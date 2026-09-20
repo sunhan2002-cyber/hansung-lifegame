@@ -1,0 +1,58 @@
+<svg width="1280" height="420" viewBox="0 0 1280 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1280" y2="420" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#101828"/>
+      <stop offset="0.48" stop-color="#173B57"/>
+      <stop offset="1" stop-color="#326273"/>
+    </linearGradient>
+    <linearGradient id="card" x1="140" y1="74" x2="1140" y2="342" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0.08"/>
+    </linearGradient>
+    <filter id="shadow" x="90" y="40" width="1100" height="340" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="22" stdDeviation="26" flood-color="#000000" flood-opacity="0.30"/>
+    </filter>
+  </defs>
+  <rect width="1280" height="420" fill="url(#bg)"/>
+  <circle cx="1035" cy="88" r="64" fill="#F6D365" opacity="0.9"/>
+  <path d="M0 332C148 274 272 302 420 338C565 373 690 399 850 344C1000 292 1110 286 1280 332V420H0V332Z" fill="#2BB673" opacity="0.22"/>
+  <path d="M0 360C145 323 252 338 398 365C580 399 720 410 890 365C1047 323 1158 319 1280 362V420H0V360Z" fill="#9AD3BC" opacity="0.20"/>
+  <g filter="url(#shadow)">
+    <rect x="140" y="74" width="1000" height="268" rx="28" fill="url(#card)" stroke="#FFFFFF" stroke-opacity="0.28"/>
+  </g>
+  <g transform="translate(182 110)">
+    <rect x="0" y="0" width="148" height="148" rx="34" fill="#FFFFFF" fill-opacity="0.92"/>
+    <circle cx="74" cy="58" r="34" fill="#F9C6A4"/>
+    <path d="M39 112C48 92 59 84 74 84C89 84 102 92 111 112" stroke="#173B57" stroke-width="12" stroke-linecap="round"/>
+    <circle cx="62" cy="56" r="5" fill="#173B57"/>
+    <circle cx="86" cy="56" r="5" fill="#173B57"/>
+    <path d="M65 72C70 76 78 76 83 72" stroke="#173B57" stroke-width="5" stroke-linecap="round"/>
+    <path d="M78 20C94 23 104 33 111 49C95 39 83 37 66 42C67 31 71 24 78 20Z" fill="#173B57"/>
+  </g>
+  <g transform="translate(382 108)">
+    <text x="0" y="42" fill="#FFFFFF" font-family="Segoe UI, Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="40" font-weight="700">Text-Based Life Game</text>
+    <text x="0" y="88" fill="#D9F4FF" font-family="Segoe UI, Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="24" font-weight="600">텍스트 기반 인생게임</text>
+    <text x="0" y="134" fill="#FFFFFF" fill-opacity="0.86" font-family="Segoe UI, Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="20">
+      선택, 지표, 돌발 이벤트가 만든 나만의 인생 시뮬레이션
+    </text>
+    <g transform="translate(0 172)">
+      <rect x="0" y="0" width="116" height="38" rx="19" fill="#F6D365"/>
+      <text x="22" y="25" fill="#173B57" font-family="Segoe UI, sans-serif" font-size="16" font-weight="700">Android</text>
+      <rect x="132" y="0" width="158" height="38" rx="19" fill="#9AD3BC"/>
+      <text x="154" y="25" fill="#173B57" font-family="Segoe UI, sans-serif" font-size="16" font-weight="700">Jetpack Compose</text>
+      <rect x="306" y="0" width="124" height="38" rx="19" fill="#FFFFFF" fill-opacity="0.90"/>
+      <text x="330" y="25" fill="#173B57" font-family="Segoe UI, sans-serif" font-size="16" font-weight="700">Life Stats</text>
+      <rect x="446" y="0" width="140" height="38" rx="19" fill="#F6A6B2"/>
+      <text x="470" y="25" fill="#173B57" font-family="Segoe UI, sans-serif" font-size="16" font-weight="700">Random Events</text>
+    </g>
+  </g>
+  <g transform="translate(950 124)" stroke="#FFFFFF" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" opacity="0.9">
+    <path d="M28 0V74"/>
+    <path d="M28 74L0 116"/>
+    <path d="M28 74L58 116"/>
+    <path d="M28 34H88"/>
+    <path d="M88 34L116 8"/>
+    <path d="M88 34L116 60"/>
+    <path d="M28 34L-22 18"/>
+  </g>
+</svg>

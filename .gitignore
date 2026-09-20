@@ -1,0 +1,22 @@
+# Local build output
+.gradle/
+build/
+app/build/
+
+# IDE
+.idea/
+*.iml
+
+# OS
+Thumbs.db
+desktop.ini
+
+# Class materials and generated scratch files
+*.pptx
+output/
+tmp/
+
+# Local environment
+.env
+local.properties
+
