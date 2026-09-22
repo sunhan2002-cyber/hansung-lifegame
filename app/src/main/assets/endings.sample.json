@@ -1,0 +1,329 @@
+[
+  {
+    "endingId": "ending_balanced_life",
+    "title": "무난하지만 단단한 어른이 되었다",
+    "priority": 90,
+    "conditions": {
+      "minStats": {
+        "건강": 45,
+        "운동능력": 45,
+        "지력": 45,
+        "사회성": 45,
+        "경제력": 45,
+        "행복": 60
+      },
+      "requiredFlags": []
+    },
+    "summary": "특별히 한쪽으로 치우치지 않은 선택들이 쌓여, 큰 사고 없이 자기 몫을 해내는 어른이 되었다.",
+    "isDefault": false
+  },
+  {
+    "endingId": "ending_genius_researcher",
+    "title": "연구실 불빛을 끄지 않는 사람이 되었다",
+    "priority": 88,
+    "conditions": {
+      "minStats": {
+        "지력": 85
+      },
+      "requiredFlags": [
+        "study_focus"
+      ]
+    },
+    "summary": "어릴 때부터 쌓은 공부 습관과 호기심이 이어져, 남들이 지나친 문제를 끝까지 붙잡는 연구자가 되었다.",
+    "isDefault": false
+  },
+  {
+    "endingId": "ending_star_athlete",
+    "title": "운동장에 이름이 걸렸다",
+    "priority": 87,
+    "conditions": {
+      "minStats": {
+        "운동능력": 85,
+        "건강": 70
+      },
+      "requiredFlags": [
+        "sports_training"
+      ]
+    },
+    "summary": "꾸준히 몸을 단련한 선택들이 결과로 이어져, 사람들에게 기억되는 운동선수가 되었다.",
+    "isDefault": false
+  },
+  {
+    "endingId": "ending_social_leader",
+    "title": "어느 모임에 가도 중심에 있었다",
+    "priority": 86,
+    "conditions": {
+      "minStats": {
+        "사회성": 85,
+        "행복": 60
+      },
+      "requiredFlags": [
+        "club_joined"
+      ]
+    },
+    "summary": "친구와 사람들을 챙기던 경험이 쌓여, 자연스럽게 사람들을 이끄는 역할을 맡게 되었다.",
+    "isDefault": false
+  },
+  {
+    "endingId": "ending_wealth_builder",
+    "title": "돈 걱정은 덜 하는 삶을 만들었다",
+    "priority": 85,
+    "conditions": {
+      "minStats": {
+        "경제력": 85,
+        "지력": 60
+      },
+      "requiredFlags": [
+        "money_habit"
+      ]
+    },
+    "summary": "작은 소비 습관과 현실적인 선택들이 모여, 하고 싶은 일을 고를 수 있는 여유를 만들었다.",
+    "isDefault": false
+  },
+  {
+    "endingId": "ending_happy_creator",
+    "title": "좋아하던 일을 계속하는 사람이 되었다",
+    "priority": 84,
+    "conditions": {
+      "minStats": {
+        "행복": 85,
+        "사회성": 55
+      },
+      "requiredFlags": [
+        "creative_hobby"
+      ]
+    },
+    "summary": "취미로 시작한 표현과 창작을 놓지 않아, 크든 작든 자기 작품을 남기는 사람이 되었다.",
+    "isDefault": false
+  },
+  {
+    "endingId": "ending_lucky_adventurer",
+    "title": "어쩌다 보니 늘 살아남았다",
+    "priority": 83,
+    "conditions": {
+      "minStats": {
+        "운": 85,
+        "건강": 55
+      },
+      "requiredFlags": [
+        "risk_taker"
+      ]
+    },
+    "summary": "위험한 선택을 꽤 많이 했지만 이상하게도 운이 따라, 남들보다 훨씬 많은 이야깃거리를 가진 사람이 되었다.",
+    "isDefault": false
+  },
+  {
+    "endingId": "ending_rescue_survivor",
+    "title": "뉴스에 나올 뻔한 위기를 넘겼다",
+    "priority": 82,
+    "conditions": {
+      "minStats": {
+        "운": 75,
+        "건강": 65
+      },
+      "requiredFlags": [
+        "special_survived"
+      ]
+    },
+    "summary": "말도 안 되는 돌발 상황들을 몇 번이나 넘기며, 주변 사람들에게 '진짜 어떻게 살았냐'는 말을 듣게 되었다.",
+    "isDefault": false
+  },
+  {
+    "endingId": "ending_kind_neighbor",
+    "title": "동네에서 먼저 인사받는 사람이 되었다",
+    "priority": 70,
+    "conditions": {
+      "minStats": {
+        "사회성": 70,
+        "행복": 70
+      },
+      "requiredFlags": [
+        "helped_friend"
+      ]
+    },
+    "summary": "거창한 성공보다 주변 사람을 챙긴 선택들이 쌓여, 곁에 사람이 남는 삶을 살게 되었다.",
+    "isDefault": false
+  },
+  {
+    "endingId": "ending_health_guardian",
+    "title": "병원보다 산책로가 익숙한 사람이 되었다",
+    "priority": 69,
+    "conditions": {
+      "minStats": {
+        "건강": 85
+      },
+      "requiredFlags": [
+        "healthy_routine"
+      ]
+    },
+    "summary": "무리하지 않고 몸을 챙긴 선택들이 쌓여, 나이 들어서도 일상을 오래 즐길 수 있게 되었다.",
+    "isDefault": false
+  },
+  {
+    "endingId": "ending_quiet_scholar",
+    "title": "조용히 한 분야를 파고들었다",
+    "priority": 68,
+    "conditions": {
+      "minStats": {
+        "지력": 75,
+        "사회성": 0
+      },
+      "requiredFlags": []
+    },
+    "summary": "화려한 길은 아니었지만 꾸준히 공부하고 기록하며, 자기만의 분야를 가진 사람이 되었다.",
+    "isDefault": false
+  },
+  {
+    "endingId": "ending_small_business_owner",
+    "title": "작지만 내 가게를 열었다",
+    "priority": 67,
+    "conditions": {
+      "minStats": {
+        "경제력": 70,
+        "사회성": 60
+      },
+      "requiredFlags": [
+        "part_time_job"
+      ]
+    },
+    "summary": "아르바이트와 사람 상대 경험이 쌓여, 크지는 않아도 스스로 책임지는 가게를 운영하게 되었다.",
+    "isDefault": false
+  },
+  {
+    "endingId": "ending_family_centered",
+    "title": "가까운 사람을 지키는 쪽을 골랐다",
+    "priority": 66,
+    "conditions": {
+      "minStats": {
+        "행복": 75,
+        "건강": 50
+      },
+      "requiredFlags": [
+        "family_memory"
+      ]
+    },
+    "summary": "성공의 크기보다 함께하는 시간을 더 자주 선택했고, 결국 곁에 있는 사람들과 안정적인 삶을 만들었다.",
+    "isDefault": false
+  },
+  {
+    "endingId": "ending_public_servant",
+    "title": "매일 같은 시간에 출근하는 사람이 되었다",
+    "priority": 65,
+    "conditions": {
+      "minStats": {
+        "지력": 65,
+        "사회성": 65
+      },
+      "requiredFlags": [
+        "responsibility"
+      ]
+    },
+    "summary": "성실함과 책임감이 쌓여, 눈에 띄지는 않아도 사회가 굴러가게 만드는 일을 맡게 되었다.",
+    "isDefault": false
+  },
+  {
+    "endingId": "ending_wandering_freelancer",
+    "title": "프리랜서로 이 일 저 일을 해냈다",
+    "priority": 64,
+    "conditions": {
+      "minStats": {
+        "행복": 60,
+        "운": 60
+      },
+      "requiredFlags": [
+        "creative_hobby"
+      ]
+    },
+    "summary": "정해진 길 대신 여러 일을 옮겨 다니며, 불안하지만 자유로운 방식으로 살아갔다.",
+    "isDefault": false
+  },
+  {
+    "endingId": "ending_burnout_worker",
+    "title": "통장에는 남았지만 체력은 바닥났다",
+    "priority": 63,
+    "conditions": {
+      "minStats": {
+        "경제력": 70
+      },
+      "requiredFlags": [
+        "overwork"
+      ]
+    },
+    "summary": "일과 성과를 우선한 선택이 쌓여 돈은 모았지만, 어느 순간 쉬는 법을 다시 배워야 했다.",
+    "isDefault": false
+  },
+  {
+    "endingId": "ending_fragile_but_alive",
+    "title": "아슬아슬했지만 끝까지 왔다",
+    "priority": 62,
+    "conditions": {
+      "minStats": {
+        "건강": 0,
+        "운": 50
+      },
+      "requiredFlags": [
+        "special_survived"
+      ]
+    },
+    "summary": "큰 성공은 아니어도 여러 위기를 넘겼고, 결국 버틴 것만으로도 설명이 되는 삶이 되었다.",
+    "isDefault": false
+  },
+  {
+    "endingId": "ending_comedy_legend",
+    "title": "친구들 술자리 단골 썰이 되었다",
+    "priority": 61,
+    "conditions": {
+      "minStats": {
+        "운": 70,
+        "사회성": 50
+      },
+      "requiredFlags": [
+        "absurd_event_witness"
+      ]
+    },
+    "summary": "황당한 사건에 자주 휘말린 탓에, 본인은 힘들었지만 남들이 들으면 웃는 이야기를 잔뜩 남겼다.",
+    "isDefault": false
+  },
+  {
+    "endingId": "ending_lonely_rich",
+    "title": "돈은 많은데 연락할 사람이 없었다",
+    "priority": 60,
+    "conditions": {
+      "minStats": {
+        "경제력": 90,
+        "사회성": 0,
+        "행복": 0
+      },
+      "requiredFlags": []
+    },
+    "summary": "경제적인 성과는 컸지만 관계와 행복을 자주 미뤘고, 결과 화면에는 묘하게 쓸쓸한 숫자들이 남았다.",
+    "isDefault": false
+  },
+  {
+    "endingId": "ending_unlucky_tragic",
+    "title": "운이 너무 없었다",
+    "priority": 59,
+    "conditions": {
+      "minStats": {
+        "운": 0,
+        "건강": 0
+      },
+      "requiredFlags": [
+        "fatal_risk"
+      ]
+    },
+    "summary": "작은 불운들이 겹치고 위험한 선택까지 더해져, 예상보다 일찍 씁쓸한 결말에 도착했다.",
+    "isDefault": false
+  },
+  {
+    "endingId": "ending_ordinary_path",
+    "title": "평범하지만 내 인생이었다",
+    "priority": 1,
+    "conditions": {
+      "minStats": {},
+      "requiredFlags": []
+    },
+    "summary": "대단한 조건을 만족하지는 못했지만, 선택의 결과를 받아들이며 자기 방식대로 한 회차를 마쳤다.",
+    "isDefault": true
+  }
+]

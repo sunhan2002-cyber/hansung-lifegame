@@ -1,0 +1,642 @@
+[
+  {
+    "imageId": "img_infant_nursery_001",
+    "usage": "event",
+    "stage": "유아기",
+    "description": "유아기 nursery 상황을 표현하는 사건 이미지",
+    "fileName": "img_infant_nursery_001.png",
+    "fallbackText": "이미지 준비 전에는 '유아기 nursery' 상황 설명으로 대체 표시"
+  },
+  {
+    "imageId": "img_infant_home_002",
+    "usage": "event",
+    "stage": "유아기",
+    "description": "유아기 home 상황을 표현하는 사건 이미지",
+    "fileName": "img_infant_home_002.png",
+    "fallbackText": "이미지 준비 전에는 '유아기 home' 상황 설명으로 대체 표시"
+  },
+  {
+    "imageId": "img_infant_toy_003",
+    "usage": "event",
+    "stage": "유아기",
+    "description": "유아기 toy 상황을 표현하는 사건 이미지",
+    "fileName": "img_infant_toy_003.png",
+    "fallbackText": "이미지 준비 전에는 '유아기 toy' 상황 설명으로 대체 표시"
+  },
+  {
+    "imageId": "img_infant_nap_004",
+    "usage": "event",
+    "stage": "유아기",
+    "description": "유아기 nap 상황을 표현하는 사건 이미지",
+    "fileName": "img_infant_nap_004.png",
+    "fallbackText": "이미지 준비 전에는 '유아기 nap' 상황 설명으로 대체 표시"
+  },
+  {
+    "imageId": "img_infant_meal_005",
+    "usage": "event",
+    "stage": "유아기",
+    "description": "유아기 meal 상황을 표현하는 사건 이미지",
+    "fileName": "img_infant_meal_005.png",
+    "fallbackText": "이미지 준비 전에는 '유아기 meal' 상황 설명으로 대체 표시"
+  },
+  {
+    "imageId": "img_infant_park_006",
+    "usage": "event",
+    "stage": "유아기",
+    "description": "유아기 park 상황을 표현하는 사건 이미지",
+    "fileName": "img_infant_park_006.png",
+    "fallbackText": "이미지 준비 전에는 '유아기 park' 상황 설명으로 대체 표시"
+  },
+  {
+    "imageId": "img_infant_cry_007",
+    "usage": "event",
+    "stage": "유아기",
+    "description": "유아기 cry 상황을 표현하는 사건 이미지",
+    "fileName": "img_infant_cry_007.png",
+    "fallbackText": "이미지 준비 전에는 '유아기 cry' 상황 설명으로 대체 표시"
+  },
+  {
+    "imageId": "img_infant_music_008",
+    "usage": "event",
+    "stage": "유아기",
+    "description": "유아기 music 상황을 표현하는 사건 이미지",
+    "fileName": "img_infant_music_008.png",
+    "fallbackText": "이미지 준비 전에는 '유아기 music' 상황 설명으로 대체 표시"
+  },
+  {
+    "imageId": "img_infant_photo_009",
+    "usage": "event",
+    "stage": "유아기",
+    "description": "유아기 photo 상황을 표현하는 사건 이미지",
+    "fileName": "img_infant_photo_009.png",
+    "fallbackText": "이미지 준비 전에는 '유아기 photo' 상황 설명으로 대체 표시"
+  },
+  {
+    "imageId": "img_infant_crawl_010",
+    "usage": "event",
+    "stage": "유아기",
+    "description": "유아기 crawl 상황을 표현하는 사건 이미지",
+    "fileName": "img_infant_crawl_010.png",
+    "fallbackText": "이미지 준비 전에는 '유아기 crawl' 상황 설명으로 대체 표시"
+  },
+  {
+    "imageId": "img_infant_doctor_011",
+    "usage": "event",
+    "stage": "유아기",
+    "description": "유아기 doctor 상황을 표현하는 사건 이미지",
+    "fileName": "img_infant_doctor_011.png",
+    "fallbackText": "이미지 준비 전에는 '유아기 doctor' 상황 설명으로 대체 표시"
+  },
+  {
+    "imageId": "img_infant_family_012",
+    "usage": "event",
+    "stage": "유아기",
+    "description": "유아기 family 상황을 표현하는 사건 이미지",
+    "fileName": "img_infant_family_012.png",
+    "fallbackText": "이미지 준비 전에는 '유아기 family' 상황 설명으로 대체 표시"
+  },
+  {
+    "imageId": "img_infant_bath_013",
+    "usage": "event",
+    "stage": "유아기",
+    "description": "유아기 bath 상황을 표현하는 사건 이미지",
+    "fileName": "img_infant_bath_013.png",
+    "fallbackText": "이미지 준비 전에는 '유아기 bath' 상황 설명으로 대체 표시"
+  },
+  {
+    "imageId": "img_infant_book_014",
+    "usage": "event",
+    "stage": "유아기",
+    "description": "유아기 book 상황을 표현하는 사건 이미지",
+    "fileName": "img_infant_book_014.png",
+    "fallbackText": "이미지 준비 전에는 '유아기 book' 상황 설명으로 대체 표시"
+  },
+  {
+    "imageId": "img_infant_block_015",
+    "usage": "event",
+    "stage": "유아기",
+    "description": "유아기 block 상황을 표현하는 사건 이미지",
+    "fileName": "img_infant_block_015.png",
+    "fallbackText": "이미지 준비 전에는 '유아기 block' 상황 설명으로 대체 표시"
+  },
+  {
+    "imageId": "img_infant_blanket_016",
+    "usage": "event",
+    "stage": "유아기",
+    "description": "유아기 blanket 상황을 표현하는 사건 이미지",
+    "fileName": "img_infant_blanket_016.png",
+    "fallbackText": "이미지 준비 전에는 '유아기 blanket' 상황 설명으로 대체 표시"
+  },
+  {
+    "imageId": "img_infant_stroller_017",
+    "usage": "event",
+    "stage": "유아기",
+    "description": "유아기 stroller 상황을 표현하는 사건 이미지",
+    "fileName": "img_infant_stroller_017.png",
+    "fallbackText": "이미지 준비 전에는 '유아기 stroller' 상황 설명으로 대체 표시"
+  },
+  {
+    "imageId": "img_infant_snack_018",
+    "usage": "event",
+    "stage": "유아기",
+    "description": "유아기 snack 상황을 표현하는 사건 이미지",
+    "fileName": "img_infant_snack_018.png",
+    "fallbackText": "이미지 준비 전에는 '유아기 snack' 상황 설명으로 대체 표시"
+  },
+  {
+    "imageId": "img_infant_mirror_019",
+    "usage": "event",
+    "stage": "유아기",
+    "description": "유아기 mirror 상황을 표현하는 사건 이미지",
+    "fileName": "img_infant_mirror_019.png",
+    "fallbackText": "이미지 준비 전에는 '유아기 mirror' 상황 설명으로 대체 표시"
+  },
+  {
+    "imageId": "img_infant_sleep_020",
+    "usage": "event",
+    "stage": "유아기",
+    "description": "유아기 sleep 상황을 표현하는 사건 이미지",
+    "fileName": "img_infant_sleep_020.png",
+    "fallbackText": "이미지 준비 전에는 '유아기 sleep' 상황 설명으로 대체 표시"
+  },
+  {
+    "imageId": "img_child_school_001",
+    "usage": "event",
+    "stage": "아동기",
+    "description": "아동기 school 상황을 표현하는 사건 이미지",
+    "fileName": "img_child_school_001.png",
+    "fallbackText": "이미지 준비 전에는 '아동기 school' 상황 설명으로 대체 표시"
+  },
+  {
+    "imageId": "img_child_classroom_002",
+    "usage": "event",
+    "stage": "아동기",
+    "description": "아동기 classroom 상황을 표현하는 사건 이미지",
+    "fileName": "img_child_classroom_002.png",
+    "fallbackText": "이미지 준비 전에는 '아동기 classroom' 상황 설명으로 대체 표시"
+  },
+  {
+    "imageId": "img_child_playground_003",
+    "usage": "event",
+    "stage": "아동기",
+    "description": "아동기 playground 상황을 표현하는 사건 이미지",
+    "fileName": "img_child_playground_003.png",
+    "fallbackText": "이미지 준비 전에는 '아동기 playground' 상황 설명으로 대체 표시"
+  },
+  {
+    "imageId": "img_child_library_004",
+    "usage": "event",
+    "stage": "아동기",
+    "description": "아동기 library 상황을 표현하는 사건 이미지",
+    "fileName": "img_child_library_004.png",
+    "fallbackText": "이미지 준비 전에는 '아동기 library' 상황 설명으로 대체 표시"
+  },
+  {
+    "imageId": "img_child_lunch_005",
+    "usage": "event",
+    "stage": "아동기",
+    "description": "아동기 lunch 상황을 표현하는 사건 이미지",
+    "fileName": "img_child_lunch_005.png",
+    "fallbackText": "이미지 준비 전에는 '아동기 lunch' 상황 설명으로 대체 표시"
+  },
+  {
+    "imageId": "img_child_friend_006",
+    "usage": "event",
+    "stage": "아동기",
+    "description": "아동기 friend 상황을 표현하는 사건 이미지",
+    "fileName": "img_child_friend_006.png",
+    "fallbackText": "이미지 준비 전에는 '아동기 friend' 상황 설명으로 대체 표시"
+  },
+  {
+    "imageId": "img_child_sports_007",
+    "usage": "event",
+    "stage": "아동기",
+    "description": "아동기 sports 상황을 표현하는 사건 이미지",
+    "fileName": "img_child_sports_007.png",
+    "fallbackText": "이미지 준비 전에는 '아동기 sports' 상황 설명으로 대체 표시"
+  },
+  {
+    "imageId": "img_child_art_008",
+    "usage": "event",
+    "stage": "아동기",
+    "description": "아동기 art 상황을 표현하는 사건 이미지",
+    "fileName": "img_child_art_008.png",
+    "fallbackText": "이미지 준비 전에는 '아동기 art' 상황 설명으로 대체 표시"
+  },
+  {
+    "imageId": "img_child_science_009",
+    "usage": "event",
+    "stage": "아동기",
+    "description": "아동기 science 상황을 표현하는 사건 이미지",
+    "fileName": "img_child_science_009.png",
+    "fallbackText": "이미지 준비 전에는 '아동기 science' 상황 설명으로 대체 표시"
+  },
+  {
+    "imageId": "img_child_homework_010",
+    "usage": "event",
+    "stage": "아동기",
+    "description": "아동기 homework 상황을 표현하는 사건 이미지",
+    "fileName": "img_child_homework_010.png",
+    "fallbackText": "이미지 준비 전에는 '아동기 homework' 상황 설명으로 대체 표시"
+  },
+  {
+    "imageId": "img_child_fieldtrip_011",
+    "usage": "event",
+    "stage": "아동기",
+    "description": "아동기 fieldtrip 상황을 표현하는 사건 이미지",
+    "fileName": "img_child_fieldtrip_011.png",
+    "fallbackText": "이미지 준비 전에는 '아동기 fieldtrip' 상황 설명으로 대체 표시"
+  },
+  {
+    "imageId": "img_child_rain_012",
+    "usage": "event",
+    "stage": "아동기",
+    "description": "아동기 rain 상황을 표현하는 사건 이미지",
+    "fileName": "img_child_rain_012.png",
+    "fallbackText": "이미지 준비 전에는 '아동기 rain' 상황 설명으로 대체 표시"
+  },
+  {
+    "imageId": "img_child_birthday_013",
+    "usage": "event",
+    "stage": "아동기",
+    "description": "아동기 birthday 상황을 표현하는 사건 이미지",
+    "fileName": "img_child_birthday_013.png",
+    "fallbackText": "이미지 준비 전에는 '아동기 birthday' 상황 설명으로 대체 표시"
+  },
+  {
+    "imageId": "img_child_pet_014",
+    "usage": "event",
+    "stage": "아동기",
+    "description": "아동기 pet 상황을 표현하는 사건 이미지",
+    "fileName": "img_child_pet_014.png",
+    "fallbackText": "이미지 준비 전에는 '아동기 pet' 상황 설명으로 대체 표시"
+  },
+  {
+    "imageId": "img_child_game_015",
+    "usage": "event",
+    "stage": "아동기",
+    "description": "아동기 game 상황을 표현하는 사건 이미지",
+    "fileName": "img_child_game_015.png",
+    "fallbackText": "이미지 준비 전에는 '아동기 game' 상황 설명으로 대체 표시"
+  },
+  {
+    "imageId": "img_child_music_016",
+    "usage": "event",
+    "stage": "아동기",
+    "description": "아동기 music 상황을 표현하는 사건 이미지",
+    "fileName": "img_child_music_016.png",
+    "fallbackText": "이미지 준비 전에는 '아동기 music' 상황 설명으로 대체 표시"
+  },
+  {
+    "imageId": "img_child_teacher_017",
+    "usage": "event",
+    "stage": "아동기",
+    "description": "아동기 teacher 상황을 표현하는 사건 이미지",
+    "fileName": "img_child_teacher_017.png",
+    "fallbackText": "이미지 준비 전에는 '아동기 teacher' 상황 설명으로 대체 표시"
+  },
+  {
+    "imageId": "img_child_market_018",
+    "usage": "event",
+    "stage": "아동기",
+    "description": "아동기 market 상황을 표현하는 사건 이미지",
+    "fileName": "img_child_market_018.png",
+    "fallbackText": "이미지 준비 전에는 '아동기 market' 상황 설명으로 대체 표시"
+  },
+  {
+    "imageId": "img_child_clinic_019",
+    "usage": "event",
+    "stage": "아동기",
+    "description": "아동기 clinic 상황을 표현하는 사건 이미지",
+    "fileName": "img_child_clinic_019.png",
+    "fallbackText": "이미지 준비 전에는 '아동기 clinic' 상황 설명으로 대체 표시"
+  },
+  {
+    "imageId": "img_child_park_020",
+    "usage": "event",
+    "stage": "아동기",
+    "description": "아동기 park 상황을 표현하는 사건 이미지",
+    "fileName": "img_child_park_020.png",
+    "fallbackText": "이미지 준비 전에는 '아동기 park' 상황 설명으로 대체 표시"
+  },
+  {
+    "imageId": "img_teen_class_001",
+    "usage": "event",
+    "stage": "청소년기",
+    "description": "청소년기 class 상황을 표현하는 사건 이미지",
+    "fileName": "img_teen_class_001.png",
+    "fallbackText": "이미지 준비 전에는 '청소년기 class' 상황 설명으로 대체 표시"
+  },
+  {
+    "imageId": "img_teen_exam_002",
+    "usage": "event",
+    "stage": "청소년기",
+    "description": "청소년기 exam 상황을 표현하는 사건 이미지",
+    "fileName": "img_teen_exam_002.png",
+    "fallbackText": "이미지 준비 전에는 '청소년기 exam' 상황 설명으로 대체 표시"
+  },
+  {
+    "imageId": "img_teen_club_003",
+    "usage": "event",
+    "stage": "청소년기",
+    "description": "청소년기 club 상황을 표현하는 사건 이미지",
+    "fileName": "img_teen_club_003.png",
+    "fallbackText": "이미지 준비 전에는 '청소년기 club' 상황 설명으로 대체 표시"
+  },
+  {
+    "imageId": "img_teen_friendship_004",
+    "usage": "event",
+    "stage": "청소년기",
+    "description": "청소년기 friendship 상황을 표현하는 사건 이미지",
+    "fileName": "img_teen_friendship_004.png",
+    "fallbackText": "이미지 준비 전에는 '청소년기 friendship' 상황 설명으로 대체 표시"
+  },
+  {
+    "imageId": "img_teen_conflict_005",
+    "usage": "event",
+    "stage": "청소년기",
+    "description": "청소년기 conflict 상황을 표현하는 사건 이미지",
+    "fileName": "img_teen_conflict_005.png",
+    "fallbackText": "이미지 준비 전에는 '청소년기 conflict' 상황 설명으로 대체 표시"
+  },
+  {
+    "imageId": "img_teen_parttime_006",
+    "usage": "event",
+    "stage": "청소년기",
+    "description": "청소년기 parttime 상황을 표현하는 사건 이미지",
+    "fileName": "img_teen_parttime_006.png",
+    "fallbackText": "이미지 준비 전에는 '청소년기 parttime' 상황 설명으로 대체 표시"
+  },
+  {
+    "imageId": "img_teen_phone_007",
+    "usage": "event",
+    "stage": "청소년기",
+    "description": "청소년기 phone 상황을 표현하는 사건 이미지",
+    "fileName": "img_teen_phone_007.png",
+    "fallbackText": "이미지 준비 전에는 '청소년기 phone' 상황 설명으로 대체 표시"
+  },
+  {
+    "imageId": "img_teen_concert_008",
+    "usage": "event",
+    "stage": "청소년기",
+    "description": "청소년기 concert 상황을 표현하는 사건 이미지",
+    "fileName": "img_teen_concert_008.png",
+    "fallbackText": "이미지 준비 전에는 '청소년기 concert' 상황 설명으로 대체 표시"
+  },
+  {
+    "imageId": "img_teen_volunteer_009",
+    "usage": "event",
+    "stage": "청소년기",
+    "description": "청소년기 volunteer 상황을 표현하는 사건 이미지",
+    "fileName": "img_teen_volunteer_009.png",
+    "fallbackText": "이미지 준비 전에는 '청소년기 volunteer' 상황 설명으로 대체 표시"
+  },
+  {
+    "imageId": "img_teen_contest_010",
+    "usage": "event",
+    "stage": "청소년기",
+    "description": "청소년기 contest 상황을 표현하는 사건 이미지",
+    "fileName": "img_teen_contest_010.png",
+    "fallbackText": "이미지 준비 전에는 '청소년기 contest' 상황 설명으로 대체 표시"
+  },
+  {
+    "imageId": "img_teen_library_011",
+    "usage": "event",
+    "stage": "청소년기",
+    "description": "청소년기 library 상황을 표현하는 사건 이미지",
+    "fileName": "img_teen_library_011.png",
+    "fallbackText": "이미지 준비 전에는 '청소년기 library' 상황 설명으로 대체 표시"
+  },
+  {
+    "imageId": "img_teen_sports_012",
+    "usage": "event",
+    "stage": "청소년기",
+    "description": "청소년기 sports 상황을 표현하는 사건 이미지",
+    "fileName": "img_teen_sports_012.png",
+    "fallbackText": "이미지 준비 전에는 '청소년기 sports' 상황 설명으로 대체 표시"
+  },
+  {
+    "imageId": "img_teen_career_013",
+    "usage": "event",
+    "stage": "청소년기",
+    "description": "청소년기 career 상황을 표현하는 사건 이미지",
+    "fileName": "img_teen_career_013.png",
+    "fallbackText": "이미지 준비 전에는 '청소년기 career' 상황 설명으로 대체 표시"
+  },
+  {
+    "imageId": "img_teen_festival_014",
+    "usage": "event",
+    "stage": "청소년기",
+    "description": "청소년기 festival 상황을 표현하는 사건 이미지",
+    "fileName": "img_teen_festival_014.png",
+    "fallbackText": "이미지 준비 전에는 '청소년기 festival' 상황 설명으로 대체 표시"
+  },
+  {
+    "imageId": "img_teen_rain_015",
+    "usage": "event",
+    "stage": "청소년기",
+    "description": "청소년기 rain 상황을 표현하는 사건 이미지",
+    "fileName": "img_teen_rain_015.png",
+    "fallbackText": "이미지 준비 전에는 '청소년기 rain' 상황 설명으로 대체 표시"
+  },
+  {
+    "imageId": "img_teen_bus_016",
+    "usage": "event",
+    "stage": "청소년기",
+    "description": "청소년기 bus 상황을 표현하는 사건 이미지",
+    "fileName": "img_teen_bus_016.png",
+    "fallbackText": "이미지 준비 전에는 '청소년기 bus' 상황 설명으로 대체 표시"
+  },
+  {
+    "imageId": "img_teen_cafe_017",
+    "usage": "event",
+    "stage": "청소년기",
+    "description": "청소년기 cafe 상황을 표현하는 사건 이미지",
+    "fileName": "img_teen_cafe_017.png",
+    "fallbackText": "이미지 준비 전에는 '청소년기 cafe' 상황 설명으로 대체 표시"
+  },
+  {
+    "imageId": "img_teen_studyroom_018",
+    "usage": "event",
+    "stage": "청소년기",
+    "description": "청소년기 studyroom 상황을 표현하는 사건 이미지",
+    "fileName": "img_teen_studyroom_018.png",
+    "fallbackText": "이미지 준비 전에는 '청소년기 studyroom' 상황 설명으로 대체 표시"
+  },
+  {
+    "imageId": "img_teen_family_019",
+    "usage": "event",
+    "stage": "청소년기",
+    "description": "청소년기 family 상황을 표현하는 사건 이미지",
+    "fileName": "img_teen_family_019.png",
+    "fallbackText": "이미지 준비 전에는 '청소년기 family' 상황 설명으로 대체 표시"
+  },
+  {
+    "imageId": "img_teen_special_020",
+    "usage": "event",
+    "stage": "청소년기",
+    "description": "청소년기 special 상황을 표현하는 사건 이미지",
+    "fileName": "img_teen_special_020.png",
+    "fallbackText": "이미지 준비 전에는 '청소년기 special' 상황 설명으로 대체 표시"
+  },
+  {
+    "imageId": "img_adult_office_001",
+    "usage": "event",
+    "stage": "성인기",
+    "description": "성인기 office 상황을 표현하는 사건 이미지",
+    "fileName": "img_adult_office_001.png",
+    "fallbackText": "이미지 준비 전에는 '성인기 office' 상황 설명으로 대체 표시"
+  },
+  {
+    "imageId": "img_adult_interview_002",
+    "usage": "event",
+    "stage": "성인기",
+    "description": "성인기 interview 상황을 표현하는 사건 이미지",
+    "fileName": "img_adult_interview_002.png",
+    "fallbackText": "이미지 준비 전에는 '성인기 interview' 상황 설명으로 대체 표시"
+  },
+  {
+    "imageId": "img_adult_startup_003",
+    "usage": "event",
+    "stage": "성인기",
+    "description": "성인기 startup 상황을 표현하는 사건 이미지",
+    "fileName": "img_adult_startup_003.png",
+    "fallbackText": "이미지 준비 전에는 '성인기 startup' 상황 설명으로 대체 표시"
+  },
+  {
+    "imageId": "img_adult_hospital_004",
+    "usage": "event",
+    "stage": "성인기",
+    "description": "성인기 hospital 상황을 표현하는 사건 이미지",
+    "fileName": "img_adult_hospital_004.png",
+    "fallbackText": "이미지 준비 전에는 '성인기 hospital' 상황 설명으로 대체 표시"
+  },
+  {
+    "imageId": "img_adult_bank_005",
+    "usage": "event",
+    "stage": "성인기",
+    "description": "성인기 bank 상황을 표현하는 사건 이미지",
+    "fileName": "img_adult_bank_005.png",
+    "fallbackText": "이미지 준비 전에는 '성인기 bank' 상황 설명으로 대체 표시"
+  },
+  {
+    "imageId": "img_adult_home_006",
+    "usage": "event",
+    "stage": "성인기",
+    "description": "성인기 home 상황을 표현하는 사건 이미지",
+    "fileName": "img_adult_home_006.png",
+    "fallbackText": "이미지 준비 전에는 '성인기 home' 상황 설명으로 대체 표시"
+  },
+  {
+    "imageId": "img_adult_travel_007",
+    "usage": "event",
+    "stage": "성인기",
+    "description": "성인기 travel 상황을 표현하는 사건 이미지",
+    "fileName": "img_adult_travel_007.png",
+    "fallbackText": "이미지 준비 전에는 '성인기 travel' 상황 설명으로 대체 표시"
+  },
+  {
+    "imageId": "img_adult_wedding_008",
+    "usage": "event",
+    "stage": "성인기",
+    "description": "성인기 wedding 상황을 표현하는 사건 이미지",
+    "fileName": "img_adult_wedding_008.png",
+    "fallbackText": "이미지 준비 전에는 '성인기 wedding' 상황 설명으로 대체 표시"
+  },
+  {
+    "imageId": "img_adult_childcare_009",
+    "usage": "event",
+    "stage": "성인기",
+    "description": "성인기 childcare 상황을 표현하는 사건 이미지",
+    "fileName": "img_adult_childcare_009.png",
+    "fallbackText": "이미지 준비 전에는 '성인기 childcare' 상황 설명으로 대체 표시"
+  },
+  {
+    "imageId": "img_adult_exercise_010",
+    "usage": "event",
+    "stage": "성인기",
+    "description": "성인기 exercise 상황을 표현하는 사건 이미지",
+    "fileName": "img_adult_exercise_010.png",
+    "fallbackText": "이미지 준비 전에는 '성인기 exercise' 상황 설명으로 대체 표시"
+  },
+  {
+    "imageId": "img_adult_community_011",
+    "usage": "event",
+    "stage": "성인기",
+    "description": "성인기 community 상황을 표현하는 사건 이미지",
+    "fileName": "img_adult_community_011.png",
+    "fallbackText": "이미지 준비 전에는 '성인기 community' 상황 설명으로 대체 표시"
+  },
+  {
+    "imageId": "img_adult_lecture_012",
+    "usage": "event",
+    "stage": "성인기",
+    "description": "성인기 lecture 상황을 표현하는 사건 이미지",
+    "fileName": "img_adult_lecture_012.png",
+    "fallbackText": "이미지 준비 전에는 '성인기 lecture' 상황 설명으로 대체 표시"
+  },
+  {
+    "imageId": "img_adult_accident_013",
+    "usage": "event",
+    "stage": "성인기",
+    "description": "성인기 accident 상황을 표현하는 사건 이미지",
+    "fileName": "img_adult_accident_013.png",
+    "fallbackText": "이미지 준비 전에는 '성인기 accident' 상황 설명으로 대체 표시"
+  },
+  {
+    "imageId": "img_adult_investment_014",
+    "usage": "event",
+    "stage": "성인기",
+    "description": "성인기 investment 상황을 표현하는 사건 이미지",
+    "fileName": "img_adult_investment_014.png",
+    "fallbackText": "이미지 준비 전에는 '성인기 investment' 상황 설명으로 대체 표시"
+  },
+  {
+    "imageId": "img_adult_freelance_015",
+    "usage": "event",
+    "stage": "성인기",
+    "description": "성인기 freelance 상황을 표현하는 사건 이미지",
+    "fileName": "img_adult_freelance_015.png",
+    "fallbackText": "이미지 준비 전에는 '성인기 freelance' 상황 설명으로 대체 표시"
+  },
+  {
+    "imageId": "img_adult_market_016",
+    "usage": "event",
+    "stage": "성인기",
+    "description": "성인기 market 상황을 표현하는 사건 이미지",
+    "fileName": "img_adult_market_016.png",
+    "fallbackText": "이미지 준비 전에는 '성인기 market' 상황 설명으로 대체 표시"
+  },
+  {
+    "imageId": "img_adult_public_017",
+    "usage": "event",
+    "stage": "성인기",
+    "description": "성인기 public 상황을 표현하는 사건 이미지",
+    "fileName": "img_adult_public_017.png",
+    "fallbackText": "이미지 준비 전에는 '성인기 public' 상황 설명으로 대체 표시"
+  },
+  {
+    "imageId": "img_adult_friend_018",
+    "usage": "event",
+    "stage": "성인기",
+    "description": "성인기 friend 상황을 표현하는 사건 이미지",
+    "fileName": "img_adult_friend_018.png",
+    "fallbackText": "이미지 준비 전에는 '성인기 friend' 상황 설명으로 대체 표시"
+  },
+  {
+    "imageId": "img_adult_retire_019",
+    "usage": "event",
+    "stage": "성인기",
+    "description": "성인기 retire 상황을 표현하는 사건 이미지",
+    "fileName": "img_adult_retire_019.png",
+    "fallbackText": "이미지 준비 전에는 '성인기 retire' 상황 설명으로 대체 표시"
+  },
+  {
+    "imageId": "img_adult_park_020",
+    "usage": "event",
+    "stage": "성인기",
+    "description": "성인기 park 상황을 표현하는 사건 이미지",
+    "fileName": "img_adult_park_020.png",
+    "fallbackText": "이미지 준비 전에는 '성인기 park' 상황 설명으로 대체 표시"
+  }
+]
