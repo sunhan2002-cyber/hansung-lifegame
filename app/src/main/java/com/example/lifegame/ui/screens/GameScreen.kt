@@ -9,8 +9,8 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.safeDrawingPadding
 import androidx.compose.foundation.layout.width
@@ -29,27 +29,32 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.example.lifegame.ui.SAMPLE_EVENTS
+import com.example.lifegame.domain.model.Choice
+import com.example.lifegame.domain.model.EventType
+import com.example.lifegame.domain.model.GameEvent
+import com.example.lifegame.domain.model.Stats
+import com.example.lifegame.ui.FALLBACK_EVENTS
 import com.example.lifegame.ui.STAT_MAX
-import com.example.lifegame.ui.STAT_NAMES
-import com.example.lifegame.ui.STAT_START
-import com.example.lifegame.ui.UiChoice
-import com.example.lifegame.ui.UiEvent
+import com.example.lifegame.ui.StatLine
+import com.example.lifegame.ui.label
+import com.example.lifegame.ui.toLines
 
 @Composable
 fun GameScreen(
-    event: UiEvent,
-    stats: Map<String, Int>,
-    onChoose: (UiChoice) -> Unit,
+    event: GameEvent,
+    stats: Stats,
+    onChoose: (Choice) -> Unit,
     onShowEndingForTest: () -> Unit,
     modifier: Modifier = Modifier,
+    usingFallbackEvents: Boolean = false,
 ) {
     val colors = MaterialTheme.colorScheme
+    val isSpecial = event.type == EventType.SPECIAL
 
     Column(
         modifier = modifier
             .fillMaxSize()
-            .background(if (event.isSpecial) colors.errorContainer.copy(alpha = 0.35f) else colors.surface)
+            .background(if (isSpecial) colors.errorContainer.copy(alpha = 0.35f) else colors.surface)
             .safeDrawingPadding()
             .padding(horizontal = 20.dp, vertical = 16.dp),
     ) {
@@ -60,8 +65,12 @@ fun GameScreen(
                 .verticalScroll(rememberScrollState()),
         ) {
             Row(verticalAlignment = Alignment.CenterVertically) {
-                Text(event.stage, style = MaterialTheme.typography.titleMedium, color = colors.primary)
-                if (event.isSpecial) {
+                Text(
+                    text = event.stage.label(),
+                    style = MaterialTheme.typography.titleMedium,
+                    color = colors.primary,
+                )
+                if (isSpecial) {
                     Spacer(Modifier.width(8.dp))
                     Text(
                         text = "돌발 이벤트",
@@ -74,9 +83,11 @@ fun GameScreen(
                     )
                 }
             }
+            Spacer(Modifier.height(4.dp))
+            Text(event.title, style = MaterialTheme.typography.headlineSmall)
             Spacer(Modifier.height(12.dp))
 
-            // 상황 이미지가 준비되기 전 자리 표시 영역
+            // 실제 이미지가 연결되기 전에는 imageId를 대체 문구로 보여 준다.
             Box(
                 modifier = Modifier
                     .fillMaxWidth()
@@ -85,14 +96,31 @@ fun GameScreen(
                     .background(colors.surfaceVariant),
                 contentAlignment = Alignment.Center,
             ) {
-                Text("상황 이미지", color = colors.onSurfaceVariant)
+                Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                    Text("상황 이미지", color = colors.onSurfaceVariant)
+                    Spacer(Modifier.height(4.dp))
+                    Text(
+                        text = event.imageId,
+                        style = MaterialTheme.typography.bodySmall,
+                        color = colors.onSurfaceVariant,
+                    )
+                }
             }
             Spacer(Modifier.height(16.dp))
 
             Text(event.text, style = MaterialTheme.typography.bodyLarge)
             Spacer(Modifier.height(20.dp))
 
-            StatGrid(stats)
+            StatGrid(stats.toLines())
+
+            if (usingFallbackEvents) {
+                Spacer(Modifier.height(8.dp))
+                Text(
+                    text = "임시 사건 데이터입니다. events.sample.json이 연결되면 실제 사건으로 바뀝니다.",
+                    style = MaterialTheme.typography.bodySmall,
+                    color = colors.onSurfaceVariant,
+                )
+            }
 
             TextButton(
                 onClick = onShowEndingForTest,
@@ -103,15 +131,23 @@ fun GameScreen(
         }
 
         Spacer(Modifier.height(12.dp))
-        ChoiceButtonPlaceholder(event.choiceA, onChoose)
-        Spacer(Modifier.height(10.dp))
-        ChoiceButtonPlaceholder(event.choiceB, onChoose)
+        event.choices.forEachIndexed { index, choice ->
+            if (index > 0) Spacer(Modifier.height(10.dp))
+            ChoiceButtonPlaceholder(label = choiceLabel(index), choice = choice, onChoose = onChoose)
+        }
     }
 }
 
+/** 선택지 앞에 붙는 A, B, C… 표시 */
+private fun choiceLabel(index: Int): String = ('A' + index).toString()
+
 // 정원률 담당 ui/components/ChoiceButton.kt가 준비되면 교체한다.
 @Composable
-private fun ChoiceButtonPlaceholder(choice: UiChoice, onChoose: (UiChoice) -> Unit) {
+private fun ChoiceButtonPlaceholder(
+    label: String,
+    choice: Choice,
+    onChoose: (Choice) -> Unit,
+) {
     Button(
         onClick = { onChoose(choice) },
         modifier = Modifier
@@ -120,7 +156,7 @@ private fun ChoiceButtonPlaceholder(choice: UiChoice, onChoose: (UiChoice) -> Un
         shape = RoundedCornerShape(14.dp),
     ) {
         Text(
-            text = "${choice.label}. ${choice.text}",
+            text = "$label. ${choice.label}",
             style = MaterialTheme.typography.titleMedium,
             textAlign = TextAlign.Center,
             modifier = Modifier.padding(vertical = 6.dp),
@@ -130,12 +166,12 @@ private fun ChoiceButtonPlaceholder(choice: UiChoice, onChoose: (UiChoice) -> Un
 
 /** 7개 지표를 2열로 보여준다. 정원률 담당 StatBar.kt가 준비되면 교체한다. */
 @Composable
-fun StatGrid(stats: Map<String, Int>, modifier: Modifier = Modifier) {
+fun StatGrid(lines: List<StatLine>, modifier: Modifier = Modifier) {
     Column(modifier = modifier, verticalArrangement = Arrangement.spacedBy(8.dp)) {
-        STAT_NAMES.chunked(2).forEach { row ->
+        lines.chunked(2).forEach { row ->
             Row(horizontalArrangement = Arrangement.spacedBy(16.dp)) {
-                row.forEach { name ->
-                    StatItem(name, stats[name] ?: STAT_START, Modifier.weight(1f))
+                row.forEach { line ->
+                    StatItem(line, Modifier.weight(1f))
                 }
                 if (row.size == 1) Spacer(Modifier.weight(1f))
             }
@@ -144,15 +180,15 @@ fun StatGrid(stats: Map<String, Int>, modifier: Modifier = Modifier) {
 }
 
 @Composable
-private fun StatItem(name: String, value: Int, modifier: Modifier = Modifier) {
+private fun StatItem(line: StatLine, modifier: Modifier = Modifier) {
     Column(modifier = modifier) {
         Row {
-            Text(name, style = MaterialTheme.typography.labelLarge, modifier = Modifier.weight(1f))
-            Text("$value", style = MaterialTheme.typography.labelLarge)
+            Text(line.label, style = MaterialTheme.typography.labelLarge, modifier = Modifier.weight(1f))
+            Text("${line.value}", style = MaterialTheme.typography.labelLarge)
         }
         Spacer(Modifier.height(4.dp))
         LinearProgressIndicator(
-            progress = { value / STAT_MAX.toFloat() },
+            progress = { line.value / STAT_MAX.toFloat() },
             modifier = Modifier.fillMaxWidth(),
         )
     }
@@ -163,10 +199,11 @@ private fun StatItem(name: String, value: Int, modifier: Modifier = Modifier) {
 private fun GameScreenPreview() {
     MaterialTheme {
         GameScreen(
-            event = SAMPLE_EVENTS[2],
-            stats = STAT_NAMES.associateWith { STAT_START },
+            event = FALLBACK_EVENTS[2],
+            stats = Stats(),
             onChoose = {},
             onShowEndingForTest = {},
+            usingFallbackEvents = true,
         )
     }
 }

@@ -5,6 +5,7 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavHostController
@@ -30,7 +31,9 @@ object Routes {
 @Composable
 fun LifeGameApp(
     navController: NavHostController = rememberNavController(),
-    gameViewModel: LifeGameViewModel = viewModel(),
+    gameViewModel: LifeGameViewModel = viewModel(
+        factory = LifeGameViewModel.factory(LocalContext.current),
+    ),
 ) {
     MaterialTheme {
         Surface(modifier = Modifier.fillMaxSize()) {
@@ -55,29 +58,37 @@ fun LifeGameApp(
                     )
                 }
                 composable(Routes.GAME) {
-                    GameScreen(
-                        event = gameViewModel.currentEvent,
-                        stats = state.stats,
-                        onChoose = { choice ->
-                            if (gameViewModel.choose(choice)) {
-                                navController.navigateOnce(Routes.CHOICE_RESULT) {
-                                    popUpTo(Routes.GAME) { inclusive = true }
+                    val event = state.currentEvent
+                    val progress = state.progress
+                    if (event != null && progress != null) {
+                        GameScreen(
+                            event = event,
+                            stats = progress.stats,
+                            usingFallbackEvents = state.usingFallbackEvents,
+                            onChoose = { choice ->
+                                if (gameViewModel.choose(choice)) {
+                                    navController.navigateOnce(Routes.CHOICE_RESULT) {
+                                        popUpTo(Routes.GAME) { inclusive = true }
+                                    }
                                 }
-                            }
-                        },
-                        onShowEndingForTest = {
-                            gameViewModel.finish()
-                            navController.navigateOnce(Routes.ENDING) {
-                                popUpTo(Routes.START)
-                            }
-                        },
-                    )
+                            },
+                            onShowEndingForTest = {
+                                gameViewModel.finish()
+                                navController.navigateOnce(Routes.ENDING) {
+                                    popUpTo(Routes.START)
+                                }
+                            },
+                        )
+                    }
                 }
                 composable(Routes.CHOICE_RESULT) {
-                    val result = state.lastResult
-                    if (result != null) {
+                    val choice = state.lastChoice
+                    if (choice != null) {
                         ChoiceResultScreen(
-                            result = result,
+                            choiceLabel = choice.label,
+                            resultText = state.lastResultText,
+                            changes = state.lastChanges,
+                            isLastEvent = state.isLastEvent,
                             onNext = {
                                 val finished = gameViewModel.proceed()
                                 navController.navigateOnce(if (finished) Routes.ENDING else Routes.GAME) {
@@ -89,11 +100,12 @@ fun LifeGameApp(
                 }
                 composable(Routes.ENDING) {
                     val ending = state.ending
-                    if (ending != null) {
+                    val progress = state.progress
+                    if (ending != null && progress != null) {
                         EndingScreen(
                             ending = ending,
-                            stats = state.stats,
-                            choiceHistory = state.choiceHistory,
+                            stats = progress.stats,
+                            choiceHistory = progress.choiceHistory,
                             onRestart = {
                                 gameViewModel.reset()
                                 navController.popBackStack(Routes.START, inclusive = false)

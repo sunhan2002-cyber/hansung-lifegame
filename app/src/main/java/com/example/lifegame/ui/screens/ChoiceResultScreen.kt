@@ -18,12 +18,14 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.example.lifegame.ui.SAMPLE_EVENTS
-import com.example.lifegame.ui.UiChoiceResult
+import com.example.lifegame.ui.StatChange
 
 @Composable
 fun ChoiceResultScreen(
-    result: UiChoiceResult,
+    choiceLabel: String,
+    resultText: String,
+    changes: List<StatChange>,
+    isLastEvent: Boolean,
     onNext: () -> Unit,
     modifier: Modifier = Modifier,
 ) {
@@ -41,28 +43,37 @@ fun ChoiceResultScreen(
             Text("선택 결과", style = MaterialTheme.typography.headlineMedium)
             Spacer(Modifier.height(8.dp))
             Text(
-                text = "${result.choice.label}. ${result.choice.text}",
+                text = choiceLabel,
                 style = MaterialTheme.typography.titleMedium,
                 color = MaterialTheme.colorScheme.primary,
             )
             Spacer(Modifier.height(16.dp))
-            Text(result.choice.resultText, style = MaterialTheme.typography.bodyLarge)
+            Text(resultText, style = MaterialTheme.typography.bodyLarge)
             Spacer(Modifier.height(24.dp))
 
             Card(modifier = Modifier.fillMaxWidth()) {
                 Column(Modifier.padding(16.dp)) {
                     Text("변화한 지표", style = MaterialTheme.typography.titleSmall)
                     Spacer(Modifier.height(8.dp))
-                    if (result.appliedChanges.isEmpty()) {
-                        Text("변화 없음", style = MaterialTheme.typography.bodyMedium)
+                    // 변화량이 0인 지표는 아예 넘어오지 않는다.
+                    if (changes.isEmpty()) {
+                        Text("변화한 지표가 없습니다.", style = MaterialTheme.typography.bodyMedium)
                     }
-                    result.appliedChanges.forEach { (name, delta) ->
+                    changes.forEach { change ->
                         Row(Modifier.padding(vertical = 4.dp)) {
-                            Text(name, style = MaterialTheme.typography.bodyLarge, modifier = Modifier.weight(1f))
                             Text(
-                                text = if (delta > 0) "+$delta" else "$delta",
+                                text = change.label,
                                 style = MaterialTheme.typography.bodyLarge,
-                                color = if (delta >= 0) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.error,
+                                modifier = Modifier.weight(1f),
+                            )
+                            Text(
+                                text = if (change.delta > 0) "+${change.delta}" else "${change.delta}",
+                                style = MaterialTheme.typography.bodyLarge,
+                                color = if (change.delta > 0) {
+                                    MaterialTheme.colorScheme.primary
+                                } else {
+                                    MaterialTheme.colorScheme.error
+                                },
                             )
                         }
                     }
@@ -78,7 +89,7 @@ fun ChoiceResultScreen(
                 .height(56.dp),
         ) {
             Text(
-                text = if (result.isLastEvent) "결말 보기" else "다음 사건",
+                text = if (isLastEvent) "결말 보기" else "다음 사건",
                 style = MaterialTheme.typography.titleMedium,
             )
         }
@@ -88,10 +99,12 @@ fun ChoiceResultScreen(
 @Preview(showBackground = true)
 @Composable
 private fun ChoiceResultScreenPreview() {
-    val choice = SAMPLE_EVENTS[0].choiceA
     MaterialTheme {
         ChoiceResultScreen(
-            result = UiChoiceResult(SAMPLE_EVENTS[0].id, choice, choice.statChanges, isLastEvent = false),
+            choiceLabel = "A. 강아지를 향해 용감하게 걸어간다",
+            resultText = "세 걸음 만에 넘어졌지만 강아지가 얼굴을 핥아 주었다.",
+            changes = listOf(StatChange("운동능력", 5), StatChange("행복", 3)),
+            isLastEvent = false,
             onNext = {},
         )
     }
