@@ -17,6 +17,7 @@ import com.example.lifegame.ui.screens.ChoiceResultScreen
 import com.example.lifegame.ui.screens.EndingScreen
 import com.example.lifegame.ui.screens.GameScreen
 import com.example.lifegame.ui.screens.StartScreen
+import com.example.lifegame.ui.theme.LifeGameTheme
 
 object Routes {
     const val START = "start"
@@ -32,7 +33,7 @@ fun LifeGameApp(
     navController: NavHostController = rememberNavController(),
     gameViewModel: LifeGameViewModel = viewModel(),
 ) {
-    MaterialTheme {
+    LifeGameTheme {
         Surface(modifier = Modifier.fillMaxSize()) {
             val state = gameViewModel.uiState
 
