@@ -1,6 +1,7 @@
 package com.example.lifegame.ui.components
 
-
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.heightIn
@@ -36,5 +37,29 @@ fun ChoiceButton(
             style = MaterialTheme.typography.labelLarge,
             textAlign = TextAlign.Start
         )
+    }
+}
+
+/**
+ * 전달받은 선택지만 순서대로 표시한다. 빈 선택지 자리는 만들지 않는다.
+ * 화면 하단 고정과 위쪽 콘텐츠의 스크롤은 호출하는 화면에서 배치한다.
+ */
+@Composable
+fun <T> ChoiceButtonGroup(
+    choices: List<T>,
+    choiceText: (T) -> String,
+    onChoose: (T) -> Unit,
+    modifier: Modifier = Modifier,
+) {
+    Column(
+        modifier = modifier.fillMaxWidth(),
+        verticalArrangement = Arrangement.spacedBy(10.dp),
+    ) {
+        choices.forEach { choice ->
+            ChoiceButton(
+                text = choiceText(choice),
+                onClick = { onChoose(choice) },
+            )
+        }
     }
 }
