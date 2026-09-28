@@ -1,0 +1,44 @@
+[
+  {
+    "starterId": "starter_loud",
+    "name": "우렁찬 아기",
+    "description": "신생아실에서 목청이 제일 컸던 아기. 어디서든 존재감이 있다.",
+    "imageId": "img_baby_loud_001",
+    "startStatDelta": {
+      "운동능력": 5,
+      "사회성": 3,
+      "지력": -3
+    },
+    "startFlags": [
+      "starter_loud"
+    ]
+  },
+  {
+    "starterId": "starter_curious",
+    "name": "골똘한 아기",
+    "description": "뭐든 뜯어보고 싶은 아기. 집 안 리모컨이 온전히 남아나지 않는다.",
+    "imageId": "img_baby_curious_001",
+    "startStatDelta": {
+      "지력": 5,
+      "운": 3,
+      "운동능력": -3
+    },
+    "startFlags": [
+      "starter_curious"
+    ]
+  },
+  {
+    "starterId": "starter_quirky",
+    "name": "엉뚱한 아기",
+    "description": "예측이 안 되는 아기. 이상하게 황당한 일이 자주 생긴다.",
+    "imageId": "img_baby_quirky_001",
+    "startStatDelta": {
+      "행복": 5,
+      "운": 3,
+      "사회성": -3
+    },
+    "startFlags": [
+      "starter_quirky"
+    ]
+  }
+]
