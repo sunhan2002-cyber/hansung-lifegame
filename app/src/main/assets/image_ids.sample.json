@@ -1734,5 +1734,125 @@
     "description": "성인기 '공원 벤치의 장기 고수' 사건을 표현하는 이미지",
     "fileName": "img_special_janggi_001.png",
     "fallbackText": "이미지 준비 전에는 '공원 벤치의 장기 고수' 상황 이미지 영역으로 대체 표시"
+  },
+  {
+    "imageId": "img_infant_remote_001",
+    "usage": "event",
+    "stage": "유아기",
+    "description": "유아기 '리모컨의 비밀' 사건을 표현하는 이미지",
+    "fileName": "img_infant_remote_001.png",
+    "fallbackText": "이미지 준비 전에는 '리모컨의 비밀' 상황 이미지 영역으로 대체 표시"
+  },
+  {
+    "imageId": "img_infant_loud_cry_001",
+    "usage": "event",
+    "stage": "유아기",
+    "description": "유아기 '신생아실 최고 목청' 사건을 표현하는 이미지",
+    "fileName": "img_infant_loud_cry_001.png",
+    "fallbackText": "이미지 준비 전에는 '신생아실 최고 목청' 상황 이미지 영역으로 대체 표시"
+  },
+  {
+    "imageId": "img_infant_upside_down_001",
+    "usage": "event",
+    "stage": "유아기",
+    "description": "유아기 '거꾸로가 좋아' 사건을 표현하는 이미지",
+    "fileName": "img_infant_upside_down_001.png",
+    "fallbackText": "이미지 준비 전에는 '거꾸로가 좋아' 상황 이미지 영역으로 대체 표시"
+  },
+  {
+    "imageId": "img_child_dream_001",
+    "usage": "event",
+    "stage": "아동기",
+    "description": "아동기 '장래 희망 발표' 사건을 표현하는 이미지",
+    "fileName": "img_child_dream_001.png",
+    "fallbackText": "이미지 준비 전에는 '장래 희망 발표' 상황 이미지 영역으로 대체 표시"
+  },
+  {
+    "imageId": "img_child_cheer_leader_001",
+    "usage": "event",
+    "stage": "아동기",
+    "description": "아동기 '응원단장 스카우트' 사건을 표현하는 이미지",
+    "fileName": "img_child_cheer_leader_001.png",
+    "fallbackText": "이미지 준비 전에는 '응원단장 스카우트' 상황 이미지 영역으로 대체 표시"
+  },
+  {
+    "imageId": "img_child_clock_001",
+    "usage": "event",
+    "stage": "아동기",
+    "description": "아동기 '고장 난 시계 해부' 사건을 표현하는 이미지",
+    "fileName": "img_child_clock_001.png",
+    "fallbackText": "이미지 준비 전에는 '고장 난 시계 해부' 상황 이미지 영역으로 대체 표시"
+  },
+  {
+    "imageId": "img_teen_backwards_uniform_001",
+    "usage": "event",
+    "stage": "청소년기",
+    "description": "청소년기 '거꾸로 입은 교복' 사건을 표현하는 이미지",
+    "fileName": "img_teen_backwards_uniform_001.png",
+    "fallbackText": "이미지 준비 전에는 '거꾸로 입은 교복' 상황 이미지 영역으로 대체 표시"
+  },
+  {
+    "imageId": "img_teen_broadcast_001",
+    "usage": "event",
+    "stage": "청소년기",
+    "description": "청소년기 '점심 방송 사고' 사건을 표현하는 이미지",
+    "fileName": "img_teen_broadcast_001.png",
+    "fallbackText": "이미지 준비 전에는 '점심 방송 사고' 상황 이미지 영역으로 대체 표시"
+  },
+  {
+    "imageId": "img_teen_wrong_answer_001",
+    "usage": "event",
+    "stage": "청소년기",
+    "description": "청소년기 '선생님의 오답' 사건을 표현하는 이미지",
+    "fileName": "img_teen_wrong_answer_001.png",
+    "fallbackText": "이미지 준비 전에는 '선생님의 오답' 상황 이미지 영역으로 대체 표시"
+  },
+  {
+    "imageId": "img_adult_patent_001",
+    "usage": "event",
+    "stage": "성인기",
+    "description": "성인기 '특허가 될지도 모르는 아이디어' 사건을 표현하는 이미지",
+    "fileName": "img_adult_patent_001.png",
+    "fallbackText": "이미지 준비 전에는 '특허가 될지도 모르는 아이디어' 상황 이미지 영역으로 대체 표시"
+  },
+  {
+    "imageId": "img_adult_leave_form_001",
+    "usage": "event",
+    "stage": "성인기",
+    "description": "성인기 '휴가 사유란' 사건을 표현하는 이미지",
+    "fileName": "img_adult_leave_form_001.png",
+    "fallbackText": "이미지 준비 전에는 '휴가 사유란' 상황 이미지 영역으로 대체 표시"
+  },
+  {
+    "imageId": "img_adult_wedding_mc_001",
+    "usage": "event",
+    "stage": "성인기",
+    "description": "성인기 '결혼식 사회 부탁' 사건을 표현하는 이미지",
+    "fileName": "img_adult_wedding_mc_001.png",
+    "fallbackText": "이미지 준비 전에는 '결혼식 사회 부탁' 상황 이미지 영역으로 대체 표시"
+  },
+  {
+    "imageId": "img_baby_loud_001",
+    "usage": "character",
+    "stage": "유아기",
+    "description": "캐릭터 선택 화면의 '우렁찬 아기' 기본 아기 이미지",
+    "fileName": "img_baby_loud_001.png",
+    "fallbackText": "이미지 준비 전에는 '우렁찬 아기' 이름과 성향 설명으로 대체 표시"
+  },
+  {
+    "imageId": "img_baby_curious_001",
+    "usage": "character",
+    "stage": "유아기",
+    "description": "캐릭터 선택 화면의 '골똘한 아기' 기본 아기 이미지",
+    "fileName": "img_baby_curious_001.png",
+    "fallbackText": "이미지 준비 전에는 '골똘한 아기' 이름과 성향 설명으로 대체 표시"
+  },
+  {
+    "imageId": "img_baby_quirky_001",
+    "usage": "character",
+    "stage": "유아기",
+    "description": "캐릭터 선택 화면의 '엉뚱한 아기' 기본 아기 이미지",
+    "fileName": "img_baby_quirky_001.png",
+    "fallbackText": "이미지 준비 전에는 '엉뚱한 아기' 이름과 성향 설명으로 대체 표시"
   }
 ]
