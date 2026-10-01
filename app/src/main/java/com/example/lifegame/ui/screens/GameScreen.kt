@@ -9,17 +9,13 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.safeDrawingPadding
-import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.rememberScrollState
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.clip
 import androidx.compose.ui.unit.dp
 import com.example.lifegame.domain.model.Choice
 import com.example.lifegame.domain.model.EventType
@@ -41,11 +37,12 @@ fun GameScreen(
     modifier: Modifier = Modifier,
 ) {
     val colors = MaterialTheme.colorScheme
+    val isSpecial = event.type == EventType.SPECIAL
 
     Column(
         modifier = modifier
             .fillMaxSize()
-            .background(if (event.type == EventType.SPECIAL) colors.errorContainer.copy(alpha = 0.35f) else colors.surface)
+            .background(if (isSpecial) colors.errorContainer.copy(alpha = 0.35f) else colors.surface)
             .safeDrawingPadding()
             .padding(horizontal = 20.dp, vertical = 16.dp),
     ) {
@@ -54,31 +51,19 @@ fun GameScreen(
                 .weight(1f)
                 .verticalScroll(rememberScrollState()),
         ) {
-            Row(verticalAlignment = Alignment.CenterVertically) {
-                Text(event.stage.displayName(), style = MaterialTheme.typography.titleMedium, color = colors.primary)
-                if (event.type == EventType.SPECIAL) {
-                    Spacer(Modifier.width(8.dp))
-                    Text(
-                        text = "돌발 이벤트",
-                        style = MaterialTheme.typography.labelLarge,
-                        color = colors.onError,
-                        modifier = Modifier
-                            .clip(RoundedCornerShape(50))
-                            .background(colors.error)
-                            .padding(horizontal = 10.dp, vertical = 4.dp),
-                    )
-                }
-            }
-            Spacer(Modifier.height(12.dp))
-            EventCard()
-            Spacer(Modifier.height(16.dp))
-            Text(event.text, style = MaterialTheme.typography.bodyLarge)
+            EventCard(
+                title = event.title,
+                description = event.text,
+                imageId = event.imageId,
+                stage = event.stage.displayName(),
+                isSpecial = isSpecial,
+            )
             Spacer(Modifier.height(20.dp))
             StatGrid(stats)
 
             TextButton(
                 onClick = onShowEndingForTest,
-                modifier = Modifier.align(Alignment.End),
+                modifier = Modifier.align(androidx.compose.ui.Alignment.End),
             ) {
                 Text("결말 화면 확인 (임시)")
             }
@@ -88,12 +73,14 @@ fun GameScreen(
         event.choices.forEachIndexed { index, choice ->
             if (index > 0) Spacer(Modifier.height(10.dp))
             ChoiceButton(
-                text = "${choice.choiceId}. ${choice.label}",
+                text = "${choiceLabel(index)}. ${choice.label}",
                 onClick = { onChoose(choice) },
             )
         }
     }
 }
+
+private fun choiceLabel(index: Int): String = ('A' + index).toString()
 
 @Composable
 fun StatGrid(stats: Stats, modifier: Modifier = Modifier) {
