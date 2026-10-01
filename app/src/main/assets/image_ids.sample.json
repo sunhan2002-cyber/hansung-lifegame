@@ -1854,5 +1854,117 @@
     "description": "캐릭터 선택 화면의 '엉뚱한 아기' 기본 아기 이미지",
     "fileName": "img_baby_quirky_001.png",
     "fallbackText": "이미지 준비 전에는 '엉뚱한 아기' 이름과 성향 설명으로 대체 표시"
+  },
+  {
+    "imageId": "img_adult_reading_glasses_001",
+    "usage": "event",
+    "stage": "성인기",
+    "description": "성인기 '팔이 짧아졌다' 사건을 표현하는 이미지",
+    "fileName": "img_adult_reading_glasses_001.png",
+    "fallbackText": "이미지 준비 전에는 '팔이 짧아졌다' 상황 이미지 영역으로 대체 표시"
+  },
+  {
+    "imageId": "img_adult_meeting_nap_001",
+    "usage": "event",
+    "stage": "성인기",
+    "description": "성인기 '회의 중 꿀잠' 사건을 표현하는 이미지",
+    "fileName": "img_adult_meeting_nap_001.png",
+    "fallbackText": "이미지 준비 전에는 '회의 중 꿀잠' 상황 이미지 영역으로 대체 표시"
+  },
+  {
+    "imageId": "img_adult_teen_child_001",
+    "usage": "event",
+    "stage": "성인기",
+    "description": "성인기 '닫힌 방문' 사건을 표현하는 이미지",
+    "fileName": "img_adult_teen_child_001.png",
+    "fallbackText": "이미지 준비 전에는 '닫힌 방문' 상황 이미지 영역으로 대체 표시"
+  },
+  {
+    "imageId": "img_adult_early_retire_001",
+    "usage": "event",
+    "stage": "성인기",
+    "description": "성인기 '희망퇴직 공고' 사건을 표현하는 이미지",
+    "fileName": "img_adult_early_retire_001.png",
+    "fallbackText": "이미지 준비 전에는 '희망퇴직 공고' 상황 이미지 영역으로 대체 표시"
+  },
+  {
+    "imageId": "img_adult_second_career_001",
+    "usage": "event",
+    "stage": "성인기",
+    "description": "성인기 '퇴직하면 치킨집?' 사건을 표현하는 이미지",
+    "fileName": "img_adult_second_career_001.png",
+    "fallbackText": "이미지 준비 전에는 '퇴직하면 치킨집?' 상황 이미지 영역으로 대체 표시"
+  },
+  {
+    "imageId": "img_adult_health_recheck_001",
+    "usage": "event",
+    "stage": "성인기",
+    "description": "성인기 '재검 통지서' 사건을 표현하는 이미지",
+    "fileName": "img_adult_health_recheck_001.png",
+    "fallbackText": "이미지 준비 전에는 '재검 통지서' 상황 이미지 영역으로 대체 표시"
+  },
+  {
+    "imageId": "img_adult_kiosk_001",
+    "usage": "event",
+    "stage": "성인기",
+    "description": "성인기 '키오스크 앞에서' 사건을 표현하는 이미지",
+    "fileName": "img_adult_kiosk_001.png",
+    "fallbackText": "이미지 준비 전에는 '키오스크 앞에서' 상황 이미지 영역으로 대체 표시"
+  },
+  {
+    "imageId": "img_adult_fandom_001",
+    "usage": "event",
+    "stage": "성인기",
+    "description": "성인기 '늦게 배운 덕질' 사건을 표현하는 이미지",
+    "fileName": "img_adult_fandom_001.png",
+    "fallbackText": "이미지 준비 전에는 '늦게 배운 덕질' 상황 이미지 영역으로 대체 표시"
+  },
+  {
+    "imageId": "img_adult_marathon_001",
+    "usage": "event",
+    "stage": "성인기",
+    "description": "성인기 '생애 첫 10km' 사건을 표현하는 이미지",
+    "fileName": "img_adult_marathon_001.png",
+    "fallbackText": "이미지 준비 전에는 '생애 첫 10km' 상황 이미지 영역으로 대체 표시"
+  },
+  {
+    "imageId": "img_adult_lifelong_friend_001",
+    "usage": "event",
+    "stage": "성인기",
+    "description": "성인기 '50년 지기' 사건을 표현하는 이미지",
+    "fileName": "img_adult_lifelong_friend_001.png",
+    "fallbackText": "이미지 준비 전에는 '50년 지기' 상황 이미지 영역으로 대체 표시"
+  },
+  {
+    "imageId": "img_adult_empty_nest_001",
+    "usage": "event",
+    "stage": "성인기",
+    "description": "성인기 '빈 방' 사건을 표현하는 이미지",
+    "fileName": "img_adult_empty_nest_001.png",
+    "fallbackText": "이미지 준비 전에는 '빈 방' 상황 이미지 영역으로 대체 표시"
+  },
+  {
+    "imageId": "img_adult_parents_spring_001",
+    "usage": "event",
+    "stage": "성인기",
+    "description": "성인기 '부모님의 봄' 사건을 표현하는 이미지",
+    "fileName": "img_adult_parents_spring_001.png",
+    "fallbackText": "이미지 준비 전에는 '부모님의 봄' 상황 이미지 영역으로 대체 표시"
+  },
+  {
+    "imageId": "img_adult_fiftieth_birthday_001",
+    "usage": "event",
+    "stage": "성인기",
+    "description": "성인기 '쉰 번째 생일' 사건을 표현하는 이미지",
+    "fileName": "img_adult_fiftieth_birthday_001.png",
+    "fallbackText": "이미지 준비 전에는 '쉰 번째 생일' 상황 이미지 영역으로 대체 표시"
+  },
+  {
+    "imageId": "img_special_boar_001",
+    "usage": "event",
+    "stage": "성인기",
+    "description": "성인기 '등산로의 멧돼지' 사건을 표현하는 이미지",
+    "fileName": "img_special_boar_001.png",
+    "fallbackText": "이미지 준비 전에는 '등산로의 멧돼지' 상황 이미지 영역으로 대체 표시"
   }
 ]

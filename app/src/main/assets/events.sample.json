@@ -7244,7 +7244,7 @@
     "stage": "ADULT",
     "type": "NORMAL",
     "isFallback": false,
-    "isMilestone": true,
+    "isMilestone": false,
     "title": "마흔 번째 생일",
     "text": "가족: \"{nameCall}, 소원 빌어!\" 초 40개는 무리라 큰 초 4개로 타협했다. 촛불 너머로 지나온 시간이 스친다.",
     "imageId": "img_adult_birthday_001",
@@ -7301,6 +7301,712 @@
     "eventId": "adult_045",
     "stage": "ADULT",
     "type": "NORMAL",
+    "isFallback": false,
+    "isMilestone": false,
+    "title": "팔이 짧아졌다",
+    "text": "식당 메뉴판 글씨가 흐릿하다. 메뉴판을 점점 멀리 들어 본다. 팔이 모자라다.",
+    "imageId": "img_adult_reading_glasses_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [],
+      "blockedFlags": []
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "돋보기를 맞춘다.",
+        "statDelta": {
+          "지력": 2,
+          "행복": -2
+        },
+        "resultText": "안경점 사장님이 \"다들 이 나이 되면 오세요\" 하며 웃었다. 세상이 다시 선명해졌다.",
+        "addFlags": [
+          "reading_glasses"
+        ]
+      },
+      {
+        "choiceId": "B",
+        "label": "직원에게 추천 메뉴를 묻는다.",
+        "statDelta": {
+          "사회성": 2,
+          "운": 1,
+          "경제력": -1
+        },
+        "resultText": "직원이 제일 비싼 메뉴를 추천했다. 맛은 있었다.",
+        "addFlags": []
+      },
+      {
+        "choiceId": "C",
+        "label": "휴대폰으로 찍어서 확대한다.",
+        "statDelta": {
+          "지력": 1,
+          "행복": 1,
+          "건강": -1
+        },
+        "resultText": "확대는 했는데 휴대폰 글씨도 안 보였다. 결국 둘 다 확대했다.",
+        "addFlags": []
+      }
+    ],
+    "priority": 0
+  },
+  {
+    "eventId": "adult_046",
+    "stage": "ADULT",
+    "type": "NORMAL",
+    "isFallback": false,
+    "isMilestone": false,
+    "title": "회의 중 꿀잠",
+    "text": "오후 3시 임원 회의. 히터가 너무 따뜻하다. 꿈속에서 누가 부른다. \"…{name} 님. {name} 님!!\"",
+    "imageId": "img_adult_meeting_nap_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [
+        "class_nap_mom"
+      ],
+      "blockedFlags": []
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "\"엄마!\"",
+        "statDelta": {
+          "행복": 1,
+          "사회성": -3
+        },
+        "resultText": "회의실이 3초 동안 조용했다. 사장님: \"…그래, 엄마다. 보고서 32쪽 펴.\" 초등학교 때 들은 말을 40년 만에 또 들었다.",
+        "addFlags": []
+      },
+      {
+        "choiceId": "B",
+        "label": "박수를 치며 벌떡 일어난다.",
+        "statDelta": {
+          "사회성": 2,
+          "운": 1,
+          "지력": -1
+        },
+        "resultText": "마침 사장님 발표가 끝난 참이었다. 사장님이 감동한 얼굴로 악수를 청했다.",
+        "addFlags": []
+      },
+      {
+        "choiceId": "C",
+        "label": "침을 닦으며 \"저 안 잤습니다.\"",
+        "statDelta": {
+          "운": 1,
+          "행복": 1,
+          "사회성": -2
+        },
+        "resultText": "사장님이 말없이 손거울을 건넸다. 볼에 보고서 쪽수가 찍혀 있었다.",
+        "addFlags": []
+      }
+    ],
+    "priority": 0
+  },
+  {
+    "eventId": "adult_047",
+    "stage": "ADULT",
+    "type": "NORMAL",
+    "isFallback": false,
+    "isMilestone": false,
+    "title": "닫힌 방문",
+    "text": "아이 방문이 쾅 닫혔다. 문 너머로 들린다. \"내 방 들어오지 마!\" 30년 전 내가 했던 말 그대로다.",
+    "imageId": "img_adult_teen_child_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [
+        "married"
+      ],
+      "blockedFlags": []
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "문 앞에 간식만 두고 간다.",
+        "statDelta": {
+          "사회성": 2,
+          "행복": -1
+        },
+        "resultText": "한 시간 뒤 접시가 비어 있었다. 접시 위에 \"고마워\"라고 적힌 포스트잇이 붙어 있었다.",
+        "addFlags": []
+      },
+      {
+        "choiceId": "B",
+        "label": "문을 두드리고 대화를 청한다.",
+        "statDelta": {
+          "사회성": 1,
+          "지력": 1,
+          "행복": -2
+        },
+        "resultText": "대화는 3분 만에 끝났다. 그래도 문은 조금 열려 있었다.",
+        "addFlags": []
+      },
+      {
+        "choiceId": "C",
+        "label": "내 부모님께 전화해서 사과한다.",
+        "statDelta": {
+          "행복": 2,
+          "사회성": 1,
+          "운": -1
+        },
+        "resultText": "엄마가 전화를 받자마자 웃었다. \"이제야 알겠지?\" 30년 만의 사과였다.",
+        "addFlags": [
+          "family_bond"
+        ]
+      }
+    ],
+    "priority": 0
+  },
+  {
+    "eventId": "adult_048",
+    "stage": "ADULT",
+    "type": "NORMAL",
+    "isFallback": false,
+    "isMilestone": false,
+    "title": "희망퇴직 공고",
+    "text": "사내 게시판에 '희망퇴직 신청 안내'가 올라왔다. 위로금이 생각보다 많다. 옆자리 동기는 벌써 신청서를 뽑았다.",
+    "imageId": "img_adult_early_retire_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [],
+      "blockedFlags": []
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "신청한다.",
+        "statDelta": {
+          "경제력": 3,
+          "행복": 1,
+          "사회성": -2
+        },
+        "resultText": "마지막 출근 날, 후배들이 화분을 줬다. 다음 날 아침 9시, 갈 곳이 없다는 게 이상하게 좋았다.",
+        "addFlags": [
+          "early_retire"
+        ]
+      },
+      {
+        "choiceId": "B",
+        "label": "버틴다.",
+        "statDelta": {
+          "경제력": 1,
+          "건강": -2,
+          "행복": -1
+        },
+        "resultText": "남았다. 사무실이 반쯤 비었다. 대신 창가 자리를 차지했다.",
+        "addFlags": []
+      },
+      {
+        "choiceId": "C",
+        "label": "신청서로 종이비행기를 접는다.",
+        "statDelta": {
+          "행복": 1,
+          "운": 1,
+          "경제력": -1
+        },
+        "resultText": "종이비행기가 인사팀장 책상에 착륙했다. 신청한 걸로 처리될 뻔했다.",
+        "addFlags": []
+      }
+    ],
+    "priority": 0
+  },
+  {
+    "eventId": "adult_049",
+    "stage": "ADULT",
+    "type": "NORMAL",
+    "isFallback": false,
+    "isMilestone": false,
+    "title": "퇴직하면 치킨집?",
+    "text": "퇴직 한 달째. 친구 단톡방에 질문이 올라왔다. \"{nameCall}, 치킨집 차리는 거지?\"",
+    "imageId": "img_adult_second_career_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [
+        "early_retire"
+      ],
+      "blockedFlags": []
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "치킨집을 차린다.",
+        "statDelta": {
+          "사회성": 2,
+          "운": 1,
+          "경제력": -3
+        },
+        "resultText": "개업 첫날 줄이 길었다. 전부 친구들이었다. 둘째 주부터는 모르는 손님도 왔다.",
+        "addFlags": [
+          "chicken_shop"
+        ]
+      },
+      {
+        "choiceId": "B",
+        "label": "동네 카페를 연다.",
+        "statDelta": {
+          "행복": 3,
+          "경제력": -4
+        },
+        "resultText": "손님은 하루 열 명. 그중 여덟 명이 동네 단골이 됐다.",
+        "addFlags": [
+          "small_cafe"
+        ]
+      },
+      {
+        "choiceId": "C",
+        "label": "1년 동안 아무것도 안 하고 쉰다.",
+        "statDelta": {
+          "건강": 3,
+          "행복": 1,
+          "경제력": -2
+        },
+        "resultText": "등산, 낮잠, 독서. 인생에서 처음으로 아무것도 안 해 봤다. 생각보다 할 게 많았다.",
+        "addFlags": []
+      }
+    ],
+    "priority": 0
+  },
+  {
+    "eventId": "adult_050",
+    "stage": "ADULT",
+    "type": "NORMAL",
+    "isFallback": false,
+    "isMilestone": false,
+    "title": "재검 통지서",
+    "text": "건강검진 결과지에 빨간 글씨가 있다. '위 내시경 재검 필요.' 의사: \"큰일은 아닐 수도 있어요. 그래도 꼭 오세요.\"",
+    "imageId": "img_adult_health_recheck_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [],
+      "blockedFlags": []
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "다음 날 바로 병원에 간다.",
+        "statDelta": {
+          "건강": 3,
+          "경제력": -2
+        },
+        "resultText": "작은 용종이었고 그 자리에서 떼어 냈다. 의사가 \"빨리 오셔서 다행\"이라고 했다.",
+        "addFlags": [
+          "health_scare"
+        ]
+      },
+      {
+        "choiceId": "B",
+        "label": "바쁘다고 미룬다.",
+        "statDelta": {
+          "경제력": 1,
+          "건강": -4
+        },
+        "resultText": "석 달을 미뤘다. 재검 날 의사가 결과지를 한참 보더니 말했다. \"다음부턴 바로 오세요.\" 다행히 괜찮았다.",
+        "addFlags": [
+          "health_scare"
+        ]
+      },
+      {
+        "choiceId": "C",
+        "label": "그날부로 술을 끊겠다고 선언한다.",
+        "statDelta": {
+          "건강": 2,
+          "사회성": -2
+        },
+        "resultText": "가족 단톡방에 선언문을 올렸다. 3주째 지키는 중이다. 회식 때마다 사이다를 마신다.",
+        "addFlags": [
+          "health_scare"
+        ]
+      }
+    ],
+    "priority": 0
+  },
+  {
+    "eventId": "adult_051",
+    "stage": "ADULT",
+    "type": "NORMAL",
+    "isFallback": false,
+    "isMilestone": false,
+    "title": "키오스크 앞에서",
+    "text": "햄버거 가게 주문은 이제 키오스크뿐이다. 화면을 넘길 때마다 메뉴가 사라진다. 뒤에 학생들이 줄을 섰다.",
+    "imageId": "img_adult_kiosk_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [],
+      "blockedFlags": []
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "천천히 끝까지 해 본다.",
+        "statDelta": {
+          "지력": 1,
+          "행복": -1
+        },
+        "resultText": "8분 걸렸다. 세트 대신 단품 세 개가 나왔다. 그래도 혼자 해냈다.",
+        "addFlags": []
+      },
+      {
+        "choiceId": "B",
+        "label": "직원을 부른다.",
+        "statDelta": {
+          "사회성": 1,
+          "지력": -1
+        },
+        "resultText": "직원이 30초 만에 끝냈다. 뒤에서 누가 \"저도요…\"라고 작게 말했다.",
+        "addFlags": []
+      },
+      {
+        "choiceId": "C",
+        "label": "뒤에 선 학생에게 부탁한다.",
+        "statDelta": {
+          "사회성": 2,
+          "경제력": -1
+        },
+        "resultText": "학생이 내 메뉴까지 골라 줬다. 처음 먹어 보는 메뉴였는데 맛있었다. 학생 것까지 계산했다.",
+        "addFlags": []
+      }
+    ],
+    "priority": 0
+  },
+  {
+    "eventId": "adult_052",
+    "stage": "ADULT",
+    "type": "NORMAL",
+    "isFallback": false,
+    "isMilestone": false,
+    "title": "늦게 배운 덕질",
+    "text": "새벽에 우연히 본 아이돌 무대 영상을 세 번째 돌려 보는 중이다. 알고리즘이 나를 완전히 파악했다.",
+    "imageId": "img_adult_fandom_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [],
+      "blockedFlags": []
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "팬클럽에 가입한다.",
+        "statDelta": {
+          "행복": 3,
+          "경제력": -3
+        },
+        "resultText": "팬 사인회 줄에서 옆 사람이 물었다. \"자녀분 대신 오셨어요?\" 아니요, 제가 팬입니다.",
+        "addFlags": [
+          "fan_life"
+        ]
+      },
+      {
+        "choiceId": "B",
+        "label": "몰래 혼자 본다.",
+        "statDelta": {
+          "행복": 1,
+          "사회성": -1
+        },
+        "resultText": "가족 몰래 이어폰을 꼈다. 응원법을 혼자 다 외웠다.",
+        "addFlags": []
+      },
+      {
+        "choiceId": "C",
+        "label": "가족 단톡방에 응원봉 사진을 올린다.",
+        "statDelta": {
+          "사회성": 2,
+          "행복": 1,
+          "운": -1
+        },
+        "resultText": "반응은 'ㅋㅋㅋ' 37개. 다음 콘서트는 온 가족이 같이 가기로 했다.",
+        "addFlags": [
+          "fan_life"
+        ]
+      }
+    ],
+    "priority": 0
+  },
+  {
+    "eventId": "adult_053",
+    "stage": "ADULT",
+    "type": "NORMAL",
+    "isFallback": false,
+    "isMilestone": false,
+    "title": "생애 첫 10km",
+    "text": "동네 마라톤 대회 포스터. '10km 완주 시 메달 증정.' 마지막으로 뛰어 본 건 고등학교 체력장이다.",
+    "imageId": "img_adult_marathon_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [],
+      "blockedFlags": []
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "신청하고 연습한다.",
+        "statDelta": {
+          "건강": 3,
+          "운동능력": 2,
+          "행복": -1
+        },
+        "resultText": "석 달을 연습해서 1시간 12분에 완주했다. 메달을 현관에 걸었다.",
+        "addFlags": [
+          "marathon"
+        ]
+      },
+      {
+        "choiceId": "B",
+        "label": "물 나눠 주는 자원봉사를 한다.",
+        "statDelta": {
+          "사회성": 2,
+          "운동능력": -1
+        },
+        "resultText": "결승선 앞에서 물을 300컵 나눠 줬다. 내년엔 꼭 뛰겠다고 다짐했다.",
+        "addFlags": [
+          "volunteer"
+        ]
+      },
+      {
+        "choiceId": "C",
+        "label": "걷기 코스로 바꿔 신청한다.",
+        "statDelta": {
+          "건강": 1,
+          "행복": 1,
+          "운": -1
+        },
+        "resultText": "5km를 걸었다. 걷기 코스 기념품은 수건이었다. 메달보다 쓸모 있었다.",
+        "addFlags": []
+      }
+    ],
+    "priority": 0
+  },
+  {
+    "eventId": "adult_054",
+    "stage": "ADULT",
+    "type": "NORMAL",
+    "isFallback": false,
+    "isMilestone": false,
+    "title": "50년 지기",
+    "text": "지호에게서 사진이 왔다. 빨간 삽을 든 두 아기. \"{nameCall}, 우리 이거 찍은 지 딱 50년이다.\"",
+    "imageId": "img_adult_lifelong_friend_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [
+        "jiho_reunion"
+      ],
+      "blockedFlags": []
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "둘이 처음 만난 동네로 여행 간다.",
+        "statDelta": {
+          "행복": 3,
+          "사회성": 2,
+          "경제력": -2
+        },
+        "resultText": "놀이터 자리엔 주차장이 있었다. 둘이 주차장 한구석에 쪼그려 앉아 모래 대신 커피를 마셨다.",
+        "addFlags": [
+          "lifelong_friend"
+        ]
+      },
+      {
+        "choiceId": "B",
+        "label": "빨간 삽 두 개를 사서 보낸다.",
+        "statDelta": {
+          "사회성": 2,
+          "행복": 1,
+          "경제력": -1
+        },
+        "resultText": "지호가 답장으로 사진을 보냈다. 손녀와 모래밭에서 그 삽을 들고 있었다.",
+        "addFlags": [
+          "lifelong_friend"
+        ]
+      },
+      {
+        "choiceId": "C",
+        "label": "단톡방에 옛날 사진을 몽땅 올린다.",
+        "statDelta": {
+          "사회성": 1,
+          "행복": 2,
+          "건강": -1
+        },
+        "resultText": "밤새 사진이 400장 오갔다. 둘 다 다음 날 출근길에 졸았다.",
+        "addFlags": []
+      }
+    ],
+    "priority": 0
+  },
+  {
+    "eventId": "adult_055",
+    "stage": "ADULT",
+    "type": "NORMAL",
+    "isFallback": false,
+    "isMilestone": false,
+    "title": "빈 방",
+    "text": "아이가 이삿짐을 싸서 독립했다. 방에 남은 건 침대와 벽에 붙은 포스터 한 장. 집이 갑자기 넓다.",
+    "imageId": "img_adult_empty_nest_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [
+        "married"
+      ],
+      "blockedFlags": []
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "방을 그대로 둔다.",
+        "statDelta": {
+          "사회성": 2,
+          "행복": -1
+        },
+        "resultText": "청소만 하고 그대로 뒀다. 명절에 온 아이가 \"내 방 그대로네\" 하며 좋아했다.",
+        "addFlags": [
+          "empty_nest"
+        ]
+      },
+      {
+        "choiceId": "B",
+        "label": "내 취미방으로 바꾼다.",
+        "statDelta": {
+          "행복": 3,
+          "사회성": -1
+        },
+        "resultText": "첫 주말에 책상과 기타를 들였다. 명절에 온 아이가 \"내 방 어디 갔어?\"라며 서운해했다.",
+        "addFlags": [
+          "empty_nest"
+        ]
+      },
+      {
+        "choiceId": "C",
+        "label": "아이에게 영상 통화를 건다.",
+        "statDelta": {
+          "사회성": 2,
+          "행복": 1,
+          "건강": -1
+        },
+        "resultText": "이사 첫날 밤, 통화가 두 시간 이어졌다. 끊고 나서야 저녁을 안 먹은 게 생각났다.",
+        "addFlags": [
+          "empty_nest"
+        ]
+      }
+    ],
+    "priority": 0
+  },
+  {
+    "eventId": "adult_056",
+    "stage": "ADULT",
+    "type": "NORMAL",
+    "isFallback": false,
+    "isMilestone": false,
+    "title": "부모님의 봄",
+    "text": "아빠가 봄에 바다를 보고 싶다고 하셨다. 의사 선생님은 조용히 말했다. \"가실 수 있을 때 다녀오세요.\"",
+    "imageId": "img_adult_parents_spring_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [],
+      "blockedFlags": []
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "회사를 쉬고 같이 떠난다.",
+        "statDelta": {
+          "행복": 3,
+          "사회성": 2,
+          "경제력": -3
+        },
+        "resultText": "바닷가 식당에서 아빠가 내 접시에 생선 살을 발라 주셨다. 50년째 똑같았다.",
+        "addFlags": [
+          "family_bond",
+          "parents_last_trip"
+        ]
+      },
+      {
+        "choiceId": "B",
+        "label": "가족사진을 찍으러 간다.",
+        "statDelta": {
+          "사회성": 2,
+          "행복": 2,
+          "경제력": -2
+        },
+        "resultText": "사진사가 \"웃으세요\" 하자 아빠가 제일 먼저 웃었다. 그 사진은 지금 거실 한가운데 걸려 있다.",
+        "addFlags": [
+          "family_bond"
+        ]
+      },
+      {
+        "choiceId": "C",
+        "label": "아빠의 옛 친구들을 수소문해 모은다.",
+        "statDelta": {
+          "사회성": 3,
+          "지력": 1,
+          "건강": -2
+        },
+        "resultText": "40년 만에 모인 아빠 친구 다섯 명. 아빠가 그렇게 크게 웃는 걸 처음 봤다.",
+        "addFlags": [
+          "family_bond"
+        ]
+      }
+    ],
+    "priority": 0
+  },
+  {
+    "eventId": "adult_057",
+    "stage": "ADULT",
+    "type": "NORMAL",
+    "isFallback": false,
+    "isMilestone": true,
+    "title": "쉰 번째 생일",
+    "text": "케이크에 초 다섯 개. 하나에 10년씩이다. 가족: \"{nameCall}, 이번엔 소원 진짜 빌어!\" 지나온 50년이 촛불 너머로 흔들린다.",
+    "imageId": "img_adult_fiftieth_birthday_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [],
+      "blockedFlags": []
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "\"앞으로 하고 싶은 것 50개\"를 적는다.",
+        "statDelta": {
+          "행복": 3,
+          "지력": 2,
+          "운": 2,
+          "경제력": -2
+        },
+        "resultText": "1번은 '스카이다이빙', 50번은 '쉰한 번째 생일도 오늘처럼'. 다음 달, 1번을 해치웠다.",
+        "addFlags": [
+          "bucket_list"
+        ]
+      },
+      {
+        "choiceId": "B",
+        "label": "가족과 사진을 찍는다.",
+        "statDelta": {
+          "행복": 4,
+          "사회성": 2,
+          "건강": -1
+        },
+        "resultText": "타이머를 맞추고 뛰어가다 넘어졌다. 넘어진 채 찍힌 사진이 인생 사진이 됐다.",
+        "addFlags": [
+          "family_bond"
+        ]
+      },
+      {
+        "choiceId": "C",
+        "label": "소원: \"앞으로 50년 더!\"",
+        "statDelta": {
+          "건강": 3,
+          "행복": 2,
+          "경제력": -2
+        },
+        "resultText": "다음 날 헬스장 평생 회원권을 끊었다. 직원이 물었다. \"평생은… 몇 년으로 해 드릴까요?\"",
+        "addFlags": [
+          "second_half"
+        ]
+      }
+    ],
+    "priority": 0
+  },
+  {
+    "eventId": "adult_058",
+    "stage": "ADULT",
+    "type": "NORMAL",
     "isFallback": true,
     "isMilestone": false,
     "title": "퇴근길 편의점",
@@ -7346,7 +8052,7 @@
     "priority": 0
   },
   {
-    "eventId": "adult_046",
+    "eventId": "adult_059",
     "stage": "ADULT",
     "type": "NORMAL",
     "isFallback": true,
@@ -7926,6 +8632,61 @@
         "resultText": "3수 만에 졌다. 이제 매주 토요일마다 훈수를 들으러 간다.",
         "addFlags": [
           "janggi_mentor"
+        ]
+      }
+    ],
+    "priority": 0
+  },
+  {
+    "eventId": "special_011",
+    "stage": "ADULT",
+    "type": "SPECIAL",
+    "isFallback": false,
+    "isMilestone": false,
+    "title": "등산로의 멧돼지",
+    "text": "산 정상에서 김밥을 꺼냈다. 덤불이 흔들리더니 멧돼지가 나왔다. 멧돼지가 김밥을 보고 있다. 나도 김밥을 보고 있다.",
+    "imageId": "img_special_boar_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [],
+      "blockedFlags": []
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "김밥을 던지고 천천히 내려간다.",
+        "statDelta": {
+          "건강": -2,
+          "운": 2
+        },
+        "resultText": "멧돼지가 김밥을 먹는 동안 무사히 내려왔다. 등산 모임 단톡방에 '김밥 조공' 후기를 올렸다.",
+        "addFlags": [
+          "survived_special"
+        ]
+      },
+      {
+        "choiceId": "B",
+        "label": "눈을 피하지 않고 맞선다.",
+        "statDelta": {
+          "운동능력": 2,
+          "건강": -8
+        },
+        "resultText": "3초간 눈싸움. 멧돼지가 이겼다. 엉덩이에 이빨 자국을 남기고 김밥까지 가져갔다.",
+        "addFlags": [
+          "special_injury"
+        ]
+      },
+      {
+        "choiceId": "C",
+        "label": "김밥을 반으로 나눠 준다.",
+        "statDelta": {
+          "사회성": 2,
+          "운": 3,
+          "건강": -3
+        },
+        "resultText": "멧돼지가 옆에 앉아 김밥을 먹었다. 그 뒤로 정상에 오를 때마다 그 녀석이 기다리고 있다. 이름은 '김밥'이다.",
+        "addFlags": [
+          "survived_special"
         ]
       }
     ],
