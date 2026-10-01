@@ -146,6 +146,7 @@ data class GameProgress(
     val handledOccurrenceIds: Set<String> = emptySet(),
     val choiceHistory: List<ChoiceHistory> = emptyList(),
     val specialEventCount: Int = 0,
+    val stageEventCount: Int = 0,
 )
 
 data class ChoiceResult(

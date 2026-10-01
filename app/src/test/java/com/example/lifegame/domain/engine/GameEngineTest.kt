@@ -30,6 +30,16 @@ class GameEngineTest {
     }
 
     @Test
+    fun createInitialProgress_startsWithDefaultStatsAndInfantStage() {
+        val initial = engine.createInitialProgress("run-new")
+
+        assertEquals(Stats(), initial.stats)
+        assertEquals(LifeStage.INFANT, initial.stage)
+        assertEquals("run-new:pending:0", initial.currentEventOccurrenceId)
+        assertEquals(0, initial.stageEventCount)
+    }
+
+    @Test
     fun applyChoice_addsIntelligenceDelta() {
         val event = event(choice(statDelta = StatDelta(intelligence = 6)))
 
@@ -226,6 +236,77 @@ class GameEngineTest {
     }
 
     @Test
+    fun advanceAfterResult_excludesCompletedEvent() {
+        val completed = event(eventId = "child_done", priority = 100)
+        val remaining = event(eventId = "child_next", priority = 10)
+
+        val advanced = engine.advanceAfterResult(
+            progress(completedEventIds = setOf(completed.eventId)),
+            listOf(completed, remaining),
+        )
+
+        assertTrue(advanced.currentEventOccurrenceId.contains(remaining.eventId))
+        assertEquals(com.example.lifegame.domain.model.GameScreenState.EVENT, advanced.screenState)
+    }
+
+    @Test
+    fun advanceAfterResult_movesToEndingWhenNoCandidatesRemain() {
+        val advanced = engine.advanceAfterResult(
+            progress(stage = LifeStage.ADULT),
+            emptyList(),
+        )
+
+        assertEquals(com.example.lifegame.domain.model.GameScreenState.ENDING, advanced.screenState)
+    }
+
+    @Test
+    fun pickSpecialEvent_stopsAtPerRunLimit() {
+        val special = event(eventId = "special_001", type = EventType.SPECIAL)
+        val limited = GameEngine(rollPercent = { 1 }, maxSpecialEventsPerRun = 2)
+
+        val selected = limited.pickSpecialEvent(
+            progress(specialEventCount = 2),
+            listOf(special),
+            chancePercent = 100,
+        )
+
+        assertNull(selected)
+    }
+
+    @Test
+    fun pickSpecialEvent_usesHighestPriorityThenEventId() {
+        val eventB = event(eventId = "special_b", type = EventType.SPECIAL, priority = 50)
+        val eventA = event(eventId = "special_a", type = EventType.SPECIAL, priority = 50)
+        val low = event(eventId = "special_low", type = EventType.SPECIAL, priority = 1)
+
+        val selected = engine.pickSpecialEvent(
+            progress(),
+            listOf(eventB, low, eventA),
+            chancePercent = 100,
+        )
+
+        assertSame(eventA, selected)
+    }
+
+    @Test
+    fun shouldMoveNextStage_afterFiveEvents() {
+        assertFalse(engine.shouldMoveNextStage(progress(stageEventCount = 4)))
+        assertTrue(engine.shouldMoveNextStage(progress(stageEventCount = 5)))
+    }
+
+    @Test
+    fun moveNextStage_keepsAdultAndAdvancesOtherStages() {
+        val child = engine.moveNextStage(
+            progress(stage = LifeStage.INFANT, stageEventCount = 5),
+        )
+        val adult = progress(stage = LifeStage.ADULT, stageEventCount = 5)
+
+        assertEquals(LifeStage.CHILD, child.stage)
+        assertEquals(0, child.stageEventCount)
+        assertSame(adult, engine.moveNextStage(adult))
+    }
+
+    @Test
     fun resolveEnding_usesHighestPriorityThenEndingId() {
         val endingB = ending("ending_b", priority = 80)
         val endingA = ending("ending_a", priority = 80)
@@ -238,6 +319,63 @@ class GameEngineTest {
         )
 
         assertEquals("ending_a", selected.endingId)
+    }
+
+    @Test
+    fun resolveEndingDecision_listsAllEligibleEndingsInDecisionOrder() {
+        val high = ending("ending_high", priority = 100)
+        val tiedB = ending("ending_tied_b", priority = 80)
+        val tiedA = ending("ending_tied_a", priority = 80)
+        val default = ending("ending_default", isDefault = true)
+
+        val decision = engine.resolveEndingDecision(
+            progress(),
+            listOf(tiedB, default, high, tiedA),
+        )
+
+        assertEquals("ending_high", decision.selected.endingId)
+        assertEquals(
+            listOf("ending_high", "ending_tied_a", "ending_tied_b"),
+            decision.eligibleEndingIds,
+        )
+        assertEquals(EndingSelectionReason.HIGHEST_PRIORITY, decision.reason)
+    }
+
+    @Test
+    fun resolveEndingDecision_sameConditionsAlwaysSelectExactlyOneEnding() {
+        val endings = (1..25).map { index ->
+            ending("ending_${index.toString().padStart(2, '0')}", priority = index)
+        } + ending("ending_default", isDefault = true)
+
+        val selectedIds = (1..30).map {
+            engine.resolveEndingDecision(progress(), endings).selected.endingId
+        }.toSet()
+
+        assertEquals(setOf("ending_25"), selectedIds)
+    }
+
+    @Test
+    fun resolveEndingDecision_excludesBlockedAndMissingRequiredFlags() {
+        val blocked = ending(
+            "ending_blocked",
+            priority = 100,
+            conditions = EndingConditions(blockedFlags = setOf("injured")),
+        )
+        val missingFlag = ending(
+            "ending_missing_flag",
+            priority = 90,
+            conditions = EndingConditions(requiredFlags = setOf("career_experience")),
+        )
+        val eligible = ending("ending_eligible", priority = 10)
+        val default = ending("ending_default", isDefault = true)
+
+        val decision = engine.resolveEndingDecision(
+            progress(flags = setOf("injured")),
+            listOf(blocked, missingFlag, eligible, default),
+        )
+
+        assertEquals("ending_eligible", decision.selected.endingId)
+        assertEquals(listOf("ending_eligible"), decision.eligibleEndingIds)
     }
 
     @Test
@@ -254,6 +392,25 @@ class GameEngineTest {
         val selected = engine.resolveEnding(progress(), listOf(specialist, default))
 
         assertSame(default, selected)
+    }
+
+    @Test
+    fun resolveEndingDecision_reportsDefaultFallbackWhenNoConditionMatches() {
+        val specialist = ending(
+            "ending_specialist",
+            priority = 100,
+            conditions = EndingConditions(stats = StatConditions(minIntelligence = 90)),
+        )
+        val default = ending("ending_default", isDefault = true)
+
+        val decision = engine.resolveEndingDecision(
+            progress(stats = Stats(intelligence = 50)),
+            listOf(specialist, default),
+        )
+
+        assertSame(default, decision.selected)
+        assertTrue(decision.eligibleEndingIds.isEmpty())
+        assertEquals(EndingSelectionReason.DEFAULT_FALLBACK, decision.reason)
     }
 
     @Test
@@ -309,6 +466,7 @@ class GameEngineTest {
         completedEventIds: Set<String> = emptySet(),
         stage: LifeStage = LifeStage.CHILD,
         specialEventCount: Int = 0,
+        stageEventCount: Int = 0,
     ) = GameProgress(
         runId = "run-001",
         stage = stage,
@@ -317,6 +475,7 @@ class GameEngineTest {
         flags = flags,
         completedEventIds = completedEventIds,
         specialEventCount = specialEventCount,
+        stageEventCount = stageEventCount,
     )
 
     private fun event(

@@ -8,8 +8,24 @@ import com.example.lifegame.domain.model.EventType
 import com.example.lifegame.domain.model.GameEvent
 import com.example.lifegame.domain.model.GameProgress
 import com.example.lifegame.domain.model.GameScreenState
+import com.example.lifegame.domain.model.LifeStage
 import com.example.lifegame.domain.model.StatDelta
 import com.example.lifegame.domain.model.Stats
+
+enum class EndingSelectionReason {
+    HIGHEST_PRIORITY,
+    DEFAULT_FALLBACK,
+}
+
+/**
+ * 결말 판정 결과와 판정 근거를 함께 제공한다.
+ * [eligibleEndingIds]는 우선순위 내림차순, 같은 우선순위는 ID 오름차순으로 정렬된다.
+ */
+data class EndingDecision(
+    val selected: Ending,
+    val eligibleEndingIds: List<String>,
+    val reason: EndingSelectionReason,
+)
 
 class GameEngine(
     private val rollPercent: () -> Int = { (1..100).random() },
@@ -22,6 +38,16 @@ class GameEngine(
     }
 
     fun clampStat(value: Int): Int = value.coerceIn(MIN_STAT, MAX_STAT)
+
+    fun createInitialProgress(runId: String): GameProgress {
+        require(runId.isNotBlank()) { "runId must not be blank" }
+        return GameProgress(
+            runId = runId,
+            stage = LifeStage.INFANT,
+            currentEventOccurrenceId = "$runId:pending:0",
+            stats = Stats(),
+        )
+    }
 
     fun applyChoice(
         progress: GameProgress,
@@ -62,6 +88,7 @@ class GameEngine(
             handledOccurrenceIds = progress.handledOccurrenceIds + occurrenceId,
             choiceHistory = progress.choiceHistory + history,
             specialEventCount = progress.specialEventCount + if (event.type == EventType.SPECIAL) 1 else 0,
+            stageEventCount = progress.stageEventCount + 1,
         )
 
         return ChoiceResult(
@@ -87,7 +114,9 @@ class GameEngine(
         progress: GameProgress,
         events: List<GameEvent>,
     ): GameEvent? {
-        val candidates = events.filter { canShowEvent(progress, it) }
+        val candidates = events.filter {
+            it.type == EventType.NORMAL && canShowEvent(progress, it)
+        }
         val conditional = candidates.filterNot { it.isFallback }
         val selectable = conditional.ifEmpty { candidates.filter { it.isFallback } }
         return selectable.sortedWith(
@@ -96,9 +125,83 @@ class GameEngine(
         ).firstOrNull()
     }
 
-    fun resolveEnding(progress: GameProgress, endings: List<Ending>): Ending {
-        val matching = endings
+    fun pickSpecialEvent(
+        progress: GameProgress,
+        events: List<GameEvent>,
+        chancePercent: Int,
+    ): GameEvent? {
+        if (!shouldTriggerSpecialEvent(progress, chancePercent)) return null
+        return events
             .asSequence()
+            .filter { it.type == EventType.SPECIAL }
+            .filter { canShowEvent(progress, it) }
+            .sortedWith(
+                compareByDescending<GameEvent> { it.priority }
+                    .thenBy { it.eventId },
+            )
+            .firstOrNull()
+    }
+
+    fun shouldMoveNextStage(progress: GameProgress): Boolean =
+        progress.stage != LifeStage.ADULT && progress.stageEventCount >= EVENTS_PER_STAGE
+
+    fun moveNextStage(progress: GameProgress): GameProgress {
+        val nextStage = when (progress.stage) {
+            LifeStage.INFANT -> LifeStage.CHILD
+            LifeStage.CHILD -> LifeStage.TEEN
+            LifeStage.TEEN -> LifeStage.ADULT
+            LifeStage.ADULT -> LifeStage.ADULT
+        }
+        if (nextStage == progress.stage) return progress
+        return progress.copy(
+            stage = nextStage,
+            stageEventCount = 0,
+            screenState = GameScreenState.EVENT,
+            currentEventOccurrenceId = "${progress.runId}:pending:${progress.choiceHistory.size}",
+        )
+    }
+
+    /**
+     * 선택 결과 화면 이후에 다음 사건을 정하고 화면에서 바로 사용할 진행 상태를 반환한다.
+     * 현재 단계에 후보가 없으면 다음 단계도 확인하며, 성인기까지 후보가 없으면 결말로 이동한다.
+     */
+    fun advanceAfterResult(
+        progress: GameProgress,
+        events: List<GameEvent>,
+    ): GameProgress {
+        var candidateProgress = if (shouldMoveNextStage(progress)) {
+            moveNextStage(progress)
+        } else {
+            progress
+        }
+
+        while (true) {
+            val nextEvent = pickSpecialEvent(
+                progress = candidateProgress,
+                events = events,
+                chancePercent = DEFAULT_SPECIAL_EVENT_CHANCE_PERCENT,
+            ) ?: pickNextEvent(candidateProgress, events)
+
+            if (nextEvent != null) {
+                return candidateProgress.copy(
+                    screenState = GameScreenState.EVENT,
+                    currentEventOccurrenceId =
+                        "${candidateProgress.runId}:${nextEvent.eventId}:${candidateProgress.choiceHistory.size + 1}",
+                )
+            }
+
+            if (candidateProgress.stage == LifeStage.ADULT) {
+                return candidateProgress.copy(screenState = GameScreenState.ENDING)
+            }
+            candidateProgress = moveNextStage(candidateProgress)
+        }
+    }
+
+    fun resolveEndingDecision(
+        progress: GameProgress,
+        endings: List<Ending>,
+    ): EndingDecision {
+        val matching = endings
             .filterNot { it.isDefault }
             .filter { it.conditions.stats.matches(progress.stats) }
             .filter { progress.flags.containsAll(it.conditions.requiredFlags) }
@@ -107,13 +210,28 @@ class GameEngine(
                 compareByDescending<Ending> { it.priority }
                     .thenBy { it.endingId },
             )
-            .firstOrNull()
+        if (matching.isNotEmpty()) {
+            return EndingDecision(
+                selected = matching.first(),
+                eligibleEndingIds = matching.map { it.endingId },
+                reason = EndingSelectionReason.HIGHEST_PRIORITY,
+            )
+        }
 
-        return matching ?: endings
+        val defaultEnding = endings
             .filter { it.isDefault }
             .minByOrNull { it.endingId }
             ?: error("At least one default ending is required")
+
+        return EndingDecision(
+            selected = defaultEnding,
+            eligibleEndingIds = emptyList(),
+            reason = EndingSelectionReason.DEFAULT_FALLBACK,
+        )
     }
+
+    fun resolveEnding(progress: GameProgress, endings: List<Ending>): Ending =
+        resolveEndingDecision(progress, endings).selected
 
     /**
      * Notion 카드의 초기 메서드명과 호환되는 진입점이다.
@@ -161,5 +279,7 @@ class GameEngine(
     private companion object {
         const val MIN_STAT = 0
         const val MAX_STAT = 100
+        const val EVENTS_PER_STAGE = 5
+        const val DEFAULT_SPECIAL_EVENT_CHANCE_PERCENT = 10
     }
 }

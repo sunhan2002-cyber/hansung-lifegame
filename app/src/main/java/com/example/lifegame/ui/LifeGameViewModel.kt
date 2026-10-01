@@ -1,83 +1,82 @@
 package com.example.lifegame.ui
 
+import android.app.Application
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
-import androidx.lifecycle.ViewModel
+import androidx.lifecycle.AndroidViewModel
+import com.example.lifegame.data.ContentRepository
+import com.example.lifegame.domain.engine.GameSession
+import com.example.lifegame.domain.model.Choice
 
-/**
- * 화면과 게임 상태를 연결한다.
- * 지표 계산과 결말 판정은 GameEngine이 준비되기 전까지 임시로 여기서 처리한다.
- */
-class LifeGameViewModel : ViewModel() {
+class LifeGameViewModel(application: Application) : AndroidViewModel(application) {
+
+    private val repository = ContentRepository(application)
+    private var session: GameSession? = null
 
     var uiState by mutableStateOf(LifeGameUiState())
         private set
 
-    val currentEvent: UiEvent
-        get() = SAMPLE_EVENTS[uiState.eventIndex.coerceIn(SAMPLE_EVENTS.indices)]
-
     fun startNewGame(characterId: Int) {
-        uiState = LifeGameUiState(characterId = characterId, hasSaveData = uiState.hasSaveData)
-    }
-
-    /** 선택을 반영한다. 이미 결과가 나온 사건에 대한 중복 탭이면 false를 반환한다. */
-    fun choose(choice: UiChoice): Boolean {
-        val state = uiState
-        if (state.lastResult != null) return false
-
-        val event = currentEvent
-        val newStats = state.stats.toMutableMap()
-        val applied = mutableMapOf<String, Int>()
-        choice.statChanges.forEach { (name, delta) ->
-            val before = newStats[name] ?: STAT_START
-            val after = (before + delta).coerceIn(STAT_MIN, STAT_MAX)
-            newStats[name] = after
-            applied[name] = after - before
+        val events = repository.loadEvents()
+        val endings = repository.loadEndings()
+        if (events.isEmpty() || endings.none { it.isDefault }) {
+            uiState = LifeGameUiState(
+                characterId = characterId,
+                contentError = "사건 또는 기본 결말 데이터를 불러오지 못했습니다.",
+            )
+            return
         }
 
-        uiState = state.copy(
-            stats = newStats,
-            lastResult = UiChoiceResult(
-                eventId = event.id,
-                choice = choice,
-                appliedChanges = applied,
-                isLastEvent = state.eventIndex >= SAMPLE_EVENTS.lastIndex,
-            ),
-            choiceHistory = state.choiceHistory + "[${event.stage}] ${choice.text}",
+        session = GameSession(events = events, endings = endings)
+        val started = session!!.start()
+        uiState = LifeGameUiState(
+            characterId = characterId,
+            progress = started.progress,
+            currentEvent = started.currentEvent,
+            ending = started.ending,
+        )
+    }
+
+    fun choose(choice: Choice): Boolean {
+        val event = uiState.currentEvent ?: return false
+        val result = session?.choose(choice) ?: return false
+        uiState = uiState.copy(
+            progress = result.progress,
+            lastResult = UiChoiceResult(event.eventId, choice, result),
         )
         return true
     }
 
-    /** 다음 사건으로 넘어간다. 마지막 사건이었다면 결말을 판정하고 true를 반환한다. */
     fun proceed(): Boolean {
-        val state = uiState
-        val result = state.lastResult ?: return state.ending != null
-        return if (result.isLastEvent) {
-            finish()
-            true
-        } else {
-            uiState = state.copy(eventIndex = state.eventIndex + 1, lastResult = null)
-            false
-        }
+        val hasNextEvent = session?.proceed() ?: return false
+        syncFromSession()
+        return !hasNextEvent
     }
 
-    /** 임시 버튼용: 현재 지표로 바로 결말을 판정한다. */
     fun finish() {
-        val state = uiState
-        uiState = state.copy(lastResult = null, ending = judgeEnding(state.stats))
+        session?.finish()
+        syncFromSession()
     }
 
     fun reset() {
+        session = null
         uiState = LifeGameUiState(hasSaveData = uiState.hasSaveData)
     }
 
-    private fun judgeEnding(stats: Map<String, Int>): UiEnding {
-        val (topStat, _) = stats.maxBy { it.value }
-        return UiEnding(
-            title = "'$topStat' 지표가 빛난 인생",
-            description = "임시 결말입니다. 가장 높은 지표인 '$topStat'을(를) 기준으로 판정했습니다. " +
-                "GameEngine의 결말 판정이 연결되면 실제 결말로 바뀝니다.",
+    private fun syncFromSession() {
+        val sessionState = session?.state ?: return
+        uiState = uiState.copy(
+            progress = sessionState.progress,
+            currentEvent = sessionState.currentEvent,
+            lastResult = sessionState.lastResult?.let { result ->
+                UiChoiceResult(
+                    eventId = result.progress.choiceHistory.lastOrNull()?.eventId.orEmpty(),
+                    choice = requireNotNull(sessionState.selectedChoice),
+                    engineResult = result,
+                )
+            },
+            ending = sessionState.ending,
         )
     }
 }

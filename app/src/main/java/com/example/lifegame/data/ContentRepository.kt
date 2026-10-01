@@ -103,13 +103,13 @@ class ContentRepository(
     )
 
     private fun JSONObject?.toStatDelta(): StatDelta = StatDelta(
-        health = this?.optInt("건강", 0) ?: this?.optInt("health", 0) ?: 0,
-        fitness = this?.optInt("운동능력", 0) ?: this?.optInt("fitness", 0) ?: 0,
-        intelligence = this?.optInt("지력", 0) ?: this?.optInt("intelligence", 0) ?: 0,
-        social = this?.optInt("사회성", 0) ?: this?.optInt("social", 0) ?: 0,
-        wealth = this?.optInt("경제력", 0) ?: this?.optInt("wealth", 0) ?: 0,
-        happiness = this?.optInt("행복", 0) ?: this?.optInt("happiness", 0) ?: 0,
-        luck = this?.optInt("운", 0) ?: this?.optInt("luck", 0) ?: 0,
+        health = this?.optNullableInt("건강") ?: this?.optNullableInt("health") ?: 0,
+        fitness = this?.optNullableInt("운동능력") ?: this?.optNullableInt("fitness") ?: 0,
+        intelligence = this?.optNullableInt("지력") ?: this?.optNullableInt("intelligence") ?: 0,
+        social = this?.optNullableInt("사회성") ?: this?.optNullableInt("social") ?: 0,
+        wealth = this?.optNullableInt("경제력") ?: this?.optNullableInt("wealth") ?: 0,
+        happiness = this?.optNullableInt("행복") ?: this?.optNullableInt("happiness") ?: 0,
+        luck = this?.optNullableInt("운") ?: this?.optNullableInt("luck") ?: 0,
     )
 
     private fun JSONArray?.toStringSet(): Set<String> =

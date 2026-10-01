@@ -16,9 +16,7 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.example.lifegame.ui.SAMPLE_EVENTS
 import com.example.lifegame.ui.UiChoiceResult
 
 @Composable
@@ -41,22 +39,24 @@ fun ChoiceResultScreen(
             Text("선택 결과", style = MaterialTheme.typography.headlineMedium)
             Spacer(Modifier.height(8.dp))
             Text(
-                text = "${result.choice.label}. ${result.choice.text}",
+                text = "${result.choice.choiceId}. ${result.choice.label}",
                 style = MaterialTheme.typography.titleMedium,
                 color = MaterialTheme.colorScheme.primary,
             )
             Spacer(Modifier.height(16.dp))
-            Text(result.choice.resultText, style = MaterialTheme.typography.bodyLarge)
+            Text(result.engineResult.resultText, style = MaterialTheme.typography.bodyLarge)
             Spacer(Modifier.height(24.dp))
 
             Card(modifier = Modifier.fillMaxWidth()) {
                 Column(Modifier.padding(16.dp)) {
                     Text("변화한 지표", style = MaterialTheme.typography.titleSmall)
                     Spacer(Modifier.height(8.dp))
-                    if (result.appliedChanges.isEmpty()) {
+                    val appliedChanges = result.engineResult.appliedDelta.toDisplayMap()
+                        .filterValues { it != 0 }
+                    if (appliedChanges.isEmpty()) {
                         Text("변화 없음", style = MaterialTheme.typography.bodyMedium)
                     }
-                    result.appliedChanges.forEach { (name, delta) ->
+                    appliedChanges.forEach { (name, delta) ->
                         Row(Modifier.padding(vertical = 4.dp)) {
                             Text(name, style = MaterialTheme.typography.bodyLarge, modifier = Modifier.weight(1f))
                             Text(
@@ -78,21 +78,19 @@ fun ChoiceResultScreen(
                 .height(56.dp),
         ) {
             Text(
-                text = if (result.isLastEvent) "결말 보기" else "다음 사건",
+                text = "다음 사건",
                 style = MaterialTheme.typography.titleMedium,
             )
         }
     }
 }
 
-@Preview(showBackground = true)
-@Composable
-private fun ChoiceResultScreenPreview() {
-    val choice = SAMPLE_EVENTS[0].choiceA
-    MaterialTheme {
-        ChoiceResultScreen(
-            result = UiChoiceResult(SAMPLE_EVENTS[0].id, choice, choice.statChanges, isLastEvent = false),
-            onNext = {},
-        )
-    }
-}
+private fun com.example.lifegame.domain.model.StatDelta.toDisplayMap(): Map<String, Int> = mapOf(
+    "건강" to health,
+    "운동능력" to fitness,
+    "지력" to intelligence,
+    "사회성" to social,
+    "경제력" to wealth,
+    "행복" to happiness,
+    "운" to luck,
+)
