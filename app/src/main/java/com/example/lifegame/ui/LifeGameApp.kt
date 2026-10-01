@@ -13,7 +13,6 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.lifegame.ui.screens.CharacterSelectScreen
-import com.example.lifegame.ui.screens.ChoiceResultScreen
 import com.example.lifegame.ui.screens.EndingScreen
 import com.example.lifegame.ui.screens.GameScreen
 import com.example.lifegame.ui.screens.StartScreen
@@ -23,7 +22,6 @@ object Routes {
     const val START = "start"
     const val CHARACTER_SELECT = "character_select"
     const val GAME = "game"
-    const val CHOICE_RESULT = "choice_result"
     const val ENDING = "ending"
 }
 
@@ -58,13 +56,15 @@ fun LifeGameApp(
                 composable(Routes.GAME) {
                     val event = state.currentEvent
                     if (event != null) {
+                        // 선택 결과는 같은 화면에 이어 붙고, 다음 해로 넘어가는 전환도 이 화면 안에서 재생한다.
                         GameScreen(
-                            event = event,
-                            stats = state.stats,
-                            onChoose = { choice ->
-                                if (gameViewModel.choose(choice)) {
-                                    navController.navigateOnce(Routes.CHOICE_RESULT) {
-                                        popUpTo(Routes.GAME) { inclusive = true }
+                            state = state,
+                            onChoose = { choice -> gameViewModel.choose(choice) },
+                            onNextYear = {
+                                val finished = gameViewModel.proceed()
+                                if (finished) {
+                                    navController.navigateOnce(Routes.ENDING) {
+                                        popUpTo(Routes.START)
                                     }
                                 }
                             },
@@ -72,20 +72,6 @@ fun LifeGameApp(
                                 gameViewModel.finish()
                                 navController.navigateOnce(Routes.ENDING) {
                                     popUpTo(Routes.START)
-                                }
-                            },
-                        )
-                    }
-                }
-                composable(Routes.CHOICE_RESULT) {
-                    val result = state.lastResult
-                    if (result != null) {
-                        ChoiceResultScreen(
-                            result = result,
-                            onNext = {
-                                val finished = gameViewModel.proceed()
-                                navController.navigateOnce(if (finished) Routes.ENDING else Routes.GAME) {
-                                    popUpTo(Routes.CHOICE_RESULT) { inclusive = true }
                                 }
                             },
                         )
