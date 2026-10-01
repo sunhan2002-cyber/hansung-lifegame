@@ -98,6 +98,16 @@ data class GameEvent(
     val isFallback: Boolean = false,
 )
 
+data class ImageAsset(
+    val imageId: String,
+    val usage: String,
+    val stage: String,
+    val description: String,
+    val fileName: String,
+    val fallbackText: String,
+)
+
+
 data class EndingConditions(
     val stats: StatConditions = StatConditions(),
     val requiredFlags: Set<String> = emptySet(),

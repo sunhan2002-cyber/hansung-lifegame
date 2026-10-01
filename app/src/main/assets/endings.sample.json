@@ -325,5 +325,95 @@
     },
     "summary": "대단한 조건을 만족하지는 못했지만, 선택의 결과를 받아들이며 자기 방식대로 한 회차를 마쳤다.",
     "isDefault": true
+  },
+  {
+    "endingId": "ending_ai_storyteller",
+    "title": "선택을 이야기로 바꾸는 사람이 되었다",
+    "priority": 64,
+    "conditions": {
+      "minStats": {
+        "지력": 70,
+        "행복": 65,
+        "사회성": 50
+      },
+      "requiredFlags": [
+        "creative_hobby"
+      ],
+      "blockedFlags": []
+    },
+    "summary": "어릴 때부터 쌓인 호기심과 표현력이 이어져, 사람들의 선택과 경험을 이야기로 풀어내는 창작자가 되었다.",
+    "isDefault": false
+  },
+  {
+    "endingId": "ending_calm_recovery",
+    "title": "넘어진 뒤에도 다시 걷는 법을 배웠다",
+    "priority": 63,
+    "conditions": {
+      "minStats": {
+        "건강": 60,
+        "행복": 55,
+        "운": 50
+      },
+      "requiredFlags": [
+        "special_survived"
+      ],
+      "blockedFlags": []
+    },
+    "summary": "예상 밖의 사건을 겪었지만 포기하지 않고 회복하는 쪽을 택했다. 삶의 속도는 느려져도 방향은 잃지 않았다.",
+    "isDefault": false
+  },
+  {
+    "endingId": "ending_warm_teacher",
+    "title": "누군가의 첫 선택을 도와주는 사람이 되었다",
+    "priority": 62,
+    "conditions": {
+      "minStats": {
+        "사회성": 70,
+        "지력": 60,
+        "행복": 60
+      },
+      "requiredFlags": [
+        "helped_friend"
+      ],
+      "blockedFlags": []
+    },
+    "summary": "친구를 도왔던 경험과 꾸준히 배운 시간이 쌓여, 다른 사람이 자기 길을 찾도록 돕는 선생님 같은 어른이 되었다.",
+    "isDefault": false
+  },
+  {
+    "endingId": "ending_unexpected_local_star",
+    "title": "동네에서 은근히 유명한 사람이 되었다",
+    "priority": 61,
+    "conditions": {
+      "minStats": {
+        "운": 70,
+        "사회성": 55,
+        "행복": 55
+      },
+      "requiredFlags": [
+        "risk_taker"
+      ],
+      "blockedFlags": []
+    },
+    "summary": "큰 계획은 없었지만 이상하게 눈에 띄는 순간이 많았다. 사소한 해프닝들이 모여 동네 사람들이 기억하는 사람이 되었다.",
+    "isDefault": false
+  },
+  {
+    "endingId": "ending_steady_app_maker",
+    "title": "작은 앱을 끝까지 완성한 사람이 되었다",
+    "priority": 60,
+    "conditions": {
+      "minStats": {
+        "지력": 65,
+        "경제력": 55,
+        "행복": 55
+      },
+      "requiredFlags": [
+        "responsibility"
+      ],
+      "blockedFlags": []
+    },
+    "summary": "화려한 시작보다 끝까지 다듬는 선택을 반복했다. 결국 누군가 실제로 쓰는 작은 앱을 완성하는 사람이 되었다.",
+    "isDefault": false
   }
 ]

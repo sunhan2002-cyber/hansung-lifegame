@@ -7,6 +7,7 @@ import com.example.lifegame.domain.model.EndingConditions
 import com.example.lifegame.domain.model.EventConditions
 import com.example.lifegame.domain.model.EventType
 import com.example.lifegame.domain.model.GameEvent
+import com.example.lifegame.domain.model.ImageAsset
 import com.example.lifegame.domain.model.LifeStage
 import com.example.lifegame.domain.model.StatConditions
 import com.example.lifegame.domain.model.StatDelta
@@ -25,6 +26,14 @@ class ContentRepository(
         val array = JSONArray(readAsset(ENDINGS_FILE))
         List(array.length()) { index -> array.getJSONObject(index).toEnding() }
     }.getOrElse { emptyList() }
+
+    fun loadImageAssets(): List<ImageAsset> = runCatching {
+        val array = JSONArray(readAsset(IMAGE_IDS_FILE))
+        List(array.length()) { index -> array.getJSONObject(index).toImageAsset() }
+    }.getOrElse { emptyList() }
+
+    fun findImageAsset(imageId: String): ImageAsset? =
+        loadImageAssets().firstOrNull { it.imageId == imageId }
 
     private fun readAsset(fileName: String): String =
         context.assets.open(fileName).bufferedReader(Charsets.UTF_8).use { it.readText() }
@@ -49,6 +58,15 @@ class ContentRepository(
         priority = optInt("priority", 0),
         conditions = optJSONObject("conditions").toEndingConditions(),
         isDefault = optBoolean("isDefault", false),
+    )
+
+    private fun JSONObject.toImageAsset(): ImageAsset = ImageAsset(
+        imageId = getString("imageId"),
+        usage = optString("usage", "event"),
+        stage = optString("stage", ""),
+        description = optString("description", ""),
+        fileName = optString("fileName", ""),
+        fallbackText = optString("fallbackText", optString("description", "")),
     )
 
     private fun JSONArray.toChoices(): List<Choice> = List(length()) { index ->
@@ -116,5 +134,6 @@ class ContentRepository(
     private companion object {
         const val EVENTS_FILE = "events.sample.json"
         const val ENDINGS_FILE = "endings.sample.json"
+        const val IMAGE_IDS_FILE = "image_ids.sample.json"
     }
 }
