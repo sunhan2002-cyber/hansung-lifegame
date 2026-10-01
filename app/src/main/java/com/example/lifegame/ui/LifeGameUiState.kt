@@ -16,6 +16,15 @@ data class UiChoiceResult(
     val choice: Choice,
     val engineResult: ChoiceResult,
 )
+private const val DEFAULT_PLAYER_NAME = "선한"
+private const val DEFAULT_PLAYER_NAME_CALL = "선한아"
+
+fun String.replacePlayerPlaceholders(
+    playerName: String = DEFAULT_PLAYER_NAME,
+    playerNameCall: String = DEFAULT_PLAYER_NAME_CALL,
+): String = this
+    .replace("{nameCall}", playerNameCall)
+    .replace("{name}", playerName)
 
 data class LifeGameUiState(
     val characterId: Int? = null,
@@ -28,3 +37,4 @@ data class LifeGameUiState(
 ) {
     val stats: Stats get() = progress?.stats ?: Stats()
 }
+
