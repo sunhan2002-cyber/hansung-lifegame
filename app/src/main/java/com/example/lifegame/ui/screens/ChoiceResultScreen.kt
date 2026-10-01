@@ -18,6 +18,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.example.lifegame.ui.UiChoiceResult
+import com.example.lifegame.ui.replacePlayerPlaceholders
 
 @Composable
 fun ChoiceResultScreen(
@@ -39,12 +40,12 @@ fun ChoiceResultScreen(
             Text("선택 결과", style = MaterialTheme.typography.headlineMedium)
             Spacer(Modifier.height(8.dp))
             Text(
-                text = "${result.choice.choiceId}. ${result.choice.label}",
+                text = "${result.choice.choiceId}. ${result.choice.label.replacePlayerPlaceholders()}",
                 style = MaterialTheme.typography.titleMedium,
                 color = MaterialTheme.colorScheme.primary,
             )
             Spacer(Modifier.height(16.dp))
-            Text(result.engineResult.resultText, style = MaterialTheme.typography.bodyLarge)
+            Text(result.engineResult.resultText.replacePlayerPlaceholders(), style = MaterialTheme.typography.bodyLarge)
             Spacer(Modifier.height(24.dp))
 
             Card(modifier = Modifier.fillMaxWidth()) {
@@ -94,3 +95,4 @@ private fun com.example.lifegame.domain.model.StatDelta.toDisplayMap(): Map<Stri
     "행복" to happiness,
     "운" to luck,
 )
+

@@ -27,6 +27,7 @@ import com.example.lifegame.ui.STAT_START
 import com.example.lifegame.ui.components.ChoiceButton
 import com.example.lifegame.ui.components.EventCard
 import com.example.lifegame.ui.components.StatBar
+import com.example.lifegame.ui.replacePlayerPlaceholders
 
 @Composable
 fun GameScreen(
@@ -52,8 +53,8 @@ fun GameScreen(
                 .verticalScroll(rememberScrollState()),
         ) {
             EventCard(
-                title = event.title,
-                description = event.text,
+                title = event.title.replacePlayerPlaceholders(),
+                description = event.text.replacePlayerPlaceholders(),
                 imageId = event.imageId,
                 stage = event.stage.displayName(),
                 isSpecial = isSpecial,
@@ -73,7 +74,7 @@ fun GameScreen(
         event.choices.forEachIndexed { index, choice ->
             if (index > 0) Spacer(Modifier.height(10.dp))
             ChoiceButton(
-                text = "${choiceLabel(index)}. ${choice.label}",
+                text = "${choiceLabel(index)}. ${choice.label.replacePlayerPlaceholders()}",
                 onClick = { onChoose(choice) },
             )
         }
@@ -117,3 +118,4 @@ private fun Stats.toDisplayMap(): Map<String, Int> = mapOf(
     "행복" to happiness,
     "운" to luck,
 )
+
