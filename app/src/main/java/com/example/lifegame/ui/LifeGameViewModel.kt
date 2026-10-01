@@ -35,6 +35,10 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
             progress = started.progress,
             currentEvent = started.currentEvent,
             ending = started.ending,
+            eventsById = events.associateBy { it.eventId },
+            imageFiles = repository.loadImageAssets()
+                .filter { it.fileName.isNotBlank() }
+                .associate { it.imageId to it.fileName },
         )
     }
 
