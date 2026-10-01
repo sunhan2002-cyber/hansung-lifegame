@@ -56,23 +56,26 @@ fun LifeGameApp(
                     )
                 }
                 composable(Routes.GAME) {
-                    GameScreen(
-                        event = gameViewModel.currentEvent,
-                        stats = state.stats,
-                        onChoose = { choice ->
-                            if (gameViewModel.choose(choice)) {
-                                navController.navigateOnce(Routes.CHOICE_RESULT) {
-                                    popUpTo(Routes.GAME) { inclusive = true }
+                    val event = state.currentEvent
+                    if (event != null) {
+                        GameScreen(
+                            event = event,
+                            stats = state.stats,
+                            onChoose = { choice ->
+                                if (gameViewModel.choose(choice)) {
+                                    navController.navigateOnce(Routes.CHOICE_RESULT) {
+                                        popUpTo(Routes.GAME) { inclusive = true }
+                                    }
                                 }
-                            }
-                        },
-                        onShowEndingForTest = {
-                            gameViewModel.finish()
-                            navController.navigateOnce(Routes.ENDING) {
-                                popUpTo(Routes.START)
-                            }
-                        },
-                    )
+                            },
+                            onShowEndingForTest = {
+                                gameViewModel.finish()
+                                navController.navigateOnce(Routes.ENDING) {
+                                    popUpTo(Routes.START)
+                                }
+                            },
+                        )
+                    }
                 }
                 composable(Routes.CHOICE_RESULT) {
                     val result = state.lastResult
@@ -94,7 +97,9 @@ fun LifeGameApp(
                         EndingScreen(
                             ending = ending,
                             stats = state.stats,
-                            choiceHistory = state.choiceHistory,
+                            choiceHistory = state.progress?.choiceHistory.orEmpty().map {
+                                "${it.eventId}: ${it.choiceId}"
+                            },
                             onRestart = {
                                 gameViewModel.reset()
                                 navController.popBackStack(Routes.START, inclusive = false)

@@ -20,22 +20,23 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.example.lifegame.ui.SAMPLE_EVENTS
+import com.example.lifegame.domain.model.Choice
+import com.example.lifegame.domain.model.EventType
+import com.example.lifegame.domain.model.GameEvent
+import com.example.lifegame.domain.model.LifeStage
+import com.example.lifegame.domain.model.Stats
 import com.example.lifegame.ui.STAT_NAMES
 import com.example.lifegame.ui.STAT_START
-import com.example.lifegame.ui.UiChoice
-import com.example.lifegame.ui.UiEvent
 import com.example.lifegame.ui.components.ChoiceButton
 import com.example.lifegame.ui.components.EventCard
 import com.example.lifegame.ui.components.StatBar
 
 @Composable
 fun GameScreen(
-    event: UiEvent,
-    stats: Map<String, Int>,
-    onChoose: (UiChoice) -> Unit,
+    event: GameEvent,
+    stats: Stats,
+    onChoose: (Choice) -> Unit,
     onShowEndingForTest: () -> Unit,
     modifier: Modifier = Modifier,
 ) {
@@ -44,19 +45,18 @@ fun GameScreen(
     Column(
         modifier = modifier
             .fillMaxSize()
-            .background(if (event.isSpecial) colors.errorContainer.copy(alpha = 0.35f) else colors.surface)
+            .background(if (event.type == EventType.SPECIAL) colors.errorContainer.copy(alpha = 0.35f) else colors.surface)
             .safeDrawingPadding()
             .padding(horizontal = 20.dp, vertical = 16.dp),
     ) {
-        // 상황·지표 영역은 스크롤되고, 선택 버튼은 항상 하단에 고정된다.
         Column(
             modifier = Modifier
                 .weight(1f)
                 .verticalScroll(rememberScrollState()),
         ) {
             Row(verticalAlignment = Alignment.CenterVertically) {
-                Text(event.stage, style = MaterialTheme.typography.titleMedium, color = colors.primary)
-                if (event.isSpecial) {
+                Text(event.stage.displayName(), style = MaterialTheme.typography.titleMedium, color = colors.primary)
+                if (event.type == EventType.SPECIAL) {
                     Spacer(Modifier.width(8.dp))
                     Text(
                         text = "돌발 이벤트",
@@ -70,15 +70,10 @@ fun GameScreen(
                 }
             }
             Spacer(Modifier.height(12.dp))
-
-            // 상황 이미지가 준비되기 전 자리 표시 영역
             EventCard()
-
             Spacer(Modifier.height(16.dp))
-
             Text(event.text, style = MaterialTheme.typography.bodyLarge)
             Spacer(Modifier.height(20.dp))
-
             StatGrid(stats)
 
             TextButton(
@@ -90,32 +85,27 @@ fun GameScreen(
         }
 
         Spacer(Modifier.height(12.dp))
-
-        ChoiceButton(
-            text = "${event.choiceA.label}. ${event.choiceA.text}",
-            onClick = { onChoose(event.choiceA) }
-        )
-
-        Spacer(Modifier.height(10.dp))
-
-        ChoiceButton(
-            text = "${event.choiceB.label}. ${event.choiceB.text}",
-            onClick = { onChoose(event.choiceB) }
-        )
+        event.choices.forEachIndexed { index, choice ->
+            if (index > 0) Spacer(Modifier.height(10.dp))
+            ChoiceButton(
+                text = "${choice.choiceId}. ${choice.label}",
+                onClick = { onChoose(choice) },
+            )
+        }
     }
 }
 
-/** 7개 지표를 2열로 보여준다. 정원률 담당 StatBar.kt가 준비되면 교체한다. */
 @Composable
-fun StatGrid(stats: Map<String, Int>, modifier: Modifier = Modifier) {
+fun StatGrid(stats: Stats, modifier: Modifier = Modifier) {
+    val values = stats.toDisplayMap()
     Column(modifier = modifier, verticalArrangement = Arrangement.spacedBy(8.dp)) {
         STAT_NAMES.chunked(2).forEach { row ->
             Row(horizontalArrangement = Arrangement.spacedBy(16.dp)) {
                 row.forEach { name ->
                     StatBar(
                         name = name,
-                        value = stats[name] ?: STAT_START,
-                        modifier = Modifier.weight(1f)
+                        value = values[name] ?: STAT_START,
+                        modifier = Modifier.weight(1f),
                     )
                 }
                 if (row.size == 1) Spacer(Modifier.weight(1f))
@@ -124,15 +114,19 @@ fun StatGrid(stats: Map<String, Int>, modifier: Modifier = Modifier) {
     }
 }
 
-@Preview(showBackground = true, heightDp = 800)
-@Composable
-private fun GameScreenPreview() {
-    MaterialTheme {
-        GameScreen(
-            event = SAMPLE_EVENTS[2],
-            stats = STAT_NAMES.associateWith { STAT_START },
-            onChoose = {},
-            onShowEndingForTest = {},
-        )
-    }
+private fun LifeStage.displayName(): String = when (this) {
+    LifeStage.INFANT -> "영아기"
+    LifeStage.CHILD -> "유년기"
+    LifeStage.TEEN -> "청소년기"
+    LifeStage.ADULT -> "성인기"
 }
+
+private fun Stats.toDisplayMap(): Map<String, Int> = mapOf(
+    "건강" to health,
+    "운동능력" to fitness,
+    "지력" to intelligence,
+    "사회성" to social,
+    "경제력" to wealth,
+    "행복" to happiness,
+    "운" to luck,
+)
