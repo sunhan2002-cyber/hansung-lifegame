@@ -23,6 +23,10 @@ data class UiChoiceResult(
 
 data class LifeGameUiState(
     val characterId: Int? = null,
+    /** 캐릭터 설정에서 입력한 이름. 비워 두면 [DEFAULT_PLAYER_NAME]. */
+    val playerName: String = DEFAULT_PLAYER_NAME,
+    /** 사건 문장에서 부르는 이름 (예: 선한아, 민지야) */
+    val nameCall: String = nameCallOf(DEFAULT_PLAYER_NAME),
     val hasSaveData: Boolean = false,
     val progress: GameProgress? = null,
     val currentEvent: GameEvent? = null,

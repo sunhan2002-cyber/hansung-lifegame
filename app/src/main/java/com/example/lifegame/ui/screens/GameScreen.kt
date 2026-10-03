@@ -38,7 +38,6 @@ import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.ModalBottomSheet
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.material3.rememberModalBottomSheetState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.Immutable
@@ -166,7 +165,6 @@ fun GameScreen(
     state: LifeGameUiState,
     onChoose: (Choice) -> Unit,
     onNextYear: () -> Unit,
-    onShowEndingForTest: () -> Unit,
     modifier: Modifier = Modifier,
 ) {
     val event = state.currentEvent ?: return
@@ -393,15 +391,6 @@ fun GameScreen(
             ) {
                 Text("능력치", style = MaterialTheme.typography.headlineMedium)
                 StatGrid(state.stats)
-                TextButton(
-                    onClick = {
-                        statsOpen = false
-                        onShowEndingForTest()
-                    },
-                    modifier = Modifier.align(Alignment.End),
-                ) {
-                    Text("결말 화면 확인 (임시)")
-                }
             }
         }
     }
