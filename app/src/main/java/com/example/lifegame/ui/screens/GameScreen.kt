@@ -2,20 +2,30 @@ package com.example.lifegame.ui.screens
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.safeDrawingPadding
-import androidx.compose.foundation.rememberScrollState
-import androidx.compose.foundation.verticalScroll
+import androidx.compose.foundation.layout.widthIn
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.itemsIndexed
+import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalDensity
+import androidx.compose.ui.platform.testTag
+import androidx.compose.ui.semantics.heading
+import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.unit.dp
 import com.example.lifegame.domain.model.Choice
 import com.example.lifegame.domain.model.EventType
@@ -28,6 +38,7 @@ import com.example.lifegame.ui.components.ChoiceButton
 import com.example.lifegame.ui.components.EventCard
 import com.example.lifegame.ui.components.StatBar
 
+@Suppress("UNUSED_PARAMETER") // 기존 FE 호출과 호환하되 임시 결말 버튼은 플레이 화면에서 숨긴다.
 @Composable
 fun GameScreen(
     event: GameEvent,
@@ -36,46 +47,54 @@ fun GameScreen(
     onShowEndingForTest: () -> Unit,
     modifier: Modifier = Modifier,
 ) {
-    val colors = MaterialTheme.colorScheme
-    val isSpecial = event.type == EventType.SPECIAL
+    val listState = rememberLazyListState()
+    LaunchedEffect(event.eventId) { listState.scrollToItem(0) }
 
-    Column(
-        modifier = modifier
-            .fillMaxSize()
-            .background(if (isSpecial) colors.errorContainer.copy(alpha = 0.35f) else colors.surface)
-            .safeDrawingPadding()
-            .padding(horizontal = 20.dp, vertical = 16.dp),
+    Box(
+        modifier = modifier.fillMaxSize()
+            .background(MaterialTheme.colorScheme.background)
+            .safeDrawingPadding(),
+        contentAlignment = Alignment.TopCenter,
     ) {
-        Column(
-            modifier = Modifier
-                .weight(1f)
-                .verticalScroll(rememberScrollState()),
+        // 선택지도 같은 스크롤에 포함해 작은 화면이나 큰 글씨에서 가려지지 않게 한다.
+        LazyColumn(
+            state = listState,
+            modifier = Modifier.widthIn(max = 720.dp).fillMaxSize().testTag("game_content"),
+            contentPadding = PaddingValues(horizontal = 16.dp, vertical = 16.dp),
+            verticalArrangement = Arrangement.spacedBy(12.dp),
         ) {
-            EventCard(
-                title = event.title,
-                description = event.text,
-                imageId = event.imageId,
-                stage = event.stage.displayName(),
-                isSpecial = isSpecial,
-            )
-            Spacer(Modifier.height(20.dp))
-            StatGrid(stats)
-
-            TextButton(
-                onClick = onShowEndingForTest,
-                modifier = Modifier.align(androidx.compose.ui.Alignment.End),
-            ) {
-                Text("결말 화면 확인 (임시)")
+            item {
+                EventCard(
+                    title = event.title,
+                    description = event.text,
+                    imageId = event.imageId,
+                    stage = event.stage.displayName(),
+                    isSpecial = event.type == EventType.SPECIAL,
+                )
             }
-        }
-
-        Spacer(Modifier.height(12.dp))
-        event.choices.forEachIndexed { index, choice ->
-            if (index > 0) Spacer(Modifier.height(10.dp))
-            ChoiceButton(
-                text = "${choiceLabel(index)}. ${choice.label}",
-                onClick = { onChoose(choice) },
-            )
+            item {
+                Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
+                    Text(
+                        "현재 지표",
+                        style = MaterialTheme.typography.titleSmall,
+                        modifier = Modifier.semantics { heading() },
+                    )
+                    StatGrid(stats)
+                }
+            }
+            item {
+                Text(
+                    "어떻게 할까요?",
+                    style = MaterialTheme.typography.titleMedium,
+                    modifier = Modifier.padding(top = 8.dp).semantics { heading() },
+                )
+            }
+            itemsIndexed(event.choices) { index, choice ->
+                ChoiceButton(
+                    text = "${choiceLabel(index)}. ${choice.label}",
+                    onClick = { onChoose(choice) },
+                )
+            }
         }
     }
 }
@@ -85,17 +104,24 @@ private fun choiceLabel(index: Int): String = ('A' + index).toString()
 @Composable
 fun StatGrid(stats: Stats, modifier: Modifier = Modifier) {
     val values = stats.toDisplayMap()
-    Column(modifier = modifier, verticalArrangement = Arrangement.spacedBy(8.dp)) {
-        STAT_NAMES.chunked(2).forEach { row ->
-            Row(horizontalArrangement = Arrangement.spacedBy(16.dp)) {
-                row.forEach { name ->
-                    StatBar(
-                        name = name,
-                        value = values[name] ?: STAT_START,
-                        modifier = Modifier.weight(1f),
-                    )
+    val fontScale = LocalDensity.current.fontScale
+    BoxWithConstraints(modifier = modifier.fillMaxWidth()) {
+        val columns = if (maxWidth < 360.dp || fontScale >= 1.5f) 1 else 2
+        Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
+            STAT_NAMES.chunked(columns).forEach { row ->
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.spacedBy(16.dp),
+                ) {
+                    row.forEach { name ->
+                        StatBar(
+                            name = name,
+                            value = values[name] ?: STAT_START,
+                            modifier = Modifier.weight(1f),
+                        )
+                    }
+                    if (columns == 2 && row.size == 1) Spacer(Modifier.weight(1f))
                 }
-                if (row.size == 1) Spacer(Modifier.weight(1f))
             }
         }
     }
