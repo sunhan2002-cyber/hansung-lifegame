@@ -6,15 +6,19 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.lifecycle.AndroidViewModel
 import com.example.lifegame.data.ContentRepository
+import com.example.lifegame.data.ProgressStore
+import com.example.lifegame.data.SavedGame
 import com.example.lifegame.domain.engine.GameSession
 import com.example.lifegame.domain.model.Choice
+import com.example.lifegame.domain.model.GameScreenState
 
 class LifeGameViewModel(application: Application) : AndroidViewModel(application) {
 
     private val repository = ContentRepository(application)
+    private val progressStore = ProgressStore(application)
     private var session: GameSession? = null
 
-    var uiState by mutableStateOf(LifeGameUiState())
+    var uiState by mutableStateOf(LifeGameUiState(hasSaveData = progressStore.hasSaveData()))
         private set
 
     fun startNewGame(characterId: Int) {
@@ -32,10 +36,31 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
         val started = session!!.start()
         uiState = LifeGameUiState(
             characterId = characterId,
+            hasSaveData = true,
             progress = started.progress,
             currentEvent = started.currentEvent,
             ending = started.ending,
         )
+        persistSession()
+    }
+
+    fun continueGame(): GameScreenState? {
+        val savedGame = progressStore.load() ?: return clearInvalidSave()
+        val events = repository.loadEvents()
+        val endings = repository.loadEndings()
+        val restoredSession = runCatching {
+            GameSession(events = events, endings = endings).also {
+                it.restore(savedGame.progress)
+            }
+        }.getOrElse { return clearInvalidSave() }
+
+        session = restoredSession
+        uiState = LifeGameUiState(
+            characterId = savedGame.characterId,
+            hasSaveData = true,
+        )
+        syncFromSession()
+        return uiState.progress?.screenState
     }
 
     fun choose(choice: Choice): Boolean {
@@ -45,23 +70,27 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
             progress = result.progress,
             lastResult = UiChoiceResult(event.eventId, choice, result),
         )
+        persistSession()
         return true
     }
 
     fun proceed(): Boolean {
         val hasNextEvent = session?.proceed() ?: return false
         syncFromSession()
+        persistSession()
         return !hasNextEvent
     }
 
     fun finish() {
         session?.finish()
         syncFromSession()
+        persistSession()
     }
 
     fun reset() {
         session = null
-        uiState = LifeGameUiState(hasSaveData = uiState.hasSaveData)
+        progressStore.clear()
+        uiState = LifeGameUiState(hasSaveData = false)
     }
 
     private fun syncFromSession() {
@@ -78,5 +107,22 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
             },
             ending = sessionState.ending,
         )
+    }
+
+    private fun persistSession() {
+        val characterId = uiState.characterId ?: return
+        val progress = session?.state?.progress ?: return
+        progressStore.save(SavedGame(characterId = characterId, progress = progress))
+        uiState = uiState.copy(hasSaveData = true)
+    }
+
+    private fun clearInvalidSave(): GameScreenState? {
+        progressStore.clear()
+        session = null
+        uiState = LifeGameUiState(
+            hasSaveData = false,
+            contentError = "저장된 진행 상태를 복원하지 못했습니다. 새 게임을 시작해 주세요.",
+        )
+        return null
     }
 }

@@ -12,6 +12,7 @@ import androidx.navigation.NavOptionsBuilder
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.example.lifegame.domain.model.GameScreenState
 import com.example.lifegame.ui.screens.CharacterSelectScreen
 import com.example.lifegame.ui.screens.ChoiceResultScreen
 import com.example.lifegame.ui.screens.EndingScreen
@@ -42,7 +43,19 @@ fun LifeGameApp(
                     StartScreen(
                         canContinue = state.hasSaveData,
                         onNewGame = { navController.navigateOnce(Routes.CHARACTER_SELECT) },
-                        onContinue = { /* ProgressStore 연결 후 저장된 화면으로 이동 */ },
+                        onContinue = {
+                            val route = when (gameViewModel.continueGame()) {
+                                GameScreenState.EVENT -> Routes.GAME
+                                GameScreenState.CHOICE_RESULT -> Routes.CHOICE_RESULT
+                                GameScreenState.ENDING -> Routes.ENDING
+                                null -> null
+                            }
+                            if (route != null) {
+                                navController.navigateOnce(route) {
+                                    popUpTo(Routes.START)
+                                }
+                            }
+                        },
                     )
                 }
                 composable(Routes.CHARACTER_SELECT) {
