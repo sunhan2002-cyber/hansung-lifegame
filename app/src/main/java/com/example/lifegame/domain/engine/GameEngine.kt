@@ -30,10 +30,14 @@ data class EndingDecision(
 class GameEngine(
     private val rollPercent: () -> Int = { (1..100).random() },
     private val maxSpecialEventsPerRun: Int = 2,
+    private val minNormalEventsBeforeSpecial: Int = 2,
 ) {
     init {
         require(maxSpecialEventsPerRun >= 0) {
             "maxSpecialEventsPerRun must be zero or greater"
+        }
+        require(minNormalEventsBeforeSpecial >= 0) {
+            "minNormalEventsBeforeSpecial must be zero or greater"
         }
     }
 
@@ -130,6 +134,9 @@ class GameEngine(
         events: List<GameEvent>,
         chancePercent: Int,
     ): GameEvent? {
+        if (completedNormalEventCount(progress, events) < minNormalEventsBeforeSpecial) {
+            return null
+        }
         if (!shouldTriggerSpecialEvent(progress, chancePercent)) return null
         return events
             .asSequence()
@@ -275,6 +282,18 @@ class GameEngine(
         (current.toLong() + delta.toLong())
             .coerceIn(MIN_STAT.toLong(), MAX_STAT.toLong())
             .toInt()
+
+    private fun completedNormalEventCount(
+        progress: GameProgress,
+        events: List<GameEvent>,
+    ): Int {
+        val normalEventIds = events
+            .asSequence()
+            .filter { it.type == EventType.NORMAL }
+            .map { it.eventId }
+            .toSet()
+        return progress.completedEventIds.count(normalEventIds::contains)
+    }
 
     private companion object {
         const val MIN_STAT = 0

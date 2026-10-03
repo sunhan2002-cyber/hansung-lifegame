@@ -115,6 +115,38 @@ class GameEngineTest {
     }
 
     @Test
+    fun applyChoice_clampsAllSevenStatsAtBothBoundaries() {
+        val event = event(
+            choice(
+                statDelta = StatDelta(
+                    health = Int.MAX_VALUE,
+                    fitness = Int.MIN_VALUE,
+                    intelligence = Int.MAX_VALUE,
+                    social = Int.MIN_VALUE,
+                    wealth = Int.MAX_VALUE,
+                    happiness = Int.MIN_VALUE,
+                    luck = Int.MAX_VALUE,
+                ),
+            ),
+        )
+
+        val result = engine.applyChoice(progress(), event, event.choices.single())
+
+        assertEquals(
+            Stats(
+                health = 100,
+                fitness = 0,
+                intelligence = 100,
+                social = 0,
+                wealth = 100,
+                happiness = 0,
+                luck = 100,
+            ),
+            result.afterStats,
+        )
+    }
+
+    @Test
     fun applyChoice_addsExperienceFlagsAndCompletesEvent() {
         val event = event(choice(addFlags = setOf("reading_interest")))
 
@@ -261,12 +293,17 @@ class GameEngineTest {
 
     @Test
     fun pickSpecialEvent_stopsAtPerRunLimit() {
+        val normal1 = event(eventId = "normal_001")
+        val normal2 = event(eventId = "normal_002")
         val special = event(eventId = "special_001", type = EventType.SPECIAL)
         val limited = GameEngine(rollPercent = { 1 }, maxSpecialEventsPerRun = 2)
 
         val selected = limited.pickSpecialEvent(
-            progress(specialEventCount = 2),
-            listOf(special),
+            progress(
+                specialEventCount = 2,
+                completedEventIds = setOf(normal1.eventId, normal2.eventId),
+            ),
+            listOf(normal1, normal2, special),
             chancePercent = 100,
         )
 
@@ -275,17 +312,105 @@ class GameEngineTest {
 
     @Test
     fun pickSpecialEvent_usesHighestPriorityThenEventId() {
+        val normal1 = event(eventId = "normal_001")
+        val normal2 = event(eventId = "normal_002")
         val eventB = event(eventId = "special_b", type = EventType.SPECIAL, priority = 50)
         val eventA = event(eventId = "special_a", type = EventType.SPECIAL, priority = 50)
         val low = event(eventId = "special_low", type = EventType.SPECIAL, priority = 1)
 
         val selected = engine.pickSpecialEvent(
-            progress(),
-            listOf(eventB, low, eventA),
+            progress(completedEventIds = setOf(normal1.eventId, normal2.eventId)),
+            listOf(normal1, normal2, eventB, low, eventA),
             chancePercent = 100,
         )
 
         assertSame(eventA, selected)
+    }
+
+    @Test
+    fun pickSpecialEvent_isLockedBeforeTwoNormalEvents() {
+        val normal1 = event(eventId = "normal_001")
+        val normal2 = event(eventId = "normal_002")
+        val special = event(eventId = "special_001", type = EventType.SPECIAL)
+        val alwaysTrigger = GameEngine(rollPercent = { 1 })
+
+        assertNull(
+            alwaysTrigger.pickSpecialEvent(
+                progress(),
+                listOf(normal1, normal2, special),
+                chancePercent = 100,
+            ),
+        )
+        assertNull(
+            alwaysTrigger.pickSpecialEvent(
+                progress(completedEventIds = setOf(normal1.eventId)),
+                listOf(normal1, normal2, special),
+                chancePercent = 100,
+            ),
+        )
+    }
+
+    @Test
+    fun pickSpecialEvent_doesNotCountCompletedSpecialAsNormalProgress() {
+        val normal = event(eventId = "normal_001")
+        val completedSpecial = event(eventId = "special_done", type = EventType.SPECIAL)
+        val nextSpecial = event(eventId = "special_next", type = EventType.SPECIAL)
+        val alwaysTrigger = GameEngine(rollPercent = { 1 })
+
+        val selected = alwaysTrigger.pickSpecialEvent(
+            progress(completedEventIds = setOf(normal.eventId, completedSpecial.eventId)),
+            listOf(normal, completedSpecial, nextSpecial),
+            chancePercent = 100,
+        )
+
+        assertNull(selected)
+    }
+
+    @Test
+    fun pickSpecialEvent_isUnlockedAfterTwoNormalEvents() {
+        val normal1 = event(eventId = "normal_001")
+        val normal2 = event(eventId = "normal_002")
+        val special = event(eventId = "special_001", type = EventType.SPECIAL)
+        val alwaysTrigger = GameEngine(rollPercent = { 1 })
+
+        val selected = alwaysTrigger.pickSpecialEvent(
+            progress(completedEventIds = setOf(normal1.eventId, normal2.eventId)),
+            listOf(normal1, normal2, special),
+            chancePercent = 100,
+        )
+
+        assertSame(special, selected)
+    }
+
+    @Test
+    fun advanceAfterResult_usesNormalEventWhileSpecialIsLocked() {
+        val normalDone = event(eventId = "normal_done")
+        val normalNext = event(eventId = "normal_next")
+        val special = event(eventId = "special_001", type = EventType.SPECIAL, priority = 100)
+        val alwaysTrigger = GameEngine(rollPercent = { 1 })
+
+        val advanced = alwaysTrigger.advanceAfterResult(
+            progress(completedEventIds = setOf(normalDone.eventId)),
+            listOf(normalDone, normalNext, special),
+        )
+
+        assertTrue(advanced.currentEventOccurrenceId.contains(normalNext.eventId))
+    }
+
+    @Test
+    fun advanceAfterResult_canUseSpecialAfterTwoNormalEvents() {
+        val normal1 = event(eventId = "normal_001")
+        val normal2 = event(eventId = "normal_002")
+        val normalNext = event(eventId = "normal_next")
+        val special = event(eventId = "special_001", type = EventType.SPECIAL)
+        val alwaysTrigger = GameEngine(rollPercent = { 1 })
+
+        val advanced = alwaysTrigger.advanceAfterResult(
+            progress(completedEventIds = setOf(normal1.eventId, normal2.eventId)),
+            listOf(normal1, normal2, normalNext, special),
+        )
+
+        assertTrue(advanced.currentEventOccurrenceId.contains(special.eventId))
     }
 
     @Test
@@ -304,6 +429,33 @@ class GameEngineTest {
         assertEquals(LifeStage.CHILD, child.stage)
         assertEquals(0, child.stageEventCount)
         assertSame(adult, engine.moveNextStage(adult))
+    }
+
+    @Test
+    fun moveNextStage_advancesThroughEveryLifeStageInOrder() {
+        val infant = progress(stage = LifeStage.INFANT, stageEventCount = 5)
+        val child = engine.moveNextStage(infant)
+        val teen = engine.moveNextStage(child.copy(stageEventCount = 5))
+        val adult = engine.moveNextStage(teen.copy(stageEventCount = 5))
+
+        assertEquals(LifeStage.CHILD, child.stage)
+        assertEquals(LifeStage.TEEN, teen.stage)
+        assertEquals(LifeStage.ADULT, adult.stage)
+        assertEquals(adult.copy(stageEventCount = 5), engine.moveNextStage(adult.copy(stageEventCount = 5)))
+    }
+
+    @Test
+    fun advanceAfterResult_movesStageAfterFiveHandledEvents() {
+        val childEvent = event(eventId = "child_first", stage = LifeStage.CHILD)
+
+        val advanced = engine.advanceAfterResult(
+            progress(stage = LifeStage.INFANT, stageEventCount = 5),
+            listOf(childEvent),
+        )
+
+        assertEquals(LifeStage.CHILD, advanced.stage)
+        assertEquals(0, advanced.stageEventCount)
+        assertTrue(advanced.currentEventOccurrenceId.contains(childEvent.eventId))
     }
 
     @Test
