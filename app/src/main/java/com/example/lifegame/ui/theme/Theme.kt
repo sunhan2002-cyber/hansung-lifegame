@@ -6,24 +6,36 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
 
 private val LifeGameColorScheme = lightColorScheme(
-    primary = LifeGamePrimary,
+    // 주 버튼은 필름과 같은 먹색
+    primary = LifeGameInk,
     onPrimary = Color.White,
+    primaryContainer = LifeGameMuted,
+    onPrimaryContainer = LifeGameInk,
 
-    background = LifeGameBackground,
-    onBackground = LifeGameTextPrimary,
+    secondary = LifeGameInkSecondary,
+    onSecondary = Color.White,
 
-    surface = LifeGameSurface,
-    onSurface = LifeGameTextPrimary,
+    background = LifeGamePaper,
+    onBackground = LifeGameInk,
 
-    // 돌발 이벤트 강조색과 그 위의 글자색
-    error = LifeGameSpecial,
-    onError = LifeGameTextPrimary,
+    surface = LifeGamePaper,
+    onSurface = LifeGameInk,
+    surfaceVariant = LifeGameMuted,
+    onSurfaceVariant = LifeGameInkSecondary,
+    surfaceContainerLowest = LifeGameCard,
+    surfaceContainerLow = LifeGamePaper,
+    surfaceContainer = LifeGamePaper,
+    surfaceContainerHigh = LifeGamePaper,
+    surfaceContainerHighest = LifeGameMuted,
 
-    // 돌발 이벤트 배경색과 그 위의 글자색
-    errorContainer = LifeGameSpecialBackground,
-    onErrorContainer = LifeGameTextPrimary,
+    // 능력치 하락 등 부정적인 변화
+    error = LifeGameStatDown,
+    onError = Color.White,
+    errorContainer = LifeGameStatDownSoft,
+    onErrorContainer = LifeGameInk,
 
-    outline = LifeGameBorder
+    outline = LifeGameRule,
+    outlineVariant = LifeGameRule,
 )
 
 @Composable

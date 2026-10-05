@@ -1,8 +1,8 @@
 package com.example.lifegame.ui.components
 
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -10,9 +10,10 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.lerp
+import androidx.compose.ui.semantics.heading
+import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.unit.dp
 
 /**
@@ -33,8 +34,9 @@ fun EventCard(
     Surface(
         modifier = modifier.fillMaxWidth(),
         shape = RoundedCornerShape(16.dp),
-        color = if (isSpecial) lerp(colors.surface, colors.errorContainer, 0.25f) else colors.surface,
+        color = if (isSpecial) lerp(colors.surface, colors.tertiaryContainer, 0.25f) else colors.surface,
         contentColor = colors.onSurface,
+        border = if (isSpecial) BorderStroke(1.dp, colors.tertiary) else null,
     ) {
         Column(
             modifier = Modifier.padding(16.dp),
@@ -43,38 +45,33 @@ fun EventCard(
             if (stage.isNotBlank()) {
                 Text(
                     text = stage,
-                    style = MaterialTheme.typography.titleMedium,
+                    style = MaterialTheme.typography.labelLarge,
                     color = colors.primary,
                 )
             }
 
-            if (title.isNotBlank() || isSpecial) {
-                Row(
-                    modifier = Modifier.fillMaxWidth(),
-                    horizontalArrangement = Arrangement.spacedBy(8.dp),
-                    verticalAlignment = Alignment.Top,
+            // 배지와 제목의 폭을 나누지 않아 큰 글씨에서도 제목 전체를 읽을 수 있다.
+            if (isSpecial) {
+                Surface(
+                    shape = RoundedCornerShape(8.dp),
+                    color = colors.tertiaryContainer,
+                    contentColor = colors.onTertiaryContainer,
                 ) {
-                    if (title.isNotBlank()) {
-                        Text(
-                            text = title,
-                            modifier = Modifier.weight(1f),
-                            style = MaterialTheme.typography.titleLarge,
-                        )
-                    }
-                    if (isSpecial) {
-                        Surface(
-                            shape = RoundedCornerShape(8.dp),
-                            color = colors.errorContainer,
-                            contentColor = colors.onErrorContainer,
-                        ) {
-                            Text(
-                                text = "돌발 이벤트",
-                                modifier = Modifier.padding(horizontal = 10.dp, vertical = 6.dp),
-                                style = MaterialTheme.typography.labelMedium,
-                            )
-                        }
-                    }
+                    Text(
+                        text = "돌발 이벤트",
+                        modifier = Modifier.padding(horizontal = 10.dp, vertical = 6.dp),
+                        style = MaterialTheme.typography.labelLarge,
+                    )
                 }
+            }
+
+            if (title.isNotBlank()) {
+                Text(
+                    text = title,
+                    modifier = Modifier.fillMaxWidth().semantics { heading() },
+                    style = MaterialTheme.typography.titleLarge,
+                    softWrap = true,
+                )
             }
 
             EventImageBox(imageId = imageId)
@@ -82,7 +79,9 @@ fun EventCard(
             if (description.isNotBlank()) {
                 Text(
                     text = description,
+                    modifier = Modifier.fillMaxWidth(),
                     style = MaterialTheme.typography.bodyLarge,
+                    softWrap = true,
                 )
             }
         }
