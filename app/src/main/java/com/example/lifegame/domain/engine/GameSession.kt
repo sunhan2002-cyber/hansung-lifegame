@@ -7,6 +7,8 @@ import com.example.lifegame.domain.model.GameEvent
 import com.example.lifegame.domain.model.GameProgress
 import com.example.lifegame.domain.model.GameScreenState
 import com.example.lifegame.domain.model.LifeStage
+import com.example.lifegame.domain.model.StatDelta
+import com.example.lifegame.domain.model.Stats
 
 data class GameSessionState(
     val progress: GameProgress? = null,
@@ -36,6 +38,27 @@ class GameSession(
         val runId = runIdFactory()
         val initial = engine.createInitialProgress(runId)
         state = moveToNextEvent(initial)
+        return state
+    }
+
+    fun restore(progress: GameProgress): GameSessionState {
+        require(events.isNotEmpty()) { "At least one event is required" }
+        require(endings.any { it.isDefault }) { "At least one default ending is required" }
+
+        state = when (progress.screenState) {
+            GameScreenState.EVENT -> GameSessionState(
+                progress = progress,
+                currentEvent = requireNotNull(progress.findCurrentEvent()) {
+                    "Saved event is not available in the current content"
+                },
+            )
+
+            GameScreenState.CHOICE_RESULT -> restoreChoiceResult(progress)
+            GameScreenState.ENDING -> GameSessionState(
+                progress = progress,
+                ending = engine.checkEnding(progress, endings),
+            )
+        }
         return state
     }
 
@@ -93,4 +116,44 @@ class GameSession(
             ending = ending,
         )
     }
+
+    private fun restoreChoiceResult(progress: GameProgress): GameSessionState {
+        val history = requireNotNull(progress.choiceHistory.lastOrNull()) {
+            "Choice result save has no choice history"
+        }
+        val event = requireNotNull(events.firstOrNull { it.eventId == history.eventId }) {
+            "Saved event is not available in the current content"
+        }
+        val choice = requireNotNull(event.choices.firstOrNull { it.choiceId == history.choiceId }) {
+            "Saved choice is not available in the current content"
+        }
+        val result = ChoiceResult(
+            progress = progress,
+            beforeStats = history.beforeStats,
+            afterStats = history.afterStats,
+            appliedDelta = history.beforeStats.deltaTo(history.afterStats),
+            resultText = history.resultText,
+            wasApplied = true,
+        )
+        return GameSessionState(
+            progress = progress,
+            currentEvent = event,
+            selectedChoice = choice,
+            lastResult = result,
+        )
+    }
+
+    private fun GameProgress.findCurrentEvent(): GameEvent? = events.firstOrNull { event ->
+        currentEventOccurrenceId.startsWith("$runId:${event.eventId}:")
+    }
+
+    private fun Stats.deltaTo(after: Stats): StatDelta = StatDelta(
+        health = after.health - health,
+        fitness = after.fitness - fitness,
+        intelligence = after.intelligence - intelligence,
+        social = after.social - social,
+        wealth = after.wealth - wealth,
+        happiness = after.happiness - happiness,
+        luck = after.luck - luck,
+    )
 }
