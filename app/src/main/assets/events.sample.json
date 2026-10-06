@@ -1045,6 +1045,391 @@
     "eventId": "infant_021",
     "stage": "INFANT",
     "type": "NORMAL",
+    "isFallback": false,
+    "isMilestone": false,
+    "title": "첫 미용실",
+    "text": "미용사: \"{name} 아기, 가만히 있으면 사탕 줄게~\" 가위가 귀 옆에서 사각거린다.",
+    "imageId": "img_infant_first_haircut_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [],
+      "blockedFlags": []
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "꼼짝 않고 버틴다.",
+        "statDelta": {
+          "사회성": 2,
+          "행복": -1
+        },
+        "resultText": "앞머리가 일자로 잘렸다. 사진관 아저씨가 \"바가지 머리 귀엽네\" 했다.",
+        "addFlags": []
+      },
+      {
+        "choiceId": "B",
+        "label": "가위를 향해 손을 뻗는다.",
+        "statDelta": {
+          "운동능력": 1,
+          "행복": 1,
+          "사회성": -1
+        },
+        "resultText": "한쪽만 짧아졌다. 엄마는 끝까지 \"언밸런스 컷\"이라고 우겼다.",
+        "addFlags": []
+      },
+      {
+        "choiceId": "C",
+        "label": "엄마 무릎에서만 자르겠다고 운다.",
+        "statDelta": {
+          "행복": 2,
+          "사회성": -1
+        },
+        "resultText": "엄마 무릎에서 잘랐다. 엄마 바지가 머리카락투성이가 됐다.",
+        "addFlags": []
+      }
+    ],
+    "priority": 0
+  },
+  {
+    "eventId": "infant_022",
+    "stage": "INFANT",
+    "type": "NORMAL",
+    "isFallback": false,
+    "isMilestone": false,
+    "title": "오리 변기",
+    "text": "엄마: \"{nameCall}, 이제 변기에서 해 볼까?\" 오리 모양 아기 변기가 나를 보고 있다.",
+    "imageId": "img_infant_potty_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [],
+      "blockedFlags": []
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "앉아 본다.",
+        "statDelta": {
+          "건강": 2,
+          "행복": -1
+        },
+        "resultText": "아무 일도 없었다. 일어나자마자 바지에 했다. 그래도 엄마가 박수를 쳤다.",
+        "addFlags": [
+          "potty_trained"
+        ]
+      },
+      {
+        "choiceId": "B",
+        "label": "오리 변기를 모자처럼 쓴다.",
+        "statDelta": {
+          "행복": 3,
+          "사회성": -1
+        },
+        "resultText": "가족 단톡방에 사진이 올라갔다. 배변 훈련은 일주일 미뤄졌다.",
+        "addFlags": []
+      },
+      {
+        "choiceId": "C",
+        "label": "아빠 화장실을 따라간다.",
+        "statDelta": {
+          "지력": 2,
+          "행복": -1
+        },
+        "resultText": "아빠가 문을 잠갔다. 문 앞에서 10분을 기다렸다.",
+        "addFlags": []
+      }
+    ],
+    "priority": 0
+  },
+  {
+    "eventId": "infant_023",
+    "stage": "INFANT",
+    "type": "NORMAL",
+    "isFallback": false,
+    "isMilestone": false,
+    "title": "회전목마",
+    "text": "놀이공원. 아빠: \"{nameCall}, 말 탈래, 마차 탈래?\" 음악이 시작되려 한다.",
+    "imageId": "img_infant_carousel_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [],
+      "blockedFlags": []
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "말을 탄다.",
+        "statDelta": {
+          "운동능력": 2,
+          "건강": -1
+        },
+        "resultText": "말 위에서 \"이랴!\"를 외쳤다. 세 바퀴째에 멀미가 났다.",
+        "addFlags": []
+      },
+      {
+        "choiceId": "B",
+        "label": "마차를 탄다.",
+        "statDelta": {
+          "행복": 2,
+          "운동능력": -1
+        },
+        "resultText": "마차 안에서 손을 흔들었다. 아빠가 바깥에서 매 바퀴 사진을 찍었다.",
+        "addFlags": []
+      }
+    ],
+    "priority": 0
+  },
+  {
+    "eventId": "infant_024",
+    "stage": "INFANT",
+    "type": "NORMAL",
+    "isFallback": false,
+    "isMilestone": false,
+    "title": "엘리베이터 버튼",
+    "text": "엘리베이터에 탔다. 버튼이 딱 손 닿는 높이에 있다. 옆집 할머니도 함께 탔다.",
+    "imageId": "img_infant_elevator_button_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [],
+      "blockedFlags": []
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "우리 층만 누른다.",
+        "statDelta": {
+          "지력": 2,
+          "사회성": -1
+        },
+        "resultText": "정확히 눌렀다. 할머니 층은 할머니가 직접 누르셨다.",
+        "addFlags": []
+      },
+      {
+        "choiceId": "B",
+        "label": "모든 층을 다 누른다.",
+        "statDelta": {
+          "행복": 3,
+          "사회성": -2
+        },
+        "resultText": "엘리베이터가 층마다 섰다. 할머니가 중간에 내려 계단으로 가셨다.",
+        "addFlags": []
+      },
+      {
+        "choiceId": "C",
+        "label": "할머니 층도 눌러 드린다.",
+        "statDelta": {
+          "사회성": 3,
+          "행복": -1
+        },
+        "resultText": "할머니가 동네방네 칭찬하고 다니셨다. 우리 층은 엄마가 눌러 버렸다.",
+        "addFlags": []
+      }
+    ],
+    "priority": 0
+  },
+  {
+    "eventId": "infant_025",
+    "stage": "INFANT",
+    "type": "NORMAL",
+    "isFallback": false,
+    "isMilestone": false,
+    "title": "할머니 댁 마당의 닭",
+    "text": "시골 할머니 댁. 마당에 닭이 있다. 닭이 나를 노려본다.",
+    "imageId": "img_infant_rooster_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [],
+      "blockedFlags": []
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "닭을 쫓아간다.",
+        "statDelta": {
+          "운동능력": 3,
+          "건강": -1
+        },
+        "resultText": "닭이 반격했다. 이번엔 내가 쫓겼다.",
+        "addFlags": []
+      },
+      {
+        "choiceId": "B",
+        "label": "할머니 뒤에 숨는다.",
+        "statDelta": {
+          "사회성": 2,
+          "운동능력": -1
+        },
+        "resultText": "할머니가 닭을 꾸짖었다. 닭은 할머니 말만 듣는다.",
+        "addFlags": []
+      },
+      {
+        "choiceId": "C",
+        "label": "모이를 한 줌 준다.",
+        "statDelta": {
+          "운": 2,
+          "행복": 1,
+          "건강": -1
+        },
+        "resultText": "닭이 손바닥까지 쪼았다. 그래도 다음 날부터 닭이 나를 졸졸 따라다녔다.",
+        "addFlags": [
+          "rooster_friend"
+        ]
+      }
+    ],
+    "priority": 0
+  },
+  {
+    "eventId": "infant_026",
+    "stage": "INFANT",
+    "type": "NORMAL",
+    "isFallback": false,
+    "isMilestone": false,
+    "title": "볼풀에서 잃어버린 신발",
+    "text": "키즈카페 볼풀에서 놀다 보니 신발 한 짝이 없다. 공이 천 개는 넘어 보인다.",
+    "imageId": "img_infant_ball_pit_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [],
+      "blockedFlags": []
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "볼풀에 잠수해서 찾는다.",
+        "statDelta": {
+          "운동능력": 2,
+          "지력": 1,
+          "건강": -1
+        },
+        "resultText": "15분 만에 찾았다. 남의 신발이었다.",
+        "addFlags": []
+      },
+      {
+        "choiceId": "B",
+        "label": "직원 형에게 말한다.",
+        "statDelta": {
+          "사회성": 2,
+          "행복": -1
+        },
+        "resultText": "직원 형이 금방 찾아 줬다. 대신 놀 시간이 끝났다.",
+        "addFlags": []
+      },
+      {
+        "choiceId": "C",
+        "label": "한 짝만 신고 계속 논다.",
+        "statDelta": {
+          "행복": 3,
+          "건강": -1
+        },
+        "resultText": "집에 와서야 엄마가 알았다. 신발은 일주일 뒤 분실물함에서 나왔다.",
+        "addFlags": []
+      }
+    ],
+    "priority": 0
+  },
+  {
+    "eventId": "infant_027",
+    "stage": "INFANT",
+    "type": "NORMAL",
+    "isFallback": false,
+    "isMilestone": false,
+    "title": "아빠의 잠자리 동화",
+    "text": "아빠가 잠자리 동화를 읽는데 자꾸 몇 장씩 건너뛴다. 이야기가 이상하게 빨리 끝나 간다.",
+    "imageId": "img_infant_bedtime_story_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [],
+      "blockedFlags": []
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "\"아빠, 거기 한 장 넘겼어.\"",
+        "statDelta": {
+          "지력": 3,
+          "사회성": -1
+        },
+        "resultText": "아빠가 처음부터 다시 읽었다. 그리고 아빠가 먼저 잠들었다.",
+        "addFlags": []
+      },
+      {
+        "choiceId": "B",
+        "label": "모른 척 끝까지 듣는다.",
+        "statDelta": {
+          "사회성": 2,
+          "지력": -1
+        },
+        "resultText": "공주가 세 장 만에 결혼했다. 그래도 아빠 목소리가 좋았다.",
+        "addFlags": []
+      },
+      {
+        "choiceId": "C",
+        "label": "\"내가 읽어 줄게!\"",
+        "statDelta": {
+          "지력": 2,
+          "행복": 2,
+          "건강": -1
+        },
+        "resultText": "그림만 보고 이야기를 지어냈다. 아빠가 끝까지 들어 줬다. 둘 다 늦게 잤다.",
+        "addFlags": [
+          "storyteller"
+        ]
+      }
+    ],
+    "priority": 0
+  },
+  {
+    "eventId": "infant_028",
+    "stage": "INFANT",
+    "type": "NORMAL",
+    "isFallback": false,
+    "isMilestone": false,
+    "title": "친구의 생일 케이크",
+    "text": "어린이집 친구 생일 파티. 케이크에 초가 다섯 개. 다들 숨을 크게 들이마시고 있다.",
+    "imageId": "img_infant_birthday_cake_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [],
+      "blockedFlags": []
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "친구가 끌 때까지 기다린다.",
+        "statDelta": {
+          "사회성": 3,
+          "행복": -1
+        },
+        "resultText": "친구가 초를 끄고 제일 큰 조각을 나한테 줬다.",
+        "addFlags": []
+      },
+      {
+        "choiceId": "B",
+        "label": "몰래 먼저 분다.",
+        "statDelta": {
+          "행복": 2,
+          "사회성": -2
+        },
+        "resultText": "초는 꺼졌고 파티 분위기도 꺼졌다. 생일인 친구가 울었다.",
+        "addFlags": []
+      },
+      {
+        "choiceId": "C",
+        "label": "생일 노래를 제일 크게 부른다.",
+        "statDelta": {
+          "사회성": 2,
+          "행복": 1,
+          "운": -1
+        },
+        "resultText": "박수는 받았는데 가사는 절반쯤 틀렸다. 친구 이름도 틀렸다.",
+        "addFlags": []
+      }
+    ],
+    "priority": 0
+  },
+  {
+    "eventId": "infant_029",
+    "stage": "INFANT",
+    "type": "NORMAL",
     "isFallback": true,
     "isMilestone": false,
     "title": "낮잠 시간",
@@ -1080,7 +1465,7 @@
     "priority": 0
   },
   {
-    "eventId": "infant_022",
+    "eventId": "infant_030",
     "stage": "INFANT",
     "type": "NORMAL",
     "isFallback": true,
@@ -3249,6 +3634,304 @@
     "eventId": "child_040",
     "stage": "CHILD",
     "type": "NORMAL",
+    "isFallback": false,
+    "isMilestone": false,
+    "title": "구구단 7단",
+    "text": "선생님: \"7단 끝까지 외우는 사람, 사탕!\" 7×8에서 늘 막힌다.",
+    "imageId": "img_child_times_table_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [],
+      "blockedFlags": []
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "손을 든다.",
+        "statDelta": {
+          "지력": 3,
+          "행복": -1
+        },
+        "resultText": "7×8에서 3초 멈췄다. 친구들이 \"오십육!\"을 속삭여 줬다. 사탕은 받았다.",
+        "addFlags": []
+      },
+      {
+        "choiceId": "B",
+        "label": "노래로 외운다.",
+        "statDelta": {
+          "지력": 2,
+          "행복": 2,
+          "사회성": -1
+        },
+        "resultText": "집에서 하루 종일 구구단 노래를 불렀다. 동생도 7단을 외웠다. 엄마는 귀를 막았다.",
+        "addFlags": []
+      },
+      {
+        "choiceId": "C",
+        "label": "계산기를 몰래 꺼낸다.",
+        "statDelta": {
+          "운": 1,
+          "지력": -1
+        },
+        "resultText": "선생님이 계산기를 압수했다. 대신 쉬는 시간에 계산기로 '이상한 단어' 만드는 법을 알려 주셨다.",
+        "addFlags": []
+      }
+    ],
+    "priority": 0
+  },
+  {
+    "eventId": "child_041",
+    "stage": "CHILD",
+    "type": "NORMAL",
+    "isFallback": false,
+    "isMilestone": false,
+    "title": "그네 차례",
+    "text": "놀이터 그네 하나에 다섯 명이 줄을 섰다. 드디어 내 차례다.",
+    "imageId": "img_child_swing_line_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [],
+      "blockedFlags": []
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "열 번만 타고 비켜 준다.",
+        "statDelta": {
+          "사회성": 3,
+          "행복": -1
+        },
+        "resultText": "뒤에 선 꼬마가 고맙다고 했다. 그날 처음 본 아이와 친구가 됐다.",
+        "addFlags": []
+      },
+      {
+        "choiceId": "B",
+        "label": "해 질 때까지 탄다.",
+        "statDelta": {
+          "행복": 3,
+          "사회성": -2
+        },
+        "resultText": "노을이 예뻤다. 뒤에 선 줄이 열 명으로 늘었다.",
+        "addFlags": []
+      },
+      {
+        "choiceId": "C",
+        "label": "뒷사람과 둘이 같이 탄다.",
+        "statDelta": {
+          "사회성": 2,
+          "행복": 1,
+          "건강": -1
+        },
+        "resultText": "둘이 같이 떨어졌다. 둘이 같이 웃었다.",
+        "addFlags": []
+      }
+    ],
+    "priority": 0
+  },
+  {
+    "eventId": "child_042",
+    "stage": "CHILD",
+    "type": "NORMAL",
+    "isFallback": false,
+    "isMilestone": false,
+    "title": "보조 바퀴 떼는 날",
+    "text": "아빠: \"{nameCall}, 오늘 보조 바퀴 뗀다. 아빠가 뒤에서 꽉 잡고 있을게.\"",
+    "imageId": "img_child_bicycle_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [],
+      "blockedFlags": []
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "힘껏 페달을 밟는다.",
+        "statDelta": {
+          "운동능력": 3,
+          "건강": -1
+        },
+        "resultText": "열 걸음쯤 가서 뒤돌아보니 아빠는 저 멀리 서 있었다. 그걸 본 순간 넘어졌다.",
+        "addFlags": [
+          "bike_rider"
+        ]
+      },
+      {
+        "choiceId": "B",
+        "label": "보조 바퀴를 하나만 떼 달라고 한다.",
+        "statDelta": {
+          "운동능력": 1,
+          "행복": 1,
+          "사회성": -1
+        },
+        "resultText": "기울어진 채로 달렸다. 동네에서 '외발 보조 바퀴'로 유명해졌다.",
+        "addFlags": []
+      },
+      {
+        "choiceId": "C",
+        "label": "\"그냥 킥보드 탈래.\"",
+        "statDelta": {
+          "행복": 2,
+          "운동능력": -1
+        },
+        "resultText": "킥보드로 동네를 돌았다. 자전거는 창고에서 1년을 더 쉬었다.",
+        "addFlags": []
+      }
+    ],
+    "priority": 0
+  },
+  {
+    "eventId": "child_043",
+    "stage": "CHILD",
+    "type": "NORMAL",
+    "isFallback": false,
+    "isMilestone": false,
+    "title": "학교 앞 병아리",
+    "text": "하굣길 교문 앞. 상자 안에서 노란 병아리들이 삐약거린다. 한 마리 500원.",
+    "imageId": "img_child_chick_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [],
+      "blockedFlags": []
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "한 마리 산다.",
+        "statDelta": {
+          "행복": 3,
+          "경제력": -1
+        },
+        "resultText": "이름을 '노랑이'로 지었다. 노랑이는 석 달 만에 닭이 되어 할머니 댁 마당으로 이사 갔다.",
+        "addFlags": [
+          "raised_chick"
+        ]
+      },
+      {
+        "choiceId": "B",
+        "label": "구경만 한다.",
+        "statDelta": {
+          "지력": 1,
+          "행복": -1
+        },
+        "resultText": "마음속으로 병아리 이름을 열 개 지어 줬다.",
+        "addFlags": []
+      },
+      {
+        "choiceId": "C",
+        "label": "엄마에게 전화한다.",
+        "statDelta": {
+          "사회성": 2,
+          "행복": -1
+        },
+        "resultText": "엄마: \"절대 안 돼.\" 대신 주말에 동물원에 갔다.",
+        "addFlags": []
+      }
+    ],
+    "priority": 0
+  },
+  {
+    "eventId": "child_044",
+    "stage": "CHILD",
+    "type": "NORMAL",
+    "isFallback": false,
+    "isMilestone": false,
+    "title": "체험학습 버스 맨 뒷자리",
+    "text": "체험학습 가는 버스 맨 뒷자리. 속이 점점 울렁거린다.",
+    "imageId": "img_child_bus_trip_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [],
+      "blockedFlags": []
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "창문을 연다.",
+        "statDelta": {
+          "건강": 2,
+          "사회성": -1
+        },
+        "resultText": "바람이 시원했다. 뒷자리 친구들 머리가 전부 날렸다.",
+        "addFlags": []
+      },
+      {
+        "choiceId": "B",
+        "label": "꾹 참는다.",
+        "statDelta": {
+          "지력": 1,
+          "건강": -3
+        },
+        "resultText": "도착할 때까지 참았다. 내리자마자 화단으로 달려갔다.",
+        "addFlags": []
+      },
+      {
+        "choiceId": "C",
+        "label": "선생님 옆 앞자리로 옮긴다.",
+        "statDelta": {
+          "건강": 3,
+          "사회성": -2
+        },
+        "resultText": "앞자리는 멀미가 덜했다. 대신 선생님이 두 시간 내내 퀴즈를 냈다.",
+        "addFlags": []
+      }
+    ],
+    "priority": 0
+  },
+  {
+    "eventId": "child_045",
+    "stage": "CHILD",
+    "type": "NORMAL",
+    "isFallback": false,
+    "isMilestone": false,
+    "title": "학급 신문 기자",
+    "text": "선생님: \"{nameCall}, 이번 달 학급 신문 기자 해 볼래?\"",
+    "imageId": "img_child_class_newspaper_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [],
+      "blockedFlags": []
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "'급식 맛 순위' 기사를 쓴다.",
+        "statDelta": {
+          "지력": 2,
+          "사회성": 2,
+          "행복": -1
+        },
+        "resultText": "기사가 학교에서 화제가 됐다. 영양사 선생님이 반박문을 보내오셨다.",
+        "addFlags": [
+          "young_reporter"
+        ]
+      },
+      {
+        "choiceId": "B",
+        "label": "네 컷 만화를 그린다.",
+        "statDelta": {
+          "행복": 3,
+          "지력": -1
+        },
+        "resultText": "담임 선생님이 주인공인 만화였다. 선생님이 제일 크게 웃으셨다.",
+        "addFlags": []
+      },
+      {
+        "choiceId": "C",
+        "label": "\"저는 안 할래요.\"",
+        "statDelta": {
+          "행복": 1,
+          "사회성": -1
+        },
+        "resultText": "다른 친구가 기자가 됐다. 그 친구의 첫 기사 제목은 '기자를 거절한 아이'였다.",
+        "addFlags": []
+      }
+    ],
+    "priority": 0
+  },
+  {
+    "eventId": "child_046",
+    "stage": "CHILD",
+    "type": "NORMAL",
     "isFallback": true,
     "isMilestone": false,
     "title": "쉬는 시간 10분",
@@ -3294,7 +3977,7 @@
     "priority": 0
   },
   {
-    "eventId": "child_041",
+    "eventId": "child_047",
     "stage": "CHILD",
     "type": "NORMAL",
     "isFallback": true,
@@ -4767,6 +5450,448 @@
     "type": "NORMAL",
     "isFallback": false,
     "isMilestone": false,
+    "title": "성적표 사인",
+    "text": "성적표에 부모님 사인을 받아 가야 한다. 수학 점수 칸에 52가 적혀 있다.",
+    "imageId": "img_teen_report_card_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [],
+      "blockedFlags": []
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "그대로 보여 드린다.",
+        "statDelta": {
+          "사회성": 2,
+          "행복": -2
+        },
+        "resultText": "엄마가 한참 보더니 말했다. \"다음엔 60점.\" 목표가 생겼다.",
+        "addFlags": []
+      },
+      {
+        "choiceId": "B",
+        "label": "사인을 연습한다.",
+        "statDelta": {
+          "운": 1,
+          "사회성": -3
+        },
+        "resultText": "선생님이 사인을 보더니 말했다. \"어머님 글씨가 너랑 똑같네?\"",
+        "addFlags": []
+      },
+      {
+        "choiceId": "C",
+        "label": "아빠한테 먼저 보여 드린다.",
+        "statDelta": {
+          "사회성": 1,
+          "운": 2,
+          "행복": -1
+        },
+        "resultText": "아빠가 \"아빠도 수학은 50점이었어\" 하며 사인해 줬다. 엄마는 아직 모른다.",
+        "addFlags": []
+      }
+    ],
+    "priority": 0
+  },
+  {
+    "eventId": "teen_029",
+    "stage": "TEEN",
+    "type": "NORMAL",
+    "isFallback": false,
+    "isMilestone": false,
+    "title": "4교시 매점 달리기",
+    "text": "4교시 종이 울렸다. 매점 크림빵은 딱 열 개뿐이다.",
+    "imageId": "img_teen_school_store_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [],
+      "blockedFlags": []
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "전력 질주한다.",
+        "statDelta": {
+          "운동능력": 2,
+          "행복": 1,
+          "건강": -1
+        },
+        "resultText": "빵을 손에 넣었다. 복도에서 뛰다가 학생주임 선생님 수첩에 이름이 적혔다.",
+        "addFlags": []
+      },
+      {
+        "choiceId": "B",
+        "label": "발 빠른 친구에게 부탁한다.",
+        "statDelta": {
+          "사회성": 2,
+          "경제력": -1
+        },
+        "resultText": "친구가 빵을 두 개 사 왔다. 심부름값으로 우유를 사 줬다.",
+        "addFlags": []
+      },
+      {
+        "choiceId": "C",
+        "label": "그냥 급식을 먹는다.",
+        "statDelta": {
+          "건강": 2,
+          "행복": -1
+        },
+        "resultText": "오늘 급식 반찬은 크림빵이었다.",
+        "addFlags": []
+      }
+    ],
+    "priority": 0
+  },
+  {
+    "eventId": "teen_030",
+    "stage": "TEEN",
+    "type": "NORMAL",
+    "isFallback": false,
+    "isMilestone": false,
+    "title": "반티 투표",
+    "text": "체육대회 반티 투표. 후보는 흰 티, 공룡 잠옷, 각자 자유.",
+    "imageId": "img_teen_class_shirt_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [],
+      "blockedFlags": []
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "무난한 흰 티에 한 표.",
+        "statDelta": {
+          "사회성": 1,
+          "행복": -1
+        },
+        "resultText": "흰 티가 됐다. 체육대회 사진 속 우리 반은 다른 반 뒤에 묻혀 있다.",
+        "addFlags": []
+      },
+      {
+        "choiceId": "B",
+        "label": "공룡 잠옷에 한 표.",
+        "statDelta": {
+          "행복": 3,
+          "사회성": -1
+        },
+        "resultText": "공룡 잠옷이 1등. 운동장에 공룡 서른 마리가 뛰어다녔다. 사진이 학교 홈페이지 메인에 걸렸다.",
+        "addFlags": [
+          "dino_class"
+        ]
+      },
+      {
+        "choiceId": "C",
+        "label": "각자 자유에 한 표.",
+        "statDelta": {
+          "행복": 2,
+          "사회성": -2
+        },
+        "resultText": "반 전체가 제각각 입고 왔다. 다른 반이 우리를 '자유 반'이라고 불렀다.",
+        "addFlags": []
+      }
+    ],
+    "priority": 0
+  },
+  {
+    "eventId": "teen_031",
+    "stage": "TEEN",
+    "type": "NORMAL",
+    "isFallback": false,
+    "isMilestone": false,
+    "title": "스터디 카페",
+    "text": "친구들이 시험 기간에 스터디 카페에 가자고 한다. 한 시간에 2천 원.",
+    "imageId": "img_teen_study_cafe_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [],
+      "blockedFlags": []
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "같이 간다.",
+        "statDelta": {
+          "지력": 3,
+          "경제력": -2
+        },
+        "resultText": "네 시간 공부했다. 그중 한 시간은 간식 고르는 데 썼다.",
+        "addFlags": []
+      },
+      {
+        "choiceId": "B",
+        "label": "집에서 한다.",
+        "statDelta": {
+          "경제력": 1,
+          "지력": 1,
+          "행복": -1
+        },
+        "resultText": "책상 앞에 앉았다. 침대가 계속 나를 불렀다.",
+        "addFlags": []
+      },
+      {
+        "choiceId": "C",
+        "label": "도서관 열람실에 간다.",
+        "statDelta": {
+          "지력": 2,
+          "사회성": -1
+        },
+        "resultText": "공짜였다. 너무 조용해서 과자 봉지를 끝내 못 뜯었다.",
+        "addFlags": []
+      }
+    ],
+    "priority": 0
+  },
+  {
+    "eventId": "teen_032",
+    "stage": "TEEN",
+    "type": "NORMAL",
+    "isFallback": false,
+    "isMilestone": false,
+    "title": "숙제냐 생일 파티냐",
+    "text": "오늘은 친한 친구 생일 파티. 학원 숙제는 50쪽 남았다.",
+    "imageId": "img_teen_party_or_homework_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [],
+      "blockedFlags": []
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "파티에 간다.",
+        "statDelta": {
+          "사회성": 3,
+          "지력": -2
+        },
+        "resultText": "노래방에서 목이 쉬었다. 다음 날 학원에서 선생님이 내 이름을 세 번 불렀다.",
+        "addFlags": []
+      },
+      {
+        "choiceId": "B",
+        "label": "숙제를 한다.",
+        "statDelta": {
+          "지력": 3,
+          "사회성": -2
+        },
+        "resultText": "숙제는 끝냈다. 단톡방에 올라온 파티 사진 200장을 하나씩 넘겨 봤다.",
+        "addFlags": []
+      },
+      {
+        "choiceId": "C",
+        "label": "문제집을 들고 파티에 간다.",
+        "statDelta": {
+          "지력": 1,
+          "사회성": 1,
+          "행복": -1
+        },
+        "resultText": "친구들이 케이크를 먹으며 같이 풀어 줬다. 절반은 틀렸다.",
+        "addFlags": []
+      }
+    ],
+    "priority": 0
+  },
+  {
+    "eventId": "teen_033",
+    "stage": "TEEN",
+    "type": "NORMAL",
+    "isFallback": false,
+    "isMilestone": false,
+    "title": "졸업앨범 촬영 날",
+    "text": "졸업앨범 개인 사진 찍는 날. 아침에 앞머리를 잘랐는데 망했다.",
+    "imageId": "img_teen_yearbook_photo_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [],
+      "blockedFlags": []
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "그냥 찍는다.",
+        "statDelta": {
+          "사회성": 1,
+          "행복": -2
+        },
+        "resultText": "10년 뒤 동창회 화면에 이 사진이 떴다. 다들 박수를 쳤다.",
+        "addFlags": []
+      },
+      {
+        "choiceId": "B",
+        "label": "모자를 쓰고 간다.",
+        "statDelta": {
+          "행복": 2,
+          "사회성": -1
+        },
+        "resultText": "촬영 직전에 선생님이 모자를 벗겼다. 망한 앞머리가 그대로 찍혔다.",
+        "addFlags": []
+      },
+      {
+        "choiceId": "C",
+        "label": "친구에게 앞머리를 맡긴다.",
+        "statDelta": {
+          "운": 2,
+          "행복": -1
+        },
+        "resultText": "친구가 실핀 열두 개로 고정해 줬다. 사진 속 나는 놀란 표정이다.",
+        "addFlags": []
+      }
+    ],
+    "priority": 0
+  },
+  {
+    "eventId": "teen_034",
+    "stage": "TEEN",
+    "type": "NORMAL",
+    "isFallback": false,
+    "isMilestone": false,
+    "title": "셀프 염색",
+    "text": "방학 첫날. 친구들은 다 밝은 갈색이 됐다. 미용실은 비싸고, 편의점에 염색약이 있다.",
+    "imageId": "img_teen_hair_dye_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [],
+      "blockedFlags": []
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "미용실에서 제대로 한다.",
+        "statDelta": {
+          "행복": 3,
+          "경제력": -2
+        },
+        "resultText": "거울 속 내가 낯설었다. 개학 사흘 전에 다시 검은색으로 덮었다.",
+        "addFlags": []
+      },
+      {
+        "choiceId": "B",
+        "label": "편의점 염색약으로 한다.",
+        "statDelta": {
+          "행복": 2,
+          "운": -1,
+          "사회성": -1
+        },
+        "resultText": "반은 갈색, 반은 주황색이 됐다. 별명이 '귤'이 됐다.",
+        "addFlags": []
+      },
+      {
+        "choiceId": "C",
+        "label": "하지 않는다.",
+        "statDelta": {
+          "경제력": 1,
+          "행복": -1
+        },
+        "resultText": "개학 날, 염색한 친구들이 전부 교무실에 불려 갔다.",
+        "addFlags": []
+      }
+    ],
+    "priority": 0
+  },
+  {
+    "eventId": "teen_035",
+    "stage": "TEEN",
+    "type": "NORMAL",
+    "isFallback": false,
+    "isMilestone": false,
+    "title": "종점에서 눈을 떴다",
+    "text": "학원 끝나고 버스에서 잠들었다. 눈을 떠 보니 종점이다. 밤 11시.",
+    "imageId": "img_teen_bus_terminal_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [],
+      "blockedFlags": []
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "부모님께 전화한다.",
+        "statDelta": {
+          "사회성": 1,
+          "행복": -2
+        },
+        "resultText": "아빠가 데리러 왔다. 차 안에서 아무 말 없다가 편의점에서 핫바를 사 줬다.",
+        "addFlags": []
+      },
+      {
+        "choiceId": "B",
+        "label": "반대 방향 버스를 기다린다.",
+        "statDelta": {
+          "지력": 1,
+          "건강": -2
+        },
+        "resultText": "자정이 넘어 집에 왔다. 숙제는 버스에서 다 했다.",
+        "addFlags": []
+      },
+      {
+        "choiceId": "C",
+        "label": "기사님께 사정을 말한다.",
+        "statDelta": {
+          "사회성": 2,
+          "운": 1,
+          "건강": -1
+        },
+        "resultText": "기사님이 차고지에서 컵라면을 나눠 주셨다. 그리고 다음 차로 동네 앞까지 태워 주셨다.",
+        "addFlags": []
+      }
+    ],
+    "priority": 0
+  },
+  {
+    "eventId": "teen_036",
+    "stage": "TEEN",
+    "type": "NORMAL",
+    "isFallback": false,
+    "isMilestone": false,
+    "title": "학생회장 선거 공약",
+    "text": "친구가 학생회장에 나간다. 공약이 '급식 메뉴 투표제' 하나뿐이다. 친구: \"{nameCall}, 도와줘!\"",
+    "imageId": "img_teen_student_council_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [],
+      "blockedFlags": []
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "선거 캠프에 들어간다.",
+        "statDelta": {
+          "사회성": 3,
+          "지력": -1
+        },
+        "resultText": "포스터를 50장 붙였다. 친구가 당선됐다. 급식 투표 1위는 매번 마라탕이었다.",
+        "addFlags": [
+          "campaign_crew"
+        ]
+      },
+      {
+        "choiceId": "B",
+        "label": "공약을 세 개 더 만들어 준다.",
+        "statDelta": {
+          "지력": 3,
+          "행복": -1
+        },
+        "resultText": "친구는 공약 네 개로 당선됐다. 하나도 못 지켰다.",
+        "addFlags": []
+      },
+      {
+        "choiceId": "C",
+        "label": "상대 후보를 찍는다.",
+        "statDelta": {
+          "운": 1,
+          "사회성": -2
+        },
+        "resultText": "비밀 투표인데, 친구가 개표 결과를 보더니 나를 쳐다봤다.",
+        "addFlags": []
+      }
+    ],
+    "priority": 0
+  },
+  {
+    "eventId": "teen_037",
+    "stage": "TEEN",
+    "type": "NORMAL",
+    "isFallback": false,
+    "isMilestone": false,
     "title": "수능 D-100",
     "text": "칠판에 'D-100'. 누군가 '아직 100일이나?'라고 썼고, 누군가 '100일밖에?'로 고쳤다.",
     "imageId": "img_teen_d100_001",
@@ -4817,7 +5942,65 @@
     "priority": 0
   },
   {
-    "eventId": "teen_029",
+    "eventId": "teen_038",
+    "stage": "TEEN",
+    "type": "NORMAL",
+    "isFallback": false,
+    "isMilestone": false,
+    "title": "수능 날 아침",
+    "text": "수능 날 아침. 엄마가 싸 준 도시락이 묵직하다. 수험표를 챙겼는지 세 번 확인했다.",
+    "imageId": "img_teen_exam_day_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [],
+      "blockedFlags": [
+        "vocational_high"
+      ]
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "평소처럼 푼다.",
+        "statDelta": {
+          "지력": 3,
+          "건강": -1
+        },
+        "resultText": "아는 문제는 맞히고 모르는 문제는 틀렸다. 교문을 나오니 엄마가 그 자리에 서 있었다.",
+        "addFlags": [
+          "exam_finished"
+        ]
+      },
+      {
+        "choiceId": "B",
+        "label": "찍은 답을 끝까지 믿는다.",
+        "statDelta": {
+          "운": 3,
+          "지력": -1
+        },
+        "resultText": "마지막 다섯 문제를 전부 3번으로 찍었다. 그중 세 개가 맞았다.",
+        "addFlags": [
+          "exam_finished"
+        ]
+      },
+      {
+        "choiceId": "C",
+        "label": "점심시간에 도시락 뚜껑을 연다.",
+        "statDelta": {
+          "행복": 2,
+          "사회성": 1,
+          "건강": -1
+        },
+        "resultText": "뚜껑 안쪽에 메모가 붙어 있었다. '수고했어, 우리 {name}.' 잠깐 울고 다시 시험장에 들어갔다.",
+        "addFlags": [
+          "exam_finished",
+          "family_bond"
+        ]
+      }
+    ],
+    "priority": 0
+  },
+  {
+    "eventId": "teen_039",
     "stage": "TEEN",
     "type": "NORMAL",
     "isFallback": false,
@@ -4875,7 +6058,7 @@
     "priority": 0
   },
   {
-    "eventId": "teen_030",
+    "eventId": "teen_040",
     "stage": "TEEN",
     "type": "NORMAL",
     "isFallback": true,
@@ -4913,7 +6096,7 @@
     "priority": 0
   },
   {
-    "eventId": "teen_031",
+    "eventId": "teen_041",
     "stage": "TEEN",
     "type": "NORMAL",
     "isFallback": true,
@@ -7245,6 +8428,408 @@
     "type": "NORMAL",
     "isFallback": false,
     "isMilestone": false,
+    "title": "도로 주행 시험",
+    "text": "운전면허 도로 주행 시험. 감독관이 클립보드를 들고 말했다. \"출발하세요.\"",
+    "imageId": "img_adult_driving_test_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [],
+      "blockedFlags": []
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "침착하게 출발한다.",
+        "statDelta": {
+          "지력": 2,
+          "건강": -1
+        },
+        "resultText": "합격했다. 감독관이 \"깜빡이를 참 열심히 켜시네요\"라고 했다.",
+        "addFlags": [
+          "driver_license"
+        ]
+      },
+      {
+        "choiceId": "B",
+        "label": "긴장해서 와이퍼부터 켠다.",
+        "statDelta": {
+          "운": 2,
+          "행복": -2
+        },
+        "resultText": "맑은 날 와이퍼가 3분 동안 움직였다. 그래도 합격했다.",
+        "addFlags": [
+          "driver_license"
+        ]
+      },
+      {
+        "choiceId": "C",
+        "label": "연습을 더 하고 다음에 본다.",
+        "statDelta": {
+          "지력": 1,
+          "경제력": -2
+        },
+        "resultText": "연수 비용이 들었다. 두 달 뒤 만점으로 합격했다.",
+        "addFlags": [
+          "driver_license"
+        ]
+      }
+    ],
+    "priority": 0
+  },
+  {
+    "eventId": "adult_045",
+    "stage": "ADULT",
+    "type": "NORMAL",
+    "isFallback": false,
+    "isMilestone": false,
+    "title": "첫 집들이",
+    "text": "자취방 집들이. 친구 열 명이 온다고 한다. 우리 집 접시는 네 개다.",
+    "imageId": "img_adult_housewarming_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [],
+      "blockedFlags": []
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "배달 음식을 시킨다.",
+        "statDelta": {
+          "사회성": 2,
+          "경제력": -3
+        },
+        "resultText": "음식은 남았고 접시는 모자랐다. 다들 배달 용기 뚜껑에 덜어 먹었다.",
+        "addFlags": []
+      },
+      {
+        "choiceId": "B",
+        "label": "직접 떡볶이를 만든다.",
+        "statDelta": {
+          "사회성": 3,
+          "건강": -1
+        },
+        "resultText": "너무 매웠다. 다들 울면서 \"맛있다\"고 했다.",
+        "addFlags": []
+      },
+      {
+        "choiceId": "C",
+        "label": "\"냄비째 먹자!\"",
+        "statDelta": {
+          "행복": 3,
+          "사회성": -1
+        },
+        "resultText": "설거지는 없었다. 다음 날 아침 냄비가 사라져 있었다. 친구가 들고 간 거였다.",
+        "addFlags": []
+      }
+    ],
+    "priority": 0
+  },
+  {
+    "eventId": "adult_046",
+    "stage": "ADULT",
+    "type": "NORMAL",
+    "isFallback": false,
+    "isMilestone": false,
+    "title": "수상한 전화",
+    "text": "\"고객님 계좌가 범죄에 연루되었습니다.\" 수화기 너머 목소리가 너무 진지하다.",
+    "imageId": "img_adult_scam_call_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [],
+      "blockedFlags": []
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "바로 끊고 은행에 확인한다.",
+        "statDelta": {
+          "지력": 2,
+          "행복": -1
+        },
+        "resultText": "아무 일도 없었다. 은행 직원이 \"잘하셨어요\"라고 했다.",
+        "addFlags": []
+      },
+      {
+        "choiceId": "B",
+        "label": "대화를 질질 끌어 본다.",
+        "statDelta": {
+          "행복": 3,
+          "지력": -1
+        },
+        "resultText": "20분 동안 \"네? 다시 한번요?\"를 반복했다. 상대가 먼저 끊었다.",
+        "addFlags": []
+      },
+      {
+        "choiceId": "C",
+        "label": "부모님께도 바로 알린다.",
+        "statDelta": {
+          "사회성": 2,
+          "행복": -1
+        },
+        "resultText": "엄마도 같은 전화를 받았다고 했다. 둘이 같이 신고했다.",
+        "addFlags": [
+          "family_bond"
+        ]
+      }
+    ],
+    "priority": 0
+  },
+  {
+    "eventId": "adult_047",
+    "stage": "ADULT",
+    "type": "NORMAL",
+    "isFallback": false,
+    "isMilestone": false,
+    "title": "애매한 사이의 청첩장",
+    "text": "대학 때 두 번 대화해 본 동기에게서 모바일 청첩장이 왔다. 축의금을 얼마 해야 할까.",
+    "imageId": "img_adult_wedding_invite_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [],
+      "blockedFlags": []
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "5만 원.",
+        "statDelta": {
+          "사회성": 1,
+          "경제력": -2
+        },
+        "resultText": "무난했다. 식권으로 먹은 갈비탕이 맛있었다.",
+        "addFlags": []
+      },
+      {
+        "choiceId": "B",
+        "label": "10만 원.",
+        "statDelta": {
+          "사회성": 3,
+          "경제력": -4
+        },
+        "resultText": "신랑 신부가 나중에 따로 감사 문자를 보냈다. 그 뒤로 진짜 친구가 됐다.",
+        "addFlags": []
+      },
+      {
+        "choiceId": "C",
+        "label": "축하 메시지만 보낸다.",
+        "statDelta": {
+          "경제력": 1,
+          "사회성": -2
+        },
+        "resultText": "답장으로 'ㅎㅎ 고마워'가 왔다. 그 'ㅎㅎ'의 의미를 오래 생각했다.",
+        "addFlags": []
+      }
+    ],
+    "priority": 0
+  },
+  {
+    "eventId": "adult_048",
+    "stage": "ADULT",
+    "type": "NORMAL",
+    "isFallback": false,
+    "isMilestone": false,
+    "title": "절대 안 죽는 화분",
+    "text": "회사 동료가 화분을 줬다. \"이건 절대 안 죽어. 진짜로.\"",
+    "imageId": "img_adult_office_plant_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [],
+      "blockedFlags": []
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "매일 물을 준다.",
+        "statDelta": {
+          "행복": 1,
+          "운": -1
+        },
+        "resultText": "한 달 만에 뿌리가 썩었다. 과습이었다. 동료가 \"어떻게 죽였어?\"라고 물었다.",
+        "addFlags": []
+      },
+      {
+        "choiceId": "B",
+        "label": "책상 구석에 두고 잊어버린다.",
+        "statDelta": {
+          "행복": 2,
+          "지력": -1
+        },
+        "resultText": "석 달 만에 보니 혼자 꽃을 피워 놨다. 식물이 나보다 잘 산다.",
+        "addFlags": []
+      },
+      {
+        "choiceId": "C",
+        "label": "이름을 붙이고 말을 건다.",
+        "statDelta": {
+          "행복": 3,
+          "사회성": -1
+        },
+        "resultText": "'초록이'는 쑥쑥 자랐다. 옆자리 동료가 내 혼잣말을 걱정하기 시작했다.",
+        "addFlags": [
+          "plant_parent"
+        ]
+      }
+    ],
+    "priority": 0
+  },
+  {
+    "eventId": "adult_049",
+    "stage": "ADULT",
+    "type": "NORMAL",
+    "isFallback": false,
+    "isMilestone": false,
+    "title": "중고 거래 첫 문의",
+    "text": "안 쓰는 물건을 중고 거래 앱에 올렸다. 1분 만에 첫 메시지가 왔다. \"네고 되나요? 무료 나눔은요?\"",
+    "imageId": "img_adult_secondhand_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [],
+      "blockedFlags": []
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "\"정가입니다.\"",
+        "statDelta": {
+          "경제력": 2,
+          "사회성": -1
+        },
+        "resultText": "일주일 뒤 다른 사람이 정가에 사 갔다. 첫 문의자는 나를 차단했다.",
+        "addFlags": []
+      },
+      {
+        "choiceId": "B",
+        "label": "반값에 판다.",
+        "statDelta": {
+          "사회성": 2,
+          "경제력": -1
+        },
+        "resultText": "구매자가 \"좋은 분이시네요\" 하며 비타민 음료를 줬다.",
+        "addFlags": []
+      },
+      {
+        "choiceId": "C",
+        "label": "무료로 주고 직접 가져다준다.",
+        "statDelta": {
+          "사회성": 3,
+          "경제력": -1,
+          "건강": -1
+        },
+        "resultText": "받는 분이 귤 한 봉지를 줬다. 귤이 그 물건보다 비쌌다.",
+        "addFlags": []
+      }
+    ],
+    "priority": 0
+  },
+  {
+    "eventId": "adult_050",
+    "stage": "ADULT",
+    "type": "NORMAL",
+    "isFallback": false,
+    "isMilestone": false,
+    "title": "워크숍 장기자랑",
+    "text": "회사 워크숍. \"신입은 장기자랑 필수입니다.\" 무대 조명이 나를 비춘다.",
+    "imageId": "img_adult_talent_show_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [],
+      "blockedFlags": []
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "요즘 유행하는 춤을 춘다.",
+        "statDelta": {
+          "사회성": 3,
+          "건강": -1
+        },
+        "resultText": "팀장님이 따라 췄다. 그 영상은 아직도 회사 단톡방에 돈다.",
+        "addFlags": []
+      },
+      {
+        "choiceId": "B",
+        "label": "카드 마술을 한다.",
+        "statDelta": {
+          "사회성": 2,
+          "행복": -1
+        },
+        "resultText": "카드가 전부 바닥에 쏟아졌다. 그게 제일 웃겼다. 인기상을 받았다.",
+        "addFlags": []
+      },
+      {
+        "choiceId": "C",
+        "label": "사회를 보겠다고 자청한다.",
+        "statDelta": {
+          "사회성": 2,
+          "지력": 1,
+          "행복": -1
+        },
+        "resultText": "진행이 깔끔했다. 다음 워크숍부터 사회는 늘 내 몫이 됐다.",
+        "addFlags": []
+      }
+    ],
+    "priority": 0
+  },
+  {
+    "eventId": "adult_051",
+    "stage": "ADULT",
+    "type": "NORMAL",
+    "isFallback": false,
+    "isMilestone": false,
+    "title": "아빠의 칠순",
+    "text": "아빠 칠순이 다가온다. 가족 단톡방에서 어떻게 할지 회의가 열렸다.",
+    "imageId": "img_adult_father_70th_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [],
+      "blockedFlags": []
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "한정식집에서 잔치를 연다.",
+        "statDelta": {
+          "사회성": 2,
+          "경제력": -3
+        },
+        "resultText": "친척들이 다 모였다. 아빠는 건배사를 세 번이나 했다.",
+        "addFlags": [
+          "family_bond"
+        ]
+      },
+      {
+        "choiceId": "B",
+        "label": "부모님 여행을 보내 드린다.",
+        "statDelta": {
+          "행복": 3,
+          "경제력": -3
+        },
+        "resultText": "제주도에서 부모님이 셀카를 50장 보내왔다. 전부 손가락이 나와 있었다.",
+        "addFlags": [
+          "family_bond"
+        ]
+      },
+      {
+        "choiceId": "C",
+        "label": "가족 영상 편지를 만든다.",
+        "statDelta": {
+          "사회성": 3,
+          "건강": -1
+        },
+        "resultText": "밤새 편집했다. 아빠가 영상을 보다 안경을 벗었다. 그 뒤로 열 번 넘게 돌려 보셨다고 한다.",
+        "addFlags": [
+          "family_bond"
+        ]
+      }
+    ],
+    "priority": 0
+  },
+  {
+    "eventId": "adult_052",
+    "stage": "ADULT",
+    "type": "NORMAL",
+    "isFallback": false,
+    "isMilestone": false,
     "title": "마흔 번째 생일",
     "text": "가족: \"{nameCall}, 소원 빌어!\" 초 40개는 무리라 큰 초 4개로 타협했다. 촛불 너머로 지나온 시간이 스친다.",
     "imageId": "img_adult_birthday_001",
@@ -7298,7 +8883,7 @@
     "priority": 0
   },
   {
-    "eventId": "adult_045",
+    "eventId": "adult_053",
     "stage": "ADULT",
     "type": "NORMAL",
     "isFallback": false,
@@ -7350,7 +8935,7 @@
     "priority": 0
   },
   {
-    "eventId": "adult_046",
+    "eventId": "adult_054",
     "stage": "ADULT",
     "type": "NORMAL",
     "isFallback": false,
@@ -7402,7 +8987,7 @@
     "priority": 0
   },
   {
-    "eventId": "adult_047",
+    "eventId": "adult_055",
     "stage": "ADULT",
     "type": "NORMAL",
     "isFallback": false,
@@ -7456,7 +9041,7 @@
     "priority": 0
   },
   {
-    "eventId": "adult_048",
+    "eventId": "adult_056",
     "stage": "ADULT",
     "type": "NORMAL",
     "isFallback": false,
@@ -7509,7 +9094,7 @@
     "priority": 0
   },
   {
-    "eventId": "adult_049",
+    "eventId": "adult_057",
     "stage": "ADULT",
     "type": "NORMAL",
     "isFallback": false,
@@ -7565,7 +9150,7 @@
     "priority": 0
   },
   {
-    "eventId": "adult_050",
+    "eventId": "adult_058",
     "stage": "ADULT",
     "type": "NORMAL",
     "isFallback": false,
@@ -7619,7 +9204,7 @@
     "priority": 0
   },
   {
-    "eventId": "adult_051",
+    "eventId": "adult_059",
     "stage": "ADULT",
     "type": "NORMAL",
     "isFallback": false,
@@ -7667,7 +9252,7 @@
     "priority": 0
   },
   {
-    "eventId": "adult_052",
+    "eventId": "adult_060",
     "stage": "ADULT",
     "type": "NORMAL",
     "isFallback": false,
@@ -7720,7 +9305,7 @@
     "priority": 0
   },
   {
-    "eventId": "adult_053",
+    "eventId": "adult_061",
     "stage": "ADULT",
     "type": "NORMAL",
     "isFallback": false,
@@ -7774,7 +9359,7 @@
     "priority": 0
   },
   {
-    "eventId": "adult_054",
+    "eventId": "adult_062",
     "stage": "ADULT",
     "type": "NORMAL",
     "isFallback": false,
@@ -7831,7 +9416,7 @@
     "priority": 0
   },
   {
-    "eventId": "adult_055",
+    "eventId": "adult_063",
     "stage": "ADULT",
     "type": "NORMAL",
     "isFallback": false,
@@ -7888,7 +9473,7 @@
     "priority": 0
   },
   {
-    "eventId": "adult_056",
+    "eventId": "adult_064",
     "stage": "ADULT",
     "type": "NORMAL",
     "isFallback": false,
@@ -7946,7 +9531,7 @@
     "priority": 0
   },
   {
-    "eventId": "adult_057",
+    "eventId": "adult_065",
     "stage": "ADULT",
     "type": "NORMAL",
     "isFallback": false,
@@ -8004,7 +9589,7 @@
     "priority": 0
   },
   {
-    "eventId": "adult_058",
+    "eventId": "adult_066",
     "stage": "ADULT",
     "type": "NORMAL",
     "isFallback": true,
@@ -8052,7 +9637,7 @@
     "priority": 0
   },
   {
-    "eventId": "adult_059",
+    "eventId": "adult_067",
     "stage": "ADULT",
     "type": "NORMAL",
     "isFallback": true,
@@ -8685,6 +10270,445 @@
           "건강": -3
         },
         "resultText": "멧돼지가 옆에 앉아 김밥을 먹었다. 그 뒤로 정상에 오를 때마다 그 녀석이 기다리고 있다. 이름은 '김밥'이다.",
+        "addFlags": [
+          "survived_special"
+        ]
+      }
+    ],
+    "priority": 0
+  },
+  {
+    "eventId": "special_012",
+    "stage": "INFANT",
+    "type": "SPECIAL",
+    "isFallback": false,
+    "isMilestone": false,
+    "title": "로봇청소기 납치 사건",
+    "text": "거실에서 놀다가 로봇청소기가 내 옷자락을 빨아들였다. 로봇청소기가 나를 끌고 거실을 돌기 시작한다.",
+    "imageId": "img_special_robot_vacuum_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [],
+      "blockedFlags": []
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "울어서 엄마를 부른다.",
+        "statDelta": {
+          "건강": -2,
+          "사회성": 2
+        },
+        "resultText": "엄마가 로봇청소기를 들어 올렸다. 로봇청소기가 말했다. \"청소를 완료했습니다.\"",
+        "addFlags": [
+          "survived_special"
+        ]
+      },
+      {
+        "choiceId": "B",
+        "label": "로봇청소기에 올라탄다.",
+        "statDelta": {
+          "운동능력": 2,
+          "행복": 2,
+          "건강": -5
+        },
+        "resultText": "거실을 세 바퀴 돌았다. 소파 모서리에서 떨어져 이마에 혹이 났다.",
+        "addFlags": [
+          "special_injury"
+        ]
+      },
+      {
+        "choiceId": "C",
+        "label": "로봇청소기를 꼭 껴안는다.",
+        "statDelta": {
+          "운": 2,
+          "건강": -3
+        },
+        "resultText": "로봇청소기가 멈췄다. 그날 이후 로봇청소기는 내 근처에 오지 않는다.",
+        "addFlags": [
+          "survived_special"
+        ]
+      }
+    ],
+    "priority": 0
+  },
+  {
+    "eventId": "special_013",
+    "stage": "INFANT",
+    "type": "SPECIAL",
+    "isFallback": false,
+    "isMilestone": false,
+    "title": "비눗방울 대참사",
+    "text": "비눗방울 놀이 중에 비눗물을 한 모금 마셔 버렸다. 딸꾹질할 때마다 입에서 비눗방울이 나온다.",
+    "imageId": "img_special_bubble_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [],
+      "blockedFlags": []
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "엄마를 부른다.",
+        "statDelta": {
+          "건강": -2,
+          "사회성": 1
+        },
+        "resultText": "물을 세 컵 마셨다. 그래도 딸꾹질할 때마다 비눗방울이 하나씩 나왔다.",
+        "addFlags": [
+          "survived_special"
+        ]
+      },
+      {
+        "choiceId": "B",
+        "label": "한 모금 더 마셔 본다.",
+        "statDelta": {
+          "행복": 1,
+          "건강": -6
+        },
+        "resultText": "배가 아파 병원에 갔다. 의사 선생님이 \"오늘은 거품 그만\"이라고 했다.",
+        "addFlags": [
+          "special_injury"
+        ]
+      },
+      {
+        "choiceId": "C",
+        "label": "입으로 후~ 불어 본다.",
+        "statDelta": {
+          "운": 3,
+          "건강": -3
+        },
+        "resultText": "입에서 비눗방울이 열 개 나왔다. 할아버지가 그걸 동영상으로 찍었다.",
+        "addFlags": [
+          "survived_special"
+        ]
+      }
+    ],
+    "priority": 0
+  },
+  {
+    "eventId": "special_014",
+    "stage": "CHILD",
+    "type": "SPECIAL",
+    "isFallback": false,
+    "isMilestone": false,
+    "title": "미끄럼틀 정전기",
+    "text": "플라스틱 미끄럼틀을 타고 내려왔더니 머리카락이 전부 하늘로 솟았다. 옆 친구가 손을 내민다.",
+    "imageId": "img_special_static_slide_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [],
+      "blockedFlags": []
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "손을 잡는다.",
+        "statDelta": {
+          "사회성": 1,
+          "건강": -2
+        },
+        "resultText": "\"빠직!\" 둘 다 놀라서 울었다. 머리는 30분 동안 서 있었다.",
+        "addFlags": [
+          "survived_special"
+        ]
+      },
+      {
+        "choiceId": "B",
+        "label": "친구 다섯 명과 줄줄이 손을 잡는다.",
+        "statDelta": {
+          "사회성": 3,
+          "건강": -5
+        },
+        "resultText": "\"빠지지직!\" 다섯 명이 동시에 비명을 질렀다. 다음 날 미끄럼틀 앞에 '손잡기 금지'가 붙었다.",
+        "addFlags": [
+          "special_injury"
+        ]
+      },
+      {
+        "choiceId": "C",
+        "label": "그 머리로 사진을 찍는다.",
+        "statDelta": {
+          "행복": 3,
+          "건강": -1
+        },
+        "resultText": "사자 머리 사진이 반 앨범 표지가 됐다.",
+        "addFlags": [
+          "survived_special"
+        ]
+      }
+    ],
+    "priority": 0
+  },
+  {
+    "eventId": "special_015",
+    "stage": "CHILD",
+    "type": "SPECIAL",
+    "isFallback": false,
+    "isMilestone": false,
+    "title": "날아가는 탕수육 소스",
+    "text": "급식 당번. 탕수육 소스 통을 옮기다 미끄러졌다. 소스 통이 공중에서 천천히 돈다.",
+    "imageId": "img_special_sauce_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [],
+      "blockedFlags": []
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "몸을 피한다.",
+        "statDelta": {
+          "운동능력": 2,
+          "사회성": -2
+        },
+        "resultText": "피했다. 뒤에 서 있던 교감 선생님은 못 피했다.",
+        "addFlags": [
+          "survived_special"
+        ]
+      },
+      {
+        "choiceId": "B",
+        "label": "몸을 날려 받아 낸다.",
+        "statDelta": {
+          "운동능력": 2,
+          "건강": -6
+        },
+        "resultText": "통은 받았다. 소스는 내가 다 받았다. 그날부터 별명이 '탕수육'이다.",
+        "addFlags": [
+          "special_injury"
+        ]
+      },
+      {
+        "choiceId": "C",
+        "label": "\"부먹이다!\"라고 외친다.",
+        "statDelta": {
+          "행복": 3,
+          "사회성": -1,
+          "건강": -2
+        },
+        "resultText": "소스가 반 아이들 식판 위로 골고루 쏟아졌다. 그날 이후 우리 반 부먹·찍먹 논쟁은 끝났다.",
+        "addFlags": [
+          "survived_special"
+        ]
+      }
+    ],
+    "priority": 0
+  },
+  {
+    "eventId": "special_016",
+    "stage": "TEEN",
+    "type": "SPECIAL",
+    "isFallback": false,
+    "isMilestone": false,
+    "title": "피구공의 궤적",
+    "text": "피구 결승, 우리 팀 마지막 생존자는 나. 상대 에이스가 던진 공이 얼굴로 날아온다.",
+    "imageId": "img_special_dodgeball_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [],
+      "blockedFlags": []
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "고개를 숙여 피한다.",
+        "statDelta": {
+          "운동능력": 2,
+          "운": 1,
+          "건강": -1
+        },
+        "resultText": "피했다. 공은 심판을 보던 체육 선생님 뒤통수에 맞았다.",
+        "addFlags": [
+          "survived_special"
+        ]
+      },
+      {
+        "choiceId": "B",
+        "label": "얼굴로 받는다.",
+        "statDelta": {
+          "사회성": 2,
+          "건강": -7
+        },
+        "resultText": "코피가 났다. 얼굴은 아웃이 아니라서 우리 팀이 이겼다.",
+        "addFlags": [
+          "special_injury"
+        ]
+      },
+      {
+        "choiceId": "C",
+        "label": "두 손으로 잡아서 되던진다.",
+        "statDelta": {
+          "운동능력": 3,
+          "운": 2,
+          "건강": -3
+        },
+        "resultText": "잡았다! 그런데 되던진 공이 에이스 품에 정확히 안겼다.",
+        "addFlags": [
+          "survived_special"
+        ]
+      }
+    ],
+    "priority": 0
+  },
+  {
+    "eventId": "special_017",
+    "stage": "TEEN",
+    "type": "SPECIAL",
+    "isFallback": false,
+    "isMilestone": false,
+    "title": "멈춘 엘리베이터",
+    "text": "학원 엘리베이터가 층 사이에 멈췄다. 안에는 나와 짝사랑하는 애 둘뿐. 관리실: \"30분 정도 걸려요.\"",
+    "imageId": "img_special_stuck_elevator_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [],
+      "blockedFlags": []
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "침착하게 말을 건다.",
+        "statDelta": {
+          "사회성": 3,
+          "건강": -1
+        },
+        "resultText": "30분이 3분 같았다. 문이 열렸을 때 조금 아쉬웠다.",
+        "addFlags": [
+          "survived_special"
+        ]
+      },
+      {
+        "choiceId": "B",
+        "label": "긴장해서 혼잣말을 한다.",
+        "statDelta": {
+          "운": 1,
+          "행복": -3
+        },
+        "resultText": "혼잣말이 비상 인터폰을 타고 관리실에 전부 들렸다.",
+        "addFlags": [
+          "survived_special"
+        ]
+      },
+      {
+        "choiceId": "C",
+        "label": "배에서 꼬르륵 소리가 난다.",
+        "statDelta": {
+          "운": 2,
+          "사회성": -2,
+          "건강": -1
+        },
+        "resultText": "소리가 엘리베이터에 울렸다. 그 애가 말없이 초코바를 반 쪼개 줬다.",
+        "addFlags": [
+          "survived_special"
+        ]
+      }
+    ],
+    "priority": 0
+  },
+  {
+    "eventId": "special_018",
+    "stage": "ADULT",
+    "type": "SPECIAL",
+    "isFallback": false,
+    "isMilestone": false,
+    "title": "회전문 무한 루프",
+    "text": "회사 로비 회전문에 들어갔는데 나갈 타이밍을 놓쳤다. 벌써 다섯 바퀴째. 출근 1분 전이다.",
+    "imageId": "img_special_revolving_door_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [],
+      "blockedFlags": []
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "다음 칸에서 뛰어나간다.",
+        "statDelta": {
+          "운동능력": 2,
+          "건강": -2
+        },
+        "resultText": "탈출 성공. 9시 정각에 자리에 앉았다. 머리는 아직 돌고 있다.",
+        "addFlags": [
+          "survived_special"
+        ]
+      },
+      {
+        "choiceId": "B",
+        "label": "회전문과 함께 계속 돈다.",
+        "statDelta": {
+          "행복": 1,
+          "건강": -5,
+          "사회성": -1
+        },
+        "resultText": "열두 바퀴째에 어지러워 주저앉았다. 경비 아저씨가 회전문을 세워 줬다.",
+        "addFlags": [
+          "special_injury"
+        ]
+      },
+      {
+        "choiceId": "C",
+        "label": "돌면서 팀장님께 전화한다.",
+        "statDelta": {
+          "사회성": 2,
+          "운": 1,
+          "건강": -2
+        },
+        "resultText": "\"어디야?\" \"회전문이요.\" 그날 별명이 '회전문'이 됐다.",
+        "addFlags": [
+          "survived_special"
+        ]
+      }
+    ],
+    "priority": 0
+  },
+  {
+    "eventId": "special_019",
+    "stage": "ADULT",
+    "type": "SPECIAL",
+    "isFallback": false,
+    "isMilestone": false,
+    "title": "중고 안마의자의 역습",
+    "text": "중고로 산 안마의자에 앉아 '강' 버튼을 눌렀다. 안마의자가 내 팔다리를 꽉 붙잡고 놓아주지 않는다.",
+    "imageId": "img_special_massage_chair_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [],
+      "blockedFlags": []
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "발가락으로 전원 코드를 뽑는다.",
+        "statDelta": {
+          "운동능력": 2,
+          "건강": -2
+        },
+        "resultText": "발가락으로 코드를 뽑았다. 인생 최고의 유연성이었다.",
+        "addFlags": [
+          "survived_special"
+        ]
+      },
+      {
+        "choiceId": "B",
+        "label": "끝까지 버틴다.",
+        "statDelta": {
+          "행복": 2,
+          "건강": -6
+        },
+        "resultText": "30분 코스가 끝났다. 온몸이 개운했고 허리는 삐었다.",
+        "addFlags": [
+          "special_injury"
+        ]
+      },
+      {
+        "choiceId": "C",
+        "label": "가족에게 SOS를 친다.",
+        "statDelta": {
+          "사회성": 2,
+          "건강": -3
+        },
+        "resultText": "가족이 달려왔다. 나를 구하기 전에 사진부터 찍었다.",
         "addFlags": [
           "survived_special"
         ]
