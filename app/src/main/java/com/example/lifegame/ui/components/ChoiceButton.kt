@@ -28,14 +28,15 @@ fun ChoiceButton(
         shape = RoundedCornerShape(12.dp),
         contentPadding = PaddingValues(
             horizontal = 16.dp,
-            vertical = 14.dp
+            vertical = 16.dp
         )
     ) {
         Text(
             text = text,
             modifier = Modifier.fillMaxWidth(),
-            style = MaterialTheme.typography.labelLarge,
-            textAlign = TextAlign.Start
+            style = MaterialTheme.typography.bodyLarge,
+            textAlign = TextAlign.Start,
+            softWrap = true,
         )
     }
 }

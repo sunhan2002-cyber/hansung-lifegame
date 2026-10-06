@@ -9,8 +9,11 @@ import com.example.lifegame.domain.model.Stats
 import org.json.JSONArray
 import org.json.JSONObject
 
+private const val DEFAULT_SAVED_PLAYER_NAME = "플레이어"
+
 data class SavedGame(
     val characterId: Int,
+    val playerName: String = DEFAULT_SAVED_PLAYER_NAME,
     val progress: GameProgress,
 )
 
@@ -46,6 +49,7 @@ internal object ProgressSnapshotCodec {
 
     fun encode(savedGame: SavedGame): String = JSONObject()
         .put("characterId", savedGame.characterId)
+        .put("playerName", savedGame.playerName)
         .put("progress", savedGame.progress.toJson())
         .toString()
 
@@ -57,6 +61,7 @@ internal object ProgressSnapshotCodec {
         }
         SavedGame(
             characterId = root.getInt("characterId"),
+            playerName = root.optString("playerName", DEFAULT_SAVED_PLAYER_NAME),
             progress = progress,
         )
     }.getOrNull()
@@ -150,4 +155,5 @@ internal object ProgressSnapshotCodec {
 
     private fun JSONObject.optNullableString(name: String): String? =
         if (has(name) && !isNull(name)) getString(name) else null
+
 }

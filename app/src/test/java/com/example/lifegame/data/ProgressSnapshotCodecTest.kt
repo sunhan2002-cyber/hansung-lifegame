@@ -5,6 +5,7 @@ import com.example.lifegame.domain.model.GameProgress
 import com.example.lifegame.domain.model.GameScreenState
 import com.example.lifegame.domain.model.LifeStage
 import com.example.lifegame.domain.model.Stats
+import org.json.JSONObject
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertNull
 import org.junit.Test
@@ -24,6 +25,7 @@ class ProgressSnapshotCodecTest {
         )
         val saved = SavedGame(
             characterId = 2,
+            playerName = "김우영",
             progress = GameProgress(
                 runId = "run-save-test",
                 contentVersion = "week7",
@@ -54,6 +56,26 @@ class ProgressSnapshotCodecTest {
         val restored = ProgressSnapshotCodec.decode(ProgressSnapshotCodec.encode(saved))
 
         assertEquals(saved, restored)
+    }
+
+    @Test
+    fun decode_usesDefaultNameForLegacySnapshot() {
+        val saved = SavedGame(
+            characterId = 1,
+            playerName = "김우영",
+            progress = GameProgress(
+                runId = "legacy-run",
+                currentEventOccurrenceId = "legacy-run:infant_event:1",
+            ),
+        )
+        val legacySnapshot = JSONObject(ProgressSnapshotCodec.encode(saved))
+            .apply { remove("playerName") }
+            .toString()
+
+        assertEquals(
+            saved.copy(playerName = "플레이어"),
+            ProgressSnapshotCodec.decode(legacySnapshot),
+        )
     }
 
     @Test

@@ -1,10 +1,17 @@
 package com.example.lifegame.ui
 
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
+import androidx.compose.material3.Button
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.unit.dp
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavHostController
@@ -13,8 +20,9 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.lifegame.domain.model.GameScreenState
+import com.example.lifegame.domain.model.Ending
+import com.example.lifegame.domain.model.Stats
 import com.example.lifegame.ui.screens.CharacterSelectScreen
-import com.example.lifegame.ui.screens.ChoiceResultScreen
 import com.example.lifegame.ui.screens.EndingScreen
 import com.example.lifegame.ui.screens.GameScreen
 import com.example.lifegame.ui.screens.StartScreen
@@ -24,7 +32,6 @@ object Routes {
     const val START = "start"
     const val CHARACTER_SELECT = "character_select"
     const val GAME = "game"
-    const val CHOICE_RESULT = "choice_result"
     const val ENDING = "ending"
 }
 
@@ -46,7 +53,8 @@ fun LifeGameApp(
                         onContinue = {
                             val route = when (gameViewModel.continueGame()) {
                                 GameScreenState.EVENT -> Routes.GAME
-                                GameScreenState.CHOICE_RESULT -> Routes.CHOICE_RESULT
+                                // 최신 UI는 선택 결과를 게임 화면 안에 이어서 표시한다.
+                                GameScreenState.CHOICE_RESULT -> Routes.GAME
                                 GameScreenState.ENDING -> Routes.ENDING
                                 null -> null
                             }
@@ -60,8 +68,8 @@ fun LifeGameApp(
                 }
                 composable(Routes.CHARACTER_SELECT) {
                     CharacterSelectScreen(
-                        onStartGame = { characterId ->
-                            gameViewModel.startNewGame(characterId)
+                        onStartGame = { characterId, playerName ->
+                            gameViewModel.startNewGame(characterId, playerName)
                             navController.navigateOnce(Routes.GAME) {
                                 popUpTo(Routes.START)
                             }
@@ -70,57 +78,122 @@ fun LifeGameApp(
                 }
                 composable(Routes.GAME) {
                     val event = state.currentEvent
-                    if (event != null) {
-                        GameScreen(
-                            event = event,
-                            stats = state.stats,
-                            onChoose = { choice ->
-                                if (gameViewModel.choose(choice)) {
-                                    navController.navigateOnce(Routes.CHOICE_RESULT) {
-                                        popUpTo(Routes.GAME) { inclusive = true }
+                    val ending = state.ending
+                    when {
+                        event != null -> {
+                            // 선택 결과는 같은 화면에 이어 붙고, 다음 해로 넘어가는 전환도 이 화면 안에서 재생한다.
+                            GameScreen(
+                                state = state,
+                                onChoose = { choice -> gameViewModel.choose(choice) },
+                                onNextYear = {
+                                    val finished = gameViewModel.proceed()
+                                    if (finished) {
+                                        navController.navigateOnce(Routes.ENDING) {
+                                            popUpTo(Routes.START)
+                                        }
                                     }
-                                }
-                            },
-                            onShowEndingForTest = {
-                                gameViewModel.finish()
-                                navController.navigateOnce(Routes.ENDING) {
-                                    popUpTo(Routes.START)
-                                }
-                            },
-                        )
-                    }
-                }
-                composable(Routes.CHOICE_RESULT) {
-                    val result = state.lastResult
-                    if (result != null) {
-                        ChoiceResultScreen(
-                            result = result,
-                            onNext = {
-                                val finished = gameViewModel.proceed()
-                                navController.navigateOnce(if (finished) Routes.ENDING else Routes.GAME) {
-                                    popUpTo(Routes.CHOICE_RESULT) { inclusive = true }
-                                }
-                            },
-                        )
+                                },
+                            )
+                        }
+                        ending != null -> {
+                            SafeEndingScreen(
+                                ending = ending,
+                                stats = state.stats,
+                                state = state,
+                                gameViewModel = gameViewModel,
+                                navController = navController,
+                            )
+                        }
+                        else -> {
+                            RecoveryScreen(
+                                message = state.contentError ?: "다음 사건을 불러오지 못했습니다.",
+                                onRestart = {
+                                    gameViewModel.reset()
+                                    navController.navigateOnce(Routes.START) {
+                                        popUpTo(Routes.START) { inclusive = true }
+                                    }
+                                },
+                            )
+                        }
                     }
                 }
                 composable(Routes.ENDING) {
                     val ending = state.ending
                     if (ending != null) {
-                        EndingScreen(
+                        SafeEndingScreen(
                             ending = ending,
                             stats = state.stats,
-                            choiceHistory = state.progress?.choiceHistory.orEmpty().map {
-                                "${it.eventId}: ${it.choiceId}"
-                            },
+                            state = state,
+                            gameViewModel = gameViewModel,
+                            navController = navController,
+                        )
+                    } else {
+                        RecoveryScreen(
+                            message = "결말 데이터를 불러오지 못했습니다.",
                             onRestart = {
                                 gameViewModel.reset()
-                                navController.popBackStack(Routes.START, inclusive = false)
+                                navController.navigateOnce(Routes.START) {
+                                    popUpTo(Routes.START) { inclusive = true }
+                                }
                             },
                         )
                     }
                 }
             }
+        }
+    }
+}
+
+@Composable
+private fun SafeEndingScreen(
+    ending: Ending,
+    stats: Stats,
+    state: LifeGameUiState,
+    gameViewModel: LifeGameViewModel,
+    navController: NavHostController,
+) {
+    EndingScreen(
+        ending = ending,
+        stats = stats,
+        // eventId 대신 "나이 · 사건 제목 → 고른 선택지"로 보여 준다. 문장은 이미 이름이 치환된 상태다.
+        choiceHistory = buildLifeRecords(
+            state.progress?.choiceHistory.orEmpty(),
+            state.eventsById,
+        ).map { "${it.age}세 · ${it.title} → ${it.choiceLabel}" },
+        onRestart = {
+            gameViewModel.reset()
+            navController.navigateOnce(Routes.START) {
+                popUpTo(Routes.START) { inclusive = true }
+            }
+        },
+    )
+}
+
+@Composable
+private fun RecoveryScreen(
+    message: String,
+    onRestart: () -> Unit,
+) {
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .padding(24.dp),
+        verticalArrangement = Arrangement.Center,
+    ) {
+        Text(
+            text = "진행 상태를 다시 확인해야 합니다",
+            style = MaterialTheme.typography.headlineSmall,
+        )
+        Text(
+            text = message,
+            modifier = Modifier.padding(top = 12.dp, bottom = 24.dp),
+            style = MaterialTheme.typography.bodyLarge,
+        )
+        Button(
+            onClick = onRestart,
+            modifier = Modifier.fillMaxWidth(),
+        ) {
+            Text("처음으로 돌아가기")
         }
     }
 }

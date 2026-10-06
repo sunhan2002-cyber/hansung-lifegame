@@ -21,12 +21,18 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
     var uiState by mutableStateOf(LifeGameUiState(hasSaveData = progressStore.hasSaveData()))
         private set
 
-    fun startNewGame(characterId: Int) {
-        val events = repository.loadEvents()
-        val endings = repository.loadEndings()
+    fun startNewGame(characterId: Int, playerName: String) {
+        val name = normalizePlayerName(playerName)
+        val nameCall = nameCallOf(name)
+        // 세션에 넘기기 전에 {name}, {nameCall}을 바꿔 두면 사건 · 선택지 · 결과 · 기록 · 결말 어디에도 남지 않는다.
+        val events = repository.loadEvents().map { it.withPlayerName(name, nameCall) }
+        val endings = repository.loadEndings().map { it.withPlayerName(name, nameCall) }
         if (events.isEmpty() || endings.none { it.isDefault }) {
+            session = null
             uiState = LifeGameUiState(
                 characterId = characterId,
+                playerName = name,
+                nameCall = nameCall,
                 contentError = "사건 또는 기본 결말 데이터를 불러오지 못했습니다.",
             )
             return
@@ -37,17 +43,25 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
         uiState = LifeGameUiState(
             characterId = characterId,
             hasSaveData = true,
+            playerName = name,
+            nameCall = nameCall,
             progress = started.progress,
             currentEvent = started.currentEvent,
             ending = started.ending,
+            eventsById = events.associateBy { it.eventId },
+            imageFiles = repository.loadImageAssets()
+                .filter { it.fileName.isNotBlank() }
+                .associate { it.imageId to it.fileName },
         )
         persistSession()
     }
 
     fun continueGame(): GameScreenState? {
         val savedGame = progressStore.load() ?: return clearInvalidSave()
-        val events = repository.loadEvents()
-        val endings = repository.loadEndings()
+        val name = normalizePlayerName(savedGame.playerName)
+        val nameCall = nameCallOf(name)
+        val events = repository.loadEvents().map { it.withPlayerName(name, nameCall) }
+        val endings = repository.loadEndings().map { it.withPlayerName(name, nameCall) }
         val restoredSession = runCatching {
             GameSession(events = events, endings = endings).also {
                 it.restore(savedGame.progress)
@@ -57,7 +71,13 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
         session = restoredSession
         uiState = LifeGameUiState(
             characterId = savedGame.characterId,
+            playerName = name,
+            nameCall = nameCall,
             hasSaveData = true,
+            eventsById = events.associateBy { it.eventId },
+            imageFiles = repository.loadImageAssets()
+                .filter { it.fileName.isNotBlank() }
+                .associate { it.imageId to it.fileName },
         )
         syncFromSession()
         return uiState.progress?.screenState
@@ -112,7 +132,13 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
     private fun persistSession() {
         val characterId = uiState.characterId ?: return
         val progress = session?.state?.progress ?: return
-        progressStore.save(SavedGame(characterId = characterId, progress = progress))
+        progressStore.save(
+            SavedGame(
+                characterId = characterId,
+                playerName = uiState.playerName,
+                progress = progress,
+            ),
+        )
         uiState = uiState.copy(hasSaveData = true)
     }
 
