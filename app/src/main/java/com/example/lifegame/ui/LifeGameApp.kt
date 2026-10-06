@@ -54,8 +54,8 @@ fun LifeGameApp(
                 }
                 composable(Routes.CHARACTER_SELECT) {
                     CharacterSelectScreen(
-                        onStartGame = { characterId ->
-                            gameViewModel.startNewGame(characterId)
+                        onStartGame = { characterId, playerName ->
+                            gameViewModel.startNewGame(characterId, playerName)
                             navController.navigateOnce(Routes.GAME) {
                                 popUpTo(Routes.START)
                             }
@@ -141,9 +141,11 @@ private fun SafeEndingScreen(
     EndingScreen(
         ending = ending,
         stats = stats,
-        choiceHistory = state.progress?.choiceHistory.orEmpty().map {
-            "${it.eventId}: ${it.choiceId}"
-        },
+        // eventId 대신 "나이 · 사건 제목 → 고른 선택지"로 보여 준다. 문장은 이미 이름이 치환된 상태다.
+        choiceHistory = buildLifeRecords(
+            state.progress?.choiceHistory.orEmpty(),
+            state.eventsById,
+        ).map { "${it.age}세 · ${it.title} → ${it.choiceLabel}" },
         onRestart = {
             gameViewModel.reset()
             navController.navigateOnce(Routes.START) {

@@ -14,6 +14,9 @@ private val LifeGameColorScheme = lightColorScheme(
 
     secondary = LifeGameInkSecondary,
     onSecondary = Color.White,
+    // 진행 막대(StatBar)의 빈 부분 등. 기본 보라색이 섞이지 않게 선 색으로 맞춘다.
+    secondaryContainer = LifeGameRule,
+    onSecondaryContainer = LifeGameInk,
 
     background = LifeGamePaper,
     onBackground = LifeGameInk,
