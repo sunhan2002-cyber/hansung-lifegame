@@ -94,7 +94,6 @@ import com.example.lifegame.ui.components.PerforationBand
 import com.example.lifegame.ui.components.PullHint
 import com.example.lifegame.ui.components.StatBar
 import com.example.lifegame.ui.displayAge
-import com.example.lifegame.ui.replacePlayerPlaceholders
 import com.example.lifegame.ui.teaser
 import com.example.lifegame.ui.theme.EventTitleStyle
 import com.example.lifegame.ui.theme.LifeGameBodyInk
@@ -330,7 +329,7 @@ fun GameScreen(
                 HistoryPanel(
                     records = records,
                     nowAge = shown.age,
-                    nowTitle = shown.event.title.replacePlayerPlaceholders(),
+                    nowTitle = shown.event.title,
                     nowIsSpecial = shown.isSpecial,
                     onBackToNow = { historyOpen = false },
                     modifier = Modifier.weight(1f),
@@ -467,13 +466,13 @@ private fun EventText(frame: YearFrame, result: UiChoiceResult?, modifier: Modif
             }
         }
         Text(
-            text = frame.event.title.replacePlayerPlaceholders(),
+            text = frame.event.title,
             style = if (chosen) EventTitleStyle.copy(fontSize = 20.sp, lineHeight = 26.sp) else EventTitleStyle,
             color = LifeGameInk,
             modifier = Modifier.semantics { heading() },
         )
         Text(
-            text = frame.event.text.replacePlayerPlaceholders(),
+            text = frame.event.text,
             style = if (chosen) StoryStyle.copy(fontSize = 15.sp, lineHeight = 25.5.sp) else StoryStyle,
             color = if (chosen) LifeGameInkTertiary else LifeGameInk,
         )
@@ -506,13 +505,13 @@ private fun ResultBlock(result: UiChoiceResult, modifier: Modifier = Modifier) {
         verticalArrangement = Arrangement.spacedBy(6.dp),
     ) {
         Text(
-            text = "→ ${result.choice.label.replacePlayerPlaceholders()}",
+            text = "→ ${result.choice.label}",
             color = LifeGameInk,
             fontSize = 14.5.sp,
             fontWeight = FontWeight.Bold,
         )
         Text(
-            text = result.engineResult.resultText.replacePlayerPlaceholders(),
+            text = result.engineResult.resultText,
             style = ResultStoryStyle,
             color = LifeGameInk,
         )
@@ -574,7 +573,7 @@ private fun ChoiceSheet(
             event.choices.forEachIndexed { index, choice ->
                 ChoiceCard(
                     key = ('A' + index).toString(),
-                    label = choice.label.replacePlayerPlaceholders(),
+                    label = choice.label,
                     affected = choice.affectedStatNames(),
                     enabled = enabled,
                     onClick = { onChoose(choice) },
@@ -700,7 +699,7 @@ private fun SpecialEventPopup(frame: YearFrame, progress: () -> Float, onOpen: (
                     Text("이번 생 ${frame.specialOrdinal}번째", color = LifeGameInkSecondary, fontSize = 11.5.sp)
                 }
                 Text(
-                    text = frame.event.title.replacePlayerPlaceholders(),
+                    text = frame.event.title,
                     color = LifeGameInk,
                     fontFamily = LifeGameSerif,
                     fontWeight = FontWeight.Bold,
@@ -708,7 +707,7 @@ private fun SpecialEventPopup(frame: YearFrame, progress: () -> Float, onOpen: (
                     lineHeight = 32.sp,
                 )
                 Text(
-                    text = frame.event.text.replacePlayerPlaceholders().teaser(),
+                    text = frame.event.text.teaser(),
                     color = LifeGameBodyInk,
                     fontFamily = LifeGameSerif,
                     fontSize = 15.5.sp,
