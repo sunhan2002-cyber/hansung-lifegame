@@ -1966,5 +1966,325 @@
     "description": "성인기 '등산로의 멧돼지' 사건을 표현하는 이미지",
     "fileName": "img_special_boar_001.png",
     "fallbackText": "이미지 준비 전에는 '등산로의 멧돼지' 상황 이미지 영역으로 대체 표시"
+  },
+  {
+    "imageId": "img_infant_first_haircut_001",
+    "usage": "event",
+    "stage": "유아기",
+    "description": "유아기 '첫 미용실' 사건을 표현하는 이미지",
+    "fileName": "img_infant_first_haircut_001.png",
+    "fallbackText": "이미지 준비 전에는 '첫 미용실' 상황 이미지 영역으로 대체 표시"
+  },
+  {
+    "imageId": "img_infant_potty_001",
+    "usage": "event",
+    "stage": "유아기",
+    "description": "유아기 '오리 변기' 사건을 표현하는 이미지",
+    "fileName": "img_infant_potty_001.png",
+    "fallbackText": "이미지 준비 전에는 '오리 변기' 상황 이미지 영역으로 대체 표시"
+  },
+  {
+    "imageId": "img_infant_carousel_001",
+    "usage": "event",
+    "stage": "유아기",
+    "description": "유아기 '회전목마' 사건을 표현하는 이미지",
+    "fileName": "img_infant_carousel_001.png",
+    "fallbackText": "이미지 준비 전에는 '회전목마' 상황 이미지 영역으로 대체 표시"
+  },
+  {
+    "imageId": "img_infant_elevator_button_001",
+    "usage": "event",
+    "stage": "유아기",
+    "description": "유아기 '엘리베이터 버튼' 사건을 표현하는 이미지",
+    "fileName": "img_infant_elevator_button_001.png",
+    "fallbackText": "이미지 준비 전에는 '엘리베이터 버튼' 상황 이미지 영역으로 대체 표시"
+  },
+  {
+    "imageId": "img_infant_rooster_001",
+    "usage": "event",
+    "stage": "유아기",
+    "description": "유아기 '할머니 댁 마당의 닭' 사건을 표현하는 이미지",
+    "fileName": "img_infant_rooster_001.png",
+    "fallbackText": "이미지 준비 전에는 '할머니 댁 마당의 닭' 상황 이미지 영역으로 대체 표시"
+  },
+  {
+    "imageId": "img_infant_ball_pit_001",
+    "usage": "event",
+    "stage": "유아기",
+    "description": "유아기 '볼풀에서 잃어버린 신발' 사건을 표현하는 이미지",
+    "fileName": "img_infant_ball_pit_001.png",
+    "fallbackText": "이미지 준비 전에는 '볼풀에서 잃어버린 신발' 상황 이미지 영역으로 대체 표시"
+  },
+  {
+    "imageId": "img_infant_bedtime_story_001",
+    "usage": "event",
+    "stage": "유아기",
+    "description": "유아기 '아빠의 잠자리 동화' 사건을 표현하는 이미지",
+    "fileName": "img_infant_bedtime_story_001.png",
+    "fallbackText": "이미지 준비 전에는 '아빠의 잠자리 동화' 상황 이미지 영역으로 대체 표시"
+  },
+  {
+    "imageId": "img_infant_birthday_cake_001",
+    "usage": "event",
+    "stage": "유아기",
+    "description": "유아기 '친구의 생일 케이크' 사건을 표현하는 이미지",
+    "fileName": "img_infant_birthday_cake_001.png",
+    "fallbackText": "이미지 준비 전에는 '친구의 생일 케이크' 상황 이미지 영역으로 대체 표시"
+  },
+  {
+    "imageId": "img_child_times_table_001",
+    "usage": "event",
+    "stage": "아동기",
+    "description": "아동기 '구구단 7단' 사건을 표현하는 이미지",
+    "fileName": "img_child_times_table_001.png",
+    "fallbackText": "이미지 준비 전에는 '구구단 7단' 상황 이미지 영역으로 대체 표시"
+  },
+  {
+    "imageId": "img_child_swing_line_001",
+    "usage": "event",
+    "stage": "아동기",
+    "description": "아동기 '그네 차례' 사건을 표현하는 이미지",
+    "fileName": "img_child_swing_line_001.png",
+    "fallbackText": "이미지 준비 전에는 '그네 차례' 상황 이미지 영역으로 대체 표시"
+  },
+  {
+    "imageId": "img_child_bicycle_001",
+    "usage": "event",
+    "stage": "아동기",
+    "description": "아동기 '보조 바퀴 떼는 날' 사건을 표현하는 이미지",
+    "fileName": "img_child_bicycle_001.png",
+    "fallbackText": "이미지 준비 전에는 '보조 바퀴 떼는 날' 상황 이미지 영역으로 대체 표시"
+  },
+  {
+    "imageId": "img_child_chick_001",
+    "usage": "event",
+    "stage": "아동기",
+    "description": "아동기 '학교 앞 병아리' 사건을 표현하는 이미지",
+    "fileName": "img_child_chick_001.png",
+    "fallbackText": "이미지 준비 전에는 '학교 앞 병아리' 상황 이미지 영역으로 대체 표시"
+  },
+  {
+    "imageId": "img_child_bus_trip_001",
+    "usage": "event",
+    "stage": "아동기",
+    "description": "아동기 '체험학습 버스 맨 뒷자리' 사건을 표현하는 이미지",
+    "fileName": "img_child_bus_trip_001.png",
+    "fallbackText": "이미지 준비 전에는 '체험학습 버스 맨 뒷자리' 상황 이미지 영역으로 대체 표시"
+  },
+  {
+    "imageId": "img_child_class_newspaper_001",
+    "usage": "event",
+    "stage": "아동기",
+    "description": "아동기 '학급 신문 기자' 사건을 표현하는 이미지",
+    "fileName": "img_child_class_newspaper_001.png",
+    "fallbackText": "이미지 준비 전에는 '학급 신문 기자' 상황 이미지 영역으로 대체 표시"
+  },
+  {
+    "imageId": "img_teen_report_card_001",
+    "usage": "event",
+    "stage": "청소년기",
+    "description": "청소년기 '성적표 사인' 사건을 표현하는 이미지",
+    "fileName": "img_teen_report_card_001.png",
+    "fallbackText": "이미지 준비 전에는 '성적표 사인' 상황 이미지 영역으로 대체 표시"
+  },
+  {
+    "imageId": "img_teen_school_store_001",
+    "usage": "event",
+    "stage": "청소년기",
+    "description": "청소년기 '4교시 매점 달리기' 사건을 표현하는 이미지",
+    "fileName": "img_teen_school_store_001.png",
+    "fallbackText": "이미지 준비 전에는 '4교시 매점 달리기' 상황 이미지 영역으로 대체 표시"
+  },
+  {
+    "imageId": "img_teen_class_shirt_001",
+    "usage": "event",
+    "stage": "청소년기",
+    "description": "청소년기 '반티 투표' 사건을 표현하는 이미지",
+    "fileName": "img_teen_class_shirt_001.png",
+    "fallbackText": "이미지 준비 전에는 '반티 투표' 상황 이미지 영역으로 대체 표시"
+  },
+  {
+    "imageId": "img_teen_study_cafe_001",
+    "usage": "event",
+    "stage": "청소년기",
+    "description": "청소년기 '스터디 카페' 사건을 표현하는 이미지",
+    "fileName": "img_teen_study_cafe_001.png",
+    "fallbackText": "이미지 준비 전에는 '스터디 카페' 상황 이미지 영역으로 대체 표시"
+  },
+  {
+    "imageId": "img_teen_party_or_homework_001",
+    "usage": "event",
+    "stage": "청소년기",
+    "description": "청소년기 '숙제냐 생일 파티냐' 사건을 표현하는 이미지",
+    "fileName": "img_teen_party_or_homework_001.png",
+    "fallbackText": "이미지 준비 전에는 '숙제냐 생일 파티냐' 상황 이미지 영역으로 대체 표시"
+  },
+  {
+    "imageId": "img_teen_yearbook_photo_001",
+    "usage": "event",
+    "stage": "청소년기",
+    "description": "청소년기 '졸업앨범 촬영 날' 사건을 표현하는 이미지",
+    "fileName": "img_teen_yearbook_photo_001.png",
+    "fallbackText": "이미지 준비 전에는 '졸업앨범 촬영 날' 상황 이미지 영역으로 대체 표시"
+  },
+  {
+    "imageId": "img_teen_hair_dye_001",
+    "usage": "event",
+    "stage": "청소년기",
+    "description": "청소년기 '셀프 염색' 사건을 표현하는 이미지",
+    "fileName": "img_teen_hair_dye_001.png",
+    "fallbackText": "이미지 준비 전에는 '셀프 염색' 상황 이미지 영역으로 대체 표시"
+  },
+  {
+    "imageId": "img_teen_bus_terminal_001",
+    "usage": "event",
+    "stage": "청소년기",
+    "description": "청소년기 '종점에서 눈을 떴다' 사건을 표현하는 이미지",
+    "fileName": "img_teen_bus_terminal_001.png",
+    "fallbackText": "이미지 준비 전에는 '종점에서 눈을 떴다' 상황 이미지 영역으로 대체 표시"
+  },
+  {
+    "imageId": "img_teen_student_council_001",
+    "usage": "event",
+    "stage": "청소년기",
+    "description": "청소년기 '학생회장 선거 공약' 사건을 표현하는 이미지",
+    "fileName": "img_teen_student_council_001.png",
+    "fallbackText": "이미지 준비 전에는 '학생회장 선거 공약' 상황 이미지 영역으로 대체 표시"
+  },
+  {
+    "imageId": "img_teen_exam_day_001",
+    "usage": "event",
+    "stage": "청소년기",
+    "description": "청소년기 '수능 날 아침' 사건을 표현하는 이미지",
+    "fileName": "img_teen_exam_day_001.png",
+    "fallbackText": "이미지 준비 전에는 '수능 날 아침' 상황 이미지 영역으로 대체 표시"
+  },
+  {
+    "imageId": "img_adult_driving_test_001",
+    "usage": "event",
+    "stage": "성인기",
+    "description": "성인기 '도로 주행 시험' 사건을 표현하는 이미지",
+    "fileName": "img_adult_driving_test_001.png",
+    "fallbackText": "이미지 준비 전에는 '도로 주행 시험' 상황 이미지 영역으로 대체 표시"
+  },
+  {
+    "imageId": "img_adult_housewarming_001",
+    "usage": "event",
+    "stage": "성인기",
+    "description": "성인기 '첫 집들이' 사건을 표현하는 이미지",
+    "fileName": "img_adult_housewarming_001.png",
+    "fallbackText": "이미지 준비 전에는 '첫 집들이' 상황 이미지 영역으로 대체 표시"
+  },
+  {
+    "imageId": "img_adult_scam_call_001",
+    "usage": "event",
+    "stage": "성인기",
+    "description": "성인기 '수상한 전화' 사건을 표현하는 이미지",
+    "fileName": "img_adult_scam_call_001.png",
+    "fallbackText": "이미지 준비 전에는 '수상한 전화' 상황 이미지 영역으로 대체 표시"
+  },
+  {
+    "imageId": "img_adult_wedding_invite_001",
+    "usage": "event",
+    "stage": "성인기",
+    "description": "성인기 '애매한 사이의 청첩장' 사건을 표현하는 이미지",
+    "fileName": "img_adult_wedding_invite_001.png",
+    "fallbackText": "이미지 준비 전에는 '애매한 사이의 청첩장' 상황 이미지 영역으로 대체 표시"
+  },
+  {
+    "imageId": "img_adult_office_plant_001",
+    "usage": "event",
+    "stage": "성인기",
+    "description": "성인기 '절대 안 죽는 화분' 사건을 표현하는 이미지",
+    "fileName": "img_adult_office_plant_001.png",
+    "fallbackText": "이미지 준비 전에는 '절대 안 죽는 화분' 상황 이미지 영역으로 대체 표시"
+  },
+  {
+    "imageId": "img_adult_secondhand_001",
+    "usage": "event",
+    "stage": "성인기",
+    "description": "성인기 '중고 거래 첫 문의' 사건을 표현하는 이미지",
+    "fileName": "img_adult_secondhand_001.png",
+    "fallbackText": "이미지 준비 전에는 '중고 거래 첫 문의' 상황 이미지 영역으로 대체 표시"
+  },
+  {
+    "imageId": "img_adult_talent_show_001",
+    "usage": "event",
+    "stage": "성인기",
+    "description": "성인기 '워크숍 장기자랑' 사건을 표현하는 이미지",
+    "fileName": "img_adult_talent_show_001.png",
+    "fallbackText": "이미지 준비 전에는 '워크숍 장기자랑' 상황 이미지 영역으로 대체 표시"
+  },
+  {
+    "imageId": "img_adult_father_70th_001",
+    "usage": "event",
+    "stage": "성인기",
+    "description": "성인기 '아빠의 칠순' 사건을 표현하는 이미지",
+    "fileName": "img_adult_father_70th_001.png",
+    "fallbackText": "이미지 준비 전에는 '아빠의 칠순' 상황 이미지 영역으로 대체 표시"
+  },
+  {
+    "imageId": "img_special_robot_vacuum_001",
+    "usage": "event",
+    "stage": "유아기",
+    "description": "유아기 '로봇청소기 납치 사건' 사건을 표현하는 이미지",
+    "fileName": "img_special_robot_vacuum_001.png",
+    "fallbackText": "이미지 준비 전에는 '로봇청소기 납치 사건' 상황 이미지 영역으로 대체 표시"
+  },
+  {
+    "imageId": "img_special_bubble_001",
+    "usage": "event",
+    "stage": "유아기",
+    "description": "유아기 '비눗방울 대참사' 사건을 표현하는 이미지",
+    "fileName": "img_special_bubble_001.png",
+    "fallbackText": "이미지 준비 전에는 '비눗방울 대참사' 상황 이미지 영역으로 대체 표시"
+  },
+  {
+    "imageId": "img_special_static_slide_001",
+    "usage": "event",
+    "stage": "아동기",
+    "description": "아동기 '미끄럼틀 정전기' 사건을 표현하는 이미지",
+    "fileName": "img_special_static_slide_001.png",
+    "fallbackText": "이미지 준비 전에는 '미끄럼틀 정전기' 상황 이미지 영역으로 대체 표시"
+  },
+  {
+    "imageId": "img_special_sauce_001",
+    "usage": "event",
+    "stage": "아동기",
+    "description": "아동기 '날아가는 탕수육 소스' 사건을 표현하는 이미지",
+    "fileName": "img_special_sauce_001.png",
+    "fallbackText": "이미지 준비 전에는 '날아가는 탕수육 소스' 상황 이미지 영역으로 대체 표시"
+  },
+  {
+    "imageId": "img_special_dodgeball_001",
+    "usage": "event",
+    "stage": "청소년기",
+    "description": "청소년기 '피구공의 궤적' 사건을 표현하는 이미지",
+    "fileName": "img_special_dodgeball_001.png",
+    "fallbackText": "이미지 준비 전에는 '피구공의 궤적' 상황 이미지 영역으로 대체 표시"
+  },
+  {
+    "imageId": "img_special_stuck_elevator_001",
+    "usage": "event",
+    "stage": "청소년기",
+    "description": "청소년기 '멈춘 엘리베이터' 사건을 표현하는 이미지",
+    "fileName": "img_special_stuck_elevator_001.png",
+    "fallbackText": "이미지 준비 전에는 '멈춘 엘리베이터' 상황 이미지 영역으로 대체 표시"
+  },
+  {
+    "imageId": "img_special_revolving_door_001",
+    "usage": "event",
+    "stage": "성인기",
+    "description": "성인기 '회전문 무한 루프' 사건을 표현하는 이미지",
+    "fileName": "img_special_revolving_door_001.png",
+    "fallbackText": "이미지 준비 전에는 '회전문 무한 루프' 상황 이미지 영역으로 대체 표시"
+  },
+  {
+    "imageId": "img_special_massage_chair_001",
+    "usage": "event",
+    "stage": "성인기",
+    "description": "성인기 '중고 안마의자의 역습' 사건을 표현하는 이미지",
+    "fileName": "img_special_massage_chair_001.png",
+    "fallbackText": "이미지 준비 전에는 '중고 안마의자의 역습' 상황 이미지 영역으로 대체 표시"
   }
 ]
