@@ -17,7 +17,8 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 
-/** 이미지 연결 전에도 사건의 이미지 ID와 대체 문구를 보여주는 영역. */
+/** 이미지 연결 전의 대체 영역. imageId는 기존 호출 계약을 유지하되 화면에 노출하지 않는다. */
+@Suppress("UNUSED_PARAMETER")
 @Composable
 fun EventImageBox(
     imageId: String,
@@ -27,8 +28,13 @@ fun EventImageBox(
     val colors = MaterialTheme.colorScheme
 
     BoxWithConstraints(modifier = modifier.fillMaxWidth()) {
-        // 기본 비율은 4:3. 큰 글꼴이나 긴 ID는 영역 높이를 늘려 표시한다.
-        val minimumHeight = if (constraints.hasBoundedWidth) maxWidth * 3f / 4f else 180.dp
+        // 실제 그림이 없는 동안 본문보다 큰 빈 공간을 만들지 않는다.
+        // 최소 높이만 지정하므로 큰 글씨의 대체 문구도 잘리지 않는다.
+        val minimumHeight = if (constraints.hasBoundedWidth) {
+            (maxWidth * 9f / 16f).coerceIn(112.dp, 160.dp)
+        } else {
+            112.dp
+        }
 
         Column(
             modifier = Modifier
@@ -43,12 +49,6 @@ fun EventImageBox(
             Text(
                 text = fallbackText.ifBlank { "이미지를 준비 중입니다" },
                 style = MaterialTheme.typography.bodyMedium,
-                color = colors.onSurfaceVariant,
-                textAlign = TextAlign.Center,
-            )
-            Text(
-                text = if (imageId.isBlank()) "이미지 ID 없음" else "이미지 ID: $imageId",
-                style = MaterialTheme.typography.bodySmall,
                 color = colors.onSurfaceVariant,
                 textAlign = TextAlign.Center,
             )
