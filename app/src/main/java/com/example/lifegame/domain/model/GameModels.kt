@@ -158,6 +158,171 @@ data class ChoiceResult(
     val wasApplied: Boolean,
 )
 
+/** v4에서 한 장(chapter)을 구성하는 생애 시기다. */
+enum class LifePeriod {
+    INFANT,
+    CHILD,
+    TEEN,
+    YOUNG_ADULT,
+    MIDDLE,
+}
+
+data class PeriodDefinition(
+    val period: LifePeriod,
+    val order: Int,
+    val years: Int,
+) {
+    init {
+        require(order >= 0) { "period order must be zero or greater" }
+        require(years > 0) { "period years must be greater than zero" }
+    }
+}
+
+data class Focus(
+    val focusId: String,
+    val period: LifePeriod,
+    val label: String,
+    val statEffects: StatDelta,
+    val description: String,
+    val sceneImageId: String? = null,
+    val momentImageId: String? = null,
+)
+
+enum class TransitionCue {
+    NOISE,
+    DISTORT,
+    CHAPTER,
+}
+
+enum class DecisionKind {
+    MILESTONE,
+    INCIDENT,
+    BIG_INCIDENT,
+}
+
+/**
+ * 능력치 50을 기준으로 10점 차이마다 결과 가중치에 더할 값이다.
+ * 양수는 해당 능력치가 높을수록, 음수는 낮을수록 결과 가능성을 높인다.
+ */
+data class ChanceWeights(
+    val health: Int = 0,
+    val fitness: Int = 0,
+    val intelligence: Int = 0,
+    val social: Int = 0,
+    val wealth: Int = 0,
+    val happiness: Int = 0,
+    val luck: Int = 0,
+)
+
+data class Outcome(
+    val outcomeId: String,
+    val resultText: String,
+    val statDelta: StatDelta = StatDelta(),
+    val addFlags: Set<String> = emptySet(),
+    val chance: Int,
+    val chanceWeights: ChanceWeights = ChanceWeights(),
+    val hidden: Boolean = false,
+    val death: Boolean = false,
+) {
+    init {
+        require(chance >= 0) { "outcome chance must be zero or greater" }
+    }
+}
+
+data class DecisionOption(
+    val choiceId: String,
+    val label: String,
+    val outcomes: List<Outcome>,
+    val requiredFlags: Set<String> = emptySet(),
+    val blockedFlags: Set<String> = emptySet(),
+) {
+    init {
+        require(outcomes.isNotEmpty()) { "decision option must have at least one outcome" }
+        require(outcomes.sumOf { it.chance } > 0) { "decision option must have a positive outcome chance" }
+    }
+}
+
+data class DecisionEvent(
+    val eventId: String,
+    val periods: Set<LifePeriod>,
+    val kind: DecisionKind,
+    val title: String,
+    val text: String,
+    val choices: List<DecisionOption>,
+    val weight: Int = 1,
+    val yearInPeriod: Int? = null,
+    val requiredFlags: Set<String> = emptySet(),
+    val blockedFlags: Set<String> = emptySet(),
+    val povImageId: String? = null,
+    val momentImageId: String? = null,
+) {
+    init {
+        require(periods.isNotEmpty()) { "decision event must target at least one period" }
+        require(choices.isNotEmpty()) { "decision event must have at least one choice" }
+        require(weight > 0) { "decision event weight must be greater than zero" }
+        require(yearInPeriod == null || yearInPeriod > 0) { "milestone year must be greater than zero" }
+    }
+}
+
+data class DecisionChoicePreview(
+    val choiceId: String,
+    val label: String,
+)
+
+/** UI에는 결과 목록을 포함하지 않아 hidden 결과가 preview로 새지 않는다. */
+data class PendingDecision(
+    val eventId: String,
+    val kind: DecisionKind,
+    val title: String,
+    val text: String,
+    val choices: List<DecisionChoicePreview>,
+    val povImageId: String? = null,
+)
+
+data class LifeMoment(
+    val period: LifePeriod,
+    val yearInPeriod: Int,
+    val text: String,
+    val momentImageId: String? = null,
+)
+
+data class PeriodRunState(
+    val runId: String,
+    val runSeed: Long,
+    val period: LifePeriod,
+    val yearInPeriod: Int = 1,
+    val selectedFocusId: String? = null,
+    val stats: Stats = Stats(),
+    val flags: Set<String> = emptySet(),
+    val pendingDecisionId: String? = null,
+    val moments: List<LifeMoment> = emptyList(),
+    val isEnding: Boolean = false,
+)
+
+enum class TurnPhase {
+    CHAPTER,
+    AUTO_PROGRESS,
+    DECISION,
+    ENDING,
+}
+
+data class TurnStep(
+    val state: PeriodRunState,
+    val phase: TurnPhase,
+    val recordText: String? = null,
+    val transitionCue: TransitionCue? = null,
+    val pendingDecision: PendingDecision? = null,
+    val sceneImageId: String? = null,
+    val momentImageId: String? = null,
+    val canAutoAdvance: Boolean = false,
+    val needsFocusSelection: Boolean = false,
+)
+
+data class OutcomeResolution(
+    val outcome: Outcome,
+    val step: TurnStep,
+)
+
 // Notion 카드에서 사용하는 초기 명칭과 GitHub 명세의 확정 명칭을 함께 지원한다.
 typealias PlayerStats = Stats
 typealias Event = GameEvent

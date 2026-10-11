@@ -70,3 +70,59 @@
 
 - 실제 Android 기기에서 앱 강제 종료 후 사건/결과/결말 각 화면의 복원 동선을 팀장이 최종 확인해야 한다.
 - 저장 포맷 버전은 현재 1만 지원하며, 이후 모델 변경 시 마이그레이션 규칙을 추가해야 한다.
+
+---
+
+## v4 자동 진행 엔진 추가 제출
+
+### 작업 범위
+
+- 시기/해/초점 모델과 24턴 개발용 시기 정의를 추가했다.
+- 시기 시작 시 초점 선택을 요구하고, 선택한 초점은 해당 시기가 끝날 때까지 변경하지 못하게 했다.
+- 해마다 초점 효과와 기록을 적용하고, 결정이 없는 해는 자동 진행 가능한 `TurnStep`을 반환한다.
+- 예약 마일스톤을 큰 돌발·일반 돌발보다 먼저 판정한다.
+- 큰 돌발과 일반 돌발의 고정 seed 추첨 및 가중치 선택 뼈대를 추가했다.
+- 선택 결과를 `outcomes` 가중치로 결정하며 능력치는 선택지를 잠그지 않고 결과 가중치만 바꾼다.
+- 같은 `runSeed + eventId + choiceId`는 동일한 결과를 반환한다.
+- hidden 결과는 `PendingDecision` preview에 포함하지 않고, 사망 결과는 즉시 `ENDING` 단계로 전환한다.
+- `sceneImageId`, `povImageId`, `momentImageId`, `TransitionCue`를 엔진 출력에 연결했다.
+- 기존 사건 나열형 API는 삭제하지 않고 v4 `PeriodGameSession`을 병행 추가했다.
+
+### v4 변경 파일
+
+- `app/src/main/java/com/example/lifegame/domain/model/GameModels.kt`
+- `app/src/main/java/com/example/lifegame/domain/engine/GameEngine.kt`
+- `app/src/main/java/com/example/lifegame/domain/engine/GameSession.kt`
+- `app/src/test/java/com/example/lifegame/domain/engine/V4GameEngineTest.kt`
+- `app/src/test/java/com/example/lifegame/domain/engine/V4PeriodGameSessionTest.kt`
+- `docs/week7_backend_submission.md`
+
+### v4 신규 테스트 13개
+
+1. 초점이 없으면 장 표지 단계 반환
+2. 시기 중간 초점 변경 거부
+3. 해 진행 시 초점 효과와 이미지 ID 반영
+4. 마일스톤 우선 처리
+5. 결정 pending 시 자동 진행 정지
+6. 같은 seed와 선택의 결과 재현
+7. 능력치에 따른 결과 가중치 변화
+8. hidden death preview 비노출
+9. 사망 결과 즉시 결말 전환
+10. 고정 seed 24턴 완주
+11. 큰 돌발의 POV 이미지와 왜곡 전환
+12. 세션의 장 표지 → 결정 → 다음 해 연결
+13. pending 결정 복원 시 자동 진행 정지 유지
+
+### 최신 검증 결과
+
+- `gradlew.bat test`: BUILD SUCCESSFUL
+- Debug 70개 + Release 70개 = 140개 실행, 실패/오류/건너뜀 0
+- `gradlew.bat assembleDebug`: BUILD SUCCESSFUL
+- `python scripts/validate_content.py`: PASS
+- 콘텐츠: 사건 204개, 돌발 19개, 결말 31개, 이미지 ID 286개
+
+### 후속 담당자 참고
+
+- 프론트는 `PeriodGameSession.start/selectFocus/advance/choose`와 `TurnStep`을 연결하면 된다.
+- 시나리오·DB 담당자가 `periods.json`, `focuses.json`, v4 사건 로더를 추가하면 현재 임시 코드 정의를 같은 모델 목록으로 교체할 수 있다.
+- 7주차 범위에서는 기존 JSON 204개를 v4로 변환하지 않았고, 서버나 실시간 이미지 생성도 연결하지 않았다.
