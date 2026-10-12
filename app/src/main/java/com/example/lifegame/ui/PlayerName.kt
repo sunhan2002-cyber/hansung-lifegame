@@ -1,6 +1,8 @@
 package com.example.lifegame.ui
 
+import com.example.lifegame.domain.model.DecisionEvent
 import com.example.lifegame.domain.model.Ending
+import com.example.lifegame.domain.model.Focus
 import com.example.lifegame.domain.model.GameEvent
 
 /** 이름을 비워 두고 시작하면 쓰는 이름 */
@@ -46,4 +48,25 @@ fun GameEvent.withPlayerName(name: String, nameCall: String): GameEvent = copy(
 fun Ending.withPlayerName(name: String, nameCall: String): Ending = copy(
     title = title.withPlayerName(name, nameCall),
     summary = summary.withPlayerName(name, nameCall),
+)
+
+/** v4 결정 · 돌발. 선택지 문구와 숨은 결과까지 모두 바꿔 둔다. */
+fun DecisionEvent.withPlayerName(name: String, nameCall: String): DecisionEvent = copy(
+    title = title.withPlayerName(name, nameCall),
+    text = text.withPlayerName(name, nameCall),
+    choices = choices.map { option ->
+        option.copy(
+            label = option.label.withPlayerName(name, nameCall),
+            outcomes = option.outcomes.map { outcome ->
+                outcome.copy(resultText = outcome.resultText.withPlayerName(name, nameCall))
+            },
+        )
+    },
+)
+
+/** v4 시기 초점. 해마다 쌓이는 기록 문장도 여기서 바꾼다. */
+fun Focus.withPlayerName(name: String, nameCall: String): Focus = copy(
+    label = label.withPlayerName(name, nameCall),
+    description = description.withPlayerName(name, nameCall),
+    yearlyLogTemplates = yearlyLogTemplates.map { it.withPlayerName(name, nameCall) },
 )

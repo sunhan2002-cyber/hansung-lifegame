@@ -28,6 +28,7 @@ import androidx.compose.ui.geometry.Rect
 import androidx.compose.ui.geometry.RoundRect
 import androidx.compose.ui.geometry.Size
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.FilterQuality
 import androidx.compose.ui.graphics.ImageBitmap
 import androidx.compose.ui.graphics.Path
 import androidx.compose.ui.graphics.asImageBitmap
@@ -41,7 +42,9 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.IntOffset
 import androidx.compose.ui.unit.IntSize
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import com.example.lifegame.ui.theme.LifeGameInk
+import com.example.lifegame.ui.theme.LifeGameInkSecondary
 import com.example.lifegame.ui.theme.LifeGamePaper
 import com.example.lifegame.ui.theme.LifeGamePicture
 import com.example.lifegame.ui.theme.LifeGameSpecial
@@ -123,10 +126,14 @@ fun FilmStrip(
                 drawFilm(motion(), currentPicture.bitmap, incomingPicture?.bitmap)
             }
             if (currentPicture.isPlaceholder) {
+                // 아래 구멍 띠에 걸리지 않게 그림 안쪽에 둔다
                 Text(
                     "이미지를 준비 중입니다",
-                    modifier = Modifier.align(Alignment.BottomStart).padding(16.dp),
-                    color = LifeGameInk,
+                    modifier = Modifier
+                        .align(Alignment.BottomStart)
+                        .padding(start = SideBorder + 12.dp, bottom = StripHeight + 10.dp),
+                    color = LifeGameInkSecondary,
+                    fontSize = 12.sp,
                 )
             }
         }
@@ -193,7 +200,10 @@ private fun placeholderPicture(
     return bitmap.asImageBitmap()
 }
 
-/** assets/images/<fileName>을 필름 칸 크기에 맞춰 가운데를 잘라 읽는다. */
+/**
+ * assets/images/<fileName>을 필름 칸 크기에 맞춰 가운데를 잘라 읽는다.
+ * 장면은 모두 도트 그림이라 확대할 때 보간하지 않는다(nearest). 보간하면 픽셀 경계가 흐려진다.
+ */
 private fun loadAssetPicture(context: Context, fileName: String, width: Int, height: Int): ImageBitmap? =
     runCatching {
         val source = context.assets.open("images/$fileName").use(BitmapFactory::decodeStream)
@@ -203,7 +213,7 @@ private fun loadAssetPicture(context: Context, fileName: String, width: Int, hei
             source,
             (source.width * scale).roundToInt().coerceAtLeast(width),
             (source.height * scale).roundToInt().coerceAtLeast(height),
-            true,
+            false,
         )
         Bitmap.createBitmap(
             scaled,
@@ -261,7 +271,12 @@ private fun DrawScope.drawPicture(image: ImageBitmap, topLeft: Offset, m: FilmMo
     val rect = Rect(topLeft, Size(image.width.toFloat(), image.height.toFloat()))
     val gate = Path().apply { addRoundRect(RoundRect(rect, CornerRadius(GateCorner.toPx()))) }
     clipPath(gate) {
-        drawImage(image, topLeft = topLeft)
+        drawImage(
+            image = image,
+            dstOffset = IntOffset(topLeft.x.roundToInt(), topLeft.y.roundToInt()),
+            dstSize = IntSize(image.width, image.height),
+            filterQuality = FilterQuality.None,
+        )
         if (m.noiseSeed != 0) drawNoise(rect, m.noiseSeed)
     }
 }
@@ -339,6 +354,7 @@ private fun DrawScope.drawDistorted(image: ImageBitmap, topLeft: Offset, m: Film
             srcSize = IntSize(image.width, sliceHeight),
             dstOffset = IntOffset((topLeft.x + offsetAt(y.toFloat())).roundToInt(), (topLeft.y + y).roundToInt()),
             dstSize = IntSize(image.width, sliceHeight + overlap),
+            filterQuality = FilterQuality.None,
         )
         y += slice
     }

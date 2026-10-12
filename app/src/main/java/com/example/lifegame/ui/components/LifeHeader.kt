@@ -125,7 +125,7 @@ fun LifeHeader(
 }
 
 @Composable
-private fun StatsButton(stats: Stats, changes: StatDelta?, onClick: () -> Unit) {
+internal fun StatsButton(stats: Stats, changes: StatDelta?, onClick: () -> Unit) {
     val shape = RoundedCornerShape(8.dp)
     Row(
         modifier = Modifier

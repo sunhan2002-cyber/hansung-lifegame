@@ -1,11 +1,11 @@
 package com.example.lifegame.ui
 
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Button
+import androidx.compose.foundation.layout.safeDrawingPadding
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
@@ -19,125 +19,62 @@ import androidx.navigation.NavOptionsBuilder
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.example.lifegame.domain.model.GameScreenState
-import com.example.lifegame.domain.model.Ending
-import com.example.lifegame.domain.model.Stats
+import com.example.lifegame.ui.components.InkButton
+import com.example.lifegame.ui.screens.AutoProgressScreen
+import com.example.lifegame.ui.screens.ChapterFocusScreen
 import com.example.lifegame.ui.screens.CharacterSelectScreen
-import com.example.lifegame.ui.screens.EndingScreen
-import com.example.lifegame.ui.screens.GameScreen
-import com.example.lifegame.ui.screens.StartScreen
+import com.example.lifegame.ui.screens.DecisionScreen
+import com.example.lifegame.ui.screens.HomeScreen
+import com.example.lifegame.ui.screens.RunEndScreen
+import com.example.lifegame.ui.theme.LifeGameInkSecondary
+import com.example.lifegame.ui.theme.LifeGamePaper
 import com.example.lifegame.ui.theme.LifeGameTheme
 
+/** v4 화면 흐름: 홈 → 프로필 만들기 → 플레이(장 표지 · 자동 진행 · 결정 · 끝). */
 object Routes {
-    const val START = "start"
-    const val CHARACTER_SELECT = "character_select"
-    const val GAME = "game"
-    const val ENDING = "ending"
+    const val HOME = "home"
+    const val PROFILE = "profile"
+    const val PLAY = "play"
 }
 
-// 정원률 담당 ui/theme의 앱 테마가 준비되면 MaterialTheme을 교체한다.
 @Composable
 fun LifeGameApp(
     navController: NavHostController = rememberNavController(),
     gameViewModel: LifeGameViewModel = viewModel(),
 ) {
     LifeGameTheme {
-        Surface(modifier = Modifier.fillMaxSize()) {
-            val state = gameViewModel.uiState
-
-            NavHost(navController = navController, startDestination = Routes.START) {
-                composable(Routes.START) {
-                    StartScreen(
-                        canContinue = state.hasSaveData,
-                        onNewGame = { navController.navigateOnce(Routes.CHARACTER_SELECT) },
-                        onContinue = {
-                            val route = when (gameViewModel.continueGame()) {
-                                GameScreenState.EVENT -> Routes.GAME
-                                // 최신 UI는 선택 결과를 게임 화면 안에 이어서 표시한다.
-                                GameScreenState.CHOICE_RESULT -> Routes.GAME
-                                GameScreenState.ENDING -> Routes.ENDING
-                                null -> null
-                            }
-                            if (route != null) {
-                                navController.navigateOnce(route) {
-                                    popUpTo(Routes.START)
-                                }
-                            }
-                        },
+        Surface(modifier = Modifier.fillMaxSize(), color = LifeGamePaper) {
+            NavHost(navController = navController, startDestination = Routes.HOME) {
+                composable(Routes.HOME) {
+                    HomeScreen(
+                        lifeCard = gameViewModel.lifeCard,
+                        finishedLives = gameViewModel.finishedLives,
+                        message = gameViewModel.playError,
+                        onContinue = { navController.navigateOnce(Routes.PLAY) },
+                        onNewLife = { navController.navigateOnce(Routes.PROFILE) },
                     )
                 }
-                composable(Routes.CHARACTER_SELECT) {
+                composable(Routes.PROFILE) {
                     CharacterSelectScreen(
-                        onStartGame = { characterId, playerName ->
-                            gameViewModel.startNewGame(characterId, playerName)
-                            navController.navigateOnce(Routes.GAME) {
-                                popUpTo(Routes.START)
+                        starters = gameViewModel.starters,
+                        onStart = { profile ->
+                            gameViewModel.startNewLife(profile)
+                            navController.navigateOnce(Routes.PLAY) {
+                                popUpTo(Routes.HOME)
                             }
                         },
                     )
                 }
-                composable(Routes.GAME) {
-                    val event = state.currentEvent
-                    val ending = state.ending
-                    when {
-                        event != null -> {
-                            // 선택 결과는 같은 화면에 이어 붙고, 다음 해로 넘어가는 전환도 이 화면 안에서 재생한다.
-                            GameScreen(
-                                state = state,
-                                onChoose = { choice -> gameViewModel.choose(choice) },
-                                onNextYear = {
-                                    val finished = gameViewModel.proceed()
-                                    if (finished) {
-                                        navController.navigateOnce(Routes.ENDING) {
-                                            popUpTo(Routes.START)
-                                        }
-                                    }
-                                },
-                            )
-                        }
-                        ending != null -> {
-                            SafeEndingScreen(
-                                ending = ending,
-                                stats = state.stats,
-                                state = state,
-                                gameViewModel = gameViewModel,
-                                navController = navController,
-                            )
-                        }
-                        else -> {
-                            RecoveryScreen(
-                                message = state.contentError ?: "다음 사건을 불러오지 못했습니다.",
-                                onRestart = {
-                                    gameViewModel.reset()
-                                    navController.navigateOnce(Routes.START) {
-                                        popUpTo(Routes.START) { inclusive = true }
-                                    }
-                                },
-                            )
-                        }
-                    }
-                }
-                composable(Routes.ENDING) {
-                    val ending = state.ending
-                    if (ending != null) {
-                        SafeEndingScreen(
-                            ending = ending,
-                            stats = state.stats,
-                            state = state,
-                            gameViewModel = gameViewModel,
-                            navController = navController,
-                        )
-                    } else {
-                        RecoveryScreen(
-                            message = "결말 데이터를 불러오지 못했습니다.",
-                            onRestart = {
-                                gameViewModel.reset()
-                                navController.navigateOnce(Routes.START) {
-                                    popUpTo(Routes.START) { inclusive = true }
-                                }
-                            },
-                        )
-                    }
+                composable(Routes.PLAY) {
+                    // 뒤로 가기는 홈으로 간다. 진행 중인 인생은 홈의 "이어하기"로 돌아온다.
+                    PlayHost(
+                        gameViewModel = gameViewModel,
+                        onGoHome = {
+                            navController.navigateOnce(Routes.HOME) {
+                                popUpTo(Routes.HOME) { inclusive = true }
+                            }
+                        },
+                    )
                 }
             }
         }
@@ -145,56 +82,61 @@ fun LifeGameApp(
 }
 
 @Composable
-private fun SafeEndingScreen(
-    ending: Ending,
-    stats: Stats,
-    state: LifeGameUiState,
+private fun PlayHost(
     gameViewModel: LifeGameViewModel,
-    navController: NavHostController,
+    onGoHome: () -> Unit,
 ) {
-    EndingScreen(
-        ending = ending,
-        stats = stats,
-        // eventId 대신 "나이 · 사건 제목 → 고른 선택지"로 보여 준다. 문장은 이미 이름이 치환된 상태다.
-        choiceHistory = buildLifeRecords(
-            state.progress?.choiceHistory.orEmpty(),
-            state.eventsById,
-        ).map { "${it.age}세 · ${it.title} → ${it.choiceLabel}" },
-        onRestart = {
-            gameViewModel.reset()
-            navController.navigateOnce(Routes.START) {
-                popUpTo(Routes.START) { inclusive = true }
-            }
-        },
-    )
+    val play = gameViewModel.play
+    when (play?.phase) {
+        PlayPhase.CHAPTER -> ChapterFocusScreen(
+            state = play,
+            onSelectFocus = gameViewModel::selectFocus,
+        )
+        PlayPhase.AUTO -> AutoProgressScreen(
+            state = play,
+            onAdvanceYear = gameViewModel::advanceYear,
+            onTogglePlaying = gameViewModel::togglePlaying,
+            onSpeedChange = gameViewModel::setSpeed,
+            onSkipToDecision = gameViewModel::skipToNextDecision,
+        )
+        PlayPhase.DECISION -> DecisionScreen(
+            state = play,
+            onChoose = gameViewModel::chooseDecision,
+            onContinue = gameViewModel::continueAfterOutcome,
+        )
+        PlayPhase.ENDED -> RunEndScreen(
+            state = play,
+            onDone = {
+                gameViewModel.finishLife()
+                onGoHome()
+            },
+        )
+        null -> RecoveryScreen(
+            message = gameViewModel.playError ?: "진행 중인 인생이 없습니다.",
+            onGoHome = onGoHome,
+        )
+    }
 }
 
 @Composable
 private fun RecoveryScreen(
     message: String,
-    onRestart: () -> Unit,
+    onGoHome: () -> Unit,
 ) {
     Column(
         modifier = Modifier
             .fillMaxSize()
+            .background(LifeGamePaper)
+            .safeDrawingPadding()
             .padding(24.dp),
-        verticalArrangement = Arrangement.Center,
+        verticalArrangement = Arrangement.spacedBy(16.dp, alignment = androidx.compose.ui.Alignment.CenterVertically),
     ) {
         Text(
             text = "진행 상태를 다시 확인해야 합니다",
             style = MaterialTheme.typography.headlineSmall,
         )
-        Text(
-            text = message,
-            modifier = Modifier.padding(top = 12.dp, bottom = 24.dp),
-            style = MaterialTheme.typography.bodyLarge,
-        )
-        Button(
-            onClick = onRestart,
-            modifier = Modifier.fillMaxWidth(),
-        ) {
-            Text("처음으로 돌아가기")
-        }
+        Text(text = message, color = LifeGameInkSecondary, style = MaterialTheme.typography.bodyLarge)
+        InkButton(text = "홈으로", onClick = onGoHome)
     }
 }
 
