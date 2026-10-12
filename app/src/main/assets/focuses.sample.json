@@ -1,0 +1,446 @@
+[
+  {
+    "focusId": "focus_infant_bonding",
+    "period": "INFANT",
+    "name": "애착",
+    "description": "보호자와의 안정감을 우선한다",
+    "annualStatDelta": {
+      "사회성": 2,
+      "행복": 1,
+      "지력": -1
+    },
+    "sceneImageId": "img_scene_infant_bonding_001",
+    "momentImageId": "img_moment_infant_bonding_001",
+    "yearlyLogTemplates": [
+      "품에 안겨 세상을 천천히 배웠다.",
+      "낯선 소리보다 익숙한 목소리가 먼저 들렸다.",
+      "울음이 곧 대화가 되는 날들이 이어졌다."
+    ]
+  },
+  {
+    "focusId": "focus_infant_explore",
+    "period": "INFANT",
+    "name": "탐색",
+    "description": "만지고 부딪히며 주변을 배운다",
+    "annualStatDelta": {
+      "지력": 2,
+      "운": 1,
+      "건강": -1
+    },
+    "sceneImageId": "img_scene_infant_explore_001",
+    "momentImageId": "img_moment_infant_explore_001",
+    "yearlyLogTemplates": [
+      "손에 잡히는 건 일단 흔들어 봤다.",
+      "방 한구석이 작은 실험실이 됐다.",
+      "넘어지고도 다시 기어갔다."
+    ]
+  },
+  {
+    "focusId": "focus_infant_rhythm",
+    "period": "INFANT",
+    "name": "생활 리듬",
+    "description": "잠과 식사 습관을 잡는다",
+    "annualStatDelta": {
+      "건강": 2,
+      "행복": 1,
+      "사회성": -1
+    },
+    "sceneImageId": "img_scene_infant_rhythm_001",
+    "momentImageId": "img_moment_infant_rhythm_001",
+    "yearlyLogTemplates": [
+      "낮잠 시간이 하루의 중심이 됐다.",
+      "정해진 시간에 배가 고파졌다.",
+      "반복되는 하루가 몸에 익었다."
+    ]
+  },
+  {
+    "focusId": "focus_infant_play",
+    "period": "INFANT",
+    "name": "놀이",
+    "description": "소리와 움직임으로 즐거움을 키운다",
+    "annualStatDelta": {
+      "행복": 2,
+      "운동능력": 1,
+      "지력": -1
+    },
+    "sceneImageId": "img_scene_infant_play_001",
+    "momentImageId": "img_moment_infant_play_001",
+    "yearlyLogTemplates": [
+      "장난감 하나로 오후가 지나갔다.",
+      "박수를 치면 웃음이 먼저 나왔다.",
+      "굴러가는 공을 끝까지 쫓았다."
+    ]
+  },
+  {
+    "focusId": "focus_infant_health",
+    "period": "INFANT",
+    "name": "건강",
+    "description": "아프지 않고 몸을 단단히 만든다",
+    "annualStatDelta": {
+      "건강": 3,
+      "행복": -1
+    },
+    "sceneImageId": "img_scene_infant_health_001",
+    "momentImageId": "img_moment_infant_health_001",
+    "yearlyLogTemplates": [
+      "기침 소리가 잦아들었다.",
+      "밥 한 숟갈이 오늘의 훈련이었다.",
+      "병원 냄새보다 햇빛이 더 익숙해졌다."
+    ]
+  },
+  {
+    "focusId": "focus_child_study",
+    "period": "CHILD",
+    "name": "학업",
+    "description": "학교와 독서에 집중한다",
+    "annualStatDelta": {
+      "지력": 2,
+      "행복": -1
+    },
+    "sceneImageId": "img_scene_child_study_001",
+    "momentImageId": "img_moment_child_study_001",
+    "yearlyLogTemplates": [
+      "알림장 글씨가 점점 반듯해졌다.",
+      "책가방이 조금씩 무거워졌다.",
+      "모르는 단어를 적어 두기 시작했다."
+    ]
+  },
+  {
+    "focusId": "focus_child_friend",
+    "period": "CHILD",
+    "name": "친구",
+    "description": "친구 관계와 사회성을 넓힌다",
+    "annualStatDelta": {
+      "사회성": 2,
+      "행복": 1,
+      "지력": -1
+    },
+    "sceneImageId": "img_scene_child_friend_001",
+    "momentImageId": "img_moment_child_friend_001",
+    "yearlyLogTemplates": [
+      "쉬는 시간이 하루의 하이라이트였다.",
+      "친구 이름이 일기장에 자주 등장했다.",
+      "같이 웃는 법을 배웠다."
+    ]
+  },
+  {
+    "focusId": "focus_child_sports",
+    "period": "CHILD",
+    "name": "운동",
+    "description": "몸을 움직이며 체력을 키운다",
+    "annualStatDelta": {
+      "운동능력": 2,
+      "건강": 1,
+      "지력": -1
+    },
+    "sceneImageId": "img_scene_child_sports_001",
+    "momentImageId": "img_moment_child_sports_001",
+    "yearlyLogTemplates": [
+      "운동장 흙먼지가 익숙해졌다.",
+      "땀 냄새가 이상하게 뿌듯했다.",
+      "체육복을 입는 날을 기다렸다."
+    ]
+  },
+  {
+    "focusId": "focus_child_creative",
+    "period": "CHILD",
+    "name": "놀이·창작",
+    "description": "그림, 게임, 만화로 상상력을 키운다",
+    "annualStatDelta": {
+      "행복": 2,
+      "운": 1,
+      "경제력": -1
+    },
+    "sceneImageId": "img_scene_child_creative_001",
+    "momentImageId": "img_moment_child_creative_001",
+    "yearlyLogTemplates": [
+      "공책 끝에 작은 세계를 그렸다.",
+      "상상 속 친구들이 늘어났다.",
+      "하교 후 시간이 빨리 사라졌다."
+    ]
+  },
+  {
+    "focusId": "focus_child_help",
+    "period": "CHILD",
+    "name": "집안 도움",
+    "description": "가족과 생활 책임감을 배운다",
+    "annualStatDelta": {
+      "사회성": 1,
+      "건강": 1,
+      "행복": -1
+    },
+    "sceneImageId": "img_scene_child_help_001",
+    "momentImageId": "img_moment_child_help_001",
+    "yearlyLogTemplates": [
+      "심부름 길이 동네 지도가 됐다.",
+      "작은 집안일을 맡기 시작했다.",
+      "칭찬 한마디가 오래 남았다."
+    ]
+  },
+  {
+    "focusId": "focus_teen_study",
+    "period": "TEEN",
+    "name": "학업",
+    "description": "성적과 진학 준비에 집중한다",
+    "annualStatDelta": {
+      "지력": 3,
+      "행복": -1
+    },
+    "sceneImageId": "img_scene_teen_study_001",
+    "momentImageId": "img_moment_teen_study_001",
+    "yearlyLogTemplates": [
+      "밤마다 책상 앞에 앉아 있는 날이 늘었다.",
+      "문제집 한 권이 하나 더 늘었다.",
+      "시험표가 벽에 붙었다."
+    ]
+  },
+  {
+    "focusId": "focus_teen_club",
+    "period": "TEEN",
+    "name": "친구·동아리",
+    "description": "관계와 활동 경험을 넓힌다",
+    "annualStatDelta": {
+      "사회성": 2,
+      "행복": 1,
+      "지력": -1
+    },
+    "sceneImageId": "img_scene_teen_club_001",
+    "momentImageId": "img_moment_teen_club_001",
+    "yearlyLogTemplates": [
+      "동아리방 문턱이 낮아졌다.",
+      "단톡방 알림이 쉬지 않았다.",
+      "같이 만든 결과물이 기억에 남았다."
+    ]
+  },
+  {
+    "focusId": "focus_teen_fitness",
+    "period": "TEEN",
+    "name": "운동",
+    "description": "체력과 자신감을 기른다",
+    "annualStatDelta": {
+      "운동능력": 2,
+      "건강": 1,
+      "지력": -1
+    },
+    "sceneImageId": "img_scene_teen_fitness_001",
+    "momentImageId": "img_moment_teen_fitness_001",
+    "yearlyLogTemplates": [
+      "운동화 밑창이 닳았다.",
+      "거울 속 자세가 조금 달라졌다.",
+      "숨이 차도 멈추지 않았다."
+    ]
+  },
+  {
+    "focusId": "focus_teen_part_time",
+    "period": "TEEN",
+    "name": "아르바이트",
+    "description": "돈과 사회 경험을 배운다",
+    "annualStatDelta": {
+      "경제력": 2,
+      "사회성": 1,
+      "건강": -1
+    },
+    "sceneImageId": "img_scene_teen_part_time_001",
+    "momentImageId": "img_moment_teen_part_time_001",
+    "yearlyLogTemplates": [
+      "첫 시급이 통장에 찍혔다.",
+      "손님 말투에 반응하는 법을 배웠다.",
+      "퇴근길 편의점 불빛이 익숙해졌다."
+    ]
+  },
+  {
+    "focusId": "focus_teen_rest",
+    "period": "TEEN",
+    "name": "휴식",
+    "description": "멘탈과 행복을 우선한다",
+    "annualStatDelta": {
+      "행복": 3,
+      "지력": -1
+    },
+    "sceneImageId": "img_scene_teen_rest_001",
+    "momentImageId": "img_moment_teen_rest_001",
+    "yearlyLogTemplates": [
+      "아무것도 안 한 시간이 오히려 필요했다.",
+      "좋아하는 노래를 반복해서 들었다.",
+      "조금 늦게 자도 마음은 가벼웠다."
+    ]
+  },
+  {
+    "focusId": "focus_young_adult_career",
+    "period": "YOUNG_ADULT",
+    "name": "커리어",
+    "description": "전공과 직무 역량을 쌓는다",
+    "annualStatDelta": {
+      "지력": 2,
+      "경제력": 1,
+      "행복": -1
+    },
+    "sceneImageId": "img_scene_young_adult_career_001",
+    "momentImageId": "img_moment_young_adult_career_001",
+    "yearlyLogTemplates": [
+      "이력서 한 줄을 위해 하루를 썼다.",
+      "작은 프로젝트가 포트폴리오가 됐다.",
+      "메일함을 자주 확인했다."
+    ]
+  },
+  {
+    "focusId": "focus_young_adult_relationship",
+    "period": "YOUNG_ADULT",
+    "name": "관계",
+    "description": "연애와 인간관계를 깊게 만든다",
+    "annualStatDelta": {
+      "사회성": 2,
+      "행복": 1,
+      "경제력": -1
+    },
+    "sceneImageId": "img_scene_young_adult_relationship_001",
+    "momentImageId": "img_moment_young_adult_relationship_001",
+    "yearlyLogTemplates": [
+      "약속이 달력에 빼곡해졌다.",
+      "대화가 길어지는 사람이 생겼다.",
+      "혼자보다 둘이 자연스러운 날이 있었다."
+    ]
+  },
+  {
+    "focusId": "focus_young_adult_money",
+    "period": "YOUNG_ADULT",
+    "name": "돈 관리",
+    "description": "저축과 수입 기회를 늘린다",
+    "annualStatDelta": {
+      "경제력": 3,
+      "행복": -1
+    },
+    "sceneImageId": "img_scene_young_adult_money_001",
+    "momentImageId": "img_moment_young_adult_money_001",
+    "yearlyLogTemplates": [
+      "가계부 숫자가 현실을 알려 줬다.",
+      "작은 소비를 한 번 더 고민했다.",
+      "월급날의 의미가 달라졌다."
+    ]
+  },
+  {
+    "focusId": "focus_young_adult_health",
+    "period": "YOUNG_ADULT",
+    "name": "건강",
+    "description": "수면과 운동 루틴을 지킨다",
+    "annualStatDelta": {
+      "건강": 2,
+      "운동능력": 1,
+      "사회성": -1
+    },
+    "sceneImageId": "img_scene_young_adult_health_001",
+    "momentImageId": "img_moment_young_adult_health_001",
+    "yearlyLogTemplates": [
+      "운동복을 빨래하는 횟수가 늘었다.",
+      "잠을 줄이면 다음 날 바로 티가 났다.",
+      "몸이 보내는 신호를 무시하지 않았다."
+    ]
+  },
+  {
+    "focusId": "focus_young_adult_adventure",
+    "period": "YOUNG_ADULT",
+    "name": "도전",
+    "description": "새로운 도시와 기회를 탐색한다",
+    "annualStatDelta": {
+      "운": 2,
+      "행복": 1,
+      "경제력": -1
+    },
+    "sceneImageId": "img_scene_young_adult_adventure_001",
+    "momentImageId": "img_moment_young_adult_adventure_001",
+    "yearlyLogTemplates": [
+      "낯선 길에서 의외의 기회를 만났다.",
+      "계획에 없던 제안을 받았다.",
+      "실패담도 이야기거리가 됐다."
+    ]
+  },
+  {
+    "focusId": "focus_middle_family",
+    "period": "MIDDLE",
+    "name": "가족",
+    "description": "가족과 생활 안정에 집중한다",
+    "annualStatDelta": {
+      "사회성": 2,
+      "행복": 1,
+      "경제력": -1
+    },
+    "sceneImageId": "img_scene_middle_family_001",
+    "momentImageId": "img_moment_middle_family_001",
+    "yearlyLogTemplates": [
+      "저녁 식탁의 대화가 길어졌다.",
+      "챙길 사람이 늘었지만 마음도 넓어졌다.",
+      "일상의 반복이 삶의 중심이 됐다."
+    ]
+  },
+  {
+    "focusId": "focus_middle_career_peak",
+    "period": "MIDDLE",
+    "name": "성과",
+    "description": "직업적 성과와 책임을 키운다",
+    "annualStatDelta": {
+      "경제력": 2,
+      "지력": 1,
+      "건강": -1
+    },
+    "sceneImageId": "img_scene_middle_career_peak_001",
+    "momentImageId": "img_moment_middle_career_peak_001",
+    "yearlyLogTemplates": [
+      "회의실에서 내 결정이 남았다.",
+      "책임이라는 단어가 무거워졌다.",
+      "성과표가 생활 리듬을 흔들었다."
+    ]
+  },
+  {
+    "focusId": "focus_middle_health",
+    "period": "MIDDLE",
+    "name": "건강",
+    "description": "검진과 운동으로 몸을 관리한다",
+    "annualStatDelta": {
+      "건강": 3,
+      "행복": -1
+    },
+    "sceneImageId": "img_scene_middle_health_001",
+    "momentImageId": "img_moment_middle_health_001",
+    "yearlyLogTemplates": [
+      "건강검진 결과표를 꼼꼼히 읽었다.",
+      "계단을 오르는 속도를 의식했다.",
+      "무리하지 않는 법을 배웠다."
+    ]
+  },
+  {
+    "focusId": "focus_middle_hobby",
+    "period": "MIDDLE",
+    "name": "취미",
+    "description": "나만의 즐거움을 회복한다",
+    "annualStatDelta": {
+      "행복": 2,
+      "운": 1,
+      "경제력": -1
+    },
+    "sceneImageId": "img_scene_middle_hobby_001",
+    "momentImageId": "img_moment_middle_hobby_001",
+    "yearlyLogTemplates": [
+      "퇴근 후의 작은 취미가 하루를 살렸다.",
+      "오래 미뤘던 장비를 꺼냈다.",
+      "잘하지 않아도 계속하고 싶었다."
+    ]
+  },
+  {
+    "focusId": "focus_middle_community",
+    "period": "MIDDLE",
+    "name": "공동체",
+    "description": "주변 사람과 경험을 나눈다",
+    "annualStatDelta": {
+      "사회성": 2,
+      "운": 1,
+      "지력": -1
+    },
+    "sceneImageId": "img_scene_middle_community_001",
+    "momentImageId": "img_moment_middle_community_001",
+    "yearlyLogTemplates": [
+      "동네에서 인사하는 사람이 늘었다.",
+      "내 경험이 누군가에게 도움이 됐다.",
+      "작은 모임의 중심에 서 있었다."
+    ]
+  }
+]
