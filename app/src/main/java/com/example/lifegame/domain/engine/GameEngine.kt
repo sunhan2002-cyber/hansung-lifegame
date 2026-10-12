@@ -289,7 +289,14 @@ class GameEngine(
         }
         require(focus.period == state.period) { "selected focus belongs to another period" }
 
-        val recordText = "${state.period.name} ${state.yearInPeriod}년차, ${focus.label}에 집중했다."
+        val recordText = focus.yearlyLogTemplates.takeIf { it.isNotEmpty() }
+            ?.let { templates ->
+                templates[deterministicIndex(
+                    "${state.runSeed}:${focus.focusId}:${state.yearInPeriod}:yearly-log",
+                    templates.size,
+                )]
+            }
+            ?: "${state.period.name} ${state.yearInPeriod}년차, ${focus.label}에 집중했다."
         val stateAfterFocus = state.copy(
             stats = state.stats.apply(focus.statEffects),
             moments = state.moments + LifeMoment(
@@ -402,8 +409,14 @@ class GameEngine(
     ): DecisionEvent? {
         val candidates = decisions.filter { canShowPeriodDecision(state, it) }
         val milestone = candidates
-            .filter { it.kind == DecisionKind.MILESTONE && it.yearInPeriod == state.yearInPeriod }
-            .sortedBy { it.eventId }
+            .filter {
+                it.kind == DecisionKind.MILESTONE &&
+                    (it.yearInPeriod == null || it.yearInPeriod == state.yearInPeriod)
+            }
+            .sortedWith(
+                compareBy<DecisionEvent> { it.yearInPeriod == null }
+                    .thenBy { it.eventId },
+            )
             .firstOrNull()
         if (milestone != null) return milestone
 
@@ -422,6 +435,7 @@ class GameEngine(
     private fun canShowPeriodDecision(state: PeriodRunState, event: DecisionEvent): Boolean =
         state.period in event.periods &&
             completedEventFlag(event.eventId) !in state.flags &&
+            event.statConditions.matches(state.stats) &&
             state.flags.containsAll(event.requiredFlags) &&
             state.flags.none(event.blockedFlags::contains) &&
             event.choices.any { choice ->

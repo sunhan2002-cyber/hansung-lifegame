@@ -171,6 +171,10 @@ data class PeriodDefinition(
     val period: LifePeriod,
     val order: Int,
     val years: Int,
+    val displayName: String = period.name,
+    val chapterTitle: String = displayName,
+    val startLabel: String = "",
+    val endLabel: String = "",
 ) {
     init {
         require(order >= 0) { "period order must be zero or greater" }
@@ -186,6 +190,7 @@ data class Focus(
     val description: String,
     val sceneImageId: String? = null,
     val momentImageId: String? = null,
+    val yearlyLogTemplates: List<String> = emptyList(),
 )
 
 enum class TransitionCue {
@@ -253,6 +258,7 @@ data class DecisionEvent(
     val yearInPeriod: Int? = null,
     val requiredFlags: Set<String> = emptySet(),
     val blockedFlags: Set<String> = emptySet(),
+    val statConditions: StatConditions = StatConditions(),
     val povImageId: String? = null,
     val momentImageId: String? = null,
 ) {

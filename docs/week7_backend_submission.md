@@ -126,3 +126,44 @@
 - 프론트는 `PeriodGameSession.start/selectFocus/advance/choose`와 `TurnStep`을 연결하면 된다.
 - 시나리오·DB 담당자가 `periods.json`, `focuses.json`, v4 사건 로더를 추가하면 현재 임시 코드 정의를 같은 모델 목록으로 교체할 수 있다.
 - 7주차 범위에서는 기존 JSON 204개를 v4로 변환하지 않았고, 서버나 실시간 이미지 생성도 연결하지 않았다.
+
+---
+
+## 협업 후속 보완 — PR #26 v4 콘텐츠 로더 연결
+
+### 반영 내용
+
+- `ContentRepository`가 `periods.sample.json`, `focuses.sample.json`, `events.sample.json`을 직접 읽는 v4 로더를 제공한다.
+- `V4ContentParser`를 Android `Context`와 분리해 JVM 단위 테스트에서 JSON 스키마를 검증할 수 있게 했다.
+- 시기 표시명·장 제목·시작/종료 문구, 초점의 연간 지표 변화·기록 문장·이미지 ID를 모델에 보존한다.
+- 사건의 `kind`, 조건, 선택지별 `outcomes`, `chanceWeights`, hidden/death, 플래그를 엔진 모델로 변환한다.
+- 기존 사건 데이터에 `outcomes`가 없을 때는 기존 `resultText/statDelta/addFlags`로 100 가중치 결과를 만들어 하위 호환한다.
+- 기존 `ADULT` 사건은 v4의 `YOUNG_ADULT`, `MIDDLE` 후보로 연결하고, 추후 `periods` 배열이 들어오면 명시 시기를 우선한다.
+- `BIG_INCIDENT`는 실제 데이터가 추가되는 즉시 낮은 확률 추첨, 자동 진행 정지, `DISTORT` 전환, POV 및 moment 이미지 전달 경로를 그대로 사용한다.
+- 연도가 지정되지 않은 기존 `MILESTONE`도 누락되지 않고 일반·큰 돌발보다 먼저 처리한다.
+- 초점의 `yearlyLogTemplates`는 seed와 연도에 따라 재현 가능하게 선택된다.
+
+### 추가 변경 파일
+
+- `app/src/main/java/com/example/lifegame/data/ContentRepository.kt`
+- `app/src/main/java/com/example/lifegame/data/V4ContentParser.kt`
+- `app/src/main/java/com/example/lifegame/domain/model/GameModels.kt`
+- `app/src/main/java/com/example/lifegame/domain/engine/GameEngine.kt`
+- `app/src/test/java/com/example/lifegame/data/V4ContentParserTest.kt`
+
+### 추가 검증
+
+- 시기 JSON 정렬 및 표시 메타데이터 파싱
+- 초점 지표·기록 문장·scene/moment 이미지 ID 파싱
+- outcomes 확률·가중치·hidden/death·조건 파싱
+- 기존 선택지의 100 가중치 outcome 하위 호환
+- 연도 없는 milestone 우선 처리
+- BIG_INCIDENT 자동 진행 정지와 POV/moment 이미지 전달
+- `gradlew.bat test`: Debug 76개 + Release 76개 = 152개, 실패 0
+- `gradlew.bat assembleDebug`: BUILD SUCCESSFUL
+
+### 남은 협업 의존성
+
+- PR #26이 main에 merge되어 실제 `periods.sample.json`, `focuses.sample.json`, v4 `events.outcomes`가 앱 자산에 포함되어야 한다.
+- 현재 PR #26 데이터에는 `BIG_INCIDENT`가 0개이므로 신기훈의 실제 사건 데이터가 추가된 뒤 콘텐츠 기반 시뮬레이션을 다시 실행해야 한다.
+- 실제 Compose 화면에서 scene/pov/moment 이미지를 그리는 작업은 UI/UX·프론트 화면 연결 범위이며, 백엔드는 세 ID를 `TurnStep`과 `PendingDecision`으로 제공한다.
