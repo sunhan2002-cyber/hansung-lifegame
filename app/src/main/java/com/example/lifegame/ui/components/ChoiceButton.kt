@@ -12,6 +12,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextAlign
+import com.example.lifegame.ui.theme.Week7DesignTokens as Design
 import androidx.compose.ui.unit.dp
 
 @Composable
@@ -24,11 +25,11 @@ fun ChoiceButton(
         onClick = onClick,
         modifier = modifier
             .fillMaxWidth()
-            .heightIn(min = 56.dp),
-        shape = RoundedCornerShape(12.dp),
+            .heightIn(min = Design.ButtonMinHeight),
+        shape = RoundedCornerShape(Design.CardCorner),
         contentPadding = PaddingValues(
-            horizontal = 16.dp,
-            vertical = 16.dp
+            horizontal = Design.CardPadding,
+            vertical = Design.CardPadding
         )
     ) {
         Text(
@@ -54,7 +55,7 @@ fun <T> ChoiceButtonGroup(
 ) {
     Column(
         modifier = modifier.fillMaxWidth(),
-        verticalArrangement = Arrangement.spacedBy(10.dp),
+        verticalArrangement = Arrangement.spacedBy(Design.ChoiceGap),
     ) {
         choices.forEach { choice ->
             ChoiceButton(

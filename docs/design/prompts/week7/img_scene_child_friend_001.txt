@@ -1,0 +1,13 @@
+Create exactly ONE standalone image of the single scene described below.
+
+Output target: opaque PNG, 300 x 225 pixels, 4:3 landscape. Use one camera viewpoint, one moment in time and one continuous environment filling the entire image. Do not divide the canvas into panels, add inset pictures or show different moments. Keep important subjects inside the image without stretching or cropping them.
+
+Viewpoint: THIRD PERSON. Show the protagonist as a small character together with the surrounding environment, using only the camera angle described below.
+
+Scene: third-person side view of a small gender-neutral child playing tag with two friends at a Korean neighborhood playground at sunset. Small full-body figures and the setting are visible together. Include a slide, swings and distant ordinary apartment windows with a few lights. Use restrained warm ochre and orange colors and a safe, everyday playful atmosphere. Keep the characters clearly readable rather than making a face close-up.
+
+Visual style: authentic 16-bit retro pixel art with crisp, grid-aligned square pixels and simple readable shapes. A limited palette with a 40-color-or-fewer feel, flat color clusters and two or three discrete shade steps. Calm vintage-film atmosphere with muted cream, ochre, brown, olive, dusty blue, teal and charcoal. Lighting is expressed through solid pixel-color shapes. Keep the scene readable at 300 x 225 pixels. Gender-neutral protagonist appearance.
+
+Scene-specific exclusions: no jumping from dangerous heights, no unsafe play, no real apartment brands.
+
+Do not add text, pseudo-lettering, numbers, labels, logos, brands, school/company emblems, watermarks, emojis, game UI, film-frame decorations or perforations. Keep paper, notes, signs, packaging and screens unlettered. No gradients, dithering, checkerboard shading, stippling, random texture noise, photographic grain, blur, bloom, smooth anti-aliased edges, neon lighting, photorealism, 3D rendering, webtoon/vector illustration or watercolor. Do not draw an image title or asset ID.

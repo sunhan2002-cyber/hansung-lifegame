@@ -1,22 +1,29 @@
 package com.example.lifegame.ui.screens
 
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.heightIn
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.safeDrawingPadding
 import androidx.compose.material3.Button
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
+import androidx.compose.material3.TextButton
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
+import com.example.lifegame.ui.theme.LifeGameTheme
+import com.example.lifegame.ui.theme.Week7DesignTokens as Design
 import androidx.compose.ui.unit.dp
 
 @Composable
@@ -25,12 +32,14 @@ fun StartScreen(
     onNewGame: () -> Unit,
     onContinue: () -> Unit,
     modifier: Modifier = Modifier,
+    onDesignPreview: (() -> Unit)? = null,
 ) {
     Column(
         modifier = modifier
             .fillMaxSize()
             .safeDrawingPadding()
-            .padding(24.dp),
+            .verticalScroll(rememberScrollState())
+            .padding(Design.ScreenPadding),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center,
     ) {
@@ -48,21 +57,29 @@ fun StartScreen(
         Spacer(Modifier.height(48.dp))
         Button(
             onClick = onNewGame,
+            shape = RoundedCornerShape(Design.CardCorner),
+            contentPadding = androidx.compose.foundation.layout.PaddingValues(Design.CardPadding),
             modifier = Modifier
                 .fillMaxWidth()
-                .height(56.dp),
+                .heightIn(min = Design.ButtonMinHeight),
         ) {
             Text("새 게임", style = MaterialTheme.typography.titleMedium)
         }
-        Spacer(Modifier.height(12.dp))
+        Spacer(Modifier.height(Design.SectionGap))
         OutlinedButton(
             onClick = onContinue,
+            shape = RoundedCornerShape(Design.CardCorner),
+            contentPadding = androidx.compose.foundation.layout.PaddingValues(Design.CardPadding),
             enabled = canContinue,
             modifier = Modifier
                 .fillMaxWidth()
-                .height(56.dp),
+                .heightIn(min = Design.ButtonMinHeight),
         ) {
             Text("이어하기", style = MaterialTheme.typography.titleMedium)
+        }
+        onDesignPreview?.let { openPreview ->
+            Spacer(Modifier.height(Design.SectionGap))
+            TextButton(onClick = openPreview) { Text("디자인 미리보기") }
         }
         if (!canContinue) {
             Spacer(Modifier.height(8.dp))
@@ -78,5 +95,5 @@ fun StartScreen(
 @Preview(showBackground = true)
 @Composable
 private fun StartScreenPreview() {
-    MaterialTheme { StartScreen(canContinue = false, onNewGame = {}, onContinue = {}) }
+    LifeGameTheme { StartScreen(canContinue = false, onNewGame = {}, onContinue = {}) }
 }

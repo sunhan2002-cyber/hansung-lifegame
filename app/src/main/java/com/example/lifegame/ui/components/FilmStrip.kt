@@ -40,6 +40,7 @@ import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.IntOffset
 import androidx.compose.ui.unit.IntSize
+import com.example.lifegame.ui.theme.Week7DesignTokens as Design
 import androidx.compose.ui.unit.dp
 import com.example.lifegame.ui.theme.LifeGameInk
 import com.example.lifegame.ui.theme.LifeGamePaper
@@ -85,11 +86,11 @@ data class FilmMotion(
 
 const val DISTORT_MAX_DP = 34f
 
-private val StripHeight = 21.dp
-private val SideBorder = 10.dp
-private val HoleWidth = 10.dp
-private val HoleHeight = 7.dp
-private val HolePitch = 18.dp
+private val StripHeight = Design.FilmBandHeight
+private val SideBorder = Design.FilmSideBorder
+private val HoleWidth = Design.FilmHoleWidth
+private val HoleHeight = Design.FilmHoleHeight
+private val HolePitch = Design.FilmHolePitch
 private val GateCorner = 3.dp
 
 // 왜곡 때 흰 번짐 줄: (그림 높이 대비 위치, 그림 폭 대비 길이)
@@ -193,25 +194,25 @@ private fun placeholderPicture(
     return bitmap.asImageBitmap()
 }
 
-/** assets/images/<fileName>을 필름 칸 크기에 맞춰 가운데를 잘라 읽는다. */
+/** 그림 전체를 필름 칸에 맞춘다. 도트가 흐려지지 않도록 보간·디더링을 끈다. */
 private fun loadAssetPicture(context: Context, fileName: String, width: Int, height: Int): ImageBitmap? =
     runCatching {
         val source = context.assets.open("images/$fileName").use(BitmapFactory::decodeStream)
             ?: return@runCatching null
-        val scale = max(width / source.width.toFloat(), height / source.height.toFloat())
+        val scale = min(width / source.width.toFloat(), height / source.height.toFloat())
         val scaled = Bitmap.createScaledBitmap(
             source,
-            (source.width * scale).roundToInt().coerceAtLeast(width),
-            (source.height * scale).roundToInt().coerceAtLeast(height),
-            true,
+            (source.width * scale).roundToInt().coerceAtLeast(1),
+            (source.height * scale).roundToInt().coerceAtLeast(1),
+            false,
         )
-        Bitmap.createBitmap(
-            scaled,
-            (scaled.width - width) / 2,
-            (scaled.height - height) / 2,
-            width,
-            height,
-        ).asImageBitmap()
+        val fitted = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888)
+        android.graphics.Canvas(fitted).apply {
+            drawColor(LifeGamePicture.toArgb())
+            drawBitmap(scaled, (width - scaled.width) / 2f, (height - scaled.height) / 2f,
+                Paint().apply { isFilterBitmap = false; isDither = false })
+        }
+        fitted.asImageBitmap()
     }.getOrNull()
 
 private fun DrawScope.drawFilm(m: FilmMotion, current: ImageBitmap, incoming: ImageBitmap?) {

@@ -19,6 +19,8 @@ import androidx.navigation.NavOptionsBuilder
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.example.lifegame.BuildConfig
+import com.example.lifegame.ui.screens.DesignPreviewScreen
 import com.example.lifegame.domain.model.Ending
 import com.example.lifegame.domain.model.Stats
 import com.example.lifegame.ui.screens.CharacterSelectScreen
@@ -29,6 +31,7 @@ import com.example.lifegame.ui.theme.LifeGameTheme
 
 object Routes {
     const val START = "start"
+    const val DESIGN_PREVIEW = "design_preview"
     const val CHARACTER_SELECT = "character_select"
     const val GAME = "game"
     const val ENDING = "ending"
@@ -50,7 +53,13 @@ fun LifeGameApp(
                         canContinue = state.hasSaveData,
                         onNewGame = { navController.navigateOnce(Routes.CHARACTER_SELECT) },
                         onContinue = { /* ProgressStore 연결 후 저장된 화면으로 이동 */ },
+                        onDesignPreview = if (BuildConfig.DEBUG) {
+                            { navController.navigateOnce(Routes.DESIGN_PREVIEW) }
+                        } else null,
                     )
+                }
+                composable(Routes.DESIGN_PREVIEW) {
+                    DesignPreviewScreen(onBack = { navController.popBackStack() })
                 }
                 composable(Routes.CHARACTER_SELECT) {
                     CharacterSelectScreen(

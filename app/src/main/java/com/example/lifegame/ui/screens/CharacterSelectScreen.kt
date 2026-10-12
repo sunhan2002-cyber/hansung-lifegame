@@ -31,6 +31,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalFocusManager
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.tooling.preview.Preview
+import com.example.lifegame.ui.theme.Week7DesignTokens as Design
 import androidx.compose.ui.unit.dp
 import com.example.lifegame.ui.DEFAULT_PLAYER_NAME
 import com.example.lifegame.ui.PLAYER_NAME_MAX_LENGTH
@@ -53,7 +54,7 @@ fun CharacterSelectScreen(
         modifier = modifier
             .fillMaxSize()
             .safeDrawingPadding()
-            .padding(24.dp),
+            .padding(Design.ScreenPadding),
     ) {
         // 키보드가 올라와도 이름 칸과 시작 버튼이 가려지지 않도록 위쪽 내용만 스크롤한다.
         Column(
