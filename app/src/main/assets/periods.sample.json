@@ -1,0 +1,47 @@
+[
+  {
+    "periodId": "INFANT",
+    "displayName": "영아기",
+    "chapterTitle": "제1장 영아기",
+    "order": 0,
+    "years": 4,
+    "startLabel": "태어난 뒤 처음 세상을 배우는 시기",
+    "endLabel": "유년기로 넘어가기 전"
+  },
+  {
+    "periodId": "CHILD",
+    "displayName": "유년기",
+    "chapterTitle": "제2장 유년기",
+    "order": 1,
+    "years": 5,
+    "startLabel": "학교와 친구를 처음 넓게 만나는 시기",
+    "endLabel": "청소년기로 넘어가기 전"
+  },
+  {
+    "periodId": "TEEN",
+    "displayName": "청소년기",
+    "chapterTitle": "제3장 청소년기",
+    "order": 2,
+    "years": 5,
+    "startLabel": "중학교 입학부터 고등학교 졸업까지",
+    "endLabel": "청년기로 넘어가기 전"
+  },
+  {
+    "periodId": "YOUNG_ADULT",
+    "displayName": "청년기",
+    "chapterTitle": "제4장 청년기",
+    "order": 3,
+    "years": 5,
+    "startLabel": "독립과 진로 선택이 본격화되는 시기",
+    "endLabel": "중년기로 넘어가기 전"
+  },
+  {
+    "periodId": "MIDDLE",
+    "displayName": "중년기",
+    "chapterTitle": "제5장 중년기",
+    "order": 4,
+    "years": 5,
+    "startLabel": "쌓아 온 선택이 생활로 굳어지는 시기",
+    "endLabel": "인생 결과 확인 전"
+  }
+]
