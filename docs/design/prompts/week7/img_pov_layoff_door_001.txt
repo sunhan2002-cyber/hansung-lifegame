@@ -1,0 +1,13 @@
+Create exactly ONE standalone image of the single scene described below.
+
+Output target: opaque PNG, 300 x 225 pixels, 4:3 landscape. Use one camera viewpoint, one moment in time and one continuous environment filling the entire image. Do not divide the canvas into panels, add inset pictures or show different moments. Keep important subjects inside the image without stretching or cropping them.
+
+Viewpoint: FIRST PERSON, through the viewer's own eyes. The foreground hand or hands belong to the viewer. Never show the viewer's face or the viewer's body from an outside camera. Other people may appear only as described in the scene.
+
+Scene: true first-person view standing directly before an ordinary office lobby turnstile in the morning. The viewer's own hand taps a blank ID badge on a reader with a small subdued red indicator light. The gate stays closed; two small coworkers in the middle distance pass through neighboring gates. Restrained cool lobby colors, quiet disappointment rather than dramatic danger. Show the viewpoint of the badge holder, not the badge holder's face or body from outside.
+
+Visual style: authentic 16-bit retro pixel art with crisp, grid-aligned square pixels and simple readable shapes. A limited palette with a 40-color-or-fewer feel, flat color clusters and two or three discrete shade steps. Calm vintage-film atmosphere with muted cream, ochre, brown, olive, dusty blue, teal and charcoal. Lighting is expressed through solid pixel-color shapes. Keep the scene readable at 300 x 225 pixels. Gender-neutral protagonist appearance.
+
+Scene-specific exclusions: no badge text, no reader messages, no company names or logos, no aggressive guards, no forced eviction. Keep the red indicator as a small flat color, without neon glow.
+
+Do not add text, pseudo-lettering, numbers, labels, logos, brands, school/company emblems, watermarks, emojis, game UI, film-frame decorations or perforations. Keep paper, notes, signs, packaging and screens unlettered. No gradients, dithering, checkerboard shading, stippling, random texture noise, photographic grain, blur, bloom, smooth anti-aliased edges, neon lighting, photorealism, 3D rendering, webtoon/vector illustration or watercolor. Do not draw an image title or asset ID.

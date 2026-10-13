@@ -14,6 +14,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.lerp
 import androidx.compose.ui.semantics.heading
 import androidx.compose.ui.semantics.semantics
+import com.example.lifegame.ui.theme.Week7DesignTokens as Design
 import androidx.compose.ui.unit.dp
 
 /**
@@ -33,14 +34,14 @@ fun EventCard(
 
     Surface(
         modifier = modifier.fillMaxWidth(),
-        shape = RoundedCornerShape(16.dp),
+        shape = RoundedCornerShape(Design.CardCorner),
         color = if (isSpecial) lerp(colors.surface, colors.tertiaryContainer, 0.25f) else colors.surface,
         contentColor = colors.onSurface,
         border = if (isSpecial) BorderStroke(1.dp, colors.tertiary) else null,
     ) {
         Column(
-            modifier = Modifier.padding(16.dp),
-            verticalArrangement = Arrangement.spacedBy(12.dp),
+            modifier = Modifier.padding(Design.CardPadding),
+            verticalArrangement = Arrangement.spacedBy(Design.SectionGap),
         ) {
             if (stage.isNotBlank()) {
                 Text(

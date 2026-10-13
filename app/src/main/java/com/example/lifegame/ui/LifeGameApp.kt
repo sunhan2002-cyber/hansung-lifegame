@@ -19,11 +19,13 @@ import androidx.navigation.NavOptionsBuilder
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.example.lifegame.BuildConfig
 import com.example.lifegame.ui.components.InkButton
 import com.example.lifegame.ui.screens.AutoProgressScreen
 import com.example.lifegame.ui.screens.ChapterFocusScreen
 import com.example.lifegame.ui.screens.CharacterSelectScreen
 import com.example.lifegame.ui.screens.DecisionScreen
+import com.example.lifegame.ui.screens.DesignPreviewScreen
 import com.example.lifegame.ui.screens.HomeScreen
 import com.example.lifegame.ui.screens.RunEndScreen
 import com.example.lifegame.ui.theme.LifeGameInkSecondary
@@ -35,6 +37,7 @@ object Routes {
     const val HOME = "home"
     const val PROFILE = "profile"
     const val PLAY = "play"
+    const val DESIGN_PREVIEW = "design_preview"
 }
 
 @Composable
@@ -52,7 +55,13 @@ fun LifeGameApp(
                         message = gameViewModel.playError,
                         onContinue = { navController.navigateOnce(Routes.PLAY) },
                         onNewLife = { navController.navigateOnce(Routes.PROFILE) },
+                        onDesignPreview = if (BuildConfig.DEBUG) {
+                            { navController.navigateOnce(Routes.DESIGN_PREVIEW) }
+                        } else null,
                     )
+                }
+                composable(Routes.DESIGN_PREVIEW) {
+                    DesignPreviewScreen(onBack = { navController.popBackStack() })
                 }
                 composable(Routes.PROFILE) {
                     CharacterSelectScreen(
@@ -66,7 +75,6 @@ fun LifeGameApp(
                     )
                 }
                 composable(Routes.PLAY) {
-                    // 뒤로 가기는 홈으로 간다. 진행 중인 인생은 홈의 "이어하기"로 돌아온다.
                     PlayHost(
                         gameViewModel = gameViewModel,
                         onGoHome = {
@@ -140,10 +148,6 @@ private fun RecoveryScreen(
     }
 }
 
-/**
- * 현재 화면이 RESUMED 상태일 때만 이동한다.
- * 버튼을 빠르게 여러 번 눌러 같은 화면이 중복으로 쌓이는 것을 막는다.
- */
 private fun NavHostController.navigateOnce(
     route: String,
     builder: NavOptionsBuilder.() -> Unit = {},

@@ -1,0 +1,26 @@
+{
+  "created": "2026-10-13",
+  "generator": "built-in image_gen",
+  "sceneCount": 8,
+  "sheetCount": 2,
+  "files": [
+    {
+      "fileName": "week7_normal_5_scenes_v1.png",
+      "width": 1774,
+      "height": 887,
+      "mode": "RGB",
+      "role": "contact sheet style candidate, not individual game asset",
+      "sourceImage": "exec-0ce7720a-ad9b-4ccd-825b-05ec60f15300.png"
+    },
+    {
+      "fileName": "week7_pov_3_scenes_v1.png",
+      "width": 1448,
+      "height": 1086,
+      "mode": "RGB",
+      "role": "contact sheet style candidate, not individual game asset",
+      "sourceImage": "exec-61d3a75f-98d1-40de-a5f5-30ca14569603.png"
+    }
+  ],
+  "individual300x225Assets": false,
+  "paletteCountCertified": false
+}

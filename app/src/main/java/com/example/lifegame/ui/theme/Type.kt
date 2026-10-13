@@ -30,17 +30,17 @@ val LifeGameTypography = Typography(
     // 화면 제목
     headlineMedium = TextStyle(
         fontFamily = LifeGameSerif,
-        fontSize = 24.sp,
+        fontSize = Week7DesignTokens.TitleSize,
         fontWeight = FontWeight.Bold,
-        lineHeight = 32.sp
+        lineHeight = Week7DesignTokens.TitleLineHeight
     ),
 
     // 사건 제목
     titleLarge = TextStyle(
         fontFamily = LifeGameSerif,
-        fontSize = 20.sp,
+        fontSize = Week7DesignTokens.TitleSize,
         fontWeight = FontWeight.Bold,
-        lineHeight = 28.sp
+        lineHeight = Week7DesignTokens.TitleLineHeight
     ),
 
     // 게임 단계, 주요 버튼, 섹션 제목
@@ -52,16 +52,16 @@ val LifeGameTypography = Typography(
 
     // 작은 섹션 제목
     titleSmall = TextStyle(
-        fontSize = 16.sp,
+        fontSize = Week7DesignTokens.BodySize,
         fontWeight = FontWeight.Medium,
         lineHeight = 22.sp
     ),
 
     // 사건 설명 등 일반 본문
     bodyLarge = TextStyle(
-        fontSize = 16.sp,
+        fontSize = Week7DesignTokens.BodySize,
         fontWeight = FontWeight.Normal,
-        lineHeight = 24.sp
+        lineHeight = Week7DesignTokens.BodyLineHeight
     ),
 
     // 지표 이름, 수치 등
@@ -80,34 +80,34 @@ val LifeGameTypography = Typography(
 
     // A/B 선택 버튼
     labelLarge = TextStyle(
-        fontSize = 16.sp,
+        fontSize = Week7DesignTokens.BodySize,
         fontWeight = FontWeight.Medium,
         lineHeight = 22.sp
     )
 )
 
-// 게임 화면 전용 글자 스타일 (시안 7)
+// 게임 화면 전용 글자 스타일 (Week7 확정 기준, 2026-10-12)
 
 // 사건 제목
 val EventTitleStyle = TextStyle(
     fontFamily = LifeGameSerif,
     fontWeight = FontWeight.Bold,
-    fontSize = 23.sp,
-    lineHeight = 30.sp,
+    fontSize = Week7DesignTokens.TitleSize,
+    lineHeight = Week7DesignTokens.TitleLineHeight,
 )
 
 // 사건 문장
 val StoryStyle = TextStyle(
     fontFamily = LifeGameSerif,
-    fontSize = 16.5.sp,
-    lineHeight = 29.sp,
+    fontSize = Week7DesignTokens.BodySize,
+    lineHeight = Week7DesignTokens.BodyLineHeight,
 )
 
 // 결과 문장
 val ResultStoryStyle = TextStyle(
     fontFamily = LifeGameSerif,
-    fontSize = 15.5.sp,
-    lineHeight = 26.5.sp,
+    fontSize = Week7DesignTokens.BodySize,
+    lineHeight = Week7DesignTokens.BodyLineHeight,
 )
 
 // "돌발 사건" 같은 작은 표시

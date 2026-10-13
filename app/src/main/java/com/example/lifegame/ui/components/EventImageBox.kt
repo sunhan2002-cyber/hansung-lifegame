@@ -1,6 +1,7 @@
 package com.example.lifegame.ui.components
 
 import androidx.compose.foundation.background
+import com.example.lifegame.ui.theme.Week7DesignTokens as Design
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
@@ -28,10 +29,10 @@ fun EventImageBox(
     val colors = MaterialTheme.colorScheme
 
     BoxWithConstraints(modifier = modifier.fillMaxWidth()) {
-        // 실제 그림이 없는 동안 본문보다 큰 빈 공간을 만들지 않는다.
+        // 실물 이미지와 동일한 4:3 자리. 큰 대체 문구에는 최소 높이보다 더 많은 공간을 허용한다.
         // 최소 높이만 지정하므로 큰 글씨의 대체 문구도 잘리지 않는다.
         val minimumHeight = if (constraints.hasBoundedWidth) {
-            (maxWidth * 9f / 16f).coerceIn(112.dp, 160.dp)
+            maxWidth / Design.ImageAspectRatio
         } else {
             112.dp
         }
@@ -40,9 +41,9 @@ fun EventImageBox(
             modifier = Modifier
                 .fillMaxWidth()
                 .heightIn(min = minimumHeight)
-                .clip(RoundedCornerShape(16.dp))
+                .clip(RoundedCornerShape(Design.CardCorner))
                 .background(colors.surfaceVariant)
-                .padding(16.dp),
+                .padding(Design.CardPadding),
             verticalArrangement = Arrangement.spacedBy(8.dp, Alignment.CenterVertically),
             horizontalAlignment = Alignment.CenterHorizontally,
         ) {

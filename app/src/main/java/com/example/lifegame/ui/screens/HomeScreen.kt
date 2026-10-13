@@ -58,6 +58,7 @@ fun HomeScreen(
     onContinue: () -> Unit,
     onNewLife: () -> Unit,
     modifier: Modifier = Modifier,
+    onDesignPreview: (() -> Unit)? = null,
     message: String? = null,
 ) {
     var confirmOverwrite by rememberSaveable { mutableStateOf(false) }
@@ -101,6 +102,10 @@ fun HomeScreen(
         } else {
             EmptyLifeCard()
             InkButton(text = "새 인생 살기", onClick = onNewLife)
+        }
+
+        onDesignPreview?.let { openPreview ->
+            LineButton(text = "디자인 미리보기", onClick = openPreview)
         }
 
         Spacer(Modifier.height(8.dp))
