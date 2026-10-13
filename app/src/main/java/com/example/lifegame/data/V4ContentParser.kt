@@ -77,6 +77,7 @@ object V4ContentParser {
                 statDelta = outcome.optJSONObject("statDelta")?.toStatDelta() ?: fallbackDelta,
                 addFlags = outcome.optJSONArray("addFlags")?.toStringSet() ?: fallbackFlags,
                 chance = outcome.getInt("chance"),
+                primary = outcome.optBoolean("primary", false),
                 chanceWeights = outcome.optJSONObject("chanceWeights").toChanceWeights(),
                 hidden = outcome.optBoolean("hidden", false),
                 death = outcome.optBoolean("death", false),

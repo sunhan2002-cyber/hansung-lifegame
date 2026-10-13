@@ -7,6 +7,7 @@ import com.example.lifegame.domain.model.DecisionOption
 import com.example.lifegame.domain.model.Focus
 import com.example.lifegame.domain.model.LifePeriod
 import com.example.lifegame.domain.model.Outcome
+import com.example.lifegame.domain.model.OutcomeLikelihood
 import com.example.lifegame.domain.model.PeriodDefinition
 import com.example.lifegame.domain.model.PeriodRunState
 import com.example.lifegame.domain.model.StatDelta
@@ -231,6 +232,60 @@ class V4GameEngineTest {
 
         assertEquals("pov_big", step.pendingDecision!!.povImageId)
         assertEquals(TransitionCue.DISTORT, step.transitionCue)
+    }
+
+    @Test
+    fun pendingPreviewProvidesEngineCalculatedLikelihoodAndKeyStats() {
+        val focus = focus(LifePeriod.INFANT, "focus")
+        val event = decisionWithOutcomes(
+            outcomes = listOf(
+                Outcome(
+                    "recover",
+                    "회복했다",
+                    chance = 60,
+                    primary = true,
+                    chanceWeights = ChanceWeights(health = 5),
+                ),
+                Outcome("hidden", "숨은 결과", chance = 3, hidden = true),
+                Outcome("worse", "악화됐다", StatDelta(health = -10), chance = 37),
+            ),
+        )
+        val state = engine.selectFocus(engine.createPeriodRun("run", 88L, periods), focus)
+
+        val step = engine.advancePeriodYear(state, periods, listOf(focus), listOf(event))
+        val preview = step.pendingDecision!!.choices.single()
+
+        assertEquals(OutcomeLikelihood.HIGH, preview.likelihood)
+        assertEquals(listOf("건강"), preview.keyStats)
+        assertFalse(preview.toString().contains("숨은 결과"))
+    }
+
+    @Test
+    fun militaryMilestoneRequiresFrontendGenderFlag() {
+        val focus = focus(LifePeriod.YOUNG_ADULT, "career")
+        val event = decisionWithOutcomes(
+            outcomes = listOf(Outcome("served", "복무했다", chance = 100, primary = true)),
+            eventId = "adult_071",
+            period = LifePeriod.YOUNG_ADULT,
+        ).copy(requiredFlags = setOf("military_service_required"))
+        val base = PeriodRunState(
+            runId = "run",
+            runSeed = 71L,
+            period = LifePeriod.YOUNG_ADULT,
+            selectedFocusId = focus.focusId,
+        )
+
+        val withoutFlag = engine.advancePeriodYear(base, periods, listOf(focus), listOf(event))
+        val withFlag = engine.advancePeriodYear(
+            base.copy(flags = setOf("gender_male", "military_service_required")),
+            periods,
+            listOf(focus),
+            listOf(event),
+        )
+
+        assertNull(withoutFlag.pendingDecision)
+        assertEquals("adult_071", withFlag.pendingDecision?.eventId)
+        assertFalse(withFlag.canAutoAdvance)
     }
 
     private fun focuses(): List<Focus> = LifePeriod.entries.map { period ->

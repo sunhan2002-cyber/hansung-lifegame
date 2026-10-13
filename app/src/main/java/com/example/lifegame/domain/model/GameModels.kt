@@ -225,6 +225,7 @@ data class Outcome(
     val statDelta: StatDelta = StatDelta(),
     val addFlags: Set<String> = emptySet(),
     val chance: Int,
+    val primary: Boolean = false,
     val chanceWeights: ChanceWeights = ChanceWeights(),
     val hidden: Boolean = false,
     val death: Boolean = false,
@@ -273,7 +274,17 @@ data class DecisionEvent(
 data class DecisionChoicePreview(
     val choiceId: String,
     val label: String,
+    val likelihood: OutcomeLikelihood? = null,
+    val keyStats: List<String> = emptyList(),
 )
+
+/** UI가 엔진의 가중치 계산을 복제하지 않고 선택지 가능성을 표시하기 위한 질적 구간이다. */
+enum class OutcomeLikelihood(val label: String) {
+    LOW("낮음"),
+    HALF("반반쯤"),
+    HIGH("높음"),
+    VERY_HIGH("매우 높음"),
+}
 
 /** UI에는 결과 목록을 포함하지 않아 hidden 결과가 preview로 새지 않는다. */
 data class PendingDecision(

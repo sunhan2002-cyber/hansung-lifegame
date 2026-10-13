@@ -3,9 +3,11 @@ package com.example.lifegame.domain.engine
 import com.example.lifegame.domain.model.Choice
 import com.example.lifegame.domain.model.ChoiceHistory
 import com.example.lifegame.domain.model.ChoiceResult
+import com.example.lifegame.domain.model.ChanceWeights
 import com.example.lifegame.domain.model.DecisionEvent
 import com.example.lifegame.domain.model.DecisionKind
 import com.example.lifegame.domain.model.DecisionChoicePreview
+import com.example.lifegame.domain.model.DecisionOption
 import com.example.lifegame.domain.model.Ending
 import com.example.lifegame.domain.model.EventType
 import com.example.lifegame.domain.model.Focus
@@ -16,6 +18,7 @@ import com.example.lifegame.domain.model.LifeMoment
 import com.example.lifegame.domain.model.LifePeriod
 import com.example.lifegame.domain.model.LifeStage
 import com.example.lifegame.domain.model.Outcome
+import com.example.lifegame.domain.model.OutcomeLikelihood
 import com.example.lifegame.domain.model.OutcomeResolution
 import com.example.lifegame.domain.model.PendingDecision
 import com.example.lifegame.domain.model.PeriodDefinition
@@ -453,7 +456,7 @@ class GameEngine(
         val visibleChoices = event.choices
             .filter { state.flags.containsAll(it.requiredFlags) }
             .filter { state.flags.none(it.blockedFlags::contains) }
-            .map { DecisionChoicePreview(it.choiceId, it.label) }
+            .map { choice -> buildChoicePreview(choice, state.stats) }
         return TurnStep(
             state = state,
             phase = TurnPhase.DECISION,
@@ -476,6 +479,63 @@ class GameEngine(
             canAutoAdvance = false,
         )
     }
+
+    /**
+     * 결과 확률과 능력치 가중치 계산은 실제 결과 추첨과 같은 함수를 사용한다.
+     * hidden 결과는 분모에는 포함하지만 대표 결과나 핵심 지표로 노출하지 않는다.
+     */
+    private fun buildChoicePreview(
+        choice: DecisionOption,
+        stats: Stats,
+    ): DecisionChoicePreview {
+        val primary = choice.outcomes.firstOrNull { it.primary && !it.hidden }
+            ?: choice.outcomes.firstOrNull { !it.hidden }
+            ?: return DecisionChoicePreview(choice.choiceId, choice.label)
+        val weighted = choice.outcomes.map { effectiveOutcomeChance(it, stats) }
+        val usable = if (weighted.sum() > 0) weighted else choice.outcomes.map { it.chance }
+        val total = usable.sum()
+        val primaryIndex = choice.outcomes.indexOf(primary)
+        val percent = if (total <= 0 || primaryIndex < 0) {
+            0
+        } else {
+            (usable[primaryIndex] * 100 + total / 2) / total
+        }
+        val likelihood = if (choice.outcomes.size <= 1) null else when {
+            percent < 35 -> OutcomeLikelihood.LOW
+            percent < 60 -> OutcomeLikelihood.HALF
+            percent < 80 -> OutcomeLikelihood.HIGH
+            else -> OutcomeLikelihood.VERY_HIGH
+        }
+        val weightedStats = primary.chanceWeights.toPreviewStats()
+        val keyStats = (weightedStats.ifEmpty { primary.statDelta.toPreviewStats() }).take(2)
+        return DecisionChoicePreview(
+            choiceId = choice.choiceId,
+            label = choice.label,
+            likelihood = likelihood,
+            keyStats = keyStats,
+        )
+    }
+
+    private fun ChanceWeights.toPreviewStats(): List<String> =
+        listOfNotNull(
+            "건강".takeIf { health != 0 },
+            "운동능력".takeIf { fitness != 0 },
+            "지력".takeIf { intelligence != 0 },
+            "사회성".takeIf { social != 0 },
+            "경제력".takeIf { wealth != 0 },
+            "행복".takeIf { happiness != 0 },
+            "운".takeIf { luck != 0 },
+        )
+
+    private fun StatDelta.toPreviewStats(): List<String> = listOfNotNull(
+        "건강".takeIf { health != 0 },
+        "운동능력".takeIf { fitness != 0 },
+        "지력".takeIf { intelligence != 0 },
+        "사회성".takeIf { social != 0 },
+        "경제력".takeIf { wealth != 0 },
+        "행복".takeIf { happiness != 0 },
+        "운".takeIf { luck != 0 },
+    )
 
     private fun pickOutcome(
         state: PeriodRunState,

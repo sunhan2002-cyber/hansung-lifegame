@@ -66,6 +66,7 @@ class V4ContentParserTest {
         assertEquals("img_pov_crash_001", event.povImageId)
         assertEquals("img_moment_crash_001", event.momentImageId)
         assertEquals(35, outcome.chance)
+        assertFalse(outcome.primary)
         assertEquals(2, outcome.chanceWeights.health)
         assertTrue(outcome.hidden)
         assertTrue(outcome.death)

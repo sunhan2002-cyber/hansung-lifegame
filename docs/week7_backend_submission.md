@@ -167,3 +167,38 @@
 - PR #26이 main에 merge되어 실제 `periods.sample.json`, `focuses.sample.json`, v4 `events.outcomes`가 앱 자산에 포함되어야 한다.
 - 현재 PR #26 데이터에는 `BIG_INCIDENT`가 0개이므로 신기훈의 실제 사건 데이터가 추가된 뒤 콘텐츠 기반 시뮬레이션을 다시 실행해야 한다.
 - 실제 Compose 화면에서 scene/pov/moment 이미지를 그리는 작업은 UI/UX·프론트 화면 연결 범위이며, 백엔드는 세 ID를 `TurnStep`과 `PendingDecision`으로 제공한다.
+
+---
+
+## 조건부 통과 후 보완 검증 — 2026-10-13
+
+### 엔진 preview 단일화
+
+- `Outcome.primary`를 엔진 모델과 JSON 파서에 연결했다.
+- `DecisionChoicePreview`가 선택지별 `OutcomeLikelihood`와 최대 2개의 핵심 지표를 제공한다.
+- 가능성 구간은 `낮음`, `반반쯤`, `높음`, `매우 높음`이며 실제 결과 추첨과 동일한 `effectiveOutcomeChance` 계산을 사용한다.
+- hidden 결과는 확률 분모에는 포함되지만 대표 결과·문장·핵심 지표로 노출하지 않는다.
+- 프론트는 이후 `DecisionOption.primaryChancePercent`, `effectiveChance`, `hint` 계산을 제거하고 `PendingDecision.choices`의 preview를 표시하면 된다.
+
+### 병역 플래그 검증
+
+- PR #27의 `adult_071`은 `military_service_required`를 필수 플래그로 요구한다.
+- PR #28은 남성 선택 시 `gender_male`과 `military_service_required`를 시작 플래그로 엔진에 전달한다.
+- 엔진 테스트에서 플래그가 없으면 입영 통지서가 나오지 않고, 플래그가 있으면 2년차 milestone으로 발생하며 자동 진행이 멈추는 것을 확인했다.
+
+### #20 + #26 + #27 + #28 통합 검증
+
+- 실제 JSON 로딩: 시기 5개, 초점 25개, 사건 209개, BIG_INCIDENT 20개, 모든 선택지 outcomes 존재
+- `adult_070` 실제 데이터: `DECISION` 단계, `canAutoAdvance=false`, `DISTORT` 전환 확인
+- `adult_071` 실제 데이터: 남성 병역 플래그 조건 확인
+- `python scripts/validate_content.py`: PASS
+- 검증 수치: 이미지 ID 346, 24년, outcomes 선택지 609, 결말 31, 캐릭터 3
+- 통합 단위 테스트: Debug + Release 총 184개, 실패/오류/건너뜀 0
+- 통합 `assembleDebug`: BUILD SUCCESSFUL
+- 김우영 브랜치 자체 테스트: Debug 78개 + Release 78개 = 156개, 실패 0
+
+### 현재 남은 일
+
+- PR #26과 #27이 main에 병합된 뒤 동일 검증을 main에서 다시 실행해야 한다.
+- PR #28은 main 최신화 후 엔진 preview를 소비하도록 중복 확률 계산을 제거해야 한다.
+- 실제 300×225 PNG가 들어오면 이미지 메타데이터와 파일명 및 화면 표시를 최종 확인해야 한다.
