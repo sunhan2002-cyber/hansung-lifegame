@@ -219,7 +219,10 @@
 #### 반드시 맞출 스타일
 
 - 도트풍 픽셀아트
-- 300×225 px, 4:3
+- 원본 생성 이미지는 960×720, 1448×1086 등 4:3 고해상도 PNG여도 됨
+- 앱 적용용 이미지는 별도 폴더에 같은 규격 PNG로 정리
+- 앱 적용용 권장 규격은 300×225 또는 960×720 중 하나로 통일
+- 직접 생성 해상도가 300×225일 필요는 없음
 - 필름 프레임에 들어갔을 때 잘리는 부분이 없어야 함
 - 색상 40색 이하 느낌
 - 디더링 없음
@@ -230,13 +233,13 @@
 ### 프롬프트 예시 형식
 
 ```text
-Korean life simulation game scene, pixel art, 300x225, 4:3, limited 40 color palette, no dithering, vintage film frame mood, calm cinematic lighting, third-person view, a teenage Korean boy studying at a wooden desk at night, desk lamp, notebooks, small room, emotional but not dramatic, no text, no UI, no watermark
+Korean life simulation game scene, pixel art, 4:3, limited 40 color palette, no dithering, vintage film frame mood, calm cinematic lighting, third-person view, a teenage Korean boy studying at a wooden desk at night, desk lamp, notebooks, small room, emotional but not dramatic, no text, no UI, no watermark
 ```
 
 1인칭 장면 예시:
 
 ```text
-first-person pixel art scene, 300x225, 4:3, limited 40 color palette, no dithering, vintage film mood, Korean teenager lying in bed with a thermometer in hand, morning light through curtains, feverish atmosphere, no face visible, no text, no UI, no watermark
+first-person pixel art scene, 4:3, limited 40 color palette, no dithering, vintage film mood, Korean teenager lying in bed with a thermometer in hand, morning light through curtains, feverish atmosphere, no face visible, no text, no UI, no watermark
 ```
 
 ### 화면 설계 숙제
@@ -262,6 +265,8 @@ first-person pixel art scene, 300x225, 4:3, limited 40 color palette, no ditheri
 
 - 이미지 프롬프트 8개 이상
 - 실제 생성 후보 또는 참고 후보 8개 이상
+- 원본 이미지 보관 경로와 앱 적용용 이미지 경로를 구분
+- 앱 적용용 이미지는 같은 비율과 같은 규격으로 통일
 - 화면별 레이아웃 기준 4개 화면 작성
 - 프론트가 바로 구현할 수 있게 컴포넌트 단위로 정리
 
@@ -408,9 +413,10 @@ v4 데이터 구조를 문서화하고, 팀원 산출물이 잘못 들어와도 
 
 이미지 산출물은 아래 기준으로 검사한다.
 
-- 300×225 px인지
 - PNG인지
 - 4:3 비율인지
+- 원본 이미지와 앱 적용용 이미지가 구분되어 있는지
+- 앱 적용용 이미지들이 같은 규격으로 통일되어 있는지
 - 1인칭/3인칭 구분이 명확한지
 - 도트풍인지
 - 텍스트/워터마크가 들어가지 않았는지
@@ -467,3 +473,5 @@ v4 데이터 구조를 문서화하고, 팀원 산출물이 잘못 들어와도 
 
 자기 역할별 세부 숙제는 docs/week7/week7_assignments_v4.md 보고 그대로 하면 됨.
 ```
+
+
