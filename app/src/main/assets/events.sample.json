@@ -19971,8 +19971,8 @@
     "type": "SPECIAL",
     "isFallback": false,
     "isMilestone": false,
-    "title": "열리지 않는 출입문",
-    "text": "월요일 아침, 사원증을 찍었는데 출입문이 열리지 않는다. 메일함에는 한 통이 와 있다. '조직 개편에 따른 면담 안내'.",
+    "title": "구조조정 통보",
+    "text": "월요일 아침, 사원증을 찍었는데 출입문이 열리지 않는다. 메일함에는 한 통이 와 있다. '구조조정 대상자 면담 안내'.",
     "imageId": "img_pov_layoff_door_001",
     "conditions": {
       "stats": {},

@@ -28,7 +28,7 @@
 | 4 | `img_moment_flu_morning_001` | adult_068 주마등 | 3인칭 (회상) | moment |
 | 5 | `img_pov_promotion_review_001` | adult_069 승진 심사 전날 | 1인칭 | pov |
 | 6 | `img_moment_promotion_review_001` | adult_069 주마등 | 3인칭 (회상) | moment |
-| 7 | `img_pov_layoff_door_001` | adult_070 열리지 않는 출입문 | 1인칭 | pov |
+| 7 | `img_pov_layoff_door_001` | adult_070 구조조정 통보 | 1인칭 | pov |
 | 8 | `img_moment_layoff_door_001` | adult_070 주마등 | 3인칭 (회상) | moment |
 | 9 | `img_pov_enlistment_letter_001` | adult_071 입영 통지서 | 1인칭 | pov |
 | 10 | `img_moment_enlistment_letter_001` | adult_071 주마등 | 3인칭 (회상) | moment |
@@ -134,9 +134,9 @@ pixel art, 16-bit retro style, small third-person office scene, office worker ho
 
 | 항목 | 내용 |
 | --- | --- |
-| 연결 | adult_070 열리지 않는 출입문 |
+| 연결 | adult_070 구조조정 통보 |
 | 장면 종류 | 1인칭 |
-| 장면 설명 | 회사 출입 게이트 앞, 사원증을 찍는 내 손. 게이트 표시등은 빨간색, 다른 사람들은 지나가는 중. 차갑지만 과장되지 않은 아침 로비. |
+| 장면 설명 | 구조조정 통보 날 아침, 회사 출입 게이트 앞에서 사원증을 찍는 내 손. 게이트 표시등은 빨간색, 다른 사람들은 지나가는 중. 차갑지만 과장되지 않은 아침 로비. |
 | 등장하면 안 되는 요소 | 경비원의 강제 퇴거, 화면 속 글씨, 실제 회사 로고 (+ 공통 금지) |
 
 도트 프롬프트 초안:
