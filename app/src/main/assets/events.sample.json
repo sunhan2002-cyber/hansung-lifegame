@@ -107,7 +107,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "INFANT"
+    ]
   },
   {
     "eventId": "infant_002",
@@ -176,7 +179,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "INFANT"
+    ]
   },
   {
     "eventId": "infant_003",
@@ -278,7 +284,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "INFANT"
+    ]
   },
   {
     "eventId": "infant_004",
@@ -378,7 +387,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "INFANT"
+    ]
   },
   {
     "eventId": "infant_005",
@@ -484,7 +496,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "INFANT"
+    ]
   },
   {
     "eventId": "infant_006",
@@ -592,7 +607,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "INFANT"
+    ]
   },
   {
     "eventId": "infant_007",
@@ -704,7 +722,11 @@
       }
     ],
     "priority": 0,
-    "kind": "MILESTONE"
+    "kind": "MILESTONE",
+    "periods": [
+      "INFANT"
+    ],
+    "yearInPeriod": 2
   },
   {
     "eventId": "infant_008",
@@ -812,7 +834,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "INFANT"
+    ]
   },
   {
     "eventId": "infant_009",
@@ -912,7 +937,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "INFANT"
+    ]
   },
   {
     "eventId": "infant_010",
@@ -1020,7 +1048,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "INFANT"
+    ]
   },
   {
     "eventId": "infant_011",
@@ -1095,7 +1126,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "INFANT"
+    ]
   },
   {
     "eventId": "infant_012",
@@ -1199,7 +1233,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "INFANT"
+    ]
   },
   {
     "eventId": "infant_013",
@@ -1299,7 +1336,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "INFANT"
+    ]
   },
   {
     "eventId": "infant_014",
@@ -1407,7 +1447,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "INFANT"
+    ]
   },
   {
     "eventId": "infant_015",
@@ -1513,7 +1556,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "INFANT"
+    ]
   },
   {
     "eventId": "infant_016",
@@ -1617,7 +1663,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "INFANT"
+    ]
   },
   {
     "eventId": "infant_017",
@@ -1723,7 +1772,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "INFANT"
+    ]
   },
   {
     "eventId": "infant_018",
@@ -1827,7 +1879,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "INFANT"
+    ]
   },
   {
     "eventId": "infant_019",
@@ -1935,7 +1990,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "INFANT"
+    ]
   },
   {
     "eventId": "infant_020",
@@ -2018,7 +2076,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "INFANT"
+    ]
   },
   {
     "eventId": "infant_021",
@@ -2114,7 +2175,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "INFANT"
+    ]
   },
   {
     "eventId": "infant_022",
@@ -2212,7 +2276,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "INFANT"
+    ]
   },
   {
     "eventId": "infant_023",
@@ -2281,7 +2348,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "INFANT"
+    ]
   },
   {
     "eventId": "infant_024",
@@ -2375,7 +2445,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "INFANT"
+    ]
   },
   {
     "eventId": "infant_025",
@@ -2475,7 +2548,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "INFANT"
+    ]
   },
   {
     "eventId": "infant_026",
@@ -2571,7 +2647,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "INFANT"
+    ]
   },
   {
     "eventId": "infant_027",
@@ -2671,7 +2750,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "INFANT"
+    ]
   },
   {
     "eventId": "infant_028",
@@ -2767,7 +2849,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "INFANT"
+    ]
   },
   {
     "eventId": "infant_029",
@@ -2836,7 +2921,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "INFANT"
+    ]
   },
   {
     "eventId": "infant_030",
@@ -2905,7 +2993,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "INFANT"
+    ]
   },
   {
     "eventId": "child_001",
@@ -3017,7 +3108,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "CHILD"
+    ]
   },
   {
     "eventId": "child_002",
@@ -3115,7 +3209,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "CHILD"
+    ]
   },
   {
     "eventId": "child_003",
@@ -3227,7 +3324,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "CHILD"
+    ]
   },
   {
     "eventId": "child_004",
@@ -3339,7 +3439,11 @@
       }
     ],
     "priority": 0,
-    "kind": "MILESTONE"
+    "kind": "MILESTONE",
+    "periods": [
+      "CHILD"
+    ],
+    "yearInPeriod": 1
   },
   {
     "eventId": "child_005",
@@ -3439,7 +3543,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "CHILD"
+    ]
   },
   {
     "eventId": "child_006",
@@ -3539,7 +3646,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "CHILD"
+    ]
   },
   {
     "eventId": "child_007",
@@ -3641,7 +3751,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "CHILD"
+    ]
   },
   {
     "eventId": "child_008",
@@ -3747,7 +3860,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "CHILD"
+    ]
   },
   {
     "eventId": "child_009",
@@ -3857,7 +3973,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "CHILD"
+    ]
   },
   {
     "eventId": "child_010",
@@ -3967,7 +4086,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "CHILD"
+    ]
   },
   {
     "eventId": "child_011",
@@ -4081,7 +4203,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "CHILD"
+    ]
   },
   {
     "eventId": "child_012",
@@ -4195,7 +4320,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "CHILD"
+    ]
   },
   {
     "eventId": "child_013",
@@ -4309,7 +4437,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "CHILD"
+    ]
   },
   {
     "eventId": "child_014",
@@ -4415,7 +4546,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "CHILD"
+    ]
   },
   {
     "eventId": "child_015",
@@ -4519,7 +4653,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "CHILD"
+    ]
   },
   {
     "eventId": "child_016",
@@ -4623,7 +4760,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "CHILD"
+    ]
   },
   {
     "eventId": "child_017",
@@ -4725,7 +4865,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "CHILD"
+    ]
   },
   {
     "eventId": "child_018",
@@ -4831,7 +4974,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "CHILD"
+    ]
   },
   {
     "eventId": "child_019",
@@ -4912,7 +5058,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "CHILD"
+    ]
   },
   {
     "eventId": "child_020",
@@ -5018,7 +5167,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "CHILD"
+    ]
   },
   {
     "eventId": "child_021",
@@ -5126,7 +5278,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "CHILD"
+    ]
   },
   {
     "eventId": "child_022",
@@ -5234,7 +5389,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "CHILD"
+    ]
   },
   {
     "eventId": "child_023",
@@ -5344,7 +5502,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "CHILD"
+    ]
   },
   {
     "eventId": "child_024",
@@ -5425,7 +5586,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "CHILD"
+    ]
   },
   {
     "eventId": "child_025",
@@ -5529,7 +5693,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "CHILD"
+    ]
   },
   {
     "eventId": "child_026",
@@ -5629,7 +5796,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "CHILD"
+    ]
   },
   {
     "eventId": "child_027",
@@ -5741,7 +5911,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "CHILD"
+    ]
   },
   {
     "eventId": "child_028",
@@ -5853,7 +6026,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "CHILD"
+    ]
   },
   {
     "eventId": "child_029",
@@ -5959,7 +6135,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "CHILD"
+    ]
   },
   {
     "eventId": "child_030",
@@ -6065,7 +6244,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "CHILD"
+    ]
   },
   {
     "eventId": "child_031",
@@ -6177,7 +6359,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "CHILD"
+    ]
   },
   {
     "eventId": "child_032",
@@ -6289,7 +6474,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "CHILD"
+    ]
   },
   {
     "eventId": "child_033",
@@ -6399,7 +6587,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "CHILD"
+    ]
   },
   {
     "eventId": "child_034",
@@ -6511,7 +6702,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "CHILD"
+    ]
   },
   {
     "eventId": "child_035",
@@ -6619,7 +6813,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "CHILD"
+    ]
   },
   {
     "eventId": "child_036",
@@ -6733,7 +6930,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "CHILD"
+    ]
   },
   {
     "eventId": "child_037",
@@ -6843,7 +7043,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "CHILD"
+    ]
   },
   {
     "eventId": "child_038",
@@ -6920,7 +7123,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "CHILD"
+    ]
   },
   {
     "eventId": "child_039",
@@ -7022,7 +7228,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "CHILD"
+    ]
   },
   {
     "eventId": "child_040",
@@ -7118,7 +7327,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "CHILD"
+    ]
   },
   {
     "eventId": "child_041",
@@ -7214,7 +7426,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "CHILD"
+    ]
   },
   {
     "eventId": "child_042",
@@ -7314,7 +7529,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "CHILD"
+    ]
   },
   {
     "eventId": "child_043",
@@ -7412,7 +7630,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "CHILD"
+    ]
   },
   {
     "eventId": "child_044",
@@ -7506,7 +7727,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "CHILD"
+    ]
   },
   {
     "eventId": "child_045",
@@ -7606,7 +7830,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "CHILD"
+    ]
   },
   {
     "eventId": "child_046",
@@ -7700,7 +7927,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "CHILD"
+    ]
   },
   {
     "eventId": "child_047",
@@ -7794,7 +8024,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "CHILD"
+    ]
   },
   {
     "eventId": "teen_001",
@@ -7890,7 +8123,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "TEEN"
+    ]
   },
   {
     "eventId": "teen_002",
@@ -7992,7 +8228,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "TEEN"
+    ]
   },
   {
     "eventId": "teen_003",
@@ -8102,7 +8341,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "TEEN"
+    ]
   },
   {
     "eventId": "teen_004",
@@ -8198,7 +8440,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "TEEN"
+    ]
   },
   {
     "eventId": "teen_005",
@@ -8294,7 +8539,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "TEEN"
+    ]
   },
   {
     "eventId": "teen_006",
@@ -8398,7 +8646,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "TEEN"
+    ]
   },
   {
     "eventId": "teen_007",
@@ -8506,7 +8757,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "TEEN"
+    ]
   },
   {
     "eventId": "teen_008",
@@ -8610,7 +8864,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "TEEN"
+    ]
   },
   {
     "eventId": "teen_009",
@@ -8708,7 +8965,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "TEEN"
+    ]
   },
   {
     "eventId": "teen_010",
@@ -8802,7 +9062,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "TEEN"
+    ]
   },
   {
     "eventId": "teen_011",
@@ -8912,7 +9175,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "TEEN"
+    ]
   },
   {
     "eventId": "teen_012",
@@ -9022,7 +9288,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "TEEN"
+    ]
   },
   {
     "eventId": "teen_013",
@@ -9128,7 +9397,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "TEEN"
+    ]
   },
   {
     "eventId": "teen_014",
@@ -9209,7 +9481,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "TEEN"
+    ]
   },
   {
     "eventId": "teen_015",
@@ -9311,7 +9586,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "TEEN"
+    ]
   },
   {
     "eventId": "teen_016",
@@ -9417,7 +9695,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "TEEN"
+    ]
   },
   {
     "eventId": "teen_017",
@@ -9529,7 +9810,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "TEEN"
+    ]
   },
   {
     "eventId": "teen_018",
@@ -9606,7 +9890,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "TEEN"
+    ]
   },
   {
     "eventId": "teen_019",
@@ -9718,7 +10005,11 @@
       }
     ],
     "priority": 0,
-    "kind": "MILESTONE"
+    "kind": "MILESTONE",
+    "periods": [
+      "TEEN"
+    ],
+    "yearInPeriod": 3
   },
   {
     "eventId": "teen_020",
@@ -9797,7 +10088,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "TEEN"
+    ]
   },
   {
     "eventId": "teen_021",
@@ -9907,7 +10201,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "TEEN"
+    ]
   },
   {
     "eventId": "teen_022",
@@ -10005,7 +10302,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "TEEN"
+    ]
   },
   {
     "eventId": "teen_023",
@@ -10116,7 +10416,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "TEEN"
+    ]
   },
   {
     "eventId": "teen_024",
@@ -10222,7 +10525,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "TEEN"
+    ]
   },
   {
     "eventId": "teen_025",
@@ -10326,7 +10632,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "TEEN"
+    ]
   },
   {
     "eventId": "teen_026",
@@ -10432,7 +10741,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "TEEN"
+    ]
   },
   {
     "eventId": "teen_027",
@@ -10536,7 +10848,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "TEEN"
+    ]
   },
   {
     "eventId": "teen_028",
@@ -10632,7 +10947,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "TEEN"
+    ]
   },
   {
     "eventId": "teen_029",
@@ -10728,7 +11046,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "TEEN"
+    ]
   },
   {
     "eventId": "teen_030",
@@ -10826,7 +11147,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "TEEN"
+    ]
   },
   {
     "eventId": "teen_031",
@@ -10922,7 +11246,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "TEEN"
+    ]
   },
   {
     "eventId": "teen_032",
@@ -11018,7 +11345,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "TEEN"
+    ]
   },
   {
     "eventId": "teen_033",
@@ -11112,7 +11442,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "TEEN"
+    ]
   },
   {
     "eventId": "teen_034",
@@ -11208,7 +11541,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "TEEN"
+    ]
   },
   {
     "eventId": "teen_035",
@@ -11304,7 +11640,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "TEEN"
+    ]
   },
   {
     "eventId": "teen_036",
@@ -11402,7 +11741,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "TEEN"
+    ]
   },
   {
     "eventId": "teen_037",
@@ -11508,7 +11850,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "TEEN"
+    ]
   },
   {
     "eventId": "teen_038",
@@ -11620,7 +11965,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "TEEN"
+    ]
   },
   {
     "eventId": "teen_039",
@@ -11734,7 +12082,11 @@
       }
     ],
     "priority": 0,
-    "kind": "MILESTONE"
+    "kind": "MILESTONE",
+    "periods": [
+      "TEEN"
+    ],
+    "yearInPeriod": 5
   },
   {
     "eventId": "teen_040",
@@ -11803,7 +12155,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "TEEN"
+    ]
   },
   {
     "eventId": "teen_041",
@@ -11899,7 +12254,195 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "TEEN"
+    ]
+  },
+  {
+    "eventId": "teen_042",
+    "stage": "TEEN",
+    "type": "NORMAL",
+    "isFallback": false,
+    "isMilestone": false,
+    "title": "기말고사 1교시",
+    "text": "기말고사 1교시, 수학. 시험지를 넘기자 첫 문제부터 처음 보는 공식이 나왔다. 앞자리 친구는 벌써 두 번째 장을 넘겼다.",
+    "imageId": "img_pov_exam_paper_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [],
+      "blockedFlags": []
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "아는 문제부터 차근차근 푼다.",
+        "statDelta": {
+          "지력": 3,
+          "행복": 1,
+          "건강": -1
+        },
+        "resultText": "아는 문제부터 풀다 보니 처음 보던 공식도 떠올랐다. 성적표가 나온 날, 엄마가 사진을 찍어 가족 단톡방에 올렸다.",
+        "addFlags": [
+          "study_focus"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "a_solved",
+            "text": "아는 문제부터 풀다 보니 처음 보던 공식도 떠올랐다. 성적표가 나온 날, 엄마가 사진을 찍어 가족 단톡방에 올렸다.",
+            "chance": 50,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "지력": 3,
+              "행복": 1,
+              "건강": -1
+            },
+            "addFlags": [
+              "study_focus"
+            ],
+            "chanceWeights": {
+              "지력": 5
+            }
+          },
+          {
+            "outcomeId": "a_average",
+            "text": "절반쯤 풀었을 때 종이 울렸다. 점수는 딱 반 평균. 엄마는 '평균이면 됐지'라고 했지만 표정은 아니었다.",
+            "chance": 35,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "지력": 1,
+              "행복": -1
+            },
+            "addFlags": []
+          },
+          {
+            "outcomeId": "a_shifted",
+            "text": "다 풀고 보니 답안지가 한 칸씩 밀려 있었다. 고치려는 순간 종이 울렸다. 그날 이후 답안지는 세 번씩 확인한다.",
+            "chance": 15,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "지력": 1,
+              "행복": -3
+            },
+            "addFlags": [],
+            "chanceWeights": {
+              "지력": -4
+            }
+          }
+        ]
+      },
+      {
+        "choiceId": "B",
+        "label": "모르는 문제는 과감하게 찍는다.",
+        "statDelta": {
+          "운": 2,
+          "행복": 2,
+          "지력": -1
+        },
+        "resultText": "연필을 굴렸다. 찍은 다섯 문제 중 네 개가 맞았다. 선생님이 채점하다 말고 나를 한참 쳐다봤다.",
+        "addFlags": [],
+        "outcomes": [
+          {
+            "outcomeId": "b_lucky",
+            "text": "연필을 굴렸다. 찍은 다섯 문제 중 네 개가 맞았다. 선생님이 채점하다 말고 나를 한참 쳐다봤다.",
+            "chance": 40,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "운": 2,
+              "행복": 2,
+              "지력": -1
+            },
+            "addFlags": [],
+            "chanceWeights": {
+              "운": 3
+            }
+          },
+          {
+            "outcomeId": "b_miss",
+            "text": "찍은 답이 전부 3번이었다. 정답은 전부 4번이었다. 다음엔 4번으로 통일하기로 했다.",
+            "chance": 60,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": -2,
+              "지력": -1
+            },
+            "addFlags": [],
+            "chanceWeights": {
+              "운": -2
+            }
+          }
+        ]
+      },
+      {
+        "choiceId": "C",
+        "label": "시험지 뒷면에 선생님 얼굴을 그린다.",
+        "statDelta": {
+          "행복": 3,
+          "사회성": 1,
+          "지력": -2
+        },
+        "resultText": "점수는 바닥이었다. 그런데 그 그림이 교무실 게시판에 붙었다. 미술 선생님이 동아리에 들어오라고 했다.",
+        "addFlags": [
+          "creative_hobby"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "c_gallery",
+            "text": "점수는 바닥이었다. 그런데 그 그림이 교무실 게시판에 붙었다. 미술 선생님이 동아리에 들어오라고 했다.",
+            "chance": 55,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 3,
+              "사회성": 1,
+              "지력": -2
+            },
+            "addFlags": [
+              "creative_hobby"
+            ],
+            "chanceWeights": {
+              "운": 2
+            }
+          },
+          {
+            "outcomeId": "c_caught",
+            "text": "선생님이 그림을 한참 보더니 말했다. '내 코가 이렇게 크진 않잖아.' 방과 후 청소 일주일이 생겼다.",
+            "chance": 45,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "사회성": 1,
+              "행복": -1,
+              "지력": -2
+            },
+            "addFlags": [],
+            "chanceWeights": {
+              "운": -2
+            }
+          }
+        ]
+      }
+    ],
+    "priority": 0,
+    "kind": "INCIDENT",
+    "periods": [
+      "TEEN"
+    ],
+    "weight": 3,
+    "view": "FIRST_PERSON",
+    "momentImageId": "img_moment_exam_paper_001"
   },
   {
     "eventId": "adult_001",
@@ -12011,7 +12554,11 @@
       }
     ],
     "priority": 0,
-    "kind": "MILESTONE"
+    "kind": "MILESTONE",
+    "periods": [
+      "YOUNG_ADULT"
+    ],
+    "yearInPeriod": 1
   },
   {
     "eventId": "adult_002",
@@ -12094,7 +12641,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "YOUNG_ADULT"
+    ]
   },
   {
     "eventId": "adult_003",
@@ -12206,7 +12756,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "YOUNG_ADULT"
+    ]
   },
   {
     "eventId": "adult_004",
@@ -12310,7 +12863,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "YOUNG_ADULT"
+    ]
   },
   {
     "eventId": "adult_005",
@@ -12410,7 +12966,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "YOUNG_ADULT"
+    ]
   },
   {
     "eventId": "adult_006",
@@ -12512,7 +13071,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "YOUNG_ADULT"
+    ]
   },
   {
     "eventId": "adult_007",
@@ -12622,7 +13184,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "YOUNG_ADULT"
+    ]
   },
   {
     "eventId": "adult_008",
@@ -12732,7 +13297,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "YOUNG_ADULT"
+    ]
   },
   {
     "eventId": "adult_009",
@@ -12834,7 +13402,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "YOUNG_ADULT"
+    ]
   },
   {
     "eventId": "adult_010",
@@ -12938,7 +13509,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "YOUNG_ADULT"
+    ]
   },
   {
     "eventId": "adult_011",
@@ -13048,7 +13622,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "YOUNG_ADULT"
+    ]
   },
   {
     "eventId": "adult_012",
@@ -13162,7 +13739,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "YOUNG_ADULT"
+    ]
   },
   {
     "eventId": "adult_013",
@@ -13266,7 +13846,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "YOUNG_ADULT"
+    ]
   },
   {
     "eventId": "adult_014",
@@ -13360,7 +13943,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "YOUNG_ADULT"
+    ]
   },
   {
     "eventId": "adult_015",
@@ -13464,7 +14050,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "YOUNG_ADULT"
+    ]
   },
   {
     "eventId": "adult_016",
@@ -13576,7 +14165,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "YOUNG_ADULT"
+    ]
   },
   {
     "eventId": "adult_017",
@@ -13678,7 +14270,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "YOUNG_ADULT"
+    ]
   },
   {
     "eventId": "adult_018",
@@ -13784,7 +14379,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "YOUNG_ADULT"
+    ]
   },
   {
     "eventId": "adult_019",
@@ -13888,7 +14486,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "YOUNG_ADULT"
+    ]
   },
   {
     "eventId": "adult_020",
@@ -13994,7 +14595,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "YOUNG_ADULT"
+    ]
   },
   {
     "eventId": "adult_021",
@@ -14094,7 +14698,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "YOUNG_ADULT"
+    ]
   },
   {
     "eventId": "adult_022",
@@ -14188,7 +14795,11 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "YOUNG_ADULT",
+      "MIDDLE"
+    ]
   },
   {
     "eventId": "adult_023",
@@ -14282,7 +14893,11 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "YOUNG_ADULT",
+      "MIDDLE"
+    ]
   },
   {
     "eventId": "adult_024",
@@ -14396,7 +15011,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "YOUNG_ADULT"
+    ]
   },
   {
     "eventId": "adult_025",
@@ -14498,7 +15116,11 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "YOUNG_ADULT",
+      "MIDDLE"
+    ]
   },
   {
     "eventId": "adult_026",
@@ -14600,7 +15222,11 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "YOUNG_ADULT",
+      "MIDDLE"
+    ]
   },
   {
     "eventId": "adult_027",
@@ -14706,7 +15332,11 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "YOUNG_ADULT",
+      "MIDDLE"
+    ]
   },
   {
     "eventId": "adult_028",
@@ -14810,7 +15440,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "YOUNG_ADULT"
+    ]
   },
   {
     "eventId": "adult_029",
@@ -14912,7 +15545,11 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "YOUNG_ADULT",
+      "MIDDLE"
+    ]
   },
   {
     "eventId": "adult_030",
@@ -15014,7 +15651,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "YOUNG_ADULT"
+    ]
   },
   {
     "eventId": "adult_031",
@@ -15124,7 +15764,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "YOUNG_ADULT"
+    ]
   },
   {
     "eventId": "adult_032",
@@ -15236,7 +15879,11 @@
       }
     ],
     "priority": 0,
-    "kind": "MILESTONE"
+    "kind": "MILESTONE",
+    "periods": [
+      "YOUNG_ADULT"
+    ],
+    "yearInPeriod": 4
   },
   {
     "eventId": "adult_033",
@@ -15340,7 +15987,11 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "YOUNG_ADULT",
+      "MIDDLE"
+    ]
   },
   {
     "eventId": "adult_034",
@@ -15444,7 +16095,11 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "YOUNG_ADULT",
+      "MIDDLE"
+    ]
   },
   {
     "eventId": "adult_035",
@@ -15538,7 +16193,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "YOUNG_ADULT"
+    ]
   },
   {
     "eventId": "adult_036",
@@ -15615,7 +16273,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "YOUNG_ADULT"
+    ]
   },
   {
     "eventId": "adult_037",
@@ -15719,7 +16380,11 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "YOUNG_ADULT",
+      "MIDDLE"
+    ]
   },
   {
     "eventId": "adult_038",
@@ -15829,7 +16494,11 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "YOUNG_ADULT",
+      "MIDDLE"
+    ]
   },
   {
     "eventId": "adult_039",
@@ -15906,7 +16575,11 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "YOUNG_ADULT",
+      "MIDDLE"
+    ]
   },
   {
     "eventId": "adult_040",
@@ -15987,7 +16660,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "MIDDLE"
+    ]
   },
   {
     "eventId": "adult_041",
@@ -16093,7 +16769,11 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "YOUNG_ADULT",
+      "MIDDLE"
+    ]
   },
   {
     "eventId": "adult_042",
@@ -16193,7 +16873,11 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "YOUNG_ADULT",
+      "MIDDLE"
+    ]
   },
   {
     "eventId": "adult_043",
@@ -16299,7 +16983,11 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "YOUNG_ADULT",
+      "MIDDLE"
+    ]
   },
   {
     "eventId": "adult_044",
@@ -16405,7 +17093,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "YOUNG_ADULT"
+    ]
   },
   {
     "eventId": "adult_045",
@@ -16499,7 +17190,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "YOUNG_ADULT"
+    ]
   },
   {
     "eventId": "adult_046",
@@ -16597,7 +17291,11 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "YOUNG_ADULT",
+      "MIDDLE"
+    ]
   },
   {
     "eventId": "adult_047",
@@ -16691,7 +17389,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "YOUNG_ADULT"
+    ]
   },
   {
     "eventId": "adult_048",
@@ -16789,7 +17490,11 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "YOUNG_ADULT",
+      "MIDDLE"
+    ]
   },
   {
     "eventId": "adult_049",
@@ -16885,7 +17590,11 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "YOUNG_ADULT",
+      "MIDDLE"
+    ]
   },
   {
     "eventId": "adult_050",
@@ -16981,7 +17690,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "YOUNG_ADULT"
+    ]
   },
   {
     "eventId": "adult_051",
@@ -17087,7 +17799,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "MIDDLE"
+    ]
   },
   {
     "eventId": "adult_052",
@@ -17201,7 +17916,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "MIDDLE"
+    ]
   },
   {
     "eventId": "adult_053",
@@ -17303,7 +18021,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "MIDDLE"
+    ]
   },
   {
     "eventId": "adult_054",
@@ -17403,7 +18124,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "MIDDLE"
+    ]
   },
   {
     "eventId": "adult_055",
@@ -17507,7 +18231,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "MIDDLE"
+    ]
   },
   {
     "eventId": "adult_056",
@@ -17611,7 +18338,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "MIDDLE"
+    ]
   },
   {
     "eventId": "adult_057",
@@ -17719,7 +18449,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "MIDDLE"
+    ]
   },
   {
     "eventId": "adult_058",
@@ -17825,7 +18558,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "MIDDLE"
+    ]
   },
   {
     "eventId": "adult_059",
@@ -17919,7 +18655,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "MIDDLE"
+    ]
   },
   {
     "eventId": "adult_060",
@@ -18023,7 +18762,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "MIDDLE"
+    ]
   },
   {
     "eventId": "adult_061",
@@ -18129,7 +18871,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "MIDDLE"
+    ]
   },
   {
     "eventId": "adult_062",
@@ -18239,7 +18984,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "MIDDLE"
+    ]
   },
   {
     "eventId": "adult_063",
@@ -18349,7 +19097,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "MIDDLE"
+    ]
   },
   {
     "eventId": "adult_064",
@@ -18463,7 +19214,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "MIDDLE"
+    ]
   },
   {
     "eventId": "adult_065",
@@ -18577,7 +19331,11 @@
       }
     ],
     "priority": 0,
-    "kind": "MILESTONE"
+    "kind": "MILESTONE",
+    "periods": [
+      "MIDDLE"
+    ],
+    "yearInPeriod": 5
   },
   {
     "eventId": "adult_066",
@@ -18671,7 +19429,11 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "YOUNG_ADULT",
+      "MIDDLE"
+    ]
   },
   {
     "eventId": "adult_067",
@@ -18767,7 +19529,875 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "INCIDENT",
+    "periods": [
+      "YOUNG_ADULT",
+      "MIDDLE"
+    ]
+  },
+  {
+    "eventId": "adult_068",
+    "stage": "ADULT",
+    "type": "NORMAL",
+    "isFallback": false,
+    "isMilestone": false,
+    "title": "온몸이 두들겨 맞은 아침",
+    "text": "눈을 떴는데 온몸이 두들겨 맞은 것 같다. 하필 오늘은 내가 발표하는 날이다. 엄마(톡): \"{nameCall}, 몸살엔 무조건 땀이야.\"",
+    "imageId": "img_pov_flu_morning_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [],
+      "blockedFlags": []
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "약 먹고 버티면서 출근한다.",
+        "statDelta": {
+          "경제력": 2,
+          "사회성": 1,
+          "건강": -3
+        },
+        "resultText": "발표는 무사히 끝났다. 쉰 목소리 덕에 카리스마 있다는 말까지 들었다. 그날 밤은 기절하듯 잤다.",
+        "addFlags": [
+          "overwork"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "a_endured",
+            "text": "발표는 무사히 끝났다. 쉰 목소리 덕에 카리스마 있다는 말까지 들었다. 그날 밤은 기절하듯 잤다.",
+            "chance": 55,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "경제력": 2,
+              "사회성": 1,
+              "건강": -3
+            },
+            "addFlags": [
+              "overwork"
+            ],
+            "chanceWeights": {
+              "건강": 2
+            }
+          },
+          {
+            "outcomeId": "a_sneeze",
+            "text": "발표 도중 재채기가 마이크를 타고 층 전체에 울렸다. 그 주 내내 앓아누웠다.",
+            "chance": 35,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "사회성": -1,
+              "행복": -2,
+              "건강": -5
+            },
+            "addFlags": [
+              "overwork"
+            ],
+            "chanceWeights": {
+              "건강": -1
+            }
+          },
+          {
+            "outcomeId": "a_worse",
+            "text": "괜찮은 줄 알았다. 사흘 뒤 몸살이 폐렴으로 번져 2주를 병원에서 보냈다. 몸이 보내는 신호는 무시하면 안 됐다.",
+            "chance": 10,
+            "primary": false,
+            "hidden": true,
+            "death": false,
+            "statDelta": {
+              "건강": -8,
+              "경제력": -2,
+              "행복": -2
+            },
+            "addFlags": [
+              "overwork",
+              "health_warning"
+            ],
+            "chanceWeights": {
+              "건강": -2
+            }
+          }
+        ]
+      },
+      {
+        "choiceId": "B",
+        "label": "회사에 연락하고 하루 푹 쉰다.",
+        "statDelta": {
+          "건강": 3,
+          "행복": 1,
+          "경제력": -1
+        },
+        "resultText": "하루 종일 잤다. 다음 날 거짓말처럼 개운했다. 발표는 동료가 대신했는데, 생각보다 잘해서 조금 서운했다.",
+        "addFlags": [
+          "healthy_routine"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "b_rested",
+            "text": "하루 종일 잤다. 다음 날 거짓말처럼 개운했다. 발표는 동료가 대신했는데, 생각보다 잘해서 조금 서운했다.",
+            "chance": 75,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "건강": 3,
+              "행복": 1,
+              "경제력": -1
+            },
+            "addFlags": [
+              "healthy_routine"
+            ],
+            "chanceWeights": {
+              "건강": 2
+            }
+          },
+          {
+            "outcomeId": "b_week",
+            "text": "하루로는 모자랐다. 일주일을 앓으면서 드라마 한 시즌을 다 봤다. 결말은 열이 펄펄 끓을 때 봐서 기억나지 않는다.",
+            "chance": 25,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "건강": 1,
+              "행복": 1,
+              "경제력": -2
+            },
+            "addFlags": [],
+            "chanceWeights": {
+              "건강": -2
+            }
+          }
+        ]
+      },
+      {
+        "choiceId": "C",
+        "label": "엄마 말대로 사우나에서 땀을 쫙 뺀다.",
+        "statDelta": {
+          "건강": 2,
+          "행복": 1,
+          "경제력": -1
+        },
+        "resultText": "땀을 한 바가지 흘렸더니 신기하게 열이 내렸다. 그 뒤로 엄마는 모든 병을 사우나로 고치려 한다.",
+        "addFlags": [],
+        "outcomes": [
+          {
+            "outcomeId": "c_sweat",
+            "text": "땀을 한 바가지 흘렸더니 신기하게 열이 내렸다. 그 뒤로 엄마는 모든 병을 사우나로 고치려 한다.",
+            "chance": 60,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "건강": 2,
+              "행복": 1,
+              "경제력": -1
+            },
+            "addFlags": [],
+            "chanceWeights": {
+              "건강": 2
+            }
+          },
+          {
+            "outcomeId": "c_dizzy",
+            "text": "땀과 함께 정신도 빠져나갔다. 눈을 떠 보니 매점 사장님이 부채질을 해 주고 있었다.",
+            "chance": 37,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "건강": -3,
+              "사회성": 1,
+              "행복": -1
+            },
+            "addFlags": [
+              "health_warning"
+            ],
+            "chanceWeights": {
+              "건강": -2
+            }
+          },
+          {
+            "outcomeId": "c_fatal",
+            "text": "몸살엔 땀이라며 가장 뜨거운 방에서 끝까지 버텼다. 땀은 전부 뺐다. 인생도 같이 빠져나갔다.",
+            "chance": 3,
+            "primary": false,
+            "hidden": true,
+            "death": true,
+            "statDelta": {
+              "건강": -10
+            },
+            "addFlags": [
+              "fatal_risk"
+            ],
+            "chanceWeights": {
+              "건강": -1
+            }
+          }
+        ]
+      }
+    ],
+    "priority": 0,
+    "kind": "INCIDENT",
+    "periods": [
+      "YOUNG_ADULT",
+      "MIDDLE"
+    ],
+    "weight": 3,
+    "view": "FIRST_PERSON",
+    "momentImageId": "img_moment_flu_morning_001"
+  },
+  {
+    "eventId": "adult_069",
+    "stage": "ADULT",
+    "type": "NORMAL",
+    "isFallback": false,
+    "isMilestone": false,
+    "title": "승진 심사 전날",
+    "text": "내일은 승진 심사 날이다. 팀장님: \"{name} 씨, 이번엔 될 거야. 아마도.\" 그 '아마도'가 밤새 귀에서 맴돈다.",
+    "imageId": "img_pov_promotion_review_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [],
+      "blockedFlags": [
+        "promoted",
+        "early_retire"
+      ]
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "그동안의 성과를 숫자로 정리해 간다.",
+        "statDelta": {
+          "경제력": 4,
+          "행복": 1,
+          "건강": -1
+        },
+        "resultText": "보고서 한 장에 3년이 담겼다. 심사위원들이 고개를 끄덕였다. 새로 나온 명함은 직함이 한 줄 길어져 있었다.",
+        "addFlags": [
+          "promoted",
+          "responsibility"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "a_promoted",
+            "text": "보고서 한 장에 3년이 담겼다. 심사위원들이 고개를 끄덕였다. 새로 나온 명함은 직함이 한 줄 길어져 있었다.",
+            "chance": 50,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "경제력": 4,
+              "행복": 1,
+              "건강": -1
+            },
+            "addFlags": [
+              "promoted",
+              "responsibility"
+            ],
+            "chanceWeights": {
+              "경제력": 3,
+              "지력": 2
+            }
+          },
+          {
+            "outcomeId": "a_next_year",
+            "text": "숫자는 완벽했다. 그런데 이번엔 자리가 하나뿐이었다. 팀장님이 '내년엔 진짜'라며 커피를 사 줬다.",
+            "chance": 40,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "경제력": 1,
+              "지력": 1,
+              "행복": -2
+            },
+            "addFlags": [
+              "promotion_missed"
+            ],
+            "chanceWeights": {
+              "경제력": -2
+            }
+          },
+          {
+            "outcomeId": "a_transfer",
+            "text": "승진했다. 발령지는 바다가 보이는 지방 지사였다. 이제 출근길에 갈매기가 인사한다.",
+            "chance": 10,
+            "primary": false,
+            "hidden": true,
+            "death": false,
+            "statDelta": {
+              "경제력": 3,
+              "행복": 1,
+              "사회성": -2
+            },
+            "addFlags": [
+              "promoted",
+              "relocated"
+            ],
+            "chanceWeights": {
+              "운": -1
+            }
+          }
+        ]
+      },
+      {
+        "choiceId": "B",
+        "label": "평소 챙겨 온 사람들을 믿는다.",
+        "statDelta": {
+          "경제력": 3,
+          "사회성": 1,
+          "지력": -1
+        },
+        "resultText": "심사장에 들어가니 심사위원 셋 중 둘이 같은 동호회 사람이었다. 분위기가 거의 동창회였다. 결과는 합격.",
+        "addFlags": [
+          "promoted"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "b_promoted",
+            "text": "심사장에 들어가니 심사위원 셋 중 둘이 같은 동호회 사람이었다. 분위기가 거의 동창회였다. 결과는 합격.",
+            "chance": 45,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "경제력": 3,
+              "사회성": 1,
+              "지력": -1
+            },
+            "addFlags": [
+              "promoted"
+            ],
+            "chanceWeights": {
+              "사회성": 4
+            }
+          },
+          {
+            "outcomeId": "b_rumor",
+            "text": "'인맥으로 올라간다'는 소문이 결과보다 먼저 돌았다. 결과는 보류. 그래도 동호회 사람들이 위로 회식을 열어 줬다.",
+            "chance": 55,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "사회성": 1,
+              "경제력": -1,
+              "행복": -1
+            },
+            "addFlags": [
+              "promotion_missed"
+            ],
+            "chanceWeights": {
+              "사회성": -3
+            }
+          }
+        ]
+      },
+      {
+        "choiceId": "C",
+        "label": "심사장에서 회사 노래를 개사해 부른다.",
+        "statDelta": {
+          "경제력": 2,
+          "사회성": 3,
+          "지력": -1
+        },
+        "resultText": "심사위원장이 박수를 쳤다. 승진은 물론이고, 다음 달 창립 기념식 사회까지 맡게 됐다.",
+        "addFlags": [
+          "promoted",
+          "absurd_event_witness"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "c_legend",
+            "text": "심사위원장이 박수를 쳤다. 승진은 물론이고, 다음 달 창립 기념식 사회까지 맡게 됐다.",
+            "chance": 30,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "경제력": 2,
+              "사회성": 3,
+              "지력": -1
+            },
+            "addFlags": [
+              "promoted",
+              "absurd_event_witness"
+            ],
+            "chanceWeights": {
+              "운": 3
+            }
+          },
+          {
+            "outcomeId": "c_silence",
+            "text": "노래가 끝나자 정적이 흘렀다. 결과는 낙방. 그날 영상은 사내 메신저에서 3년째 돌고 있다.",
+            "chance": 70,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "사회성": 1,
+              "행복": -1,
+              "경제력": -1
+            },
+            "addFlags": [
+              "promotion_missed",
+              "absurd_event_witness"
+            ],
+            "chanceWeights": {
+              "운": -2
+            }
+          }
+        ]
+      }
+    ],
+    "priority": 0,
+    "kind": "INCIDENT",
+    "periods": [
+      "YOUNG_ADULT",
+      "MIDDLE"
+    ],
+    "weight": 2,
+    "view": "FIRST_PERSON",
+    "momentImageId": "img_moment_promotion_review_001"
+  },
+  {
+    "eventId": "adult_070",
+    "stage": "ADULT",
+    "type": "SPECIAL",
+    "isFallback": false,
+    "isMilestone": false,
+    "title": "구조조정 통보",
+    "text": "월요일 아침, 사원증을 찍었는데 출입문이 열리지 않는다. 메일함에는 한 통이 와 있다. '구조조정 대상자 면담 안내'.",
+    "imageId": "img_pov_layoff_door_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [],
+      "blockedFlags": [
+        "laid_off",
+        "early_retire"
+      ]
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "위로금을 받고 새 출발을 준비한다.",
+        "statDelta": {
+          "경제력": -3,
+          "지력": 2,
+          "행복": 1
+        },
+        "resultText": "위로금으로 석 달을 버티며 자격증을 하나 땄다. 넉 달째, 새 회사에서 연락이 왔다. 연봉은 조금 줄었지만 퇴근 시간은 지켜진다.",
+        "addFlags": [
+          "laid_off",
+          "comeback"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "a_restart",
+            "text": "위로금으로 석 달을 버티며 자격증을 하나 땄다. 넉 달째, 새 회사에서 연락이 왔다. 연봉은 조금 줄었지만 퇴근 시간은 지켜진다.",
+            "chance": 50,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "경제력": -3,
+              "지력": 2,
+              "행복": 1
+            },
+            "addFlags": [
+              "laid_off",
+              "comeback"
+            ],
+            "chanceWeights": {
+              "지력": 2
+            }
+          },
+          {
+            "outcomeId": "a_better",
+            "text": "쉬는 동안 정리한 포트폴리오를 보고 다른 회사에서 먼저 연락이 왔다. 연봉이 올랐다. 전 회사 단톡방은 조용히 나왔다.",
+            "chance": 30,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "경제력": 2,
+              "행복": 2
+            },
+            "addFlags": [
+              "laid_off",
+              "comeback"
+            ],
+            "chanceWeights": {
+              "운": 2,
+              "지력": 1
+            }
+          },
+          {
+            "outcomeId": "a_long",
+            "text": "이력서를 쉰 군데 넣었다. 답장은 두 통이었다. 대신 요리 실력이 늘어서 동네 반찬 가게에서 같이 일하자는 제안을 받았다.",
+            "chance": 20,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "경제력": -5,
+              "행복": -2,
+              "사회성": 1
+            },
+            "addFlags": [
+              "laid_off"
+            ],
+            "chanceWeights": {
+              "지력": -3
+            }
+          }
+        ]
+      },
+      {
+        "choiceId": "B",
+        "label": "남게 해 달라고 끝까지 버틴다.",
+        "statDelta": {
+          "경제력": -1,
+          "건강": -3,
+          "사회성": 1
+        },
+        "resultText": "남았다. 대신 떠난 세 사람의 일이 내 책상으로 왔다. 야근이 일상이 됐다.",
+        "addFlags": [
+          "overwork"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "b_stayed",
+            "text": "남았다. 대신 떠난 세 사람의 일이 내 책상으로 왔다. 야근이 일상이 됐다.",
+            "chance": 55,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "경제력": -1,
+              "건강": -3,
+              "사회성": 1
+            },
+            "addFlags": [
+              "overwork"
+            ],
+            "chanceWeights": {
+              "사회성": 2
+            }
+          },
+          {
+            "outcomeId": "b_again",
+            "text": "석 달 뒤 다시 면담실에 불려 갔다. 이번엔 위로금이 절반이었다.",
+            "chance": 45,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "경제력": -5,
+              "행복": -3
+            },
+            "addFlags": [
+              "laid_off"
+            ],
+            "chanceWeights": {
+              "사회성": -2
+            }
+          }
+        ]
+      },
+      {
+        "choiceId": "C",
+        "label": "이참에 꿈꾸던 가게를 차린다.",
+        "statDelta": {
+          "경제력": -2,
+          "행복": 3,
+          "사회성": 1
+        },
+        "resultText": "위로금에 적금까지 털어 작은 가게를 열었다. 첫 달은 적자, 셋째 달엔 단골이 생겼다. 사장님 소리는 아직도 어색하다.",
+        "addFlags": [
+          "laid_off",
+          "risk_taker",
+          "own_shop",
+          "comeback"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "c_shop",
+            "text": "위로금에 적금까지 털어 작은 가게를 열었다. 첫 달은 적자, 셋째 달엔 단골이 생겼다. 사장님 소리는 아직도 어색하다.",
+            "chance": 40,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "경제력": -2,
+              "행복": 3,
+              "사회성": 1
+            },
+            "addFlags": [
+              "laid_off",
+              "risk_taker",
+              "own_shop",
+              "comeback"
+            ],
+            "chanceWeights": {
+              "운": 2,
+              "사회성": 1
+            }
+          },
+          {
+            "outcomeId": "c_closed",
+            "text": "개업 첫날 손님은 엄마와 이모 두 분이었다. 여섯 달 뒤 가게를 접었다. 장사를 배운 수업료라고 생각하기로 했다.",
+            "chance": 60,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "경제력": -6,
+              "지력": 2,
+              "행복": -1
+            },
+            "addFlags": [
+              "laid_off",
+              "risk_taker"
+            ],
+            "chanceWeights": {
+              "운": -2
+            }
+          }
+        ]
+      }
+    ],
+    "priority": 0,
+    "kind": "BIG_INCIDENT",
+    "periods": [
+      "YOUNG_ADULT",
+      "MIDDLE"
+    ],
+    "weight": 1,
+    "view": "FIRST_PERSON",
+    "momentImageId": "img_moment_layoff_door_001"
+  },
+  {
+    "eventId": "adult_071",
+    "stage": "ADULT",
+    "type": "NORMAL",
+    "isFallback": false,
+    "isMilestone": true,
+    "title": "입영 통지서",
+    "text": "우편함에 병무청 봉투가 꽂혀 있다. 입영일까지 두 달. 엄마: \"{nameCall}, 머리는 동네 미용실에서 깎자.\" 아빠는 벌써 군대 이야기를 시작했다.",
+    "imageId": "img_pov_enlistment_letter_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [
+        "military_service_required"
+      ],
+      "blockedFlags": [
+        "military_done"
+      ]
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "날짜에 맞춰 입대한다.",
+        "statDelta": {
+          "건강": 2,
+          "운동능력": 3,
+          "사회성": 2,
+          "경제력": -2
+        },
+        "resultText": "훈련소 첫날 밤, 옆자리 동기가 코를 심하게 골았다. 1년 6개월 뒤 그 동기는 평생 친구가 됐다. 전역하는 날 거울 속 내가 조금 낯설었다.",
+        "addFlags": [
+          "military_done",
+          "responsibility"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "a_served",
+            "text": "훈련소 첫날 밤, 옆자리 동기가 코를 심하게 골았다. 1년 6개월 뒤 그 동기는 평생 친구가 됐다. 전역하는 날 거울 속 내가 조금 낯설었다.",
+            "chance": 60,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "건강": 2,
+              "운동능력": 3,
+              "사회성": 2,
+              "경제력": -2
+            },
+            "addFlags": [
+              "military_done",
+              "responsibility"
+            ],
+            "chanceWeights": {
+              "운동능력": 1,
+              "건강": 1
+            }
+          },
+          {
+            "outcomeId": "a_office",
+            "text": "행군 첫날 발목을 접질렸다. 남은 복무는 행정반에서 보냈다. 전역할 때 타자 속도가 두 배가 돼 있었다.",
+            "chance": 30,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "지력": 2,
+              "사회성": 1,
+              "건강": -1,
+              "경제력": -2
+            },
+            "addFlags": [
+              "military_done"
+            ],
+            "chanceWeights": {
+              "운동능력": -1
+            }
+          },
+          {
+            "outcomeId": "a_cook",
+            "text": "취사병으로 뽑혔다. 매일 500인분을 볶았다. 전역하고 처음 올린 요리 영상이 생각보다 잘됐다.",
+            "chance": 10,
+            "primary": false,
+            "hidden": true,
+            "death": false,
+            "statDelta": {
+              "행복": 2,
+              "경제력": 1,
+              "운동능력": 1,
+              "건강": -1
+            },
+            "addFlags": [
+              "military_done",
+              "cooking_skill"
+            ],
+            "chanceWeights": {
+              "운": 1
+            }
+          }
+        ]
+      },
+      {
+        "choiceId": "B",
+        "label": "하던 공부와 일을 마무리하고 1년 뒤에 간다.",
+        "statDelta": {
+          "지력": 2,
+          "사회성": 1,
+          "경제력": -2
+        },
+        "resultText": "1년을 미루고 하던 일을 마무리했다. 대신 훈련소에서 내가 제일 나이가 많았다. 별명은 '어르신'이었다.",
+        "addFlags": [
+          "military_done"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "b_later",
+            "text": "1년을 미루고 하던 일을 마무리했다. 대신 훈련소에서 내가 제일 나이가 많았다. 별명은 '어르신'이었다.",
+            "chance": 70,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "지력": 2,
+              "사회성": 1,
+              "경제력": -2
+            },
+            "addFlags": [
+              "military_done"
+            ]
+          },
+          {
+            "outcomeId": "b_alternative",
+            "text": "미룬 1년 동안 자격증을 땄고 산업기능요원으로 뽑혔다. 회사에 다니면서 복무를 마쳤다. 출퇴근하는 군복무였다.",
+            "chance": 30,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "지력": 2,
+              "경제력": 2,
+              "운동능력": -1
+            },
+            "addFlags": [
+              "military_done",
+              "alternative_service"
+            ],
+            "chanceWeights": {
+              "지력": 2
+            }
+          }
+        ]
+      },
+      {
+        "choiceId": "C",
+        "label": "입대 전까지 송별회를 일곱 번 한다.",
+        "statDelta": {
+          "사회성": 3,
+          "행복": 1,
+          "건강": -2,
+          "경제력": -1
+        },
+        "resultText": "송별회가 일곱 번 열렸고, 일곱 번 다 울었다. 정작 입대 날엔 아무도 안 나왔다. 다들 늦잠이었다.",
+        "addFlags": [
+          "military_done"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "c_farewell",
+            "text": "송별회가 일곱 번 열렸고, 일곱 번 다 울었다. 정작 입대 날엔 아무도 안 나왔다. 다들 늦잠이었다.",
+            "chance": 75,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "사회성": 3,
+              "행복": 1,
+              "건강": -2,
+              "경제력": -1
+            },
+            "addFlags": [
+              "military_done"
+            ],
+            "chanceWeights": {
+              "사회성": 1
+            }
+          },
+          {
+            "outcomeId": "c_recheck",
+            "text": "송별회 다음 날 신체검사 재검 통지가 왔다. 결과는 사회복무요원. 동네 주민센터로 출근하게 되면서 송별회 일곱 번은 없던 일이 됐다.",
+            "chance": 25,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "사회성": 1,
+              "건강": -1,
+              "경제력": 1
+            },
+            "addFlags": [
+              "military_done",
+              "social_service"
+            ],
+            "chanceWeights": {
+              "건강": -2
+            }
+          }
+        ]
+      }
+    ],
+    "priority": 0,
+    "kind": "MILESTONE",
+    "periods": [
+      "YOUNG_ADULT"
+    ],
+    "yearInPeriod": 2,
+    "weight": 1,
+    "view": "FIRST_PERSON",
+    "momentImageId": "img_moment_enlistment_letter_001"
   },
   {
     "eventId": "special_001",
@@ -18846,7 +20476,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "BIG_INCIDENT",
+    "periods": [
+      "INFANT"
+    ]
   },
   {
     "eventId": "special_002",
@@ -18956,7 +20589,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "BIG_INCIDENT",
+    "periods": [
+      "INFANT"
+    ]
   },
   {
     "eventId": "special_003",
@@ -19066,7 +20702,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "BIG_INCIDENT",
+    "periods": [
+      "CHILD"
+    ]
   },
   {
     "eventId": "special_004",
@@ -19172,7 +20811,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "BIG_INCIDENT",
+    "periods": [
+      "CHILD"
+    ]
   },
   {
     "eventId": "special_005",
@@ -19282,7 +20924,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "BIG_INCIDENT",
+    "periods": [
+      "TEEN"
+    ]
   },
   {
     "eventId": "special_006",
@@ -19386,7 +21031,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "BIG_INCIDENT",
+    "periods": [
+      "TEEN"
+    ]
   },
   {
     "eventId": "special_007",
@@ -19494,7 +21142,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "BIG_INCIDENT",
+    "periods": [
+      "YOUNG_ADULT"
+    ]
   },
   {
     "eventId": "special_008",
@@ -19602,7 +21253,11 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "BIG_INCIDENT",
+    "periods": [
+      "YOUNG_ADULT",
+      "MIDDLE"
+    ]
   },
   {
     "eventId": "special_009",
@@ -19706,7 +21361,11 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "BIG_INCIDENT",
+    "periods": [
+      "YOUNG_ADULT",
+      "MIDDLE"
+    ]
   },
   {
     "eventId": "special_010",
@@ -19816,7 +21475,11 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "BIG_INCIDENT",
+    "periods": [
+      "YOUNG_ADULT",
+      "MIDDLE"
+    ]
   },
   {
     "eventId": "special_011",
@@ -19924,7 +21587,11 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "BIG_INCIDENT",
+    "periods": [
+      "YOUNG_ADULT",
+      "MIDDLE"
+    ]
   },
   {
     "eventId": "special_012",
@@ -20032,7 +21699,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "BIG_INCIDENT",
+    "periods": [
+      "INFANT"
+    ]
   },
   {
     "eventId": "special_013",
@@ -20138,7 +21808,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "BIG_INCIDENT",
+    "periods": [
+      "INFANT"
+    ]
   },
   {
     "eventId": "special_014",
@@ -20244,7 +21917,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "BIG_INCIDENT",
+    "periods": [
+      "CHILD"
+    ]
   },
   {
     "eventId": "special_015",
@@ -20352,7 +22028,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "BIG_INCIDENT",
+    "periods": [
+      "CHILD"
+    ]
   },
   {
     "eventId": "special_016",
@@ -20462,7 +22141,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "BIG_INCIDENT",
+    "periods": [
+      "TEEN"
+    ]
   },
   {
     "eventId": "special_017",
@@ -20570,7 +22252,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "BIG_INCIDENT",
+    "periods": [
+      "TEEN"
+    ]
   },
   {
     "eventId": "special_018",
@@ -20680,7 +22365,11 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "BIG_INCIDENT",
+    "periods": [
+      "YOUNG_ADULT",
+      "MIDDLE"
+    ]
   },
   {
     "eventId": "special_019",
@@ -20786,6 +22475,10 @@
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT"
+    "kind": "BIG_INCIDENT",
+    "periods": [
+      "YOUNG_ADULT",
+      "MIDDLE"
+    ]
   }
 ]
