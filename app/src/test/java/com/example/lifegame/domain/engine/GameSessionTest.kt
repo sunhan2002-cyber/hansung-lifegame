@@ -1,11 +1,14 @@
 package com.example.lifegame.domain.engine
 
 import com.example.lifegame.domain.model.Choice
+import com.example.lifegame.domain.model.ChoiceHistory
 import com.example.lifegame.domain.model.Ending
 import com.example.lifegame.domain.model.GameEvent
+import com.example.lifegame.domain.model.GameProgress
 import com.example.lifegame.domain.model.GameScreenState
 import com.example.lifegame.domain.model.LifeStage
 import com.example.lifegame.domain.model.StatDelta
+import com.example.lifegame.domain.model.Stats
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertFalse
 import org.junit.Assert.assertNull
@@ -65,6 +68,70 @@ class GameSessionTest {
         assertTrue(session.choose(choice)!!.wasApplied)
         assertNull(session.choose(choice))
         assertEquals(57, session.state.progress!!.stats.health)
+    }
+
+    @Test
+    fun restore_reopensSavedEventScreen() {
+        val infant = event(LifeStage.INFANT)
+        val session = session(events = listOf(infant))
+        val progress = GameProgress(
+            runId = "saved-run",
+            currentEventOccurrenceId = "saved-run:${infant.eventId}:1",
+            stage = LifeStage.INFANT,
+            stageEventCount = 3,
+        )
+
+        val restored = session.restore(progress)
+
+        assertEquals(progress, restored.progress)
+        assertEquals(infant.eventId, restored.currentEvent!!.eventId)
+        assertNull(restored.lastResult)
+    }
+
+    @Test
+    fun restore_rebuildsSavedChoiceResult() {
+        val infant = event(LifeStage.INFANT, healthDelta = 7)
+        val before = Stats()
+        val after = before.copy(health = 57)
+        val progress = GameProgress(
+            runId = "saved-run",
+            currentEventOccurrenceId = "saved-run:${infant.eventId}:1",
+            screenState = GameScreenState.CHOICE_RESULT,
+            stats = after,
+            completedEventIds = setOf(infant.eventId),
+            handledOccurrenceIds = setOf("saved-run:${infant.eventId}:1"),
+            choiceHistory = listOf(
+                ChoiceHistory(
+                    eventOccurrenceId = "saved-run:${infant.eventId}:1",
+                    eventId = infant.eventId,
+                    choiceId = "A",
+                    beforeStats = before,
+                    afterStats = after,
+                    resultText = "선택이 반영되었다.",
+                ),
+            ),
+        )
+
+        val restored = session(events = listOf(infant)).restore(progress)
+
+        assertEquals("A", restored.selectedChoice!!.choiceId)
+        assertEquals(7, restored.lastResult!!.appliedDelta.health)
+        assertEquals(after, restored.lastResult!!.afterStats)
+    }
+
+    @Test
+    fun restore_resolvesEndingForSavedEndingScreen() {
+        val progress = GameProgress(
+            runId = "saved-run",
+            currentEventOccurrenceId = "saved-run:adult_event:1",
+            stage = LifeStage.ADULT,
+            screenState = GameScreenState.ENDING,
+        )
+
+        val restored = session(events = listOf(event(LifeStage.ADULT))).restore(progress)
+
+        assertEquals("ending_default", restored.ending!!.endingId)
+        assertNull(restored.currentEvent)
     }
 
     private fun session(events: List<GameEvent>) = GameSession(

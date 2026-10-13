@@ -9,6 +9,9 @@ import com.example.lifegame.domain.model.EventType
 import com.example.lifegame.domain.model.GameEvent
 import com.example.lifegame.domain.model.ImageAsset
 import com.example.lifegame.domain.model.LifeStage
+import com.example.lifegame.domain.model.DecisionEvent
+import com.example.lifegame.domain.model.Focus
+import com.example.lifegame.domain.model.PeriodDefinition
 import com.example.lifegame.domain.model.StatConditions
 import com.example.lifegame.domain.model.StatDelta
 import org.json.JSONArray
@@ -17,6 +20,24 @@ import org.json.JSONObject
 class ContentRepository(
     private val context: Context,
 ) {
+    fun loadPeriodDefinitions(): List<PeriodDefinition> = runCatching {
+        V4ContentParser.parsePeriods(readAsset(PERIODS_FILE))
+    }.getOrElse { emptyList() }
+
+    fun loadFocuses(): List<Focus> = runCatching {
+        V4ContentParser.parseFocuses(readAsset(FOCUSES_FILE))
+    }.getOrElse { emptyList() }
+
+    fun loadDecisionEvents(): List<DecisionEvent> = runCatching {
+        V4ContentParser.parseDecisionEvents(readAsset(EVENTS_FILE))
+    }.getOrElse { emptyList() }
+
+    fun loadV4Content(): V4Content = V4Content(
+        periods = loadPeriodDefinitions(),
+        focuses = loadFocuses(),
+        decisions = loadDecisionEvents(),
+    )
+
     fun loadEvents(): List<GameEvent> = runCatching {
         val array = JSONArray(readAsset(EVENTS_FILE))
         List(array.length()) { index -> array.getJSONObject(index).toGameEvent() }
@@ -132,6 +153,8 @@ class ContentRepository(
     }
 
     private companion object {
+        const val PERIODS_FILE = "periods.sample.json"
+        const val FOCUSES_FILE = "focuses.sample.json"
         const val EVENTS_FILE = "events.sample.json"
         const val ENDINGS_FILE = "endings.sample.json"
         const val IMAGE_IDS_FILE = "image_ids.sample.json"

@@ -3,10 +3,18 @@ package com.example.lifegame.domain.engine
 import com.example.lifegame.domain.model.Choice
 import com.example.lifegame.domain.model.ChoiceResult
 import com.example.lifegame.domain.model.Ending
+import com.example.lifegame.domain.model.DecisionEvent
+import com.example.lifegame.domain.model.Focus
 import com.example.lifegame.domain.model.GameEvent
 import com.example.lifegame.domain.model.GameProgress
 import com.example.lifegame.domain.model.GameScreenState
 import com.example.lifegame.domain.model.LifeStage
+import com.example.lifegame.domain.model.OutcomeResolution
+import com.example.lifegame.domain.model.PeriodDefinition
+import com.example.lifegame.domain.model.PeriodRunState
+import com.example.lifegame.domain.model.StatDelta
+import com.example.lifegame.domain.model.Stats
+import com.example.lifegame.domain.model.TurnStep
 
 data class GameSessionState(
     val progress: GameProgress? = null,
@@ -36,6 +44,27 @@ class GameSession(
         val runId = runIdFactory()
         val initial = engine.createInitialProgress(runId)
         state = moveToNextEvent(initial)
+        return state
+    }
+
+    fun restore(progress: GameProgress): GameSessionState {
+        require(events.isNotEmpty()) { "At least one event is required" }
+        require(endings.any { it.isDefault }) { "At least one default ending is required" }
+
+        state = when (progress.screenState) {
+            GameScreenState.EVENT -> GameSessionState(
+                progress = progress,
+                currentEvent = requireNotNull(progress.findCurrentEvent()) {
+                    "Saved event is not available in the current content"
+                },
+            )
+
+            GameScreenState.CHOICE_RESULT -> restoreChoiceResult(progress)
+            GameScreenState.ENDING -> GameSessionState(
+                progress = progress,
+                ending = engine.checkEnding(progress, endings),
+            )
+        }
         return state
     }
 
@@ -92,5 +121,117 @@ class GameSession(
             progress = advanced.copy(screenState = GameScreenState.ENDING),
             ending = ending,
         )
+    }
+
+    private fun restoreChoiceResult(progress: GameProgress): GameSessionState {
+        val history = requireNotNull(progress.choiceHistory.lastOrNull()) {
+            "Choice result save has no choice history"
+        }
+        val event = requireNotNull(events.firstOrNull { it.eventId == history.eventId }) {
+            "Saved event is not available in the current content"
+        }
+        val choice = requireNotNull(event.choices.firstOrNull { it.choiceId == history.choiceId }) {
+            "Saved choice is not available in the current content"
+        }
+        val result = ChoiceResult(
+            progress = progress,
+            beforeStats = history.beforeStats,
+            afterStats = history.afterStats,
+            appliedDelta = history.beforeStats.deltaTo(history.afterStats),
+            resultText = history.resultText,
+            wasApplied = true,
+        )
+        return GameSessionState(
+            progress = progress,
+            currentEvent = event,
+            selectedChoice = choice,
+            lastResult = result,
+        )
+    }
+
+    private fun GameProgress.findCurrentEvent(): GameEvent? = events.firstOrNull { event ->
+        currentEventOccurrenceId.startsWith("$runId:${event.eventId}:")
+    }
+
+    private fun Stats.deltaTo(after: Stats): StatDelta = StatDelta(
+        health = after.health - health,
+        fitness = after.fitness - fitness,
+        intelligence = after.intelligence - intelligence,
+        social = after.social - social,
+        wealth = after.wealth - wealth,
+        happiness = after.happiness - happiness,
+        luck = after.luck - luck,
+    )
+}
+
+/**
+ * v4 시기 단위 자동 진행을 화면과 연결하기 위한 순수 Kotlin 세션.
+ * 기존 사건 나열형 [GameSession]은 이전 화면 호환을 위해 그대로 유지한다.
+ */
+class PeriodGameSession(
+    private val periods: List<PeriodDefinition>,
+    private val focuses: List<Focus>,
+    private val decisions: List<DecisionEvent>,
+    private val engine: GameEngine = GameEngine(),
+    private val runIdFactory: () -> String = { "run-${System.currentTimeMillis()}" },
+    private val runSeedFactory: () -> Long = { System.currentTimeMillis() },
+) {
+    var state: PeriodRunState? = null
+        private set
+
+    var lastStep: TurnStep? = null
+        private set
+
+    fun start(): TurnStep {
+        val initial = engine.createPeriodRun(
+            runId = runIdFactory(),
+            runSeed = runSeedFactory(),
+            periods = periods,
+        )
+        val step = engine.advancePeriodYear(initial, periods, focuses, decisions)
+        state = step.state
+        lastStep = step
+        return step
+    }
+
+    fun restore(savedState: PeriodRunState): TurnStep {
+        val step = engine.advancePeriodYear(savedState, periods, focuses, decisions)
+        state = step.state
+        lastStep = step
+        return step
+    }
+
+    fun selectFocus(focusId: String): TurnStep {
+        val current = requireNotNull(state) { "Session has not started" }
+        val focus = requireNotNull(focuses.firstOrNull { it.focusId == focusId }) {
+            "Focus is not available in the current content"
+        }
+        val selected = engine.selectFocus(current, focus)
+        state = selected
+        return engine.advancePeriodYear(selected, periods, focuses, decisions)
+            .also {
+                state = it.state
+                lastStep = it
+            }
+    }
+
+    fun advance(): TurnStep {
+        val current = requireNotNull(state) { "Session has not started" }
+        val step = engine.advancePeriodYear(current, periods, focuses, decisions)
+        state = step.state
+        lastStep = step
+        return step
+    }
+
+    fun choose(choiceId: String): OutcomeResolution {
+        val current = requireNotNull(state) { "Session has not started" }
+        val eventId = requireNotNull(current.pendingDecisionId) { "There is no pending decision" }
+        val event = requireNotNull(decisions.firstOrNull { it.eventId == eventId }) {
+            "Pending decision is not available in the current content"
+        }
+        val resolution = engine.resolvePeriodDecision(current, event, choiceId, periods)
+        state = resolution.step.state
+        lastStep = resolution.step
+        return resolution
     }
 }
