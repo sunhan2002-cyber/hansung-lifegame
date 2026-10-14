@@ -778,12 +778,24 @@ class GameEngine(
     fun resolveEndingDecision(
         progress: GameProgress,
         endings: List<Ending>,
+    ): EndingDecision = resolveEndingDecision(progress.stats, progress.flags, endings)
+
+    /** v4 시기 진행 상태를 기존 결말 우선순위 규칙에 그대로 연결한다. */
+    fun resolveEndingDecision(
+        state: PeriodRunState,
+        endings: List<Ending>,
+    ): EndingDecision = resolveEndingDecision(state.stats, state.flags, endings)
+
+    private fun resolveEndingDecision(
+        stats: Stats,
+        flags: Set<String>,
+        endings: List<Ending>,
     ): EndingDecision {
         val matching = endings
             .filterNot { it.isDefault }
-            .filter { it.conditions.stats.matches(progress.stats) }
-            .filter { progress.flags.containsAll(it.conditions.requiredFlags) }
-            .filterNot { ending -> progress.flags.any(ending.conditions.blockedFlags::contains) }
+            .filter { it.conditions.stats.matches(stats) }
+            .filter { flags.containsAll(it.conditions.requiredFlags) }
+            .filterNot { ending -> flags.any(ending.conditions.blockedFlags::contains) }
             .sortedWith(
                 compareByDescending<Ending> { it.priority }
                     .thenBy { it.endingId },
@@ -810,6 +822,9 @@ class GameEngine(
 
     fun resolveEnding(progress: GameProgress, endings: List<Ending>): Ending =
         resolveEndingDecision(progress, endings).selected
+
+    fun resolveEnding(state: PeriodRunState, endings: List<Ending>): Ending =
+        resolveEndingDecision(state, endings).selected
 
     /**
      * Notion 카드의 초기 메서드명과 호환되는 진입점이다.

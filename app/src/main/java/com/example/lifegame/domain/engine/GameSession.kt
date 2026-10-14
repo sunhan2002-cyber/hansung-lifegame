@@ -173,6 +173,7 @@ class PeriodGameSession(
     private val periods: List<PeriodDefinition>,
     private val focuses: List<Focus>,
     private val decisions: List<DecisionEvent>,
+    private val endings: List<Ending> = emptyList(),
     private val engine: GameEngine = GameEngine(),
     private val runIdFactory: () -> String = { "run-${System.currentTimeMillis()}" },
     private val runSeedFactory: () -> Long = { System.currentTimeMillis() },
@@ -183,23 +184,24 @@ class PeriodGameSession(
     var lastStep: TurnStep? = null
         private set
 
+    /** v4 진행이 끝났을 때 기존 결말 우선순위 규칙으로 선택된 단 하나의 결말. */
+    var ending: Ending? = null
+        private set
+
     fun start(): TurnStep {
+        ending = null
         val initial = engine.createPeriodRun(
             runId = runIdFactory(),
             runSeed = runSeedFactory(),
             periods = periods,
         )
         val step = engine.advancePeriodYear(initial, periods, focuses, decisions)
-        state = step.state
-        lastStep = step
-        return step
+        return record(step)
     }
 
     fun restore(savedState: PeriodRunState): TurnStep {
         val step = engine.advancePeriodYear(savedState, periods, focuses, decisions)
-        state = step.state
-        lastStep = step
-        return step
+        return record(step)
     }
 
     /** 이미 한 해를 처리한 상태를 중복 처리하지 않고 화면에 복원한다. */
@@ -223,18 +225,13 @@ class PeriodGameSession(
         val selected = engine.selectFocus(current, focus)
         state = selected
         return engine.advancePeriodYear(selected, periods, focuses, decisions)
-            .also {
-                state = it.state
-                lastStep = it
-            }
+            .let(::record)
     }
 
     fun advance(): TurnStep {
         val current = requireNotNull(state) { "Session has not started" }
         val step = engine.advancePeriodYear(current, periods, focuses, decisions)
-        state = step.state
-        lastStep = step
-        return step
+        return record(step)
     }
 
     fun choose(choiceId: String): OutcomeResolution {
@@ -244,8 +241,18 @@ class PeriodGameSession(
             "Pending decision is not available in the current content"
         }
         val resolution = engine.resolvePeriodDecision(current, event, choiceId, periods)
-        state = resolution.step.state
-        lastStep = resolution.step
+        record(resolution.step)
         return resolution
+    }
+
+    private fun record(step: TurnStep): TurnStep {
+        state = step.state
+        lastStep = step
+        ending = if (step.state.isEnding && endings.isNotEmpty()) {
+            engine.resolveEnding(step.state, endings)
+        } else {
+            null
+        }
+        return step
     }
 }
