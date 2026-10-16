@@ -36,7 +36,7 @@
 | `outcomes` | `choices[].outcomes[]` | `chance`, `chanceWeights`, `primary`, `hidden`, `death` |
 | `addFlags` / `removeFlags` | `outcomes[].addFlags` / `outcomes[].removeFlags` | `removeFlags`는 엔진 반영 필요 (8장) |
 | 후속 사건 ID | `followUps` | 이 사건 다음에 이어질 수 있는 경로 사건 |
-| 경로 주석 | `lifePath`, `pathRole` | 예: `INTELLIGENCE`, `전환점` |
+| 경로 주석 | 경로 사건: `lifePath`, `pathRole` / 경로 밖 신규 사건 11개(adult_072~082): `relatedPaths`, `pathRole` | 예: `INTELLIGENCE`, `전환점` / `[SOCIAL, HAPPINESS]`, `연애 입구` |
 | 결과로 추가되는 사실 | 사실 플래그 + `life_facts.sample.json` | 5장 |
 
 ## 3. 설계 규칙

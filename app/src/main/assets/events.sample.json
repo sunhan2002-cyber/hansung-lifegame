@@ -21428,7 +21428,19 @@
     ],
     "yearInPeriod": 1,
     "weight": 1,
-    "view": "FIRST_PERSON"
+    "view": "FIRST_PERSON",
+    "relatedPaths": [
+      "WEALTH",
+      "INTELLIGENCE"
+    ],
+    "pathRole": "직업 입구(공통 전환점) — 직장 없이 중년기에 들어선 사람",
+    "followUps": [
+      "adult_079",
+      "adult_080",
+      "adult_081",
+      "adult_082",
+      "adult_069"
+    ]
   },
   {
     "eventId": "adult_073",
@@ -21604,7 +21616,17 @@
     ],
     "yearInPeriod": 4,
     "weight": 1,
-    "view": "FIRST_PERSON"
+    "view": "FIRST_PERSON",
+    "relatedPaths": [
+      "SOCIAL",
+      "HAPPINESS"
+    ],
+    "pathRole": "연애·결혼 갈림길 — 연인 없는 사람의 4년 차",
+    "followUps": [
+      "adult_039",
+      "path_soc_05",
+      "path_soc_07"
+    ]
   },
   {
     "eventId": "adult_074",
@@ -21767,7 +21789,15 @@
       "YOUNG_ADULT"
     ],
     "weight": 15,
-    "view": "FIRST_PERSON"
+    "view": "FIRST_PERSON",
+    "relatedPaths": [
+      "SOCIAL",
+      "HAPPINESS"
+    ],
+    "pathRole": "연애 입구 — 결혼 이야기 전 연인",
+    "followUps": [
+      "adult_032"
+    ]
   },
   {
     "eventId": "adult_075",
@@ -21934,7 +21964,15 @@
       "YOUNG_ADULT"
     ],
     "weight": 15,
-    "view": "FIRST_PERSON"
+    "view": "FIRST_PERSON",
+    "relatedPaths": [
+      "SOCIAL",
+      "HAPPINESS"
+    ],
+    "pathRole": "연애 입구 — 대학 진학자",
+    "followUps": [
+      "adult_032"
+    ]
   },
   {
     "eventId": "adult_076",
@@ -22103,7 +22141,15 @@
       "YOUNG_ADULT"
     ],
     "weight": 15,
-    "view": "FIRST_PERSON"
+    "view": "FIRST_PERSON",
+    "relatedPaths": [
+      "SOCIAL",
+      "HAPPINESS"
+    ],
+    "pathRole": "연애 입구 — 결혼 이야기 전 연인",
+    "followUps": [
+      "adult_032"
+    ]
   },
   {
     "eventId": "adult_077",
@@ -22271,7 +22317,15 @@
       "YOUNG_ADULT"
     ],
     "weight": 15,
-    "view": "FIRST_PERSON"
+    "view": "FIRST_PERSON",
+    "relatedPaths": [
+      "SOCIAL",
+      "HAPPINESS"
+    ],
+    "pathRole": "연애 입구 — 청소년기 첫사랑의 후속",
+    "followUps": [
+      "adult_032"
+    ]
   },
   {
     "eventId": "adult_078",
@@ -22443,7 +22497,15 @@
       "YOUNG_ADULT"
     ],
     "weight": 15,
-    "view": "FIRST_PERSON"
+    "view": "FIRST_PERSON",
+    "relatedPaths": [
+      "SOCIAL",
+      "HEALTH"
+    ],
+    "pathRole": "연애 입구 — 운동 습관(gym_habit)",
+    "followUps": [
+      "adult_032"
+    ]
   },
   {
     "eventId": "adult_079",
@@ -22629,7 +22691,15 @@
       "MIDDLE"
     ],
     "weight": 10,
-    "view": "FIRST_PERSON"
+    "view": "FIRST_PERSON",
+    "relatedPaths": [
+      "WEALTH",
+      "SOCIAL"
+    ],
+    "pathRole": "늦은 취업 신입",
+    "followUps": [
+      "adult_069"
+    ]
   },
   {
     "eventId": "adult_080",
@@ -22795,7 +22865,15 @@
       "MIDDLE"
     ],
     "weight": 10,
-    "view": "FIRST_PERSON"
+    "view": "FIRST_PERSON",
+    "relatedPaths": [
+      "WEALTH"
+    ],
+    "pathRole": "늦은 취업 신입 — 첫 수입의 쓰임",
+    "followUps": [
+      "adult_069",
+      "path_wea_05"
+    ]
   },
   {
     "eventId": "adult_081",
@@ -23000,7 +23078,16 @@
       "MIDDLE"
     ],
     "weight": 10,
-    "view": "FIRST_PERSON"
+    "view": "FIRST_PERSON",
+    "relatedPaths": [
+      "WEALTH",
+      "HAPPINESS"
+    ],
+    "pathRole": "늦은 취업 신입",
+    "followUps": [
+      "adult_069",
+      "adult_038"
+    ]
   },
   {
     "eventId": "adult_082",
@@ -23208,7 +23295,15 @@
       "MIDDLE"
     ],
     "weight": 10,
-    "view": "FIRST_PERSON"
+    "view": "FIRST_PERSON",
+    "relatedPaths": [
+      "WEALTH",
+      "SOCIAL"
+    ],
+    "pathRole": "늦은 취업 신입 — 서른의 첫 명함 후속",
+    "followUps": [
+      "adult_069"
+    ]
   },
   {
     "eventId": "special_001",
