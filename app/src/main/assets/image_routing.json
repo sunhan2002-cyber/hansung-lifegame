@@ -1,0 +1,717 @@
+{
+  "schemaVersion": 1,
+  "description": "시나리오와 독립적인 이미지 경로 및 표현용 초점 매핑. 게임 규칙이나 스탯 판정에 사용하지 않음.",
+  "requiredImageIds": [
+    "img_portrait_default_infant_001",
+    "img_portrait_default_child_001",
+    "img_portrait_default_teen_001",
+    "img_portrait_default_young_adult_001",
+    "img_portrait_default_middle_001",
+    "img_portrait_default_old_age_001",
+    "img_stat_health_001",
+    "img_stat_fitness_001",
+    "img_stat_intelligence_001",
+    "img_stat_social_001",
+    "img_stat_wealth_001",
+    "img_stat_happiness_001",
+    "img_stat_luck_001"
+  ],
+  "assets": [
+    {
+      "imageId": "img_portrait_default_infant_001",
+      "assetPath": "week8/generic/img_portrait_default_infant_001.png",
+      "fileName": "img_portrait_default_infant_001.png",
+      "usage": "character",
+      "period": "INFANT",
+      "statTag": null,
+      "description": "공용 플레이어의 영아기 성장 초상. 특정 직업·가족·경제 상태를 표현하지 않는다.",
+      "fallbackText": "현재 시기의 모습을 준비 중입니다"
+    },
+    {
+      "imageId": "img_portrait_default_child_001",
+      "assetPath": "week8/generic/img_portrait_default_child_001.png",
+      "fileName": "img_portrait_default_child_001.png",
+      "usage": "character",
+      "period": "CHILD",
+      "statTag": null,
+      "description": "공용 플레이어의 유년기 성장 초상. 특정 직업·가족·경제 상태를 표현하지 않는다.",
+      "fallbackText": "현재 시기의 모습을 준비 중입니다"
+    },
+    {
+      "imageId": "img_portrait_default_teen_001",
+      "assetPath": "week8/generic/img_portrait_default_teen_001.png",
+      "fileName": "img_portrait_default_teen_001.png",
+      "usage": "character",
+      "period": "TEEN",
+      "statTag": null,
+      "description": "공용 플레이어의 청소년기 성장 초상. 특정 직업·가족·경제 상태를 표현하지 않는다.",
+      "fallbackText": "현재 시기의 모습을 준비 중입니다"
+    },
+    {
+      "imageId": "img_portrait_default_young_adult_001",
+      "assetPath": "week8/generic/img_portrait_default_young_adult_001.png",
+      "fileName": "img_portrait_default_young_adult_001.png",
+      "usage": "character",
+      "period": "YOUNG_ADULT",
+      "statTag": null,
+      "description": "공용 플레이어의 청년기 성장 초상. 특정 직업·가족·경제 상태를 표현하지 않는다.",
+      "fallbackText": "현재 시기의 모습을 준비 중입니다"
+    },
+    {
+      "imageId": "img_portrait_default_middle_001",
+      "assetPath": "week8/generic/img_portrait_default_middle_001.png",
+      "fileName": "img_portrait_default_middle_001.png",
+      "usage": "character",
+      "period": "MIDDLE",
+      "statTag": null,
+      "description": "공용 플레이어의 중년기 성장 초상. 특정 직업·가족·경제 상태를 표현하지 않는다.",
+      "fallbackText": "현재 시기의 모습을 준비 중입니다"
+    },
+    {
+      "imageId": "img_portrait_default_old_age_001",
+      "assetPath": "week8/generic/img_portrait_default_old_age_001.png",
+      "fileName": "img_portrait_default_old_age_001.png",
+      "usage": "character",
+      "period": "OLD_AGE",
+      "statTag": null,
+      "description": "공용 플레이어의 노년기 성장 초상. 특정 직업·가족·경제 상태를 표현하지 않는다.",
+      "fallbackText": "현재 시기의 모습을 준비 중입니다"
+    },
+    {
+      "imageId": "img_stat_health_001",
+      "assetPath": "week8/generic/img_stat_health_001.png",
+      "fileName": "img_stat_health_001.png",
+      "usage": "scene",
+      "period": null,
+      "statTag": "health",
+      "description": "A quiet everyday health-care still life in a modest room: a clear glass of water, neatly folded cream towel, plain unmarked thermometer and a small muted-teal wash basin arranged together on a simple wooden side table. Ordinary morning light represented by flat pixel shapes. No people, pills, red cross, hospital, numbers, diagnoses, suffering or recovery outcome. The water glass, towel and thermometer form an instantly legible large triangular grouping.",
+      "fallbackText": "관련 장면을 준비 중입니다"
+    },
+    {
+      "imageId": "img_stat_fitness_001",
+      "assetPath": "week8/generic/img_stat_fitness_001.png",
+      "fileName": "img_stat_fitness_001.png",
+      "usage": "scene",
+      "period": null,
+      "statTag": "fitness",
+      "description": "A small ordinary exercise corner: one pair of plain worn-in navy running shoes, a rolled muted-teal exercise mat and two modest dumbbells arranged on a warm wooden floor. No person, gym branding, trophies, medal, muscles, competition or result. Show all objects fully, sturdy readable silhouettes and a calm sense of preparation and steady training. No luxury gym.",
+      "fallbackText": "관련 장면을 준비 중입니다"
+    },
+    {
+      "imageId": "img_stat_intelligence_001",
+      "assetPath": "week8/generic/img_stat_intelligence_001.png",
+      "fileName": "img_stat_intelligence_001.png",
+      "usage": "scene",
+      "period": null,
+      "statTag": "intelligence",
+      "description": "A modest learning desk: open BLANK notebook, a few closed unlettered books, plain pencil and simple desk lamp. Wider third-person environmental viewpoint, no human face or age-specific school equipment. Muted navy surroundings with restrained flat warm lamplight shapes. No writing, equations, certificates, graduation, exam marks, screens or academic success. Large simple shapes that read at small size.",
+      "fallbackText": "관련 장면을 준비 중입니다"
+    },
+    {
+      "imageId": "img_stat_social_001",
+      "assetPath": "week8/generic/img_stat_social_001.png",
+      "fileName": "img_stat_social_001.png",
+      "usage": "scene",
+      "period": null,
+      "statTag": "social",
+      "description": "Exactly three small gender-neutral people sitting around one round modest wooden table, jointly looking at a few completely blank sheets and passing one plain object. Show all three heads, hands and chairs fully inside canvas. Wide third-person view, people equally weighted, no protagonist portrait, faces minimal, ordinary neutral clothes in muted olive, cream and dusty blue. This conveys conversation and cooperation only, not marriage, romance, family status, school achievement, promotion or guaranteed friendship. Plain understated shared-room backdrop.",
+      "fallbackText": "관련 장면을 준비 중입니다"
+    },
+    {
+      "imageId": "img_stat_wealth_001",
+      "assetPath": "week8/generic/img_stat_wealth_001.png",
+      "fileName": "img_stat_wealth_001.png",
+      "usage": "scene",
+      "period": null,
+      "statTag": "wealth",
+      "description": "A modest everyday money-management still life on an ordinary wooden desk: an open BLANK account notebook, plain pencil, a small unmarked coin tray containing only a few generic coins and a simple closed plain wallet. One continuous room, centered readable composition, muted olive and dusty teal accents with warm brown desk. No currency symbols or numerals, graphs, soaring arrows, gold bars, mansion, salary slip, company, job, business success or rich person. Convey managing resources, not a financial outcome.",
+      "fallbackText": "관련 장면을 준비 중입니다"
+    },
+    {
+      "imageId": "img_stat_happiness_001",
+      "assetPath": "week8/generic/img_stat_happiness_001.png",
+      "fileName": "img_stat_happiness_001.png",
+      "usage": "scene",
+      "period": null,
+      "statTag": "happiness",
+      "description": "A simple unoccupied personal hobby and rest corner: a modest comfortable chair, a small leafy plant, a small wooden side table with a plain mug and an open blank sketchbook with two plain colored pencils. Gentle warm late-afternoon light, restrained ochre and soft olive accents, no expensive furniture or panoramic luxury view. No people, family, romance, marriage, trophies, readable drawings or text. Convey available everyday enjoyment and quiet satisfaction without claiming an outcome.",
+      "fallbackText": "관련 장면을 준비 중입니다"
+    },
+    {
+      "imageId": "img_stat_luck_001",
+      "assetPath": "week8/generic/img_stat_luck_001.png",
+      "fileName": "img_stat_luck_001.png",
+      "usage": "scene",
+      "period": null,
+      "statTag": "luck",
+      "description": "An ordinary small fork in a walking path with a SINGLE clearly readable four-leaf clover in the foreground beside it. A restrained patch of warm sunlight falls on one of the paths, suggesting an unexpected possibility rather than a predetermined destination. Muted olive, dusty teal and warm ochre; calm ordinary landscape, not magical spectacle. No person, money, lottery ticket, casino, dice, winning numbers, treasures, victory symbols, glowing particles, supernatural characters or guaranteed reward. Keep clover and both path directions fully readable within safety margins.",
+      "fallbackText": "관련 장면을 준비 중입니다"
+    },
+    {
+      "imageId": "img_pov_exam_paper_001",
+      "assetPath": "design_preview/week7/img_pov_exam_paper_001.png",
+      "fileName": "img_pov_exam_paper_001.png",
+      "usage": "pov",
+      "period": "TEEN",
+      "statTag": null,
+      "description": "기말고사 시험지를 내려다보는 1인칭 장면",
+      "fallbackText": "시험지를 받아 든 장면 준비 중"
+    },
+    {
+      "imageId": "img_pov_flu_morning_001",
+      "assetPath": "design_preview/week7/img_pov_flu_morning_001.png",
+      "fileName": "img_pov_flu_morning_001.png",
+      "usage": "pov",
+      "period": "YOUNG_ADULT",
+      "statTag": null,
+      "description": "몸살로 누운 채 천장과 체온계를 보는 1인칭 장면",
+      "fallbackText": "몸살 난 아침 장면 준비 중"
+    },
+    {
+      "imageId": "img_pov_layoff_door_001",
+      "assetPath": "design_preview/week7/img_pov_layoff_door_001.png",
+      "fileName": "img_pov_layoff_door_001.png",
+      "usage": "pov",
+      "period": "YOUNG_ADULT",
+      "statTag": null,
+      "description": "구조조정 통보 날, 사원증을 찍어도 열리지 않는 출입문 앞 1인칭 장면",
+      "fallbackText": "구조조정 통보 장면 준비 중"
+    },
+    {
+      "imageId": "img_scene_child_friend_001",
+      "assetPath": "design_preview/week7/img_scene_child_friend_001.png",
+      "fileName": "img_scene_child_friend_001.png",
+      "usage": "scene",
+      "period": "CHILD",
+      "statTag": null,
+      "description": "CHILD 친구 초점의 3인칭 도트 진행 장면",
+      "fallbackText": "친구 초점 이미지 준비 중"
+    },
+    {
+      "imageId": "img_scene_middle_hobby_001",
+      "assetPath": "design_preview/week7/img_scene_middle_hobby_001.png",
+      "fileName": "img_scene_middle_hobby_001.png",
+      "usage": "scene",
+      "period": "MIDDLE",
+      "statTag": null,
+      "description": "MIDDLE 취미 초점의 3인칭 도트 진행 장면",
+      "fallbackText": "취미 초점 이미지 준비 중"
+    },
+    {
+      "imageId": "img_scene_teen_part_time_001",
+      "assetPath": "design_preview/week7/img_scene_teen_part_time_001.png",
+      "fileName": "img_scene_teen_part_time_001.png",
+      "usage": "scene",
+      "period": "TEEN",
+      "statTag": null,
+      "description": "TEEN 아르바이트 초점의 3인칭 도트 진행 장면",
+      "fallbackText": "아르바이트 초점 이미지 준비 중"
+    },
+    {
+      "imageId": "img_scene_teen_study_001",
+      "assetPath": "design_preview/week7/img_scene_teen_study_001.png",
+      "fileName": "img_scene_teen_study_001.png",
+      "usage": "scene",
+      "period": "TEEN",
+      "statTag": null,
+      "description": "TEEN 학업 초점의 3인칭 도트 진행 장면",
+      "fallbackText": "학업 초점 이미지 준비 중"
+    },
+    {
+      "imageId": "img_scene_young_adult_adventure_001",
+      "assetPath": "design_preview/week7/img_scene_young_adult_adventure_001.png",
+      "fileName": "img_scene_young_adult_adventure_001.png",
+      "usage": "scene",
+      "period": "YOUNG_ADULT",
+      "statTag": null,
+      "description": "YOUNG_ADULT 도전 초점의 3인칭 도트 진행 장면",
+      "fallbackText": "도전 초점 이미지 준비 중"
+    }
+  ],
+  "periodPortraits": {
+    "INFANT": "img_portrait_default_infant_001",
+    "CHILD": "img_portrait_default_child_001",
+    "TEEN": "img_portrait_default_teen_001",
+    "YOUNG_ADULT": "img_portrait_default_young_adult_001",
+    "MIDDLE": "img_portrait_default_middle_001",
+    "OLD_AGE": "img_portrait_default_old_age_001"
+  },
+  "statScenes": {
+    "health": "img_stat_health_001",
+    "fitness": "img_stat_fitness_001",
+    "intelligence": "img_stat_intelligence_001",
+    "social": "img_stat_social_001",
+    "wealth": "img_stat_wealth_001",
+    "happiness": "img_stat_happiness_001",
+    "luck": "img_stat_luck_001"
+  },
+  "focusStats": {
+    "focus_infant_bonding": "social",
+    "focus_infant_explore": "intelligence",
+    "focus_infant_rhythm": "health",
+    "focus_infant_play": "happiness",
+    "focus_infant_health": "health",
+    "focus_child_study": "intelligence",
+    "focus_child_friend": "social",
+    "focus_child_sports": "fitness",
+    "focus_child_creative": "happiness",
+    "focus_child_help": "social",
+    "focus_teen_study": "intelligence",
+    "focus_teen_club": "social",
+    "focus_teen_fitness": "fitness",
+    "focus_teen_part_time": "wealth",
+    "focus_teen_rest": "happiness",
+    "focus_young_adult_career": "wealth",
+    "focus_young_adult_relationship": "social",
+    "focus_young_adult_money": "wealth",
+    "focus_young_adult_health": "health",
+    "focus_young_adult_adventure": "luck",
+    "focus_middle_family": "social",
+    "focus_middle_career_peak": "wealth",
+    "focus_middle_health": "health",
+    "focus_middle_hobby": "happiness",
+    "focus_middle_community": "social",
+    "focus_old_age_family": "social",
+    "focus_old_age_health": "health",
+    "focus_old_age_hobby": "happiness",
+    "focus_old_age_community": "intelligence",
+    "focus_old_age_reflection": "happiness"
+  },
+  "eventStatTags": {
+    "adult_002": [
+      "fitness"
+    ],
+    "adult_003": [
+      "happiness"
+    ],
+    "adult_005": [
+      "social"
+    ],
+    "adult_006": [
+      "social"
+    ],
+    "adult_007": [
+      "social"
+    ],
+    "adult_008": [
+      "social"
+    ],
+    "adult_009": [
+      "social"
+    ],
+    "adult_010": [
+      "social"
+    ],
+    "adult_012": [
+      "social"
+    ],
+    "adult_013": [
+      "wealth"
+    ],
+    "adult_014": [
+      "wealth"
+    ],
+    "adult_015": [
+      "wealth"
+    ],
+    "adult_016": [
+      "social"
+    ],
+    "adult_017": [
+      "social"
+    ],
+    "adult_019": [
+      "luck"
+    ],
+    "adult_020": [
+      "social"
+    ],
+    "adult_021": [
+      "health"
+    ],
+    "adult_023": [
+      "social",
+      "luck"
+    ],
+    "adult_024": [
+      "wealth"
+    ],
+    "adult_025": [
+      "intelligence"
+    ],
+    "adult_026": [
+      "wealth"
+    ],
+    "adult_027": [
+      "fitness"
+    ],
+    "adult_028": [
+      "wealth"
+    ],
+    "adult_029": [
+      "happiness"
+    ],
+    "adult_030": [
+      "social"
+    ],
+    "adult_031": [
+      "social"
+    ],
+    "adult_032": [
+      "social"
+    ],
+    "adult_033": [
+      "fitness"
+    ],
+    "adult_034": [
+      "fitness"
+    ],
+    "adult_035": [
+      "social"
+    ],
+    "adult_036": [
+      "happiness"
+    ],
+    "adult_037": [
+      "wealth"
+    ],
+    "adult_038": [
+      "happiness"
+    ],
+    "adult_039": [
+      "social"
+    ],
+    "adult_040": [
+      "happiness"
+    ],
+    "adult_041": [
+      "wealth"
+    ],
+    "adult_043": [
+      "health"
+    ],
+    "adult_045": [
+      "social"
+    ],
+    "adult_046": [
+      "wealth"
+    ],
+    "adult_047": [
+      "social"
+    ],
+    "adult_048": [
+      "happiness"
+    ],
+    "adult_049": [
+      "wealth"
+    ],
+    "adult_050": [
+      "happiness"
+    ],
+    "adult_051": [
+      "social"
+    ],
+    "adult_053": [
+      "health"
+    ],
+    "adult_055": [
+      "social"
+    ],
+    "adult_056": [
+      "wealth"
+    ],
+    "adult_057": [
+      "wealth"
+    ],
+    "adult_058": [
+      "health"
+    ],
+    "adult_060": [
+      "happiness"
+    ],
+    "adult_061": [
+      "fitness"
+    ],
+    "adult_062": [
+      "social"
+    ],
+    "adult_063": [
+      "social"
+    ],
+    "adult_064": [
+      "social"
+    ],
+    "adult_067": [
+      "happiness"
+    ],
+    "adult_068": [
+      "health"
+    ],
+    "adult_069": [
+      "wealth"
+    ],
+    "adult_070": [
+      "wealth"
+    ],
+    "child_003": [
+      "social"
+    ],
+    "child_004": [
+      "intelligence"
+    ],
+    "child_005": [
+      "intelligence"
+    ],
+    "child_006": [
+      "wealth"
+    ],
+    "child_008": [
+      "wealth"
+    ],
+    "child_011": [
+      "fitness"
+    ],
+    "child_012": [
+      "happiness"
+    ],
+    "child_013": [
+      "happiness"
+    ],
+    "child_014": [
+      "happiness"
+    ],
+    "child_016": [
+      "intelligence"
+    ],
+    "child_017": [
+      "fitness"
+    ],
+    "child_018": [
+      "social"
+    ],
+    "child_019": [
+      "intelligence"
+    ],
+    "child_021": [
+      "intelligence"
+    ],
+    "child_022": [
+      "happiness"
+    ],
+    "child_023": [
+      "health"
+    ],
+    "child_024": [
+      "fitness"
+    ],
+    "child_025": [
+      "social"
+    ],
+    "child_026": [
+      "social"
+    ],
+    "child_028": [
+      "intelligence"
+    ],
+    "child_029": [
+      "fitness"
+    ],
+    "child_030": [
+      "fitness"
+    ],
+    "child_031": [
+      "intelligence"
+    ],
+    "child_032": [
+      "social"
+    ],
+    "child_033": [
+      "intelligence"
+    ],
+    "child_034": [
+      "happiness"
+    ],
+    "child_035": [
+      "happiness"
+    ],
+    "child_036": [
+      "happiness"
+    ],
+    "child_037": [
+      "fitness"
+    ],
+    "child_038": [
+      "happiness"
+    ],
+    "child_039": [
+      "happiness"
+    ],
+    "child_040": [
+      "intelligence"
+    ],
+    "child_041": [
+      "social"
+    ],
+    "child_042": [
+      "fitness"
+    ],
+    "child_044": [
+      "social"
+    ],
+    "child_045": [
+      "social"
+    ],
+    "infant_001": [
+      "health"
+    ],
+    "infant_002": [
+      "health"
+    ],
+    "infant_007": [
+      "happiness"
+    ],
+    "infant_008": [
+      "health"
+    ],
+    "infant_009": [
+      "social"
+    ],
+    "infant_010": [
+      "fitness"
+    ],
+    "infant_011": [
+      "intelligence"
+    ],
+    "infant_013": [
+      "social"
+    ],
+    "infant_014": [
+      "happiness"
+    ],
+    "infant_015": [
+      "happiness"
+    ],
+    "infant_018": [
+      "social"
+    ],
+    "infant_019": [
+      "social"
+    ],
+    "infant_020": [
+      "happiness"
+    ],
+    "infant_023": [
+      "happiness"
+    ],
+    "infant_027": [
+      "intelligence"
+    ],
+    "infant_028": [
+      "happiness"
+    ],
+    "infant_029": [
+      "health"
+    ],
+    "special_006": [
+      "luck"
+    ],
+    "special_009": [
+      "health"
+    ],
+    "special_016": [
+      "fitness"
+    ],
+    "teen_003": [
+      "social"
+    ],
+    "teen_005": [
+      "social"
+    ],
+    "teen_006": [
+      "social"
+    ],
+    "teen_007": [
+      "intelligence"
+    ],
+    "teen_009": [
+      "fitness"
+    ],
+    "teen_011": [
+      "social"
+    ],
+    "teen_012": [
+      "happiness"
+    ],
+    "teen_013": [
+      "intelligence"
+    ],
+    "teen_014": [
+      "social"
+    ],
+    "teen_015": [
+      "wealth"
+    ],
+    "teen_016": [
+      "social"
+    ],
+    "teen_019": [
+      "intelligence"
+    ],
+    "teen_020": [
+      "fitness"
+    ],
+    "teen_021": [
+      "social"
+    ],
+    "teen_022": [
+      "happiness"
+    ],
+    "teen_023": [
+      "intelligence"
+    ],
+    "teen_024": [
+      "intelligence"
+    ],
+    "teen_025": [
+      "wealth"
+    ],
+    "teen_026": [
+      "social"
+    ],
+    "teen_028": [
+      "intelligence"
+    ],
+    "teen_030": [
+      "social"
+    ],
+    "teen_031": [
+      "intelligence"
+    ],
+    "teen_032": [
+      "intelligence",
+      "social",
+      "happiness"
+    ],
+    "teen_034": [
+      "happiness"
+    ],
+    "teen_036": [
+      "social"
+    ],
+    "teen_037": [
+      "intelligence"
+    ],
+    "teen_038": [
+      "intelligence"
+    ],
+    "teen_040": [
+      "intelligence"
+    ],
+    "teen_041": [
+      "happiness"
+    ],
+    "teen_042": [
+      "intelligence"
+    ]
+  }
+}

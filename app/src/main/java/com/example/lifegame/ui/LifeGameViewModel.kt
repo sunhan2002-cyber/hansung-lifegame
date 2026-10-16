@@ -231,6 +231,7 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
             imageFiles = repository.loadImageAssets()
                 .filter { it.fileName.isNotBlank() }
                 .associate { it.imageId to it.fileName },
+            imageRouting = com.example.lifegame.data.ImageRoutingRepository(getApplication<Application>()).load(),
         )
         playerNameForPlay = name
         characterImageIdForPlay = starter?.imageId
@@ -255,7 +256,11 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
         val nameCall = nameCallOf(name)
         val focuses = content.focuses.map { it.withPlayerName(name, nameCall) }
         val decisions = content.decisions.map { it.withPlayerName(name, nameCall) }
-        playContent = PlayContent(content.periods, focuses, decisions.associateBy { it.eventId }, repository.loadImageAssets().filter { it.fileName.isNotBlank() }.associate { it.imageId to it.fileName })
+        playContent = PlayContent(
+            content.periods, focuses, decisions.associateBy { it.eventId },
+            repository.loadImageAssets().filter { it.fileName.isNotBlank() }.associate { it.imageId to it.fileName },
+            com.example.lifegame.data.ImageRoutingRepository(getApplication<Application>()).load(),
+        )
         playSession = PeriodGameSession(
             content.periods,
             focuses,

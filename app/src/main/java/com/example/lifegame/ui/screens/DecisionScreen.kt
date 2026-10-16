@@ -182,12 +182,14 @@ fun DecisionScreen(
                 key = introKey,
                 imageId = decision.imageId,
                 imageFile = decision.imageFile,
+                candidates = decision.images,
                 isSpecial = decision.kind == DecisionKind.BIG_INCIDENT,
             ),
             modifier = Modifier
                 .fillMaxSize()
                 // 장면 보기 전에는 배경만 살짝 흐리게 한다. 텍스트는 별도 패널에서 선명하게 읽힌다.
                 .blur(if (sceneOnly) 0.dp else 8.dp),
+            fitWholeImage = sceneOnly,
         )
         Box(
             Modifier
