@@ -74,6 +74,10 @@ def has_explicit_condition(choice: dict[str, Any]) -> bool:
     return bool(choice.get("requiredStats") or choice.get("requiredFlags") or choice.get("blockedFlags") or choice.get("alwaysAvailable"))
 
 
+def is_hard_condition_event(event: dict[str, Any]) -> bool:
+    return str(event.get("kind", "")).upper() in {"BIG_INCIDENT", "MILESTONE"} or str(event.get("type", "")).upper() == "SPECIAL"
+
+
 def threshold(event_periods: set[str]) -> int:
     values = [THRESHOLDS[p] for p in event_periods if p in THRESHOLDS]
     return min(values) if values else 50
@@ -108,6 +112,10 @@ def resolve(events: list[dict[str, Any]]) -> tuple[Counter[str], list[dict[str, 
     for event in events:
         event_periods = periods(event)
         choices = event.get("choices") if isinstance(event.get("choices"), list) else []
+        if not is_hard_condition_event(event):
+            counts["soft_only_event"] += 1
+            counts["soft_only_choice"] += len(choices)
+            continue
         for choice in choices:
             if not isinstance(choice, dict):
                 continue
@@ -153,7 +161,10 @@ def write_report(counts: Counter[str], rows: list[dict[str, Any]]) -> None:
     lines = [
         "# 8주차 선택지 조건 확정 결과", "",
         "이번 단계는 609개 선택지를 조건부 또는 항상 실행 가능으로 확정하고 실제 JSON에 반영한 결과다.", "",
-        f"- 입력 시점에 이미 처리된 선택지: {counts['existing']}개",
+        f"- 하드 조건 대상 사건: {counts['hard_event']}개",
+        f"- 하드 조건 대상 선택지: {counts['hard_choice']}개",
+        f"- 일반 사건(소프트 반응만): {counts['soft_only_event']}개 사건 / {counts['soft_only_choice']}개 선택지",
+        f"- 입력 시점에 이미 처리된 하드 선택지: {counts['existing']}개",
         f"- 조건 확정 추가: {counts['confirmed_condition']}개",
         f"- 영아기 항상 실행 가능: {counts['infant_always_available']}개",
         f"- 의미상 항상 실행 가능: {counts['always_available']}개",
@@ -175,10 +186,14 @@ def main() -> int:
     sys.stdout.reconfigure(encoding="utf-8")
     data = json.loads(EVENT_FILE.read_text(encoding="utf-8"))
     counts, rows = resolve(data)
+    counts["hard_event"] = sum(1 for event in data if is_hard_condition_event(event))
+    counts["hard_choice"] = sum(len(event.get("choices", [])) for event in data if is_hard_condition_event(event))
     final_gated = 0
     final_always = 0
     final_unresolved = 0
     for event in data:
+        if not is_hard_condition_event(event):
+            continue
         for choice in event.get("choices", []):
             if choice.get("alwaysAvailable"):
                 final_always += 1
