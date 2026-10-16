@@ -505,5 +505,554 @@
     },
     "summary": "사무실보다 먼저 생긴 건 문제를 해결하고 싶은 마음이었다. 몇 번의 삐걱거림을 지나며 그는 작지만 쉽게 무너지지 않는 팀을 만들었다.",
     "isDefault": false
+  },
+  {
+    "endingId": "ending_path_int_researcher",
+    "title": "질문 하나로 평생을 산 연구자",
+    "priority": 97,
+    "conditions": {
+      "minStats": {
+        "지력": 85
+      },
+      "requiredFlags": [
+        "int_path",
+        "edu_graduate",
+        "achv_breakthrough"
+      ],
+      "blockedFlags": []
+    },
+    "summary": "경시대회 상장에서 시작해 대학원과 연구실을 거쳐, 평생 붙잡은 문제의 마지막 조각을 맞췄다. 학회 무대에서 떨리던 목소리는 마지막 강의에서 다음 질문이 되었다.",
+    "isDefault": false,
+    "lifePath": "INTELLIGENCE"
+  },
+  {
+    "endingId": "ending_path_int_engineer",
+    "title": "특허 한 줄에 이름을 남긴 엔지니어",
+    "priority": 96,
+    "conditions": {
+      "minStats": {},
+      "requiredFlags": [
+        "int_path",
+        "achv_patent"
+      ],
+      "blockedFlags": []
+    },
+    "summary": "연구소 책상에서 쌓은 결과가 특허 등록증이 되었다. 회사 로비 액자 속 이름은 작았지만, 그 기술은 매일 누군가의 손에서 쓰였다.",
+    "isDefault": false,
+    "lifePath": "INTELLIGENCE"
+  },
+  {
+    "endingId": "ending_path_int_teacher",
+    "title": "질문을 물려준 선생님",
+    "priority": 95,
+    "conditions": {
+      "minStats": {},
+      "requiredFlags": [
+        "int_path",
+        "achv_mentor"
+      ],
+      "blockedFlags": []
+    },
+    "summary": "스스로 답을 찾던 학생은 후배에게 질문하는 법을 가르치는 사람이 되었다. 강의실에서 들은 자신의 옛 질문이 가장 큰 성과였다.",
+    "isDefault": false,
+    "lifePath": "INTELLIGENCE"
+  },
+  {
+    "endingId": "ending_path_int_late",
+    "title": "퇴근길에 딴 졸업장",
+    "priority": 94,
+    "conditions": {
+      "minStats": {},
+      "requiredFlags": [
+        "int_path",
+        "achv_night_degree"
+      ],
+      "blockedFlags": []
+    },
+    "summary": "대학 대신 회사를 먼저 택했지만 공부를 놓지 않았다. 4년 동안 퇴근길에 학교로 향했고, 늦게 받은 졸업장은 누구보다 무거웠다.",
+    "isDefault": false,
+    "lifePath": "INTELLIGENCE"
+  },
+  {
+    "endingId": "ending_path_int_burnout",
+    "title": "책상 앞에서 놓친 것들",
+    "priority": 93,
+    "conditions": {
+      "minStats": {},
+      "requiredFlags": [
+        "int_path",
+        "int_burnout"
+      ],
+      "blockedFlags": []
+    },
+    "summary": "성과는 남았지만 몸이 먼저 무너졌다. 연구실 의자에서 쓰러진 뒤에야 잠과 가족이 실력의 일부였다는 걸 알았다.",
+    "isDefault": false,
+    "lifePath": "INTELLIGENCE"
+  },
+  {
+    "endingId": "ending_path_fit_legend",
+    "title": "경기장에 이름을 남긴 선수",
+    "priority": 97,
+    "conditions": {
+      "minStats": {
+        "운동능력": 85
+      },
+      "requiredFlags": [
+        "career_athlete",
+        "achv_league_best"
+      ],
+      "blockedFlags": []
+    },
+    "summary": "새벽 운동장 열 바퀴로 시작한 몸이 프로 무대의 베스트 11이 되었다. 은퇴 후에도 경기장 전광판에 등번호가 가끔 떠올랐다.",
+    "isDefault": false,
+    "lifePath": "FITNESS"
+  },
+  {
+    "endingId": "ending_path_fit_coach",
+    "title": "누군가의 첫 메달을 만든 지도자",
+    "priority": 95,
+    "conditions": {
+      "minStats": {},
+      "requiredFlags": [
+        "fit_path",
+        "career_coach"
+      ],
+      "blockedFlags": []
+    },
+    "summary": "자신의 메달보다 제자의 메달을 더 오래 바라봤다. 신발 끈부터 묶게 했던 아이들이 국가대표 유니폼을 입었다.",
+    "isDefault": false,
+    "lifePath": "FITNESS"
+  },
+  {
+    "endingId": "ending_path_fit_gym",
+    "title": "내 이름을 건 체육관 관장",
+    "priority": 94,
+    "conditions": {
+      "minStats": {},
+      "requiredFlags": [
+        "achv_own_gym"
+      ],
+      "blockedFlags": []
+    },
+    "summary": "선수 생활을 마치고 동네에 체육관을 열었다. 간판 불을 끄는 건 늘 관장의 몫이었고, 회원 대기 명단은 줄지 않았다.",
+    "isDefault": false,
+    "lifePath": "FITNESS"
+  },
+  {
+    "endingId": "ending_path_fit_teacher",
+    "title": "운동장을 지킨 체육 선생님",
+    "priority": 92,
+    "conditions": {
+      "minStats": {},
+      "requiredFlags": [
+        "career_pe_teacher"
+      ],
+      "blockedFlags": []
+    },
+    "summary": "프로 대신 교단을 택했다. 수십 년 동안 운동장에서 아이들 줄을 세웠고, 그중 몇은 지금 선수가 되어 인사를 온다.",
+    "isDefault": false,
+    "lifePath": "FITNESS"
+  },
+  {
+    "endingId": "ending_path_fit_injury",
+    "title": "부상으로 멈췄지만 다시 걸은 사람",
+    "priority": 93,
+    "conditions": {
+      "minStats": {},
+      "requiredFlags": [
+        "fit_path",
+        "fit_retired",
+        "health_limited"
+      ],
+      "blockedFlags": []
+    },
+    "summary": "무릎이 먼저 은퇴를 알렸다. 뛰지 못하는 몸과 화해하는 데 오래 걸렸지만, 끝까지 결승선 근처를 떠나지 않았다.",
+    "isDefault": false,
+    "lifePath": "FITNESS"
+  },
+  {
+    "endingId": "ending_path_soc_leader",
+    "title": "동네가 기억하는 이름",
+    "priority": 97,
+    "conditions": {
+      "minStats": {},
+      "requiredFlags": [
+        "achv_community_leader"
+      ],
+      "blockedFlags": []
+    },
+    "summary": "반장 선거 연설에서 친구 이름을 하나씩 부르던 아이는 동네 사람 모두의 이름을 아는 어른이 되었다. 놀이터 그네를 고친 날이 가장 큰 업적이었다.",
+    "isDefault": false,
+    "lifePath": "SOCIAL"
+  },
+  {
+    "endingId": "ending_path_soc_family",
+    "title": "큰 식탁의 중심",
+    "priority": 96,
+    "conditions": {
+      "minStats": {},
+      "requiredFlags": [
+        "soc_path",
+        "married",
+        "family_bond"
+      ],
+      "blockedFlags": [
+        "divorced"
+      ]
+    },
+    "summary": "버스 세 정거장을 함께 걸은 사람과 가정을 꾸렸다. 명절마다 식탁은 모자랐고, 칠순 잔치 사진 한가운데에서 가장 크게 웃었다.",
+    "isDefault": false,
+    "lifePath": "SOCIAL"
+  },
+  {
+    "endingId": "ending_path_soc_connector",
+    "title": "사람과 사람을 이어 준 사람",
+    "priority": 95,
+    "conditions": {
+      "minStats": {},
+      "requiredFlags": [
+        "soc_path",
+        "achv_connector"
+      ],
+      "blockedFlags": []
+    },
+    "summary": "일자리도, 인연도 사람을 통해 왔고 사람에게 돌려줬다. 그가 만든 모임에서 결혼한 커플이 두 쌍, 창업한 팀이 세 팀 나왔다.",
+    "isDefault": false,
+    "lifePath": "SOCIAL"
+  },
+  {
+    "endingId": "ending_path_soc_after_divorce",
+    "title": "헤어진 뒤에도 사람을 잃지 않은 사람",
+    "priority": 93,
+    "conditions": {
+      "minStats": {},
+      "requiredFlags": [
+        "soc_path",
+        "divorced"
+      ],
+      "blockedFlags": []
+    },
+    "summary": "결혼은 끝났지만 관계는 끝나지 않았다. 혼자 끓인 미역국을 나눠 먹으러 온 친구들이 남은 인생의 가족이 되었다.",
+    "isDefault": false,
+    "lifePath": "SOCIAL"
+  },
+  {
+    "endingId": "ending_path_wea_exit",
+    "title": "작은 가게를 큰 회사로 키운 창업가",
+    "priority": 97,
+    "conditions": {
+      "minStats": {},
+      "requiredFlags": [
+        "achv_exit"
+      ],
+      "blockedFlags": []
+    },
+    "summary": "37만 원 첫 월급에서 시작해 중고 거래 가게, 내 가게, 회사를 거쳤다. 회사를 팔던 날 직원 전원의 고용을 지켰다.",
+    "isDefault": false,
+    "lifePath": "WEALTH"
+  },
+  {
+    "endingId": "ending_path_wea_ceo",
+    "title": "직원 백 명의 대표",
+    "priority": 96,
+    "conditions": {
+      "minStats": {},
+      "requiredFlags": [
+        "achv_company_100"
+      ],
+      "blockedFlags": []
+    },
+    "summary": "인수 제안을 거절하고 회사를 키웠다. 흰머리는 두 배가 됐지만 월급날마다 백 명의 통장에 숫자가 찍혔다.",
+    "isDefault": false,
+    "lifePath": "WEALTH"
+  },
+  {
+    "endingId": "ending_path_wea_home",
+    "title": "대출을 다 갚은 날",
+    "priority": 95,
+    "conditions": {
+      "minStats": {},
+      "requiredFlags": [
+        "wea_path",
+        "achv_home",
+        "debt_free"
+      ],
+      "blockedFlags": []
+    },
+    "summary": "30년 만기 대출로 산 집의 마지막 상환 문자를 받았다. 적금 통장을 처음 만든 날부터 계산하면 반백 년이 걸린 집이었다.",
+    "isDefault": false,
+    "lifePath": "WEALTH"
+  },
+  {
+    "endingId": "ending_path_wea_stock",
+    "title": "스톡옵션 숫자에 0을 붙인 사람",
+    "priority": 94,
+    "conditions": {
+      "minStats": {},
+      "requiredFlags": [
+        "wea_path",
+        "achv_stock_option"
+      ],
+      "blockedFlags": []
+    },
+    "summary": "대기업 대신 작은 회사를 골랐다. 회사가 크게 투자를 받던 날, 스톡옵션 숫자에 0이 두 개 붙었다.",
+    "isDefault": false,
+    "lifePath": "WEALTH"
+  },
+  {
+    "endingId": "ending_path_wea_saver",
+    "title": "적금 통장 하나로 시작한 자산가",
+    "priority": 91,
+    "conditions": {
+      "minStats": {
+        "경제력": 85
+      },
+      "requiredFlags": [
+        "wea_path",
+        "money_habit"
+      ],
+      "blockedFlags": []
+    },
+    "summary": "첫 알바 월급으로 만든 적금 통장을 평생 놓지 않았다. 크게 벌진 않았지만 크게 잃지도 않았다.",
+    "isDefault": false,
+    "lifePath": "WEALTH"
+  },
+  {
+    "endingId": "ending_path_wea_debt",
+    "title": "빚과 함께 늙은 사장님",
+    "priority": 92,
+    "conditions": {
+      "minStats": {},
+      "requiredFlags": [
+        "wea_path",
+        "in_debt"
+      ],
+      "blockedFlags": [
+        "debt_free"
+      ]
+    },
+    "summary": "버텨 보려고 받은 대출이 끝내 발목을 잡았다. 그래도 단골 손님의 전화번호는 마지막까지 휴대폰에 남아 있었다.",
+    "isDefault": false,
+    "lifePath": "WEALTH"
+  },
+  {
+    "endingId": "ending_path_hap_artist",
+    "title": "쉰 석짜리 무대의 주인공",
+    "priority": 96,
+    "conditions": {
+      "minStats": {},
+      "requiredFlags": [
+        "hap_path",
+        "achv_solo_show"
+      ],
+      "blockedFlags": []
+    },
+    "summary": "다섯 줄짜리 기타로 시작한 취미가 개인 공연 무대가 되었다. 연봉 대신 고른 저녁 시간들이 앙코르로 돌아왔다.",
+    "isDefault": false,
+    "lifePath": "HAPPINESS"
+  },
+  {
+    "endingId": "ending_path_hap_teacher",
+    "title": "복지관 기타 선생님",
+    "priority": 95,
+    "conditions": {
+      "minStats": {},
+      "requiredFlags": [
+        "hap_path",
+        "achv_senior_teacher"
+      ],
+      "blockedFlags": []
+    },
+    "summary": "평생 즐겨 온 취미를 노년에 스물두 명의 학생과 나눴다. 다 같이 틀린 첫 곡이 가장 오래 기억에 남았다.",
+    "isDefault": false,
+    "lifePath": "HAPPINESS"
+  },
+  {
+    "endingId": "ending_path_hap_content",
+    "title": "천천히 오래 웃은 사람",
+    "priority": 94,
+    "conditions": {
+      "minStats": {},
+      "requiredFlags": [
+        "hap_path",
+        "content_life"
+      ],
+      "blockedFlags": [
+        "hap_lost_joy"
+      ]
+    },
+    "summary": "돈을 많이 모으진 못했지만 사진은 가장 많이 남겼다. 행복을 미루지 않는 연습을 평생 했다.",
+    "isDefault": false,
+    "lifePath": "HAPPINESS"
+  },
+  {
+    "endingId": "ending_path_hap_burnout",
+    "title": "웃는 법을 잊었던 사람",
+    "priority": 93,
+    "conditions": {
+      "minStats": {},
+      "requiredFlags": [
+        "hap_path",
+        "hap_lost_joy"
+      ],
+      "blockedFlags": []
+    },
+    "summary": "좋아하던 것들이 하나씩 재미없어졌다. 버티는 게 일이 된 시간을 지나, 노년에야 다시 흥얼거리는 노래를 찾았다.",
+    "isDefault": false,
+    "lifePath": "HAPPINESS"
+  },
+  {
+    "endingId": "ending_path_luk_jackpot",
+    "title": "될 사람은 됐다",
+    "priority": 97,
+    "conditions": {
+      "minStats": {},
+      "requiredFlags": [
+        "luk_windfall"
+      ],
+      "blockedFlags": []
+    },
+    "summary": "뽑기 기계 1등에서 시작된 운이 인생 한가운데에서 크게 터졌다. 사람들은 운이라고 했고, 본인은 운을 줍는 법을 배웠다고 했다.",
+    "isDefault": false,
+    "lifePath": "LUCK"
+  },
+  {
+    "endingId": "ending_path_luk_patron",
+    "title": "지갑 하나로 바뀐 인생",
+    "priority": 95,
+    "conditions": {
+      "minStats": {},
+      "requiredFlags": [
+        "luk_patron"
+      ],
+      "blockedFlags": []
+    },
+    "summary": "출근길에 주운 지갑을 돌려준 일이 평생의 인연이 되었다. 운은 정직한 손에 오래 머물렀다.",
+    "isDefault": false,
+    "lifePath": "LUCK"
+  },
+  {
+    "endingId": "ending_path_luk_wanderer",
+    "title": "동전 한 닢으로 떠난 사람",
+    "priority": 94,
+    "conditions": {
+      "minStats": {},
+      "requiredFlags": [
+        "luk_wanderer"
+      ],
+      "blockedFlags": []
+    },
+    "summary": "면접 대신 동전을 던졌고 앞면이 나왔다. 남쪽 섬 게스트하우스에서 시작한 인생은 지도에 없는 길로 이어졌다.",
+    "isDefault": false,
+    "lifePath": "LUCK"
+  },
+  {
+    "endingId": "ending_path_luk_dodger",
+    "title": "아슬아슬 피해 간 인생",
+    "priority": 91,
+    "conditions": {
+      "minStats": {},
+      "requiredFlags": [
+        "luk_path",
+        "luk_avoided"
+      ],
+      "blockedFlags": []
+    },
+    "summary": "가짜 당첨 문자도, 마지막 기회라던 투자도, 회항한 비행기도 한 발짝 앞에서 비켜 갔다. 큰 행운은 없었지만 큰 불운도 끝내 오지 않았다.",
+    "isDefault": false,
+    "lifePath": "LUCK"
+  },
+  {
+    "endingId": "ending_path_luk_small_win",
+    "title": "적당히 운 좋았던 사람",
+    "priority": 92,
+    "conditions": {
+      "minStats": {},
+      "requiredFlags": [
+        "luk_path",
+        "luk_small_win"
+      ],
+      "blockedFlags": []
+    },
+    "summary": "크게 걸지 않아서 크게 잃지 않았다. 넣은 돈의 세 배는 평생 술자리 안주가 되었다.",
+    "isDefault": false,
+    "lifePath": "LUCK"
+  },
+  {
+    "endingId": "ending_path_luk_loss",
+    "title": "운이 등을 돌렸던 날들",
+    "priority": 93,
+    "conditions": {
+      "minStats": {},
+      "requiredFlags": [
+        "luk_path",
+        "luk_loss"
+      ],
+      "blockedFlags": []
+    },
+    "summary": "마지막 기회라던 투자가 인생의 큰 손실이 되었다. 그래도 손주의 한마디가 가장 운 좋은 순간으로 남았다.",
+    "isDefault": false,
+    "lifePath": "LUCK"
+  },
+  {
+    "endingId": "ending_path_hea_peaks",
+    "title": "백 개의 정상을 밟은 사람",
+    "priority": 96,
+    "conditions": {
+      "minStats": {},
+      "requiredFlags": [
+        "achv_hundred_peaks"
+      ],
+      "blockedFlags": []
+    },
+    "summary": "급식판의 브로콜리부터 시작한 습관이 등산 모임 대장이 되었다. 백 번째 정상에서 받은 케이크는 하산 후에 먹었다.",
+    "isDefault": false,
+    "lifePath": "HEALTH"
+  },
+  {
+    "endingId": "ending_path_hea_young",
+    "title": "열두 살 젊은 몸으로 산 사람",
+    "priority": 95,
+    "conditions": {
+      "minStats": {},
+      "requiredFlags": [
+        "hea_path",
+        "achv_young_body"
+      ],
+      "blockedFlags": []
+    },
+    "summary": "잠을 지키고 매일 걸었다. 건강 나이 측정기가 두 번 확인할 만큼 젊은 몸으로 노년을 맞았다.",
+    "isDefault": false,
+    "lifePath": "HEALTH"
+  },
+  {
+    "endingId": "ending_path_hea_recovered",
+    "title": "아프고 나서 더 단단해진 사람",
+    "priority": 94,
+    "conditions": {
+      "minStats": {},
+      "requiredFlags": [
+        "hea_recovered"
+      ],
+      "blockedFlags": []
+    },
+    "summary": "진단서 한 장이 인생을 바꿨다. 야근과 술을 끊은 1년 뒤, 의사는 진단서를 다시 써 줬다.",
+    "isDefault": false,
+    "lifePath": "HEALTH"
+  },
+  {
+    "endingId": "ending_path_hea_chronic",
+    "title": "몸과 타협하며 산 사람",
+    "priority": 93,
+    "conditions": {
+      "minStats": {},
+      "requiredFlags": [
+        "hea_chronic"
+      ],
+      "blockedFlags": []
+    },
+    "summary": "경고를 미룬 대가로 평생 약을 먹게 됐다. 높은 산 대신 둘레길을 걸으며, 할 수 있는 만큼의 삶을 찾았다.",
+    "isDefault": false,
+    "lifePath": "HEALTH"
   }
 ]
