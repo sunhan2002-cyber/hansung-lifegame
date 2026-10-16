@@ -20971,7 +20971,7 @@
           {
             "outcomeId": "a_served",
             "text": "훈련소 첫날 밤, 옆자리 동기가 코를 심하게 골았다. 1년 6개월 뒤 그 동기는 평생 친구가 됐다. 전역하는 날 거울 속 내가 조금 낯설었다.",
-            "chance": 60,
+            "chance": 50,
             "primary": true,
             "hidden": false,
             "death": false,
@@ -20994,7 +20994,7 @@
           {
             "outcomeId": "a_office",
             "text": "행군 첫날 발목을 접질렸다. 남은 복무는 행정반에서 보냈다. 전역할 때 타자 속도가 두 배가 돼 있었다.",
-            "chance": 30,
+            "chance": 25,
             "primary": false,
             "hidden": false,
             "death": false,
@@ -21031,6 +21031,27 @@
             "chanceWeights": {
               "운": 1
             }
+          },
+          {
+            "outcomeId": "a_letter",
+            "text": "훈련소에서 받은 편지 중에 모르는 이름이 하나 있었다. 동기의 친구가 \"심심할 것 같아서\" 보낸 편지였다. 답장을 열두 통 주고받았고, 첫 휴가 날 그 사람이 터미널에 나와 있었다.",
+            "chance": 15,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "사회성": 2,
+              "행복": 3,
+              "경제력": -2
+            },
+            "addFlags": [
+              "military_done",
+              "dating"
+            ],
+            "chanceWeights": {
+              "사회성": 2,
+              "운": 1
+            }
           }
         ],
         "requiredStats": {
@@ -21055,7 +21076,7 @@
           {
             "outcomeId": "b_later",
             "text": "1년을 미루고 하던 일을 마무리했다. 대신 훈련소에서 내가 제일 나이가 많았다. 별명은 '어르신'이었다.",
-            "chance": 70,
+            "chance": 55,
             "primary": true,
             "hidden": false,
             "death": false,
@@ -21071,7 +21092,7 @@
           {
             "outcomeId": "b_alternative",
             "text": "미룬 1년 동안 자격증을 땄고 산업기능요원으로 뽑혔다. 회사에 다니면서 복무를 마쳤다. 출퇴근하는 군복무였다.",
-            "chance": 30,
+            "chance": 25,
             "primary": false,
             "hidden": false,
             "death": false,
@@ -21088,6 +21109,26 @@
               "지력": 2
             },
             "lifeDelta": 10
+          },
+          {
+            "outcomeId": "b_library",
+            "text": "미룬 1년 동안 동네 도서관에서 매일 같은 자리에 앉는 사람과 친해졌다. 입대하는 날, 그 사람이 훈련소 정문 앞까지 따라왔다. \"1년 6개월, 금방이야.\"",
+            "chance": 20,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "지력": 1,
+              "행복": 3,
+              "경제력": -2
+            },
+            "addFlags": [
+              "military_done",
+              "dating"
+            ],
+            "chanceWeights": {
+              "사회성": 2
+            }
           }
         ],
         "requiredStats": {
@@ -21111,7 +21152,7 @@
           {
             "outcomeId": "c_farewell",
             "text": "송별회가 일곱 번 열렸고, 일곱 번 다 울었다. 정작 입대 날엔 아무도 안 나왔다. 다들 늦잠이었다.",
-            "chance": 75,
+            "chance": 55,
             "primary": true,
             "hidden": false,
             "death": false,
@@ -21131,7 +21172,7 @@
           {
             "outcomeId": "c_recheck",
             "text": "송별회 다음 날 신체검사 재검 통지가 왔다. 결과는 사회복무요원. 동네 주민센터로 출근하게 되면서 송별회 일곱 번은 없던 일이 됐다.",
-            "chance": 25,
+            "chance": 20,
             "primary": false,
             "hidden": false,
             "death": false,
@@ -21146,6 +21187,27 @@
             ],
             "chanceWeights": {
               "건강": -2
+            }
+          },
+          {
+            "outcomeId": "c_letters",
+            "text": "일곱 번째 송별회에서 친구가 데려온 사람이 말했다. \"편지 쓸게요.\" 진짜로 매주 편지가 왔다. 전역하는 날, 그 사람이 정문 앞에 서 있었다.",
+            "chance": 25,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "사회성": 3,
+              "행복": 2,
+              "건강": -1
+            },
+            "addFlags": [
+              "military_done",
+              "dating"
+            ],
+            "chanceWeights": {
+              "사회성": 2,
+              "운": 1
             }
           }
         ],
