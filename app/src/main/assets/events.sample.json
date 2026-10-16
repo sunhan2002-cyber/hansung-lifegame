@@ -4274,10 +4274,7 @@
             ],
             "lifeDelta": 10
           }
-        ],
-        "requiredStats": {
-          "운동능력": 52
-        }
+        ]
       }
     ],
     "priority": 0,

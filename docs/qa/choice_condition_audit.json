@@ -2,11 +2,11 @@
   "metrics": {
     "eventCount": 209,
     "choiceCount": 609,
-    "explicitConditionCount": 55,
-    "explicitConditionRate": 9.03,
-    "missingConditionCount": 459,
+    "explicitConditionCount": 54,
+    "explicitConditionRate": 8.87,
+    "missingConditionCount": 460,
     "candidateConditionCount": 236,
-    "ambiguousConditionCount": 223,
+    "ambiguousConditionCount": 224,
     "infantUnconditionalCount": 95,
     "conditionStatCandidates": {
       "행복": 66,
@@ -18,10 +18,8 @@
       "건강": 15
     },
     "invalidConditionCount": 0,
-    "allChoicesLockedEventCount": 1,
-    "allChoicesLockedEvents": [
-      "child_011"
-    ]
+    "allChoicesLockedEventCount": 0,
+    "allChoicesLockedEvents": []
   },
   "choices": [
     {
@@ -1722,10 +1720,8 @@
       "periods": [
         "CHILD"
       ],
-      "category": "explicit",
-      "conditionFields": [
-        "requiredStats"
-      ],
+      "category": "ambiguous",
+      "conditionFields": [],
       "positiveStats": {
         "운동능력": 1,
         "건강": 2
