@@ -67,6 +67,18 @@
    - `family_memory`: 가족과 보낸 결과
    - `special_survived`: 위기를 피한 결과
 
+10. **나이·순서는 사건 완료 플래그로 맞춘다**: 엔진은 사건을 끝내면 `v4:event:<사건ID>`를 붙인다. 이걸 조건으로 써서 시기 안의 순서를 고정했다.
+
+| 상황 | 방법 | 적용한 경로 사건 |
+| --- | --- | --- |
+| 고등학생 때 일 (수능·진로 상담·편의점 알바·운동부 특기생) | 원서 완료 `v4:event:teen_019`(청소년기 3년 차)를 등장 조건에 넣음 | path_int_03, path_hap_02, path_wea_01, path_fit_03 |
+| 수능 날 뒤에 나오면 안 되는 일 | 제외 조건 `v4:event:teen_038` | path_int_03 |
+| 졸업·취업 전환점 (대학 1학년에 나오면 안 됨) | 청년기 5년 차로 고정 (`yearInPeriod: 5`) | path_int_07, path_wea_03, path_hap_03, path_soc_04, path_luk_04 |
+| 손주가 나오는 선택지 | 첫 아이 완료 `v4:event:adult_039`가 있을 때만 | path_int_10 C, path_soc_09 B, path_hap_08 B |
+| 같은 일이 두 번 | 이미 일어났으면 제외 (`home_owner`, `pro_athlete`, `v4:event:child_003`, 자취 플래그) | path_wea_05, path_fit_05, path_soc_01, path_wea_04 C |
+
+엔진으로 2,400판을 돌려 위 순서가 깨지는 판이 0판인지 확인했다. 기존 사건에도 같은 방법을 쓸 수 있다(예: 수능 D-100·수능 날·야자에 `v4:event:teen_019`).
+
 ## 4. 경로별 연결표
 
 ### 4.1 지력 경로
@@ -77,14 +89,14 @@
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | path_int_01 | 유년기 | INCIDENT | 입구 | 교내 수학 경시대회 | 지력 62+ | A. 대회에 나간다. (항상) → `int_path` `achv_math_award` <sub>결과 2갈래</sub><br>B. 친구 생일 파티에 간다. (항상) → -<br>C. 대회 문제를 직접 만들어서 선생님께 낸다. (항상) → `int_path` `achv_problem_setter` `achv_math_award` <sub>결과 2갈래</sub> | path_int_02 |
 | path_int_02 | 청소년기 | MILESTONE | 전환점 | 영재교육원 선발 시험 | 지력 72+ | A. 추천을 받아 시험을 본다. (지력 75+) → `int_path` `int_gifted` `achv_gifted_program` `int_gifted_fail` <sub>결과 2갈래</sub><br>B. 혼자 공부하는 게 더 맞다. (항상) → `int_path` `int_self_study`<br>C. 추천을 친구에게 양보한다. (사회성 60+) → `int_path` `helped_friend` | path_int_03 |
-| path_int_03 | 청소년기 | INCIDENT | 시험·상호작용(건강) | 수능 D-30 | `int_path` | A. 하루 네 시간만 자고 문제를 더 푼다. (항상) → `int_csat_top` `overwork` `int_csat_fail` <sub>결과 2갈래</sub><br>B. 평소처럼 자고 평소처럼 푼다. (항상) → `int_csat_top` `int_csat_fail` <sub>결과 2갈래</sub><br>C. 사물함에 '수능 대박' 엿을 붙이고 인증샷을 올린다. (항상) → `int_csat_top` `int_csat_fail` <sub>결과 2갈래</sub> | path_int_04, path_int_05, path_int_06 |
+| path_int_03 | 청소년기 | INCIDENT | 시험·상호작용(건강) | 수능 D-30 | `int_path`, `v4:event:teen_019`, 제외 `v4:event:teen_038` | A. 하루 네 시간만 자고 문제를 더 푼다. (항상) → `int_csat_top` `overwork` `int_csat_fail` <sub>결과 2갈래</sub><br>B. 평소처럼 자고 평소처럼 푼다. (항상) → `int_csat_top` `int_csat_fail` <sub>결과 2갈래</sub><br>C. 사물함에 '수능 대박' 엿을 붙이고 인증샷을 올린다. (항상) → `int_csat_top` `int_csat_fail` <sub>결과 2갈래</sub> | path_int_04, path_int_05, path_int_06 |
 | path_int_04 | 청년기 | INCIDENT | 진학·장학금·상호작용(경제력) | 3.98과 장학금 커트라인 | `int_path`, `university` | A. 교수님께 성적 확인 메일을 보낸다. (항상) → `scholarship` `int_major_strong` <sub>결과 2갈래</sub><br>B. 연구실 인턴에 지원한다. (항상) → `int_lab` <sub>결과 2갈래</sub><br>C. 과외 세 개로 등록금을 직접 번다. (항상) → `int_tutor` `student_loan` <sub>결과 2갈래</sub> | path_int_07 |
 | path_int_05 | 청년기 | INCIDENT | 실패 후 재도전 | 쉬어 가는 1년, 다시 수능 | `int_path`, `gap_year` | A. 다시 수능을 본다. (항상) → `university` `field_science` `int_retake_success` `int_retake_fail` <sub>결과 2갈래</sub><br>B. 혼자 코딩을 배워 바로 일을 구한다. (항상) → `int_self_taught` `career_engineer` `job_employed` | path_int_07 |
 | path_int_06 | 청년기·중년기 | INCIDENT | 취업한 지력형 — 다른 길 | 퇴근 후 야간대학 | `int_path`, `early_job` | A. 야간대학에 등록한다. (항상) → `university` `achv_night_degree` `int_night_dropout` <sub>결과 2갈래</sub><br>B. 사내 기술 자격증부터 딴다. (항상) → `career_engineer` `level_mid` | path_int_08 |
 | path_int_07 | 청년기 | MILESTONE | 전환점 | 졸업 앞의 세 갈래 | 지력 82+, `int_path`, `university` | A. 대학원에 진학한다. (지력 85+) → `edu_graduate` `career_researcher` `job_employed`<br>B. 대기업 연구소에 입사한다. (항상) → `career_engineer` `job_employed`<br>C. 변리사 시험에 도전한다. (지력 90+) → `career_patent_attorney` `job_employed` `achv_license` `career_engineer` `int_exam_fail` <sub>결과 2갈래</sub> | path_int_08, path_int_09 |
 | path_int_08 | 중년기 | INCIDENT | 성과 vs 가족·상호작용(건강·사회성) | 마감 D-1과 가족 모임 | `int_path`, `job_employed` | A. 주말 내내 결과를 마무리한다. (항상) → `achv_major_paper` `int_burnout` `health_warning` `overwork` `int_project_delayed` <sub>결과 3갈래·숨김</sub><br>B. 가족 모임에 간다. (항상) → `family_bond` `family_memory`<br>C. 노트북을 들고 가족 모임에 간다. (항상) → `achv_major_paper` `int_project_delayed` <sub>결과 2갈래</sub> | path_int_09, path_int_10 |
 | path_int_09 | 중년기 | MILESTONE | 전환점·중년 성과 | 평생 연구의 마지막 퍼즐 | 지력 88+, `int_path`, `job_employed` | A. 연구를 끝까지 밀어붙인다. (`career_researcher`) → `achv_breakthrough` `level_senior` `int_project_cancelled` <sub>결과 2갈래</sub><br>B. 결과를 특허로 낸다. (`career_engineer`) → `patent_holder` `achv_patent` `level_senior`<br>C. 은사님 강의를 맡아 후배를 가르친다. (항상) → `achv_mentor` `helped_friend` `career_professor` | path_int_10 |
-| path_int_10 | 노년기 | INCIDENT | 노년 결과 | 마지막 강의 | `int_path` | A. 평생의 연구 이야기를 한다. (`achv_major_paper`) → `achv_last_lecture`<br>B. 실패한 이야기만 골라서 한다. (항상) → `achv_last_lecture`<br>C. 손주 숙제를 대신 풀어 주고 강연은 미룬다. (항상) → `family_bond` `family_memory` | - |
+| path_int_10 | 노년기 | INCIDENT | 노년 결과 | 마지막 강의 | `int_path` | A. 평생의 연구 이야기를 한다. (`achv_major_paper`) → `achv_last_lecture`<br>B. 실패한 이야기만 골라서 한다. (항상) → `achv_last_lecture`<br>C. 손주 숙제를 대신 풀어 주고 강연은 미룬다. (`v4:event:adult_039`) → `family_bond` `family_memory` | - |
 
 지력 경로 결말:
 
@@ -104,13 +116,13 @@
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | path_fit_01 | 유년기 | INCIDENT | 입구 | 체육관 관장님의 명함 | 운동능력 63+ | A. 육상부에 들어간다. (항상) → `fit_path` `sports_club` `sports_training`<br>B. 운동은 취미로만 한다. (항상) → -<br>C. 명함을 받아 들고 운동장 한 바퀴를 더 돈다. (항상) → `fit_path` `sports_club` `sports_training` | path_fit_02 |
 | path_fit_02 | 유년기·청소년기 | INCIDENT | 첫 경기·상호작용(운) | 첫 대회 결승선 | `fit_path` | A. 끈을 묶고 다시 자세를 잡는다. (항상) → `achv_youth_medal` `fit_rival` <sub>결과 2갈래</sub><br>B. 그냥 달린다. (항상) → `achv_youth_medal` `fit_first_loss` <sub>결과 2갈래</sub> | path_fit_03 |
-| path_fit_03 | 청소년기 | MILESTONE | 전환점 | 체육 특기생 제안 | 운동능력 70+, `fit_path` | A. 체육 특기생으로 간다. (운동능력 74+) → `fit_path` `fit_elite`<br>B. 일반고에 가서 공부와 병행한다. (항상) → `fit_path` `fit_dual`<br>C. 운동을 그만두고 공부에 집중한다. (항상) → `fit_quit` | path_fit_04, path_fit_05 |
+| path_fit_03 | 청소년기 | MILESTONE | 전환점 | 운동부 특기생 제안 | 운동능력 70+, `fit_path`, `v4:event:teen_019` | A. 운동부 특기생이 된다. (운동능력 74+) → `fit_path` `fit_elite`<br>B. 일반고에 가서 공부와 병행한다. (항상) → `fit_path` `fit_dual`<br>C. 운동을 그만두고 공부에 집중한다. (항상) → `fit_quit` | path_fit_04, path_fit_05 |
 | path_fit_04 | 청소년기 | INCIDENT | 경기·부상·상호작용(건강) | 전국체전 결승, 무릎의 소리 | `fit_path`, 제외 `fit_quit` | A. 테이핑하고 결승에 뛴다. (항상) → `achv_national_champion` `fit_injury` `health_injured` `achv_youth_medal` <sub>결과 3갈래</sub><br>B. 기권하고 병원에 간다. (항상) → `healthy_routine` | path_fit_05 |
-| path_fit_05 | 청년기 | MILESTONE | 전환점·직업 | 프로 입단 테스트 | `fit_path`, 제외 `fit_quit` | A. 프로 테스트를 본다. (운동능력 82+) → `career_athlete` `pro_athlete` `job_employed` `career_coach` `fit_pro_fail` <sub>결과 2갈래</sub><br>B. 체육교육과에 진학한다. (항상) → `university` `field_sports` `career_pe_teacher` `job_employed`<br>C. 재활 트레이너가 된다. (`fit_injury`) → `career_trainer` `job_employed` `helped_friend` | path_fit_06, path_fit_07, path_fit_08 |
+| path_fit_05 | 청년기 | MILESTONE | 전환점·직업 | 프로 입단 테스트 | `fit_path`, 제외 `fit_quit`, 제외 `pro_athlete`, 제외 `coach_path` | A. 프로 테스트를 본다. (운동능력 82+) → `career_athlete` `pro_athlete` `job_employed` `career_coach` `fit_pro_fail` <sub>결과 2갈래</sub><br>B. 체육교육과에 진학한다. (항상) → `university` `field_sports` `career_pe_teacher` `job_employed`<br>C. 재활 트레이너가 된다. (`fit_injury`) → `career_trainer` `job_employed` `helped_friend` | path_fit_06, path_fit_07, path_fit_08 |
 | path_fit_06 | 청년기·중년기 | INCIDENT | 직업 성과·상호작용(사회성) | 주전 경쟁 | `career_athlete` | A. 훈련량을 두 배로 늘린다. (항상) → `achv_league_best` `fit_bench` `health_injured` <sub>결과 2갈래</sub><br>B. 후배에게 밥을 사며 비결을 묻는다. (항상) → `achv_league_best` `lifelong_friend` `fit_bench` <sub>결과 2갈래</sub> | path_fit_07 |
 | path_fit_07 | 청년기·중년기 | INCIDENT | 부상·은퇴 갈림길(실패) | 세 번째 수술 상담 | `fit_path`, `health_injured` | A. 수술하고 복귀를 노린다. (항상) → `achv_comeback` `fit_retired` `health_limited` <sub>결과 2갈래</sub><br>B. 은퇴하고 유소년 감독이 된다. (항상) → `career_coach` `coach_path` `fit_retired`<br>C. 해설위원 제안을 받는다. (항상) → `career_caster` `fit_retired` | path_fit_08 |
 | path_fit_08 | 중년기 | MILESTONE | 전환점·중년 결과 | 내 이름을 건 체육관 | 운동능력 85+, `fit_path`, 제외 `fit_quit` | A. 내 이름을 건 체육관을 연다. (경제력 60+) → `career_gym_owner` `own_shop` `job_self_employed` `achv_own_gym` `fit_gym_closed` `in_debt` <sub>결과 2갈래</sub><br>B. 후배들을 길러 내는 지도자로 남는다. (항상) → `career_coach` `achv_trained_champion` | path_fit_09 |
-| path_fit_09 | 노년기 | INCIDENT | 노년 결과·상호작용(건강) | 시니어 마라톤 출발선 | `fit_path` | A. 풀코스에 도전한다. (항상) → `achv_senior_marathon` <sub>결과 2갈래</sub><br>B. 무릎을 생각해 응원석에 선다. (`health_limited`) → -<br>C. 5km 걷기 코스로 바꾼다. (항상) → `family_bond` `family_memory` | - |
+| path_fit_09 | 노년기 | INCIDENT | 노년 결과·상호작용(건강) | 시니어 마라톤 출발선 | `fit_path` | A. 풀코스에 도전한다. (항상) → `achv_senior_marathon` <sub>결과 2갈래</sub><br>B. 무릎을 생각해 응원석에 선다. (`health_limited`) → -<br>C. 5km 걷기 코스로 바꾼다. (항상) → `lifelong_friend` | - |
 
 운동능력 경로 결말:
 
@@ -128,7 +140,7 @@
 
 | ID | 시기 | 종류 | 역할 | 제목 | 등장 조건 | 선택지 (조건) → 결과로 붙는 사실 | 후속 |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| path_soc_01 | 유년기 | INCIDENT | 입구 | 반장 선거 연설 | 사회성 64+ | A. 친구들 이름을 하나씩 부르며 즉석 연설을 한다. (항상) → `soc_path` `class_leader` `achv_class_president` <sub>결과 2갈래</sub><br>B. 다른 후보를 지지한다고 말하고 내려온다. (항상) → `soc_path` `leader_experience` | path_soc_02 |
+| path_soc_01 | 유년기 | INCIDENT | 입구 | 반장 선거 연설 | 사회성 64+, 제외 `v4:event:child_003` | A. 친구들 이름을 하나씩 부르며 즉석 연설을 한다. (항상) → `soc_path` `class_leader` `achv_class_president` <sub>결과 2갈래</sub><br>B. 다른 후보를 지지한다고 말하고 내려온다. (항상) → `soc_path` `leader_experience` | path_soc_02 |
 | path_soc_02 | 청소년기 | INCIDENT | 협업·상호작용(행복) | 축제 준비위원회의 밤 | `soc_path` | A. 양쪽을 모아 밤새 예산표를 다시 짠다. (항상) → `soc_team_lead` `achv_festival` `club_joined` `soc_conflict` <sub>결과 2갈래</sub><br>B. 투표로 정하자고 한다. (항상) → `soc_team_lead` `club_joined`<br>C. 내 용돈으로 모자란 예산을 채운다. (항상) → `soc_team_lead` `secret_payer` `club_joined` | path_soc_03 |
 | path_soc_03 | 청소년기·청년기 | INCIDENT | 연애 | 집에 가는 길이 같은 사람 | `soc_path` | A. "같이 내려서 걸을래?"라고 묻는다. (항상) → `dating` `first_love` `best_friend` <sub>결과 2갈래</sub><br>B. 모르는 척 다음 정류장에서 내린다. (항상) → `missed_chance` | path_soc_04, path_soc_05 |
 | path_soc_04 | 청년기 | MILESTONE | 전환점·직업 | 사람으로 들어온 일자리 | 사회성 82+, `soc_path` | A. 선배 회사 영업팀에 간다. (사회성 85+) → `career_sales` `job_employed` `achv_top_sales` `career_office` <sub>결과 2갈래</sub><br>B. 상담·복지 일을 배운다. (항상) → `career_counselor` `job_employed`<br>C. 친구와 같이 창업한다. (경제력 60+) → `career_founder` `startup_founder` `job_self_employed` `soc_friend_lost` `job_unemployed` <sub>결과 2갈래</sub> | path_soc_06 |
@@ -136,7 +148,7 @@
 | path_soc_06 | 중년기 | MILESTONE | 전환점·네트워크 | 동네가 나를 부른다 | 사회성 88+, `soc_path` | A. 선거에 나간다. (사회성 90+) → `achv_community_leader` `volunteer` <sub>결과 2갈래</sub><br>B. 사람들을 이어 주는 모임을 만든다. (항상) → `achv_connector` `best_friend` | path_soc_08 |
 | path_soc_07 | 중년기 | INCIDENT | 가족 위기(실패)·상호작용(행복·경제력) | 식탁 위의 침묵 | 사회성 60+, `married`, 제외 `divorced` | A. 이번 주말 둘만의 여행을 예약한다. (항상) → `family_bond` `achv_family_peace` `family_memory` `divorced` `soc_divorce` <sub>결과 2갈래</sub><br>B. 부부 상담을 받아 보자고 한다. (항상) → `family_talk` | path_soc_08 |
 | path_soc_08 | 중년기·노년기 | INCIDENT | 이혼 후·실패에서 회복 | 혼자 차린 생일상 | `divorced` | A. 친구들을 불러 남은 미역국을 같이 먹는다. (항상) → `lifelong_friend` `achv_found_family`<br>B. 혼자 조용히 하루를 보낸다. (항상) → `single_life` | path_soc_09 |
-| path_soc_09 | 노년기 | INCIDENT | 노년 결과 | 칠순 잔치의 방명록 | `soc_path` | A. 한 사람 한 사람에게 인사하러 돈다. (항상) → `achv_full_guestbook`<br>B. 가족 테이블에 앉아 손주들과 사진을 찍는다. (`married`) → `family_bond` `family_memory`<br>C. 마이크를 잡고 노래방 18번을 부른다. (항상) → - | - |
+| path_soc_09 | 노년기 | INCIDENT | 노년 결과 | 칠순 잔치의 방명록 | `soc_path` | A. 한 사람 한 사람에게 인사하러 돈다. (항상) → `achv_full_guestbook`<br>B. 가족 테이블에 앉아 손주들과 사진을 찍는다. (`v4:event:adult_039`) → `family_bond` `family_memory`<br>C. 마이크를 잡고 노래방 18번을 부른다. (항상) → - | - |
 
 사회성 경로 결말:
 
@@ -149,16 +161,16 @@
 
 ### 4.4 경제력 경로
 
-흐름: 첫 알바 월급 → 중고 거래 사업 → 첫 직장 계약서 → 전셋집 계약 → 내 집 마련 → 학원비 → 가게 위기 → 회사 인수 제안 → 재산 정리
+흐름: 첫 알바 월급 → 중고 거래 사업 → 첫 직장 계약서 → 전셋집 계약 → 내 집 마련 → 가족 지출 → 가게 위기 → 회사 인수 제안 → 재산 정리
 
 | ID | 시기 | 종류 | 역할 | 제목 | 등장 조건 | 선택지 (조건) → 결과로 붙는 사실 | 후속 |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| path_wea_01 | 청소년기 | MILESTONE | 입구·전환점 | 첫 월급 37만 원 | 경제력 56+ | A. 적금 통장을 만든다. (항상) → `wea_path` `saving_habit` `money_habit` `part_time_job`<br>B. 주식 계좌를 열고 첫 주식을 산다. (항상) → `wea_path` `wea_investor` `part_time_job` <sub>결과 2갈래</sub><br>C. 친구들에게 떡볶이를 쏜다. (항상) → `secret_payer` `part_time_job` | path_wea_02, path_wea_03 |
+| path_wea_01 | 청소년기 | MILESTONE | 입구·전환점 | 첫 월급 37만 원 | 경제력 56+, `v4:event:teen_019` | A. 적금 통장을 만든다. (항상) → `wea_path` `saving_habit` `money_habit` `part_time_job`<br>B. 주식 계좌를 열고 첫 주식을 산다. (항상) → `wea_path` `wea_investor` `part_time_job` <sub>결과 2갈래</sub><br>C. 친구들에게 떡볶이를 쏜다. (항상) → `secret_payer` `part_time_job` | path_wea_02, path_wea_03 |
 | path_wea_02 | 청소년기·청년기 | INCIDENT | 작은 사업·상호작용(사회성) | 중고 거래 사장님 | `wea_path` | A. 온라인 가게를 정식으로 연다. (항상) → `wea_seller` `achv_first_business` <sub>결과 2갈래</sub><br>B. 번 돈으로 학원비를 낸다. (항상) → `family_bond` `family_memory` | path_wea_03 |
-| path_wea_03 | 청년기 | MILESTONE | 전환점·직업 | 첫 직장, 세 개의 계약서 | 경제력 62+ | A. 대기업에 입사한다. (항상) → `wea_path` `career_office` `corporate_job` `job_employed` `housing_monthly_rent`<br>B. 스타트업에 들어간다. (경제력 65+) → `wea_path` `career_startup` `job_employed` `achv_stock_option` `job_unemployed` <sub>결과 2갈래</sub><br>C. 내 가게를 연다. (`wea_seller`) → `wea_path` `career_founder` `startup_founder` `own_shop` `job_self_employed` `wea_struggle` <sub>결과 2갈래</sub> | path_wea_04, path_wea_06 |
-| path_wea_04 | 청년기·중년기 | INCIDENT | 주거·상호작용(지력·운) | 전셋집 계약 전날 | `wea_path`, `job_employed` | A. 등기부등본부터 떼어 본다. (항상) → `housing_jeonse` <sub>결과 2갈래</sub><br>B. 좋은 집은 빨리 잡아야 한다. 계약금을 넣는다. (항상) → `housing_jeonse` `wea_jeonse_loss` `in_debt` <sub>결과 2갈래·숨김</sub><br>C. 부모님 집에 조금 더 산다. (항상) → `housing_with_parents` | path_wea_05 |
-| path_wea_05 | 중년기 | MILESTONE | 전환점·주거 | 내 집 마련 상담 | 경제력 75+, `wea_path` | A. 대출을 끼고 아파트를 산다. (경제력 80+) → `home_owner` `housing_own_apartment` `in_debt` `achv_home`<br>B. 전세를 유지하고 남은 돈을 투자한다. (항상) → `wea_investor` `housing_jeonse` `wea_market_loss` <sub>결과 2갈래</sub><br>C. 도시를 떠나 마당 있는 집을 산다. (행복 70+) → `home_owner` `housing_own_house` | path_wea_06, path_wea_08 |
-| path_wea_06 | 중년기 | INCIDENT | 가족 지출·상호작용(행복·사회성) | 학원비 영수증 | `wea_path`, `married`, 제외 `divorced` | A. 내 용돈을 줄이고 학원을 보낸다. (항상) → `first_child` `family_bond` `devoted_parent` `family_memory`<br>B. 학원 대신 주말에 같이 그림을 그린다. (항상) → `first_child` `family_bond` `family_memory` <sub>결과 2갈래</sub><br>C. 부업을 하나 더 시작한다. (항상) → `first_child` `overwork` | path_wea_08 |
+| path_wea_03 | 청년기 | MILESTONE | 전환점·직업 | 세 장의 계약서 | 경제력 62+ | A. 대기업에 입사한다. (항상) → `wea_path` `career_office` `corporate_job` `job_employed` `housing_monthly_rent`<br>B. 스타트업에 들어간다. (경제력 65+) → `wea_path` `career_startup` `job_employed` `achv_stock_option` `job_unemployed` <sub>결과 2갈래</sub><br>C. 내 가게를 연다. (`wea_seller`) → `wea_path` `career_founder` `startup_founder` `own_shop` `job_self_employed` `wea_struggle` <sub>결과 2갈래</sub> | path_wea_04, path_wea_06 |
+| path_wea_04 | 청년기·중년기 | INCIDENT | 주거·상호작용(지력·운) | 전셋집 계약 전날 | `wea_path`, `job_employed` | A. 등기부등본부터 떼어 본다. (항상) → `housing_jeonse` <sub>결과 2갈래</sub><br>B. 좋은 집은 빨리 잡아야 한다. 계약금을 넣는다. (항상) → `housing_jeonse` `wea_jeonse_loss` `in_debt` <sub>결과 2갈래·숨김</sub><br>C. 부모님 집에 조금 더 산다. (제외 `housing_monthly_rent`, 제외 `v4:event:adult_004`, 제외 `v4:event:adult_045`) → `housing_with_parents` | path_wea_05 |
+| path_wea_05 | 중년기 | MILESTONE | 전환점·주거 | 내 집 마련 상담 | 경제력 75+, `wea_path`, 제외 `home_owner` | A. 대출을 끼고 아파트를 산다. (경제력 80+) → `home_owner` `housing_own_apartment` `in_debt` `achv_home`<br>B. 전세를 유지하고 남은 돈을 투자한다. (항상) → `wea_investor` `housing_jeonse` `wea_market_loss` <sub>결과 2갈래</sub><br>C. 도시를 떠나 마당 있는 집을 산다. (행복 70+) → `home_owner` `housing_own_house` | path_wea_06, path_wea_08 |
+| path_wea_06 | 중년기 | INCIDENT | 가족 지출·상호작용(사회성) | 가족 지출 명세서 | `wea_path` | A. 부모님 병원비는 내가 다 낸다. (항상) → `family_bond` `family_memory`<br>B. 형제들과 똑같이 나눈다. (항상) → `family_bond` `family_memory` `family_conflict` <sub>결과 2갈래</sub><br>C. 부업을 하나 더 시작한다. (항상) → `overwork` | path_wea_08 |
 | path_wea_07 | 청년기·중년기 | INCIDENT | 위기(실패) | 월세 날의 통장 잔고 | `wea_struggle` | A. 대출을 받아 버틴다. (항상) → `in_debt` `comeback` `wea_survived_crisis` `wea_bankrupt` `job_unemployed` <sub>결과 2갈래</sub><br>B. 가게를 접고 다시 회사에 들어간다. (항상) → `career_office` `job_employed` `comeback` | path_wea_08 |
 | path_wea_08 | 중년기 | INCIDENT | 중년 성과 | 회사를 사겠다는 전화 | `career_founder`, 제외 `wea_bankrupt` | A. 회사를 판다. (항상) → `achv_exit` `job_retired` `debt_free`<br>B. 거절하고 회사를 더 키운다. (항상) → `achv_company_100` `level_executive` <sub>결과 2갈래</sub> | path_wea_09 |
 | path_wea_09 | 노년기 | INCIDENT | 노년 결과 | 통장 정리하는 날 | `wea_path` | A. 장학 재단에 일부를 기부한다. (`achv_exit`) → `achv_donation`<br>B. 남은 빚부터 정리한다. (`in_debt`) → `debt_free`<br>C. 가족에게 나누고 남은 돈으로 여행을 간다. (항상) → `family_bond` `family_memory` | - |
@@ -181,13 +193,13 @@
 | ID | 시기 | 종류 | 역할 | 제목 | 등장 조건 | 선택지 (조건) → 결과로 붙는 사실 | 후속 |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | path_hap_01 | 유년기 | INCIDENT | 입구 | 주말의 비밀 취미 | 행복 74+ | A. 없는 줄 하나 빼고 다섯 줄로 연습한다. (항상) → `hap_path` `creative_hobby` `music_path`<br>B. 기타 대신 그림을 그린다. (항상) → `hap_path` `creative_hobby` `art_interest`<br>C. 창고를 다시 닫고 게임을 한다. (항상) → `gamer` | path_hap_02 |
-| path_hap_02 | 청소년기 | INCIDENT | 진로 갈등·상호작용(지력) | 좋아하는 것과 잘하는 것 | `hap_path` | A. 좋아하는 걸 전공하겠다고 말한다. (항상) → `hap_art_major` `arts_track` `family_conflict` <sub>결과 2갈래</sub><br>B. 성적에 맞춰 가고 취미는 남겨 둔다. (항상) → `hap_hobby_side` | path_hap_03 |
+| path_hap_02 | 청소년기 | INCIDENT | 진로 갈등·상호작용(지력) | 좋아하는 것과 잘하는 것 | `hap_path`, `v4:event:teen_019` | A. 좋아하는 걸 전공하겠다고 말한다. (항상) → `hap_art_major` `arts_track` `family_conflict` <sub>결과 2갈래</sub><br>B. 성적에 맞춰 가고 취미는 남겨 둔다. (항상) → `hap_hobby_side` | path_hap_03 |
 | path_hap_03 | 청년기 | MILESTONE | 전환점·직업 | 연봉이냐 저녁이냐 | `hap_path` | A. 6시 퇴근 회사에 간다. (항상) → `work_life_balance` `career_office` `job_employed`<br>B. 연봉 높은 회사에 간다. (경제력 55+) → `career_office` `job_employed` `overwork`<br>C. 친구와 작업실을 연다. (`hap_art_major`) → `career_creator` `job_self_employed` `achv_first_commission` `overwork` <sub>결과 2갈래</sub> | path_hap_04, path_hap_05 |
 | path_hap_04 | 청년기·중년기 | INCIDENT | 번아웃(실패)·상호작용(건강) | 아무것도 재미없는 일요일 | `hap_path`, `overwork` | A. 휴직계를 낸다. (항상) → `burnout_recovered` `hap_rest` `burnout` <sub>결과 2갈래</sub><br>B. 상담을 받아 본다. (항상) → `burnout_recovered`<br>C. 그냥 버틴다. (항상) → `burnout` `hap_lost_joy` `health_warning` <sub>결과 2갈래·숨김</sub> | path_hap_06 |
 | path_hap_05 | 청년기·중년기 | INCIDENT | 관계 만족·상호작용(사회성) | 취미 모임에서 만난 사람 | `hap_path`, 제외 `married` | A. 다음 주에도 간다. (항상) → `married` `achv_band_wedding` `lifelong_friend` <sub>결과 2갈래</sub><br>B. 혼자 하는 취미가 더 편하다. (항상) → `single_life` `solo_musician` | path_hap_06 |
 | path_hap_06 | 중년기 | MILESTONE | 전환점·중년 성과 | 첫 개인 공연 제안 | `hap_path`, 제외 `hap_lost_joy` | A. 공연을 연다. (행복 80+) → `achv_solo_show` <sub>결과 2갈래</sub><br>B. 가족 앞에서만 작게 연다. (항상) → `family_bond` `content_life` `family_memory` | path_hap_07, path_hap_08 |
 | path_hap_07 | 중년기 | INCIDENT | 행복의 대가·상호작용(경제력) | 통장과 웃음 사이 | `hap_path` | A. 취미로 돈을 버는 방법을 찾는다. (항상) → `achv_hobby_income` `content_life` <sub>결과 2갈래</sub><br>B. 지금 행복한 게 노후다. (항상) → `content_life` | path_hap_08 |
-| path_hap_08 | 노년기 | INCIDENT | 노년 결과 | 문화센터 할머니 할아버지 선생님 | `hap_path` | A. 첫 곡으로 다 같이 아는 동요를 고른다. (항상) → `achv_senior_teacher`<br>B. 손주에게 먼저 가르쳐 본다. (`first_child`) → `family_bond` `family_memory`<br>C. 번아웃 때 쓴 일기를 꺼내 읽는다. (`burnout`) → `burnout_recovered` | - |
+| path_hap_08 | 노년기 | INCIDENT | 노년 결과 | 문화센터 할머니 할아버지 선생님 | `hap_path` | A. 첫 곡으로 다 같이 아는 동요를 고른다. (항상) → `achv_senior_teacher`<br>B. 손주에게 먼저 가르쳐 본다. (`v4:event:adult_039`) → `family_bond` `family_memory`<br>C. 번아웃 때 쓴 일기를 꺼내 읽는다. (`burnout`) → `burnout_recovered` | - |
 
 행복 경로 결말:
 
@@ -232,7 +244,7 @@
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | path_hea_01 | 유년기 | INCIDENT | 입구 | 급식 시간의 브로콜리 | 없음 (선택으로 입장) | A. 다섯 송이를 다 먹는다. (항상) → `hea_path` `good_eater`<br>B. 짝꿍 것만 돌려준다. (항상) → -<br>C. 브로콜리로 나무를 만들어 급식판 숲을 꾸민다. (항상) → `storyteller` | path_hea_02 |
 | path_hea_02 | 청소년기 | INCIDENT | 입구·습관·상호작용(지력) | 새벽 2시의 책상 | 없음 (선택으로 입장) | A. 불을 끄고 잔다. (항상) → `hea_path` `healthy_routine` `hea_sleep_habit`<br>B. 에너지 음료를 따고 밤을 새운다. (항상) → `hea_sleep_debt` `health_warning` <sub>결과 2갈래·숨김</sub> | path_hea_03 |
-| path_hea_03 | 청년기·중년기 | INCIDENT | 검진 | 첫 종합검진 결과지 | `hea_path` | A. 그날부터 매일 30분 걷는다. (항상) → `healthy_routine` `hea_managed`<br>B. 경계면 아직 괜찮은 거다. (항상) → `health_warning` <sub>결과 2갈래</sub> | path_hea_04, path_hea_05 |
+| path_hea_03 | 청년기·중년기 | INCIDENT | 검진 | 종합검진 결과지 | `hea_path` | A. 그날부터 매일 30분 걷는다. (항상) → `healthy_routine` `hea_managed`<br>B. 경계면 아직 괜찮은 거다. (항상) → `health_warning` <sub>결과 2갈래</sub> | path_hea_04, path_hea_05 |
 | path_hea_04 | 청년기·중년기 | INCIDENT | 관리 성과·상호작용(운동능력) | 주말 등산 모임 대장 | `hea_managed` | A. 대장을 맡는다. (항상) → `achv_hundred_peaks` `healthy_routine` `health_injured` <sub>결과 2갈래</sub><br>B. 혼자 걷는 게 더 좋다. (항상) → `healthy_routine` | path_hea_06 |
 | path_hea_05 | 중년기 | MILESTONE | 전환점·질병 | 진단서 한 장 | `health_warning` | A. 일을 줄이고 생활을 다 바꾼다. (항상) → `hea_recovered` `healthy_routine` `health_recovered` `hea_chronic` `health_chronic` <sub>결과 2갈래</sub><br>B. 전문 재활 프로그램에 등록한다. (경제력 65+) → `hea_recovered` `health_recovered` `achv_full_recovery`<br>C. 지금 일이 더 급하다. 약만 먹는다. (항상) → `hea_chronic` `health_chronic` `overwork` | path_hea_06, path_hea_07 |
 | path_hea_06 | 중년기·노년기 | INCIDENT | 건강 성과 | 건강 나이 측정 | 건강 70+, `healthy_routine`, 제외 `hea_chronic` | A. 결과지를 액자에 넣는다. (항상) → `achv_young_body`<br>B. 보건소 걷기 교실 강사를 자원한다. (항상) → `achv_young_body` `volunteer` `helped_friend` | path_hea_08 |
@@ -260,7 +272,7 @@
 | 직급 (`careerLevel`) | 3 | `level_mid`=중간 관리자, `level_senior`=책임자, `level_executive`=임원·대표 |
 | 고용 상태 (`employmentStatus`) | 7 | `job_employed`=재직, `job_self_employed`=자영업, `job_unemployed`=실직, `job_retired`=은퇴 |
 | 결혼 (`maritalStatus`) | 4 | `dating`=연애 중, `married`=결혼, `divorced`=이혼, `single_life`=혼자의 삶 |
-| 자녀 (`childrenAtLeast`) | 2 | `first_child`=자녀, `v4:event:adult_039`=첫 아이 |
+| 자녀 (`childrenAtLeast`) | 1 | `v4:event:adult_039`=첫 아이 |
 | 주거 (`housingType`) | 6 | `housing_with_parents`=부모님 집, `housing_monthly_rent`=월세, `housing_jeonse`=전세, `housing_own_apartment`=내 집(아파트) |
 | 경제 상태 (`wealthNote`) | 3 | `in_debt`=빚 있음, `debt_free`=빚 청산, `student_loan`=학자금 대출 |
 | 건강 상태 (`healthStatus`) | 6 | `health_injured`=부상, `health_limited`=활동 제한, `health_chronic`=만성 질환 관리, `health_recovered`=회복 |
@@ -276,13 +288,13 @@
 
 | 집중 스탯 | 이번 주 전 1위 결말 | 이번 주 후 1위 결말 | 경로 사건 (중앙값) | 경로 결말 도달 | 다른 스탯 집중 판의 경로 결말 |
 | --- | --- | --- | ---: | ---: | ---: |
-| 지력 | 조용한 학자 80% | 질문 하나로 평생을 산 연구자 56% | 6 / 10 | 57% | 1% |
-| 운동능력 | 평범한 인생 74% | 누군가의 첫 메달을 만든 지도자 49% | 7 / 9 | 85% | 1% |
-| 사회성 | 평범한 인생 90% | 큰 식탁의 중심 49% | 7 / 9 | 84% | 1% |
-| 경제력 | 무난한 어른 42% | 대출을 다 갚은 날 45% | 5 / 9 | 89% | 0% |
+| 지력 | 조용한 학자 80% | 질문 하나로 평생을 산 연구자 56% | 6 / 10 | 58% | 1% |
+| 운동능력 | 평범한 인생 74% | 누군가의 첫 메달을 만든 지도자 51% | 7 / 9 | 84% | 1% |
+| 사회성 | 평범한 인생 90% | 큰 식탁의 중심 58% | 6 / 9 | 83% | 1% |
+| 경제력 | 무난한 어른 42% | 대출을 다 갚은 날 42% | 5 / 9 | 85% | 0% |
 | 행복 | 평범한 인생 98% | 쉰 석짜리 무대의 주인공 84% | 5 / 8 | 84% | 0% |
-| 운 | 조용한 학자 54% | 지갑 하나로 바뀐 인생 21% | 6 / 8 | 61% | 0% |
-| 건강 | 평범한 인생 72% | 열두 살 젊은 몸으로 산 사람 38% | 5 / 8 | 75% | 9% |
+| 운 | 조용한 학자 54% | 지갑 하나로 바뀐 인생 20% | 6 / 8 | 60% | 0% |
+| 건강 | 평범한 인생 72% | 백 개의 정상을 밟은 사람 38% | 5 / 8 | 74% | 11% |
 
 무작위로 고른 300판에서 나온 결말 종류: 31개 (이번 주 전 10개)
 
@@ -294,31 +306,31 @@
 
 **지력 집중** — 엔진 시드 8002, 결말 「질문 하나로 평생을 산 연구자」
 
-영아기 돌잡이 → 판사봉을 잡는다. → 유년기 학원 고르기 → 피아노. → 유년기 교내 수학 경시대회 → 대회에 나간다. → 청소년기 영재교육원 선발 시험 → 추천을 받아 시험을 본다. → 청소년기 고등학교 원서 → 인문계. → 청소년기 졸업식 날 → 친구들을 전부 고깃집에 데려간다. → 청년기 대학이냐 취업이냐 → 대학. → 청년기 입영 통지서 → 하던 공부와 일을 마무리하고 1년 뒤에 간다. → 청년기 졸업 앞의 세 갈래 → 대학원에 진학한다. → 청년기 결혼 이야기 → "같이 파견 가자." → 중년기 평생 연구의 마지막 퍼즐 → 연구를 끝까지 밀어붙인다. → 중년기 쉰 번째 생일 → 소원: "앞으로 50년 더!" → 노년기 마지막 강의 → 실패한 이야기만 골라서 한다.
+영아기 돌잡이 → 판사봉을 잡는다. → 유년기 학원 고르기 → 피아노. → 유년기 교내 수학 경시대회 → 대회에 나간다. → 청소년기 영재교육원 선발 시험 → 추천을 받아 시험을 본다. → 청소년기 고등학교 원서 → 인문계. → 청소년기 수능 D-30 → 하루 네 시간만 자고 문제를 더 푼다. → 청소년기 졸업식 날 → 친구들을 전부 고깃집에 데려간다. → 청년기 대학이냐 취업이냐 → 대학. → 청년기 입영 통지서 → 하던 공부와 일을 마무리하고 1년 뒤에 간다. → 청년기 3.98과 장학금 커트라인 → 연구실 인턴에 지원한다. → 청년기 결혼 이야기 → "같이 파견 가자." → 청년기 졸업 앞의 세 갈래 → 대학원에 진학한다. → 중년기 평생 연구의 마지막 퍼즐 → 연구를 끝까지 밀어붙인다. → 중년기 쉰 번째 생일 → 소원: "앞으로 50년 더!" → 노년기 마지막 강의 → 실패한 이야기만 골라서 한다.
 
-**운동능력 집중** — 엔진 시드 8037, 결말 「누군가의 첫 메달을 만든 지도자」
+**운동능력 집중** — 엔진 시드 8087, 결말 「경기장에 이름을 남긴 선수」
 
-영아기 돌잡이 → 5만 원권을 잡는다. → 유년기 학원 고르기 → 태권도. → 유년기 체육관 관장님의 명함 → 육상부에 들어간다. → 유년기 첫 대회 결승선 → 끈을 묶고 다시 자세를 잡는다. → 청소년기 체육 특기생 제안 → 체육 특기생으로 간다. → 청소년기 고등학교 원서 → 예술고 실기 시험에 도전한다. → 청소년기 전국체전 결승, 무릎의 소리 → 테이핑하고 결승에 뛴다. → 청소년기 졸업식 날 → 친구들을 전부 고깃집에 데려간다. → 청년기 대학이냐 취업이냐 → 1년 쉬면서 생각해 본다. → 청년기 프로 입단 테스트 → 프로 테스트를 본다. → 청년기 주전 경쟁 → 훈련량을 두 배로 늘린다. → 청년기 결혼 이야기 → "같이 파견 가자." → 청년기 세 번째 수술 상담 → 수술하고 복귀를 노린다. → 중년기 내 이름을 건 체육관 → 후배들을 길러 내는 지도자로 남는다. → 중년기 쉰 번째 생일 → 소원: "앞으로 50년 더!" → 노년기 시니어 마라톤 출발선 → 풀코스에 도전한다.
+영아기 돌잡이 → 5만 원권을 잡는다. → 유년기 학원 고르기 → 태권도. → 유년기 체육관 관장님의 명함 → 육상부에 들어간다. → 유년기 첫 대회 결승선 → 끈을 묶고 다시 자세를 잡는다. → 청소년기 전국체전 결승, 무릎의 소리 → 테이핑하고 결승에 뛴다. → 청소년기 고등학교 원서 → 예술고 실기 시험에 도전한다. → 청소년기 운동부 특기생 제안 → 운동부 특기생이 된다. → 청소년기 졸업식 날 → 친구들을 전부 고깃집에 데려간다. → 청년기 대학이냐 취업이냐 → 1년 쉬면서 생각해 본다. → 청년기 프로 입단 테스트 → 프로 테스트를 본다. → 청년기 결혼 이야기 → "같이 파견 가자." → 중년기 내 이름을 건 체육관 → 후배들을 길러 내는 지도자로 남는다. → 중년기 주전 경쟁 → 훈련량을 두 배로 늘린다. → 중년기 세 번째 수술 상담 → 수술하고 복귀를 노린다. → 중년기 쉰 번째 생일 → 소원: "앞으로 50년 더!" → 노년기 시니어 마라톤 출발선 → 풀코스에 도전한다.
 
-**사회성 집중** — 엔진 시드 8299, 결말 「큰 식탁의 중심」
+**사회성 집중** — 엔진 시드 8040, 결말 「큰 식탁의 중심」
 
-영아기 돌잡이 → 5만 원권을 잡는다. → 유년기 학원 고르기 → "나 그냥 놀래." → 유년기 반장 선거 연설 → 친구들 이름을 하나씩 부르며 즉석 연설을 한다. → 청소년기 축제 준비위원회의 밤 → 양쪽을 모아 밤새 예산표를 다시 짠다. → 청소년기 고등학교 원서 → 예술고 실기 시험에 도전한다. → 청소년기 집에 가는 길이 같은 사람 → "같이 내려서 걸을래?"라고 묻는다. → 청소년기 졸업식 날 → 친구들을 전부 고깃집에 데려간다. → 청년기 대학이냐 취업이냐 → 1년 쉬면서 생각해 본다. → 청년기 사람으로 들어온 일자리 → 상담·복지 일을 배운다. → 청년기 결혼 이야기 → 결혼한다. → 청년기 상견례 대참사 → 그날 축구 영상을 찾아서 같이 본다. → 중년기 동네가 나를 부른다 → 사람들을 이어 주는 모임을 만든다. → 중년기 쉰 번째 생일 → 가족과 사진을 찍는다. → 노년기 칠순 잔치의 방명록 → 한 사람 한 사람에게 인사하러 돈다.
+영아기 돌잡이 → 판사봉을 잡는다. → 유년기 학원 고르기 → "나 그냥 놀래." → 유년기 반장 선거 연설 → 친구들 이름을 하나씩 부르며 즉석 연설을 한다. → 청소년기 집에 가는 길이 같은 사람 → "같이 내려서 걸을래?"라고 묻는다. → 청소년기 축제 준비위원회의 밤 → 내 용돈으로 모자란 예산을 채운다. → 청소년기 고등학교 원서 → 예술고 실기 시험에 도전한다. → 청소년기 졸업식 날 → 친구들을 전부 고깃집에 데려간다. → 청년기 대학이냐 취업이냐 → 1년 쉬면서 생각해 본다. → 청년기 입영 통지서 → 입대 전까지 송별회를 일곱 번 한다. → 청년기 결혼 이야기 → 결혼한다. → 청년기 사람으로 들어온 일자리 → 상담·복지 일을 배운다. → 중년기 동네가 나를 부른다 → 선거에 나간다. → 중년기 상견례 대참사 → 그날 축구 영상을 찾아서 같이 본다. → 중년기 쉰 번째 생일 → 가족과 사진을 찍는다. → 노년기 칠순 잔치의 방명록 → 한 사람 한 사람에게 인사하러 돈다.
 
-**경제력 집중** — 엔진 시드 8107, 결말 「대출을 다 갚은 날」
+**경제력 집중** — 엔진 시드 8045, 결말 「작은 가게를 큰 회사로 키운 창업가」
 
-영아기 돌잡이 → 판사봉을 잡는다. → 유년기 학원 고르기 → "나 그냥 놀래." → 청소년기 첫 월급 37만 원 → 주식 계좌를 열고 첫 주식을 산다. → 청소년기 고등학교 원서 → 특성화고. → 청소년기 졸업식 날 → 친구들한테 간다. → 청년기 대학이냐 취업이냐 → 취업. → 청년기 첫 직장, 세 개의 계약서 → 스타트업에 들어간다. → 청년기 결혼 이야기 → 파견부터 다녀온다. → 청년기 전셋집 계약 전날 → 부모님 집에 조금 더 산다. → 중년기 내 집 마련 상담 → 대출을 끼고 아파트를 산다. → 중년기 쉰 번째 생일 → 소원: "앞으로 50년 더!" → 노년기 통장 정리하는 날 → 남은 빚부터 정리한다.
+영아기 돌잡이 → 5만 원권을 잡는다. → 유년기 학원 고르기 → "나 그냥 놀래." → 청소년기 고등학교 원서 → 특성화고. → 청소년기 첫 월급 37만 원 → 적금 통장을 만든다. → 청소년기 졸업식 날 → 가족이랑 고깃집에 간다. → 청년기 대학이냐 취업이냐 → 취업. → 청년기 중고 거래 사장님 → 온라인 가게를 정식으로 연다. → 청년기 결혼 이야기 → 파견부터 다녀온다. → 청년기 세 장의 계약서 → 내 가게를 연다. → 중년기 내 집 마련 상담 → 대출을 끼고 아파트를 산다. → 중년기 회사를 사겠다는 전화 → 회사를 판다. → 중년기 쉰 번째 생일 → 소원: "앞으로 50년 더!" → 노년기 통장 정리하는 날 → 가족에게 나누고 남은 돈으로 여행을 간다.
 
 **행복 집중** — 엔진 시드 8018, 결말 「쉰 석짜리 무대의 주인공」
 
 영아기 돌잡이 → 피아노 장난감을 잡는다. → 유년기 학원 고르기 → "나 그냥 놀래." → 유년기 주말의 비밀 취미 → 기타 대신 그림을 그린다. → 청소년기 고등학교 원서 → 예술고 실기 시험에 도전한다. → 청소년기 졸업식 날 → 친구들을 전부 고깃집에 데려간다. → 청년기 대학이냐 취업이냐 → 1년 쉬면서 생각해 본다. → 청년기 입영 통지서 → 입대 전까지 송별회를 일곱 번 한다. → 청년기 결혼 이야기 → 결혼한다. → 청년기 연봉이냐 저녁이냐 → 6시 퇴근 회사에 간다. → 중년기 첫 개인 공연 제안 → 공연을 연다. → 중년기 쉰 번째 생일 → 가족과 사진을 찍는다. → 노년기 문화센터 할머니 할아버지 선생님 → 첫 곡으로 다 같이 아는 동요를 고른다.
 
-**운 집중** — 엔진 시드 8235, 결말 「지갑 하나로 바뀐 인생」
+**운 집중** — 엔진 시드 8089, 결말 「될 사람은 됐다」
 
-영아기 돌잡이 → 5만 원권을 잡는다. → 유년기 학원 고르기 → 피아노. → 유년기 문구점 뽑기 3연속 1등 → 한 번 더 뽑는다. → 청소년기 당첨 축하 문자 → 링크를 누른다. → 청소년기 고등학교 원서 → 인문계. → 청소년기 졸업식 날 → 친구들을 전부 고깃집에 데려간다. → 청년기 대학이냐 취업이냐 → 1년 쉬면서 생각해 본다. → 청년기 엘리베이터 안의 30초 → 동네 이야기로 30초를 꽉 채운다. → 청년기 놓친 비행기 → 출장을 취소하고 집에 간다. → 청년기 결혼 이야기 → "같이 파견 가자." → 청년기 주운 지갑의 주인 → 바로 근처 파출소에 맡긴다. → 중년기 동창의 투자 제안 → 술값만 내고 먼저 일어난다. → 중년기 쉰 번째 생일 → "앞으로 하고 싶은 것 50개"를 적는다. → 노년기 운으로 산 인생 → "운은 몰라도 사람은 좋았지."
+영아기 돌잡이 → 5만 원권을 잡는다. → 유년기 학원 고르기 → "나 그냥 놀래." → 유년기 문구점 뽑기 3연속 1등 → 한 번 더 뽑는다. → 청소년기 당첨 축하 문자 → 링크를 누른다. → 청소년기 고등학교 원서 → 인문계. → 청소년기 졸업식 날 → 친구들을 전부 고깃집에 데려간다. → 청년기 대학이냐 취업이냐 → 1년 쉬면서 생각해 본다. → 청년기 결혼 이야기 → "같이 파견 가자." → 청년기 엘리베이터 안의 30초 → 동네 이야기로 30초를 꽉 채운다. → 중년기 동창의 투자 제안 → 모아 둔 돈을 넣는다. → 중년기 놓친 비행기 → 공항 근처에서 하룻밤 자고 내일 간다. → 중년기 쉰 번째 생일 → "앞으로 하고 싶은 것 50개"를 적는다. → 노년기 운으로 산 인생 → "운은 몰라도 사람은 좋았지."
 
-**건강 집중** — 엔진 시드 8099, 결말 「백 개의 정상을 밟은 사람」
+**건강 집중** — 엔진 시드 8133, 결말 「백 개의 정상을 밟은 사람」
 
-영아기 돌잡이 → 판사봉을 잡는다. → 유년기 학원 고르기 → "나 그냥 놀래." → 유년기 급식 시간의 브로콜리 → 다섯 송이를 다 먹는다. → 청소년기 새벽 2시의 책상 → 불을 끄고 잔다. → 청소년기 고등학교 원서 → 예술고 실기 시험에 도전한다. → 청소년기 졸업식 날 → 친구들을 전부 고깃집에 데려간다. → 청년기 대학이냐 취업이냐 → 1년 쉬면서 생각해 본다. → 청년기 첫 종합검진 결과지 → 그날부터 매일 30분 걷는다. → 청년기 결혼 이야기 → "같이 파견 가자." → 중년기 건강 나이 측정 → 결과지를 액자에 넣는다. → 중년기 주말 등산 모임 대장 → 대장을 맡는다. → 중년기 쉰 번째 생일 → 소원: "앞으로 50년 더!" → 노년기 병원 대기실의 단골 → 오늘도 걸어서 집에 간다.
+영아기 돌잡이 → 피아노 장난감을 잡는다. → 유년기 학원 고르기 → 태권도. → 유년기 급식 시간의 브로콜리 → 다섯 송이를 다 먹는다. → 청소년기 고등학교 원서 → 예술고 실기 시험에 도전한다. → 청소년기 졸업식 날 → 친구들을 전부 고깃집에 데려간다. → 청년기 대학이냐 취업이냐 → 1년 쉬면서 생각해 본다. → 청년기 종합검진 결과지 → 그날부터 매일 30분 걷는다. → 청년기 결혼 이야기 → "같이 파견 가자." → 중년기 주말 등산 모임 대장 → 대장을 맡는다. → 중년기 쉰 번째 생일 → 소원: "앞으로 50년 더!" → 노년기 병원 대기실의 단골 → 오늘도 걸어서 집에 간다. → 노년기 건강 나이 측정 → 결과지를 액자에 넣는다.
 
 ## 8. 다른 담당자 확인 필요
 
@@ -345,7 +357,7 @@
 | `img_path_int_10_001` | 지력 | 노년기 | 마지막 강의 | 도서관 강연대에서 객석을 바라보는 1인칭 |
 | `img_path_fit_01_001` | 운동능력 | 유년기 | 체육관 관장님의 명함 | 운동회 결승선 옆에서 명함을 받아 드는 1인칭 |
 | `img_path_fit_02_001` | 운동능력 | 유년기·청소년기 | 첫 대회 결승선 | 출발선에 엎드린 채 풀린 신발 끈을 내려다보는 1인칭 |
-| `img_path_fit_03_001` | 운동능력 | 청소년기 | 체육 특기생 제안 | 교무실에서 감독님 명함과 성적표를 번갈아 보는 1인칭 |
+| `img_path_fit_03_001` | 운동능력 | 청소년기 | 운동부 특기생 제안 | 교실 앞 복도에서 감독님과 담임 사이에 선 1인칭 |
 | `img_path_fit_04_001` | 운동능력 | 청소년기 | 전국체전 결승, 무릎의 소리 | 경기장 트랙 위에서 자신의 무릎을 내려다보는 1인칭 |
 | `img_path_fit_05_001` | 운동능력 | 청년기 | 프로 입단 테스트 | 라커룸 벤치 위에 통지서와 합격 문자가 뜬 휴대폰을 놓고 보는 1인칭 |
 | `img_path_fit_06_001` | 운동능력 | 청년기·중년기 | 주전 경쟁 | 훈련장 전광판의 명단을 올려다보는 1인칭 |
@@ -363,10 +375,10 @@
 | `img_path_soc_09_001` | 사회성 | 노년기 | 칠순 잔치의 방명록 | 빼곡한 방명록 페이지를 넘기는 1인칭 |
 | `img_path_wea_01_001` | 경제력 | 청소년기 | 첫 월급 37만 원 | 은행 앱 잔액 37만 원을 보는 1인칭 |
 | `img_path_wea_02_001` | 경제력 | 청소년기·청년기 | 중고 거래 사장님 | 방구석에 쌓인 택배 박스와 거래 앱 알림을 보는 1인칭 |
-| `img_path_wea_03_001` | 경제력 | 청년기 | 첫 직장, 세 개의 계약서 | 책상 위 계약서 세 장과 볼펜을 내려다보는 1인칭 |
+| `img_path_wea_03_001` | 경제력 | 청년기 | 세 장의 계약서 | 책상 위 계약서 세 장과 볼펜을 내려다보는 1인칭 |
 | `img_path_wea_04_001` | 경제력 | 청년기·중년기 | 전셋집 계약 전날 | 빈 거실 창밖을 보며 계약서를 쥔 1인칭 |
 | `img_path_wea_05_001` | 경제력 | 중년기 | 내 집 마련 상담 | 은행 창구 너머 대출 상담 서류를 보는 1인칭 |
-| `img_path_wea_06_001` | 경제력 | 중년기 | 학원비 영수증 | 식탁 위 카드 명세서와 아이 그림을 함께 보는 1인칭 |
+| `img_path_wea_06_001` | 경제력 | 중년기 | 가족 지출 명세서 | 식탁 위 카드 명세서와 가족 단톡방 알림을 함께 보는 1인칭 |
 | `img_path_wea_07_001` | 경제력 | 청년기·중년기 | 월세 날의 통장 잔고 | 텅 빈 가게 계산대와 통장 잔고 화면을 보는 1인칭 |
 | `img_path_wea_08_001` | 경제력 | 중년기 | 회사를 사겠다는 전화 | 사장실 창밖으로 일하는 직원들을 내려다보는 1인칭 |
 | `img_path_wea_09_001` | 경제력 | 노년기 | 통장 정리하는 날 | 변호사 책상 위 재산 목록 서류를 내려다보는 1인칭 |
@@ -385,10 +397,10 @@
 | `img_path_luk_05_001` | 운 | 중년기 | 동창의 투자 제안 | 술잔 너머로 내밀어진 휴대폰 속 투자 자료를 보는 1인칭 |
 | `img_path_luk_06_001` | 운 | 청년기·중년기 | 주운 지갑의 주인 | 길바닥에서 주운 지갑 속 신분증을 보는 1인칭 |
 | `img_path_luk_08_001` | 운 | 청년기·중년기 | 놓친 비행기 | 닫힌 탑승 게이트 앞에서 캐리어 손잡이를 쥔 1인칭 |
-| `img_path_luk_07_001` | 운 | 노년기 | 운으로 산 인생 | 손주의 눈을 마주 보는 1인칭 |
+| `img_path_luk_07_001` | 운 | 노년기 | 운으로 산 인생 | 놀이터 벤치에서 옆집 아이의 눈을 마주 보는 1인칭 |
 | `img_path_hea_01_001` | 건강 | 유년기 | 급식 시간의 브로콜리 | 급식판 위 브로콜리 다섯 송이를 내려다보는 1인칭 |
 | `img_path_hea_02_001` | 건강 | 청소년기 | 새벽 2시의 책상 | 새벽 2시를 가리키는 탁상시계와 켜진 스탠드를 보는 1인칭 |
-| `img_path_hea_03_001` | 건강 | 청년기·중년기 | 첫 종합검진 결과지 | 검진 결과지의 노란 형광펜 줄을 보는 1인칭 |
+| `img_path_hea_03_001` | 건강 | 청년기·중년기 | 종합검진 결과지 | 검진 결과지의 노란 형광펜 줄을 보는 1인칭 |
 | `img_path_hea_04_001` | 건강 | 청년기·중년기 | 주말 등산 모임 대장 | 산 정상 표지석 옆에서 회원들을 내려다보는 1인칭 |
 | `img_path_hea_05_001` | 건강 | 중년기 | 진단서 한 장 | 진료실 책상 위 진단서와 안내문을 보는 1인칭 |
 | `img_path_hea_06_001` | 건강 | 중년기·노년기 | 건강 나이 측정 | 측정기 화면의 건강 나이 숫자를 보는 1인칭 |

@@ -246,12 +246,6 @@
     "label": "혼자의 삶"
   },
   {
-    "flag": "first_child",
-    "fact": "childrenAtLeast",
-    "value": 1,
-    "label": "자녀"
-  },
-  {
     "flag": "v4:event:adult_039",
     "fact": "childrenAtLeast",
     "value": 1,
