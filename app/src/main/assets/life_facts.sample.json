@@ -144,6 +144,12 @@
     "label": "프리랜서"
   },
   {
+    "flag": "career_public_servant",
+    "fact": "careerTrack",
+    "value": "PUBLIC_SERVANT",
+    "label": "공무원"
+  },
+  {
     "flag": "early_job",
     "fact": "careerTrack",
     "value": "OFFICE",

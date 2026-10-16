@@ -3858,5 +3858,29 @@
     "height": 225,
     "style": "pixel_art",
     "perspective": "first_person"
+  },
+  {
+    "imageId": "img_pov_first_card_001",
+    "usage": "pov",
+    "stage": "MIDDLE",
+    "description": "책상 위 새 명함 상자와 시험 접수증을 내려다보는 1인칭",
+    "fileName": "img_pov_first_card_001.png",
+    "fallbackText": "서른의 첫 명함 장면 준비 중",
+    "width": 300,
+    "height": 225,
+    "style": "pixel_art",
+    "perspective": "first_person"
+  },
+  {
+    "imageId": "img_pov_wedding_guest_001",
+    "usage": "pov",
+    "stage": "YOUNG_ADULT",
+    "description": "결혼식장 하객석에서 날아가는 부케를 올려다보는 1인칭",
+    "fileName": "img_pov_wedding_guest_001.png",
+    "fallbackText": "결혼식 하객 장면 준비 중",
+    "width": 300,
+    "height": 225,
+    "style": "pixel_art",
+    "perspective": "first_person"
   }
 ]
