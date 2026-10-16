@@ -8,6 +8,8 @@ import androidx.lifecycle.AndroidViewModel
 import com.example.lifegame.data.ContentRepository
 import com.example.lifegame.data.ProgressStore
 import com.example.lifegame.data.SavedGame
+import com.example.lifegame.data.V4ProgressStore
+import com.example.lifegame.data.V4SavedRun
 import com.example.lifegame.domain.engine.GameSession
 import com.example.lifegame.domain.engine.PeriodGameSession
 import com.example.lifegame.domain.model.Choice
@@ -19,6 +21,7 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
 
     private val repository = ContentRepository(application)
     private val progressStore = ProgressStore(application)
+    private val v4ProgressStore = V4ProgressStore(application)
     private var session: GameSession? = null
 
     var uiState by mutableStateOf(LifeGameUiState(hasSaveData = progressStore.hasSaveData()))
@@ -117,12 +120,13 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
     }
 
     // ---- v4: 홈 → 장 표지(초점) → 자동 진행 → 결정 · 돌발 ----
-    // 저장 · 이어하기(앱을 껐다 켠 뒤)는 8주차 백엔드 저장 API가 나오면 연결한다. 지금은 앱을 켜 둔 동안만 이어진다.
+    // v4 진행 상태는 로컬 V4ProgressStore에 저장해 앱을 껐다 켜도 이어갈 수 있다.
 
     private var playSession: PeriodGameSession? = null
     private var playContent: PlayContent? = null
     private var playStep: TurnStep? = null
     private var playerNameForPlay: String = DEFAULT_PLAYER_NAME
+    private var characterImageIdForPlay: String? = null
     private var shownDecision: DecisionUi? = null
     private var decisionYear: Int? = null
     private var outcome: OutcomeUi? = null
@@ -160,6 +164,21 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
                 stats = current.stats,
                 lastLine = current.log.lastOrNull()?.text,
             )
+        } ?: v4ProgressStore.load()?.let { saved ->
+            val content = repository.loadV4Content()
+            val period = content.periods.firstOrNull { it.period == saved.state.period }
+            val focus = content.focuses.firstOrNull { it.focusId == saved.state.selectedFocusId }
+            LifeCardUi(
+                playerName = saved.playerName,
+                place = if (saved.state.selectedFocusId == null) {
+                    "${period?.displayName ?: saved.state.period.name} · 초점 고르는 중"
+                } else {
+                    "${period?.displayName ?: saved.state.period.name} · ${saved.state.yearInPeriod}번째 해"
+                },
+                focusLabel = focus?.label,
+                stats = saved.state.stats,
+                lastLine = saved.state.moments.lastOrNull()?.text,
+            )
         }
 
     fun startNewLife(profile: NewLifeProfile) {
@@ -174,7 +193,15 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
         // 엔진에 넘기기 전에 이름을 바꿔 두면 결정 · 결과 · 기록 문장 어디에도 {name}이 남지 않는다.
         val focuses = content.focuses.map { it.withPlayerName(name, nameCall) }
         val decisions = content.decisions.map { it.withPlayerName(name, nameCall) }
-        val newSession = PeriodGameSession(periods = content.periods, focuses = focuses, decisions = decisions)
+        val newSession = PeriodGameSession(
+            periods = content.periods,
+            focuses = focuses,
+            decisions = decisions,
+            engine = com.example.lifegame.domain.engine.GameEngine(
+                skipInfantFocus = true,
+                guaranteeYearlyIncident = true,
+            ),
+        )
         val starter = starters.firstOrNull { it.starterId == profile.starterId }
         val step = runCatching {
             val first = newSession.start().state
@@ -206,6 +233,7 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
                 .associate { it.imageId to it.fileName },
         )
         playerNameForPlay = name
+        characterImageIdForPlay = starter?.imageId
         shownDecision = null
         decisionYear = null
         outcome = null
@@ -213,7 +241,41 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
         speed = PLAY_SPEEDS.first()
         died = false
         playError = null
+        v4ProgressStore.clear()
         applyStep(step)
+    }
+
+    fun continueLife() {
+        val saved = v4ProgressStore.load() ?: run {
+            playError = "저장된 인생이 없습니다. 새 인생을 시작해 주세요."
+            return
+        }
+        val content = repository.loadV4Content()
+        val name = normalizePlayerName(saved.playerName)
+        val nameCall = nameCallOf(name)
+        val focuses = content.focuses.map { it.withPlayerName(name, nameCall) }
+        val decisions = content.decisions.map { it.withPlayerName(name, nameCall) }
+        playContent = PlayContent(content.periods, focuses, decisions.associateBy { it.eventId }, repository.loadImageAssets().filter { it.fileName.isNotBlank() }.associate { it.imageId to it.fileName })
+        playSession = PeriodGameSession(
+            content.periods,
+            focuses,
+            decisions,
+            engine = com.example.lifegame.domain.engine.GameEngine(
+                skipInfantFocus = true,
+                guaranteeYearlyIncident = true,
+            ),
+        )
+        playerNameForPlay = name
+        characterImageIdForPlay = saved.state.flags.firstNotNullOfOrNull { flag ->
+            when (flag) {
+                "starter_loud" -> "img_baby_loud_001"
+                "starter_curious" -> "img_baby_curious_001"
+                "starter_quirky" -> "img_baby_quirky_001"
+                else -> null
+            }
+        }
+        shownDecision = null; outcome = null; decisionYear = null; died = saved.state.isDead; playError = null
+        applyStep(playSession!!.restoreSaved(saved.state))
     }
 
     fun selectFocus(focusId: String) {
@@ -254,12 +316,12 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
             return
         }
         shownDecision = decision
-        died = died || resolution.outcome.death
+        died = died || resolution.step.state.isDead
         outcome = OutcomeUi(
             choiceLabel = label,
             text = resolution.outcome.resultText,
             changes = statChanges(before, resolution.step.state.stats),
-            endsLife = resolution.outcome.death,
+            endsLife = resolution.step.state.isDead,
         )
         playStep = resolution.step
         publishPlay()
@@ -295,6 +357,7 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
         }
         finishedLives = listOf(FinishedLifeUi(ended.runKey, ended.playerName, summary)) + finishedLives
         clearPlay()
+        v4ProgressStore.clear()
     }
 
     private inline fun runStep(block: () -> TurnStep) {
@@ -307,6 +370,7 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
 
     private fun applyStep(step: TurnStep) {
         playStep = step
+        died = died || step.state.isDead
         decisionYear = if (step.phase == TurnPhase.DECISION) step.state.yearInPeriod else null
         publishPlay()
     }
@@ -324,7 +388,9 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
             autoPlaying = autoPlaying,
             speed = speed,
             isDead = died,
+            characterImageId = characterImageIdForPlay,
         )
+        v4ProgressStore.save(V4SavedRun(playerNameForPlay, step.state))
     }
 
     private fun clearPlay() {

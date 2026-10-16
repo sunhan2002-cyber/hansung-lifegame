@@ -141,6 +141,27 @@ fun FilmStrip(
     }
 }
 
+/** 사건 화면 전체를 채우는 배경 이미지. 실제 그림이 없으면 기존 자리 표시 그림을 사용한다. */
+@Composable
+fun SceneImage(
+    shot: FilmShot,
+    modifier: Modifier = Modifier,
+) {
+    val density = LocalDensity.current
+    BoxWithConstraints(modifier.clipToBounds()) {
+        val width = with(density) { maxWidth.roundToPx() }.coerceAtLeast(1)
+        val height = with(density) { maxHeight.roundToPx() }.coerceAtLeast(1)
+        val picture = rememberScenePicture(shot, width, height)
+        Canvas(Modifier.fillMaxSize()) {
+            drawImage(
+                image = picture.bitmap,
+                dstSize = IntSize(size.width.roundToInt(), size.height.roundToInt()),
+                filterQuality = FilterQuality.None,
+            )
+        }
+    }
+}
+
 /** 팝업, "지금으로" 막대처럼 그림 없이 구멍 띠만 필요한 곳에 쓴다. */
 @Composable
 fun PerforationBand(
@@ -169,20 +190,56 @@ fun PerforationBand(
 
 private data class FilmPicture(val bitmap: ImageBitmap, val isPlaceholder: Boolean)
 
+/**
+ * 실제 이미지 제작이 끝나기 전에도 필름을 확인할 수 있도록 사용하는 8개 샘플 컷.
+ * debug source set에 있는 파일을 우선 사용하며, 데이터가 아직 준비되지 않은 imageId만
+ * 이 목록에서 결정적으로 하나를 골라 표시한다.
+ */
+private val Week7PreviewFiles = listOf(
+    "design_preview/week7/img_scene_child_friend_001.png",
+    "design_preview/week7/img_scene_teen_study_001.png",
+    "design_preview/week7/img_scene_teen_part_time_001.png",
+    "design_preview/week7/img_scene_young_adult_adventure_001.png",
+    "design_preview/week7/img_scene_middle_hobby_001.png",
+    "design_preview/week7/img_pov_exam_paper_001.png",
+    "design_preview/week7/img_pov_flu_morning_001.png",
+    "design_preview/week7/img_pov_layoff_door_001.png",
+)
+
 @Composable
 private fun rememberFilmPicture(shot: FilmShot, width: Int, height: Int): FilmPicture {
     val context = LocalContext.current
     val placeholder = remember(shot.key, width, height) {
         placeholderPicture(shot, width, height)
     }
-    var loaded by remember(shot.imageFile, width, height) { mutableStateOf<ImageBitmap?>(null) }
-    LaunchedEffect(shot.imageFile, width, height) {
-        loaded = shot.imageFile?.let { file ->
-            withContext(Dispatchers.IO) { loadAssetPicture(context, file, width, height) }
+    var loaded by remember(shot.imageId, shot.imageFile, width, height) { mutableStateOf<ImageBitmap?>(null) }
+    LaunchedEffect(shot.imageId, shot.imageFile, width, height) {
+        val file = shot.imageFile ?: previewForImageId(shot.imageId)
+        loaded = withContext(Dispatchers.IO) { loadAssetPicture(context, file, width, height) }
+    }
+    return FilmPicture(loaded ?: placeholder, isPlaceholder = loaded == null)
+}
+
+@Composable
+private fun rememberScenePicture(shot: FilmShot, width: Int, height: Int): FilmPicture {
+    val context = LocalContext.current
+    val placeholder = remember("scene-${shot.key}", width, height) {
+        placeholderPicture(shot, width, height)
+    }
+    var loaded by remember("scene", shot.imageId, shot.imageFile, width, height) {
+        mutableStateOf<ImageBitmap?>(null)
+    }
+    LaunchedEffect("scene", shot.imageId, shot.imageFile, width, height) {
+        val file = shot.imageFile ?: previewForImageId(shot.imageId)
+        loaded = withContext(Dispatchers.IO) {
+            loadAssetPicture(context, file, width, height, cropToFill = true)
         }
     }
     return FilmPicture(loaded ?: placeholder, isPlaceholder = loaded == null)
 }
+
+private fun previewForImageId(imageId: String): String =
+    Week7PreviewFiles[Math.floorMod(imageId.hashCode(), Week7PreviewFiles.size)]
 
 /** 그림이 준비되기 전 자리: 단색 바탕과 아래쪽 바닥 면. 이미지 ID는 플레이 화면에 노출하지 않는다. */
 private fun placeholderPicture(
@@ -202,11 +259,20 @@ private fun placeholderPicture(
 }
 
 /** 그림 전체를 필름 칸에 맞춘다. 도트가 흐려지지 않도록 보간·디더링을 끈다. */
-private fun loadAssetPicture(context: Context, fileName: String, width: Int, height: Int): ImageBitmap? =
+private fun loadAssetPicture(
+    context: Context,
+    fileName: String,
+    width: Int,
+    height: Int,
+    cropToFill: Boolean = false,
+): ImageBitmap? =
     runCatching {
-        val source = context.assets.open("images/$fileName").use(BitmapFactory::decodeStream)
-            ?: return@runCatching null
-        val scale = min(width / source.width.toFloat(), height / source.height.toFloat())
+        val source = loadSourceBitmap(context, fileName) ?: return@runCatching null
+        val scale = if (cropToFill) {
+            max(width / source.width.toFloat(), height / source.height.toFloat())
+        } else {
+            min(width / source.width.toFloat(), height / source.height.toFloat())
+        }
         val scaled = Bitmap.createScaledBitmap(
             source,
             (source.width * scale).roundToInt().coerceAtLeast(1),
@@ -221,6 +287,27 @@ private fun loadAssetPicture(context: Context, fileName: String, width: Int, hei
         }
         fitted.asImageBitmap()
     }.getOrNull()
+
+private fun loadSourceBitmap(context: Context, fileName: String): Bitmap? {
+    val candidates = buildList {
+        add(fileName)
+        if (!fileName.startsWith("design_preview/week7/")) {
+            add("design_preview/week7/$fileName")
+        }
+
+        val isPov = fileName.contains("pov", ignoreCase = true)
+        val pool = if (isPov) Week7PreviewFiles.drop(5) else Week7PreviewFiles.take(5)
+        if (pool.isNotEmpty()) {
+            val index = Math.floorMod(fileName.hashCode(), pool.size)
+            add(pool[index])
+        }
+    }
+    return candidates.firstNotNullOfOrNull { candidate ->
+        runCatching {
+            context.assets.open("images/$candidate").use(BitmapFactory::decodeStream)
+        }.getOrNull()
+    }
+}
 
 private fun DrawScope.drawFilm(m: FilmMotion, current: ImageBitmap, incoming: ImageBitmap?) {
     val strip = StripHeight.toPx()

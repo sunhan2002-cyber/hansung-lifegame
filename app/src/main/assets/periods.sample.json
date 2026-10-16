@@ -4,7 +4,7 @@
     "displayName": "영아기",
     "chapterTitle": "제1장 영아기",
     "order": 0,
-    "years": 4,
+    "years": 5,
     "startLabel": "태어난 뒤 처음 세상을 배우는 시기",
     "endLabel": "유년기로 넘어가기 전"
   },
@@ -43,5 +43,14 @@
     "years": 5,
     "startLabel": "쌓아 온 선택이 생활로 굳어지는 시기",
     "endLabel": "인생 결과 확인 전"
+  },
+  {
+    "periodId": "OLD_AGE",
+    "displayName": "노년기",
+    "chapterTitle": "제6장 노년기",
+    "order": 5,
+    "years": 5,
+    "startLabel": "지나온 시간을 천천히 돌아보는 시기",
+    "endLabel": "자연스럽게 인생을 마무리하는 때"
   }
 ]

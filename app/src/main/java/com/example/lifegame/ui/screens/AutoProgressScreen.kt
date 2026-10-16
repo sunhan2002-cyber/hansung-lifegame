@@ -52,12 +52,11 @@ import com.example.lifegame.ui.LogLineUi
 import com.example.lifegame.ui.PLAY_SPEEDS
 import com.example.lifegame.ui.PeriodPlayUiState
 import com.example.lifegame.ui.YEAR_MILLIS_AT_1X
-import com.example.lifegame.ui.components.FilmMotion
-import com.example.lifegame.ui.components.FilmShot
-import com.example.lifegame.ui.components.FilmStrip
 import com.example.lifegame.ui.components.FocusLockRow
+import com.example.lifegame.ui.components.LifeGauge
 import com.example.lifegame.ui.components.NOISE_ADVANCE_MILLIS
 import com.example.lifegame.ui.components.PeriodHeader
+import com.example.lifegame.ui.components.PixelFigurePlaceholder
 import com.example.lifegame.ui.components.StatsSheet
 import com.example.lifegame.ui.components.normalAdvance
 import com.example.lifegame.ui.components.rememberReduceMotion
@@ -71,7 +70,6 @@ import com.example.lifegame.ui.theme.LifeGameSerif
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.isActive
 import kotlinx.coroutines.launch
-import kotlin.random.Random
 
 /**
  * 시안 8-2 자동 진행. 결정할 일이 없는 해는 저절로 넘어간다 (R-20).
@@ -91,39 +89,7 @@ fun AutoProgressScreen(
     val reduceMotion = rememberReduceMotion()
     val advance by rememberUpdatedState(onAdvanceYear)
 
-    val target = FilmShot(
-        key = state.yearKey,
-        imageId = state.sceneImageId,
-        imageFile = state.sceneFile,
-        isSpecial = false,
-    )
-    var shown by remember { mutableStateOf(target) }
-    var incoming by remember { mutableStateOf<FilmShot?>(null) }
-    var motion by remember { mutableStateOf(FilmMotion()) }
     val yearProgress = remember { Animatable(0f) }
-
-    // 해 넘김 지지직. 배속이 오르면 그만큼 짧게.
-    LaunchedEffect(state.yearKey) {
-        if (target.key == shown.key) return@LaunchedEffect
-        if (reduceMotion) {
-            shown = target
-            return@LaunchedEffect
-        }
-        incoming = target
-        val noise = launch {
-            while (isActive) {
-                motion = motion.copy(noiseSeed = Random.nextInt(1, Int.MAX_VALUE))
-                delay(60)
-            }
-        }
-        animate(0f, 1f, animationSpec = tween(NOISE_ADVANCE_MILLIS / state.speed, easing = LinearEasing)) { p, _ ->
-            motion = motion.copy(advance = normalAdvance(p))
-        }
-        noise.cancel()
-        shown = target
-        incoming = null
-        motion = FilmMotion()
-    }
 
     // 자동 진행 타이머. 해가 바뀌거나 배속 · 일시정지가 바뀌면 다시 센다.
     LaunchedEffect(state.yearKey, state.autoPlaying, state.speed) {
@@ -155,13 +121,7 @@ fun AutoProgressScreen(
                     .testTag("auto_progress_content"),
             ) {
                 state.focus?.let { FocusLockRow(focus = it, years = state.periodYears) }
-                FilmStrip(
-                    current = shown,
-                    incoming = incoming,
-                    gateHeight = gateHeight,
-                    motion = { motion },
-                    modifier = Modifier.padding(top = 6.dp),
-                )
+                CharacterMainPanel(state, onStatsClick = { statsOpen = true })
                 YearTimer(progress = { yearProgress.value }, playing = state.autoPlaying)
                 YearLog(lines = state.log.takeLast(3))
             }
@@ -176,6 +136,33 @@ fun AutoProgressScreen(
     }
 
     if (statsOpen) StatsSheet(stats = state.stats, onDismiss = { statsOpen = false })
+}
+
+/** 사건이 없을 때 계속 유지되는 3인칭 캐릭터 메인 화면. */
+@Composable
+private fun CharacterMainPanel(state: PeriodPlayUiState, onStatsClick: () -> Unit) {
+    Column(
+        Modifier
+            .fillMaxWidth()
+            .padding(horizontal = 20.dp, vertical = 12.dp)
+            .clip(RoundedCornerShape(14.dp))
+            .background(LifeGameCard)
+            .border(1.dp, LifeGameRule, RoundedCornerShape(14.dp))
+            .padding(vertical = 18.dp),
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.spacedBy(8.dp),
+    ) {
+        PixelFigurePlaceholder(
+            height = 130.dp,
+            grown = state.periodName != "영아기",
+            color = LifeGameInk.copy(alpha = 0.72f),
+            modifier = Modifier
+                .clickable(role = Role.Button, onClick = onStatsClick)
+                .semantics { contentDescription = "플레이어 현재 모습, 능력치 보기" },
+        )
+        Text(state.playerName, color = LifeGameInk, fontSize = 20.sp, fontWeight = FontWeight.Bold)
+        Text(text = "${state.periodName} · 다음 사건을 기다리는 중", color = LifeGameInkSecondary, fontFamily = LifeGameSerif, fontSize = 13.sp)
+    }
 }
 
 @Composable

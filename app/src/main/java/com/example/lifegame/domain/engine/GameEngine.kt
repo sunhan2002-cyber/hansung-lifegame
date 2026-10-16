@@ -48,6 +48,8 @@ class GameEngine(
     private val rollPercent: () -> Int = { (1..100).random() },
     private val maxSpecialEventsPerRun: Int = 2,
     private val minNormalEventsBeforeSpecial: Int = 2,
+    private val skipInfantFocus: Boolean = false,
+    private val guaranteeYearlyIncident: Boolean = false,
 ) {
     init {
         require(maxSpecialEventsPerRun >= 0) {
@@ -266,11 +268,16 @@ class GameEngine(
         focuses: List<Focus>,
         decisions: List<DecisionEvent>,
         bigIncidentChancePercent: Int = DEFAULT_BIG_INCIDENT_CHANCE_PERCENT,
-        incidentChancePercent: Int = DEFAULT_INCIDENT_CHANCE_PERCENT,
+        incidentChancePercent: Int = if (guaranteeYearlyIncident) 100 else DEFAULT_INCIDENT_CHANCE_PERCENT,
     ): TurnStep {
         val orderedPeriods = validatePeriods(periods)
         if (state.isEnding) {
             return TurnStep(state = state, phase = TurnPhase.ENDING)
+        }
+
+        // 영아기는 초점을 고르지 않고 1년 차 돌잡이부터 바로 시작한다.
+        if (skipInfantFocus && (state.period == LifePeriod.INFANT || state.period == LifePeriod.OLD_AGE) && state.selectedFocusId == null) {
+            return advanceInfantYear(state, orderedPeriods, focuses, decisions, bigIncidentChancePercent, incidentChancePercent)
         }
 
         state.pendingDecisionId?.let { eventId ->
@@ -301,7 +308,10 @@ class GameEngine(
             }
             ?: "${state.period.name} ${state.yearInPeriod}년차, ${focus.label}에 집중했다."
         val stateAfterFocus = state.copy(
-            stats = state.stats.apply(focus.statEffects),
+            stats = state.stats.apply(
+                focus.statEffects.copy(health = focus.statEffects.health + annualHealthDelta(state.period)),
+                minHealth = healthFloor(state.period),
+            ),
             moments = state.moments + LifeMoment(
                 period = state.period,
                 yearInPeriod = state.yearInPeriod,
@@ -309,6 +319,7 @@ class GameEngine(
                 momentImageId = focus.momentImageId,
             ),
         )
+        healthDeathStep(stateAfterFocus)?.let { return it }
         val decision = pickPeriodDecision(
             state = stateAfterFocus,
             decisions = decisions,
@@ -326,7 +337,7 @@ class GameEngine(
         }
 
         val nextState = movePeriodCalendar(stateAfterFocus, orderedPeriods)
-        val needsFocus = !nextState.isEnding && nextState.selectedFocusId == null
+        val needsFocus = !nextState.isEnding && nextState.selectedFocusId == null && nextState.period != LifePeriod.INFANT
         return TurnStep(
             state = nextState,
             phase = when {
@@ -355,12 +366,16 @@ class GameEngine(
         val choice = requireNotNull(event.choices.firstOrNull { it.choiceId == choiceId }) {
             "choice is not available in the pending decision"
         }
+        require(choice.statConditions.matches(state.stats)) { "choice stat requirements are not met" }
         require(state.flags.containsAll(choice.requiredFlags)) { "choice requirements are not met" }
         require(state.flags.none(choice.blockedFlags::contains)) { "choice is blocked by current flags" }
 
         val outcome = pickOutcome(state, event, choice.choiceId, choice.outcomes)
+        val combinedDelta = outcome.statDelta.copy(health = outcome.statDelta.health + outcome.lifeDelta)
+        val afterStats = state.stats.apply(combinedDelta, minHealth = healthFloor(state.period))
+        val healthDepleted = afterStats.health <= 0
         val resolved = state.copy(
-            stats = state.stats.apply(outcome.statDelta),
+            stats = afterStats,
             flags = state.flags + outcome.addFlags + completedEventFlag(event.eventId),
             pendingDecisionId = null,
             moments = state.moments + LifeMoment(
@@ -369,9 +384,11 @@ class GameEngine(
                 text = outcome.resultText,
                 momentImageId = event.momentImageId,
             ),
-            isEnding = outcome.death,
+            isEnding = outcome.death || healthDepleted,
+            isDead = outcome.death || healthDepleted,
+            endingPeriod = if (outcome.death || healthDepleted) state.period else state.endingPeriod,
         )
-        if (outcome.death) {
+        if (outcome.death || healthDepleted) {
             return OutcomeResolution(
                 outcome = outcome,
                 step = TurnStep(
@@ -385,7 +402,7 @@ class GameEngine(
         }
 
         val nextState = movePeriodCalendar(resolved, orderedPeriods)
-        val needsFocus = !nextState.isEnding && nextState.selectedFocusId == null
+        val needsFocus = !nextState.isEnding && nextState.selectedFocusId == null && nextState.period != LifePeriod.INFANT
         return OutcomeResolution(
             outcome = outcome,
             step = TurnStep(
@@ -435,6 +452,46 @@ class GameEngine(
         return null
     }
 
+    private fun advanceInfantYear(
+        state: PeriodRunState,
+        periods: List<PeriodDefinition>,
+        focuses: List<Focus>,
+        decisions: List<DecisionEvent>,
+        bigIncidentChancePercent: Int,
+        incidentChancePercent: Int,
+    ): TurnStep {
+        val record = if (state.period == LifePeriod.INFANT) {
+            "영아기 ${state.yearInPeriod}번째 해, 세상을 처음 배웠다."
+        } else {
+            "노년기 ${state.yearInPeriod}번째 해, 지나온 선택을 돌아보았다."
+        }
+        val afterRecord = state.copy(
+            stats = state.stats.apply(
+                StatDelta(health = annualHealthDelta(state.period)),
+                minHealth = healthFloor(state.period),
+            ),
+            moments = state.moments + LifeMoment(state.period, state.yearInPeriod, record),
+        )
+        healthDeathStep(afterRecord)?.let { return it }
+        val decision = pickPeriodDecision(afterRecord, decisions, bigIncidentChancePercent, incidentChancePercent)
+        if (decision != null) {
+            return decisionStep(afterRecord.copy(pendingDecisionId = decision.eventId), decision)
+        }
+        val next = movePeriodCalendar(afterRecord, periods)
+        val chapter = next.period != LifePeriod.INFANT && next.period != LifePeriod.OLD_AGE && next.selectedFocusId == null
+        return TurnStep(
+            state = next,
+            phase = when {
+                next.isEnding -> TurnPhase.ENDING
+                chapter -> TurnPhase.CHAPTER
+                else -> TurnPhase.AUTO_PROGRESS
+            },
+            recordText = record,
+            canAutoAdvance = !next.isEnding && !chapter,
+            needsFocusSelection = chapter,
+        )
+    }
+
     private fun canShowPeriodDecision(state: PeriodRunState, event: DecisionEvent): Boolean =
         state.period in event.periods &&
             completedEventFlag(event.eventId) !in state.flags &&
@@ -442,6 +499,7 @@ class GameEngine(
             state.flags.containsAll(event.requiredFlags) &&
             state.flags.none(event.blockedFlags::contains) &&
             event.choices.any { choice ->
+                choice.statConditions.matches(state.stats) &&
                 state.flags.containsAll(choice.requiredFlags) &&
                     state.flags.none(choice.blockedFlags::contains)
             }
@@ -453,10 +511,20 @@ class GameEngine(
         sceneImageId: String? = null,
         momentImageId: String? = null,
     ): TurnStep {
-        val visibleChoices = event.choices
-            .filter { state.flags.containsAll(it.requiredFlags) }
-            .filter { state.flags.none(it.blockedFlags::contains) }
-            .map { choice -> buildChoicePreview(choice, state.stats) }
+        // 잠긴 선택지도 화면에 남겨 요구 스탯을 안내한다. 실제 선택 시에는
+        // resolvePeriodDecision에서 다시 검사하므로 UI 우회가 불가능하다.
+        val visibleChoices = event.choices.map { choice ->
+            val statOk = choice.statConditions.matches(state.stats)
+            val flagsOk = state.flags.containsAll(choice.requiredFlags) &&
+                state.flags.none(choice.blockedFlags::contains)
+            buildChoicePreview(
+                choice = choice,
+                stats = state.stats,
+                available = statOk && flagsOk,
+                lockReason = if (!statOk) "${choice.statConditions.description()} 필요" else
+                    if (!flagsOk) "이전 선택과 조건이 맞지 않아요" else null,
+            )
+        }.sortedByDescending { it.available }
         return TurnStep(
             state = state,
             phase = TurnPhase.DECISION,
@@ -487,10 +555,18 @@ class GameEngine(
     private fun buildChoicePreview(
         choice: DecisionOption,
         stats: Stats,
+        available: Boolean = true,
+        lockReason: String? = null,
     ): DecisionChoicePreview {
         val primary = choice.outcomes.firstOrNull { it.primary && !it.hidden }
             ?: choice.outcomes.firstOrNull { !it.hidden }
-            ?: return DecisionChoicePreview(choice.choiceId, choice.label)
+            ?: return DecisionChoicePreview(
+                choiceId = choice.choiceId,
+                label = choice.label,
+                statConditionText = choice.statConditions.description().takeIf { it.isNotBlank() },
+                available = available,
+                lockReason = lockReason,
+            )
         val weighted = choice.outcomes.map { effectiveOutcomeChance(it, stats) }
         val usable = if (weighted.sum() > 0) weighted else choice.outcomes.map { it.chance }
         val total = usable.sum()
@@ -513,6 +589,9 @@ class GameEngine(
             label = choice.label,
             likelihood = likelihood,
             keyStats = keyStats,
+            statConditionText = choice.statConditions.description().takeIf { it.isNotBlank() },
+            available = available,
+            lockReason = lockReason,
         )
     }
 
@@ -584,15 +663,27 @@ class GameEngine(
     ): DecisionEvent? {
         if (events.isEmpty()) return null
         val sorted = events.sortedBy { it.eventId }
+        val weightedEvents = sorted.map { event ->
+            event to eventSelectionWeight(event, state.stats)
+        }
         var roll = deterministicIndex(
             "${state.runSeed}:${state.period}:${state.yearInPeriod}:$salt",
-            sorted.sumOf { it.weight },
+            weightedEvents.sumOf { it.second },
         ) + 1
-        sorted.forEach { event ->
-            roll -= event.weight
+        weightedEvents.forEach { (event, weight) ->
+            roll -= weight
             if (roll <= 0) return event
         }
         return sorted.last()
+    }
+
+    /** 사건의 기본 weight에 현재 능력치와 사건 결과의 chanceWeights를 함께 반영한다. */
+    private fun eventSelectionWeight(event: DecisionEvent, stats: Stats): Int {
+        val outcomes = event.choices.flatMap { it.outcomes }.filterNot { it.hidden }
+        val baseChance = outcomes.sumOf { it.chance }
+        if (baseChance <= 0) return event.weight
+        val effectiveChance = outcomes.sumOf { effectiveOutcomeChance(it, stats) }
+        return (event.weight * effectiveChance / baseChance).coerceAtLeast(1)
     }
 
     private fun deterministicPercent(state: PeriodRunState, salt: String): Int =
@@ -622,12 +713,52 @@ class GameEngine(
             return state.copy(yearInPeriod = state.yearInPeriod + 1)
         }
         val next = orderedPeriods.getOrNull(currentIndex + 1)
-            ?: return state.copy(isEnding = true, pendingDecisionId = null)
+            ?: return if (state.period == LifePeriod.OLD_AGE) {
+                state.copy(
+                    isEnding = true,
+                    isDead = true,
+                    endingPeriod = state.period,
+                    pendingDecisionId = null,
+                    moments = state.moments + LifeMoment(
+                        period = state.period,
+                        yearInPeriod = state.yearInPeriod,
+                        text = "노년기를 마치고 자연스럽게 생을 마쳤다.",
+                    ),
+                )
+            } else {
+                state.copy(isEnding = true, endingPeriod = state.period, pendingDecisionId = null)
+            }
         return state.copy(
             period = next.period,
             yearInPeriod = 1,
             selectedFocusId = null,
             pendingDecisionId = null,
+        )
+    }
+
+    /** 건강이 낮을 때만 발생하는 연간 돌발 사망. 보통 건강 수치에서는 확률을 0으로 둔다. */
+    private fun healthDeathStep(state: PeriodRunState): TurnStep? {
+        if (state.period !in setOf(LifePeriod.YOUNG_ADULT, LifePeriod.MIDDLE, LifePeriod.OLD_AGE)) return null
+        val chance = when {
+            state.stats.health <= 15 -> 8
+            state.stats.health <= 25 -> 4
+            state.stats.health <= 35 -> 1
+            else -> 0
+        }
+        if (chance == 0 || deterministicPercent(state, "health-death") > chance) return null
+        val text = "건강이 급격히 나빠져 예기치 않게 생을 마쳤다."
+        val ended = state.copy(
+            isEnding = true,
+            isDead = true,
+            endingPeriod = state.period,
+            pendingDecisionId = null,
+            moments = state.moments + LifeMoment(state.period, state.yearInPeriod, text),
+        )
+        return TurnStep(
+            state = ended,
+            phase = TurnPhase.ENDING,
+            recordText = text,
+            transitionCue = TransitionCue.DISTORT,
         )
     }
 
@@ -698,8 +829,8 @@ class GameEngine(
         return rollPercent().coerceIn(1, 100) <= normalizedChance
     }
 
-    private fun Stats.apply(delta: StatDelta): Stats = copy(
-        health = addAndClamp(health, delta.health),
+    private fun Stats.apply(delta: StatDelta, minHealth: Int = 0): Stats = copy(
+        health = addAndClamp(health, delta.health, minHealth, MAX_STAT),
         fitness = addAndClamp(fitness, delta.fitness),
         intelligence = addAndClamp(intelligence, delta.intelligence),
         social = addAndClamp(social, delta.social),
@@ -707,6 +838,18 @@ class GameEngine(
         happiness = addAndClamp(happiness, delta.happiness),
         luck = addAndClamp(luck, delta.luck),
     )
+
+    private fun healthFloor(period: LifePeriod): Int = when (period) {
+        LifePeriod.INFANT, LifePeriod.CHILD -> 1
+        else -> MIN_STAT
+    }
+
+    private fun annualHealthDelta(period: LifePeriod): Int = when (period) {
+        LifePeriod.INFANT, LifePeriod.CHILD, LifePeriod.TEEN -> 0
+        LifePeriod.YOUNG_ADULT -> -1
+        LifePeriod.MIDDLE -> -3
+        LifePeriod.OLD_AGE -> -5
+    }
 
     private operator fun Stats.minus(before: Stats): StatDelta = StatDelta(
         health = health - before.health,
@@ -721,6 +864,11 @@ class GameEngine(
     private fun addAndClamp(current: Int, delta: Int): Int =
         (current.toLong() + delta.toLong())
             .coerceIn(MIN_STAT.toLong(), MAX_STAT.toLong())
+            .toInt()
+
+    private fun addAndClamp(current: Int, delta: Int, min: Int, max: Int): Int =
+        (current.toLong() + delta.toLong())
+            .coerceIn(min.toLong(), max.toLong())
             .toInt()
 
     private fun completedNormalEventCount(
@@ -742,6 +890,7 @@ class GameEngine(
         const val DEFAULT_SPECIAL_EVENT_CHANCE_PERCENT = 10
         const val DEFAULT_BIG_INCIDENT_CHANCE_PERCENT = 5
         const val DEFAULT_INCIDENT_CHANCE_PERCENT = 20
+        const val LIFE_DECAY_PER_YEAR = 5
         const val COMPLETED_EVENT_FLAG_PREFIX = "v4:event:"
         const val FNV_OFFSET_BASIS = -3750763034362895579L
         const val FNV_PRIME = 1099511628211L

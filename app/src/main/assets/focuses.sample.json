@@ -445,5 +445,55 @@
       "모임 총무를 맡았다. 엑셀 실력이 늘었다.",
       "경조사 달력이 회사 달력보다 빽빽해졌다."
     ]
+  },
+  {
+    "focusId": "focus_old_age_family",
+    "period": "OLD_AGE",
+    "name": "가족과 대화",
+    "description": "함께한 사람들과 지난 시간을 나눈다.",
+    "annualStatDelta": { "사회성": 2, "행복": 2 },
+    "sceneImageId": "img_scene_old_age_family_001",
+    "momentImageId": "img_moment_old_age_family_001",
+    "yearlyLogTemplates": ["오래된 사진을 꺼내 함께 웃었다.", "가족의 안부를 먼저 물었다."]
+  },
+  {
+    "focusId": "focus_old_age_health",
+    "period": "OLD_AGE",
+    "name": "건강 관리",
+    "description": "몸의 신호를 살피며 천천히 움직인다.",
+    "annualStatDelta": { "건강": 2, "운동능력": 1 },
+    "sceneImageId": "img_scene_old_age_health_001",
+    "momentImageId": "img_moment_old_age_health_001",
+    "yearlyLogTemplates": ["아침 산책이 하루의 기준이 되었다.", "검진 결과를 꼼꼼히 확인했다."]
+  },
+  {
+    "focusId": "focus_old_age_hobby",
+    "period": "OLD_AGE",
+    "name": "취미 생활",
+    "description": "미뤄 둔 취미를 다시 시작한다.",
+    "annualStatDelta": { "행복": 3, "지력": 1 },
+    "sceneImageId": "img_scene_old_age_hobby_001",
+    "momentImageId": "img_moment_old_age_hobby_001",
+    "yearlyLogTemplates": ["서랍 속 도구를 꺼내 다시 손에 익혔다.", "배우는 즐거움은 나이를 타지 않았다."]
+  },
+  {
+    "focusId": "focus_old_age_community",
+    "period": "OLD_AGE",
+    "name": "동네 기록",
+    "description": "살아온 동네의 이야기를 기록한다.",
+    "annualStatDelta": { "사회성": 1, "지력": 2 },
+    "sceneImageId": "img_scene_old_age_community_001",
+    "momentImageId": "img_moment_old_age_community_001",
+    "yearlyLogTemplates": ["오래된 가게의 이름을 수첩에 적었다.", "동네의 변화가 내 기록에 쌓였다."]
+  },
+  {
+    "focusId": "focus_old_age_reflection",
+    "period": "OLD_AGE",
+    "name": "인생 돌아보기",
+    "description": "중요했던 선택들을 천천히 정리한다.",
+    "annualStatDelta": { "행복": 2, "지력": 1 },
+    "sceneImageId": "img_scene_old_age_reflection_001",
+    "momentImageId": "img_moment_old_age_reflection_001",
+    "yearlyLogTemplates": ["가장 오래 남은 선택을 한 문장으로 적었다.", "후회보다 고마웠던 일이 먼저 떠올랐다."]
   }
 ]

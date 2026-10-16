@@ -53,7 +53,10 @@ fun LifeGameApp(
                         lifeCard = gameViewModel.lifeCard,
                         finishedLives = gameViewModel.finishedLives,
                         message = gameViewModel.playError,
-                        onContinue = { navController.navigateOnce(Routes.PLAY) },
+                        onContinue = {
+                            gameViewModel.continueLife()
+                            navController.navigateOnce(Routes.PLAY)
+                        },
                         onNewLife = { navController.navigateOnce(Routes.PROFILE) },
                         onDesignPreview = if (BuildConfig.DEBUG) {
                             { navController.navigateOnce(Routes.DESIGN_PREVIEW) }

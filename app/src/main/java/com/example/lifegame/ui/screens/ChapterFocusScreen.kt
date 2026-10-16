@@ -80,7 +80,7 @@ fun ChapterFocusScreen(
                 modifier = Modifier.semantics { heading() },
             )
             Text(
-                text = listOf("${state.periodYears}해", state.periodIntro).filter { it.isNotBlank() }.joinToString(" · "),
+                text = state.periodIntro,
                 color = LifeGameInkSecondary,
                 fontFamily = LifeGameSerif,
                 fontSize = 15.sp,
@@ -113,7 +113,7 @@ fun ChapterFocusScreen(
         }
 
         InkButton(
-            text = selected?.let { "${it.label.withRo()} ${state.periodYears}해 시작하기" } ?: "초점을 골라 주세요",
+            text = selected?.let { "${state.periodName} 시작하기" } ?: "초점을 골라 주세요",
             enabled = selected != null,
             onClick = { selected?.let { onSelectFocus(it.focusId) } },
             modifier = Modifier.padding(start = 16.dp, end = 16.dp, top = 8.dp, bottom = 16.dp),

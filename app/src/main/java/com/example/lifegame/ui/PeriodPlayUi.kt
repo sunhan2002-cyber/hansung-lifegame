@@ -67,6 +67,10 @@ data class DecisionChoiceUi(
     val label: String,
     /** "가능성 반반쯤 · 지력" 또는 결과가 하나뿐이면 "건강 · 행복". 숨은 결과는 들어가지 않는다. */
     val hint: String,
+    val statConditionText: String? = null,
+    val healthEffectText: String? = null,
+    val available: Boolean = true,
+    val lockReason: String? = null,
 )
 
 data class DecisionUi(
@@ -93,6 +97,7 @@ data class StarterUi(
     val starterId: String,
     val name: String,
     val description: String,
+    val imageId: String?,
     val statDelta: StatDelta,
     val startFlags: Set<String>,
 ) {
@@ -124,6 +129,8 @@ data class FinishedLifeUi(
 data class PeriodPlayUiState(
     val runKey: String,
     val playerName: String,
+    val characterImageId: String? = null,
+    val characterImageFile: String? = null,
     val phase: PlayPhase,
     val periodName: String,
     /** "제3장"처럼 장 번호만 */
@@ -271,14 +278,36 @@ fun buildDecisionUi(
         imageId = imageId,
         imageFile = imageFiles[imageId],
         choices = pending.choices.mapIndexed { index, preview ->
+            val option = options[preview.choiceId]
             DecisionChoiceUi(
                 choiceId = preview.choiceId,
                 key = ('A' + index).toString(),
                 label = preview.label,
                 hint = options[preview.choiceId]?.hint(stats).orEmpty(),
+                statConditionText = preview.statConditionText,
+                healthEffectText = option?.healthEffectText(),
+                available = preview.available,
+                lockReason = preview.lockReason,
             )
         },
     )
+}
+
+private fun DecisionOption.healthEffectText(): String? {
+    val changes = outcomes.filterNot { it.hidden }
+        .map { it.statDelta.health + it.lifeDelta }
+        .distinct()
+    val value = when {
+        changes.size == 1 -> changes.single()
+        else -> outcomes.firstOrNull { it.primary && !it.hidden }?.let { it.statDelta.health + it.lifeDelta }
+            ?: outcomes.firstOrNull { !it.hidden }?.let { it.statDelta.health + it.lifeDelta }
+            ?: return null
+    }
+    return when {
+        value < 0 -> "건강 ${value} 감소"
+        value > 0 -> "건강 +${value} 회복"
+        else -> null
+    }
 }
 
 fun buildLogLines(moments: List<LifeMoment>, periods: List<PeriodDefinition>): List<LogLineUi> {
@@ -306,12 +335,14 @@ fun buildPeriodPlayState(
     autoPlaying: Boolean = true,
     speed: Int = 1,
     isDead: Boolean = false,
+    characterImageId: String? = null,
 ): PeriodPlayUiState {
     val state = step.state
     val periods = content.periods.sortedBy { it.order }
     val periodIndex = periods.indexOfFirst { it.period == state.period }.coerceAtLeast(0)
     val period = periods.getOrNull(periodIndex)
     val lastMoment = state.moments.lastOrNull()
+    val endingPeriod = state.endingPeriod ?: if (state.isDead) lastMoment?.period else null
     val phase = when {
         decision != null || outcome != null -> PlayPhase.DECISION
         else -> when (step.phase) {
@@ -333,8 +364,11 @@ fun buildPeriodPlayState(
     return PeriodPlayUiState(
         runKey = state.runId,
         playerName = playerName,
+        characterImageId = characterImageId,
+        characterImageFile = characterImageId?.let { content.imageFiles[it] },
         phase = phase,
-        periodName = period?.displayName ?: state.period.name,
+        periodName = (periods.firstOrNull { it.period == (endingPeriod ?: state.period) }?.displayName
+            ?: (endingPeriod ?: state.period).name),
         chapterLabel = period?.chapterLabel().orEmpty(),
         periodYears = years,
         periodIntro = period?.startLabel.orEmpty(),
@@ -378,6 +412,7 @@ fun parseStarters(json: String): List<StarterUi> = runCatching {
             starterId = item.getString("starterId"),
             name = item.getString("name"),
             description = item.optString("description"),
+            imageId = item.optString("imageId").takeIf { it.isNotBlank() },
             statDelta = item.optJSONObject("startStatDelta").toStatDelta(),
             startFlags = item.optJSONArray("startFlags")?.let { flags ->
                 List(flags.length()) { flags.getString(it) }.toSet()

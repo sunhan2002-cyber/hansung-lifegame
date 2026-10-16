@@ -14,14 +14,12 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
-import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.ModalBottomSheet
 import androidx.compose.material3.Text
-import androidx.compose.material3.rememberModalBottomSheetState
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -45,6 +43,7 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.compose.ui.window.Dialog
 import com.example.lifegame.domain.model.Stats
 import com.example.lifegame.ui.FocusOptionUi
 import com.example.lifegame.ui.PeriodMarkUi
@@ -58,8 +57,36 @@ import com.example.lifegame.ui.theme.LifeGamePaper
 import com.example.lifegame.ui.theme.LifeGameRule
 import com.example.lifegame.ui.theme.LifeGameStatDown
 import com.example.lifegame.ui.theme.LifeGameStatUp
+import com.example.lifegame.ui.theme.LifeGameSpecial
 
-/** 시안 8 헤더: 시기 이름 + N번째 해 + 능력치 버튼 + 시기 진행 막대 5칸. 나이는 보여 주지 않는다. */
+/** 캐릭터 화면과 사건 화면에서 공통으로 보여 주는 0~100 건강 게이지. */
+@Composable
+fun LifeGauge(health: Int, modifier: Modifier = Modifier) {
+    val value = health.coerceIn(0, 100)
+    Column(modifier.fillMaxWidth(), verticalArrangement = Arrangement.spacedBy(4.dp)) {
+        Row(Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
+            Text("건강", color = LifeGameInkSecondary, fontSize = 11.5.sp, modifier = Modifier.weight(1f))
+            Text("$value / 100", color = LifeGameStatDown, fontSize = 11.5.sp, fontWeight = FontWeight.Bold)
+        }
+        Box(
+            Modifier
+                .fillMaxWidth()
+                .height(8.dp)
+                .clip(RoundedCornerShape(4.dp))
+                .background(LifeGameRule),
+        ) {
+            Box(
+                Modifier
+                    .fillMaxWidth(value / 100f)
+                    .height(8.dp)
+                    .clip(RoundedCornerShape(4.dp))
+                    .background(LifeGameStatDown),
+            )
+        }
+    }
+}
+
+/** 시안 8 헤더: 플레이어 모습·생명력과 시기 진행 막대. 캐릭터를 누르면 능력치를 연다. */
 @Composable
 fun PeriodHeader(
     periodName: String,
@@ -69,30 +96,33 @@ fun PeriodHeader(
     onStatsClick: () -> Unit,
     modifier: Modifier = Modifier,
 ) {
-    Column(modifier.fillMaxWidth().padding(start = 20.dp, end = 20.dp, top = 16.dp, bottom = 8.dp)) {
+    val shape = RoundedCornerShape(14.dp)
+    Column(
+        modifier
+            .fillMaxWidth()
+            .padding(horizontal = 12.dp, vertical = 6.dp)
+            .clip(shape)
+            .background(LifeGamePaper.copy(alpha = 0.94f))
+            .border(1.dp, LifeGameRule, shape)
+            .padding(start = 12.dp, end = 12.dp, top = 8.dp, bottom = 8.dp),
+    ) {
         Row(verticalAlignment = Alignment.CenterVertically) {
             Row(
                 modifier = Modifier.weight(1f),
-                horizontalArrangement = Arrangement.spacedBy(8.dp),
-                verticalAlignment = Alignment.Bottom,
+                horizontalArrangement = Arrangement.spacedBy(10.dp),
+                verticalAlignment = Alignment.CenterVertically,
             ) {
-                Text(
-                    text = periodName,
-                    color = LifeGameInk,
-                    fontSize = 24.sp,
-                    fontWeight = FontWeight.Bold,
-                    modifier = Modifier.semantics { heading() },
+                PixelFigurePlaceholder(
+                    height = 42.dp,
+                    grown = periodName != "영아기",
+                    modifier = Modifier
+                        .clickable(role = Role.Button, onClick = onStatsClick)
+                        .semantics { contentDescription = "플레이어 현재 모습, 능력치 보기" },
                 )
-                Text(
-                    text = yearLabel,
-                    color = LifeGameInkSecondary,
-                    fontSize = 13.sp,
-                    modifier = Modifier.padding(bottom = 3.dp),
-                )
+                LifeGauge(health = stats.health, modifier = Modifier.weight(1f))
             }
-            StatsButton(stats = stats, changes = null, onClick = onStatsClick)
         }
-        Spacer(Modifier.height(14.dp))
+        Spacer(Modifier.height(6.dp))
         PeriodProgress(marks)
     }
 }
@@ -105,30 +135,49 @@ fun PeriodProgress(
 ) {
     val track = if (dark) Color(0xFF3A3631) else LifeGameRule
     val fill = if (dark) LifePaperOnDark else LifeGameInk
-    Row(
+    Box(
         modifier = modifier
             .fillMaxWidth()
+            .height(43.dp)
             .semantics {
                 contentDescription = marks.firstOrNull { it.isCurrent }?.let { "${it.label} 시기" }.orEmpty()
             },
-        horizontalArrangement = Arrangement.spacedBy(4.dp),
     ) {
-        marks.forEach { mark ->
-            Column(Modifier.weight(1f)) {
-                Canvas(Modifier.fillMaxWidth().height(3.dp)) {
-                    val radius = CornerRadius(size.height / 2)
-                    drawRoundRect(track, cornerRadius = radius)
-                    if (mark.fill > 0f) {
-                        drawRoundRect(
-                            fill,
-                            size = Size(maxOf(size.height, size.width * mark.fill), size.height),
-                            cornerRadius = radius,
-                        )
-                    }
-                }
+        Canvas(
+            Modifier
+                .fillMaxWidth()
+                .height(22.dp)
+                .padding(horizontal = 10.dp),
+        ) {
+            if (marks.isEmpty()) return@Canvas
+            val y = size.height / 2f
+            val step = if (marks.size == 1) 0f else size.width / (marks.size - 1)
+            drawLine(track, Offset(0f, y), Offset(size.width, y), strokeWidth = 2.dp.toPx())
+            marks.forEachIndexed { index, mark ->
+                val x = step * index
+                val isComplete = mark.fill >= 1f || mark.isCurrent
+                drawCircle(
+                    color = if (isComplete) fill else LifeGamePaper,
+                    radius = if (mark.isCurrent) 6.dp.toPx() else 5.dp.toPx(),
+                    center = Offset(x, y),
+                )
+                drawCircle(
+                    color = if (mark.isCurrent) LifeGameSpecial else track,
+                    radius = if (mark.isCurrent) 6.dp.toPx() else 5.dp.toPx(),
+                    center = Offset(x, y),
+                    style = Stroke(width = 2.dp.toPx()),
+                )
+            }
+        }
+        Row(
+            Modifier
+                .fillMaxWidth()
+                .padding(top = 22.dp),
+            horizontalArrangement = Arrangement.SpaceBetween,
+        ) {
+            marks.forEach { mark ->
                 Text(
                     text = mark.label,
-                    modifier = Modifier.padding(top = 5.dp),
                     color = when {
                         mark.isCurrent && dark -> LifePaperOnDark
                         mark.isCurrent -> LifeGameInk
@@ -154,7 +203,10 @@ fun FocusLockRow(
     Row(
         modifier = modifier
             .fillMaxWidth()
-            .padding(horizontal = 20.dp, vertical = 6.dp)
+            .clip(RoundedCornerShape(10.dp))
+            .background(LifeGameInk.copy(alpha = 0.62f))
+            .border(1.dp, LifeGamePaper.copy(alpha = 0.22f), RoundedCornerShape(10.dp))
+            .padding(horizontal = 16.dp, vertical = 8.dp)
             .testTag("focus_lock_row"),
         verticalAlignment = Alignment.CenterVertically,
     ) {
@@ -163,12 +215,9 @@ fun FocusLockRow(
             horizontalArrangement = Arrangement.spacedBy(6.dp),
             verticalAlignment = Alignment.CenterVertically,
         ) {
-            Text("이번 시기 초점", color = LifeGameInkTertiary, fontSize = 12.sp)
-            Text(focus.label, color = LifeGameInk, fontSize = 13.sp, fontWeight = FontWeight.Bold)
-            LockIcon()
-            Text("${years}해 고정", color = LifeGameInkTertiary, fontSize = 11.5.sp)
+            Text("이번 시기 초점", color = LifeGamePaper.copy(alpha = 0.86f), fontSize = 12.sp)
+            Text(focus.label, color = LifeGamePaper, fontSize = 13.sp, fontWeight = FontWeight.Bold)
         }
-        EffectText(focus.effects, fontSize = 12.sp)
     }
 }
 
@@ -227,22 +276,23 @@ fun InkButton(
     onClick: () -> Unit,
     modifier: Modifier = Modifier,
     enabled: Boolean = true,
+    compact: Boolean = false,
 ) {
     val shape = RoundedCornerShape(10.dp)
     Box(
         modifier = modifier
             .fillMaxWidth()
-            .heightIn(min = 56.dp)
+            .heightIn(min = if (compact) 44.dp else 56.dp)
             .clip(shape)
             .background(if (enabled) LifeGameInk else LifeGameRule)
             .clickable(enabled = enabled, role = Role.Button, onClick = onClick)
-            .padding(horizontal = 16.dp, vertical = 15.dp),
+            .padding(horizontal = 16.dp, vertical = if (compact) 10.dp else 15.dp),
         contentAlignment = Alignment.Center,
     ) {
         Text(
             text = text,
             color = if (enabled) LifeGameCard else LifeGameInkTertiary,
-            fontSize = 15.5.sp,
+            fontSize = if (compact) 14.sp else 15.5.sp,
             fontWeight = FontWeight.Bold,
             textAlign = TextAlign.Center,
         )
@@ -279,21 +329,20 @@ fun LineButton(
     }
 }
 
-/** 능력치 자세히 보기 시트. */
-@OptIn(ExperimentalMaterial3Api::class)
+/** 능력치 자세히 보기 중앙 대화상자. */
 @Composable
 fun StatsSheet(stats: Stats, onDismiss: () -> Unit) {
-    ModalBottomSheet(
-        onDismissRequest = onDismiss,
-        sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true),
-        containerColor = LifeGamePaper,
-    ) {
+    Dialog(onDismissRequest = onDismiss) {
         Column(
             Modifier
                 .fillMaxWidth()
+                .widthIn(max = 360.dp)
+                .clip(RoundedCornerShape(18.dp))
+                .background(LifeGamePaper)
+                .border(1.dp, LifeGameRule, RoundedCornerShape(18.dp))
                 .verticalScroll(rememberScrollState())
                 .testTag("stats_content")
-                .padding(start = 24.dp, end = 24.dp, bottom = 32.dp),
+                .padding(24.dp),
             verticalArrangement = Arrangement.spacedBy(16.dp),
         ) {
             Text("능력치", style = MaterialTheme.typography.headlineMedium)
