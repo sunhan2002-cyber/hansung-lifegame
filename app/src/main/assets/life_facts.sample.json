@@ -1,0 +1,644 @@
+[
+  {
+    "flag": "university",
+    "fact": "educationLevel",
+    "value": "UNIVERSITY",
+    "label": "대학 진학"
+  },
+  {
+    "flag": "edu_graduate",
+    "fact": "educationLevel",
+    "value": "GRADUATE",
+    "label": "대학원 진학"
+  },
+  {
+    "flag": "vocational_high",
+    "fact": "educationLevel",
+    "value": "VOCATIONAL_HIGH",
+    "label": "특성화고"
+  },
+  {
+    "flag": "arts_high",
+    "fact": "educationLevel",
+    "value": "ARTS_HIGH",
+    "label": "예술고"
+  },
+  {
+    "flag": "field_science",
+    "fact": "fieldOfStudy",
+    "value": "SCIENCE",
+    "label": "자연과학 전공"
+  },
+  {
+    "flag": "field_sports",
+    "fact": "fieldOfStudy",
+    "value": "SPORTS",
+    "label": "체육 전공"
+  },
+  {
+    "flag": "arts_track",
+    "fact": "fieldOfStudy",
+    "value": "ARTS",
+    "label": "예술 전공"
+  },
+  {
+    "flag": "career_researcher",
+    "fact": "careerTrack",
+    "value": "RESEARCHER",
+    "label": "연구원"
+  },
+  {
+    "flag": "career_engineer",
+    "fact": "careerTrack",
+    "value": "ENGINEER",
+    "label": "엔지니어"
+  },
+  {
+    "flag": "career_patent_attorney",
+    "fact": "careerTrack",
+    "value": "PATENT_ATTORNEY",
+    "label": "변리사"
+  },
+  {
+    "flag": "career_professor",
+    "fact": "careerTrack",
+    "value": "PROFESSOR",
+    "label": "강단에 선 연구자"
+  },
+  {
+    "flag": "career_athlete",
+    "fact": "careerTrack",
+    "value": "ATHLETE",
+    "label": "프로 선수"
+  },
+  {
+    "flag": "career_coach",
+    "fact": "careerTrack",
+    "value": "COACH",
+    "label": "코치·감독"
+  },
+  {
+    "flag": "career_pe_teacher",
+    "fact": "careerTrack",
+    "value": "PE_TEACHER",
+    "label": "체육 교사"
+  },
+  {
+    "flag": "career_trainer",
+    "fact": "careerTrack",
+    "value": "TRAINER",
+    "label": "재활 트레이너"
+  },
+  {
+    "flag": "career_caster",
+    "fact": "careerTrack",
+    "value": "CASTER",
+    "label": "해설위원"
+  },
+  {
+    "flag": "career_gym_owner",
+    "fact": "careerTrack",
+    "value": "GYM_OWNER",
+    "label": "체육관 관장"
+  },
+  {
+    "flag": "career_sales",
+    "fact": "careerTrack",
+    "value": "SALES",
+    "label": "영업"
+  },
+  {
+    "flag": "career_office",
+    "fact": "careerTrack",
+    "value": "OFFICE",
+    "label": "회사원"
+  },
+  {
+    "flag": "career_counselor",
+    "fact": "careerTrack",
+    "value": "COUNSELOR",
+    "label": "상담사"
+  },
+  {
+    "flag": "career_founder",
+    "fact": "careerTrack",
+    "value": "FOUNDER",
+    "label": "창업가"
+  },
+  {
+    "flag": "career_startup",
+    "fact": "careerTrack",
+    "value": "STARTUP",
+    "label": "스타트업 직원"
+  },
+  {
+    "flag": "career_creator",
+    "fact": "careerTrack",
+    "value": "CREATOR",
+    "label": "창작자"
+  },
+  {
+    "flag": "career_freelancer",
+    "fact": "careerTrack",
+    "value": "FREELANCER",
+    "label": "프리랜서"
+  },
+  {
+    "flag": "early_job",
+    "fact": "careerTrack",
+    "value": "OFFICE",
+    "label": "고졸 취업"
+  },
+  {
+    "flag": "pro_athlete",
+    "fact": "careerTrack",
+    "value": "ATHLETE",
+    "label": "프로 선수"
+  },
+  {
+    "flag": "coach_path",
+    "fact": "careerTrack",
+    "value": "COACH",
+    "label": "코치"
+  },
+  {
+    "flag": "level_mid",
+    "fact": "careerLevel",
+    "value": "MID",
+    "label": "중간 관리자"
+  },
+  {
+    "flag": "level_senior",
+    "fact": "careerLevel",
+    "value": "SENIOR",
+    "label": "책임자"
+  },
+  {
+    "flag": "level_executive",
+    "fact": "careerLevel",
+    "value": "EXECUTIVE",
+    "label": "임원·대표"
+  },
+  {
+    "flag": "job_employed",
+    "fact": "employmentStatus",
+    "value": "EMPLOYED",
+    "label": "재직"
+  },
+  {
+    "flag": "job_self_employed",
+    "fact": "employmentStatus",
+    "value": "SELF_EMPLOYED",
+    "label": "자영업"
+  },
+  {
+    "flag": "job_unemployed",
+    "fact": "employmentStatus",
+    "value": "UNEMPLOYED",
+    "label": "실직"
+  },
+  {
+    "flag": "job_retired",
+    "fact": "employmentStatus",
+    "value": "RETIRED",
+    "label": "은퇴"
+  },
+  {
+    "flag": "laid_off",
+    "fact": "employmentStatus",
+    "value": "UNEMPLOYED",
+    "label": "구조조정"
+  },
+  {
+    "flag": "comeback",
+    "fact": "employmentStatus",
+    "value": "EMPLOYED",
+    "label": "재취업"
+  },
+  {
+    "flag": "early_retire",
+    "fact": "employmentStatus",
+    "value": "RETIRED",
+    "label": "희망퇴직"
+  },
+  {
+    "flag": "dating",
+    "fact": "maritalStatus",
+    "value": "DATING",
+    "label": "연애 중"
+  },
+  {
+    "flag": "married",
+    "fact": "maritalStatus",
+    "value": "MARRIED",
+    "label": "결혼"
+  },
+  {
+    "flag": "divorced",
+    "fact": "maritalStatus",
+    "value": "DIVORCED",
+    "label": "이혼"
+  },
+  {
+    "flag": "single_life",
+    "fact": "maritalStatus",
+    "value": "SINGLE",
+    "label": "혼자의 삶"
+  },
+  {
+    "flag": "first_child",
+    "fact": "childrenAtLeast",
+    "value": 1,
+    "label": "자녀"
+  },
+  {
+    "flag": "v4:event:adult_039",
+    "fact": "childrenAtLeast",
+    "value": 1,
+    "label": "첫 아이"
+  },
+  {
+    "flag": "housing_with_parents",
+    "fact": "housingType",
+    "value": "WITH_PARENTS",
+    "label": "부모님 집"
+  },
+  {
+    "flag": "housing_monthly_rent",
+    "fact": "housingType",
+    "value": "MONTHLY_RENT",
+    "label": "월세"
+  },
+  {
+    "flag": "housing_jeonse",
+    "fact": "housingType",
+    "value": "JEONSE",
+    "label": "전세"
+  },
+  {
+    "flag": "housing_own_apartment",
+    "fact": "housingType",
+    "value": "OWN_APARTMENT",
+    "label": "내 집(아파트)"
+  },
+  {
+    "flag": "housing_own_house",
+    "fact": "housingType",
+    "value": "OWN_HOUSE",
+    "label": "마당 있는 내 집"
+  },
+  {
+    "flag": "home_owner",
+    "fact": "housingType",
+    "value": "OWN_APARTMENT",
+    "label": "내 집 마련"
+  },
+  {
+    "flag": "in_debt",
+    "fact": "wealthNote",
+    "value": "IN_DEBT",
+    "label": "빚 있음"
+  },
+  {
+    "flag": "debt_free",
+    "fact": "wealthNote",
+    "value": "DEBT_FREE",
+    "label": "빚 청산"
+  },
+  {
+    "flag": "student_loan",
+    "fact": "wealthNote",
+    "value": "STUDENT_LOAN",
+    "label": "학자금 대출"
+  },
+  {
+    "flag": "health_injured",
+    "fact": "healthStatus",
+    "value": "INJURED",
+    "label": "부상"
+  },
+  {
+    "flag": "health_limited",
+    "fact": "healthStatus",
+    "value": "LIMITED_ACTIVITY",
+    "label": "활동 제한"
+  },
+  {
+    "flag": "health_chronic",
+    "fact": "healthStatus",
+    "value": "CHRONIC",
+    "label": "만성 질환 관리"
+  },
+  {
+    "flag": "health_recovered",
+    "fact": "healthStatus",
+    "value": "RECOVERED",
+    "label": "회복"
+  },
+  {
+    "flag": "health_warning",
+    "fact": "healthStatus",
+    "value": "WARNING",
+    "label": "건강 경고"
+  },
+  {
+    "flag": "healthy_routine",
+    "fact": "healthStatus",
+    "value": "MANAGED",
+    "label": "건강 관리 습관"
+  },
+  {
+    "flag": "achv_band_wedding",
+    "fact": "achievement",
+    "value": "achv_band_wedding",
+    "label": "합주 모임 결혼식"
+  },
+  {
+    "flag": "achv_breakthrough",
+    "fact": "achievement",
+    "value": "achv_breakthrough",
+    "label": "연구 돌파구"
+  },
+  {
+    "flag": "achv_class_president",
+    "fact": "achievement",
+    "value": "achv_class_president",
+    "label": "반장 당선"
+  },
+  {
+    "flag": "achv_clinic_friends",
+    "fact": "achievement",
+    "value": "achv_clinic_friends",
+    "label": "대기실 친구들"
+  },
+  {
+    "flag": "achv_comeback",
+    "fact": "achievement",
+    "value": "achv_comeback",
+    "label": "부상 복귀전"
+  },
+  {
+    "flag": "achv_community_leader",
+    "fact": "achievement",
+    "value": "achv_community_leader",
+    "label": "주민자치위원장"
+  },
+  {
+    "flag": "achv_company_100",
+    "fact": "achievement",
+    "value": "achv_company_100",
+    "label": "직원 백 명"
+  },
+  {
+    "flag": "achv_connector",
+    "fact": "achievement",
+    "value": "achv_connector",
+    "label": "연결 모임"
+  },
+  {
+    "flag": "achv_donation",
+    "fact": "achievement",
+    "value": "achv_donation",
+    "label": "장학금 기부"
+  },
+  {
+    "flag": "achv_exchange",
+    "fact": "achievement",
+    "value": "achv_exchange",
+    "label": "해외 연수"
+  },
+  {
+    "flag": "achv_exit",
+    "fact": "achievement",
+    "value": "achv_exit",
+    "label": "회사 매각"
+  },
+  {
+    "flag": "achv_family_peace",
+    "fact": "achievement",
+    "value": "achv_family_peace",
+    "label": "집안의 화해"
+  },
+  {
+    "flag": "achv_festival",
+    "fact": "achievement",
+    "value": "achv_festival",
+    "label": "축제 최고 매출"
+  },
+  {
+    "flag": "achv_first_business",
+    "fact": "achievement",
+    "value": "achv_first_business",
+    "label": "첫 사업자 등록"
+  },
+  {
+    "flag": "achv_first_commission",
+    "fact": "achievement",
+    "value": "achv_first_commission",
+    "label": "첫 작업 의뢰"
+  },
+  {
+    "flag": "achv_found_family",
+    "fact": "achievement",
+    "value": "achv_found_family",
+    "label": "친구라는 가족"
+  },
+  {
+    "flag": "achv_full_guestbook",
+    "fact": "achievement",
+    "value": "achv_full_guestbook",
+    "label": "방명록 두 권"
+  },
+  {
+    "flag": "achv_full_recovery",
+    "fact": "achievement",
+    "value": "achv_full_recovery",
+    "label": "완전 회복"
+  },
+  {
+    "flag": "achv_gifted_program",
+    "fact": "achievement",
+    "value": "achv_gifted_program",
+    "label": "영재교육원 합격"
+  },
+  {
+    "flag": "achv_good_deed",
+    "fact": "achievement",
+    "value": "achv_good_deed",
+    "label": "지갑 돌려주기"
+  },
+  {
+    "flag": "achv_hobby_income",
+    "fact": "achievement",
+    "value": "achv_hobby_income",
+    "label": "취미로 번 첫 돈"
+  },
+  {
+    "flag": "achv_home",
+    "fact": "achievement",
+    "value": "achv_home",
+    "label": "내 집 마련"
+  },
+  {
+    "flag": "achv_hundred_peaks",
+    "fact": "achievement",
+    "value": "achv_hundred_peaks",
+    "label": "백 개 산 등정"
+  },
+  {
+    "flag": "achv_last_lecture",
+    "fact": "achievement",
+    "value": "achv_last_lecture",
+    "label": "마지막 강연"
+  },
+  {
+    "flag": "achv_league_best",
+    "fact": "achievement",
+    "value": "achv_league_best",
+    "label": "리그 베스트 11"
+  },
+  {
+    "flag": "achv_license",
+    "fact": "achievement",
+    "value": "achv_license",
+    "label": "변리사 합격"
+  },
+  {
+    "flag": "achv_lucky_life",
+    "fact": "achievement",
+    "value": "achv_lucky_life",
+    "label": "운 좋은 인생"
+  },
+  {
+    "flag": "achv_lucky_streak",
+    "fact": "achievement",
+    "value": "achv_lucky_streak",
+    "label": "행운의 연속"
+  },
+  {
+    "flag": "achv_major_paper",
+    "fact": "achievement",
+    "value": "achv_major_paper",
+    "label": "대표 논문"
+  },
+  {
+    "flag": "achv_math_award",
+    "fact": "achievement",
+    "value": "achv_math_award",
+    "label": "수학 경시대회 수상"
+  },
+  {
+    "flag": "achv_mentor",
+    "fact": "achievement",
+    "value": "achv_mentor",
+    "label": "후배 양성"
+  },
+  {
+    "flag": "achv_national_champion",
+    "fact": "achievement",
+    "value": "achv_national_champion",
+    "label": "전국체전 우승"
+  },
+  {
+    "flag": "achv_night_degree",
+    "fact": "achievement",
+    "value": "achv_night_degree",
+    "label": "야간대학 졸업"
+  },
+  {
+    "flag": "achv_own_gym",
+    "fact": "achievement",
+    "value": "achv_own_gym",
+    "label": "체육관 개관"
+  },
+  {
+    "flag": "achv_patent",
+    "fact": "achievement",
+    "value": "achv_patent",
+    "label": "특허 등록"
+  },
+  {
+    "flag": "achv_problem_setter",
+    "fact": "achievement",
+    "value": "achv_problem_setter",
+    "label": "경시대회 출제"
+  },
+  {
+    "flag": "achv_senior_marathon",
+    "fact": "achievement",
+    "value": "achv_senior_marathon",
+    "label": "시니어 마라톤 완주"
+  },
+  {
+    "flag": "achv_senior_teacher",
+    "fact": "achievement",
+    "value": "achv_senior_teacher",
+    "label": "복지관 강사"
+  },
+  {
+    "flag": "achv_solo_show",
+    "fact": "achievement",
+    "value": "achv_solo_show",
+    "label": "개인 공연"
+  },
+  {
+    "flag": "achv_stock_option",
+    "fact": "achievement",
+    "value": "achv_stock_option",
+    "label": "스톡옵션 대박"
+  },
+  {
+    "flag": "achv_top_sales",
+    "fact": "achievement",
+    "value": "achv_top_sales",
+    "label": "영업 1등"
+  },
+  {
+    "flag": "achv_trained_champion",
+    "fact": "achievement",
+    "value": "achv_trained_champion",
+    "label": "국가대표 제자"
+  },
+  {
+    "flag": "achv_walk_home",
+    "fact": "achievement",
+    "value": "achv_walk_home",
+    "label": "걸어서 귀가"
+  },
+  {
+    "flag": "achv_windfall",
+    "fact": "achievement",
+    "value": "achv_windfall",
+    "label": "투자 대박"
+  },
+  {
+    "flag": "achv_young_body",
+    "fact": "achievement",
+    "value": "achv_young_body",
+    "label": "건강 나이 12살 젊음"
+  },
+  {
+    "flag": "achv_youth_medal",
+    "fact": "achievement",
+    "value": "achv_youth_medal",
+    "label": "첫 메달"
+  },
+  {
+    "flag": "scholarship",
+    "fact": "achievement",
+    "value": "scholarship",
+    "label": "장학금"
+  },
+  {
+    "flag": "patent_holder",
+    "fact": "achievement",
+    "value": "patent_holder",
+    "label": "특허 보유"
+  },
+  {
+    "flag": "startup_founder",
+    "fact": "achievement",
+    "value": "startup_founder",
+    "label": "창업 경험"
+  }
+]
