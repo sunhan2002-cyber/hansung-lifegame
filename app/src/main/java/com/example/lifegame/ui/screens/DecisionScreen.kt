@@ -69,7 +69,9 @@ import com.example.lifegame.ui.components.EffectText
 import com.example.lifegame.ui.components.FilmMotion
 import com.example.lifegame.ui.components.FilmShot
 import com.example.lifegame.ui.components.FilmStrip
-import com.example.lifegame.ui.components.FocusLockRow
+import com.example.lifegame.ui.components.LifeFactsSheet
+import com.example.lifegame.ui.components.LifePathSummary
+import com.example.lifegame.ui.components.LockIcon
 import com.example.lifegame.ui.components.InkButton
 import com.example.lifegame.ui.components.LifeGauge
 import com.example.lifegame.ui.components.PerforationBand
@@ -118,6 +120,7 @@ fun DecisionScreen(
     var sceneOnly by rememberSaveable(introKey) { mutableStateOf(false) }
     var typedChars by rememberSaveable(introKey) { mutableStateOf(if (outcome != null) decision.text.length else 0) }
     var statsOpen by remember { mutableStateOf(false) }
+    var factsOpen by remember { mutableStateOf(false) }
     var motion by remember { mutableStateOf(FilmMotion()) }
     var popupOpen by remember { mutableStateOf(false) }
     val popupProgress = remember { Animatable(0f) }
@@ -216,7 +219,13 @@ fun DecisionScreen(
                         .verticalScroll(rememberScrollState())
                         .testTag("decision_content"),
                 ) {
-                    state.focus?.let { FocusLockRow(focus = it, years = state.periodYears) }
+                    LifePathSummary(
+                        focus = state.focus,
+                        topStat = state.topStat,
+                        facts = state.facts,
+                        onOpen = { factsOpen = true },
+                        modifier = Modifier.padding(horizontal = 12.dp, vertical = 4.dp),
+                    )
                     if (outcome == null) {
                         NarrativeReveal(
                             decision = decision,
@@ -249,6 +258,7 @@ fun DecisionScreen(
     }
 
     if (statsOpen) StatsSheet(stats = state.stats, onDismiss = { statsOpen = false })
+    if (factsOpen) LifeFactsSheet(facts = state.facts, stats = state.stats, onDismiss = { factsOpen = false })
 }
 
 private fun DecisionKind.markLabel(): String = when (this) {
@@ -411,14 +421,31 @@ private fun DecisionChoiceCard(
                 if (choice.hint.isNotBlank()) {
                     Text(choice.hint, color = LifeGamePaper.copy(alpha = 0.78f), fontSize = 11.5.sp, lineHeight = 15.5.sp)
                 }
-                if (choice.statConditionText != null) {
+                // 잠긴 선택지는 아래 잠금 이유(필요 값 · 지금 값)에 조건이 이미 나오므로 겹쳐 쓰지 않는다.
+                if (choice.statConditionText != null && choice.available) {
                     Text("조건: ${choice.statConditionText}", color = if (choice.available) LifeGamePaper.copy(alpha = 0.78f) else LifeGamePaper.copy(alpha = 0.5f), fontSize = 11.5.sp, lineHeight = 15.5.sp)
                 }
                 if (choice.healthEffectText != null) {
                     Text(choice.healthEffectText, color = if (choice.healthEffectText.contains("감소")) LifeGameSpecial else LifeGameStatUp, fontSize = 11.5.sp, lineHeight = 15.5.sp, fontWeight = FontWeight.Medium)
                 }
-                if (!choice.available && choice.lockReason != null) {
-                    Text("🔒 ${choice.lockReason}", color = LifeGamePaper.copy(alpha = 0.6f), fontSize = 11.5.sp, lineHeight = 15.5.sp)
+                if (!choice.available) {
+                    val reasons = choice.lockReasons.ifEmpty { listOfNotNull(choice.lockReason) }
+                    reasons.forEach { reason ->
+                        Row(
+                            horizontalArrangement = Arrangement.spacedBy(6.dp),
+                            verticalAlignment = Alignment.CenterVertically,
+                            modifier = Modifier.testTag("lock_reason"),
+                        ) {
+                            LockIcon(color = LifeGamePaper.copy(alpha = 0.78f))
+                            Text(
+                                text = reason,
+                                color = LifeGamePaper.copy(alpha = 0.86f),
+                                fontSize = 12.sp,
+                                lineHeight = 16.sp,
+                                fontWeight = FontWeight.Medium,
+                            )
+                        }
+                    }
                 }
             }
             Text("›", color = LifeGamePaper.copy(alpha = 0.86f), fontSize = 32.sp, lineHeight = 32.sp, fontWeight = FontWeight.Light)
@@ -461,7 +488,41 @@ private fun OutcomeBlock(outcome: OutcomeUi) {
             color = LifeGameInk,
             lineHeight = 24.sp,
         )
-        // 세부 증감 수치는 능력치 시트에서 확인하고 결과 화면은 서사에 집중한다.
+        if (outcome.changes.isEmpty()) {
+            Text("능력치 변화 없음", color = LifeGameInkTertiary, fontSize = 12.5.sp)
+        } else {
+            EffectText(outcome.changes, fontSize = 12.5.sp, showAmount = true, modifier = Modifier.testTag("outcome_stat_changes"))
+        }
+        if (outcome.factChanges.isNotEmpty()) {
+            Column(
+                Modifier.fillMaxWidth().testTag("outcome_fact_changes"),
+                verticalArrangement = Arrangement.spacedBy(3.dp),
+            ) {
+                Text("새로 생긴 사실", color = LifeGameInkSecondary, fontSize = 12.sp, fontWeight = FontWeight.Bold)
+                outcome.factChanges.forEach { change ->
+                    Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                        Text(change.category, color = LifeGameInkTertiary, fontSize = 13.sp, modifier = Modifier.widthIn(min = 44.dp))
+                        Text(
+                            text = change.text,
+                            color = LifeGameInk,
+                            fontSize = 13.5.sp,
+                            lineHeight = 19.sp,
+                            fontWeight = FontWeight.Medium,
+                            modifier = Modifier.weight(1f),
+                        )
+                    }
+                }
+            }
+        }
+        if (outcome.openedEvents.isNotEmpty()) {
+            Text(
+                text = "새로 열린 길: " + outcome.openedEvents.joinToString(", ") { "「$it」" },
+                color = LifeGameInkSecondary,
+                fontSize = 12.5.sp,
+                lineHeight = 18.sp,
+                modifier = Modifier.testTag("outcome_opened_events"),
+            )
+        }
     }
 }
 

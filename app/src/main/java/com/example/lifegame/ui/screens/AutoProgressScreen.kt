@@ -52,7 +52,8 @@ import com.example.lifegame.ui.LogLineUi
 import com.example.lifegame.ui.PLAY_SPEEDS
 import com.example.lifegame.ui.PeriodPlayUiState
 import com.example.lifegame.ui.YEAR_MILLIS_AT_1X
-import com.example.lifegame.ui.components.FocusLockRow
+import com.example.lifegame.ui.components.LifeFactsSheet
+import com.example.lifegame.ui.components.LifePathSummary
 import com.example.lifegame.ui.components.LifeGauge
 import com.example.lifegame.ui.components.NOISE_ADVANCE_MILLIS
 import com.example.lifegame.ui.components.PeriodHeader
@@ -86,6 +87,7 @@ fun AutoProgressScreen(
     modifier: Modifier = Modifier,
 ) {
     var statsOpen by remember { mutableStateOf(false) }
+    var factsOpen by remember { mutableStateOf(false) }
     val reduceMotion = rememberReduceMotion()
     val advance by rememberUpdatedState(onAdvanceYear)
 
@@ -120,7 +122,13 @@ fun AutoProgressScreen(
                     .verticalScroll(rememberScrollState())
                     .testTag("auto_progress_content"),
             ) {
-                state.focus?.let { FocusLockRow(focus = it, years = state.periodYears) }
+                LifePathSummary(
+                    focus = state.focus,
+                    topStat = state.topStat,
+                    facts = state.facts,
+                    onOpen = { factsOpen = true },
+                    modifier = Modifier.padding(horizontal = 12.dp, vertical = 4.dp),
+                )
                 CharacterMainPanel(state, onStatsClick = { statsOpen = true })
                 YearTimer(progress = { yearProgress.value }, playing = state.autoPlaying)
                 YearLog(lines = state.log.takeLast(3))
@@ -136,6 +144,7 @@ fun AutoProgressScreen(
     }
 
     if (statsOpen) StatsSheet(stats = state.stats, onDismiss = { statsOpen = false })
+    if (factsOpen) LifeFactsSheet(facts = state.facts, stats = state.stats, onDismiss = { factsOpen = false })
 }
 
 /** 사건이 없을 때 계속 유지되는 3인칭 캐릭터 메인 화면. */

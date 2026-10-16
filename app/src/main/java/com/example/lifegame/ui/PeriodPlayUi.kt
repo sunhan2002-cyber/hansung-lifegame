@@ -71,6 +71,8 @@ data class DecisionChoiceUi(
     val healthEffectText: String? = null,
     val available: Boolean = true,
     val lockReason: String? = null,
+    /** 잠긴 이유를 하나씩. 예: "지력 60 필요 (지금 52)", "대학 진학 필요" (8주차) */
+    val lockReasons: List<String> = emptyList(),
 )
 
 data class DecisionUi(
@@ -91,6 +93,10 @@ data class OutcomeUi(
     val text: String,
     val changes: List<StatChangeUi>,
     val endsLife: Boolean,
+    /** 이번 선택으로 새로 생긴 교육 · 직업 · 관계 · 가족 · 주거 · 경제력 · 업적 사실 */
+    val factChanges: List<FactChangeUi> = emptyList(),
+    /** 이번 선택으로 새로 조건이 맞게 된 사건 제목 */
+    val openedEvents: List<String> = emptyList(),
 )
 
 data class StarterUi(
@@ -154,6 +160,12 @@ data class PeriodPlayUiState(
     val isDead: Boolean,
     val autoPlaying: Boolean,
     val speed: Int,
+    /** 지금까지 쌓인 인생 사실 (8주차) */
+    val facts: LifeFactsUi = LifeFactsUi(),
+    /** 지금 가장 높은 능력치 */
+    val topStat: StatValueUi? = null,
+    /** 끝났을 때만 채운다 */
+    val ending: EndingSummaryUi? = null,
 ) {
     val place: String get() = "$periodName · ${yearInPeriod}번째 해"
 }
@@ -164,6 +176,10 @@ data class PlayContent(
     val focuses: List<Focus>,
     val decisions: Map<String, DecisionEvent>,
     val imageFiles: Map<String, String>,
+    /** 플래그 → 인생 사실 (life_facts.sample.json) */
+    val factCatalog: LifeFactCatalog = LifeFactCatalog.EMPTY,
+    /** 잠금 이유에 쓸 플래그 이름표 */
+    val lookup: FlagLookup = FlagLookup(catalog = factCatalog),
 )
 
 fun StatDelta.toChanges(): List<StatChangeUi> =
@@ -267,6 +283,8 @@ fun buildDecisionUi(
     event: DecisionEvent?,
     stats: Stats,
     imageFiles: Map<String, String>,
+    flags: Set<String> = emptySet(),
+    lookup: FlagLookup = FlagLookup(),
 ): DecisionUi {
     val options = event?.choices.orEmpty().associateBy { it.choiceId }
     val imageId = pending.povImageId.orEmpty()
@@ -288,6 +306,12 @@ fun buildDecisionUi(
                 healthEffectText = option?.healthEffectText(),
                 available = preview.available,
                 lockReason = preview.lockReason,
+                lockReasons = if (preview.available) {
+                    emptyList()
+                } else {
+                    option?.lockReasons(stats, flags, lookup).orEmpty()
+                        .ifEmpty { listOfNotNull(preview.lockReason) }
+                },
             )
         },
     )
@@ -336,6 +360,9 @@ fun buildPeriodPlayState(
     speed: Int = 1,
     isDead: Boolean = false,
     characterImageId: String? = null,
+    choiceLog: List<ChoiceRecordUi> = emptyList(),
+    endingTitle: String? = null,
+    endingSummary: String? = null,
 ): PeriodPlayUiState {
     val state = step.state
     val periods = content.periods.sortedBy { it.order }
@@ -359,6 +386,7 @@ fun buildPeriodPlayState(
         else -> state.yearInPeriod
     }
     val focus = content.focuses.firstOrNull { it.focusId == state.selectedFocusId }
+    val facts = buildLifeFacts(state.flags, state.stats, content.factCatalog)
     val sceneImageId = step.sceneImageId ?: focus?.sceneImageId.orEmpty()
     val years = period?.years ?: 1
     return PeriodPlayUiState(
@@ -394,12 +422,34 @@ fun buildPeriodPlayState(
         log = buildLogLines(state.moments, periods),
         yearKey = "${state.runId}:${state.period}:$shownYear:${state.moments.size}",
         decision = decision ?: step.pendingDecision?.let { pending ->
-            buildDecisionUi(pending, content.decisions[pending.eventId], state.stats, content.imageFiles)
+            buildDecisionUi(
+                pending = pending,
+                event = content.decisions[pending.eventId],
+                stats = state.stats,
+                imageFiles = content.imageFiles,
+                flags = state.flags,
+                lookup = content.lookup,
+            )
         },
         outcome = outcome,
         isDead = isDead || outcome?.endsLife == true,
         autoPlaying = autoPlaying,
         speed = speed,
+        facts = facts,
+        topStat = state.stats.topStat(),
+        ending = if (phase == PlayPhase.ENDED) {
+            buildEndingSummary(
+                playerName = playerName,
+                state = state,
+                periods = periods,
+                facts = facts,
+                endingTitle = endingTitle,
+                endingSummary = endingSummary,
+                choices = choiceLog,
+            )
+        } else {
+            null
+        },
     )
 }
 
