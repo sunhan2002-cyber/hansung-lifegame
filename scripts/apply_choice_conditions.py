@@ -157,10 +157,17 @@ def resolve(events: list[dict[str, Any]]) -> tuple[Counter[str], list[dict[str, 
 
 
 def write_report(counts: Counter[str], rows: list[dict[str, Any]]) -> None:
-    by_stat = Counter(row.get("stat") for row in rows if row.get("stat"))
+    by_stat: Counter[str] = Counter()
+    current = json.loads(EVENT_FILE.read_text(encoding="utf-8"))
+    for event in current:
+        if not is_hard_condition_event(event):
+            continue
+        for choice in event.get("choices", []):
+            for stat in (choice.get("requiredStats") or {}):
+                by_stat[stat] += 1
     lines = [
         "# 8주차 선택지 조건 확정 결과", "",
-        "이번 단계는 609개 선택지를 조건부 또는 항상 실행 가능으로 확정하고 실제 JSON에 반영한 결과다.", "",
+        "이번 단계는 하드 조건 대상 83개 선택지를 조건부 또는 항상 실행 가능으로 확정하고 실제 JSON에 반영한 결과다. 일반 사건 526개 선택지는 하드 조건을 걸지 않고 소프트 반응으로 유지한다.", "",
         f"- 하드 조건 대상 사건: {counts['hard_event']}개",
         f"- 하드 조건 대상 선택지: {counts['hard_choice']}개",
         f"- 일반 사건(소프트 반응만): {counts['soft_only_event']}개 사건 / {counts['soft_only_choice']}개 선택지",

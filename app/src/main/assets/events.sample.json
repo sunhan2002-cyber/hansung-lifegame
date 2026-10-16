@@ -42,10 +42,7 @@
             ],
             "lifeDelta": 10
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "infant_baseline",
-        "alwaysAvailableReason": "영아기 기본 선택지는 초기 능력치 조건 없이 제공"
+        ]
       },
       {
         "choiceId": "B",
@@ -76,10 +73,7 @@
               "pet_bond"
             ]
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "infant_baseline",
-        "alwaysAvailableReason": "영아기 기본 선택지는 초기 능력치 조건 없이 제공"
+        ]
       },
       {
         "choiceId": "C",
@@ -110,10 +104,7 @@
               "picky_eater"
             ]
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "infant_baseline",
-        "alwaysAvailableReason": "영아기 기본 선택지는 초기 능력치 조건 없이 제공"
+        ]
       }
     ],
     "priority": 0,
@@ -160,10 +151,7 @@
             },
             "addFlags": []
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "infant_baseline",
-        "alwaysAvailableReason": "영아기 기본 선택지는 초기 능력치 조건 없이 제공"
+        ]
       },
       {
         "choiceId": "B",
@@ -188,10 +176,7 @@
             },
             "addFlags": []
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "infant_baseline",
-        "alwaysAvailableReason": "영아기 기본 선택지는 초기 능력치 조건 없이 제공"
+        ]
       }
     ],
     "priority": 0,
@@ -245,10 +230,7 @@
             ],
             "lifeDelta": 10
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "infant_baseline",
-        "alwaysAvailableReason": "영아기 기본 선택지는 초기 능력치 조건 없이 제공"
+        ]
       },
       {
         "choiceId": "B",
@@ -273,10 +255,7 @@
             },
             "addFlags": []
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "infant_baseline",
-        "alwaysAvailableReason": "영아기 기본 선택지는 초기 능력치 조건 없이 제공"
+        ]
       },
       {
         "choiceId": "C",
@@ -303,10 +282,7 @@
             },
             "addFlags": []
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "infant_baseline",
-        "alwaysAvailableReason": "영아기 기본 선택지는 초기 능력치 조건 없이 제공"
+        ]
       }
     ],
     "priority": 0,
@@ -359,10 +335,7 @@
               "loud_legend"
             ]
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "infant_baseline",
-        "alwaysAvailableReason": "영아기 기본 선택지는 초기 능력치 조건 없이 제공"
+        ]
       },
       {
         "choiceId": "B",
@@ -388,10 +361,7 @@
             "addFlags": [],
             "lifeDelta": 10
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "infant_baseline",
-        "alwaysAvailableReason": "영아기 기본 선택지는 초기 능력치 조건 없이 제공"
+        ]
       },
       {
         "choiceId": "C",
@@ -416,10 +386,7 @@
             },
             "addFlags": []
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "infant_baseline",
-        "alwaysAvailableReason": "영아기 기본 선택지는 초기 능력치 조건 없이 제공"
+        ]
       }
     ],
     "priority": 0,
@@ -473,10 +440,7 @@
             ],
             "lifeDelta": 10
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "infant_baseline",
-        "alwaysAvailableReason": "영아기 기본 선택지는 초기 능력치 조건 없이 제공"
+        ]
       },
       {
         "choiceId": "B",
@@ -505,10 +469,7 @@
               "afraid_of_water"
             ]
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "infant_baseline",
-        "alwaysAvailableReason": "영아기 기본 선택지는 초기 능력치 조건 없이 제공"
+        ]
       },
       {
         "choiceId": "C",
@@ -535,10 +496,7 @@
             },
             "addFlags": []
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "infant_baseline",
-        "alwaysAvailableReason": "영아기 기본 선택지는 초기 능력치 조건 없이 제공"
+        ]
       }
     ],
     "priority": 0,
@@ -588,10 +546,7 @@
             "addFlags": [],
             "lifeDelta": 10
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "infant_baseline",
-        "alwaysAvailableReason": "영아기 기본 선택지는 초기 능력치 조건 없이 제공"
+        ]
       },
       {
         "choiceId": "B",
@@ -622,10 +577,7 @@
               "night_owl"
             ]
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "infant_baseline",
-        "alwaysAvailableReason": "영아기 기본 선택지는 초기 능력치 조건 없이 제공"
+        ]
       },
       {
         "choiceId": "C",
@@ -656,10 +608,7 @@
               "night_owl"
             ]
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "infant_baseline",
-        "alwaysAvailableReason": "영아기 기본 선택지는 초기 능력치 조건 없이 제공"
+        ]
       }
     ],
     "priority": 0,
@@ -839,10 +788,7 @@
             ],
             "lifeDelta": 10
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "infant_baseline",
-        "alwaysAvailableReason": "영아기 기본 선택지는 초기 능력치 조건 없이 제공"
+        ]
       },
       {
         "choiceId": "B",
@@ -871,10 +817,7 @@
             },
             "addFlags": []
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "infant_baseline",
-        "alwaysAvailableReason": "영아기 기본 선택지는 초기 능력치 조건 없이 제공"
+        ]
       },
       {
         "choiceId": "C",
@@ -906,10 +849,7 @@
             ],
             "lifeDelta": 10
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "infant_baseline",
-        "alwaysAvailableReason": "영아기 기본 선택지는 초기 능력치 조건 없이 제공"
+        ]
       }
     ],
     "priority": 0,
@@ -957,10 +897,7 @@
             "addFlags": [],
             "lifeDelta": 10
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "infant_baseline",
-        "alwaysAvailableReason": "영아기 기본 선택지는 초기 능력치 조건 없이 제공"
+        ]
       },
       {
         "choiceId": "B",
@@ -986,10 +923,7 @@
             "addFlags": [],
             "lifeDelta": 10
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "infant_baseline",
-        "alwaysAvailableReason": "영아기 기본 선택지는 초기 능력치 조건 없이 제공"
+        ]
       },
       {
         "choiceId": "C",
@@ -1021,10 +955,7 @@
             ],
             "lifeDelta": 10
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "infant_baseline",
-        "alwaysAvailableReason": "영아기 기본 선택지는 초기 능력치 조건 없이 제공"
+        ]
       }
     ],
     "priority": 0,
@@ -1078,10 +1009,7 @@
             ],
             "lifeDelta": 10
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "infant_baseline",
-        "alwaysAvailableReason": "영아기 기본 선택지는 초기 능력치 조건 없이 제공"
+        ]
       },
       {
         "choiceId": "B",
@@ -1113,10 +1041,7 @@
             ],
             "lifeDelta": 10
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "infant_baseline",
-        "alwaysAvailableReason": "영아기 기본 선택지는 초기 능력치 조건 없이 제공"
+        ]
       },
       {
         "choiceId": "C",
@@ -1143,10 +1068,7 @@
             },
             "addFlags": []
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "infant_baseline",
-        "alwaysAvailableReason": "영아기 기본 선택지는 초기 능력치 조건 없이 제공"
+        ]
       }
     ],
     "priority": 0,
@@ -1198,10 +1120,7 @@
             ],
             "lifeDelta": 10
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "infant_baseline",
-        "alwaysAvailableReason": "영아기 기본 선택지는 초기 능력치 조건 없이 제공"
+        ]
       },
       {
         "choiceId": "B",
@@ -1228,10 +1147,7 @@
             },
             "addFlags": []
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "infant_baseline",
-        "alwaysAvailableReason": "영아기 기본 선택지는 초기 능력치 조건 없이 제공"
+        ]
       }
     ],
     "priority": 0,
@@ -1285,10 +1201,7 @@
             ],
             "lifeDelta": 10
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "infant_baseline",
-        "alwaysAvailableReason": "영아기 기본 선택지는 초기 능력치 조건 없이 제공"
+        ]
       },
       {
         "choiceId": "B",
@@ -1315,10 +1228,7 @@
             },
             "addFlags": []
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "infant_baseline",
-        "alwaysAvailableReason": "영아기 기본 선택지는 초기 능력치 조건 없이 제공"
+        ]
       },
       {
         "choiceId": "C",
@@ -1345,10 +1255,7 @@
             },
             "addFlags": []
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "infant_baseline",
-        "alwaysAvailableReason": "영아기 기본 선택지는 초기 능력치 조건 없이 제공"
+        ]
       }
     ],
     "priority": 0,
@@ -1400,10 +1307,7 @@
             ],
             "lifeDelta": 10
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "infant_baseline",
-        "alwaysAvailableReason": "영아기 기본 선택지는 초기 능력치 조건 없이 제공"
+        ]
       },
       {
         "choiceId": "B",
@@ -1428,10 +1332,7 @@
             },
             "addFlags": []
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "infant_baseline",
-        "alwaysAvailableReason": "영아기 기본 선택지는 초기 능력치 조건 없이 제공"
+        ]
       },
       {
         "choiceId": "C",
@@ -1458,10 +1359,7 @@
             },
             "addFlags": []
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "infant_baseline",
-        "alwaysAvailableReason": "영아기 기본 선택지는 초기 능력치 조건 없이 제공"
+        ]
       }
     ],
     "priority": 0,
@@ -1515,10 +1413,7 @@
             ],
             "lifeDelta": 10
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "infant_baseline",
-        "alwaysAvailableReason": "영아기 기본 선택지는 초기 능력치 조건 없이 제공"
+        ]
       },
       {
         "choiceId": "B",
@@ -1550,10 +1445,7 @@
             ],
             "lifeDelta": 10
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "infant_baseline",
-        "alwaysAvailableReason": "영아기 기본 선택지는 초기 능력치 조건 없이 제공"
+        ]
       },
       {
         "choiceId": "C",
@@ -1580,10 +1472,7 @@
             },
             "addFlags": []
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "infant_baseline",
-        "alwaysAvailableReason": "영아기 기본 선택지는 초기 능력치 조건 없이 제공"
+        ]
       }
     ],
     "priority": 0,
@@ -1637,10 +1526,7 @@
             ],
             "lifeDelta": 10
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "infant_baseline",
-        "alwaysAvailableReason": "영아기 기본 선택지는 초기 능력치 조건 없이 제공"
+        ]
       },
       {
         "choiceId": "B",
@@ -1672,10 +1558,7 @@
             ],
             "lifeDelta": 10
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "infant_baseline",
-        "alwaysAvailableReason": "영아기 기본 선택지는 초기 능력치 조건 없이 제공"
+        ]
       },
       {
         "choiceId": "C",
@@ -1700,10 +1583,7 @@
             },
             "addFlags": []
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "infant_baseline",
-        "alwaysAvailableReason": "영아기 기본 선택지는 초기 능력치 조건 없이 제공"
+        ]
       }
     ],
     "priority": 0,
@@ -1756,10 +1636,7 @@
               "quirky_walk"
             ]
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "infant_baseline",
-        "alwaysAvailableReason": "영아기 기본 선택지는 초기 능력치 조건 없이 제공"
+        ]
       },
       {
         "choiceId": "B",
@@ -1784,10 +1661,7 @@
             },
             "addFlags": []
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "infant_baseline",
-        "alwaysAvailableReason": "영아기 기본 선택지는 초기 능력치 조건 없이 제공"
+        ]
       },
       {
         "choiceId": "C",
@@ -1816,10 +1690,7 @@
               "quirky_walk"
             ]
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "infant_baseline",
-        "alwaysAvailableReason": "영아기 기본 선택지는 초기 능력치 조건 없이 제공"
+        ]
       }
     ],
     "priority": 0,
@@ -1871,10 +1742,7 @@
             ],
             "lifeDelta": 10
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "infant_baseline",
-        "alwaysAvailableReason": "영아기 기본 선택지는 초기 능력치 조건 없이 제공"
+        ]
       },
       {
         "choiceId": "B",
@@ -1905,10 +1773,7 @@
               "solo_player"
             ]
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "infant_baseline",
-        "alwaysAvailableReason": "영아기 기본 선택지는 초기 능력치 조건 없이 제공"
+        ]
       },
       {
         "choiceId": "C",
@@ -1935,10 +1800,7 @@
             },
             "addFlags": []
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "infant_baseline",
-        "alwaysAvailableReason": "영아기 기본 선택지는 초기 능력치 조건 없이 제공"
+        ]
       }
     ],
     "priority": 0,
@@ -1990,10 +1852,7 @@
             ],
             "lifeDelta": 10
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "infant_baseline",
-        "alwaysAvailableReason": "영아기 기본 선택지는 초기 능력치 조건 없이 제공"
+        ]
       },
       {
         "choiceId": "B",
@@ -2022,10 +1881,7 @@
               "possessive"
             ]
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "infant_baseline",
-        "alwaysAvailableReason": "영아기 기본 선택지는 초기 능력치 조건 없이 제공"
+        ]
       },
       {
         "choiceId": "C",
@@ -2052,10 +1908,7 @@
             },
             "addFlags": []
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "infant_baseline",
-        "alwaysAvailableReason": "영아기 기본 선택지는 초기 능력치 조건 없이 제공"
+        ]
       }
     ],
     "priority": 0,
@@ -2107,10 +1960,7 @@
             ],
             "lifeDelta": 10
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "infant_baseline",
-        "alwaysAvailableReason": "영아기 기본 선택지는 초기 능력치 조건 없이 제공"
+        ]
       },
       {
         "choiceId": "B",
@@ -2139,10 +1989,7 @@
               "shy_child"
             ]
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "infant_baseline",
-        "alwaysAvailableReason": "영아기 기본 선택지는 초기 능력치 조건 없이 제공"
+        ]
       },
       {
         "choiceId": "C",
@@ -2174,10 +2021,7 @@
             ],
             "lifeDelta": 10
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "infant_baseline",
-        "alwaysAvailableReason": "영아기 기본 선택지는 초기 능력치 조건 없이 제공"
+        ]
       }
     ],
     "priority": 0,
@@ -2233,10 +2077,7 @@
             ],
             "lifeDelta": 10
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "infant_baseline",
-        "alwaysAvailableReason": "영아기 기본 선택지는 초기 능력치 조건 없이 제공"
+        ]
       },
       {
         "choiceId": "B",
@@ -2267,10 +2108,7 @@
               "solo_musician"
             ]
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "infant_baseline",
-        "alwaysAvailableReason": "영아기 기본 선택지는 초기 능력치 조건 없이 제공"
+        ]
       }
     ],
     "priority": 0,
@@ -2317,10 +2155,7 @@
             },
             "addFlags": []
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "infant_baseline",
-        "alwaysAvailableReason": "영아기 기본 선택지는 초기 능력치 조건 없이 제공"
+        ]
       },
       {
         "choiceId": "B",
@@ -2347,10 +2182,7 @@
             },
             "addFlags": []
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "infant_baseline",
-        "alwaysAvailableReason": "영아기 기본 선택지는 초기 능력치 조건 없이 제공"
+        ]
       },
       {
         "choiceId": "C",
@@ -2375,10 +2207,7 @@
             },
             "addFlags": []
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "infant_baseline",
-        "alwaysAvailableReason": "영아기 기본 선택지는 초기 능력치 조건 없이 제공"
+        ]
       }
     ],
     "priority": 0,
@@ -2429,10 +2258,7 @@
               "potty_trained"
             ]
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "infant_baseline",
-        "alwaysAvailableReason": "영아기 기본 선택지는 초기 능력치 조건 없이 제공"
+        ]
       },
       {
         "choiceId": "B",
@@ -2458,10 +2284,7 @@
             "addFlags": [],
             "lifeDelta": 10
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "infant_baseline",
-        "alwaysAvailableReason": "영아기 기본 선택지는 초기 능력치 조건 없이 제공"
+        ]
       },
       {
         "choiceId": "C",
@@ -2486,10 +2309,7 @@
             },
             "addFlags": []
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "infant_baseline",
-        "alwaysAvailableReason": "영아기 기본 선택지는 초기 능력치 조건 없이 제공"
+        ]
       }
     ],
     "priority": 0,
@@ -2536,10 +2356,7 @@
             },
             "addFlags": []
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "infant_baseline",
-        "alwaysAvailableReason": "영아기 기본 선택지는 초기 능력치 조건 없이 제공"
+        ]
       },
       {
         "choiceId": "B",
@@ -2564,10 +2381,7 @@
             },
             "addFlags": []
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "infant_baseline",
-        "alwaysAvailableReason": "영아기 기본 선택지는 초기 능력치 조건 없이 제공"
+        ]
       }
     ],
     "priority": 0,
@@ -2614,10 +2428,7 @@
             },
             "addFlags": []
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "infant_baseline",
-        "alwaysAvailableReason": "영아기 기본 선택지는 초기 능력치 조건 없이 제공"
+        ]
       },
       {
         "choiceId": "B",
@@ -2642,10 +2453,7 @@
             },
             "addFlags": []
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "infant_baseline",
-        "alwaysAvailableReason": "영아기 기본 선택지는 초기 능력치 조건 없이 제공"
+        ]
       },
       {
         "choiceId": "C",
@@ -2671,10 +2479,7 @@
             "addFlags": [],
             "lifeDelta": 10
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "infant_baseline",
-        "alwaysAvailableReason": "영아기 기본 선택지는 초기 능력치 조건 없이 제공"
+        ]
       }
     ],
     "priority": 0,
@@ -2722,10 +2527,7 @@
             "addFlags": [],
             "lifeDelta": 10
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "infant_baseline",
-        "alwaysAvailableReason": "영아기 기본 선택지는 초기 능력치 조건 없이 제공"
+        ]
       },
       {
         "choiceId": "B",
@@ -2750,10 +2552,7 @@
             },
             "addFlags": []
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "infant_baseline",
-        "alwaysAvailableReason": "영아기 기본 선택지는 초기 능력치 조건 없이 제공"
+        ]
       },
       {
         "choiceId": "C",
@@ -2785,10 +2584,7 @@
             ],
             "lifeDelta": 10
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "infant_baseline",
-        "alwaysAvailableReason": "영아기 기본 선택지는 초기 능력치 조건 없이 제공"
+        ]
       }
     ],
     "priority": 0,
@@ -2838,10 +2634,7 @@
             "addFlags": [],
             "lifeDelta": 10
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "infant_baseline",
-        "alwaysAvailableReason": "영아기 기본 선택지는 초기 능력치 조건 없이 제공"
+        ]
       },
       {
         "choiceId": "B",
@@ -2866,10 +2659,7 @@
             },
             "addFlags": []
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "infant_baseline",
-        "alwaysAvailableReason": "영아기 기본 선택지는 초기 능력치 조건 없이 제공"
+        ]
       },
       {
         "choiceId": "C",
@@ -2895,10 +2685,7 @@
             "addFlags": [],
             "lifeDelta": 10
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "infant_baseline",
-        "alwaysAvailableReason": "영아기 기본 선택지는 초기 능력치 조건 없이 제공"
+        ]
       }
     ],
     "priority": 0,
@@ -2946,10 +2733,7 @@
             "addFlags": [],
             "lifeDelta": 10
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "infant_baseline",
-        "alwaysAvailableReason": "영아기 기본 선택지는 초기 능력치 조건 없이 제공"
+        ]
       },
       {
         "choiceId": "B",
@@ -2974,10 +2758,7 @@
             },
             "addFlags": []
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "infant_baseline",
-        "alwaysAvailableReason": "영아기 기본 선택지는 초기 능력치 조건 없이 제공"
+        ]
       },
       {
         "choiceId": "C",
@@ -3009,10 +2790,7 @@
             ],
             "lifeDelta": 10
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "infant_baseline",
-        "alwaysAvailableReason": "영아기 기본 선택지는 초기 능력치 조건 없이 제공"
+        ]
       }
     ],
     "priority": 0,
@@ -3060,10 +2838,7 @@
             "addFlags": [],
             "lifeDelta": 10
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "infant_baseline",
-        "alwaysAvailableReason": "영아기 기본 선택지는 초기 능력치 조건 없이 제공"
+        ]
       },
       {
         "choiceId": "B",
@@ -3088,10 +2863,7 @@
             },
             "addFlags": []
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "infant_baseline",
-        "alwaysAvailableReason": "영아기 기본 선택지는 초기 능력치 조건 없이 제공"
+        ]
       },
       {
         "choiceId": "C",
@@ -3119,10 +2891,7 @@
             "addFlags": [],
             "lifeDelta": 10
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "infant_baseline",
-        "alwaysAvailableReason": "영아기 기본 선택지는 초기 능력치 조건 없이 제공"
+        ]
       }
     ],
     "priority": 0,
@@ -3169,10 +2938,7 @@
             },
             "addFlags": []
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "infant_baseline",
-        "alwaysAvailableReason": "영아기 기본 선택지는 초기 능력치 조건 없이 제공"
+        ]
       },
       {
         "choiceId": "B",
@@ -3197,10 +2963,7 @@
             },
             "addFlags": []
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "infant_baseline",
-        "alwaysAvailableReason": "영아기 기본 선택지는 초기 능력치 조건 없이 제공"
+        ]
       }
     ],
     "priority": 0,
@@ -3247,10 +3010,7 @@
             },
             "addFlags": []
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "infant_baseline",
-        "alwaysAvailableReason": "영아기 기본 선택지는 초기 능력치 조건 없이 제공"
+        ]
       },
       {
         "choiceId": "B",
@@ -3275,10 +3035,7 @@
             },
             "addFlags": []
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "infant_baseline",
-        "alwaysAvailableReason": "영아기 기본 선택지는 초기 능력치 조건 없이 제공"
+        ]
       }
     ],
     "priority": 0,
@@ -3332,12 +3089,7 @@
               "reading_interest"
             ]
           }
-        ],
-        "requiredStats": {
-          "행복": 52
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "semantic_flag_or_text_match"
+        ]
       },
       {
         "choiceId": "B",
@@ -3369,12 +3121,7 @@
             ],
             "lifeDelta": 10
           }
-        ],
-        "requiredStats": {
-          "사회성": 52
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "semantic_flag_or_text_match"
+        ]
       },
       {
         "choiceId": "C",
@@ -3407,9 +3154,9 @@
             "lifeDelta": 10
           }
         ],
-        "alwaysAvailable": true,
-        "conditionReview": "fallback_choice",
-        "alwaysAvailableReason": "사건 내 최소 한 선택지는 항상 실행 가능해야 함"
+        "requiredStats": {
+          "사회성": 52
+        }
       }
     ],
     "priority": 0,
@@ -3456,12 +3203,7 @@
             },
             "addFlags": []
           }
-        ],
-        "requiredStats": {
-          "행복": 52
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "B",
@@ -3490,12 +3232,7 @@
               "family_bond"
             ]
           }
-        ],
-        "requiredStats": {
-          "사회성": 52
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "C",
@@ -3520,11 +3257,7 @@
             },
             "addFlags": []
           }
-        ],
-        "conditionReview": "fallback_choice",
-        "conditionBasis": "single_positive_outcome_stat",
-        "alwaysAvailable": true,
-        "alwaysAvailableReason": "사건 내 최소 한 선택지는 항상 실행 가능해야 함"
+        ]
       }
     ],
     "priority": 0,
@@ -3578,12 +3311,7 @@
               "class_leader"
             ]
           }
-        ],
-        "requiredStats": {
-          "사회성": 52
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "semantic_flag_or_text_match"
+        ]
       },
       {
         "choiceId": "B",
@@ -3649,11 +3377,7 @@
               "class_leader"
             ]
           }
-        ],
-        "conditionReview": "fallback_choice",
-        "conditionBasis": "semantic_flag_or_text_match",
-        "alwaysAvailable": true,
-        "alwaysAvailableReason": "사건 내 최소 한 선택지는 항상 실행 가능해야 함"
+        ]
       }
     ],
     "priority": 0,
@@ -3866,12 +3590,7 @@
             },
             "addFlags": []
           }
-        ],
-        "requiredStats": {
-          "행복": 52
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "C",
@@ -3898,10 +3617,7 @@
             },
             "addFlags": []
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "confirmed",
-        "alwaysAvailableReason": "서술·반응·돌발 선택지로 능력치 잠금보다 선택 가능성이 우선"
+        ]
       }
     ],
     "priority": 0,
@@ -3951,10 +3667,7 @@
             "addFlags": [],
             "lifeDelta": 10
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "confirmed",
-        "alwaysAvailableReason": "서술·반응·돌발 선택지로 능력치 잠금보다 선택 가능성이 우선"
+        ]
       },
       {
         "choiceId": "B",
@@ -3981,12 +3694,7 @@
             },
             "addFlags": []
           }
-        ],
-        "requiredStats": {
-          "행복": 52
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "C",
@@ -4013,10 +3721,7 @@
             },
             "addFlags": []
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "confirmed",
-        "alwaysAvailableReason": "서술·반응·돌발 선택지로 능력치 잠금보다 선택 가능성이 우선"
+        ]
       }
     ],
     "priority": 0,
@@ -4070,12 +3775,7 @@
             ],
             "lifeDelta": 10
           }
-        ],
-        "requiredStats": {
-          "행복": 52
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "B",
@@ -4100,12 +3800,7 @@
             },
             "addFlags": []
           }
-        ],
-        "requiredStats": {
-          "사회성": 52
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "C",
@@ -4132,10 +3827,7 @@
             },
             "addFlags": []
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "confirmed",
-        "alwaysAvailableReason": "서술·반응·돌발 선택지로 능력치 잠금보다 선택 가능성이 우선"
+        ]
       }
     ],
     "priority": 0,
@@ -4187,12 +3879,7 @@
             ],
             "lifeDelta": 10
           }
-        ],
-        "requiredStats": {
-          "경제력": 52
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "B",
@@ -4223,12 +3910,7 @@
               "gacha_lover"
             ]
           }
-        ],
-        "requiredStats": {
-          "운": 52
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "semantic_flag_or_text_match"
+        ]
       },
       {
         "choiceId": "C",
@@ -4255,10 +3937,7 @@
             },
             "addFlags": []
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "confirmed",
-        "alwaysAvailableReason": "서술·반응·돌발 선택지로 능력치 잠금보다 선택 가능성이 우선"
+        ]
       }
     ],
     "priority": 0,
@@ -4312,12 +3991,7 @@
             ],
             "lifeDelta": 10
           }
-        ],
-        "requiredStats": {
-          "운": 52
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "semantic_flag_or_text_match"
+        ]
       },
       {
         "choiceId": "B",
@@ -4346,12 +4020,7 @@
               "santa_truth"
             ]
           }
-        ],
-        "requiredStats": {
-          "지력": 52
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "C",
@@ -4383,10 +4052,7 @@
             ],
             "lifeDelta": 10
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "confirmed",
-        "alwaysAvailableReason": "서술·반응·돌발 선택지로 능력치 잠금보다 선택 가능성이 우선"
+        ]
       }
     ],
     "priority": 0,
@@ -4473,12 +4139,7 @@
             ],
             "lifeDelta": 10
           }
-        ],
-        "requiredStats": {
-          "지력": 52
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "C",
@@ -4510,11 +4171,7 @@
             ],
             "lifeDelta": 10
           }
-        ],
-        "conditionReview": "fallback_choice",
-        "conditionBasis": "semantic_flag_or_text_match",
-        "alwaysAvailable": true,
-        "alwaysAvailableReason": "사건 내 최소 한 선택지는 항상 실행 가능해야 함"
+        ]
       }
     ],
     "priority": 0,
@@ -4640,11 +4297,7 @@
             ],
             "lifeDelta": 10
           }
-        ],
-        "conditionReview": "fallback_choice",
-        "conditionBasis": "semantic_flag_or_text_match",
-        "alwaysAvailable": true,
-        "alwaysAvailableReason": "사건 내 최소 한 선택지는 항상 실행 가능해야 함"
+        ]
       }
     ],
     "priority": 0,
@@ -4769,11 +4422,7 @@
             ],
             "lifeDelta": 10
           }
-        ],
-        "conditionReview": "fallback_choice",
-        "conditionBasis": "single_positive_outcome_stat",
-        "alwaysAvailable": true,
-        "alwaysAvailableReason": "사건 내 최소 한 선택지는 항상 실행 가능해야 함"
+        ]
       }
     ],
     "priority": 0,
@@ -4831,12 +4480,7 @@
             ],
             "lifeDelta": 10
           }
-        ],
-        "requiredStats": {
-          "행복": 52
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "semantic_flag_or_text_match"
+        ]
       },
       {
         "choiceId": "B",
@@ -4868,12 +4512,7 @@
             ],
             "lifeDelta": 10
           }
-        ],
-        "requiredStats": {
-          "사회성": 52
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "semantic_flag_or_text_match"
+        ]
       },
       {
         "choiceId": "C",
@@ -4903,11 +4542,7 @@
             ],
             "lifeDelta": 10
           }
-        ],
-        "conditionReview": "fallback_choice",
-        "conditionBasis": "single_positive_outcome_stat",
-        "alwaysAvailable": true,
-        "alwaysAvailableReason": "사건 내 최소 한 선택지는 항상 실행 가능해야 함"
+        ]
       }
     ],
     "priority": 0,
@@ -4961,10 +4596,7 @@
             ],
             "lifeDelta": 10
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "confirmed",
-        "alwaysAvailableReason": "서술·반응·돌발 선택지로 능력치 잠금보다 선택 가능성이 우선"
+        ]
       },
       {
         "choiceId": "B",
@@ -4989,12 +4621,7 @@
             },
             "addFlags": []
           }
-        ],
-        "requiredStats": {
-          "사회성": 52
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "C",
@@ -5026,10 +4653,7 @@
             ],
             "lifeDelta": 10
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "confirmed",
-        "alwaysAvailableReason": "서술·반응·돌발 선택지로 능력치 잠금보다 선택 가능성이 우선"
+        ]
       }
     ],
     "priority": 0,
@@ -5081,12 +4705,7 @@
             ],
             "lifeDelta": 10
           }
-        ],
-        "requiredStats": {
-          "사회성": 52
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "B",
@@ -5115,12 +4734,7 @@
               "tattletale"
             ]
           }
-        ],
-        "requiredStats": {
-          "행복": 52
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "C",
@@ -5147,10 +4761,7 @@
             },
             "addFlags": []
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "confirmed",
-        "alwaysAvailableReason": "서술·반응·돌발 선택지로 능력치 잠금보다 선택 가능성이 우선"
+        ]
       }
     ],
     "priority": 0,
@@ -5201,12 +4812,7 @@
               "honest_writer"
             ]
           }
-        ],
-        "requiredStats": {
-          "지력": 52
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "B",
@@ -5238,10 +4844,7 @@
             ],
             "lifeDelta": 10
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "confirmed",
-        "alwaysAvailableReason": "서술·반응·돌발 선택지로 능력치 잠금보다 선택 가능성이 우선"
+        ]
       },
       {
         "choiceId": "C",
@@ -5323,10 +4926,7 @@
             ],
             "lifeDelta": 10
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "confirmed",
-        "alwaysAvailableReason": "서술·반응·돌발 선택지로 능력치 잠금보다 선택 가능성이 우선"
+        ]
       },
       {
         "choiceId": "B",
@@ -5382,10 +4982,7 @@
             },
             "addFlags": []
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "confirmed",
-        "alwaysAvailableReason": "서술·반응·돌발 선택지로 능력치 잠금보다 선택 가능성이 우선"
+        ]
       }
     ],
     "priority": 0,
@@ -5439,12 +5036,7 @@
             ],
             "lifeDelta": 10
           }
-        ],
-        "requiredStats": {
-          "사회성": 52
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "B",
@@ -5469,12 +5061,7 @@
             },
             "addFlags": []
           }
-        ],
-        "requiredStats": {
-          "운동능력": 52
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "C",
@@ -5505,11 +5092,7 @@
               "cheer_leader"
             ]
           }
-        ],
-        "conditionReview": "fallback_choice",
-        "conditionBasis": "semantic_flag_or_text_match",
-        "alwaysAvailable": true,
-        "alwaysAvailableReason": "사건 내 최소 한 선택지는 항상 실행 가능해야 함"
+        ]
       }
     ],
     "priority": 0,
@@ -5563,12 +5146,7 @@
             ],
             "lifeDelta": 10
           }
-        ],
-        "requiredStats": {
-          "지력": 52
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "semantic_flag_or_text_match"
+        ]
       },
       {
         "choiceId": "B",
@@ -5600,11 +5178,7 @@
             ],
             "lifeDelta": 10
           }
-        ],
-        "conditionReview": "fallback_choice",
-        "conditionBasis": "semantic_flag_or_text_match",
-        "alwaysAvailable": true,
-        "alwaysAvailableReason": "사건 내 최소 한 선택지는 항상 실행 가능해야 함"
+        ]
       }
     ],
     "priority": 0,
@@ -5658,12 +5232,7 @@
             ],
             "lifeDelta": 10
           }
-        ],
-        "requiredStats": {
-          "지력": 52
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "B",
@@ -5691,10 +5260,7 @@
             "addFlags": [],
             "lifeDelta": 10
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "confirmed",
-        "alwaysAvailableReason": "서술·반응·돌발 선택지로 능력치 잠금보다 선택 가능성이 우선"
+        ]
       },
       {
         "choiceId": "C",
@@ -5781,12 +5347,7 @@
             ],
             "lifeDelta": 10
           }
-        ],
-        "requiredStats": {
-          "지력": 52
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "B",
@@ -5849,11 +5410,7 @@
             ],
             "lifeDelta": 10
           }
-        ],
-        "conditionReview": "fallback_choice",
-        "conditionBasis": "semantic_flag_or_text_match",
-        "alwaysAvailable": true,
-        "alwaysAvailableReason": "사건 내 최소 한 선택지는 항상 실행 가능해야 함"
+        ]
       }
     ],
     "priority": 0,
@@ -5909,12 +5466,7 @@
             ],
             "lifeDelta": 10
           }
-        ],
-        "requiredStats": {
-          "운": 52
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "semantic_flag_or_text_match"
+        ]
       },
       {
         "choiceId": "B",
@@ -5974,11 +5526,7 @@
             ],
             "lifeDelta": 10
           }
-        ],
-        "conditionReview": "fallback_choice",
-        "conditionBasis": "semantic_flag_or_text_match",
-        "alwaysAvailable": true,
-        "alwaysAvailableReason": "사건 내 최소 한 선택지는 항상 실행 가능해야 함"
+        ]
       }
     ],
     "priority": 0,
@@ -6034,10 +5582,7 @@
             ],
             "lifeDelta": 10
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "confirmed",
-        "alwaysAvailableReason": "서술·반응·돌발 선택지로 능력치 잠금보다 선택 가능성이 우선"
+        ]
       },
       {
         "choiceId": "B",
@@ -6068,10 +5613,7 @@
               "lunch_deal"
             ]
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "confirmed",
-        "alwaysAvailableReason": "서술·반응·돌발 선택지로 능력치 잠금보다 선택 가능성이 우선"
+        ]
       },
       {
         "choiceId": "C",
@@ -6098,12 +5640,7 @@
             },
             "addFlags": []
           }
-        ],
-        "requiredStats": {
-          "건강": 52
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       }
     ],
     "priority": 0,
@@ -6191,11 +5728,7 @@
               "gamer"
             ]
           }
-        ],
-        "conditionReview": "fallback_choice",
-        "conditionBasis": "single_positive_outcome_stat",
-        "alwaysAvailable": true,
-        "alwaysAvailableReason": "사건 내 최소 한 선택지는 항상 실행 가능해야 함"
+        ]
       }
     ],
     "priority": 0,
@@ -6247,12 +5780,7 @@
             ],
             "lifeDelta": 10
           }
-        ],
-        "requiredStats": {
-          "사회성": 52
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "B",
@@ -6313,9 +5841,9 @@
             "lifeDelta": 10
           }
         ],
-        "alwaysAvailable": true,
-        "conditionReview": "fallback_choice",
-        "alwaysAvailableReason": "사건 내 최소 한 선택지는 항상 실행 가능해야 함"
+        "requiredStats": {
+          "사회성": 52
+        }
       }
     ],
     "priority": 0,
@@ -6364,12 +5892,7 @@
             },
             "addFlags": []
           }
-        ],
-        "requiredStats": {
-          "사회성": 52
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "B",
@@ -6394,12 +5917,7 @@
             },
             "addFlags": []
           }
-        ],
-        "requiredStats": {
-          "지력": 52
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "C",
@@ -6429,11 +5947,7 @@
             ],
             "lifeDelta": 10
           }
-        ],
-        "conditionReview": "fallback_choice",
-        "conditionBasis": "single_positive_outcome_stat",
-        "alwaysAvailable": true,
-        "alwaysAvailableReason": "사건 내 최소 한 선택지는 항상 실행 가능해야 함"
+        ]
       }
     ],
     "priority": 0,
@@ -6486,10 +6000,7 @@
               "self_control"
             ]
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "confirmed",
-        "alwaysAvailableReason": "서술·반응·돌발 선택지로 능력치 잠금보다 선택 가능성이 우선"
+        ]
       },
       {
         "choiceId": "B",
@@ -6520,12 +6031,7 @@
               "phone_addict"
             ]
           }
-        ],
-        "requiredStats": {
-          "행복": 52
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "C",
@@ -6556,10 +6062,7 @@
               "phone_addict"
             ]
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "confirmed",
-        "alwaysAvailableReason": "서술·반응·돌발 선택지로 능력치 잠금보다 선택 가능성이 우선"
+        ]
       }
     ],
     "priority": 0,
@@ -6612,12 +6115,7 @@
               "class_nap_mom"
             ]
           }
-        ],
-        "requiredStats": {
-          "행복": 52
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "B",
@@ -6649,12 +6147,7 @@
             ],
             "lifeDelta": 10
           }
-        ],
-        "requiredStats": {
-          "지력": 52
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "semantic_flag_or_text_match"
+        ]
       },
       {
         "choiceId": "C",
@@ -6685,11 +6178,7 @@
               "class_nap_denial"
             ]
           }
-        ],
-        "conditionReview": "fallback_choice",
-        "conditionBasis": "semantic_flag_or_text_match",
-        "alwaysAvailable": true,
-        "alwaysAvailableReason": "사건 내 최소 한 선택지는 항상 실행 가능해야 함"
+        ]
       }
     ],
     "priority": 0,
@@ -6747,12 +6236,7 @@
             ],
             "lifeDelta": 10
           }
-        ],
-        "requiredStats": {
-          "운동능력": 52
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "semantic_flag_or_text_match"
+        ]
       },
       {
         "choiceId": "B",
@@ -6808,11 +6292,7 @@
             },
             "addFlags": []
           }
-        ],
-        "conditionReview": "fallback_choice",
-        "conditionBasis": "single_positive_outcome_stat",
-        "alwaysAvailable": true,
-        "alwaysAvailableReason": "사건 내 최소 한 선택지는 항상 실행 가능해야 함"
+        ]
       }
     ],
     "priority": 0,
@@ -6870,12 +6350,7 @@
             ],
             "lifeDelta": 10
           }
-        ],
-        "requiredStats": {
-          "운동능력": 52
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "semantic_flag_or_text_match"
+        ]
       },
       {
         "choiceId": "B",
@@ -6903,10 +6378,7 @@
             "addFlags": [],
             "lifeDelta": 10
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "confirmed",
-        "alwaysAvailableReason": "서술·반응·돌발 선택지로 능력치 잠금보다 선택 가능성이 우선"
+        ]
       },
       {
         "choiceId": "C",
@@ -6931,12 +6403,7 @@
             },
             "addFlags": []
           }
-        ],
-        "requiredStats": {
-          "사회성": 52
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       }
     ],
     "priority": 0,
@@ -7022,12 +6489,7 @@
             },
             "addFlags": []
           }
-        ],
-        "requiredStats": {
-          "운": 52
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "C",
@@ -7061,11 +6523,7 @@
             ],
             "lifeDelta": 10
           }
-        ],
-        "conditionReview": "fallback_choice",
-        "conditionBasis": "semantic_flag_or_text_match",
-        "alwaysAvailable": true,
-        "alwaysAvailableReason": "사건 내 최소 한 선택지는 항상 실행 가능해야 함"
+        ]
       }
     ],
     "priority": 0,
@@ -7117,10 +6575,7 @@
             "addFlags": [],
             "lifeDelta": 10
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "confirmed",
-        "alwaysAvailableReason": "서술·반응·돌발 선택지로 능력치 잠금보다 선택 가능성이 우선"
+        ]
       },
       {
         "choiceId": "B",
@@ -7152,12 +6607,7 @@
             ],
             "lifeDelta": 10
           }
-        ],
-        "requiredStats": {
-          "지력": 52
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "C",
@@ -7191,12 +6641,7 @@
             ],
             "lifeDelta": 10
           }
-        ],
-        "requiredStats": {
-          "지력": 52
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "semantic_flag_or_text_match"
+        ]
       }
     ],
     "priority": 0,
@@ -7245,12 +6690,7 @@
             },
             "addFlags": []
           }
-        ],
-        "requiredStats": {
-          "지력": 52
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "B",
@@ -7284,12 +6724,7 @@
             ],
             "lifeDelta": 10
           }
-        ],
-        "requiredStats": {
-          "지력": 52
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "semantic_flag_or_text_match"
+        ]
       },
       {
         "choiceId": "C",
@@ -7320,11 +6755,7 @@
               "culture_star"
             ]
           }
-        ],
-        "conditionReview": "fallback_choice",
-        "conditionBasis": "single_positive_outcome_stat",
-        "alwaysAvailable": true,
-        "alwaysAvailableReason": "사건 내 최소 한 선택지는 항상 실행 가능해야 함"
+        ]
       }
     ],
     "priority": 0,
@@ -7381,12 +6812,7 @@
               "arts_star"
             ]
           }
-        ],
-        "requiredStats": {
-          "행복": 52
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "semantic_flag_or_text_match"
+        ]
       },
       {
         "choiceId": "B",
@@ -7420,12 +6846,7 @@
             ],
             "lifeDelta": 10
           }
-        ],
-        "requiredStats": {
-          "행복": 52
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "semantic_flag_or_text_match"
+        ]
       },
       {
         "choiceId": "C",
@@ -7451,9 +6872,9 @@
             "addFlags": []
           }
         ],
-        "alwaysAvailable": true,
-        "conditionReview": "fallback_choice",
-        "alwaysAvailableReason": "사건 내 최소 한 선택지는 항상 실행 가능해야 함"
+        "requiredStats": {
+          "사회성": 52
+        }
       }
     ],
     "priority": 0,
@@ -7511,12 +6932,7 @@
             ],
             "lifeDelta": 10
           }
-        ],
-        "requiredStats": {
-          "행복": 52
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "semantic_flag_or_text_match"
+        ]
       },
       {
         "choiceId": "B",
@@ -7544,12 +6960,7 @@
             "addFlags": [],
             "lifeDelta": 10
           }
-        ],
-        "requiredStats": {
-          "사회성": 52
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "semantic_flag_or_text_match"
+        ]
       },
       {
         "choiceId": "C",
@@ -7576,10 +6987,7 @@
             },
             "addFlags": []
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "confirmed",
-        "alwaysAvailableReason": "서술·반응·돌발 선택지로 능력치 잠금보다 선택 가능성이 우선"
+        ]
       }
     ],
     "priority": 0,
@@ -7637,12 +7045,7 @@
             ],
             "lifeDelta": 10
           }
-        ],
-        "requiredStats": {
-          "행복": 52
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "semantic_flag_or_text_match"
+        ]
       },
       {
         "choiceId": "B",
@@ -7670,10 +7073,7 @@
             "addFlags": [],
             "lifeDelta": 10
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "confirmed",
-        "alwaysAvailableReason": "서술·반응·돌발 선택지로 능력치 잠금보다 선택 가능성이 우선"
+        ]
       },
       {
         "choiceId": "C",
@@ -7707,12 +7107,7 @@
             ],
             "lifeDelta": 10
           }
-        ],
-        "requiredStats": {
-          "행복": 52
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "semantic_flag_or_text_match"
+        ]
       }
     ],
     "priority": 0,
@@ -7772,12 +7167,7 @@
             ],
             "lifeDelta": 10
           }
-        ],
-        "requiredStats": {
-          "운동능력": 52
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "semantic_flag_or_text_match"
+        ]
       },
       {
         "choiceId": "B",
@@ -7805,10 +7195,7 @@
             "addFlags": [],
             "lifeDelta": 10
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "confirmed",
-        "alwaysAvailableReason": "서술·반응·돌발 선택지로 능력치 잠금보다 선택 가능성이 우선"
+        ]
       },
       {
         "choiceId": "C",
@@ -7835,12 +7222,7 @@
             },
             "addFlags": []
           }
-        ],
-        "requiredStats": {
-          "운": 52
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "semantic_flag_or_text_match"
+        ]
       }
     ],
     "priority": 0,
@@ -7896,12 +7278,7 @@
             ],
             "lifeDelta": 10
           }
-        ],
-        "requiredStats": {
-          "행복": 52
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "semantic_flag_or_text_match"
+        ]
       },
       {
         "choiceId": "B",
@@ -7927,11 +7304,7 @@
             "addFlags": [],
             "lifeDelta": 10
           }
-        ],
-        "conditionReview": "fallback_choice",
-        "conditionBasis": "single_positive_outcome_stat",
-        "alwaysAvailable": true,
-        "alwaysAvailableReason": "사건 내 최소 한 선택지는 항상 실행 가능해야 함"
+        ]
       }
     ],
     "priority": 0,
@@ -7981,10 +7354,7 @@
             "addFlags": [],
             "lifeDelta": 10
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "confirmed",
-        "alwaysAvailableReason": "서술·반응·돌발 선택지로 능력치 잠금보다 선택 가능성이 우선"
+        ]
       },
       {
         "choiceId": "B",
@@ -8014,12 +7384,7 @@
             ],
             "lifeDelta": 10
           }
-        ],
-        "requiredStats": {
-          "지력": 52
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "C",
@@ -8047,10 +7412,7 @@
             "addFlags": [],
             "lifeDelta": 10
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "confirmed",
-        "alwaysAvailableReason": "서술·반응·돌발 선택지로 능력치 잠금보다 선택 가능성이 우선"
+        ]
       }
     ],
     "priority": 0,
@@ -8098,12 +7460,7 @@
             "addFlags": [],
             "lifeDelta": 10
           }
-        ],
-        "requiredStats": {
-          "지력": 52
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "B",
@@ -8131,10 +7488,7 @@
             "addFlags": [],
             "lifeDelta": 10
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "confirmed",
-        "alwaysAvailableReason": "서술·반응·돌발 선택지로 능력치 잠금보다 선택 가능성이 우선"
+        ]
       },
       {
         "choiceId": "C",
@@ -8159,12 +7513,7 @@
             },
             "addFlags": []
           }
-        ],
-        "requiredStats": {
-          "운": 52
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       }
     ],
     "priority": 0,
@@ -8212,12 +7561,7 @@
             "addFlags": [],
             "lifeDelta": 10
           }
-        ],
-        "requiredStats": {
-          "사회성": 52
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "B",
@@ -8242,12 +7586,7 @@
             },
             "addFlags": []
           }
-        ],
-        "requiredStats": {
-          "행복": 52
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "C",
@@ -8275,10 +7614,7 @@
             "addFlags": [],
             "lifeDelta": 10
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "confirmed",
-        "alwaysAvailableReason": "서술·반응·돌발 선택지로 능력치 잠금보다 선택 가능성이 우선"
+        ]
       }
     ],
     "priority": 0,
@@ -8330,12 +7666,7 @@
             ],
             "lifeDelta": 10
           }
-        ],
-        "requiredStats": {
-          "운동능력": 52
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "B",
@@ -8362,10 +7693,7 @@
             },
             "addFlags": []
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "confirmed",
-        "alwaysAvailableReason": "서술·반응·돌발 선택지로 능력치 잠금보다 선택 가능성이 우선"
+        ]
       },
       {
         "choiceId": "C",
@@ -8390,12 +7718,7 @@
             },
             "addFlags": []
           }
-        ],
-        "requiredStats": {
-          "행복": 52
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       }
     ],
     "priority": 0,
@@ -8447,12 +7770,7 @@
             ],
             "lifeDelta": 10
           }
-        ],
-        "requiredStats": {
-          "행복": 52
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "B",
@@ -8477,12 +7795,7 @@
             },
             "addFlags": []
           }
-        ],
-        "requiredStats": {
-          "지력": 52
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "C",
@@ -8507,11 +7820,7 @@
             },
             "addFlags": []
           }
-        ],
-        "conditionReview": "fallback_choice",
-        "conditionBasis": "single_positive_outcome_stat",
-        "alwaysAvailable": true,
-        "alwaysAvailableReason": "사건 내 최소 한 선택지는 항상 실행 가능해야 함"
+        ]
       }
     ],
     "priority": 0,
@@ -8558,12 +7867,7 @@
             },
             "addFlags": []
           }
-        ],
-        "requiredStats": {
-          "건강": 52
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "B",
@@ -8588,12 +7892,7 @@
             },
             "addFlags": []
           }
-        ],
-        "requiredStats": {
-          "지력": 52
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "C",
@@ -8618,11 +7917,7 @@
             },
             "addFlags": []
           }
-        ],
-        "conditionReview": "fallback_choice",
-        "conditionBasis": "single_positive_outcome_stat",
-        "alwaysAvailable": true,
-        "alwaysAvailableReason": "사건 내 최소 한 선택지는 항상 실행 가능해야 함"
+        ]
       }
     ],
     "priority": 0,
@@ -8676,12 +7971,7 @@
             ],
             "lifeDelta": 10
           }
-        ],
-        "requiredStats": {
-          "지력": 52
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "semantic_flag_or_text_match"
+        ]
       },
       {
         "choiceId": "B",
@@ -8707,12 +7997,7 @@
             "addFlags": [],
             "lifeDelta": 10
           }
-        ],
-        "requiredStats": {
-          "행복": 52
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "C",
@@ -8737,11 +8022,7 @@
             },
             "addFlags": []
           }
-        ],
-        "conditionReview": "fallback_choice",
-        "conditionBasis": "single_positive_outcome_stat",
-        "alwaysAvailable": true,
-        "alwaysAvailableReason": "사건 내 최소 한 선택지는 항상 실행 가능해야 함"
+        ]
       }
     ],
     "priority": 0,
@@ -8788,12 +8069,7 @@
             },
             "addFlags": []
           }
-        ],
-        "requiredStats": {
-          "행복": 52
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "B",
@@ -8846,11 +8122,7 @@
             },
             "addFlags": []
           }
-        ],
-        "conditionReview": "fallback_choice",
-        "conditionBasis": "single_positive_outcome_stat",
-        "alwaysAvailable": true,
-        "alwaysAvailableReason": "사건 내 최소 한 선택지는 항상 실행 가능해야 함"
+        ]
       }
     ],
     "priority": 0,
@@ -8897,12 +8169,7 @@
             },
             "addFlags": []
           }
-        ],
-        "requiredStats": {
-          "행복": 52
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "B",
@@ -8927,12 +8194,7 @@
             },
             "addFlags": []
           }
-        ],
-        "requiredStats": {
-          "경제력": 52
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "C",
@@ -8958,9 +8220,9 @@
             "addFlags": []
           }
         ],
-        "alwaysAvailable": true,
-        "conditionReview": "fallback_choice",
-        "alwaysAvailableReason": "사건 내 최소 한 선택지는 항상 실행 가능해야 함"
+        "requiredStats": {
+          "사회성": 52
+        }
       }
     ],
     "priority": 0,
@@ -9008,12 +8270,7 @@
             },
             "addFlags": []
           }
-        ],
-        "requiredStats": {
-          "경제력": 55
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "B",
@@ -9038,12 +8295,7 @@
             },
             "addFlags": []
           }
-        ],
-        "requiredStats": {
-          "행복": 55
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "C",
@@ -9070,10 +8322,7 @@
             },
             "addFlags": []
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "confirmed",
-        "alwaysAvailableReason": "서술·반응·돌발 선택지로 능력치 잠금보다 선택 가능성이 우선"
+        ]
       }
     ],
     "priority": 0,
@@ -9122,12 +8371,7 @@
             },
             "addFlags": []
           }
-        ],
-        "requiredStats": {
-          "지력": 55
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "B",
@@ -9158,10 +8402,7 @@
               "trend_setter"
             ]
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "confirmed",
-        "alwaysAvailableReason": "서술·반응·돌발 선택지로 능력치 잠금보다 선택 가능성이 우선"
+        ]
       },
       {
         "choiceId": "C",
@@ -9186,12 +8427,7 @@
             },
             "addFlags": []
           }
-        ],
-        "requiredStats": {
-          "행복": 55
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       }
     ],
     "priority": 0,
@@ -9278,12 +8514,7 @@
             ],
             "lifeDelta": 10
           }
-        ],
-        "requiredStats": {
-          "지력": 55
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "C",
@@ -9315,11 +8546,7 @@
             ],
             "lifeDelta": 10
           }
-        ],
-        "conditionReview": "fallback_choice",
-        "conditionBasis": "semantic_flag_or_text_match",
-        "alwaysAvailable": true,
-        "alwaysAvailableReason": "사건 내 최소 한 선택지는 항상 실행 가능해야 함"
+        ]
       }
     ],
     "priority": 0,
@@ -9366,12 +8593,7 @@
             },
             "addFlags": []
           }
-        ],
-        "requiredStats": {
-          "사회성": 55
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "B",
@@ -9396,12 +8618,7 @@
             },
             "addFlags": []
           }
-        ],
-        "requiredStats": {
-          "사회성": 55
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "C",
@@ -9428,10 +8645,7 @@
             },
             "addFlags": []
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "confirmed",
-        "alwaysAvailableReason": "서술·반응·돌발 선택지로 능력치 잠금보다 선택 가능성이 우선"
+        ]
       }
     ],
     "priority": 0,
@@ -9479,12 +8693,7 @@
             },
             "addFlags": []
           }
-        ],
-        "requiredStats": {
-          "사회성": 55
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "B",
@@ -9509,12 +8718,7 @@
             },
             "addFlags": []
           }
-        ],
-        "requiredStats": {
-          "지력": 55
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "C",
@@ -9542,10 +8746,7 @@
             "addFlags": [],
             "lifeDelta": 10
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "confirmed",
-        "alwaysAvailableReason": "서술·반응·돌발 선택지로 능력치 잠금보다 선택 가능성이 우선"
+        ]
       }
     ],
     "priority": 0,
@@ -9597,10 +8798,7 @@
             "addFlags": [],
             "lifeDelta": 10
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "confirmed",
-        "alwaysAvailableReason": "서술·반응·돌발 선택지로 능력치 잠금보다 선택 가능성이 우선"
+        ]
       },
       {
         "choiceId": "B",
@@ -9632,12 +8830,7 @@
             ],
             "lifeDelta": 10
           }
-        ],
-        "requiredStats": {
-          "지력": 55
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "semantic_flag_or_text_match"
+        ]
       },
       {
         "choiceId": "C",
@@ -9662,12 +8855,7 @@
             },
             "addFlags": []
           }
-        ],
-        "requiredStats": {
-          "행복": 55
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       }
     ],
     "priority": 0,
@@ -9752,10 +8940,7 @@
             "addFlags": [],
             "lifeDelta": 10
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "confirmed",
-        "alwaysAvailableReason": "서술·반응·돌발 선택지로 능력치 잠금보다 선택 가능성이 우선"
+        ]
       },
       {
         "choiceId": "C",
@@ -9787,12 +8972,7 @@
             ],
             "lifeDelta": 10
           }
-        ],
-        "requiredStats": {
-          "지력": 55
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "semantic_flag_or_text_match"
+        ]
       }
     ],
     "priority": 0,
@@ -9846,12 +9026,7 @@
             ],
             "lifeDelta": 10
           }
-        ],
-        "requiredStats": {
-          "사회성": 55
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "semantic_flag_or_text_match"
+        ]
       },
       {
         "choiceId": "B",
@@ -9880,12 +9055,7 @@
               "family_conflict"
             ]
           }
-        ],
-        "requiredStats": {
-          "행복": 55
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "C",
@@ -9910,11 +9080,7 @@
             },
             "addFlags": []
           }
-        ],
-        "conditionReview": "fallback_choice",
-        "conditionBasis": "single_positive_outcome_stat",
-        "alwaysAvailable": true,
-        "alwaysAvailableReason": "사건 내 최소 한 선택지는 항상 실행 가능해야 함"
+        ]
       }
     ],
     "priority": 0,
@@ -9964,10 +9130,7 @@
             "addFlags": [],
             "lifeDelta": 10
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "confirmed",
-        "alwaysAvailableReason": "서술·반응·돌발 선택지로 능력치 잠금보다 선택 가능성이 우선"
+        ]
       },
       {
         "choiceId": "B",
@@ -9992,12 +9155,7 @@
             },
             "addFlags": []
           }
-        ],
-        "requiredStats": {
-          "행복": 55
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "C",
@@ -10024,10 +9182,7 @@
             },
             "addFlags": []
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "confirmed",
-        "alwaysAvailableReason": "서술·반응·돌발 선택지로 능력치 잠금보다 선택 가능성이 우선"
+        ]
       }
     ],
     "priority": 0,
@@ -10075,12 +9230,7 @@
             },
             "addFlags": []
           }
-        ],
-        "requiredStats": {
-          "사회성": 55
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "B",
@@ -10105,12 +9255,7 @@
             },
             "addFlags": []
           }
-        ],
-        "requiredStats": {
-          "운동능력": 55
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "C",
@@ -10135,11 +9280,7 @@
             },
             "addFlags": []
           }
-        ],
-        "conditionReview": "fallback_choice",
-        "conditionBasis": "single_positive_outcome_stat",
-        "alwaysAvailable": true,
-        "alwaysAvailableReason": "사건 내 최소 한 선택지는 항상 실행 가능해야 함"
+        ]
       }
     ],
     "priority": 0,
@@ -10193,10 +9334,7 @@
             ],
             "lifeDelta": 10
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "confirmed",
-        "alwaysAvailableReason": "서술·반응·돌발 선택지로 능력치 잠금보다 선택 가능성이 우선"
+        ]
       },
       {
         "choiceId": "B",
@@ -10225,12 +9363,7 @@
               "bystander"
             ]
           }
-        ],
-        "requiredStats": {
-          "사회성": 55
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "C",
@@ -10261,10 +9394,7 @@
               "counter_attack"
             ]
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "confirmed",
-        "alwaysAvailableReason": "서술·반응·돌발 선택지로 능력치 잠금보다 선택 가능성이 우선"
+        ]
       }
     ],
     "priority": 0,
@@ -10320,10 +9450,7 @@
             ],
             "lifeDelta": 10
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "confirmed",
-        "alwaysAvailableReason": "서술·반응·돌발 선택지로 능력치 잠금보다 선택 가능성이 우선"
+        ]
       },
       {
         "choiceId": "B",
@@ -10350,10 +9477,7 @@
             },
             "addFlags": []
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "confirmed",
-        "alwaysAvailableReason": "서술·반응·돌발 선택지로 능력치 잠금보다 선택 가능성이 우선"
+        ]
       },
       {
         "choiceId": "C",
@@ -10385,10 +9509,7 @@
             ],
             "lifeDelta": 10
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "confirmed",
-        "alwaysAvailableReason": "서술·반응·돌발 선택지로 능력치 잠금보다 선택 가능성이 우선"
+        ]
       }
     ],
     "priority": 0,
@@ -10444,12 +9565,7 @@
             ],
             "lifeDelta": 10
           }
-        ],
-        "requiredStats": {
-          "지력": 55
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "semantic_flag_or_text_match"
+        ]
       },
       {
         "choiceId": "B",
@@ -10507,10 +9623,7 @@
             },
             "addFlags": []
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "confirmed",
-        "alwaysAvailableReason": "서술·반응·돌발 선택지로 능력치 잠금보다 선택 가능성이 우선"
+        ]
       }
     ],
     "priority": 0,
@@ -10568,10 +9681,7 @@
             ],
             "lifeDelta": 10
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "confirmed",
-        "alwaysAvailableReason": "서술·반응·돌발 선택지로 능력치 잠금보다 선택 가능성이 우선"
+        ]
       },
       {
         "choiceId": "B",
@@ -10598,10 +9708,7 @@
             },
             "addFlags": []
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "confirmed",
-        "alwaysAvailableReason": "서술·반응·돌발 선택지로 능력치 잠금보다 선택 가능성이 우선"
+        ]
       }
     ],
     "priority": 0,
@@ -10684,12 +9791,7 @@
             "addFlags": [],
             "lifeDelta": 10
           }
-        ],
-        "requiredStats": {
-          "지력": 55
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "C",
@@ -10716,10 +9818,7 @@
             },
             "addFlags": []
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "confirmed",
-        "alwaysAvailableReason": "서술·반응·돌발 선택지로 능력치 잠금보다 선택 가능성이 우선"
+        ]
       }
     ],
     "priority": 0,
@@ -10772,12 +9871,7 @@
               "family_bond"
             ]
           }
-        ],
-        "requiredStats": {
-          "사회성": 55
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "semantic_flag_or_text_match"
+        ]
       },
       {
         "choiceId": "B",
@@ -10809,12 +9903,7 @@
             ],
             "lifeDelta": 10
           }
-        ],
-        "requiredStats": {
-          "사회성": 55
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "semantic_flag_or_text_match"
+        ]
       },
       {
         "choiceId": "C",
@@ -10839,11 +9928,7 @@
             },
             "addFlags": []
           }
-        ],
-        "conditionReview": "fallback_choice",
-        "conditionBasis": "single_positive_outcome_stat",
-        "alwaysAvailable": true,
-        "alwaysAvailableReason": "사건 내 최소 한 선택지는 항상 실행 가능해야 함"
+        ]
       }
     ],
     "priority": 0,
@@ -10900,10 +9985,7 @@
               "self_control"
             ]
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "confirmed",
-        "alwaysAvailableReason": "서술·반응·돌발 선택지로 능력치 잠금보다 선택 가능성이 우선"
+        ]
       },
       {
         "choiceId": "B",
@@ -10934,12 +10016,7 @@
               "night_gamer"
             ]
           }
-        ],
-        "requiredStats": {
-          "행복": 55
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "C",
@@ -10967,10 +10044,7 @@
             "addFlags": [],
             "lifeDelta": 10
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "confirmed",
-        "alwaysAvailableReason": "서술·반응·돌발 선택지로 능력치 잠금보다 선택 가능성이 우선"
+        ]
       }
     ],
     "priority": 0,
@@ -11025,12 +10099,7 @@
               "vet_dream"
             ]
           }
-        ],
-        "requiredStats": {
-          "행복": 55
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "semantic_flag_or_text_match"
+        ]
       },
       {
         "choiceId": "B",
@@ -11055,11 +10124,7 @@
             },
             "addFlags": []
           }
-        ],
-        "conditionReview": "fallback_choice",
-        "conditionBasis": "single_positive_outcome_stat",
-        "alwaysAvailable": true,
-        "alwaysAvailableReason": "사건 내 최소 한 선택지는 항상 실행 가능해야 함"
+        ]
       }
     ],
     "priority": 0,
@@ -11247,12 +10312,7 @@
             ],
             "lifeDelta": 10
           }
-        ],
-        "requiredStats": {
-          "운동능력": 55
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "semantic_flag_or_text_match"
+        ]
       },
       {
         "choiceId": "B",
@@ -11278,11 +10338,7 @@
             "addFlags": [],
             "lifeDelta": 10
           }
-        ],
-        "conditionReview": "fallback_choice",
-        "conditionBasis": "single_positive_outcome_stat",
-        "alwaysAvailable": true,
-        "alwaysAvailableReason": "사건 내 최소 한 선택지는 항상 실행 가능해야 함"
+        ]
       }
     ],
     "priority": 0,
@@ -11336,12 +10392,7 @@
             ],
             "lifeDelta": 10
           }
-        ],
-        "requiredStats": {
-          "사회성": 55
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "semantic_flag_or_text_match"
+        ]
       },
       {
         "choiceId": "B",
@@ -11370,12 +10421,7 @@
               "missed_chance"
             ]
           }
-        ],
-        "requiredStats": {
-          "지력": 55
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "C",
@@ -11406,11 +10452,7 @@
               "first_love"
             ]
           }
-        ],
-        "conditionReview": "fallback_choice",
-        "conditionBasis": "semantic_flag_or_text_match",
-        "alwaysAvailable": true,
-        "alwaysAvailableReason": "사건 내 최소 한 선택지는 항상 실행 가능해야 함"
+        ]
       }
     ],
     "priority": 0,
@@ -11460,10 +10502,7 @@
             "addFlags": [],
             "lifeDelta": 10
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "confirmed",
-        "alwaysAvailableReason": "서술·반응·돌발 선택지로 능력치 잠금보다 선택 가능성이 우선"
+        ]
       },
       {
         "choiceId": "B",
@@ -11488,12 +10527,7 @@
             },
             "addFlags": []
           }
-        ],
-        "requiredStats": {
-          "건강": 55
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "C",
@@ -11520,12 +10554,7 @@
             },
             "addFlags": []
           }
-        ],
-        "requiredStats": {
-          "사회성": 55
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "semantic_flag_or_text_match"
+        ]
       }
     ],
     "priority": 0,
@@ -11580,12 +10609,7 @@
             ],
             "lifeDelta": 10
           }
-        ],
-        "requiredStats": {
-          "지력": 55
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "B",
@@ -11617,12 +10641,7 @@
             ],
             "lifeDelta": 10
           }
-        ],
-        "requiredStats": {
-          "행복": 55
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "semantic_flag_or_text_match"
+        ]
       },
       {
         "choiceId": "C",
@@ -11651,11 +10670,7 @@
               "science_track"
             ]
           }
-        ],
-        "conditionReview": "fallback_choice",
-        "conditionBasis": "single_positive_outcome_stat",
-        "alwaysAvailable": true,
-        "alwaysAvailableReason": "사건 내 최소 한 선택지는 항상 실행 가능해야 함"
+        ]
       }
     ],
     "priority": 0,
@@ -11708,12 +10723,7 @@
               "sharp_eye"
             ]
           }
-        ],
-        "requiredStats": {
-          "지력": 55
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "B",
@@ -11745,12 +10755,7 @@
             ],
             "lifeDelta": 10
           }
-        ],
-        "requiredStats": {
-          "지력": 55
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "semantic_flag_or_text_match"
+        ]
       },
       {
         "choiceId": "C",
@@ -11776,9 +10781,9 @@
             "addFlags": []
           }
         ],
-        "alwaysAvailable": true,
-        "conditionReview": "fallback_choice",
-        "alwaysAvailableReason": "사건 내 최소 한 선택지는 항상 실행 가능해야 함"
+        "requiredStats": {
+          "지력": 55
+        }
       }
     ],
     "priority": 0,
@@ -11834,10 +10839,7 @@
             ],
             "lifeDelta": 10
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "confirmed",
-        "alwaysAvailableReason": "서술·반응·돌발 선택지로 능력치 잠금보다 선택 가능성이 우선"
+        ]
       },
       {
         "choiceId": "B",
@@ -11862,12 +10864,7 @@
             },
             "addFlags": []
           }
-        ],
-        "requiredStats": {
-          "행복": 55
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "C",
@@ -11895,10 +10892,7 @@
             "addFlags": [],
             "lifeDelta": 10
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "confirmed",
-        "alwaysAvailableReason": "서술·반응·돌발 선택지로 능력치 잠금보다 선택 가능성이 우선"
+        ]
       }
     ],
     "priority": 0,
@@ -11952,12 +10946,7 @@
             ],
             "lifeDelta": 10
           }
-        ],
-        "requiredStats": {
-          "사회성": 55
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "B",
@@ -11982,12 +10971,7 @@
             },
             "addFlags": []
           }
-        ],
-        "requiredStats": {
-          "건강": 55
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "C",
@@ -12019,11 +11003,7 @@
             ],
             "lifeDelta": 10
           }
-        ],
-        "conditionReview": "fallback_choice",
-        "conditionBasis": "semantic_flag_or_text_match",
-        "alwaysAvailable": true,
-        "alwaysAvailableReason": "사건 내 최소 한 선택지는 항상 실행 가능해야 함"
+        ]
       }
     ],
     "priority": 0,
@@ -12075,12 +11055,7 @@
             ],
             "lifeDelta": 10
           }
-        ],
-        "requiredStats": {
-          "사회성": 55
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "B",
@@ -12105,12 +11080,7 @@
             },
             "addFlags": []
           }
-        ],
-        "requiredStats": {
-          "지력": 55
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "C",
@@ -12142,11 +11112,7 @@
             ],
             "lifeDelta": 10
           }
-        ],
-        "conditionReview": "fallback_choice",
-        "conditionBasis": "semantic_flag_or_text_match",
-        "alwaysAvailable": true,
-        "alwaysAvailableReason": "사건 내 최소 한 선택지는 항상 실행 가능해야 함"
+        ]
       }
     ],
     "priority": 0,
@@ -12193,12 +11159,7 @@
             },
             "addFlags": []
           }
-        ],
-        "requiredStats": {
-          "사회성": 55
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "B",
@@ -12223,12 +11184,7 @@
             },
             "addFlags": []
           }
-        ],
-        "requiredStats": {
-          "운": 55
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "C",
@@ -12256,10 +11212,7 @@
             "addFlags": [],
             "lifeDelta": 10
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "confirmed",
-        "alwaysAvailableReason": "서술·반응·돌발 선택지로 능력치 잠금보다 선택 가능성이 우선"
+        ]
       }
     ],
     "priority": 0,
@@ -12309,10 +11262,7 @@
             "addFlags": [],
             "lifeDelta": 10
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "confirmed",
-        "alwaysAvailableReason": "서술·반응·돌발 선택지로 능력치 잠금보다 선택 가능성이 우선"
+        ]
       },
       {
         "choiceId": "B",
@@ -12365,12 +11315,7 @@
             },
             "addFlags": []
           }
-        ],
-        "requiredStats": {
-          "건강": 55
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       }
     ],
     "priority": 0,
@@ -12417,12 +11362,7 @@
             },
             "addFlags": []
           }
-        ],
-        "requiredStats": {
-          "사회성": 55
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "B",
@@ -12452,12 +11392,7 @@
             ],
             "lifeDelta": 10
           }
-        ],
-        "requiredStats": {
-          "행복": 55
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "C",
@@ -12482,11 +11417,7 @@
             },
             "addFlags": []
           }
-        ],
-        "conditionReview": "fallback_choice",
-        "conditionBasis": "single_positive_outcome_stat",
-        "alwaysAvailable": true,
-        "alwaysAvailableReason": "사건 내 최소 한 선택지는 항상 실행 가능해야 함"
+        ]
       }
     ],
     "priority": 0,
@@ -12533,12 +11464,7 @@
             },
             "addFlags": []
           }
-        ],
-        "requiredStats": {
-          "지력": 55
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "B",
@@ -12565,10 +11491,7 @@
             },
             "addFlags": []
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "confirmed",
-        "alwaysAvailableReason": "서술·반응·돌발 선택지로 능력치 잠금보다 선택 가능성이 우선"
+        ]
       },
       {
         "choiceId": "C",
@@ -12593,12 +11516,7 @@
             },
             "addFlags": []
           }
-        ],
-        "requiredStats": {
-          "지력": 55
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       }
     ],
     "priority": 0,
@@ -12645,12 +11563,7 @@
             },
             "addFlags": []
           }
-        ],
-        "requiredStats": {
-          "사회성": 55
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "B",
@@ -12675,12 +11588,7 @@
             },
             "addFlags": []
           }
-        ],
-        "requiredStats": {
-          "지력": 55
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "C",
@@ -12707,10 +11615,7 @@
             },
             "addFlags": []
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "confirmed",
-        "alwaysAvailableReason": "서술·반응·돌발 선택지로 능력치 잠금보다 선택 가능성이 우선"
+        ]
       }
     ],
     "priority": 0,
@@ -12757,12 +11662,7 @@
             },
             "addFlags": []
           }
-        ],
-        "requiredStats": {
-          "사회성": 55
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "B",
@@ -12787,12 +11687,7 @@
             },
             "addFlags": []
           }
-        ],
-        "requiredStats": {
-          "행복": 55
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "C",
@@ -12818,9 +11713,9 @@
             "addFlags": []
           }
         ],
-        "alwaysAvailable": true,
-        "conditionReview": "fallback_choice",
-        "alwaysAvailableReason": "사건 내 최소 한 선택지는 항상 실행 가능해야 함"
+        "requiredStats": {
+          "사회성": 55
+        }
       }
     ],
     "priority": 0,
@@ -12867,12 +11762,7 @@
             },
             "addFlags": []
           }
-        ],
-        "requiredStats": {
-          "행복": 55
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "B",
@@ -12899,12 +11789,7 @@
             },
             "addFlags": []
           }
-        ],
-        "requiredStats": {
-          "행복": 55
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "C",
@@ -12929,11 +11814,7 @@
             },
             "addFlags": []
           }
-        ],
-        "conditionReview": "fallback_choice",
-        "conditionBasis": "single_positive_outcome_stat",
-        "alwaysAvailable": true,
-        "alwaysAvailableReason": "사건 내 최소 한 선택지는 항상 실행 가능해야 함"
+        ]
       }
     ],
     "priority": 0,
@@ -12980,12 +11861,7 @@
             },
             "addFlags": []
           }
-        ],
-        "requiredStats": {
-          "사회성": 55
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "B",
@@ -13010,12 +11886,7 @@
             },
             "addFlags": []
           }
-        ],
-        "requiredStats": {
-          "지력": 55
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "C",
@@ -13043,10 +11914,7 @@
             "addFlags": [],
             "lifeDelta": 10
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "confirmed",
-        "alwaysAvailableReason": "서술·반응·돌발 선택지로 능력치 잠금보다 선택 가능성이 우선"
+        ]
       }
     ],
     "priority": 0,
@@ -13098,12 +11966,7 @@
             ],
             "lifeDelta": 10
           }
-        ],
-        "requiredStats": {
-          "사회성": 55
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "B",
@@ -13157,11 +12020,7 @@
             },
             "addFlags": []
           }
-        ],
-        "conditionReview": "fallback_choice",
-        "conditionBasis": "single_positive_outcome_stat",
-        "alwaysAvailable": true,
-        "alwaysAvailableReason": "사건 내 최소 한 선택지는 항상 실행 가능해야 함"
+        ]
       }
     ],
     "priority": 0,
@@ -13216,12 +12075,7 @@
               "exam_ready"
             ]
           }
-        ],
-        "requiredStats": {
-          "지력": 55
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "B",
@@ -13280,10 +12134,7 @@
             "addFlags": [],
             "lifeDelta": 10
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "confirmed",
-        "alwaysAvailableReason": "서술·반응·돌발 선택지로 능력치 잠금보다 선택 가능성이 우선"
+        ]
       }
     ],
     "priority": 0,
@@ -13337,12 +12188,7 @@
             ],
             "lifeDelta": 10
           }
-        ],
-        "requiredStats": {
-          "지력": 55
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "B",
@@ -13372,12 +12218,7 @@
             ],
             "lifeDelta": 10
           }
-        ],
-        "requiredStats": {
-          "운": 55
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "C",
@@ -13411,11 +12252,7 @@
             ],
             "lifeDelta": 10
           }
-        ],
-        "conditionReview": "fallback_choice",
-        "conditionBasis": "semantic_flag_or_text_match",
-        "alwaysAvailable": true,
-        "alwaysAvailableReason": "사건 내 최소 한 선택지는 항상 실행 가능해야 함"
+        ]
       }
     ],
     "priority": 0,
@@ -13594,12 +12431,7 @@
             },
             "addFlags": []
           }
-        ],
-        "requiredStats": {
-          "행복": 55
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "B",
@@ -13624,11 +12456,7 @@
             },
             "addFlags": []
           }
-        ],
-        "conditionReview": "fallback_choice",
-        "conditionBasis": "single_positive_outcome_stat",
-        "alwaysAvailable": true,
-        "alwaysAvailableReason": "사건 내 최소 한 선택지는 항상 실행 가능해야 함"
+        ]
       }
     ],
     "priority": 0,
@@ -13675,12 +12503,7 @@
             },
             "addFlags": []
           }
-        ],
-        "requiredStats": {
-          "행복": 55
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "B",
@@ -13708,10 +12531,7 @@
             "addFlags": [],
             "lifeDelta": 10
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "confirmed",
-        "alwaysAvailableReason": "서술·반응·돌발 선택지로 능력치 잠금보다 선택 가능성이 우선"
+        ]
       },
       {
         "choiceId": "C",
@@ -13825,12 +12645,7 @@
               "지력": -4
             }
           }
-        ],
-        "requiredStats": {
-          "지력": 55
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "semantic_flag_or_text_match"
+        ]
       },
       {
         "choiceId": "B",
@@ -13877,12 +12692,7 @@
               "운": -2
             }
           }
-        ],
-        "requiredStats": {
-          "운": 55
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "semantic_flag_or_text_match"
+        ]
       },
       {
         "choiceId": "C",
@@ -13935,9 +12745,9 @@
             }
           }
         ],
-        "alwaysAvailable": true,
-        "conditionReview": "fallback_choice",
-        "alwaysAvailableReason": "사건 내 최소 한 선택지는 항상 실행 가능해야 함"
+        "requiredStats": {
+          "지력": 55
+        }
       }
     ],
     "priority": 0,
@@ -14126,12 +12936,7 @@
             ],
             "lifeDelta": 10
           }
-        ],
-        "requiredStats": {
-          "운동능력": 58
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "semantic_flag_or_text_match"
+        ]
       },
       {
         "choiceId": "B",
@@ -14163,11 +12968,7 @@
             ],
             "lifeDelta": 10
           }
-        ],
-        "conditionReview": "fallback_choice",
-        "conditionBasis": "semantic_flag_or_text_match",
-        "alwaysAvailable": true,
-        "alwaysAvailableReason": "사건 내 최소 한 선택지는 항상 실행 가능해야 함"
+        ]
       }
     ],
     "priority": 0,
@@ -14225,10 +13026,7 @@
               "audition_star"
             ]
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "confirmed",
-        "alwaysAvailableReason": "서술·반응·돌발 선택지로 능력치 잠금보다 선택 가능성이 우선"
+        ]
       },
       {
         "choiceId": "B",
@@ -14260,12 +13058,7 @@
             ],
             "lifeDelta": 10
           }
-        ],
-        "requiredStats": {
-          "사회성": 58
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "semantic_flag_or_text_match"
+        ]
       },
       {
         "choiceId": "C",
@@ -14292,12 +13085,7 @@
             },
             "addFlags": []
           }
-        ],
-        "requiredStats": {
-          "사회성": 58
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       }
     ],
     "priority": 0,
@@ -14351,10 +13139,7 @@
             ],
             "lifeDelta": 10
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "confirmed",
-        "alwaysAvailableReason": "서술·반응·돌발 선택지로 능력치 잠금보다 선택 가능성이 우선"
+        ]
       },
       {
         "choiceId": "B",
@@ -14381,12 +13166,7 @@
             },
             "addFlags": []
           }
-        ],
-        "requiredStats": {
-          "행복": 58
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "C",
@@ -14414,10 +13194,7 @@
             "addFlags": [],
             "lifeDelta": 10
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "confirmed",
-        "alwaysAvailableReason": "서술·반응·돌발 선택지로 능력치 잠금보다 선택 가능성이 우선"
+        ]
       }
     ],
     "priority": 0,
@@ -14467,12 +13244,7 @@
             },
             "addFlags": []
           }
-        ],
-        "requiredStats": {
-          "사회성": 58
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "B",
@@ -14497,12 +13269,7 @@
             },
             "addFlags": []
           }
-        ],
-        "requiredStats": {
-          "지력": 58
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "C",
@@ -14531,11 +13298,7 @@
               "met_ideal"
             ]
           }
-        ],
-        "conditionReview": "fallback_choice",
-        "conditionBasis": "single_positive_outcome_stat",
-        "alwaysAvailable": true,
-        "alwaysAvailableReason": "사건 내 최소 한 선택지는 항상 실행 가능해야 함"
+        ]
       }
     ],
     "priority": 0,
@@ -14591,10 +13354,7 @@
             ],
             "lifeDelta": 10
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "confirmed",
-        "alwaysAvailableReason": "서술·반응·돌발 선택지로 능력치 잠금보다 선택 가능성이 우선"
+        ]
       },
       {
         "choiceId": "B",
@@ -14619,12 +13379,7 @@
             },
             "addFlags": []
           }
-        ],
-        "requiredStats": {
-          "사회성": 58
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "C",
@@ -14649,12 +13404,7 @@
             },
             "addFlags": []
           }
-        ],
-        "requiredStats": {
-          "운": 58
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       }
     ],
     "priority": 0,
@@ -14707,10 +13457,7 @@
               "seat_ideal"
             ]
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "confirmed",
-        "alwaysAvailableReason": "서술·반응·돌발 선택지로 능력치 잠금보다 선택 가능성이 우선"
+        ]
       },
       {
         "choiceId": "B",
@@ -14774,12 +13521,7 @@
               "seat_grill"
             ]
           }
-        ],
-        "requiredStats": {
-          "사회성": 58
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       }
     ],
     "priority": 0,
@@ -14835,10 +13577,7 @@
             ],
             "lifeDelta": 10
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "confirmed",
-        "alwaysAvailableReason": "서술·반응·돌발 선택지로 능력치 잠금보다 선택 가능성이 우선"
+        ]
       },
       {
         "choiceId": "B",
@@ -14870,10 +13609,7 @@
             ],
             "lifeDelta": 10
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "confirmed",
-        "alwaysAvailableReason": "서술·반응·돌발 선택지로 능력치 잠금보다 선택 가능성이 우선"
+        ]
       },
       {
         "choiceId": "C",
@@ -14900,12 +13636,7 @@
             },
             "addFlags": []
           }
-        ],
-        "requiredStats": {
-          "행복": 58
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       }
     ],
     "priority": 0,
@@ -14956,10 +13687,7 @@
             },
             "addFlags": []
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "confirmed",
-        "alwaysAvailableReason": "서술·반응·돌발 선택지로 능력치 잠금보다 선택 가능성이 우선"
+        ]
       },
       {
         "choiceId": "B",
@@ -15018,10 +13746,7 @@
             "addFlags": [],
             "lifeDelta": 10
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "confirmed",
-        "alwaysAvailableReason": "서술·반응·돌발 선택지로 능력치 잠금보다 선택 가능성이 우선"
+        ]
       }
     ],
     "priority": 0,
@@ -15071,12 +13796,7 @@
             },
             "addFlags": []
           }
-        ],
-        "requiredStats": {
-          "행복": 58
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "B",
@@ -15105,12 +13825,7 @@
               "secret_payer"
             ]
           }
-        ],
-        "requiredStats": {
-          "사회성": 58
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "C",
@@ -15140,9 +13855,9 @@
             ]
           }
         ],
-        "alwaysAvailable": true,
-        "conditionReview": "fallback_choice",
-        "alwaysAvailableReason": "사건 내 최소 한 선택지는 항상 실행 가능해야 함"
+        "requiredStats": {
+          "사회성": 58
+        }
       }
     ],
     "priority": 0,
@@ -15228,12 +13943,7 @@
               "kongi_regret"
             ]
           }
-        ],
-        "requiredStats": {
-          "경제력": 58
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "C",
@@ -15264,11 +13974,7 @@
               "kongi_goodbye"
             ]
           }
-        ],
-        "conditionReview": "fallback_choice",
-        "conditionBasis": "semantic_flag_or_text_match",
-        "alwaysAvailable": true,
-        "alwaysAvailableReason": "사건 내 최소 한 선택지는 항상 실행 가능해야 함"
+        ]
       }
     ],
     "priority": 0,
@@ -15359,12 +14065,7 @@
             ],
             "lifeDelta": 10
           }
-        ],
-        "requiredStats": {
-          "사회성": 58
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "semantic_flag_or_text_match"
+        ]
       },
       {
         "choiceId": "C",
@@ -15396,9 +14097,9 @@
             ]
           }
         ],
-        "alwaysAvailable": true,
-        "conditionReview": "fallback_choice",
-        "alwaysAvailableReason": "사건 내 최소 한 선택지는 항상 실행 가능해야 함"
+        "requiredStats": {
+          "사회성": 58
+        }
       }
     ],
     "priority": 0,
@@ -15452,10 +14153,7 @@
             ],
             "lifeDelta": 10
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "confirmed",
-        "alwaysAvailableReason": "서술·반응·돌발 선택지로 능력치 잠금보다 선택 가능성이 우선"
+        ]
       },
       {
         "choiceId": "B",
@@ -15482,10 +14180,7 @@
             },
             "addFlags": []
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "confirmed",
-        "alwaysAvailableReason": "서술·반응·돌발 선택지로 능력치 잠금보다 선택 가능성이 우선"
+        ]
       },
       {
         "choiceId": "C",
@@ -15512,10 +14207,7 @@
             },
             "addFlags": []
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "confirmed",
-        "alwaysAvailableReason": "서술·반응·돌발 선택지로 능력치 잠금보다 선택 가능성이 우선"
+        ]
       }
     ],
     "priority": 0,
@@ -15562,12 +14254,7 @@
             },
             "addFlags": []
           }
-        ],
-        "requiredStats": {
-          "건강": 58
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "B",
@@ -15592,12 +14279,7 @@
             },
             "addFlags": []
           }
-        ],
-        "requiredStats": {
-          "경제력": 58
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "C",
@@ -15622,11 +14304,7 @@
             },
             "addFlags": []
           }
-        ],
-        "conditionReview": "fallback_choice",
-        "conditionBasis": "single_positive_outcome_stat",
-        "alwaysAvailable": true,
-        "alwaysAvailableReason": "사건 내 최소 한 선택지는 항상 실행 가능해야 함"
+        ]
       }
     ],
     "priority": 0,
@@ -15678,12 +14356,7 @@
             ],
             "lifeDelta": 10
           }
-        ],
-        "requiredStats": {
-          "경제력": 58
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "B",
@@ -15714,12 +14387,7 @@
               "family_bond"
             ]
           }
-        ],
-        "requiredStats": {
-          "사회성": 58
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "semantic_flag_or_text_match"
+        ]
       },
       {
         "choiceId": "C",
@@ -15744,11 +14412,7 @@
             },
             "addFlags": []
           }
-        ],
-        "conditionReview": "fallback_choice",
-        "conditionBasis": "single_positive_outcome_stat",
-        "alwaysAvailable": true,
-        "alwaysAvailableReason": "사건 내 최소 한 선택지는 항상 실행 가능해야 함"
+        ]
       }
     ],
     "priority": 0,
@@ -15801,10 +14465,7 @@
               "seat_boss"
             ]
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "confirmed",
-        "alwaysAvailableReason": "서술·반응·돌발 선택지로 능력치 잠금보다 선택 가능성이 우선"
+        ]
       },
       {
         "choiceId": "B",
@@ -15835,10 +14496,7 @@
               "seat_peer"
             ]
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "confirmed",
-        "alwaysAvailableReason": "서술·반응·돌발 선택지로 능력치 잠금보다 선택 가능성이 우선"
+        ]
       },
       {
         "choiceId": "C",
@@ -15869,10 +14527,7 @@
               "seat_door"
             ]
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "confirmed",
-        "alwaysAvailableReason": "서술·반응·돌발 선택지로 능력치 잠금보다 선택 가능성이 우선"
+        ]
       }
     ],
     "priority": 0,
@@ -15925,12 +14580,7 @@
               "blackout_work"
             ]
           }
-        ],
-        "requiredStats": {
-          "사회성": 58
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "B",
@@ -15955,12 +14605,7 @@
             },
             "addFlags": []
           }
-        ],
-        "requiredStats": {
-          "건강": 58
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "C",
@@ -15988,10 +14633,7 @@
             "addFlags": [],
             "lifeDelta": 10
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "confirmed",
-        "alwaysAvailableReason": "서술·반응·돌발 선택지로 능력치 잠금보다 선택 가능성이 우선"
+        ]
       }
     ],
     "priority": 0,
@@ -16044,12 +14686,7 @@
               "peer_friend"
             ]
           }
-        ],
-        "requiredStats": {
-          "행복": 58
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "B",
@@ -16077,10 +14714,7 @@
             "addFlags": [],
             "lifeDelta": 10
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "confirmed",
-        "alwaysAvailableReason": "서술·반응·돌발 선택지로 능력치 잠금보다 선택 가능성이 우선"
+        ]
       },
       {
         "choiceId": "C",
@@ -16109,12 +14743,7 @@
               "peer_friend"
             ]
           }
-        ],
-        "requiredStats": {
-          "사회성": 58
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       }
     ],
     "priority": 0,
@@ -16170,12 +14799,7 @@
             ],
             "lifeDelta": 10
           }
-        ],
-        "requiredStats": {
-          "운": 58
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "semantic_flag_or_text_match"
+        ]
       },
       {
         "choiceId": "B",
@@ -16200,12 +14824,7 @@
             },
             "addFlags": []
           }
-        ],
-        "requiredStats": {
-          "사회성": 58
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "C",
@@ -16232,10 +14851,7 @@
             },
             "addFlags": []
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "confirmed",
-        "alwaysAvailableReason": "서술·반응·돌발 선택지로 능력치 잠금보다 선택 가능성이 우선"
+        ]
       }
     ],
     "priority": 0,
@@ -16286,12 +14902,7 @@
               "team_favorite"
             ]
           }
-        ],
-        "requiredStats": {
-          "사회성": 58
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "B",
@@ -16318,10 +14929,7 @@
             },
             "addFlags": []
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "confirmed",
-        "alwaysAvailableReason": "서술·반응·돌발 선택지로 능력치 잠금보다 선택 가능성이 우선"
+        ]
       },
       {
         "choiceId": "C",
@@ -16353,12 +14961,7 @@
             ],
             "lifeDelta": 10
           }
-        ],
-        "requiredStats": {
-          "사회성": 58
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "semantic_flag_or_text_match"
+        ]
       }
     ],
     "priority": 0,
@@ -16409,12 +15012,7 @@
             },
             "addFlags": []
           }
-        ],
-        "requiredStats": {
-          "사회성": 58
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "B",
@@ -16439,12 +15037,7 @@
             },
             "addFlags": []
           }
-        ],
-        "requiredStats": {
-          "건강": 58
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "C",
@@ -16471,10 +15064,7 @@
             },
             "addFlags": []
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "confirmed",
-        "alwaysAvailableReason": "서술·반응·돌발 선택지로 능력치 잠금보다 선택 가능성이 우선"
+        ]
       }
     ],
     "priority": 0,
@@ -16521,12 +15111,7 @@
             },
             "addFlags": []
           }
-        ],
-        "requiredStats": {
-          "건강": 58
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "B",
@@ -16551,12 +15136,7 @@
             },
             "addFlags": []
           }
-        ],
-        "requiredStats": {
-          "경제력": 58
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "C",
@@ -16581,11 +15161,7 @@
             },
             "addFlags": []
           }
-        ],
-        "conditionReview": "fallback_choice",
-        "conditionBasis": "single_positive_outcome_stat",
-        "alwaysAvailable": true,
-        "alwaysAvailableReason": "사건 내 최소 한 선택지는 항상 실행 가능해야 함"
+        ]
       }
     ],
     "priority": 0,
@@ -16633,12 +15209,7 @@
             },
             "addFlags": []
           }
-        ],
-        "requiredStats": {
-          "사회성": 58
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "B",
@@ -16663,12 +15234,7 @@
             },
             "addFlags": []
           }
-        ],
-        "requiredStats": {
-          "지력": 58
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "C",
@@ -16693,11 +15259,7 @@
             },
             "addFlags": []
           }
-        ],
-        "conditionReview": "fallback_choice",
-        "conditionBasis": "single_positive_outcome_stat",
-        "alwaysAvailable": true,
-        "alwaysAvailableReason": "사건 내 최소 한 선택지는 항상 실행 가능해야 함"
+        ]
       }
     ],
     "priority": 0,
@@ -16755,12 +15317,7 @@
               "startup_founder"
             ]
           }
-        ],
-        "requiredStats": {
-          "경제력": 58
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "semantic_flag_or_text_match"
+        ]
       },
       {
         "choiceId": "B",
@@ -16790,12 +15347,7 @@
             ],
             "lifeDelta": 10
           }
-        ],
-        "requiredStats": {
-          "경제력": 58
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "C",
@@ -16826,11 +15378,7 @@
               "startup_founder"
             ]
           }
-        ],
-        "conditionReview": "fallback_choice",
-        "conditionBasis": "semantic_flag_or_text_match",
-        "alwaysAvailable": true,
-        "alwaysAvailableReason": "사건 내 최소 한 선택지는 항상 실행 가능해야 함"
+        ]
       }
     ],
     "priority": 0,
@@ -16883,12 +15431,7 @@
               "patent_holder"
             ]
           }
-        ],
-        "requiredStats": {
-          "지력": 58
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "B",
@@ -16915,10 +15458,7 @@
             },
             "addFlags": []
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "confirmed",
-        "alwaysAvailableReason": "서술·반응·돌발 선택지로 능력치 잠금보다 선택 가능성이 우선"
+        ]
       },
       {
         "choiceId": "C",
@@ -16943,12 +15483,7 @@
             },
             "addFlags": []
           }
-        ],
-        "requiredStats": {
-          "행복": 58
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       }
     ],
     "priority": 0,
@@ -17000,12 +15535,7 @@
               "crypto_scare"
             ]
           }
-        ],
-        "requiredStats": {
-          "운": 58
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "B",
@@ -17062,10 +15592,7 @@
             },
             "addFlags": []
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "confirmed",
-        "alwaysAvailableReason": "서술·반응·돌발 선택지로 능력치 잠금보다 선택 가능성이 우선"
+        ]
       }
     ],
     "priority": 0,
@@ -17120,12 +15647,7 @@
             ],
             "lifeDelta": 10
           }
-        ],
-        "requiredStats": {
-          "운동능력": 58
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "semantic_flag_or_text_match"
+        ]
       },
       {
         "choiceId": "B",
@@ -17150,12 +15672,7 @@
             },
             "addFlags": []
           }
-        ],
-        "requiredStats": {
-          "행복": 58
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "C",
@@ -17186,11 +15703,7 @@
               "gym_habit"
             ]
           }
-        ],
-        "conditionReview": "fallback_choice",
-        "conditionBasis": "semantic_flag_or_text_match",
-        "alwaysAvailable": true,
-        "alwaysAvailableReason": "사건 내 최소 한 선택지는 항상 실행 가능해야 함"
+        ]
       }
     ],
     "priority": 0,
@@ -17242,12 +15755,7 @@
               "first_car"
             ]
           }
-        ],
-        "requiredStats": {
-          "행복": 58
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "B",
@@ -17276,12 +15784,7 @@
               "first_car"
             ]
           }
-        ],
-        "requiredStats": {
-          "행복": 58
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "C",
@@ -17308,10 +15811,7 @@
             },
             "addFlags": []
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "confirmed",
-        "alwaysAvailableReason": "서술·반응·돌발 선택지로 능력치 잠금보다 선택 가능성이 우선"
+        ]
       }
     ],
     "priority": 0,
@@ -17360,12 +15860,7 @@
             },
             "addFlags": []
           }
-        ],
-        "requiredStats": {
-          "행복": 58
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "B",
@@ -17397,10 +15892,7 @@
             ],
             "lifeDelta": 10
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "confirmed",
-        "alwaysAvailableReason": "서술·반응·돌발 선택지로 능력치 잠금보다 선택 가능성이 우선"
+        ]
       },
       {
         "choiceId": "C",
@@ -17425,12 +15917,7 @@
             },
             "addFlags": []
           }
-        ],
-        "requiredStats": {
-          "지력": 58
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       }
     ],
     "priority": 0,
@@ -17483,10 +15970,7 @@
             "addFlags": [],
             "lifeDelta": 10
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "confirmed",
-        "alwaysAvailableReason": "서술·반응·돌발 선택지로 능력치 잠금보다 선택 가능성이 우선"
+        ]
       },
       {
         "choiceId": "B",
@@ -17513,12 +15997,7 @@
             },
             "addFlags": []
           }
-        ],
-        "requiredStats": {
-          "행복": 58
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "C",
@@ -17546,10 +16025,7 @@
             "addFlags": [],
             "lifeDelta": 10
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "confirmed",
-        "alwaysAvailableReason": "서술·반응·돌발 선택지로 능력치 잠금보다 선택 가능성이 우선"
+        ]
       }
     ],
     "priority": 0,
@@ -17605,12 +16081,7 @@
             ],
             "lifeDelta": 10
           }
-        ],
-        "requiredStats": {
-          "사회성": 58
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "semantic_flag_or_text_match"
+        ]
       },
       {
         "choiceId": "B",
@@ -17637,12 +16108,7 @@
             },
             "addFlags": []
           }
-        ],
-        "requiredStats": {
-          "행복": 58
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "C",
@@ -17674,11 +16140,7 @@
             ],
             "lifeDelta": 10
           }
-        ],
-        "conditionReview": "fallback_choice",
-        "conditionBasis": "semantic_flag_or_text_match",
-        "alwaysAvailable": true,
-        "alwaysAvailableReason": "사건 내 최소 한 선택지는 항상 실행 가능해야 함"
+        ]
       }
     ],
     "priority": 0,
@@ -17859,10 +16321,7 @@
             },
             "addFlags": []
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "confirmed",
-        "alwaysAvailableReason": "서술·반응·돌발 선택지로 능력치 잠금보다 선택 가능성이 우선"
+        ]
       },
       {
         "choiceId": "B",
@@ -17890,10 +16349,7 @@
             "addFlags": [],
             "lifeDelta": 10
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "confirmed",
-        "alwaysAvailableReason": "서술·반응·돌발 선택지로 능력치 잠금보다 선택 가능성이 우선"
+        ]
       },
       {
         "choiceId": "C",
@@ -17925,12 +16381,7 @@
             ],
             "lifeDelta": 10
           }
-        ],
-        "requiredStats": {
-          "사회성": 58
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "semantic_flag_or_text_match"
+        ]
       }
     ],
     "priority": 0,
@@ -17985,12 +16436,7 @@
             ],
             "lifeDelta": 10
           }
-        ],
-        "requiredStats": {
-          "사회성": 58
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "semantic_flag_or_text_match"
+        ]
       },
       {
         "choiceId": "B",
@@ -18017,10 +16463,7 @@
             },
             "addFlags": []
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "confirmed",
-        "alwaysAvailableReason": "서술·반응·돌발 선택지로 능력치 잠금보다 선택 가능성이 우선"
+        ]
       },
       {
         "choiceId": "C",
@@ -18047,12 +16490,7 @@
             },
             "addFlags": []
           }
-        ],
-        "requiredStats": {
-          "행복": 58
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       }
     ],
     "priority": 0,
@@ -18100,12 +16538,7 @@
             },
             "addFlags": []
           }
-        ],
-        "requiredStats": {
-          "사회성": 58
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "B",
@@ -18130,12 +16563,7 @@
             },
             "addFlags": []
           }
-        ],
-        "requiredStats": {
-          "건강": 58
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "C",
@@ -18160,11 +16588,7 @@
             },
             "addFlags": []
           }
-        ],
-        "conditionReview": "fallback_choice",
-        "conditionBasis": "single_positive_outcome_stat",
-        "alwaysAvailable": true,
-        "alwaysAvailableReason": "사건 내 최소 한 선택지는 항상 실행 가능해야 함"
+        ]
       }
     ],
     "priority": 0,
@@ -18220,12 +16644,7 @@
             ],
             "lifeDelta": 10
           }
-        ],
-        "requiredStats": {
-          "사회성": 58
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "semantic_flag_or_text_match"
+        ]
       },
       {
         "choiceId": "B",
@@ -18250,11 +16669,7 @@
             },
             "addFlags": []
           }
-        ],
-        "conditionReview": "fallback_choice",
-        "conditionBasis": "single_positive_outcome_stat",
-        "alwaysAvailable": true,
-        "alwaysAvailableReason": "사건 내 최소 한 선택지는 항상 실행 가능해야 함"
+        ]
       }
     ],
     "priority": 0,
@@ -18303,12 +16718,7 @@
             },
             "addFlags": []
           }
-        ],
-        "requiredStats": {
-          "경제력": 58
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "B",
@@ -18340,10 +16750,7 @@
             ],
             "lifeDelta": 10
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "confirmed",
-        "alwaysAvailableReason": "서술·반응·돌발 선택지로 능력치 잠금보다 선택 가능성이 우선"
+        ]
       },
       {
         "choiceId": "C",
@@ -18431,12 +16838,7 @@
             ],
             "lifeDelta": 10
           }
-        ],
-        "requiredStats": {
-          "건강": 58
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "semantic_flag_or_text_match"
+        ]
       },
       {
         "choiceId": "B",
@@ -18467,12 +16869,7 @@
               "burnout"
             ]
           }
-        ],
-        "requiredStats": {
-          "경제력": 58
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "C",
@@ -18499,10 +16896,7 @@
             },
             "addFlags": []
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "confirmed",
-        "alwaysAvailableReason": "서술·반응·돌발 선택지로 능력치 잠금보다 선택 가능성이 우선"
+        ]
       }
     ],
     "priority": 0,
@@ -18559,12 +16953,7 @@
             ],
             "lifeDelta": 10
           }
-        ],
-        "requiredStats": {
-          "사회성": 58
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "semantic_flag_or_text_match"
+        ]
       },
       {
         "choiceId": "B",
@@ -18590,11 +16979,7 @@
             "addFlags": [],
             "lifeDelta": 10
           }
-        ],
-        "conditionReview": "fallback_choice",
-        "conditionBasis": "single_positive_outcome_stat",
-        "alwaysAvailable": true,
-        "alwaysAvailableReason": "사건 내 최소 한 선택지는 항상 실행 가능해야 함"
+        ]
       }
     ],
     "priority": 0,
@@ -18653,12 +17038,7 @@
             ],
             "lifeDelta": 10
           }
-        ],
-        "requiredStats": {
-          "행복": 60
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "semantic_flag_or_text_match"
+        ]
       },
       {
         "choiceId": "B",
@@ -18685,11 +17065,7 @@
             },
             "addFlags": []
           }
-        ],
-        "conditionReview": "fallback_choice",
-        "conditionBasis": "single_positive_outcome_stat",
-        "alwaysAvailable": true,
-        "alwaysAvailableReason": "사건 내 최소 한 선택지는 항상 실행 가능해야 함"
+        ]
       }
     ],
     "priority": 0,
@@ -18747,12 +17123,7 @@
             ],
             "lifeDelta": 10
           }
-        ],
-        "requiredStats": {
-          "경제력": 58
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "semantic_flag_or_text_match"
+        ]
       },
       {
         "choiceId": "B",
@@ -18777,12 +17148,7 @@
             },
             "addFlags": []
           }
-        ],
-        "requiredStats": {
-          "경제력": 58
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "C",
@@ -18810,10 +17176,7 @@
             "addFlags": [],
             "lifeDelta": 10
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "confirmed",
-        "alwaysAvailableReason": "서술·반응·돌발 선택지로 능력치 잠금보다 선택 가능성이 우선"
+        ]
       }
     ],
     "priority": 0,
@@ -18862,12 +17225,7 @@
             "addFlags": [],
             "lifeDelta": 10
           }
-        ],
-        "requiredStats": {
-          "행복": 58
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "B",
@@ -18892,12 +17250,7 @@
             },
             "addFlags": []
           }
-        ],
-        "requiredStats": {
-          "행복": 58
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "C",
@@ -18929,10 +17282,7 @@
             ],
             "lifeDelta": 10
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "confirmed",
-        "alwaysAvailableReason": "서술·반응·돌발 선택지로 능력치 잠금보다 선택 가능성이 우선"
+        ]
       }
     ],
     "priority": 0,
@@ -18986,10 +17336,7 @@
               "family_bond"
             ]
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "confirmed",
-        "alwaysAvailableReason": "서술·반응·돌발 선택지로 능력치 잠금보다 선택 가능성이 우선"
+        ]
       },
       {
         "choiceId": "B",
@@ -19014,12 +17361,7 @@
             },
             "addFlags": []
           }
-        ],
-        "requiredStats": {
-          "사회성": 58
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "C",
@@ -19050,12 +17392,7 @@
               "family_bond"
             ]
           }
-        ],
-        "requiredStats": {
-          "사회성": 58
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "semantic_flag_or_text_match"
+        ]
       }
     ],
     "priority": 0,
@@ -19107,12 +17444,7 @@
               "driver_license"
             ]
           }
-        ],
-        "requiredStats": {
-          "지력": 58
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "B",
@@ -19141,12 +17473,7 @@
               "driver_license"
             ]
           }
-        ],
-        "requiredStats": {
-          "운": 58
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "C",
@@ -19175,11 +17502,7 @@
               "driver_license"
             ]
           }
-        ],
-        "conditionReview": "fallback_choice",
-        "conditionBasis": "single_positive_outcome_stat",
-        "alwaysAvailable": true,
-        "alwaysAvailableReason": "사건 내 최소 한 선택지는 항상 실행 가능해야 함"
+        ]
       }
     ],
     "priority": 0,
@@ -19226,12 +17549,7 @@
             },
             "addFlags": []
           }
-        ],
-        "requiredStats": {
-          "사회성": 58
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "B",
@@ -19257,12 +17575,7 @@
             "addFlags": [],
             "lifeDelta": 10
           }
-        ],
-        "requiredStats": {
-          "사회성": 58
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "C",
@@ -19288,11 +17601,7 @@
             "addFlags": [],
             "lifeDelta": 10
           }
-        ],
-        "conditionReview": "fallback_choice",
-        "conditionBasis": "single_positive_outcome_stat",
-        "alwaysAvailable": true,
-        "alwaysAvailableReason": "사건 내 최소 한 선택지는 항상 실행 가능해야 함"
+        ]
       }
     ],
     "priority": 0,
@@ -19339,12 +17648,7 @@
             },
             "addFlags": []
           }
-        ],
-        "requiredStats": {
-          "지력": 58
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "B",
@@ -19402,11 +17706,7 @@
               "family_bond"
             ]
           }
-        ],
-        "conditionReview": "fallback_choice",
-        "conditionBasis": "single_positive_outcome_stat",
-        "alwaysAvailable": true,
-        "alwaysAvailableReason": "사건 내 최소 한 선택지는 항상 실행 가능해야 함"
+        ]
       }
     ],
     "priority": 0,
@@ -19454,12 +17754,7 @@
             },
             "addFlags": []
           }
-        ],
-        "requiredStats": {
-          "사회성": 58
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "B",
@@ -19484,12 +17779,7 @@
             },
             "addFlags": []
           }
-        ],
-        "requiredStats": {
-          "사회성": 58
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "C",
@@ -19514,11 +17804,7 @@
             },
             "addFlags": []
           }
-        ],
-        "conditionReview": "fallback_choice",
-        "conditionBasis": "single_positive_outcome_stat",
-        "alwaysAvailable": true,
-        "alwaysAvailableReason": "사건 내 최소 한 선택지는 항상 실행 가능해야 함"
+        ]
       }
     ],
     "priority": 0,
@@ -19565,12 +17851,7 @@
             },
             "addFlags": []
           }
-        ],
-        "requiredStats": {
-          "행복": 58
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "B",
@@ -19628,11 +17909,7 @@
             ],
             "lifeDelta": 10
           }
-        ],
-        "conditionReview": "fallback_choice",
-        "conditionBasis": "single_positive_outcome_stat",
-        "alwaysAvailable": true,
-        "alwaysAvailableReason": "사건 내 최소 한 선택지는 항상 실행 가능해야 함"
+        ]
       }
     ],
     "priority": 0,
@@ -19680,12 +17957,7 @@
             },
             "addFlags": []
           }
-        ],
-        "requiredStats": {
-          "경제력": 58
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "B",
@@ -19710,12 +17982,7 @@
             },
             "addFlags": []
           }
-        ],
-        "requiredStats": {
-          "사회성": 58
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "C",
@@ -19742,11 +18009,7 @@
             },
             "addFlags": []
           }
-        ],
-        "conditionReview": "fallback_choice",
-        "conditionBasis": "single_positive_outcome_stat",
-        "alwaysAvailable": true,
-        "alwaysAvailableReason": "사건 내 최소 한 선택지는 항상 실행 가능해야 함"
+        ]
       }
     ],
     "priority": 0,
@@ -19795,12 +18058,7 @@
             "addFlags": [],
             "lifeDelta": 10
           }
-        ],
-        "requiredStats": {
-          "사회성": 58
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "B",
@@ -19825,12 +18083,7 @@
             },
             "addFlags": []
           }
-        ],
-        "requiredStats": {
-          "사회성": 58
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "C",
@@ -19858,10 +18111,7 @@
             "addFlags": [],
             "lifeDelta": 10
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "confirmed",
-        "alwaysAvailableReason": "서술·반응·돌발 선택지로 능력치 잠금보다 선택 가능성이 우선"
+        ]
       }
     ],
     "priority": 0,
@@ -19912,12 +18162,7 @@
               "family_bond"
             ]
           }
-        ],
-        "requiredStats": {
-          "사회성": 60
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "B",
@@ -19946,12 +18191,7 @@
               "family_bond"
             ]
           }
-        ],
-        "requiredStats": {
-          "행복": 60
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "C",
@@ -19981,11 +18221,7 @@
             ],
             "lifeDelta": 10
           }
-        ],
-        "conditionReview": "fallback_choice",
-        "conditionBasis": "single_positive_outcome_stat",
-        "alwaysAvailable": true,
-        "alwaysAvailableReason": "사건 내 최소 한 선택지는 항상 실행 가능해야 함"
+        ]
       }
     ],
     "priority": 0,
@@ -20041,10 +18277,7 @@
             ],
             "lifeDelta": 10
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "confirmed",
-        "alwaysAvailableReason": "서술·반응·돌발 선택지로 능력치 잠금보다 선택 가능성이 우선"
+        ]
       },
       {
         "choiceId": "B",
@@ -20076,12 +18309,7 @@
             ],
             "lifeDelta": 10
           }
-        ],
-        "requiredStats": {
-          "행복": 60
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "semantic_flag_or_text_match"
+        ]
       },
       {
         "choiceId": "C",
@@ -20113,12 +18341,7 @@
             ],
             "lifeDelta": 10
           }
-        ],
-        "requiredStats": {
-          "행복": 60
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "semantic_flag_or_text_match"
+        ]
       }
     ],
     "priority": 0,
@@ -20169,12 +18392,7 @@
               "reading_glasses"
             ]
           }
-        ],
-        "requiredStats": {
-          "지력": 60
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "B",
@@ -20202,10 +18420,7 @@
             "addFlags": [],
             "lifeDelta": 10
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "confirmed",
-        "alwaysAvailableReason": "서술·반응·돌발 선택지로 능력치 잠금보다 선택 가능성이 우선"
+        ]
       },
       {
         "choiceId": "C",
@@ -20232,10 +18447,7 @@
             },
             "addFlags": []
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "confirmed",
-        "alwaysAvailableReason": "서술·반응·돌발 선택지로 능력치 잠금보다 선택 가능성이 우선"
+        ]
       }
     ],
     "priority": 0,
@@ -20284,12 +18496,7 @@
             },
             "addFlags": []
           }
-        ],
-        "requiredStats": {
-          "행복": 60
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "B",
@@ -20317,10 +18524,7 @@
             "addFlags": [],
             "lifeDelta": 10
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "confirmed",
-        "alwaysAvailableReason": "서술·반응·돌발 선택지로 능력치 잠금보다 선택 가능성이 우선"
+        ]
       },
       {
         "choiceId": "C",
@@ -20347,10 +18551,7 @@
             },
             "addFlags": []
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "confirmed",
-        "alwaysAvailableReason": "서술·반응·돌발 선택지로 능력치 잠금보다 선택 가능성이 우선"
+        ]
       }
     ],
     "priority": 0,
@@ -20399,12 +18600,7 @@
             },
             "addFlags": []
           }
-        ],
-        "requiredStats": {
-          "사회성": 60
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "B",
@@ -20467,9 +18663,9 @@
             "lifeDelta": 10
           }
         ],
-        "alwaysAvailable": true,
-        "conditionReview": "fallback_choice",
-        "alwaysAvailableReason": "사건 내 최소 한 선택지는 항상 실행 가능해야 함"
+        "requiredStats": {
+          "사회성": 58
+        }
       }
     ],
     "priority": 0,
@@ -20523,10 +18719,7 @@
             ],
             "lifeDelta": 10
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "confirmed",
-        "alwaysAvailableReason": "서술·반응·돌발 선택지로 능력치 잠금보다 선택 가능성이 우선"
+        ]
       },
       {
         "choiceId": "B",
@@ -20553,12 +18746,7 @@
             },
             "addFlags": []
           }
-        ],
-        "requiredStats": {
-          "경제력": 60
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "C",
@@ -20585,10 +18773,7 @@
             },
             "addFlags": []
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "confirmed",
-        "alwaysAvailableReason": "서술·반응·돌발 선택지로 능력치 잠금보다 선택 가능성이 우선"
+        ]
       }
     ],
     "priority": 0,
@@ -20643,12 +18828,7 @@
               "chicken_shop"
             ]
           }
-        ],
-        "requiredStats": {
-          "경제력": 60
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "semantic_flag_or_text_match"
+        ]
       },
       {
         "choiceId": "B",
@@ -20677,12 +18857,7 @@
               "small_cafe"
             ]
           }
-        ],
-        "requiredStats": {
-          "행복": 60
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "C",
@@ -20710,10 +18885,7 @@
             "addFlags": [],
             "lifeDelta": 10
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "confirmed",
-        "alwaysAvailableReason": "서술·반응·돌발 선택지로 능력치 잠금보다 선택 가능성이 우선"
+        ]
       }
     ],
     "priority": 0,
@@ -20796,12 +18968,7 @@
               "health_scare"
             ]
           }
-        ],
-        "requiredStats": {
-          "경제력": 60
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "C",
@@ -20830,11 +18997,7 @@
               "health_scare"
             ]
           }
-        ],
-        "conditionReview": "fallback_choice",
-        "conditionBasis": "single_positive_outcome_stat",
-        "alwaysAvailable": true,
-        "alwaysAvailableReason": "사건 내 최소 한 선택지는 항상 실행 가능해야 함"
+        ]
       }
     ],
     "priority": 0,
@@ -20881,12 +19044,7 @@
             },
             "addFlags": []
           }
-        ],
-        "requiredStats": {
-          "지력": 60
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "B",
@@ -20911,12 +19069,7 @@
             },
             "addFlags": []
           }
-        ],
-        "requiredStats": {
-          "사회성": 60
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "C",
@@ -20941,11 +19094,7 @@
             },
             "addFlags": []
           }
-        ],
-        "conditionReview": "fallback_choice",
-        "conditionBasis": "single_positive_outcome_stat",
-        "alwaysAvailable": true,
-        "alwaysAvailableReason": "사건 내 최소 한 선택지는 항상 실행 가능해야 함"
+        ]
       }
     ],
     "priority": 0,
@@ -20996,12 +19145,7 @@
               "fan_life"
             ]
           }
-        ],
-        "requiredStats": {
-          "행복": 60
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "B",
@@ -21026,12 +19170,7 @@
             },
             "addFlags": []
           }
-        ],
-        "requiredStats": {
-          "행복": 60
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "C",
@@ -21063,11 +19202,7 @@
             ],
             "lifeDelta": 10
           }
-        ],
-        "conditionReview": "fallback_choice",
-        "conditionBasis": "semantic_flag_or_text_match",
-        "alwaysAvailable": true,
-        "alwaysAvailableReason": "사건 내 최소 한 선택지는 항상 실행 가능해야 함"
+        ]
       }
     ],
     "priority": 0,
@@ -21121,12 +19256,7 @@
             ],
             "lifeDelta": 10
           }
-        ],
-        "requiredStats": {
-          "운동능력": 60
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "semantic_flag_or_text_match"
+        ]
       },
       {
         "choiceId": "B",
@@ -21155,12 +19285,7 @@
               "volunteer"
             ]
           }
-        ],
-        "requiredStats": {
-          "사회성": 60
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "C",
@@ -21187,10 +19312,7 @@
             },
             "addFlags": []
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "confirmed",
-        "alwaysAvailableReason": "서술·반응·돌발 선택지로 능력치 잠금보다 선택 가능성이 우선"
+        ]
       }
     ],
     "priority": 0,
@@ -21246,12 +19368,7 @@
             ],
             "lifeDelta": 10
           }
-        ],
-        "requiredStats": {
-          "사회성": 60
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "semantic_flag_or_text_match"
+        ]
       },
       {
         "choiceId": "B",
@@ -21283,12 +19400,7 @@
             ],
             "lifeDelta": 10
           }
-        ],
-        "requiredStats": {
-          "사회성": 60
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "semantic_flag_or_text_match"
+        ]
       },
       {
         "choiceId": "C",
@@ -21316,10 +19428,7 @@
             "addFlags": [],
             "lifeDelta": 10
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "confirmed",
-        "alwaysAvailableReason": "서술·반응·돌발 선택지로 능력치 잠금보다 선택 가능성이 우선"
+        ]
       }
     ],
     "priority": 0,
@@ -21372,12 +19481,7 @@
               "empty_nest"
             ]
           }
-        ],
-        "requiredStats": {
-          "사회성": 60
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "B",
@@ -21407,12 +19511,7 @@
             ],
             "lifeDelta": 10
           }
-        ],
-        "requiredStats": {
-          "행복": 60
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "C",
@@ -21444,10 +19543,7 @@
             ],
             "lifeDelta": 10
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "confirmed",
-        "alwaysAvailableReason": "서술·반응·돌발 선택지로 능력치 잠금보다 선택 가능성이 우선"
+        ]
       }
     ],
     "priority": 0,
@@ -21503,12 +19599,7 @@
             ],
             "lifeDelta": 10
           }
-        ],
-        "requiredStats": {
-          "사회성": 60
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "semantic_flag_or_text_match"
+        ]
       },
       {
         "choiceId": "B",
@@ -21540,12 +19631,7 @@
             ],
             "lifeDelta": 10
           }
-        ],
-        "requiredStats": {
-          "사회성": 60
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "semantic_flag_or_text_match"
+        ]
       },
       {
         "choiceId": "C",
@@ -21578,9 +19664,9 @@
             "lifeDelta": 10
           }
         ],
-        "alwaysAvailable": true,
-        "conditionReview": "fallback_choice",
-        "alwaysAvailableReason": "사건 내 최소 한 선택지는 항상 실행 가능해야 함"
+        "requiredStats": {
+          "사회성": 58
+        }
       }
     ],
     "priority": 0,
@@ -21761,12 +19847,7 @@
             },
             "addFlags": []
           }
-        ],
-        "requiredStats": {
-          "행복": 58
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "B",
@@ -21791,12 +19872,7 @@
             },
             "addFlags": []
           }
-        ],
-        "requiredStats": {
-          "행복": 58
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "C",
@@ -21821,11 +19897,7 @@
             },
             "addFlags": []
           }
-        ],
-        "conditionReview": "fallback_choice",
-        "conditionBasis": "single_positive_outcome_stat",
-        "alwaysAvailable": true,
-        "alwaysAvailableReason": "사건 내 최소 한 선택지는 항상 실행 가능해야 함"
+        ]
       }
     ],
     "priority": 0,
@@ -21873,12 +19945,7 @@
             },
             "addFlags": []
           }
-        ],
-        "requiredStats": {
-          "건강": 58
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "B",
@@ -21903,12 +19970,7 @@
             },
             "addFlags": []
           }
-        ],
-        "requiredStats": {
-          "행복": 58
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "single_positive_outcome_stat"
+        ]
       },
       {
         "choiceId": "C",
@@ -21935,10 +19997,7 @@
             },
             "addFlags": []
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "confirmed",
-        "alwaysAvailableReason": "서술·반응·돌발 선택지로 능력치 잠금보다 선택 가능성이 우선"
+        ]
       }
     ],
     "priority": 0,
@@ -22034,10 +20093,7 @@
               "건강": -2
             }
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "confirmed",
-        "alwaysAvailableReason": "서술·반응·돌발 선택지로 능력치 잠금보다 선택 가능성이 우선"
+        ]
       },
       {
         "choiceId": "B",
@@ -22089,12 +20145,7 @@
               "건강": -2
             }
           }
-        ],
-        "requiredStats": {
-          "건강": 58
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "semantic_flag_or_text_match"
+        ]
       },
       {
         "choiceId": "C",
@@ -22161,10 +20212,7 @@
               "건강": -1
             }
           }
-        ],
-        "alwaysAvailable": true,
-        "conditionReview": "confirmed",
-        "alwaysAvailableReason": "서술·반응·돌발 선택지로 능력치 잠금보다 선택 가능성이 우선"
+        ]
       }
     ],
     "priority": 0,
@@ -22269,12 +20317,7 @@
               "운": -1
             }
           }
-        ],
-        "requiredStats": {
-          "경제력": 58
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "semantic_flag_or_text_match"
+        ]
       },
       {
         "choiceId": "B",
@@ -22328,12 +20371,7 @@
               "사회성": -3
             }
           }
-        ],
-        "requiredStats": {
-          "경제력": 58
-        },
-        "conditionReview": "confirmed",
-        "conditionBasis": "semantic_flag_or_text_match"
+        ]
       },
       {
         "choiceId": "C",
@@ -22390,11 +20428,7 @@
               "운": -2
             }
           }
-        ],
-        "conditionReview": "fallback_choice",
-        "conditionBasis": "semantic_flag_or_text_match",
-        "alwaysAvailable": true,
-        "alwaysAvailableReason": "사건 내 최소 한 선택지는 항상 실행 가능해야 함"
+        ]
       }
     ],
     "priority": 0,
