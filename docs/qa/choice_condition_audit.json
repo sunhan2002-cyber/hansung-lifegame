@@ -2,22 +2,14 @@
   "metrics": {
     "eventCount": 209,
     "choiceCount": 609,
-    "explicitConditionCount": 54,
-    "explicitConditionRate": 8.87,
-    "missingConditionCount": 555,
-    "reviewRequiredCount": 460,
-    "candidateConditionCount": 236,
-    "ambiguousConditionCount": 224,
-    "infantUnconditionalCount": 95,
-    "conditionStatCandidates": {
-      "행복": 66,
-      "사회성": 63,
-      "운": 21,
-      "경제력": 21,
-      "지력": 41,
-      "운동능력": 9,
-      "건강": 15
-    },
+    "explicitConditionCount": 609,
+    "explicitConditionRate": 100.0,
+    "missingConditionCount": 0,
+    "reviewRequiredCount": 0,
+    "candidateConditionCount": 0,
+    "ambiguousConditionCount": 0,
+    "infantUnconditionalCount": 0,
+    "conditionStatCandidates": {},
     "invalidConditionCount": 0,
     "allChoicesLockedEventCount": 0,
     "allChoicesLockedEvents": []
@@ -29,8 +21,10 @@
       "periods": [
         "INFANT"
       ],
-      "category": "infant_unconditional",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "건강": 4
       },
@@ -43,8 +37,10 @@
       "periods": [
         "INFANT"
       ],
-      "category": "infant_unconditional",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "행복": 2
       },
@@ -57,8 +53,10 @@
       "periods": [
         "INFANT"
       ],
-      "category": "infant_unconditional",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "지력": 2,
         "사회성": 1
@@ -72,8 +70,10 @@
       "periods": [
         "INFANT"
       ],
-      "category": "infant_unconditional",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "건강": 2
       },
@@ -86,8 +86,10 @@
       "periods": [
         "INFANT"
       ],
-      "category": "infant_unconditional",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "사회성": 2
       },
@@ -100,8 +102,10 @@
       "periods": [
         "INFANT"
       ],
-      "category": "infant_unconditional",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "지력": 4
       },
@@ -114,8 +118,10 @@
       "periods": [
         "INFANT"
       ],
-      "category": "infant_unconditional",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "운": 1
       },
@@ -128,8 +134,10 @@
       "periods": [
         "INFANT"
       ],
-      "category": "infant_unconditional",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "지력": 1,
         "운동능력": 1
@@ -143,8 +151,10 @@
       "periods": [
         "INFANT"
       ],
-      "category": "infant_unconditional",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "사회성": 2
       },
@@ -157,8 +167,10 @@
       "periods": [
         "INFANT"
       ],
-      "category": "infant_unconditional",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "사회성": 3
       },
@@ -171,8 +183,10 @@
       "periods": [
         "INFANT"
       ],
-      "category": "infant_unconditional",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "행복": 2
       },
@@ -185,8 +199,10 @@
       "periods": [
         "INFANT"
       ],
-      "category": "infant_unconditional",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "운동능력": 3,
         "행복": 2
@@ -200,8 +216,10 @@
       "periods": [
         "INFANT"
       ],
-      "category": "infant_unconditional",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "건강": 1
       },
@@ -214,8 +232,10 @@
       "periods": [
         "INFANT"
       ],
-      "category": "infant_unconditional",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "운동능력": 1,
         "행복": 2
@@ -229,8 +249,10 @@
       "periods": [
         "INFANT"
       ],
-      "category": "infant_unconditional",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "건강": 3,
         "사회성": 1
@@ -244,8 +266,10 @@
       "periods": [
         "INFANT"
       ],
-      "category": "infant_unconditional",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "행복": 2
       },
@@ -258,8 +282,10 @@
       "periods": [
         "INFANT"
       ],
-      "category": "infant_unconditional",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "사회성": 2,
         "행복": 1
@@ -273,8 +299,10 @@
       "periods": [
         "INFANT"
       ],
-      "category": "infant_unconditional",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "행복": 4,
         "지력": 2
@@ -288,8 +316,10 @@
       "periods": [
         "INFANT"
       ],
-      "category": "infant_unconditional",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "지력": 4,
         "사회성": 1
@@ -303,8 +333,10 @@
       "periods": [
         "INFANT"
       ],
-      "category": "infant_unconditional",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "운": 4,
         "사회성": 1
@@ -318,8 +350,10 @@
       "periods": [
         "INFANT"
       ],
-      "category": "infant_unconditional",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "건강": 4
       },
@@ -332,8 +366,10 @@
       "periods": [
         "INFANT"
       ],
-      "category": "infant_unconditional",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "운동능력": 2,
         "건강": 2
@@ -347,8 +383,10 @@
       "periods": [
         "INFANT"
       ],
-      "category": "infant_unconditional",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "건강": 4,
         "운": 1
@@ -362,8 +400,10 @@
       "periods": [
         "INFANT"
       ],
-      "category": "infant_unconditional",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "사회성": 3
       },
@@ -376,8 +416,10 @@
       "periods": [
         "INFANT"
       ],
-      "category": "infant_unconditional",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "사회성": 3
       },
@@ -390,8 +432,10 @@
       "periods": [
         "INFANT"
       ],
-      "category": "infant_unconditional",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "운": 3,
         "행복": 2
@@ -405,8 +449,10 @@
       "periods": [
         "INFANT"
       ],
-      "category": "infant_unconditional",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "운동능력": 4,
         "행복": 1
@@ -420,8 +466,10 @@
       "periods": [
         "INFANT"
       ],
-      "category": "infant_unconditional",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "건강": 2,
         "지력": 1
@@ -435,8 +483,10 @@
       "periods": [
         "INFANT"
       ],
-      "category": "infant_unconditional",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "운동능력": 1,
         "행복": 1
@@ -450,8 +500,10 @@
       "periods": [
         "INFANT"
       ],
-      "category": "infant_unconditional",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "지력": 4
       },
@@ -464,8 +516,10 @@
       "periods": [
         "INFANT"
       ],
-      "category": "infant_unconditional",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "운동능력": 1,
         "행복": 2
@@ -479,8 +533,10 @@
       "periods": [
         "INFANT"
       ],
-      "category": "infant_unconditional",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "운동능력": 4,
         "행복": 2
@@ -494,8 +550,10 @@
       "periods": [
         "INFANT"
       ],
-      "category": "infant_unconditional",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "행복": 1,
         "건강": 1
@@ -509,8 +567,10 @@
       "periods": [
         "INFANT"
       ],
-      "category": "infant_unconditional",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "운": 2,
         "사회성": 1
@@ -524,8 +584,10 @@
       "periods": [
         "INFANT"
       ],
-      "category": "infant_unconditional",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "사회성": 4
       },
@@ -538,8 +600,10 @@
       "periods": [
         "INFANT"
       ],
-      "category": "infant_unconditional",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "행복": 1
       },
@@ -552,8 +616,10 @@
       "periods": [
         "INFANT"
       ],
-      "category": "infant_unconditional",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "행복": 2,
         "운": 1
@@ -567,8 +633,10 @@
       "periods": [
         "INFANT"
       ],
-      "category": "infant_unconditional",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "지력": 2,
         "사회성": 1
@@ -582,8 +650,10 @@
       "periods": [
         "INFANT"
       ],
-      "category": "infant_unconditional",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "행복": 4,
         "운": 1
@@ -597,8 +667,10 @@
       "periods": [
         "INFANT"
       ],
-      "category": "infant_unconditional",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "지력": 1
       },
@@ -611,8 +683,10 @@
       "periods": [
         "INFANT"
       ],
-      "category": "infant_unconditional",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "운동능력": 2,
         "사회성": 2
@@ -626,8 +700,10 @@
       "periods": [
         "INFANT"
       ],
-      "category": "infant_unconditional",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "지력": 1,
         "행복": 2
@@ -641,8 +717,10 @@
       "periods": [
         "INFANT"
       ],
-      "category": "infant_unconditional",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "지력": 2
       },
@@ -655,8 +733,10 @@
       "periods": [
         "INFANT"
       ],
-      "category": "infant_unconditional",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "행복": 2
       },
@@ -669,8 +749,10 @@
       "periods": [
         "INFANT"
       ],
-      "category": "infant_unconditional",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "운동능력": 1
       },
@@ -683,8 +765,10 @@
       "periods": [
         "INFANT"
       ],
-      "category": "infant_unconditional",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "행복": 3
       },
@@ -697,8 +781,10 @@
       "periods": [
         "INFANT"
       ],
-      "category": "infant_unconditional",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "사회성": 4
       },
@@ -711,8 +797,10 @@
       "periods": [
         "INFANT"
       ],
-      "category": "infant_unconditional",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "지력": 2,
         "행복": 1
@@ -726,8 +814,10 @@
       "periods": [
         "INFANT"
       ],
-      "category": "infant_unconditional",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "행복": 2,
         "운동능력": 1
@@ -741,8 +831,10 @@
       "periods": [
         "INFANT"
       ],
-      "category": "infant_unconditional",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "사회성": 4
       },
@@ -755,8 +847,10 @@
       "periods": [
         "INFANT"
       ],
-      "category": "infant_unconditional",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "행복": 1
       },
@@ -769,8 +863,10 @@
       "periods": [
         "INFANT"
       ],
-      "category": "infant_unconditional",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "지력": 2,
         "운": 1
@@ -784,8 +880,10 @@
       "periods": [
         "INFANT"
       ],
-      "category": "infant_unconditional",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "사회성": 4
       },
@@ -798,8 +896,10 @@
       "periods": [
         "INFANT"
       ],
-      "category": "infant_unconditional",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "행복": 1
       },
@@ -812,8 +912,10 @@
       "periods": [
         "INFANT"
       ],
-      "category": "infant_unconditional",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "사회성": 2,
         "행복": 1
@@ -827,8 +929,10 @@
       "periods": [
         "INFANT"
       ],
-      "category": "infant_unconditional",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "사회성": 2,
         "행복": 2
@@ -842,8 +946,10 @@
       "periods": [
         "INFANT"
       ],
-      "category": "infant_unconditional",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "지력": 2,
         "행복": 1
@@ -857,8 +963,10 @@
       "periods": [
         "INFANT"
       ],
-      "category": "infant_unconditional",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "사회성": 2
       },
@@ -871,8 +979,10 @@
       "periods": [
         "INFANT"
       ],
-      "category": "infant_unconditional",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "운동능력": 1,
         "행복": 1
@@ -886,8 +996,10 @@
       "periods": [
         "INFANT"
       ],
-      "category": "infant_unconditional",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "행복": 2
       },
@@ -900,8 +1012,10 @@
       "periods": [
         "INFANT"
       ],
-      "category": "infant_unconditional",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "건강": 2
       },
@@ -914,8 +1028,10 @@
       "periods": [
         "INFANT"
       ],
-      "category": "infant_unconditional",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "행복": 3
       },
@@ -928,8 +1044,10 @@
       "periods": [
         "INFANT"
       ],
-      "category": "infant_unconditional",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "지력": 2
       },
@@ -942,8 +1060,10 @@
       "periods": [
         "INFANT"
       ],
-      "category": "infant_unconditional",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "운동능력": 2
       },
@@ -956,8 +1076,10 @@
       "periods": [
         "INFANT"
       ],
-      "category": "infant_unconditional",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "행복": 2
       },
@@ -970,8 +1092,10 @@
       "periods": [
         "INFANT"
       ],
-      "category": "infant_unconditional",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "지력": 2
       },
@@ -984,8 +1108,10 @@
       "periods": [
         "INFANT"
       ],
-      "category": "infant_unconditional",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "행복": 3
       },
@@ -998,8 +1124,10 @@
       "periods": [
         "INFANT"
       ],
-      "category": "infant_unconditional",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "사회성": 3
       },
@@ -1012,8 +1140,10 @@
       "periods": [
         "INFANT"
       ],
-      "category": "infant_unconditional",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "운동능력": 3
       },
@@ -1026,8 +1156,10 @@
       "periods": [
         "INFANT"
       ],
-      "category": "infant_unconditional",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "사회성": 2
       },
@@ -1040,8 +1172,10 @@
       "periods": [
         "INFANT"
       ],
-      "category": "infant_unconditional",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "운": 2,
         "행복": 1
@@ -1055,8 +1189,10 @@
       "periods": [
         "INFANT"
       ],
-      "category": "infant_unconditional",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "운동능력": 2,
         "지력": 1
@@ -1070,8 +1206,10 @@
       "periods": [
         "INFANT"
       ],
-      "category": "infant_unconditional",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "사회성": 2
       },
@@ -1084,8 +1222,10 @@
       "periods": [
         "INFANT"
       ],
-      "category": "infant_unconditional",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "행복": 3
       },
@@ -1098,8 +1238,10 @@
       "periods": [
         "INFANT"
       ],
-      "category": "infant_unconditional",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "지력": 3
       },
@@ -1112,8 +1254,10 @@
       "periods": [
         "INFANT"
       ],
-      "category": "infant_unconditional",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "사회성": 2
       },
@@ -1126,8 +1270,10 @@
       "periods": [
         "INFANT"
       ],
-      "category": "infant_unconditional",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "지력": 2,
         "행복": 2
@@ -1141,8 +1287,10 @@
       "periods": [
         "INFANT"
       ],
-      "category": "infant_unconditional",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "사회성": 3
       },
@@ -1155,8 +1303,10 @@
       "periods": [
         "INFANT"
       ],
-      "category": "infant_unconditional",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "행복": 2
       },
@@ -1169,8 +1319,10 @@
       "periods": [
         "INFANT"
       ],
-      "category": "infant_unconditional",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "사회성": 2,
         "행복": 1
@@ -1184,8 +1336,10 @@
       "periods": [
         "INFANT"
       ],
-      "category": "infant_unconditional",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "건강": 2
       },
@@ -1198,8 +1352,10 @@
       "periods": [
         "INFANT"
       ],
-      "category": "infant_unconditional",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "행복": 1
       },
@@ -1212,8 +1368,10 @@
       "periods": [
         "INFANT"
       ],
-      "category": "infant_unconditional",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "사회성": 2
       },
@@ -1226,8 +1384,10 @@
       "periods": [
         "INFANT"
       ],
-      "category": "infant_unconditional",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "행복": 2
       },
@@ -1240,8 +1400,10 @@
       "periods": [
         "CHILD"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "지력": 3,
         "운": 1
@@ -1255,8 +1417,10 @@
       "periods": [
         "CHILD"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "운동능력": 4,
         "사회성": 3
@@ -1272,7 +1436,7 @@
       ],
       "category": "explicit",
       "conditionFields": [
-        "requiredStats"
+        "alwaysAvailable"
       ],
       "positiveStats": {
         "사회성": 2,
@@ -1287,12 +1451,14 @@
       "periods": [
         "CHILD"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "행복": 1
       },
-      "suggestedThreshold": 52,
+      "suggestedThreshold": null,
       "label": "자는 척한다."
     },
     {
@@ -1301,12 +1467,14 @@
       "periods": [
         "CHILD"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "사회성": 3
       },
-      "suggestedThreshold": 52,
+      "suggestedThreshold": null,
       "label": "가서 열심히 도와드린다."
     },
     {
@@ -1315,12 +1483,14 @@
       "periods": [
         "CHILD"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "운": 1
       },
-      "suggestedThreshold": 52,
+      "suggestedThreshold": null,
       "label": "\"나 지금 숙제 중이야!\" (게임 소리를 켜 둔 채로)"
     },
     {
@@ -1329,8 +1499,10 @@
       "periods": [
         "CHILD"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "사회성": 4,
         "지력": 1
@@ -1361,8 +1533,10 @@
       "periods": [
         "CHILD"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "사회성": 3,
         "운": 1
@@ -1376,8 +1550,10 @@
       "periods": [
         "CHILD"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "행복": 3,
         "지력": 2
@@ -1391,8 +1567,10 @@
       "periods": [
         "CHILD"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "운동능력": 4,
         "건강": 2
@@ -1406,8 +1584,10 @@
       "periods": [
         "CHILD"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "행복": 4,
         "사회성": 2
@@ -1437,12 +1617,14 @@
       "periods": [
         "CHILD"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "행복": 4
       },
-      "suggestedThreshold": 52,
+      "suggestedThreshold": null,
       "label": "만화부터 본다."
     },
     {
@@ -1451,8 +1633,10 @@
       "periods": [
         "CHILD"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "행복": 1,
         "지력": 1
@@ -1466,8 +1650,10 @@
       "periods": [
         "CHILD"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "사회성": 2,
         "경제력": 1
@@ -1481,12 +1667,14 @@
       "periods": [
         "CHILD"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "행복": 2
       },
-      "suggestedThreshold": 52,
+      "suggestedThreshold": null,
       "label": "거스름돈으로 사탕을 산다."
     },
     {
@@ -1495,8 +1683,10 @@
       "periods": [
         "CHILD"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "행복": 1,
         "운": 1
@@ -1510,12 +1700,14 @@
       "periods": [
         "CHILD"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "행복": 3
       },
-      "suggestedThreshold": 52,
+      "suggestedThreshold": null,
       "label": "\"공룡이요.\""
     },
     {
@@ -1524,12 +1716,14 @@
       "periods": [
         "CHILD"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "사회성": 1
       },
-      "suggestedThreshold": 52,
+      "suggestedThreshold": null,
       "label": "\"아직 모르겠어요.\""
     },
     {
@@ -1538,8 +1732,10 @@
       "periods": [
         "CHILD"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "지력": 2,
         "사회성": 1
@@ -1553,12 +1749,14 @@
       "periods": [
         "CHILD"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "경제력": 4
       },
-      "suggestedThreshold": 52,
+      "suggestedThreshold": null,
       "label": "저금통에 넣는다."
     },
     {
@@ -1567,8 +1765,10 @@
       "periods": [
         "CHILD"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "운": 3,
         "행복": 1
@@ -1582,8 +1782,10 @@
       "periods": [
         "CHILD"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "운동능력": 1,
         "운": 1
@@ -1597,8 +1799,10 @@
       "periods": [
         "CHILD"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "사회성": 2,
         "지력": 1
@@ -1612,12 +1816,14 @@
       "periods": [
         "CHILD"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "지력": 1
       },
-      "suggestedThreshold": 52,
+      "suggestedThreshold": null,
       "label": "\"아빠?!\" 하고 불을 켠다."
     },
     {
@@ -1626,8 +1832,10 @@
       "periods": [
         "CHILD"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "행복": 3,
         "운": 1
@@ -1658,12 +1866,14 @@
       "periods": [
         "CHILD"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "지력": 4
       },
-      "suggestedThreshold": 52,
+      "suggestedThreshold": null,
       "label": "문화부."
     },
     {
@@ -1672,8 +1882,10 @@
       "periods": [
         "CHILD"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "행복": 3,
         "사회성": 1
@@ -1721,8 +1933,10 @@
       "periods": [
         "CHILD"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "운동능력": 1,
         "건강": 2
@@ -1770,12 +1984,14 @@
       "periods": [
         "CHILD"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "지력": 3
       },
-      "suggestedThreshold": 52,
+      "suggestedThreshold": null,
       "label": "바둑반."
     },
     {
@@ -1784,8 +2000,10 @@
       "periods": [
         "CHILD"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "행복": 2,
         "지력": 1
@@ -1799,8 +2017,10 @@
       "periods": [
         "CHILD"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "사회성": 2,
         "행복": 1
@@ -1814,12 +2034,14 @@
       "periods": [
         "CHILD"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "사회성": 3
       },
-      "suggestedThreshold": 52,
+      "suggestedThreshold": null,
       "label": "연극반."
     },
     {
@@ -1828,8 +2050,10 @@
       "periods": [
         "CHILD"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "행복": 4,
         "사회성": 1
@@ -1843,12 +2067,14 @@
       "periods": [
         "CHILD"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "사회성": 2
       },
-      "suggestedThreshold": 52,
+      "suggestedThreshold": null,
       "label": "가끔 놀러 가서 본다."
     },
     {
@@ -1857,8 +2083,10 @@
       "periods": [
         "CHILD"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "행복": 3,
         "운": 1
@@ -1872,12 +2100,14 @@
       "periods": [
         "CHILD"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "사회성": 4
       },
-      "suggestedThreshold": 52,
+      "suggestedThreshold": null,
       "label": "\"그거 내 거야. 돌려줘.\""
     },
     {
@@ -1886,12 +2116,14 @@
       "periods": [
         "CHILD"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "행복": 1
       },
-      "suggestedThreshold": 52,
+      "suggestedThreshold": null,
       "label": "선생님께 이른다."
     },
     {
@@ -1900,8 +2132,10 @@
       "periods": [
         "CHILD"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "운": 1,
         "행복": 1
@@ -1915,12 +2149,14 @@
       "periods": [
         "CHILD"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "지력": 3
       },
-      "suggestedThreshold": 52,
+      "suggestedThreshold": null,
       "label": "솔직하게 몰아서 쓴다."
     },
     {
@@ -1929,8 +2165,10 @@
       "periods": [
         "CHILD"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "지력": 1,
         "행복": 2
@@ -1960,8 +2198,10 @@
       "periods": [
         "CHILD"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "운동능력": 4,
         "행복": 2
@@ -1991,8 +2231,10 @@
       "periods": [
         "CHILD"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "사회성": 2,
         "행복": 1
@@ -2006,12 +2248,14 @@
       "periods": [
         "CHILD"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "사회성": 4
       },
-      "suggestedThreshold": 52,
+      "suggestedThreshold": null,
       "label": "수락한다."
     },
     {
@@ -2020,12 +2264,14 @@
       "periods": [
         "CHILD"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "운동능력": 2
       },
-      "suggestedThreshold": 52,
+      "suggestedThreshold": null,
       "label": "\"저는 그냥 뛸래요.\""
     },
     {
@@ -2034,8 +2280,10 @@
       "periods": [
         "CHILD"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "사회성": 3,
         "행복": 1
@@ -2049,8 +2297,10 @@
       "periods": [
         "CHILD"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "지력": 3,
         "운동능력": 1
@@ -2064,8 +2314,10 @@
       "periods": [
         "CHILD"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "지력": 1,
         "행복": 3
@@ -2079,12 +2331,14 @@
       "periods": [
         "CHILD"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "지력": 4
       },
-      "suggestedThreshold": 52,
+      "suggestedThreshold": null,
       "label": "끝까지 분해했다가 다시 조립한다."
     },
     {
@@ -2093,8 +2347,10 @@
       "periods": [
         "CHILD"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "행복": 2,
         "지력": 1
@@ -2124,12 +2380,14 @@
       "periods": [
         "CHILD"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "지력": 5
       },
-      "suggestedThreshold": 52,
+      "suggestedThreshold": null,
       "label": "한 달 20권에 도전한다."
     },
     {
@@ -2155,8 +2413,10 @@
       "periods": [
         "CHILD"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "사회성": 3,
         "지력": 2
@@ -2170,8 +2430,10 @@
       "periods": [
         "CHILD"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "사회성": 4,
         "행복": 3
@@ -2201,8 +2463,10 @@
       "periods": [
         "CHILD"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "사회성": 3,
         "행복": 1
@@ -2216,8 +2480,10 @@
       "periods": [
         "CHILD"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "건강": 4,
         "사회성": 1
@@ -2231,8 +2497,10 @@
       "periods": [
         "CHILD"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "사회성": 1,
         "행복": 1
@@ -2246,12 +2514,14 @@
       "periods": [
         "CHILD"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "건강": 2
       },
-      "suggestedThreshold": 52,
+      "suggestedThreshold": null,
       "label": "밥 밑에 숨긴다."
     },
     {
@@ -2277,12 +2547,14 @@
       "periods": [
         "CHILD"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "행복": 3
       },
-      "suggestedThreshold": 52,
+      "suggestedThreshold": null,
       "label": "게임 랭킹을 노린다."
     },
     {
@@ -2291,12 +2563,14 @@
       "periods": [
         "CHILD"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "사회성": 4
       },
-      "suggestedThreshold": 52,
+      "suggestedThreshold": null,
       "label": "전학생 옆에 앉는다."
     },
     {
@@ -2323,7 +2597,7 @@
       ],
       "category": "explicit",
       "conditionFields": [
-        "requiredStats"
+        "alwaysAvailable"
       ],
       "positiveStats": {
         "사회성": 4,
@@ -2338,12 +2612,14 @@
       "periods": [
         "CHILD"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "사회성": 2
       },
-      "suggestedThreshold": 52,
+      "suggestedThreshold": null,
       "label": "\"가지 마.\""
     },
     {
@@ -2352,12 +2628,14 @@
       "periods": [
         "CHILD"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "지력": 1
       },
-      "suggestedThreshold": 52,
+      "suggestedThreshold": null,
       "label": "괜찮은 척 \"잘 가.\""
     },
     {
@@ -2366,12 +2644,14 @@
       "periods": [
         "CHILD"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "사회성": 3
       },
-      "suggestedThreshold": 52,
+      "suggestedThreshold": null,
       "label": "\"우리 타임캡슐 묻자.\""
     },
     {
@@ -2380,8 +2660,10 @@
       "periods": [
         "CHILD"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "지력": 2,
         "건강": 1
@@ -2395,12 +2677,14 @@
       "periods": [
         "CHILD"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "행복": 3
       },
-      "suggestedThreshold": 52,
+      "suggestedThreshold": null,
       "label": "계약서 수정을 요구한다."
     },
     {
@@ -2409,8 +2693,10 @@
       "periods": [
         "CHILD"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "운": 2,
         "행복": 1
@@ -2424,12 +2710,14 @@
       "periods": [
         "CHILD"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "행복": 1
       },
-      "suggestedThreshold": 52,
+      "suggestedThreshold": null,
       "label": "\"엄마!\""
     },
     {
@@ -2438,8 +2726,10 @@
       "periods": [
         "CHILD"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "사회성": 2,
         "운": 1
@@ -2453,8 +2743,10 @@
       "periods": [
         "CHILD"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "운": 1,
         "행복": 1
@@ -2468,8 +2760,10 @@
       "periods": [
         "CHILD"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "운동능력": 3,
         "행복": 4
@@ -2500,12 +2794,14 @@
       "periods": [
         "CHILD"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "운": 1
       },
-      "suggestedThreshold": 52,
+      "suggestedThreshold": null,
       "label": "드리블로 시간을 끈다."
     },
     {
@@ -2514,8 +2810,10 @@
       "periods": [
         "CHILD"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "운동능력": 3,
         "행복": 3
@@ -2529,8 +2827,10 @@
       "periods": [
         "CHILD"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "사회성": 2,
         "운동능력": 1
@@ -2544,12 +2844,14 @@
       "periods": [
         "CHILD"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "사회성": 2
       },
-      "suggestedThreshold": 52,
+      "suggestedThreshold": null,
       "label": "수경을 벗어 던지고 뛴다."
     },
     {
@@ -2575,12 +2877,14 @@
       "periods": [
         "CHILD"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "운": 1
       },
-      "suggestedThreshold": 52,
+      "suggestedThreshold": null,
       "label": "숫자를 살짝 고친다."
     },
     {
@@ -2589,8 +2893,10 @@
       "periods": [
         "CHILD"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "지력": 2,
         "행복": 1
@@ -2604,8 +2910,10 @@
       "periods": [
         "CHILD"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "사회성": 3,
         "행복": 1
@@ -2619,12 +2927,14 @@
       "periods": [
         "CHILD"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "지력": 4
       },
-      "suggestedThreshold": 52,
+      "suggestedThreshold": null,
       "label": "\"숙제는 필요합니다.\" 논리로 밀어붙인다."
     },
     {
@@ -2633,8 +2943,10 @@
       "periods": [
         "CHILD"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "사회성": 2,
         "운": 1
@@ -2648,12 +2960,14 @@
       "periods": [
         "CHILD"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "지력": 3
       },
-      "suggestedThreshold": 52,
+      "suggestedThreshold": null,
       "label": "정석대로 버틴다."
     },
     {
@@ -2662,8 +2976,10 @@
       "periods": [
         "CHILD"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "지력": 2,
         "운": 2
@@ -2677,12 +2993,14 @@
       "periods": [
         "CHILD"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "운": 3
       },
-      "suggestedThreshold": 52,
+      "suggestedThreshold": null,
       "label": "\"화장실 좀…\" 하고 시간을 번다."
     },
     {
@@ -2691,8 +3009,10 @@
       "periods": [
         "CHILD"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "지력": 1,
         "행복": 1
@@ -2706,8 +3026,10 @@
       "periods": [
         "CHILD"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "행복": 3,
         "운": 1
@@ -2723,7 +3045,7 @@
       ],
       "category": "explicit",
       "conditionFields": [
-        "requiredStats"
+        "alwaysAvailable"
       ],
       "positiveStats": {
         "사회성": 3
@@ -2737,8 +3059,10 @@
       "periods": [
         "CHILD"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "사회성": 3,
         "행복": 2
@@ -2752,8 +3076,10 @@
       "periods": [
         "CHILD"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "사회성": 2,
         "지력": 1
@@ -2767,8 +3093,10 @@
       "periods": [
         "CHILD"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "행복": 2,
         "운": 1
@@ -2782,8 +3110,10 @@
       "periods": [
         "CHILD"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "사회성": 4,
         "행복": 2
@@ -2797,8 +3127,10 @@
       "periods": [
         "CHILD"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "사회성": 3,
         "행복": 1
@@ -2812,8 +3144,10 @@
       "periods": [
         "CHILD"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "행복": 3,
         "운": 1
@@ -2827,8 +3161,10 @@
       "periods": [
         "CHILD"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "운동능력": 3,
         "행복": 4
@@ -2842,8 +3178,10 @@
       "periods": [
         "CHILD"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "사회성": 3,
         "행복": 1
@@ -2857,8 +3195,10 @@
       "periods": [
         "CHILD"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "운": 1,
         "행복": 1
@@ -2872,8 +3212,10 @@
       "periods": [
         "CHILD"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "지력": 2,
         "사회성": 1
@@ -2887,12 +3229,14 @@
       "periods": [
         "CHILD"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "행복": 3
       },
-      "suggestedThreshold": 52,
+      "suggestedThreshold": null,
       "label": "취미로만 친다."
     },
     {
@@ -2901,8 +3245,10 @@
       "periods": [
         "CHILD"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "운동능력": 2,
         "행복": 3
@@ -2916,12 +3262,14 @@
       "periods": [
         "CHILD"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "지력": 4
       },
-      "suggestedThreshold": 52,
+      "suggestedThreshold": null,
       "label": "박물관!"
     },
     {
@@ -2930,8 +3278,10 @@
       "periods": [
         "CHILD"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "건강": 1,
         "행복": 2
@@ -2945,12 +3295,14 @@
       "periods": [
         "CHILD"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "지력": 3
       },
-      "suggestedThreshold": 52,
+      "suggestedThreshold": null,
       "label": "손을 든다."
     },
     {
@@ -2959,8 +3311,10 @@
       "periods": [
         "CHILD"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "지력": 2,
         "행복": 2
@@ -2974,12 +3328,14 @@
       "periods": [
         "CHILD"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "운": 1
       },
-      "suggestedThreshold": 52,
+      "suggestedThreshold": null,
       "label": "계산기를 몰래 꺼낸다."
     },
     {
@@ -2988,12 +3344,14 @@
       "periods": [
         "CHILD"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "사회성": 3
       },
-      "suggestedThreshold": 52,
+      "suggestedThreshold": null,
       "label": "열 번만 타고 비켜 준다."
     },
     {
@@ -3002,12 +3360,14 @@
       "periods": [
         "CHILD"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "행복": 3
       },
-      "suggestedThreshold": 52,
+      "suggestedThreshold": null,
       "label": "해 질 때까지 탄다."
     },
     {
@@ -3016,8 +3376,10 @@
       "periods": [
         "CHILD"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "사회성": 2,
         "행복": 1
@@ -3031,12 +3393,14 @@
       "periods": [
         "CHILD"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "운동능력": 3
       },
-      "suggestedThreshold": 52,
+      "suggestedThreshold": null,
       "label": "힘껏 페달을 밟는다."
     },
     {
@@ -3045,8 +3409,10 @@
       "periods": [
         "CHILD"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "운동능력": 1,
         "행복": 1
@@ -3060,12 +3426,14 @@
       "periods": [
         "CHILD"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "행복": 2
       },
-      "suggestedThreshold": 52,
+      "suggestedThreshold": null,
       "label": "\"그냥 킥보드 탈래.\""
     },
     {
@@ -3074,12 +3442,14 @@
       "periods": [
         "CHILD"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "행복": 3
       },
-      "suggestedThreshold": 52,
+      "suggestedThreshold": null,
       "label": "한 마리 산다."
     },
     {
@@ -3088,12 +3458,14 @@
       "periods": [
         "CHILD"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "지력": 1
       },
-      "suggestedThreshold": 52,
+      "suggestedThreshold": null,
       "label": "구경만 한다."
     },
     {
@@ -3102,12 +3474,14 @@
       "periods": [
         "CHILD"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "사회성": 2
       },
-      "suggestedThreshold": 52,
+      "suggestedThreshold": null,
       "label": "엄마에게 전화한다."
     },
     {
@@ -3116,12 +3490,14 @@
       "periods": [
         "CHILD"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "건강": 2
       },
-      "suggestedThreshold": 52,
+      "suggestedThreshold": null,
       "label": "창문을 연다."
     },
     {
@@ -3130,12 +3506,14 @@
       "periods": [
         "CHILD"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "지력": 1
       },
-      "suggestedThreshold": 52,
+      "suggestedThreshold": null,
       "label": "꾹 참는다."
     },
     {
@@ -3144,12 +3522,14 @@
       "periods": [
         "CHILD"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "건강": 3
       },
-      "suggestedThreshold": 52,
+      "suggestedThreshold": null,
       "label": "선생님 옆 앞자리로 옮긴다."
     },
     {
@@ -3158,8 +3538,10 @@
       "periods": [
         "CHILD"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "지력": 2,
         "사회성": 2
@@ -3173,12 +3555,14 @@
       "periods": [
         "CHILD"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "행복": 3
       },
-      "suggestedThreshold": 52,
+      "suggestedThreshold": null,
       "label": "네 컷 만화를 그린다."
     },
     {
@@ -3187,12 +3571,14 @@
       "periods": [
         "CHILD"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "행복": 1
       },
-      "suggestedThreshold": 52,
+      "suggestedThreshold": null,
       "label": "\"저는 안 할래요.\""
     },
     {
@@ -3201,12 +3587,14 @@
       "periods": [
         "CHILD"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "행복": 2
       },
-      "suggestedThreshold": 52,
+      "suggestedThreshold": null,
       "label": "매점으로 달린다."
     },
     {
@@ -3231,12 +3619,14 @@
       "periods": [
         "CHILD"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "지력": 2
       },
-      "suggestedThreshold": 52,
+      "suggestedThreshold": null,
       "label": "다음 시간 숙제를 한다."
     },
     {
@@ -3245,12 +3635,14 @@
       "periods": [
         "CHILD"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "행복": 2
       },
-      "suggestedThreshold": 52,
+      "suggestedThreshold": null,
       "label": "불량식품을 산다."
     },
     {
@@ -3259,12 +3651,14 @@
       "periods": [
         "CHILD"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "경제력": 1
       },
-      "suggestedThreshold": 52,
+      "suggestedThreshold": null,
       "label": "저금통에 넣으려고 참는다."
     },
     {
@@ -3275,7 +3669,7 @@
       ],
       "category": "explicit",
       "conditionFields": [
-        "requiredStats"
+        "alwaysAvailable"
       ],
       "positiveStats": {
         "사회성": 2
@@ -3289,12 +3683,14 @@
       "periods": [
         "TEEN"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "경제력": 1
       },
-      "suggestedThreshold": 55,
+      "suggestedThreshold": null,
       "label": "그냥 입는다."
     },
     {
@@ -3303,12 +3699,14 @@
       "periods": [
         "TEEN"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "행복": 1
       },
-      "suggestedThreshold": 55,
+      "suggestedThreshold": null,
       "label": "소매만 줄인다."
     },
     {
@@ -3317,8 +3715,10 @@
       "periods": [
         "TEEN"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "사회성": 1,
         "행복": 1
@@ -3332,12 +3732,14 @@
       "periods": [
         "TEEN"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "지력": 1
       },
-      "suggestedThreshold": 55,
+      "suggestedThreshold": null,
       "label": "화장실에서 조용히 고쳐 입는다."
     },
     {
@@ -3346,8 +3748,10 @@
       "periods": [
         "TEEN"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "사회성": 2,
         "행복": 1
@@ -3361,12 +3765,14 @@
       "periods": [
         "TEEN"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "행복": 2
       },
-      "suggestedThreshold": 55,
+      "suggestedThreshold": null,
       "label": "하루 종일 그대로 다닌다."
     },
     {
@@ -3392,12 +3798,14 @@
       "periods": [
         "TEEN"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "지력": 4
       },
-      "suggestedThreshold": 55,
+      "suggestedThreshold": null,
       "label": "학술부 코딩반."
     },
     {
@@ -3406,8 +3814,10 @@
       "periods": [
         "TEEN"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "사회성": 3,
         "행복": 3
@@ -3421,12 +3831,14 @@
       "periods": [
         "TEEN"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "사회성": 1
       },
-      "suggestedThreshold": 55,
+      "suggestedThreshold": null,
       "label": "\"아 그래?\" 하고 넘어간다."
     },
     {
@@ -3435,12 +3847,14 @@
       "periods": [
         "TEEN"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "사회성": 2
       },
-      "suggestedThreshold": 55,
+      "suggestedThreshold": null,
       "label": "\"줄 서.\""
     },
     {
@@ -3449,8 +3863,10 @@
       "periods": [
         "TEEN"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "행복": 1,
         "사회성": 1
@@ -3464,12 +3880,14 @@
       "periods": [
         "TEEN"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "사회성": 3
       },
-      "suggestedThreshold": 55,
+      "suggestedThreshold": null,
       "label": "먼저 인사한다."
     },
     {
@@ -3478,12 +3896,14 @@
       "periods": [
         "TEEN"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "지력": 1
       },
-      "suggestedThreshold": 55,
+      "suggestedThreshold": null,
       "label": "서로 조용히 지낸다."
     },
     {
@@ -3492,8 +3912,10 @@
       "periods": [
         "TEEN"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "사회성": 2,
         "행복": 1
@@ -3507,8 +3929,10 @@
       "periods": [
         "TEEN"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "사회성": 2,
         "지력": 1
@@ -3522,8 +3946,10 @@
       "periods": [
         "TEEN"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "사회성": 4,
         "행복": 1
@@ -3537,12 +3963,14 @@
       "periods": [
         "TEEN"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "행복": 3
       },
-      "suggestedThreshold": 55,
+      "suggestedThreshold": null,
       "label": "노래를 한 곡 부른다."
     },
     {
@@ -3567,8 +3995,10 @@
       "periods": [
         "TEEN"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "사회성": 2,
         "행복": 2
@@ -3582,8 +4012,10 @@
       "periods": [
         "TEEN"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "사회성": 2,
         "지력": 2
@@ -3597,8 +4029,10 @@
       "periods": [
         "TEEN"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "사회성": 3,
         "운": 1
@@ -3612,12 +4046,14 @@
       "periods": [
         "TEEN"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "행복": 1
       },
-      "suggestedThreshold": 55,
+      "suggestedThreshold": null,
       "label": "문을 쾅 닫는다."
     },
     {
@@ -3626,12 +4062,14 @@
       "periods": [
         "TEEN"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "지력": 1
       },
-      "suggestedThreshold": 55,
+      "suggestedThreshold": null,
       "label": "\"이건 정리된 혼돈이야.\""
     },
     {
@@ -3640,8 +4078,10 @@
       "periods": [
         "TEEN"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "운동능력": 4,
         "건강": 1
@@ -3655,12 +4095,14 @@
       "periods": [
         "TEEN"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "행복": 1
       },
-      "suggestedThreshold": 55,
+      "suggestedThreshold": null,
       "label": "선생님이 볼 때만 뛴다."
     },
     {
@@ -3669,8 +4111,10 @@
       "periods": [
         "TEEN"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "건강": 1,
         "행복": 1
@@ -3684,12 +4128,14 @@
       "periods": [
         "TEEN"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "사회성": 3
       },
-      "suggestedThreshold": 55,
+      "suggestedThreshold": null,
       "label": "\"같이 써도 돼?\""
     },
     {
@@ -3698,12 +4144,14 @@
       "periods": [
         "TEEN"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "운동능력": 1
       },
-      "suggestedThreshold": 55,
+      "suggestedThreshold": null,
       "label": "괜찮다고 하고 뛰어간다."
     },
     {
@@ -3712,12 +4160,14 @@
       "periods": [
         "TEEN"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "행복": 2
       },
-      "suggestedThreshold": 55,
+      "suggestedThreshold": null,
       "label": "비가 그칠 때까지 기다린다."
     },
     {
@@ -3726,8 +4176,10 @@
       "periods": [
         "TEEN"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "행복": 3,
         "경제력": 1
@@ -3741,12 +4193,14 @@
       "periods": [
         "TEEN"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "사회성": 2
       },
-      "suggestedThreshold": 55,
+      "suggestedThreshold": null,
       "label": "28번째 'ㅋㅋㅋ'"
     },
     {
@@ -3755,8 +4209,10 @@
       "periods": [
         "TEEN"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "사회성": 1,
         "운": 1
@@ -3770,8 +4226,10 @@
       "periods": [
         "TEEN"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "사회성": 4,
         "행복": 3
@@ -3785,8 +4243,10 @@
       "periods": [
         "TEEN"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "지력": 1,
         "행복": 1
@@ -3800,8 +4260,10 @@
       "periods": [
         "TEEN"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "사회성": 3,
         "운": 1
@@ -3815,8 +4277,10 @@
       "periods": [
         "TEEN"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "지력": 4,
         "경제력": 1
@@ -3847,8 +4311,10 @@
       "periods": [
         "TEEN"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "사회성": 1,
         "운": 2
@@ -3862,8 +4328,10 @@
       "periods": [
         "TEEN"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "지력": 4,
         "사회성": 2
@@ -3877,8 +4345,10 @@
       "periods": [
         "TEEN"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "지력": 2,
         "사회성": 1
@@ -3909,12 +4379,14 @@
       "periods": [
         "TEEN"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "지력": 4
       },
-      "suggestedThreshold": 55,
+      "suggestedThreshold": null,
       "label": "특강."
     },
     {
@@ -3923,8 +4395,10 @@
       "periods": [
         "TEEN"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "경제력": 1,
         "행복": 2
@@ -3938,8 +4412,10 @@
       "periods": [
         "TEEN"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "사회성": 2,
         "행복": 1
@@ -3953,8 +4429,10 @@
       "periods": [
         "TEEN"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "사회성": 2,
         "지력": 1
@@ -3968,12 +4446,14 @@
       "periods": [
         "TEEN"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "경제력": 1
       },
-      "suggestedThreshold": 55,
+      "suggestedThreshold": null,
       "label": "모른 척 넘어간다."
     },
     {
@@ -3982,8 +4462,10 @@
       "periods": [
         "TEEN"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "지력": 2,
         "건강": 2
@@ -3997,12 +4479,14 @@
       "periods": [
         "TEEN"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "행복": 2
       },
-      "suggestedThreshold": 55,
+      "suggestedThreshold": null,
       "label": "몰래 계속한다."
     },
     {
@@ -4011,8 +4495,10 @@
       "periods": [
         "TEEN"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "사회성": 3,
         "운": 1
@@ -4026,8 +4512,10 @@
       "periods": [
         "TEEN"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "행복": 1,
         "사회성": 1
@@ -4041,12 +4529,14 @@
       "periods": [
         "TEEN"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "경제력": 1
       },
-      "suggestedThreshold": 55,
+      "suggestedThreshold": null,
       "label": "부모님께 부탁한다."
     },
     {
@@ -4055,12 +4545,14 @@
       "periods": [
         "TEEN"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "지력": 4
       },
-      "suggestedThreshold": 55,
+      "suggestedThreshold": null,
       "label": "인문계."
     },
     {
@@ -4069,8 +4561,10 @@
       "periods": [
         "TEEN"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "경제력": 4,
         "운동능력": 1
@@ -4086,7 +4580,7 @@
       ],
       "category": "explicit",
       "conditionFields": [
-        "requiredStats"
+        "alwaysAvailable"
       ],
       "positiveStats": {
         "행복": 4,
@@ -4101,8 +4595,10 @@
       "periods": [
         "TEEN"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "운동능력": 4,
         "행복": 2
@@ -4116,12 +4612,14 @@
       "periods": [
         "TEEN"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "지력": 4
       },
-      "suggestedThreshold": 55,
+      "suggestedThreshold": null,
       "label": "기말고사를 본다."
     },
     {
@@ -4130,8 +4628,10 @@
       "periods": [
         "TEEN"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "사회성": 3,
         "행복": 2
@@ -4145,12 +4645,14 @@
       "periods": [
         "TEEN"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "지력": 1
       },
-      "suggestedThreshold": 55,
+      "suggestedThreshold": null,
       "label": "\"글쎄, 그냥 집에 있을 듯.\""
     },
     {
@@ -4159,8 +4661,10 @@
       "periods": [
         "TEEN"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "사회성": 2,
         "운": 1
@@ -4174,8 +4678,10 @@
       "periods": [
         "TEEN"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "사회성": 4,
         "행복": 3
@@ -4189,12 +4695,14 @@
       "periods": [
         "TEEN"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "건강": 2
       },
-      "suggestedThreshold": 55,
+      "suggestedThreshold": null,
       "label": "방에서 잔다."
     },
     {
@@ -4203,8 +4711,10 @@
       "periods": [
         "TEEN"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "운": 2,
         "행복": 1
@@ -4218,12 +4728,14 @@
       "periods": [
         "TEEN"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "지력": 4
       },
-      "suggestedThreshold": 55,
+      "suggestedThreshold": null,
       "label": "이과."
     },
     {
@@ -4232,8 +4744,10 @@
       "periods": [
         "TEEN"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "사회성": 2,
         "행복": 1
@@ -4247,12 +4761,14 @@
       "periods": [
         "TEEN"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "운": 2
       },
-      "suggestedThreshold": 55,
+      "suggestedThreshold": null,
       "label": "사다리 타기로 정한다."
     },
     {
@@ -4261,12 +4777,14 @@
       "periods": [
         "TEEN"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "지력": 3
       },
-      "suggestedThreshold": 55,
+      "suggestedThreshold": null,
       "label": "손을 들고 말한다."
     },
     {
@@ -4275,8 +4793,10 @@
       "periods": [
         "TEEN"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "지력": 2,
         "사회성": 1
@@ -4292,7 +4812,7 @@
       ],
       "category": "explicit",
       "conditionFields": [
-        "requiredStats"
+        "alwaysAvailable"
       ],
       "positiveStats": {
         "지력": 1
@@ -4306,8 +4826,10 @@
       "periods": [
         "TEEN"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "사회성": 3,
         "경제력": 2
@@ -4321,12 +4843,14 @@
       "periods": [
         "TEEN"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "행복": 1
       },
-      "suggestedThreshold": 55,
+      "suggestedThreshold": null,
       "label": "점장님을 부른다."
     },
     {
@@ -4335,8 +4859,10 @@
       "periods": [
         "TEEN"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "사회성": 2,
         "행복": 1
@@ -4350,12 +4876,14 @@
       "periods": [
         "TEEN"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "사회성": 4
       },
-      "suggestedThreshold": 55,
+      "suggestedThreshold": null,
       "label": "바로 전화한다."
     },
     {
@@ -4364,12 +4892,14 @@
       "periods": [
         "TEEN"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "건강": 1
       },
-      "suggestedThreshold": 55,
+      "suggestedThreshold": null,
       "label": "\"내일 얘기하자\" 답장한다."
     },
     {
@@ -4378,8 +4908,10 @@
       "periods": [
         "TEEN"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "사회성": 4,
         "행복": 1
@@ -4393,12 +4925,14 @@
       "periods": [
         "TEEN"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "사회성": 3
       },
-      "suggestedThreshold": 55,
+      "suggestedThreshold": null,
       "label": "내려가서 창문을 두드린다."
     },
     {
@@ -4407,12 +4941,14 @@
       "periods": [
         "TEEN"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "지력": 1
       },
-      "suggestedThreshold": 55,
+      "suggestedThreshold": null,
       "label": "모른 척 커튼을 친다."
     },
     {
@@ -4421,8 +4957,10 @@
       "periods": [
         "TEEN"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "사회성": 2,
         "행복": 1
@@ -4436,12 +4974,14 @@
       "periods": [
         "TEEN"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "사회성": 2
       },
-      "suggestedThreshold": 55,
+      "suggestedThreshold": null,
       "label": "그대로 보여 드린다."
     },
     {
@@ -4450,12 +4990,14 @@
       "periods": [
         "TEEN"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "운": 1
       },
-      "suggestedThreshold": 55,
+      "suggestedThreshold": null,
       "label": "사인을 연습한다."
     },
     {
@@ -4464,8 +5006,10 @@
       "periods": [
         "TEEN"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "사회성": 1,
         "운": 2
@@ -4479,8 +5023,10 @@
       "periods": [
         "TEEN"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "운동능력": 2,
         "행복": 1
@@ -4510,12 +5056,14 @@
       "periods": [
         "TEEN"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "건강": 2
       },
-      "suggestedThreshold": 55,
+      "suggestedThreshold": null,
       "label": "그냥 급식을 먹는다."
     },
     {
@@ -4524,12 +5072,14 @@
       "periods": [
         "TEEN"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "사회성": 1
       },
-      "suggestedThreshold": 55,
+      "suggestedThreshold": null,
       "label": "무난한 흰 티에 한 표."
     },
     {
@@ -4538,12 +5088,14 @@
       "periods": [
         "TEEN"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "행복": 3
       },
-      "suggestedThreshold": 55,
+      "suggestedThreshold": null,
       "label": "공룡 잠옷에 한 표."
     },
     {
@@ -4552,12 +5104,14 @@
       "periods": [
         "TEEN"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "행복": 2
       },
-      "suggestedThreshold": 55,
+      "suggestedThreshold": null,
       "label": "각자 자유에 한 표."
     },
     {
@@ -4566,12 +5120,14 @@
       "periods": [
         "TEEN"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "지력": 3
       },
-      "suggestedThreshold": 55,
+      "suggestedThreshold": null,
       "label": "같이 간다."
     },
     {
@@ -4580,8 +5136,10 @@
       "periods": [
         "TEEN"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "경제력": 1,
         "지력": 1
@@ -4595,12 +5153,14 @@
       "periods": [
         "TEEN"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "지력": 2
       },
-      "suggestedThreshold": 55,
+      "suggestedThreshold": null,
       "label": "도서관 열람실에 간다."
     },
     {
@@ -4609,12 +5169,14 @@
       "periods": [
         "TEEN"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "사회성": 3
       },
-      "suggestedThreshold": 55,
+      "suggestedThreshold": null,
       "label": "파티에 간다."
     },
     {
@@ -4623,12 +5185,14 @@
       "periods": [
         "TEEN"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "지력": 3
       },
-      "suggestedThreshold": 55,
+      "suggestedThreshold": null,
       "label": "숙제를 한다."
     },
     {
@@ -4637,8 +5201,10 @@
       "periods": [
         "TEEN"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "지력": 1,
         "사회성": 1
@@ -4652,12 +5218,14 @@
       "periods": [
         "TEEN"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "사회성": 1
       },
-      "suggestedThreshold": 55,
+      "suggestedThreshold": null,
       "label": "그냥 찍는다."
     },
     {
@@ -4666,12 +5234,14 @@
       "periods": [
         "TEEN"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "행복": 2
       },
-      "suggestedThreshold": 55,
+      "suggestedThreshold": null,
       "label": "모자를 쓰고 간다."
     },
     {
@@ -4682,7 +5252,7 @@
       ],
       "category": "explicit",
       "conditionFields": [
-        "requiredStats"
+        "alwaysAvailable"
       ],
       "positiveStats": {
         "운": 2
@@ -4696,12 +5266,14 @@
       "periods": [
         "TEEN"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "행복": 3
       },
-      "suggestedThreshold": 55,
+      "suggestedThreshold": null,
       "label": "미용실에서 제대로 한다."
     },
     {
@@ -4710,12 +5282,14 @@
       "periods": [
         "TEEN"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "행복": 2
       },
-      "suggestedThreshold": 55,
+      "suggestedThreshold": null,
       "label": "편의점 염색약으로 한다."
     },
     {
@@ -4724,12 +5298,14 @@
       "periods": [
         "TEEN"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "경제력": 1
       },
-      "suggestedThreshold": 55,
+      "suggestedThreshold": null,
       "label": "하지 않는다."
     },
     {
@@ -4738,12 +5314,14 @@
       "periods": [
         "TEEN"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "사회성": 1
       },
-      "suggestedThreshold": 55,
+      "suggestedThreshold": null,
       "label": "부모님께 전화한다."
     },
     {
@@ -4752,12 +5330,14 @@
       "periods": [
         "TEEN"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "지력": 1
       },
-      "suggestedThreshold": 55,
+      "suggestedThreshold": null,
       "label": "반대 방향 버스를 기다린다."
     },
     {
@@ -4766,8 +5346,10 @@
       "periods": [
         "TEEN"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "사회성": 2,
         "운": 1
@@ -4781,12 +5363,14 @@
       "periods": [
         "TEEN"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "사회성": 3
       },
-      "suggestedThreshold": 55,
+      "suggestedThreshold": null,
       "label": "선거 캠프에 들어간다."
     },
     {
@@ -4811,12 +5395,14 @@
       "periods": [
         "TEEN"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "운": 1
       },
-      "suggestedThreshold": 55,
+      "suggestedThreshold": null,
       "label": "상대 후보를 찍는다."
     },
     {
@@ -4825,12 +5411,14 @@
       "periods": [
         "TEEN"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "지력": 5
       },
-      "suggestedThreshold": 55,
+      "suggestedThreshold": null,
       "label": "잠을 줄이고 문제집을 판다."
     },
     {
@@ -4856,8 +5444,10 @@
       "periods": [
         "TEEN"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "사회성": 3,
         "행복": 2
@@ -4871,12 +5461,14 @@
       "periods": [
         "TEEN"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "지력": 3
       },
-      "suggestedThreshold": 55,
+      "suggestedThreshold": null,
       "label": "평소처럼 푼다."
     },
     {
@@ -4885,12 +5477,14 @@
       "periods": [
         "TEEN"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "운": 3
       },
-      "suggestedThreshold": 55,
+      "suggestedThreshold": null,
       "label": "찍은 답을 끝까지 믿는다."
     },
     {
@@ -4899,8 +5493,10 @@
       "periods": [
         "TEEN"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "행복": 2,
         "사회성": 1
@@ -4931,8 +5527,10 @@
       "periods": [
         "TEEN"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "행복": 4,
         "지력": 1
@@ -4948,7 +5546,7 @@
       ],
       "category": "explicit",
       "conditionFields": [
-        "requiredStats"
+        "alwaysAvailable"
       ],
       "positiveStats": {
         "사회성": 4,
@@ -4963,12 +5561,14 @@
       "periods": [
         "TEEN"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "행복": 2
       },
-      "suggestedThreshold": 55,
+      "suggestedThreshold": null,
       "label": "가방에서 몰래 간식을 꺼낸다."
     },
     {
@@ -4977,12 +5577,14 @@
       "periods": [
         "TEEN"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "건강": 1
       },
-      "suggestedThreshold": 55,
+      "suggestedThreshold": null,
       "label": "물로 버틴다."
     },
     {
@@ -4991,12 +5593,14 @@
       "periods": [
         "TEEN"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "행복": 2
       },
-      "suggestedThreshold": 55,
+      "suggestedThreshold": null,
       "label": "침대에서 영상을 본다."
     },
     {
@@ -5005,8 +5609,10 @@
       "periods": [
         "TEEN"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "건강": 2,
         "행복": 1
@@ -5036,8 +5642,10 @@
       "periods": [
         "TEEN"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "지력": 3,
         "행복": 1
@@ -5051,8 +5659,10 @@
       "periods": [
         "TEEN"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "운": 2,
         "행복": 2
@@ -5068,7 +5678,7 @@
       ],
       "category": "explicit",
       "conditionFields": [
-        "requiredStats"
+        "alwaysAvailable"
       ],
       "positiveStats": {
         "행복": 3,
@@ -5083,8 +5693,10 @@
       "periods": [
         "YOUNG_ADULT"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "지력": 5,
         "행복": 1
@@ -5114,8 +5726,10 @@
       "periods": [
         "YOUNG_ADULT"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "행복": 4,
         "사회성": 2
@@ -5129,8 +5743,10 @@
       "periods": [
         "YOUNG_ADULT"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "운동능력": 5,
         "경제력": 3
@@ -5144,8 +5760,10 @@
       "periods": [
         "YOUNG_ADULT"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "사회성": 3,
         "지력": 2
@@ -5159,8 +5777,10 @@
       "periods": [
         "YOUNG_ADULT"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "사회성": 4,
         "행복": 2,
@@ -5175,8 +5795,10 @@
       "periods": [
         "YOUNG_ADULT"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "행복": 2,
         "경제력": 1
@@ -5190,12 +5812,14 @@
       "periods": [
         "YOUNG_ADULT"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "사회성": 2
       },
-      "suggestedThreshold": 58,
+      "suggestedThreshold": null,
       "label": "\"그 영상 좀 내려 주세요.\""
     },
     {
@@ -5204,8 +5828,10 @@
       "periods": [
         "YOUNG_ADULT"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "건강": 4,
         "경제력": 1
@@ -5219,12 +5845,14 @@
       "periods": [
         "YOUNG_ADULT"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "행복": 3
       },
-      "suggestedThreshold": 58,
+      "suggestedThreshold": null,
       "label": "배달 앱을 켠다."
     },
     {
@@ -5233,8 +5861,10 @@
       "periods": [
         "YOUNG_ADULT"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "건강": 2,
         "사회성": 1
@@ -5248,12 +5878,14 @@
       "periods": [
         "YOUNG_ADULT"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "사회성": 1
       },
-      "suggestedThreshold": 58,
+      "suggestedThreshold": null,
       "label": "번호를 물어본다."
     },
     {
@@ -5262,12 +5894,14 @@
       "periods": [
         "YOUNG_ADULT"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "지력": 1
       },
-      "suggestedThreshold": 58,
+      "suggestedThreshold": null,
       "label": "\"내가 되겠어…?\" 그냥 간다."
     },
     {
@@ -5276,12 +5910,14 @@
       "periods": [
         "YOUNG_ADULT"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "운": 2
       },
-      "suggestedThreshold": 58,
+      "suggestedThreshold": null,
       "label": "모른 척 같은 방향으로 걷는다."
     },
     {
@@ -5290,8 +5926,10 @@
       "periods": [
         "YOUNG_ADULT"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "사회성": 3,
         "행복": 2
@@ -5305,12 +5943,14 @@
       "periods": [
         "YOUNG_ADULT"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "사회성": 1
       },
-      "suggestedThreshold": 58,
+      "suggestedThreshold": null,
       "label": "\"내가 되겠어…?\" 그냥 간다."
     },
     {
@@ -5319,12 +5959,14 @@
       "periods": [
         "YOUNG_ADULT"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "운": 2
       },
-      "suggestedThreshold": 58,
+      "suggestedThreshold": null,
       "label": "모른 척 같은 방향으로 걷는다."
     },
     {
@@ -5333,8 +5975,10 @@
       "periods": [
         "YOUNG_ADULT"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "행복": 1,
         "사회성": 1
@@ -5365,12 +6009,14 @@
       "periods": [
         "YOUNG_ADULT"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "사회성": 2
       },
-      "suggestedThreshold": 58,
+      "suggestedThreshold": null,
       "label": "불판 앞에 앉는다."
     },
     {
@@ -5379,8 +6025,10 @@
       "periods": [
         "YOUNG_ADULT"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "사회성": 2,
         "행복": 2
@@ -5394,8 +6042,10 @@
       "periods": [
         "YOUNG_ADULT"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "행복": 2,
         "건강": 1
@@ -5409,12 +6059,14 @@
       "periods": [
         "YOUNG_ADULT"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "행복": 1
       },
-      "suggestedThreshold": 58,
+      "suggestedThreshold": null,
       "label": "멋있게 원샷한다."
     },
     {
@@ -5423,8 +6075,10 @@
       "periods": [
         "YOUNG_ADULT"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "사회성": 1,
         "행복": 1
@@ -5455,8 +6109,10 @@
       "periods": [
         "YOUNG_ADULT"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "행복": 2,
         "경제력": 1
@@ -5470,12 +6126,14 @@
       "periods": [
         "YOUNG_ADULT"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "행복": 3
       },
-      "suggestedThreshold": 58,
+      "suggestedThreshold": null,
       "label": "마지막 한 점을 먹는다."
     },
     {
@@ -5484,12 +6142,14 @@
       "periods": [
         "YOUNG_ADULT"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "사회성": 3
       },
-      "suggestedThreshold": 58,
+      "suggestedThreshold": null,
       "label": "계산서를 조용히 가져간다."
     },
     {
@@ -5500,7 +6160,7 @@
       ],
       "category": "explicit",
       "conditionFields": [
-        "requiredStats"
+        "alwaysAvailable"
       ],
       "positiveStats": {
         "사회성": 4
@@ -5530,12 +6190,14 @@
       "periods": [
         "YOUNG_ADULT"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "경제력": 1
       },
-      "suggestedThreshold": 58,
+      "suggestedThreshold": null,
       "label": "바빠서 다음 달에 간다."
     },
     {
@@ -5544,8 +6206,10 @@
       "periods": [
         "YOUNG_ADULT"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "사회성": 1,
         "운": 1
@@ -5576,8 +6240,10 @@
       "periods": [
         "YOUNG_ADULT"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "사회성": 4,
         "행복": 1
@@ -5593,7 +6259,7 @@
       ],
       "category": "explicit",
       "conditionFields": [
-        "requiredStats"
+        "alwaysAvailable"
       ],
       "positiveStats": {
         "지력": 3,
@@ -5608,8 +6274,10 @@
       "periods": [
         "YOUNG_ADULT"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "사회성": 3,
         "운": 2
@@ -5623,8 +6291,10 @@
       "periods": [
         "YOUNG_ADULT"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "경제력": 1,
         "지력": 1
@@ -5638,8 +6308,10 @@
       "periods": [
         "YOUNG_ADULT"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "운": 3,
         "경제력": 1
@@ -5653,12 +6325,14 @@
       "periods": [
         "YOUNG_ADULT"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "건강": 1
       },
-      "suggestedThreshold": 58,
+      "suggestedThreshold": null,
       "label": "한 대 보내고 다음 차를 탄다."
     },
     {
@@ -5667,12 +6341,14 @@
       "periods": [
         "YOUNG_ADULT"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "경제력": 1
       },
-      "suggestedThreshold": 58,
+      "suggestedThreshold": null,
       "label": "밀고 들어간다."
     },
     {
@@ -5681,12 +6357,14 @@
       "periods": [
         "YOUNG_ADULT"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "행복": 1
       },
-      "suggestedThreshold": 58,
+      "suggestedThreshold": null,
       "label": "택시를 탄다."
     },
     {
@@ -5695,12 +6373,14 @@
       "periods": [
         "YOUNG_ADULT"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "경제력": 5
       },
-      "suggestedThreshold": 58,
+      "suggestedThreshold": null,
       "label": "절반은 적금."
     },
     {
@@ -5709,8 +6389,10 @@
       "periods": [
         "YOUNG_ADULT"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "사회성": 2,
         "행복": 3
@@ -5724,12 +6406,14 @@
       "periods": [
         "YOUNG_ADULT"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "행복": 4
       },
-      "suggestedThreshold": 58,
+      "suggestedThreshold": null,
       "label": "전부 나를 위해 쓴다."
     },
     {
@@ -5738,8 +6422,10 @@
       "periods": [
         "YOUNG_ADULT"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "사회성": 2,
         "경제력": 1
@@ -5753,8 +6439,10 @@
       "periods": [
         "YOUNG_ADULT"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "사회성": 1,
         "행복": 1
@@ -5768,8 +6456,10 @@
       "periods": [
         "YOUNG_ADULT"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "건강": 1,
         "사회성": 1
@@ -5783,12 +6473,14 @@
       "periods": [
         "YOUNG_ADULT"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "사회성": 2
       },
-      "suggestedThreshold": 58,
+      "suggestedThreshold": null,
       "label": "원샷한다."
     },
     {
@@ -5797,12 +6489,14 @@
       "periods": [
         "YOUNG_ADULT"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "건강": 2
       },
-      "suggestedThreshold": 58,
+      "suggestedThreshold": null,
       "label": "\"저는 오늘 물로 하겠습니다.\""
     },
     {
@@ -5811,8 +6505,10 @@
       "periods": [
         "YOUNG_ADULT"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "운": 2,
         "건강": 1
@@ -5826,12 +6522,14 @@
       "periods": [
         "YOUNG_ADULT"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "행복": 3
       },
-      "suggestedThreshold": 58,
+      "suggestedThreshold": null,
       "label": "작전대로 탈출한다."
     },
     {
@@ -5840,8 +6538,10 @@
       "periods": [
         "YOUNG_ADULT"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "사회성": 2,
         "운": 1
@@ -5855,12 +6555,14 @@
       "periods": [
         "YOUNG_ADULT"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "사회성": 3
       },
-      "suggestedThreshold": 58,
+      "suggestedThreshold": null,
       "label": "둘 다 끝까지 버틴다."
     },
     {
@@ -5869,8 +6571,10 @@
       "periods": [
         "YOUNG_ADULT"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "경제력": 2,
         "사회성": 1
@@ -5884,12 +6588,14 @@
       "periods": [
         "YOUNG_ADULT"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "사회성": 2
       },
-      "suggestedThreshold": 58,
+      "suggestedThreshold": null,
       "label": "\"감사합니다.\" 하고 계속 굽는다."
     },
     {
@@ -5898,8 +6604,10 @@
       "periods": [
         "YOUNG_ADULT"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "건강": 2,
         "행복": 1
@@ -5913,12 +6621,14 @@
       "periods": [
         "YOUNG_ADULT"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "사회성": 4
       },
-      "suggestedThreshold": 58,
+      "suggestedThreshold": null,
       "label": "손을 든다."
     },
     {
@@ -5927,8 +6637,10 @@
       "periods": [
         "YOUNG_ADULT"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "건강": 1,
         "행복": 1
@@ -5942,8 +6654,10 @@
       "periods": [
         "YOUNG_ADULT"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "사회성": 3,
         "행복": 1
@@ -5957,12 +6671,14 @@
       "periods": [
         "YOUNG_ADULT"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "사회성": 1
       },
-      "suggestedThreshold": 58,
+      "suggestedThreshold": null,
       "label": "숙취해소제 두 병을 마시고 출근한다."
     },
     {
@@ -5971,12 +6687,14 @@
       "periods": [
         "YOUNG_ADULT"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "건강": 2
       },
-      "suggestedThreshold": 58,
+      "suggestedThreshold": null,
       "label": "반차를 쓴다."
     },
     {
@@ -5985,8 +6703,10 @@
       "periods": [
         "YOUNG_ADULT"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "사회성": 2,
         "운": 1
@@ -6001,12 +6721,14 @@
         "MIDDLE",
         "YOUNG_ADULT"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "건강": 1
       },
-      "suggestedThreshold": 58,
+      "suggestedThreshold": null,
       "label": "읽씹한다."
     },
     {
@@ -6016,12 +6738,14 @@
         "MIDDLE",
         "YOUNG_ADULT"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "경제력": 2
       },
-      "suggestedThreshold": 58,
+      "suggestedThreshold": null,
       "label": "바로 답장한다."
     },
     {
@@ -6031,12 +6755,14 @@
         "MIDDLE",
         "YOUNG_ADULT"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "운": 1
       },
-      "suggestedThreshold": 58,
+      "suggestedThreshold": null,
       "label": "\"네 자요\""
     },
     {
@@ -6046,12 +6772,14 @@
         "MIDDLE",
         "YOUNG_ADULT"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "사회성": 1
       },
-      "suggestedThreshold": 58,
+      "suggestedThreshold": null,
       "label": "친절히 알려준다."
     },
     {
@@ -6061,12 +6789,14 @@
         "MIDDLE",
         "YOUNG_ADULT"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "지력": 1
       },
-      "suggestedThreshold": 58,
+      "suggestedThreshold": null,
       "label": "못 들은 척 지나간다."
     },
     {
@@ -6076,12 +6806,14 @@
         "MIDDLE",
         "YOUNG_ADULT"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "행복": 1
       },
-      "suggestedThreshold": 58,
+      "suggestedThreshold": null,
       "label": "\"사이비죠? 저 다 알아요!\""
     },
     {
@@ -6090,8 +6822,10 @@
       "periods": [
         "YOUNG_ADULT"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "지력": 3,
         "운": 2
@@ -6105,12 +6839,14 @@
       "periods": [
         "YOUNG_ADULT"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "경제력": 4
       },
-      "suggestedThreshold": 58,
+      "suggestedThreshold": null,
       "label": "회사에 남는다."
     },
     {
@@ -6119,8 +6855,10 @@
       "periods": [
         "YOUNG_ADULT"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "경제력": 2,
         "지력": 2
@@ -6135,12 +6873,14 @@
         "MIDDLE",
         "YOUNG_ADULT"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "지력": 3
       },
-      "suggestedThreshold": 58,
+      "suggestedThreshold": null,
       "label": "특허 출원을 알아본다."
     },
     {
@@ -6150,8 +6890,10 @@
         "MIDDLE",
         "YOUNG_ADULT"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "경제력": 2,
         "사회성": 1
@@ -6166,12 +6908,14 @@
         "MIDDLE",
         "YOUNG_ADULT"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "행복": 1
       },
-      "suggestedThreshold": 58,
+      "suggestedThreshold": null,
       "label": "메모만 하고 넘어간다."
     },
     {
@@ -6181,12 +6925,14 @@
         "MIDDLE",
         "YOUNG_ADULT"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "운": 3
       },
-      "suggestedThreshold": 58,
+      "suggestedThreshold": null,
       "label": "여윳돈 조금만 넣는다."
     },
     {
@@ -6214,8 +6960,10 @@
         "MIDDLE",
         "YOUNG_ADULT"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "지력": 2,
         "행복": 1
@@ -6230,8 +6978,10 @@
         "MIDDLE",
         "YOUNG_ADULT"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "건강": 4,
         "운동능력": 3
@@ -6246,12 +6996,14 @@
         "MIDDLE",
         "YOUNG_ADULT"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "행복": 3
       },
-      "suggestedThreshold": 58,
+      "suggestedThreshold": null,
       "label": "소파에 눕는다."
     },
     {
@@ -6261,8 +7013,10 @@
         "MIDDLE",
         "YOUNG_ADULT"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "건강": 3,
         "경제력": 1
@@ -6276,12 +7030,14 @@
       "periods": [
         "YOUNG_ADULT"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "행복": 2
       },
-      "suggestedThreshold": 58,
+      "suggestedThreshold": null,
       "label": "10년 된 중고 경차를 산다."
     },
     {
@@ -6290,12 +7046,14 @@
       "periods": [
         "YOUNG_ADULT"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "행복": 4
       },
-      "suggestedThreshold": 58,
+      "suggestedThreshold": null,
       "label": "새 차를 할부로 산다."
     },
     {
@@ -6304,8 +7062,10 @@
       "periods": [
         "YOUNG_ADULT"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "경제력": 2,
         "지력": 1
@@ -6320,12 +7080,14 @@
         "MIDDLE",
         "YOUNG_ADULT"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "행복": 1
       },
-      "suggestedThreshold": 58,
+      "suggestedThreshold": null,
       "label": "\"개인 사정\"이라고 쓴다."
     },
     {
@@ -6335,8 +7097,10 @@
         "MIDDLE",
         "YOUNG_ADULT"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "행복": 3,
         "사회성": 1
@@ -6351,12 +7115,14 @@
         "MIDDLE",
         "YOUNG_ADULT"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "지력": 1
       },
-      "suggestedThreshold": 58,
+      "suggestedThreshold": null,
       "label": "사유서를 A4 한 장으로 쓴다."
     },
     {
@@ -6365,8 +7131,10 @@
       "periods": [
         "YOUNG_ADULT"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "사회성": 4,
         "행복": 1
@@ -6380,12 +7148,14 @@
       "periods": [
         "YOUNG_ADULT"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "행복": 1
       },
-      "suggestedThreshold": 58,
+      "suggestedThreshold": null,
       "label": "축의금만 두둑이 낸다."
     },
     {
@@ -6394,8 +7164,10 @@
       "periods": [
         "YOUNG_ADULT"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "사회성": 4,
         "행복": 2
@@ -6409,8 +7181,10 @@
       "periods": [
         "YOUNG_ADULT"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "사회성": 4,
         "행복": 1
@@ -6424,12 +7198,14 @@
       "periods": [
         "YOUNG_ADULT"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "행복": 1
       },
-      "suggestedThreshold": 58,
+      "suggestedThreshold": null,
       "label": "\"축의금을 더 낼게.\""
     },
     {
@@ -6438,8 +7214,10 @@
       "periods": [
         "YOUNG_ADULT"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "사회성": 3,
         "운": 1
@@ -6453,8 +7231,10 @@
       "periods": [
         "YOUNG_ADULT"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "행복": 5,
         "사회성": 2
@@ -6468,8 +7248,10 @@
       "periods": [
         "YOUNG_ADULT"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "경제력": 4,
         "지력": 2
@@ -6483,8 +7265,10 @@
       "periods": [
         "YOUNG_ADULT"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "행복": 4,
         "운": 1
@@ -6499,8 +7283,10 @@
         "MIDDLE",
         "YOUNG_ADULT"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "운동능력": 1,
         "사회성": 1
@@ -6515,8 +7301,10 @@
         "MIDDLE",
         "YOUNG_ADULT"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "사회성": 2,
         "행복": 1
@@ -6531,8 +7319,10 @@
         "MIDDLE",
         "YOUNG_ADULT"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "사회성": 3,
         "행복": 1
@@ -6547,8 +7337,10 @@
         "MIDDLE",
         "YOUNG_ADULT"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "사회성": 4,
         "건강": 2
@@ -6563,8 +7355,10 @@
         "MIDDLE",
         "YOUNG_ADULT"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "건강": 1,
         "행복": 1
@@ -6579,12 +7373,14 @@
         "MIDDLE",
         "YOUNG_ADULT"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "행복": 1
       },
-      "suggestedThreshold": 58,
+      "suggestedThreshold": null,
       "label": "\"저는 마음으로 참여할게요!\""
     },
     {
@@ -6593,12 +7389,14 @@
       "periods": [
         "YOUNG_ADULT"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "사회성": 3
       },
-      "suggestedThreshold": 58,
+      "suggestedThreshold": null,
       "label": "간다."
     },
     {
@@ -6607,12 +7405,14 @@
       "periods": [
         "YOUNG_ADULT"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "건강": 1
       },
-      "suggestedThreshold": 58,
+      "suggestedThreshold": null,
       "label": "안 간다."
     },
     {
@@ -6621,12 +7421,14 @@
       "periods": [
         "YOUNG_ADULT"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "사회성": 1
       },
-      "suggestedThreshold": 58,
+      "suggestedThreshold": null,
       "label": "단톡방에 인사만 남긴다."
     },
     {
@@ -6635,8 +7437,10 @@
       "periods": [
         "YOUNG_ADULT"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "사회성": 4,
         "행복": 3
@@ -6650,12 +7454,14 @@
       "periods": [
         "YOUNG_ADULT"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "경제력": 1
       },
-      "suggestedThreshold": 58,
+      "suggestedThreshold": null,
       "label": "\"요즘 바빠서… 다음에 보자.\""
     },
     {
@@ -6665,12 +7471,14 @@
         "MIDDLE",
         "YOUNG_ADULT"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "경제력": 5
       },
-      "suggestedThreshold": 58,
+      "suggestedThreshold": null,
       "label": "이직한다."
     },
     {
@@ -6680,8 +7488,10 @@
         "MIDDLE",
         "YOUNG_ADULT"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "행복": 4,
         "건강": 1
@@ -6714,8 +7524,10 @@
         "MIDDLE",
         "YOUNG_ADULT"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "건강": 4,
         "행복": 4
@@ -6730,12 +7542,14 @@
         "MIDDLE",
         "YOUNG_ADULT"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "경제력": 3
       },
-      "suggestedThreshold": 58,
+      "suggestedThreshold": null,
       "label": "버틴다."
     },
     {
@@ -6745,8 +7559,10 @@
         "MIDDLE",
         "YOUNG_ADULT"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "행복": 3,
         "건강": 1
@@ -6761,8 +7577,10 @@
         "MIDDLE",
         "YOUNG_ADULT"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "행복": 4,
         "사회성": 2
@@ -6777,12 +7595,14 @@
         "MIDDLE",
         "YOUNG_ADULT"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "경제력": 4
       },
-      "suggestedThreshold": 58,
+      "suggestedThreshold": null,
       "label": "계속 일한다."
     },
     {
@@ -6791,8 +7611,10 @@
       "periods": [
         "MIDDLE"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "행복": 4,
         "사회성": 2,
@@ -6807,12 +7629,14 @@
       "periods": [
         "MIDDLE"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "사회성": 1
       },
-      "suggestedThreshold": 60,
+      "suggestedThreshold": null,
       "label": "사진을 삭제한다."
     },
     {
@@ -6822,8 +7646,10 @@
         "MIDDLE",
         "YOUNG_ADULT"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "경제력": 2,
         "행복": 3
@@ -6838,12 +7664,14 @@
         "MIDDLE",
         "YOUNG_ADULT"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "경제력": 3
       },
-      "suggestedThreshold": 58,
+      "suggestedThreshold": null,
       "label": "전세로 더 모은다."
     },
     {
@@ -6853,8 +7681,10 @@
         "MIDDLE",
         "YOUNG_ADULT"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "행복": 2,
         "운": 1
@@ -6869,12 +7699,14 @@
         "MIDDLE",
         "YOUNG_ADULT"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "행복": 3
       },
-      "suggestedThreshold": 58,
+      "suggestedThreshold": null,
       "label": "열어 본다."
     },
     {
@@ -6884,12 +7716,14 @@
         "MIDDLE",
         "YOUNG_ADULT"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "행복": 1
       },
-      "suggestedThreshold": 58,
+      "suggestedThreshold": null,
       "label": "그대로 새집에 가져간다."
     },
     {
@@ -6899,8 +7733,10 @@
         "MIDDLE",
         "YOUNG_ADULT"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "사회성": 2,
         "행복": 1
@@ -6915,8 +7751,10 @@
         "MIDDLE",
         "YOUNG_ADULT"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "사회성": 3,
         "행복": 1
@@ -6931,12 +7769,14 @@
         "MIDDLE",
         "YOUNG_ADULT"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "사회성": 1
       },
-      "suggestedThreshold": 58,
+      "suggestedThreshold": null,
       "label": "간병인을 구하고 주말마다 간다."
     },
     {
@@ -6946,8 +7786,10 @@
         "MIDDLE",
         "YOUNG_ADULT"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "사회성": 2,
         "경제력": 1
@@ -6961,12 +7803,14 @@
       "periods": [
         "YOUNG_ADULT"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "지력": 2
       },
-      "suggestedThreshold": 58,
+      "suggestedThreshold": null,
       "label": "침착하게 출발한다."
     },
     {
@@ -6975,12 +7819,14 @@
       "periods": [
         "YOUNG_ADULT"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "운": 2
       },
-      "suggestedThreshold": 58,
+      "suggestedThreshold": null,
       "label": "긴장해서 와이퍼부터 켠다."
     },
     {
@@ -6989,12 +7835,14 @@
       "periods": [
         "YOUNG_ADULT"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "지력": 1
       },
-      "suggestedThreshold": 58,
+      "suggestedThreshold": null,
       "label": "연습을 더 하고 다음에 본다."
     },
     {
@@ -7003,12 +7851,14 @@
       "periods": [
         "YOUNG_ADULT"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "사회성": 2
       },
-      "suggestedThreshold": 58,
+      "suggestedThreshold": null,
       "label": "배달 음식을 시킨다."
     },
     {
@@ -7017,12 +7867,14 @@
       "periods": [
         "YOUNG_ADULT"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "사회성": 3
       },
-      "suggestedThreshold": 58,
+      "suggestedThreshold": null,
       "label": "직접 떡볶이를 만든다."
     },
     {
@@ -7031,12 +7883,14 @@
       "periods": [
         "YOUNG_ADULT"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "행복": 3
       },
-      "suggestedThreshold": 58,
+      "suggestedThreshold": null,
       "label": "\"냄비째 먹자!\""
     },
     {
@@ -7046,12 +7900,14 @@
         "MIDDLE",
         "YOUNG_ADULT"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "지력": 2
       },
-      "suggestedThreshold": 58,
+      "suggestedThreshold": null,
       "label": "바로 끊고 은행에 확인한다."
     },
     {
@@ -7078,12 +7934,14 @@
         "MIDDLE",
         "YOUNG_ADULT"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "사회성": 2
       },
-      "suggestedThreshold": 58,
+      "suggestedThreshold": null,
       "label": "부모님께도 바로 알린다."
     },
     {
@@ -7092,12 +7950,14 @@
       "periods": [
         "YOUNG_ADULT"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "사회성": 1
       },
-      "suggestedThreshold": 58,
+      "suggestedThreshold": null,
       "label": "5만 원."
     },
     {
@@ -7106,12 +7966,14 @@
       "periods": [
         "YOUNG_ADULT"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "사회성": 3
       },
-      "suggestedThreshold": 58,
+      "suggestedThreshold": null,
       "label": "10만 원."
     },
     {
@@ -7120,12 +7982,14 @@
       "periods": [
         "YOUNG_ADULT"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "경제력": 1
       },
-      "suggestedThreshold": 58,
+      "suggestedThreshold": null,
       "label": "축하 메시지만 보낸다."
     },
     {
@@ -7135,12 +7999,14 @@
         "MIDDLE",
         "YOUNG_ADULT"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "행복": 1
       },
-      "suggestedThreshold": 58,
+      "suggestedThreshold": null,
       "label": "매일 물을 준다."
     },
     {
@@ -7167,12 +8033,14 @@
         "MIDDLE",
         "YOUNG_ADULT"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "행복": 3
       },
-      "suggestedThreshold": 58,
+      "suggestedThreshold": null,
       "label": "이름을 붙이고 말을 건다."
     },
     {
@@ -7182,12 +8050,14 @@
         "MIDDLE",
         "YOUNG_ADULT"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "경제력": 2
       },
-      "suggestedThreshold": 58,
+      "suggestedThreshold": null,
       "label": "\"정가입니다.\""
     },
     {
@@ -7197,12 +8067,14 @@
         "MIDDLE",
         "YOUNG_ADULT"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "사회성": 2
       },
-      "suggestedThreshold": 58,
+      "suggestedThreshold": null,
       "label": "반값에 판다."
     },
     {
@@ -7212,12 +8084,14 @@
         "MIDDLE",
         "YOUNG_ADULT"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "사회성": 3
       },
-      "suggestedThreshold": 58,
+      "suggestedThreshold": null,
       "label": "무료로 주고 직접 가져다준다."
     },
     {
@@ -7226,12 +8100,14 @@
       "periods": [
         "YOUNG_ADULT"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "사회성": 3
       },
-      "suggestedThreshold": 58,
+      "suggestedThreshold": null,
       "label": "요즘 유행하는 춤을 춘다."
     },
     {
@@ -7240,12 +8116,14 @@
       "periods": [
         "YOUNG_ADULT"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "사회성": 2
       },
-      "suggestedThreshold": 58,
+      "suggestedThreshold": null,
       "label": "카드 마술을 한다."
     },
     {
@@ -7254,8 +8132,10 @@
       "periods": [
         "YOUNG_ADULT"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "사회성": 2,
         "지력": 1
@@ -7269,12 +8149,14 @@
       "periods": [
         "MIDDLE"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "사회성": 2
       },
-      "suggestedThreshold": 60,
+      "suggestedThreshold": null,
       "label": "한정식집에서 잔치를 연다."
     },
     {
@@ -7283,12 +8165,14 @@
       "periods": [
         "MIDDLE"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "행복": 3
       },
-      "suggestedThreshold": 60,
+      "suggestedThreshold": null,
       "label": "부모님 여행을 보내 드린다."
     },
     {
@@ -7297,12 +8181,14 @@
       "periods": [
         "MIDDLE"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "사회성": 3
       },
-      "suggestedThreshold": 60,
+      "suggestedThreshold": null,
       "label": "가족 영상 편지를 만든다."
     },
     {
@@ -7311,8 +8197,10 @@
       "periods": [
         "MIDDLE"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "행복": 4,
         "지력": 2,
@@ -7327,8 +8215,10 @@
       "periods": [
         "MIDDLE"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "행복": 4,
         "건강": 1
@@ -7342,8 +8232,10 @@
       "periods": [
         "MIDDLE"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "사회성": 4,
         "행복": 2
@@ -7357,12 +8249,14 @@
       "periods": [
         "MIDDLE"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "지력": 2
       },
-      "suggestedThreshold": 60,
+      "suggestedThreshold": null,
       "label": "돋보기를 맞춘다."
     },
     {
@@ -7371,8 +8265,10 @@
       "periods": [
         "MIDDLE"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "사회성": 2,
         "운": 1
@@ -7386,8 +8282,10 @@
       "periods": [
         "MIDDLE"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "지력": 1,
         "행복": 1
@@ -7401,12 +8299,14 @@
       "periods": [
         "MIDDLE"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "행복": 1
       },
-      "suggestedThreshold": 60,
+      "suggestedThreshold": null,
       "label": "\"엄마!\""
     },
     {
@@ -7415,8 +8315,10 @@
       "periods": [
         "MIDDLE"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "사회성": 2,
         "운": 1
@@ -7430,8 +8332,10 @@
       "periods": [
         "MIDDLE"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "운": 1,
         "행복": 1
@@ -7445,12 +8349,14 @@
       "periods": [
         "MIDDLE"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "사회성": 2
       },
-      "suggestedThreshold": 60,
+      "suggestedThreshold": null,
       "label": "문 앞에 간식만 두고 간다."
     },
     {
@@ -7478,7 +8384,7 @@
       ],
       "category": "explicit",
       "conditionFields": [
-        "requiredStats"
+        "alwaysAvailable"
       ],
       "positiveStats": {
         "행복": 2,
@@ -7493,8 +8399,10 @@
       "periods": [
         "MIDDLE"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "경제력": 3,
         "행복": 1
@@ -7508,12 +8416,14 @@
       "periods": [
         "MIDDLE"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "경제력": 1
       },
-      "suggestedThreshold": 60,
+      "suggestedThreshold": null,
       "label": "버틴다."
     },
     {
@@ -7522,8 +8432,10 @@
       "periods": [
         "MIDDLE"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "행복": 1,
         "운": 1
@@ -7537,8 +8449,10 @@
       "periods": [
         "MIDDLE"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "사회성": 2,
         "운": 1
@@ -7552,12 +8466,14 @@
       "periods": [
         "MIDDLE"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "행복": 3
       },
-      "suggestedThreshold": 60,
+      "suggestedThreshold": null,
       "label": "동네 카페를 연다."
     },
     {
@@ -7566,8 +8482,10 @@
       "periods": [
         "MIDDLE"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "건강": 3,
         "행복": 1
@@ -7597,12 +8515,14 @@
       "periods": [
         "MIDDLE"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "경제력": 1
       },
-      "suggestedThreshold": 60,
+      "suggestedThreshold": null,
       "label": "바쁘다고 미룬다."
     },
     {
@@ -7611,12 +8531,14 @@
       "periods": [
         "MIDDLE"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "건강": 2
       },
-      "suggestedThreshold": 60,
+      "suggestedThreshold": null,
       "label": "그날부로 술을 끊겠다고 선언한다."
     },
     {
@@ -7625,12 +8547,14 @@
       "periods": [
         "MIDDLE"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "지력": 1
       },
-      "suggestedThreshold": 60,
+      "suggestedThreshold": null,
       "label": "천천히 끝까지 해 본다."
     },
     {
@@ -7639,12 +8563,14 @@
       "periods": [
         "MIDDLE"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "사회성": 1
       },
-      "suggestedThreshold": 60,
+      "suggestedThreshold": null,
       "label": "직원을 부른다."
     },
     {
@@ -7653,12 +8579,14 @@
       "periods": [
         "MIDDLE"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "사회성": 2
       },
-      "suggestedThreshold": 60,
+      "suggestedThreshold": null,
       "label": "뒤에 선 학생에게 부탁한다."
     },
     {
@@ -7667,12 +8595,14 @@
       "periods": [
         "MIDDLE"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "행복": 3
       },
-      "suggestedThreshold": 60,
+      "suggestedThreshold": null,
       "label": "팬클럽에 가입한다."
     },
     {
@@ -7681,12 +8611,14 @@
       "periods": [
         "MIDDLE"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "행복": 1
       },
-      "suggestedThreshold": 60,
+      "suggestedThreshold": null,
       "label": "몰래 혼자 본다."
     },
     {
@@ -7695,8 +8627,10 @@
       "periods": [
         "MIDDLE"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "사회성": 2,
         "행복": 1
@@ -7710,8 +8644,10 @@
       "periods": [
         "MIDDLE"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "건강": 3,
         "운동능력": 2
@@ -7725,12 +8661,14 @@
       "periods": [
         "MIDDLE"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "사회성": 2
       },
-      "suggestedThreshold": 60,
+      "suggestedThreshold": null,
       "label": "물 나눠 주는 자원봉사를 한다."
     },
     {
@@ -7739,8 +8677,10 @@
       "periods": [
         "MIDDLE"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "건강": 1,
         "행복": 1
@@ -7754,8 +8694,10 @@
       "periods": [
         "MIDDLE"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "행복": 3,
         "사회성": 2
@@ -7769,8 +8711,10 @@
       "periods": [
         "MIDDLE"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "사회성": 2,
         "행복": 1
@@ -7784,8 +8728,10 @@
       "periods": [
         "MIDDLE"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "사회성": 1,
         "행복": 2
@@ -7799,12 +8745,14 @@
       "periods": [
         "MIDDLE"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "사회성": 2
       },
-      "suggestedThreshold": 60,
+      "suggestedThreshold": null,
       "label": "방을 그대로 둔다."
     },
     {
@@ -7813,12 +8761,14 @@
       "periods": [
         "MIDDLE"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "행복": 3
       },
-      "suggestedThreshold": 60,
+      "suggestedThreshold": null,
       "label": "내 취미방으로 바꾼다."
     },
     {
@@ -7827,8 +8777,10 @@
       "periods": [
         "MIDDLE"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "사회성": 2,
         "행복": 1
@@ -7842,8 +8794,10 @@
       "periods": [
         "MIDDLE"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "행복": 3,
         "사회성": 2
@@ -7857,8 +8811,10 @@
       "periods": [
         "MIDDLE"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "사회성": 2,
         "행복": 2
@@ -7874,7 +8830,7 @@
       ],
       "category": "explicit",
       "conditionFields": [
-        "requiredStats"
+        "alwaysAvailable"
       ],
       "positiveStats": {
         "사회성": 3,
@@ -7889,8 +8845,10 @@
       "periods": [
         "MIDDLE"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "행복": 3,
         "지력": 2,
@@ -7905,8 +8863,10 @@
       "periods": [
         "MIDDLE"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "행복": 4,
         "사회성": 2
@@ -7920,8 +8880,10 @@
       "periods": [
         "MIDDLE"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "건강": 3,
         "행복": 2
@@ -7936,12 +8898,14 @@
         "MIDDLE",
         "YOUNG_ADULT"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "행복": 2
       },
-      "suggestedThreshold": 58,
+      "suggestedThreshold": null,
       "label": "맥주 한 캔을 산다."
     },
     {
@@ -7951,12 +8915,14 @@
         "MIDDLE",
         "YOUNG_ADULT"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "행복": 1
       },
-      "suggestedThreshold": 58,
+      "suggestedThreshold": null,
       "label": "바나나 우유를 산다."
     },
     {
@@ -7966,12 +8932,14 @@
         "MIDDLE",
         "YOUNG_ADULT"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "경제력": 1
       },
-      "suggestedThreshold": 58,
+      "suggestedThreshold": null,
       "label": "그냥 지나친다."
     },
     {
@@ -7981,12 +8949,14 @@
         "MIDDLE",
         "YOUNG_ADULT"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "건강": 2
       },
-      "suggestedThreshold": 58,
+      "suggestedThreshold": null,
       "label": "일찍 잔다."
     },
     {
@@ -7996,12 +8966,14 @@
         "MIDDLE",
         "YOUNG_ADULT"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "행복": 1
       },
-      "suggestedThreshold": 58,
+      "suggestedThreshold": null,
       "label": "영상 하나만 더 본다."
     },
     {
@@ -8011,8 +8983,10 @@
         "MIDDLE",
         "YOUNG_ADULT"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "지력": 1,
         "행복": 1
@@ -8026,8 +9000,10 @@
       "periods": [
         "YOUNG_ADULT"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "경제력": 2,
         "사회성": 1
@@ -8041,8 +9017,10 @@
       "periods": [
         "YOUNG_ADULT"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "건강": 3,
         "행복": 1
@@ -8056,8 +9034,10 @@
       "periods": [
         "YOUNG_ADULT"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "건강": 2,
         "행복": 1
@@ -8072,8 +9052,10 @@
         "MIDDLE",
         "YOUNG_ADULT"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "경제력": 4,
         "행복": 1
@@ -8088,8 +9070,10 @@
         "MIDDLE",
         "YOUNG_ADULT"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "경제력": 3,
         "사회성": 1
@@ -8104,8 +9088,10 @@
         "MIDDLE",
         "YOUNG_ADULT"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "경제력": 2,
         "사회성": 3
@@ -8120,8 +9106,10 @@
         "MIDDLE",
         "YOUNG_ADULT"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "지력": 2,
         "행복": 1
@@ -8136,12 +9124,14 @@
         "MIDDLE",
         "YOUNG_ADULT"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "사회성": 1
       },
-      "suggestedThreshold": 58,
+      "suggestedThreshold": null,
       "label": "남게 해 달라고 끝까지 버틴다."
     },
     {
@@ -8151,8 +9141,10 @@
         "MIDDLE",
         "YOUNG_ADULT"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "행복": 3,
         "사회성": 1
@@ -8166,8 +9158,10 @@
       "periods": [
         "YOUNG_ADULT"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "건강": 2,
         "운동능력": 3,
@@ -8199,8 +9193,10 @@
       "periods": [
         "YOUNG_ADULT"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "사회성": 3,
         "행복": 1
@@ -8214,8 +9210,10 @@
       "periods": [
         "INFANT"
       ],
-      "category": "infant_unconditional",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "사회성": 1
       },
@@ -8228,8 +9226,10 @@
       "periods": [
         "INFANT"
       ],
-      "category": "infant_unconditional",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "운동능력": 2,
         "운": 1
@@ -8243,8 +9243,10 @@
       "periods": [
         "INFANT"
       ],
-      "category": "infant_unconditional",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "사회성": 1
       },
@@ -8257,8 +9259,10 @@
       "periods": [
         "INFANT"
       ],
-      "category": "infant_unconditional",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "행복": 2
       },
@@ -8271,8 +9275,10 @@
       "periods": [
         "INFANT"
       ],
-      "category": "infant_unconditional",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "운동능력": 1,
         "운": 1
@@ -8286,12 +9292,14 @@
       "periods": [
         "CHILD"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "운": 1
       },
-      "suggestedThreshold": 52,
+      "suggestedThreshold": null,
       "label": "\"선생님!! 저 죽어요!!\""
     },
     {
@@ -8300,8 +9308,10 @@
       "periods": [
         "CHILD"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {},
       "suggestedThreshold": null,
       "label": "괜찮은 척 김밥을 마저 먹는다."
@@ -8312,12 +9322,14 @@
       "periods": [
         "CHILD"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "운동능력": 2
       },
-      "suggestedThreshold": 52,
+      "suggestedThreshold": null,
       "label": "말벌을 쫓아가서 복수한다."
     },
     {
@@ -8326,8 +9338,10 @@
       "periods": [
         "CHILD"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {},
       "suggestedThreshold": null,
       "label": "뱉고 선생님을 부른다."
@@ -8338,8 +9352,10 @@
       "periods": [
         "CHILD"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {},
       "suggestedThreshold": null,
       "label": "한 번에 삼킨다."
@@ -8366,12 +9382,14 @@
       "periods": [
         "TEEN"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "운": 1
       },
-      "suggestedThreshold": 55,
+      "suggestedThreshold": null,
       "label": "옆문으로 간다."
     },
     {
@@ -8380,12 +9398,14 @@
       "periods": [
         "TEEN"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "사회성": 2
       },
-      "suggestedThreshold": 55,
+      "suggestedThreshold": null,
       "label": "끝장을 본다."
     },
     {
@@ -8394,8 +9414,10 @@
       "periods": [
         "TEEN"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "사회성": 1,
         "운": 1
@@ -8409,12 +9431,14 @@
       "periods": [
         "TEEN"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "지력": 3
       },
-      "suggestedThreshold": 55,
+      "suggestedThreshold": null,
       "label": "휴지로 막고 푼다."
     },
     {
@@ -8423,12 +9447,14 @@
       "periods": [
         "TEEN"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "운": 2
       },
-      "suggestedThreshold": 55,
+      "suggestedThreshold": null,
       "label": "예언자처럼 행동한다."
     },
     {
@@ -8437,8 +9463,10 @@
       "periods": [
         "TEEN"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "운": 1,
         "건강": 1
@@ -8452,8 +9480,10 @@
       "periods": [
         "YOUNG_ADULT"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "사회성": 3,
         "운": 1
@@ -8467,8 +9497,10 @@
       "periods": [
         "YOUNG_ADULT"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {},
       "suggestedThreshold": null,
       "label": "아무 일 없던 척 계속 든다."
@@ -8479,8 +9511,10 @@
       "periods": [
         "YOUNG_ADULT"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "사회성": 2,
         "운": 1
@@ -8495,12 +9529,14 @@
         "MIDDLE",
         "YOUNG_ADULT"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "사회성": 1
       },
-      "suggestedThreshold": 58,
+      "suggestedThreshold": null,
       "label": "14층까지 참는다."
     },
     {
@@ -8510,12 +9546,14 @@
         "MIDDLE",
         "YOUNG_ADULT"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "운": 1
       },
-      "suggestedThreshold": 58,
+      "suggestedThreshold": null,
       "label": "조용히 흘려보낸다."
     },
     {
@@ -8525,8 +9563,10 @@
         "MIDDLE",
         "YOUNG_ADULT"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "운동능력": 1,
         "행복": 1
@@ -8541,12 +9581,14 @@
         "MIDDLE",
         "YOUNG_ADULT"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "건강": 1
       },
-      "suggestedThreshold": 58,
+      "suggestedThreshold": null,
       "label": "정중히 거절한다."
     },
     {
@@ -8574,12 +9616,14 @@
         "MIDDLE",
         "YOUNG_ADULT"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "행복": 2
       },
-      "suggestedThreshold": 58,
+      "suggestedThreshold": null,
       "label": "\"평균이라뇨? 저 특별한 사람입니다.\""
     },
     {
@@ -8589,12 +9633,14 @@
         "MIDDLE",
         "YOUNG_ADULT"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "행복": 1
       },
-      "suggestedThreshold": 58,
+      "suggestedThreshold": null,
       "label": "조용히 자리를 뜬다."
     },
     {
@@ -8604,8 +9650,10 @@
         "MIDDLE",
         "YOUNG_ADULT"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "사회성": 2,
         "지력": 1
@@ -8620,8 +9668,10 @@
         "MIDDLE",
         "YOUNG_ADULT"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "사회성": 2,
         "행복": 1
@@ -8636,12 +9686,14 @@
         "MIDDLE",
         "YOUNG_ADULT"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "운": 2
       },
-      "suggestedThreshold": 58,
+      "suggestedThreshold": null,
       "label": "김밥을 던지고 천천히 내려간다."
     },
     {
@@ -8651,12 +9703,14 @@
         "MIDDLE",
         "YOUNG_ADULT"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "운동능력": 2
       },
-      "suggestedThreshold": 58,
+      "suggestedThreshold": null,
       "label": "눈을 피하지 않고 맞선다."
     },
     {
@@ -8666,8 +9720,10 @@
         "MIDDLE",
         "YOUNG_ADULT"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "사회성": 2,
         "운": 3
@@ -8681,8 +9737,10 @@
       "periods": [
         "INFANT"
       ],
-      "category": "infant_unconditional",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "사회성": 2
       },
@@ -8695,8 +9753,10 @@
       "periods": [
         "INFANT"
       ],
-      "category": "infant_unconditional",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "운동능력": 2,
         "행복": 2
@@ -8710,8 +9770,10 @@
       "periods": [
         "INFANT"
       ],
-      "category": "infant_unconditional",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "운": 2
       },
@@ -8724,8 +9786,10 @@
       "periods": [
         "INFANT"
       ],
-      "category": "infant_unconditional",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "사회성": 1
       },
@@ -8738,8 +9802,10 @@
       "periods": [
         "INFANT"
       ],
-      "category": "infant_unconditional",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "행복": 1
       },
@@ -8752,8 +9818,10 @@
       "periods": [
         "INFANT"
       ],
-      "category": "infant_unconditional",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "운": 3
       },
@@ -8766,12 +9834,14 @@
       "periods": [
         "CHILD"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "사회성": 1
       },
-      "suggestedThreshold": 52,
+      "suggestedThreshold": null,
       "label": "손을 잡는다."
     },
     {
@@ -8796,12 +9866,14 @@
       "periods": [
         "CHILD"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "행복": 3
       },
-      "suggestedThreshold": 52,
+      "suggestedThreshold": null,
       "label": "그 머리로 사진을 찍는다."
     },
     {
@@ -8810,12 +9882,14 @@
       "periods": [
         "CHILD"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "운동능력": 2
       },
-      "suggestedThreshold": 52,
+      "suggestedThreshold": null,
       "label": "몸을 피한다."
     },
     {
@@ -8824,12 +9898,14 @@
       "periods": [
         "CHILD"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "운동능력": 2
       },
-      "suggestedThreshold": 52,
+      "suggestedThreshold": null,
       "label": "몸을 날려 받아 낸다."
     },
     {
@@ -8838,12 +9914,14 @@
       "periods": [
         "CHILD"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "행복": 3
       },
-      "suggestedThreshold": 52,
+      "suggestedThreshold": null,
       "label": "\"부먹이다!\"라고 외친다."
     },
     {
@@ -8852,8 +9930,10 @@
       "periods": [
         "TEEN"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "운동능력": 2,
         "운": 1
@@ -8867,12 +9947,14 @@
       "periods": [
         "TEEN"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "사회성": 2
       },
-      "suggestedThreshold": 55,
+      "suggestedThreshold": null,
       "label": "얼굴로 받는다."
     },
     {
@@ -8881,8 +9963,10 @@
       "periods": [
         "TEEN"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "운동능력": 3,
         "운": 2
@@ -8896,12 +9980,14 @@
       "periods": [
         "TEEN"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "사회성": 3
       },
-      "suggestedThreshold": 55,
+      "suggestedThreshold": null,
       "label": "침착하게 말을 건다."
     },
     {
@@ -8910,12 +9996,14 @@
       "periods": [
         "TEEN"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "운": 1
       },
-      "suggestedThreshold": 55,
+      "suggestedThreshold": null,
       "label": "긴장해서 혼잣말을 한다."
     },
     {
@@ -8924,12 +10012,14 @@
       "periods": [
         "TEEN"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "운": 2
       },
-      "suggestedThreshold": 55,
+      "suggestedThreshold": null,
       "label": "배에서 꼬르륵 소리가 난다."
     },
     {
@@ -8939,12 +10029,14 @@
         "MIDDLE",
         "YOUNG_ADULT"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "운동능력": 2
       },
-      "suggestedThreshold": 58,
+      "suggestedThreshold": null,
       "label": "다음 칸에서 뛰어나간다."
     },
     {
@@ -8954,12 +10046,14 @@
         "MIDDLE",
         "YOUNG_ADULT"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "행복": 1
       },
-      "suggestedThreshold": 58,
+      "suggestedThreshold": null,
       "label": "회전문과 함께 계속 돈다."
     },
     {
@@ -8969,8 +10063,10 @@
         "MIDDLE",
         "YOUNG_ADULT"
       ],
-      "category": "ambiguous",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "사회성": 2,
         "운": 1
@@ -8985,12 +10081,14 @@
         "MIDDLE",
         "YOUNG_ADULT"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "운동능력": 2
       },
-      "suggestedThreshold": 58,
+      "suggestedThreshold": null,
       "label": "발가락으로 전원 코드를 뽑는다."
     },
     {
@@ -9000,12 +10098,14 @@
         "MIDDLE",
         "YOUNG_ADULT"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
       "positiveStats": {
         "행복": 2
       },
-      "suggestedThreshold": 58,
+      "suggestedThreshold": null,
       "label": "끝까지 버틴다."
     },
     {
@@ -9015,12 +10115,14 @@
         "MIDDLE",
         "YOUNG_ADULT"
       ],
-      "category": "candidate",
-      "conditionFields": [],
+      "category": "explicit",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "사회성": 2
       },
-      "suggestedThreshold": 58,
+      "suggestedThreshold": null,
       "label": "가족에게 SOS를 친다."
     }
   ]
