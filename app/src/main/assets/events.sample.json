@@ -21539,6 +21539,845 @@
     "view": "FIRST_PERSON"
   },
   {
+    "eventId": "adult_074",
+    "stage": "ADULT",
+    "type": "NORMAL",
+    "isFallback": false,
+    "isMilestone": false,
+    "title": "첫 매칭",
+    "text": "친구가 몰래 깔아 준 소개팅 앱에서 알림이 울렸다. '매칭되었습니다!' 상대 프로필 첫 줄은 '고양이랑 등산 좋아해요.' 나는 둘 다 무섭다.",
+    "imageId": "img_pov_dating_app_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [],
+      "blockedFlags": [
+        "dating",
+        "married"
+      ]
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "먼저 인사를 보낸다.",
+        "statDelta": {
+          "사회성": 2,
+          "행복": 3,
+          "경제력": -1
+        },
+        "resultText": "'저도 사실 고양이 무서워요.' 답장이 왔다. 세 번째 만남에서 둘 다 등산도 싫어한다는 걸 알았다. 그날부터 만나는 사이가 됐다.",
+        "addFlags": [
+          "dating"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "a_date",
+            "text": "'저도 사실 고양이 무서워요.' 답장이 왔다. 세 번째 만남에서 둘 다 등산도 싫어한다는 걸 알았다. 그날부터 만나는 사이가 됐다.",
+            "chance": 60,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "사회성": 2,
+              "행복": 3,
+              "경제력": -1
+            },
+            "addFlags": [
+              "dating"
+            ],
+            "chanceWeights": {
+              "사회성": 2,
+              "운": 1
+            }
+          },
+          {
+            "outcomeId": "a_read",
+            "text": "읽음 표시만 떴다. 사흘 뒤 앱이 알려 줬다. '대화를 이어가 보세요!' 고맙다, 앱아.",
+            "chance": 40,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "사회성": 1,
+              "행복": -2
+            },
+            "addFlags": [],
+            "chanceWeights": {
+              "사회성": -2
+            }
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week8_romance"
+      },
+      {
+        "choiceId": "B",
+        "label": "프로필 사진만 일곱 번 바꾼다.",
+        "statDelta": {
+          "행복": 1,
+          "운": -1
+        },
+        "resultText": "사진을 고르다 보니 새벽 3시였다. 매칭은 그사이 사라졌다. 대신 인생 사진 한 장은 건졌다.",
+        "addFlags": [],
+        "outcomes": [
+          {
+            "outcomeId": "b_photo",
+            "text": "사진을 고르다 보니 새벽 3시였다. 매칭은 그사이 사라졌다. 대신 인생 사진 한 장은 건졌다.",
+            "chance": 100,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 1,
+              "운": -1
+            },
+            "addFlags": []
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week8_romance"
+      },
+      {
+        "choiceId": "C",
+        "label": "앱을 지우고 동네 독서 모임에 나간다.",
+        "statDelta": {
+          "지력": 1,
+          "사회성": 2,
+          "경제력": -1
+        },
+        "resultText": "같은 책 같은 문장에 밑줄을 그은 사람이 있었다. 모임이 끝나고 둘이 남아 두 시간을 더 이야기했다.",
+        "addFlags": [
+          "dating"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "c_book",
+            "text": "같은 책 같은 문장에 밑줄을 그은 사람이 있었다. 모임이 끝나고 둘이 남아 두 시간을 더 이야기했다.",
+            "chance": 55,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "지력": 1,
+              "사회성": 2,
+              "경제력": -1
+            },
+            "addFlags": [
+              "dating"
+            ],
+            "chanceWeights": {
+              "지력": 1,
+              "사회성": 1
+            }
+          },
+          {
+            "outcomeId": "c_quiet",
+            "text": "책은 좋았다. 사람들은 다 나보다 책을 많이 읽었다. 조용히 다음 달 책을 주문했다.",
+            "chance": 45,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "지력": 2,
+              "행복": -1
+            },
+            "addFlags": []
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week8_romance"
+      }
+    ],
+    "priority": 0,
+    "kind": "INCIDENT",
+    "periods": [
+      "YOUNG_ADULT"
+    ],
+    "weight": 15,
+    "view": "FIRST_PERSON"
+  },
+  {
+    "eventId": "adult_075",
+    "stage": "ADULT",
+    "type": "NORMAL",
+    "isFallback": false,
+    "isMilestone": false,
+    "title": "모닥불 옆자리",
+    "text": "동아리 MT 둘째 날 밤. 늘 말없이 기타만 치던 사람이 모닥불 옆자리에 앉았다. \"{name}, 마시멜로 구울 줄 알아?\"",
+    "imageId": "img_pov_campfire_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [
+        "university"
+      ],
+      "blockedFlags": [
+        "dating",
+        "married"
+      ]
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "같이 구워 준다.",
+        "statDelta": {
+          "사회성": 2,
+          "행복": 3,
+          "건강": -1
+        },
+        "resultText": "두 개는 태우고 세 번째는 완벽했다. 돌아오는 버스에서도 옆자리에 앉았다. 그날부터 사귀었다.",
+        "addFlags": [
+          "dating"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "a_spark",
+            "text": "두 개는 태우고 세 번째는 완벽했다. 돌아오는 버스에서도 옆자리에 앉았다. 그날부터 사귀었다.",
+            "chance": 65,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "사회성": 2,
+              "행복": 3,
+              "건강": -1
+            },
+            "addFlags": [
+              "dating"
+            ],
+            "chanceWeights": {
+              "사회성": 2,
+              "행복": 1
+            }
+          },
+          {
+            "outcomeId": "a_chord",
+            "text": "마시멜로는 맛있었다. 그 사람은 기타 코드 세 개를 알려 줬다. 우리는 좋은 기타 친구가 됐다.",
+            "chance": 35,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 2,
+              "사회성": 1
+            },
+            "addFlags": [
+              "lifelong_friend"
+            ]
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week8_romance"
+      },
+      {
+        "choiceId": "B",
+        "label": "기타를 빌려서 아는 노래를 친다.",
+        "statDelta": {
+          "행복": 3,
+          "사회성": 1,
+          "운": -1
+        },
+        "resultText": "코드 세 개로 버텼는데 다 같이 떼창을 했다. 노래가 끝나자 그 사람이 말했다. \"다음엔 같이 치자.\"",
+        "addFlags": [
+          "dating"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "b_song",
+            "text": "코드 세 개로 버텼는데 다 같이 떼창을 했다. 노래가 끝나자 그 사람이 말했다. \"다음엔 같이 치자.\"",
+            "chance": 40,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 3,
+              "사회성": 1,
+              "운": -1
+            },
+            "addFlags": [
+              "dating"
+            ],
+            "chanceWeights": {
+              "행복": 2,
+              "운": 1
+            }
+          },
+          {
+            "outcomeId": "b_string",
+            "text": "첫 소절에서 줄이 끊어졌다. 남은 밤 내내 둘이서 기타 줄 파는 곳을 검색했다.",
+            "chance": 60,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "사회성": 1,
+              "행복": -1
+            },
+            "addFlags": [],
+            "chanceWeights": {
+              "운": -2
+            }
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week8_romance"
+      },
+      {
+        "choiceId": "C",
+        "label": "먼저 텐트로 들어가 잔다.",
+        "statDelta": {
+          "건강": 2,
+          "사회성": -1
+        },
+        "resultText": "푹 잤다. 다음 날 아침 단체 사진에서 나만 눈이 맑았다.",
+        "addFlags": [],
+        "outcomes": [
+          {
+            "outcomeId": "c_sleep",
+            "text": "푹 잤다. 다음 날 아침 단체 사진에서 나만 눈이 맑았다.",
+            "chance": 100,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "건강": 2,
+              "사회성": -1
+            },
+            "addFlags": []
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week8_romance"
+      }
+    ],
+    "priority": 0,
+    "kind": "INCIDENT",
+    "periods": [
+      "YOUNG_ADULT"
+    ],
+    "weight": 15,
+    "view": "FIRST_PERSON"
+  },
+  {
+    "eventId": "adult_076",
+    "stage": "ADULT",
+    "type": "NORMAL",
+    "isFallback": false,
+    "isMilestone": false,
+    "title": "마감 같이 하는 사람",
+    "text": "알바든 회사든, 매일 마감을 같이 하는 사람이 있다. 오늘은 둘만 남았다. 그 사람이 불을 끄며 묻는다. \"{name} 씨, 배 안 고파요?\"",
+    "imageId": "img_pov_closing_shift_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [],
+      "blockedFlags": [
+        "dating",
+        "married"
+      ]
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "근처 국밥집에 가자고 한다.",
+        "statDelta": {
+          "사회성": 2,
+          "행복": 3,
+          "경제력": -1
+        },
+        "resultText": "국밥 두 그릇을 앞에 두고 세 시간을 떠들었다. 그 뒤로 마감이 기다려졌다. 석 달 뒤엔 마감 없는 날에도 만났다.",
+        "addFlags": [
+          "dating"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "a_soup",
+            "text": "국밥 두 그릇을 앞에 두고 세 시간을 떠들었다. 그 뒤로 마감이 기다려졌다. 석 달 뒤엔 마감 없는 날에도 만났다.",
+            "chance": 65,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "사회성": 2,
+              "행복": 3,
+              "경제력": -1
+            },
+            "addFlags": [
+              "dating"
+            ],
+            "chanceWeights": {
+              "사회성": 2
+            }
+          },
+          {
+            "outcomeId": "a_ramen",
+            "text": "국밥집은 문을 닫았다. 편의점 컵라면을 나눠 먹고 헤어졌다. 그날은 그걸로 끝이었지만 컵라면이 이상하게 맛있었다.",
+            "chance": 35,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 1,
+              "건강": -1
+            },
+            "addFlags": [],
+            "chanceWeights": {
+              "사회성": -1
+            }
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week8_romance"
+      },
+      {
+        "choiceId": "B",
+        "label": "오늘은 피곤해서 먼저 간다고 한다.",
+        "statDelta": {
+          "건강": 1,
+          "행복": -2
+        },
+        "resultText": "집에 와서 그 질문을 세 번 곱씹었다. 다음 날부터 그 사람은 다른 사람과 마감을 했다.",
+        "addFlags": [
+          "missed_chance"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "b_home",
+            "text": "집에 와서 그 질문을 세 번 곱씹었다. 다음 날부터 그 사람은 다른 사람과 마감을 했다.",
+            "chance": 100,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "건강": 1,
+              "행복": -2
+            },
+            "addFlags": [
+              "missed_chance"
+            ]
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week8_romance"
+      },
+      {
+        "choiceId": "C",
+        "label": "배는 안 고픈데 같이 좀 걷자고 한다.",
+        "statDelta": {
+          "행복": 3,
+          "건강": 1,
+          "경제력": -1
+        },
+        "resultText": "정류장 세 개를 그냥 지나쳤다. 마지막 버스가 끊겼는데 둘 다 별로 아쉽지 않았다.",
+        "addFlags": [
+          "dating"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "c_walk",
+            "text": "정류장 세 개를 그냥 지나쳤다. 마지막 버스가 끊겼는데 둘 다 별로 아쉽지 않았다.",
+            "chance": 65,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 3,
+              "건강": 1,
+              "경제력": -1
+            },
+            "addFlags": [
+              "dating"
+            ],
+            "chanceWeights": {
+              "운": 2,
+              "행복": 1
+            }
+          },
+          {
+            "outcomeId": "c_rain",
+            "text": "걷자마자 비가 쏟아졌다. 둘 다 우산이 없었다. 다음 날 감기도 같이 걸렸다.",
+            "chance": 35,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "건강": -2,
+              "사회성": 1
+            },
+            "addFlags": [],
+            "chanceWeights": {
+              "운": -2
+            }
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week8_romance"
+      }
+    ],
+    "priority": 0,
+    "kind": "INCIDENT",
+    "periods": [
+      "YOUNG_ADULT"
+    ],
+    "weight": 15,
+    "view": "FIRST_PERSON"
+  },
+  {
+    "eventId": "adult_077",
+    "stage": "ADULT",
+    "type": "NORMAL",
+    "isFallback": false,
+    "isMilestone": false,
+    "title": "첫사랑의 연락",
+    "text": "모르는 번호로 문자가 왔다. '혹시 {nameCall} 맞아? 나 기억해? 고등학교 축제 때…' 그 축제가 벌써 7년 전이다.",
+    "imageId": "img_pov_first_love_text_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [
+        "first_love"
+      ],
+      "blockedFlags": [
+        "dating",
+        "married"
+      ]
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "만나서 밥 한번 먹자고 한다.",
+        "statDelta": {
+          "행복": 4,
+          "사회성": 1,
+          "경제력": -1
+        },
+        "resultText": "그 사람은 축제 날 단체 사진을 아직 갖고 있었다. 옆자리에 선 우리 둘을 보며 한참 웃었다. 이번엔 둘만 사진을 찍었다.",
+        "addFlags": [
+          "dating"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "a_again",
+            "text": "그 사람은 축제 날 단체 사진을 아직 갖고 있었다. 옆자리에 선 우리 둘을 보며 한참 웃었다. 이번엔 둘만 사진을 찍었다.",
+            "chance": 65,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 4,
+              "사회성": 1,
+              "경제력": -1
+            },
+            "addFlags": [
+              "dating"
+            ],
+            "chanceWeights": {
+              "사회성": 1,
+              "운": 2
+            }
+          },
+          {
+            "outcomeId": "a_changed",
+            "text": "7년은 길었다. 서로 많이 달라져 있었다. 그래도 그때 고마웠다는 말은 하고 헤어졌다.",
+            "chance": 35,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "지력": 1,
+              "행복": -1
+            },
+            "addFlags": []
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week8_romance"
+      },
+      {
+        "choiceId": "B",
+        "label": "답장 대신 축제 사진을 다시 꺼내 본다.",
+        "statDelta": {
+          "행복": 1,
+          "사회성": -1
+        },
+        "resultText": "사진 속 우리는 여전히 옆자리였다. 답장은 끝내 못 보냈다. 사진은 다시 상자 속으로 들어갔다.",
+        "addFlags": [
+          "missed_chance"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "b_photo",
+            "text": "사진 속 우리는 여전히 옆자리였다. 답장은 끝내 못 보냈다. 사진은 다시 상자 속으로 들어갔다.",
+            "chance": 100,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 1,
+              "사회성": -1
+            },
+            "addFlags": [
+              "missed_chance"
+            ]
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week8_romance"
+      },
+      {
+        "choiceId": "C",
+        "label": "'누구세요?' 하고 모른 척한다.",
+        "statDelta": {
+          "행복": 3,
+          "운": 1,
+          "사회성": -1
+        },
+        "resultText": "'축제 때 같이 다녔던 사람!' 답장을 보고 얼굴이 빨개졌다. 그 사람이 웃는 이모티콘을 보냈다. 다음 주에 만나기로 했다.",
+        "addFlags": [
+          "dating"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "c_play",
+            "text": "'축제 때 같이 다녔던 사람!' 답장을 보고 얼굴이 빨개졌다. 그 사람이 웃는 이모티콘을 보냈다. 다음 주에 만나기로 했다.",
+            "chance": 50,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 3,
+              "운": 1,
+              "사회성": -1
+            },
+            "addFlags": [
+              "dating"
+            ],
+            "chanceWeights": {
+              "운": 2
+            }
+          },
+          {
+            "outcomeId": "c_gone",
+            "text": "'아, 잘못 보냈나 봐요. 죄송해요.' 대화가 끝났다. 진짜로 끝났다.",
+            "chance": 50,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": -3,
+              "운": -1
+            },
+            "addFlags": [],
+            "chanceWeights": {
+              "운": -2
+            }
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week8_romance"
+      }
+    ],
+    "priority": 0,
+    "kind": "INCIDENT",
+    "periods": [
+      "YOUNG_ADULT"
+    ],
+    "weight": 15,
+    "view": "FIRST_PERSON"
+  },
+  {
+    "eventId": "adult_078",
+    "stage": "ADULT",
+    "type": "NORMAL",
+    "isFallback": false,
+    "isMilestone": false,
+    "title": "런닝머신 옆자리",
+    "text": "새벽 6시 헬스장. 한 달째 같은 시간, 옆 런닝머신에 같은 사람이 있다. 오늘 그 사람 이어폰 한쪽이 바닥에 떨어졌다.",
+    "imageId": "img_pov_treadmill_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [],
+      "blockedFlags": [
+        "dating",
+        "married"
+      ]
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "이어폰을 주워 건넨다.",
+        "statDelta": {
+          "사회성": 2,
+          "행복": 2,
+          "경제력": -1
+        },
+        "resultText": "\"감사해요. 매일 오시던데요?\" 그날부터 운동 끝나고 같이 두유를 마셨다. 두 달 뒤엔 주말에도 만났다.",
+        "addFlags": [
+          "dating",
+          "gym_habit"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "a_talk",
+            "text": "\"감사해요. 매일 오시던데요?\" 그날부터 운동 끝나고 같이 두유를 마셨다. 두 달 뒤엔 주말에도 만났다.",
+            "chance": 60,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "사회성": 2,
+              "행복": 2,
+              "경제력": -1
+            },
+            "addFlags": [
+              "dating",
+              "gym_habit"
+            ],
+            "chanceWeights": {
+              "사회성": 1,
+              "운동능력": 1
+            }
+          },
+          {
+            "outcomeId": "a_nod",
+            "text": "고개만 꾸벅하고 다시 달렸다. 그 뒤로 눈인사하는 사이가 됐다. 딱 거기까지였다.",
+            "chance": 40,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "운동능력": 2,
+              "사회성": -1
+            },
+            "addFlags": [
+              "gym_habit"
+            ]
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week8_romance"
+      },
+      {
+        "choiceId": "B",
+        "label": "모르는 척 속도를 올린다.",
+        "statDelta": {
+          "사회성": 1,
+          "행복": 2,
+          "건강": -2
+        },
+        "resultText": "속도를 너무 올렸다. 런닝머신 뒤로 밀려났다. 그 사람이 나를 일으켜 줬고, 둘 다 웃음이 터졌다. 그날 처음 이름을 물었다.",
+        "addFlags": [
+          "dating"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "b_fall",
+            "text": "속도를 너무 올렸다. 런닝머신 뒤로 밀려났다. 그 사람이 나를 일으켜 줬고, 둘 다 웃음이 터졌다. 그날 처음 이름을 물었다.",
+            "chance": 40,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "사회성": 1,
+              "행복": 2,
+              "건강": -2
+            },
+            "addFlags": [
+              "dating"
+            ],
+            "chanceWeights": {
+              "운": 2
+            }
+          },
+          {
+            "outcomeId": "b_record",
+            "text": "기록은 좋았다. 그 사람은 다음 날부터 운동 시간을 바꿨다.",
+            "chance": 60,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "운동능력": 2,
+              "사회성": -1
+            },
+            "addFlags": [
+              "gym_habit"
+            ],
+            "chanceWeights": {
+              "운": -2
+            }
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week8_romance"
+      },
+      {
+        "choiceId": "C",
+        "label": "운동 루틴을 알려 달라고 한다.",
+        "statDelta": {
+          "운동능력": 3,
+          "행복": -1
+        },
+        "resultText": "그 사람은 진지하게 루틴표를 짜 줬다. 운동은 늘었고 마음은… 운동만 늘었다.",
+        "addFlags": [
+          "gym_habit"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "c_routine",
+            "text": "그 사람은 진지하게 루틴표를 짜 줬다. 운동은 늘었고 마음은… 운동만 늘었다.",
+            "chance": 100,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "운동능력": 3,
+              "행복": -1
+            },
+            "addFlags": [
+              "gym_habit"
+            ]
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week8_romance"
+      }
+    ],
+    "priority": 0,
+    "kind": "INCIDENT",
+    "periods": [
+      "YOUNG_ADULT"
+    ],
+    "weight": 15,
+    "view": "FIRST_PERSON"
+  },
+  {
     "eventId": "special_001",
     "stage": "INFANT",
     "type": "SPECIAL",

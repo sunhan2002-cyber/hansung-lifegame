@@ -3882,5 +3882,65 @@
     "height": 225,
     "style": "pixel_art",
     "perspective": "first_person"
+  },
+  {
+    "imageId": "img_pov_dating_app_001",
+    "usage": "pov",
+    "stage": "YOUNG_ADULT",
+    "description": "휴대폰 화면의 매칭 알림과 상대 프로필을 보는 1인칭",
+    "fileName": "img_pov_dating_app_001.png",
+    "fallbackText": "첫 매칭 장면 준비 중",
+    "width": 300,
+    "height": 225,
+    "style": "pixel_art",
+    "perspective": "first_person"
+  },
+  {
+    "imageId": "img_pov_campfire_001",
+    "usage": "pov",
+    "stage": "YOUNG_ADULT",
+    "description": "MT 밤 모닥불 앞에서 마시멜로 꼬치를 든 옆사람을 보는 1인칭",
+    "fileName": "img_pov_campfire_001.png",
+    "fallbackText": "모닥불 옆자리 장면 준비 중",
+    "width": 300,
+    "height": 225,
+    "style": "pixel_art",
+    "perspective": "first_person"
+  },
+  {
+    "imageId": "img_pov_closing_shift_001",
+    "usage": "pov",
+    "stage": "YOUNG_ADULT",
+    "description": "불 꺼진 가게에서 셔터를 내리는 동료를 보는 1인칭",
+    "fileName": "img_pov_closing_shift_001.png",
+    "fallbackText": "마감 같이 하는 사람 장면 준비 중",
+    "width": 300,
+    "height": 225,
+    "style": "pixel_art",
+    "perspective": "first_person"
+  },
+  {
+    "imageId": "img_pov_first_love_text_001",
+    "usage": "pov",
+    "stage": "YOUNG_ADULT",
+    "description": "휴대폰에 온 모르는 번호의 문자와 옛 축제 사진을 함께 보는 1인칭",
+    "fileName": "img_pov_first_love_text_001.png",
+    "fallbackText": "첫사랑의 연락 장면 준비 중",
+    "width": 300,
+    "height": 225,
+    "style": "pixel_art",
+    "perspective": "first_person"
+  },
+  {
+    "imageId": "img_pov_treadmill_001",
+    "usage": "pov",
+    "stage": "YOUNG_ADULT",
+    "description": "새벽 헬스장 옆 런닝머신 아래 떨어진 이어폰을 내려다보는 1인칭",
+    "fileName": "img_pov_treadmill_001.png",
+    "fallbackText": "런닝머신 옆자리 장면 준비 중",
+    "width": 300,
+    "height": 225,
+    "style": "pixel_art",
+    "perspective": "first_person"
   }
 ]
