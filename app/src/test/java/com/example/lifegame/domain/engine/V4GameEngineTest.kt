@@ -196,7 +196,67 @@ class V4GameEngineTest {
     }
 
     @Test
-    fun fixedSeedDevelopmentLoopCompletesAll24Turns() {
+    fun lifeDamageEndsRunAtZeroAndRecoveryIsClamped() {
+        val dangerous = decisionWithOutcomes(
+            listOf(Outcome("hit", "큰 사고를 당했다", chance = 100, lifeDelta = -100)),
+            period = LifePeriod.TEEN,
+        )
+        val damaged = engine.resolvePeriodDecision(
+            pendingState(7L, dangerous, period = LifePeriod.TEEN, stats = Stats(health = 40)),
+            dangerous,
+            "A",
+            periods,
+        )
+        assertEquals(0, damaged.step.state.stats.health)
+        assertTrue(damaged.step.state.isEnding)
+        assertTrue(damaged.step.state.isDead)
+
+        val recovery = decisionWithOutcomes(
+            listOf(Outcome("rest", "회복했다", chance = 100, lifeDelta = 20)),
+            period = LifePeriod.TEEN,
+        )
+        val recovered = engine.resolvePeriodDecision(
+            pendingState(8L, recovery, period = LifePeriod.TEEN, stats = Stats(health = 90)),
+            recovery,
+            "A",
+            periods,
+        )
+        assertEquals(100, recovered.step.state.stats.health)
+        assertFalse(recovered.step.state.isDead)
+    }
+
+    @Test
+    fun lowHealthCanCauseSuddenDeathButNormalHealthCannot() {
+        val middleFocus = focus(LifePeriod.MIDDLE, "middle", StatDelta())
+        val lowHealthStates = (1L..500L).map { seed ->
+            engine.advancePeriodYear(
+                engine.selectFocus(
+                    PeriodRunState("low-$seed", seed, LifePeriod.MIDDLE, stats = Stats(health = 10)),
+                    middleFocus,
+                ),
+                periods,
+                listOf(middleFocus),
+                emptyList(),
+            )
+        }
+        assertTrue(lowHealthStates.any { it.state.isEnding && it.state.isDead })
+
+        val normalHealthStates = (1L..500L).map { seed ->
+            engine.advancePeriodYear(
+                engine.selectFocus(
+                    PeriodRunState("normal-$seed", seed, LifePeriod.MIDDLE, stats = Stats(health = 50)),
+                    middleFocus,
+                ),
+                periods,
+                listOf(middleFocus),
+                emptyList(),
+            )
+        }
+        assertTrue(normalHealthStates.none { it.state.isEnding && it.state.isDead })
+    }
+
+    @Test
+    fun fixedSeedDevelopmentLoopStopsWhenLifeReachesZero() {
         var state = engine.createPeriodRun("demo", 20261012L, periods)
         val focuses = focuses()
         var completedTurns = 0
@@ -210,8 +270,8 @@ class V4GameEngineTest {
             state = step.state
         }
 
-        assertEquals(24, completedTurns)
-        assertEquals(24, state.moments.size)
+        assertEquals(20, completedTurns)
+        assertEquals(21, state.moments.size)
         assertEquals(LifePeriod.MIDDLE, state.period)
     }
 

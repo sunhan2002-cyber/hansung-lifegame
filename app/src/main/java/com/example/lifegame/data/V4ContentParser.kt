@@ -54,7 +54,9 @@ object V4ContentParser {
             kind = item.toDecisionKind(),
             title = item.getString("title"),
             text = item.getString("text"),
-            choices = item.getJSONArray("choices").mapObjects { choice -> choice.toDecisionOption() },
+            choices = item.getJSONArray("choices").mapObjects { choice ->
+                choice.toDecisionOption(periods = item.toPeriods(), kind = item.toDecisionKind())
+            },
             weight = item.optInt("weight", 1).coerceAtLeast(1),
             yearInPeriod = item.optPositiveInt("yearInPeriod"),
             requiredFlags = conditions?.optJSONArray("requiredFlags").toStringSet(),
@@ -66,7 +68,7 @@ object V4ContentParser {
         )
     }
 
-    private fun JSONObject.toDecisionOption(): DecisionOption {
+    private fun JSONObject.toDecisionOption(periods: Set<LifePeriod>, kind: DecisionKind): DecisionOption {
         val fallbackDelta = optJSONObject("statDelta").toStatDelta()
         val fallbackText = optString("resultText")
         val fallbackFlags = optJSONArray("addFlags").toStringSet()
@@ -81,6 +83,7 @@ object V4ContentParser {
                 chanceWeights = outcome.optJSONObject("chanceWeights").toChanceWeights(),
                 hidden = outcome.optBoolean("hidden", false),
                 death = outcome.optBoolean("death", false),
+                lifeDelta = outcome.optInt("lifeDelta", inferLifeDelta(kind, outcome)),
             )
         }.orEmpty()
         val outcomes = parsedOutcomes.ifEmpty {
@@ -91,16 +94,69 @@ object V4ContentParser {
                     statDelta = fallbackDelta,
                     addFlags = fallbackFlags,
                     chance = 100,
+                    primary = true,
+                    lifeDelta = inferLifeDelta(kind, fallbackDelta),
                 ),
             )
         }
+        val explicitStats = optJSONObject("requiredStats")?.toStatConditions()
+            ?: optJSONObject("stats")?.toStatConditions()
+        val inferredStats = inferStatConditions(outcomes, periods)
+        // 돌발 선택지는 최소 한 갈래가 능력치에 따라 잠기도록 한다.
+        // JSON에 명시된 조건이 있으면 그 조건을 그대로 사용한다.
         return DecisionOption(
             choiceId = getString("choiceId"),
             label = getString("label"),
             outcomes = outcomes,
             requiredFlags = optJSONArray("requiredFlags").toStringSet(),
             blockedFlags = optJSONArray("blockedFlags").toStringSet(),
+            statConditions = explicitStats ?: inferredStats,
         )
+    }
+
+    private fun inferLifeDelta(kind: DecisionKind, outcome: JSONObject): Int = when {
+        outcome.optBoolean("death", false) -> -100
+        kind == DecisionKind.BIG_INCIDENT -> -25
+        else -> 0
+    }
+
+    private fun inferLifeDelta(kind: DecisionKind, delta: StatDelta): Int = when {
+        kind == DecisionKind.BIG_INCIDENT -> -25
+        else -> 0
+    }
+
+    /**
+     * 콘텐츠에 명시 조건이 없을 때도 선택지 결과와 연결된 핵심 능력만 조건으로 사용한다.
+     * 여러 능력이 동시에 상승하는 선택지는 억지로 하나를 고르지 않고 조건 없이 둔다.
+     */
+    private fun inferStatConditions(outcomes: List<Outcome>, periods: Set<LifePeriod>): StatConditions {
+        if (periods == setOf(LifePeriod.INFANT)) return StatConditions()
+        val primary = outcomes.firstOrNull { it.primary } ?: outcomes.firstOrNull() ?: return StatConditions()
+        val positive = listOfNotNull(
+            "health" to primary.statDelta.health.takeIf { it > 0 },
+            "fitness" to primary.statDelta.fitness.takeIf { it > 0 },
+            "intelligence" to primary.statDelta.intelligence.takeIf { it > 0 },
+            "social" to primary.statDelta.social.takeIf { it > 0 },
+            "wealth" to primary.statDelta.wealth.takeIf { it > 0 },
+            "luck" to primary.statDelta.luck.takeIf { it > 0 },
+        )
+        if (positive.size != 1) return StatConditions()
+        val threshold = when {
+            periods.contains(LifePeriod.OLD_AGE) -> if (positive.single().first == "health") 45 else 65
+            periods.contains(LifePeriod.MIDDLE) -> 60
+            periods.contains(LifePeriod.YOUNG_ADULT) -> 58
+            periods.contains(LifePeriod.TEEN) -> 55
+            periods.contains(LifePeriod.CHILD) -> 52
+            else -> 50
+        }
+        return when (positive.single().first) {
+            "health" -> StatConditions(minHealth = threshold)
+            "fitness" -> StatConditions(minFitness = threshold)
+            "intelligence" -> StatConditions(minIntelligence = threshold)
+            "social" -> StatConditions(minSocial = threshold)
+            "wealth" -> StatConditions(minWealth = threshold)
+            else -> StatConditions(minLuck = threshold)
+        }
     }
 
     private fun JSONObject.toPeriods(): Set<LifePeriod> {

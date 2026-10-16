@@ -25,6 +25,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.safeDrawing
 import androidx.compose.foundation.layout.safeDrawingPadding
 import androidx.compose.foundation.layout.sizeIn
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.layout.windowInsetsPadding
 import androidx.compose.foundation.rememberScrollState
@@ -40,10 +41,9 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.blur
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.drawBehind
-import androidx.compose.ui.geometry.Offset
-import androidx.compose.ui.graphics.PathEffect
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.hapticfeedback.HapticFeedbackType
 import androidx.compose.ui.input.pointer.pointerInput
@@ -53,9 +53,11 @@ import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.semantics.heading
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.min
 import androidx.compose.ui.unit.sp
+import kotlinx.coroutines.delay
 import com.example.lifegame.domain.model.DecisionKind
 import com.example.lifegame.ui.DecisionChoiceUi
 import com.example.lifegame.ui.DecisionUi
@@ -69,8 +71,11 @@ import com.example.lifegame.ui.components.FilmShot
 import com.example.lifegame.ui.components.FilmStrip
 import com.example.lifegame.ui.components.FocusLockRow
 import com.example.lifegame.ui.components.InkButton
+import com.example.lifegame.ui.components.LifeGauge
 import com.example.lifegame.ui.components.PerforationBand
 import com.example.lifegame.ui.components.PeriodHeader
+import com.example.lifegame.ui.components.PixelFigurePlaceholder
+import com.example.lifegame.ui.components.SceneImage
 import com.example.lifegame.ui.components.StatsSheet
 import com.example.lifegame.ui.components.distortEnvelope
 import com.example.lifegame.ui.components.rememberReduceMotion
@@ -86,6 +91,7 @@ import com.example.lifegame.ui.theme.LifeGamePaper
 import com.example.lifegame.ui.theme.LifeGameRule
 import com.example.lifegame.ui.theme.LifeGameSerif
 import com.example.lifegame.ui.theme.LifeGameSpecial
+import com.example.lifegame.ui.theme.LifeGameStatUp
 import com.example.lifegame.ui.theme.MarkLabelStyle
 import com.example.lifegame.ui.theme.ResultStoryStyle
 import com.example.lifegame.ui.theme.StoryStyle
@@ -109,6 +115,8 @@ fun DecisionScreen(
     val outcome = state.outcome
     val introKey = "${decision.eventId}:${state.yearKey}"
     var introDone by rememberSaveable(introKey) { mutableStateOf(outcome != null) }
+    var sceneOnly by rememberSaveable(introKey) { mutableStateOf(false) }
+    var typedChars by rememberSaveable(introKey) { mutableStateOf(if (outcome != null) decision.text.length else 0) }
     var statsOpen by remember { mutableStateOf(false) }
     var motion by remember { mutableStateOf(FilmMotion()) }
     var popupOpen by remember { mutableStateOf(false) }
@@ -149,48 +157,81 @@ fun DecisionScreen(
         contentAlpha.animateTo(1f, tween(if (reduceMotion) 0 else 180))
     }
 
+    LaunchedEffect(introKey, introDone) {
+        if (!introDone || outcome != null) return@LaunchedEffect
+        typedChars = 0
+        if (reduceMotion) {
+            typedChars = decision.text.length
+        } else {
+            decision.text.forEachIndexed { index, _ ->
+                typedChars = index + 1
+                delay(18)
+            }
+        }
+    }
+
     BackHandler(enabled = popupOpen) { popupClosed.trySend(Unit) }
 
     BoxWithConstraints(
         modifier
             .fillMaxSize()
-            .background(LifeGamePaper),
+            .background(LifeGameInk),
     ) {
-        // 선택지가 한 화면에 더 많이 보이도록 자동 진행보다 조금 낮게 잡는다 (넘치면 가운데를 잘라 보여 준다).
-        val gateHeight = min((maxWidth - 20.dp) * 0.75f, maxHeight * 0.26f)
-        Column(Modifier.fillMaxSize().safeDrawingPadding()) {
-            PeriodHeader(
-                periodName = state.periodName,
-                yearLabel = "${state.yearInPeriod}번째 해",
-                marks = state.periodMarks,
-                stats = state.stats,
-                onStatsClick = { statsOpen = true },
-            )
-            Column(
+        SceneImage(
+            shot = FilmShot(
+                key = introKey,
+                imageId = decision.imageId,
+                imageFile = decision.imageFile,
+                isSpecial = decision.kind == DecisionKind.BIG_INCIDENT,
+            ),
+            modifier = Modifier
+                .fillMaxSize()
+                // 장면 보기 전에는 배경만 살짝 흐리게 한다. 텍스트는 별도 패널에서 선명하게 읽힌다.
+                .blur(if (sceneOnly) 0.dp else 8.dp),
+        )
+        Box(
+            Modifier
+                .fillMaxSize()
+                .background(LifeGameInk.copy(alpha = if (sceneOnly) 0.04f else 0.30f)),
+        )
+        if (sceneOnly) {
+            Box(
                 Modifier
-                    .weight(1f)
-                    .verticalScroll(rememberScrollState())
-                    .testTag("decision_content"),
-            ) {
-                state.focus?.let { FocusLockRow(focus = it, years = state.periodYears) }
-                FilmStrip(
-                    current = FilmShot(
-                        key = introKey,
-                        imageId = decision.imageId,
-                        imageFile = decision.imageFile,
-                        isSpecial = decision.kind == DecisionKind.BIG_INCIDENT,
-                    ),
-                    incoming = null,
-                    gateHeight = gateHeight,
-                    motion = { motion },
-                    modifier = Modifier.padding(top = 6.dp),
+                    .fillMaxSize()
+                    .pointerInput(Unit) { detectTapGestures { sceneOnly = false } },
+            )
+        } else {
+            Column(Modifier.fillMaxSize().safeDrawingPadding()) {
+                PeriodHeader(
+                    periodName = state.periodName,
+                    yearLabel = "${state.yearInPeriod}번째 해",
+                    marks = state.periodMarks,
+                    stats = state.stats,
+                    onStatsClick = { statsOpen = true },
                 )
-                Column(Modifier.graphicsLayer { alpha = contentAlpha.value }) {
-                    DecisionText(decision = decision, dimmed = outcome != null)
+                Column(
+                    Modifier
+                        .weight(1f)
+                        .fillMaxWidth()
+                        .verticalScroll(rememberScrollState())
+                        .testTag("decision_content"),
+                ) {
+                    state.focus?.let { FocusLockRow(focus = it, years = state.periodYears) }
+                    if (outcome == null) {
+                        NarrativeReveal(
+                            decision = decision,
+                            typedText = decision.text.take(typedChars),
+                            ready = introDone && typedChars >= decision.text.length,
+                            onReveal = { sceneOnly = true },
+                        )
+                    } else {
+                        DecisionText(decision = decision, dimmed = true)
+                    }
                     DecisionSheet(
                         decision = decision,
                         outcome = outcome,
                         enabled = introDone,
+                        choicesBlurred = false,
                         onChoose = onChoose,
                         onContinue = onContinue,
                     )
@@ -211,35 +252,87 @@ fun DecisionScreen(
 }
 
 private fun DecisionKind.markLabel(): String = when (this) {
-    DecisionKind.MILESTONE -> "갈림길"
-    DecisionKind.INCIDENT -> "돌발 사건"
-    DecisionKind.BIG_INCIDENT -> "큰 돌발"
+    DecisionKind.MILESTONE -> "인생의 전환점"
+    DecisionKind.INCIDENT -> "돌발사건"
+    DecisionKind.BIG_INCIDENT -> "돌발선택"
 }
 
 @Composable
-private fun DecisionText(decision: DecisionUi, dimmed: Boolean) {
+private fun NarrativeReveal(
+    decision: DecisionUi,
+    typedText: String,
+    ready: Boolean,
+    onReveal: () -> Unit,
+) {
+    Column(
+        Modifier
+            .fillMaxWidth()
+            .padding(horizontal = 22.dp, vertical = 26.dp),
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.spacedBy(6.dp),
+    ) {
+        Text(
+            text = decision.kind.markLabel(),
+            color = LifeGameSpecial,
+            fontSize = 16.sp,
+            fontWeight = FontWeight.Bold,
+            letterSpacing = 0.8.sp,
+            textAlign = TextAlign.Center,
+        )
+        Text(
+            text = decision.title,
+            color = LifeGamePaper,
+            fontFamily = LifeGameSerif,
+            fontWeight = FontWeight.Bold,
+            fontSize = 29.sp,
+            lineHeight = 36.sp,
+            textAlign = TextAlign.Center,
+        )
+        Text(
+            text = typedText,
+            color = LifeGamePaper,
+            fontFamily = LifeGameSerif,
+            fontSize = 17.sp,
+            lineHeight = 27.sp,
+            textAlign = TextAlign.Center,
+        )
+        Spacer(Modifier.height(4.dp))
+        InkButton(
+            text = "장면 보기",
+            onClick = onReveal,
+            enabled = ready,
+            modifier = Modifier.fillMaxWidth(0.72f),
+            compact = true,
+        )
+    }
+}
+
+@Composable
+private fun DecisionText(decision: DecisionUi, dimmed: Boolean, showBody: Boolean = true) {
     Column(
         modifier = Modifier
             .fillMaxWidth()
-            .padding(start = 20.dp, end = 20.dp, top = 16.dp, bottom = 12.dp),
-        verticalArrangement = Arrangement.spacedBy(8.dp),
+            .padding(start = 22.dp, end = 22.dp, top = 18.dp, bottom = 10.dp),
+        verticalArrangement = Arrangement.spacedBy(5.dp),
     ) {
         Text(
             text = decision.kind.markLabel(),
             style = MarkLabelStyle,
-            color = if (decision.isIncident) LifeGameSpecial else LifeGameInkSecondary,
+            color = if (decision.isIncident) LifeGameSpecial else LifeGamePaper,
         )
         Text(
             text = decision.title,
             style = EventTitleStyle,
-            color = LifeGameInk,
+            color = LifeGamePaper,
             modifier = Modifier.semantics { heading() },
         )
-        Text(
-            text = decision.text,
-            style = StoryStyle,
-            color = if (dimmed) LifeGameInkTertiary else LifeGameInk,
-        )
+        if (showBody) {
+            Text(
+                text = decision.text,
+                style = StoryStyle,
+                color = LifeGamePaper,
+            )
+        }
     }
 }
 
@@ -248,17 +341,15 @@ private fun DecisionSheet(
     decision: DecisionUi,
     outcome: OutcomeUi?,
     enabled: Boolean,
+    choicesBlurred: Boolean = false,
     onChoose: (String) -> Unit,
     onContinue: () -> Unit,
 ) {
     Column(
         modifier = Modifier
             .fillMaxWidth()
-            .drawBehind {
-                drawLine(LifeGameRule, Offset(0f, 0f), Offset(size.width, 0f), strokeWidth = 1.dp.toPx())
-            }
-            .padding(start = 16.dp, end = 16.dp, top = 12.dp, bottom = 16.dp),
-        verticalArrangement = Arrangement.spacedBy(8.dp),
+            .padding(start = 12.dp, end = 12.dp, top = 6.dp, bottom = 8.dp),
+        verticalArrangement = Arrangement.spacedBy(6.dp),
     ) {
         if (outcome == null) {
             Row(Modifier.fillMaxWidth().padding(horizontal = 4.dp)) {
@@ -266,7 +357,12 @@ private fun DecisionSheet(
                 Text("결과 가능성", color = LifeGameInkTertiary, fontSize = 12.sp)
             }
             decision.choices.forEach { choice ->
-                DecisionChoiceCard(choice = choice, enabled = enabled, onClick = { onChoose(choice.choiceId) })
+                DecisionChoiceCard(
+                    choice = choice,
+                    enabled = enabled && choice.available,
+                    blurred = choicesBlurred,
+                    onClick = { onChoose(choice.choiceId) },
+                )
             }
         } else {
             OutcomeBlock(outcome)
@@ -280,82 +376,92 @@ private fun DecisionSheet(
 }
 
 @Composable
-private fun DecisionChoiceCard(choice: DecisionChoiceUi, enabled: Boolean, onClick: () -> Unit) {
+private fun DecisionChoiceCard(
+    choice: DecisionChoiceUi,
+    enabled: Boolean,
+    blurred: Boolean = false,
+    onClick: () -> Unit,
+) {
     val shape = RoundedCornerShape(10.dp)
-    Row(
+    Box(
         modifier = Modifier
             .fillMaxWidth()
-            .heightIn(min = 56.dp)
+            .heightIn(min = 76.dp)
             .clip(shape)
-            .background(LifeGameCard)
-            .border(1.dp, LifeGameRule, shape)
+            .background(LifeGameInk.copy(alpha = 0.52f))
+            .border(1.dp, LifeGamePaper.copy(alpha = 0.28f), shape)
             .clickable(enabled = enabled, role = Role.Button, onClick = onClick)
-            .padding(horizontal = 14.dp, vertical = 12.dp)
             .testTag("decision_choice_${choice.key}"),
-        horizontalArrangement = Arrangement.spacedBy(12.dp),
-        verticalAlignment = Alignment.CenterVertically,
     ) {
+        Row(
+            Modifier
+                .fillMaxWidth()
+                .padding(start = 46.dp, end = 14.dp, top = 13.dp, bottom = 13.dp),
+            horizontalArrangement = Arrangement.spacedBy(12.dp),
+            verticalAlignment = Alignment.CenterVertically,
+        ) {
+            Column(Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(4.dp)) {
+                Text(
+                    text = choice.label,
+                    color = LifeGamePaper,
+                    fontSize = 16.sp,
+                    lineHeight = 22.sp,
+                    fontWeight = FontWeight.Medium,
+                )
+                if (choice.hint.isNotBlank()) {
+                    Text(choice.hint, color = LifeGamePaper.copy(alpha = 0.78f), fontSize = 11.5.sp, lineHeight = 15.5.sp)
+                }
+                if (choice.statConditionText != null) {
+                    Text("조건: ${choice.statConditionText}", color = if (choice.available) LifeGamePaper.copy(alpha = 0.78f) else LifeGamePaper.copy(alpha = 0.5f), fontSize = 11.5.sp, lineHeight = 15.5.sp)
+                }
+                if (choice.healthEffectText != null) {
+                    Text(choice.healthEffectText, color = if (choice.healthEffectText.contains("감소")) LifeGameSpecial else LifeGameStatUp, fontSize = 11.5.sp, lineHeight = 15.5.sp, fontWeight = FontWeight.Medium)
+                }
+                if (!choice.available && choice.lockReason != null) {
+                    Text("🔒 ${choice.lockReason}", color = LifeGamePaper.copy(alpha = 0.6f), fontSize = 11.5.sp, lineHeight = 15.5.sp)
+                }
+            }
+            Text("›", color = LifeGamePaper.copy(alpha = 0.86f), fontSize = 32.sp, lineHeight = 32.sp, fontWeight = FontWeight.Light)
+        }
         Box(
             Modifier
-                .sizeIn(minWidth = 22.dp, minHeight = 22.dp)
-                .clip(RoundedCornerShape(6.dp))
-                .background(LifeGameMuted)
-                .padding(4.dp),
+                .align(Alignment.TopStart)
+                .size(width = 34.dp, height = 30.dp)
+                .clip(RoundedCornerShape(bottomEnd = 7.dp))
+                .background(LifeGameInk),
             contentAlignment = Alignment.Center,
         ) {
-            Text(choice.key, color = LifeGameInkSecondary, fontSize = 12.sp, fontWeight = FontWeight.Bold)
-        }
-        Column(Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(4.dp)) {
-            Text(
-                text = choice.label,
-                color = LifeGameInk,
-                fontSize = 15.5.sp,
-                lineHeight = 21.5.sp,
-                fontWeight = FontWeight.Medium,
-            )
-            if (choice.hint.isNotBlank()) {
-                Text(
-                    text = choice.hint,
-                    color = LifeGameInkSecondary,
-                    fontSize = 11.5.sp,
-                    lineHeight = 15.5.sp,
-                )
-            }
+            Text(choice.key, color = LifeGamePaper, fontSize = 13.sp, fontWeight = FontWeight.Bold)
         }
     }
 }
 
 @Composable
 private fun OutcomeBlock(outcome: OutcomeUi) {
+    val shape = RoundedCornerShape(12.dp)
     Column(
         modifier = Modifier
             .fillMaxWidth()
-            .drawBehind {
-                val dash = 4.dp.toPx()
-                drawLine(
-                    color = LifeGameRule,
-                    start = Offset(0f, 0f),
-                    end = Offset(size.width, 0f),
-                    strokeWidth = 1.dp.toPx(),
-                    pathEffect = PathEffect.dashPathEffect(floatArrayOf(dash, dash * 0.75f)),
-                )
-            }
-            .padding(start = 4.dp, end = 4.dp, top = 10.dp)
+            .clip(shape)
+            .background(LifeGamePaper.copy(alpha = 0.94f))
+            .border(1.dp, LifeGameRule, shape)
+            .padding(horizontal = 16.dp, vertical = 14.dp)
             .testTag("decision_outcome"),
-        verticalArrangement = Arrangement.spacedBy(8.dp),
+        verticalArrangement = Arrangement.spacedBy(7.dp),
     ) {
         Text(
             text = "→ ${outcome.choiceLabel}",
             color = LifeGameInk,
-            fontSize = 14.5.sp,
+            fontSize = 15.sp,
             fontWeight = FontWeight.Bold,
         )
-        Text(text = outcome.text, style = ResultStoryStyle, color = LifeGameInk)
-        if (outcome.changes.isEmpty()) {
-            Text("변화 없음", color = LifeGameInkTertiary, fontSize = 12.5.sp)
-        } else {
-            EffectText(outcome.changes, fontSize = 12.5.sp, showAmount = true)
-        }
+        Text(
+            text = outcome.text,
+            style = ResultStoryStyle,
+            color = LifeGameInk,
+            lineHeight = 24.sp,
+        )
+        // 세부 증감 수치는 능력치 시트에서 확인하고 결과 화면은 서사에 집중한다.
     }
 }
 

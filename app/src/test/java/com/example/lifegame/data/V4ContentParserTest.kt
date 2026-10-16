@@ -92,6 +92,23 @@ class V4ContentParserTest {
     }
 
     @Test
+    fun lifeDeltaDefaultsFollowIncidentRiskAndPositiveOutcome() {
+        val events = V4ContentParser.parseDecisionEvents(
+            """
+            [
+              {"eventId":"big","periods":["TEEN"],"kind":"BIG_INCIDENT","title":"위험","text":"위험한 순간",
+               "choices":[{"choiceId":"A","label":"버틴다","outcomes":[{"outcomeId":"hit","text":"다쳤다","chance":100,"primary":true}]}]},
+              {"eventId":"normal","periods":["TEEN"],"kind":"INCIDENT","title":"회복","text":"좋은 순간",
+               "choices":[{"choiceId":"A","label":"쉰다","outcomes":[{"outcomeId":"rest","text":"회복했다","chance":100,"primary":true,"statDelta":{"건강":3}}]}]}
+            ]
+            """.trimIndent(),
+        )
+
+        assertEquals(-25, events.first().choices.single().outcomes.single().lifeDelta)
+        assertEquals(0, events.last().choices.single().outcomes.single().lifeDelta)
+    }
+
+    @Test
     fun `milestone without an explicit year is still handled before random incidents`() {
         val periods = V4ContentParser.parsePeriods(
             """[{"periodId":"CHILD","displayName":"유년기","chapterTitle":"제2장","order":0,"years":2}]""",

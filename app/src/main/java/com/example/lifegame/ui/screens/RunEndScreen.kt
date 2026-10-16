@@ -52,7 +52,7 @@ fun RunEndScreen(
                 .testTag("run_end_content"),
             verticalArrangement = Arrangement.spacedBy(12.dp),
         ) {
-            Text("인생 기록", color = LifeGameInkSecondary, fontSize = 13.sp)
+            Text("인생 요약", color = LifeGameInkSecondary, fontSize = 13.sp)
             Text(
                 text = state.playerName,
                 color = LifeGameInk,
@@ -62,7 +62,7 @@ fun RunEndScreen(
                 modifier = Modifier.semantics { heading() },
             )
             Text(
-                text = if (state.isDead) "${state.periodName}에 생을 마쳤다." else "${state.periodName}까지 살았다.",
+                text = if (state.isDead) "${state.periodName}에서 인생을 마쳤다." else "${state.periodName}까지의 선택을 돌아본다.",
                 color = LifeGameInk,
                 fontFamily = LifeGameSerif,
                 fontSize = 17.sp,
@@ -79,6 +79,14 @@ fun RunEndScreen(
                 }
             }
             ThinRule(Modifier.padding(vertical = 4.dp))
+            SectionLabel("한 줄 요약")
+            Text(
+                text = state.log.lastOrNull()?.text ?: "기록된 선택이 아직 없다.",
+                color = LifeGameInk,
+                fontFamily = LifeGameSerif,
+                fontSize = 16.sp,
+                lineHeight = 24.sp,
+            )
             SectionLabel("지나온 해", trailing = "${state.log.size}줄")
             state.log.forEach { line ->
                 Column(Modifier.fillMaxWidth()) {

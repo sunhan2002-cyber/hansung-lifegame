@@ -15,6 +15,7 @@ import com.example.lifegame.domain.model.PeriodRunState
 import com.example.lifegame.domain.model.StatDelta
 import com.example.lifegame.domain.model.Stats
 import com.example.lifegame.domain.model.TurnStep
+import com.example.lifegame.domain.model.TurnPhase
 
 data class GameSessionState(
     val progress: GameProgress? = null,
@@ -197,6 +198,19 @@ class PeriodGameSession(
     fun restore(savedState: PeriodRunState): TurnStep {
         val step = engine.advancePeriodYear(savedState, periods, focuses, decisions)
         state = step.state
+        lastStep = step
+        return step
+    }
+
+    /** 이미 한 해를 처리한 상태를 중복 처리하지 않고 화면에 복원한다. */
+    fun restoreSaved(savedState: PeriodRunState): TurnStep {
+        state = savedState
+        val step = when {
+            savedState.isEnding -> TurnStep(savedState, TurnPhase.ENDING)
+            savedState.pendingDecisionId != null -> engine.advancePeriodYear(savedState, periods, focuses, decisions)
+            savedState.selectedFocusId == null -> TurnStep(savedState, TurnPhase.CHAPTER, needsFocusSelection = true)
+            else -> TurnStep(savedState, TurnPhase.AUTO_PROGRESS, canAutoAdvance = true)
+        }
         lastStep = step
         return step
     }

@@ -67,6 +67,16 @@ data class StatConditions(
             stats.happiness.isWithin(minHappiness, maxHappiness) &&
             stats.luck.isWithin(minLuck, maxLuck)
 
+    fun description(): String = listOfNotNull(
+        minHealth?.let { "건강 $it 이상" }, maxHealth?.let { "건강 $it 이하" },
+        minFitness?.let { "운동능력 $it 이상" }, maxFitness?.let { "운동능력 $it 이하" },
+        minIntelligence?.let { "지력 $it 이상" }, maxIntelligence?.let { "지력 $it 이하" },
+        minSocial?.let { "사회성 $it 이상" }, maxSocial?.let { "사회성 $it 이하" },
+        minWealth?.let { "경제력 $it 이상" }, maxWealth?.let { "경제력 $it 이하" },
+        minHappiness?.let { "행복 $it 이상" }, maxHappiness?.let { "행복 $it 이하" },
+        minLuck?.let { "운 $it 이상" }, maxLuck?.let { "운 $it 이하" },
+    ).joinToString(" · ")
+
     private fun Int.isWithin(min: Int?, max: Int?): Boolean =
         (min == null || this >= min) && (max == null || this <= max)
 }
@@ -165,6 +175,7 @@ enum class LifePeriod {
     TEEN,
     YOUNG_ADULT,
     MIDDLE,
+    OLD_AGE,
 }
 
 data class PeriodDefinition(
@@ -229,6 +240,8 @@ data class Outcome(
     val chanceWeights: ChanceWeights = ChanceWeights(),
     val hidden: Boolean = false,
     val death: Boolean = false,
+    /** Legacy content field. It is merged into health during resolution. */
+    val lifeDelta: Int = 0,
 ) {
     init {
         require(chance >= 0) { "outcome chance must be zero or greater" }
@@ -241,6 +254,7 @@ data class DecisionOption(
     val outcomes: List<Outcome>,
     val requiredFlags: Set<String> = emptySet(),
     val blockedFlags: Set<String> = emptySet(),
+    val statConditions: StatConditions = StatConditions(),
 ) {
     init {
         require(outcomes.isNotEmpty()) { "decision option must have at least one outcome" }
@@ -276,6 +290,10 @@ data class DecisionChoicePreview(
     val label: String,
     val likelihood: OutcomeLikelihood? = null,
     val keyStats: List<String> = emptyList(),
+    /** 선택 전에 충족해야 하는 능력치 조건을 화면에 표시한다. */
+    val statConditionText: String? = null,
+    val available: Boolean = true,
+    val lockReason: String? = null,
 )
 
 /** UI가 엔진의 가중치 계산을 복제하지 않고 선택지 가능성을 표시하기 위한 질적 구간이다. */
@@ -314,6 +332,9 @@ data class PeriodRunState(
     val pendingDecisionId: String? = null,
     val moments: List<LifeMoment> = emptyList(),
     val isEnding: Boolean = false,
+    val isDead: Boolean = false,
+    /** 종료가 발생한 생애 시기. 종료 후 다음 시기로 이동해도 이 값은 유지한다. */
+    val endingPeriod: LifePeriod? = null,
 )
 
 enum class TurnPhase {
