@@ -168,6 +168,12 @@
     "label": "코치"
   },
   {
+    "flag": "level_entry",
+    "fact": "careerLevel",
+    "value": "ENTRY",
+    "label": "신입"
+  },
+  {
     "flag": "level_mid",
     "fact": "careerLevel",
     "value": "MID",

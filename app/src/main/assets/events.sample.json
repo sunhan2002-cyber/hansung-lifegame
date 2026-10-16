@@ -21268,7 +21268,8 @@
         "resultText": "명함은 작았고 사무실도 작았다. 그래도 매달 같은 날 월급이 들어왔다. 엄마가 명함을 지갑에 넣고 다닌다.",
         "addFlags": [
           "job_employed",
-          "career_office"
+          "career_office",
+          "level_entry"
         ],
         "outcomes": [
           {
@@ -21285,7 +21286,8 @@
             },
             "addFlags": [
               "job_employed",
-              "career_office"
+              "career_office",
+              "level_entry"
             ],
             "chanceWeights": {
               "사회성": 1
@@ -21305,7 +21307,8 @@
             },
             "addFlags": [
               "job_employed",
-              "career_office"
+              "career_office",
+              "level_entry"
             ]
           }
         ],
@@ -21326,7 +21329,8 @@
         "addFlags": [
           "job_employed",
           "career_public_servant",
-          "responsibility"
+          "responsibility",
+          "level_entry"
         ],
         "outcomes": [
           {
@@ -21344,7 +21348,8 @@
             "addFlags": [
               "job_employed",
               "career_public_servant",
-              "responsibility"
+              "responsibility",
+              "level_entry"
             ],
             "chanceWeights": {
               "지력": 2
@@ -21364,7 +21369,8 @@
             },
             "addFlags": [
               "job_employed",
-              "career_office"
+              "career_office",
+              "level_entry"
             ],
             "chanceWeights": {
               "지력": -2
@@ -22437,6 +22443,771 @@
       "YOUNG_ADULT"
     ],
     "weight": 15,
+    "view": "FIRST_PERSON"
+  },
+  {
+    "eventId": "adult_079",
+    "stage": "ADULT",
+    "type": "NORMAL",
+    "isFallback": false,
+    "isMilestone": false,
+    "title": "사원증 사진",
+    "text": "입사 첫날. 인사팀이 사원증을 건넨다. 사진 속 나는 면접 날 긴장한 얼굴 그대로다. 옆자리 선배: \"점심 뭐 먹을지가 오늘 제일 어려운 결정이에요.\"",
+    "imageId": "img_pov_id_badge_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [
+        "level_entry",
+        "job_employed"
+      ],
+      "blockedFlags": [
+        "early_job",
+        "promoted",
+        "promotion_missed",
+        "v4:event:adult_069",
+        "level_mid",
+        "level_senior",
+        "level_executive",
+        "career_athlete",
+        "pro_athlete",
+        "career_coach",
+        "coach_path",
+        "career_caster",
+        "career_trainer",
+        "career_gym_owner",
+        "career_founder",
+        "career_creator",
+        "career_freelancer",
+        "job_self_employed",
+        "early_retire",
+        "job_retired"
+      ]
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "선배를 따라 회사 앞 식당에 간다.",
+        "statDelta": {
+          "사회성": 3,
+          "지력": 1,
+          "경제력": -1
+        },
+        "resultText": "회사 앞 김치찌개 집이 사내 소식의 중심이었다. 첫날 점심에 팀의 지난 3년 역사를 다 들었다.",
+        "addFlags": [
+          "team_favorite"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "a_lunch",
+            "text": "회사 앞 김치찌개 집이 사내 소식의 중심이었다. 첫날 점심에 팀의 지난 3년 역사를 다 들었다.",
+            "chance": 60,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "사회성": 3,
+              "지력": 1,
+              "경제력": -1
+            },
+            "addFlags": [
+              "team_favorite"
+            ],
+            "chanceWeights": {
+              "사회성": 2
+            }
+          },
+          {
+            "outcomeId": "a_alone",
+            "text": "선배가 회의에 불려 갔다. 혼자 편의점 김밥을 먹으며 사내 메신저 프로필 사진만 열 번 바꿨다.",
+            "chance": 40,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "지력": 1,
+              "행복": -2
+            },
+            "addFlags": [],
+            "chanceWeights": {
+              "사회성": -2
+            }
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week8_late_newcomer"
+      },
+      {
+        "choiceId": "B",
+        "label": "도시락을 먹으며 업무 매뉴얼을 읽는다.",
+        "statDelta": {
+          "지력": 3,
+          "사회성": -1
+        },
+        "resultText": "매뉴얼 세 권을 다 읽었다. 오후 회의에서 아무도 모르던 규정을 내가 찾았다. 팀장님이 내 이름을 처음 불렀다.",
+        "addFlags": [
+          "diligent"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "b_manual",
+            "text": "매뉴얼 세 권을 다 읽었다. 오후 회의에서 아무도 모르던 규정을 내가 찾았다. 팀장님이 내 이름을 처음 불렀다.",
+            "chance": 100,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "지력": 3,
+              "사회성": -1
+            },
+            "addFlags": [
+              "diligent"
+            ]
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week8_late_newcomer"
+      },
+      {
+        "choiceId": "C",
+        "label": "사원증 사진을 다시 찍어 달라고 한다.",
+        "statDelta": {
+          "사회성": 2,
+          "행복": 1,
+          "운": -1
+        },
+        "resultText": "인사팀이 웃으며 다시 찍어 줬다. 새 사진은 더 어색했다. 결국 원래 사진을 쓰기로 했지만 인사팀 사람들과는 친해졌다.",
+        "addFlags": [],
+        "outcomes": [
+          {
+            "outcomeId": "c_retake",
+            "text": "인사팀이 웃으며 다시 찍어 줬다. 새 사진은 더 어색했다. 결국 원래 사진을 쓰기로 했지만 인사팀 사람들과는 친해졌다.",
+            "chance": 55,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "사회성": 2,
+              "행복": 1,
+              "운": -1
+            },
+            "addFlags": [],
+            "chanceWeights": {
+              "운": 2
+            }
+          },
+          {
+            "outcomeId": "c_later",
+            "text": "\"다음 갱신 때 바꿔 드릴게요.\" 다음 갱신은 5년 뒤였다. 그 얼굴로 5년을 출근했다.",
+            "chance": 45,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": -1,
+              "운": 1
+            },
+            "addFlags": [],
+            "chanceWeights": {
+              "운": -2
+            }
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week8_late_newcomer"
+      }
+    ],
+    "priority": 0,
+    "kind": "INCIDENT",
+    "periods": [
+      "YOUNG_ADULT",
+      "MIDDLE"
+    ],
+    "weight": 10,
+    "view": "FIRST_PERSON"
+  },
+  {
+    "eventId": "adult_080",
+    "stage": "ADULT",
+    "type": "NORMAL",
+    "isFallback": false,
+    "isMilestone": false,
+    "title": "늦게 받은 첫 월급",
+    "text": "알림: '급여가 입금되었습니다.' 친구들은 벌써 몇 년째 받던 월급이다. 통장 앱을 열 번 새로고침했다.",
+    "imageId": "img_pov_late_paycheck_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [
+        "level_entry",
+        "job_employed"
+      ],
+      "blockedFlags": [
+        "early_job",
+        "promoted",
+        "promotion_missed",
+        "v4:event:adult_069",
+        "level_mid",
+        "level_senior",
+        "level_executive",
+        "career_athlete",
+        "pro_athlete",
+        "career_coach",
+        "coach_path",
+        "career_caster",
+        "career_trainer",
+        "career_gym_owner",
+        "career_founder",
+        "career_creator",
+        "career_freelancer",
+        "job_self_employed",
+        "early_retire",
+        "job_retired"
+      ]
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "부모님께 용돈 봉투를 드린다.",
+        "statDelta": {
+          "사회성": 2,
+          "행복": 2,
+          "경제력": -2
+        },
+        "resultText": "봉투를 받은 엄마가 한참 말이 없었다. 그날 저녁 반찬이 다섯 개 늘었다.",
+        "addFlags": [
+          "family_bond"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "a_parents",
+            "text": "봉투를 받은 엄마가 한참 말이 없었다. 그날 저녁 반찬이 다섯 개 늘었다.",
+            "chance": 100,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "사회성": 2,
+              "행복": 2,
+              "경제력": -2
+            },
+            "addFlags": [
+              "family_bond"
+            ]
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week8_late_newcomer"
+      },
+      {
+        "choiceId": "B",
+        "label": "적금부터 든다.",
+        "statDelta": {
+          "경제력": 3,
+          "행복": -1
+        },
+        "resultText": "월급의 절반이 적금으로 빠져나갔다. 남은 돈으로 한 달을 버티는 게 첫 업무보다 어려웠다.",
+        "addFlags": [
+          "saving_habit"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "b_save",
+            "text": "월급의 절반이 적금으로 빠져나갔다. 남은 돈으로 한 달을 버티는 게 첫 업무보다 어려웠다.",
+            "chance": 70,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "경제력": 3,
+              "행복": -1
+            },
+            "addFlags": [
+              "saving_habit"
+            ],
+            "chanceWeights": {
+              "경제력": 1
+            }
+          },
+          {
+            "outcomeId": "b_wedding",
+            "text": "적금을 들자마자 결혼식이 세 개, 돌잔치가 하나 잡혔다. 적금은 둘째 달부터 시작했다.",
+            "chance": 30,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "사회성": 2,
+              "경제력": -2
+            },
+            "addFlags": [],
+            "chanceWeights": {
+              "운": -2
+            }
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week8_late_newcomer"
+      },
+      {
+        "choiceId": "C",
+        "label": "학자금 대출부터 갚는다.",
+        "statDelta": {
+          "행복": 3,
+          "경제력": -1
+        },
+        "resultText": "대출 잔액이 처음으로 줄었다. 은행 앱의 숫자가 이렇게 반가울 줄 몰랐다.",
+        "addFlags": [],
+        "outcomes": [
+          {
+            "outcomeId": "c_loan",
+            "text": "대출 잔액이 처음으로 줄었다. 은행 앱의 숫자가 이렇게 반가울 줄 몰랐다.",
+            "chance": 100,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 3,
+              "경제력": -1
+            },
+            "addFlags": []
+          }
+        ],
+        "requiredFlags": [
+          "student_loan"
+        ],
+        "conditionReview": "confirmed",
+        "conditionBasis": "week8_late_newcomer"
+      }
+    ],
+    "priority": 0,
+    "kind": "INCIDENT",
+    "periods": [
+      "YOUNG_ADULT",
+      "MIDDLE"
+    ],
+    "weight": 10,
+    "view": "FIRST_PERSON"
+  },
+  {
+    "eventId": "adult_081",
+    "stage": "ADULT",
+    "type": "NORMAL",
+    "isFallback": false,
+    "isMilestone": false,
+    "title": "환영회의 밸런스 게임",
+    "text": "신입 환영회. 동기들이 밸런스 게임을 시작했다. \"평생 야근 없는 회사 vs 연봉 두 배!\" 모두의 시선이 나에게 쏠린다. 팀장님도 듣고 있다.",
+    "imageId": "img_pov_welcome_party_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [
+        "level_entry",
+        "job_employed"
+      ],
+      "blockedFlags": [
+        "early_job",
+        "promoted",
+        "promotion_missed",
+        "v4:event:adult_069",
+        "level_mid",
+        "level_senior",
+        "level_executive",
+        "career_athlete",
+        "pro_athlete",
+        "career_coach",
+        "coach_path",
+        "career_caster",
+        "career_trainer",
+        "career_gym_owner",
+        "career_founder",
+        "career_creator",
+        "career_freelancer",
+        "job_self_employed",
+        "early_retire",
+        "job_retired"
+      ]
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "\"연봉 두 배!\"",
+        "statDelta": {
+          "경제력": 2,
+          "사회성": 1,
+          "행복": -1
+        },
+        "resultText": "솔직한 대답에 팀장님이 크게 웃었다. 다음 날 팀장님이 연봉 협상 요령을 몰래 알려 줬다.",
+        "addFlags": [],
+        "outcomes": [
+          {
+            "outcomeId": "a_money",
+            "text": "솔직한 대답에 팀장님이 크게 웃었다. 다음 날 팀장님이 연봉 협상 요령을 몰래 알려 줬다.",
+            "chance": 55,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "경제력": 2,
+              "사회성": 1,
+              "행복": -1
+            },
+            "addFlags": [],
+            "chanceWeights": {
+              "운": 1,
+              "사회성": 1
+            }
+          },
+          {
+            "outcomeId": "a_quiet",
+            "text": "분위기가 잠깐 조용해졌다. 그 뒤로 내 별명은 '두 배'가 됐다.",
+            "chance": 45,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "사회성": -1,
+              "운": 1
+            },
+            "addFlags": [],
+            "chanceWeights": {
+              "사회성": -2
+            }
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week8_late_newcomer"
+      },
+      {
+        "choiceId": "B",
+        "label": "\"야근 없는 회사!\"",
+        "statDelta": {
+          "행복": 2,
+          "사회성": 1,
+          "경제력": -1
+        },
+        "resultText": "동기들이 박수를 쳤다. 팀장님은 그 주 금요일에 정시 퇴근을 시켜 줬다. 딱 그 주만.",
+        "addFlags": [],
+        "outcomes": [
+          {
+            "outcomeId": "b_free",
+            "text": "동기들이 박수를 쳤다. 팀장님은 그 주 금요일에 정시 퇴근을 시켜 줬다. 딱 그 주만.",
+            "chance": 60,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 2,
+              "사회성": 1,
+              "경제력": -1
+            },
+            "addFlags": [],
+            "chanceWeights": {
+              "행복": 1
+            }
+          },
+          {
+            "outcomeId": "b_overtime",
+            "text": "그 박수 소리를 들은 팀장님이 다음 날 야근 공지를 올렸다. 동기들이 나를 원망했다.",
+            "chance": 40,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "사회성": -1,
+              "건강": -2
+            },
+            "addFlags": [],
+            "chanceWeights": {
+              "운": -2
+            }
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week8_late_newcomer"
+      },
+      {
+        "choiceId": "C",
+        "label": "\"둘 다 이 회사 얘기는 아니죠?\"",
+        "statDelta": {
+          "사회성": 3,
+          "행복": 1,
+          "운": -1
+        },
+        "resultText": "팀장님이 제일 크게 웃었다. 그날 환영회 최고의 한 마디로 뽑혔다. 상품은 커피 쿠폰 한 장이었다.",
+        "addFlags": [
+          "team_favorite"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "c_legend",
+            "text": "팀장님이 제일 크게 웃었다. 그날 환영회 최고의 한 마디로 뽑혔다. 상품은 커피 쿠폰 한 장이었다.",
+            "chance": 40,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "사회성": 3,
+              "행복": 1,
+              "운": -1
+            },
+            "addFlags": [
+              "team_favorite"
+            ],
+            "chanceWeights": {
+              "운": 2,
+              "사회성": 1
+            }
+          },
+          {
+            "outcomeId": "c_silence",
+            "text": "정적이 흘렀다. 팀장님이 잔을 들며 말했다. \"패기 좋네.\" 그 말이 칭찬인지는 아직도 모른다.",
+            "chance": 60,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "사회성": -2,
+              "행복": -1
+            },
+            "addFlags": [],
+            "chanceWeights": {
+              "운": -2
+            }
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week8_late_newcomer"
+      }
+    ],
+    "priority": 0,
+    "kind": "INCIDENT",
+    "periods": [
+      "YOUNG_ADULT",
+      "MIDDLE"
+    ],
+    "weight": 10,
+    "view": "FIRST_PERSON"
+  },
+  {
+    "eventId": "adult_082",
+    "stage": "ADULT",
+    "type": "NORMAL",
+    "isFallback": false,
+    "isMilestone": false,
+    "title": "나보다 어린 사수",
+    "text": "사수를 소개받았다. 나보다 다섯 살 어리다. 사수: \"{name} 님… 아니, {name} 씨라고 불러도 될까요?\" 둘 다 웃는데 둘 다 어색하다.",
+    "imageId": "img_pov_young_mentor_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [
+        "level_entry",
+        "job_employed",
+        "v4:event:adult_072"
+      ],
+      "blockedFlags": [
+        "early_job",
+        "promoted",
+        "promotion_missed",
+        "v4:event:adult_069",
+        "level_mid",
+        "level_senior",
+        "level_executive",
+        "career_athlete",
+        "pro_athlete",
+        "career_coach",
+        "coach_path",
+        "career_caster",
+        "career_trainer",
+        "career_gym_owner",
+        "career_founder",
+        "career_creator",
+        "career_freelancer",
+        "job_self_employed",
+        "early_retire",
+        "job_retired"
+      ]
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "'선배님'이라고 깍듯하게 부른다.",
+        "statDelta": {
+          "사회성": 3,
+          "행복": 1,
+          "지력": -1
+        },
+        "resultText": "선배님 소리에 사수 귀가 빨개졌다. 석 달 뒤 사수가 먼저 말을 놓자고 했다. 회식 때마다 우리 둘이 제일 늦게까지 남는다.",
+        "addFlags": [
+          "lifelong_friend"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "a_senior",
+            "text": "선배님 소리에 사수 귀가 빨개졌다. 석 달 뒤 사수가 먼저 말을 놓자고 했다. 회식 때마다 우리 둘이 제일 늦게까지 남는다.",
+            "chance": 60,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "사회성": 3,
+              "행복": 1,
+              "지력": -1
+            },
+            "addFlags": [
+              "lifelong_friend"
+            ],
+            "chanceWeights": {
+              "사회성": 2
+            }
+          },
+          {
+            "outcomeId": "a_stiff",
+            "text": "깍듯함이 너무 깍듯했다. 사수가 나를 어려워해서 일을 잘 안 가르쳐 줬다. 결국 매뉴얼을 혼자 읽었다.",
+            "chance": 40,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "지력": 2,
+              "사회성": -1,
+              "행복": -1
+            },
+            "addFlags": [],
+            "chanceWeights": {
+              "사회성": -2
+            }
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week8_late_newcomer"
+      },
+      {
+        "choiceId": "B",
+        "label": "\"제가 나이가 좀 많으니까 커피는 제가 살게요.\"",
+        "statDelta": {
+          "사회성": 2,
+          "행복": 2,
+          "경제력": -1
+        },
+        "resultText": "사수가 빵 터졌다. 그날부터 커피는 번갈아 산다. 내 차례인 날이 조금 더 많다.",
+        "addFlags": [],
+        "outcomes": [
+          {
+            "outcomeId": "b_coffee",
+            "text": "사수가 빵 터졌다. 그날부터 커피는 번갈아 산다. 내 차례인 날이 조금 더 많다.",
+            "chance": 50,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "사회성": 2,
+              "행복": 2,
+              "경제력": -1
+            },
+            "addFlags": [],
+            "chanceWeights": {
+              "운": 2,
+              "사회성": 1
+            }
+          },
+          {
+            "outcomeId": "b_awkward",
+            "text": "나이 얘기가 나오자 사수 표정이 굳었다. 알고 보니 사수도 어린 나이 때문에 늘 마음고생을 하던 사람이었다. 그날은 둘 다 말이 없었다.",
+            "chance": 50,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "사회성": -1,
+              "행복": -2
+            },
+            "addFlags": [],
+            "chanceWeights": {
+              "운": -2
+            }
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week8_late_newcomer"
+      },
+      {
+        "choiceId": "C",
+        "label": "말 대신 일로 먼저 보여 준다.",
+        "statDelta": {
+          "지력": 3,
+          "건강": -2
+        },
+        "resultText": "첫 보고서를 밤새 만들었다. 사수가 빨간 펜으로 세 군데만 고쳤다. \"이 정도면 저보다 낫네요.\"",
+        "addFlags": [
+          "diligent"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "c_report",
+            "text": "첫 보고서를 밤새 만들었다. 사수가 빨간 펜으로 세 군데만 고쳤다. \"이 정도면 저보다 낫네요.\"",
+            "chance": 55,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "지력": 3,
+              "건강": -2
+            },
+            "addFlags": [
+              "diligent"
+            ],
+            "chanceWeights": {
+              "지력": 2
+            }
+          },
+          {
+            "outcomeId": "c_format",
+            "text": "밤새 만든 보고서가 양식부터 틀렸다. 사수가 회사 양식 파일을 조용히 보내 줬다.",
+            "chance": 45,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "지력": 1,
+              "행복": -2
+            },
+            "addFlags": [],
+            "chanceWeights": {
+              "지력": -2
+            }
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week8_late_newcomer"
+      }
+    ],
+    "priority": 0,
+    "kind": "INCIDENT",
+    "periods": [
+      "YOUNG_ADULT",
+      "MIDDLE"
+    ],
+    "weight": 10,
     "view": "FIRST_PERSON"
   },
   {
@@ -25668,7 +26439,8 @@
         "addFlags": [
           "int_self_taught",
           "career_engineer",
-          "job_employed"
+          "job_employed",
+          "level_entry"
         ],
         "outcomes": [
           {
@@ -25686,7 +26458,8 @@
             "addFlags": [
               "int_self_taught",
               "career_engineer",
-              "job_employed"
+              "job_employed",
+              "level_entry"
             ]
           }
         ],
@@ -25907,7 +26680,8 @@
         "resultText": "사원증 목걸이가 생겼다. 첫 월급으로 지도교수님께 밥을 샀다. 교수님은 아직 포기하지 않으셨다.",
         "addFlags": [
           "career_engineer",
-          "job_employed"
+          "job_employed",
+          "level_entry"
         ],
         "outcomes": [
           {
@@ -25924,7 +26698,8 @@
             },
             "addFlags": [
               "career_engineer",
-              "job_employed"
+              "job_employed",
+              "level_entry"
             ]
           }
         ],
@@ -25945,7 +26720,8 @@
         "addFlags": [
           "career_patent_attorney",
           "job_employed",
-          "achv_license"
+          "achv_license",
+          "level_entry"
         ],
         "outcomes": [
           {
@@ -25963,7 +26739,8 @@
             "addFlags": [
               "career_patent_attorney",
               "job_employed",
-              "achv_license"
+              "achv_license",
+              "level_entry"
             ],
             "chanceWeights": {
               "지력": 2,
@@ -25984,7 +26761,8 @@
             "addFlags": [
               "career_engineer",
               "job_employed",
-              "int_exam_fail"
+              "int_exam_fail",
+              "level_entry"
             ],
             "chanceWeights": {
               "건강": -2
@@ -28328,7 +29106,8 @@
         "addFlags": [
           "career_sales",
           "job_employed",
-          "achv_top_sales"
+          "achv_top_sales",
+          "level_entry"
         ],
         "outcomes": [
           {
@@ -28346,7 +29125,8 @@
             "addFlags": [
               "career_sales",
               "job_employed",
-              "achv_top_sales"
+              "achv_top_sales",
+              "level_entry"
             ],
             "chanceWeights": {
               "사회성": 2,
@@ -28366,7 +29146,8 @@
             },
             "addFlags": [
               "career_office",
-              "job_employed"
+              "job_employed",
+              "level_entry"
             ]
           }
         ],
@@ -28387,7 +29168,8 @@
         "resultText": "자격증을 따서 상담사가 됐다. 하루 여덟 시간 남의 이야기를 들었다. 퇴근길엔 이어폰을 꼈다.",
         "addFlags": [
           "career_counselor",
-          "job_employed"
+          "job_employed",
+          "level_entry"
         ],
         "outcomes": [
           {
@@ -28404,7 +29186,8 @@
             },
             "addFlags": [
               "career_counselor",
-              "job_employed"
+              "job_employed",
+              "level_entry"
             ]
           }
         ],
@@ -29471,7 +30254,8 @@
           "career_office",
           "corporate_job",
           "job_employed",
-          "housing_monthly_rent"
+          "housing_monthly_rent",
+          "level_entry"
         ],
         "outcomes": [
           {
@@ -29490,7 +30274,8 @@
               "career_office",
               "corporate_job",
               "job_employed",
-              "housing_monthly_rent"
+              "housing_monthly_rent",
+              "level_entry"
             ]
           }
         ],
@@ -29512,7 +30297,8 @@
           "wea_path",
           "career_startup",
           "job_employed",
-          "achv_stock_option"
+          "achv_stock_option",
+          "level_entry"
         ],
         "outcomes": [
           {
@@ -29531,7 +30317,8 @@
               "wea_path",
               "career_startup",
               "job_employed",
-              "achv_stock_option"
+              "achv_stock_option",
+              "level_entry"
             ],
             "chanceWeights": {
               "운": 3
@@ -30261,7 +31048,8 @@
         "addFlags": [
           "career_office",
           "job_employed",
-          "comeback"
+          "comeback",
+          "level_entry"
         ],
         "outcomes": [
           {
@@ -30279,7 +31067,8 @@
             "addFlags": [
               "career_office",
               "job_employed",
-              "comeback"
+              "comeback",
+              "level_entry"
             ]
           }
         ],
@@ -30864,7 +31653,8 @@
         "addFlags": [
           "work_life_balance",
           "career_office",
-          "job_employed"
+          "job_employed",
+          "level_entry"
         ],
         "outcomes": [
           {
@@ -30882,7 +31672,8 @@
             "addFlags": [
               "work_life_balance",
               "career_office",
-              "job_employed"
+              "job_employed",
+              "level_entry"
             ]
           }
         ],
@@ -30902,7 +31693,8 @@
         "addFlags": [
           "career_office",
           "job_employed",
-          "overwork"
+          "overwork",
+          "level_entry"
         ],
         "outcomes": [
           {
@@ -30919,7 +31711,8 @@
             "addFlags": [
               "career_office",
               "job_employed",
-              "overwork"
+              "overwork",
+              "level_entry"
             ]
           }
         ],
@@ -32096,7 +32889,8 @@
         "addFlags": [
           "career_office",
           "job_employed",
-          "luk_lucky_hire"
+          "luk_lucky_hire",
+          "level_entry"
         ],
         "outcomes": [
           {
@@ -32114,7 +32908,8 @@
             "addFlags": [
               "career_office",
               "job_employed",
-              "luk_lucky_hire"
+              "luk_lucky_hire",
+              "level_entry"
             ],
             "chanceWeights": {
               "운": 2,
@@ -32154,7 +32949,8 @@
         "resultText": "준비한 답이 그대로 나왔다. 운이 아니라 연습이었다. 그래도 사람들은 운이 좋았다고 했다.",
         "addFlags": [
           "career_office",
-          "job_employed"
+          "job_employed",
+          "level_entry"
         ],
         "outcomes": [
           {
@@ -32171,7 +32967,8 @@
             },
             "addFlags": [
               "career_office",
-              "job_employed"
+              "job_employed",
+              "level_entry"
             ]
           }
         ],
