@@ -1,0 +1,9026 @@
+{
+  "metrics": {
+    "eventCount": 209,
+    "choiceCount": 609,
+    "explicitConditionCount": 54,
+    "explicitConditionRate": 8.87,
+    "missingConditionCount": 460,
+    "candidateConditionCount": 236,
+    "ambiguousConditionCount": 224,
+    "infantUnconditionalCount": 95,
+    "conditionStatCandidates": {
+      "행복": 66,
+      "사회성": 63,
+      "운": 21,
+      "경제력": 21,
+      "지력": 41,
+      "운동능력": 9,
+      "건강": 15
+    },
+    "invalidConditionCount": 0,
+    "allChoicesLockedEventCount": 0,
+    "allChoicesLockedEvents": []
+  },
+  "choices": [
+    {
+      "eventId": "infant_001",
+      "choiceId": "A",
+      "periods": [
+        "INFANT"
+      ],
+      "category": "infant_unconditional",
+      "conditionFields": [],
+      "positiveStats": {
+        "건강": 4
+      },
+      "suggestedThreshold": null,
+      "label": "입을 벌린다."
+    },
+    {
+      "eventId": "infant_001",
+      "choiceId": "B",
+      "periods": [
+        "INFANT"
+      ],
+      "category": "infant_unconditional",
+      "conditionFields": [],
+      "positiveStats": {
+        "행복": 2
+      },
+      "suggestedThreshold": null,
+      "label": "고개를 홱 돌린다."
+    },
+    {
+      "eventId": "infant_001",
+      "choiceId": "C",
+      "periods": [
+        "INFANT"
+      ],
+      "category": "infant_unconditional",
+      "conditionFields": [],
+      "positiveStats": {
+        "지력": 2,
+        "사회성": 1
+      },
+      "suggestedThreshold": null,
+      "label": "숟가락을 뺏어서 엄마 입에 넣는다."
+    },
+    {
+      "eventId": "infant_002",
+      "choiceId": "A",
+      "periods": [
+        "INFANT"
+      ],
+      "category": "infant_unconditional",
+      "conditionFields": [],
+      "positiveStats": {
+        "건강": 2
+      },
+      "suggestedThreshold": null,
+      "label": "치발기를 꼭 문다."
+    },
+    {
+      "eventId": "infant_002",
+      "choiceId": "B",
+      "periods": [
+        "INFANT"
+      ],
+      "category": "infant_unconditional",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 2
+      },
+      "suggestedThreshold": null,
+      "label": "엄마 손가락을 문다."
+    },
+    {
+      "eventId": "infant_003",
+      "choiceId": "A",
+      "periods": [
+        "INFANT"
+      ],
+      "category": "infant_unconditional",
+      "conditionFields": [],
+      "positiveStats": {
+        "지력": 4
+      },
+      "suggestedThreshold": null,
+      "label": "다시 조립한다."
+    },
+    {
+      "eventId": "infant_003",
+      "choiceId": "B",
+      "periods": [
+        "INFANT"
+      ],
+      "category": "infant_unconditional",
+      "conditionFields": [],
+      "positiveStats": {
+        "운": 1
+      },
+      "suggestedThreshold": null,
+      "label": "조각을 소파 밑에 숨긴다."
+    },
+    {
+      "eventId": "infant_003",
+      "choiceId": "C",
+      "periods": [
+        "INFANT"
+      ],
+      "category": "infant_unconditional",
+      "conditionFields": [],
+      "positiveStats": {
+        "지력": 1,
+        "운동능력": 1
+      },
+      "suggestedThreshold": null,
+      "label": "아빠 휴대폰을 향해 기어간다."
+    },
+    {
+      "eventId": "infant_004",
+      "choiceId": "A",
+      "periods": [
+        "INFANT"
+      ],
+      "category": "infant_unconditional",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 2
+      },
+      "suggestedThreshold": null,
+      "label": "더 크게 운다."
+    },
+    {
+      "eventId": "infant_004",
+      "choiceId": "B",
+      "periods": [
+        "INFANT"
+      ],
+      "category": "infant_unconditional",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 3
+      },
+      "suggestedThreshold": null,
+      "label": "옆 아기를 빤히 보며 뚝 그친다."
+    },
+    {
+      "eventId": "infant_004",
+      "choiceId": "C",
+      "periods": [
+        "INFANT"
+      ],
+      "category": "infant_unconditional",
+      "conditionFields": [],
+      "positiveStats": {
+        "행복": 2
+      },
+      "suggestedThreshold": null,
+      "label": "딸꾹질로 박자를 맞춘다."
+    },
+    {
+      "eventId": "infant_005",
+      "choiceId": "A",
+      "periods": [
+        "INFANT"
+      ],
+      "category": "infant_unconditional",
+      "conditionFields": [],
+      "positiveStats": {
+        "운동능력": 3,
+        "행복": 2
+      },
+      "suggestedThreshold": null,
+      "label": "물장구를 친다."
+    },
+    {
+      "eventId": "infant_005",
+      "choiceId": "B",
+      "periods": [
+        "INFANT"
+      ],
+      "category": "infant_unconditional",
+      "conditionFields": [],
+      "positiveStats": {
+        "건강": 1
+      },
+      "suggestedThreshold": null,
+      "label": "운다."
+    },
+    {
+      "eventId": "infant_005",
+      "choiceId": "C",
+      "periods": [
+        "INFANT"
+      ],
+      "category": "infant_unconditional",
+      "conditionFields": [],
+      "positiveStats": {
+        "운동능력": 1,
+        "행복": 2
+      },
+      "suggestedThreshold": null,
+      "label": "오리를 아빠 얼굴에 던진다."
+    },
+    {
+      "eventId": "infant_006",
+      "choiceId": "A",
+      "periods": [
+        "INFANT"
+      ],
+      "category": "infant_unconditional",
+      "conditionFields": [],
+      "positiveStats": {
+        "건강": 3,
+        "사회성": 1
+      },
+      "suggestedThreshold": null,
+      "label": "자는 척한다."
+    },
+    {
+      "eventId": "infant_006",
+      "choiceId": "B",
+      "periods": [
+        "INFANT"
+      ],
+      "category": "infant_unconditional",
+      "conditionFields": [],
+      "positiveStats": {
+        "행복": 2
+      },
+      "suggestedThreshold": null,
+      "label": "울면서 놀자고 한다."
+    },
+    {
+      "eventId": "infant_006",
+      "choiceId": "C",
+      "periods": [
+        "INFANT"
+      ],
+      "category": "infant_unconditional",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 2,
+        "행복": 1
+      },
+      "suggestedThreshold": null,
+      "label": "자장가에 맞춰 옹알이로 떼창한다."
+    },
+    {
+      "eventId": "infant_007",
+      "choiceId": "A",
+      "periods": [
+        "INFANT"
+      ],
+      "category": "infant_unconditional",
+      "conditionFields": [],
+      "positiveStats": {
+        "행복": 4,
+        "지력": 2
+      },
+      "suggestedThreshold": null,
+      "label": "피아노 장난감을 잡는다."
+    },
+    {
+      "eventId": "infant_007",
+      "choiceId": "B",
+      "periods": [
+        "INFANT"
+      ],
+      "category": "infant_unconditional",
+      "conditionFields": [],
+      "positiveStats": {
+        "지력": 4,
+        "사회성": 1
+      },
+      "suggestedThreshold": null,
+      "label": "판사봉을 잡는다."
+    },
+    {
+      "eventId": "infant_007",
+      "choiceId": "C",
+      "periods": [
+        "INFANT"
+      ],
+      "category": "infant_unconditional",
+      "conditionFields": [],
+      "positiveStats": {
+        "운": 4,
+        "사회성": 1
+      },
+      "suggestedThreshold": null,
+      "label": "5만 원권을 잡는다."
+    },
+    {
+      "eventId": "infant_008",
+      "choiceId": "A",
+      "periods": [
+        "INFANT"
+      ],
+      "category": "infant_unconditional",
+      "conditionFields": [],
+      "positiveStats": {
+        "건강": 4
+      },
+      "suggestedThreshold": null,
+      "label": "엄마 손을 꼭 잡고 참는다."
+    },
+    {
+      "eventId": "infant_008",
+      "choiceId": "B",
+      "periods": [
+        "INFANT"
+      ],
+      "category": "infant_unconditional",
+      "conditionFields": [],
+      "positiveStats": {
+        "운동능력": 2,
+        "건강": 2
+      },
+      "suggestedThreshold": null,
+      "label": "온몸을 비틀어 탈출한다."
+    },
+    {
+      "eventId": "infant_008",
+      "choiceId": "C",
+      "periods": [
+        "INFANT"
+      ],
+      "category": "infant_unconditional",
+      "conditionFields": [],
+      "positiveStats": {
+        "건강": 4,
+        "운": 1
+      },
+      "suggestedThreshold": null,
+      "label": "간호사를 빤히 쳐다본다."
+    },
+    {
+      "eventId": "infant_009",
+      "choiceId": "A",
+      "periods": [
+        "INFANT"
+      ],
+      "category": "infant_unconditional",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 3
+      },
+      "suggestedThreshold": null,
+      "label": "\"엄마!\""
+    },
+    {
+      "eventId": "infant_009",
+      "choiceId": "B",
+      "periods": [
+        "INFANT"
+      ],
+      "category": "infant_unconditional",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 3
+      },
+      "suggestedThreshold": null,
+      "label": "\"아빠!\""
+    },
+    {
+      "eventId": "infant_009",
+      "choiceId": "C",
+      "periods": [
+        "INFANT"
+      ],
+      "category": "infant_unconditional",
+      "conditionFields": [],
+      "positiveStats": {
+        "운": 3,
+        "행복": 2
+      },
+      "suggestedThreshold": null,
+      "label": "강아지 이름을 부른다."
+    },
+    {
+      "eventId": "infant_010",
+      "choiceId": "A",
+      "periods": [
+        "INFANT"
+      ],
+      "category": "infant_unconditional",
+      "conditionFields": [],
+      "positiveStats": {
+        "운동능력": 4,
+        "행복": 1
+      },
+      "suggestedThreshold": null,
+      "label": "손을 놓고 걸어간다."
+    },
+    {
+      "eventId": "infant_010",
+      "choiceId": "B",
+      "periods": [
+        "INFANT"
+      ],
+      "category": "infant_unconditional",
+      "conditionFields": [],
+      "positiveStats": {
+        "건강": 2,
+        "지력": 1
+      },
+      "suggestedThreshold": null,
+      "label": "소파를 잡고 게걸음 친다."
+    },
+    {
+      "eventId": "infant_010",
+      "choiceId": "C",
+      "periods": [
+        "INFANT"
+      ],
+      "category": "infant_unconditional",
+      "conditionFields": [],
+      "positiveStats": {
+        "운동능력": 1,
+        "행복": 1
+      },
+      "suggestedThreshold": null,
+      "label": "그냥 기어간다."
+    },
+    {
+      "eventId": "infant_011",
+      "choiceId": "A",
+      "periods": [
+        "INFANT"
+      ],
+      "category": "infant_unconditional",
+      "conditionFields": [],
+      "positiveStats": {
+        "지력": 4
+      },
+      "suggestedThreshold": null,
+      "label": "\"끼리!\""
+    },
+    {
+      "eventId": "infant_011",
+      "choiceId": "B",
+      "periods": [
+        "INFANT"
+      ],
+      "category": "infant_unconditional",
+      "conditionFields": [],
+      "positiveStats": {
+        "운동능력": 1,
+        "행복": 2
+      },
+      "suggestedThreshold": null,
+      "label": "책장을 찢는다."
+    },
+    {
+      "eventId": "infant_012",
+      "choiceId": "A",
+      "periods": [
+        "INFANT"
+      ],
+      "category": "infant_unconditional",
+      "conditionFields": [],
+      "positiveStats": {
+        "운동능력": 4,
+        "행복": 2
+      },
+      "suggestedThreshold": null,
+      "label": "유모차에서 탈출해 쫓아간다."
+    },
+    {
+      "eventId": "infant_012",
+      "choiceId": "B",
+      "periods": [
+        "INFANT"
+      ],
+      "category": "infant_unconditional",
+      "conditionFields": [],
+      "positiveStats": {
+        "행복": 1,
+        "건강": 1
+      },
+      "suggestedThreshold": null,
+      "label": "유모차에서 구경만 한다."
+    },
+    {
+      "eventId": "infant_012",
+      "choiceId": "C",
+      "periods": [
+        "INFANT"
+      ],
+      "category": "infant_unconditional",
+      "conditionFields": [],
+      "positiveStats": {
+        "운": 2,
+        "사회성": 1
+      },
+      "suggestedThreshold": null,
+      "label": "과자를 던져 준다."
+    },
+    {
+      "eventId": "infant_013",
+      "choiceId": "A",
+      "periods": [
+        "INFANT"
+      ],
+      "category": "infant_unconditional",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 4
+      },
+      "suggestedThreshold": null,
+      "label": "방긋 웃으며 안긴다."
+    },
+    {
+      "eventId": "infant_013",
+      "choiceId": "B",
+      "periods": [
+        "INFANT"
+      ],
+      "category": "infant_unconditional",
+      "conditionFields": [],
+      "positiveStats": {
+        "행복": 1
+      },
+      "suggestedThreshold": null,
+      "label": "엄마 뒤에 숨는다."
+    },
+    {
+      "eventId": "infant_013",
+      "choiceId": "C",
+      "periods": [
+        "INFANT"
+      ],
+      "category": "infant_unconditional",
+      "conditionFields": [],
+      "positiveStats": {
+        "행복": 2,
+        "운": 1
+      },
+      "suggestedThreshold": null,
+      "label": "큰이모 안경을 벗긴다."
+    },
+    {
+      "eventId": "infant_014",
+      "choiceId": "A",
+      "periods": [
+        "INFANT"
+      ],
+      "category": "infant_unconditional",
+      "conditionFields": [],
+      "positiveStats": {
+        "지력": 2,
+        "사회성": 1
+      },
+      "suggestedThreshold": null,
+      "label": "스케치북에 그린다."
+    },
+    {
+      "eventId": "infant_014",
+      "choiceId": "B",
+      "periods": [
+        "INFANT"
+      ],
+      "category": "infant_unconditional",
+      "conditionFields": [],
+      "positiveStats": {
+        "행복": 4,
+        "운": 1
+      },
+      "suggestedThreshold": null,
+      "label": "벽에 대작을 남긴다."
+    },
+    {
+      "eventId": "infant_014",
+      "choiceId": "C",
+      "periods": [
+        "INFANT"
+      ],
+      "category": "infant_unconditional",
+      "conditionFields": [],
+      "positiveStats": {
+        "지력": 1
+      },
+      "suggestedThreshold": null,
+      "label": "크레파스를 먹어 본다."
+    },
+    {
+      "eventId": "infant_015",
+      "choiceId": "A",
+      "periods": [
+        "INFANT"
+      ],
+      "category": "infant_unconditional",
+      "conditionFields": [],
+      "positiveStats": {
+        "운동능력": 2,
+        "사회성": 2
+      },
+      "suggestedThreshold": null,
+      "label": "엉덩이춤을 춘다."
+    },
+    {
+      "eventId": "infant_015",
+      "choiceId": "B",
+      "periods": [
+        "INFANT"
+      ],
+      "category": "infant_unconditional",
+      "conditionFields": [],
+      "positiveStats": {
+        "지력": 1,
+        "행복": 2
+      },
+      "suggestedThreshold": null,
+      "label": "따라 부른다."
+    },
+    {
+      "eventId": "infant_015",
+      "choiceId": "C",
+      "periods": [
+        "INFANT"
+      ],
+      "category": "infant_unconditional",
+      "conditionFields": [],
+      "positiveStats": {
+        "지력": 2
+      },
+      "suggestedThreshold": null,
+      "label": "리모컨으로 채널을 돌린다."
+    },
+    {
+      "eventId": "infant_016",
+      "choiceId": "A",
+      "periods": [
+        "INFANT"
+      ],
+      "category": "infant_unconditional",
+      "conditionFields": [],
+      "positiveStats": {
+        "행복": 2
+      },
+      "suggestedThreshold": null,
+      "label": "그대로 걷는다."
+    },
+    {
+      "eventId": "infant_016",
+      "choiceId": "B",
+      "periods": [
+        "INFANT"
+      ],
+      "category": "infant_unconditional",
+      "conditionFields": [],
+      "positiveStats": {
+        "운동능력": 1
+      },
+      "suggestedThreshold": null,
+      "label": "신발을 벗어 던진다."
+    },
+    {
+      "eventId": "infant_016",
+      "choiceId": "C",
+      "periods": [
+        "INFANT"
+      ],
+      "category": "infant_unconditional",
+      "conditionFields": [],
+      "positiveStats": {
+        "행복": 3
+      },
+      "suggestedThreshold": null,
+      "label": "엄마 신발을 신어 본다."
+    },
+    {
+      "eventId": "infant_017",
+      "choiceId": "A",
+      "periods": [
+        "INFANT"
+      ],
+      "category": "infant_unconditional",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 4
+      },
+      "suggestedThreshold": null,
+      "label": "같이 논다."
+    },
+    {
+      "eventId": "infant_017",
+      "choiceId": "B",
+      "periods": [
+        "INFANT"
+      ],
+      "category": "infant_unconditional",
+      "conditionFields": [],
+      "positiveStats": {
+        "지력": 2,
+        "행복": 1
+      },
+      "suggestedThreshold": null,
+      "label": "혼자 모래성을 쌓는다."
+    },
+    {
+      "eventId": "infant_017",
+      "choiceId": "C",
+      "periods": [
+        "INFANT"
+      ],
+      "category": "infant_unconditional",
+      "conditionFields": [],
+      "positiveStats": {
+        "행복": 2,
+        "운동능력": 1
+      },
+      "suggestedThreshold": null,
+      "label": "삽을 뺏는다."
+    },
+    {
+      "eventId": "infant_018",
+      "choiceId": "A",
+      "periods": [
+        "INFANT"
+      ],
+      "category": "infant_unconditional",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 4
+      },
+      "suggestedThreshold": null,
+      "label": "준다."
+    },
+    {
+      "eventId": "infant_018",
+      "choiceId": "B",
+      "periods": [
+        "INFANT"
+      ],
+      "category": "infant_unconditional",
+      "conditionFields": [],
+      "positiveStats": {
+        "행복": 1
+      },
+      "suggestedThreshold": null,
+      "label": "꽉 끌어안는다."
+    },
+    {
+      "eventId": "infant_018",
+      "choiceId": "C",
+      "periods": [
+        "INFANT"
+      ],
+      "category": "infant_unconditional",
+      "conditionFields": [],
+      "positiveStats": {
+        "지력": 2,
+        "운": 1
+      },
+      "suggestedThreshold": null,
+      "label": "형 가방에서 형 장난감을 꺼낸다."
+    },
+    {
+      "eventId": "infant_019",
+      "choiceId": "A",
+      "periods": [
+        "INFANT"
+      ],
+      "category": "infant_unconditional",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 4
+      },
+      "suggestedThreshold": null,
+      "label": "선생님 손을 잡고 들어간다."
+    },
+    {
+      "eventId": "infant_019",
+      "choiceId": "B",
+      "periods": [
+        "INFANT"
+      ],
+      "category": "infant_unconditional",
+      "conditionFields": [],
+      "positiveStats": {
+        "행복": 1
+      },
+      "suggestedThreshold": null,
+      "label": "엄마 다리에 매달린다."
+    },
+    {
+      "eventId": "infant_019",
+      "choiceId": "C",
+      "periods": [
+        "INFANT"
+      ],
+      "category": "infant_unconditional",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 2,
+        "행복": 1
+      },
+      "suggestedThreshold": null,
+      "label": "우는 애들 사이에서 같이 운다."
+    },
+    {
+      "eventId": "infant_020",
+      "choiceId": "A",
+      "periods": [
+        "INFANT"
+      ],
+      "category": "infant_unconditional",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 2,
+        "행복": 2
+      },
+      "suggestedThreshold": null,
+      "label": "신나게 두드린다."
+    },
+    {
+      "eventId": "infant_020",
+      "choiceId": "B",
+      "periods": [
+        "INFANT"
+      ],
+      "category": "infant_unconditional",
+      "conditionFields": [],
+      "positiveStats": {
+        "지력": 2,
+        "행복": 1
+      },
+      "suggestedThreshold": null,
+      "label": "얼어붙는다."
+    },
+    {
+      "eventId": "infant_021",
+      "choiceId": "A",
+      "periods": [
+        "INFANT"
+      ],
+      "category": "infant_unconditional",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 2
+      },
+      "suggestedThreshold": null,
+      "label": "꼼짝 않고 버틴다."
+    },
+    {
+      "eventId": "infant_021",
+      "choiceId": "B",
+      "periods": [
+        "INFANT"
+      ],
+      "category": "infant_unconditional",
+      "conditionFields": [],
+      "positiveStats": {
+        "운동능력": 1,
+        "행복": 1
+      },
+      "suggestedThreshold": null,
+      "label": "가위를 향해 손을 뻗는다."
+    },
+    {
+      "eventId": "infant_021",
+      "choiceId": "C",
+      "periods": [
+        "INFANT"
+      ],
+      "category": "infant_unconditional",
+      "conditionFields": [],
+      "positiveStats": {
+        "행복": 2
+      },
+      "suggestedThreshold": null,
+      "label": "엄마 무릎에서만 자르겠다고 운다."
+    },
+    {
+      "eventId": "infant_022",
+      "choiceId": "A",
+      "periods": [
+        "INFANT"
+      ],
+      "category": "infant_unconditional",
+      "conditionFields": [],
+      "positiveStats": {
+        "건강": 2
+      },
+      "suggestedThreshold": null,
+      "label": "앉아 본다."
+    },
+    {
+      "eventId": "infant_022",
+      "choiceId": "B",
+      "periods": [
+        "INFANT"
+      ],
+      "category": "infant_unconditional",
+      "conditionFields": [],
+      "positiveStats": {
+        "행복": 3
+      },
+      "suggestedThreshold": null,
+      "label": "오리 변기를 모자처럼 쓴다."
+    },
+    {
+      "eventId": "infant_022",
+      "choiceId": "C",
+      "periods": [
+        "INFANT"
+      ],
+      "category": "infant_unconditional",
+      "conditionFields": [],
+      "positiveStats": {
+        "지력": 2
+      },
+      "suggestedThreshold": null,
+      "label": "아빠 화장실을 따라간다."
+    },
+    {
+      "eventId": "infant_023",
+      "choiceId": "A",
+      "periods": [
+        "INFANT"
+      ],
+      "category": "infant_unconditional",
+      "conditionFields": [],
+      "positiveStats": {
+        "운동능력": 2
+      },
+      "suggestedThreshold": null,
+      "label": "말을 탄다."
+    },
+    {
+      "eventId": "infant_023",
+      "choiceId": "B",
+      "periods": [
+        "INFANT"
+      ],
+      "category": "infant_unconditional",
+      "conditionFields": [],
+      "positiveStats": {
+        "행복": 2
+      },
+      "suggestedThreshold": null,
+      "label": "마차를 탄다."
+    },
+    {
+      "eventId": "infant_024",
+      "choiceId": "A",
+      "periods": [
+        "INFANT"
+      ],
+      "category": "infant_unconditional",
+      "conditionFields": [],
+      "positiveStats": {
+        "지력": 2
+      },
+      "suggestedThreshold": null,
+      "label": "우리 층만 누른다."
+    },
+    {
+      "eventId": "infant_024",
+      "choiceId": "B",
+      "periods": [
+        "INFANT"
+      ],
+      "category": "infant_unconditional",
+      "conditionFields": [],
+      "positiveStats": {
+        "행복": 3
+      },
+      "suggestedThreshold": null,
+      "label": "모든 층을 다 누른다."
+    },
+    {
+      "eventId": "infant_024",
+      "choiceId": "C",
+      "periods": [
+        "INFANT"
+      ],
+      "category": "infant_unconditional",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 3
+      },
+      "suggestedThreshold": null,
+      "label": "할머니 층도 눌러 드린다."
+    },
+    {
+      "eventId": "infant_025",
+      "choiceId": "A",
+      "periods": [
+        "INFANT"
+      ],
+      "category": "infant_unconditional",
+      "conditionFields": [],
+      "positiveStats": {
+        "운동능력": 3
+      },
+      "suggestedThreshold": null,
+      "label": "닭을 쫓아간다."
+    },
+    {
+      "eventId": "infant_025",
+      "choiceId": "B",
+      "periods": [
+        "INFANT"
+      ],
+      "category": "infant_unconditional",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 2
+      },
+      "suggestedThreshold": null,
+      "label": "할머니 뒤에 숨는다."
+    },
+    {
+      "eventId": "infant_025",
+      "choiceId": "C",
+      "periods": [
+        "INFANT"
+      ],
+      "category": "infant_unconditional",
+      "conditionFields": [],
+      "positiveStats": {
+        "운": 2,
+        "행복": 1
+      },
+      "suggestedThreshold": null,
+      "label": "모이를 한 줌 준다."
+    },
+    {
+      "eventId": "infant_026",
+      "choiceId": "A",
+      "periods": [
+        "INFANT"
+      ],
+      "category": "infant_unconditional",
+      "conditionFields": [],
+      "positiveStats": {
+        "운동능력": 2,
+        "지력": 1
+      },
+      "suggestedThreshold": null,
+      "label": "볼풀에 잠수해서 찾는다."
+    },
+    {
+      "eventId": "infant_026",
+      "choiceId": "B",
+      "periods": [
+        "INFANT"
+      ],
+      "category": "infant_unconditional",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 2
+      },
+      "suggestedThreshold": null,
+      "label": "직원 형에게 말한다."
+    },
+    {
+      "eventId": "infant_026",
+      "choiceId": "C",
+      "periods": [
+        "INFANT"
+      ],
+      "category": "infant_unconditional",
+      "conditionFields": [],
+      "positiveStats": {
+        "행복": 3
+      },
+      "suggestedThreshold": null,
+      "label": "한 짝만 신고 계속 논다."
+    },
+    {
+      "eventId": "infant_027",
+      "choiceId": "A",
+      "periods": [
+        "INFANT"
+      ],
+      "category": "infant_unconditional",
+      "conditionFields": [],
+      "positiveStats": {
+        "지력": 3
+      },
+      "suggestedThreshold": null,
+      "label": "\"아빠, 거기 한 장 넘겼어.\""
+    },
+    {
+      "eventId": "infant_027",
+      "choiceId": "B",
+      "periods": [
+        "INFANT"
+      ],
+      "category": "infant_unconditional",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 2
+      },
+      "suggestedThreshold": null,
+      "label": "모른 척 끝까지 듣는다."
+    },
+    {
+      "eventId": "infant_027",
+      "choiceId": "C",
+      "periods": [
+        "INFANT"
+      ],
+      "category": "infant_unconditional",
+      "conditionFields": [],
+      "positiveStats": {
+        "지력": 2,
+        "행복": 2
+      },
+      "suggestedThreshold": null,
+      "label": "\"내가 읽어 줄게!\""
+    },
+    {
+      "eventId": "infant_028",
+      "choiceId": "A",
+      "periods": [
+        "INFANT"
+      ],
+      "category": "infant_unconditional",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 3
+      },
+      "suggestedThreshold": null,
+      "label": "친구가 끌 때까지 기다린다."
+    },
+    {
+      "eventId": "infant_028",
+      "choiceId": "B",
+      "periods": [
+        "INFANT"
+      ],
+      "category": "infant_unconditional",
+      "conditionFields": [],
+      "positiveStats": {
+        "행복": 2
+      },
+      "suggestedThreshold": null,
+      "label": "몰래 먼저 분다."
+    },
+    {
+      "eventId": "infant_028",
+      "choiceId": "C",
+      "periods": [
+        "INFANT"
+      ],
+      "category": "infant_unconditional",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 2,
+        "행복": 1
+      },
+      "suggestedThreshold": null,
+      "label": "생일 노래를 제일 크게 부른다."
+    },
+    {
+      "eventId": "infant_029",
+      "choiceId": "A",
+      "periods": [
+        "INFANT"
+      ],
+      "category": "infant_unconditional",
+      "conditionFields": [],
+      "positiveStats": {
+        "건강": 2
+      },
+      "suggestedThreshold": null,
+      "label": "그냥 잔다."
+    },
+    {
+      "eventId": "infant_029",
+      "choiceId": "B",
+      "periods": [
+        "INFANT"
+      ],
+      "category": "infant_unconditional",
+      "conditionFields": [],
+      "positiveStats": {
+        "행복": 1
+      },
+      "suggestedThreshold": null,
+      "label": "끝까지 버틴다."
+    },
+    {
+      "eventId": "infant_030",
+      "choiceId": "A",
+      "periods": [
+        "INFANT"
+      ],
+      "category": "infant_unconditional",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 2
+      },
+      "suggestedThreshold": null,
+      "label": "노래에 맞춰 하나씩 담는다."
+    },
+    {
+      "eventId": "infant_030",
+      "choiceId": "B",
+      "periods": [
+        "INFANT"
+      ],
+      "category": "infant_unconditional",
+      "conditionFields": [],
+      "positiveStats": {
+        "행복": 2
+      },
+      "suggestedThreshold": null,
+      "label": "빈 상자 안에 들어가 앉는다."
+    },
+    {
+      "eventId": "child_001",
+      "choiceId": "A",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "지력": 3,
+        "운": 1
+      },
+      "suggestedThreshold": null,
+      "label": "도서관에 간다."
+    },
+    {
+      "eventId": "child_001",
+      "choiceId": "B",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "운동능력": 4,
+        "사회성": 3
+      },
+      "suggestedThreshold": null,
+      "label": "딱 한 판만 한다."
+    },
+    {
+      "eventId": "child_001",
+      "choiceId": "C",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
+      "positiveStats": {
+        "사회성": 2,
+        "행복": 1
+      },
+      "suggestedThreshold": null,
+      "label": "친구들을 도서관으로 끌고 간다."
+    },
+    {
+      "eventId": "child_002",
+      "choiceId": "A",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "행복": 1
+      },
+      "suggestedThreshold": 52,
+      "label": "자는 척한다."
+    },
+    {
+      "eventId": "child_002",
+      "choiceId": "B",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 3
+      },
+      "suggestedThreshold": 52,
+      "label": "가서 열심히 도와드린다."
+    },
+    {
+      "eventId": "child_002",
+      "choiceId": "C",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "운": 1
+      },
+      "suggestedThreshold": 52,
+      "label": "\"나 지금 숙제 중이야!\" (게임 소리를 켜 둔 채로)"
+    },
+    {
+      "eventId": "child_003",
+      "choiceId": "A",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 4,
+        "지력": 1
+      },
+      "suggestedThreshold": null,
+      "label": "출마한다."
+    },
+    {
+      "eventId": "child_003",
+      "choiceId": "B",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
+      "positiveStats": {
+        "사회성": 2,
+        "행복": 1
+      },
+      "suggestedThreshold": null,
+      "label": "친구를 밀어준다."
+    },
+    {
+      "eventId": "child_003",
+      "choiceId": "C",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 3,
+        "운": 1
+      },
+      "suggestedThreshold": null,
+      "label": "공약: \"당선되면 급식 두 번 먹기!\""
+    },
+    {
+      "eventId": "child_004",
+      "choiceId": "A",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "행복": 3,
+        "지력": 2
+      },
+      "suggestedThreshold": null,
+      "label": "피아노."
+    },
+    {
+      "eventId": "child_004",
+      "choiceId": "B",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "운동능력": 4,
+        "건강": 2
+      },
+      "suggestedThreshold": null,
+      "label": "태권도."
+    },
+    {
+      "eventId": "child_004",
+      "choiceId": "C",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "행복": 4,
+        "사회성": 2
+      },
+      "suggestedThreshold": null,
+      "label": "\"나 그냥 놀래.\""
+    },
+    {
+      "eventId": "child_005",
+      "choiceId": "A",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
+      "positiveStats": {
+        "지력": 4
+      },
+      "suggestedThreshold": null,
+      "label": "공부부터 한다."
+    },
+    {
+      "eventId": "child_005",
+      "choiceId": "B",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "행복": 4
+      },
+      "suggestedThreshold": 52,
+      "label": "만화부터 본다."
+    },
+    {
+      "eventId": "child_005",
+      "choiceId": "C",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "행복": 1,
+        "지력": 1
+      },
+      "suggestedThreshold": null,
+      "label": "만화 대사로 받아쓰기 연습을 한다."
+    },
+    {
+      "eventId": "child_006",
+      "choiceId": "A",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 2,
+        "경제력": 1
+      },
+      "suggestedThreshold": null,
+      "label": "두부만 사서 곧장 온다."
+    },
+    {
+      "eventId": "child_006",
+      "choiceId": "B",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "행복": 2
+      },
+      "suggestedThreshold": 52,
+      "label": "거스름돈으로 사탕을 산다."
+    },
+    {
+      "eventId": "child_006",
+      "choiceId": "C",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "행복": 1,
+        "운": 1
+      },
+      "suggestedThreshold": null,
+      "label": "가게 앞 고양이랑 놀다 온다."
+    },
+    {
+      "eventId": "child_007",
+      "choiceId": "A",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "행복": 3
+      },
+      "suggestedThreshold": 52,
+      "label": "\"공룡이요.\""
+    },
+    {
+      "eventId": "child_007",
+      "choiceId": "B",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 1
+      },
+      "suggestedThreshold": 52,
+      "label": "\"아직 모르겠어요.\""
+    },
+    {
+      "eventId": "child_007",
+      "choiceId": "C",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "지력": 2,
+        "사회성": 1
+      },
+      "suggestedThreshold": null,
+      "label": "\"선생님이요. 선생님보다 잘할 자신 있어요.\""
+    },
+    {
+      "eventId": "child_008",
+      "choiceId": "A",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "경제력": 4
+      },
+      "suggestedThreshold": 52,
+      "label": "저금통에 넣는다."
+    },
+    {
+      "eventId": "child_008",
+      "choiceId": "B",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "운": 3,
+        "행복": 1
+      },
+      "suggestedThreshold": null,
+      "label": "전부 뽑기에 건다."
+    },
+    {
+      "eventId": "child_008",
+      "choiceId": "C",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "운동능력": 1,
+        "운": 1
+      },
+      "suggestedThreshold": null,
+      "label": "뽑기 기계를 흔들어 본다."
+    },
+    {
+      "eventId": "child_009",
+      "choiceId": "A",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 2,
+        "지력": 1
+      },
+      "suggestedThreshold": null,
+      "label": "모른 척 다시 잔다."
+    },
+    {
+      "eventId": "child_009",
+      "choiceId": "B",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "지력": 1
+      },
+      "suggestedThreshold": 52,
+      "label": "\"아빠?!\" 하고 불을 켠다."
+    },
+    {
+      "eventId": "child_009",
+      "choiceId": "C",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "행복": 3,
+        "운": 1
+      },
+      "suggestedThreshold": null,
+      "label": "달려가서 선물 목록을 바꿔 달라고 한다."
+    },
+    {
+      "eventId": "child_010",
+      "choiceId": "A",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
+      "positiveStats": {
+        "운동능력": 4,
+        "건강": 1
+      },
+      "suggestedThreshold": null,
+      "label": "운동부."
+    },
+    {
+      "eventId": "child_010",
+      "choiceId": "B",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "지력": 4
+      },
+      "suggestedThreshold": 52,
+      "label": "문화부."
+    },
+    {
+      "eventId": "child_010",
+      "choiceId": "C",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "행복": 3,
+        "사회성": 1
+      },
+      "suggestedThreshold": null,
+      "label": "예술부."
+    },
+    {
+      "eventId": "child_011",
+      "choiceId": "A",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
+      "positiveStats": {
+        "운동능력": 2,
+        "사회성": 1
+      },
+      "suggestedThreshold": null,
+      "label": "축구."
+    },
+    {
+      "eventId": "child_011",
+      "choiceId": "B",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
+      "positiveStats": {
+        "운동능력": 2,
+        "사회성": 1
+      },
+      "suggestedThreshold": null,
+      "label": "농구."
+    },
+    {
+      "eventId": "child_011",
+      "choiceId": "C",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "운동능력": 1,
+        "건강": 2
+      },
+      "suggestedThreshold": null,
+      "label": "수영."
+    },
+    {
+      "eventId": "child_012",
+      "choiceId": "A",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
+      "positiveStats": {
+        "지력": 2,
+        "운": 1
+      },
+      "suggestedThreshold": null,
+      "label": "과학 실험반."
+    },
+    {
+      "eventId": "child_012",
+      "choiceId": "B",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
+      "positiveStats": {
+        "지력": 1,
+        "사회성": 1
+      },
+      "suggestedThreshold": null,
+      "label": "독서 토론반."
+    },
+    {
+      "eventId": "child_012",
+      "choiceId": "C",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "지력": 3
+      },
+      "suggestedThreshold": 52,
+      "label": "바둑반."
+    },
+    {
+      "eventId": "child_013",
+      "choiceId": "A",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "행복": 2,
+        "지력": 1
+      },
+      "suggestedThreshold": null,
+      "label": "미술반."
+    },
+    {
+      "eventId": "child_013",
+      "choiceId": "B",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 2,
+        "행복": 1
+      },
+      "suggestedThreshold": null,
+      "label": "합창단."
+    },
+    {
+      "eventId": "child_013",
+      "choiceId": "C",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 3
+      },
+      "suggestedThreshold": 52,
+      "label": "연극반."
+    },
+    {
+      "eventId": "child_014",
+      "choiceId": "A",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "행복": 4,
+        "사회성": 1
+      },
+      "suggestedThreshold": null,
+      "label": "\"내가 매일 할게!\" 각서를 쓴다."
+    },
+    {
+      "eventId": "child_014",
+      "choiceId": "B",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 2
+      },
+      "suggestedThreshold": 52,
+      "label": "가끔 놀러 가서 본다."
+    },
+    {
+      "eventId": "child_014",
+      "choiceId": "C",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "행복": 3,
+        "운": 1
+      },
+      "suggestedThreshold": null,
+      "label": "\"아빠가 하면 되잖아.\""
+    },
+    {
+      "eventId": "child_015",
+      "choiceId": "A",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 4
+      },
+      "suggestedThreshold": 52,
+      "label": "\"그거 내 거야. 돌려줘.\""
+    },
+    {
+      "eventId": "child_015",
+      "choiceId": "B",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "행복": 1
+      },
+      "suggestedThreshold": 52,
+      "label": "선생님께 이른다."
+    },
+    {
+      "eventId": "child_015",
+      "choiceId": "C",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "운": 1,
+        "행복": 1
+      },
+      "suggestedThreshold": null,
+      "label": "짝꿍 필통에서 지우개를 하나 가져온다."
+    },
+    {
+      "eventId": "child_016",
+      "choiceId": "A",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "지력": 3
+      },
+      "suggestedThreshold": 52,
+      "label": "솔직하게 몰아서 쓴다."
+    },
+    {
+      "eventId": "child_016",
+      "choiceId": "B",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "지력": 1,
+        "행복": 2
+      },
+      "suggestedThreshold": null,
+      "label": "지어낸다."
+    },
+    {
+      "eventId": "child_016",
+      "choiceId": "C",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
+      "positiveStats": {
+        "행복": 1
+      },
+      "suggestedThreshold": null,
+      "label": "친구 일기를 베낀다."
+    },
+    {
+      "eventId": "child_017",
+      "choiceId": "A",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "운동능력": 4,
+        "행복": 2
+      },
+      "suggestedThreshold": null,
+      "label": "전력 질주한다."
+    },
+    {
+      "eventId": "child_017",
+      "choiceId": "B",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
+      "positiveStats": {
+        "사회성": 3
+      },
+      "suggestedThreshold": null,
+      "label": "빠른 친구에게 양보한다."
+    },
+    {
+      "eventId": "child_017",
+      "choiceId": "C",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 2,
+        "행복": 1
+      },
+      "suggestedThreshold": null,
+      "label": "엄마한테 손 흔들며 달린다."
+    },
+    {
+      "eventId": "child_018",
+      "choiceId": "A",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 4
+      },
+      "suggestedThreshold": 52,
+      "label": "수락한다."
+    },
+    {
+      "eventId": "child_018",
+      "choiceId": "B",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "운동능력": 2
+      },
+      "suggestedThreshold": 52,
+      "label": "\"저는 그냥 뛸래요.\""
+    },
+    {
+      "eventId": "child_018",
+      "choiceId": "C",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 3,
+        "행복": 1
+      },
+      "suggestedThreshold": null,
+      "label": "마이크 없이 하겠다고 한다."
+    },
+    {
+      "eventId": "child_019",
+      "choiceId": "A",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "지력": 3,
+        "운동능력": 1
+      },
+      "suggestedThreshold": null,
+      "label": "물로켓."
+    },
+    {
+      "eventId": "child_019",
+      "choiceId": "B",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "지력": 1,
+        "행복": 3
+      },
+      "suggestedThreshold": null,
+      "label": "상상화."
+    },
+    {
+      "eventId": "child_020",
+      "choiceId": "A",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "지력": 4
+      },
+      "suggestedThreshold": 52,
+      "label": "끝까지 분해했다가 다시 조립한다."
+    },
+    {
+      "eventId": "child_020",
+      "choiceId": "B",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "행복": 2,
+        "지력": 1
+      },
+      "suggestedThreshold": null,
+      "label": "톱니바퀴만 꺼내 모은다."
+    },
+    {
+      "eventId": "child_020",
+      "choiceId": "C",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
+      "positiveStats": {
+        "지력": 3
+      },
+      "suggestedThreshold": null,
+      "label": "분해 과정을 공책에 그린다."
+    },
+    {
+      "eventId": "child_021",
+      "choiceId": "A",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "지력": 5
+      },
+      "suggestedThreshold": 52,
+      "label": "한 달 20권에 도전한다."
+    },
+    {
+      "eventId": "child_021",
+      "choiceId": "B",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
+      "positiveStats": {
+        "행복": 3,
+        "지력": 1
+      },
+      "suggestedThreshold": null,
+      "label": "좋아하는 책만 천천히 읽는다."
+    },
+    {
+      "eventId": "child_021",
+      "choiceId": "C",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 3,
+        "지력": 2
+      },
+      "suggestedThreshold": null,
+      "label": "옆 반 애한테 추천 도서를 물어본다."
+    },
+    {
+      "eventId": "child_022",
+      "choiceId": "A",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 4,
+        "행복": 3
+      },
+      "suggestedThreshold": null,
+      "label": "박스를 모아서 만든다."
+    },
+    {
+      "eventId": "child_022",
+      "choiceId": "B",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
+      "positiveStats": {
+        "지력": 2
+      },
+      "suggestedThreshold": null,
+      "label": "학원 때문에 빠진다."
+    },
+    {
+      "eventId": "child_022",
+      "choiceId": "C",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 3,
+        "행복": 1
+      },
+      "suggestedThreshold": null,
+      "label": "\"기지는 우리 집으로 하자.\""
+    },
+    {
+      "eventId": "child_023",
+      "choiceId": "A",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "건강": 4,
+        "사회성": 1
+      },
+      "suggestedThreshold": null,
+      "label": "눈 감고 먹는다."
+    },
+    {
+      "eventId": "child_023",
+      "choiceId": "B",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 1,
+        "행복": 1
+      },
+      "suggestedThreshold": null,
+      "label": "짝꿍한테 넘긴다."
+    },
+    {
+      "eventId": "child_023",
+      "choiceId": "C",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "건강": 2
+      },
+      "suggestedThreshold": 52,
+      "label": "밥 밑에 숨긴다."
+    },
+    {
+      "eventId": "child_024",
+      "choiceId": "A",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
+      "positiveStats": {
+        "운동능력": 4,
+        "건강": 2
+      },
+      "suggestedThreshold": null,
+      "label": "수영 배운다."
+    },
+    {
+      "eventId": "child_024",
+      "choiceId": "B",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "행복": 3
+      },
+      "suggestedThreshold": 52,
+      "label": "게임 랭킹을 노린다."
+    },
+    {
+      "eventId": "child_025",
+      "choiceId": "A",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 4
+      },
+      "suggestedThreshold": 52,
+      "label": "전학생 옆에 앉는다."
+    },
+    {
+      "eventId": "child_025",
+      "choiceId": "B",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
+      "positiveStats": {
+        "행복": 1
+      },
+      "suggestedThreshold": null,
+      "label": "친구들이랑 먹는다."
+    },
+    {
+      "eventId": "child_025",
+      "choiceId": "C",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
+      "positiveStats": {
+        "사회성": 4,
+        "행복": 1
+      },
+      "suggestedThreshold": null,
+      "label": "전학생을 친구들 자리로 데려온다."
+    },
+    {
+      "eventId": "child_026",
+      "choiceId": "A",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 2
+      },
+      "suggestedThreshold": 52,
+      "label": "\"가지 마.\""
+    },
+    {
+      "eventId": "child_026",
+      "choiceId": "B",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "지력": 1
+      },
+      "suggestedThreshold": 52,
+      "label": "괜찮은 척 \"잘 가.\""
+    },
+    {
+      "eventId": "child_026",
+      "choiceId": "C",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 3
+      },
+      "suggestedThreshold": 52,
+      "label": "\"우리 타임캡슐 묻자.\""
+    },
+    {
+      "eventId": "child_027",
+      "choiceId": "A",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "지력": 2,
+        "건강": 1
+      },
+      "suggestedThreshold": null,
+      "label": "서명한다."
+    },
+    {
+      "eventId": "child_027",
+      "choiceId": "B",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "행복": 3
+      },
+      "suggestedThreshold": 52,
+      "label": "계약서 수정을 요구한다."
+    },
+    {
+      "eventId": "child_027",
+      "choiceId": "C",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "운": 2,
+        "행복": 1
+      },
+      "suggestedThreshold": null,
+      "label": "\"아빠 폰 사용 시간도 조항에 넣자.\""
+    },
+    {
+      "eventId": "child_028",
+      "choiceId": "A",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "행복": 1
+      },
+      "suggestedThreshold": 52,
+      "label": "\"엄마!\""
+    },
+    {
+      "eventId": "child_028",
+      "choiceId": "B",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 2,
+        "운": 1
+      },
+      "suggestedThreshold": null,
+      "label": "박수를 치며 벌떡 일어난다."
+    },
+    {
+      "eventId": "child_028",
+      "choiceId": "C",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "운": 1,
+        "행복": 1
+      },
+      "suggestedThreshold": null,
+      "label": "침을 닦으며 \"저 안 잤는데요?\""
+    },
+    {
+      "eventId": "child_029",
+      "choiceId": "A",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "운동능력": 3,
+        "행복": 4
+      },
+      "suggestedThreshold": null,
+      "label": "던진다."
+    },
+    {
+      "eventId": "child_029",
+      "choiceId": "B",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
+      "positiveStats": {
+        "사회성": 3,
+        "행복": 1
+      },
+      "suggestedThreshold": null,
+      "label": "비어 있는 친구에게 패스한다."
+    },
+    {
+      "eventId": "child_029",
+      "choiceId": "C",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "운": 1
+      },
+      "suggestedThreshold": 52,
+      "label": "드리블로 시간을 끈다."
+    },
+    {
+      "eventId": "child_030",
+      "choiceId": "A",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "운동능력": 3,
+        "행복": 3
+      },
+      "suggestedThreshold": null,
+      "label": "그냥 뛰어든다."
+    },
+    {
+      "eventId": "child_030",
+      "choiceId": "B",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 2,
+        "운동능력": 1
+      },
+      "suggestedThreshold": null,
+      "label": "손을 들어 시간을 달라고 한다."
+    },
+    {
+      "eventId": "child_030",
+      "choiceId": "C",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 2
+      },
+      "suggestedThreshold": 52,
+      "label": "수경을 벗어 던지고 뛴다."
+    },
+    {
+      "eventId": "child_031",
+      "choiceId": "A",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
+      "positiveStats": {
+        "지력": 4,
+        "행복": 1
+      },
+      "suggestedThreshold": null,
+      "label": "결과를 그대로 발표한다."
+    },
+    {
+      "eventId": "child_031",
+      "choiceId": "B",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "운": 1
+      },
+      "suggestedThreshold": 52,
+      "label": "숫자를 살짝 고친다."
+    },
+    {
+      "eventId": "child_031",
+      "choiceId": "C",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "지력": 2,
+        "행복": 1
+      },
+      "suggestedThreshold": null,
+      "label": "제목을 '왜 반대로 나왔을까?'로 바꾼다."
+    },
+    {
+      "eventId": "child_032",
+      "choiceId": "A",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 3,
+        "행복": 1
+      },
+      "suggestedThreshold": null,
+      "label": "\"숙제는 필요 없습니다!\""
+    },
+    {
+      "eventId": "child_032",
+      "choiceId": "B",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "지력": 4
+      },
+      "suggestedThreshold": 52,
+      "label": "\"숙제는 필요합니다.\" 논리로 밀어붙인다."
+    },
+    {
+      "eventId": "child_032",
+      "choiceId": "C",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 2,
+        "운": 1
+      },
+      "suggestedThreshold": null,
+      "label": "\"숙제는 선생님이 먼저 해 보고 정하면 어떨까요?\""
+    },
+    {
+      "eventId": "child_033",
+      "choiceId": "A",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "지력": 3
+      },
+      "suggestedThreshold": 52,
+      "label": "정석대로 버틴다."
+    },
+    {
+      "eventId": "child_033",
+      "choiceId": "B",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "지력": 2,
+        "운": 2
+      },
+      "suggestedThreshold": null,
+      "label": "아무도 안 둘 것 같은 수를 둔다."
+    },
+    {
+      "eventId": "child_033",
+      "choiceId": "C",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "운": 3
+      },
+      "suggestedThreshold": 52,
+      "label": "\"화장실 좀…\" 하고 시간을 번다."
+    },
+    {
+      "eventId": "child_034",
+      "choiceId": "A",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "지력": 1,
+        "행복": 1
+      },
+      "suggestedThreshold": null,
+      "label": "보이는 그대로 그린다."
+    },
+    {
+      "eventId": "child_034",
+      "choiceId": "B",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "행복": 3,
+        "운": 1
+      },
+      "suggestedThreshold": null,
+      "label": "상상 속 동네를 그린다."
+    },
+    {
+      "eventId": "child_034",
+      "choiceId": "C",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
+      "positiveStats": {
+        "사회성": 3
+      },
+      "suggestedThreshold": null,
+      "label": "친구 얼굴을 몰래 그린다."
+    },
+    {
+      "eventId": "child_035",
+      "choiceId": "A",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 3,
+        "행복": 2
+      },
+      "suggestedThreshold": null,
+      "label": "\"할게요.\""
+    },
+    {
+      "eventId": "child_035",
+      "choiceId": "B",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 2,
+        "지력": 1
+      },
+      "suggestedThreshold": null,
+      "label": "\"다 같이 부르면 안 돼요?\""
+    },
+    {
+      "eventId": "child_035",
+      "choiceId": "C",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "행복": 2,
+        "운": 1
+      },
+      "suggestedThreshold": null,
+      "label": "녹음으로 립싱크하자고 한다."
+    },
+    {
+      "eventId": "child_036",
+      "choiceId": "A",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 4,
+        "행복": 2
+      },
+      "suggestedThreshold": null,
+      "label": "주인공 대신 나선다."
+    },
+    {
+      "eventId": "child_036",
+      "choiceId": "B",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 3,
+        "행복": 1
+      },
+      "suggestedThreshold": null,
+      "label": "나무인 채로 대사를 속삭여 준다."
+    },
+    {
+      "eventId": "child_036",
+      "choiceId": "C",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "행복": 3,
+        "운": 1
+      },
+      "suggestedThreshold": null,
+      "label": "나무가 즉흥 대사를 한다."
+    },
+    {
+      "eventId": "child_037",
+      "choiceId": "A",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "운동능력": 3,
+        "행복": 4
+      },
+      "suggestedThreshold": null,
+      "label": "구석으로 찬다."
+    },
+    {
+      "eventId": "child_037",
+      "choiceId": "B",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 3,
+        "행복": 1
+      },
+      "suggestedThreshold": null,
+      "label": "주장에게 양보한다."
+    },
+    {
+      "eventId": "child_037",
+      "choiceId": "C",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "운": 1,
+        "행복": 1
+      },
+      "suggestedThreshold": null,
+      "label": "살짝 띄워 차는 파넨카킥을 시도한다."
+    },
+    {
+      "eventId": "child_038",
+      "choiceId": "A",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "지력": 2,
+        "사회성": 1
+      },
+      "suggestedThreshold": null,
+      "label": "출전한다."
+    },
+    {
+      "eventId": "child_038",
+      "choiceId": "B",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "행복": 3
+      },
+      "suggestedThreshold": 52,
+      "label": "취미로만 친다."
+    },
+    {
+      "eventId": "child_039",
+      "choiceId": "A",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "운동능력": 2,
+        "행복": 3
+      },
+      "suggestedThreshold": null,
+      "label": "바다!"
+    },
+    {
+      "eventId": "child_039",
+      "choiceId": "B",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "지력": 4
+      },
+      "suggestedThreshold": 52,
+      "label": "박물관!"
+    },
+    {
+      "eventId": "child_039",
+      "choiceId": "C",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "건강": 1,
+        "행복": 2
+      },
+      "suggestedThreshold": null,
+      "label": "\"집에서 에어컨 틀고 쉬자.\""
+    },
+    {
+      "eventId": "child_040",
+      "choiceId": "A",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "지력": 3
+      },
+      "suggestedThreshold": 52,
+      "label": "손을 든다."
+    },
+    {
+      "eventId": "child_040",
+      "choiceId": "B",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "지력": 2,
+        "행복": 2
+      },
+      "suggestedThreshold": null,
+      "label": "노래로 외운다."
+    },
+    {
+      "eventId": "child_040",
+      "choiceId": "C",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "운": 1
+      },
+      "suggestedThreshold": 52,
+      "label": "계산기를 몰래 꺼낸다."
+    },
+    {
+      "eventId": "child_041",
+      "choiceId": "A",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 3
+      },
+      "suggestedThreshold": 52,
+      "label": "열 번만 타고 비켜 준다."
+    },
+    {
+      "eventId": "child_041",
+      "choiceId": "B",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "행복": 3
+      },
+      "suggestedThreshold": 52,
+      "label": "해 질 때까지 탄다."
+    },
+    {
+      "eventId": "child_041",
+      "choiceId": "C",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 2,
+        "행복": 1
+      },
+      "suggestedThreshold": null,
+      "label": "뒷사람과 둘이 같이 탄다."
+    },
+    {
+      "eventId": "child_042",
+      "choiceId": "A",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "운동능력": 3
+      },
+      "suggestedThreshold": 52,
+      "label": "힘껏 페달을 밟는다."
+    },
+    {
+      "eventId": "child_042",
+      "choiceId": "B",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "운동능력": 1,
+        "행복": 1
+      },
+      "suggestedThreshold": null,
+      "label": "보조 바퀴를 하나만 떼 달라고 한다."
+    },
+    {
+      "eventId": "child_042",
+      "choiceId": "C",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "행복": 2
+      },
+      "suggestedThreshold": 52,
+      "label": "\"그냥 킥보드 탈래.\""
+    },
+    {
+      "eventId": "child_043",
+      "choiceId": "A",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "행복": 3
+      },
+      "suggestedThreshold": 52,
+      "label": "한 마리 산다."
+    },
+    {
+      "eventId": "child_043",
+      "choiceId": "B",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "지력": 1
+      },
+      "suggestedThreshold": 52,
+      "label": "구경만 한다."
+    },
+    {
+      "eventId": "child_043",
+      "choiceId": "C",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 2
+      },
+      "suggestedThreshold": 52,
+      "label": "엄마에게 전화한다."
+    },
+    {
+      "eventId": "child_044",
+      "choiceId": "A",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "건강": 2
+      },
+      "suggestedThreshold": 52,
+      "label": "창문을 연다."
+    },
+    {
+      "eventId": "child_044",
+      "choiceId": "B",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "지력": 1
+      },
+      "suggestedThreshold": 52,
+      "label": "꾹 참는다."
+    },
+    {
+      "eventId": "child_044",
+      "choiceId": "C",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "건강": 3
+      },
+      "suggestedThreshold": 52,
+      "label": "선생님 옆 앞자리로 옮긴다."
+    },
+    {
+      "eventId": "child_045",
+      "choiceId": "A",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "지력": 2,
+        "사회성": 2
+      },
+      "suggestedThreshold": null,
+      "label": "'급식 맛 순위' 기사를 쓴다."
+    },
+    {
+      "eventId": "child_045",
+      "choiceId": "B",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "행복": 3
+      },
+      "suggestedThreshold": 52,
+      "label": "네 컷 만화를 그린다."
+    },
+    {
+      "eventId": "child_045",
+      "choiceId": "C",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "행복": 1
+      },
+      "suggestedThreshold": 52,
+      "label": "\"저는 안 할래요.\""
+    },
+    {
+      "eventId": "child_046",
+      "choiceId": "A",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "행복": 2
+      },
+      "suggestedThreshold": 52,
+      "label": "매점으로 달린다."
+    },
+    {
+      "eventId": "child_046",
+      "choiceId": "B",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
+      "positiveStats": {
+        "건강": 1
+      },
+      "suggestedThreshold": null,
+      "label": "책상에 엎드려 잔다."
+    },
+    {
+      "eventId": "child_046",
+      "choiceId": "C",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "지력": 2
+      },
+      "suggestedThreshold": 52,
+      "label": "다음 시간 숙제를 한다."
+    },
+    {
+      "eventId": "child_047",
+      "choiceId": "A",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "행복": 2
+      },
+      "suggestedThreshold": 52,
+      "label": "불량식품을 산다."
+    },
+    {
+      "eventId": "child_047",
+      "choiceId": "B",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "경제력": 1
+      },
+      "suggestedThreshold": 52,
+      "label": "저금통에 넣으려고 참는다."
+    },
+    {
+      "eventId": "child_047",
+      "choiceId": "C",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
+      "positiveStats": {
+        "사회성": 2
+      },
+      "suggestedThreshold": null,
+      "label": "친구에게 빌려준다."
+    },
+    {
+      "eventId": "teen_001",
+      "choiceId": "A",
+      "periods": [
+        "TEEN"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "경제력": 1
+      },
+      "suggestedThreshold": 55,
+      "label": "그냥 입는다."
+    },
+    {
+      "eventId": "teen_001",
+      "choiceId": "B",
+      "periods": [
+        "TEEN"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "행복": 1
+      },
+      "suggestedThreshold": 55,
+      "label": "소매만 줄인다."
+    },
+    {
+      "eventId": "teen_001",
+      "choiceId": "C",
+      "periods": [
+        "TEEN"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 1,
+        "행복": 1
+      },
+      "suggestedThreshold": null,
+      "label": "\"한 치수 작은 걸로 바꿔 줘.\""
+    },
+    {
+      "eventId": "teen_002",
+      "choiceId": "A",
+      "periods": [
+        "TEEN"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "지력": 1
+      },
+      "suggestedThreshold": 55,
+      "label": "화장실에서 조용히 고쳐 입는다."
+    },
+    {
+      "eventId": "teen_002",
+      "choiceId": "B",
+      "periods": [
+        "TEEN"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 2,
+        "행복": 1
+      },
+      "suggestedThreshold": null,
+      "label": "\"유행입니다\"라고 우긴다."
+    },
+    {
+      "eventId": "teen_002",
+      "choiceId": "C",
+      "periods": [
+        "TEEN"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "행복": 2
+      },
+      "suggestedThreshold": 55,
+      "label": "하루 종일 그대로 다닌다."
+    },
+    {
+      "eventId": "teen_003",
+      "choiceId": "A",
+      "periods": [
+        "TEEN"
+      ],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
+      "positiveStats": {
+        "운동능력": 4,
+        "건강": 1
+      },
+      "suggestedThreshold": null,
+      "label": "운동부."
+    },
+    {
+      "eventId": "teen_003",
+      "choiceId": "B",
+      "periods": [
+        "TEEN"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "지력": 4
+      },
+      "suggestedThreshold": 55,
+      "label": "학술부 코딩반."
+    },
+    {
+      "eventId": "teen_003",
+      "choiceId": "C",
+      "periods": [
+        "TEEN"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 3,
+        "행복": 3
+      },
+      "suggestedThreshold": null,
+      "label": "예술부 밴드."
+    },
+    {
+      "eventId": "teen_004",
+      "choiceId": "A",
+      "periods": [
+        "TEEN"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 1
+      },
+      "suggestedThreshold": 55,
+      "label": "\"아 그래?\" 하고 넘어간다."
+    },
+    {
+      "eventId": "teen_004",
+      "choiceId": "B",
+      "periods": [
+        "TEEN"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 2
+      },
+      "suggestedThreshold": 55,
+      "label": "\"줄 서.\""
+    },
+    {
+      "eventId": "teen_004",
+      "choiceId": "C",
+      "periods": [
+        "TEEN"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "행복": 1,
+        "사회성": 1
+      },
+      "suggestedThreshold": null,
+      "label": "그 애 앞으로 한 칸 더 새치기한다."
+    },
+    {
+      "eventId": "teen_005",
+      "choiceId": "A",
+      "periods": [
+        "TEEN"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 3
+      },
+      "suggestedThreshold": 55,
+      "label": "먼저 인사한다."
+    },
+    {
+      "eventId": "teen_005",
+      "choiceId": "B",
+      "periods": [
+        "TEEN"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "지력": 1
+      },
+      "suggestedThreshold": 55,
+      "label": "서로 조용히 지낸다."
+    },
+    {
+      "eventId": "teen_005",
+      "choiceId": "C",
+      "periods": [
+        "TEEN"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 2,
+        "행복": 1
+      },
+      "suggestedThreshold": null,
+      "label": "쪽지로 말을 건다."
+    },
+    {
+      "eventId": "teen_006",
+      "choiceId": "A",
+      "periods": [
+        "TEEN"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 2,
+        "지력": 1
+      },
+      "suggestedThreshold": null,
+      "label": "대본대로 읽는다."
+    },
+    {
+      "eventId": "teen_006",
+      "choiceId": "B",
+      "periods": [
+        "TEEN"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 4,
+        "행복": 1
+      },
+      "suggestedThreshold": null,
+      "label": "즉흥으로 사연을 받는다."
+    },
+    {
+      "eventId": "teen_006",
+      "choiceId": "C",
+      "periods": [
+        "TEEN"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "행복": 3
+      },
+      "suggestedThreshold": 55,
+      "label": "노래를 한 곡 부른다."
+    },
+    {
+      "eventId": "teen_007",
+      "choiceId": "A",
+      "periods": [
+        "TEEN"
+      ],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
+      "positiveStats": {
+        "지력": 5
+      },
+      "suggestedThreshold": null,
+      "label": "독서실에 간다."
+    },
+    {
+      "eventId": "teen_007",
+      "choiceId": "B",
+      "periods": [
+        "TEEN"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 2,
+        "행복": 2
+      },
+      "suggestedThreshold": null,
+      "label": "딱 한 시간만 간다."
+    },
+    {
+      "eventId": "teen_007",
+      "choiceId": "C",
+      "periods": [
+        "TEEN"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 2,
+        "지력": 2
+      },
+      "suggestedThreshold": null,
+      "label": "친구들을 독서실로 끌고 간다."
+    },
+    {
+      "eventId": "teen_008",
+      "choiceId": "A",
+      "periods": [
+        "TEEN"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 3,
+        "운": 1
+      },
+      "suggestedThreshold": null,
+      "label": "청소 규칙을 정하자고 한다."
+    },
+    {
+      "eventId": "teen_008",
+      "choiceId": "B",
+      "periods": [
+        "TEEN"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "행복": 1
+      },
+      "suggestedThreshold": 55,
+      "label": "문을 쾅 닫는다."
+    },
+    {
+      "eventId": "teen_008",
+      "choiceId": "C",
+      "periods": [
+        "TEEN"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "지력": 1
+      },
+      "suggestedThreshold": 55,
+      "label": "\"이건 정리된 혼돈이야.\""
+    },
+    {
+      "eventId": "teen_009",
+      "choiceId": "A",
+      "periods": [
+        "TEEN"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "운동능력": 4,
+        "건강": 1
+      },
+      "suggestedThreshold": null,
+      "label": "끝까지 달린다."
+    },
+    {
+      "eventId": "teen_009",
+      "choiceId": "B",
+      "periods": [
+        "TEEN"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "행복": 1
+      },
+      "suggestedThreshold": 55,
+      "label": "선생님이 볼 때만 뛴다."
+    },
+    {
+      "eventId": "teen_009",
+      "choiceId": "C",
+      "periods": [
+        "TEEN"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "건강": 1,
+        "행복": 1
+      },
+      "suggestedThreshold": null,
+      "label": "옆구리를 잡고 드라마처럼 쓰러진다."
+    },
+    {
+      "eventId": "teen_010",
+      "choiceId": "A",
+      "periods": [
+        "TEEN"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 3
+      },
+      "suggestedThreshold": 55,
+      "label": "\"같이 써도 돼?\""
+    },
+    {
+      "eventId": "teen_010",
+      "choiceId": "B",
+      "periods": [
+        "TEEN"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "운동능력": 1
+      },
+      "suggestedThreshold": 55,
+      "label": "괜찮다고 하고 뛰어간다."
+    },
+    {
+      "eventId": "teen_010",
+      "choiceId": "C",
+      "periods": [
+        "TEEN"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "행복": 2
+      },
+      "suggestedThreshold": 55,
+      "label": "비가 그칠 때까지 기다린다."
+    },
+    {
+      "eventId": "teen_011",
+      "choiceId": "A",
+      "periods": [
+        "TEEN"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "행복": 3,
+        "경제력": 1
+      },
+      "suggestedThreshold": null,
+      "label": "\"이건 좀 아닌 듯\""
+    },
+    {
+      "eventId": "teen_011",
+      "choiceId": "B",
+      "periods": [
+        "TEEN"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 2
+      },
+      "suggestedThreshold": 55,
+      "label": "28번째 'ㅋㅋㅋ'"
+    },
+    {
+      "eventId": "teen_011",
+      "choiceId": "C",
+      "periods": [
+        "TEEN"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 1,
+        "운": 1
+      },
+      "suggestedThreshold": null,
+      "label": "인싸 사진으로 합성을 만들어 올린다."
+    },
+    {
+      "eventId": "teen_012",
+      "choiceId": "A",
+      "periods": [
+        "TEEN"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 4,
+        "행복": 3
+      },
+      "suggestedThreshold": null,
+      "label": "마이크를 잡는다."
+    },
+    {
+      "eventId": "teen_012",
+      "choiceId": "B",
+      "periods": [
+        "TEEN"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "지력": 1,
+        "행복": 1
+      },
+      "suggestedThreshold": null,
+      "label": "연주곡으로 바꾼다."
+    },
+    {
+      "eventId": "teen_012",
+      "choiceId": "C",
+      "periods": [
+        "TEEN"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 3,
+        "운": 1
+      },
+      "suggestedThreshold": null,
+      "label": "관객에게 마이크를 넘긴다."
+    },
+    {
+      "eventId": "teen_013",
+      "choiceId": "A",
+      "periods": [
+        "TEEN"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "지력": 4,
+        "경제력": 1
+      },
+      "suggestedThreshold": null,
+      "label": "밤새 완성한다."
+    },
+    {
+      "eventId": "teen_013",
+      "choiceId": "B",
+      "periods": [
+        "TEEN"
+      ],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
+      "positiveStats": {
+        "건강": 1,
+        "사회성": 2
+      },
+      "suggestedThreshold": null,
+      "label": "같이 자고 발표에 올인한다."
+    },
+    {
+      "eventId": "teen_013",
+      "choiceId": "C",
+      "periods": [
+        "TEEN"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 1,
+        "운": 2
+      },
+      "suggestedThreshold": null,
+      "label": "자는 팀원 얼굴을 앱 로고로 쓴다."
+    },
+    {
+      "eventId": "teen_014",
+      "choiceId": "A",
+      "periods": [
+        "TEEN"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "지력": 4,
+        "사회성": 2
+      },
+      "suggestedThreshold": null,
+      "label": "대표로 나간다."
+    },
+    {
+      "eventId": "teen_014",
+      "choiceId": "B",
+      "periods": [
+        "TEEN"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "지력": 2,
+        "사회성": 1
+      },
+      "suggestedThreshold": null,
+      "label": "자료 조사만 한다."
+    },
+    {
+      "eventId": "teen_015",
+      "choiceId": "A",
+      "periods": [
+        "TEEN"
+      ],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
+      "positiveStats": {
+        "경제력": 4,
+        "사회성": 1
+      },
+      "suggestedThreshold": null,
+      "label": "전단지 알바."
+    },
+    {
+      "eventId": "teen_015",
+      "choiceId": "B",
+      "periods": [
+        "TEEN"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "지력": 4
+      },
+      "suggestedThreshold": 55,
+      "label": "특강."
+    },
+    {
+      "eventId": "teen_015",
+      "choiceId": "C",
+      "periods": [
+        "TEEN"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "경제력": 1,
+        "행복": 2
+      },
+      "suggestedThreshold": null,
+      "label": "전단지를 종이비행기로 접어 날린다."
+    },
+    {
+      "eventId": "teen_016",
+      "choiceId": "A",
+      "periods": [
+        "TEEN"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 2,
+        "행복": 1
+      },
+      "suggestedThreshold": null,
+      "label": "조각 케이크 두 개를 산다."
+    },
+    {
+      "eventId": "teen_016",
+      "choiceId": "B",
+      "periods": [
+        "TEEN"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 2,
+        "지력": 1
+      },
+      "suggestedThreshold": null,
+      "label": "편지를 쓴다."
+    },
+    {
+      "eventId": "teen_016",
+      "choiceId": "C",
+      "periods": [
+        "TEEN"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "경제력": 1
+      },
+      "suggestedThreshold": 55,
+      "label": "모른 척 넘어간다."
+    },
+    {
+      "eventId": "teen_017",
+      "choiceId": "A",
+      "periods": [
+        "TEEN"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "지력": 2,
+        "건강": 2
+      },
+      "suggestedThreshold": null,
+      "label": "게임 앱을 지운다."
+    },
+    {
+      "eventId": "teen_017",
+      "choiceId": "B",
+      "periods": [
+        "TEEN"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "행복": 2
+      },
+      "suggestedThreshold": 55,
+      "label": "몰래 계속한다."
+    },
+    {
+      "eventId": "teen_017",
+      "choiceId": "C",
+      "periods": [
+        "TEEN"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 3,
+        "운": 1
+      },
+      "suggestedThreshold": null,
+      "label": "엄마를 게임에 초대한다."
+    },
+    {
+      "eventId": "teen_018",
+      "choiceId": "A",
+      "periods": [
+        "TEEN"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "행복": 1,
+        "사회성": 1
+      },
+      "suggestedThreshold": null,
+      "label": "모아 둔 용돈을 턴다."
+    },
+    {
+      "eventId": "teen_018",
+      "choiceId": "B",
+      "periods": [
+        "TEEN"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "경제력": 1
+      },
+      "suggestedThreshold": 55,
+      "label": "부모님께 부탁한다."
+    },
+    {
+      "eventId": "teen_019",
+      "choiceId": "A",
+      "periods": [
+        "TEEN"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "지력": 4
+      },
+      "suggestedThreshold": 55,
+      "label": "인문계."
+    },
+    {
+      "eventId": "teen_019",
+      "choiceId": "B",
+      "periods": [
+        "TEEN"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "경제력": 4,
+        "운동능력": 1
+      },
+      "suggestedThreshold": null,
+      "label": "특성화고."
+    },
+    {
+      "eventId": "teen_019",
+      "choiceId": "C",
+      "periods": [
+        "TEEN"
+      ],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
+      "positiveStats": {
+        "행복": 4,
+        "지력": 1
+      },
+      "suggestedThreshold": null,
+      "label": "예술고 실기 시험에 도전한다."
+    },
+    {
+      "eventId": "teen_020",
+      "choiceId": "A",
+      "periods": [
+        "TEEN"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "운동능력": 4,
+        "행복": 2
+      },
+      "suggestedThreshold": null,
+      "label": "테스트에 간다."
+    },
+    {
+      "eventId": "teen_020",
+      "choiceId": "B",
+      "periods": [
+        "TEEN"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "지력": 4
+      },
+      "suggestedThreshold": 55,
+      "label": "기말고사를 본다."
+    },
+    {
+      "eventId": "teen_021",
+      "choiceId": "A",
+      "periods": [
+        "TEEN"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 3,
+        "행복": 2
+      },
+      "suggestedThreshold": null,
+      "label": "\"나랑 같이 갈래?\""
+    },
+    {
+      "eventId": "teen_021",
+      "choiceId": "B",
+      "periods": [
+        "TEEN"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "지력": 1
+      },
+      "suggestedThreshold": 55,
+      "label": "\"글쎄, 그냥 집에 있을 듯.\""
+    },
+    {
+      "eventId": "teen_021",
+      "choiceId": "C",
+      "periods": [
+        "TEEN"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 2,
+        "운": 1
+      },
+      "suggestedThreshold": null,
+      "label": "\"너 좋아해.\""
+    },
+    {
+      "eventId": "teen_022",
+      "choiceId": "A",
+      "periods": [
+        "TEEN"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 4,
+        "행복": 3
+      },
+      "suggestedThreshold": null,
+      "label": "몰래 간다."
+    },
+    {
+      "eventId": "teen_022",
+      "choiceId": "B",
+      "periods": [
+        "TEEN"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "건강": 2
+      },
+      "suggestedThreshold": 55,
+      "label": "방에서 잔다."
+    },
+    {
+      "eventId": "teen_022",
+      "choiceId": "C",
+      "periods": [
+        "TEEN"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "운": 2,
+        "행복": 1
+      },
+      "suggestedThreshold": null,
+      "label": "학생주임 선생님 옆에 앉아 같이 지킨다."
+    },
+    {
+      "eventId": "teen_023",
+      "choiceId": "A",
+      "periods": [
+        "TEEN"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "지력": 4
+      },
+      "suggestedThreshold": 55,
+      "label": "이과."
+    },
+    {
+      "eventId": "teen_023",
+      "choiceId": "B",
+      "periods": [
+        "TEEN"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 2,
+        "행복": 1
+      },
+      "suggestedThreshold": null,
+      "label": "문과."
+    },
+    {
+      "eventId": "teen_023",
+      "choiceId": "C",
+      "periods": [
+        "TEEN"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "운": 2
+      },
+      "suggestedThreshold": 55,
+      "label": "사다리 타기로 정한다."
+    },
+    {
+      "eventId": "teen_024",
+      "choiceId": "A",
+      "periods": [
+        "TEEN"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "지력": 3
+      },
+      "suggestedThreshold": 55,
+      "label": "손을 들고 말한다."
+    },
+    {
+      "eventId": "teen_024",
+      "choiceId": "B",
+      "periods": [
+        "TEEN"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "지력": 2,
+        "사회성": 1
+      },
+      "suggestedThreshold": null,
+      "label": "수업 끝나고 조용히 말한다."
+    },
+    {
+      "eventId": "teen_024",
+      "choiceId": "C",
+      "periods": [
+        "TEEN"
+      ],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
+      "positiveStats": {
+        "지력": 1
+      },
+      "suggestedThreshold": null,
+      "label": "틀린 채로 놔두고 내 공책에만 고쳐 적는다."
+    },
+    {
+      "eventId": "teen_025",
+      "choiceId": "A",
+      "periods": [
+        "TEEN"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 3,
+        "경제력": 2
+      },
+      "suggestedThreshold": null,
+      "label": "규정을 설명한다."
+    },
+    {
+      "eventId": "teen_025",
+      "choiceId": "B",
+      "periods": [
+        "TEEN"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "행복": 1
+      },
+      "suggestedThreshold": 55,
+      "label": "점장님을 부른다."
+    },
+    {
+      "eventId": "teen_025",
+      "choiceId": "C",
+      "periods": [
+        "TEEN"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 2,
+        "행복": 1
+      },
+      "suggestedThreshold": null,
+      "label": "\"저도 오늘 기분 상했어요.\""
+    },
+    {
+      "eventId": "teen_026",
+      "choiceId": "A",
+      "periods": [
+        "TEEN"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 4
+      },
+      "suggestedThreshold": 55,
+      "label": "바로 전화한다."
+    },
+    {
+      "eventId": "teen_026",
+      "choiceId": "B",
+      "periods": [
+        "TEEN"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "건강": 1
+      },
+      "suggestedThreshold": 55,
+      "label": "\"내일 얘기하자\" 답장한다."
+    },
+    {
+      "eventId": "teen_026",
+      "choiceId": "C",
+      "periods": [
+        "TEEN"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 4,
+        "행복": 1
+      },
+      "suggestedThreshold": null,
+      "label": "편의점 앞으로 불러낸다."
+    },
+    {
+      "eventId": "teen_027",
+      "choiceId": "A",
+      "periods": [
+        "TEEN"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 3
+      },
+      "suggestedThreshold": 55,
+      "label": "내려가서 창문을 두드린다."
+    },
+    {
+      "eventId": "teen_027",
+      "choiceId": "B",
+      "periods": [
+        "TEEN"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "지력": 1
+      },
+      "suggestedThreshold": 55,
+      "label": "모른 척 커튼을 친다."
+    },
+    {
+      "eventId": "teen_027",
+      "choiceId": "C",
+      "periods": [
+        "TEEN"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 2,
+        "행복": 1
+      },
+      "suggestedThreshold": null,
+      "label": "캔커피 두 개를 들고 조수석에 탄다."
+    },
+    {
+      "eventId": "teen_028",
+      "choiceId": "A",
+      "periods": [
+        "TEEN"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 2
+      },
+      "suggestedThreshold": 55,
+      "label": "그대로 보여 드린다."
+    },
+    {
+      "eventId": "teen_028",
+      "choiceId": "B",
+      "periods": [
+        "TEEN"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "운": 1
+      },
+      "suggestedThreshold": 55,
+      "label": "사인을 연습한다."
+    },
+    {
+      "eventId": "teen_028",
+      "choiceId": "C",
+      "periods": [
+        "TEEN"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 1,
+        "운": 2
+      },
+      "suggestedThreshold": null,
+      "label": "아빠한테 먼저 보여 드린다."
+    },
+    {
+      "eventId": "teen_029",
+      "choiceId": "A",
+      "periods": [
+        "TEEN"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "운동능력": 2,
+        "행복": 1
+      },
+      "suggestedThreshold": null,
+      "label": "전력 질주한다."
+    },
+    {
+      "eventId": "teen_029",
+      "choiceId": "B",
+      "periods": [
+        "TEEN"
+      ],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
+      "positiveStats": {
+        "사회성": 2
+      },
+      "suggestedThreshold": null,
+      "label": "발 빠른 친구에게 부탁한다."
+    },
+    {
+      "eventId": "teen_029",
+      "choiceId": "C",
+      "periods": [
+        "TEEN"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "건강": 2
+      },
+      "suggestedThreshold": 55,
+      "label": "그냥 급식을 먹는다."
+    },
+    {
+      "eventId": "teen_030",
+      "choiceId": "A",
+      "periods": [
+        "TEEN"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 1
+      },
+      "suggestedThreshold": 55,
+      "label": "무난한 흰 티에 한 표."
+    },
+    {
+      "eventId": "teen_030",
+      "choiceId": "B",
+      "periods": [
+        "TEEN"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "행복": 3
+      },
+      "suggestedThreshold": 55,
+      "label": "공룡 잠옷에 한 표."
+    },
+    {
+      "eventId": "teen_030",
+      "choiceId": "C",
+      "periods": [
+        "TEEN"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "행복": 2
+      },
+      "suggestedThreshold": 55,
+      "label": "각자 자유에 한 표."
+    },
+    {
+      "eventId": "teen_031",
+      "choiceId": "A",
+      "periods": [
+        "TEEN"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "지력": 3
+      },
+      "suggestedThreshold": 55,
+      "label": "같이 간다."
+    },
+    {
+      "eventId": "teen_031",
+      "choiceId": "B",
+      "periods": [
+        "TEEN"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "경제력": 1,
+        "지력": 1
+      },
+      "suggestedThreshold": null,
+      "label": "집에서 한다."
+    },
+    {
+      "eventId": "teen_031",
+      "choiceId": "C",
+      "periods": [
+        "TEEN"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "지력": 2
+      },
+      "suggestedThreshold": 55,
+      "label": "도서관 열람실에 간다."
+    },
+    {
+      "eventId": "teen_032",
+      "choiceId": "A",
+      "periods": [
+        "TEEN"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 3
+      },
+      "suggestedThreshold": 55,
+      "label": "파티에 간다."
+    },
+    {
+      "eventId": "teen_032",
+      "choiceId": "B",
+      "periods": [
+        "TEEN"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "지력": 3
+      },
+      "suggestedThreshold": 55,
+      "label": "숙제를 한다."
+    },
+    {
+      "eventId": "teen_032",
+      "choiceId": "C",
+      "periods": [
+        "TEEN"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "지력": 1,
+        "사회성": 1
+      },
+      "suggestedThreshold": null,
+      "label": "문제집을 들고 파티에 간다."
+    },
+    {
+      "eventId": "teen_033",
+      "choiceId": "A",
+      "periods": [
+        "TEEN"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 1
+      },
+      "suggestedThreshold": 55,
+      "label": "그냥 찍는다."
+    },
+    {
+      "eventId": "teen_033",
+      "choiceId": "B",
+      "periods": [
+        "TEEN"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "행복": 2
+      },
+      "suggestedThreshold": 55,
+      "label": "모자를 쓰고 간다."
+    },
+    {
+      "eventId": "teen_033",
+      "choiceId": "C",
+      "periods": [
+        "TEEN"
+      ],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
+      "positiveStats": {
+        "운": 2
+      },
+      "suggestedThreshold": null,
+      "label": "친구에게 앞머리를 맡긴다."
+    },
+    {
+      "eventId": "teen_034",
+      "choiceId": "A",
+      "periods": [
+        "TEEN"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "행복": 3
+      },
+      "suggestedThreshold": 55,
+      "label": "미용실에서 제대로 한다."
+    },
+    {
+      "eventId": "teen_034",
+      "choiceId": "B",
+      "periods": [
+        "TEEN"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "행복": 2
+      },
+      "suggestedThreshold": 55,
+      "label": "편의점 염색약으로 한다."
+    },
+    {
+      "eventId": "teen_034",
+      "choiceId": "C",
+      "periods": [
+        "TEEN"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "경제력": 1
+      },
+      "suggestedThreshold": 55,
+      "label": "하지 않는다."
+    },
+    {
+      "eventId": "teen_035",
+      "choiceId": "A",
+      "periods": [
+        "TEEN"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 1
+      },
+      "suggestedThreshold": 55,
+      "label": "부모님께 전화한다."
+    },
+    {
+      "eventId": "teen_035",
+      "choiceId": "B",
+      "periods": [
+        "TEEN"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "지력": 1
+      },
+      "suggestedThreshold": 55,
+      "label": "반대 방향 버스를 기다린다."
+    },
+    {
+      "eventId": "teen_035",
+      "choiceId": "C",
+      "periods": [
+        "TEEN"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 2,
+        "운": 1
+      },
+      "suggestedThreshold": null,
+      "label": "기사님께 사정을 말한다."
+    },
+    {
+      "eventId": "teen_036",
+      "choiceId": "A",
+      "periods": [
+        "TEEN"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 3
+      },
+      "suggestedThreshold": 55,
+      "label": "선거 캠프에 들어간다."
+    },
+    {
+      "eventId": "teen_036",
+      "choiceId": "B",
+      "periods": [
+        "TEEN"
+      ],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
+      "positiveStats": {
+        "지력": 3
+      },
+      "suggestedThreshold": null,
+      "label": "공약을 세 개 더 만들어 준다."
+    },
+    {
+      "eventId": "teen_036",
+      "choiceId": "C",
+      "periods": [
+        "TEEN"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "운": 1
+      },
+      "suggestedThreshold": 55,
+      "label": "상대 후보를 찍는다."
+    },
+    {
+      "eventId": "teen_037",
+      "choiceId": "A",
+      "periods": [
+        "TEEN"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "지력": 5
+      },
+      "suggestedThreshold": 55,
+      "label": "잠을 줄이고 문제집을 판다."
+    },
+    {
+      "eventId": "teen_037",
+      "choiceId": "B",
+      "periods": [
+        "TEEN"
+      ],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
+      "positiveStats": {
+        "건강": 3,
+        "지력": 1
+      },
+      "suggestedThreshold": null,
+      "label": "운동도 같이 한다."
+    },
+    {
+      "eventId": "teen_037",
+      "choiceId": "C",
+      "periods": [
+        "TEEN"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 3,
+        "행복": 2
+      },
+      "suggestedThreshold": null,
+      "label": "옆에 'D-99: 치킨'이라고 쓴다."
+    },
+    {
+      "eventId": "teen_038",
+      "choiceId": "A",
+      "periods": [
+        "TEEN"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "지력": 3
+      },
+      "suggestedThreshold": 55,
+      "label": "평소처럼 푼다."
+    },
+    {
+      "eventId": "teen_038",
+      "choiceId": "B",
+      "periods": [
+        "TEEN"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "운": 3
+      },
+      "suggestedThreshold": 55,
+      "label": "찍은 답을 끝까지 믿는다."
+    },
+    {
+      "eventId": "teen_038",
+      "choiceId": "C",
+      "periods": [
+        "TEEN"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "행복": 2,
+        "사회성": 1
+      },
+      "suggestedThreshold": null,
+      "label": "점심시간에 도시락 뚜껑을 연다."
+    },
+    {
+      "eventId": "teen_039",
+      "choiceId": "A",
+      "periods": [
+        "TEEN"
+      ],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
+      "positiveStats": {
+        "사회성": 4,
+        "행복": 2
+      },
+      "suggestedThreshold": null,
+      "label": "친구들한테 간다."
+    },
+    {
+      "eventId": "teen_039",
+      "choiceId": "B",
+      "periods": [
+        "TEEN"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "행복": 4,
+        "지력": 1
+      },
+      "suggestedThreshold": null,
+      "label": "가족이랑 고깃집에 간다."
+    },
+    {
+      "eventId": "teen_039",
+      "choiceId": "C",
+      "periods": [
+        "TEEN"
+      ],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
+      "positiveStats": {
+        "사회성": 4,
+        "행복": 3
+      },
+      "suggestedThreshold": null,
+      "label": "친구들을 전부 고깃집에 데려간다."
+    },
+    {
+      "eventId": "teen_040",
+      "choiceId": "A",
+      "periods": [
+        "TEEN"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "행복": 2
+      },
+      "suggestedThreshold": 55,
+      "label": "가방에서 몰래 간식을 꺼낸다."
+    },
+    {
+      "eventId": "teen_040",
+      "choiceId": "B",
+      "periods": [
+        "TEEN"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "건강": 1
+      },
+      "suggestedThreshold": 55,
+      "label": "물로 버틴다."
+    },
+    {
+      "eventId": "teen_041",
+      "choiceId": "A",
+      "periods": [
+        "TEEN"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "행복": 2
+      },
+      "suggestedThreshold": 55,
+      "label": "침대에서 영상을 본다."
+    },
+    {
+      "eventId": "teen_041",
+      "choiceId": "B",
+      "periods": [
+        "TEEN"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "건강": 2,
+        "행복": 1
+      },
+      "suggestedThreshold": null,
+      "label": "동네를 한 바퀴 걷는다."
+    },
+    {
+      "eventId": "teen_041",
+      "choiceId": "C",
+      "periods": [
+        "TEEN"
+      ],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
+      "positiveStats": {
+        "지력": 2
+      },
+      "suggestedThreshold": null,
+      "label": "안 읽던 책을 편다."
+    },
+    {
+      "eventId": "teen_042",
+      "choiceId": "A",
+      "periods": [
+        "TEEN"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "지력": 3,
+        "행복": 1
+      },
+      "suggestedThreshold": null,
+      "label": "아는 문제부터 차근차근 푼다."
+    },
+    {
+      "eventId": "teen_042",
+      "choiceId": "B",
+      "periods": [
+        "TEEN"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "운": 2,
+        "행복": 2
+      },
+      "suggestedThreshold": null,
+      "label": "모르는 문제는 과감하게 찍는다."
+    },
+    {
+      "eventId": "teen_042",
+      "choiceId": "C",
+      "periods": [
+        "TEEN"
+      ],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
+      "positiveStats": {
+        "행복": 3,
+        "사회성": 1
+      },
+      "suggestedThreshold": null,
+      "label": "시험지 뒷면에 선생님 얼굴을 그린다."
+    },
+    {
+      "eventId": "adult_001",
+      "choiceId": "A",
+      "periods": [
+        "YOUNG_ADULT"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "지력": 5,
+        "행복": 1
+      },
+      "suggestedThreshold": null,
+      "label": "대학."
+    },
+    {
+      "eventId": "adult_001",
+      "choiceId": "B",
+      "periods": [
+        "YOUNG_ADULT"
+      ],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
+      "positiveStats": {
+        "경제력": 6
+      },
+      "suggestedThreshold": null,
+      "label": "취업."
+    },
+    {
+      "eventId": "adult_001",
+      "choiceId": "C",
+      "periods": [
+        "YOUNG_ADULT"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "행복": 4,
+        "사회성": 2
+      },
+      "suggestedThreshold": null,
+      "label": "1년 쉬면서 생각해 본다."
+    },
+    {
+      "eventId": "adult_002",
+      "choiceId": "A",
+      "periods": [
+        "YOUNG_ADULT"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "운동능력": 5,
+        "경제력": 3
+      },
+      "suggestedThreshold": null,
+      "label": "프로 입단."
+    },
+    {
+      "eventId": "adult_002",
+      "choiceId": "B",
+      "periods": [
+        "YOUNG_ADULT"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 3,
+        "지력": 2
+      },
+      "suggestedThreshold": null,
+      "label": "모교 코치가 된다."
+    },
+    {
+      "eventId": "adult_003",
+      "choiceId": "A",
+      "periods": [
+        "YOUNG_ADULT"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 4,
+        "행복": 2,
+        "운": 1
+      },
+      "suggestedThreshold": null,
+      "label": "출연한다."
+    },
+    {
+      "eventId": "adult_003",
+      "choiceId": "B",
+      "periods": [
+        "YOUNG_ADULT"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "행복": 2,
+        "경제력": 1
+      },
+      "suggestedThreshold": null,
+      "label": "주말 밴드나 한다."
+    },
+    {
+      "eventId": "adult_003",
+      "choiceId": "C",
+      "periods": [
+        "YOUNG_ADULT"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 2
+      },
+      "suggestedThreshold": 58,
+      "label": "\"그 영상 좀 내려 주세요.\""
+    },
+    {
+      "eventId": "adult_004",
+      "choiceId": "A",
+      "periods": [
+        "YOUNG_ADULT"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "건강": 4,
+        "경제력": 1
+      },
+      "suggestedThreshold": null,
+      "label": "직접 요리한다."
+    },
+    {
+      "eventId": "adult_004",
+      "choiceId": "B",
+      "periods": [
+        "YOUNG_ADULT"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "행복": 3
+      },
+      "suggestedThreshold": 58,
+      "label": "배달 앱을 켠다."
+    },
+    {
+      "eventId": "adult_004",
+      "choiceId": "C",
+      "periods": [
+        "YOUNG_ADULT"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "건강": 2,
+        "사회성": 1
+      },
+      "suggestedThreshold": null,
+      "label": "주말마다 본가에 간다."
+    },
+    {
+      "eventId": "adult_005",
+      "choiceId": "A",
+      "periods": [
+        "YOUNG_ADULT"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 1
+      },
+      "suggestedThreshold": 58,
+      "label": "번호를 물어본다."
+    },
+    {
+      "eventId": "adult_005",
+      "choiceId": "B",
+      "periods": [
+        "YOUNG_ADULT"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "지력": 1
+      },
+      "suggestedThreshold": 58,
+      "label": "\"내가 되겠어…?\" 그냥 간다."
+    },
+    {
+      "eventId": "adult_005",
+      "choiceId": "C",
+      "periods": [
+        "YOUNG_ADULT"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "운": 2
+      },
+      "suggestedThreshold": 58,
+      "label": "모른 척 같은 방향으로 걷는다."
+    },
+    {
+      "eventId": "adult_006",
+      "choiceId": "A",
+      "periods": [
+        "YOUNG_ADULT"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 3,
+        "행복": 2
+      },
+      "suggestedThreshold": null,
+      "label": "번호를 물어본다."
+    },
+    {
+      "eventId": "adult_006",
+      "choiceId": "B",
+      "periods": [
+        "YOUNG_ADULT"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 1
+      },
+      "suggestedThreshold": 58,
+      "label": "\"내가 되겠어…?\" 그냥 간다."
+    },
+    {
+      "eventId": "adult_006",
+      "choiceId": "C",
+      "periods": [
+        "YOUNG_ADULT"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "운": 2
+      },
+      "suggestedThreshold": 58,
+      "label": "모른 척 같은 방향으로 걷는다."
+    },
+    {
+      "eventId": "adult_007",
+      "choiceId": "A",
+      "periods": [
+        "YOUNG_ADULT"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "행복": 1,
+        "사회성": 1
+      },
+      "suggestedThreshold": null,
+      "label": "이상형 옆에 앉는다."
+    },
+    {
+      "eventId": "adult_007",
+      "choiceId": "B",
+      "periods": [
+        "YOUNG_ADULT"
+      ],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
+      "positiveStats": {
+        "사회성": 2,
+        "행복": 1
+      },
+      "suggestedThreshold": null,
+      "label": "친구들 사이에 앉는다."
+    },
+    {
+      "eventId": "adult_007",
+      "choiceId": "C",
+      "periods": [
+        "YOUNG_ADULT"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 2
+      },
+      "suggestedThreshold": 58,
+      "label": "불판 앞에 앉는다."
+    },
+    {
+      "eventId": "adult_008",
+      "choiceId": "A",
+      "periods": [
+        "YOUNG_ADULT"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 2,
+        "행복": 2
+      },
+      "suggestedThreshold": null,
+      "label": "똑같이 한 잔 따라 준다."
+    },
+    {
+      "eventId": "adult_008",
+      "choiceId": "B",
+      "periods": [
+        "YOUNG_ADULT"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "행복": 2,
+        "건강": 1
+      },
+      "suggestedThreshold": null,
+      "label": "\"저 사실 술 잘 못해요.\" 사이다를 따른다."
+    },
+    {
+      "eventId": "adult_008",
+      "choiceId": "C",
+      "periods": [
+        "YOUNG_ADULT"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "행복": 1
+      },
+      "suggestedThreshold": 58,
+      "label": "멋있게 원샷한다."
+    },
+    {
+      "eventId": "adult_009",
+      "choiceId": "A",
+      "periods": [
+        "YOUNG_ADULT"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 1,
+        "행복": 1
+      },
+      "suggestedThreshold": null,
+      "label": "\"우리의 우정을 위하여!\""
+    },
+    {
+      "eventId": "adult_009",
+      "choiceId": "B",
+      "periods": [
+        "YOUNG_ADULT"
+      ],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
+      "positiveStats": {
+        "사회성": 3,
+        "운": 1
+      },
+      "suggestedThreshold": null,
+      "label": "\"친! 친구야, 구! 구해 줘, 야! 야, 계산은 네가 해!\""
+    },
+    {
+      "eventId": "adult_009",
+      "choiceId": "C",
+      "periods": [
+        "YOUNG_ADULT"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "행복": 2,
+        "경제력": 1
+      },
+      "suggestedThreshold": null,
+      "label": "\"건배사는 사장님께 넘깁니다!\""
+    },
+    {
+      "eventId": "adult_010",
+      "choiceId": "A",
+      "periods": [
+        "YOUNG_ADULT"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "행복": 3
+      },
+      "suggestedThreshold": 58,
+      "label": "마지막 한 점을 먹는다."
+    },
+    {
+      "eventId": "adult_010",
+      "choiceId": "B",
+      "periods": [
+        "YOUNG_ADULT"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 3
+      },
+      "suggestedThreshold": 58,
+      "label": "계산서를 조용히 가져간다."
+    },
+    {
+      "eventId": "adult_010",
+      "choiceId": "C",
+      "periods": [
+        "YOUNG_ADULT"
+      ],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
+      "positiveStats": {
+        "사회성": 4
+      },
+      "suggestedThreshold": null,
+      "label": "취한 친구들을 한 명씩 택시에 태운다."
+    },
+    {
+      "eventId": "adult_011",
+      "choiceId": "A",
+      "periods": [
+        "YOUNG_ADULT"
+      ],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
+      "positiveStats": {
+        "사회성": 2
+      },
+      "suggestedThreshold": null,
+      "label": "주말에 가서 콩이를 안고 산책한다."
+    },
+    {
+      "eventId": "adult_011",
+      "choiceId": "B",
+      "periods": [
+        "YOUNG_ADULT"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "경제력": 1
+      },
+      "suggestedThreshold": 58,
+      "label": "바빠서 다음 달에 간다."
+    },
+    {
+      "eventId": "adult_011",
+      "choiceId": "C",
+      "periods": [
+        "YOUNG_ADULT"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 1,
+        "운": 1
+      },
+      "suggestedThreshold": null,
+      "label": "당장 영상 통화를 건다."
+    },
+    {
+      "eventId": "adult_012",
+      "choiceId": "A",
+      "periods": [
+        "YOUNG_ADULT"
+      ],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
+      "positiveStats": {
+        "지력": 4,
+        "경제력": 2
+      },
+      "suggestedThreshold": null,
+      "label": "장학금 공부."
+    },
+    {
+      "eventId": "adult_012",
+      "choiceId": "B",
+      "periods": [
+        "YOUNG_ADULT"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 4,
+        "행복": 1
+      },
+      "suggestedThreshold": null,
+      "label": "회장 수락."
+    },
+    {
+      "eventId": "adult_012",
+      "choiceId": "C",
+      "periods": [
+        "YOUNG_ADULT"
+      ],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
+      "positiveStats": {
+        "지력": 3,
+        "경제력": 1
+      },
+      "suggestedThreshold": null,
+      "label": "동아리를 스터디 모임으로 바꾼다."
+    },
+    {
+      "eventId": "adult_013",
+      "choiceId": "A",
+      "periods": [
+        "YOUNG_ADULT"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 3,
+        "운": 2
+      },
+      "suggestedThreshold": null,
+      "label": "\"아침잠이 많아서 알람을 7개 맞춥니다.\""
+    },
+    {
+      "eventId": "adult_013",
+      "choiceId": "B",
+      "periods": [
+        "YOUNG_ADULT"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "경제력": 1,
+        "지력": 1
+      },
+      "suggestedThreshold": null,
+      "label": "\"완벽주의라 일을 너무 열심히 합니다.\""
+    },
+    {
+      "eventId": "adult_013",
+      "choiceId": "C",
+      "periods": [
+        "YOUNG_ADULT"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "운": 3,
+        "경제력": 1
+      },
+      "suggestedThreshold": null,
+      "label": "\"단점이요? 음… 단점이 없는 게 단점?\""
+    },
+    {
+      "eventId": "adult_014",
+      "choiceId": "A",
+      "periods": [
+        "YOUNG_ADULT"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "건강": 1
+      },
+      "suggestedThreshold": 58,
+      "label": "한 대 보내고 다음 차를 탄다."
+    },
+    {
+      "eventId": "adult_014",
+      "choiceId": "B",
+      "periods": [
+        "YOUNG_ADULT"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "경제력": 1
+      },
+      "suggestedThreshold": 58,
+      "label": "밀고 들어간다."
+    },
+    {
+      "eventId": "adult_014",
+      "choiceId": "C",
+      "periods": [
+        "YOUNG_ADULT"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "행복": 1
+      },
+      "suggestedThreshold": 58,
+      "label": "택시를 탄다."
+    },
+    {
+      "eventId": "adult_015",
+      "choiceId": "A",
+      "periods": [
+        "YOUNG_ADULT"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "경제력": 5
+      },
+      "suggestedThreshold": 58,
+      "label": "절반은 적금."
+    },
+    {
+      "eventId": "adult_015",
+      "choiceId": "B",
+      "periods": [
+        "YOUNG_ADULT"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 2,
+        "행복": 3
+      },
+      "suggestedThreshold": null,
+      "label": "부모님 선물."
+    },
+    {
+      "eventId": "adult_015",
+      "choiceId": "C",
+      "periods": [
+        "YOUNG_ADULT"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "행복": 4
+      },
+      "suggestedThreshold": 58,
+      "label": "전부 나를 위해 쓴다."
+    },
+    {
+      "eventId": "adult_016",
+      "choiceId": "A",
+      "periods": [
+        "YOUNG_ADULT"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 2,
+        "경제력": 1
+      },
+      "suggestedThreshold": null,
+      "label": "팀장님 옆."
+    },
+    {
+      "eventId": "adult_016",
+      "choiceId": "B",
+      "periods": [
+        "YOUNG_ADULT"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 1,
+        "행복": 1
+      },
+      "suggestedThreshold": null,
+      "label": "동기 옆."
+    },
+    {
+      "eventId": "adult_016",
+      "choiceId": "C",
+      "periods": [
+        "YOUNG_ADULT"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "건강": 1,
+        "사회성": 1
+      },
+      "suggestedThreshold": null,
+      "label": "문 앞 끝자리."
+    },
+    {
+      "eventId": "adult_017",
+      "choiceId": "A",
+      "periods": [
+        "YOUNG_ADULT"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 2
+      },
+      "suggestedThreshold": 58,
+      "label": "원샷한다."
+    },
+    {
+      "eventId": "adult_017",
+      "choiceId": "B",
+      "periods": [
+        "YOUNG_ADULT"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "건강": 2
+      },
+      "suggestedThreshold": 58,
+      "label": "\"저는 오늘 물로 하겠습니다.\""
+    },
+    {
+      "eventId": "adult_017",
+      "choiceId": "C",
+      "periods": [
+        "YOUNG_ADULT"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "운": 2,
+        "건강": 1
+      },
+      "suggestedThreshold": null,
+      "label": "팀장님 잔에 몰래 물을 채워 드린다."
+    },
+    {
+      "eventId": "adult_018",
+      "choiceId": "A",
+      "periods": [
+        "YOUNG_ADULT"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "행복": 3
+      },
+      "suggestedThreshold": 58,
+      "label": "작전대로 탈출한다."
+    },
+    {
+      "eventId": "adult_018",
+      "choiceId": "B",
+      "periods": [
+        "YOUNG_ADULT"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 2,
+        "운": 1
+      },
+      "suggestedThreshold": null,
+      "label": "남아서 동기 핑계를 대 준다."
+    },
+    {
+      "eventId": "adult_018",
+      "choiceId": "C",
+      "periods": [
+        "YOUNG_ADULT"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 3
+      },
+      "suggestedThreshold": 58,
+      "label": "둘 다 끝까지 버틴다."
+    },
+    {
+      "eventId": "adult_019",
+      "choiceId": "A",
+      "periods": [
+        "YOUNG_ADULT"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "경제력": 2,
+        "사회성": 1
+      },
+      "suggestedThreshold": null,
+      "label": "\"삼겹살은 한 번만 뒤집는 게 기본입니다.\""
+    },
+    {
+      "eventId": "adult_019",
+      "choiceId": "B",
+      "periods": [
+        "YOUNG_ADULT"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 2
+      },
+      "suggestedThreshold": 58,
+      "label": "\"감사합니다.\" 하고 계속 굽는다."
+    },
+    {
+      "eventId": "adult_019",
+      "choiceId": "C",
+      "periods": [
+        "YOUNG_ADULT"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "건강": 2,
+        "행복": 1
+      },
+      "suggestedThreshold": null,
+      "label": "집게를 넘기고 조용히 집에 간다."
+    },
+    {
+      "eventId": "adult_020",
+      "choiceId": "A",
+      "periods": [
+        "YOUNG_ADULT"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 4
+      },
+      "suggestedThreshold": 58,
+      "label": "손을 든다."
+    },
+    {
+      "eventId": "adult_020",
+      "choiceId": "B",
+      "periods": [
+        "YOUNG_ADULT"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "건강": 1,
+        "행복": 1
+      },
+      "suggestedThreshold": null,
+      "label": "1차만 하고 집에 간다."
+    },
+    {
+      "eventId": "adult_020",
+      "choiceId": "C",
+      "periods": [
+        "YOUNG_ADULT"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 3,
+        "행복": 1
+      },
+      "suggestedThreshold": null,
+      "label": "\"저 음치인데 괜찮으세요?\""
+    },
+    {
+      "eventId": "adult_021",
+      "choiceId": "A",
+      "periods": [
+        "YOUNG_ADULT"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 1
+      },
+      "suggestedThreshold": 58,
+      "label": "숙취해소제 두 병을 마시고 출근한다."
+    },
+    {
+      "eventId": "adult_021",
+      "choiceId": "B",
+      "periods": [
+        "YOUNG_ADULT"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "건강": 2
+      },
+      "suggestedThreshold": 58,
+      "label": "반차를 쓴다."
+    },
+    {
+      "eventId": "adult_021",
+      "choiceId": "C",
+      "periods": [
+        "YOUNG_ADULT"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 2,
+        "운": 1
+      },
+      "suggestedThreshold": null,
+      "label": "영상에 '좋아요'를 누른다."
+    },
+    {
+      "eventId": "adult_022",
+      "choiceId": "A",
+      "periods": [
+        "MIDDLE",
+        "YOUNG_ADULT"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "건강": 1
+      },
+      "suggestedThreshold": 58,
+      "label": "읽씹한다."
+    },
+    {
+      "eventId": "adult_022",
+      "choiceId": "B",
+      "periods": [
+        "MIDDLE",
+        "YOUNG_ADULT"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "경제력": 2
+      },
+      "suggestedThreshold": 58,
+      "label": "바로 답장한다."
+    },
+    {
+      "eventId": "adult_022",
+      "choiceId": "C",
+      "periods": [
+        "MIDDLE",
+        "YOUNG_ADULT"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "운": 1
+      },
+      "suggestedThreshold": 58,
+      "label": "\"네 자요\""
+    },
+    {
+      "eventId": "adult_023",
+      "choiceId": "A",
+      "periods": [
+        "MIDDLE",
+        "YOUNG_ADULT"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 1
+      },
+      "suggestedThreshold": 58,
+      "label": "친절히 알려준다."
+    },
+    {
+      "eventId": "adult_023",
+      "choiceId": "B",
+      "periods": [
+        "MIDDLE",
+        "YOUNG_ADULT"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "지력": 1
+      },
+      "suggestedThreshold": 58,
+      "label": "못 들은 척 지나간다."
+    },
+    {
+      "eventId": "adult_023",
+      "choiceId": "C",
+      "periods": [
+        "MIDDLE",
+        "YOUNG_ADULT"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "행복": 1
+      },
+      "suggestedThreshold": 58,
+      "label": "\"사이비죠? 저 다 알아요!\""
+    },
+    {
+      "eventId": "adult_024",
+      "choiceId": "A",
+      "periods": [
+        "YOUNG_ADULT"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "지력": 3,
+        "운": 2
+      },
+      "suggestedThreshold": null,
+      "label": "퇴사하고 창업한다."
+    },
+    {
+      "eventId": "adult_024",
+      "choiceId": "B",
+      "periods": [
+        "YOUNG_ADULT"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "경제력": 4
+      },
+      "suggestedThreshold": 58,
+      "label": "회사에 남는다."
+    },
+    {
+      "eventId": "adult_024",
+      "choiceId": "C",
+      "periods": [
+        "YOUNG_ADULT"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "경제력": 2,
+        "지력": 2
+      },
+      "suggestedThreshold": null,
+      "label": "퇴근 후에만 돕는다."
+    },
+    {
+      "eventId": "adult_025",
+      "choiceId": "A",
+      "periods": [
+        "MIDDLE",
+        "YOUNG_ADULT"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "지력": 3
+      },
+      "suggestedThreshold": 58,
+      "label": "특허 출원을 알아본다."
+    },
+    {
+      "eventId": "adult_025",
+      "choiceId": "B",
+      "periods": [
+        "MIDDLE",
+        "YOUNG_ADULT"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "경제력": 2,
+        "사회성": 1
+      },
+      "suggestedThreshold": null,
+      "label": "회사 아이디어 공모에 낸다."
+    },
+    {
+      "eventId": "adult_025",
+      "choiceId": "C",
+      "periods": [
+        "MIDDLE",
+        "YOUNG_ADULT"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "행복": 1
+      },
+      "suggestedThreshold": 58,
+      "label": "메모만 하고 넘어간다."
+    },
+    {
+      "eventId": "adult_026",
+      "choiceId": "A",
+      "periods": [
+        "MIDDLE",
+        "YOUNG_ADULT"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "운": 3
+      },
+      "suggestedThreshold": 58,
+      "label": "여윳돈 조금만 넣는다."
+    },
+    {
+      "eventId": "adult_026",
+      "choiceId": "B",
+      "periods": [
+        "MIDDLE",
+        "YOUNG_ADULT"
+      ],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
+      "positiveStats": {
+        "경제력": 1,
+        "지력": 1
+      },
+      "suggestedThreshold": null,
+      "label": "거절하고 재테크 공부를 한다."
+    },
+    {
+      "eventId": "adult_026",
+      "choiceId": "C",
+      "periods": [
+        "MIDDLE",
+        "YOUNG_ADULT"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "지력": 2,
+        "행복": 1
+      },
+      "suggestedThreshold": null,
+      "label": "\"그럼 네가 산 가격에 나한테 팔아.\""
+    },
+    {
+      "eventId": "adult_027",
+      "choiceId": "A",
+      "periods": [
+        "MIDDLE",
+        "YOUNG_ADULT"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "건강": 4,
+        "운동능력": 3
+      },
+      "suggestedThreshold": null,
+      "label": "12개월 등록."
+    },
+    {
+      "eventId": "adult_027",
+      "choiceId": "B",
+      "periods": [
+        "MIDDLE",
+        "YOUNG_ADULT"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "행복": 3
+      },
+      "suggestedThreshold": 58,
+      "label": "소파에 눕는다."
+    },
+    {
+      "eventId": "adult_027",
+      "choiceId": "C",
+      "periods": [
+        "MIDDLE",
+        "YOUNG_ADULT"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "건강": 3,
+        "경제력": 1
+      },
+      "suggestedThreshold": null,
+      "label": "1일 무료 체험만 열두 군데 돈다."
+    },
+    {
+      "eventId": "adult_028",
+      "choiceId": "A",
+      "periods": [
+        "YOUNG_ADULT"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "행복": 2
+      },
+      "suggestedThreshold": 58,
+      "label": "10년 된 중고 경차를 산다."
+    },
+    {
+      "eventId": "adult_028",
+      "choiceId": "B",
+      "periods": [
+        "YOUNG_ADULT"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "행복": 4
+      },
+      "suggestedThreshold": 58,
+      "label": "새 차를 할부로 산다."
+    },
+    {
+      "eventId": "adult_028",
+      "choiceId": "C",
+      "periods": [
+        "YOUNG_ADULT"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "경제력": 2,
+        "지력": 1
+      },
+      "suggestedThreshold": null,
+      "label": "대중교통을 계속 탄다."
+    },
+    {
+      "eventId": "adult_029",
+      "choiceId": "A",
+      "periods": [
+        "MIDDLE",
+        "YOUNG_ADULT"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "행복": 1
+      },
+      "suggestedThreshold": 58,
+      "label": "\"개인 사정\"이라고 쓴다."
+    },
+    {
+      "eventId": "adult_029",
+      "choiceId": "B",
+      "periods": [
+        "MIDDLE",
+        "YOUNG_ADULT"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "행복": 3,
+        "사회성": 1
+      },
+      "suggestedThreshold": null,
+      "label": "\"고양이 생일\"이라고 쓴다."
+    },
+    {
+      "eventId": "adult_029",
+      "choiceId": "C",
+      "periods": [
+        "MIDDLE",
+        "YOUNG_ADULT"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "지력": 1
+      },
+      "suggestedThreshold": 58,
+      "label": "사유서를 A4 한 장으로 쓴다."
+    },
+    {
+      "eventId": "adult_030",
+      "choiceId": "A",
+      "periods": [
+        "YOUNG_ADULT"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 4,
+        "행복": 1
+      },
+      "suggestedThreshold": null,
+      "label": "축사를 맡는다."
+    },
+    {
+      "eventId": "adult_030",
+      "choiceId": "B",
+      "periods": [
+        "YOUNG_ADULT"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "행복": 1
+      },
+      "suggestedThreshold": 58,
+      "label": "축의금만 두둑이 낸다."
+    },
+    {
+      "eventId": "adult_030",
+      "choiceId": "C",
+      "periods": [
+        "YOUNG_ADULT"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 4,
+        "행복": 2
+      },
+      "suggestedThreshold": null,
+      "label": "축가까지 부르겠다고 한다."
+    },
+    {
+      "eventId": "adult_031",
+      "choiceId": "A",
+      "periods": [
+        "YOUNG_ADULT"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 4,
+        "행복": 1
+      },
+      "suggestedThreshold": null,
+      "label": "수락한다."
+    },
+    {
+      "eventId": "adult_031",
+      "choiceId": "B",
+      "periods": [
+        "YOUNG_ADULT"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "행복": 1
+      },
+      "suggestedThreshold": 58,
+      "label": "\"축의금을 더 낼게.\""
+    },
+    {
+      "eventId": "adult_031",
+      "choiceId": "C",
+      "periods": [
+        "YOUNG_ADULT"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 3,
+        "운": 1
+      },
+      "suggestedThreshold": null,
+      "label": "사회는 보되 대본을 안 쓴다."
+    },
+    {
+      "eventId": "adult_032",
+      "choiceId": "A",
+      "periods": [
+        "YOUNG_ADULT"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "행복": 5,
+        "사회성": 2
+      },
+      "suggestedThreshold": null,
+      "label": "결혼한다."
+    },
+    {
+      "eventId": "adult_032",
+      "choiceId": "B",
+      "periods": [
+        "YOUNG_ADULT"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "경제력": 4,
+        "지력": 2
+      },
+      "suggestedThreshold": null,
+      "label": "파견부터 다녀온다."
+    },
+    {
+      "eventId": "adult_032",
+      "choiceId": "C",
+      "periods": [
+        "YOUNG_ADULT"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "행복": 4,
+        "운": 1
+      },
+      "suggestedThreshold": null,
+      "label": "\"같이 파견 가자.\""
+    },
+    {
+      "eventId": "adult_033",
+      "choiceId": "A",
+      "periods": [
+        "MIDDLE",
+        "YOUNG_ADULT"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "운동능력": 1,
+        "사회성": 1
+      },
+      "suggestedThreshold": null,
+      "label": "진심으로 한다."
+    },
+    {
+      "eventId": "adult_033",
+      "choiceId": "B",
+      "periods": [
+        "MIDDLE",
+        "YOUNG_ADULT"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 2,
+        "행복": 1
+      },
+      "suggestedThreshold": null,
+      "label": "져 준다."
+    },
+    {
+      "eventId": "adult_033",
+      "choiceId": "C",
+      "periods": [
+        "MIDDLE",
+        "YOUNG_ADULT"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 3,
+        "행복": 1
+      },
+      "suggestedThreshold": null,
+      "label": "한참 버티다 무승부를 선언한다."
+    },
+    {
+      "eventId": "adult_034",
+      "choiceId": "A",
+      "periods": [
+        "MIDDLE",
+        "YOUNG_ADULT"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 4,
+        "건강": 2
+      },
+      "suggestedThreshold": null,
+      "label": "신청한다."
+    },
+    {
+      "eventId": "adult_034",
+      "choiceId": "B",
+      "periods": [
+        "MIDDLE",
+        "YOUNG_ADULT"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "건강": 1,
+        "행복": 1
+      },
+      "suggestedThreshold": null,
+      "label": "늦잠 잔다."
+    },
+    {
+      "eventId": "adult_034",
+      "choiceId": "C",
+      "periods": [
+        "MIDDLE",
+        "YOUNG_ADULT"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "행복": 1
+      },
+      "suggestedThreshold": 58,
+      "label": "\"저는 마음으로 참여할게요!\""
+    },
+    {
+      "eventId": "adult_035",
+      "choiceId": "A",
+      "periods": [
+        "YOUNG_ADULT"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 3
+      },
+      "suggestedThreshold": 58,
+      "label": "간다."
+    },
+    {
+      "eventId": "adult_035",
+      "choiceId": "B",
+      "periods": [
+        "YOUNG_ADULT"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "건강": 1
+      },
+      "suggestedThreshold": 58,
+      "label": "안 간다."
+    },
+    {
+      "eventId": "adult_035",
+      "choiceId": "C",
+      "periods": [
+        "YOUNG_ADULT"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 1
+      },
+      "suggestedThreshold": 58,
+      "label": "단톡방에 인사만 남긴다."
+    },
+    {
+      "eventId": "adult_036",
+      "choiceId": "A",
+      "periods": [
+        "YOUNG_ADULT"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 4,
+        "행복": 3
+      },
+      "suggestedThreshold": null,
+      "label": "주말에 놀이터로 간다."
+    },
+    {
+      "eventId": "adult_036",
+      "choiceId": "B",
+      "periods": [
+        "YOUNG_ADULT"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "경제력": 1
+      },
+      "suggestedThreshold": 58,
+      "label": "\"요즘 바빠서… 다음에 보자.\""
+    },
+    {
+      "eventId": "adult_037",
+      "choiceId": "A",
+      "periods": [
+        "MIDDLE",
+        "YOUNG_ADULT"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "경제력": 5
+      },
+      "suggestedThreshold": 58,
+      "label": "이직한다."
+    },
+    {
+      "eventId": "adult_037",
+      "choiceId": "B",
+      "periods": [
+        "MIDDLE",
+        "YOUNG_ADULT"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "행복": 4,
+        "건강": 1
+      },
+      "suggestedThreshold": null,
+      "label": "저녁 있는 삶을 지킨다."
+    },
+    {
+      "eventId": "adult_037",
+      "choiceId": "C",
+      "periods": [
+        "MIDDLE",
+        "YOUNG_ADULT"
+      ],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
+      "positiveStats": {
+        "경제력": 3,
+        "지력": 1
+      },
+      "suggestedThreshold": null,
+      "label": "지금 회사에 협상 카드로 쓴다."
+    },
+    {
+      "eventId": "adult_038",
+      "choiceId": "A",
+      "periods": [
+        "MIDDLE",
+        "YOUNG_ADULT"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "건강": 4,
+        "행복": 4
+      },
+      "suggestedThreshold": null,
+      "label": "휴직하고 여행 간다."
+    },
+    {
+      "eventId": "adult_038",
+      "choiceId": "B",
+      "periods": [
+        "MIDDLE",
+        "YOUNG_ADULT"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "경제력": 3
+      },
+      "suggestedThreshold": 58,
+      "label": "버틴다."
+    },
+    {
+      "eventId": "adult_038",
+      "choiceId": "C",
+      "periods": [
+        "MIDDLE",
+        "YOUNG_ADULT"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "행복": 3,
+        "건강": 1
+      },
+      "suggestedThreshold": null,
+      "label": "메일 327개를 전부 '읽음' 처리한다."
+    },
+    {
+      "eventId": "adult_039",
+      "choiceId": "A",
+      "periods": [
+        "MIDDLE",
+        "YOUNG_ADULT"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "행복": 4,
+        "사회성": 2
+      },
+      "suggestedThreshold": null,
+      "label": "육아휴직."
+    },
+    {
+      "eventId": "adult_039",
+      "choiceId": "B",
+      "periods": [
+        "MIDDLE",
+        "YOUNG_ADULT"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "경제력": 4
+      },
+      "suggestedThreshold": 58,
+      "label": "계속 일한다."
+    },
+    {
+      "eventId": "adult_040",
+      "choiceId": "A",
+      "periods": [
+        "MIDDLE"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "행복": 4,
+        "사회성": 2,
+        "경제력": 1
+      },
+      "suggestedThreshold": null,
+      "label": "그 사진으로 지원한다."
+    },
+    {
+      "eventId": "adult_040",
+      "choiceId": "B",
+      "periods": [
+        "MIDDLE"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 1
+      },
+      "suggestedThreshold": 60,
+      "label": "사진을 삭제한다."
+    },
+    {
+      "eventId": "adult_041",
+      "choiceId": "A",
+      "periods": [
+        "MIDDLE",
+        "YOUNG_ADULT"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "경제력": 2,
+        "행복": 3
+      },
+      "suggestedThreshold": null,
+      "label": "집을 산다."
+    },
+    {
+      "eventId": "adult_041",
+      "choiceId": "B",
+      "periods": [
+        "MIDDLE",
+        "YOUNG_ADULT"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "경제력": 3
+      },
+      "suggestedThreshold": 58,
+      "label": "전세로 더 모은다."
+    },
+    {
+      "eventId": "adult_041",
+      "choiceId": "C",
+      "periods": [
+        "MIDDLE",
+        "YOUNG_ADULT"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "행복": 2,
+        "운": 1
+      },
+      "suggestedThreshold": null,
+      "label": "\"돼지 저금통 깨면 얼마나 될까요?\""
+    },
+    {
+      "eventId": "adult_042",
+      "choiceId": "A",
+      "periods": [
+        "MIDDLE",
+        "YOUNG_ADULT"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "행복": 3
+      },
+      "suggestedThreshold": 58,
+      "label": "열어 본다."
+    },
+    {
+      "eventId": "adult_042",
+      "choiceId": "B",
+      "periods": [
+        "MIDDLE",
+        "YOUNG_ADULT"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "행복": 1
+      },
+      "suggestedThreshold": 58,
+      "label": "그대로 새집에 가져간다."
+    },
+    {
+      "eventId": "adult_042",
+      "choiceId": "C",
+      "periods": [
+        "MIDDLE",
+        "YOUNG_ADULT"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 2,
+        "행복": 1
+      },
+      "suggestedThreshold": null,
+      "label": "사진을 찍어 엄마에게 보낸다."
+    },
+    {
+      "eventId": "adult_043",
+      "choiceId": "A",
+      "periods": [
+        "MIDDLE",
+        "YOUNG_ADULT"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 3,
+        "행복": 1
+      },
+      "suggestedThreshold": null,
+      "label": "휴가 내고 간병한다."
+    },
+    {
+      "eventId": "adult_043",
+      "choiceId": "B",
+      "periods": [
+        "MIDDLE",
+        "YOUNG_ADULT"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 1
+      },
+      "suggestedThreshold": 58,
+      "label": "간병인을 구하고 주말마다 간다."
+    },
+    {
+      "eventId": "adult_043",
+      "choiceId": "C",
+      "periods": [
+        "MIDDLE",
+        "YOUNG_ADULT"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 2,
+        "경제력": 1
+      },
+      "suggestedThreshold": null,
+      "label": "노트북 들고 병실에서 일한다."
+    },
+    {
+      "eventId": "adult_044",
+      "choiceId": "A",
+      "periods": [
+        "YOUNG_ADULT"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "지력": 2
+      },
+      "suggestedThreshold": 58,
+      "label": "침착하게 출발한다."
+    },
+    {
+      "eventId": "adult_044",
+      "choiceId": "B",
+      "periods": [
+        "YOUNG_ADULT"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "운": 2
+      },
+      "suggestedThreshold": 58,
+      "label": "긴장해서 와이퍼부터 켠다."
+    },
+    {
+      "eventId": "adult_044",
+      "choiceId": "C",
+      "periods": [
+        "YOUNG_ADULT"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "지력": 1
+      },
+      "suggestedThreshold": 58,
+      "label": "연습을 더 하고 다음에 본다."
+    },
+    {
+      "eventId": "adult_045",
+      "choiceId": "A",
+      "periods": [
+        "YOUNG_ADULT"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 2
+      },
+      "suggestedThreshold": 58,
+      "label": "배달 음식을 시킨다."
+    },
+    {
+      "eventId": "adult_045",
+      "choiceId": "B",
+      "periods": [
+        "YOUNG_ADULT"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 3
+      },
+      "suggestedThreshold": 58,
+      "label": "직접 떡볶이를 만든다."
+    },
+    {
+      "eventId": "adult_045",
+      "choiceId": "C",
+      "periods": [
+        "YOUNG_ADULT"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "행복": 3
+      },
+      "suggestedThreshold": 58,
+      "label": "\"냄비째 먹자!\""
+    },
+    {
+      "eventId": "adult_046",
+      "choiceId": "A",
+      "periods": [
+        "MIDDLE",
+        "YOUNG_ADULT"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "지력": 2
+      },
+      "suggestedThreshold": 58,
+      "label": "바로 끊고 은행에 확인한다."
+    },
+    {
+      "eventId": "adult_046",
+      "choiceId": "B",
+      "periods": [
+        "MIDDLE",
+        "YOUNG_ADULT"
+      ],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
+      "positiveStats": {
+        "행복": 3
+      },
+      "suggestedThreshold": null,
+      "label": "대화를 질질 끌어 본다."
+    },
+    {
+      "eventId": "adult_046",
+      "choiceId": "C",
+      "periods": [
+        "MIDDLE",
+        "YOUNG_ADULT"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 2
+      },
+      "suggestedThreshold": 58,
+      "label": "부모님께도 바로 알린다."
+    },
+    {
+      "eventId": "adult_047",
+      "choiceId": "A",
+      "periods": [
+        "YOUNG_ADULT"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 1
+      },
+      "suggestedThreshold": 58,
+      "label": "5만 원."
+    },
+    {
+      "eventId": "adult_047",
+      "choiceId": "B",
+      "periods": [
+        "YOUNG_ADULT"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 3
+      },
+      "suggestedThreshold": 58,
+      "label": "10만 원."
+    },
+    {
+      "eventId": "adult_047",
+      "choiceId": "C",
+      "periods": [
+        "YOUNG_ADULT"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "경제력": 1
+      },
+      "suggestedThreshold": 58,
+      "label": "축하 메시지만 보낸다."
+    },
+    {
+      "eventId": "adult_048",
+      "choiceId": "A",
+      "periods": [
+        "MIDDLE",
+        "YOUNG_ADULT"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "행복": 1
+      },
+      "suggestedThreshold": 58,
+      "label": "매일 물을 준다."
+    },
+    {
+      "eventId": "adult_048",
+      "choiceId": "B",
+      "periods": [
+        "MIDDLE",
+        "YOUNG_ADULT"
+      ],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
+      "positiveStats": {
+        "행복": 2
+      },
+      "suggestedThreshold": null,
+      "label": "책상 구석에 두고 잊어버린다."
+    },
+    {
+      "eventId": "adult_048",
+      "choiceId": "C",
+      "periods": [
+        "MIDDLE",
+        "YOUNG_ADULT"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "행복": 3
+      },
+      "suggestedThreshold": 58,
+      "label": "이름을 붙이고 말을 건다."
+    },
+    {
+      "eventId": "adult_049",
+      "choiceId": "A",
+      "periods": [
+        "MIDDLE",
+        "YOUNG_ADULT"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "경제력": 2
+      },
+      "suggestedThreshold": 58,
+      "label": "\"정가입니다.\""
+    },
+    {
+      "eventId": "adult_049",
+      "choiceId": "B",
+      "periods": [
+        "MIDDLE",
+        "YOUNG_ADULT"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 2
+      },
+      "suggestedThreshold": 58,
+      "label": "반값에 판다."
+    },
+    {
+      "eventId": "adult_049",
+      "choiceId": "C",
+      "periods": [
+        "MIDDLE",
+        "YOUNG_ADULT"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 3
+      },
+      "suggestedThreshold": 58,
+      "label": "무료로 주고 직접 가져다준다."
+    },
+    {
+      "eventId": "adult_050",
+      "choiceId": "A",
+      "periods": [
+        "YOUNG_ADULT"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 3
+      },
+      "suggestedThreshold": 58,
+      "label": "요즘 유행하는 춤을 춘다."
+    },
+    {
+      "eventId": "adult_050",
+      "choiceId": "B",
+      "periods": [
+        "YOUNG_ADULT"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 2
+      },
+      "suggestedThreshold": 58,
+      "label": "카드 마술을 한다."
+    },
+    {
+      "eventId": "adult_050",
+      "choiceId": "C",
+      "periods": [
+        "YOUNG_ADULT"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 2,
+        "지력": 1
+      },
+      "suggestedThreshold": null,
+      "label": "사회를 보겠다고 자청한다."
+    },
+    {
+      "eventId": "adult_051",
+      "choiceId": "A",
+      "periods": [
+        "MIDDLE"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 2
+      },
+      "suggestedThreshold": 60,
+      "label": "한정식집에서 잔치를 연다."
+    },
+    {
+      "eventId": "adult_051",
+      "choiceId": "B",
+      "periods": [
+        "MIDDLE"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "행복": 3
+      },
+      "suggestedThreshold": 60,
+      "label": "부모님 여행을 보내 드린다."
+    },
+    {
+      "eventId": "adult_051",
+      "choiceId": "C",
+      "periods": [
+        "MIDDLE"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 3
+      },
+      "suggestedThreshold": 60,
+      "label": "가족 영상 편지를 만든다."
+    },
+    {
+      "eventId": "adult_052",
+      "choiceId": "A",
+      "periods": [
+        "MIDDLE"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "행복": 4,
+        "지력": 2,
+        "운": 1
+      },
+      "suggestedThreshold": null,
+      "label": "새 꿈에 도전하기로 한다."
+    },
+    {
+      "eventId": "adult_052",
+      "choiceId": "B",
+      "periods": [
+        "MIDDLE"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "행복": 4,
+        "건강": 1
+      },
+      "suggestedThreshold": null,
+      "label": "지금에 감사한다."
+    },
+    {
+      "eventId": "adult_052",
+      "choiceId": "C",
+      "periods": [
+        "MIDDLE"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 4,
+        "행복": 2
+      },
+      "suggestedThreshold": null,
+      "label": "소원: \"초 40개 다 꽂기.\""
+    },
+    {
+      "eventId": "adult_053",
+      "choiceId": "A",
+      "periods": [
+        "MIDDLE"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "지력": 2
+      },
+      "suggestedThreshold": 60,
+      "label": "돋보기를 맞춘다."
+    },
+    {
+      "eventId": "adult_053",
+      "choiceId": "B",
+      "periods": [
+        "MIDDLE"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 2,
+        "운": 1
+      },
+      "suggestedThreshold": null,
+      "label": "직원에게 추천 메뉴를 묻는다."
+    },
+    {
+      "eventId": "adult_053",
+      "choiceId": "C",
+      "periods": [
+        "MIDDLE"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "지력": 1,
+        "행복": 1
+      },
+      "suggestedThreshold": null,
+      "label": "휴대폰으로 찍어서 확대한다."
+    },
+    {
+      "eventId": "adult_054",
+      "choiceId": "A",
+      "periods": [
+        "MIDDLE"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "행복": 1
+      },
+      "suggestedThreshold": 60,
+      "label": "\"엄마!\""
+    },
+    {
+      "eventId": "adult_054",
+      "choiceId": "B",
+      "periods": [
+        "MIDDLE"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 2,
+        "운": 1
+      },
+      "suggestedThreshold": null,
+      "label": "박수를 치며 벌떡 일어난다."
+    },
+    {
+      "eventId": "adult_054",
+      "choiceId": "C",
+      "periods": [
+        "MIDDLE"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "운": 1,
+        "행복": 1
+      },
+      "suggestedThreshold": null,
+      "label": "침을 닦으며 \"저 안 잤습니다.\""
+    },
+    {
+      "eventId": "adult_055",
+      "choiceId": "A",
+      "periods": [
+        "MIDDLE"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 2
+      },
+      "suggestedThreshold": 60,
+      "label": "문 앞에 간식만 두고 간다."
+    },
+    {
+      "eventId": "adult_055",
+      "choiceId": "B",
+      "periods": [
+        "MIDDLE"
+      ],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
+      "positiveStats": {
+        "사회성": 1,
+        "지력": 1
+      },
+      "suggestedThreshold": null,
+      "label": "문을 두드리고 대화를 청한다."
+    },
+    {
+      "eventId": "adult_055",
+      "choiceId": "C",
+      "periods": [
+        "MIDDLE"
+      ],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
+      "positiveStats": {
+        "행복": 2,
+        "사회성": 1
+      },
+      "suggestedThreshold": null,
+      "label": "내 부모님께 전화해서 사과한다."
+    },
+    {
+      "eventId": "adult_056",
+      "choiceId": "A",
+      "periods": [
+        "MIDDLE"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "경제력": 3,
+        "행복": 1
+      },
+      "suggestedThreshold": null,
+      "label": "신청한다."
+    },
+    {
+      "eventId": "adult_056",
+      "choiceId": "B",
+      "periods": [
+        "MIDDLE"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "경제력": 1
+      },
+      "suggestedThreshold": 60,
+      "label": "버틴다."
+    },
+    {
+      "eventId": "adult_056",
+      "choiceId": "C",
+      "periods": [
+        "MIDDLE"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "행복": 1,
+        "운": 1
+      },
+      "suggestedThreshold": null,
+      "label": "신청서로 종이비행기를 접는다."
+    },
+    {
+      "eventId": "adult_057",
+      "choiceId": "A",
+      "periods": [
+        "MIDDLE"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 2,
+        "운": 1
+      },
+      "suggestedThreshold": null,
+      "label": "치킨집을 차린다."
+    },
+    {
+      "eventId": "adult_057",
+      "choiceId": "B",
+      "periods": [
+        "MIDDLE"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "행복": 3
+      },
+      "suggestedThreshold": 60,
+      "label": "동네 카페를 연다."
+    },
+    {
+      "eventId": "adult_057",
+      "choiceId": "C",
+      "periods": [
+        "MIDDLE"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "건강": 3,
+        "행복": 1
+      },
+      "suggestedThreshold": null,
+      "label": "1년 동안 아무것도 안 하고 쉰다."
+    },
+    {
+      "eventId": "adult_058",
+      "choiceId": "A",
+      "periods": [
+        "MIDDLE"
+      ],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
+      "positiveStats": {
+        "건강": 3
+      },
+      "suggestedThreshold": null,
+      "label": "다음 날 바로 병원에 간다."
+    },
+    {
+      "eventId": "adult_058",
+      "choiceId": "B",
+      "periods": [
+        "MIDDLE"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "경제력": 1
+      },
+      "suggestedThreshold": 60,
+      "label": "바쁘다고 미룬다."
+    },
+    {
+      "eventId": "adult_058",
+      "choiceId": "C",
+      "periods": [
+        "MIDDLE"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "건강": 2
+      },
+      "suggestedThreshold": 60,
+      "label": "그날부로 술을 끊겠다고 선언한다."
+    },
+    {
+      "eventId": "adult_059",
+      "choiceId": "A",
+      "periods": [
+        "MIDDLE"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "지력": 1
+      },
+      "suggestedThreshold": 60,
+      "label": "천천히 끝까지 해 본다."
+    },
+    {
+      "eventId": "adult_059",
+      "choiceId": "B",
+      "periods": [
+        "MIDDLE"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 1
+      },
+      "suggestedThreshold": 60,
+      "label": "직원을 부른다."
+    },
+    {
+      "eventId": "adult_059",
+      "choiceId": "C",
+      "periods": [
+        "MIDDLE"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 2
+      },
+      "suggestedThreshold": 60,
+      "label": "뒤에 선 학생에게 부탁한다."
+    },
+    {
+      "eventId": "adult_060",
+      "choiceId": "A",
+      "periods": [
+        "MIDDLE"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "행복": 3
+      },
+      "suggestedThreshold": 60,
+      "label": "팬클럽에 가입한다."
+    },
+    {
+      "eventId": "adult_060",
+      "choiceId": "B",
+      "periods": [
+        "MIDDLE"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "행복": 1
+      },
+      "suggestedThreshold": 60,
+      "label": "몰래 혼자 본다."
+    },
+    {
+      "eventId": "adult_060",
+      "choiceId": "C",
+      "periods": [
+        "MIDDLE"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 2,
+        "행복": 1
+      },
+      "suggestedThreshold": null,
+      "label": "가족 단톡방에 응원봉 사진을 올린다."
+    },
+    {
+      "eventId": "adult_061",
+      "choiceId": "A",
+      "periods": [
+        "MIDDLE"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "건강": 3,
+        "운동능력": 2
+      },
+      "suggestedThreshold": null,
+      "label": "신청하고 연습한다."
+    },
+    {
+      "eventId": "adult_061",
+      "choiceId": "B",
+      "periods": [
+        "MIDDLE"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 2
+      },
+      "suggestedThreshold": 60,
+      "label": "물 나눠 주는 자원봉사를 한다."
+    },
+    {
+      "eventId": "adult_061",
+      "choiceId": "C",
+      "periods": [
+        "MIDDLE"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "건강": 1,
+        "행복": 1
+      },
+      "suggestedThreshold": null,
+      "label": "걷기 코스로 바꿔 신청한다."
+    },
+    {
+      "eventId": "adult_062",
+      "choiceId": "A",
+      "periods": [
+        "MIDDLE"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "행복": 3,
+        "사회성": 2
+      },
+      "suggestedThreshold": null,
+      "label": "둘이 처음 만난 동네로 여행 간다."
+    },
+    {
+      "eventId": "adult_062",
+      "choiceId": "B",
+      "periods": [
+        "MIDDLE"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 2,
+        "행복": 1
+      },
+      "suggestedThreshold": null,
+      "label": "빨간 삽 두 개를 사서 보낸다."
+    },
+    {
+      "eventId": "adult_062",
+      "choiceId": "C",
+      "periods": [
+        "MIDDLE"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 1,
+        "행복": 2
+      },
+      "suggestedThreshold": null,
+      "label": "단톡방에 옛날 사진을 몽땅 올린다."
+    },
+    {
+      "eventId": "adult_063",
+      "choiceId": "A",
+      "periods": [
+        "MIDDLE"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 2
+      },
+      "suggestedThreshold": 60,
+      "label": "방을 그대로 둔다."
+    },
+    {
+      "eventId": "adult_063",
+      "choiceId": "B",
+      "periods": [
+        "MIDDLE"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "행복": 3
+      },
+      "suggestedThreshold": 60,
+      "label": "내 취미방으로 바꾼다."
+    },
+    {
+      "eventId": "adult_063",
+      "choiceId": "C",
+      "periods": [
+        "MIDDLE"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 2,
+        "행복": 1
+      },
+      "suggestedThreshold": null,
+      "label": "아이에게 영상 통화를 건다."
+    },
+    {
+      "eventId": "adult_064",
+      "choiceId": "A",
+      "periods": [
+        "MIDDLE"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "행복": 3,
+        "사회성": 2
+      },
+      "suggestedThreshold": null,
+      "label": "회사를 쉬고 같이 떠난다."
+    },
+    {
+      "eventId": "adult_064",
+      "choiceId": "B",
+      "periods": [
+        "MIDDLE"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 2,
+        "행복": 2
+      },
+      "suggestedThreshold": null,
+      "label": "가족사진을 찍으러 간다."
+    },
+    {
+      "eventId": "adult_064",
+      "choiceId": "C",
+      "periods": [
+        "MIDDLE"
+      ],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
+      "positiveStats": {
+        "사회성": 3,
+        "지력": 1
+      },
+      "suggestedThreshold": null,
+      "label": "아빠의 옛 친구들을 수소문해 모은다."
+    },
+    {
+      "eventId": "adult_065",
+      "choiceId": "A",
+      "periods": [
+        "MIDDLE"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "행복": 3,
+        "지력": 2,
+        "운": 2
+      },
+      "suggestedThreshold": null,
+      "label": "\"앞으로 하고 싶은 것 50개\"를 적는다."
+    },
+    {
+      "eventId": "adult_065",
+      "choiceId": "B",
+      "periods": [
+        "MIDDLE"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "행복": 4,
+        "사회성": 2
+      },
+      "suggestedThreshold": null,
+      "label": "가족과 사진을 찍는다."
+    },
+    {
+      "eventId": "adult_065",
+      "choiceId": "C",
+      "periods": [
+        "MIDDLE"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "건강": 3,
+        "행복": 2
+      },
+      "suggestedThreshold": null,
+      "label": "소원: \"앞으로 50년 더!\""
+    },
+    {
+      "eventId": "adult_066",
+      "choiceId": "A",
+      "periods": [
+        "MIDDLE",
+        "YOUNG_ADULT"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "행복": 2
+      },
+      "suggestedThreshold": 58,
+      "label": "맥주 한 캔을 산다."
+    },
+    {
+      "eventId": "adult_066",
+      "choiceId": "B",
+      "periods": [
+        "MIDDLE",
+        "YOUNG_ADULT"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "행복": 1
+      },
+      "suggestedThreshold": 58,
+      "label": "바나나 우유를 산다."
+    },
+    {
+      "eventId": "adult_066",
+      "choiceId": "C",
+      "periods": [
+        "MIDDLE",
+        "YOUNG_ADULT"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "경제력": 1
+      },
+      "suggestedThreshold": 58,
+      "label": "그냥 지나친다."
+    },
+    {
+      "eventId": "adult_067",
+      "choiceId": "A",
+      "periods": [
+        "MIDDLE",
+        "YOUNG_ADULT"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "건강": 2
+      },
+      "suggestedThreshold": 58,
+      "label": "일찍 잔다."
+    },
+    {
+      "eventId": "adult_067",
+      "choiceId": "B",
+      "periods": [
+        "MIDDLE",
+        "YOUNG_ADULT"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "행복": 1
+      },
+      "suggestedThreshold": 58,
+      "label": "영상 하나만 더 본다."
+    },
+    {
+      "eventId": "adult_067",
+      "choiceId": "C",
+      "periods": [
+        "MIDDLE",
+        "YOUNG_ADULT"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "지력": 1,
+        "행복": 1
+      },
+      "suggestedThreshold": null,
+      "label": "내일 입을 옷을 미리 꺼내 둔다."
+    },
+    {
+      "eventId": "adult_068",
+      "choiceId": "A",
+      "periods": [
+        "YOUNG_ADULT"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "경제력": 2,
+        "사회성": 1
+      },
+      "suggestedThreshold": null,
+      "label": "약 먹고 버티면서 출근한다."
+    },
+    {
+      "eventId": "adult_068",
+      "choiceId": "B",
+      "periods": [
+        "YOUNG_ADULT"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "건강": 3,
+        "행복": 1
+      },
+      "suggestedThreshold": null,
+      "label": "회사에 연락하고 하루 푹 쉰다."
+    },
+    {
+      "eventId": "adult_068",
+      "choiceId": "C",
+      "periods": [
+        "YOUNG_ADULT"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "건강": 2,
+        "행복": 1
+      },
+      "suggestedThreshold": null,
+      "label": "엄마 말대로 사우나에서 땀을 쫙 뺀다."
+    },
+    {
+      "eventId": "adult_069",
+      "choiceId": "A",
+      "periods": [
+        "MIDDLE",
+        "YOUNG_ADULT"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "경제력": 4,
+        "행복": 1
+      },
+      "suggestedThreshold": null,
+      "label": "그동안의 성과를 숫자로 정리해 간다."
+    },
+    {
+      "eventId": "adult_069",
+      "choiceId": "B",
+      "periods": [
+        "MIDDLE",
+        "YOUNG_ADULT"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "경제력": 3,
+        "사회성": 1
+      },
+      "suggestedThreshold": null,
+      "label": "평소 챙겨 온 사람들을 믿는다."
+    },
+    {
+      "eventId": "adult_069",
+      "choiceId": "C",
+      "periods": [
+        "MIDDLE",
+        "YOUNG_ADULT"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "경제력": 2,
+        "사회성": 3
+      },
+      "suggestedThreshold": null,
+      "label": "심사장에서 회사 노래를 개사해 부른다."
+    },
+    {
+      "eventId": "adult_070",
+      "choiceId": "A",
+      "periods": [
+        "MIDDLE",
+        "YOUNG_ADULT"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "지력": 2,
+        "행복": 1
+      },
+      "suggestedThreshold": null,
+      "label": "위로금을 받고 새 출발을 준비한다."
+    },
+    {
+      "eventId": "adult_070",
+      "choiceId": "B",
+      "periods": [
+        "MIDDLE",
+        "YOUNG_ADULT"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 1
+      },
+      "suggestedThreshold": 58,
+      "label": "남게 해 달라고 끝까지 버틴다."
+    },
+    {
+      "eventId": "adult_070",
+      "choiceId": "C",
+      "periods": [
+        "MIDDLE",
+        "YOUNG_ADULT"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "행복": 3,
+        "사회성": 1
+      },
+      "suggestedThreshold": null,
+      "label": "이참에 꿈꾸던 가게를 차린다."
+    },
+    {
+      "eventId": "adult_071",
+      "choiceId": "A",
+      "periods": [
+        "YOUNG_ADULT"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "건강": 2,
+        "운동능력": 3,
+        "사회성": 2
+      },
+      "suggestedThreshold": null,
+      "label": "날짜에 맞춰 입대한다."
+    },
+    {
+      "eventId": "adult_071",
+      "choiceId": "B",
+      "periods": [
+        "YOUNG_ADULT"
+      ],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
+      "positiveStats": {
+        "지력": 2,
+        "사회성": 1
+      },
+      "suggestedThreshold": null,
+      "label": "하던 공부와 일을 마무리하고 1년 뒤에 간다."
+    },
+    {
+      "eventId": "adult_071",
+      "choiceId": "C",
+      "periods": [
+        "YOUNG_ADULT"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 3,
+        "행복": 1
+      },
+      "suggestedThreshold": null,
+      "label": "입대 전까지 송별회를 일곱 번 한다."
+    },
+    {
+      "eventId": "special_001",
+      "choiceId": "A",
+      "periods": [
+        "INFANT"
+      ],
+      "category": "infant_unconditional",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 1
+      },
+      "suggestedThreshold": null,
+      "label": "울어서 엄마한테 알린다."
+    },
+    {
+      "eventId": "special_001",
+      "choiceId": "B",
+      "periods": [
+        "INFANT"
+      ],
+      "category": "infant_unconditional",
+      "conditionFields": [],
+      "positiveStats": {
+        "운동능력": 2,
+        "운": 1
+      },
+      "suggestedThreshold": null,
+      "label": "팔을 쭉 뻗는다."
+    },
+    {
+      "eventId": "special_002",
+      "choiceId": "A",
+      "periods": [
+        "INFANT"
+      ],
+      "category": "infant_unconditional",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 1
+      },
+      "suggestedThreshold": null,
+      "label": "울어서 엄마를 부른다."
+    },
+    {
+      "eventId": "special_002",
+      "choiceId": "B",
+      "periods": [
+        "INFANT"
+      ],
+      "category": "infant_unconditional",
+      "conditionFields": [],
+      "positiveStats": {
+        "행복": 2
+      },
+      "suggestedThreshold": null,
+      "label": "강아지 집에서 같이 잔다."
+    },
+    {
+      "eventId": "special_002",
+      "choiceId": "C",
+      "periods": [
+        "INFANT"
+      ],
+      "category": "infant_unconditional",
+      "conditionFields": [],
+      "positiveStats": {
+        "운동능력": 1,
+        "운": 1
+      },
+      "suggestedThreshold": null,
+      "label": "강아지를 거꾸로 물어 본다."
+    },
+    {
+      "eventId": "special_003",
+      "choiceId": "A",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "운": 1
+      },
+      "suggestedThreshold": 52,
+      "label": "\"선생님!! 저 죽어요!!\""
+    },
+    {
+      "eventId": "special_003",
+      "choiceId": "B",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {},
+      "suggestedThreshold": null,
+      "label": "괜찮은 척 김밥을 마저 먹는다."
+    },
+    {
+      "eventId": "special_003",
+      "choiceId": "C",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "운동능력": 2
+      },
+      "suggestedThreshold": 52,
+      "label": "말벌을 쫓아가서 복수한다."
+    },
+    {
+      "eventId": "special_004",
+      "choiceId": "A",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {},
+      "suggestedThreshold": null,
+      "label": "뱉고 선생님을 부른다."
+    },
+    {
+      "eventId": "special_004",
+      "choiceId": "B",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {},
+      "suggestedThreshold": null,
+      "label": "한 번에 삼킨다."
+    },
+    {
+      "eventId": "special_004",
+      "choiceId": "C",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
+      "positiveStats": {
+        "사회성": 2
+      },
+      "suggestedThreshold": null,
+      "label": "친구들한테 반대쪽 끝을 잡아 달라고 한다."
+    },
+    {
+      "eventId": "special_005",
+      "choiceId": "A",
+      "periods": [
+        "TEEN"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "운": 1
+      },
+      "suggestedThreshold": 55,
+      "label": "옆문으로 간다."
+    },
+    {
+      "eventId": "special_005",
+      "choiceId": "B",
+      "periods": [
+        "TEEN"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 2
+      },
+      "suggestedThreshold": 55,
+      "label": "끝장을 본다."
+    },
+    {
+      "eventId": "special_005",
+      "choiceId": "C",
+      "periods": [
+        "TEEN"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 1,
+        "운": 1
+      },
+      "suggestedThreshold": null,
+      "label": "센서 앞에서 팔을 휘저으며 춤춘다."
+    },
+    {
+      "eventId": "special_006",
+      "choiceId": "A",
+      "periods": [
+        "TEEN"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "지력": 3
+      },
+      "suggestedThreshold": 55,
+      "label": "휴지로 막고 푼다."
+    },
+    {
+      "eventId": "special_006",
+      "choiceId": "B",
+      "periods": [
+        "TEEN"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "운": 2
+      },
+      "suggestedThreshold": 55,
+      "label": "예언자처럼 행동한다."
+    },
+    {
+      "eventId": "special_006",
+      "choiceId": "C",
+      "periods": [
+        "TEEN"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "운": 1,
+        "건강": 1
+      },
+      "suggestedThreshold": null,
+      "label": "다시 잔다."
+    },
+    {
+      "eventId": "special_007",
+      "choiceId": "A",
+      "periods": [
+        "YOUNG_ADULT"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 3,
+        "운": 1
+      },
+      "suggestedThreshold": null,
+      "label": "\"제가 많이 긴장했나 봅니다.\""
+    },
+    {
+      "eventId": "special_007",
+      "choiceId": "B",
+      "periods": [
+        "YOUNG_ADULT"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {},
+      "suggestedThreshold": null,
+      "label": "아무 일 없던 척 계속 든다."
+    },
+    {
+      "eventId": "special_007",
+      "choiceId": "C",
+      "periods": [
+        "YOUNG_ADULT"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 2,
+        "운": 1
+      },
+      "suggestedThreshold": null,
+      "label": "뚜껑째로 한 번 더 마시는 척한다."
+    },
+    {
+      "eventId": "special_008",
+      "choiceId": "A",
+      "periods": [
+        "MIDDLE",
+        "YOUNG_ADULT"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 1
+      },
+      "suggestedThreshold": 58,
+      "label": "14층까지 참는다."
+    },
+    {
+      "eventId": "special_008",
+      "choiceId": "B",
+      "periods": [
+        "MIDDLE",
+        "YOUNG_ADULT"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "운": 1
+      },
+      "suggestedThreshold": 58,
+      "label": "조용히 흘려보낸다."
+    },
+    {
+      "eventId": "special_008",
+      "choiceId": "C",
+      "periods": [
+        "MIDDLE",
+        "YOUNG_ADULT"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "운동능력": 1,
+        "행복": 1
+      },
+      "suggestedThreshold": null,
+      "label": "층 버튼을 전부 누르고 2층에서 내린다."
+    },
+    {
+      "eventId": "special_009",
+      "choiceId": "A",
+      "periods": [
+        "MIDDLE",
+        "YOUNG_ADULT"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "건강": 1
+      },
+      "suggestedThreshold": 58,
+      "label": "정중히 거절한다."
+    },
+    {
+      "eventId": "special_009",
+      "choiceId": "B",
+      "periods": [
+        "MIDDLE",
+        "YOUNG_ADULT"
+      ],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
+      "positiveStats": {
+        "건강": 4,
+        "운": 1
+      },
+      "suggestedThreshold": null,
+      "label": "연구에 참여한다."
+    },
+    {
+      "eventId": "special_009",
+      "choiceId": "C",
+      "periods": [
+        "MIDDLE",
+        "YOUNG_ADULT"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "행복": 2
+      },
+      "suggestedThreshold": 58,
+      "label": "\"평균이라뇨? 저 특별한 사람입니다.\""
+    },
+    {
+      "eventId": "special_010",
+      "choiceId": "A",
+      "periods": [
+        "MIDDLE",
+        "YOUNG_ADULT"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "행복": 1
+      },
+      "suggestedThreshold": 58,
+      "label": "조용히 자리를 뜬다."
+    },
+    {
+      "eventId": "special_010",
+      "choiceId": "B",
+      "periods": [
+        "MIDDLE",
+        "YOUNG_ADULT"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 2,
+        "지력": 1
+      },
+      "suggestedThreshold": null,
+      "label": "인생 상담을 받는다."
+    },
+    {
+      "eventId": "special_010",
+      "choiceId": "C",
+      "periods": [
+        "MIDDLE",
+        "YOUNG_ADULT"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 2,
+        "행복": 1
+      },
+      "suggestedThreshold": null,
+      "label": "\"한 판 두시죠. 제가 이기면 훈수 금지.\""
+    },
+    {
+      "eventId": "special_011",
+      "choiceId": "A",
+      "periods": [
+        "MIDDLE",
+        "YOUNG_ADULT"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "운": 2
+      },
+      "suggestedThreshold": 58,
+      "label": "김밥을 던지고 천천히 내려간다."
+    },
+    {
+      "eventId": "special_011",
+      "choiceId": "B",
+      "periods": [
+        "MIDDLE",
+        "YOUNG_ADULT"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "운동능력": 2
+      },
+      "suggestedThreshold": 58,
+      "label": "눈을 피하지 않고 맞선다."
+    },
+    {
+      "eventId": "special_011",
+      "choiceId": "C",
+      "periods": [
+        "MIDDLE",
+        "YOUNG_ADULT"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 2,
+        "운": 3
+      },
+      "suggestedThreshold": null,
+      "label": "김밥을 반으로 나눠 준다."
+    },
+    {
+      "eventId": "special_012",
+      "choiceId": "A",
+      "periods": [
+        "INFANT"
+      ],
+      "category": "infant_unconditional",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 2
+      },
+      "suggestedThreshold": null,
+      "label": "울어서 엄마를 부른다."
+    },
+    {
+      "eventId": "special_012",
+      "choiceId": "B",
+      "periods": [
+        "INFANT"
+      ],
+      "category": "infant_unconditional",
+      "conditionFields": [],
+      "positiveStats": {
+        "운동능력": 2,
+        "행복": 2
+      },
+      "suggestedThreshold": null,
+      "label": "로봇청소기에 올라탄다."
+    },
+    {
+      "eventId": "special_012",
+      "choiceId": "C",
+      "periods": [
+        "INFANT"
+      ],
+      "category": "infant_unconditional",
+      "conditionFields": [],
+      "positiveStats": {
+        "운": 2
+      },
+      "suggestedThreshold": null,
+      "label": "로봇청소기를 꼭 껴안는다."
+    },
+    {
+      "eventId": "special_013",
+      "choiceId": "A",
+      "periods": [
+        "INFANT"
+      ],
+      "category": "infant_unconditional",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 1
+      },
+      "suggestedThreshold": null,
+      "label": "엄마를 부른다."
+    },
+    {
+      "eventId": "special_013",
+      "choiceId": "B",
+      "periods": [
+        "INFANT"
+      ],
+      "category": "infant_unconditional",
+      "conditionFields": [],
+      "positiveStats": {
+        "행복": 1
+      },
+      "suggestedThreshold": null,
+      "label": "한 모금 더 마셔 본다."
+    },
+    {
+      "eventId": "special_013",
+      "choiceId": "C",
+      "periods": [
+        "INFANT"
+      ],
+      "category": "infant_unconditional",
+      "conditionFields": [],
+      "positiveStats": {
+        "운": 3
+      },
+      "suggestedThreshold": null,
+      "label": "입으로 후~ 불어 본다."
+    },
+    {
+      "eventId": "special_014",
+      "choiceId": "A",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 1
+      },
+      "suggestedThreshold": 52,
+      "label": "손을 잡는다."
+    },
+    {
+      "eventId": "special_014",
+      "choiceId": "B",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "explicit",
+      "conditionFields": [
+        "requiredStats"
+      ],
+      "positiveStats": {
+        "사회성": 3
+      },
+      "suggestedThreshold": null,
+      "label": "친구 다섯 명과 줄줄이 손을 잡는다."
+    },
+    {
+      "eventId": "special_014",
+      "choiceId": "C",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "행복": 3
+      },
+      "suggestedThreshold": 52,
+      "label": "그 머리로 사진을 찍는다."
+    },
+    {
+      "eventId": "special_015",
+      "choiceId": "A",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "운동능력": 2
+      },
+      "suggestedThreshold": 52,
+      "label": "몸을 피한다."
+    },
+    {
+      "eventId": "special_015",
+      "choiceId": "B",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "운동능력": 2
+      },
+      "suggestedThreshold": 52,
+      "label": "몸을 날려 받아 낸다."
+    },
+    {
+      "eventId": "special_015",
+      "choiceId": "C",
+      "periods": [
+        "CHILD"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "행복": 3
+      },
+      "suggestedThreshold": 52,
+      "label": "\"부먹이다!\"라고 외친다."
+    },
+    {
+      "eventId": "special_016",
+      "choiceId": "A",
+      "periods": [
+        "TEEN"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "운동능력": 2,
+        "운": 1
+      },
+      "suggestedThreshold": null,
+      "label": "고개를 숙여 피한다."
+    },
+    {
+      "eventId": "special_016",
+      "choiceId": "B",
+      "periods": [
+        "TEEN"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 2
+      },
+      "suggestedThreshold": 55,
+      "label": "얼굴로 받는다."
+    },
+    {
+      "eventId": "special_016",
+      "choiceId": "C",
+      "periods": [
+        "TEEN"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "운동능력": 3,
+        "운": 2
+      },
+      "suggestedThreshold": null,
+      "label": "두 손으로 잡아서 되던진다."
+    },
+    {
+      "eventId": "special_017",
+      "choiceId": "A",
+      "periods": [
+        "TEEN"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 3
+      },
+      "suggestedThreshold": 55,
+      "label": "침착하게 말을 건다."
+    },
+    {
+      "eventId": "special_017",
+      "choiceId": "B",
+      "periods": [
+        "TEEN"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "운": 1
+      },
+      "suggestedThreshold": 55,
+      "label": "긴장해서 혼잣말을 한다."
+    },
+    {
+      "eventId": "special_017",
+      "choiceId": "C",
+      "periods": [
+        "TEEN"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "운": 2
+      },
+      "suggestedThreshold": 55,
+      "label": "배에서 꼬르륵 소리가 난다."
+    },
+    {
+      "eventId": "special_018",
+      "choiceId": "A",
+      "periods": [
+        "MIDDLE",
+        "YOUNG_ADULT"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "운동능력": 2
+      },
+      "suggestedThreshold": 58,
+      "label": "다음 칸에서 뛰어나간다."
+    },
+    {
+      "eventId": "special_018",
+      "choiceId": "B",
+      "periods": [
+        "MIDDLE",
+        "YOUNG_ADULT"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "행복": 1
+      },
+      "suggestedThreshold": 58,
+      "label": "회전문과 함께 계속 돈다."
+    },
+    {
+      "eventId": "special_018",
+      "choiceId": "C",
+      "periods": [
+        "MIDDLE",
+        "YOUNG_ADULT"
+      ],
+      "category": "ambiguous",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 2,
+        "운": 1
+      },
+      "suggestedThreshold": null,
+      "label": "돌면서 팀장님께 전화한다."
+    },
+    {
+      "eventId": "special_019",
+      "choiceId": "A",
+      "periods": [
+        "MIDDLE",
+        "YOUNG_ADULT"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "운동능력": 2
+      },
+      "suggestedThreshold": 58,
+      "label": "발가락으로 전원 코드를 뽑는다."
+    },
+    {
+      "eventId": "special_019",
+      "choiceId": "B",
+      "periods": [
+        "MIDDLE",
+        "YOUNG_ADULT"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "행복": 2
+      },
+      "suggestedThreshold": 58,
+      "label": "끝까지 버틴다."
+    },
+    {
+      "eventId": "special_019",
+      "choiceId": "C",
+      "periods": [
+        "MIDDLE",
+        "YOUNG_ADULT"
+      ],
+      "category": "candidate",
+      "conditionFields": [],
+      "positiveStats": {
+        "사회성": 2
+      },
+      "suggestedThreshold": 58,
+      "label": "가족에게 SOS를 친다."
+    }
+  ]
+}
