@@ -9,6 +9,7 @@ import com.example.lifegame.domain.model.GameEvent
 import com.example.lifegame.domain.model.GameProgress
 import com.example.lifegame.domain.model.GameScreenState
 import com.example.lifegame.domain.model.LifeStage
+import com.example.lifegame.domain.model.LifeFactRule
 import com.example.lifegame.domain.model.OutcomeResolution
 import com.example.lifegame.domain.model.PeriodDefinition
 import com.example.lifegame.domain.model.PeriodRunState
@@ -174,6 +175,7 @@ class PeriodGameSession(
     private val focuses: List<Focus>,
     private val decisions: List<DecisionEvent>,
     private val endings: List<Ending> = emptyList(),
+    private val lifeFactRules: List<LifeFactRule> = emptyList(),
     private val engine: GameEngine = GameEngine(),
     private val runIdFactory: () -> String = { "run-${System.currentTimeMillis()}" },
     private val runSeedFactory: () -> Long = { System.currentTimeMillis() },
@@ -200,21 +202,22 @@ class PeriodGameSession(
     }
 
     fun restore(savedState: PeriodRunState): TurnStep {
-        val step = engine.advancePeriodYear(savedState, periods, focuses, decisions)
+        val migrated = engine.synchronizeLifeFacts(savedState, lifeFactRules)
+        val step = engine.advancePeriodYear(migrated, periods, focuses, decisions)
         return record(step)
     }
 
     /** 이미 한 해를 처리한 상태를 중복 처리하지 않고 화면에 복원한다. */
     fun restoreSaved(savedState: PeriodRunState): TurnStep {
-        state = savedState
+        val migrated = engine.synchronizeLifeFacts(savedState, lifeFactRules)
+        state = migrated
         val step = when {
-            savedState.isEnding -> TurnStep(savedState, TurnPhase.ENDING)
-            savedState.pendingDecisionId != null -> engine.advancePeriodYear(savedState, periods, focuses, decisions)
-            savedState.selectedFocusId == null -> TurnStep(savedState, TurnPhase.CHAPTER, needsFocusSelection = true)
-            else -> TurnStep(savedState, TurnPhase.AUTO_PROGRESS, canAutoAdvance = true)
+            migrated.isEnding -> TurnStep(migrated, TurnPhase.ENDING)
+            migrated.pendingDecisionId != null -> engine.advancePeriodYear(migrated, periods, focuses, decisions)
+            migrated.selectedFocusId == null -> TurnStep(migrated, TurnPhase.CHAPTER, needsFocusSelection = true)
+            else -> TurnStep(migrated, TurnPhase.AUTO_PROGRESS, canAutoAdvance = true)
         }
-        lastStep = step
-        return step
+        return record(step)
     }
 
     fun selectFocus(focusId: String): TurnStep {
@@ -240,7 +243,13 @@ class PeriodGameSession(
         val event = requireNotNull(decisions.firstOrNull { it.eventId == eventId }) {
             "Pending decision is not available in the current content"
         }
-        val resolution = engine.resolvePeriodDecision(current, event, choiceId, periods)
+        val resolution = engine.resolvePeriodDecision(
+            current,
+            event,
+            choiceId,
+            periods,
+            lifeFactRules,
+        )
         record(resolution.step)
         return resolution
     }

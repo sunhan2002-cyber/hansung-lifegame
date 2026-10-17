@@ -1,59 +1,86 @@
-# 8주차 백엔드 제출 보고서 — 김우영
+# 8주차 게임 로직 제출 보고서 — 김우영
 
 ## 목표
 
-v4 시기 진행을 처음부터 끝까지 완주했을 때 기존 결말 우선순위 규칙으로 실제 결말 하나를 선택하고, 서로 다른 최소 3개 경로를 자동 검증한다.
+플레이어가 집중한 건강·운동능력·지력·사회성·경제력·행복·운이 다음 사건 후보와 결과 확률에 영향을 주고, 선택으로 생긴 교육·직업·관계·가족·주거·경제력·업적·사망 기록이 결말까지 이어지도록 한다.
 
 ## 구현 내용
 
-- `GameEngine.resolveEndingDecision(PeriodRunState, endings)` 추가
-- 기존 `GameProgress`와 v4 `PeriodRunState`가 동일한 결말 조건·우선순위·기본 결말 규칙을 사용
-- `PeriodGameSession`에 선택된 `ending` 상태 추가
-- 자연 완주와 사망 종료 모두 마지막 `TurnStep` 기록 시 결말 판정
-- 기존 생성자 호출을 깨지 않도록 `endings` 기본값은 빈 목록으로 유지
+### 1. 인생 사실 상태와 저장 호환
 
-## 전체 플레이 결말 경로
+- `PeriodRunState.lifeFacts`에 학력, 전공, 직업 경로, 직급, 고용 상태, 결혼 상태, 자녀 수, 주거, 경제력 구간, 업적, 사망 시기·원인을 저장한다.
+- `life_facts.sample.json`의 플래그→사실 규칙을 `LifeFactRule`로 읽는다.
+- 결과 플래그가 추가되는 즉시 인생 사실도 누적한다.
+- v4 저장 형식을 2로 올리고 인생 사실, 대표 초점 스탯, 최근 선택을 함께 저장한다.
+- 예전처럼 플래그만 있는 저장은 `synchronizeLifeFacts`로 새 상태에 승격한다.
 
-| 경로 | 전체 진행 | 기대 결말 |
-|---|---|---|
-| 공부 초점 | 5개 시기 완주, `study_focus`, 지력 85 이상 | `ending_genius_researcher` |
-| 운동 초점 | 5개 시기 완주, `sports_training`, 건강·운동능력 조건 | `ending_star_athlete` |
-| 평범한 초점 | 5개 시기 완주, 전문 결말 조건 불충족 | `ending_ordinary_path` |
+### 2. 일곱 스탯 경로 전이
 
-각 경로는 고정 seed, 시기별 장 표지, 초점 선택, 마일스톤 결정, 결과 반영, 다음 시기 전환, 마지막 결말까지 한 번에 실행한다.
+| 집중 스탯 | 사건 경로 ID | 대표 누적 사실 | 테스트 결말 |
+|---|---|---|---|
+| 건강 | `path_hea_*` | 건강 관리 직업·건강 상태 | `ending_hea` |
+| 운동능력 | `path_fit_*` | 선수·코치 경력 | `ending_fit` |
+| 지력 | `path_int_*` | 진학·전공·연구 경력 | `ending_int` |
+| 사회성 | `path_soc_*` | 관계·결혼·상담 경력 | `ending_soc` |
+| 경제력 | `path_wea_*` | 취업·창업·주거·자산 | `ending_wea` |
+| 행복 | `path_hap_*` | 취미·창작·가족 안정 | `ending_hap` |
+| 운 | `path_luk_*` | 기회·위기 회피·행운 업적 | `ending_luk` |
 
-## 수정 파일
+- 초점의 가장 큰 양수 효과를 `dominantFocusStat`으로 기록한다.
+- 사건·선택지는 스탯, 플래그, 인생 사실 조건을 모두 만족해야 후보가 된다.
+- `path_hea_`부터 `path_luk_`까지의 경로 사건은 대응 초점과 일치할 때 추첨 가중치를 받는다.
+- 결과 확률은 기존 `chanceWeights`의 7개 스탯 보정을 그대로 사용한다.
+- 최근 사건·선택은 `recentChoiceIds`와 완료 사건 플래그로 다음 후보에 사용할 수 있다.
 
+### 3. 결말과 사망 기록
+
+- 결말 판정은 `특수 사망·업적 > 교육·직업·가족 > 경제력·주거·관계 > 일반 인생 > 기본값` 순서의 `EndingTier`를 먼저 비교하고, 같은 단계에서 기존 priority를 비교한다.
+- 결말 조건에 인생 사실 조합(`LifeFactConditions`)을 사용할 수 있다.
+- 결과 사망, 건강 0 사망, 확률 사망, 노년 자연사 모두 `deathPeriod`와 `deathCause`를 기록한다.
+- 결말 요약에 교육, 전공, 직업, 관계, 자녀, 주거, 경제력, 업적, 실제 사망 시기·원인을 조합한다.
+- 기본 결말을 선택해도 단순한 “노년기에서 인생을 마쳤다” 한 문장으로 끝나지 않는다.
+
+## 주요 변경 파일
+
+- `app/src/main/java/com/example/lifegame/domain/model/GameModels.kt`
 - `app/src/main/java/com/example/lifegame/domain/engine/GameEngine.kt`
 - `app/src/main/java/com/example/lifegame/domain/engine/GameSession.kt`
+- `app/src/main/java/com/example/lifegame/data/V4ContentParser.kt`
+- `app/src/main/java/com/example/lifegame/data/ContentRepository.kt`
+- `app/src/main/java/com/example/lifegame/data/V4ProgressStore.kt`
+- `app/src/main/java/com/example/lifegame/ui/LifeGameViewModel.kt`
+- `app/src/test/java/com/example/lifegame/domain/engine/Week8LifePathEngineTest.kt`
 - `app/src/test/java/com/example/lifegame/domain/engine/V4FullLifeEndingPathTest.kt`
-- `docs/week8_backend_submission.md`
+- `app/src/test/java/com/example/lifegame/domain/engine/V4GameEngineTest.kt`
 
-## 검증 명령
+## 자동 테스트
+
+- 7개 스탯 집중 플레이를 각각 독립 테스트로 실행한다.
+- 같은 seed와 같은 선택이 같은 상태·사실·결말을 재현하는지 검사한다.
+- 7개 경로의 완료 사건, 직업 사실, 결말 ID가 서로 다른지 검사한다.
+- 청소년기 건강이 0이 되면 `deathPeriod=TEEN`, `deathCause=급성 질환`이고 결말 요약도 청소년기로 표시되는지 검사한다.
+- 구형 플래그 저장이 학력·직업·결혼·자녀·경제력 사실로 승격되는지 검사한다.
+
+## 실행 명령과 결과
 
 ```powershell
-.\gradlew.bat test
-.\gradlew.bat assembleDebug
+.\gradlew.bat test assembleDebug --no-daemon
 python scripts\validate_content.py
 ```
 
-## 검증 결과
-
-- 전체 단위 테스트: Debug 94개 + Release 94개 = 188개
-- 실패 0, 오류 0, 건너뜀 0
-- 신규 전체 생애 결말 경로 테스트: Debug·Release 각각 3개 통과
+- Gradle Debug 테스트: 108개 통과, 실패 0, 오류 0
+- Gradle Release 테스트: 108개 통과, 실패 0, 오류 0
+- 총 216개 테스트 통과
 - `assembleDebug`: BUILD SUCCESSFUL
-- 콘텐츠 검증: PASS
-  - 시기 5개, 전체 24년
-  - 초점 25개
-  - 사건 209개
-  - BIG_INCIDENT 20개
-  - outcomes 선택지 609개
-  - 결말 31개, 기본 결말 1개
-  - 이미지 ID 346개
+- 콘텐츠 검증기는 실행했으나 최신 main의 8주차 노년기 데이터가 검증 스크립트보다 먼저 병합되어 오류를 보고한다.
+  - `OLD_AGE` 미등록
+  - 노년기 초점 이미지 ID 10개 미등록
+  - 노년기 초점 로그 템플릿 3개 미만
+  - 이 항목은 백엔드 코드 변경과 무관한 DB·QA 통합 선행 조건이며 숨기지 않고 PR에 기록한다.
 
-## 협업 확인 사항
+## 통합 확인 사항
 
-- 프론트는 `PeriodGameSession.ending`의 제목과 요약을 결말 화면에 표시할 수 있다.
-- 저장·이어하기에서 v4 `PeriodRunState`와 pending 결정을 영구 복원하는 작업은 별도 8주차 저장 연동 범위다.
-- 팀장 검증 후에만 main에 병합한다.
+- 시나리오 PR의 `life_facts.sample.json`이 병합되면 별도 코드 변경 없이 실제 플래그를 인생 사실로 변환한다.
+- 프론트는 `PeriodRunState.lifeFacts`와 `PeriodGameSession.ending.summary`를 그대로 표시할 수 있다.
+- DB·QA의 8주차 조건 데이터와 검증 스크립트가 병합된 뒤 `python scripts/validate_content.py`를 다시 실행해야 한다.
+- 팀장 Android Studio 실행 검증 후 main에 병합한다.

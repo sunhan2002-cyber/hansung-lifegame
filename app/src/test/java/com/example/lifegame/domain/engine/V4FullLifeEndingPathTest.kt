@@ -32,7 +32,7 @@ class V4FullLifeEndingPathTest {
     @Test
     fun `training path completes every period and selects athlete ending`() {
         val session = playFullLife(
-            focusDelta = StatDelta(health = 5, fitness = 10),
+            focusDelta = StatDelta(health = 10, fitness = 10),
             acquiredFlag = "sports_training",
             seed = 20261015L,
         )
@@ -116,8 +116,8 @@ class V4FullLifeEndingPathTest {
 
         assertEquals(TurnPhase.ENDING, step.phase)
         assertEquals(LifePeriod.entries.size, completedPeriods)
-        // 시기마다 초점 기록 1개와 마일스톤 결과 1개가 남는다.
-        assertEquals(LifePeriod.entries.size * 2, step.state.moments.size)
+        // 시기마다 초점·마일스톤 기록이 남고 노년기 자연사 기록이 마지막에 추가된다.
+        assertEquals(LifePeriod.entries.size * 2 + 1, step.state.moments.size)
         assertNotNull(session.ending)
         return session
     }

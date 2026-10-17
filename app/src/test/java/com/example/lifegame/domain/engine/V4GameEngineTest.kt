@@ -256,7 +256,7 @@ class V4GameEngineTest {
     }
 
     @Test
-    fun fixedSeedDevelopmentLoopStopsWhenLifeReachesZero() {
+    fun fixedSeedDevelopmentLoopCompletesAllDefaultPeriodTurns() {
         var state = engine.createPeriodRun("demo", 20261012L, periods)
         val focuses = focuses()
         var completedTurns = 0
@@ -270,8 +270,8 @@ class V4GameEngineTest {
             state = step.state
         }
 
-        assertEquals(20, completedTurns)
-        assertEquals(21, state.moments.size)
+        assertEquals(24, completedTurns)
+        assertEquals(24, state.moments.size)
         assertEquals(LifePeriod.MIDDLE, state.period)
     }
 

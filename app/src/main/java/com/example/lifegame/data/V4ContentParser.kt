@@ -6,10 +6,13 @@ import com.example.lifegame.domain.model.DecisionKind
 import com.example.lifegame.domain.model.DecisionOption
 import com.example.lifegame.domain.model.Focus
 import com.example.lifegame.domain.model.LifePeriod
+import com.example.lifegame.domain.model.LifeFactConditions
+import com.example.lifegame.domain.model.LifeFactRule
 import com.example.lifegame.domain.model.Outcome
 import com.example.lifegame.domain.model.PeriodDefinition
 import com.example.lifegame.domain.model.StatConditions
 import com.example.lifegame.domain.model.StatDelta
+import com.example.lifegame.domain.model.StatKey
 import org.json.JSONArray
 import org.json.JSONObject
 
@@ -17,10 +20,20 @@ data class V4Content(
     val periods: List<PeriodDefinition>,
     val focuses: List<Focus>,
     val decisions: List<DecisionEvent>,
+    val lifeFactRules: List<LifeFactRule> = emptyList(),
 )
 
 /** PR #26의 v4 JSON을 Android Context 없이도 검증할 수 있는 순수 파서다. */
 object V4ContentParser {
+    fun parseLifeFactRules(json: String): List<LifeFactRule> = JSONArray(json).mapObjects { item ->
+        LifeFactRule(
+            flag = item.getString("flag"),
+            fact = item.getString("fact"),
+            value = item.opt("value")?.toString().orEmpty(),
+            label = item.optString("label", item.opt("value")?.toString().orEmpty()),
+        )
+    }
+
     fun parsePeriods(json: String): List<PeriodDefinition> = JSONArray(json).mapObjects { item ->
         PeriodDefinition(
             period = item.getString("periodId").toLifePeriod(),
@@ -65,6 +78,8 @@ object V4ContentParser {
             povImageId = item.optNullableString("povImageId")
                 ?: item.optNullableString("imageId"),
             momentImageId = item.optNullableString("momentImageId"),
+            pathStat = item.getString("eventId").toPathStat(),
+            lifeFactConditions = conditions?.optJSONObject("lifeFacts").toLifeFactConditions(),
         )
     }
 
@@ -83,6 +98,7 @@ object V4ContentParser {
                 chanceWeights = outcome.optJSONObject("chanceWeights").toChanceWeights(),
                 hidden = outcome.optBoolean("hidden", false),
                 death = outcome.optBoolean("death", false),
+                deathCause = outcome.optNullableString("deathCause"),
                 lifeDelta = outcome.optInt("lifeDelta", inferLifeDelta(kind, outcome)),
             )
         }.orEmpty()
@@ -111,7 +127,32 @@ object V4ContentParser {
             requiredFlags = optJSONArray("requiredFlags").toStringSet(),
             blockedFlags = optJSONArray("blockedFlags").toStringSet(),
             statConditions = explicitStats ?: inferredStats,
+            lifeFactConditions = optJSONObject("lifeFacts").toLifeFactConditions(),
         )
+    }
+
+    private fun JSONObject?.toLifeFactConditions(): LifeFactConditions = LifeFactConditions(
+        educationLevel = this?.optNullableString("educationLevel"),
+        fieldOfStudy = this?.optNullableString("fieldOfStudy"),
+        careerTrack = this?.optNullableString("careerTrack"),
+        careerLevel = this?.optNullableString("careerLevel"),
+        employmentStatus = this?.optNullableString("employmentStatus"),
+        maritalStatus = this?.optNullableString("maritalStatus"),
+        minChildrenCount = this?.optNullableInt("minChildrenCount"),
+        housingType = this?.optNullableString("housingType"),
+        wealthBand = this?.optNullableString("wealthBand"),
+        requiredAchievements = this?.optJSONArray("requiredAchievements").toStringSet(),
+    )
+
+    private fun String.toPathStat(): StatKey? = when {
+        startsWith("path_hea_") -> StatKey.HEALTH
+        startsWith("path_fit_") -> StatKey.FITNESS
+        startsWith("path_int_") -> StatKey.INTELLIGENCE
+        startsWith("path_soc_") -> StatKey.SOCIAL
+        startsWith("path_wea_") -> StatKey.WEALTH
+        startsWith("path_hap_") -> StatKey.HAPPINESS
+        startsWith("path_luk_") -> StatKey.LUCK
+        else -> null
     }
 
     private fun inferLifeDelta(kind: DecisionKind, outcome: JSONObject): Int = when {
