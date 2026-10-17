@@ -15,6 +15,8 @@ import com.example.lifegame.domain.model.GameEvent
 import com.example.lifegame.domain.model.GameProgress
 import com.example.lifegame.domain.model.GameScreenState
 import com.example.lifegame.domain.model.LifeMoment
+import com.example.lifegame.domain.model.LifeFacts
+import com.example.lifegame.domain.model.LifeFactRule
 import com.example.lifegame.domain.model.LifePeriod
 import com.example.lifegame.domain.model.LifeStage
 import com.example.lifegame.domain.model.Outcome
@@ -24,6 +26,7 @@ import com.example.lifegame.domain.model.PendingDecision
 import com.example.lifegame.domain.model.PeriodDefinition
 import com.example.lifegame.domain.model.PeriodRunState
 import com.example.lifegame.domain.model.StatDelta
+import com.example.lifegame.domain.model.StatKey
 import com.example.lifegame.domain.model.Stats
 import com.example.lifegame.domain.model.TransitionCue
 import com.example.lifegame.domain.model.TurnPhase
@@ -246,6 +249,16 @@ class GameEngine(
         )
     }
 
+    /** v1 저장본처럼 플래그만 있는 상태를 v2 인생 사실 상태로 안전하게 승격한다. */
+    fun synchronizeLifeFacts(
+        state: PeriodRunState,
+        lifeFactRules: List<LifeFactRule>,
+    ): PeriodRunState = state.copy(
+        lifeFacts = state.lifeFacts
+            .applyRules(state.flags, lifeFactRules)
+            .copy(wealthBand = wealthBand(state.stats.wealth)),
+    )
+
     /** 초점은 새 시기의 장 표지에서 한 번만 고를 수 있다. */
     fun selectFocus(
         state: PeriodRunState,
@@ -255,7 +268,10 @@ class GameEngine(
         require(state.pendingDecisionId == null) { "pending decision must be resolved first" }
         require(state.selectedFocusId == null) { "focus cannot change during a period" }
         require(focus.period == state.period) { "focus must belong to the current period" }
-        return state.copy(selectedFocusId = focus.focusId)
+        return state.copy(
+            selectedFocusId = focus.focusId,
+            dominantFocusStat = focus.statEffects.dominantPositiveStat() ?: state.dominantFocusStat,
+        )
     }
 
     /**
@@ -308,10 +324,7 @@ class GameEngine(
             }
             ?: "${state.period.name} ${state.yearInPeriod}년차, ${focus.label}에 집중했다."
         val stateAfterFocus = state.copy(
-            stats = state.stats.apply(
-                focus.statEffects.copy(health = focus.statEffects.health + annualHealthDelta(state.period)),
-                minHealth = healthFloor(state.period),
-            ),
+            stats = state.stats.apply(focus.statEffects, minHealth = healthFloor(state.period)),
             moments = state.moments + LifeMoment(
                 period = state.period,
                 yearInPeriod = state.yearInPeriod,
@@ -319,7 +332,6 @@ class GameEngine(
                 momentImageId = focus.momentImageId,
             ),
         )
-        healthDeathStep(stateAfterFocus)?.let { return it }
         val decision = pickPeriodDecision(
             state = stateAfterFocus,
             decisions = decisions,
@@ -336,7 +348,14 @@ class GameEngine(
             )
         }
 
-        val nextState = movePeriodCalendar(stateAfterFocus, orderedPeriods)
+        val stateAfterYear = stateAfterFocus.copy(
+            stats = stateAfterFocus.stats.apply(
+                StatDelta(health = annualHealthDelta(state.period)),
+                minHealth = healthFloor(state.period),
+            ),
+        )
+        healthDeathStep(stateAfterYear)?.let { return it }
+        val nextState = movePeriodCalendar(stateAfterYear, orderedPeriods)
         val needsFocus = !nextState.isEnding && nextState.selectedFocusId == null && nextState.period != LifePeriod.INFANT
         return TurnStep(
             state = nextState,
@@ -359,6 +378,7 @@ class GameEngine(
         event: DecisionEvent,
         choiceId: String,
         periods: List<PeriodDefinition>,
+        lifeFactRules: List<LifeFactRule> = emptyList(),
     ): OutcomeResolution {
         val orderedPeriods = validatePeriods(periods)
         require(!state.isEnding) { "ending state cannot resolve a decision" }
@@ -367,16 +387,28 @@ class GameEngine(
             "choice is not available in the pending decision"
         }
         require(choice.statConditions.matches(state.stats)) { "choice stat requirements are not met" }
+        require(choice.lifeFactConditions.matches(state.lifeFacts)) { "choice life fact requirements are not met" }
         require(state.flags.containsAll(choice.requiredFlags)) { "choice requirements are not met" }
         require(state.flags.none(choice.blockedFlags::contains)) { "choice is blocked by current flags" }
 
         val outcome = pickOutcome(state, event, choice.choiceId, choice.outcomes)
-        val combinedDelta = outcome.statDelta.copy(health = outcome.statDelta.health + outcome.lifeDelta)
+        val combinedDelta = outcome.statDelta.copy(
+            health = outcome.statDelta.health + outcome.lifeDelta + annualHealthDelta(state.period),
+        )
         val afterStats = state.stats.apply(combinedDelta, minHealth = healthFloor(state.period))
         val healthDepleted = afterStats.health <= 0
+        val nextFlags = state.flags + outcome.addFlags + completedEventFlag(event.eventId)
+        val nextFacts = state.lifeFacts
+            .applyRules(outcome.addFlags, lifeFactRules)
+            .copy(wealthBand = wealthBand(afterStats.wealth))
         val resolved = state.copy(
             stats = afterStats,
-            flags = state.flags + outcome.addFlags + completedEventFlag(event.eventId),
+            flags = nextFlags,
+            lifeFacts = if (outcome.death || healthDepleted) nextFacts.copy(
+                deathPeriod = state.period,
+                deathCause = outcome.deathCause ?: if (healthDepleted) "건강 악화" else event.title,
+            ) else nextFacts,
+            recentChoiceIds = (state.recentChoiceIds + "${event.eventId}:$choiceId").takeLast(5),
             pendingDecisionId = null,
             moments = state.moments + LifeMoment(
                 period = state.period,
@@ -496,10 +528,12 @@ class GameEngine(
         state.period in event.periods &&
             completedEventFlag(event.eventId) !in state.flags &&
             event.statConditions.matches(state.stats) &&
+            event.lifeFactConditions.matches(state.lifeFacts) &&
             state.flags.containsAll(event.requiredFlags) &&
             state.flags.none(event.blockedFlags::contains) &&
             event.choices.any { choice ->
                 choice.statConditions.matches(state.stats) &&
+                choice.lifeFactConditions.matches(state.lifeFacts) &&
                 state.flags.containsAll(choice.requiredFlags) &&
                     state.flags.none(choice.blockedFlags::contains)
             }
@@ -517,12 +551,14 @@ class GameEngine(
             val statOk = choice.statConditions.matches(state.stats)
             val flagsOk = state.flags.containsAll(choice.requiredFlags) &&
                 state.flags.none(choice.blockedFlags::contains)
+            val factsOk = choice.lifeFactConditions.matches(state.lifeFacts)
             buildChoicePreview(
                 choice = choice,
                 stats = state.stats,
-                available = statOk && flagsOk,
+                available = statOk && flagsOk && factsOk,
                 lockReason = if (!statOk) "${choice.statConditions.description()} 필요" else
-                    if (!flagsOk) "이전 선택과 조건이 맞지 않아요" else null,
+                    if (!flagsOk) "이전 선택과 조건이 맞지 않아요" else
+                        if (!factsOk) "현재 인생 경로와 조건이 맞지 않아요" else null,
             )
         }.sortedByDescending { it.available }
         return TurnStep(
@@ -664,7 +700,7 @@ class GameEngine(
         if (events.isEmpty()) return null
         val sorted = events.sortedBy { it.eventId }
         val weightedEvents = sorted.map { event ->
-            event to eventSelectionWeight(event, state.stats)
+            event to eventSelectionWeight(event, state)
         }
         var roll = deterministicIndex(
             "${state.runSeed}:${state.period}:${state.yearInPeriod}:$salt",
@@ -678,12 +714,14 @@ class GameEngine(
     }
 
     /** 사건의 기본 weight에 현재 능력치와 사건 결과의 chanceWeights를 함께 반영한다. */
-    private fun eventSelectionWeight(event: DecisionEvent, stats: Stats): Int {
+    private fun eventSelectionWeight(event: DecisionEvent, state: PeriodRunState): Int {
+        val stats = state.stats
         val outcomes = event.choices.flatMap { it.outcomes }.filterNot { it.hidden }
         val baseChance = outcomes.sumOf { it.chance }
         if (baseChance <= 0) return event.weight
         val effectiveChance = outcomes.sumOf { effectiveOutcomeChance(it, stats) }
-        return (event.weight * effectiveChance / baseChance).coerceAtLeast(1)
+        val pathBonus = if (event.pathStat != null && event.pathStat == state.dominantFocusStat) 4 else 1
+        return (event.weight * effectiveChance / baseChance * pathBonus).coerceAtLeast(1)
     }
 
     private fun deterministicPercent(state: PeriodRunState, salt: String): Int =
@@ -718,6 +756,10 @@ class GameEngine(
                     isEnding = true,
                     isDead = true,
                     endingPeriod = state.period,
+                    lifeFacts = state.lifeFacts.copy(
+                        deathPeriod = state.period,
+                        deathCause = "자연사",
+                    ),
                     pendingDecisionId = null,
                     moments = state.moments + LifeMoment(
                         period = state.period,
@@ -751,6 +793,10 @@ class GameEngine(
             isEnding = true,
             isDead = true,
             endingPeriod = state.period,
+            lifeFacts = state.lifeFacts.copy(
+                deathPeriod = state.period,
+                deathCause = "건강 악화",
+            ),
             pendingDecisionId = null,
             moments = state.moments + LifeMoment(state.period, state.yearInPeriod, text),
         )
@@ -778,14 +824,29 @@ class GameEngine(
     fun resolveEndingDecision(
         progress: GameProgress,
         endings: List<Ending>,
+    ): EndingDecision = resolveEndingDecision(progress.stats, progress.flags, endings)
+
+    /** v4 시기 진행 상태를 기존 결말 우선순위 규칙에 그대로 연결한다. */
+    fun resolveEndingDecision(
+        state: PeriodRunState,
+        endings: List<Ending>,
+    ): EndingDecision = resolveEndingDecision(state.stats, state.flags, endings, state.lifeFacts)
+
+    private fun resolveEndingDecision(
+        stats: Stats,
+        flags: Set<String>,
+        endings: List<Ending>,
+        lifeFacts: LifeFacts = LifeFacts(),
     ): EndingDecision {
         val matching = endings
             .filterNot { it.isDefault }
-            .filter { it.conditions.stats.matches(progress.stats) }
-            .filter { progress.flags.containsAll(it.conditions.requiredFlags) }
-            .filterNot { ending -> progress.flags.any(ending.conditions.blockedFlags::contains) }
+            .filter { it.conditions.stats.matches(stats) }
+            .filter { flags.containsAll(it.conditions.requiredFlags) }
+            .filterNot { ending -> flags.any(ending.conditions.blockedFlags::contains) }
+            .filter { it.conditions.lifeFacts.matches(lifeFacts) }
             .sortedWith(
-                compareByDescending<Ending> { it.priority }
+                compareByDescending<Ending> { it.tier.rank }
+                    .thenByDescending { it.priority }
                     .thenBy { it.endingId },
             )
         if (matching.isNotEmpty()) {
@@ -810,6 +871,34 @@ class GameEngine(
 
     fun resolveEnding(progress: GameProgress, endings: List<Ending>): Ending =
         resolveEndingDecision(progress, endings).selected
+
+    fun resolveEnding(state: PeriodRunState, endings: List<Ending>): Ending {
+        val selected = resolveEndingDecision(state, endings).selected
+        return selected.copy(summary = buildLifeSummary(state, selected.summary))
+    }
+
+    /** 프론트가 별도 판정 없이 그대로 표시할 수 있는 결말용 인생 요약. */
+    fun buildLifeSummary(state: PeriodRunState, baseSummary: String = ""): String {
+        val facts = state.lifeFacts
+        val details = listOfNotNull(
+            facts.educationLevel?.let { "교육 $it" },
+            facts.fieldOfStudy?.let { "전공 $it" },
+            facts.careerTrack?.let { career ->
+                listOfNotNull(career, facts.careerLevel).joinToString(" · ").let { "직업 $it" }
+            },
+            facts.maritalStatus?.let { "관계 $it" },
+            "자녀 ${facts.childrenCount}명".takeIf { facts.childrenCount > 0 },
+            facts.housingType?.let { "주거 $it" },
+            "경제력 ${facts.wealthBand}",
+            "업적 ${facts.achievementFlags.size}개".takeIf { facts.achievementFlags.isNotEmpty() },
+            facts.deathPeriod?.let { period ->
+                "${period.koreanName()}에 ${facts.deathCause ?: "알 수 없는 원인"}로 생을 마침"
+            },
+        )
+        return (listOf(baseSummary.trim().trimEnd('.')) + details)
+            .filter { it.isNotBlank() }
+            .joinToString(". ") + "."
+    }
 
     /**
      * Notion 카드의 초기 메서드명과 호환되는 진입점이다.
@@ -846,9 +935,7 @@ class GameEngine(
 
     private fun annualHealthDelta(period: LifePeriod): Int = when (period) {
         LifePeriod.INFANT, LifePeriod.CHILD, LifePeriod.TEEN -> 0
-        LifePeriod.YOUNG_ADULT -> -1
-        LifePeriod.MIDDLE -> -3
-        LifePeriod.OLD_AGE -> -5
+        LifePeriod.YOUNG_ADULT, LifePeriod.MIDDLE, LifePeriod.OLD_AGE -> -LIFE_DECAY_PER_YEAR
     }
 
     private operator fun Stats.minus(before: Stats): StatDelta = StatDelta(
@@ -881,6 +968,54 @@ class GameEngine(
             .map { it.eventId }
             .toSet()
         return progress.completedEventIds.count(normalEventIds::contains)
+    }
+
+    private fun StatDelta.dominantPositiveStat(): StatKey? = listOf(
+        StatKey.HEALTH to health,
+        StatKey.FITNESS to fitness,
+        StatKey.INTELLIGENCE to intelligence,
+        StatKey.SOCIAL to social,
+        StatKey.WEALTH to wealth,
+        StatKey.HAPPINESS to happiness,
+        StatKey.LUCK to luck,
+    ).filter { it.second > 0 }.maxByOrNull { it.second }?.first
+
+    private fun LifeFacts.applyRules(flags: Set<String>, rules: List<LifeFactRule>): LifeFacts {
+        var current = this
+        rules.filter { it.flag in flags }.forEach { rule ->
+            current = when (rule.fact) {
+                "educationLevel" -> current.copy(educationLevel = rule.value)
+                "fieldOfStudy" -> current.copy(fieldOfStudy = rule.value)
+                "careerTrack" -> current.copy(careerTrack = rule.value)
+                "careerLevel" -> current.copy(careerLevel = rule.value)
+                "employmentStatus" -> current.copy(employmentStatus = rule.value)
+                "maritalStatus" -> current.copy(maritalStatus = rule.value)
+                "childrenAtLeast" -> current.copy(
+                    childrenCount = maxOf(current.childrenCount, rule.value.toIntOrNull() ?: 1),
+                )
+                "housingType" -> current.copy(housingType = rule.value)
+                "achievement" -> current.copy(achievementFlags = current.achievementFlags + rule.flag)
+                else -> current
+            }
+        }
+        return current
+    }
+
+    private fun wealthBand(wealth: Int): String = when {
+        wealth < 25 -> "LOW"
+        wealth < 50 -> "LOWER_MIDDLE"
+        wealth < 75 -> "MIDDLE"
+        wealth < 90 -> "HIGH"
+        else -> "VERY_HIGH"
+    }
+
+    private fun LifePeriod.koreanName(): String = when (this) {
+        LifePeriod.INFANT -> "영아기"
+        LifePeriod.CHILD -> "유년기"
+        LifePeriod.TEEN -> "청소년기"
+        LifePeriod.YOUNG_ADULT -> "청년기"
+        LifePeriod.MIDDLE -> "중년기"
+        LifePeriod.OLD_AGE -> "노년기"
     }
 
     private companion object {

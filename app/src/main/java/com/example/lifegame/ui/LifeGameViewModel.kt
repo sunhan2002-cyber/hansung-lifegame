@@ -197,6 +197,8 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
             periods = content.periods,
             focuses = focuses,
             decisions = decisions,
+            endings = repository.loadEndings().map { it.withPlayerName(name, nameCall) },
+            lifeFactRules = content.lifeFactRules,
             engine = com.example.lifegame.domain.engine.GameEngine(
                 skipInfantFocus = true,
                 guaranteeYearlyIncident = true,
