@@ -9,6 +9,7 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
@@ -52,11 +53,12 @@ import com.example.lifegame.ui.LogLineUi
 import com.example.lifegame.ui.PLAY_SPEEDS
 import com.example.lifegame.ui.PeriodPlayUiState
 import com.example.lifegame.ui.YEAR_MILLIS_AT_1X
-import com.example.lifegame.ui.components.FocusLockRow
+import com.example.lifegame.ui.components.LifeFactsSheet
+import com.example.lifegame.ui.components.LifePathSummary
 import com.example.lifegame.ui.components.LifeGauge
 import com.example.lifegame.ui.components.NOISE_ADVANCE_MILLIS
 import com.example.lifegame.ui.components.PeriodHeader
-import com.example.lifegame.ui.components.PixelFigurePlaceholder
+import com.example.lifegame.ui.components.PixelAssetImage
 import com.example.lifegame.ui.components.StatsSheet
 import com.example.lifegame.ui.components.normalAdvance
 import com.example.lifegame.ui.components.rememberReduceMotion
@@ -86,6 +88,7 @@ fun AutoProgressScreen(
     modifier: Modifier = Modifier,
 ) {
     var statsOpen by remember { mutableStateOf(false) }
+    var factsOpen by remember { mutableStateOf(false) }
     val reduceMotion = rememberReduceMotion()
     val advance by rememberUpdatedState(onAdvanceYear)
 
@@ -120,7 +123,13 @@ fun AutoProgressScreen(
                     .verticalScroll(rememberScrollState())
                     .testTag("auto_progress_content"),
             ) {
-                state.focus?.let { FocusLockRow(focus = it, years = state.periodYears) }
+                LifePathSummary(
+                    focus = state.focus,
+                    topStat = state.topStat,
+                    facts = state.facts,
+                    onOpen = { factsOpen = true },
+                    modifier = Modifier.padding(horizontal = 12.dp, vertical = 4.dp),
+                )
                 CharacterMainPanel(state, onStatsClick = { statsOpen = true })
                 YearTimer(progress = { yearProgress.value }, playing = state.autoPlaying)
                 YearLog(lines = state.log.takeLast(3))
@@ -136,6 +145,7 @@ fun AutoProgressScreen(
     }
 
     if (statsOpen) StatsSheet(stats = state.stats, onDismiss = { statsOpen = false })
+    if (factsOpen) LifeFactsSheet(facts = state.facts, stats = state.stats, onDismiss = { factsOpen = false })
 }
 
 /** 사건이 없을 때 계속 유지되는 3인칭 캐릭터 메인 화면. */
@@ -152,11 +162,10 @@ private fun CharacterMainPanel(state: PeriodPlayUiState, onStatsClick: () -> Uni
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.spacedBy(8.dp),
     ) {
-        PixelFigurePlaceholder(
-            height = 130.dp,
-            grown = state.periodName != "영아기",
-            color = LifeGameInk.copy(alpha = 0.72f),
-            modifier = Modifier
+        PixelAssetImage(
+            candidates = state.portraitImages,
+            description = "${state.periodName} 플레이어 모습",
+            modifier = Modifier.width(200.dp).aspectRatio(4f / 3f)
                 .clickable(role = Role.Button, onClick = onStatsClick)
                 .semantics { contentDescription = "플레이어 현재 모습, 능력치 보기" },
         )

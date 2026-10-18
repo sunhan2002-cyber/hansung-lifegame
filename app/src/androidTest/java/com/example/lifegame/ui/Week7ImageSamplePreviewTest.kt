@@ -62,7 +62,7 @@ class Week7ImageSamplePreviewTest {
         composeRule.onNodeWithTag("preview_reset").performClick()
         composeRule.onNodeWithTag("image_sample_title").assertTextEquals(Week7ImageSamples.first().title)
         composeRule.onNodeWithTag("preview_exit").performClick()
-        composeRule.onNodeWithText("새 게임").assertIsDisplayed()
-        composeRule.onNodeWithText("저장된 게임이 없습니다.").assertIsDisplayed()
+        composeRule.onNodeWithTag("home_screen").assertIsDisplayed()
+        composeRule.onNodeWithText("새 인생 살기").performScrollTo().assertIsDisplayed()
     }
 }

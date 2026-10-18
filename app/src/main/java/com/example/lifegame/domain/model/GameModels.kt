@@ -122,7 +122,17 @@ data class EndingConditions(
     val stats: StatConditions = StatConditions(),
     val requiredFlags: Set<String> = emptySet(),
     val blockedFlags: Set<String> = emptySet(),
+    val lifeFacts: LifeFactConditions = LifeFactConditions(),
 )
+
+/** 8주차 결말 판정 순서. 숫자가 클수록 일반 priority보다 먼저 판정한다. */
+enum class EndingTier(val rank: Int) {
+    DEFAULT(0),
+    GENERAL_LIFE(1),
+    WEALTH_HOUSING_RELATIONSHIP(2),
+    EDUCATION_CAREER_FAMILY(3),
+    SPECIAL_ACHIEVEMENT(4),
+}
 
 data class Ending(
     val endingId: String,
@@ -131,6 +141,7 @@ data class Ending(
     val priority: Int,
     val conditions: EndingConditions = EndingConditions(),
     val isDefault: Boolean = false,
+    val tier: EndingTier = if (isDefault) EndingTier.DEFAULT else EndingTier.GENERAL_LIFE,
 )
 
 data class ChoiceHistory(
@@ -216,6 +227,70 @@ enum class DecisionKind {
     BIG_INCIDENT,
 }
 
+/** 일곱 스탯을 사건 경로와 직접 연결할 때 사용하는 안정적인 내부 키다. */
+enum class StatKey {
+    HEALTH,
+    FITNESS,
+    INTELLIGENCE,
+    SOCIAL,
+    WEALTH,
+    HAPPINESS,
+    LUCK,
+}
+
+/**
+ * 선택으로 누적되는 인생 사실. 문자열 값은 life_facts.sample.json의 value와 같게 유지해
+ * DB·시나리오가 직업이나 학력 종류를 늘려도 앱 업데이트 없이 저장할 수 있다.
+ */
+data class LifeFacts(
+    val educationLevel: String? = null,
+    val fieldOfStudy: String? = null,
+    val careerTrack: String? = null,
+    val careerLevel: String? = null,
+    val employmentStatus: String? = null,
+    val maritalStatus: String? = null,
+    val childrenCount: Int = 0,
+    val housingType: String? = null,
+    val wealthBand: String = "MIDDLE",
+    val achievementFlags: Set<String> = emptySet(),
+    val deathPeriod: LifePeriod? = null,
+    val deathCause: String? = null,
+)
+
+data class LifeFactRule(
+    val flag: String,
+    val fact: String,
+    val value: String,
+    val label: String = value,
+)
+
+data class LifeFactConditions(
+    val educationLevel: String? = null,
+    val fieldOfStudy: String? = null,
+    val careerTrack: String? = null,
+    val careerLevel: String? = null,
+    val employmentStatus: String? = null,
+    val maritalStatus: String? = null,
+    val minChildrenCount: Int? = null,
+    val housingType: String? = null,
+    val wealthBand: String? = null,
+    val requiredAchievements: Set<String> = emptySet(),
+) {
+    fun matches(facts: LifeFacts): Boolean =
+        educationLevel.matches(facts.educationLevel) &&
+            fieldOfStudy.matches(facts.fieldOfStudy) &&
+            careerTrack.matches(facts.careerTrack) &&
+            careerLevel.matches(facts.careerLevel) &&
+            employmentStatus.matches(facts.employmentStatus) &&
+            maritalStatus.matches(facts.maritalStatus) &&
+            (minChildrenCount == null || facts.childrenCount >= minChildrenCount) &&
+            housingType.matches(facts.housingType) &&
+            wealthBand.matches(facts.wealthBand) &&
+            facts.achievementFlags.containsAll(requiredAchievements)
+
+    private fun String?.matches(actual: String?): Boolean = this == null || this == actual
+}
+
 /**
  * 능력치 50을 기준으로 10점 차이마다 결과 가중치에 더할 값이다.
  * 양수는 해당 능력치가 높을수록, 음수는 낮을수록 결과 가능성을 높인다.
@@ -240,6 +315,7 @@ data class Outcome(
     val chanceWeights: ChanceWeights = ChanceWeights(),
     val hidden: Boolean = false,
     val death: Boolean = false,
+    val deathCause: String? = null,
     /** Legacy content field. It is merged into health during resolution. */
     val lifeDelta: Int = 0,
 ) {
@@ -255,6 +331,7 @@ data class DecisionOption(
     val requiredFlags: Set<String> = emptySet(),
     val blockedFlags: Set<String> = emptySet(),
     val statConditions: StatConditions = StatConditions(),
+    val lifeFactConditions: LifeFactConditions = LifeFactConditions(),
 ) {
     init {
         require(outcomes.isNotEmpty()) { "decision option must have at least one outcome" }
@@ -276,6 +353,9 @@ data class DecisionEvent(
     val statConditions: StatConditions = StatConditions(),
     val povImageId: String? = null,
     val momentImageId: String? = null,
+    /** path_hea_*, path_fit_* 같은 8주차 사건 ID에서 파서가 채운다. */
+    val pathStat: StatKey? = null,
+    val lifeFactConditions: LifeFactConditions = LifeFactConditions(),
 ) {
     init {
         require(periods.isNotEmpty()) { "decision event must target at least one period" }
@@ -329,6 +409,9 @@ data class PeriodRunState(
     val selectedFocusId: String? = null,
     val stats: Stats = Stats(),
     val flags: Set<String> = emptySet(),
+    val lifeFacts: LifeFacts = LifeFacts(),
+    val dominantFocusStat: StatKey? = null,
+    val recentChoiceIds: List<String> = emptyList(),
     val pendingDecisionId: String? = null,
     val moments: List<LifeMoment> = emptyList(),
     val isEnding: Boolean = false,

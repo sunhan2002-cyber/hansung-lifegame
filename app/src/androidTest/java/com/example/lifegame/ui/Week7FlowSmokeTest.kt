@@ -6,6 +6,8 @@ import androidx.compose.ui.test.assertCountEquals
 import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.captureToImage
 import androidx.compose.ui.test.hasText
+import androidx.compose.ui.test.hasTestTag
+import androidx.compose.ui.test.isEnabled
 import androidx.compose.ui.test.junit4.createAndroidComposeRule
 import androidx.compose.ui.test.onAllNodesWithTag
 import androidx.compose.ui.test.onNodeWithTag
@@ -13,6 +15,8 @@ import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.onRoot
 import androidx.compose.ui.test.performClick
 import androidx.compose.ui.test.performScrollTo
+import androidx.compose.ui.test.performTouchInput
+import androidx.compose.ui.test.click
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.platform.app.InstrumentationRegistry
 import com.example.lifegame.MainActivity
@@ -38,55 +42,89 @@ class Week7FlowSmokeTest {
         saveScreenshot("01_home.png")
 
         composeRule.onNodeWithText("새 인생 살기").performClick()
+        if (composeRule.onAllNodes(hasText("새로 시작")).fetchSemanticsNodes().isNotEmpty()) {
+            composeRule.onNodeWithText("새로 시작").performClick()
+        }
+        waitForAny("profile_content")
         composeRule.onNodeWithText("남").performClick()
         composeRule.onNodeWithText("우렁찬 아기").performScrollTo().performClick()
         composeRule.onNodeWithText("이 아기로 시작하기").performClick()
 
-        waitForAny("chapter_content")
-        chooseFirstFocus(screenshot = "02_chapter.png")
-
-        // 자동 진행 화면은 시계를 멈춘 채로 확인한다. 첫해에 결정이 걸리면 이 단계는 건너뛴다.
-        composeRule.mainClock.autoAdvance = false
-        composeRule.mainClock.advanceTimeBy(200)
-        if (composeRule.onAllNodesWithTag("auto_progress_content").fetchSemanticsNodes().isNotEmpty()) {
-            composeRule.onNodeWithTag("play_pause").performClick()
-            composeRule.mainClock.advanceTimeBy(600)
-            composeRule.onNodeWithTag("year_log").assertIsDisplayed()
-            composeRule.onNodeWithTag("speed_toggle").assertIsDisplayed()
-            saveScreenshot("03_auto_progress.png")
-            composeRule.onNodeWithTag("play_pause").performClick()
-        }
-        composeRule.mainClock.autoAdvance = true
-
-        // 자동 진행은 결정 · 돌발 또는 다음 장 표지에서 멈춘다. 결정이 나올 때까지 진행한다.
-        var reachedDecision = false
-        repeat(12) {
-            if (reachedDecision) return@repeat
+        // 영아기는 초점 없이 바로 진행되고(매해 사건 보장), 첫 장 표지는 유년기에 나온다.
+        // 결정 화면과 장 표지를 한 번씩 볼 때까지 진행한다.
+        var sawChapter = false
+        var sawDecision = false
+        var sawAuto = false
+        var sawEnding = false
+        for (action in 0 until 150) {
             when (waitForAny("decision_content", "chapter_content", "auto_progress_content", "run_end_content")) {
-                "chapter_content" -> chooseFirstFocus(screenshot = null)
-                "auto_progress_content" -> composeRule.onNodeWithText("다음 결정까지 ›").performClick()
-                "run_end_content" -> fail("결정이 한 번도 나오지 않고 인생이 끝났다")
-                "decision_content" -> reachedDecision = true
+                "chapter_content" -> {
+                    chooseFirstFocus(screenshot = if (sawChapter) null else "02_chapter.png")
+                    sawChapter = true
+                }
+                "auto_progress_content" -> {
+                    if (!sawAuto) {
+                        composeRule.onNodeWithTag("life_path_summary").assertIsDisplayed()
+                        saveScreenshot("03_auto_progress.png")
+                        sawAuto = true
+                    }
+                    composeRule.onNodeWithText("다음 결정까지 ›").performClick()
+                }
+                "decision_content" -> {
+                    resolveDecision(screenshot = !sawDecision)
+                    sawDecision = true
+                }
+                "run_end_content" -> {
+                    composeRule.onNodeWithText("인생 요약").performScrollTo().assertIsDisplayed()
+                    saveScreenshot("07_ending.png")
+                    sawEnding = true
+                    break
+                }
             }
         }
-        assertTrue("결정 화면에 닿지 못했다", reachedDecision)
+        assertTrue("결정 화면에 닿지 못했다", sawDecision)
+        assertTrue("장 표지에 닿지 못했다", sawChapter)
+        assertTrue("한 판이 결말까지 완료돼야 한다", sawEnding)
+    }
 
+    /** 돌발이면 팝업을 닫고, 고를 수 있는 첫 선택지(A)를 고른 뒤 결과에서 계속한다. */
+    private fun resolveDecision(screenshot: Boolean) {
         if (composeRule.onAllNodesWithTag("incident_popup").fetchSemanticsNodes().isNotEmpty()) {
-            saveScreenshot("04_incident_popup.png")
+            if (screenshot) saveScreenshot("04_incident_popup.png")
             composeRule.onNodeWithText("사건 보기").performScrollTo().performClick()
             composeRule.waitForIdle()
         }
-        composeRule.onNodeWithTag("decision_content").assertIsDisplayed()
         composeRule.onNodeWithTag("decision_choice_A").performScrollTo().assertIsDisplayed()
-        saveScreenshot("05_decision.png")
-
-        // 숫자 확률은 어디에도 보이면 안 된다 (R-43).
-        composeRule.onAllNodes(hasText("%", substring = true)).assertCountEquals(0)
-        composeRule.onAllNodes(hasText("{name", substring = true)).assertCountEquals(0)
-
-        composeRule.onNodeWithTag("decision_choice_A").performClick()
+        if (screenshot) {
+            saveScreenshot("05_decision.png")
+            // 숫자 확률과 이름 자리 표시는 어디에도 보이면 안 된다 (R-43).
+            composeRule.onAllNodes(hasText("%", substring = true)).assertCountEquals(0)
+            composeRule.onAllNodes(hasText("{name", substring = true)).assertCountEquals(0)
+        }
+        if (screenshot) {
+            composeRule.onNodeWithText("장면 보기").performScrollTo().performClick()
+            composeRule.onNodeWithTag("decision_content").assertDoesNotExist()
+            saveScreenshot("05_scene_only.png")
+            composeRule.onRoot().performTouchInput { click(center) }
+            composeRule.onNodeWithTag("decision_content").assertIsDisplayed()
+        }
+        // Wait for the reveal and choose an enabled option; A can legitimately be locked.
+        composeRule.waitUntil(timeoutMillis = 20_000) {
+            if (composeRule.onAllNodesWithTag("incident_popup").fetchSemanticsNodes().isNotEmpty()) {
+                composeRule.onNodeWithText("사건 보기").performScrollTo().performClick()
+            }
+            if (composeRule.onAllNodesWithTag("decision_outcome").fetchSemanticsNodes().isEmpty()) {
+                val key = listOf("A", "B", "C").firstOrNull {
+                    composeRule.onAllNodes(hasTestTag("decision_choice_$it") and isEnabled()).fetchSemanticsNodes().isNotEmpty()
+                }
+                if (key != null) composeRule.onNodeWithTag("decision_choice_$key").performScrollTo().performClick()
+            }
+            composeRule.onAllNodesWithTag("decision_outcome").fetchSemanticsNodes().isNotEmpty()
+        }
         composeRule.onNodeWithTag("decision_outcome").performScrollTo().assertIsDisplayed()
-        saveScreenshot("06_outcome.png")
+        if (screenshot) saveScreenshot("06_outcome.png")
+        val next = if (composeRule.onAllNodes(hasText("계속하기")).fetchSemanticsNodes().isNotEmpty()) "계속하기" else "인생 정리하기"
+        composeRule.onNodeWithText(next).performScrollTo().performClick()
     }
 
     private fun chooseFirstFocus(screenshot: String?) {

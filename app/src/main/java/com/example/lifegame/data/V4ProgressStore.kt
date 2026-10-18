@@ -2,9 +2,11 @@ package com.example.lifegame.data
 
 import android.content.Context
 import com.example.lifegame.domain.model.LifeMoment
+import com.example.lifegame.domain.model.LifeFacts
 import com.example.lifegame.domain.model.LifePeriod
 import com.example.lifegame.domain.model.PeriodRunState
 import com.example.lifegame.domain.model.Stats
+import com.example.lifegame.domain.model.StatKey
 import org.json.JSONArray
 import org.json.JSONObject
 
@@ -18,6 +20,7 @@ class V4ProgressStore(context: Context) {
     fun clear() = prefs.edit().remove(KEY).apply()
 
     private fun encode(run: V4SavedRun): String = JSONObject().apply {
+        put("saveFormatVersion", 2)
         put("playerName", run.playerName)
         put("state", JSONObject().apply {
             put("runId", run.state.runId)
@@ -32,6 +35,9 @@ class V4ProgressStore(context: Context) {
                 put("luck", run.state.stats.luck)
             })
             put("flags", JSONArray(run.state.flags.toList()))
+            put("dominantFocusStat", run.state.dominantFocusStat?.name)
+            put("recentChoiceIds", JSONArray(run.state.recentChoiceIds))
+            put("lifeFacts", run.state.lifeFacts.toJson())
             put("pending", run.state.pendingDecisionId)
             put("ending", run.state.isEnding)
             put("dead", run.state.isDead)
@@ -55,6 +61,13 @@ class V4ProgressStore(context: Context) {
             selectedFocusId = obj.optString("focus").takeIf { it.isNotBlank() && it != "null" },
             stats = Stats(stats.optInt("health", stats.optInt("life", Stats.DEFAULT_STAT)), stats.getInt("fitness"), stats.getInt("intelligence"), stats.getInt("social"), stats.getInt("wealth"), stats.getInt("happiness"), stats.getInt("luck")),
             flags = buildSet { repeat(obj.optJSONArray("flags")?.length() ?: 0) { add(obj.getJSONArray("flags").getString(it)) } },
+            lifeFacts = obj.optJSONObject("lifeFacts")?.toLifeFacts() ?: LifeFacts(
+                wealthBand = wealthBand(stats.optInt("wealth", Stats.DEFAULT_STAT)),
+            ),
+            dominantFocusStat = obj.optString("dominantFocusStat")
+                .takeIf { it.isNotBlank() && it != "null" }
+                ?.let { runCatching { StatKey.valueOf(it) }.getOrNull() },
+            recentChoiceIds = obj.optJSONArray("recentChoiceIds").toStringList(),
             pendingDecisionId = obj.optString("pending").takeIf { it.isNotBlank() && it != "null" },
             moments = List(moments.length()) { index -> moments.getJSONObject(index).let { LifeMoment(LifePeriod.valueOf(it.getString("period")), it.getInt("year"), it.getString("text"), it.optString("image").takeIf(String::isNotBlank)) } },
             isEnding = obj.optBoolean("ending", false),
@@ -63,6 +76,44 @@ class V4ProgressStore(context: Context) {
         )
         V4SavedRun(root.optString("playerName", "플레이어"), state)
     }.getOrNull()
+
+    private fun LifeFacts.toJson(): JSONObject = JSONObject().apply {
+        put("educationLevel", educationLevel); put("fieldOfStudy", fieldOfStudy)
+        put("careerTrack", careerTrack); put("careerLevel", careerLevel)
+        put("employmentStatus", employmentStatus); put("maritalStatus", maritalStatus)
+        put("childrenCount", childrenCount); put("housingType", housingType)
+        put("wealthBand", wealthBand); put("achievementFlags", JSONArray(achievementFlags.toList()))
+        put("deathPeriod", deathPeriod?.name); put("deathCause", deathCause)
+    }
+
+    private fun JSONObject.toLifeFacts(): LifeFacts = LifeFacts(
+        educationLevel = nullableString("educationLevel"),
+        fieldOfStudy = nullableString("fieldOfStudy"),
+        careerTrack = nullableString("careerTrack"),
+        careerLevel = nullableString("careerLevel"),
+        employmentStatus = nullableString("employmentStatus"),
+        maritalStatus = nullableString("maritalStatus"),
+        childrenCount = optInt("childrenCount", 0),
+        housingType = nullableString("housingType"),
+        wealthBand = optString("wealthBand", "MIDDLE"),
+        achievementFlags = optJSONArray("achievementFlags").toStringList().toSet(),
+        deathPeriod = nullableString("deathPeriod")?.let { runCatching { LifePeriod.valueOf(it) }.getOrNull() },
+        deathCause = nullableString("deathCause"),
+    )
+
+    private fun JSONObject.nullableString(name: String): String? =
+        optString(name).takeIf { it.isNotBlank() && it != "null" }
+
+    private fun JSONArray?.toStringList(): List<String> =
+        if (this == null) emptyList() else List(length()) { getString(it) }
+
+    private fun wealthBand(value: Int): String = when {
+        value < 25 -> "LOW"
+        value < 50 -> "LOWER_MIDDLE"
+        value < 75 -> "MIDDLE"
+        value < 90 -> "HIGH"
+        else -> "VERY_HIGH"
+    }
 
     private companion object { const val KEY = "savedRun" }
 }

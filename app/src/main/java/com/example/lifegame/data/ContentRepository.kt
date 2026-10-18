@@ -4,11 +4,13 @@ import android.content.Context
 import com.example.lifegame.domain.model.Choice
 import com.example.lifegame.domain.model.Ending
 import com.example.lifegame.domain.model.EndingConditions
+import com.example.lifegame.domain.model.EndingTier
 import com.example.lifegame.domain.model.EventConditions
 import com.example.lifegame.domain.model.EventType
 import com.example.lifegame.domain.model.GameEvent
 import com.example.lifegame.domain.model.ImageAsset
 import com.example.lifegame.domain.model.LifeStage
+import com.example.lifegame.domain.model.LifeFactConditions
 import com.example.lifegame.domain.model.DecisionEvent
 import com.example.lifegame.domain.model.Focus
 import com.example.lifegame.domain.model.PeriodDefinition
@@ -32,10 +34,16 @@ class ContentRepository(
         V4ContentParser.parseDecisionEvents(readAsset(EVENTS_FILE))
     }.getOrElse { emptyList() }
 
+    /** 시나리오 PR의 플래그→인생 사실 카탈로그. 병합 전에는 빈 목록으로 안전하게 동작한다. */
+    fun loadLifeFactRules() = runCatching {
+        V4ContentParser.parseLifeFactRules(readAsset(LIFE_FACTS_FILE))
+    }.getOrElse { emptyList() }
+
     fun loadV4Content(): V4Content = V4Content(
         periods = loadPeriodDefinitions(),
         focuses = loadFocuses(),
         decisions = loadDecisionEvents(),
+        lifeFactRules = loadLifeFactRules(),
     )
 
     fun loadEvents(): List<GameEvent> = runCatching {
@@ -44,8 +52,7 @@ class ContentRepository(
     }.getOrElse { emptyList() }
 
     fun loadEndings(): List<Ending> = runCatching {
-        val array = JSONArray(readAsset(ENDINGS_FILE))
-        List(array.length()) { index -> array.getJSONObject(index).toEnding() }
+        V4ContentParser.parseEndings(readAsset(ENDINGS_FILE))
     }.getOrElse { emptyList() }
 
     fun loadImageAssets(): List<ImageAsset> = runCatching {
@@ -79,6 +86,9 @@ class ContentRepository(
         priority = optInt("priority", 0),
         conditions = optJSONObject("conditions").toEndingConditions(),
         isDefault = optBoolean("isDefault", false),
+        tier = optString("tier").takeIf { it.isNotBlank() }
+            ?.let { runCatching { EndingTier.valueOf(it.uppercase()) }.getOrNull() }
+            ?: if (optBoolean("isDefault", false)) EndingTier.DEFAULT else EndingTier.GENERAL_LIFE,
     )
 
     private fun JSONObject.toImageAsset(): ImageAsset = ImageAsset(
@@ -111,6 +121,20 @@ class ContentRepository(
         stats = this?.optJSONObject("minStats").toStatConditions(),
         requiredFlags = this?.optJSONArray("requiredFlags").toStringSet(),
         blockedFlags = this?.optJSONArray("blockedFlags").toStringSet(),
+        lifeFacts = this?.optJSONObject("lifeFacts").toLifeFactConditions(),
+    )
+
+    private fun JSONObject?.toLifeFactConditions(): LifeFactConditions = LifeFactConditions(
+        educationLevel = this?.optString("educationLevel")?.takeIf { it.isNotBlank() },
+        fieldOfStudy = this?.optString("fieldOfStudy")?.takeIf { it.isNotBlank() },
+        careerTrack = this?.optString("careerTrack")?.takeIf { it.isNotBlank() },
+        careerLevel = this?.optString("careerLevel")?.takeIf { it.isNotBlank() },
+        employmentStatus = this?.optString("employmentStatus")?.takeIf { it.isNotBlank() },
+        maritalStatus = this?.optString("maritalStatus")?.takeIf { it.isNotBlank() },
+        minChildrenCount = this?.optNullableInt("minChildrenCount"),
+        housingType = this?.optString("housingType")?.takeIf { it.isNotBlank() },
+        wealthBand = this?.optString("wealthBand")?.takeIf { it.isNotBlank() },
+        requiredAchievements = this?.optJSONArray("requiredAchievements").toStringSet(),
     )
 
     private fun JSONObject?.toStatConditions(): StatConditions = StatConditions(
@@ -158,5 +182,6 @@ class ContentRepository(
         const val EVENTS_FILE = "events.sample.json"
         const val ENDINGS_FILE = "endings.sample.json"
         const val IMAGE_IDS_FILE = "image_ids.sample.json"
+        const val LIFE_FACTS_FILE = "life_facts.sample.json"
     }
 }
