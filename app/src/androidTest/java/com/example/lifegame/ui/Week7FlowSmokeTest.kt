@@ -6,6 +6,8 @@ import androidx.compose.ui.test.assertCountEquals
 import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.captureToImage
 import androidx.compose.ui.test.hasText
+import androidx.compose.ui.test.hasTestTag
+import androidx.compose.ui.test.isEnabled
 import androidx.compose.ui.test.junit4.createAndroidComposeRule
 import androidx.compose.ui.test.onAllNodesWithTag
 import androidx.compose.ui.test.onNodeWithTag
@@ -13,6 +15,8 @@ import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.onRoot
 import androidx.compose.ui.test.performClick
 import androidx.compose.ui.test.performScrollTo
+import androidx.compose.ui.test.performTouchInput
+import androidx.compose.ui.test.click
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.platform.app.InstrumentationRegistry
 import com.example.lifegame.MainActivity
@@ -38,6 +42,9 @@ class Week7FlowSmokeTest {
         saveScreenshot("01_home.png")
 
         composeRule.onNodeWithText("새 인생 살기").performClick()
+        if (composeRule.onAllNodes(hasText("새로 시작")).fetchSemanticsNodes().isNotEmpty()) {
+            composeRule.onNodeWithText("새로 시작").performClick()
+        }
         waitForAny("profile_content")
         composeRule.onNodeWithText("남").performClick()
         composeRule.onNodeWithText("우렁찬 아기").performScrollTo().performClick()
@@ -48,8 +55,8 @@ class Week7FlowSmokeTest {
         var sawChapter = false
         var sawDecision = false
         var sawAuto = false
-        repeat(60) {
-            if (sawChapter && sawDecision) return@repeat
+        var sawEnding = false
+        for (action in 0 until 150) {
             when (waitForAny("decision_content", "chapter_content", "auto_progress_content", "run_end_content")) {
                 "chapter_content" -> {
                     chooseFirstFocus(screenshot = if (sawChapter) null else "02_chapter.png")
@@ -67,11 +74,17 @@ class Week7FlowSmokeTest {
                     resolveDecision(screenshot = !sawDecision)
                     sawDecision = true
                 }
-                "run_end_content" -> fail("장 표지와 결정을 다 보기 전에 인생이 끝났다")
+                "run_end_content" -> {
+                    composeRule.onNodeWithText("인생 요약").performScrollTo().assertIsDisplayed()
+                    saveScreenshot("07_ending.png")
+                    sawEnding = true
+                    break
+                }
             }
         }
         assertTrue("결정 화면에 닿지 못했다", sawDecision)
         assertTrue("장 표지에 닿지 못했다", sawChapter)
+        assertTrue("한 판이 결말까지 완료돼야 한다", sawEnding)
     }
 
     /** 돌발이면 팝업을 닫고, 고를 수 있는 첫 선택지(A)를 고른 뒤 결과에서 계속한다. */
@@ -88,10 +101,23 @@ class Week7FlowSmokeTest {
             composeRule.onAllNodes(hasText("%", substring = true)).assertCountEquals(0)
             composeRule.onAllNodes(hasText("{name", substring = true)).assertCountEquals(0)
         }
-        // 글자가 다 나오기 전에는 선택지가 눌리지 않으므로 결과가 뜰 때까지 다시 누른다.
+        if (screenshot) {
+            composeRule.onNodeWithText("장면 보기").performScrollTo().performClick()
+            composeRule.onNodeWithTag("decision_content").assertDoesNotExist()
+            saveScreenshot("05_scene_only.png")
+            composeRule.onRoot().performTouchInput { click(center) }
+            composeRule.onNodeWithTag("decision_content").assertIsDisplayed()
+        }
+        // Wait for the reveal and choose an enabled option; A can legitimately be locked.
         composeRule.waitUntil(timeoutMillis = 20_000) {
+            if (composeRule.onAllNodesWithTag("incident_popup").fetchSemanticsNodes().isNotEmpty()) {
+                composeRule.onNodeWithText("사건 보기").performScrollTo().performClick()
+            }
             if (composeRule.onAllNodesWithTag("decision_outcome").fetchSemanticsNodes().isEmpty()) {
-                composeRule.onNodeWithTag("decision_choice_A").performScrollTo().performClick()
+                val key = listOf("A", "B", "C").firstOrNull {
+                    composeRule.onAllNodes(hasTestTag("decision_choice_$it") and isEnabled()).fetchSemanticsNodes().isNotEmpty()
+                }
+                if (key != null) composeRule.onNodeWithTag("decision_choice_$key").performScrollTo().performClick()
             }
             composeRule.onAllNodesWithTag("decision_outcome").fetchSemanticsNodes().isNotEmpty()
         }

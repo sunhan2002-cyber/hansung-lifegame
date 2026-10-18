@@ -28,6 +28,9 @@ class LifeFactCatalog(entries: List<LifeFactEntry>) {
 
     fun entry(flag: String): LifeFactEntry? = byFlag[flag]
 
+    fun label(fact: String, value: String): String =
+        byFlag.values.firstOrNull { it.fact == fact && it.value == value }?.label ?: value
+
     companion object {
         val EMPTY = LifeFactCatalog(emptyList())
     }
@@ -107,6 +110,25 @@ fun buildLifeFacts(flags: Collection<String>, stats: Stats, catalog: LifeFactCat
         }
     }
     return facts.copy(achievements = achievements.distinct())
+}
+
+/** Persisted engine facts are authoritative; flags supply labels and legacy defaults. */
+fun buildLifeFacts(state: PeriodRunState, catalog: LifeFactCatalog): LifeFactsUi {
+    val inferred = buildLifeFacts(state.flags, state.stats, catalog)
+    val saved = state.lifeFacts
+    fun label(fact: String, value: String?, fallback: String?): String? =
+        value?.let { catalog.label(fact, it) } ?: fallback
+    return inferred.copy(
+        education = label("educationLevel", saved.educationLevel, inferred.education),
+        fieldOfStudy = label("fieldOfStudy", saved.fieldOfStudy, inferred.fieldOfStudy),
+        career = label("careerTrack", saved.careerTrack, inferred.career),
+        careerLevel = label("careerLevel", saved.careerLevel, inferred.careerLevel),
+        employment = label("employmentStatus", saved.employmentStatus, inferred.employment),
+        marital = label("maritalStatus", saved.maritalStatus, inferred.marital),
+        children = maxOf(saved.childrenCount, inferred.children),
+        housing = label("housingType", saved.housingType, inferred.housing),
+        achievements = (saved.achievementFlags.map { catalog.entry(it)?.label ?: it } + inferred.achievements).distinct(),
+    )
 }
 
 /** 선택 직후 "새로 생긴 사실" 한 줄. */
@@ -347,11 +369,13 @@ private const val SUDDEN_HEALTH_DEATH_TEXT = "건강이 급격히 나빠져"
 
 fun buildDeathInfo(state: PeriodRunState, periods: List<PeriodDefinition>): DeathInfoUi? {
     if (!state.isDead) return null
-    val period = state.endingPeriod ?: state.moments.lastOrNull()?.period ?: state.period
+    val period = state.lifeFacts.deathPeriod ?: state.endingPeriod ?: state.moments.lastOrNull()?.period ?: state.period
     val periodName = periods.firstOrNull { it.period == period }?.displayName ?: period.name
     val last = state.moments.lastOrNull { it.period == period } ?: state.moments.lastOrNull()
     val text = last?.text
     val cause = when {
+        state.lifeFacts.deathCause == "자연사" -> "노환 (자연사)"
+        state.lifeFacts.deathCause != null -> state.lifeFacts.deathCause
         text == NATURAL_DEATH_TEXT -> "노환 (자연사)"
         text?.contains(SUDDEN_HEALTH_DEATH_TEXT) == true -> "건강 악화"
         state.stats.health <= 0 -> "건강이 바닥남"

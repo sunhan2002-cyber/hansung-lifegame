@@ -94,6 +94,8 @@ def audit(events: list[dict[str, Any]]) -> tuple[dict[str, Any], list[dict[str, 
 
     for event in events:
         event_id = str(event.get("eventId", "<missing>"))
+        hard = event.get("kind") in {"BIG_INCIDENT", "MILESTONE"}
+        category_counts["hard_event" if hard else "soft_event"] += 1
         periods = periods_for_event(event)
         choices = event.get("choices") if isinstance(event.get("choices"), list) else []
         locked_count = 0
@@ -103,6 +105,12 @@ def audit(events: list[dict[str, Any]]) -> tuple[dict[str, Any], list[dict[str, 
             total += 1
             choice_id = str(choice.get("choiceId", index))
             has_condition, fields = explicit_condition(choice)
+            category_counts["hard_choice" if hard else "soft_choice"] += 1
+            if hard and has_condition:
+                category_counts["hard_explicit"] += 1
+                category_counts["hard_open" if choice.get("alwaysAvailable") else "hard_gated"] += 1
+            if choice.get("alwaysAvailable") and not choice.get("alwaysAvailableReason"):
+                invalid.append({"eventId": event_id, "choiceId": choice_id, "error": "missing alwaysAvailableReason"})
             positives = positive_stats(choice)
             unknown_stats = []
             for key in (choice.get("requiredStats") or choice.get("stats") or {}):
@@ -117,6 +125,8 @@ def audit(events: list[dict[str, Any]]) -> tuple[dict[str, Any], list[dict[str, 
                 category = "explicit"
                 if fields and all(field not in {"alwaysAvailable"} for field in fields):
                     locked_count += 1
+            elif not hard:
+                category = "soft_unconditional"
             elif periods == {"INFANT"}:
                 category = "infant_unconditional"
             elif len(positives) == 1:
@@ -132,6 +142,7 @@ def audit(events: list[dict[str, Any]]) -> tuple[dict[str, Any], list[dict[str, 
                 "choiceId": choice_id,
                 "periods": sorted(periods),
                 "category": category,
+                "scope": "hard" if hard else "soft",
                 "conditionFields": fields,
                 "positiveStats": positives,
                 "suggestedThreshold": threshold_for(periods) if category == "candidate" else None,
@@ -154,7 +165,14 @@ def audit(events: list[dict[str, Any]]) -> tuple[dict[str, Any], list[dict[str, 
         "choiceCount": total,
         "explicitConditionCount": category_counts["explicit"],
         "explicitConditionRate": round(category_counts["explicit"] / total * 100, 2) if total else 0,
-        "missingConditionCount": total - category_counts["explicit"],
+        "hardTargetEventCount": category_counts["hard_event"],
+        "hardTargetChoiceCount": category_counts["hard_choice"],
+        "hardGatedChoiceCount": category_counts["hard_gated"],
+        "hardOpenChoiceCount": category_counts["hard_open"],
+        "softEventCount": category_counts["soft_event"],
+        "softChoiceCount": category_counts["soft_choice"],
+        "softUnconditionalCount": category_counts["soft_unconditional"],
+        "missingConditionCount": category_counts["hard_choice"] - category_counts["hard_explicit"],
         "reviewRequiredCount": category_counts["candidate"] + category_counts["ambiguous"],
         "candidateConditionCount": category_counts["candidate"],
         "ambiguousConditionCount": category_counts["ambiguous"],
@@ -171,14 +189,18 @@ def markdown(metrics: dict[str, Any], details: list[dict[str, Any]]) -> str:
     lines = [
         "# 8주차 선택지 조건 전수 감사",
         "",
-        "> 이 보고서는 선택지 데이터를 자동으로 분류한 1차 감사 결과다. `candidate`는 결과 스탯만 보고 조건을 제안할 수 있는 항목이며, 실제 반영 전 시나리오 담당자의 의미 검토가 필요하다.",
+        "> 합의한 정책: 돌발사건·인생의 전환점만 새 하드 조건을 적용한다. 일반 사건은 기존 명시 조건을 보존하고, 나머지 선택지는 추가 잠금 없이 결과 스탯만 반영한다. 아래 누락 수는 하드 조건 대상에 한정한다.",
         "",
         "## 현황",
         "",
         f"- 사건: **{metrics['eventCount']}개**",
         f"- 선택지: **{metrics['choiceCount']}개**",
         f"- 명시 조건 보유: **{metrics['explicitConditionCount']}개 ({metrics['explicitConditionRate']}%)**",
-        f"- 명시 조건 미적용: **{metrics['missingConditionCount']}개**",
+        f"- 하드 조건 대상: **{metrics['hardTargetEventCount']}개 사건 / {metrics['hardTargetChoiceCount']}개 선택지**",
+        f"- 하드 조건부: {metrics['hardGatedChoiceCount']}개 / 명시적 항상 가능: {metrics['hardOpenChoiceCount']}개",
+        f"- 일반 사건: {metrics['softEventCount']}개 / 선택지 {metrics['softChoiceCount']}개",
+        f"- 일반 사건 중 의도적으로 명시 조건을 두지 않은 선택지: {metrics['softUnconditionalCount']}개 (누락 아님)",
+        f"- 하드 대상 명시 조건·항상 가능 사유 누락: **{metrics['missingConditionCount']}개**",
         f"  - 영아기 무조건 진행으로 분류: {metrics['infantUnconditionalCount']}개",
         f"  - 실제 의미 검토 필요: **{metrics['reviewRequiredCount']}개**",
         f"    - 단일 상승 스탯으로 조건 제안 가능: {metrics['candidateConditionCount']}개",
@@ -218,7 +240,7 @@ def main() -> int:
         print(f"{key}: {value}")
     print(f"report: {REPORT_DIR / 'week8_choice_condition_audit.md'}")
     print(f"details: {REPORT_DIR / 'choice_condition_audit.json'}")
-    return 0
+    return int(bool(metrics["missingConditionCount"] or metrics["invalidConditionCount"] or metrics["allChoicesLockedEventCount"]))
 
 
 if __name__ == "__main__":

@@ -712,6 +712,232 @@
     ],
     "teen_042": [
       "intelligence"
+    ],
+    "adult_072": [
+      "wealth",
+      "intelligence"
+    ],
+    "adult_073": [
+      "social",
+      "happiness"
+    ],
+    "adult_074": [
+      "social",
+      "happiness"
+    ],
+    "adult_075": [
+      "social",
+      "happiness"
+    ],
+    "adult_076": [
+      "social",
+      "happiness"
+    ],
+    "adult_077": [
+      "social",
+      "happiness"
+    ],
+    "adult_078": [
+      "social",
+      "health"
+    ],
+    "adult_079": [
+      "wealth",
+      "social"
+    ],
+    "adult_080": [
+      "wealth"
+    ],
+    "adult_081": [
+      "wealth",
+      "happiness"
+    ],
+    "adult_082": [
+      "wealth",
+      "social"
+    ],
+    "path_int_01": [
+      "intelligence"
+    ],
+    "path_int_02": [
+      "intelligence"
+    ],
+    "path_int_03": [
+      "intelligence"
+    ],
+    "path_int_04": [
+      "intelligence"
+    ],
+    "path_int_05": [
+      "intelligence"
+    ],
+    "path_int_06": [
+      "intelligence"
+    ],
+    "path_int_07": [
+      "intelligence"
+    ],
+    "path_int_08": [
+      "intelligence"
+    ],
+    "path_int_09": [
+      "intelligence"
+    ],
+    "path_int_10": [
+      "intelligence"
+    ],
+    "path_fit_01": [
+      "fitness"
+    ],
+    "path_fit_02": [
+      "fitness"
+    ],
+    "path_fit_03": [
+      "fitness"
+    ],
+    "path_fit_04": [
+      "fitness"
+    ],
+    "path_fit_05": [
+      "fitness"
+    ],
+    "path_fit_06": [
+      "fitness"
+    ],
+    "path_fit_07": [
+      "fitness"
+    ],
+    "path_fit_08": [
+      "fitness"
+    ],
+    "path_fit_09": [
+      "fitness"
+    ],
+    "path_soc_01": [
+      "social"
+    ],
+    "path_soc_02": [
+      "social"
+    ],
+    "path_soc_03": [
+      "social"
+    ],
+    "path_soc_04": [
+      "social"
+    ],
+    "path_soc_05": [
+      "social"
+    ],
+    "path_soc_06": [
+      "social"
+    ],
+    "path_soc_07": [
+      "social"
+    ],
+    "path_soc_08": [
+      "social"
+    ],
+    "path_soc_09": [
+      "social"
+    ],
+    "path_wea_01": [
+      "wealth"
+    ],
+    "path_wea_02": [
+      "wealth"
+    ],
+    "path_wea_03": [
+      "wealth"
+    ],
+    "path_wea_04": [
+      "wealth"
+    ],
+    "path_wea_05": [
+      "wealth"
+    ],
+    "path_wea_06": [
+      "wealth"
+    ],
+    "path_wea_07": [
+      "wealth"
+    ],
+    "path_wea_08": [
+      "wealth"
+    ],
+    "path_wea_09": [
+      "wealth"
+    ],
+    "path_hap_01": [
+      "happiness"
+    ],
+    "path_hap_02": [
+      "happiness"
+    ],
+    "path_hap_03": [
+      "happiness"
+    ],
+    "path_hap_04": [
+      "happiness"
+    ],
+    "path_hap_05": [
+      "happiness"
+    ],
+    "path_hap_06": [
+      "happiness"
+    ],
+    "path_hap_07": [
+      "happiness"
+    ],
+    "path_hap_08": [
+      "happiness"
+    ],
+    "path_luk_01": [
+      "luck"
+    ],
+    "path_luk_02": [
+      "luck"
+    ],
+    "path_luk_03": [
+      "luck"
+    ],
+    "path_luk_04": [
+      "luck"
+    ],
+    "path_luk_05": [
+      "luck"
+    ],
+    "path_luk_06": [
+      "luck"
+    ],
+    "path_luk_08": [
+      "luck"
+    ],
+    "path_luk_07": [
+      "luck"
+    ],
+    "path_hea_01": [
+      "health"
+    ],
+    "path_hea_02": [
+      "health"
+    ],
+    "path_hea_03": [
+      "health"
+    ],
+    "path_hea_04": [
+      "health"
+    ],
+    "path_hea_05": [
+      "health"
+    ],
+    "path_hea_06": [
+      "health"
+    ],
+    "path_hea_07": [
+      "health"
+    ],
+    "path_hea_08": [
+      "health"
     ]
   }
 }

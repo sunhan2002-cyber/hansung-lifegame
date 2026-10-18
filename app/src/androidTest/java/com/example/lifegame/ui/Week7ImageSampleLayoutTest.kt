@@ -15,6 +15,7 @@ import androidx.compose.ui.semantics.SemanticsActions
 import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.assertTextEquals
 import androidx.compose.ui.test.captureToImage
+import androidx.compose.ui.test.hasTestTag
 import androidx.compose.ui.test.junit4.createComposeRule
 import androidx.compose.ui.test.onAllNodesWithText
 import androidx.compose.ui.test.onNodeWithTag
@@ -22,6 +23,7 @@ import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.onRoot
 import androidx.compose.ui.test.performClick
 import androidx.compose.ui.test.performScrollTo
+import androidx.compose.ui.test.performScrollToNode
 import androidx.compose.ui.test.performSemanticsAction
 import androidx.compose.ui.text.TextLayoutResult
 import androidx.compose.ui.unit.Density
@@ -72,6 +74,7 @@ class Week7ImageSampleLayoutTest {
         File(directory, "image-sample-small-large-text.png").outputStream().use {
             image.compress(Bitmap.CompressFormat.PNG, 100, it)
         }
+        composeRule.onNodeWithTag("image_sample_content").performScrollToNode(hasTestTag("image_sample_next"))
         composeRule.onNodeWithTag("image_sample_next").performScrollTo().assertIsDisplayed().performClick()
         composeRule.runOnIdle { assertTrue(index == 3) }
         composeRule.onNodeWithTag("image_sample_previous").performScrollTo().assertIsDisplayed().performClick()

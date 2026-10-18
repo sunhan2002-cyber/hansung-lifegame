@@ -259,6 +259,10 @@ class GameEngine(
             .copy(wealthBand = wealthBand(state.stats.wealth)),
     )
 
+    internal fun requiresFocusSelection(state: PeriodRunState): Boolean =
+        state.selectedFocusId == null &&
+            !(skipInfantFocus && state.period in setOf(LifePeriod.INFANT, LifePeriod.OLD_AGE))
+
     /** 초점은 새 시기의 장 표지에서 한 번만 고를 수 있다. */
     fun selectFocus(
         state: PeriodRunState,
@@ -291,16 +295,16 @@ class GameEngine(
             return TurnStep(state = state, phase = TurnPhase.ENDING)
         }
 
-        // 영아기는 초점을 고르지 않고 1년 차 돌잡이부터 바로 시작한다.
-        if (skipInfantFocus && (state.period == LifePeriod.INFANT || state.period == LifePeriod.OLD_AGE) && state.selectedFocusId == null) {
-            return advanceInfantYear(state, orderedPeriods, focuses, decisions, bigIncidentChancePercent, incidentChancePercent)
-        }
-
         state.pendingDecisionId?.let { eventId ->
             val event = requireNotNull(decisions.firstOrNull { it.eventId == eventId }) {
                 "pending decision is not available in current content"
             }
             return decisionStep(state, event)
+        }
+
+        // Restore a pending decision before any yearly work, including focus-free periods.
+        if (skipInfantFocus && (state.period == LifePeriod.INFANT || state.period == LifePeriod.OLD_AGE) && state.selectedFocusId == null) {
+            return advanceInfantYear(state, orderedPeriods, focuses, decisions, bigIncidentChancePercent, incidentChancePercent)
         }
 
         val focusId = state.selectedFocusId
@@ -323,8 +327,10 @@ class GameEngine(
                 )]
             }
             ?: "${state.period.name} ${state.yearInPeriod}년차, ${focus.label}에 집중했다."
+        val focusStats = state.stats.apply(focus.statEffects, minHealth = healthFloor(state.period))
         val stateAfterFocus = state.copy(
-            stats = state.stats.apply(focus.statEffects, minHealth = healthFloor(state.period)),
+            stats = focusStats,
+            lifeFacts = state.lifeFacts.copy(wealthBand = wealthBand(focusStats.wealth)),
             moments = state.moments + LifeMoment(
                 period = state.period,
                 yearInPeriod = state.yearInPeriod,
@@ -356,7 +362,7 @@ class GameEngine(
         )
         healthDeathStep(stateAfterYear)?.let { return it }
         val nextState = movePeriodCalendar(stateAfterYear, orderedPeriods)
-        val needsFocus = !nextState.isEnding && nextState.selectedFocusId == null && nextState.period != LifePeriod.INFANT
+        val needsFocus = !nextState.isEnding && requiresFocusSelection(nextState)
         return TurnStep(
             state = nextState,
             phase = when {
@@ -399,7 +405,7 @@ class GameEngine(
         val healthDepleted = afterStats.health <= 0
         val nextFlags = state.flags + outcome.addFlags + completedEventFlag(event.eventId)
         val nextFacts = state.lifeFacts
-            .applyRules(outcome.addFlags, lifeFactRules)
+            .applyRules(outcome.addFlags + completedEventFlag(event.eventId), lifeFactRules)
             .copy(wealthBand = wealthBand(afterStats.wealth))
         val resolved = state.copy(
             stats = afterStats,
@@ -434,7 +440,7 @@ class GameEngine(
         }
 
         val nextState = movePeriodCalendar(resolved, orderedPeriods)
-        val needsFocus = !nextState.isEnding && nextState.selectedFocusId == null && nextState.period != LifePeriod.INFANT
+        val needsFocus = !nextState.isEnding && requiresFocusSelection(nextState)
         return OutcomeResolution(
             outcome = outcome,
             step = TurnStep(
@@ -982,7 +988,8 @@ class GameEngine(
 
     private fun LifeFacts.applyRules(flags: Set<String>, rules: List<LifeFactRule>): LifeFacts {
         var current = this
-        rules.filter { it.flag in flags }.forEach { rule ->
+        val rulesByFlag = rules.groupBy { it.flag }
+        flags.flatMap { rulesByFlag[it].orEmpty() }.forEach { rule ->
             current = when (rule.fact) {
                 "educationLevel" -> current.copy(educationLevel = rule.value)
                 "fieldOfStudy" -> current.copy(fieldOfStudy = rule.value)

@@ -47,7 +47,7 @@ class ImageRoutingTest {
         val state = PeriodRunState("run", 1L, LifePeriod.OLD_AGE, isEnding = true,
             isDead = true, endingPeriod = LifePeriod.TEEN)
         val ui = buildPeriodPlayState(TurnStep(state, TurnPhase.ENDING),
-            PlayContent(emptyList(), emptyList(), emptyMap(), emptyMap(), routing), "플레이어")
+            PlayContent(emptyList(), emptyList(), emptyMap(), emptyMap(), imageRouting = routing), "플레이어")
         assertEquals(LifePeriod.TEEN, ui.imagePeriod)
         assertEquals("img_portrait_default_teen_001", ui.portraitImages.single().imageId)
         assertEquals(state.stats, ui.stats)
@@ -80,7 +80,7 @@ class ImageRoutingTest {
             val pending = PendingDecision(id, event.kind, event.title, event.text, emptyList(), event.povImageId)
             val state = PeriodRunState("run", 1L, period, selectedFocusId = focus)
             val ui = buildPeriodPlayState(TurnStep(state, TurnPhase.DECISION, pendingDecision = pending),
-                PlayContent(emptyList(), emptyList(), events, files, routing), "플레이어")
+                PlayContent(emptyList(), emptyList(), events, files, imageRouting = routing), "플레이어")
             val candidates = ui.decision!!.images
             // Simulates missing event files using the actual packaged file paths, not just ID order.
             val ready = candidates.first { File(assetDir(), "images/${it.path}").isFile }
@@ -120,7 +120,7 @@ class ImageRoutingTest {
         val event = V4ContentParser.parseDecisionEvents(File(assetDir(), "events.sample.json").readText())
             .first { it.eventId == "teen_042" }
         val ui = buildDecisionUi(PendingDecision(event.eventId, event.kind, event.title, event.text, emptyList()),
-            event, Stats(), emptyMap(), routing, "focus_teen_study", LifePeriod.TEEN)
+            event, Stats(), emptyMap(), imageRouting = routing, focusId = "focus_teen_study", period = LifePeriod.TEEN)
         assertEquals("img_pov_exam_paper_001", ui.images.first().imageId)
     }
 

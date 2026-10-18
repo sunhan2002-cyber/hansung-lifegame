@@ -167,7 +167,7 @@ def write_report(counts: Counter[str], rows: list[dict[str, Any]]) -> None:
                 by_stat[stat] += 1
     lines = [
         "# 8주차 선택지 조건 확정 결과", "",
-        "이번 단계는 하드 조건 대상 83개 선택지를 조건부 또는 항상 실행 가능으로 확정하고 실제 JSON에 반영한 결과다. 일반 사건 526개 선택지는 하드 조건을 걸지 않고 소프트 반응으로 유지한다.", "",
+        f"통합 콘텐츠의 하드 조건 대상 {counts['hard_choice']}개 선택지를 검토한다. 일반 사건 {counts['soft_only_choice']}개 선택지는 기존 명시 조건을 보존하고 새 자동 잠금을 추가하지 않는다.", "",
         f"- 하드 조건 대상 사건: {counts['hard_event']}개",
         f"- 하드 조건 대상 선택지: {counts['hard_choice']}개",
         f"- 일반 사건(소프트 반응만): {counts['soft_only_event']}개 사건 / {counts['soft_only_choice']}개 선택지",

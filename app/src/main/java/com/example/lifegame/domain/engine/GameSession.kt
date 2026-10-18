@@ -214,7 +214,7 @@ class PeriodGameSession(
         val step = when {
             migrated.isEnding -> TurnStep(migrated, TurnPhase.ENDING)
             migrated.pendingDecisionId != null -> engine.advancePeriodYear(migrated, periods, focuses, decisions)
-            migrated.selectedFocusId == null -> TurnStep(migrated, TurnPhase.CHAPTER, needsFocusSelection = true)
+            engine.requiresFocusSelection(migrated) -> TurnStep(migrated, TurnPhase.CHAPTER, needsFocusSelection = true)
             else -> TurnStep(migrated, TurnPhase.AUTO_PROGRESS, canAutoAdvance = true)
         }
         return record(step)

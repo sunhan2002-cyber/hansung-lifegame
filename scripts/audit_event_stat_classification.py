@@ -8,7 +8,7 @@ their outcomes change one or more stats.
 from __future__ import annotations
 
 import json
-from collections import Counter, defaultdict
+from collections import Counter
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -67,7 +67,7 @@ def main() -> int:
         "# 사건 스탯 분류 재검증",
         "",
         "정책상 스탯 조건을 거는 사건은 `BIG_INCIDENT(돌발사건)`과 `MILESTONE(인생의 전환점)`으로 한정한다.",
-        "일반 `INCIDENT`는 선택지를 잠그지 않고, 선택 결과의 스탯 변화로만 플레이어 방향이 반영된다.",
+        "일반 `INCIDENT`는 기존 명시 조건을 보존하며, 나머지는 추가 잠금 없이 선택 결과의 스탯 변화를 반영한다.",
         "",
         "## 분류 결과",
         "",
@@ -91,7 +91,7 @@ def main() -> int:
     for row in soft:
         stats = ", ".join(row["stats"]) or "없음"
         lines.append(f"| `{row['event_id']}` | {row['title']} | {stats} | {row['choices']} |")
-    lines += ["", "## 해석", "", "- 하드 조건 대상 28개 사건은 조건 분류가 끝났고, 대상 선택지 83개에 미분류가 남지 않았다.", f"- 일반 사건 181개는 이번 단계에서 조건 잠금을 추가하지 않았다. 기존 명시 조건 {soft_explicit}개는 보존했고, 나머지는 결과 스탯으로 플레이어 방향성이 누적된다.", "- 스탯 변화가 없는 사건은 0개다.", "", "## 하드·소프트 전체에서 등장한 결과 스탯", ""]
+    lines += ["", "## 해석", "", f"- 하드 조건 검토 대상: {len(hard)}개 사건 / {hard_choices}개 선택지. 실제 조건 누락은 audit_choice_conditions.py에서 검사한다.", f"- 일반 사건 {len(soft)}개의 기존 명시 조건 {soft_explicit}개는 보존하고 나머지는 결과 스탯으로 플레이어 방향성을 누적한다.", f"- 스탯 변화가 없는 사건은 {len(statless)}개다. 스탯 변화가 있다는 사실만으로 능력치에 따라 결과가 달라진다고 보장하지는 않는다.", "", "## 하드·소프트 전체에서 등장한 결과 스탯", ""]
     for stat, count in sorted(stat_counts.items()):
         lines.append(f"- {stat}: {count}개 사건")
     REPORT_FILE.write_text("\n".join(lines) + "\n", encoding="utf-8")

@@ -291,6 +291,8 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
             content.periods,
             focuses,
             decisions,
+            endings = repository.loadEndings().map { it.withPlayerName(name, nameCall) },
+            lifeFactRules = content.lifeFactRules,
             engine = com.example.lifegame.domain.engine.GameEngine(
                 skipInfantFocus = true,
                 guaranteeYearlyIncident = true,
@@ -360,8 +362,8 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
             changes = statChanges(before, afterState.stats),
             endsLife = afterState.isDead,
             factChanges = factChanges(
-                buildLifeFacts(beforeState.flags, before, factCatalog),
-                buildLifeFacts(afterState.flags, afterState.stats, factCatalog),
+                buildLifeFacts(beforeState, factCatalog),
+                buildLifeFacts(afterState, factCatalog),
             ),
             openedEvents = if (afterState.isEnding) {
                 emptyList()
@@ -459,15 +461,9 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
         val nameCall = nameCallOf(name)
         val ending = runCatching {
             val endings = repository.loadEndings().map { it.withPlayerName(name, nameCall) }
-            GameEngine().resolveEnding(
-                GameProgress(
-                    runId = state.runId,
-                    currentEventOccurrenceId = "${state.runId}:ending",
-                    stats = state.stats,
-                    flags = state.flags,
-                ),
-                endings,
-            )
+            val result = GameEngine().resolveEndingDecision(state, endings)
+            android.util.Log.d("LifeGameEnding", "run=${state.runId} reason=${result.reason} ending=${result.selected.endingId}")
+            result.selected
         }.getOrNull()
         endingForRun = state.runId to ending
         return ending

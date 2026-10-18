@@ -13237,7 +13237,8 @@
       "stats": {},
       "requiredFlags": [],
       "blockedFlags": [
-        "photo_celebrity"
+        "dating",
+        "married"
       ]
     },
     "choices": [
@@ -13337,14 +13338,17 @@
     "isFallback": false,
     "isMilestone": false,
     "title": "이상형과 눈이 마주쳤다",
-    "text": "길을 가다 멈췄다. 저 앞에 이상형이 서 있다. 그런데 이상형도 나를 보고 멈췄다.",
+    "text": "전에 길에서 마주쳤던 사람이 다시 눈앞에 서 있다. 이번에는 상대도 나를 알아보고 잠시 멈췄다.",
     "imageId": "img_adult_ideal_type_star_001",
     "conditions": {
       "stats": {},
       "requiredFlags": [
-        "photo_celebrity"
+        "v4:event:adult_005"
       ],
-      "blockedFlags": []
+      "blockedFlags": [
+        "dating",
+        "married"
+      ]
     },
     "choices": [
       {
@@ -13355,7 +13359,7 @@
           "행복": 2,
           "건강": -1
         },
-        "resultText": "이상형이 먼저 웃었다. \"혹시… 아기 때 광고 나오지 않았어요?\" 번호는 이상형이 먼저 물어봤다.",
+        "resultText": "상대가 먼저 웃었다. \"우리 전에 여기서 마주쳤죠?\" 이번에는 서로 이름과 연락처를 주고받았다.",
         "addFlags": [
           "met_ideal",
           "dating"
@@ -13363,7 +13367,7 @@
         "outcomes": [
           {
             "outcomeId": "a_primary",
-            "text": "이상형이 먼저 웃었다. \"혹시… 아기 때 광고 나오지 않았어요?\" 번호는 이상형이 먼저 물어봤다.",
+            "text": "상대가 먼저 웃었다. \"우리 전에 여기서 마주쳤죠?\" 이번에는 서로 이름과 연락처를 주고받았다.",
             "chance": 100,
             "primary": true,
             "hidden": false,
@@ -13388,12 +13392,12 @@
           "사회성": 1,
           "행복": -2
         },
-        "resultText": "세 걸음 가다 뒤돌아봤다. 이상형이 뛰어오고 있었다. \"저기요! 사인 좀…\" 번호 대신 사인을 해 줬다.",
+        "resultText": "세 걸음 가다 뒤돌아봤다. 상대도 돌아봤지만, 나는 인사만 건넸다. 다음에 마주치면 조금 더 이야기해 볼까.",
         "addFlags": [],
         "outcomes": [
           {
             "outcomeId": "b_primary",
-            "text": "세 걸음 가다 뒤돌아봤다. 이상형이 뛰어오고 있었다. \"저기요! 사인 좀…\" 번호 대신 사인을 해 줬다.",
+            "text": "세 걸음 가다 뒤돌아봤다. 상대도 돌아봤지만, 나는 인사만 건넸다. 다음에 마주치면 조금 더 이야기해 볼까.",
             "chance": 100,
             "primary": true,
             "hidden": false,
@@ -13413,12 +13417,12 @@
           "운": 2,
           "사회성": -2
         },
-        "resultText": "10분째 같은 방향. 뒤를 보니 이상형 말고도 열 명이 따라오고 있었다. 전부 나를 알아본 사람들이었다.",
+        "resultText": "같은 방향으로 걷다가 횡단보도에서 나란히 멈췄다. 짧은 인사를 나눴지만 연락처를 물을 용기는 아직 나지 않았다.",
         "addFlags": [],
         "outcomes": [
           {
             "outcomeId": "c_primary",
-            "text": "10분째 같은 방향. 뒤를 보니 이상형 말고도 열 명이 따라오고 있었다. 전부 나를 알아본 사람들이었다.",
+            "text": "같은 방향으로 걷다가 횡단보도에서 나란히 멈췄다. 짧은 인사를 나눴지만 연락처를 물을 용기는 아직 나지 않았다.",
             "chance": 100,
             "primary": true,
             "hidden": false,

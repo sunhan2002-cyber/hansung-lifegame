@@ -399,7 +399,7 @@ fun buildPeriodPlayState(
         else -> state.yearInPeriod
     }
     val focus = content.focuses.firstOrNull { it.focusId == state.selectedFocusId }
-    val facts = buildLifeFacts(state.flags, state.stats, content.factCatalog)
+    val facts = buildLifeFacts(state, content.factCatalog)
     val sceneImageId = step.sceneImageId ?: focus?.sceneImageId.orEmpty()
     val imagePeriod = endingPeriod ?: state.period
     val years = period?.years ?: 1

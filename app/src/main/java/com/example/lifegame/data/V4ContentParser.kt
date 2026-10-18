@@ -4,6 +4,9 @@ import com.example.lifegame.domain.model.ChanceWeights
 import com.example.lifegame.domain.model.DecisionEvent
 import com.example.lifegame.domain.model.DecisionKind
 import com.example.lifegame.domain.model.DecisionOption
+import com.example.lifegame.domain.model.Ending
+import com.example.lifegame.domain.model.EndingConditions
+import com.example.lifegame.domain.model.EndingTier
 import com.example.lifegame.domain.model.Focus
 import com.example.lifegame.domain.model.LifePeriod
 import com.example.lifegame.domain.model.LifeFactConditions
@@ -25,6 +28,26 @@ data class V4Content(
 
 /** PR #26의 v4 JSON을 Android Context 없이도 검증할 수 있는 순수 파서다. */
 object V4ContentParser {
+    fun parseEndings(json: String): List<Ending> = JSONArray(json).mapObjects { item ->
+        val conditions = item.optJSONObject("conditions")
+        Ending(
+            endingId = item.getString("endingId"),
+            title = item.getString("title"),
+            summary = item.getString("summary"),
+            priority = item.optInt("priority", 0),
+            isDefault = item.optBoolean("isDefault", false),
+            tier = item.optNullableString("tier")
+                ?.let { runCatching { EndingTier.valueOf(it.uppercase()) }.getOrNull() }
+                ?: if (item.optBoolean("isDefault", false)) EndingTier.DEFAULT else EndingTier.GENERAL_LIFE,
+            conditions = EndingConditions(
+                stats = conditions?.optJSONObject("minStats").toStatConditions(),
+                requiredFlags = conditions?.optJSONArray("requiredFlags").toStringSet(),
+                blockedFlags = conditions?.optJSONArray("blockedFlags").toStringSet(),
+                lifeFacts = conditions?.optJSONObject("lifeFacts").toLifeFactConditions(),
+            ),
+        )
+    }
+
     fun parseLifeFactRules(json: String): List<LifeFactRule> = JSONArray(json).mapObjects { item ->
         LifeFactRule(
             flag = item.getString("flag"),
@@ -68,7 +91,7 @@ object V4ContentParser {
             title = item.getString("title"),
             text = item.getString("text"),
             choices = item.getJSONArray("choices").mapObjects { choice ->
-                choice.toDecisionOption(periods = item.toPeriods(), kind = item.toDecisionKind())
+                choice.toDecisionOption(kind = item.toDecisionKind())
             },
             weight = item.optInt("weight", 1).coerceAtLeast(1),
             yearInPeriod = item.optPositiveInt("yearInPeriod"),
@@ -83,7 +106,7 @@ object V4ContentParser {
         )
     }
 
-    private fun JSONObject.toDecisionOption(periods: Set<LifePeriod>, kind: DecisionKind): DecisionOption {
+    private fun JSONObject.toDecisionOption(kind: DecisionKind): DecisionOption {
         val fallbackDelta = optJSONObject("statDelta").toStatDelta()
         val fallbackText = optString("resultText")
         val fallbackFlags = optJSONArray("addFlags").toStringSet()
@@ -117,16 +140,15 @@ object V4ContentParser {
         }
         val explicitStats = optJSONObject("requiredStats")?.toStatConditions()
             ?: optJSONObject("stats")?.toStatConditions()
-        val inferredStats = inferStatConditions(outcomes, periods)
-        // 돌발 선택지는 최소 한 갈래가 능력치에 따라 잠기도록 한다.
-        // JSON에 명시된 조건이 있으면 그 조건을 그대로 사용한다.
+        // Gates are authored in JSON. Outcome rewards must never create hidden locks,
+        // particularly for alwaysAvailable fallbacks and ordinary incidents.
         return DecisionOption(
             choiceId = getString("choiceId"),
             label = getString("label"),
             outcomes = outcomes,
             requiredFlags = optJSONArray("requiredFlags").toStringSet(),
             blockedFlags = optJSONArray("blockedFlags").toStringSet(),
-            statConditions = explicitStats ?: inferredStats,
+            statConditions = explicitStats ?: StatConditions(),
             lifeFactConditions = optJSONObject("lifeFacts").toLifeFactConditions(),
         )
     }
@@ -164,40 +186,6 @@ object V4ContentParser {
     private fun inferLifeDelta(kind: DecisionKind, delta: StatDelta): Int = when {
         kind == DecisionKind.BIG_INCIDENT -> -25
         else -> 0
-    }
-
-    /**
-     * 콘텐츠에 명시 조건이 없을 때도 선택지 결과와 연결된 핵심 능력만 조건으로 사용한다.
-     * 여러 능력이 동시에 상승하는 선택지는 억지로 하나를 고르지 않고 조건 없이 둔다.
-     */
-    private fun inferStatConditions(outcomes: List<Outcome>, periods: Set<LifePeriod>): StatConditions {
-        if (periods == setOf(LifePeriod.INFANT)) return StatConditions()
-        val primary = outcomes.firstOrNull { it.primary } ?: outcomes.firstOrNull() ?: return StatConditions()
-        val positive = listOfNotNull(
-            "health" to primary.statDelta.health.takeIf { it > 0 },
-            "fitness" to primary.statDelta.fitness.takeIf { it > 0 },
-            "intelligence" to primary.statDelta.intelligence.takeIf { it > 0 },
-            "social" to primary.statDelta.social.takeIf { it > 0 },
-            "wealth" to primary.statDelta.wealth.takeIf { it > 0 },
-            "luck" to primary.statDelta.luck.takeIf { it > 0 },
-        )
-        if (positive.size != 1) return StatConditions()
-        val threshold = when {
-            periods.contains(LifePeriod.OLD_AGE) -> if (positive.single().first == "health") 45 else 65
-            periods.contains(LifePeriod.MIDDLE) -> 60
-            periods.contains(LifePeriod.YOUNG_ADULT) -> 58
-            periods.contains(LifePeriod.TEEN) -> 55
-            periods.contains(LifePeriod.CHILD) -> 52
-            else -> 50
-        }
-        return when (positive.single().first) {
-            "health" -> StatConditions(minHealth = threshold)
-            "fitness" -> StatConditions(minFitness = threshold)
-            "intelligence" -> StatConditions(minIntelligence = threshold)
-            "social" -> StatConditions(minSocial = threshold)
-            "wealth" -> StatConditions(minWealth = threshold)
-            else -> StatConditions(minLuck = threshold)
-        }
     }
 
     private fun JSONObject.toPeriods(): Set<LifePeriod> {

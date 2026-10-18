@@ -52,8 +52,7 @@ class ContentRepository(
     }.getOrElse { emptyList() }
 
     fun loadEndings(): List<Ending> = runCatching {
-        val array = JSONArray(readAsset(ENDINGS_FILE))
-        List(array.length()) { index -> array.getJSONObject(index).toEnding() }
+        V4ContentParser.parseEndings(readAsset(ENDINGS_FILE))
     }.getOrElse { emptyList() }
 
     fun loadImageAssets(): List<ImageAsset> = runCatching {
