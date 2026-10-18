@@ -2,7 +2,8 @@ package com.example.lifegame.ui.components
 
 import android.content.Context
 import android.graphics.Bitmap
-import android.graphics.BitmapFactory
+import com.example.lifegame.ui.images.ImageCandidate
+import com.example.lifegame.ui.images.PixelAssetLoader
 import android.graphics.Paint
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.layout.BoxWithConstraints
@@ -70,6 +71,7 @@ data class FilmShot(
     /** assets/images 아래 그림 파일 이름. 없거나 읽지 못하면 자리 표시 그림을 그린다. */
     val imageFile: String?,
     val isSpecial: Boolean,
+    val candidates: List<ImageCandidate> = emptyList(),
 )
 
 /** 전환 중 필름의 순간 상태. 매 프레임 바뀌므로 그리기 단계에서만 읽는다. */
@@ -121,8 +123,8 @@ fun FilmStrip(
         BoxWithConstraints(Modifier.fillMaxWidth().height(filmHeight(gateHeight))) {
             val pictureWidth = with(density) { (maxWidth - SideBorder * 2).roundToPx() }.coerceAtLeast(1)
             val pictureHeight = with(density) { gateHeight.roundToPx() }.coerceAtLeast(1)
-            val currentPicture = rememberFilmPicture(current, pictureWidth, pictureHeight)
-            val incomingPicture = incoming?.let { rememberFilmPicture(it, pictureWidth, pictureHeight) }
+            val currentPicture = rememberPicture(current, pictureWidth, pictureHeight)
+            val incomingPicture = incoming?.let { rememberPicture(it, pictureWidth, pictureHeight) }
             Canvas(Modifier.fillMaxSize().clipToBounds()) {
                 drawFilm(motion(), currentPicture.bitmap, incomingPicture?.bitmap)
             }
@@ -146,12 +148,13 @@ fun FilmStrip(
 fun SceneImage(
     shot: FilmShot,
     modifier: Modifier = Modifier,
+    fitWholeImage: Boolean = false,
 ) {
     val density = LocalDensity.current
     BoxWithConstraints(modifier.clipToBounds()) {
         val width = with(density) { maxWidth.roundToPx() }.coerceAtLeast(1)
         val height = with(density) { maxHeight.roundToPx() }.coerceAtLeast(1)
-        val picture = rememberScenePicture(shot, width, height)
+        val picture = rememberPicture(shot, width, height, cropToFill = !fitWholeImage)
         Canvas(Modifier.fillMaxSize()) {
             drawImage(
                 image = picture.bitmap,
@@ -190,56 +193,20 @@ fun PerforationBand(
 
 private data class FilmPicture(val bitmap: ImageBitmap, val isPlaceholder: Boolean)
 
-/**
- * 실제 이미지 제작이 끝나기 전에도 필름을 확인할 수 있도록 사용하는 8개 샘플 컷.
- * debug source set에 있는 파일을 우선 사용하며, 데이터가 아직 준비되지 않은 imageId만
- * 이 목록에서 결정적으로 하나를 골라 표시한다.
- */
-private val Week7PreviewFiles = listOf(
-    "design_preview/week7/img_scene_child_friend_001.png",
-    "design_preview/week7/img_scene_teen_study_001.png",
-    "design_preview/week7/img_scene_teen_part_time_001.png",
-    "design_preview/week7/img_scene_young_adult_adventure_001.png",
-    "design_preview/week7/img_scene_middle_hobby_001.png",
-    "design_preview/week7/img_pov_exam_paper_001.png",
-    "design_preview/week7/img_pov_flu_morning_001.png",
-    "design_preview/week7/img_pov_layoff_door_001.png",
-)
-
+/** Missing files never select an unrelated sample. */
 @Composable
-private fun rememberFilmPicture(shot: FilmShot, width: Int, height: Int): FilmPicture {
+private fun rememberPicture(shot: FilmShot, width: Int, height: Int, cropToFill: Boolean = false): FilmPicture {
     val context = LocalContext.current
-    val placeholder = remember(shot.key, width, height) {
-        placeholderPicture(shot, width, height)
+    val candidates = shot.candidates.ifEmpty {
+        listOfNotNull(shot.imageFile?.let { ImageCandidate(shot.imageId, it) })
     }
-    var loaded by remember(shot.imageId, shot.imageFile, width, height) { mutableStateOf<ImageBitmap?>(null) }
-    LaunchedEffect(shot.imageId, shot.imageFile, width, height) {
-        val file = shot.imageFile ?: previewForImageId(shot.imageId)
-        loaded = withContext(Dispatchers.IO) { loadAssetPicture(context, file, width, height) }
+    val placeholder = remember(shot.isSpecial, width, height) { placeholderPicture(shot, width, height) }
+    var loaded by remember(candidates, width, height, cropToFill) { mutableStateOf<ImageBitmap?>(null) }
+    LaunchedEffect(candidates, width, height, cropToFill) {
+        loaded = withContext(Dispatchers.IO) { loadAssetPicture(context, candidates, width, height, cropToFill) }
     }
     return FilmPicture(loaded ?: placeholder, isPlaceholder = loaded == null)
 }
-
-@Composable
-private fun rememberScenePicture(shot: FilmShot, width: Int, height: Int): FilmPicture {
-    val context = LocalContext.current
-    val placeholder = remember("scene-${shot.key}", width, height) {
-        placeholderPicture(shot, width, height)
-    }
-    var loaded by remember("scene", shot.imageId, shot.imageFile, width, height) {
-        mutableStateOf<ImageBitmap?>(null)
-    }
-    LaunchedEffect("scene", shot.imageId, shot.imageFile, width, height) {
-        val file = shot.imageFile ?: previewForImageId(shot.imageId)
-        loaded = withContext(Dispatchers.IO) {
-            loadAssetPicture(context, file, width, height, cropToFill = true)
-        }
-    }
-    return FilmPicture(loaded ?: placeholder, isPlaceholder = loaded == null)
-}
-
-private fun previewForImageId(imageId: String): String =
-    Week7PreviewFiles[Math.floorMod(imageId.hashCode(), Week7PreviewFiles.size)]
 
 /** 그림이 준비되기 전 자리: 단색 바탕과 아래쪽 바닥 면. 이미지 ID는 플레이 화면에 노출하지 않는다. */
 private fun placeholderPicture(
@@ -258,56 +225,32 @@ private fun placeholderPicture(
     return bitmap.asImageBitmap()
 }
 
-/** 그림 전체를 필름 칸에 맞춘다. 도트가 흐려지지 않도록 보간·디더링을 끈다. */
+/** Portraits and scene inspection fit fully; ordinary background scenes may crop to fill. */
 private fun loadAssetPicture(
     context: Context,
-    fileName: String,
+    candidates: List<ImageCandidate>,
     width: Int,
     height: Int,
     cropToFill: Boolean = false,
-): ImageBitmap? =
-    runCatching {
-        val source = loadSourceBitmap(context, fileName) ?: return@runCatching null
-        val scale = if (cropToFill) {
-            max(width / source.width.toFloat(), height / source.height.toFloat())
-        } else {
-            min(width / source.width.toFloat(), height / source.height.toFloat())
-        }
-        val scaled = Bitmap.createScaledBitmap(
-            source,
-            (source.width * scale).roundToInt().coerceAtLeast(1),
-            (source.height * scale).roundToInt().coerceAtLeast(1),
-            false,
-        )
-        val fitted = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888)
-        android.graphics.Canvas(fitted).apply {
-            drawColor(LifeGamePicture.toArgb())
-            drawBitmap(scaled, (width - scaled.width) / 2f, (height - scaled.height) / 2f,
-                Paint().apply { isFilterBitmap = false; isDither = false })
-        }
-        fitted.asImageBitmap()
-    }.getOrNull()
-
-private fun loadSourceBitmap(context: Context, fileName: String): Bitmap? {
-    val candidates = buildList {
-        add(fileName)
-        if (!fileName.startsWith("design_preview/week7/")) {
-            add("design_preview/week7/$fileName")
-        }
-
-        val isPov = fileName.contains("pov", ignoreCase = true)
-        val pool = if (isPov) Week7PreviewFiles.drop(5) else Week7PreviewFiles.take(5)
-        if (pool.isNotEmpty()) {
-            val index = Math.floorMod(fileName.hashCode(), pool.size)
-            add(pool[index])
-        }
+): ImageBitmap? = runCatching {
+    val loaded = PixelAssetLoader.load(context, candidates, width, height) ?: return@runCatching null
+    val source = loaded.bitmap
+    val crop = cropToFill && loaded.candidate.usage != "character"
+    val scale = if (crop) max(width / source.width.toFloat(), height / source.height.toFloat())
+        else min(width / source.width.toFloat(), height / source.height.toFloat())
+    val scaled = Bitmap.createScaledBitmap(
+        source, (source.width * scale).roundToInt().coerceAtLeast(1),
+        (source.height * scale).roundToInt().coerceAtLeast(1), false,
+    )
+    val fitted = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888)
+    android.graphics.Canvas(fitted).apply {
+        drawColor(LifeGamePicture.toArgb())
+        drawBitmap(scaled, (width - scaled.width) / 2f, (height - scaled.height) / 2f,
+            Paint().apply { isFilterBitmap = false; isDither = false })
     }
-    return candidates.firstNotNullOfOrNull { candidate ->
-        runCatching {
-            context.assets.open("images/$candidate").use(BitmapFactory::decodeStream)
-        }.getOrNull()
-    }
-}
+    if (scaled !== source) scaled.recycle()
+    fitted.asImageBitmap()
+}.getOrNull()
 
 private fun DrawScope.drawFilm(m: FilmMotion, current: ImageBitmap, incoming: ImageBitmap?) {
     val strip = StripHeight.toPx()

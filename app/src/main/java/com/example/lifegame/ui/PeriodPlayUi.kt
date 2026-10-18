@@ -6,6 +6,9 @@ import com.example.lifegame.domain.model.DecisionKind
 import com.example.lifegame.domain.model.DecisionOption
 import com.example.lifegame.domain.model.Focus
 import com.example.lifegame.domain.model.LifeMoment
+import com.example.lifegame.domain.model.LifePeriod
+import com.example.lifegame.ui.images.ImageCandidate
+import com.example.lifegame.ui.images.ImageRouting
 import com.example.lifegame.domain.model.Outcome
 import com.example.lifegame.domain.model.PendingDecision
 import com.example.lifegame.domain.model.PeriodDefinition
@@ -83,6 +86,7 @@ data class DecisionUi(
     val imageId: String,
     val imageFile: String?,
     val choices: List<DecisionChoiceUi>,
+    val images: List<ImageCandidate> = emptyList(),
 ) {
     /** 갈림길이 아닌 결정은 모두 돌발이다. 모든 돌발은 왜곡 전환을 쓴다 (R-23). */
     val isIncident: Boolean get() = kind != DecisionKind.MILESTONE
@@ -166,6 +170,10 @@ data class PeriodPlayUiState(
     val topStat: StatValueUi? = null,
     /** 끝났을 때만 채운다 */
     val ending: EndingSummaryUi? = null,
+    val imagePeriod: LifePeriod? = null,
+    val portraitImages: List<ImageCandidate> = emptyList(),
+    val previousPortraitImages: List<ImageCandidate> = emptyList(),
+    val sceneImages: List<ImageCandidate> = emptyList(),
 ) {
     val place: String get() = "$periodName · ${yearInPeriod}번째 해"
 }
@@ -180,6 +188,7 @@ data class PlayContent(
     val factCatalog: LifeFactCatalog = LifeFactCatalog.EMPTY,
     /** 잠금 이유에 쓸 플래그 이름표 */
     val lookup: FlagLookup = FlagLookup(catalog = factCatalog),
+    val imageRouting: ImageRouting = ImageRouting(),
 )
 
 fun StatDelta.toChanges(): List<StatChangeUi> =
@@ -285,9 +294,12 @@ fun buildDecisionUi(
     imageFiles: Map<String, String>,
     flags: Set<String> = emptySet(),
     lookup: FlagLookup = FlagLookup(),
+    imageRouting: ImageRouting = ImageRouting(),
+    focusId: String? = null,
+    period: LifePeriod? = null,
 ): DecisionUi {
     val options = event?.choices.orEmpty().associateBy { it.choiceId }
-    val imageId = pending.povImageId.orEmpty()
+    val imageId = pending.povImageId?.takeIf(String::isNotBlank) ?: event?.povImageId.orEmpty()
     return DecisionUi(
         eventId = pending.eventId,
         kind = pending.kind,
@@ -295,6 +307,7 @@ fun buildDecisionUi(
         text = pending.text,
         imageId = imageId,
         imageFile = imageFiles[imageId],
+        images = imageRouting.eventCandidates(pending.eventId, imageId, focusId, period, imageFiles),
         choices = pending.choices.mapIndexed { index, preview ->
             val option = options[preview.choiceId]
             DecisionChoiceUi(
@@ -388,6 +401,7 @@ fun buildPeriodPlayState(
     val focus = content.focuses.firstOrNull { it.focusId == state.selectedFocusId }
     val facts = buildLifeFacts(state.flags, state.stats, content.factCatalog)
     val sceneImageId = step.sceneImageId ?: focus?.sceneImageId.orEmpty()
+    val imagePeriod = endingPeriod ?: state.period
     val years = period?.years ?: 1
     return PeriodPlayUiState(
         runKey = state.runId,
@@ -429,6 +443,9 @@ fun buildPeriodPlayState(
                 imageFiles = content.imageFiles,
                 flags = state.flags,
                 lookup = content.lookup,
+                imageRouting = content.imageRouting,
+                focusId = state.selectedFocusId,
+                period = state.period,
             )
         },
         outcome = outcome,
@@ -450,6 +467,10 @@ fun buildPeriodPlayState(
         } else {
             null
         },
+        imagePeriod = imagePeriod,
+        portraitImages = content.imageRouting.portrait(imagePeriod),
+        previousPortraitImages = content.imageRouting.portrait(periods.getOrNull(periodIndex - 1)?.period),
+        sceneImages = content.imageRouting.candidates(sceneImageId, state.selectedFocusId, state.period, content.imageFiles),
     )
 }
 

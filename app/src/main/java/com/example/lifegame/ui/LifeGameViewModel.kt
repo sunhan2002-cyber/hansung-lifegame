@@ -175,6 +175,7 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
         imageFiles = repository.loadImageAssets()
             .filter { it.fileName.isNotBlank() }
             .associate { it.imageId to it.fileName },
+        imageRouting = com.example.lifegame.data.ImageRoutingRepository(getApplication<Application>()).load(),
         factCatalog = factCatalog,
         lookup = FlagLookup.from(decisions, factCatalog),
     )

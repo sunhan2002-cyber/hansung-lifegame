@@ -2,6 +2,7 @@ package com.example.lifegame.ui.screens
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -31,7 +32,8 @@ import androidx.compose.ui.unit.sp
 import com.example.lifegame.ui.PeriodPlayUiState
 import com.example.lifegame.ui.components.EffectText
 import com.example.lifegame.ui.components.InkButton
-import com.example.lifegame.ui.components.PixelFigurePlaceholder
+import com.example.lifegame.ui.components.PixelAssetImage
+import com.example.lifegame.ui.images.ImageCandidate
 import com.example.lifegame.ui.components.SectionLabel
 import com.example.lifegame.ui.components.ThinRule
 import com.example.lifegame.ui.theme.LifeGameInk
@@ -87,7 +89,7 @@ fun ChapterFocusScreen(
                 lineHeight = 23.sp,
             )
 
-            GrowthStage(previous = state.previousPeriodName, current = state.periodName)
+            GrowthStage(state)
 
             SectionLabel("이번 시기에 집중할 것", trailing = "시기가 끝날 때까지 바꿀 수 없어요")
             state.focusOptions.forEach { option ->
@@ -121,18 +123,18 @@ fun ChapterFocusScreen(
     }
 }
 
-/** 지난 시기 모습 → 이번 시기 모습. 도트 스프라이트가 들어오기 전까지는 자리 표시 실루엣. */
+/** 실제 생애 시기에 연결된 이전 초상과 현재 초상. */
 @Composable
-private fun GrowthStage(previous: String?, current: String) {
+private fun GrowthStage(state: PeriodPlayUiState) {
     Column(Modifier.fillMaxWidth().padding(vertical = 8.dp), horizontalAlignment = Alignment.CenterHorizontally) {
         Row(verticalAlignment = Alignment.Bottom, horizontalArrangement = Arrangement.Center) {
-            if (previous != null) {
-                FigureWithLabel(height = 92, grown = false, label = "${previous} 끝", emphasized = false)
+            if (state.previousPeriodName != null) {
+                FigureWithLabel(state.previousPortraitImages, 108, "${state.previousPeriodName} 끝", false)
                 Box(Modifier.padding(horizontal = 18.dp, vertical = 40.dp)) {
                     Text("→", color = LifeGameInkTertiary, fontSize = 18.sp)
                 }
             }
-            FigureWithLabel(height = 116, grown = true, label = "$current 시작", emphasized = true)
+            FigureWithLabel(state.portraitImages, 132, "${state.periodName} 시작", true)
         }
         Spacer(Modifier.height(4.dp))
         ThinRule(Modifier.width(240.dp))
@@ -140,9 +142,9 @@ private fun GrowthStage(previous: String?, current: String) {
 }
 
 @Composable
-private fun FigureWithLabel(height: Int, grown: Boolean, label: String, emphasized: Boolean) {
+private fun FigureWithLabel(images: List<ImageCandidate>, width: Int, label: String, emphasized: Boolean) {
     Column(horizontalAlignment = Alignment.CenterHorizontally) {
-        PixelFigurePlaceholder(height = height.dp, grown = grown)
+        PixelAssetImage(images, label, Modifier.width(width.dp).aspectRatio(4f / 3f))
         Spacer(Modifier.height(8.dp))
         Text(
             text = label,

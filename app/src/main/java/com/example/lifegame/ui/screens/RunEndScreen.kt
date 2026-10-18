@@ -3,6 +3,7 @@ package com.example.lifegame.ui.screens
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -28,6 +29,7 @@ import com.example.lifegame.ui.PeriodPlayUiState
 import com.example.lifegame.ui.components.Achievements
 import com.example.lifegame.ui.components.FactLines
 import com.example.lifegame.ui.components.InkButton
+import com.example.lifegame.ui.components.PixelAssetImage
 import com.example.lifegame.ui.components.SectionLabel
 import com.example.lifegame.ui.components.ThinRule
 import com.example.lifegame.ui.theme.LifeGameCard
@@ -67,6 +69,10 @@ fun RunEndScreen(
             verticalArrangement = Arrangement.spacedBy(14.dp),
         ) {
             Text("인생 요약", color = LifeGameInkSecondary, fontSize = 13.sp)
+            PixelAssetImage(
+                state.portraitImages, "${state.periodName} 마지막 모습",
+                Modifier.fillMaxWidth().aspectRatio(4f / 3f).testTag("ending_portrait"),
+            )
             Text(
                 text = state.playerName,
                 color = LifeGameInk,

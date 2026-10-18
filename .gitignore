@@ -1,6 +1,7 @@
 # Local build output
 .gradle/
 .kotlin/
+__pycache__/
 build/
 app/build/
 

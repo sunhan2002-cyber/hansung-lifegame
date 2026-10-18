@@ -9,6 +9,7 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
@@ -57,7 +58,7 @@ import com.example.lifegame.ui.components.LifePathSummary
 import com.example.lifegame.ui.components.LifeGauge
 import com.example.lifegame.ui.components.NOISE_ADVANCE_MILLIS
 import com.example.lifegame.ui.components.PeriodHeader
-import com.example.lifegame.ui.components.PixelFigurePlaceholder
+import com.example.lifegame.ui.components.PixelAssetImage
 import com.example.lifegame.ui.components.StatsSheet
 import com.example.lifegame.ui.components.normalAdvance
 import com.example.lifegame.ui.components.rememberReduceMotion
@@ -161,11 +162,10 @@ private fun CharacterMainPanel(state: PeriodPlayUiState, onStatsClick: () -> Uni
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.spacedBy(8.dp),
     ) {
-        PixelFigurePlaceholder(
-            height = 130.dp,
-            grown = state.periodName != "영아기",
-            color = LifeGameInk.copy(alpha = 0.72f),
-            modifier = Modifier
+        PixelAssetImage(
+            candidates = state.portraitImages,
+            description = "${state.periodName} 플레이어 모습",
+            modifier = Modifier.width(200.dp).aspectRatio(4f / 3f)
                 .clickable(role = Role.Button, onClick = onStatsClick)
                 .semantics { contentDescription = "플레이어 현재 모습, 능력치 보기" },
         )

@@ -7,8 +7,8 @@ v4 redesign data that will be connected by the frontend/backend PRs:
 - periods.sample.json / focuses.sample.json
 
 The script is dependency-free. If a referenced PNG file exists, it reads the PNG
-header directly and validates 300x225 dimensions; missing image files are allowed
-while the project is still using placeholders.
+header directly and validates positive 4:3 dimensions; missing legacy files are allowed
+while placeholders are in use. Routed images are required; --images-only isolates image checks.
 """
 from __future__ import annotations
 
@@ -16,6 +16,7 @@ import json
 import re
 import struct
 import sys
+from validate_images import audit_routing, routed_path, valid_dimensions
 from collections import Counter
 from pathlib import Path
 from typing import Any
@@ -59,7 +60,7 @@ FOCUS_REQUIRED = {
 }
 
 VALID_STAGES = {"INFANT", "CHILD", "TEEN", "ADULT"}
-VALID_PERIODS = {"INFANT", "CHILD", "TEEN", "YOUNG_ADULT", "MIDDLE"}
+VALID_PERIODS = {"INFANT", "CHILD", "TEEN", "YOUNG_ADULT", "MIDDLE", "OLD_AGE"}
 VALID_EVENT_TYPES = {"NORMAL", "SPECIAL"}
 VALID_EVENT_KINDS = {"MILESTONE", "INCIDENT", "BIG_INCIDENT"}
 VALID_IMAGE_USAGES = {
@@ -76,8 +77,6 @@ VALID_IMAGE_USAGES = {
 ID_PATTERN = re.compile(r"^[a-z0-9_]+$")
 PLACEHOLDER_PATTERN = re.compile(r"\{([^{}]+)\}")
 ALLOWED_PLACEHOLDERS = {"name", "nameCall"}
-REQUIRED_IMAGE_WIDTH = 300
-REQUIRED_IMAGE_HEIGHT = 225
 
 
 class ValidationReport:
@@ -178,6 +177,11 @@ def read_png_size(path: Path) -> tuple[int, int] | None:
 
 
 def find_image_file(file_name: str) -> Path | None:
+    if Path(file_name).name != file_name or "\\" in file_name or ":" in file_name:
+        return None
+    routed = routed_path(ASSET_DIR, file_name)
+    if routed is not None:
+        return routed
     for directory in IMAGE_DIRS:
         candidate = directory / file_name
         if candidate.exists():
@@ -215,18 +219,18 @@ def validate_images(images: Any, report: ValidationReport) -> set[str]:
 
         width = image.get("width")
         height = image.get("height")
-        if width is not None and width != REQUIRED_IMAGE_WIDTH:
-            report.error(f"{image_id}.width must be {REQUIRED_IMAGE_WIDTH}")
-        if height is not None and height != REQUIRED_IMAGE_HEIGHT:
-            report.error(f"{image_id}.height must be {REQUIRED_IMAGE_HEIGHT}")
+        if (width is not None or height is not None) and not valid_dimensions(width, height):
+            report.error(f"{image_id} metadata dimensions must be positive integers with 4:3 ratio")
 
         existing_file = find_image_file(file_name) if isinstance(file_name, str) else None
         if existing_file:
             size = read_png_size(existing_file)
             if size is None:
                 report.error(f"{image_id} file is not a valid PNG: {existing_file}")
-            elif size != (REQUIRED_IMAGE_WIDTH, REQUIRED_IMAGE_HEIGHT):
-                report.error(f"{image_id} image size must be 300x225; current={size[0]}x{size[1]}")
+            elif not valid_dimensions(*size):
+                report.error(f"{image_id} image dimensions must be positive 4:3; current={size[0]}x{size[1]}")
+            elif width is not None and size != (width, height):
+                report.error(f"{image_id} metadata does not match actual PNG dimensions: {size}")
 
         desc = f"{image.get('description', '')} {image.get('fallbackText', '')}"
         if any(word in desc.lower() for word in ["watermark", "logo text", "caption text"]):
@@ -535,13 +539,17 @@ def main() -> int:
     focuses = load_json("focuses.sample.json", report)
 
     image_ids = validate_images(images, report)
-    period_ids = validate_periods(periods, report)
-    validate_focuses(focuses, period_ids, image_ids, report)
-    validate_events(events, image_ids, report)
-    validate_endings(endings, report)
-    validate_characters(characters, report)
+    image_errors, image_metrics = audit_routing(ROOT)
+    report.errors.extend(image_errors)
+    report.metrics.update(image_metrics)
+    if "--images-only" not in sys.argv:
+        period_ids = validate_periods(periods, report)
+        validate_focuses(focuses, period_ids, image_ids, report)
+        validate_events(events, image_ids, report)
+        validate_endings(endings, report)
+        validate_characters(characters, report)
 
-    print("LifeGame content validation")
+    print("LifeGame image validation" if "--images-only" in sys.argv else "LifeGame content validation")
     print("===========================")
     for key, value in report.metrics.items():
         print(f"{key}: {value}")
@@ -557,7 +565,7 @@ def main() -> int:
             print(f"- {error}")
         return 1
 
-    print("\nPASS: content JSON files are valid.")
+    print("\nPASS: image assets and mappings are valid." if "--images-only" in sys.argv else "\nPASS: content JSON files are valid.")
     return 0
 
 
