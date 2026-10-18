@@ -138,7 +138,7 @@ fun PeriodProgress(
     Box(
         modifier = modifier
             .fillMaxWidth()
-            .height(43.dp)
+            .heightIn(min = 43.dp)
             .semantics {
                 contentDescription = marks.firstOrNull { it.isCurrent }?.let { "${it.label} 시기" }.orEmpty()
             },
