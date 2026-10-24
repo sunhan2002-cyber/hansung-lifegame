@@ -5,7 +5,7 @@
     "type": "NORMAL",
     "isFallback": false,
     "isMilestone": false,
-    "title": "브로콜리 이유식",
+    "title": "브로콜리 반찬",
     "text": "엄마: \"{nameCall}~ 비행기 들어갑니다~ 슈우웅~\" 숟가락 위에 초록색 덩어리가 있다.",
     "imageId": "img_infant_baby_food_001",
     "conditions": {
@@ -83,14 +83,14 @@
           "사회성": 1,
           "건강": -2
         },
-        "resultText": "엄마도 한 입 먹더니 조용히 이유식을 치웠다.",
+        "resultText": "엄마도 한 입 먹더니 조용히 반찬을 치웠다.",
         "addFlags": [
           "picky_eater"
         ],
         "outcomes": [
           {
             "outcomeId": "c_primary",
-            "text": "엄마도 한 입 먹더니 조용히 이유식을 치웠다.",
+            "text": "엄마도 한 입 먹더니 조용히 반찬을 치웠다.",
             "chance": 100,
             "primary": true,
             "hidden": false,
@@ -718,7 +718,7 @@
           {
             "outcomeId": "c_primary",
             "text": "박수 소리가 제일 컸다. 돈은 끝까지 안 놨는데 엄마가 결국 가져갔다. 그날 이후 돈 냄새만 맡으면 눈이 반짝인다.",
-            "chance": 100,
+            "chance": 75,
             "primary": true,
             "hidden": false,
             "death": false,
@@ -731,6 +731,26 @@
               "cash_grabber"
             ],
             "lifeDelta": 10
+          },
+          {
+            "outcomeId": "c_double",
+            "text": "잡고 보니 5만 원권이 두 장이었다. 할아버지가 몰래 한 장을 겹쳐 둔 것이다. 박수가 두 배로 터졌고, 할아버지 지갑은 그날 두 배로 가벼워졌다.",
+            "chance": 25,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "운": 5,
+              "사회성": 2,
+              "행복": -2,
+              "건강": 10
+            },
+            "addFlags": [
+              "cash_grabber"
+            ],
+            "chanceWeights": {
+              "운": 3
+            }
           }
         ],
         "alwaysAvailable": true,
@@ -1057,7 +1077,7 @@
           {
             "outcomeId": "c_primary",
             "text": "제일 빨랐다. 아빠가 한숨을 쉬며 녹화를 멈췄다.",
-            "chance": 100,
+            "chance": 70,
             "primary": true,
             "hidden": false,
             "death": false,
@@ -1067,6 +1087,25 @@
               "사회성": -1
             },
             "addFlags": []
+          },
+          {
+            "outcomeId": "c_stood_up",
+            "text": "기어가다 탁자를 잡고 벌떡 일어섰다. 그리고 걸었다. 녹화는 이미 꺼져 있었다. 아빠는 지금도 그 장면을 말로만 설명한다.",
+            "chance": 30,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "운동능력": 3,
+              "행복": 1,
+              "운": -1
+            },
+            "addFlags": [
+              "early_walker"
+            ],
+            "chanceWeights": {
+              "운동능력": 3
+            }
           }
         ]
       }
@@ -1947,7 +1986,7 @@
           {
             "outcomeId": "a_primary",
             "text": "점심때 친구랑 깔깔거렸다. 데리러 온 엄마가 오히려 서운해했다.",
-            "chance": 100,
+            "chance": 70,
             "primary": true,
             "hidden": false,
             "death": false,
@@ -1958,7 +1997,29 @@
             "addFlags": [
               "daycare_adapted"
             ],
-            "lifeDelta": 10
+            "lifeDelta": 10,
+            "chanceWeights": {
+              "사회성": 2
+            }
+          },
+          {
+            "outcomeId": "a_late_tears",
+            "text": "씩씩하게 들어갔다. 10분 뒤에 엄마가 없다는 게 생각났다. 그때부터 울었다. 그날 선생님 무릎은 하루 종일 내 자리였다.",
+            "chance": 30,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "사회성": 1,
+              "행복": -1,
+              "건강": 10
+            },
+            "addFlags": [
+              "daycare_adapted"
+            ],
+            "chanceWeights": {
+              "사회성": -2
+            }
           }
         ]
       },
@@ -3364,7 +3425,7 @@
           {
             "outcomeId": "c_primary",
             "text": "몰표 당선. 공약은 못 지켰다. 정치 인생 3일 만에 탄핵 위기.",
-            "chance": 100,
+            "chance": 70,
             "primary": true,
             "hidden": false,
             "death": false,
@@ -3376,6 +3437,25 @@
             "addFlags": [
               "class_leader"
             ]
+          },
+          {
+            "outcomeId": "c_promise_kept",
+            "text": "몰표 당선. 다음 날 영양사 선생님이 교실에 찾아왔다. \"금요일만 두 번 먹자.\" 공약은 금요일마다 지켜졌고 임기는 무사히 끝났다.",
+            "chance": 30,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "사회성": 4,
+              "행복": 2,
+              "운": 1
+            },
+            "addFlags": [
+              "class_leader"
+            ],
+            "chanceWeights": {
+              "운": 3
+            }
           }
         ]
       }
@@ -3417,7 +3497,7 @@
           {
             "outcomeId": "a_primary",
             "text": "손가락이 빠르다고 칭찬받았다. 게임 덕분인 건 비밀. 그해 겨울, 처음으로 악보 없이 한 곡을 끝까지 쳤다.",
-            "chance": 100,
+            "chance": 75,
             "primary": true,
             "hidden": false,
             "death": false,
@@ -3429,7 +3509,28 @@
             "addFlags": [
               "piano_lessons"
             ],
-            "lifeDelta": 10
+            "lifeDelta": 10,
+            "chanceWeights": {
+              "행복": 2
+            }
+          },
+          {
+            "outcomeId": "a_quit",
+            "text": "석 달 만에 체르니 책이 가방 밑바닥에 깔렸다. 피아노는 그만뒀다. 대신 학원 옆 문방구 사장님과 아주 친해졌다.",
+            "chance": 25,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "사회성": 2,
+              "행복": 1,
+              "경제력": -3,
+              "건강": 10
+            },
+            "addFlags": [],
+            "chanceWeights": {
+              "행복": -2
+            }
           }
         ],
         "requiredStats": {
@@ -3897,7 +3998,7 @@
           {
             "outcomeId": "b_primary",
             "text": "꽝 10장. 뒷면: '꽝 10장 모으면 1회 무료'. 절망과 희망을 동시에 배웠다.",
-            "chance": 100,
+            "chance": 75,
             "primary": true,
             "hidden": false,
             "death": false,
@@ -3909,6 +4010,25 @@
             "addFlags": [
               "gacha_lover"
             ]
+          },
+          {
+            "outcomeId": "b_golden",
+            "text": "아홉 장은 꽝, 마지막 한 장이 황금 카드였다. 다음 날 학년의 왕이 됐다. 왕위는 정확히 일주일 갔다.",
+            "chance": 25,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "운": 4,
+              "사회성": 2,
+              "경제력": -4
+            },
+            "addFlags": [
+              "gacha_lover"
+            ],
+            "chanceWeights": {
+              "운": 3
+            }
           }
         ]
       },
@@ -4912,7 +5032,7 @@
           {
             "outcomeId": "a_primary",
             "text": "1등! 그리고 못 멈춰서 교장 선생님 천막에 돌진.",
-            "chance": 100,
+            "chance": 70,
             "primary": true,
             "hidden": false,
             "death": false,
@@ -4924,7 +5044,27 @@
             "addFlags": [
               "relay_hero"
             ],
-            "lifeDelta": 10
+            "lifeDelta": 10,
+            "chanceWeights": {
+              "운동능력": 3
+            }
+          },
+          {
+            "outcomeId": "a_fell",
+            "text": "마지막 코너에서 넘어졌다. 일어나서 끝까지 뛰었다. 꼴찌였는데 박수는 1등보다 컸다. 엄마 현수막도 끝까지 내려가지 않았다.",
+            "chance": 30,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "사회성": 2,
+              "행복": 1,
+              "건강": 8
+            },
+            "addFlags": [],
+            "chanceWeights": {
+              "운동능력": -2
+            }
           }
         ]
       },
@@ -6335,7 +6475,7 @@
           {
             "outcomeId": "a_primary",
             "text": "출발하자마자 수경이 벗겨졌다. 눈을 감고 헤엄쳤는데 1등이었다.",
-            "chance": 100,
+            "chance": 65,
             "primary": true,
             "hidden": false,
             "death": false,
@@ -6348,7 +6488,27 @@
               "swim_star",
               "sports_star"
             ],
-            "lifeDelta": 10
+            "lifeDelta": 10,
+            "chanceWeights": {
+              "운동능력": 3
+            }
+          },
+          {
+            "outcomeId": "a_wall",
+            "text": "수경이 벗겨져 눈을 감고 헤엄쳤다. 손보다 머리가 먼저 벽에 닿았다. 4등. 이마의 혹은 1등만큼 컸다.",
+            "chance": 35,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "운동능력": 2,
+              "행복": -1,
+              "건강": 8
+            },
+            "addFlags": [],
+            "chanceWeights": {
+              "운동능력": -3
+            }
           }
         ]
       },
@@ -6446,7 +6606,7 @@
           {
             "outcomeId": "a_primary",
             "text": "심사위원: \"실패를 솔직하게 분석한 게 인상적이네요.\" 금상.",
-            "chance": 100,
+            "chance": 70,
             "primary": true,
             "hidden": false,
             "death": false,
@@ -6459,7 +6619,30 @@
               "science_star",
               "culture_star"
             ],
-            "lifeDelta": 10
+            "lifeDelta": 10,
+            "chanceWeights": {
+              "지력": 2
+            }
+          },
+          {
+            "outcomeId": "a_questions",
+            "text": "심사위원이 질문을 세 개 던졌다. 두 개는 \"모르겠습니다\"였다. 동상. 그 질문 세 개는 공책 맨 앞장에 적어 두었다.",
+            "chance": 30,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "지력": 3,
+              "행복": -1,
+              "건강": 10
+            },
+            "addFlags": [
+              "science_star",
+              "culture_star"
+            ],
+            "chanceWeights": {
+              "지력": -2
+            }
           }
         ],
         "requiredStats": {
@@ -7211,7 +7394,7 @@
           {
             "outcomeId": "c_primary",
             "text": "골키퍼가 그냥 잡았다. 다음 키커 덕에 이겼다. 별명 '파넨카' 획득.",
-            "chance": 100,
+            "chance": 70,
             "primary": true,
             "hidden": false,
             "death": false,
@@ -7221,6 +7404,27 @@
               "사회성": -2
             },
             "addFlags": []
+          },
+          {
+            "outcomeId": "c_panenka",
+            "text": "공이 골키퍼 머리 위로 천천히 넘어갔다. 우승. 감독님은 나를 번쩍 들어 올렸다가 내려놓으며 말했다. \"다신 하지 마.\"",
+            "chance": 30,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "운": 2,
+              "행복": 4,
+              "사회성": 1
+            },
+            "addFlags": [
+              "soccer_star",
+              "sports_star"
+            ],
+            "chanceWeights": {
+              "운": 3,
+              "운동능력": 1
+            }
           }
         ]
       }
@@ -7264,7 +7468,7 @@
           {
             "outcomeId": "a_primary",
             "text": "셋째 페이지를 까먹고 즉흥으로 쳤다. 심사평: '해석이 독창적.' 장려상.",
-            "chance": 100,
+            "chance": 70,
             "primary": true,
             "hidden": false,
             "death": false,
@@ -7276,7 +7480,29 @@
             "addFlags": [
               "music_path"
             ],
-            "lifeDelta": 10
+            "lifeDelta": 10,
+            "chanceWeights": {
+              "행복": 2
+            }
+          },
+          {
+            "outcomeId": "a_blank",
+            "text": "무대에서 인사까지 했는데 첫 음이 기억나지 않았다. 선생님이 객석에서 허공에 건반을 쳐 보였다. 끝까지 쳤다. 상은 없었고 박수는 있었다.",
+            "chance": 30,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "사회성": 2,
+              "행복": -1,
+              "건강": 10
+            },
+            "addFlags": [
+              "music_path"
+            ],
+            "chanceWeights": {
+              "운": -2
+            }
           }
         ]
       },
@@ -8901,7 +9127,7 @@
           {
             "outcomeId": "a_primary",
             "text": "반 5등. 친구들 길드 이름은 끝까지 몰랐다.",
-            "chance": 100,
+            "chance": 70,
             "primary": true,
             "hidden": false,
             "death": false,
@@ -8913,7 +9139,27 @@
             "addFlags": [
               "study_hard"
             ],
-            "lifeDelta": 10
+            "lifeDelta": 10,
+            "chanceWeights": {
+              "지력": 2
+            }
+          },
+          {
+            "outcomeId": "a_desk_nap",
+            "text": "독서실 칸막이 안에서 매일 밤 잤다. 의자에 앉아 자는 법은 완벽하게 익혔다. 성적은 그대로였고, 목은 일주일 동안 돌아가지 않았다.",
+            "chance": 30,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "지력": 1,
+              "건강": 8,
+              "행복": -1
+            },
+            "addFlags": [],
+            "chanceWeights": {
+              "건강": -2
+            }
           }
         ],
         "requiredStats": {
@@ -9557,7 +9803,7 @@
           {
             "outcomeId": "a_primary",
             "text": "마감 3분 전 제출. 대상! 시상식 사진 속 나는 눈 뜨고 자고 있었다.",
-            "chance": 100,
+            "chance": 65,
             "primary": true,
             "hidden": false,
             "death": false,
@@ -9569,7 +9815,27 @@
             "addFlags": [
               "hackathon_winner"
             ],
-            "lifeDelta": 10
+            "lifeDelta": 10,
+            "chanceWeights": {
+              "지력": 2
+            }
+          },
+          {
+            "outcomeId": "a_laptop_died",
+            "text": "새벽 4시에 노트북이 꺼졌다. 마지막 저장은 2시였다. 두 시간 만에 다시 짰다. 입선. 그날 이후 30분마다 저장 단축키를 누른다.",
+            "chance": 35,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "지력": 3,
+              "건강": 7,
+              "행복": -1
+            },
+            "addFlags": [],
+            "chanceWeights": {
+              "운": -3
+            }
           }
         ]
       },
@@ -9673,7 +9939,7 @@
           {
             "outcomeId": "a_primary",
             "text": "회장의 허점을 짚어 우승. 회장이 복도에서 나를 피해 다닌다.",
-            "chance": 100,
+            "chance": 65,
             "primary": true,
             "hidden": false,
             "death": false,
@@ -9685,7 +9951,28 @@
             "addFlags": [
               "debate_champ"
             ],
-            "lifeDelta": 10
+            "lifeDelta": 10,
+            "chanceWeights": {
+              "지력": 2
+            }
+          },
+          {
+            "outcomeId": "a_runner_up",
+            "text": "회장이 내 논리를 내 말로 되받아쳤다. 준우승. 시상식이 끝나고 회장이 먼저 손을 내밀었다. \"내년에 또 하자.\"",
+            "chance": 35,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "지력": 3,
+              "사회성": 2,
+              "행복": -2,
+              "건강": 10
+            },
+            "addFlags": [],
+            "chanceWeights": {
+              "사회성": -2
+            }
           }
         ]
       },
@@ -10020,7 +10307,8 @@
             },
             "addFlags": [
               "night_gamer"
-            ]
+            ],
+            "deathCause": "밤샘 게임 과로"
           }
         ]
       },
@@ -10304,7 +10592,7 @@
           {
             "outcomeId": "a_primary",
             "text": "최종 명단 합격. 기말 재시험은 원래 시험보다 어려웠다.",
-            "chance": 100,
+            "chance": 65,
             "primary": true,
             "hidden": false,
             "death": false,
@@ -10316,7 +10604,28 @@
             "addFlags": [
               "athlete_path"
             ],
-            "lifeDelta": 10
+            "lifeDelta": 10,
+            "chanceWeights": {
+              "운동능력": 3
+            }
+          },
+          {
+            "outcomeId": "a_reserve",
+            "text": "최종 명단 바로 아래, 예비 1번이었다. 기말 재시험까지 망쳤다. 코치가 어깨를 두드렸다. \"내년엔 네 자리다.\"",
+            "chance": 35,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "운동능력": 2,
+              "행복": -3,
+              "지력": -2,
+              "건강": 10
+            },
+            "addFlags": [],
+            "chanceWeights": {
+              "운동능력": -3
+            }
           }
         ]
       },
@@ -10445,7 +10754,7 @@
           {
             "outcomeId": "c_primary",
             "text": "3초 정적. \"…나 축제 때 뭐 하냐고 물어본 건데?\" 그래도 다음 날 매점에 같이 갔다.",
-            "chance": 100,
+            "chance": 65,
             "primary": true,
             "hidden": false,
             "death": false,
@@ -10457,6 +10766,26 @@
             "addFlags": [
               "first_love"
             ]
+          },
+          {
+            "outcomeId": "c_me_too",
+            "text": "3초 정적. \"…나도.\" 축제 날, 둘이 솜사탕 하나를 나눠 먹었다. 다음 날 아침엔 반 전체가 알고 있었다.",
+            "chance": 35,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "사회성": 2,
+              "행복": 4,
+              "지력": -1
+            },
+            "addFlags": [
+              "first_love"
+            ],
+            "chanceWeights": {
+              "사회성": 3,
+              "운": 2
+            }
           }
         ]
       }
@@ -12044,8 +12373,8 @@
     "type": "NORMAL",
     "isFallback": false,
     "isMilestone": false,
-    "title": "수능 D-100",
-    "text": "칠판에 'D-100'. 누군가 '아직 100일이나?'라고 썼고, 누군가 '100일밖에?'로 고쳤다.",
+    "title": "수능 D-365",
+    "text": "고2 마지막 날, 칠판에 'D-365'. 누군가 '아직 1년이나?'라고 썼고, 누군가 '1년밖에?'로 고쳤다.",
     "imageId": "img_teen_d100_001",
     "conditions": {
       "stats": {},
@@ -12097,12 +12426,12 @@
           "지력": 1,
           "사회성": -1
         },
-        "resultText": "점수는 천천히 올랐다. 수능 날 아침, 나만 쌩쌩했다.",
+        "resultText": "점수는 천천히 올랐다. 1년 뒤 수능 날 아침, 나만 쌩쌩했다.",
         "addFlags": [],
         "outcomes": [
           {
             "outcomeId": "b_primary",
-            "text": "점수는 천천히 올랐다. 수능 날 아침, 나만 쌩쌩했다.",
+            "text": "점수는 천천히 올랐다. 1년 뒤 수능 날 아침, 나만 쌩쌩했다.",
             "chance": 100,
             "primary": true,
             "hidden": false,
@@ -12122,7 +12451,7 @@
       },
       {
         "choiceId": "C",
-        "label": "옆에 'D-99: 치킨'이라고 쓴다.",
+        "label": "옆에 'D-364: 치킨'이라고 쓴다.",
         "statDelta": {
           "사회성": 3,
           "행복": 2,
@@ -12160,7 +12489,7 @@
     "stage": "TEEN",
     "type": "NORMAL",
     "isFallback": false,
-    "isMilestone": false,
+    "isMilestone": true,
     "title": "수능 날 아침",
     "text": "수능 날 아침. 엄마가 싸 준 도시락이 묵직하다. 수험표를 챙겼는지 세 번 확인했다.",
     "imageId": "img_teen_exam_day_001",
@@ -12170,7 +12499,8 @@
         "v4:event:teen_019"
       ],
       "blockedFlags": [
-        "vocational_high"
+        "vocational_high",
+        "int_path"
       ]
     },
     "choices": [
@@ -12202,7 +12532,11 @@
             ],
             "lifeDelta": 10
           }
-        ]
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "수능 전환점 — 누구나 치르는 시험이라 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "open_turning_point",
+        "conditionBasis": "week9_age_fix"
       },
       {
         "choiceId": "B",
@@ -12219,7 +12553,7 @@
           {
             "outcomeId": "b_primary",
             "text": "마지막 다섯 문제를 전부 3번으로 찍었다. 그중 세 개가 맞았다.",
-            "chance": 100,
+            "chance": 65,
             "primary": true,
             "hidden": false,
             "death": false,
@@ -12230,9 +12564,36 @@
             "addFlags": [
               "exam_finished"
             ],
-            "lifeDelta": 10
+            "lifeDelta": 10,
+            "chanceWeights": {
+              "운": 2
+            }
+          },
+          {
+            "outcomeId": "b_all_four",
+            "text": "마지막 다섯 문제를 전부 3번으로 찍었다. 정답은 전부 4번이었다. 출제위원이 나를 아는 게 분명하다.",
+            "chance": 35,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "운": -1,
+              "지력": -1,
+              "행복": -2,
+              "건강": 10
+            },
+            "addFlags": [
+              "exam_finished"
+            ],
+            "chanceWeights": {
+              "운": -3
+            }
           }
-        ]
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "수능 전환점 — 누구나 치르는 시험이라 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "open_turning_point",
+        "conditionBasis": "week9_age_fix"
       },
       {
         "choiceId": "C",
@@ -12266,14 +12627,19 @@
             ],
             "lifeDelta": 10
           }
-        ]
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "수능 전환점 — 누구나 치르는 시험이라 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "open_turning_point",
+        "conditionBasis": "week9_age_fix"
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT",
+    "kind": "MILESTONE",
     "periods": [
       "TEEN"
-    ]
+    ],
+    "yearInPeriod": 4
   },
   {
     "eventId": "teen_039",
@@ -12880,7 +13246,7 @@
           {
             "outcomeId": "c_primary",
             "text": "알바 세 개, 여행 두 번. 생각은 하나도 정리되지 않았다. 대신 여행지에서 평생 갈 친구를 만났다.",
-            "chance": 100,
+            "chance": 70,
             "primary": true,
             "hidden": false,
             "death": false,
@@ -12892,7 +13258,30 @@
             "addFlags": [
               "gap_year"
             ],
-            "lifeDelta": 10
+            "lifeDelta": 10,
+            "chanceWeights": {
+              "사회성": 2
+            }
+          },
+          {
+            "outcomeId": "c_found_it",
+            "text": "알바하던 카페 사장님이 커피 내리는 법을 가르쳐 줬다. 1년이 끝날 무렵, 처음으로 하고 싶은 일이 하나 생겼다.",
+            "chance": 30,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 3,
+              "지력": 1,
+              "경제력": -2,
+              "건강": 10
+            },
+            "addFlags": [
+              "gap_year"
+            ],
+            "chanceWeights": {
+              "운": 3
+            }
           }
         ],
         "alwaysAvailable": true,
@@ -13255,8 +13644,7 @@
           {
             "outcomeId": "a_primary",
             "text": "용기 내서 물어봤다. \"아, 죄송해요. 기다리는 사람이 있어서요.\" 잠시 뒤 도착한 그 사람은 나랑 똑같은 옷을 입고 있었다.",
-            "chance": 100,
-            "lifeDelta": 10,
+            "chance": 70,
             "primary": true,
             "hidden": false,
             "death": false,
@@ -13264,7 +13652,29 @@
               "사회성": 1,
               "행복": -3
             },
-            "addFlags": []
+            "addFlags": [],
+            "lifeDelta": 10
+          },
+          {
+            "outcomeId": "a_number",
+            "text": "\"…저도 아까부터 보고 있었어요.\" 번호를 받았다. 손이 떨려서 이름을 세 번 틀리게 저장했다.",
+            "chance": 30,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "사회성": 3,
+              "행복": 3,
+              "건강": 10
+            },
+            "addFlags": [
+              "met_ideal",
+              "dating"
+            ],
+            "chanceWeights": {
+              "사회성": 3,
+              "운": 2
+            }
           }
         ]
       },
@@ -13667,7 +14077,8 @@
               "건강": -5,
               "사회성": -1
             },
-            "addFlags": []
+            "addFlags": [],
+            "deathCause": "이상형 앞 원샷 무리"
           }
         ]
       }
@@ -14229,7 +14640,7 @@
           {
             "outcomeId": "c_primary",
             "text": "면접관 셋이 동시에 한숨. 그런데 뒤에 있던 사장님이 크게 웃었다. 합격.",
-            "chance": 100,
+            "chance": 60,
             "primary": true,
             "hidden": false,
             "death": false,
@@ -14238,7 +14649,27 @@
               "경제력": 1,
               "사회성": -3
             },
-            "addFlags": []
+            "addFlags": [],
+            "chanceWeights": {
+              "운": 2
+            }
+          },
+          {
+            "outcomeId": "c_rejected",
+            "text": "면접관 셋이 동시에 한숨. 뒤에 있던 사장님도 한숨. 불합격 문자는 엘리베이터 안에서 왔다.",
+            "chance": 40,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "사회성": -2,
+              "행복": -2,
+              "지력": 1
+            },
+            "addFlags": [],
+            "chanceWeights": {
+              "운": -3
+            }
           }
         ]
       }
@@ -14659,7 +15090,8 @@
             },
             "addFlags": [
               "blackout_work"
-            ]
+            ],
+            "deathCause": "회식 과음 사고"
           }
         ]
       },
@@ -15248,7 +15680,8 @@
               "경제력": 2,
               "건강": -4
             },
-            "addFlags": []
+            "addFlags": [],
+            "deathCause": "밤 11시의 보고서"
           }
         ]
       },
@@ -15418,7 +15851,7 @@
           {
             "outcomeId": "a_primary",
             "text": "라면으로 1년. 투자 유치한 날, 친구 어머니: \"이제 거실 좀 비워 줄래?\"",
-            "chance": 100,
+            "chance": 60,
             "primary": true,
             "hidden": false,
             "death": false,
@@ -15429,7 +15862,28 @@
             },
             "addFlags": [
               "startup_founder"
-            ]
+            ],
+            "chanceWeights": {
+              "지력": 2,
+              "운": 2
+            }
+          },
+          {
+            "outcomeId": "a_closed",
+            "text": "라면으로 1년. 투자는 끝내 오지 않았다. 마지막 회의에서 둘이 동시에 말했다. \"재밌었다.\" 거실은 다시 거실이 됐다.",
+            "chance": 40,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "지력": 3,
+              "행복": 1,
+              "경제력": -6
+            },
+            "addFlags": [],
+            "chanceWeights": {
+              "운": -2
+            }
           }
         ]
       },
@@ -15490,7 +15944,8 @@
             },
             "addFlags": [
               "startup_founder"
-            ]
+            ],
+            "deathCause": "투잡 과로"
           }
         ]
       }
@@ -15533,7 +15988,7 @@
           {
             "outcomeId": "a_primary",
             "text": "비용과 서류가 만만치 않았다. 1년 뒤 등록증이 나왔다. 액자에 넣어 걸었다.",
-            "chance": 100,
+            "chance": 65,
             "primary": true,
             "hidden": false,
             "death": false,
@@ -15543,7 +15998,27 @@
             },
             "addFlags": [
               "patent_holder"
-            ]
+            ],
+            "chanceWeights": {
+              "지력": 2
+            }
+          },
+          {
+            "outcomeId": "a_beaten",
+            "text": "1년 뒤 거절 통지가 왔다. 비슷한 특허가 지난달 먼저 등록돼 있었다. 출원 번호 차이는 세 칸이었다.",
+            "chance": 35,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "지력": 2,
+              "경제력": -3,
+              "행복": -2
+            },
+            "addFlags": [],
+            "chanceWeights": {
+              "운": -2
+            }
           }
         ]
       },
@@ -15637,7 +16112,7 @@
           {
             "outcomeId": "a_primary",
             "text": "반토막 났다가 원금 회복. 그 한 달 동안 흰머리가 세 가닥 났다.",
-            "chance": 100,
+            "chance": 60,
             "primary": true,
             "hidden": false,
             "death": false,
@@ -15648,6 +16123,43 @@
             "addFlags": [
               "crypto_scare"
             ]
+          },
+          {
+            "outcomeId": "a_tenfold",
+            "text": "다음 날 열 배가 됐다. 그다음 날 다시 반이 됐다. 팔 타이밍은 화장실에 있을 때 지나갔다. 그래도 치킨 두 마리 값은 남았다.",
+            "chance": 20,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "운": 2,
+              "경제력": 1,
+              "행복": 1
+            },
+            "addFlags": [
+              "crypto_scare"
+            ],
+            "chanceWeights": {
+              "운": 3
+            }
+          },
+          {
+            "outcomeId": "a_vanished",
+            "text": "코인 이름을 검색하니 뉴스가 떴다. '개발자 잠적.' 친구 말은 맞았다. 이번엔 진짜로 사라졌다.",
+            "chance": 20,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "경제력": -4,
+              "행복": -2
+            },
+            "addFlags": [
+              "crypto_scare"
+            ],
+            "chanceWeights": {
+              "운": -3
+            }
           }
         ]
       },
@@ -15857,7 +16369,7 @@
           {
             "outcomeId": "a_primary",
             "text": "하얀 경차에 '흰둥이'라는 이름을 붙였다. 주말마다 세차를 한다.",
-            "chance": 100,
+            "chance": 70,
             "primary": true,
             "hidden": false,
             "death": false,
@@ -15867,7 +16379,28 @@
             },
             "addFlags": [
               "first_car"
-            ]
+            ],
+            "chanceWeights": {
+              "운": 2
+            }
+          },
+          {
+            "outcomeId": "a_tow",
+            "text": "흰둥이는 일주일 만에 고속도로 갓길에 섰다. 견인차 기사님이 말했다. \"이 차, 저번 주에도 태웠는데.\"",
+            "chance": 30,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "경제력": -3,
+              "행복": -1
+            },
+            "addFlags": [
+              "first_car"
+            ],
+            "chanceWeights": {
+              "운": -3
+            }
           }
         ]
       },
@@ -17031,7 +17564,8 @@
             },
             "addFlags": [
               "burnout"
-            ]
+            ],
+            "deathCause": "번아웃 과로"
           }
         ]
       },
@@ -17279,7 +17813,7 @@
           {
             "outcomeId": "a_primary",
             "text": "문패를 달았다. 30년 뒤엔 진짜 내 집. 그때 몇 살인지 계산하다 그만뒀다.",
-            "chance": 100,
+            "chance": 70,
             "primary": true,
             "hidden": false,
             "death": false,
@@ -17291,7 +17825,29 @@
             "addFlags": [
               "home_owner"
             ],
-            "lifeDelta": 10
+            "lifeDelta": 10,
+            "chanceWeights": {
+              "경제력": 2
+            }
+          },
+          {
+            "outcomeId": "a_rate_hike",
+            "text": "문패를 단 다음 달에 금리가 올랐다. 월급날마다 은행에 먼저 인사한다. 그래도 내 집 창문으로 보는 노을은 좋았다.",
+            "chance": 30,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "경제력": -2,
+              "행복": 2,
+              "건강": 7
+            },
+            "addFlags": [
+              "home_owner"
+            ],
+            "chanceWeights": {
+              "경제력": -2
+            }
           }
         ]
       },
@@ -17602,7 +18158,7 @@
           {
             "outcomeId": "a_primary",
             "text": "합격했다. 감독관이 \"깜빡이를 참 열심히 켜시네요\"라고 했다.",
-            "chance": 100,
+            "chance": 75,
             "primary": true,
             "hidden": false,
             "death": false,
@@ -17612,7 +18168,26 @@
             },
             "addFlags": [
               "driver_license"
-            ]
+            ],
+            "chanceWeights": {
+              "지력": 2
+            }
+          },
+          {
+            "outcomeId": "a_curb",
+            "text": "출발은 침착했다. 우회전에서 연석을 밟았다. 불합격. 감독관이 덧붙였다. \"출발은 정말 침착하셨어요.\"",
+            "chance": 25,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": -2,
+              "경제력": -1
+            },
+            "addFlags": [],
+            "chanceWeights": {
+              "운": -2
+            }
           }
         ]
       },
@@ -18926,7 +19501,7 @@
           {
             "outcomeId": "a_primary",
             "text": "마지막 출근 날, 후배들이 화분을 줬다. 다음 날 아침 9시, 갈 곳이 없다는 게 이상하게 좋았다.",
-            "chance": 100,
+            "chance": 65,
             "primary": true,
             "hidden": false,
             "death": false,
@@ -18938,7 +19513,30 @@
             "addFlags": [
               "early_retire"
             ],
-            "lifeDelta": 10
+            "lifeDelta": 10,
+            "chanceWeights": {
+              "행복": 2
+            }
+          },
+          {
+            "outcomeId": "a_long_morning",
+            "text": "첫 달은 좋았다. 둘째 달부터 아침 9시가 너무 길었다. 결국 동네 도서관 문 여는 시간에 맞춰 출근하기 시작했다.",
+            "chance": 35,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "경제력": 3,
+              "행복": -2,
+              "지력": 1,
+              "건강": 10
+            },
+            "addFlags": [
+              "early_retire"
+            ],
+            "chanceWeights": {
+              "사회성": -2
+            }
           }
         ]
       },
@@ -19036,7 +19634,7 @@
           {
             "outcomeId": "a_primary",
             "text": "개업 첫날 줄이 길었다. 전부 친구들이었다. 둘째 주부터는 모르는 손님도 왔다.",
-            "chance": 100,
+            "chance": 55,
             "primary": true,
             "hidden": false,
             "death": false,
@@ -19047,7 +19645,31 @@
             },
             "addFlags": [
               "chicken_shop"
-            ]
+            ],
+            "chanceWeights": {
+              "사회성": 2,
+              "운": 2
+            }
+          },
+          {
+            "outcomeId": "a_shut",
+            "text": "개업 첫날 줄은 친구들이었다. 둘째 주에도 친구들이었다. 1년 뒤 간판을 내렸다. 친구들은 지금도 우리 집에서 치킨을 먹는다. 튀기는 건 나다.",
+            "chance": 45,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "사회성": 2,
+              "경제력": -6,
+              "행복": -1
+            },
+            "addFlags": [
+              "chicken_shop"
+            ],
+            "chanceWeights": {
+              "운": -2,
+              "경제력": -2
+            }
           }
         ]
       },
@@ -19177,7 +19799,7 @@
           {
             "outcomeId": "b_primary",
             "text": "석 달을 미뤘다. 재검 날 의사가 결과지를 한참 보더니 말했다. \"다음부턴 바로 오세요.\" 다행히 괜찮았다.",
-            "chance": 100,
+            "chance": 60,
             "primary": true,
             "hidden": false,
             "death": false,
@@ -19187,7 +19809,31 @@
             },
             "addFlags": [
               "health_scare"
-            ]
+            ],
+            "chanceWeights": {
+              "건강": 2
+            },
+            "deathCause": "미뤄 둔 재검사"
+          },
+          {
+            "outcomeId": "b_too_late",
+            "text": "석 달을 미뤘다. 재검 날 의사가 결과지를 한참 보더니 입원 날짜부터 잡았다. 수술은 잘 끝났다. 회복은 석 달보다 길었다.",
+            "chance": 40,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "건강": -8,
+              "경제력": -3,
+              "행복": -2
+            },
+            "addFlags": [
+              "health_scare"
+            ],
+            "chanceWeights": {
+              "건강": -3
+            },
+            "deathCause": "늦어진 치료"
           }
         ]
       },
@@ -19255,7 +19901,7 @@
           {
             "outcomeId": "a_primary",
             "text": "8분 걸렸다. 세트 대신 단품 세 개가 나왔다. 그래도 혼자 해냈다.",
-            "chance": 100,
+            "chance": 65,
             "primary": true,
             "hidden": false,
             "death": false,
@@ -19264,6 +19910,22 @@
               "행복": -1
             },
             "addFlags": []
+          },
+          {
+            "outcomeId": "a_got_it",
+            "text": "화면이 넘어갈 때마다 손가락이 빨라졌다. 4분 만에 세트를 시켰다. 뒤에 선 학생이 작게 박수를 쳤다.",
+            "chance": 35,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "지력": 2,
+              "행복": 2
+            },
+            "addFlags": [],
+            "chanceWeights": {
+              "지력": 3
+            }
           }
         ]
       },
@@ -19469,7 +20131,7 @@
           {
             "outcomeId": "a_primary",
             "text": "석 달을 연습해서 1시간 12분에 완주했다. 메달을 현관에 걸었다.",
-            "chance": 100,
+            "chance": 70,
             "primary": true,
             "hidden": false,
             "death": false,
@@ -19481,7 +20143,30 @@
             "addFlags": [
               "marathon"
             ],
-            "lifeDelta": 10
+            "lifeDelta": 10,
+            "chanceWeights": {
+              "운동능력": 2,
+              "건강": 1
+            }
+          },
+          {
+            "outcomeId": "a_cramp",
+            "text": "7km 지점에서 종아리에 쥐가 났다. 구급 요원이 스프레이를 뿌려 줬다. 남은 3km는 걸었다. 메달은 똑같이 줬다.",
+            "chance": 30,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "건강": 11,
+              "운동능력": 1,
+              "행복": 1
+            },
+            "addFlags": [
+              "marathon"
+            ],
+            "chanceWeights": {
+              "운동능력": -2
+            }
           }
         ]
       },
@@ -19581,7 +20266,7 @@
           {
             "outcomeId": "a_primary",
             "text": "놀이터 자리엔 주차장이 있었다. 둘이 주차장 한구석에 쪼그려 앉아 모래 대신 커피를 마셨다.",
-            "chance": 100,
+            "chance": 70,
             "primary": true,
             "hidden": false,
             "death": false,
@@ -19594,6 +20279,26 @@
               "lifelong_friend"
             ],
             "lifeDelta": 10
+          },
+          {
+            "outcomeId": "a_still_there",
+            "text": "놀이터가 그대로 있었다. 모래밭도, 녹슨 그네도. 둘이 그네에 앉았다가 일어나는 데 10분이 걸렸다.",
+            "chance": 30,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 4,
+              "사회성": 2,
+              "경제력": -2,
+              "건강": 9
+            },
+            "addFlags": [
+              "lifelong_friend"
+            ],
+            "chanceWeights": {
+              "운": 3
+            }
           }
         ]
       },
@@ -19938,7 +20643,7 @@
           {
             "outcomeId": "a_primary",
             "text": "1번은 '스카이다이빙', 50번은 '쉰한 번째 생일도 오늘처럼'. 다음 달, 1번을 해치웠다.",
-            "chance": 100,
+            "chance": 70,
             "primary": true,
             "hidden": false,
             "death": false,
@@ -19951,7 +20656,30 @@
             "addFlags": [
               "bucket_list"
             ],
-            "lifeDelta": 10
+            "lifeDelta": 10,
+            "chanceWeights": {
+              "운": 2
+            }
+          },
+          {
+            "outcomeId": "a_list_only",
+            "text": "50개를 다 적는 데 석 달이 걸렸다. 그래서 1번을 '버킷리스트 끝까지 쓰기'로 바꿨다. 그건 해냈다.",
+            "chance": 30,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 2,
+              "지력": 2,
+              "경제력": -1,
+              "건강": 10
+            },
+            "addFlags": [
+              "bucket_list"
+            ],
+            "chanceWeights": {
+              "운": -2
+            }
           }
         ],
         "requiredStats": {
@@ -20302,7 +21030,8 @@
             ],
             "chanceWeights": {
               "건강": -1
-            }
+            },
+            "deathCause": "참고 나간 몸살"
           },
           {
             "outcomeId": "a_worse",
@@ -20322,7 +21051,8 @@
             ],
             "chanceWeights": {
               "건강": -2
-            }
+            },
+            "deathCause": "폐렴으로 번진 몸살"
           }
         ]
       },
@@ -20441,7 +21171,8 @@
             ],
             "chanceWeights": {
               "건강": -1
-            }
+            },
+            "deathCause": "사우나 끝장 버티기"
           }
         ]
       }
@@ -20736,7 +21467,6 @@
             "outcomeId": "a_restart",
             "text": "위로금으로 석 달을 버티며 자격증을 하나 땄다. 넉 달째, 새 회사에서 연락이 왔다. 연봉은 조금 줄었지만 퇴근 시간은 지켜진다.",
             "chance": 50,
-            "lifeDelta": -25,
             "primary": true,
             "hidden": false,
             "death": false,
@@ -20749,15 +21479,16 @@
               "laid_off",
               "comeback"
             ],
+            "lifeDelta": -25,
             "chanceWeights": {
               "지력": 2
-            }
+            },
+            "deathCause": "구조조정 스트레스"
           },
           {
             "outcomeId": "a_better",
             "text": "쉬는 동안 정리한 포트폴리오를 보고 다른 회사에서 먼저 연락이 왔다. 연봉이 올랐다. 전 회사 단톡방은 조용히 나왔다.",
             "chance": 30,
-            "lifeDelta": -25,
             "primary": false,
             "hidden": false,
             "death": false,
@@ -20769,16 +21500,17 @@
               "laid_off",
               "comeback"
             ],
+            "lifeDelta": -25,
             "chanceWeights": {
               "운": 2,
               "지력": 1
-            }
+            },
+            "deathCause": "구조조정 스트레스"
           },
           {
             "outcomeId": "a_long",
             "text": "이력서를 쉰 군데 넣었다. 답장은 두 통이었다. 대신 요리 실력이 늘어서 동네 반찬 가게에서 같이 일하자는 제안을 받았다.",
             "chance": 20,
-            "lifeDelta": -25,
             "primary": false,
             "hidden": false,
             "death": false,
@@ -20790,9 +21522,11 @@
             "addFlags": [
               "laid_off"
             ],
+            "lifeDelta": -25,
             "chanceWeights": {
               "지력": -3
-            }
+            },
+            "deathCause": "끝없는 구직 스트레스"
           }
         ],
         "requiredStats": {
@@ -20818,7 +21552,6 @@
             "outcomeId": "b_stayed",
             "text": "남았다. 대신 떠난 세 사람의 일이 내 책상으로 왔다. 야근이 일상이 됐다.",
             "chance": 55,
-            "lifeDelta": -25,
             "primary": true,
             "hidden": false,
             "death": false,
@@ -20830,15 +21563,16 @@
             "addFlags": [
               "overwork"
             ],
+            "lifeDelta": -25,
             "chanceWeights": {
               "사회성": 2
-            }
+            },
+            "deathCause": "남은 자의 과로"
           },
           {
             "outcomeId": "b_again",
             "text": "석 달 뒤 다시 면담실에 불려 갔다. 이번엔 위로금이 절반이었다.",
             "chance": 45,
-            "lifeDelta": -25,
             "primary": false,
             "hidden": false,
             "death": false,
@@ -20849,9 +21583,11 @@
             "addFlags": [
               "laid_off"
             ],
+            "lifeDelta": -25,
             "chanceWeights": {
               "사회성": -2
-            }
+            },
+            "deathCause": "거듭된 구조조정 스트레스"
           }
         ],
         "requiredStats": {
@@ -20880,7 +21616,6 @@
             "outcomeId": "c_shop",
             "text": "위로금에 적금까지 털어 작은 가게를 열었다. 첫 달은 적자, 셋째 달엔 단골이 생겼다. 사장님 소리는 아직도 어색하다.",
             "chance": 40,
-            "lifeDelta": -25,
             "primary": true,
             "hidden": false,
             "death": false,
@@ -20895,16 +21630,17 @@
               "own_shop",
               "comeback"
             ],
+            "lifeDelta": -25,
             "chanceWeights": {
               "운": 2,
               "사회성": 1
-            }
+            },
+            "deathCause": "가게 차리기 과로"
           },
           {
             "outcomeId": "c_closed",
             "text": "개업 첫날 손님은 엄마와 이모 두 분이었다. 여섯 달 뒤 가게를 접었다. 장사를 배운 수업료라고 생각하기로 했다.",
             "chance": 60,
-            "lifeDelta": -25,
             "primary": false,
             "hidden": false,
             "death": false,
@@ -20917,9 +21653,11 @@
               "laid_off",
               "risk_taker"
             ],
+            "lifeDelta": -25,
             "chanceWeights": {
               "운": -2
-            }
+            },
+            "deathCause": "폐업 스트레스"
           }
         ],
         "conditionReview": "fallback_choice",
@@ -23807,7 +24545,6 @@
             "outcomeId": "a_primary",
             "text": "옆문은 수동이었다. 아무도 기억 못 할 아침. 자동문도 끝까지 날 기억 못 했다.",
             "chance": 100,
-            "lifeDelta": -25,
             "primary": true,
             "hidden": false,
             "death": false,
@@ -23817,7 +24554,9 @@
             },
             "addFlags": [
               "survived_special"
-            ]
+            ],
+            "lifeDelta": -25,
+            "deathCause": "옆문까지 걸어간 굴욕 쇼크"
           }
         ],
         "requiredStats": {
@@ -23843,7 +24582,6 @@
             "outcomeId": "b_primary",
             "text": "13번째에 열림. 기립 박수. 그리고 복도에서 지각 벌점.",
             "chance": 100,
-            "lifeDelta": -25,
             "primary": true,
             "hidden": false,
             "death": false,
@@ -23854,7 +24592,9 @@
             },
             "addFlags": [
               "auto_door_legend"
-            ]
+            ],
+            "lifeDelta": -25,
+            "deathCause": "자동문과의 13판 승부"
           }
         ],
         "requiredStats": {
@@ -23880,7 +24620,6 @@
             "outcomeId": "c_primary",
             "text": "문이 열렸다. 영상이 전교에 퍼졌다. 별명 '자동문 댄서'.",
             "chance": 100,
-            "lifeDelta": -25,
             "primary": true,
             "hidden": false,
             "death": false,
@@ -23891,7 +24630,9 @@
             },
             "addFlags": [
               "auto_door_legend"
-            ]
+            ],
+            "lifeDelta": -25,
+            "deathCause": "자동문 앞 막춤 과로"
           }
         ],
         "conditionReview": "fallback_choice",
@@ -23937,7 +24678,6 @@
             "outcomeId": "a_primary",
             "text": "휴지 한 통 소진, 만점. 선생님: \"열정이 느껴지는 핏자국이구나.\"",
             "chance": 100,
-            "lifeDelta": -25,
             "primary": true,
             "hidden": false,
             "death": false,
@@ -23947,7 +24687,9 @@
             },
             "addFlags": [
               "survived_special"
-            ]
+            ],
+            "lifeDelta": -25,
+            "deathCause": "만점과 맞바꾼 코피"
           }
         ],
         "requiredStats": {
@@ -23972,7 +24714,6 @@
             "outcomeId": "b_primary",
             "text": "다음 시험 문제를 '예언'했다. 전부 맞았다. '미래에서 온 애' 소문. 아무도 옆에 안 앉는다.",
             "chance": 100,
-            "lifeDelta": -25,
             "primary": true,
             "hidden": false,
             "death": false,
@@ -23982,7 +24723,9 @@
             },
             "addFlags": [
               "weird_rumor"
-            ]
+            ],
+            "lifeDelta": -25,
+            "deathCause": "예언자 행세"
           }
         ],
         "requiredStats": {
@@ -24006,7 +24749,6 @@
             "outcomeId": "c_primary",
             "text": "꿈에서 다음 과목 문제를 봤다. 깨어 보니 시험이 다 끝나 있었다.",
             "chance": 100,
-            "lifeDelta": -25,
             "primary": true,
             "hidden": false,
             "death": false,
@@ -24015,7 +24757,9 @@
               "건강": 1,
               "지력": -4
             },
-            "addFlags": []
+            "addFlags": [],
+            "lifeDelta": -25,
+            "deathCause": "시험 시간 숙면 과다"
           }
         ],
         "alwaysAvailable": true,
@@ -24060,7 +24804,6 @@
             "outcomeId": "a_primary",
             "text": "면접관들 폭소. 끝날 때 한 명이 뚜껑을 따서 건네줬다.",
             "chance": 100,
-            "lifeDelta": -25,
             "primary": true,
             "hidden": false,
             "death": false,
@@ -24070,7 +24813,9 @@
             },
             "addFlags": [
               "survived_special"
-            ]
+            ],
+            "lifeDelta": -25,
+            "deathCause": "면접장 물병 사태"
           }
         ],
         "requiredStats": {
@@ -24095,7 +24840,6 @@
             "outcomeId": "b_primary",
             "text": "끝까지 못 내려놨다. 불합격 문자가 빨리 왔다. 그 병은 아직도 안 땄다.",
             "chance": 100,
-            "lifeDelta": -25,
             "primary": true,
             "hidden": false,
             "death": false,
@@ -24105,7 +24849,9 @@
             },
             "addFlags": [
               "interview_fail"
-            ]
+            ],
+            "lifeDelta": -25,
+            "deathCause": "끝까지 들고 있던 물병 무리"
           }
         ],
         "alwaysAvailable": true,
@@ -24129,7 +24875,6 @@
             "outcomeId": "c_primary",
             "text": "면접관 한 명이 따라 했다. 둘이 건배했다. 결과는 예비 합격.",
             "chance": 100,
-            "lifeDelta": -25,
             "primary": true,
             "hidden": false,
             "death": false,
@@ -24140,7 +24885,9 @@
             },
             "addFlags": [
               "survived_special"
-            ]
+            ],
+            "lifeDelta": -25,
+            "deathCause": "뚜껑째 건배"
           }
         ],
         "requiredStats": {
@@ -24203,7 +24950,6 @@
             "outcomeId": "a_primary",
             "text": "얼굴이 보라색이 됐다. 사장님: \"어디 아파요? 오늘 쉬어요.\" 참은 보람은 있었다.",
             "chance": 100,
-            "lifeDelta": -25,
             "primary": true,
             "hidden": false,
             "death": false,
@@ -24213,7 +24959,9 @@
             },
             "addFlags": [
               "special_injury"
-            ]
+            ],
+            "lifeDelta": -25,
+            "deathCause": "14층까지 참은 방귀"
           }
         ],
         "requiredStats": {
@@ -24238,7 +24986,6 @@
             "outcomeId": "b_primary",
             "text": "소리는 없었다. 냄새는 있었다. 사장님이 나를 봤다. 나는 옆 사람을 봤다. 옆 사람은 그날 권고사직을 걱정했다.",
             "chance": 100,
-            "lifeDelta": -25,
             "primary": true,
             "hidden": false,
             "death": false,
@@ -24248,7 +24995,9 @@
             },
             "addFlags": [
               "survived_special"
-            ]
+            ],
+            "lifeDelta": -25,
+            "deathCause": "사장님 앞 무음 방귀"
           }
         ],
         "requiredStats": {
@@ -24274,7 +25023,6 @@
             "outcomeId": "c_primary",
             "text": "14층까지 계단으로 올라가 지각했다. 사장님은 층마다 멈추는 엘리베이터에 갇혀 있었다.",
             "chance": 100,
-            "lifeDelta": -25,
             "primary": true,
             "hidden": false,
             "death": false,
@@ -24285,7 +25033,9 @@
             },
             "addFlags": [
               "survived_special"
-            ]
+            ],
+            "lifeDelta": -25,
+            "deathCause": "14층 계단 질주"
           }
         ],
         "conditionReview": "fallback_choice",
@@ -24332,7 +25082,6 @@
             "outcomeId": "a_primary",
             "text": "집 앞에 과일 바구니와 쪽지가 놓여 있었다. '다시 생각해 주세요.'",
             "chance": 100,
-            "lifeDelta": -25,
             "primary": true,
             "hidden": false,
             "death": false,
@@ -24342,7 +25091,9 @@
             },
             "addFlags": [
               "survived_special"
-            ]
+            ],
+            "lifeDelta": -25,
+            "deathCause": "과일 바구니 스트레스"
           }
         ],
         "requiredStats": {
@@ -24368,7 +25119,6 @@
             "outcomeId": "b_primary",
             "text": "6개월간 매일 채혈, 매일 같은 식단. 논문 속 '피험자 A'. 몸은 건강해졌는데 사는 낙이 사라졌다.",
             "chance": 100,
-            "lifeDelta": -25,
             "primary": true,
             "hidden": false,
             "death": false,
@@ -24379,7 +25129,9 @@
             },
             "addFlags": [
               "research_subject"
-            ]
+            ],
+            "lifeDelta": -25,
+            "deathCause": "6개월 매일 채혈"
           }
         ],
         "requiredStats": {
@@ -24400,7 +25152,6 @@
             "outcomeId": "c_primary",
             "text": "기분이 상해서 야식을 먹기 시작했다. 한 달 뒤 수치가 평균을 벗어났다. 연구팀이 떠났다.",
             "chance": 100,
-            "lifeDelta": -25,
             "primary": true,
             "hidden": false,
             "death": false,
@@ -24408,7 +25159,9 @@
               "행복": 2,
               "건강": -4
             },
-            "addFlags": []
+            "addFlags": [],
+            "lifeDelta": -25,
+            "deathCause": "평균 탈출용 야식 과다"
           }
         ],
         "conditionReview": "fallback_choice",
@@ -24455,7 +25208,6 @@
             "outcomeId": "a_primary",
             "text": "등 뒤로 외침이 들렸다. \"그러니까 승진이 안 되지!\" 맞는 말이라 더 아팠다.",
             "chance": 100,
-            "lifeDelta": -25,
             "primary": true,
             "hidden": false,
             "death": false,
@@ -24465,7 +25217,9 @@
             },
             "addFlags": [
               "survived_special"
-            ]
+            ],
+            "lifeDelta": -25,
+            "deathCause": "등 뒤에서 날아온 훈수 한마디"
           }
         ],
         "requiredStats": {
@@ -24491,7 +25245,6 @@
             "outcomeId": "b_primary",
             "text": "세 시간 뒤, 장기판 뒷면에 내 인생 계획표가 완성됐다. 상담료는 막걸리 두 병.",
             "chance": 100,
-            "lifeDelta": -25,
             "primary": true,
             "hidden": false,
             "death": false,
@@ -24502,7 +25255,9 @@
             },
             "addFlags": [
               "janggi_mentor"
-            ]
+            ],
+            "lifeDelta": -25,
+            "deathCause": "장기판 인생 설계"
           }
         ],
         "requiredStats": {
@@ -24528,7 +25283,6 @@
             "outcomeId": "c_primary",
             "text": "3수 만에 졌다. 이제 매주 토요일마다 훈수를 들으러 간다.",
             "chance": 100,
-            "lifeDelta": -25,
             "primary": true,
             "hidden": false,
             "death": false,
@@ -24539,7 +25293,9 @@
             },
             "addFlags": [
               "janggi_mentor"
-            ]
+            ],
+            "lifeDelta": -25,
+            "deathCause": "3수 만의 패배"
           }
         ],
         "conditionReview": "fallback_choice",
@@ -24586,7 +25342,6 @@
             "outcomeId": "a_primary",
             "text": "멧돼지가 김밥을 먹는 동안 무사히 내려왔다. 등산 모임 단톡방에 '김밥 조공' 후기를 올렸다.",
             "chance": 100,
-            "lifeDelta": -25,
             "primary": true,
             "hidden": false,
             "death": false,
@@ -24596,7 +25351,9 @@
             },
             "addFlags": [
               "survived_special"
-            ]
+            ],
+            "lifeDelta": -25,
+            "deathCause": "등산로 멧돼지 조우"
           }
         ],
         "requiredStats": {
@@ -24621,7 +25378,6 @@
             "outcomeId": "b_primary",
             "text": "3초간 눈싸움. 멧돼지가 이겼다. 엉덩이에 이빨 자국을 남기고 김밥까지 가져갔다.",
             "chance": 100,
-            "lifeDelta": -25,
             "primary": true,
             "hidden": false,
             "death": false,
@@ -24631,7 +25387,9 @@
             },
             "addFlags": [
               "special_injury"
-            ]
+            ],
+            "lifeDelta": -25,
+            "deathCause": "멧돼지와의 정면 승부"
           }
         ],
         "requiredStats": {
@@ -24657,7 +25415,6 @@
             "outcomeId": "c_primary",
             "text": "멧돼지가 옆에 앉아 김밥을 먹었다. 그 뒤로 정상에 오를 때마다 그 녀석이 기다리고 있다. 이름은 '김밥'이다.",
             "chance": 100,
-            "lifeDelta": -25,
             "primary": true,
             "hidden": false,
             "death": false,
@@ -24668,7 +25425,9 @@
             },
             "addFlags": [
               "survived_special"
-            ]
+            ],
+            "lifeDelta": -25,
+            "deathCause": "멧돼지 친구 사귀기"
           }
         ],
         "conditionReview": "fallback_choice",
@@ -25212,7 +25971,6 @@
             "outcomeId": "a_primary",
             "text": "피했다. 공은 심판을 보던 체육 선생님 뒤통수에 맞았다.",
             "chance": 100,
-            "lifeDelta": -25,
             "primary": true,
             "hidden": false,
             "death": false,
@@ -25223,7 +25981,9 @@
             },
             "addFlags": [
               "survived_special"
-            ]
+            ],
+            "lifeDelta": -25,
+            "deathCause": "체육 선생님의 분노"
           }
         ],
         "requiredStats": {
@@ -25248,7 +26008,6 @@
             "outcomeId": "b_primary",
             "text": "코피가 났다. 얼굴은 아웃이 아니라서 우리 팀이 이겼다.",
             "chance": 100,
-            "lifeDelta": -25,
             "primary": true,
             "hidden": false,
             "death": false,
@@ -25258,7 +26017,9 @@
             },
             "addFlags": [
               "special_injury"
-            ]
+            ],
+            "lifeDelta": -25,
+            "deathCause": "안면 피구"
           }
         ],
         "requiredStats": {
@@ -25284,7 +26045,6 @@
             "outcomeId": "c_primary",
             "text": "잡았다! 그런데 되던진 공이 에이스 품에 정확히 안겼다.",
             "chance": 100,
-            "lifeDelta": -25,
             "primary": true,
             "hidden": false,
             "death": false,
@@ -25295,7 +26055,9 @@
             },
             "addFlags": [
               "survived_special"
-            ]
+            ],
+            "lifeDelta": -25,
+            "deathCause": "되던진 피구공 대참사"
           }
         ],
         "conditionReview": "fallback_choice",
@@ -25341,7 +26103,6 @@
             "outcomeId": "a_primary",
             "text": "30분이 3분 같았다. 문이 열렸을 때 조금 아쉬웠다.",
             "chance": 100,
-            "lifeDelta": -25,
             "primary": true,
             "hidden": false,
             "death": false,
@@ -25351,7 +26112,9 @@
             },
             "addFlags": [
               "survived_special"
-            ]
+            ],
+            "lifeDelta": -25,
+            "deathCause": "엘리베이터 속 설렘 과다"
           }
         ],
         "requiredStats": {
@@ -25376,7 +26139,6 @@
             "outcomeId": "b_primary",
             "text": "혼잣말이 비상 인터폰을 타고 관리실에 전부 들렸다.",
             "chance": 100,
-            "lifeDelta": -25,
             "primary": true,
             "hidden": false,
             "death": false,
@@ -25386,7 +26148,9 @@
             },
             "addFlags": [
               "survived_special"
-            ]
+            ],
+            "lifeDelta": -25,
+            "deathCause": "관리실 생중계 수치"
           }
         ],
         "requiredStats": {
@@ -25412,7 +26176,6 @@
             "outcomeId": "c_primary",
             "text": "소리가 엘리베이터에 울렸다. 그 애가 말없이 초코바를 반 쪼개 줬다.",
             "chance": 100,
-            "lifeDelta": -25,
             "primary": true,
             "hidden": false,
             "death": false,
@@ -25423,7 +26186,9 @@
             },
             "addFlags": [
               "survived_special"
-            ]
+            ],
+            "lifeDelta": -25,
+            "deathCause": "꼬르륵 굴욕 쇼크"
           }
         ],
         "conditionReview": "fallback_choice",
@@ -25485,7 +26250,6 @@
             "outcomeId": "a_primary",
             "text": "탈출 성공. 9시 정각에 자리에 앉았다. 머리는 아직 돌고 있다.",
             "chance": 100,
-            "lifeDelta": -25,
             "primary": true,
             "hidden": false,
             "death": false,
@@ -25495,7 +26259,9 @@
             },
             "addFlags": [
               "survived_special"
-            ]
+            ],
+            "lifeDelta": -25,
+            "deathCause": "회전문 멀미"
           }
         ],
         "requiredStats": {
@@ -25521,7 +26287,6 @@
             "outcomeId": "b_primary",
             "text": "열두 바퀴째에 어지러워 주저앉았다. 경비 아저씨가 회전문을 세워 줬다.",
             "chance": 100,
-            "lifeDelta": -25,
             "primary": true,
             "hidden": false,
             "death": false,
@@ -25532,7 +26297,9 @@
             },
             "addFlags": [
               "special_injury"
-            ]
+            ],
+            "lifeDelta": -25,
+            "deathCause": "회전문 열두 바퀴"
           }
         ],
         "requiredStats": {
@@ -25558,7 +26325,6 @@
             "outcomeId": "c_primary",
             "text": "\"어디야?\" \"회전문이요.\" 그날 별명이 '회전문'이 됐다.",
             "chance": 100,
-            "lifeDelta": -25,
             "primary": true,
             "hidden": false,
             "death": false,
@@ -25569,7 +26335,9 @@
             },
             "addFlags": [
               "survived_special"
-            ]
+            ],
+            "lifeDelta": -25,
+            "deathCause": "회전문 속 통화 사고"
           }
         ],
         "conditionReview": "fallback_choice",
@@ -25616,7 +26384,6 @@
             "outcomeId": "a_primary",
             "text": "발가락으로 코드를 뽑았다. 인생 최고의 유연성이었다.",
             "chance": 100,
-            "lifeDelta": -25,
             "primary": true,
             "hidden": false,
             "death": false,
@@ -25626,7 +26393,9 @@
             },
             "addFlags": [
               "survived_special"
-            ]
+            ],
+            "lifeDelta": -25,
+            "deathCause": "발가락 요가 무리"
           }
         ],
         "requiredStats": {
@@ -25651,7 +26420,6 @@
             "outcomeId": "b_primary",
             "text": "30분 코스가 끝났다. 온몸이 개운했고 허리는 삐었다.",
             "chance": 100,
-            "lifeDelta": -25,
             "primary": true,
             "hidden": false,
             "death": false,
@@ -25661,7 +26429,9 @@
             },
             "addFlags": [
               "special_injury"
-            ]
+            ],
+            "lifeDelta": -25,
+            "deathCause": "안마의자 30분 코스"
           }
         ],
         "requiredStats": {
@@ -25686,7 +26456,6 @@
             "outcomeId": "c_primary",
             "text": "가족이 달려왔다. 나를 구하기 전에 사진부터 찍었다.",
             "chance": 100,
-            "lifeDelta": -25,
             "primary": true,
             "hidden": false,
             "death": false,
@@ -25696,7 +26465,9 @@
             },
             "addFlags": [
               "survived_special"
-            ]
+            ],
+            "lifeDelta": -25,
+            "deathCause": "안마의자 포로 생활"
           }
         ],
         "conditionReview": "fallback_choice",
@@ -26053,7 +26824,7 @@
     "stage": "TEEN",
     "type": "NORMAL",
     "isFallback": false,
-    "isMilestone": false,
+    "isMilestone": true,
     "title": "수능 D-30",
     "text": "수능 30일 전. 담임: \"{name}, 이대로면 원하는 과 쓸 수 있다. 문제는 컨디션이야.\" 책상 위엔 문제집 다섯 권과 에너지 음료 세 캔이 있다.",
     "imageId": "img_path_int_03_001",
@@ -26118,12 +26889,13 @@
             ],
             "chanceWeights": {
               "건강": -3
-            }
+            },
+            "deathCause": "수능 직전 과로"
           }
         ],
         "alwaysAvailable": true,
-        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
-        "conditionReview": "soft_incident",
+        "alwaysAvailableReason": "수능 전환점 — 누구나 치르는 시험이라 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "open_turning_point",
         "conditionBasis": "week8_life_path"
       },
       {
@@ -26178,8 +26950,8 @@
           }
         ],
         "alwaysAvailable": true,
-        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
-        "conditionReview": "soft_incident",
+        "alwaysAvailableReason": "수능 전환점 — 누구나 치르는 시험이라 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "open_turning_point",
         "conditionBasis": "week8_life_path"
       },
       {
@@ -26231,16 +27003,17 @@
           }
         ],
         "alwaysAvailable": true,
-        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
-        "conditionReview": "soft_incident",
+        "alwaysAvailableReason": "수능 전환점 — 누구나 치르는 시험이라 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "open_turning_point",
         "conditionBasis": "week8_life_path"
       }
     ],
     "priority": 0,
-    "kind": "INCIDENT",
+    "kind": "MILESTONE",
     "periods": [
       "TEEN"
     ],
+    "yearInPeriod": 4,
     "weight": 20,
     "view": "FIRST_PERSON",
     "lifePath": "INTELLIGENCE",
@@ -26960,7 +27733,8 @@
             ],
             "chanceWeights": {
               "건강": -3
-            }
+            },
+            "deathCause": "연구실 과로"
           },
           {
             "outcomeId": "a_rejected",
@@ -27898,7 +28672,8 @@
             ],
             "chanceWeights": {
               "건강": -3
-            }
+            },
+            "deathCause": "부상 투혼 무리"
           },
           {
             "outcomeId": "a_bronze",
@@ -28220,7 +28995,8 @@
             ],
             "chanceWeights": {
               "건강": -2
-            }
+            },
+            "deathCause": "훈련 과부하"
           }
         ],
         "alwaysAvailable": true,
@@ -32062,7 +32838,8 @@
             ],
             "chanceWeights": {
               "건강": -2
-            }
+            },
+            "deathCause": "참고 버틴 우울"
           }
         ],
         "alwaysAvailable": true,
@@ -33987,7 +34764,8 @@
             ],
             "chanceWeights": {
               "건강": -2
-            }
+            },
+            "deathCause": "에너지 음료 과다"
           }
         ],
         "alwaysAvailable": true,
@@ -34402,7 +35180,8 @@
               "hea_chronic",
               "health_chronic",
               "overwork"
-            ]
+            ],
+            "deathCause": "미룬 치료"
           }
         ],
         "alwaysAvailable": true,
@@ -34639,7 +35418,8 @@
             ],
             "chanceWeights": {
               "건강": 1
-            }
+            },
+            "deathCause": "산행 무리"
           },
           {
             "outcomeId": "b_ambulance",
@@ -34658,7 +35438,8 @@
             ],
             "chanceWeights": {
               "건강": -2
-            }
+            },
+            "deathCause": "산행 무리"
           }
         ],
         "alwaysAvailable": true,
@@ -34746,7 +35527,8 @@
             ],
             "chanceWeights": {
               "건강": -2
-            }
+            },
+            "deathCause": "깊어진 병세"
           },
           {
             "outcomeId": "a_last",
@@ -34763,7 +35545,8 @@
             ],
             "chanceWeights": {
               "건강": -2
-            }
+            },
+            "deathCause": "잠결의 심장마비"
           }
         ],
         "alwaysAvailable": true,

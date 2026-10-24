@@ -1,0 +1,671 @@
+[
+  {
+    "titleId": "title_seven_sided",
+    "text": "칠각형 인간",
+    "description": "일곱 가지 능력치가 전부 고르게 높았다. 친구들은 부러워하다 포기했다.",
+    "priority": 88,
+    "conditions": {
+      "minStats": {
+        "건강": 65,
+        "운동능력": 65,
+        "지력": 65,
+        "사회성": 65,
+        "경제력": 65,
+        "행복": 65,
+        "운": 65
+      },
+      "requiredFlags": [],
+      "blockedFlags": []
+    },
+    "isDefault": false
+  },
+  {
+    "titleId": "title_forever_leader",
+    "text": "평생 반장",
+    "description": "반장, 회장, 대표… 어디를 가도 맨 앞에 섰다.",
+    "priority": 80,
+    "conditions": {
+      "minStats": {},
+      "requiredFlags": [
+        "class_leader",
+        "leader_experience"
+      ],
+      "blockedFlags": []
+    },
+    "isDefault": false
+  },
+  {
+    "titleId": "title_paid_off_home",
+    "text": "대출 다 갚은 집주인",
+    "description": "마지막 대출 상환 문자를 받았다. 문패가 그제야 진짜 내 것이 됐다.",
+    "priority": 80,
+    "conditions": {
+      "minStats": {},
+      "requiredFlags": [
+        "home_owner",
+        "debt_free"
+      ],
+      "blockedFlags": []
+    },
+    "isDefault": false
+  },
+  {
+    "titleId": "title_kongi_friend",
+    "text": "콩이의 영원한 친구",
+    "description": "어릴 때 데려온 강아지와 마지막 산책까지 함께했다.",
+    "priority": 72,
+    "conditions": {
+      "minStats": {},
+      "requiredFlags": [
+        "has_dog",
+        "kongi_goodbye"
+      ],
+      "blockedFlags": []
+    },
+    "isDefault": false
+  },
+  {
+    "titleId": "title_survivor",
+    "text": "살아남은 개복치",
+    "description": "어릴 때 죽을 뻔한 고비를 넘기고 끝까지 살아남았다. 그 뒤로 뭐든 꼭꼭 씹어 먹는다.",
+    "priority": 72,
+    "conditions": {
+      "minStats": {},
+      "requiredFlags": [
+        "death_crisis",
+        "survived_special"
+      ],
+      "blockedFlags": []
+    },
+    "isDefault": false
+  },
+  {
+    "titleId": "title_burnout_back",
+    "text": "번아웃 생존자",
+    "description": "다 타 버린 줄 알았는데, 쉬고 나니 다시 웃을 수 있었다.",
+    "priority": 66,
+    "conditions": {
+      "minStats": {},
+      "requiredFlags": [
+        "burnout_recovered"
+      ],
+      "blockedFlags": []
+    },
+    "isDefault": false
+  },
+  {
+    "titleId": "title_auto_door",
+    "text": "자동문의 전설",
+    "description": "열리지 않는 자동문 앞에서 끝까지 물러서지 않았다. 그 아침은 전교가 기억한다.",
+    "priority": 70,
+    "conditions": {
+      "minStats": {},
+      "requiredFlags": [
+        "auto_door_legend"
+      ],
+      "blockedFlags": []
+    },
+    "isDefault": false
+  },
+  {
+    "titleId": "title_janggi",
+    "text": "장기 고수의 제자",
+    "description": "공원 벤치의 장기 고수에게 매주 토요일 훈수를 들었다.",
+    "priority": 68,
+    "conditions": {
+      "minStats": {},
+      "requiredFlags": [
+        "janggi_mentor"
+      ],
+      "blockedFlags": []
+    },
+    "isDefault": false
+  },
+  {
+    "titleId": "title_subject_a",
+    "text": "피험자 A",
+    "description": "너무 평범하게 건강해서 논문에 실렸다. 이름 대신 알파벳으로.",
+    "priority": 68,
+    "conditions": {
+      "minStats": {},
+      "requiredFlags": [
+        "research_subject"
+      ],
+      "blockedFlags": []
+    },
+    "isDefault": false
+  },
+  {
+    "titleId": "title_founder",
+    "text": "맨땅에서 시작한 창업가",
+    "description": "가진 건 아이디어와 라면뿐이었다. 그래도 내 이름으로 시작했다.",
+    "priority": 70,
+    "conditions": {
+      "minStats": {},
+      "requiredFlags": [
+        "startup_founder"
+      ],
+      "blockedFlags": []
+    },
+    "isDefault": false
+  },
+  {
+    "titleId": "title_patent",
+    "text": "액자 속 특허권자",
+    "description": "떠오른 생각 하나가 특허 등록증이 되어 액자에 걸렸다.",
+    "priority": 70,
+    "conditions": {
+      "minStats": {},
+      "requiredFlags": [
+        "patent_holder"
+      ],
+      "blockedFlags": []
+    },
+    "isDefault": false
+  },
+  {
+    "titleId": "title_fifty_years",
+    "text": "50년 지기",
+    "description": "빨간 삽을 들고 처음 만난 친구와 50년을 같이 늙었다.",
+    "priority": 68,
+    "conditions": {
+      "minStats": {},
+      "requiredFlags": [
+        "lifelong_friend",
+        "v4:event:adult_062"
+      ],
+      "blockedFlags": []
+    },
+    "isDefault": false
+  },
+  {
+    "titleId": "title_chicken",
+    "text": "동네 치킨집 사장님",
+    "description": "퇴직 후 튀김기 앞에 섰다. 첫 손님은 전부 친구였다.",
+    "priority": 66,
+    "conditions": {
+      "minStats": {},
+      "requiredFlags": [
+        "chicken_shop"
+      ],
+      "blockedFlags": []
+    },
+    "isDefault": false
+  },
+  {
+    "titleId": "title_cafe",
+    "text": "단골 여덟 명의 카페 사장",
+    "description": "하루 손님 열 명, 그중 여덟 명이 단골이었다.",
+    "priority": 66,
+    "conditions": {
+      "minStats": {},
+      "requiredFlags": [
+        "small_cafe"
+      ],
+      "blockedFlags": []
+    },
+    "isDefault": false
+  },
+  {
+    "titleId": "title_first_steps",
+    "text": "첫 걸음마를 본 부모",
+    "description": "육아휴직을 내고 아이의 첫 세 걸음과 첫 엉덩방아를 봤다.",
+    "priority": 66,
+    "conditions": {
+      "minStats": {},
+      "requiredFlags": [
+        "devoted_parent"
+      ],
+      "blockedFlags": []
+    },
+    "isDefault": false
+  },
+  {
+    "titleId": "title_audition",
+    "text": "음이탈 레전드",
+    "description": "오디션 TOP 10. 방송은 내 음이탈을 슬로 모션으로 세 번 틀었다.",
+    "priority": 66,
+    "conditions": {
+      "minStats": {},
+      "requiredFlags": [
+        "audition_star"
+      ],
+      "blockedFlags": []
+    },
+    "isDefault": false
+  },
+  {
+    "titleId": "title_doorplate",
+    "text": "문패 단 사람",
+    "description": "30년 만기 대출에 서명하고 처음으로 문패를 달았다.",
+    "priority": 64,
+    "conditions": {
+      "minStats": {},
+      "requiredFlags": [
+        "home_owner"
+      ],
+      "blockedFlags": [
+        "debt_free"
+      ]
+    },
+    "isDefault": false
+  },
+  {
+    "titleId": "title_medal_door",
+    "text": "현관에 메달 건 사람",
+    "description": "마흔 넘어 처음 뛴 10km. 메달은 아직 현관에 걸려 있다.",
+    "priority": 62,
+    "conditions": {
+      "minStats": {},
+      "requiredFlags": [
+        "marathon"
+      ],
+      "blockedFlags": []
+    },
+    "isDefault": false
+  },
+  {
+    "titleId": "title_hackathon",
+    "text": "눈 뜨고 자는 개발자",
+    "description": "해커톤 대상 사진 속에서 눈을 뜨고 자고 있었다.",
+    "priority": 62,
+    "conditions": {
+      "minStats": {},
+      "requiredFlags": [
+        "hackathon_winner"
+      ],
+      "blockedFlags": []
+    },
+    "isDefault": false
+  },
+  {
+    "titleId": "title_debate",
+    "text": "전교 회장을 이긴 토론가",
+    "description": "토론대회 결승에서 전교 회장의 허점을 짚었다. 회장은 한동안 나를 피해 다녔다.",
+    "priority": 62,
+    "conditions": {
+      "minStats": {},
+      "requiredFlags": [
+        "debate_champ"
+      ],
+      "blockedFlags": []
+    },
+    "isDefault": false
+  },
+  {
+    "titleId": "title_cat_birthday",
+    "text": "고양이 생일 휴가자",
+    "description": "휴가 사유란에 \"고양이 생일\"이라고 썼고, 결재가 났다.",
+    "priority": 60,
+    "conditions": {
+      "minStats": {},
+      "requiredFlags": [
+        "office_legend"
+      ],
+      "blockedFlags": []
+    },
+    "isDefault": false
+  },
+  {
+    "titleId": "title_bucket_list",
+    "text": "버킷리스트 해치운 사람",
+    "description": "쉰 번째 생일에 적은 목록의 1번을 다음 달에 해치웠다.",
+    "priority": 60,
+    "conditions": {
+      "minStats": {},
+      "requiredFlags": [
+        "bucket_list"
+      ],
+      "blockedFlags": []
+    },
+    "isDefault": false
+  },
+  {
+    "titleId": "title_cash_baby",
+    "text": "돌잡이부터 5만 원",
+    "description": "돌상에서 5만 원권을 잡고 끝까지 놓지 않았다.",
+    "priority": 60,
+    "conditions": {
+      "minStats": {},
+      "requiredFlags": [
+        "cash_grabber"
+      ],
+      "blockedFlags": []
+    },
+    "isDefault": false
+  },
+  {
+    "titleId": "title_relay",
+    "text": "운동회 마지막 주자",
+    "description": "계주 마지막 주자로 1등을 하고, 못 멈춰서 교장 선생님 천막에 들어갔다.",
+    "priority": 60,
+    "conditions": {
+      "minStats": {},
+      "requiredFlags": [
+        "relay_hero"
+      ],
+      "blockedFlags": []
+    },
+    "isDefault": false
+  },
+  {
+    "titleId": "title_scholarship",
+    "text": "장학금 사냥꾼",
+    "description": "학점으로 등록금 고지서의 0을 하나 지웠다.",
+    "priority": 58,
+    "conditions": {
+      "minStats": {},
+      "requiredFlags": [
+        "scholarship"
+      ],
+      "blockedFlags": []
+    },
+    "isDefault": false
+  },
+  {
+    "titleId": "title_free_morning",
+    "text": "아침 9시가 자유로운 사람",
+    "description": "희망퇴직 다음 날 아침, 갈 곳이 없다는 게 이상하게 좋았다.",
+    "priority": 58,
+    "conditions": {
+      "minStats": {},
+      "requiredFlags": [
+        "early_retire"
+      ],
+      "blockedFlags": []
+    },
+    "isDefault": false
+  },
+  {
+    "titleId": "title_alarm_seven",
+    "text": "알람 일곱 개의 신입",
+    "description": "면접에서 알람이 일곱 개라고 말했다. 면접관은 아홉 개였다.",
+    "priority": 58,
+    "conditions": {
+      "minStats": {},
+      "requiredFlags": [
+        "honest_worker"
+      ],
+      "blockedFlags": []
+    },
+    "isDefault": false
+  },
+  {
+    "titleId": "title_gacha",
+    "text": "꽝 수집가",
+    "description": "첫 용돈 5천 원을 전부 뽑기에 걸었다. 절망과 희망을 동시에 배웠다.",
+    "priority": 58,
+    "conditions": {
+      "minStats": {},
+      "requiredFlags": [
+        "gacha_lover"
+      ],
+      "blockedFlags": []
+    },
+    "isDefault": false
+  },
+  {
+    "titleId": "title_crypto",
+    "text": "흰머리 세 가닥의 투자자",
+    "description": "\"이번엔 진짜\"라는 코인에 넣어 봤다. 흰머리가 먼저 늘었다.",
+    "priority": 56,
+    "conditions": {
+      "minStats": {},
+      "requiredFlags": [
+        "crypto_scare"
+      ],
+      "blockedFlags": []
+    },
+    "isDefault": false
+  },
+  {
+    "titleId": "title_judge_baby",
+    "text": "판사봉 쥔 아기",
+    "description": "돌잡이 판사봉으로 아빠 이마를 두드렸다. \"땅! 땅!\"",
+    "priority": 55,
+    "conditions": {
+      "minStats": {},
+      "requiredFlags": [
+        "judge_gavel"
+      ],
+      "blockedFlags": []
+    },
+    "isDefault": false
+  },
+  {
+    "titleId": "title_interphone",
+    "text": "아랫집 인터폰 단골",
+    "description": "돌잡이 피아노 장난감 이후로 우리 집엔 음악이, 아랫집엔 인터폰이 끊이지 않았다.",
+    "priority": 55,
+    "conditions": {
+      "minStats": {},
+      "requiredFlags": [
+        "music_toy"
+      ],
+      "blockedFlags": []
+    },
+    "isDefault": false
+  },
+  {
+    "titleId": "title_chick",
+    "text": "노랑이 보호자",
+    "description": "학교 앞에서 500원에 데려온 병아리를 닭이 될 때까지 키웠다.",
+    "priority": 55,
+    "conditions": {
+      "minStats": {},
+      "requiredFlags": [
+        "raised_chick"
+      ],
+      "blockedFlags": []
+    },
+    "isDefault": false
+  },
+  {
+    "titleId": "title_fan_life",
+    "text": "늦게 배운 덕질 고수",
+    "description": "중년에 처음 덕질을 시작했다. 아무도 말리지 못했다.",
+    "priority": 55,
+    "conditions": {
+      "minStats": {},
+      "requiredFlags": [
+        "fan_life"
+      ],
+      "blockedFlags": []
+    },
+    "isDefault": false
+  },
+  {
+    "titleId": "title_wall_artist",
+    "text": "거실 벽 화백",
+    "description": "크레파스로 거실 벽에 대작을 남겼다. 아빠는 몰래 사진을 찍어 뒀다.",
+    "priority": 52,
+    "conditions": {
+      "minStats": {},
+      "requiredFlags": [
+        "wall_artist"
+      ],
+      "blockedFlags": []
+    },
+    "isDefault": false
+  },
+  {
+    "titleId": "title_loud_legend",
+    "text": "어린이집 최고 목청",
+    "description": "울음 한 번에 어린이집 전체가 합창을 시작했다.",
+    "priority": 52,
+    "conditions": {
+      "minStats": {},
+      "requiredFlags": [
+        "loud_legend"
+      ],
+      "blockedFlags": []
+    },
+    "isDefault": false
+  },
+  {
+    "titleId": "title_first_love",
+    "text": "첫사랑 보유자",
+    "description": "학창 시절 첫사랑이 있었다. 그 노래가 나오면 지금도 볼륨을 줄인다.",
+    "priority": 50,
+    "conditions": {
+      "minStats": {},
+      "requiredFlags": [
+        "first_love"
+      ],
+      "blockedFlags": []
+    },
+    "isDefault": false
+  },
+  {
+    "titleId": "title_gap_year",
+    "text": "1년 쉬어 본 사람",
+    "description": "스무 살에 1년을 쉬었다. 생각은 정리되지 않았지만 평생 친구가 생겼다.",
+    "priority": 50,
+    "conditions": {
+      "minStats": {},
+      "requiredFlags": [
+        "gap_year"
+      ],
+      "blockedFlags": []
+    },
+    "isDefault": false
+  },
+  {
+    "titleId": "title_plant_parent",
+    "text": "안 죽는 화분 집사",
+    "description": "화분 초록이에게 매일 말을 걸었다. 초록이는 쑥쑥 자랐다.",
+    "priority": 50,
+    "conditions": {
+      "minStats": {},
+      "requiredFlags": [
+        "plant_parent"
+      ],
+      "blockedFlags": []
+    },
+    "isDefault": false
+  },
+  {
+    "titleId": "title_blinker",
+    "text": "깜빡이 장인",
+    "description": "운전면허를 땄다. 깜빡이는 지금도 남들보다 일찍 켠다.",
+    "priority": 48,
+    "conditions": {
+      "minStats": {},
+      "requiredFlags": [
+        "driver_license"
+      ],
+      "blockedFlags": []
+    },
+    "isDefault": false
+  },
+  {
+    "titleId": "title_stat_intelligence",
+    "text": "걸어 다니는 백과사전",
+    "description": "모르는 게 생기면 다들 검색창보다 나를 먼저 찾았다.",
+    "priority": 46,
+    "conditions": {
+      "minStats": {
+        "지력": 85
+      },
+      "requiredFlags": [],
+      "blockedFlags": []
+    },
+    "isDefault": false
+  },
+  {
+    "titleId": "title_stat_fitness",
+    "text": "계단 두 칸씩 오르는 사람",
+    "description": "엘리베이터를 기다리는 시간에 7층까지 먼저 올라가 있었다.",
+    "priority": 46,
+    "conditions": {
+      "minStats": {
+        "운동능력": 85
+      },
+      "requiredFlags": [],
+      "blockedFlags": []
+    },
+    "isDefault": false
+  },
+  {
+    "titleId": "title_stat_social",
+    "text": "단톡방 방장",
+    "description": "모임은 늘 내가 만들었고, 정산도 늘 내가 했다.",
+    "priority": 46,
+    "conditions": {
+      "minStats": {
+        "사회성": 85
+      },
+      "requiredFlags": [],
+      "blockedFlags": []
+    },
+    "isDefault": false
+  },
+  {
+    "titleId": "title_stat_wealth",
+    "text": "통장이 든든한 사람",
+    "description": "월급날을 기다리지 않아도 되는 삶을 만들었다.",
+    "priority": 46,
+    "conditions": {
+      "minStats": {
+        "경제력": 85
+      },
+      "requiredFlags": [],
+      "blockedFlags": []
+    },
+    "isDefault": false
+  },
+  {
+    "titleId": "title_stat_happiness",
+    "text": "늘 웃고 있던 사람",
+    "description": "사진첩 어디를 펼쳐도 웃고 있었다.",
+    "priority": 46,
+    "conditions": {
+      "minStats": {
+        "행복": 85
+      },
+      "requiredFlags": [],
+      "blockedFlags": []
+    },
+    "isDefault": false
+  },
+  {
+    "titleId": "title_stat_luck",
+    "text": "될놈될",
+    "description": "찍은 답도, 뽑기도, 막차도 늘 내 편이었다.",
+    "priority": 46,
+    "conditions": {
+      "minStats": {
+        "운": 85
+      },
+      "requiredFlags": [],
+      "blockedFlags": []
+    },
+    "isDefault": false
+  },
+  {
+    "titleId": "title_stat_health",
+    "text": "감기도 비켜 간 사람",
+    "description": "독감이 돌 때마다 혼자 멀쩡했다. 그래서 늘 대신 출근했다.",
+    "priority": 46,
+    "conditions": {
+      "minStats": {
+        "건강": 85
+      },
+      "requiredFlags": [],
+      "blockedFlags": []
+    },
+    "isDefault": false
+  },
+  {
+    "titleId": "title_default",
+    "text": "평범한 인생의 주인공",
+    "description": "특별한 칭호는 없었다. 대신 하루하루가 전부 내 것이었다.",
+    "priority": 0,
+    "conditions": {
+      "minStats": {},
+      "requiredFlags": [],
+      "blockedFlags": []
+    },
+    "isDefault": true
+  }
+]
