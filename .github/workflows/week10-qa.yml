@@ -44,8 +44,13 @@ jobs:
       - name: Ensure Android 35 packages
         run: |
           python - <<'PY'
-          import subprocess
-          subprocess.run(['sdkmanager', 'platforms;android-35', 'build-tools;35.0.0'], input='y\n' * 30, text=True, check=True)
+          import os, pathlib, shutil, subprocess
+          root = pathlib.Path(os.environ.get('ANDROID_HOME', os.environ.get('ANDROID_SDK_ROOT', '/usr/local/lib/android/sdk')))
+          candidates = [root / 'cmdline-tools/latest/bin/sdkmanager', *root.glob('cmdline-tools/*/bin/sdkmanager')]
+          manager = shutil.which('sdkmanager') or next((str(p) for p in candidates if p.is_file()), None)
+          if manager is None:
+              raise RuntimeError(f'Android SDK manager missing under {root}')
+          subprocess.run([manager, 'platforms;android-35', 'build-tools;35.0.0'], input=('y' + chr(10)) * 30, text=True, check=True)
           PY
       - name: Unit tests, 10000 real lives, and APKs
         run: |
