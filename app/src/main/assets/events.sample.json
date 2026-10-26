@@ -3533,11 +3533,10 @@
             }
           }
         ],
-        "requiredStats": {
-          "행복": 52
-        },
         "conditionReview": "confirmed",
-        "conditionBasis": "semantic_flag_or_text_match"
+        "conditionBasis": "week10_qa_semantic_review",
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "기본 행동이라 능력치로 막지 않음 — 차이는 결과·후속 사실로 (10주차 QA 의미 검토 Q10-06)"
       },
       {
         "choiceId": "B",
@@ -3570,11 +3569,10 @@
             "lifeDelta": 10
           }
         ],
-        "requiredStats": {
-          "운동능력": 52
-        },
         "conditionReview": "confirmed",
-        "conditionBasis": "semantic_flag_or_text_match"
+        "conditionBasis": "week10_qa_semantic_review",
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "기본 행동이라 능력치로 막지 않음 — 차이는 결과·후속 사실로 (10주차 QA 의미 검토 Q10-06)"
       },
       {
         "choiceId": "C",
@@ -10509,11 +10507,10 @@
             "lifeDelta": 10
           }
         ],
-        "requiredStats": {
-          "경제력": 55
-        },
         "conditionReview": "confirmed",
-        "conditionBasis": "semantic_flag_or_text_match"
+        "conditionBasis": "week10_qa_semantic_review",
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "기본 행동이라 능력치로 막지 않음 — 차이는 결과·후속 사실로 (10주차 QA 의미 검토 Q10-06)"
       },
       {
         "choiceId": "C",
@@ -12687,9 +12684,10 @@
             "lifeDelta": 10
           }
         ],
-        "requiredStats": {
-          "사회성": 55
-        }
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "기본 행동이라 능력치로 막지 않음 — 차이는 결과·후속 사실로 (10주차 QA 의미 검토 Q10-06)",
+        "conditionReview": "confirmed",
+        "conditionBasis": "week10_qa_semantic_review"
       },
       {
         "choiceId": "B",
@@ -12722,11 +12720,10 @@
             "lifeDelta": 10
           }
         ],
-        "requiredStats": {
-          "사회성": 55
-        },
         "conditionReview": "confirmed",
-        "conditionBasis": "semantic_flag_or_text_match"
+        "conditionBasis": "week10_qa_semantic_review",
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "기본 행동이라 능력치로 막지 않음 — 차이는 결과·후속 사실로 (10주차 QA 의미 검토 Q10-06)"
       },
       {
         "choiceId": "C",
@@ -13226,9 +13223,10 @@
             "lifeDelta": 10
           }
         ],
-        "requiredStats": {
-          "경제력": 58
-        }
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "기본 행동이라 능력치로 막지 않음 — 차이는 결과·후속 사실로 (10주차 QA 의미 검토 Q10-06)",
+        "conditionReview": "confirmed",
+        "conditionBasis": "week10_qa_semantic_review"
       },
       {
         "choiceId": "C",
@@ -16898,11 +16896,11 @@
             "lifeDelta": 10
           }
         ],
-        "requiredStats": {
-          "경제력": 58
-        },
         "conditionReview": "confirmed",
-        "conditionBasis": "semantic_flag_or_text_match"
+        "conditionBasis": "week10_qa_semantic_review",
+        "requiredStats": {
+          "지력": 55
+        }
       },
       {
         "choiceId": "C",
@@ -20683,11 +20681,10 @@
             }
           }
         ],
-        "requiredStats": {
-          "행복": 60
-        },
         "conditionReview": "confirmed",
-        "conditionBasis": "semantic_flag_or_text_match"
+        "conditionBasis": "week10_qa_semantic_review",
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "기본 행동이라 능력치로 막지 않음 — 차이는 결과·후속 사실로 (10주차 QA 의미 검토 Q10-06)"
       },
       {
         "choiceId": "B",
@@ -20721,10 +20718,9 @@
           }
         ],
         "conditionReview": "confirmed",
-        "conditionBasis": "week10_meaning_review",
-        "requiredStats": {
-          "사회성": 55
-        }
+        "conditionBasis": "week10_qa_semantic_review",
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "기본 행동이라 능력치로 막지 않음 — 차이는 결과·후속 사실로 (10주차 QA 의미 검토 Q10-06)"
       },
       {
         "choiceId": "C",
@@ -21530,11 +21526,10 @@
             "deathCause": "끝없는 구직 스트레스"
           }
         ],
-        "requiredStats": {
-          "경제력": 58
-        },
         "conditionReview": "confirmed",
-        "conditionBasis": "semantic_flag_or_text_match"
+        "conditionBasis": "week10_qa_semantic_review",
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "기본 행동이라 능력치로 막지 않음 — 차이는 결과·후속 사실로 (10주차 QA 의미 검토 Q10-06)"
       },
       {
         "choiceId": "B",
@@ -21874,9 +21869,11 @@
             }
           }
         ],
-        "requiredStats": {
-          "지력": 58
-        }
+        "requiredFlags": [
+          "university"
+        ],
+        "conditionReview": "confirmed",
+        "conditionBasis": "week10_qa_semantic_review"
       },
       {
         "choiceId": "C",
@@ -24482,11 +24479,10 @@
             ]
           }
         ],
-        "requiredStats": {
-          "운": 52
-        },
         "conditionReview": "confirmed",
-        "conditionBasis": "semantic_flag_or_text_match"
+        "conditionBasis": "week10_qa_semantic_review",
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "기본 행동이라 능력치로 막지 않음 — 차이는 결과·후속 사실로 (10주차 QA 의미 검토 Q10-06)"
       },
       {
         "choiceId": "B",
@@ -24739,9 +24735,9 @@
           }
         ],
         "conditionReview": "confirmed",
-        "conditionBasis": "week10_meaning_review",
+        "conditionBasis": "week10_qa_semantic_review",
         "requiredStats": {
-          "건강": 55
+          "지력": 55
         }
       },
       {
@@ -24864,11 +24860,10 @@
             "deathCause": "면접장 물병 사태"
           }
         ],
-        "requiredStats": {
-          "운": 58
-        },
         "conditionReview": "confirmed",
-        "conditionBasis": "semantic_flag_or_text_match"
+        "conditionBasis": "week10_qa_semantic_review",
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "기본 행동이라 능력치로 막지 않음 — 차이는 결과·후속 사실로 (10주차 QA 의미 검토 Q10-06)"
       },
       {
         "choiceId": "B",
@@ -24936,11 +24931,11 @@
             "deathCause": "뚜껑째 건배"
           }
         ],
-        "requiredStats": {
-          "운": 58
-        },
         "conditionReview": "confirmed",
-        "conditionBasis": "semantic_flag_or_text_match"
+        "conditionBasis": "week10_qa_semantic_review",
+        "requiredStats": {
+          "사회성": 58
+        }
       }
     ],
     "priority": 0,
@@ -25179,9 +25174,10 @@
             "deathCause": "6개월 매일 채혈"
           }
         ],
-        "requiredStats": {
-          "지력": 58
-        }
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "기본 행동이라 능력치로 막지 않음 — 차이는 결과·후속 사실로 (10주차 QA 의미 검토 Q10-06)",
+        "conditionReview": "confirmed",
+        "conditionBasis": "week10_qa_semantic_review"
       },
       {
         "choiceId": "C",
@@ -26030,11 +26026,11 @@
             "deathCause": "체육 선생님의 분노"
           }
         ],
-        "requiredStats": {
-          "운": 55
-        },
         "conditionReview": "confirmed",
-        "conditionBasis": "semantic_flag_or_text_match"
+        "conditionBasis": "week10_qa_semantic_review",
+        "requiredStats": {
+          "운동능력": 55
+        }
       },
       {
         "choiceId": "B",
@@ -26067,10 +26063,9 @@
           }
         ],
         "conditionReview": "confirmed",
-        "conditionBasis": "week10_meaning_review",
-        "requiredStats": {
-          "건강": 55
-        }
+        "conditionBasis": "week10_qa_semantic_review",
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "기본 행동이라 능력치로 막지 않음 — 차이는 결과·후속 사실로 (10주차 QA 의미 검토 Q10-06)"
       },
       {
         "choiceId": "C",
@@ -29405,7 +29400,7 @@
           },
           {
             "outcomeId": "a_close",
-            "text": "2년 만에 문을 닫았다. 운동 기구는 중고로 팔았다. 회원 세 명은 지금도 연락이 온다.",
+            "text": "2년 만에 문을 닫았다. 운동 기구는 중고로 팔았다. 그 뒤로 다른 체육관에서 코치로 일했다. 그때 회원 세 명은 지금도 연락이 온다.",
             "chance": 40,
             "primary": false,
             "hidden": false,
@@ -29417,7 +29412,9 @@
             },
             "addFlags": [
               "fit_gym_closed",
-              "in_debt"
+              "in_debt",
+              "career_coach",
+              "career_coach__path_fit_08"
             ],
             "chanceWeights": {
               "경제력": -2
@@ -31361,11 +31358,11 @@
             }
           }
         ],
-        "requiredStats": {
-          "경제력": 65
-        },
         "conditionReview": "confirmed",
-        "conditionBasis": "week8_life_path"
+        "conditionBasis": "week10_qa_semantic_review",
+        "requiredFlags": [
+          "part_time_job"
+        ]
       },
       {
         "choiceId": "C",
@@ -31785,16 +31782,18 @@
           "건강": 2,
           "경제력": -3
         },
-        "resultText": "출퇴근은 두 배가 됐다. 대신 마당에 토마토가 열렸다. 주말마다 친구들이 놀러 온다.",
+        "resultText": "출퇴근은 두 배가 됐다. 대출은 아파트의 절반이었다. 대신 마당에 토마토가 열렸다. 주말마다 친구들이 놀러 온다.",
         "addFlags": [
           "home_owner",
           "housing_own_house",
+          "achv_home",
+          "in_debt",
           "home_owner__path_wea_05"
         ],
         "outcomes": [
           {
             "outcomeId": "c_country",
-            "text": "출퇴근은 두 배가 됐다. 대신 마당에 토마토가 열렸다. 주말마다 친구들이 놀러 온다.",
+            "text": "출퇴근은 두 배가 됐다. 대출은 아파트의 절반이었다. 대신 마당에 토마토가 열렸다. 주말마다 친구들이 놀러 온다.",
             "chance": 100,
             "primary": true,
             "hidden": false,
@@ -31807,15 +31806,17 @@
             "addFlags": [
               "home_owner",
               "housing_own_house",
+              "achv_home",
+              "in_debt",
               "home_owner__path_wea_05"
             ]
           }
         ],
-        "requiredStats": {
-          "행복": 70
-        },
         "conditionReview": "confirmed",
-        "conditionBasis": "week8_life_path"
+        "conditionBasis": "week10_qa_semantic_review",
+        "requiredStats": {
+          "경제력": 60
+        }
       }
     ],
     "priority": 0,
@@ -32783,11 +32784,11 @@
             ]
           }
         ],
-        "requiredStats": {
-          "경제력": 55
-        },
         "conditionReview": "confirmed",
-        "conditionBasis": "week8_life_path"
+        "conditionBasis": "week10_qa_semantic_review",
+        "requiredStats": {
+          "지력": 55
+        }
       },
       {
         "choiceId": "C",
@@ -34018,11 +34019,11 @@
             ]
           }
         ],
-        "requiredStats": {
-          "운": 66
-        },
         "conditionReview": "confirmed",
-        "conditionBasis": "week8_life_path"
+        "conditionBasis": "week10_qa_semantic_review",
+        "requiredStats": {
+          "사회성": 58
+        }
       },
       {
         "choiceId": "B",
@@ -36646,7 +36647,7 @@
             "death": false,
             "statDelta": {
               "경제력": 3,
-              "건강": -6
+              "건강": -10
             },
             "addFlags": [
               "overwork",
@@ -47213,7 +47214,7 @@
             "death": false,
             "statDelta": {
               "경제력": 2,
-              "건강": -6
+              "건강": -10
             },
             "addFlags": [
               "overwork",
