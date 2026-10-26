@@ -91,6 +91,10 @@ class Week10AuditTest(unittest.TestCase):
         self.assertEqual("UNREVIEWED_OR_CHANGED", row["semanticReview"])
         self.assertTrue(any(g["code"] == "CHOICE_MEANING_REVIEW_OPEN" for g in result["acceptanceFailures"]))
 
+    def test_unread_fact_type_cannot_silently_pass(self):
+        self.data["life_facts"][0]["fact"] = "careerTrak"
+        self.assertIn("unread fact type", self.errors())
+
 
 if __name__ == "__main__":
     unittest.main()

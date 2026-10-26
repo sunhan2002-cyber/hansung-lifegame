@@ -1,0 +1,10 @@
+{
+  "sourceCommit": "02fd63d",
+  "policy": "RANDOM",
+  "target": "HEALTH",
+  "seed": 20261002,
+  "endingId": "ending_path_hea_peaks",
+  "decisionCount": 28,
+  "matchesStoredDemoTrace": true,
+  "canonicalTraceSha256": "a384124446fc271648ef3579c10aac624c8268efcbab886e0fa4443752b48168"
+}

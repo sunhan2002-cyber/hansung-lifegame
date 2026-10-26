@@ -7,7 +7,7 @@
 - 게임 기준: main `0991b33`. 검사 소스: `6b3730e`. 게임 코드·콘텐츠의 동작을 이번 QA 브랜치에서 임의 변경하지 않았다.
 - 자동 데이터 검사: 281사건·796선택지·945결과·65결말·47칭호, 구조 오류 0. 파서 미지원 removeFlags 2곳 확인.
 - 의미 검토: 전환점·돌발 140선택지 중 열린 대안 유지 70, 조건 유지 29, 조건 재설계 권고 26, 의도/문구 보완 15. 전체 796개 행은 감사 JSON에 있으며 일반 사건의 새 잠금을 강제하지 않았다.
-- Python 검사기 회귀 13개 통과. Kotlin/Android 호스트 단위 테스트 debug/release **각 135개, 실패 0, skip 0**. 1,000사건 메모리 로딩 및 실제 최소 스탯 경계 시험 포함.
+- Python 검사기 회귀 14개 통과. Kotlin/Android 호스트 단위 테스트 debug/release **각 135개, 실패 0, skip 0**. 1,000사건 메모리 로딩 및 실제 최소 스탯 경계 시험 포함.
 - 실제 엔진 기본 표본 10,000회 + 별도 동일 시드 재실행 20회. 기본 표본의 치명 불변식 위반 0. 목표 미달: 행복 RANDOM 4.8%, 운 RANDOM 16.4%.
 - Android instrumentation **10개 중 7개 PASS, 3개 FAIL**. 결과 복원·완료 목록 저장·알 수 없는 저장 버전에서 실패.
 - 실제 프로세스 force-stop: 선택 전 pending 사건·저장 상태 일치 PASS, 선택 후 결과 화면 복원 FAIL. 각각 새 PID를 확인했다.
@@ -60,6 +60,6 @@ Windows 한글 경로의 JVM 테스트 클래스 로딩 문제가 있어 호스�
 
 ## CI 상태
 
-GitHub Actions의 첫 실행은 SDK manager의 PATH 누락으로 실패했고 SDK 설치 경로를 명시해 수정했다. 수정 후 실행 [40279398196](https://github.com/sunhan2002-cyber/hansung-lifegame/actions/runs/40279398196)은 데이터 검사·단위 테스트·10,000회·APKs 모두 성공했다. 이는 해당 커밋의 호스트 CI 증거이며 최종 앱/기기 인수 PASS가 아니다. 최종 변경분 CI 결과는 개인 제출 문서에 추가 기록한다.
+GitHub Actions의 첫 실행은 SDK manager의 PATH 누락으로 실패했고 SDK 설치 경로를 명시해 수정했다. 수정 후 실행 [40279398196](https://github.com/sunhan2002-cyber/hansung-lifegame/actions/runs/40279398196)과 소스 02fd63d의 [40280593838](https://github.com/sunhan2002-cyber/hansung-lifegame/actions/runs/40280593838)은 데이터 검사·단위 테스트·10,000회·APKs 모두 성공했다. 이는 해당 커밋의 호스트 CI 증거이며 최종 앱/기기 인수 PASS가 아니다. 현재 커밋 검사 상태는 [PR #39 Checks](https://github.com/sunhan2002-cyber/hansung-lifegame/pull/39/checks)를 따른다.
 
 자동화 설정은 [checkout](https://github.com/actions/checkout), [setup-java](https://github.com/actions/setup-java), [setup-python](https://github.com/actions/setup-python), [upload-artifact](https://github.com/actions/upload-artifact)의 공식 사용법과 실제 태그 SHA를 확인해 고정했다.

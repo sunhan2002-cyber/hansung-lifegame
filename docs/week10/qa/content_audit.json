@@ -287,6 +287,7 @@
     "outcomes": 945,
     "endings": 65,
     "titles": 47,
+    "lifeFactRules": 108,
     "producedFlags": 667,
     "scopedIdCollectionsChecked": 1083
   },
@@ -10509,7 +10510,7 @@
     "CHANGE_RECOMMENDED": 26,
     "KEEP_CONDITION": 29
   },
-  "sourceCommit": "d22eea269010b7023376ae8f7bae95db2fb31a90",
+  "sourceCommit": "02fd63dcbf0a1dc9fd6a5bde196532580e241886",
   "assetSha256": {
     "characters.sample.json": "5f19f66a2c3695c424524ad2b423a2b9f9b057aeea4ce33267576fa12ab88990",
     "endings.sample.json": "e5a909c9fd6447c4b4b984c5107657c0cee7bb812f732c8c9b41b395c935b639",

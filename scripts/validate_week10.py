@@ -19,6 +19,8 @@ STATS = {"건강", "운동능력", "지력", "사회성", "경제력", "행복",
          "health", "fitness", "intelligence", "social", "wealth", "happiness", "luck"}
 FACTS = {"educationLevel", "fieldOfStudy", "careerTrack", "careerLevel", "employmentStatus",
          "maritalStatus", "minChildrenCount", "housingType", "wealthBand", "requiredAchievements"}
+RULE_FACTS = {"educationLevel", "fieldOfStudy", "careerTrack", "careerLevel", "employmentStatus",
+              "maritalStatus", "childrenAtLeast", "housingType", "achievement", "healthStatus", "wealthNote"}
 TOKENS = {"name", "nameCall"}
 
 
@@ -43,6 +45,7 @@ def audit(bundle, parser_source="", source_tree=""):
     produced = {"gender_male", "gender_female", "military_service_required"}
     periods = {r["periodId"]: r["years"] for r in bundle["periods"]}
     images = {r["imageId"] for r in bundle["image_ids"]}
+    achievement_flags = {r["flag"] for r in bundle["life_facts"] if r.get("fact") == "achievement"}
     ids_by_scope = {}
 
     def error(where, message):
@@ -107,6 +110,12 @@ def audit(bundle, parser_source="", source_tree=""):
         for key in node.get("lifeFacts", {}):
             if key not in FACTS:
                 error(where, f"unread lifeFacts field: {key}")
+        child_min = node.get("lifeFacts", {}).get("minChildrenCount")
+        if child_min is not None and (type(child_min) is not int or child_min < 0):
+            error(where, "minChildrenCount must be a nonnegative integer")
+        achievements = node.get("lifeFacts", {}).get("requiredAchievements", [])
+        if not isinstance(achievements, list) or any(a not in achievement_flags for a in achievements):
+            error(where, "requiredAchievements must reference produced achievement flags")
         for unsupported in ("requiresFlags", "excludesFlags", "alwaysAvailableIf"):
             if node.get(unsupported):
                 error(where, f"unsupported condition alias: {unsupported}")
@@ -170,11 +179,28 @@ def audit(bundle, parser_source="", source_tree=""):
             if type(row.get("priority")) is not int:
                 error(where, "priority must be integer")
             conditions(row.get("conditions", {}), where)
+            extra = set(row.get("conditions", {})) - {"minStats", "maxStats", "requiredFlags", "blockedFlags", "lifeFacts"}
+            if extra:
+                error(where, f"unknown {kind} conditions: {sorted(extra)}")
             if row.get("isDefault") and any(row.get("conditions", {}).values()):
                 error(where, "default must not require conditions")
+    seen_rules = set()
     for i, rule in enumerate(bundle["life_facts"]):
         if rule.get("flag") not in produced:
             error(f"life_facts[{i}]", "rule flag has no producer")
+        if rule.get("fact") not in RULE_FACTS:
+            error(f"life_facts[{i}]", f"unread fact type: {rule.get('fact')}")
+        key = (rule.get("flag"), rule.get("fact"))
+        if key in seen_rules:
+            error(f"life_facts[{i}]", f"duplicate flag/fact mapping: {key}")
+        seen_rules.add(key)
+        if rule.get("fact") == "childrenAtLeast":
+            try:
+                value = str(rule["value"])
+                if not value.isdigit():
+                    raise ValueError()
+            except (KeyError, ValueError):
+                error(f"life_facts[{i}]", "childrenAtLeast must be a nonnegative integer value")
 
     def text_tokens(node, location):
         if isinstance(node, str):
@@ -199,7 +225,7 @@ def audit(bundle, parser_source="", source_tree=""):
     gates.extend(runtime_gaps)
     return {"schemaVersion": 1, "errors": errors, "runtimeGaps": runtime_gaps, "acceptanceFailures": gates,
         "metrics": {"events": len(events), "choices": choice_count, "outcomes": sum(len(c["outcomes"]) for e in events for c in e["choices"]),
-                    "endings": len(endings), "titles": len(titles), "producedFlags": len(produced),
+                    "endings": len(endings), "titles": len(titles), "lifeFactRules": len(bundle["life_facts"]), "producedFlags": len(produced),
                     "scopedIdCollectionsChecked": len(ids_by_scope)},
         "choiceReview": choices_review,
         "scope": "STATIC_DATA_INTEGRITY; source capability scans are not runtime proof; semantic review is separate"}

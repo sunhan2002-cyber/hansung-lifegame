@@ -1,6 +1,6 @@
 # 10주차 콘텐츠·조건 감사
 
-검증 소스: `d22eea269010b7023376ae8f7bae95db2fb31a90`.
+검증 소스: `02fd63dcbf0a1dc9fd6a5bde196532580e241886`.
 
 구조 오류 0건, 최종 인수 미해결 46건.
 
@@ -15,6 +15,7 @@
   "outcomes": 945,
   "endings": 65,
   "titles": 47,
+  "lifeFactRules": 108,
   "producedFlags": 667,
   "scopedIdCollectionsChecked": 1083
 }

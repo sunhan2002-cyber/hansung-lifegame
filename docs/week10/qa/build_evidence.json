@@ -19,13 +19,17 @@
       "variant": "debug",
       "file": "app-debug.apk",
       "sha256": "6a5520ddc20dd630bfc3995eaf99ae25b61e0245a5f7b50d30fcd676772035ea",
-      "bytes": 45456113
+      "bytes": 45456113,
+      "packagedPngFiles": 21,
+      "missingRoutedAssets": []
     },
     {
       "variant": "release",
       "file": "app-release-unsigned.apk",
       "sha256": "5c1fc489aca9296f87f28700e7faf46af458e5f02d47d4c97ac41674533acfb1",
-      "bytes": 42090923
+      "bytes": 42090923,
+      "packagedPngFiles": 21,
+      "missingRoutedAssets": []
     },
     {
       "variant": "androidTest/debug",
