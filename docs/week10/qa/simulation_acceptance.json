@@ -1,0 +1,8 @@
+{
+  "status": "FAIL",
+  "failures": [
+    "F10-02/13: HAPPINESS random path rate=4.8%, target>=20%",
+    "F10-02/13: LUCK random path rate=16.4%, target>=20%"
+  ],
+  "scope": "F10-02/03/13 simulation gates only; does not certify UI, storage, titles or full final acceptance"
+}

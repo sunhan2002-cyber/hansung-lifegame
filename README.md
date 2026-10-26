@@ -12,6 +12,8 @@
 
 팀원은 최신 main을 받은 뒤 통합 숙제→최종 인수 명세→본인 숙제 순으로 읽는다. 일반적인 빌드 명령은 `gradlew.bat test assembleDebug`이며, Windows 한글 경로에서 테스트 클래스 로딩에 실패할 경우 영문 경로에서 재현한다. 사진·서버 AI 연동 등 아직 없는 기능을 구현 완료로 해석하지 않는다.
 
+10주차 김선한 QA 결과: [개인 제출](docs/week10/submissions/김선한.md) · [최종 인수 보고](docs/week10/final_acceptance_report.md) · [실제 10,000회 통계](docs/week10/qa/simulation_report.md) · [담당자별 수정 요청](docs/week10/qa/team_fix_requests.md) · [시연·재현 명령](docs/week10/final_demo.md). 현재 최종 앱 인수는 FAIL이며 호스트 CI 통과와 구분한다.
+
 > 아기 캐릭터로 시작해 선택과 지표, 돌발 이벤트가 만든 미래를 확인하는 Android 기반 텍스트 인생게임입니다.
 
 | 구분 | 내용 |

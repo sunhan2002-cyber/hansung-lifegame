@@ -1,0 +1,38 @@
+{
+  "sourceCommit": "6b3730e",
+  "unitTests": {
+    "testDebugUnitTest": {
+      "tests": 135,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "testReleaseUnitTest": {
+      "tests": 135,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  },
+  "artifacts": [
+    {
+      "variant": "debug",
+      "file": "app-debug.apk",
+      "sha256": "6a5520ddc20dd630bfc3995eaf99ae25b61e0245a5f7b50d30fcd676772035ea",
+      "bytes": 45456113
+    },
+    {
+      "variant": "release",
+      "file": "app-release-unsigned.apk",
+      "sha256": "5c1fc489aca9296f87f28700e7faf46af458e5f02d47d4c97ac41674533acfb1",
+      "bytes": 42090923
+    },
+    {
+      "variant": "androidTest/debug",
+      "file": "app-debug-androidTest.apk",
+      "sha256": "87bdff347799c14301fc478bc2c4cfcf05363a3aa77581f2949e8f7bc58fb633",
+      "bytes": 1024150
+    }
+  ],
+  "installedApk": "C:\\Users\\hansung\\Desktop\\week10-sunhan-qa-20261026\\lifegame-week10-sunhan-qa-debug.apk"
+}

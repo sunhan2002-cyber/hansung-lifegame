@@ -33,6 +33,14 @@ object Week10SimulationRunner {
 
     @JvmStatic fun main(args: Array<String>) {
         val out = File(args.getOrElse(0) { "build/reports/week10" }).apply { mkdirs() }
+        if (args.size >= 5) {
+            val spec = Spec(Policy.valueOf(args[2]), StatKey.valueOf(args[3]), args[4].toLong())
+            val run = play(spec, sampleRestoration = true).put("sourceCommit", args[1])
+            File(out, "replay.json").writeText(run.toString(2))
+            println("WEEK10_REPLAY policy=${spec.policy} target=${spec.target} seed=${spec.seed} ending=${run.getString("endingId")}")
+            check(run.getJSONArray("violations").length() == 0) { "Replay invariant failure; inspect replay.json" }
+            return
+        }
         val began = System.currentTimeMillis()
         val specs = buildList {
             for (policy in listOf(Policy.RANDOM, Policy.TARGET)) {

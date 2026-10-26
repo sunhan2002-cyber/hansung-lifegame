@@ -4,7 +4,7 @@ import sys
 import unittest
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from validate_week10 import ASSETS, ROOT, audit, load_bundle, unique_object
+from validate_week10 import ASSETS, ROOT, audit, apply_semantic_review, load_bundle, unique_object
 
 
 class Week10AuditTest(unittest.TestCase):
@@ -81,6 +81,15 @@ class Week10AuditTest(unittest.TestCase):
         self.assertIn("unsupported token", self.errors())
         with self.assertRaises(ValueError):
             unique_object([("chance", 10), ("chance", 100)])
+
+    def test_semantic_review_is_invalidated_after_a_choice_changes(self):
+        result = audit(self.data, self.parser)
+        row = next(r for r in result["choiceReview"] if r["hardScope"])
+        document = {"entries": [{"id": row["eventId"] + ":" + row["choiceId"],
+                                  "sourceHash": "outdated", "verdict": "KEEP_OPEN", "reason": "old"}]}
+        apply_semantic_review(result, document)
+        self.assertEqual("UNREVIEWED_OR_CHANGED", row["semanticReview"])
+        self.assertTrue(any(g["code"] == "CHOICE_MEANING_REVIEW_OPEN" for g in result["acceptanceFailures"]))
 
 
 if __name__ == "__main__":

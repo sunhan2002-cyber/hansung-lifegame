@@ -1,0 +1,24 @@
+[
+  {
+    "command": [
+      "python",
+      "scripts/validate_week10.py",
+      "--acceptance"
+    ],
+    "exitCode": 1,
+    "status": "FINAL_TARGETS_NOT_MET_AS_RECORDED"
+  },
+  {
+    "command": [
+      "python",
+      "scripts/summarize_week10.py",
+      "--input",
+      "C:/Users/hansung/Desktop/week10-sunhan-qa-20261026/simulation",
+      "--out",
+      "docs/week10/qa",
+      "--acceptance"
+    ],
+    "exitCode": 1,
+    "status": "FINAL_TARGETS_NOT_MET_AS_RECORDED"
+  }
+]

@@ -64,6 +64,13 @@ tasks.register<JavaExec>("week10Simulation") {
         providers.gradleProperty("week10ReportDir").getOrElse("build/reports/week10"),
         providers.gradleProperty("week10SourceCommit").getOrElse("unrecorded"),
     )
+    if (providers.gradleProperty("week10Policy").isPresent) {
+        args(
+            providers.gradleProperty("week10Policy").get(),
+            providers.gradleProperty("week10Target").getOrElse("HEALTH"),
+            providers.gradleProperty("week10Seed").getOrElse("20261000"),
+        )
+    }
 }
 
 dependencies {

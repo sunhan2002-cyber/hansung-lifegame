@@ -151,8 +151,11 @@ def audit(bundle, parser_source="", source_tree=""):
                 if outcome.get("removeFlags") and 'optJSONArray("removeFlags")' not in parser_source:
                     runtime_gaps.append({"location": where, "code": "REMOVE_FLAGS_NOT_PARSED"})
             hard = event.get("kind") in {"MILESTONE", "BIG_INCIDENT"}
+            authored_requirements = {k: choice[k] for k in ("requiredStats", "stats", "requiredFlags", "blockedFlags", "lifeFacts") if choice.get(k)}
+            review_input = {"title": event["title"], "text": event["text"], "label": choice["label"], "requirements": authored_requirements, "kind": event["kind"]}
             choices_review.append({"eventId": eid, "choiceId": choice["choiceId"], "kind": event.get("kind"),
                 "label": choice["label"], "requirements": {k: choice[k] for k in ("requiredStats", "requiredFlags", "blockedFlags") if choice.get(k)},
+                "sourceHash": hashlib.sha256(json.dumps(review_input, ensure_ascii=False, sort_keys=True).encode()).hexdigest(),
                 "structurallyOpen": is_open, "hardScope": hard,
                 "authoredBasis": choice.get("conditionBasis") or choice.get("alwaysAvailableReason"),
                 "semanticReview": "EXISTING_AUTHOR_RATIONALE_NOT_NEW_MANUAL_CERTIFICATION" if choice.get("conditionBasis") or choice.get("alwaysAvailableReason") else "REVIEW_REASON_NEEDED"})
@@ -202,23 +205,63 @@ def audit(bundle, parser_source="", source_tree=""):
         "scope": "STATIC_DATA_INTEGRITY; source capability scans are not runtime proof; semantic review is separate"}
 
 
+def apply_semantic_review(result, document):
+    """Never carry an old decision over to an edited choice or an unseen new event."""
+    known = {r["id"]: r for r in document.get("entries", [])}
+    counts = Counter()
+    for row in result["choiceReview"]:
+        if not row["hardScope"]:
+            continue
+        key = row["eventId"] + ":" + row["choiceId"]
+        review = known.get(key)
+        if review is None or review.get("sourceHash") != row["sourceHash"]:
+            verdict = "UNREVIEWED_OR_CHANGED"
+        else:
+            verdict = review["verdict"]
+            row["semanticReason"] = review["reason"]
+        row["semanticReview"] = verdict
+        counts[verdict] += 1
+        if verdict not in {"KEEP_OPEN", "KEEP_CONDITION"}:
+            result["acceptanceFailures"].append({"code": "CHOICE_MEANING_REVIEW_OPEN", "location": key, "verdict": verdict, "owner": "신기훈·김우영"})
+    result["semanticReviewCounts"] = dict(counts)
+    return result
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--assets", type=Path, default=ASSETS)
     parser.add_argument("--report", type=Path, default=ROOT / "docs/week10/qa/content_audit.json")
     parser.add_argument("--acceptance", action="store_true")
+    parser.add_argument("--semantic-review", type=Path, default=ROOT / "docs/week10/qa/semantic_review.json")
     args = parser.parse_args()
     try:
         source = ROOT / "app/src/main/java/com/example/lifegame"
         result = audit(load_bundle(args.assets), (source / "data/V4ContentParser.kt").read_text(encoding="utf-8"),
                        "\n".join(p.read_text(encoding="utf-8") for p in source.rglob("*.kt")))
+        document = json.loads(args.semantic_review.read_text(encoding="utf-8")) if args.semantic_review.exists() else {}
+        apply_semantic_review(result, document)
         result["sourceCommit"] = __import__("subprocess").check_output(["git", "rev-parse", "HEAD"], cwd=ROOT, text=True).strip()
         result["assetSha256"] = {p.name: hashlib.sha256(p.read_bytes()).hexdigest() for p in args.assets.glob("*.json")}
     except (OSError, ValueError, KeyError, TypeError) as exc:
         result = {"errors": [{"location": str(args.assets), "message": str(exc)}], "acceptanceFailures": []}
     args.report.parent.mkdir(parents=True, exist_ok=True)
     args.report.write_text(json.dumps(result, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    print(json.dumps({k: v for k, v in result.items() if k in {"metrics", "errors", "runtimeGaps", "acceptanceFailures"}}, ensure_ascii=True, indent=2))
+    lines = ["# 10주차 콘텐츠·조건 감사", "", f"검증 소스: `{result.get('sourceCommit', 'unknown')}`.", "",
+             f"구조 오류 {len(result['errors'])}건, 최종 인수 미해결 {len(result['acceptanceFailures'])}건.", "",
+             "자동 구조 검사, 기존 작성 근거, 이번 AI 의미 검토는 서로 다른 증거다. 일반 사건 전체가 새로 수동 승인됐다고 간주하지 않는다.", "",
+             "## 수량", "", "```json", json.dumps(result.get("metrics", {}), ensure_ascii=False, indent=2), "```", "",
+             "## 돌발·전환점 의미 검토", "", "```json", json.dumps(result.get("semanticReviewCounts", {}), ensure_ascii=False, indent=2), "```", "",
+             "KEEP는 현재 설계 유지 의견, CLARIFY/CHANGE는 담당자의 재설계·설명 보완이 필요하다는 의견이다. 임계값의 실제 균형을 보증하지 않는다. 문구/맥락/조건이 바뀌면 sourceHash가 달라져 미검토로 돌아간다.", "",
+             "| 사건:선택 | 행동 | 조건 | 검토 | 근거 |", "| --- | --- | --- | --- | --- |"]
+    for row in result.get("choiceReview", []):
+        if row["hardScope"]:
+            fields = [row["eventId"] + ":" + row["choiceId"], row["label"], json.dumps(row["requirements"], ensure_ascii=False), row["semanticReview"], row.get("semanticReason", "새 의미 검토 필요")]
+            lines.append("| " + " | ".join(str(v).replace("|", "\\|").replace("\n", " ") for v in fields) + " |")
+    lines += ["", "## 실행 연결 누락", "", "```json", json.dumps(result.get("runtimeGaps", []), ensure_ascii=False, indent=2), "```", "",
+              "칭호 실행·선택지 목표·공유 계약 등 전체 미해결 목록과 796개 전수 행은 동명의 JSON 보고서를 참고한다."]
+    args.report.with_suffix(".md").write_text("\n".join(lines) + "\n", encoding="utf-8")
+    print(json.dumps({k: v for k, v in result.items() if k in {"metrics", "errors", "runtimeGaps", "semanticReviewCounts"}}, ensure_ascii=True, indent=2))
+    print(f"final_acceptance_open_items={len(result['acceptanceFailures'])}; full details: {args.report}")
     return int(bool(result["errors"] or (args.acceptance and result["acceptanceFailures"])))
 
 
