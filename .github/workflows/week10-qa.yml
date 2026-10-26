@@ -1,0 +1,72 @@
+name: Week 10 QA
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      final_acceptance:
+        description: Enforce unfinished final release gates as failures
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+concurrency:
+  group: week10-qa-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  data-and-android:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-java@b843ebf9b913146b38da2eaa7aeddf76074ae1ad # v6
+        with:
+          distribution: temurin
+          java-version: '17'
+      - name: Validate authored data and validator regression tests
+        run: |
+          python scripts/validate_content.py
+          python scripts/validate_images.py
+          python scripts/validate_week8_contracts.py
+          python scripts/audit_choice_conditions.py
+          python scripts/audit_event_stat_classification.py
+          python -m unittest discover -s scripts/tests -v
+          python scripts/validate_week10.py --report build/week10/content_audit.json
+      - name: Ensure Android 35 packages
+        run: |
+          python - <<'PY'
+          import subprocess
+          subprocess.run(['sdkmanager', 'platforms;android-35', 'build-tools;35.0.0'], input='y\n' * 30, text=True, check=True)
+          PY
+      - name: Unit tests, 10000 real lives, and APKs
+        run: |
+          chmod +x gradlew
+          ./gradlew test :app:week10Simulation assembleDebug assembleRelease assembleDebugAndroidTest --no-daemon --max-workers=2 -Pweek10ReportDir=../build/week10/simulation -Pweek10SourceCommit="$(git rev-parse HEAD)"
+          python scripts/summarize_week10.py --input build/week10/simulation --out build/week10/assessment
+          cat build/week10/assessment/simulation_report.md >> "$GITHUB_STEP_SUMMARY"
+          sha256sum app/build/outputs/apk/debug/*.apk app/build/outputs/apk/release/*.apk > build/week10/apk-sha256.txt
+      - name: Enforce final release targets when requested
+        if: ${{ github.event_name == 'workflow_dispatch' && inputs.final_acceptance }}
+        run: |
+          python scripts/validate_week10.py --report build/week10/content_audit.json --acceptance
+          python scripts/summarize_week10.py --input build/week10/simulation --out build/week10/assessment --acceptance
+      - name: Preserve QA evidence even on failure
+        if: always()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7
+        with:
+          name: week10-qa-${{ github.run_id }}
+          retention-days: 14
+          path: |
+            build/week10/
+            app/build/reports/
+            app/build/test-results/
+            app/build/outputs/apk/
