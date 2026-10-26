@@ -129,8 +129,7 @@
     "name": "운동",
     "description": "몸을 움직이며 체력을 키운다. 주말 연습 때문에 친구 생일 파티는 자주 놓친다.",
     "annualStatDelta": {
-      "운동능력": 2,
-      "건강": 1,
+      "운동능력": 3,
       "사회성": -1
     },
     "sceneImageId": "img_scene_child_sports_001",
@@ -163,10 +162,9 @@
     "focusId": "focus_child_help",
     "period": "CHILD",
     "name": "집안일 돕기",
-    "description": "심부름과 집안일을 맡으며 책임감을 배운다. 대신 노는 시간이 줄어든다.",
+    "description": "심부름과 집안일을 맡으며 책임감과 생활 습관을 배운다. 밥은 남기지 않고 잠은 일찍 잔다. 대신 노는 시간이 줄어든다.",
     "annualStatDelta": {
-      "사회성": 1,
-      "건강": 1,
+      "건강": 2,
       "경제력": 1,
       "행복": -1
     },
@@ -219,8 +217,7 @@
     "name": "운동",
     "description": "체력과 자신감을 기른다. 아침 운동 탓에 1교시엔 자주 존다.",
     "annualStatDelta": {
-      "운동능력": 2,
-      "건강": 1,
+      "운동능력": 3,
       "지력": -1
     },
     "sceneImageId": "img_scene_teen_fitness_001",
@@ -324,16 +321,15 @@
     "focusId": "focus_young_adult_health",
     "period": "YOUNG_ADULT",
     "name": "건강",
-    "description": "잠과 식사, 운동 루틴을 지킨다. 아플 때 회복할 가능성이 커지지만 공부는 다음 달로 밀린다.",
+    "description": "잠과 식사를 제때 챙기고 검진을 미루지 않는다. 아플 때 회복할 가능성이 커지지만 공부는 다음 달로 밀린다.",
     "annualStatDelta": {
-      "건강": 2,
-      "운동능력": 1,
+      "건강": 3,
       "지력": -1
     },
     "sceneImageId": "img_scene_young_adult_health_001",
     "momentImageId": "img_moment_young_adult_health_001",
     "yearlyLogTemplates": [
-      "헬스장 출석 도장이 한 달을 꽉 채웠다.",
+      "건강검진을 예약한 날짜에 정확히 받았다.",
       "밤 11시에 휴대폰 내려놓기에 성공했다. 세 번 중 한 번은.",
       "편의점 도시락 대신 직접 싼 도시락을 들고 다녔다."
     ]
@@ -342,10 +338,10 @@
     "focusId": "focus_young_adult_adventure",
     "period": "YOUNG_ADULT",
     "name": "도전",
-    "description": "낯선 도시와 새 기회를 찾아다닌다. 뜻밖의 기회를 만날 가능성이 커지지만 생활은 불규칙해진다.",
+    "description": "배낭 하나로 낯선 도시와 산길을 찾아다닌다. 다리가 튼튼해지고 뜻밖의 기회를 만날 가능성이 커지지만 생활은 불규칙해진다.",
     "annualStatDelta": {
       "운": 2,
-      "행복": 1,
+      "운동능력": 1,
       "건강": -1
     },
     "sceneImageId": "img_scene_young_adult_adventure_001",
@@ -353,7 +349,7 @@
     "yearlyLogTemplates": [
       "지도 앱 '최근 검색'이 전부 처음 가 보는 동네였다.",
       "계획에 없던 제안을 받았다. 일단 해 보겠다고 했다.",
-      "실패담 세 개가 술자리 단골 이야기가 됐다."
+      "산 정상 인증 사진이 앨범 한 칸을 다 채웠다."
     ]
   },
   {
@@ -396,10 +392,9 @@
     "focusId": "focus_middle_health",
     "period": "MIDDLE",
     "name": "건강",
-    "description": "검진과 운동으로 몸을 관리한다. 아프거나 다쳤을 때 나쁜 결과가 나올 가능성이 줄어든다. 야식과는 이별이다.",
+    "description": "검진과 식단으로 몸을 관리한다. 아프거나 다쳤을 때 나쁜 결과가 나올 가능성이 줄어든다. 야식과는 이별이다.",
     "annualStatDelta": {
-      "건강": 2,
-      "운동능력": 1,
+      "건강": 3,
       "행복": -1
     },
     "sceneImageId": "img_scene_middle_health_001",
@@ -414,18 +409,19 @@
     "focusId": "focus_middle_hobby",
     "period": "MIDDLE",
     "name": "취미",
-    "description": "나만의 즐거움을 되찾는다. 장비부터 사는 바람에 통장이 가벼워진다.",
+    "description": "나만의 즐거움을 되찾는다. 자전거, 등산화, 라켓… 장비부터 사는 바람에 통장이 가벼워진다.",
     "annualStatDelta": {
       "행복": 2,
       "운": 1,
-      "경제력": -1
+      "운동능력": 1,
+      "경제력": -2
     },
     "sceneImageId": "img_scene_middle_hobby_001",
     "momentImageId": "img_moment_middle_hobby_001",
     "yearlyLogTemplates": [
       "퇴근 후 한 시간이 하루 중 제일 길었다.",
       "실력보다 장비가 먼저 프로가 됐다.",
-      "택배 상자를 가족 몰래 뜯었다."
+      "주말마다 자전거로 옆 동네까지 다녀왔다. 엉덩이가 먼저 적응했다."
     ]
   },
   {
