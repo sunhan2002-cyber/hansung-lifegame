@@ -2,15 +2,15 @@
   "metrics": {
     "eventCount": 281,
     "choiceCount": 796,
-    "explicitConditionCount": 316,
-    "explicitConditionRate": 39.7,
-    "hardTargetEventCount": 46,
-    "hardTargetChoiceCount": 134,
+    "explicitConditionCount": 319,
+    "explicitConditionRate": 40.08,
+    "hardTargetEventCount": 48,
+    "hardTargetChoiceCount": 140,
     "hardGatedChoiceCount": 70,
-    "hardOpenChoiceCount": 64,
-    "softEventCount": 235,
-    "softChoiceCount": 662,
-    "softUnconditionalCount": 480,
+    "hardOpenChoiceCount": 70,
+    "softEventCount": 233,
+    "softChoiceCount": 656,
+    "softUnconditionalCount": 477,
     "missingConditionCount": 0,
     "reviewRequiredCount": 0,
     "candidateConditionCount": 0,
@@ -5208,7 +5208,7 @@
         "행복": 2
       },
       "suggestedThreshold": null,
-      "label": "옆에 'D-99: 치킨'이라고 쓴다."
+      "label": "옆에 'D-364: 치킨'이라고 쓴다."
     },
     {
       "eventId": "teen_038",
@@ -5216,9 +5216,11 @@
       "periods": [
         "TEEN"
       ],
-      "category": "soft_unconditional",
-      "scope": "soft",
-      "conditionFields": [],
+      "category": "explicit",
+      "scope": "hard",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "지력": 3
       },
@@ -5231,9 +5233,11 @@
       "periods": [
         "TEEN"
       ],
-      "category": "soft_unconditional",
-      "scope": "soft",
-      "conditionFields": [],
+      "category": "explicit",
+      "scope": "hard",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "운": 3
       },
@@ -5246,9 +5250,11 @@
       "periods": [
         "TEEN"
       ],
-      "category": "soft_unconditional",
-      "scope": "soft",
-      "conditionFields": [],
+      "category": "explicit",
+      "scope": "hard",
+      "conditionFields": [
+        "alwaysAvailable"
+      ],
       "positiveStats": {
         "행복": 2,
         "사회성": 1
@@ -10489,7 +10495,7 @@
         "TEEN"
       ],
       "category": "explicit",
-      "scope": "soft",
+      "scope": "hard",
       "conditionFields": [
         "alwaysAvailable"
       ],
@@ -10506,7 +10512,7 @@
         "TEEN"
       ],
       "category": "explicit",
-      "scope": "soft",
+      "scope": "hard",
       "conditionFields": [
         "alwaysAvailable"
       ],
@@ -10524,7 +10530,7 @@
         "TEEN"
       ],
       "category": "explicit",
-      "scope": "soft",
+      "scope": "hard",
       "conditionFields": [
         "alwaysAvailable"
       ],
