@@ -43,6 +43,12 @@ android {
     }
 }
 
+// Unit tests load the authored JSON and image routing directly from this directory.
+// A content-only change must invalidate Gradle's cached test result too.
+tasks.withType<org.gradle.api.tasks.testing.Test>().configureEach {
+    inputs.dir("src/main/assets")
+}
+
 dependencies {
     val composeBom = platform("androidx.compose:compose-bom:2024.12.01")
     implementation(composeBom)
