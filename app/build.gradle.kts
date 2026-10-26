@@ -49,6 +49,23 @@ tasks.withType<org.gradle.api.tasks.testing.Test>().configureEach {
     inputs.dir("src/main/assets")
 }
 
+// Explicit long-run QA entry point; this is not a skipped or weakened unit test.
+tasks.register<JavaExec>("week10Simulation") {
+    group = "verification"
+    description = "Run 10,000 real-content lives and write reproducible week 10 QA evidence"
+    dependsOn("testDebugUnitTest")
+    mainClass.set("com.example.lifegame.domain.engine.Week10SimulationRunner")
+    classpath = files(provider {
+        tasks.named<org.gradle.api.tasks.testing.Test>("testDebugUnitTest").get().classpath
+    })
+    workingDir = projectDir
+    maxHeapSize = "1536m"
+    args(
+        providers.gradleProperty("week10ReportDir").getOrElse("build/reports/week10"),
+        providers.gradleProperty("week10SourceCommit").getOrElse("unrecorded"),
+    )
+}
+
 dependencies {
     val composeBom = platform("androidx.compose:compose-bom:2024.12.01")
     implementation(composeBom)
