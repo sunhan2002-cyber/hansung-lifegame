@@ -38,11 +38,11 @@
     "priority": 87,
     "conditions": {
       "minStats": {
-        "운동능력": 85,
-        "건강": 70
+        "운동능력": 85
       },
       "requiredFlags": [
-        "sports_training"
+        "sports_training",
+        "healthy_routine"
       ]
     },
     "summary": "꾸준히 몸을 단련한 선택들이 결과로 이어져, 사람들에게 기억되는 운동선수가 되었다.",
@@ -102,8 +102,7 @@
     "priority": 83,
     "conditions": {
       "minStats": {
-        "운": 85,
-        "건강": 55
+        "운": 85
       },
       "requiredFlags": [
         "risk_taker"
@@ -118,8 +117,7 @@
     "priority": 82,
     "conditions": {
       "minStats": {
-        "운": 75,
-        "건강": 65
+        "운": 75
       },
       "requiredFlags": [
         "special_survived"
@@ -149,11 +147,10 @@
     "title": "병원보다 산책로가 익숙한 사람이 되었다",
     "priority": 69,
     "conditions": {
-      "minStats": {
-        "건강": 85
-      },
+      "minStats": {},
       "requiredFlags": [
-        "healthy_routine"
+        "healthy_routine",
+        "hea_managed"
       ]
     },
     "summary": "무리하지 않고 몸을 챙긴 선택들이 쌓여, 나이 들어서도 일상을 오래 즐길 수 있게 되었다.",
@@ -350,12 +347,12 @@
     "priority": 63,
     "conditions": {
       "minStats": {
-        "건강": 60,
         "행복": 55,
         "운": 50
       },
       "requiredFlags": [
-        "special_survived"
+        "special_survived",
+        "healthy_routine"
       ],
       "blockedFlags": []
     },
@@ -440,12 +437,12 @@
     "priority": 58,
     "conditions": {
       "minStats": {
-        "건강": 70,
         "운동능력": 70,
         "행복": 55
       },
       "requiredFlags": [
-        "gym_habit"
+        "gym_habit",
+        "healthy_routine"
       ],
       "blockedFlags": []
     },
@@ -1034,7 +1031,9 @@
       "requiredFlags": [
         "hea_recovered"
       ],
-      "blockedFlags": []
+      "blockedFlags": [
+        "hea_relapse"
+      ]
     },
     "summary": "진단서 한 장이 인생을 바꿨다. 야근과 술을 끊은 1년 뒤, 의사는 진단서를 다시 써 줬다.",
     "isDefault": false,
@@ -1052,6 +1051,22 @@
       "blockedFlags": []
     },
     "summary": "경고를 미룬 대가로 평생 약을 먹게 됐다. 높은 산 대신 둘레길을 걸으며, 할 수 있는 만큼의 삶을 찾았다.",
+    "isDefault": false,
+    "lifePath": "HEALTH"
+  },
+  {
+    "endingId": "ending_path_hea_neighbors",
+    "title": "공원 체조로 동네를 깨운 사람",
+    "priority": 94,
+    "conditions": {
+      "minStats": {},
+      "requiredFlags": [
+        "hea_path",
+        "achv_health_teacher"
+      ],
+      "blockedFlags": []
+    },
+    "summary": "급식판의 채소부터 시작한 습관을 끝까지 지켰다. 노년에는 공원 정자 앞에서 구령을 붙였고, 혼자 지키던 건강이 동네 사람들의 아침이 되었다.",
     "isDefault": false,
     "lifePath": "HEALTH"
   }
