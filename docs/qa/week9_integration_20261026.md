@@ -59,4 +59,22 @@ Week9BalanceSimulationTest, 시드 20261000~20261049 ×7경로. 초점은 목표
 
 이번 통합 검사는 9주차 결과가 기존 게임에 합쳐져 빌드·단위 테스트·정적 데이터 검사를 통과하는지를 확인했다. **10,000회 장기 검증, 기기 UI 인수, 완료 인생 영구 저장, 칭호 실제 연결, 성장 캐릭터 조립, 실제 AI 생성 서비스는 완료한 것으로 보지 않는다.** 행복·운 밸런스가 완성됐다고 평가하지 않는다. 10주차 최종 인수 명세와 담당 숙제로 넘긴다.
 
-최종 문서/라우팅까지 반영한 추가 빌드 결과는 아래 최종 확인 절에 기록한다.
+## 최종 확인
+
+검증 소스 커밋: `2f7c8cb`(9주차 두 브랜치, 10주차 문서, 건강 초점 이미지 태그, 테스트 입력 보완 포함).
+
+실제 JSON을 파일로 읽는 테스트가 콘텐츠만 바뀌었을 때도 재실행되도록 `app/build.gradle.kts`의 Test 입력에 `src/main/assets`를 추가했다. 이 변경 뒤 아래 명령을 다시 실행했다.
+
+```powershell
+.\gradlew.bat test assembleDebug assembleRelease --no-daemon --max-workers=2
+```
+
+- BUILD SUCCESSFUL, debug/release 단위 테스트 각각 133개 모두 통과. XML 갱신 시각으로 테스트가 재실행된 것을 확인했다.
+- debug 설치 APK 및 **서명 없는 release APK** 빌드 성공, release lintVital 통과.
+- 두 APK를 ZIP으로 열어 실제 PNG 21개와 `focus_child_help: health` 라우팅 포함을 확인했다.
+- debug SHA-256: `6a5520ddc20dd630bfc3995eaf99ae25b61e0245a5f7b50d30fcd676772035ea`.
+- unsigned release SHA-256: `5c1fc489aca9296f87f28700e7faf46af458e5f02d47d4c97ac41674533acfb1`.
+- 최종 로그: 로컬 `C:/Users/hansung/Desktop/week10-integration-20261026/gradle-content-inputs.log`.
+- 설치용 사본: 로컬 `C:/Users/hansung/Desktop/week10-integration-20261026/app-week9-integrated-debug.apk`. 이번 작업에서 기기 설치·기존 플레이 갱신은 수행하지 않았다.
+
+원격 브랜치도 추가 대조했다. 미포함처럼 보이는 과거 인수인계 브랜치의 문서는 현재 main의 파일과 동일하고, wrapper 줄 끝 정책도 이미 반영돼 있다. 과거 6주차 UI 브랜치 전체를 다시 병합해 현행 8·9주차 기능을 되돌리지 않았다.
