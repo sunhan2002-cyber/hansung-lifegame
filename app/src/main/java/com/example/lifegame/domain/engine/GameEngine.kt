@@ -3,6 +3,7 @@ package com.example.lifegame.domain.engine
 import com.example.lifegame.domain.model.Choice
 import com.example.lifegame.domain.model.ChoiceHistory
 import com.example.lifegame.domain.model.ChoiceResult
+import com.example.lifegame.domain.model.AwardedTitle
 import com.example.lifegame.domain.model.ChanceWeights
 import com.example.lifegame.domain.model.DecisionEvent
 import com.example.lifegame.domain.model.DecisionKind
@@ -15,6 +16,7 @@ import com.example.lifegame.domain.model.GameEvent
 import com.example.lifegame.domain.model.GameProgress
 import com.example.lifegame.domain.model.GameScreenState
 import com.example.lifegame.domain.model.LifeMoment
+import com.example.lifegame.domain.model.LifeTitle
 import com.example.lifegame.domain.model.LifeFacts
 import com.example.lifegame.domain.model.LifeFactRule
 import com.example.lifegame.domain.model.LifePeriod
@@ -109,7 +111,8 @@ class GameEngine(
         val updated = progress.copy(
             screenState = GameScreenState.CHOICE_RESULT,
             stats = after,
-            flags = progress.flags + choice.addFlags,
+            // 제거 후 추가한다. 같은 플래그가 양쪽에 있으면 addFlags가 최종 승리한다.
+            flags = (progress.flags - choice.removeFlags) + choice.addFlags,
             completedEventIds = progress.completedEventIds + event.eventId,
             handledOccurrenceIds = progress.handledOccurrenceIds + occurrenceId,
             choiceHistory = progress.choiceHistory + history,
@@ -398,13 +401,12 @@ class GameEngine(
         require(state.flags.none(choice.blockedFlags::contains)) { "choice is blocked by current flags" }
 
         val outcome = pickOutcome(state, event, choice.choiceId, choice.outcomes)
-        val combinedDelta = outcome.statDelta.copy(
-            health = outcome.statDelta.health + outcome.lifeDelta + annualHealthDelta(state.period),
-        )
+        val combinedDelta = resolveOutcomeStatDelta(state.period, outcome)
         val afterStats = state.stats.apply(combinedDelta, minHealth = healthFloor(state.period))
         val healthDepleted = afterStats.health <= 0
-        val nextFlags = state.flags + outcome.addFlags + completedEventFlag(event.eventId)
+        val nextFlags = (state.flags - outcome.removeFlags) + outcome.addFlags + completedEventFlag(event.eventId)
         val nextFacts = state.lifeFacts
+            .removeRules(outcome.removeFlags, lifeFactRules)
             .applyRules(outcome.addFlags + completedEventFlag(event.eventId), lifeFactRules)
             .copy(wealthBand = wealthBand(afterStats.wealth))
         val resolved = state.copy(
@@ -458,6 +460,11 @@ class GameEngine(
             ),
         )
     }
+
+    /** 한 선택 결과에 적용되는 건강 정책: 명시 statDelta + legacy lifeDelta + 연간 감소를 정확히 한 번 합산한다. */
+    fun resolveOutcomeStatDelta(period: LifePeriod, outcome: Outcome): StatDelta = outcome.statDelta.copy(
+        health = outcome.statDelta.health + outcome.lifeDelta + annualHealthDelta(period),
+    )
 
     private fun pickPeriodDecision(
         state: PeriodRunState,
@@ -883,6 +890,23 @@ class GameEngine(
         return selected.copy(summary = buildLifeSummary(state, selected.summary))
     }
 
+    /** 우선순위 내림차순, 동률 titleId 오름차순. 조건 불일치 시 유일한 기본 칭호를 반환한다. */
+    fun resolveTitle(state: PeriodRunState, titles: List<LifeTitle>): AwardedTitle {
+        require(titles.isNotEmpty()) { "At least one title is required" }
+        val defaults = titles.filter { it.isDefault }
+        require(defaults.size == 1) { "Exactly one default title is required" }
+        val selected = titles.asSequence()
+            .filterNot { it.isDefault }
+            .filter { it.conditions.stats.matches(state.stats) }
+            .filter { state.flags.containsAll(it.conditions.requiredFlags) }
+            .filterNot { title -> state.flags.any(title.conditions.blockedFlags::contains) }
+            .filter { it.conditions.lifeFacts.matches(state.lifeFacts) }
+            .sortedWith(compareByDescending<LifeTitle> { it.priority }.thenBy { it.titleId })
+            .firstOrNull()
+            ?: defaults.single()
+        return AwardedTitle(selected.titleId, selected.text, selected.description)
+    }
+
     /** 프론트가 별도 판정 없이 그대로 표시할 수 있는 결말용 인생 요약. */
     fun buildLifeSummary(state: PeriodRunState, baseSummary: String = ""): String {
         val facts = state.lifeFacts
@@ -988,8 +1012,8 @@ class GameEngine(
 
     private fun LifeFacts.applyRules(flags: Set<String>, rules: List<LifeFactRule>): LifeFacts {
         var current = this
-        val rulesByFlag = rules.groupBy { it.flag }
-        flags.flatMap { rulesByFlag[it].orEmpty() }.forEach { rule ->
+        // flags는 LinkedHashSet으로 누적되므로 실제 선택 연대기를 유지한다. 같은 사실은 나중 선택이 이긴다.
+        flags.flatMap { flag -> rules.filter { it.flag == flag } }.forEach { rule ->
             current = when (rule.fact) {
                 "educationLevel" -> current.copy(educationLevel = rule.value)
                 "fieldOfStudy" -> current.copy(fieldOfStudy = rule.value)
@@ -1002,6 +1026,25 @@ class GameEngine(
                 )
                 "housingType" -> current.copy(housingType = rule.value)
                 "achievement" -> current.copy(achievementFlags = current.achievementFlags + rule.flag)
+                else -> current
+            }
+        }
+        return current
+    }
+
+    private fun LifeFacts.removeRules(flags: Set<String>, rules: List<LifeFactRule>): LifeFacts {
+        var current = this
+        rules.filter { it.flag in flags }.forEach { rule ->
+            current = when (rule.fact) {
+                "educationLevel" -> if (current.educationLevel == rule.value) current.copy(educationLevel = null) else current
+                "fieldOfStudy" -> if (current.fieldOfStudy == rule.value) current.copy(fieldOfStudy = null) else current
+                "careerTrack" -> if (current.careerTrack == rule.value) current.copy(careerTrack = null) else current
+                "careerLevel" -> if (current.careerLevel == rule.value) current.copy(careerLevel = null) else current
+                "employmentStatus" -> if (current.employmentStatus == rule.value) current.copy(employmentStatus = null) else current
+                "maritalStatus" -> if (current.maritalStatus == rule.value) current.copy(maritalStatus = null) else current
+                "housingType" -> if (current.housingType == rule.value) current.copy(housingType = null) else current
+                "achievement" -> current.copy(achievementFlags = current.achievementFlags - rule.flag)
+                // 자녀 수와 과거 업적은 현재 상태 플래그 제거만으로 되돌리지 않는다.
                 else -> current
             }
         }

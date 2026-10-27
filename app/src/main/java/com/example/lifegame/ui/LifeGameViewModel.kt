@@ -10,13 +10,19 @@ import com.example.lifegame.data.ProgressStore
 import com.example.lifegame.data.SavedGame
 import com.example.lifegame.data.V4ProgressStore
 import com.example.lifegame.data.V4SavedRun
+import com.example.lifegame.data.V4LoadResult
 import com.example.lifegame.domain.engine.GameEngine
 import com.example.lifegame.domain.engine.GameSession
 import com.example.lifegame.domain.engine.PeriodGameSession
+import com.example.lifegame.domain.model.AvatarConfig
+import com.example.lifegame.domain.model.AwardedTitle
 import com.example.lifegame.domain.model.Choice
+import com.example.lifegame.domain.model.CompletedLifeRecord
 import com.example.lifegame.domain.model.Ending
 import com.example.lifegame.domain.model.GameProgress
 import com.example.lifegame.domain.model.GameScreenState
+import com.example.lifegame.domain.model.RunChoiceRecord
+import com.example.lifegame.domain.model.SavedOutcome
 import com.example.lifegame.domain.model.TurnPhase
 import com.example.lifegame.domain.model.TurnStep
 
@@ -132,6 +138,10 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
     private var characterImageIdForPlay: String? = null
     /** 고른 선택지 기록. 결말 화면의 "주요 선택"에 쓴다. */
     private val choiceLog = mutableListOf<ChoiceRecordUi>()
+    private val runChoiceHistory = mutableListOf<RunChoiceRecord>()
+    private var pendingOutcomeSnapshot: SavedOutcome? = null
+    private var avatarForPlay = AvatarConfig()
+    private var awardedTitleForRun: AwardedTitle? = null
     /** 끝난 판의 결말 (runId 기준으로 한 번만 고른다) */
     private var endingForRun: Pair<String, Ending?>? = null
     private var shownDecision: DecisionUi? = null
@@ -147,7 +157,11 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
     var playError by mutableStateOf<String?>(null)
         private set
 
-    var finishedLives by mutableStateOf<List<FinishedLifeUi>>(emptyList())
+    var finishedLives by mutableStateOf(
+        v4ProgressStore.loadCompletedLives().map {
+            FinishedLifeUi(it.runId, it.playerName, it.summary)
+        },
+    )
         private set
 
     /** 프로필 만들기의 타고난 기질. characters.sample.json에서 읽는다. */
@@ -258,6 +272,10 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
         playSession = newSession
         playContent = playContentOf(content.periods, focuses, decisions)
         choiceLog.clear()
+        runChoiceHistory.clear()
+        pendingOutcomeSnapshot = null
+        avatarForPlay = AvatarConfig()
+        awardedTitleForRun = null
         endingForRun = null
         playerNameForPlay = name
         characterImageIdForPlay = starter?.imageId
@@ -273,9 +291,17 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
     }
 
     fun continueLife() {
-        val saved = v4ProgressStore.load() ?: run {
-            playError = "저장된 인생이 없습니다. 새 인생을 시작해 주세요."
-            return
+        val saved = when (val loaded = v4ProgressStore.loadResult()) {
+            V4LoadResult.Empty -> {
+                playError = "저장된 인생이 없습니다. 새 인생을 시작해 주세요."
+                return
+            }
+            V4LoadResult.Invalid -> {
+                v4ProgressStore.clear()
+                playError = "저장 데이터가 손상되었거나 새 버전과 호환되지 않습니다. 새 인생을 시작해 주세요."
+                return
+            }
+            is V4LoadResult.Loaded -> loaded.run
         }
         val content = repository.loadV4Content()
         val name = normalizePlayerName(saved.playerName)
@@ -283,9 +309,17 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
         val focuses = content.focuses.map { it.withPlayerName(name, nameCall) }
         val decisions = content.decisions.map { it.withPlayerName(name, nameCall) }
         playContent = playContentOf(content.periods, focuses, decisions)
-        // 고른 선택지 이름은 저장되지 않으므로 겪은 사건 제목으로 기록을 되살린다.
         choiceLog.clear()
-        choiceLog += choiceRecordsFromFlags(saved.state.flags, decisions.associateBy { it.eventId }, content.periods)
+        runChoiceHistory.clear()
+        runChoiceHistory += saved.choices
+        choiceLog += saved.choices.map { record ->
+            val periodName = content.periods.firstOrNull { it.period == record.period }?.displayName
+                ?: record.period.name
+            ChoiceRecordUi(periodName, record.yearInPeriod, record.eventTitle, record.choiceLabel)
+        }
+        pendingOutcomeSnapshot = saved.pendingOutcome
+        avatarForPlay = saved.avatar
+        awardedTitleForRun = saved.awardedTitle
         endingForRun = null
         playSession = PeriodGameSession(
             content.periods,
@@ -307,7 +341,21 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
                 else -> null
             }
         }
-        shownDecision = null; outcome = null; decisionYear = null; died = saved.state.isDead; playError = null
+        shownDecision = null
+        outcome = saved.pendingOutcome?.let { snapshot ->
+            OutcomeUi(
+                choiceLabel = snapshot.choiceLabel,
+                text = snapshot.resultText,
+                changes = statChanges(snapshot.beforeStats, snapshot.afterStats),
+                endsLife = snapshot.endsLife,
+                factChanges = factChanges(
+                    buildLifeFacts(saved.state.copy(stats = snapshot.beforeStats, lifeFacts = snapshot.beforeFacts), factCatalog),
+                    buildLifeFacts(saved.state.copy(stats = snapshot.afterStats, lifeFacts = snapshot.afterFacts), factCatalog),
+                ),
+            )
+        }
+        decisionYear = saved.choices.lastOrNull()?.yearInPeriod.takeIf { outcome != null }
+        died = saved.state.isDead; playError = null
         applyStep(playSession!!.restoreSaved(saved.state))
     }
 
@@ -356,6 +404,30 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
         val periodName = content.periods.firstOrNull { it.period == beforeState.period }?.displayName
             ?: beforeState.period.name
         choiceLog += ChoiceRecordUi(periodName, beforeState.yearInPeriod, decision.title, label)
+        val choiceRecord = RunChoiceRecord(
+            eventId = decision.eventId,
+            choiceId = choiceId,
+            outcomeId = resolution.outcome.outcomeId,
+            period = beforeState.period,
+            yearInPeriod = beforeState.yearInPeriod,
+            eventTitle = decision.title,
+            choiceLabel = label,
+            resultText = resolution.outcome.resultText,
+            momentImageId = content.decisions[decision.eventId]?.momentImageId,
+        )
+        runChoiceHistory += choiceRecord
+        pendingOutcomeSnapshot = SavedOutcome(
+            eventId = decision.eventId,
+            choiceId = choiceId,
+            outcomeId = resolution.outcome.outcomeId,
+            choiceLabel = label,
+            resultText = resolution.outcome.resultText,
+            beforeStats = beforeState.stats,
+            afterStats = afterState.stats,
+            beforeFacts = beforeState.lifeFacts,
+            afterFacts = afterState.lifeFacts,
+            endsLife = afterState.isDead,
+        )
         outcome = OutcomeUi(
             choiceLabel = label,
             text = resolution.outcome.resultText,
@@ -385,6 +457,7 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
     fun continueAfterOutcome() {
         if (outcome == null) return
         outcome = null
+        pendingOutcomeSnapshot = null
         shownDecision = null
         decisionYear = null
         publishPlay()
@@ -404,12 +477,32 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
     /** 끝난 인생을 "지난 인생"에 남기고 홈으로 돌아간다. */
     fun finishLife() {
         val ended = play?.takeIf { it.phase == PlayPhase.ENDED } ?: return
+        val finalState = playStep?.state ?: return
+        val ending = endingFor(finalState)
+        val title = awardedTitleForRun ?: resolveTitleFor(finalState)
         val summary = ended.ending?.headline ?: if (ended.isDead) {
             "${ended.periodName}에 생을 마쳤다"
         } else {
             "${ended.periodName}까지 살았다"
         }
-        finishedLives = listOf(FinishedLifeUi(ended.runKey, ended.playerName, summary)) + finishedLives
+        val savedSummary = title?.let { "$summary · ${it.text}" } ?: summary
+        v4ProgressStore.saveCompletedLife(
+            CompletedLifeRecord(
+                runId = finalState.runId,
+                playerName = ended.playerName,
+                summary = savedSummary,
+                endingId = ending?.endingId,
+                endingTitle = ending?.title,
+                endingSummary = ending?.summary,
+                awardedTitle = title,
+                finalState = finalState,
+                choices = runChoiceHistory.toList(),
+                avatar = avatarForPlay,
+            ),
+        )
+        finishedLives = v4ProgressStore.loadCompletedLives().map {
+            FinishedLifeUi(it.runId, it.playerName, it.summary)
+        }
         clearPlay()
         v4ProgressStore.clear()
     }
@@ -433,6 +526,9 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
         val step = playStep ?: return
         val content = playContent ?: return
         val ending = if (step.phase == TurnPhase.ENDING) endingFor(step.state) else null
+        if (step.phase == TurnPhase.ENDING && awardedTitleForRun == null) {
+            awardedTitleForRun = resolveTitleFor(step.state)
+        }
         play = buildPeriodPlayState(
             step = step,
             content = content,
@@ -448,7 +544,17 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
             endingTitle = ending?.title,
             endingSummary = ending?.summary,
         )
-        v4ProgressStore.save(V4SavedRun(playerNameForPlay, step.state))
+        v4ProgressStore.save(
+            V4SavedRun(
+                playerName = playerNameForPlay,
+                state = step.state,
+                choices = runChoiceHistory.toList(),
+                pendingOutcome = pendingOutcomeSnapshot,
+                avatar = avatarForPlay,
+                awardedTitle = awardedTitleForRun,
+                phase = step.phase,
+            ),
+        )
     }
 
     /**
@@ -469,6 +575,9 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
         return ending
     }
 
+    private fun resolveTitleFor(state: com.example.lifegame.domain.model.PeriodRunState): AwardedTitle? =
+        runCatching { GameEngine().resolveTitle(state, repository.loadTitles()) }.getOrNull()
+
     private fun clearPlay() {
         playSession = null
         playContent = null
@@ -478,6 +587,10 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
         outcome = null
         died = false
         choiceLog.clear()
+        runChoiceHistory.clear()
+        pendingOutcomeSnapshot = null
+        avatarForPlay = AvatarConfig()
+        awardedTitleForRun = null
         endingForRun = null
         play = null
     }

@@ -11,6 +11,7 @@ import com.example.lifegame.domain.model.GameEvent
 import com.example.lifegame.domain.model.ImageAsset
 import com.example.lifegame.domain.model.LifeStage
 import com.example.lifegame.domain.model.LifeFactConditions
+import com.example.lifegame.domain.model.LifeTitle
 import com.example.lifegame.domain.model.DecisionEvent
 import com.example.lifegame.domain.model.Focus
 import com.example.lifegame.domain.model.PeriodDefinition
@@ -39,11 +40,16 @@ class ContentRepository(
         V4ContentParser.parseLifeFactRules(readAsset(LIFE_FACTS_FILE))
     }.getOrElse { emptyList() }
 
+    fun loadTitles(): List<LifeTitle> = runCatching {
+        V4ContentParser.parseTitles(readAsset(TITLES_FILE))
+    }.getOrElse { emptyList() }
+
     fun loadV4Content(): V4Content = V4Content(
         periods = loadPeriodDefinitions(),
         focuses = loadFocuses(),
         decisions = loadDecisionEvents(),
         lifeFactRules = loadLifeFactRules(),
+        titles = loadTitles(),
     )
 
     fun loadEvents(): List<GameEvent> = runCatching {
@@ -108,6 +114,7 @@ class ContentRepository(
             statDelta = item.optJSONObject("statDelta").toStatDelta(),
             resultText = item.getString("resultText"),
             addFlags = item.optJSONArray("addFlags").toStringSet(),
+            removeFlags = item.optJSONArray("removeFlags").toStringSet(),
         )
     }
 
@@ -168,7 +175,7 @@ class ContentRepository(
         "CHILD", "아동기" -> LifeStage.CHILD
         "TEEN", "청소년기" -> LifeStage.TEEN
         "ADULT", "성인기" -> LifeStage.ADULT
-        else -> LifeStage.CHILD
+        else -> error("Unknown life stage: $this")
     }
 
     private fun String.toEventType(): EventType = when (uppercase()) {
@@ -183,5 +190,6 @@ class ContentRepository(
         const val ENDINGS_FILE = "endings.sample.json"
         const val IMAGE_IDS_FILE = "image_ids.sample.json"
         const val LIFE_FACTS_FILE = "life_facts.sample.json"
+        const val TITLES_FILE = "titles.sample.json"
     }
 }

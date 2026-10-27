@@ -93,6 +93,7 @@ data class Choice(
     val statDelta: StatDelta = StatDelta(),
     val resultText: String,
     val addFlags: Set<String> = emptySet(),
+    val removeFlags: Set<String> = emptySet(),
 )
 
 data class GameEvent(
@@ -318,6 +319,8 @@ data class Outcome(
     val deathCause: String? = null,
     /** Legacy content field. It is merged into health during resolution. */
     val lifeDelta: Int = 0,
+    /** 제거를 먼저 적용하고 addFlags를 나중에 적용한다. 충돌 시 추가가 최종 상태다. */
+    val removeFlags: Set<String> = emptySet(),
 ) {
     init {
         require(chance >= 0) { "outcome chance must be zero or greater" }
@@ -418,6 +421,78 @@ data class PeriodRunState(
     val isDead: Boolean = false,
     /** 종료가 발생한 생애 시기. 종료 후 다음 시기로 이동해도 이 값은 유지한다. */
     val endingPeriod: LifePeriod? = null,
+)
+
+/** titles.sample.json 한 항목. 결말과 같은 능력치·플래그 조건 계약을 사용한다. */
+data class LifeTitle(
+    val titleId: String,
+    val text: String,
+    val description: String,
+    val priority: Int,
+    val conditions: EndingConditions = EndingConditions(),
+    val isDefault: Boolean = false,
+)
+
+/** 완료 당시 문구를 함께 저장해 콘텐츠 업데이트 뒤에도 과거 기록의 의미가 바뀌지 않게 한다. */
+data class AwardedTitle(
+    val titleId: String,
+    val text: String,
+    val description: String,
+)
+
+data class RunChoiceRecord(
+    val eventId: String,
+    val choiceId: String,
+    val outcomeId: String,
+    val period: LifePeriod,
+    val yearInPeriod: Int,
+    val eventTitle: String,
+    val choiceLabel: String,
+    val resultText: String,
+    val momentImageId: String? = null,
+)
+
+/** 결과 화면에서 종료되어도 같은 결과를 복원하기 위한 적용 완료 스냅샷. */
+data class SavedOutcome(
+    val eventId: String,
+    val choiceId: String,
+    val outcomeId: String,
+    val choiceLabel: String,
+    val resultText: String,
+    val beforeStats: Stats,
+    val afterStats: Stats,
+    val beforeFacts: LifeFacts,
+    val afterFacts: LifeFacts,
+    val endsLife: Boolean,
+)
+
+enum class BodyType {
+    SLIM,
+    STANDARD,
+    MUSCULAR,
+}
+
+data class AvatarConfig(
+    val skinToneId: String = "skin_default",
+    val hairId: String = "hair_default",
+    val eyesId: String = "eyes_default",
+    val portraitRef: String? = null,
+    val faceSheetRef: String? = null,
+    val photoConsent: Boolean = false,
+)
+
+/** 앱 재실행 뒤에도 다시 열 수 있는 불변 완료 인생 기록. */
+data class CompletedLifeRecord(
+    val runId: String,
+    val playerName: String,
+    val summary: String,
+    val endingId: String?,
+    val endingTitle: String?,
+    val endingSummary: String?,
+    val awardedTitle: AwardedTitle?,
+    val finalState: PeriodRunState,
+    val choices: List<RunChoiceRecord>,
+    val avatar: AvatarConfig = AvatarConfig(),
 )
 
 enum class TurnPhase {
