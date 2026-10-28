@@ -438,7 +438,7 @@
             "addFlags": [
               "water_friendly"
             ],
-            "lifeDelta": 10
+            "lifeDelta": 4
           }
         ]
       },
@@ -1027,7 +1027,7 @@
             "addFlags": [
               "early_walker"
             ],
-            "lifeDelta": 10
+            "lifeDelta": 4
           }
         ]
       },
@@ -1238,7 +1238,7 @@
             "addFlags": [
               "outdoor_play"
             ],
-            "lifeDelta": 10
+            "lifeDelta": 4
           }
         ]
       },
@@ -1779,7 +1779,7 @@
             "addFlags": [
               "first_friend"
             ],
-            "lifeDelta": 10
+            "lifeDelta": 4
           }
         ]
       },
@@ -2080,7 +2080,7 @@
             "addFlags": [
               "daycare_adapted"
             ],
-            "lifeDelta": 10
+            "lifeDelta": 4
           }
         ]
       }
@@ -2586,7 +2586,7 @@
               "건강": -1
             },
             "addFlags": [],
-            "lifeDelta": 10
+            "lifeDelta": 4
           }
         ]
       },
@@ -2643,7 +2643,7 @@
             "addFlags": [
               "rooster_friend"
             ],
-            "lifeDelta": 10
+            "lifeDelta": 4
           }
         ]
       }
@@ -2693,7 +2693,7 @@
               "건강": -1
             },
             "addFlags": [],
-            "lifeDelta": 10
+            "lifeDelta": 4
           }
         ]
       },
@@ -2744,7 +2744,7 @@
               "건강": -1
             },
             "addFlags": [],
-            "lifeDelta": 10
+            "lifeDelta": 4
           }
         ]
       }
@@ -2849,7 +2849,7 @@
             "addFlags": [
               "storyteller"
             ],
-            "lifeDelta": 10
+            "lifeDelta": 4
           }
         ]
       }
@@ -4343,7 +4343,7 @@
             "addFlags": [
               "soccer_club"
             ],
-            "lifeDelta": 10
+            "lifeDelta": 4
           }
         ],
         "requiredStats": {
@@ -4378,7 +4378,7 @@
             "addFlags": [
               "basketball_club"
             ],
-            "lifeDelta": 10
+            "lifeDelta": 4
           }
         ],
         "requiredStats": {
@@ -4628,7 +4628,7 @@
             "addFlags": [
               "choir"
             ],
-            "lifeDelta": 10
+            "lifeDelta": 4
           }
         ]
       },
@@ -5042,7 +5042,7 @@
             "addFlags": [
               "relay_hero"
             ],
-            "lifeDelta": 10,
+            "lifeDelta": 4,
             "chanceWeights": {
               "운동능력": 3
             }
@@ -5057,7 +5057,7 @@
             "statDelta": {
               "사회성": 2,
               "행복": 1,
-              "건강": 8
+              "건강": 2
             },
             "addFlags": [],
             "chanceWeights": {
@@ -5172,7 +5172,7 @@
             "addFlags": [
               "cheer_leader"
             ],
-            "lifeDelta": 10
+            "lifeDelta": 4
           }
         ]
       },
@@ -5368,7 +5368,7 @@
             "addFlags": [
               "little_engineer"
             ],
-            "lifeDelta": 10
+            "lifeDelta": 4
           }
         ]
       },
@@ -5483,7 +5483,7 @@
             "addFlags": [
               "book_champion"
             ],
-            "lifeDelta": 10
+            "lifeDelta": 4
           }
         ]
       },
@@ -5546,7 +5546,7 @@
             "addFlags": [
               "book_champion"
             ],
-            "lifeDelta": 10
+            "lifeDelta": 4
           }
         ]
       }
@@ -5602,7 +5602,7 @@
             "addFlags": [
               "secret_base_crew"
             ],
-            "lifeDelta": 10
+            "lifeDelta": 4
           }
         ]
       },
@@ -5976,7 +5976,7 @@
             "addFlags": [
               "kind_heart"
             ],
-            "lifeDelta": 10
+            "lifeDelta": 4
           }
         ],
         "requiredStats": {
@@ -6372,7 +6372,7 @@
               "basketball_star",
               "sports_star"
             ],
-            "lifeDelta": 10
+            "lifeDelta": 4
           }
         ]
       },
@@ -6486,7 +6486,7 @@
               "swim_star",
               "sports_star"
             ],
-            "lifeDelta": 10,
+            "lifeDelta": 4,
             "chanceWeights": {
               "운동능력": 3
             }
@@ -6501,7 +6501,7 @@
             "statDelta": {
               "운동능력": 2,
               "행복": -1,
-              "건강": 8
+              "건강": 2
             },
             "addFlags": [],
             "chanceWeights": {
@@ -6617,7 +6617,7 @@
               "science_star",
               "culture_star"
             ],
-            "lifeDelta": 10,
+            "lifeDelta": 4,
             "chanceWeights": {
               "지력": 2
             }
@@ -6903,7 +6903,7 @@
               "baduk_star",
               "culture_star"
             ],
-            "lifeDelta": 10
+            "lifeDelta": 4
           }
         ]
       },
@@ -7111,7 +7111,7 @@
               "choir_star",
               "arts_star"
             ],
-            "lifeDelta": 10
+            "lifeDelta": 4
           }
         ]
       },
@@ -7224,7 +7224,7 @@
               "drama_star",
               "arts_star"
             ],
-            "lifeDelta": 10
+            "lifeDelta": 4
           }
         ]
       },
@@ -7346,7 +7346,7 @@
               "soccer_star",
               "sports_star"
             ],
-            "lifeDelta": 10
+            "lifeDelta": 4
           }
         ]
       },
@@ -7836,7 +7836,7 @@
               "건강": -1
             },
             "addFlags": [],
-            "lifeDelta": 10
+            "lifeDelta": 4
           }
         ]
       }
@@ -7888,7 +7888,7 @@
             "addFlags": [
               "bike_rider"
             ],
-            "lifeDelta": 10
+            "lifeDelta": 4
           }
         ]
       },
@@ -9151,7 +9151,7 @@
             "death": false,
             "statDelta": {
               "지력": 1,
-              "건강": 8,
+              "건강": 2,
               "행복": -1
             },
             "addFlags": [],
@@ -9470,7 +9470,7 @@
             "outcomeId": "a_primary",
             "text": "우산이 작아서 둘 다 한쪽 어깨가 젖었다. 그래도 집까지 가는 길이 짧게 느껴졌다.",
             "chance": 100,
-            "lifeDelta": 10,
+            "lifeDelta": 4,
             "primary": true,
             "hidden": false,
             "death": false,
@@ -9698,7 +9698,7 @@
             "addFlags": [
               "stage_star"
             ],
-            "lifeDelta": 10
+            "lifeDelta": 4
           }
         ]
       },
@@ -9813,7 +9813,7 @@
             "addFlags": [
               "hackathon_winner"
             ],
-            "lifeDelta": 10,
+            "lifeDelta": 4,
             "chanceWeights": {
               "지력": 2
             }
@@ -9827,7 +9827,7 @@
             "death": false,
             "statDelta": {
               "지력": 3,
-              "건강": 7,
+              "건강": 1,
               "행복": -1
             },
             "addFlags": [],
@@ -10051,7 +10051,7 @@
             "addFlags": [
               "part_time_worker"
             ],
-            "lifeDelta": 10
+            "lifeDelta": 4
           }
         ],
         "requiredStats": {
@@ -11279,7 +11279,7 @@
             "addFlags": [
               "best_friend"
             ],
-            "lifeDelta": 10
+            "lifeDelta": 4
           }
         ]
       },
@@ -11336,7 +11336,7 @@
             "addFlags": [
               "best_friend"
             ],
-            "lifeDelta": 10
+            "lifeDelta": 4
           }
         ]
       }
@@ -11388,7 +11388,7 @@
             "addFlags": [
               "family_bond"
             ],
-            "lifeDelta": 10
+            "lifeDelta": 4
           }
         ]
       },
@@ -11595,7 +11595,7 @@
               "건강": -1
             },
             "addFlags": [],
-            "lifeDelta": 10
+            "lifeDelta": 4
           }
         ]
       },
@@ -12247,7 +12247,7 @@
               "건강": -1
             },
             "addFlags": [],
-            "lifeDelta": 10
+            "lifeDelta": 4
           }
         ]
       }
@@ -12527,7 +12527,7 @@
             "addFlags": [
               "exam_finished"
             ],
-            "lifeDelta": 10
+            "lifeDelta": 4
           }
         ],
         "alwaysAvailable": true,
@@ -12622,7 +12622,7 @@
               "exam_finished",
               "family_bond"
             ],
-            "lifeDelta": 10
+            "lifeDelta": 4
           }
         ],
         "alwaysAvailable": true,
@@ -12681,7 +12681,7 @@
             "addFlags": [
               "graduation_crew"
             ],
-            "lifeDelta": 10
+            "lifeDelta": 4
           }
         ],
         "alwaysAvailable": true,
@@ -12993,7 +12993,7 @@
             "chanceWeights": {
               "지력": 5
             },
-            "lifeDelta": 10
+            "lifeDelta": 4
           },
           {
             "outcomeId": "a_average",
@@ -13342,7 +13342,7 @@
             "addFlags": [
               "pro_athlete"
             ],
-            "lifeDelta": 10
+            "lifeDelta": 4
           }
         ]
       },
@@ -13420,7 +13420,7 @@
             "outcomeId": "a_primary",
             "text": "TOP 10. 첫 방송에서 제작진이 음이탈 장면을 슬로 모션으로 세 번 틀었다.",
             "chance": 100,
-            "lifeDelta": 10,
+            "lifeDelta": 4,
             "primary": true,
             "hidden": false,
             "death": false,
@@ -13789,7 +13789,7 @@
               "met_ideal",
               "dating"
             ],
-            "lifeDelta": 10
+            "lifeDelta": 4
           }
         ]
       },
@@ -14014,7 +14014,7 @@
               "met_ideal",
               "dating"
             ],
-            "lifeDelta": 10
+            "lifeDelta": 4
           }
         ]
       },
@@ -14155,7 +14155,7 @@
               "건강": -1
             },
             "addFlags": [],
-            "lifeDelta": 10
+            "lifeDelta": 4
           }
         ],
         "requiredStats": {
@@ -15487,7 +15487,7 @@
             "addFlags": [
               "team_favorite"
             ],
-            "lifeDelta": 10
+            "lifeDelta": 4
           }
         ]
       }
@@ -16628,7 +16628,7 @@
               "건강": -1
             },
             "addFlags": [],
-            "lifeDelta": 10
+            "lifeDelta": 4
           }
         ]
       },
@@ -16739,7 +16739,7 @@
             "addFlags": [
               "wedding_mc"
             ],
-            "lifeDelta": 10
+            "lifeDelta": 4
           }
         ]
       },
@@ -17043,7 +17043,7 @@
             "addFlags": [
               "family_bond"
             ],
-            "lifeDelta": 10
+            "lifeDelta": 4
           }
         ]
       }
@@ -17735,7 +17735,7 @@
             "addFlags": [
               "mural_artist"
             ],
-            "lifeDelta": 10
+            "lifeDelta": 4
           }
         ]
       },
@@ -17823,7 +17823,7 @@
             "addFlags": [
               "home_owner"
             ],
-            "lifeDelta": 10,
+            "lifeDelta": 4,
             "chanceWeights": {
               "경제력": 2
             }
@@ -17838,7 +17838,7 @@
             "statDelta": {
               "경제력": -2,
               "행복": 2,
-              "건강": 7
+              "건강": 1
             },
             "addFlags": [
               "home_owner"
@@ -18004,7 +18004,7 @@
             "addFlags": [
               "family_bond"
             ],
-            "lifeDelta": 10
+            "lifeDelta": 4
           }
         ]
       }
@@ -18316,7 +18316,7 @@
               "건강": -1
             },
             "addFlags": [],
-            "lifeDelta": 10
+            "lifeDelta": 4
           }
         ]
       },
@@ -18815,7 +18815,7 @@
               "건강": -1
             },
             "addFlags": [],
-            "lifeDelta": 10
+            "lifeDelta": 4
           }
         ]
       },
@@ -18978,7 +18978,7 @@
             "addFlags": [
               "family_bond"
             ],
-            "lifeDelta": 10
+            "lifeDelta": 4
           }
         ]
       }
@@ -20156,7 +20156,7 @@
             "hidden": false,
             "death": false,
             "statDelta": {
-              "건강": 11,
+              "건강": 5,
               "운동능력": 1,
               "행복": 1
             },
@@ -20290,7 +20290,7 @@
               "행복": 4,
               "사회성": 2,
               "경제력": -2,
-              "건강": 9
+              "건강": 3
             },
             "addFlags": [
               "lifelong_friend"
@@ -20357,7 +20357,7 @@
               "건강": -1
             },
             "addFlags": [],
-            "lifeDelta": 10
+            "lifeDelta": 4
           }
         ]
       }
@@ -20475,7 +20475,7 @@
             "addFlags": [
               "empty_nest"
             ],
-            "lifeDelta": 10
+            "lifeDelta": 4
           }
         ]
       }
@@ -20596,7 +20596,7 @@
             "addFlags": [
               "family_bond"
             ],
-            "lifeDelta": 10
+            "lifeDelta": 4
           }
         ],
         "requiredStats": {
@@ -20714,7 +20714,7 @@
             "addFlags": [
               "family_bond"
             ],
-            "lifeDelta": 10
+            "lifeDelta": 4
           }
         ],
         "conditionReview": "confirmed",
@@ -21249,7 +21249,7 @@
               "경제력": 3,
               "지력": 2
             },
-            "lifeDelta": 10
+            "lifeDelta": 4
           },
           {
             "outcomeId": "a_next_year",
@@ -21476,7 +21476,7 @@
               "laid_off",
               "comeback"
             ],
-            "lifeDelta": -25,
+            "lifeDelta": -8,
             "chanceWeights": {
               "지력": 2
             },
@@ -21497,7 +21497,7 @@
               "laid_off",
               "comeback"
             ],
-            "lifeDelta": -25,
+            "lifeDelta": -3,
             "chanceWeights": {
               "운": 2,
               "지력": 1
@@ -21626,7 +21626,7 @@
               "own_shop",
               "comeback"
             ],
-            "lifeDelta": -25,
+            "lifeDelta": -10,
             "chanceWeights": {
               "운": 2,
               "사회성": 1
@@ -24927,7 +24927,7 @@
             "addFlags": [
               "survived_special"
             ],
-            "lifeDelta": -25,
+            "lifeDelta": -5,
             "deathCause": "뚜껑째 건배"
           }
         ],
@@ -25466,7 +25466,7 @@
             "addFlags": [
               "survived_special"
             ],
-            "lifeDelta": -25,
+            "lifeDelta": 0,
             "deathCause": "멧돼지 친구 사귀기"
           }
         ],
@@ -26152,7 +26152,7 @@
             "addFlags": [
               "survived_special"
             ],
-            "lifeDelta": -25,
+            "lifeDelta": 0,
             "deathCause": "엘리베이터 속 설렘 과다"
           }
         ],
@@ -26298,7 +26298,7 @@
             "addFlags": [
               "survived_special"
             ],
-            "lifeDelta": -25,
+            "lifeDelta": -3,
             "deathCause": "회전문 멀미"
           }
         ],
