@@ -1,0 +1,239 @@
+{
+  "young_adult_standard": {
+    "source": "C:\\Users\\bestw\\.codex\\generated_images\\01a18201-fe9b-7c92-83d5-fb63c765d04d\\exec-4f6dbfd4-8308-4334-bfc4-beb000f9674b.png",
+    "method": "OpenAI built-in imagegen",
+    "status": "accepted in final packaged assets; 35 emulator tests passed",
+    "sourceSha256": "4d6c942dbc868212c6d64b7f93e0343a87a84faa9438bfcbbce7687ef4ddfa46",
+    "localOriginal": "output/week10/avatar_v2/originals/young_adult_standard.png"
+  },
+  "young_adult_slim": {
+    "source": "C:\\Users\\bestw\\.codex\\generated_images\\01a18201-fe9b-7c92-83d5-fb63c765d04d\\exec-171843a8-e479-463f-a428-95f8cb065bb7.png",
+    "method": "OpenAI built-in imagegen",
+    "status": "accepted in final packaged assets; 35 emulator tests passed",
+    "sourceSha256": "e9f49912fe512beb87cebb4fe5d7d009c3de17057ec864092d9ca352f9db717a",
+    "localOriginal": "output/week10/avatar_v2/originals/young_adult_slim.png"
+  },
+  "young_adult_muscular": {
+    "source": "C:\\Users\\bestw\\.codex\\generated_images\\01a18201-fe9b-7c92-83d5-fb63c765d04d\\exec-09df1a8f-7155-4a6a-b0de-008b97796d12.png",
+    "method": "OpenAI built-in imagegen",
+    "status": "accepted in final packaged assets; 35 emulator tests passed",
+    "sourceSha256": "59bdafb3827119ca6f8e081a7817df2dd73beb068fab4b4e5d4c6caac1f6867e",
+    "localOriginal": "output/week10/avatar_v2/originals/young_adult_muscular.png"
+  },
+  "face_young_adult": {
+    "source": "C:\\Users\\bestw\\.codex\\generated_images\\01a18201-fe9b-7c92-83d5-fb63c765d04d\\exec-8176518d-6efb-4d18-a9da-03ee4c53bca6.png",
+    "method": "OpenAI built-in imagegen",
+    "status": "accepted in final packaged assets; 35 emulator tests passed",
+    "sourceSha256": "227e57cd18ca4ef4cd7520b712103b7dd78f068a46e9ea48afab8c5d5c4722ff",
+    "localOriginal": "output/week10/avatar_v2/originals/face_young_adult.png"
+  },
+  "hair_default": {
+    "source": "C:\\Users\\bestw\\.codex\\generated_images\\01a18201-fe9b-7c92-83d5-fb63c765d04d\\exec-e66a819b-06be-494f-ab1e-7bc25a1f12db.png",
+    "method": "OpenAI built-in imagegen",
+    "status": "accepted in final packaged assets; 35 emulator tests passed",
+    "sourceSha256": "d1a60f360acb362f7e866dfccd850d81f806d3682c4a7611a50232bc9816ad47",
+    "localOriginal": "output/week10/avatar_v2/originals/hair_default.png"
+  },
+  "hair_bob_brown": {
+    "source": "C:\\Users\\bestw\\.codex\\generated_images\\01a18201-fe9b-7c92-83d5-fb63c765d04d\\exec-d2e64f1b-fe50-4b39-84db-af7d7167bd43.png",
+    "method": "OpenAI built-in imagegen",
+    "status": "accepted in final packaged assets; 35 emulator tests passed",
+    "sourceSha256": "769b0a345f91f32da5c4a9664fcb929741419a95ebebedb0a4b2271d3faf542e",
+    "localOriginal": "output/week10/avatar_v2/originals/hair_bob_brown.png"
+  },
+  "hair_long_black": {
+    "source": "C:\\Users\\bestw\\.codex\\generated_images\\01a18201-fe9b-7c92-83d5-fb63c765d04d\\exec-5818a2ce-ae9a-4d96-8099-36b8eef7951c.png",
+    "method": "OpenAI built-in imagegen",
+    "status": "accepted in final packaged assets; 35 emulator tests passed",
+    "sourceSha256": "f85251f20da46d962c3ed14bcb316f8b72e05c6d66012bc266d754fe30a62a5b",
+    "localOriginal": "output/week10/avatar_v2/originals/hair_long_black.png"
+  },
+  "hair_curly_brown": {
+    "source": "C:\\Users\\bestw\\.codex\\generated_images\\01a18201-fe9b-7c92-83d5-fb63c765d04d\\exec-fb5d90a0-a178-4e3a-bfd2-c8c1af76c6f5.png",
+    "method": "OpenAI built-in imagegen",
+    "status": "accepted in final packaged assets; 35 emulator tests passed",
+    "sourceSha256": "97f821412b21bc6d0e531f7601fe9c4eeaa2894d6fac0da19fb387301d39bd6c",
+    "localOriginal": "output/week10/avatar_v2/originals/hair_curly_brown.png"
+  },
+  "eyes_default": {
+    "source": "C:\\Users\\bestw\\.codex\\generated_images\\01a18201-fe9b-7c92-83d5-fb63c765d04d\\exec-55d4161f-42b0-421d-9369-ea325dd721b3.png",
+    "method": "OpenAI built-in imagegen",
+    "status": "accepted in final packaged assets; 35 emulator tests passed",
+    "sourceSha256": "3fc60501b638fe7988078deba0d3b72b8d9d8c0c908b9b8a7480541a434ba029",
+    "localOriginal": "output/week10/avatar_v2/originals/eyes_default.png"
+  },
+  "eyes_big": {
+    "source": "C:\\Users\\bestw\\.codex\\generated_images\\01a18201-fe9b-7c92-83d5-fb63c765d04d\\exec-0d38bc24-4ddd-41d5-bb2d-750bacd8244d.png",
+    "method": "OpenAI built-in imagegen",
+    "status": "accepted in final packaged assets; 35 emulator tests passed",
+    "sourceSha256": "21d7e717e7e3aa70c68f27a1d023fef103a39586c2964287b544aebb0a9b8bef",
+    "localOriginal": "output/week10/avatar_v2/originals/eyes_big.png"
+  },
+  "eyes_narrow": {
+    "source": "C:\\Users\\bestw\\.codex\\generated_images\\01a18201-fe9b-7c92-83d5-fb63c765d04d\\exec-cb51a6d6-cf2f-4831-9373-e0d487ba841d.png",
+    "method": "OpenAI built-in imagegen",
+    "status": "accepted in final packaged assets; 35 emulator tests passed",
+    "sourceSha256": "22659d16ae5f67f6fd185e211a258b43aac99de3ee00d0103bf16414b7faee9e",
+    "localOriginal": "output/week10/avatar_v2/originals/eyes_narrow.png"
+  },
+  "face_infant": {
+    "source": "C:\\Users\\bestw\\.codex\\generated_images\\01a18201-fe9b-7c92-83d5-fb63c765d04d\\exec-4de9290d-586b-47a4-addb-26940de8ea80.png",
+    "method": "OpenAI built-in imagegen",
+    "prompt": "Same-person modular face: the same person's infant face, very rounded soft cheeks, tiny nose and small mouth, no teeth, no wrinkles; blank eyes and scalp, transparent, detailed pixel art",
+    "status": "accepted in final packaged assets; 35 emulator tests passed",
+    "sourceSha256": "888a972561387325667bea0f7525e3c5575cf7d8248e461451928e4cb825de05",
+    "localOriginal": "output/week10/avatar_v2/originals/face_infant.png"
+  },
+  "face_child": {
+    "source": "C:\\Users\\bestw\\.codex\\generated_images\\01a18201-fe9b-7c92-83d5-fb63c765d04d\\exec-ee6bdba9-f173-44a8-a80b-14b39dc23e98.png",
+    "method": "OpenAI built-in imagegen",
+    "prompt": "Same-person modular face: the same person's school-age childhood face, round youthful cheeks, small nose, innocent gentle smile; blank eyes and scalp, transparent, detailed pixel art",
+    "status": "accepted in final packaged assets; 35 emulator tests passed",
+    "sourceSha256": "eba204178aa9f358844ba1e66b4fcd0676b11615e8e1408378b977a382aaf3c5",
+    "localOriginal": "output/week10/avatar_v2/originals/face_child.png"
+  },
+  "face_teen": {
+    "source": "C:\\Users\\bestw\\.codex\\generated_images\\01a18201-fe9b-7c92-83d5-fb63c765d04d\\exec-606734e6-8727-4fff-9b70-b574e643dec0.png",
+    "method": "OpenAI built-in imagegen",
+    "prompt": "Same-person modular face: the same person's teenage face, developing softly angular jaw, youthful cheeks, slim nose, no wrinkles; blank eyes and scalp, transparent, detailed pixel art",
+    "status": "accepted in final packaged assets; 35 emulator tests passed",
+    "sourceSha256": "5e472fe0dad8d5b7a0338f7d3dcf0807a1a8a09018c0bbb6ea885f56d25836fc",
+    "localOriginal": "output/week10/avatar_v2/originals/face_teen.png"
+  },
+  "face_middle": {
+    "source": "C:\\Users\\bestw\\.codex\\generated_images\\01a18201-fe9b-7c92-83d5-fb63c765d04d\\exec-5882c061-5982-42ae-8880-a7b8c19090a7.png",
+    "method": "OpenAI built-in imagegen",
+    "prompt": "Same-person modular face: the same person's middle-aged face, slightly fuller jaw, subtle nasolabial and forehead lines, mature nose and calm smile; blank eyes and scalp, transparent, detailed pixel art",
+    "status": "accepted in final packaged assets; 35 emulator tests passed",
+    "sourceSha256": "9da9e5a3e9c2cc70f3b3411b501077489fca356ff39da36cf27f86a79afc8963",
+    "localOriginal": "output/week10/avatar_v2/originals/face_middle.png"
+  },
+  "face_old_age": {
+    "source": "C:\\Users\\bestw\\.codex\\generated_images\\01a18201-fe9b-7c92-83d5-fb63c765d04d\\exec-81aae79b-645f-479b-bb15-7357b681896e.png",
+    "method": "OpenAI built-in imagegen",
+    "prompt": "Same-person modular face: the same person's elderly face, visible forehead and cheek wrinkles, slightly sagging cheeks, kind small mouth, aged but recognizable nose and ears; blank eyes and scalp, transparent, detailed pixel art",
+    "status": "accepted in final packaged assets; 35 emulator tests passed",
+    "sourceSha256": "b6f7cac07d4bd3b2ffb8d7d149f82dee1d1e9c5cf289cf298a802c6620557449",
+    "localOriginal": "output/week10/avatar_v2/originals/face_old_age.png"
+  },
+  "infant_slim": {
+    "source": "C:\\Users\\bestw\\.codex\\generated_images\\01a18201-fe9b-7c92-83d5-fb63c765d04d\\exec-b2c19215-d782-4854-97d9-a7e064de1e0b.png",
+    "method": "OpenAI built-in imagegen",
+    "prompt": "Production modular HEADLESS character BODY sprite. INFANT BABY, soft mint green long-sleeved one-piece romper with little cloth buttons and covered feet. Clearly baby proportions: plump short torso, extremely short legs and arms, small baby hands, no adult anatomy. Build: SLIM, visibly slender trunk and thin limbs. Reference is ONLY pixel-art quality and front-facing pose; independently redraw age-specific anatomy and outfit, never resize the adult. Same Korean life-game character as they grow. Detailed hand-pixelled 16-bit artwork, fabric seams, cuffs, fingers, shoes. Arms down, symmetrical front standing pose, feet level, short neck at top. Absolutely NO HEAD FACE HAIR. Entire neck-to-feet silhouette unclipped with margins. TRUE transparent background, ZERO glow, aura, exterior shadow, haze, props, text or checkerboard. One body only.",
+    "status": "accepted in final packaged assets; 35 emulator tests passed",
+    "sourceSha256": "73fc2625b3262c2491eb250c0846c55e72b8419023d5a67de78c02d113bd7a52",
+    "localOriginal": "output/week10/avatar_v2/originals/infant_slim.png"
+  },
+  "infant_standard": {
+    "source": "C:\\Users\\bestw\\.codex\\generated_images\\01a18201-fe9b-7c92-83d5-fb63c765d04d\\exec-417df091-472e-47df-9843-c8952d20feae.png",
+    "method": "OpenAI built-in imagegen",
+    "prompt": "Production modular HEADLESS character BODY sprite. INFANT BABY, soft mint green long-sleeved one-piece romper with little cloth buttons and covered feet. Clearly baby proportions: plump short torso, extremely short legs and arms, small baby hands, no adult anatomy. Build: STANDARD average age-appropriate build. Reference is ONLY pixel-art quality and front-facing pose; independently redraw age-specific anatomy and outfit, never resize the adult. Same Korean life-game character as they grow. Detailed hand-pixelled 16-bit artwork, fabric seams, cuffs, fingers, shoes. Arms down, symmetrical front standing pose, feet level, short neck at top. Absolutely NO HEAD FACE HAIR. Entire neck-to-feet silhouette unclipped with margins. TRUE transparent background, ZERO glow, aura, exterior shadow, haze, props, text or checkerboard. One body only.",
+    "status": "accepted in final packaged assets; 35 emulator tests passed",
+    "sourceSha256": "756db1e0ceeeff6b02076d7b20106a089dc5c8685fa7a84d36a93cd4acb4106a",
+    "localOriginal": "output/week10/avatar_v2/originals/infant_standard.png"
+  },
+  "infant_muscular": {
+    "source": "C:\\Users\\bestw\\.codex\\generated_images\\01a18201-fe9b-7c92-83d5-fb63c765d04d\\exec-c7009841-9f46-4380-bb33-3c76eb525829.png",
+    "method": "OpenAI built-in imagegen",
+    "prompt": "Production modular HEADLESS character BODY sprite. INFANT BABY, soft mint green long-sleeved one-piece romper with little cloth buttons and covered feet. Clearly baby proportions: plump short torso, extremely short legs and arms, small baby hands, no adult anatomy. Build: STRONG build for this age, broader shoulders and sturdy arms/thighs, age-appropriate healthy strength, not an adult bodybuilder. Reference is ONLY pixel-art quality and front-facing pose; independently redraw age-specific anatomy and outfit, never resize the adult. Same Korean life-game character as they grow. Detailed hand-pixelled 16-bit artwork, fabric seams, cuffs, fingers, shoes. Arms down, symmetrical front standing pose, feet level, short neck at top. Absolutely NO HEAD FACE HAIR. Entire neck-to-feet silhouette unclipped with margins. TRUE transparent background, ZERO glow, aura, exterior shadow, haze, props, text or checkerboard. One body only.",
+    "status": "accepted in final packaged assets; 35 emulator tests passed",
+    "sourceSha256": "f4b770d2a253c34d380f1e49848495faeeb3b5a7d0a81b004d41f06bfdef21d2",
+    "localOriginal": "output/week10/avatar_v2/originals/infant_muscular.png"
+  },
+  "child_slim": {
+    "source": "C:\\Users\\bestw\\.codex\\generated_images\\01a18201-fe9b-7c92-83d5-fb63c765d04d\\exec-775b1d5b-4736-46a9-a4be-5ec5cac17873.png",
+    "method": "OpenAI built-in imagegen",
+    "prompt": "Production modular HEADLESS character BODY sprite. SCHOOL AGE CHILD, teal zip hoodie with pockets, cream undershirt, dark blue knee-length shorts, white socks and small brown sneakers. Clearly child proportions with short legs and small hands, playful clothing, no adult torso. Build: SLIM, visibly slender trunk and thin limbs. Reference is ONLY pixel-art quality and front-facing pose; independently redraw age-specific anatomy and outfit, never resize the adult. Same Korean life-game character as they grow. Detailed hand-pixelled 16-bit artwork, fabric seams, cuffs, fingers, shoes. Arms down, symmetrical front standing pose, feet level, short neck at top. Absolutely NO HEAD FACE HAIR. Entire neck-to-feet silhouette unclipped with margins. TRUE transparent background, ZERO glow, aura, exterior shadow, haze, props, text or checkerboard. One body only.",
+    "status": "accepted in final packaged assets; 35 emulator tests passed",
+    "sourceSha256": "1544ef1b96dc5548651f06cbce61f376a5cbb090ad588596b6e9bdc510b4fcaf",
+    "localOriginal": "output/week10/avatar_v2/originals/child_slim.png"
+  },
+  "child_standard": {
+    "source": "C:\\Users\\bestw\\.codex\\generated_images\\01a18201-fe9b-7c92-83d5-fb63c765d04d\\exec-61a45ca6-588c-4a31-8569-df417f31e9ee.png",
+    "method": "OpenAI built-in imagegen",
+    "prompt": "Production modular HEADLESS character BODY sprite. SCHOOL AGE CHILD, teal zip hoodie with pockets, cream undershirt, dark blue knee-length shorts, white socks and small brown sneakers. Clearly child proportions with short legs and small hands, playful clothing, no adult torso. Build: STANDARD average age-appropriate build. Reference is ONLY pixel-art quality and front-facing pose; independently redraw age-specific anatomy and outfit, never resize the adult. Same Korean life-game character as they grow. Detailed hand-pixelled 16-bit artwork, fabric seams, cuffs, fingers, shoes. Arms down, symmetrical front standing pose, feet level, short neck at top. Absolutely NO HEAD FACE HAIR. Entire neck-to-feet silhouette unclipped with margins. TRUE transparent background, ZERO glow, aura, exterior shadow, haze, props, text or checkerboard. One body only.",
+    "status": "accepted in final packaged assets; 35 emulator tests passed",
+    "sourceSha256": "9365a3db424d20ce14b9968eae80f110ef26d69645637528a3df98409501ce14",
+    "localOriginal": "output/week10/avatar_v2/originals/child_standard.png"
+  },
+  "child_muscular": {
+    "source": "C:\\Users\\bestw\\.codex\\generated_images\\01a18201-fe9b-7c92-83d5-fb63c765d04d\\exec-5e4696b1-3142-426f-829a-18fe45ec7dc2.png",
+    "method": "OpenAI built-in imagegen",
+    "prompt": "Production modular HEADLESS character BODY sprite. SCHOOL AGE CHILD, teal zip hoodie with pockets, cream undershirt, dark blue knee-length shorts, white socks and small brown sneakers. Clearly child proportions with short legs and small hands, playful clothing, no adult torso. Build: STRONG build for this age, broader shoulders and sturdy arms/thighs, age-appropriate healthy strength, not an adult bodybuilder. Reference is ONLY pixel-art quality and front-facing pose; independently redraw age-specific anatomy and outfit, never resize the adult. Same Korean life-game character as they grow. Detailed hand-pixelled 16-bit artwork, fabric seams, cuffs, fingers, shoes. Arms down, symmetrical front standing pose, feet level, short neck at top. Absolutely NO HEAD FACE HAIR. Entire neck-to-feet silhouette unclipped with margins. TRUE transparent background, ZERO glow, aura, exterior shadow, haze, props, text or checkerboard. One body only.",
+    "status": "accepted in final packaged assets; 35 emulator tests passed",
+    "sourceSha256": "76dc3853ca6d35910b3f0ff6b42a5d42a41dcd06be3639202a0fbba70aa43bc2",
+    "localOriginal": "output/week10/avatar_v2/originals/child_muscular.png"
+  },
+  "teen_slim": {
+    "source": "C:\\Users\\bestw\\.codex\\generated_images\\01a18201-fe9b-7c92-83d5-fb63c765d04d\\exec-f69c87b0-3b48-40b8-8b81-de801619ae4e.png",
+    "method": "OpenAI built-in imagegen",
+    "prompt": "Production modular HEADLESS body sprite. TEENAGER wearing navy school cardigan over white shirt, dark red narrow tie, charcoal school trousers and black loafers. Youthful slim-limbed adolescent anatomy, slightly narrower frame and shorter limbs than a grown adult. SLIM: narrow shoulders, visibly thin forearms and legs, slender waist. Independently draw anatomy and clothing. Reference defines detailed 16-bit hand-pixel-art style, not size or age. Same Korean life-game person growing. Crisp pixel clusters, fabric folds, pockets, fingers and shoe details. Symmetrical front-facing relaxed standing pose, arms down, feet level, short neck at top, NO HEAD HAIR FACE. Entire neck-to-feet silhouette visible with safe margins. Genuinely transparent background, absolutely NO glow/haze/aura/exterior shadow/props/text/checkerboard. One body only.",
+    "status": "accepted in final packaged assets; 35 emulator tests passed",
+    "sourceSha256": "21365c33f2770b54363b8fd68762e4f68bb5c8f83a4f5a841e57c2f092fd8b64",
+    "localOriginal": "output/week10/avatar_v2/originals/teen_slim.png"
+  },
+  "teen_standard": {
+    "source": "C:\\Users\\bestw\\.codex\\generated_images\\01a18201-fe9b-7c92-83d5-fb63c765d04d\\exec-d5b9d089-66b4-439e-a4ca-df1140395c49.png",
+    "method": "OpenAI built-in imagegen",
+    "prompt": "Production modular HEADLESS body sprite. TEENAGER wearing navy school cardigan over white shirt, dark red narrow tie, charcoal school trousers and black loafers. Youthful slim-limbed adolescent anatomy, slightly narrower frame and shorter limbs than a grown adult. STANDARD average build with moderate shoulders and limbs. Independently draw anatomy and clothing. Reference defines detailed 16-bit hand-pixel-art style, not size or age. Same Korean life-game person growing. Crisp pixel clusters, fabric folds, pockets, fingers and shoe details. Symmetrical front-facing relaxed standing pose, arms down, feet level, short neck at top, NO HEAD HAIR FACE. Entire neck-to-feet silhouette visible with safe margins. Genuinely transparent background, absolutely NO glow/haze/aura/exterior shadow/props/text/checkerboard. One body only.",
+    "status": "accepted in final packaged assets; 35 emulator tests passed",
+    "sourceSha256": "4ed6beb4fe70531601cd942def8debba30792c609ce6a86e6969a12fbe1f8aa4",
+    "localOriginal": "output/week10/avatar_v2/originals/teen_standard.png"
+  },
+  "teen_muscular": {
+    "source": "C:\\Users\\bestw\\.codex\\generated_images\\01a18201-fe9b-7c92-83d5-fb63c765d04d\\exec-1f56ebfe-ea53-4c83-8f49-0109b0c72a47.png",
+    "method": "OpenAI built-in imagegen",
+    "prompt": "Production modular HEADLESS body sprite. TEENAGER wearing navy school cardigan over white shirt, dark red narrow tie, charcoal school trousers and black loafers. Youthful slim-limbed adolescent anatomy, slightly narrower frame and shorter limbs than a grown adult. MUSCULAR: clearly broad shoulders, thick upper arms, strong chest and legs, V-shaped torso. Independently draw anatomy and clothing. Reference defines detailed 16-bit hand-pixel-art style, not size or age. Same Korean life-game person growing. Crisp pixel clusters, fabric folds, pockets, fingers and shoe details. Symmetrical front-facing relaxed standing pose, arms down, feet level, short neck at top, NO HEAD HAIR FACE. Entire neck-to-feet silhouette visible with safe margins. Genuinely transparent background, absolutely NO glow/haze/aura/exterior shadow/props/text/checkerboard. One body only.",
+    "status": "accepted in final packaged assets; 35 emulator tests passed",
+    "sourceSha256": "8ebacbfb1279d754593257a4dcc37466f6569e086507e2bfd3851e5bc50ee197",
+    "localOriginal": "output/week10/avatar_v2/originals/teen_muscular.png"
+  },
+  "middle_slim": {
+    "source": "C:\\Users\\bestw\\.codex\\generated_images\\01a18201-fe9b-7c92-83d5-fb63c765d04d\\exec-345e666c-e366-42db-a09a-58b6d59202c2.png",
+    "method": "OpenAI built-in imagegen",
+    "prompt": "Production modular HEADLESS body sprite. MIDDLE AGED ADULT wearing a charcoal blazer, pale blue open collar shirt, grey trousers and dark leather shoes. Mature posture, slightly thicker waist on standard build, age visible in hands and practical work clothes. SLIM: narrow shoulders, visibly thin forearms and legs, slender waist. Independently draw anatomy and clothing. Reference defines detailed 16-bit hand-pixel-art style, not size or age. Same Korean life-game person growing. Crisp pixel clusters, fabric folds, pockets, fingers and shoe details. Symmetrical front-facing relaxed standing pose, arms down, feet level, short neck at top, NO HEAD HAIR FACE. Entire neck-to-feet silhouette visible with safe margins. Genuinely transparent background, absolutely NO glow/haze/aura/exterior shadow/props/text/checkerboard. One body only.",
+    "status": "accepted in final packaged assets; 35 emulator tests passed",
+    "sourceSha256": "d8a319851bab51e6672c8a7bd3297faecf8e1bb7c0ce8d5250428034ae809bcd",
+    "localOriginal": "output/week10/avatar_v2/originals/middle_slim.png"
+  },
+  "middle_standard": {
+    "source": "C:\\Users\\bestw\\.codex\\generated_images\\01a18201-fe9b-7c92-83d5-fb63c765d04d\\exec-da04ff86-2f7b-4bbf-be5b-e7809e7f3be7.png",
+    "method": "OpenAI built-in imagegen",
+    "prompt": "Production modular HEADLESS body sprite. MIDDLE AGED ADULT wearing a charcoal blazer, pale blue open collar shirt, grey trousers and dark leather shoes. Mature posture, slightly thicker waist on standard build, age visible in hands and practical work clothes. STANDARD average build with moderate shoulders and limbs. Independently draw anatomy and clothing. Reference defines detailed 16-bit hand-pixel-art style, not size or age. Same Korean life-game person growing. Crisp pixel clusters, fabric folds, pockets, fingers and shoe details. Symmetrical front-facing relaxed standing pose, arms down, feet level, short neck at top, NO HEAD HAIR FACE. Entire neck-to-feet silhouette visible with safe margins. Genuinely transparent background, absolutely NO glow/haze/aura/exterior shadow/props/text/checkerboard. One body only.",
+    "status": "accepted in final packaged assets; 35 emulator tests passed",
+    "sourceSha256": "7f58d6d97b18051c9bb1d8b601872a7e7b8aa95c4b8847f85dcdc79373e94cfd",
+    "localOriginal": "output/week10/avatar_v2/originals/middle_standard.png"
+  },
+  "middle_muscular": {
+    "source": "C:\\Users\\bestw\\.codex\\generated_images\\01a18201-fe9b-7c92-83d5-fb63c765d04d\\exec-883865e5-6627-42d2-85e6-4a773e0891bb.png",
+    "method": "OpenAI built-in imagegen",
+    "prompt": "Production modular HEADLESS body sprite. MIDDLE AGED ADULT wearing a charcoal blazer, pale blue open collar shirt, grey trousers and dark leather shoes. Mature posture, slightly thicker waist on standard build, age visible in hands and practical work clothes. MUSCULAR: clearly broad shoulders, thick upper arms, strong chest and legs, V-shaped torso. Independently draw anatomy and clothing. Reference defines detailed 16-bit hand-pixel-art style, not size or age. Same Korean life-game person growing. Crisp pixel clusters, fabric folds, pockets, fingers and shoe details. Symmetrical front-facing relaxed standing pose, arms down, feet level, short neck at top, NO HEAD HAIR FACE. Entire neck-to-feet silhouette visible with safe margins. Genuinely transparent background, absolutely NO glow/haze/aura/exterior shadow/props/text/checkerboard. One body only.",
+    "status": "accepted in final packaged assets; 35 emulator tests passed",
+    "sourceSha256": "5e49b634bb4f223c333ab1b8bb23010f6ef0ece0d469d273c5ec9c6e474d0928",
+    "localOriginal": "output/week10/avatar_v2/originals/middle_muscular.png"
+  },
+  "old_age_slim": {
+    "source": "C:\\Users\\bestw\\.codex\\generated_images\\01a18201-fe9b-7c92-83d5-fb63c765d04d\\exec-32a42719-ded0-4fca-b2be-51bf1880fa3f.png",
+    "method": "OpenAI built-in imagegen",
+    "prompt": "Production modular HEADLESS ELDERLY character body sprite for the same Korean life-game person. Sage green wool button cardigan over cream shirt, loose charcoal trousers, comfortable dark walking shoes. Elderly anatomy: slightly stooped frontal posture, lowered shoulders, wrinkled veined hands, shorter stance, natural relaxed arms. SLIM frail build: narrow shoulders, thin wrists, slender legs. Reference is only polished detailed 16-bit pixel-art style; draw old anatomy and new clothes independently, do not resize adult artwork. Crisp pixel clusters, knit texture, seams, fingers, shoe details. Short centered neck at top, absolutely NO HEAD FACE HAIR. Entire neck-to-shoes silhouette visible, front facing, feet level, safe margins. True transparent background, no glow/haze/aura/exterior shadows/props/text/checkerboard. One body only.",
+    "status": "accepted in final packaged assets; 35 emulator tests passed",
+    "sourceSha256": "17a27fc5a5a9b84d6e6c7f46bfaa2b083ad48f50adc8ddf7babbe37fb6240e54",
+    "localOriginal": "output/week10/avatar_v2/originals/old_age_slim.png"
+  },
+  "old_age_standard": {
+    "source": "C:\\Users\\bestw\\.codex\\generated_images\\01a18201-fe9b-7c92-83d5-fb63c765d04d\\exec-3da79cbd-7242-405f-a14c-afb92435a766.png",
+    "method": "OpenAI built-in imagegen",
+    "prompt": "Production modular HEADLESS ELDERLY character body sprite for the same Korean life-game person. Sage green wool button cardigan over cream shirt, loose charcoal trousers, comfortable dark walking shoes. Elderly anatomy: slightly stooped frontal posture, lowered shoulders, wrinkled veined hands, shorter stance, natural relaxed arms. STANDARD average elderly build, gently rounded waist, moderate shoulders and limbs. Reference is only polished detailed 16-bit pixel-art style; draw old anatomy and new clothes independently, do not resize adult artwork. Crisp pixel clusters, knit texture, seams, fingers, shoe details. Short centered neck at top, absolutely NO HEAD FACE HAIR. Entire neck-to-shoes silhouette visible, front facing, feet level, safe margins. True transparent background, no glow/haze/aura/exterior shadows/props/text/checkerboard. One body only.",
+    "status": "accepted in final packaged assets; 35 emulator tests passed",
+    "sourceSha256": "426555ecc8123c17261cfd56b749bd31e677422940a7809a27e1e4b42c00eeaf",
+    "localOriginal": "output/week10/avatar_v2/originals/old_age_standard.png"
+  },
+  "old_age_muscular": {
+    "source": "C:\\Users\\bestw\\.codex\\generated_images\\01a18201-fe9b-7c92-83d5-fb63c765d04d\\exec-39e6d594-c942-43d8-8cee-7b9bdda8153a.png",
+    "method": "OpenAI built-in imagegen",
+    "prompt": "Production modular HEADLESS ELDERLY character body sprite for the same Korean life-game person. Sage green wool button cardigan over cream shirt, loose charcoal trousers, comfortable dark walking shoes. Elderly anatomy: slightly stooped frontal posture, lowered shoulders, wrinkled veined hands, shorter stance, natural relaxed arms. MUSCULAR active elderly build: retained broad shoulders, strong forearms and sturdy legs, age remains visibly elderly. Reference is only polished detailed 16-bit pixel-art style; draw old anatomy and new clothes independently, do not resize adult artwork. Crisp pixel clusters, knit texture, seams, fingers, shoe details. Short centered neck at top, absolutely NO HEAD FACE HAIR. Entire neck-to-shoes silhouette visible, front facing, feet level, safe margins. True transparent background, no glow/haze/aura/exterior shadows/props/text/checkerboard. One body only.",
+    "status": "accepted in final packaged assets; 35 emulator tests passed",
+    "sourceSha256": "ee55e1897096ad955cec34b3535c0d06f1687e0ba4bf6eb664990dd9778e4b69",
+    "localOriginal": "output/week10/avatar_v2/originals/old_age_muscular.png"
+  }
+}

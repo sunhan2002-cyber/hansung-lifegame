@@ -6,7 +6,11 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.geometry.Offset
@@ -17,16 +21,21 @@ import androidx.compose.ui.graphics.asImageBitmap
 import androidx.compose.ui.graphics.painter.BitmapPainter
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalDensity
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.semantics
+import androidx.compose.ui.semantics.SemanticsPropertyKey
 import com.example.lifegame.domain.engine.bodyTypeFor
 import com.example.lifegame.domain.model.AvatarConfig
 import com.example.lifegame.domain.model.BodyType
 import com.example.lifegame.domain.model.LifePeriod
 import com.example.lifegame.domain.model.Stats
 import com.example.lifegame.ui.images.ImageCandidate
-import com.example.lifegame.ui.images.rememberPixelAsset
+import com.example.lifegame.ui.images.LoadedPixelAsset
+import com.example.lifegame.ui.images.PixelAssetLoader
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.withContext
 
 /**
  * 화면에 그릴 플레이어 모습. 외형(피부 · 머리 · 눈)은 저장된 [AvatarConfig],
@@ -104,14 +113,17 @@ object AvatarOptions {
  * 별도 좌표 없이 겹치면 된다(합의안, docs/week10/submissions/김재겸.md 참고).
  * 파일이 없거나 읽지 못하면 null을 돌려주고 [PixelAvatar]가 대신 그린다.
  */
+val AvatarAssetLookKey = SemanticsPropertyKey<String>("AvatarAssetLook")
+
 object AvatarLayerAssets {
     fun layers(look: AvatarLook): List<ImageCandidate> {
         val period = look.period.name.lowercase()
+        val root = "avatar_v4"
         return listOf(
-            ImageCandidate("avatar_body", "avatar/body/body_${period}_${look.bodyType.name.lowercase()}.png", "avatar"),
-            ImageCandidate("avatar_skin", "avatar/face/skin_${period}_${look.skinToneId}.png", "avatar"),
-            ImageCandidate("avatar_eyes", "avatar/face/eyes_${period}_${look.eyesId}.png", "avatar"),
-            ImageCandidate("avatar_hair", "avatar/face/hair_${period}_${look.hairId}.png", "avatar"),
+            ImageCandidate("avatar_body", "$root/body/body_${period}_${look.bodyType.name.lowercase()}.png", "avatar"),
+            ImageCandidate("avatar_skin", "$root/face/skin_${period}_${look.skinToneId}_${look.bodyType.name.lowercase()}.png", "avatar"),
+            ImageCandidate("avatar_eyes", "$root/face/eyes_${period}_${look.eyesId}.png", "avatar"),
+            ImageCandidate("avatar_hair", "$root/face/hair_${period}_${look.hairId}.png", "avatar"),
         )
     }
 }
@@ -123,6 +135,7 @@ object AvatarLayerAssets {
 @Composable
 fun PlayerAvatar(look: AvatarLook, modifier: Modifier = Modifier) {
     val density = LocalDensity.current
+    val context = LocalContext.current
     BoxWithConstraints(
         modifier
             .testTag("player_avatar")
@@ -131,14 +144,21 @@ fun PlayerAvatar(look: AvatarLook, modifier: Modifier = Modifier) {
     ) {
         val width = with(density) { maxWidth.roundToPx() }.coerceAtLeast(1)
         val height = with(density) { maxHeight.roundToPx() }.coerceAtLeast(1)
-        val layers = AvatarLayerAssets.layers(look).map { candidate ->
-            rememberPixelAsset(listOf(candidate), width, height)
+        var displayed by remember { mutableStateOf<Pair<AvatarLook, List<LoadedPixelAsset>>?>(null) }
+        LaunchedEffect(look, width, height) {
+            val next = withContext(Dispatchers.IO) {
+                AvatarLayerAssets.layers(look).map { PixelAssetLoader.load(context, listOf(it), width, height) }
+            }
+            // Keep one coherent appearance while loading; publish head/body/skin together.
+            displayed = if (next.all { it != null }) look to next.filterNotNull() else null
         }
-        if (layers.all { it != null }) {
-            Box(Modifier.fillMaxSize().testTag("player_avatar_layers")) {
-                layers.forEach { loaded ->
+        val ready = displayed
+        if (ready != null) {
+            Box(Modifier.fillMaxSize().testTag("player_avatar_layers")
+                .semantics { this[AvatarAssetLookKey] = ready.first.description }) {
+                ready.second.forEach { loaded ->
                     Image(
-                        painter = BitmapPainter(loaded!!.bitmap.asImageBitmap(), filterQuality = FilterQuality.None),
+                        painter = BitmapPainter(loaded.bitmap.asImageBitmap(), filterQuality = FilterQuality.None),
                         contentDescription = null,
                         modifier = Modifier.fillMaxSize(),
                         contentScale = ContentScale.Fit,

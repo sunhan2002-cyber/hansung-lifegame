@@ -1,0 +1,136 @@
+[
+  {
+    "id": "bg_infant",
+    "prompt": "A cozy Korean nursery, low toy shelf, folded yellow blanket, moon mobile, open central play mat, morning window.",
+    "source": "C:\\Users\\bestw\\.codex\\generated_images\\01a18201-fe9b-7c92-83d5-fb63c765d04d\\exec-816259d8-4488-4567-83e5-9a53bd7592a9.png"
+  },
+  {
+    "id": "bg_child",
+    "prompt": "A Korean elementary school courtyard, flowering tree at left, classroom building behind, empty sandy ground in center.",
+    "source": "C:\\Users\\bestw\\.codex\\generated_images\\01a18201-fe9b-7c92-83d5-fb63c765d04d\\exec-9cf09edd-83f6-4393-b668-99fba7731652.png"
+  },
+  {
+    "id": "bg_teen",
+    "prompt": "Korean high school hallway at afternoon, lockers along left, sunny windows right, clear central floor.",
+    "source": "C:\\Users\\bestw\\.codex\\generated_images\\01a18201-fe9b-7c92-83d5-fb63c765d04d\\exec-783b4975-7b7d-471e-a1bb-ae3d71af4b7d.png"
+  },
+  {
+    "id": "bg_young_adult",
+    "prompt": "Korean neighborhood bus stop beside brick cafe, early summer, open pavement at center foreground.",
+    "source": "C:\\Users\\bestw\\.codex\\generated_images\\01a18201-fe9b-7c92-83d5-fb63c765d04d\\exec-e878bcb9-2a00-47b5-a7fb-4e41d53fa91e.png"
+  },
+  {
+    "id": "bg_middle",
+    "prompt": "Quiet Korean riverside promenade, distant apartment skyline, bench left, center foreground open paved path.",
+    "source": "C:\\Users\\bestw\\.codex\\generated_images\\01a18201-fe9b-7c92-83d5-fb63c765d04d\\exec-672c5e21-8e92-4fe6-a79d-4f8f692bd9fe.png"
+  },
+  {
+    "id": "bg_old_age",
+    "prompt": "Autumn community garden courtyard, persimmon tree, low stone wall, empty central garden path.",
+    "source": "C:\\Users\\bestw\\.codex\\generated_images\\01a18201-fe9b-7c92-83d5-fb63c765d04d\\exec-91f92c08-a5bb-400f-9702-badb3191115b.png"
+  },
+  {
+    "id": "path_hea_09",
+    "prompt": "First person seated on school infirmary cot after dizziness in gym, glass of water and sleep schedule on bedside table, blurred-in-pixel empty sports court beyond window.",
+    "source": "C:\\Users\\bestw\\.codex\\generated_images\\01a18201-fe9b-7c92-83d5-fb63c765d04d\\exec-1e8a1585-9025-49a5-bcad-dcf5efbf4085.png"
+  },
+  {
+    "id": "path_hea_10",
+    "prompt": "First person at office desk late at night, wall clock showing near midnight, energy drink beside unfinished work, empty desks beyond.",
+    "source": "C:\\Users\\bestw\\.codex\\generated_images\\01a18201-fe9b-7c92-83d5-fb63c765d04d\\exec-1d525a33-b0b7-440b-b65a-2d7383804cc5.png"
+  },
+  {
+    "id": "path_fit_09",
+    "prompt": "First person standing behind start line of senior marathon, running shoes at bottom, race arch and fellow elderly runners ahead.",
+    "source": "C:\\Users\\bestw\\.codex\\generated_images\\01a18201-fe9b-7c92-83d5-fb63c765d04d\\exec-37714587-efe6-4c9e-9849-e195cf8d7666.png"
+  },
+  {
+    "id": "path_fit_10",
+    "prompt": "First person holding worn running shoes in lap on empty afternoon school stadium bleachers after leaving the sports team.",
+    "source": "C:\\Users\\bestw\\.codex\\generated_images\\01a18201-fe9b-7c92-83d5-fb63c765d04d\\exec-b0166420-aeaf-4a74-b5c9-e3a85370e541.png"
+  },
+  {
+    "id": "path_int_09",
+    "prompt": "First person at aging scientist desk, hands assembling final geometric research puzzle, notebooks and chalkboard in cozy study, no readable text.",
+    "source": "C:\\Users\\bestw\\.codex\\generated_images\\01a18201-fe9b-7c92-83d5-fb63c765d04d\\exec-7ba612c5-7843-4e74-8423-2fc8904d932a.png"
+  },
+  {
+    "id": "path_int_10",
+    "prompt": "First person lecturer at wooden podium, hands on open lecture notes, university audience facing viewer in warm lecture hall.",
+    "source": "C:\\Users\\bestw\\.codex\\generated_images\\01a18201-fe9b-7c92-83d5-fb63c765d04d\\exec-6df08179-ad8a-47ee-b967-90f719904a36.png"
+  },
+  {
+    "id": "path_soc_09",
+    "prompt": "First person at seventieth birthday guestbook table, hand holding pen over open blank book, flower bouquets and seated family beyond.",
+    "source": "C:\\Users\\bestw\\.codex\\generated_images\\01a18201-fe9b-7c92-83d5-fb63c765d04d\\exec-d2461787-b513-4109-9981-1fc25e2847a7.png"
+  },
+  {
+    "id": "path_soc_10",
+    "prompt": "First person looking at empty school festival courtyard after party, torn bunting, scattered cups, two groups of friends walking away separately.",
+    "source": "C:\\Users\\bestw\\.codex\\generated_images\\01a18201-fe9b-7c92-83d5-fb63c765d04d\\exec-2f3ebdd8-0c11-45b4-aff5-950e39cdeb1f.png"
+  },
+  {
+    "id": "path_wea_09",
+    "prompt": "Create a replacement 4:3 pixel-art life-simulation event scene. Use input only as style/palette reference, not subject. Exact event: an older player is meeting a lawyer to decide how to distribute an inheritance. FIRST-PERSON seated view of the player's two mature hands at a polished lawyer's desk, neatly divided estate document folders, a simple family-tree diagram made of marks without readable words, a closed will envelope and pen. Across the desk only a lawyer's hands calmly indicating the distribution papers, shelves and subdued office window behind. Quiet consequential mood, no cash windfall celebration, no home budgeting, no invented family count, no legible text. Match reference's clean medium-fine warm pixel clusters, warm browns/cream/desaturated blue, 4:3 full scene.",
+    "source": "C:\\Users\\bestw\\.codex\\generated_images\\01a18201-fe9b-7c92-83d5-fb63c765d04d\\exec-f1f6f2f7-cdf5-4c10-9a87-6788109723e8.png",
+    "previousVersions": [
+      {
+        "source": "C:\\Users\\bestw\\.codex\\generated_images\\01a18201-fe9b-7c92-83d5-fb63c765d04d\\exec-c5163a77-d0b0-4e98-b2aa-d93a431756f1.png",
+        "prompt": "First person at home dining table organizing bank passbooks, calculator, small stacks of coins, modest tidy Korean apartment, no readable text."
+      }
+    ],
+    "revision": "2026-10-29 scenario match"
+  },
+  {
+    "id": "path_wea_10",
+    "prompt": "First person behind Korean convenience store checkout at midnight, hands near scanner, shelves of snacks, clock, empty street outside.",
+    "source": "C:\\Users\\bestw\\.codex\\generated_images\\01a18201-fe9b-7c92-83d5-fb63c765d04d\\exec-6bafa8d7-7923-4a56-96e3-838297a51889.png"
+  },
+  {
+    "id": "path_hap_09",
+    "prompt": "First person at art high school painting easel, hands with paint brush, vibrant still life vase, classmates easels in sunlit art classroom.",
+    "source": "C:\\Users\\bestw\\.codex\\generated_images\\01a18201-fe9b-7c92-83d5-fb63c765d04d\\exec-34366cac-3c8b-4a5c-b8bd-01a0ba277559.png"
+  },
+  {
+    "id": "path_hap_10",
+    "prompt": "Create a replacement 4:3 pixel-art life-simulation event scene. Use input only as style/palette reference. Exact event: final exams are next week, friends invite the player to a PC cafe, and the player must choose how to balance studying and a painting hobby. FIRST-PERSON view at a Korean student's modest bedroom desk in evening. Two hands pause over an open sketchbook with an unfinished watercolor study; exam study books and a weekly planner sit immediately beside it, smartphone screen shows only tiny generic message marks with no readable words, art supplies organized to one side. Warm desk lamp and cool evening window, natural calm tension between study and creativity, no outdoor landscape painting session, no scenic travel. Match reference's clean medium-fine warm pixel clusters and restrained warm palette, no legible text, 4:3 full scene.",
+    "source": "C:\\Users\\bestw\\.codex\\generated_images\\01a18201-fe9b-7c92-83d5-fb63c765d04d\\exec-c23bbb0c-89cc-413f-92bb-ffd203b95104.png",
+    "previousVersions": [
+      {
+        "source": "C:\\Users\\bestw\\.codex\\generated_images\\01a18201-fe9b-7c92-83d5-fb63c765d04d\\exec-af304d23-db47-4450-9f5d-b72aeea62770.png",
+        "prompt": "First person opening sketchbook after school exams on riverside bench, hands with pencil sketching peaceful sunset, pencil case and closed exam book."
+      }
+    ],
+    "revision": "2026-10-29 scenario match"
+  },
+  {
+    "id": "path_luk_09",
+    "prompt": "First person reaching into vending machine tray discovering TWO drink cans instead of one, surprised open hand, coin return and glowing buttons, no logos or readable text.",
+    "source": "C:\\Users\\bestw\\.codex\\generated_images\\01a18201-fe9b-7c92-83d5-fb63c765d04d\\exec-e01b1c01-fca2-497e-b7f4-d70c8ca44715.png"
+  },
+  {
+    "id": "path_luk_10",
+    "prompt": "First person holding ringing smartphone showing abstract incoming call symbol, hand pausing above answer icon, cozy apartment doorway beyond, no text.",
+    "source": "C:\\Users\\bestw\\.codex\\generated_images\\01a18201-fe9b-7c92-83d5-fb63c765d04d\\exec-5d42cec7-a3f2-4abc-984d-e271dce7acc8.png"
+  },
+  {
+    "id": "ending_achievement",
+    "prompt": "A quiet desk with modest framed abstract award, closed work notebook, fountain pen, evening city window, symbolic achievement without asserting specific profession. No people, center clear floor.",
+    "source": "C:\\Users\\bestw\\.codex\\generated_images\\01a18201-fe9b-7c92-83d5-fb63c765d04d\\exec-4868279f-b90f-40cb-8437-46b59eda3519.png"
+  },
+  {
+    "id": "ending_relationship",
+    "prompt": "Warm Korean home dining room, two tea cups on table, photo frames showing abstract silhouettes, two empty chairs, sunset light, no people, clear floor center.",
+    "source": "C:\\Users\\bestw\\.codex\\generated_images\\01a18201-fe9b-7c92-83d5-fb63c765d04d\\exec-12081742-f688-45da-a6b3-b2ca0641543b.png"
+  },
+  {
+    "id": "ending_peace",
+    "prompt": "Peaceful autumn lakeside bench beneath golden tree, mountains reflected in still water, one closed book, no people, open path center.",
+    "source": "C:\\Users\\bestw\\.codex\\generated_images\\01a18201-fe9b-7c92-83d5-fb63c765d04d\\exec-26599d1d-61d0-486c-a9b3-09a65457afcb.png"
+  },
+  {
+    "id": "ending_health",
+    "prompt": "Calm bedroom recovery space, neatly folded blanket, glass of water, cane resting against chair, green garden visible through window. No people, open central floor.",
+    "source": "C:\\Users\\bestw\\.codex\\generated_images\\01a18201-fe9b-7c92-83d5-fb63c765d04d\\exec-42b75ee5-d721-4234-9ba5-355b35a0acd9.png"
+  }
+]

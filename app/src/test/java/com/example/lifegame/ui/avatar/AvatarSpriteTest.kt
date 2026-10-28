@@ -13,6 +13,24 @@ import org.junit.Test
 
 class AvatarSpriteTest {
 
+    @Test
+    fun packagedAppearancePartsChangeIndependently() {
+        val base = AvatarLook(period = LifePeriod.YOUNG_ADULT)
+        val paths = AvatarLayerAssets.layers(base).map { it.path }
+        val edits = listOf(
+            base.copy(skinToneId = "skin_deep") to setOf(1),
+            base.copy(hairId = "hair_long_black") to setOf(3),
+            base.copy(eyesId = "eyes_narrow") to setOf(2),
+            base.copy(bodyType = BodyType.MUSCULAR) to setOf(0, 1),
+        )
+        edits.forEach { (look, expectedChangedLayers) ->
+            val next = AvatarLayerAssets.layers(look).map { it.path }
+            assertEquals(expectedChangedLayers, paths.indices.filter { paths[it] != next[it] }.toSet())
+        }
+        assertEquals(listOf("avatar_body", "avatar_skin", "avatar_eyes", "avatar_hair"),
+            AvatarLayerAssets.layers(base).map { it.imageId })
+    }
+
     private fun widthOf(sprite: AvatarSprite): Int {
         val xs = sprite.pixels.keys.map { it.first }
         return xs.max() - xs.min() + 1

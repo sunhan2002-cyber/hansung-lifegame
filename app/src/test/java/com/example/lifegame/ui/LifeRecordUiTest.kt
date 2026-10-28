@@ -88,8 +88,8 @@ class LifeRecordUiTest {
         assertEquals("skin_tan", ui.avatar.skinToneId)
         assertTrue(ui.summary.educationCareer.any { it.value == "대학 진학" })
         assertTrue(ui.summary.familyLife.any { it.value.contains("2") })
-        // 운동능력이 가장 높은 삶이면 운동 장면을 미래 모습 배경으로 쓴다(사람이 그려진 초상은 쓰지 않는다).
-        assertEquals(listOf("img_stat_fitness_001"), ui.backdrop.map { it.imageId })
+        // 운동 경로는 신규 성취 분위기 배경을 쓰며 특정 직업을 그림으로 단정하지 않는다.
+        assertEquals(listOf("img_week10_ending_achievement"), ui.backdrop.map { it.imageId })
     }
 
     @Test

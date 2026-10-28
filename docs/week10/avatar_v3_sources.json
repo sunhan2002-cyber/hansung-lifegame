@@ -1,0 +1,268 @@
+{
+  "face_infant": {
+    "source": "C:\\Users\\bestw\\.codex\\generated_images\\01a18201-fe9b-7c92-83d5-fb63c765d04d\\exec-0d05ed04-9fe6-46ad-8458-22ee95eb1b4b.png",
+    "method": "built-in imagegen",
+    "prompt": "Use reference EXACT coarse low resolution farming-game pixel art face shape and warm two-color palette. One modular blank face layer of an infant's very soft broad round baby cheeks, two tiny square ears. Same person growing. Width/height nearly equal, absolutely NO pointy triangular jaw. Simple head made from about24logical pixels across with clearly LARGE square edges. NO hair, NO eyes, NO eyebrows, NO nose, NO mouth or lips. Minimal two flat peach shades plus dark brown outline; no gradients, detailed anatomy, skin texture, realistic portrait or fashion doll. Isolated face with ears only, no neck/clothes. True transparent background, no shadow/glow/text.",
+    "status": "packaged; 35 emulator tests passed; self-reviewed, not user approval",
+    "sourceSha256": "4935ebf52cff207ea9ab1efde35b4d40dea343dc32955cf41b74c63b9306009f",
+    "localOriginal": "output/week10/avatar_v3/originals/face_infant.png"
+  },
+  "face_child": {
+    "source": "C:\\Users\\bestw\\.codex\\generated_images\\01a18201-fe9b-7c92-83d5-fb63c765d04d\\exec-c46baa66-757d-4c65-9bb4-d09713347c30.png",
+    "method": "built-in imagegen",
+    "prompt": "Use reference EXACT coarse low resolution farming-game pixel art face shape and warm two-color palette. One modular blank face layer of a child's broad rounded cheeks and little square ears. Same person growing. Width/height nearly equal, absolutely NO pointy triangular jaw. Simple head made from about24logical pixels across with clearly LARGE square edges. NO hair, NO eyes, NO eyebrows, NO nose, NO mouth or lips. Minimal two flat peach shades plus dark brown outline; no gradients, detailed anatomy, skin texture, realistic portrait or fashion doll. Isolated face with ears only, no neck/clothes. True transparent background, no shadow/glow/text.",
+    "status": "packaged; 35 emulator tests passed; self-reviewed, not user approval",
+    "sourceSha256": "08c2a2dce1cb66bd7e5c0524336edc047d4444da2efb22b56d4d21a8180e2bc4",
+    "localOriginal": "output/week10/avatar_v3/originals/face_child.png"
+  },
+  "face_teen": {
+    "source": "C:\\Users\\bestw\\.codex\\generated_images\\01a18201-fe9b-7c92-83d5-fb63c765d04d\\exec-7e314fdb-5e7f-465e-8e49-f2f8f29d628d.png",
+    "method": "built-in imagegen",
+    "prompt": "Use reference EXACT coarse low resolution farming-game pixel art face shape and warm two-color palette. One modular blank face layer of a teenager's gently rounded oval cheeks, rounded chin, little ears. Same person growing. Width/height nearly equal, absolutely NO pointy triangular jaw. Simple head made from about24logical pixels across with clearly LARGE square edges. NO hair, NO eyes, NO eyebrows, NO nose, NO mouth or lips. Minimal two flat peach shades plus dark brown outline; no gradients, detailed anatomy, skin texture, realistic portrait or fashion doll. Isolated face with ears only, no neck/clothes. True transparent background, no shadow/glow/text.",
+    "status": "packaged; 35 emulator tests passed; self-reviewed, not user approval",
+    "sourceSha256": "3339df69c42d389908f4792893728c6560e6118a356652159de8ef2a4072e412",
+    "localOriginal": "output/week10/avatar_v3/originals/face_teen.png"
+  },
+  "face_middle": {
+    "source": "C:\\Users\\bestw\\.codex\\generated_images\\01a18201-fe9b-7c92-83d5-fb63c765d04d\\exec-8236dc19-c03e-4b80-ac64-a6a9b6f50de5.png",
+    "method": "built-in imagegen",
+    "prompt": "Use reference EXACT coarse low resolution farming-game pixel art face shape and warm two-color palette. One modular blank face layer of a middle-aged person's broad rounded cheeks with ONE small smile crease on each cheek. Same person growing. Width/height nearly equal, absolutely NO pointy triangular jaw. Simple head made from about24logical pixels across with clearly LARGE square edges. NO hair, NO eyes, NO eyebrows, NO nose, NO mouth or lips. Minimal two flat peach shades plus dark brown outline; no gradients, detailed anatomy, skin texture, realistic portrait or fashion doll. Isolated face with ears only, no neck/clothes. True transparent background, no shadow/glow/text.",
+    "status": "packaged; 35 emulator tests passed; self-reviewed, not user approval",
+    "sourceSha256": "e7d85b12d10a460ea1a0d5b368ed341f65db9c1c3d09964386246cc4e34626bc",
+    "localOriginal": "output/week10/avatar_v3/originals/face_middle.png"
+  },
+  "face_old_age": {
+    "source": "C:\\Users\\bestw\\.codex\\generated_images\\01a18201-fe9b-7c92-83d5-fb63c765d04d\\exec-84018222-6a6e-4ba7-9adb-6ae5fc1600eb.png",
+    "method": "built-in imagegen",
+    "prompt": "Use reference EXACT coarse low resolution farming-game pixel art face shape and warm two-color palette. One modular blank face layer of a kindly elderly person's ROUND cheeks and chin, just TWO simple pixel wrinkle marks on cheeks. Same person growing. Width/height nearly equal, absolutely NO pointy triangular jaw. Simple head made from about24logical pixels across with clearly LARGE square edges. NO hair, NO eyes, NO eyebrows, NO nose, NO mouth or lips. Minimal two flat peach shades plus dark brown outline; no gradients, detailed anatomy, skin texture, realistic portrait or fashion doll. Isolated face with ears only, no neck/clothes. True transparent background, no shadow/glow/text.",
+    "status": "packaged; 35 emulator tests passed; self-reviewed, not user approval",
+    "sourceSha256": "9461009cb614fd00048f4602e21188bd3ccea06d8ff12c4c7df53b84403746e7",
+    "localOriginal": "output/week10/avatar_v3/originals/face_old_age.png"
+  },
+  "infant_full_slim": {
+    "source": "C:\\Users\\bestw\\.codex\\generated_images\\01a18201-fe9b-7c92-83d5-fb63c765d04d\\exec-18a78d90-3c67-4dbb-9b8c-5433a594146a.png",
+    "method": "built-in imagegen",
+    "prompt": "Production FULL BODY sprite of the same adorable round pixel character at INFANT BABY, mint green one-piece romper with covered feet and little buttons, baby soft round short limbs and mitten hands, head a little larger relative to body, no adult anatomy. Build slim: noticeably narrow little trunk and thin SHORT arms and legs. Keep reference's EXACT coherent2head-tall cute farming-game proportions, round bean face, tiny dot eyes and tiny smile, NO NOSE/lips/pointed chin, chunky dark short hair. Large visible square pixels, roughly48x64logical grid, limited warm flat colors2shades per material, no gradients, no texture, no realistic anatomy or long legs. Independently redraw age and body shape, do not resize the adult. Front-facing relaxed pose, arms down, feet level, complete head-to-shoes visible, centered safe margins. True transparent background, no shadow/glow/props/text.",
+    "status": "packaged; 35 emulator tests passed; self-reviewed, not user approval",
+    "neckCropRow": 568,
+    "sourceSha256": "890aec97427a6a3cf8e4cf8925840254748bcd60ae190f665efb94e4513fe5a1",
+    "localOriginal": "output/week10/avatar_v3/originals/infant_full_slim.png"
+  },
+  "infant_full_standard": {
+    "source": "C:\\Users\\bestw\\.codex\\generated_images\\01a18201-fe9b-7c92-83d5-fb63c765d04d\\exec-4a1fba66-b74e-435d-973b-0a63947f906d.png",
+    "method": "built-in imagegen",
+    "prompt": "Production FULL BODY sprite of the same adorable round pixel character at INFANT BABY, mint green one-piece romper with covered feet and little buttons, baby soft round short limbs and mitten hands, head a little larger relative to body, no adult anatomy. Build standard: average little trunk and round age-appropriate limbs. Keep reference's EXACT coherent2head-tall cute farming-game proportions, round bean face, tiny dot eyes and tiny smile, NO NOSE/lips/pointed chin, chunky dark short hair. Large visible square pixels, roughly48x64logical grid, limited warm flat colors2shades per material, no gradients, no texture, no realistic anatomy or long legs. Independently redraw age and body shape, do not resize the adult. Front-facing relaxed pose, arms down, feet level, complete head-to-shoes visible, centered safe margins. True transparent background, no shadow/glow/props/text.",
+    "status": "packaged; 35 emulator tests passed; self-reviewed, not user approval",
+    "neckCropRow": 572,
+    "sourceSha256": "ab913e85fbf1434e97b29c7b671f205106c0950fd4bcad3ea539b9c1abcca2ec",
+    "localOriginal": "output/week10/avatar_v3/originals/infant_full_standard.png"
+  },
+  "infant_full_muscular": {
+    "source": "C:\\Users\\bestw\\.codex\\generated_images\\01a18201-fe9b-7c92-83d5-fb63c765d04d\\exec-e8930d22-f352-44e6-ac84-f7896d513e41.png",
+    "method": "built-in imagegen",
+    "prompt": "Production FULL BODY sprite of the same adorable round pixel character at INFANT BABY, mint green one-piece romper with covered feet and little buttons, baby soft round short limbs and mitten hands, head a little larger relative to body, no adult anatomy. Build muscular: visibly broader little shoulders and thick sturdy SHORT limbs, age-appropriate healthy strength. Keep reference's EXACT coherent2head-tall cute farming-game proportions, round bean face, tiny dot eyes and tiny smile, NO NOSE/lips/pointed chin, chunky dark short hair. Large visible square pixels, roughly48x64logical grid, limited warm flat colors2shades per material, no gradients, no texture, no realistic anatomy or long legs. Independently redraw age and body shape, do not resize the adult. Front-facing relaxed pose, arms down, feet level, complete head-to-shoes visible, centered safe margins. True transparent background, no shadow/glow/props/text.",
+    "status": "packaged; 35 emulator tests passed; self-reviewed, not user approval",
+    "neckCropRow": 642,
+    "sourceSha256": "45e8e543aecaa98f820b44219cbfe210d0bb3553043e4456985cbf66796433dc",
+    "localOriginal": "output/week10/avatar_v3/originals/infant_full_muscular.png"
+  },
+  "child_full_slim": {
+    "source": "C:\\Users\\bestw\\.codex\\generated_images\\01a18201-fe9b-7c92-83d5-fb63c765d04d\\exec-fc395022-f111-45e9-bca1-deb1060112aa.png",
+    "method": "built-in imagegen",
+    "prompt": "Production FULL BODY sprite of the same adorable round pixel character at SCHOOL AGE CHILD, warm rust-red simple hoodie, navy shorts, short white socks and brown round sneakers, small round hands, very short child limbs. Build slim: noticeably narrow little trunk and thin SHORT arms and legs. Keep reference's EXACT coherent2head-tall cute farming-game proportions, round bean face, tiny dot eyes and tiny smile, NO NOSE/lips/pointed chin, chunky dark short hair. Large visible square pixels, roughly48x64logical grid, limited warm flat colors2shades per material, no gradients, no texture, no realistic anatomy or long legs. Independently redraw age and body shape, do not resize the adult. Front-facing relaxed pose, arms down, feet level, complete head-to-shoes visible, centered safe margins. True transparent background, no shadow/glow/props/text.",
+    "status": "packaged; 35 emulator tests passed; self-reviewed, not user approval",
+    "neckCropRow": 540,
+    "sourceSha256": "fbe5a7f39358f7521d8c9e4ec7e0d32bc77e826a3f5c1898448c5fa1bd70c418",
+    "localOriginal": "output/week10/avatar_v3/originals/child_full_slim.png"
+  },
+  "child_full_standard": {
+    "source": "C:\\Users\\bestw\\.codex\\generated_images\\01a18201-fe9b-7c92-83d5-fb63c765d04d\\exec-a98583ef-03bb-4e0a-aac3-79d618e38191.png",
+    "method": "built-in imagegen",
+    "prompt": "Production FULL BODY sprite of the same adorable round pixel character at SCHOOL AGE CHILD, warm rust-red simple hoodie, navy shorts, short white socks and brown round sneakers, small round hands, very short child limbs. Build standard: average little trunk and round age-appropriate limbs. Keep reference's EXACT coherent2head-tall cute farming-game proportions, round bean face, tiny dot eyes and tiny smile, NO NOSE/lips/pointed chin, chunky dark short hair. Large visible square pixels, roughly48x64logical grid, limited warm flat colors2shades per material, no gradients, no texture, no realistic anatomy or long legs. Independently redraw age and body shape, do not resize the adult. Front-facing relaxed pose, arms down, feet level, complete head-to-shoes visible, centered safe margins. True transparent background, no shadow/glow/props/text.",
+    "status": "packaged; 35 emulator tests passed; self-reviewed, not user approval",
+    "neckCropRow": 580,
+    "sourceSha256": "6845b09cbf8679b79b042f5c1064ca85549810f2cbf9c5ab95547be14385b2dd",
+    "localOriginal": "output/week10/avatar_v3/originals/child_full_standard.png"
+  },
+  "child_full_muscular": {
+    "source": "C:\\Users\\bestw\\.codex\\generated_images\\01a18201-fe9b-7c92-83d5-fb63c765d04d\\exec-1413d301-6a5e-4868-bbe9-d45f162e04f3.png",
+    "method": "built-in imagegen",
+    "prompt": "Production FULL BODY sprite of the same adorable round pixel character at SCHOOL AGE CHILD, warm rust-red simple hoodie, navy shorts, short white socks and brown round sneakers, small round hands, very short child limbs. Build muscular: visibly broader little shoulders and thick sturdy SHORT limbs, age-appropriate healthy strength. Keep reference's EXACT coherent2head-tall cute farming-game proportions, round bean face, tiny dot eyes and tiny smile, NO NOSE/lips/pointed chin, chunky dark short hair. Large visible square pixels, roughly48x64logical grid, limited warm flat colors2shades per material, no gradients, no texture, no realistic anatomy or long legs. Independently redraw age and body shape, do not resize the adult. Front-facing relaxed pose, arms down, feet level, complete head-to-shoes visible, centered safe margins. True transparent background, no shadow/glow/props/text.",
+    "status": "packaged; 35 emulator tests passed; self-reviewed, not user approval",
+    "neckCropRow": 564,
+    "sourceSha256": "2fc77cead4c8c912770fb0205ab58e26144907fba3be4b23e4bf8a735e179c91",
+    "localOriginal": "output/week10/avatar_v3/originals/child_full_muscular.png"
+  },
+  "teen_full_slim": {
+    "source": "C:\\Users\\bestw\\.codex\\generated_images\\01a18201-fe9b-7c92-83d5-fb63c765d04d\\exec-acb0dfed-cf13-488d-b5b1-d0f0fbeec3bd.png",
+    "method": "built-in imagegen",
+    "prompt": "Production FULL BODY sprite: same adorable character at TEENAGER, simple navy school cardigan, cream shirt with tiny red tie, charcoal short school trousers, brown round shoes. Youthful small frame. Build slim: narrow little torso with skinny SHORT arms and legs. Keep EXACT reference LOW RESOLUTION farming-game style: coherent2head-tall round bean head, tiny dot eyes and smile, no nose/lips/pointed chin, chunky simple short hair, stubby legs and mitten hands. Genuine large square pixel clusters, approximately48x64logical grid, warm limited flat colors,2shades per material. Independently redraw age-specific clothes/body, not a resized copy. No realistic anatomy, portraits, long legs, gradients, tiny fabric detail or texture. Front view arms down feet level, entire full sprite unclipped with margins. True transparent background, no shadow/glow/text/props.",
+    "status": "packaged; 35 emulator tests passed; self-reviewed, not user approval",
+    "neckCropRow": 580,
+    "sourceSha256": "022993e93d170a8150b4e1529fcc62f04a8cd5443db17fb0cb954376f0d4e20b",
+    "localOriginal": "output/week10/avatar_v3/originals/teen_full_slim.png"
+  },
+  "teen_full_standard": {
+    "source": "C:\\Users\\bestw\\.codex\\generated_images\\01a18201-fe9b-7c92-83d5-fb63c765d04d\\exec-3eba5321-0aa2-4978-adc6-0b74bec192f0.png",
+    "method": "built-in imagegen",
+    "prompt": "Production FULL BODY sprite: same adorable character at TEENAGER, simple navy school cardigan, cream shirt with tiny red tie, charcoal short school trousers, brown round shoes. Youthful small frame. Build standard: average rounded torso and moderate SHORT limbs. Keep EXACT reference LOW RESOLUTION farming-game style: coherent2head-tall round bean head, tiny dot eyes and smile, no nose/lips/pointed chin, chunky simple short hair, stubby legs and mitten hands. Genuine large square pixel clusters, approximately48x64logical grid, warm limited flat colors,2shades per material. Independently redraw age-specific clothes/body, not a resized copy. No realistic anatomy, portraits, long legs, gradients, tiny fabric detail or texture. Front view arms down feet level, entire full sprite unclipped with margins. True transparent background, no shadow/glow/text/props.",
+    "status": "packaged; 35 emulator tests passed; self-reviewed, not user approval",
+    "neckCropRow": 579,
+    "sourceSha256": "0076e513008da0662772ab64015a03028bf3eeff3778ce2c155c3ad3bbbf7d62",
+    "localOriginal": "output/week10/avatar_v3/originals/teen_full_standard.png"
+  },
+  "teen_full_muscular": {
+    "source": "C:\\Users\\bestw\\.codex\\generated_images\\01a18201-fe9b-7c92-83d5-fb63c765d04d\\exec-bfe9f026-ea62-425d-a0b0-f25f955ffc00.png",
+    "method": "built-in imagegen",
+    "prompt": "Production FULL BODY sprite: same adorable character at TEENAGER, simple navy school cardigan, cream shirt with tiny red tie, charcoal short school trousers, brown round shoes. Youthful small frame. Build muscular: clearly broad little shoulders and thick sturdy SHORT arms and legs, compact rounded strength. Keep EXACT reference LOW RESOLUTION farming-game style: coherent2head-tall round bean head, tiny dot eyes and smile, no nose/lips/pointed chin, chunky simple short hair, stubby legs and mitten hands. Genuine large square pixel clusters, approximately48x64logical grid, warm limited flat colors,2shades per material. Independently redraw age-specific clothes/body, not a resized copy. No realistic anatomy, portraits, long legs, gradients, tiny fabric detail or texture. Front view arms down feet level, entire full sprite unclipped with margins. True transparent background, no shadow/glow/text/props.",
+    "status": "packaged; 35 emulator tests passed; self-reviewed, not user approval",
+    "neckCropRow": 592,
+    "sourceSha256": "adc770befb52689856e59dbb29ee6a4e70114d2f74410c152b337daedba367c6",
+    "localOriginal": "output/week10/avatar_v3/originals/teen_full_muscular.png"
+  },
+  "middle_full_slim": {
+    "source": "C:\\Users\\bestw\\.codex\\generated_images\\01a18201-fe9b-7c92-83d5-fb63c765d04d\\exec-34d596dc-f9b1-43e7-9f8d-d8831c612c03.png",
+    "method": "built-in imagegen",
+    "prompt": "Production FULL BODY sprite: same adorable character at MIDDLE AGED ADULT, simple charcoal jacket over pale blue shirt, grey trousers and brown round shoes. Slightly rounder little waist, mature relaxed pose. Build slim: narrow little torso with skinny SHORT arms and legs. Keep EXACT reference LOW RESOLUTION farming-game style: coherent2head-tall round bean head, tiny dot eyes and smile, no nose/lips/pointed chin, chunky simple short hair, stubby legs and mitten hands. Genuine large square pixel clusters, approximately48x64logical grid, warm limited flat colors,2shades per material. Independently redraw age-specific clothes/body, not a resized copy. No realistic anatomy, portraits, long legs, gradients, tiny fabric detail or texture. Front view arms down feet level, entire full sprite unclipped with margins. True transparent background, no shadow/glow/text/props.",
+    "status": "packaged; 35 emulator tests passed; self-reviewed, not user approval",
+    "neckCropRow": 570,
+    "sourceSha256": "b9ce09b804c4dea9e7188ca7f082c07025743d0bd5bc6576710293fd202e283c",
+    "localOriginal": "output/week10/avatar_v3/originals/middle_full_slim.png"
+  },
+  "middle_full_standard": {
+    "source": "C:\\Users\\bestw\\.codex\\generated_images\\01a18201-fe9b-7c92-83d5-fb63c765d04d\\exec-9e630923-6801-47ce-89bc-87d74bbaa257.png",
+    "method": "built-in imagegen",
+    "prompt": "Production FULL BODY sprite: same adorable character at MIDDLE AGED ADULT, simple charcoal jacket over pale blue shirt, grey trousers and brown round shoes. Slightly rounder little waist, mature relaxed pose. Build standard: average rounded torso and moderate SHORT limbs. Keep EXACT reference LOW RESOLUTION farming-game style: coherent2head-tall round bean head, tiny dot eyes and smile, no nose/lips/pointed chin, chunky simple short hair, stubby legs and mitten hands. Genuine large square pixel clusters, approximately48x64logical grid, warm limited flat colors,2shades per material. Independently redraw age-specific clothes/body, not a resized copy. No realistic anatomy, portraits, long legs, gradients, tiny fabric detail or texture. Front view arms down feet level, entire full sprite unclipped with margins. True transparent background, no shadow/glow/text/props.",
+    "status": "packaged; 35 emulator tests passed; self-reviewed, not user approval",
+    "neckCropRow": 572,
+    "sourceSha256": "e00970556ea72349ebc6d45fa8606d89feb0b528b7e486ec9e520c323b43e1fc",
+    "localOriginal": "output/week10/avatar_v3/originals/middle_full_standard.png"
+  },
+  "middle_full_muscular": {
+    "source": "C:\\Users\\bestw\\.codex\\generated_images\\01a18201-fe9b-7c92-83d5-fb63c765d04d\\exec-bd74e4e9-c0e2-41b2-83ee-f5ecfdd8f51d.png",
+    "method": "built-in imagegen",
+    "prompt": "Production FULL BODY sprite: same adorable character at MIDDLE AGED ADULT, simple charcoal jacket over pale blue shirt, grey trousers and brown round shoes. Slightly rounder little waist, mature relaxed pose. Build muscular: clearly broad little shoulders and thick sturdy SHORT arms and legs, compact rounded strength. Keep EXACT reference LOW RESOLUTION farming-game style: coherent2head-tall round bean head, tiny dot eyes and smile, no nose/lips/pointed chin, chunky simple short hair, stubby legs and mitten hands. Genuine large square pixel clusters, approximately48x64logical grid, warm limited flat colors,2shades per material. Independently redraw age-specific clothes/body, not a resized copy. No realistic anatomy, portraits, long legs, gradients, tiny fabric detail or texture. Front view arms down feet level, entire full sprite unclipped with margins. True transparent background, no shadow/glow/text/props.",
+    "status": "packaged; 35 emulator tests passed; self-reviewed, not user approval",
+    "neckCropRow": 574,
+    "sourceSha256": "8b5ac13959d7a8d38506755820423dd1ab4f3804b2563e1a1ce74c5f7358c90f",
+    "localOriginal": "output/week10/avatar_v3/originals/middle_full_muscular.png"
+  },
+  "old_age_full_slim": {
+    "source": "C:\\Users\\bestw\\.codex\\generated_images\\01a18201-fe9b-7c92-83d5-fb63c765d04d\\exec-3f59bed3-2c72-45b7-bd6d-10a5b5ab484d.png",
+    "method": "built-in imagegen",
+    "prompt": "Production FULL BODY ELDERLY sprite of the exact reference adorable round farming-game pixel character. Sage green simple cardigan over cream shirt, charcoal short comfortable trousers and brown round walking shoes. White/silver chunky short hair, tiny dot eyes and friendly smile, TWO tiny pixel cheek wrinkle marks, rounded cheeks and ROUND chin, no nose or lips. Build slim: narrow little trunk, thin SHORT limbs, subtly stooped. Coherent2head-tall CHIBI proportions with stubby legs and mitten hands. Large square pixel clusters on roughly48x64logical grid,2flat shades per material, limited warm palette, no gradient/realism/anatomical detail or long legs. Independently redraw elderly clothes and body, do not resize adult. Front view arms down feet level, entire full sprite with margins. True transparent background, no glow/shadow/props/text.",
+    "status": "packaged; 35 emulator tests passed; self-reviewed, not user approval",
+    "neckCropRow": 599,
+    "sourceSha256": "5710869417592df66798211978695e85d411b6206fa45a78872b9388cc31e7b7",
+    "localOriginal": "output/week10/avatar_v3/originals/old_age_full_slim.png"
+  },
+  "old_age_full_standard": {
+    "source": "C:\\Users\\bestw\\.codex\\generated_images\\01a18201-fe9b-7c92-83d5-fb63c765d04d\\exec-176d642b-c432-48ce-b2c4-1725169725d4.png",
+    "method": "built-in imagegen",
+    "prompt": "Production FULL BODY ELDERLY sprite of the exact reference adorable round farming-game pixel character. Sage green simple cardigan over cream shirt, charcoal short comfortable trousers and brown round walking shoes. White/silver chunky short hair, tiny dot eyes and friendly smile, TWO tiny pixel cheek wrinkle marks, rounded cheeks and ROUND chin, no nose or lips. Build standard: average rounded little torso and moderate SHORT limbs, gently stooped. Coherent2head-tall CHIBI proportions with stubby legs and mitten hands. Large square pixel clusters on roughly48x64logical grid,2flat shades per material, limited warm palette, no gradient/realism/anatomical detail or long legs. Independently redraw elderly clothes and body, do not resize adult. Front view arms down feet level, entire full sprite with margins. True transparent background, no glow/shadow/props/text.",
+    "status": "packaged; 35 emulator tests passed; self-reviewed, not user approval",
+    "neckCropRow": 651,
+    "sourceSha256": "f2be8f892d0984af13610e08c96425a3cc4e2328fbd278b644a7846daa6f2d02",
+    "localOriginal": "output/week10/avatar_v3/originals/old_age_full_standard.png"
+  },
+  "old_age_full_muscular": {
+    "source": "C:\\Users\\bestw\\.codex\\generated_images\\01a18201-fe9b-7c92-83d5-fb63c765d04d\\exec-690bfa80-4827-45ac-9a45-add5e969380f.png",
+    "method": "built-in imagegen",
+    "prompt": "Production FULL BODY ELDERLY sprite of the exact reference adorable round farming-game pixel character. Sage green simple cardigan over cream shirt, charcoal short comfortable trousers and brown round walking shoes. White/silver chunky short hair, tiny dot eyes and friendly smile, TWO tiny pixel cheek wrinkle marks, rounded cheeks and ROUND chin, no nose or lips. Build muscular: broader little shoulders and thick sturdy SHORT limbs, active elderly yet still kindly and rounded. Coherent2head-tall CHIBI proportions with stubby legs and mitten hands. Large square pixel clusters on roughly48x64logical grid,2flat shades per material, limited warm palette, no gradient/realism/anatomical detail or long legs. Independently redraw elderly clothes and body, do not resize adult. Front view arms down feet level, entire full sprite with margins. True transparent background, no glow/shadow/props/text.",
+    "status": "packaged; 35 emulator tests passed; self-reviewed, not user approval",
+    "neckCropRow": 579,
+    "sourceSha256": "4cecf3a2458dea41792e513016f6c3923dcc4840ba948de0ee7016148f1ccecb",
+    "localOriginal": "output/week10/avatar_v3/originals/old_age_full_muscular.png"
+  },
+  "young_adult_full_standard": {
+    "source": "C:\\Users\\bestw\\.codex\\generated_images\\01a18201-fe9b-7c92-83d5-fb63c765d04d\\exec-59d3a412-f4f5-4194-86bf-c8f52761cf2d.png",
+    "method": "built-in imagegen",
+    "prompt": "Production character sprite for a CUTE COZY PIXEL LIFE GAME. One full-body young-adult character, front view, normal average build. Art direction: tiny charming 2D farming-game NPC, 2.5 heads tall, rounded bean-shaped head, SHORT compact torso, stubby arms and SHORT legs, little mitten hands and rounded shoes. FACE: exactly two tiny dark pixel dot eyes and a tiny curved smile, NO drawn nose, NO lips, NO cheekbones, NO pointed chin; broad round soft cheeks and round jaw. HAIR: neat short dark brown hair in just 5 to 7 chunky square clusters, short tidy bangs, follows round head contour, no individual hair strands. Clothes: sky-blue simple overshirt over cream shirt, navy short trousers and small brown shoes, all expressed in a few flat color blocks. Genuine LOW RESOLUTION 32-bit console pixel art drawn on roughly a 48x64 pixel grid and enlarged nearest-neighbor; visibly large square pixels, 20-color warm muted palette, each material just 2 flat shades. Entire character fully visible, aligned straight, centered with margins. Truly transparent background with no ground shadow, glow, aura, props, labels or text. Do not draw a realistic human, fashion doll, portrait, long elegant legs, long face, tapered triangular jaw, anime eyes, smooth gradients, tiny detailed fabric folds, or high-resolution pixel-textured painting. The body and round head must be designed together as ONE coherent adorable miniature sprite.",
+    "status": "packaged; 35 emulator tests passed; self-reviewed, not user approval",
+    "neckCropRow": 570,
+    "sourceSha256": "e460b9ea395b4fb21ae1a568cd90b9f4c9cabaccfcbff5525e0d974b7741964e",
+    "localOriginal": "output/week10/avatar_v3/originals/young_adult_full_standard.png"
+  },
+  "young_adult_full_slim": {
+    "source": "C:\\Users\\bestw\\.codex\\generated_images\\01a18201-fe9b-7c92-83d5-fb63c765d04d\\exec-06dbf711-e257-4cd9-a4cb-bf201c7c19b4.png",
+    "method": "built-in imagegen",
+    "prompt": "Same reference design; coarse cute pixel style, round face and short limbs; young_adult_full_slim",
+    "status": "packaged; 35 emulator tests passed; self-reviewed, not user approval",
+    "neckCropRow": 570,
+    "sourceSha256": "b56c287804ad57d0b21ce08836a95affbb9825172f3e1a919c39cba2a77c8d19",
+    "localOriginal": "output/week10/avatar_v3/originals/young_adult_full_slim.png"
+  },
+  "young_adult_full_muscular": {
+    "source": "C:\\Users\\bestw\\.codex\\generated_images\\01a18201-fe9b-7c92-83d5-fb63c765d04d\\exec-348e927a-23ee-4bbf-b2fc-38ef85ae1456.png",
+    "method": "built-in imagegen",
+    "prompt": "Same reference design; coarse cute pixel style, round face and short limbs; young_adult_full_muscular",
+    "status": "packaged; 35 emulator tests passed; self-reviewed, not user approval",
+    "neckCropRow": 623,
+    "sourceSha256": "95d3ebdd15aaa40f9c896ac8fc9b74cfe804df3fc3502a027b9a9a22f5e957b8",
+    "localOriginal": "output/week10/avatar_v3/originals/young_adult_full_muscular.png"
+  },
+  "face_young_adult": {
+    "source": "C:\\Users\\bestw\\.codex\\generated_images\\01a18201-fe9b-7c92-83d5-fb63c765d04d\\exec-b71770b3-82e8-4b79-ad73-65b1790eb160.png",
+    "method": "built-in imagegen",
+    "prompt": "Same reference design; coarse cute pixel style, round face and short limbs; face_young_adult",
+    "status": "packaged; 35 emulator tests passed; self-reviewed, not user approval",
+    "sourceSha256": "23ffb99c2134c039e2a868fc3f51aed7846cceaa700779becc28504bebf1c3c6",
+    "localOriginal": "output/week10/avatar_v3/originals/face_young_adult.png"
+  },
+  "hair_default": {
+    "source": "C:\\Users\\bestw\\.codex\\generated_images\\01a18201-fe9b-7c92-83d5-fb63c765d04d\\exec-e99836de-a9ea-4c80-a7e6-0af5df748d8a.png",
+    "method": "built-in imagegen",
+    "prompt": "Reference defines the EXACT cute chunky LOW RESOLUTION farming-game pixel character style and round proportions. Produce ONE separate production overlay asset: HAIR ONLY modular layer, a neat short dark brown rounded pixel hair cap with short tidy bangs and two little temple locks. Same rounded scalp as reference, just5 to7 LARGE squared clusters, not loose strands. Front view. Face area below bangs must be transparent. Genuine low resolution pixel art made from about24x24logical pixels per head, enlarged nearest-neighbor with VISIBLE BIG SQUARE pixels. At most3 flat colors per material, no gradient or blur. NO realistic anatomy or rendering. Truly transparent background including face opening, no dark filled face hole, no glow/shadow/haze/text/labels. Entire overlay centered with transparent margin. Must fit the reference adorable round bean head; do not create a portrait or fashion-doll part.",
+    "status": "packaged; 35 emulator tests passed; self-reviewed, not user approval",
+    "sourceSha256": "62e98a1772471a6f8a0193a79b3bebfd11066c11201441ddd84bf6351eb01a4c",
+    "localOriginal": "output/week10/avatar_v3/originals/hair_default.png"
+  },
+  "hair_bob_brown": {
+    "source": "C:\\Users\\bestw\\.codex\\generated_images\\01a18201-fe9b-7c92-83d5-fb63c765d04d\\exec-c16ad42d-505e-40a8-8dcb-65ccd719e41e.png",
+    "method": "built-in imagegen",
+    "prompt": "Reference defines the EXACT cute chunky LOW RESOLUTION farming-game pixel character style and round proportions. Produce ONE separate production overlay asset: HAIR ONLY modular layer, warm brown rounded chin length bob, chunky short bangs, simple two side locks, same round head width as reference. Front view, transparent face opening. Just a few LARGE squared clusters. Genuine low resolution pixel art made from about24x24logical pixels per head, enlarged nearest-neighbor with VISIBLE BIG SQUARE pixels. At most3 flat colors per material, no gradient or blur. NO realistic anatomy or rendering. Truly transparent background including face opening, no dark filled face hole, no glow/shadow/haze/text/labels. Entire overlay centered with transparent margin. Must fit the reference adorable round bean head; do not create a portrait or fashion-doll part.",
+    "status": "packaged; 35 emulator tests passed; self-reviewed, not user approval",
+    "sourceSha256": "e845118afc78722428a6073a019622cc74643e1d772f786283d668b35032f747",
+    "localOriginal": "output/week10/avatar_v3/originals/hair_bob_brown.png"
+  },
+  "hair_long_black": {
+    "source": "C:\\Users\\bestw\\.codex\\generated_images\\01a18201-fe9b-7c92-83d5-fb63c765d04d\\exec-9128643d-ee7f-4ed3-b3ff-54970877a47c.png",
+    "method": "built-in imagegen",
+    "prompt": "Reference defines the EXACT cute chunky LOW RESOLUTION farming-game pixel character style and round proportions. Produce ONE separate production overlay asset: HAIR ONLY modular layer, simple long dark brown straight hair, rounded cap and TWO broad side strips to shoulders, short tidy fringe above eyes, front view, transparent face opening. About8 LARGE squared clusters, no fine strands. Genuine low resolution pixel art made from about24x24logical pixels per head, enlarged nearest-neighbor with VISIBLE BIG SQUARE pixels. At most3 flat colors per material, no gradient or blur. NO realistic anatomy or rendering. Truly transparent background including face opening, no dark filled face hole, no glow/shadow/haze/text/labels. Entire overlay centered with transparent margin. Must fit the reference adorable round bean head; do not create a portrait or fashion-doll part.",
+    "status": "packaged; 35 emulator tests passed; self-reviewed, not user approval",
+    "sourceSha256": "42dfad505f42f80bc6f6fc9d1982212f525d01832ed39e70395613ba97d05ead",
+    "localOriginal": "output/week10/avatar_v3/originals/hair_long_black.png"
+  },
+  "hair_curly_brown": {
+    "source": "C:\\Users\\bestw\\.codex\\generated_images\\01a18201-fe9b-7c92-83d5-fb63c765d04d\\exec-643e48fc-2904-467f-90b6-8fa57a60209e.png",
+    "method": "built-in imagegen",
+    "prompt": "Reference defines the EXACT cute chunky LOW RESOLUTION farming-game pixel character style and round proportions. Produce ONE separate production overlay asset: HAIR ONLY modular layer, warm brown rounded soft curly hair cap made of6 to8 chunky square curls, short bangs above eyes, two little temple locks, front view. Face area remains transparent. Genuine low resolution pixel art made from about24x24logical pixels per head, enlarged nearest-neighbor with VISIBLE BIG SQUARE pixels. At most3 flat colors per material, no gradient or blur. NO realistic anatomy or rendering. Truly transparent background including face opening, no dark filled face hole, no glow/shadow/haze/text/labels. Entire overlay centered with transparent margin. Must fit the reference adorable round bean head; do not create a portrait or fashion-doll part.",
+    "status": "packaged; 35 emulator tests passed; self-reviewed, not user approval",
+    "sourceSha256": "982c8a36e323489e9b310cd256910a5ed31ce1051fc88ee7c0f669d052731793",
+    "localOriginal": "output/week10/avatar_v3/originals/hair_curly_brown.png"
+  },
+  "eyes_default": {
+    "source": "C:\\Users\\bestw\\.codex\\generated_images\\01a18201-fe9b-7c92-83d5-fb63c765d04d\\exec-5afb64b9-5b31-46c2-8784-2a424b6f2fa6.png",
+    "method": "built-in imagegen",
+    "prompt": "Reference defines the EXACT cute chunky LOW RESOLUTION farming-game pixel character style and round proportions. Produce ONE separate production overlay asset: EXPRESSION ONLY modular layer: two small dark pixel DOT eyes and a tiny friendly U-shaped smile centered below them. NO skin, face, head or hair. Eyes widely spaced, mouth midway beneath. No nose, eyebrows, whites, lips, eyelashes or teeth. Each eye2logical pixels, smile4logical pixels. Genuine low resolution pixel art made from about24x24logical pixels per head, enlarged nearest-neighbor with VISIBLE BIG SQUARE pixels. At most3 flat colors per material, no gradient or blur. NO realistic anatomy or rendering. Truly transparent background including face opening, no dark filled face hole, no glow/shadow/haze/text/labels. Entire overlay centered with transparent margin. Must fit the reference adorable round bean head; do not create a portrait or fashion-doll part.",
+    "status": "packaged; 35 emulator tests passed; self-reviewed, not user approval",
+    "sourceSha256": "e48d6148daa23a0f990dc9033ff7c16d97f6ccdd75c032d498758f7c57b92c5c",
+    "localOriginal": "output/week10/avatar_v3/originals/eyes_default.png"
+  },
+  "eyes_big": {
+    "source": "C:\\Users\\bestw\\.codex\\generated_images\\01a18201-fe9b-7c92-83d5-fb63c765d04d\\exec-9c882ad8-5b9c-4806-9175-a49f5b053d21.png",
+    "method": "built-in imagegen",
+    "prompt": "Reference defines the EXACT cute chunky LOW RESOLUTION farming-game pixel character style and round proportions. Produce ONE separate production overlay asset: EXPRESSION ONLY modular layer: two slightly larger round dark pixel DOT eyes with ONE tiny cream highlight each and tiny friendly U-smile beneath. NO skin, face, head or hair. No nose, eyebrows, eyelashes, eye anatomy or lips. Each eye3logical pixels, smile4logical pixels. Genuine low resolution pixel art made from about24x24logical pixels per head, enlarged nearest-neighbor with VISIBLE BIG SQUARE pixels. At most3 flat colors per material, no gradient or blur. NO realistic anatomy or rendering. Truly transparent background including face opening, no dark filled face hole, no glow/shadow/haze/text/labels. Entire overlay centered with transparent margin. Must fit the reference adorable round bean head; do not create a portrait or fashion-doll part.",
+    "status": "packaged; 35 emulator tests passed; self-reviewed, not user approval",
+    "sourceSha256": "5fd6e7880117ee8541536ee58d82b2b26fd135ba33d43ac89090ca7c3dd6a223",
+    "localOriginal": "output/week10/avatar_v3/originals/eyes_big.png"
+  },
+  "eyes_narrow": {
+    "source": "C:\\Users\\bestw\\.codex\\generated_images\\01a18201-fe9b-7c92-83d5-fb63c765d04d\\exec-60ff3f41-ef7b-451f-beec-c800ef6cb428.png",
+    "method": "built-in imagegen",
+    "prompt": "Reference defines the EXACT cute chunky LOW RESOLUTION farming-game pixel character style and round proportions. Produce ONE separate production overlay asset: EXPRESSION ONLY modular layer: two tiny happy closed crescent pixel eyes and a tiny U-smile centered below. NO skin, face, head or hair. No nose, eyebrows, eyelashes, eye anatomy, lips or teeth. Each eye3logical pixels wide, smile4logical pixels. Genuine low resolution pixel art made from about24x24logical pixels per head, enlarged nearest-neighbor with VISIBLE BIG SQUARE pixels. At most3 flat colors per material, no gradient or blur. NO realistic anatomy or rendering. Truly transparent background including face opening, no dark filled face hole, no glow/shadow/haze/text/labels. Entire overlay centered with transparent margin. Must fit the reference adorable round bean head; do not create a portrait or fashion-doll part.",
+    "status": "packaged; 35 emulator tests passed; self-reviewed, not user approval",
+    "sourceSha256": "826d3c53ae45f167cd46d0f71032e9e324f45db90eacecf284601d84bdae3f5b",
+    "localOriginal": "output/week10/avatar_v3/originals/eyes_narrow.png"
+  }
+}

@@ -124,6 +124,18 @@ class Week10PlayScreenTest {
     )
 
     @Test
+    fun newBrightBackgroundKeepsChoiceTextReadable() {
+        val art = com.example.lifegame.ui.images.ImageCandidate(
+            "img_week10_bg_child", "week10/scenes/img_week10_bg_child.png", "scene")
+        setScreen { DecisionScreen(state = playState(decision = decision.copy(images = listOf(art))), onChoose = {}, onContinue = {}) }
+        composeRule.mainClock.advanceTimeBy(10_000)
+        composeRule.waitForIdle()
+        saveScreenshot("w10_bright_background.png")
+        assertTextFits(decision.title)
+        assertTextFits(decision.text, multiline = true)
+    }
+
+    @Test
     fun decisionScreenFollowsTheFinalLayoutAt360dpAndLargeText() {
         setScreen { DecisionScreen(state = playState(), onChoose = {}, onContinue = {}) }
 
@@ -211,7 +223,9 @@ class Week10PlayScreenTest {
             changes = listOf(StatChangeUi("경제력", 6), StatChangeUi("건강", -3)),
             endsLife = false,
         )
-        setScreen { DecisionScreen(state = playState(outcome = outcome), onChoose = {}, onContinue = {}) }
+        val art = com.example.lifegame.ui.images.ImageCandidate(
+            "img_week10_bg_young_adult", "week10/scenes/img_week10_bg_young_adult.png", "scene")
+        setScreen { DecisionScreen(state = playState(outcome = outcome, decision = decision.copy(images = listOf(art))), onChoose = {}, onContinue = {}) }
         composeRule.onNodeWithText(outcome.text).assertIsDisplayed()
         assertTextFits(outcome.text, multiline = true)
         saveScreenshot("w10_outcome_360dp.png")
@@ -219,6 +233,7 @@ class Week10PlayScreenTest {
         composeRule.onNodeWithTag("scene_view_button").performClick()
         composeRule.onNodeWithTag("scene_only").assertIsDisplayed()
         composeRule.onNodeWithTag("scene_clear").assertExists()
+        saveScreenshot("w10_scene_only.png")
         composeRule.onAllNodesWithTag("play_top_bar").assertCountEquals(0)
         composeRule.onAllNodesWithTag("decision_outcome").assertCountEquals(0)
         composeRule.onAllNodesWithTag("period_track").assertCountEquals(0)

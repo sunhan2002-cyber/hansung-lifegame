@@ -156,7 +156,14 @@ fun buildLifeRecordUi(record: CompletedLifeRecord, content: RecordContent): Life
         choices = record.choices.map { it.toChoiceRecordUi(periods) },
         endingId = record.endingId,
     )
-    val backdrop = PATH_STAT_KEYS[path]
+    val endingTheme = when (path) {
+        LifePathKind.HEALTH -> "health"
+        LifePathKind.SOCIAL -> "relationship"
+        LifePathKind.FITNESS, LifePathKind.INTELLIGENCE, LifePathKind.WEALTH -> "achievement"
+        else -> "peace"
+    }
+    val endingArt = content.imageRouting.endingScenes[endingTheme]?.let(content.imageRouting.assets::get)
+    val backdrop = endingArt ?: PATH_STAT_KEYS[path]
         ?.let(content.imageRouting.statScenes::get)
         ?.let(content.imageRouting.assets::get)
     return LifeRecordUi(

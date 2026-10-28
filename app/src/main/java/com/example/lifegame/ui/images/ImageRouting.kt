@@ -17,6 +17,8 @@ data class ImageRouting(
     val statScenes: Map<String, String> = emptyMap(),
     val focusStats: Map<String, String> = emptyMap(),
     val eventStatTags: Map<String, List<String>> = emptyMap(),
+    val periodScenes: Map<LifePeriod, String> = emptyMap(),
+    val endingScenes: Map<String, String> = emptyMap(),
 ) {
     fun portrait(period: LifePeriod?): List<ImageCandidate> =
         listOfNotNull(periodPortraits[period]?.let(assets::get))
@@ -34,6 +36,7 @@ data class ImageRouting(
             exact?.let(::add)
         }
         focusStats[focusId]?.let(statScenes::get)?.let(assets::get)?.let(::add)
+        periodScenes[period]?.let(assets::get)?.let(::add)
         addAll(portrait(period))
     }.distinctBy { it.path }
 
@@ -51,6 +54,7 @@ data class ImageRouting(
             // Reuse the exact-art lookup, without its unconditional focus fallback.
             addAll(candidates(preferredImageId, null, null, legacyFiles))
             tag?.let(statScenes::get)?.let(assets::get)?.let(::add)
+            periodScenes[period]?.let(assets::get)?.let(::add)
             addAll(portrait(period))
         }.distinctBy { it.path }
     }
@@ -87,7 +91,13 @@ data class ImageRouting(
                     }
                 }
             }.orEmpty()
-            return ImageRouting(assets, portraits, scenes, focuses, eventTags)
+            fun optionalMap(key: String): Map<String, String> = root.optJSONObject(key)?.let { obj ->
+                obj.keys().asSequence().associateWith { obj.getString(it) }
+            }.orEmpty()
+            val periodScenes = optionalMap("periodScenes").mapKeys { LifePeriod.valueOf(it.key) }
+            val endingScenes = optionalMap("endingScenes")
+            require((periodScenes.values + endingScenes.values).all { it in assets }) { "Unregistered scene" }
+            return ImageRouting(assets, portraits, scenes, focuses, eventTags, periodScenes, endingScenes)
         }
     }
 }

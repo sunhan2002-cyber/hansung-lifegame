@@ -261,6 +261,26 @@ class Week10EndingFlowTest {
     }
 
     @Test
+    fun appearanceSelectorsPreserveTheOtherSelectedParts() {
+        setScreen { CharacterSelectScreen(starters = emptyList(), onStart = {}) }
+        fun pick(id: String, description: String) {
+            composeRule.onNodeWithTag("option_$id").performScrollTo().performClick()
+            composeRule.onAllNodes(hasContentDescription(description, substring = true)).assertCountEquals(3)
+        }
+        pick("hair_long_black", "밝은 피부, 긴 생머리, 둥근 눈")
+        pick("skin_deep", "짙은 피부, 긴 생머리, 둥근 눈")
+        pick("eyes_narrow", "짙은 피부, 긴 생머리, 가는 눈")
+        pick("eyes_big", "짙은 피부, 긴 생머리, 큰 눈")
+        pick("hair_bob_brown", "짙은 피부, 갈색 단발, 큰 눈")
+        pick("skin_tan", "구릿빛 피부, 갈색 단발, 큰 눈")
+        composeRule.onNodeWithTag("appearance_preview").performScrollTo()
+        composeRule.waitUntil(15000) {
+            composeRule.onAllNodesWithTag("player_avatar_layers").fetchSemanticsNodes().size == 3
+        }
+        saveScreenshot("w10_independent_appearance.png")
+    }
+
+    @Test
     fun profileStartsWithoutPhotoAndDecliningConsentKeepsTheDefaultLook() {
         var started: NewLifeProfile? = null
         setScreen {
