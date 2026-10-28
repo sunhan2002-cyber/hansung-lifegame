@@ -57,14 +57,16 @@ class Week7FlowSmokeTest {
         var sawAuto = false
         var sawEnding = false
         for (action in 0 until 150) {
-            when (waitForAny("decision_content", "chapter_content", "auto_progress_content", "run_end_content")) {
+            when (waitForAny("decision_content", "chapter_content", "auto_progress_content", "recap_screen", "run_end_content")) {
                 "chapter_content" -> {
                     chooseFirstFocus(screenshot = if (sawChapter) null else "02_chapter.png")
                     sawChapter = true
                 }
                 "auto_progress_content" -> {
                     if (!sawAuto) {
-                        composeRule.onNodeWithTag("life_path_summary").assertIsDisplayed()
+                        // 10주차: 초점 요약 박스 대신 상단 캐릭터 · 건강바와 하단 시기선
+                        composeRule.onNodeWithTag("play_top_bar").assertIsDisplayed()
+                        composeRule.onNodeWithTag("period_track").assertIsDisplayed()
                         saveScreenshot("03_auto_progress.png")
                         sawAuto = true
                     }
@@ -73,6 +75,18 @@ class Week7FlowSmokeTest {
                 "decision_content" -> {
                     resolveDecision(screenshot = !sawDecision)
                     sawDecision = true
+                }
+                "recap_screen" -> {
+                    // 10주차 종료 흐름: 주마등 → 미래 모습 → 인생기록증
+                    saveScreenshot("07_recap.png")
+                    composeRule.onNodeWithTag("recap_skip").performClick()
+                    waitForAny("future_next")
+                    composeRule.onNodeWithTag("future_next").performScrollTo().performClick()
+                    waitForAny("certificate")
+                    composeRule.onNodeWithText("인생기록증").assertIsDisplayed()
+                    saveScreenshot("08_certificate.png")
+                    sawEnding = true
+                    break
                 }
                 "run_end_content" -> {
                     composeRule.onNodeWithText("인생 요약").performScrollTo().assertIsDisplayed()

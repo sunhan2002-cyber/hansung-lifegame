@@ -2,6 +2,13 @@ package com.example.lifegame.ui.screens
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
+import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.heightIn
+import androidx.compose.foundation.layout.ExperimentalLayoutApi
+import androidx.compose.foundation.layout.FlowRow
+import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.selection.selectable
+import androidx.compose.ui.semantics.Role
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -36,7 +43,8 @@ import com.example.lifegame.ui.FinishedLifeUi
 import com.example.lifegame.ui.LifeCardUi
 import com.example.lifegame.ui.components.InkButton
 import com.example.lifegame.ui.components.LineButton
-import com.example.lifegame.ui.components.PixelFigurePlaceholder
+import com.example.lifegame.ui.FakeScenario
+import com.example.lifegame.ui.avatar.PlayerAvatar
 import com.example.lifegame.ui.components.SectionLabel
 import com.example.lifegame.ui.components.ThinRule
 import com.example.lifegame.ui.theme.LifeGameCard
@@ -46,11 +54,13 @@ import com.example.lifegame.ui.theme.LifeGameInkTertiary
 import com.example.lifegame.ui.theme.LifeGamePaper
 import com.example.lifegame.ui.theme.LifeGameRule
 import com.example.lifegame.ui.theme.LifeGameSerif
+import com.example.lifegame.ui.theme.LifeGameSpecial
 
 /**
  * 홈(프로필) 화면 (R-110). 앱을 켜면 처음 보는 화면이다.
  * 진행 중인 인생 카드, 이어하기 / 새 인생 살기, 지난 인생 목록을 보여 준다.
  */
+@OptIn(ExperimentalLayoutApi::class)
 @Composable
 fun HomeScreen(
     lifeCard: LifeCardUi?,
@@ -60,6 +70,10 @@ fun HomeScreen(
     modifier: Modifier = Modifier,
     onDesignPreview: (() -> Unit)? = null,
     message: String? = null,
+    onOpenRecord: (runId: String) -> Unit = {},
+    onOpenTitles: () -> Unit = {},
+    generationScenario: FakeScenario? = null,
+    onScenarioChange: (FakeScenario) -> Unit = {},
 ) {
     var confirmOverwrite by rememberSaveable { mutableStateOf(false) }
 
@@ -104,8 +118,33 @@ fun HomeScreen(
             InkButton(text = "새 인생 살기", onClick = onNewLife)
         }
 
+        LineButton(text = "칭호 수집", onClick = onOpenTitles, modifier = Modifier.testTag("home_titles"))
+
         onDesignPreview?.let { openPreview ->
             LineButton(text = "디자인 미리보기", onClick = openPreview)
+        }
+        if (generationScenario != null) {
+            // 디버그 빌드에서만: 생성 Fake 응답을 바꿔 실패 · 지연 · 취소 화면을 재현한다.
+            Column(verticalArrangement = Arrangement.spacedBy(6.dp), modifier = Modifier.testTag("debug_generation")) {
+                Text("개발용 생성 응답 (Fake)", color = LifeGameInkTertiary, fontSize = 13.sp)
+                FlowRow(horizontalArrangement = Arrangement.spacedBy(6.dp), verticalArrangement = Arrangement.spacedBy(6.dp)) {
+                    FakeScenario.entries.forEach { option ->
+                        val selected = option == generationScenario
+                        Text(
+                            text = option.label,
+                            color = if (selected) LifeGameCard else LifeGameInkSecondary,
+                            fontSize = 13.sp,
+                            fontWeight = FontWeight.Bold,
+                            modifier = Modifier
+                                .clip(RoundedCornerShape(8.dp))
+                                .background(if (selected) LifeGameInk else LifeGameCard)
+                                .border(1.dp, LifeGameRule, RoundedCornerShape(8.dp))
+                                .selectable(selected = selected, role = Role.RadioButton) { onScenarioChange(option) }
+                                .padding(horizontal = 10.dp, vertical = 12.dp),
+                        )
+                    }
+                }
+            }
         }
 
         Spacer(Modifier.height(8.dp))
@@ -117,15 +156,25 @@ fun HomeScreen(
                 fontSize = 13.sp,
             )
         } else {
-            Column(verticalArrangement = Arrangement.spacedBy(10.dp)) {
+            Column(verticalArrangement = Arrangement.spacedBy(4.dp), modifier = Modifier.testTag("finished_lives")) {
                 finishedLives.forEachIndexed { index, life ->
                     if (index > 0) ThinRule()
-                    Row(
-                        modifier = Modifier.fillMaxWidth(),
-                        horizontalArrangement = Arrangement.spacedBy(12.dp),
+                    Column(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .heightIn(min = 48.dp)
+                            .clip(RoundedCornerShape(8.dp))
+                            .clickable(role = Role.Button) { onOpenRecord(life.key) }
+                            .padding(vertical = 10.dp, horizontal = 4.dp)
+                            .testTag("finished_life_$index"),
+                        verticalArrangement = Arrangement.spacedBy(2.dp),
                     ) {
-                        Text(life.playerName, color = LifeGameInk, fontSize = 14.sp, fontWeight = FontWeight.Bold)
-                        Text(life.summary, color = LifeGameInkSecondary, fontSize = 14.sp, fontFamily = LifeGameSerif)
+                        Row(horizontalArrangement = Arrangement.spacedBy(10.dp), verticalAlignment = Alignment.CenterVertically) {
+                            Text(life.playerName, color = LifeGameInk, fontSize = 16.sp, fontWeight = FontWeight.Bold)
+                            life.titleText?.let { Text(it, color = LifeGameSpecial, fontSize = 14.sp, fontWeight = FontWeight.Medium) }
+                        }
+                        Text(life.summary, color = LifeGameInkSecondary, fontSize = 14.sp, fontFamily = LifeGameSerif, lineHeight = 20.sp)
+                        life.endedAt?.let { Text(it, color = LifeGameInkTertiary, fontSize = 13.sp) }
                     }
                 }
             }
@@ -165,7 +214,7 @@ private fun LifeCard(card: LifeCardUi) {
         horizontalArrangement = Arrangement.spacedBy(16.dp),
         verticalAlignment = Alignment.Top,
     ) {
-        PixelFigurePlaceholder(height = 72.dp, modifier = Modifier.padding(top = 4.dp))
+        PlayerAvatar(card.avatar, Modifier.size(width = 56.dp, height = 84.dp))
         Column(Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(4.dp)) {
             Text(
                 text = card.playerName,

@@ -13,6 +13,7 @@ import androidx.compose.ui.draw.clipToBounds
 import androidx.compose.ui.graphics.asAndroidBitmap
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.semantics.SemanticsActions
+import androidx.compose.ui.test.assertCountEquals
 import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.captureToImage
 import androidx.compose.ui.test.hasText
@@ -185,19 +186,21 @@ class Week8LifePathScreenTest {
         saveScreenshot("decision_outcome_facts.png")
     }
 
+    /** 10주차부터 플레이 화면의 요약 박스는 없다. 초점 · 인생 사실은 캐릭터를 눌러 여는 상세 창에서 본다. */
     @Test
-    fun playingSummaryShowsFocusTopStatAndFacts() {
+    fun focusAndFactsMovedFromThePlayScreenToTheDetailsWindow() {
         val facts = LifeFactsUi(education = "대학원 진학", career = "연구원", careerLevel = "책임자", marital = "결혼",
             children = 1, housing = "전세", wealthBand = "여유", achievements = listOf("연구 돌파구"))
         val state = playState(decision = null, facts = facts).copy(phase = PlayPhase.AUTO, autoPlaying = false)
         setSmallScreen {
             AutoProgressScreen(state = state, onAdvanceYear = {}, onTogglePlaying = {}, onSpeedChange = {}, onSkipToDecision = {})
         }
-        assertTextFits(facts.shortLine, multiline = true)
-        assertTextFits("이번 시기 초점 커리어  ·  대표 지력 88")
-        saveScreenshot("auto_life_summary.png")
-        composeRule.onNodeWithTag("life_path_summary").performClick()
+        composeRule.onAllNodesWithTag("life_path_summary").assertCountEquals(0)
+        saveScreenshot("auto_without_summary_box.png")
+        composeRule.onNodeWithTag("player_avatar_button").performClick()
         composeRule.onNodeWithText("지금까지의 나").assertIsDisplayed()
+        composeRule.onNodeWithText("커리어").assertExists()
+        composeRule.onNodeWithText("대학원 진학").assertExists()
     }
 
     // ---- helpers ----

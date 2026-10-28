@@ -19,9 +19,18 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.safeDrawingPadding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.layout.WindowInsets
+import androidx.compose.foundation.layout.WindowInsetsSides
+import androidx.compose.foundation.layout.only
+import androidx.compose.foundation.layout.safeDrawing
+import androidx.compose.foundation.layout.windowInsetsPadding
+import androidx.compose.ui.unit.Dp
+import com.example.lifegame.ui.avatar.PlayerAvatar
+import com.example.lifegame.ui.components.PeriodTrack
+import com.example.lifegame.ui.components.PlayTopBar
+import com.example.lifegame.ui.components.SceneBackdrop
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.selection.selectable
 import androidx.compose.foundation.shape.CircleShape
@@ -41,6 +50,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.geometry.Size
 import androidx.compose.ui.graphics.Path
+import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.semantics.contentDescription
@@ -54,12 +64,7 @@ import com.example.lifegame.ui.PLAY_SPEEDS
 import com.example.lifegame.ui.PeriodPlayUiState
 import com.example.lifegame.ui.YEAR_MILLIS_AT_1X
 import com.example.lifegame.ui.components.LifeFactsSheet
-import com.example.lifegame.ui.components.LifePathSummary
-import com.example.lifegame.ui.components.LifeGauge
 import com.example.lifegame.ui.components.NOISE_ADVANCE_MILLIS
-import com.example.lifegame.ui.components.PeriodHeader
-import com.example.lifegame.ui.components.PixelAssetImage
-import com.example.lifegame.ui.components.StatsSheet
 import com.example.lifegame.ui.components.normalAdvance
 import com.example.lifegame.ui.components.rememberReduceMotion
 import com.example.lifegame.ui.theme.LifeGameCard
@@ -87,8 +92,7 @@ fun AutoProgressScreen(
     onSkipToDecision: () -> Unit,
     modifier: Modifier = Modifier,
 ) {
-    var statsOpen by remember { mutableStateOf(false) }
-    var factsOpen by remember { mutableStateOf(false) }
+    var detailsOpen by remember { mutableStateOf(false) }
     val reduceMotion = rememberReduceMotion()
     val advance by rememberUpdatedState(onAdvanceYear)
 
@@ -107,70 +111,97 @@ fun AutoProgressScreen(
             .fillMaxSize()
             .background(LifeGamePaper),
     ) {
-        // 도트 장면은 4:3. 작은 화면에서는 높이를 줄여 기록이 보이게 한다.
-        val gateHeight = min((maxWidth - 20.dp) * 0.75f, maxHeight * 0.36f)
-        Column(Modifier.fillMaxSize().safeDrawingPadding()) {
-            PeriodHeader(
-                periodName = state.periodName,
-                yearLabel = "${state.yearInPeriod}번째 해",
-                marks = state.periodMarks,
-                stats = state.stats,
-                onStatsClick = { statsOpen = true },
+        // 장면은 4:3. 작은 화면에서는 높이를 줄여 기록이 보이게 한다.
+        val stageHeight = min((maxWidth - 32.dp) * 0.75f, maxHeight * 0.38f)
+        Column(Modifier.fillMaxSize()) {
+            PlayTopBar(
+                health = state.stats.health,
+                onOpenDetails = { detailsOpen = true },
+                onDark = false,
+                modifier = Modifier.windowInsetsPadding(
+                    WindowInsets.safeDrawing.only(WindowInsetsSides.Top + WindowInsetsSides.Horizontal),
+                ),
+                avatar = { avatarModifier -> PlayerAvatar(state.avatar, avatarModifier) },
             )
             Column(
                 Modifier
                     .weight(1f)
+                    .windowInsetsPadding(WindowInsets.safeDrawing.only(WindowInsetsSides.Horizontal))
                     .verticalScroll(rememberScrollState())
                     .testTag("auto_progress_content"),
             ) {
-                LifePathSummary(
-                    focus = state.focus,
-                    topStat = state.topStat,
-                    facts = state.facts,
-                    onOpen = { factsOpen = true },
-                    modifier = Modifier.padding(horizontal = 12.dp, vertical = 4.dp),
-                )
-                CharacterMainPanel(state, onStatsClick = { statsOpen = true })
+                CharacterStage(state, height = stageHeight, onOpenDetails = { detailsOpen = true })
                 YearTimer(progress = { yearProgress.value }, playing = state.autoPlaying)
                 YearLog(lines = state.log.takeLast(3))
             }
+            PeriodTrack(marks = state.periodMarks, yearLabel = "${state.yearInPeriod}번째 해")
             PlaybackBar(
                 playing = state.autoPlaying,
                 speed = state.speed,
                 onTogglePlaying = onTogglePlaying,
                 onSpeedChange = onSpeedChange,
                 onSkipToDecision = onSkipToDecision,
+                modifier = Modifier.windowInsetsPadding(
+                    WindowInsets.safeDrawing.only(WindowInsetsSides.Bottom + WindowInsetsSides.Horizontal),
+                ),
             )
         }
     }
 
-    if (statsOpen) StatsSheet(stats = state.stats, onDismiss = { statsOpen = false })
-    if (factsOpen) LifeFactsSheet(facts = state.facts, stats = state.stats, onDismiss = { factsOpen = false })
+    if (detailsOpen) {
+        LifeFactsSheet(
+            facts = state.facts,
+            stats = state.stats,
+            onDismiss = { detailsOpen = false },
+            place = state.place,
+            focus = state.focus,
+            showFocus = true,
+        )
+    }
 }
 
-/** 사건이 없을 때 계속 유지되는 3인칭 캐릭터 메인 화면. */
+/**
+ * 사건이 없을 때 계속 보이는 3인칭 무대. 배경(지금 초점의 장면)과 캐릭터를 따로 겹친다.
+ * 배경 후보에서 사람이 그려진 시기 초상은 빼서 캐릭터가 두 번 보이지 않게 한다.
+ */
 @Composable
-private fun CharacterMainPanel(state: PeriodPlayUiState, onStatsClick: () -> Unit) {
+private fun CharacterStage(state: PeriodPlayUiState, height: Dp, onOpenDetails: () -> Unit) {
     Column(
         Modifier
             .fillMaxWidth()
-            .padding(horizontal = 20.dp, vertical = 12.dp)
-            .clip(RoundedCornerShape(14.dp))
-            .background(LifeGameCard)
-            .border(1.dp, LifeGameRule, RoundedCornerShape(14.dp))
-            .padding(vertical = 18.dp),
+            .padding(horizontal = 16.dp, vertical = 10.dp),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.spacedBy(8.dp),
     ) {
-        PixelAssetImage(
-            candidates = state.portraitImages,
-            description = "${state.periodName} 플레이어 모습",
-            modifier = Modifier.width(200.dp).aspectRatio(4f / 3f)
-                .clickable(role = Role.Button, onClick = onStatsClick)
-                .semantics { contentDescription = "플레이어 현재 모습, 능력치 보기" },
-        )
+        Box(
+            Modifier
+                .fillMaxWidth()
+                .height(height)
+                .clip(RoundedCornerShape(14.dp))
+                .clickable(role = Role.Button, onClick = onOpenDetails)
+                .semantics(mergeDescendants = true) { contentDescription = "${state.periodName} 플레이어 모습, 능력치와 이번 시기 초점 보기" }
+                .testTag("character_stage"),
+            contentAlignment = Alignment.BottomCenter,
+        ) {
+            SceneBackdrop(
+                candidates = state.sceneImages.filter { it.usage != "character" },
+                modifier = Modifier.fillMaxSize(),
+            )
+            PlayerAvatar(
+                look = state.avatar,
+                modifier = Modifier
+                    .padding(bottom = height * 0.06f)
+                    .height(height * 0.74f)
+                    .aspectRatio(0.62f),
+            )
+        }
         Text(state.playerName, color = LifeGameInk, fontSize = 20.sp, fontWeight = FontWeight.Bold)
-        Text(text = "${state.periodName} · 다음 사건을 기다리는 중", color = LifeGameInkSecondary, fontFamily = LifeGameSerif, fontSize = 13.sp)
+        Text(
+            text = "${state.periodName} · 다음 사건을 기다리는 중",
+            color = LifeGameInkSecondary,
+            fontFamily = LifeGameSerif,
+            fontSize = 14.sp,
+        )
     }
 }
 
@@ -237,58 +268,85 @@ private fun PlaybackBar(
     onTogglePlaying: () -> Unit,
     onSpeedChange: (Int) -> Unit,
     onSkipToDecision: () -> Unit,
+    modifier: Modifier = Modifier,
 ) {
-    Column(Modifier.fillMaxWidth().background(LifeGamePaper)) {
-        Box(Modifier.fillMaxWidth().height(1.dp).background(LifeGameRule))
-        Row(
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(horizontal = 16.dp, vertical = 12.dp),
-            verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.spacedBy(12.dp),
-        ) {
-            Box(
-                modifier = Modifier
-                    .size(48.dp)
-                    .clip(CircleShape)
-                    .background(LifeGameInk)
-                    .clickable(role = Role.Button, onClick = onTogglePlaying)
-                    .semantics { contentDescription = if (playing) "일시정지" else "계속 진행" }
-                    .testTag("play_pause"),
-                contentAlignment = Alignment.Center,
+    BoxWithConstraints(Modifier.fillMaxWidth().background(LifeGamePaper).then(modifier)) {
+        // 좁은 폭 · 큰 글꼴에서 "다음 결정까지"가 글자 단위로 꺾이지 않도록, 들어갈 자리가 없으면 아랫줄로 내린다.
+        val fontScale = LocalDensity.current.fontScale
+        val skipWidth = (14f * fontScale * 8.6f + 14f).dp
+        val rowSpace = maxWidth - 32.dp - 48.dp - SPEED_TOGGLE_WIDTH - 24.dp
+        val stacked = skipWidth > rowSpace
+        Column(Modifier.fillMaxWidth().padding(horizontal = 16.dp, vertical = 12.dp)) {
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.spacedBy(12.dp),
             ) {
-                Canvas(Modifier.size(16.dp)) {
-                    if (playing) {
-                        val bar = size.width * 0.28f
-                        drawRect(LifeGameCard, topLeft = Offset(size.width * 0.12f, 0f), size = Size(bar, size.height))
-                        drawRect(LifeGameCard, topLeft = Offset(size.width * 0.6f, 0f), size = Size(bar, size.height))
-                    } else {
-                        val path = Path().apply {
-                            moveTo(size.width * 0.2f, 0f)
-                            lineTo(size.width, size.height / 2)
-                            lineTo(size.width * 0.2f, size.height)
-                            close()
-                        }
-                        drawPath(path, LifeGameCard)
+                PlayPauseButton(playing = playing, onClick = onTogglePlaying)
+                SpeedToggle(speed = speed, onSpeedChange = onSpeedChange)
+                if (!stacked) {
+                    Box(Modifier.weight(1f), contentAlignment = Alignment.CenterEnd) {
+                        SkipToDecisionButton(onSkipToDecision)
                     }
                 }
             }
-            SpeedToggle(speed = speed, onSpeedChange = onSpeedChange)
-            Box(Modifier.weight(1f), contentAlignment = Alignment.CenterEnd) {
-                Text(
-                    text = "다음 결정까지 ›",
-                    modifier = Modifier
-                        .heightIn(min = 48.dp)
-                        .clip(RoundedCornerShape(8.dp))
-                        .clickable(role = Role.Button, onClick = onSkipToDecision)
-                        .padding(horizontal = 6.dp, vertical = 13.dp),
-                    color = LifeGameInk,
-                    fontSize = 14.sp,
-                    fontWeight = FontWeight.Bold,
-                )
+            if (stacked) {
+                Box(Modifier.fillMaxWidth().padding(top = 6.dp), contentAlignment = Alignment.CenterEnd) {
+                    SkipToDecisionButton(onSkipToDecision)
+                }
             }
         }
     }
+}
+
+private val SPEED_TOGGLE_WIDTH = 132.dp
+
+@Composable
+private fun PlayPauseButton(playing: Boolean, onClick: () -> Unit) {
+    Box(
+        modifier = Modifier
+            .size(48.dp)
+            .clip(CircleShape)
+            .background(LifeGameInk)
+            .clickable(role = Role.Button, onClick = onClick)
+            .semantics { contentDescription = if (playing) "일시정지" else "계속 진행" }
+            .testTag("play_pause"),
+        contentAlignment = Alignment.Center,
+    ) {
+        Canvas(Modifier.size(16.dp)) {
+            if (playing) {
+                val bar = size.width * 0.28f
+                drawRect(LifeGameCard, topLeft = Offset(size.width * 0.12f, 0f), size = Size(bar, size.height))
+                drawRect(LifeGameCard, topLeft = Offset(size.width * 0.6f, 0f), size = Size(bar, size.height))
+            } else {
+                val path = Path().apply {
+                    moveTo(size.width * 0.2f, 0f)
+                    lineTo(size.width, size.height / 2)
+                    lineTo(size.width * 0.2f, size.height)
+                    close()
+                }
+                drawPath(path, LifeGameCard)
+            }
+        }
+    }
+}
+
+@Composable
+private fun SkipToDecisionButton(onClick: () -> Unit) {
+    Text(
+        text = "다음 결정까지 ›",
+        modifier = Modifier
+            .heightIn(min = 48.dp)
+            .clip(RoundedCornerShape(8.dp))
+            .clickable(role = Role.Button, onClick = onClick)
+            .padding(horizontal = 6.dp, vertical = 13.dp)
+            .testTag("skip_to_decision"),
+        color = LifeGameInk,
+        fontSize = 14.sp,
+        fontWeight = FontWeight.Bold,
+        maxLines = 1,
+        softWrap = false,
+    )
 }
 
 @Composable

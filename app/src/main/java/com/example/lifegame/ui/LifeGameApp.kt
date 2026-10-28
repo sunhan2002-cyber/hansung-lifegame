@@ -10,6 +10,7 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.Lifecycle
@@ -26,6 +27,9 @@ import com.example.lifegame.ui.screens.ChapterFocusScreen
 import com.example.lifegame.ui.screens.CharacterSelectScreen
 import com.example.lifegame.ui.screens.DecisionScreen
 import com.example.lifegame.ui.screens.DesignPreviewScreen
+import com.example.lifegame.ui.screens.EndingFlowScreen
+import com.example.lifegame.ui.screens.EndingStep
+import com.example.lifegame.ui.screens.TitleCollectionScreen
 import com.example.lifegame.ui.screens.HomeScreen
 import com.example.lifegame.ui.screens.RunEndScreen
 import com.example.lifegame.ui.theme.LifeGameInkSecondary
@@ -38,6 +42,10 @@ object Routes {
     const val PROFILE = "profile"
     const val PLAY = "play"
     const val DESIGN_PREVIEW = "design_preview"
+    const val RECORD = "record/{runId}"
+    const val TITLES = "titles"
+
+    fun record(runId: String) = "record/${android.net.Uri.encode(runId)}"
 }
 
 @Composable
@@ -61,7 +69,32 @@ fun LifeGameApp(
                         onDesignPreview = if (BuildConfig.DEBUG) {
                             { navController.navigateOnce(Routes.DESIGN_PREVIEW) }
                         } else null,
+                        onOpenRecord = { runId -> navController.navigateOnce(Routes.record(runId)) },
+                        onOpenTitles = { navController.navigateOnce(Routes.TITLES) },
+                        generationScenario = if (BuildConfig.DEBUG) gameViewModel.generationScenario else null,
+                        onScenarioChange = { gameViewModel.generationScenario = it },
                     )
+                }
+                composable(Routes.RECORD) { entry ->
+                    val runId = entry.arguments?.getString("runId").orEmpty()
+                    val record = remember(runId, gameViewModel.completedLives) { gameViewModel.recordFor(runId) }
+                    if (record == null) {
+                        RecoveryScreen(message = "이 인생 기록을 찾지 못했습니다.", onGoHome = { navController.popBackStack() })
+                    } else {
+                        EndingFlowScreen(
+                            record = record,
+                            futureLook = gameViewModel.futureLook,
+                            onRequestFuture = { gameViewModel.requestFutureLook(runId) },
+                            onCancelFuture = gameViewModel::cancelFutureLook,
+                            onDone = { navController.popBackStack() },
+                            doneLabel = "목록으로",
+                            initialStep = EndingStep.CERTIFICATE,
+                        )
+                    }
+                }
+                composable(Routes.TITLES) {
+                    val collection = remember(gameViewModel.completedLives) { gameViewModel.titleCollection() }
+                    TitleCollectionScreen(collection = collection, onBack = { navController.popBackStack() })
                 }
                 composable(Routes.DESIGN_PREVIEW) {
                     DesignPreviewScreen(onBack = { navController.popBackStack() })
@@ -69,6 +102,10 @@ fun LifeGameApp(
                 composable(Routes.PROFILE) {
                     CharacterSelectScreen(
                         starters = gameViewModel.starters,
+                        faceSheet = gameViewModel.faceSheet,
+                        onRequestFaceSheet = gameViewModel::requestFaceSheet,
+                        onCancelFaceSheet = gameViewModel::cancelFaceSheet,
+                        onClearFaceSheet = gameViewModel::clearFaceSheet,
                         onStart = { profile ->
                             gameViewModel.startNewLife(profile)
                             navController.navigateOnce(Routes.PLAY) {
@@ -110,18 +147,39 @@ private fun PlayHost(
             onSpeedChange = gameViewModel::setSpeed,
             onSkipToDecision = gameViewModel::skipToNextDecision,
         )
-        PlayPhase.DECISION -> DecisionScreen(
-            state = play,
-            onChoose = gameViewModel::chooseDecision,
-            onContinue = gameViewModel::continueAfterOutcome,
-        )
-        PlayPhase.ENDED -> RunEndScreen(
-            state = play,
-            onDone = {
-                gameViewModel.finishLife()
-                onGoHome()
-            },
-        )
+        PlayPhase.DECISION -> if (play.decision == null) {
+            // 사건 머리를 되살리지 못한 결과 화면은 빈 화면 대신 다음 진행으로 넘긴다.
+            androidx.compose.runtime.LaunchedEffect(play.yearKey) { gameViewModel.continueAfterOutcome() }
+        } else {
+            DecisionScreen(
+                state = play,
+                onChoose = gameViewModel::chooseDecision,
+                onContinue = gameViewModel::continueAfterOutcome,
+            )
+        }
+        PlayPhase.ENDED -> {
+            val record = gameViewModel.currentRecord
+            if (record != null) {
+                EndingFlowScreen(
+                    record = record,
+                    futureLook = gameViewModel.futureLook,
+                    onRequestFuture = { gameViewModel.requestFutureLook(record.runId) },
+                    onCancelFuture = gameViewModel::cancelFutureLook,
+                    onDone = {
+                        gameViewModel.finishLife()
+                        onGoHome()
+                    },
+                )
+            } else {
+                RunEndScreen(
+                    state = play,
+                    onDone = {
+                        gameViewModel.finishLife()
+                        onGoHome()
+                    },
+                )
+            }
+        }
         null -> RecoveryScreen(
             message = gameViewModel.playError ?: "진행 중인 인생이 없습니다.",
             onGoHome = onGoHome,

@@ -1,5 +1,6 @@
 package com.example.lifegame.ui
 
+import com.example.lifegame.domain.model.AvatarConfig
 import com.example.lifegame.domain.model.ChanceWeights
 import com.example.lifegame.domain.model.DecisionEvent
 import com.example.lifegame.domain.model.DecisionKind
@@ -7,6 +8,8 @@ import com.example.lifegame.domain.model.DecisionOption
 import com.example.lifegame.domain.model.Focus
 import com.example.lifegame.domain.model.LifeMoment
 import com.example.lifegame.domain.model.LifePeriod
+import com.example.lifegame.ui.avatar.AvatarLook
+import com.example.lifegame.ui.avatar.avatarLookOf
 import com.example.lifegame.ui.images.ImageCandidate
 import com.example.lifegame.ui.images.ImageRouting
 import com.example.lifegame.domain.model.Outcome
@@ -118,6 +121,8 @@ data class NewLifeProfile(
     val name: String,
     val gender: Gender,
     val starterId: String?,
+    /** 사진 없이 고른 외형과(선택) 사진 참조. 저장 모델에 그대로 들어간다. */
+    val avatar: AvatarConfig = AvatarConfig(),
 )
 
 /** 홈 화면의 "지금 사는 인생" 카드. */
@@ -127,13 +132,16 @@ data class LifeCardUi(
     val focusLabel: String?,
     val stats: Stats,
     val lastLine: String?,
+    val avatar: AvatarLook = AvatarLook(),
 )
 
-/** 홈 화면의 "지난 인생" 한 줄. 이번 주에는 앱을 켜 둔 동안만 남는다. */
+/** 홈 화면의 "지난 인생" 한 줄. 완료 기록 저장소(V4ProgressStore)에서 읽어 앱을 다시 켜도 남는다. */
 data class FinishedLifeUi(
     val key: String,
     val playerName: String,
     val summary: String,
+    val titleText: String? = null,
+    val endedAt: String? = null,
 )
 
 data class PeriodPlayUiState(
@@ -174,6 +182,8 @@ data class PeriodPlayUiState(
     val portraitImages: List<ImageCandidate> = emptyList(),
     val previousPortraitImages: List<ImageCandidate> = emptyList(),
     val sceneImages: List<ImageCandidate> = emptyList(),
+    /** 지금 시기 · 체형 · 외형으로 조립할 플레이어 모습 (10주차) */
+    val avatar: AvatarLook = AvatarLook(),
 ) {
     val place: String get() = "$periodName · ${yearInPeriod}번째 해"
 }
@@ -330,6 +340,29 @@ fun buildDecisionUi(
     )
 }
 
+/**
+ * 결과를 읽던 중 앱이 꺼졌다가 이어할 때 결과 위에 다시 보여 줄 사건 머리.
+ * 선택은 이미 반영됐으므로 선택지는 비워 두고(다시 고를 수 없게) 제목 · 본문 · 그림만 되살린다.
+ */
+fun restoredDecisionUi(
+    event: DecisionEvent,
+    content: PlayContent,
+    focusId: String?,
+    period: LifePeriod?,
+): DecisionUi {
+    val imageId = event.povImageId.orEmpty()
+    return DecisionUi(
+        eventId = event.eventId,
+        kind = event.kind,
+        title = event.title,
+        text = event.text,
+        imageId = imageId,
+        imageFile = content.imageFiles[imageId],
+        images = content.imageRouting.eventCandidates(event.eventId, imageId, focusId, period, content.imageFiles),
+        choices = emptyList(),
+    )
+}
+
 private fun DecisionOption.healthEffectText(): String? {
     val changes = outcomes.filterNot { it.hidden }
         .map { it.statDelta.health + it.lifeDelta }
@@ -376,6 +409,8 @@ fun buildPeriodPlayState(
     choiceLog: List<ChoiceRecordUi> = emptyList(),
     endingTitle: String? = null,
     endingSummary: String? = null,
+    avatar: AvatarConfig = AvatarConfig(),
+    endingId: String? = null,
 ): PeriodPlayUiState {
     val state = step.state
     val periods = content.periods.sortedBy { it.order }
@@ -463,6 +498,7 @@ fun buildPeriodPlayState(
                 endingTitle = endingTitle,
                 endingSummary = endingSummary,
                 choices = choiceLog,
+                endingId = endingId,
             )
         } else {
             null
@@ -471,6 +507,7 @@ fun buildPeriodPlayState(
         portraitImages = content.imageRouting.portrait(imagePeriod),
         previousPortraitImages = content.imageRouting.portrait(periods.getOrNull(periodIndex - 1)?.period),
         sceneImages = content.imageRouting.candidates(sceneImageId, state.selectedFocusId, state.period, content.imageFiles),
+        avatar = avatarLookOf(avatar, imagePeriod, state.stats),
     )
 }
 

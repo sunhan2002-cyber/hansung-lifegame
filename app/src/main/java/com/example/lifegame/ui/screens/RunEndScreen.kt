@@ -117,7 +117,7 @@ fun RunEndScreen(
 }
 
 @Composable
-private fun EndingBody(ending: EndingSummaryUi) {
+internal fun EndingBody(ending: EndingSummaryUi) {
     Text(
         text = ending.headline,
         color = if (ending.death?.early == true) LifeGameSpecial else LifeGameInk,
