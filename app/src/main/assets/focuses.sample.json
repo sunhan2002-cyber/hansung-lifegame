@@ -197,10 +197,10 @@
     "focusId": "focus_teen_club",
     "period": "TEEN",
     "name": "친구·동아리",
-    "description": "동아리와 친구 관계를 넓힌다. 떡볶이값과 노래방비가 꾸준히 나간다.",
+    "description": "동아리와 친구 관계를 넓힌다. 아는 사람이 많을수록 뜻밖의 기회도 자주 들어온다. 떡볶이값과 노래방비가 꾸준히 나간다.",
     "annualStatDelta": {
       "사회성": 2,
-      "행복": 1,
+      "운": 1,
       "경제력": -1
     },
     "sceneImageId": "img_scene_teen_club_001",
