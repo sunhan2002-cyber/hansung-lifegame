@@ -1043,7 +1043,6 @@ class GameEngine(
                 "employmentStatus" -> if (current.employmentStatus == rule.value) current.copy(employmentStatus = null) else current
                 "maritalStatus" -> if (current.maritalStatus == rule.value) current.copy(maritalStatus = null) else current
                 "housingType" -> if (current.housingType == rule.value) current.copy(housingType = null) else current
-                "achievement" -> current.copy(achievementFlags = current.achievementFlags - rule.flag)
                 // 자녀 수와 과거 업적은 현재 상태 플래그 제거만으로 되돌리지 않는다.
                 else -> current
             }

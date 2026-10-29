@@ -102,6 +102,19 @@ class Week10BackendContractTest {
         assertEquals(listOf(first, second), recapMomentsFrom(listOf(first, duplicate, record("none", "ok", null), second)))
     }
 
+    @Test fun removingCurrentFlagPreservesPastAchievementAndChildren() {
+        val achievement = "achv_completed"
+        val event = event(Outcome("remove", "현재 상태 변경", chance = 100, removeFlags = setOf(achievement, "parent")))
+        val state = PeriodRunState("past", 1, LifePeriod.YOUNG_ADULT,
+            flags = setOf(achievement, "parent"), pendingDecisionId = event.eventId,
+            lifeFacts = LifeFacts(childrenCount = 2, achievementFlags = setOf(achievement)))
+        val rules = listOf(LifeFactRule(achievement, "achievement", "과거 업적"), LifeFactRule("parent", "childrenAtLeast", "2"))
+        val after = GameEngine().resolvePeriodDecision(state, event, "A", periods, rules).step.state
+        assertFalse(achievement in after.flags)
+        assertTrue(achievement in after.lifeFacts.achievementFlags)
+        assertEquals(2, after.lifeFacts.childrenCount)
+    }
+
     private fun event(outcome: Outcome) = DecisionEvent(
         eventId = "event", periods = setOf(LifePeriod.YOUNG_ADULT), kind = DecisionKind.INCIDENT,
         title = "사건", text = "본문", choices = listOf(DecisionOption("A", "선택", listOf(outcome))),
