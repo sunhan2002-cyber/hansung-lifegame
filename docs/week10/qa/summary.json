@@ -1,0 +1,3376 @@
+{
+  "assetSha256": {
+    "image_routing.json": "9069701d18ef5f61a16a280379807392ce9a33c379b43a162031c0005c445e01",
+    "image_ids.sample.json": "60bfc0ba559604f5ea103b6b0abd2e5617f5d483b611cc92960cd8669d0f2292",
+    "events.sample.json": "4005190779353b5424315d2fb47a681cc4331f86ce6dde117218b05fca245fa7",
+    "endings.sample.json": "e5a909c9fd6447c4b4b984c5107657c0cee7bb812f732c8c9b41b395c935b639",
+    "focuses.sample.json": "6473addd9a931bbdc8fa0f7fc9b8f1d53c483fa9f450d52a1d0ac5601cc9e313",
+    "periods.sample.json": "880a2c2a68b3ac5e9430d1dd60f42b82a9a2ab3488170a9da5e45bbb1f972d81",
+    "titles.sample.json": "624d3f41ab0fd7d1b8f23c193f80ae4cd140da24e808baa6508ab4b662bbaff0",
+    "characters.sample.json": "5f19f66a2c3695c424524ad2b423a2b9f9b057aeea4ce33267576fa12ab88990",
+    "life_facts.sample.json": "2e5e2d00daf3ea388e1fc5b672292d78b22fc5963ecdfaeafaf9ffa045926cff"
+  },
+  "schemaVersion": 1,
+  "titleStatus": "QA_EXPECTATION_ONLY_NOT_APP_IMPLEMENTATION",
+  "seenOutcomes": 809,
+  "groups": {
+    "TARGET/HEALTH": {
+      "endings": {
+        "ending_path_hea_young": 454,
+        "ending_path_soc_family": 1,
+        "ending_family_centered": 1,
+        "ending_path_fit_teacher": 3,
+        "ending_balanced_life": 3,
+        "ending_ordinary_path": 38
+      },
+      "expectedTitles": {
+        "title_medal_door": 15,
+        "title_fan_life": 8,
+        "title_interphone": 247,
+        "title_relay": 4,
+        "title_scholarship": 6,
+        "title_burnout_back": 2,
+        "title_crypto": 26,
+        "title_first_steps": 116,
+        "title_chick": 31,
+        "title_survivor": 12,
+        "title_auto_door": 11,
+        "title_free_morning": 13,
+        "title_subject_a": 5,
+        "title_alarm_seven": 4
+      },
+      "meanBigIncidents": 0.78,
+      "pathEndings": 454,
+      "bigIncidentHistogram": {
+        "0": 215,
+        "1": 201,
+        "2": 67,
+        "3": 14,
+        "4": 2,
+        "5": 1
+      },
+      "runs": 500,
+      "deathPeriods": {"OLD_AGE": 500},
+      "factDistributions": {
+        "housingType": {
+          "JEONSE": 37,
+          "null": 407,
+          "MONTHLY_RENT": 56
+        },
+        "wealthBand": {
+          "MIDDLE": 94,
+          "LOW": 2,
+          "LOWER_MIDDLE": 404
+        },
+        "educationLevel": {
+          "UNIVERSITY": 158,
+          "ARTS_HIGH": 244,
+          "VOCATIONAL_HIGH": 98
+        },
+        "careerLevel": {
+          "null": 274,
+          "ENTRY": 226
+        },
+        "careerTrack": {
+          "PUBLIC_SERVANT": 73,
+          "PE_TEACHER": 17,
+          "FREELANCER": 250,
+          "OFFICE": 160
+        },
+        "employmentStatus": {
+          "UNEMPLOYED": 1,
+          "SELF_EMPLOYED": 250,
+          "EMPLOYED": 234,
+          "RETIRED": 15
+        },
+        "fieldOfStudy": {
+          "null": 483,
+          "SPORTS": 17
+        },
+        "maritalStatus": {
+          "MARRIED": 286,
+          "SINGLE": 30,
+          "null": 162,
+          "DATING": 22
+        },
+        "childrenCount": {
+          "0": 379,
+          "1": 121
+        }
+      },
+      "pathEndingRate": 0.908
+    },
+    "RANDOM/HEALTH": {
+      "endings": {
+        "ending_kind_neighbor": 1,
+        "ending_family_centered": 27,
+        "ending_path_hea_chronic": 59,
+        "ending_path_hea_peaks": 57,
+        "ending_path_hea_young": 103,
+        "ending_path_soc_family": 2,
+        "ending_small_stage_big_memory": 5,
+        "ending_balanced_life": 42,
+        "ending_happy_creator": 1,
+        "ending_path_hea_recovered": 23,
+        "ending_ordinary_path": 180
+      },
+      "expectedTitles": {
+        "title_medal_door": 10,
+        "title_bucket_list": 126,
+        "title_fan_life": 8,
+        "title_interphone": 74,
+        "title_relay": 1,
+        "title_scholarship": 2,
+        "title_burnout_back": 2,
+        "title_crypto": 6,
+        "title_first_steps": 56,
+        "title_chicken": 1,
+        "title_chick": 8,
+        "title_survivor": 12,
+        "title_gacha": 8,
+        "title_auto_door": 9,
+        "title_free_morning": 1,
+        "title_janggi": 13,
+        "title_cash_baby": 70,
+        "title_subject_a": 1,
+        "title_alarm_seven": 2,
+        "title_judge_baby": 90
+      },
+      "meanBigIncidents": 0.758,
+      "pathEndings": 242,
+      "bigIncidentHistogram": {
+        "0": 221,
+        "1": 200,
+        "2": 62,
+        "3": 14,
+        "4": 2,
+        "5": 1
+      },
+      "runs": 500,
+      "deathPeriods": {
+        "MIDDLE": 1,
+        "OLD_AGE": 498,
+        "YOUNG_ADULT": 1
+      },
+      "factDistributions": {
+        "housingType": {
+          "JEONSE": 11,
+          "null": 489
+        },
+        "wealthBand": {
+          "MIDDLE": 48,
+          "LOWER_MIDDLE": 452
+        },
+        "educationLevel": {
+          "ARTS_HIGH": 249,
+          "UNIVERSITY": 80,
+          "null": 32,
+          "VOCATIONAL_HIGH": 139
+        },
+        "careerLevel": {
+          "null": 249,
+          "ENTRY": 251
+        },
+        "careerTrack": {
+          "PUBLIC_SERVANT": 19,
+          "PE_TEACHER": 1,
+          "FREELANCER": 245,
+          "STARTUP": 2,
+          "null": 1,
+          "OFFICE": 232
+        },
+        "employmentStatus": {
+          "UNEMPLOYED": 3,
+          "SELF_EMPLOYED": 245,
+          "null": 1,
+          "EMPLOYED": 246,
+          "RETIRED": 5
+        },
+        "fieldOfStudy": {
+          "null": 498,
+          "SPORTS": 1,
+          "ARTS": 1
+        },
+        "maritalStatus": {
+          "MARRIED": 240,
+          "DIVORCED": 6,
+          "SINGLE": 121,
+          "null": 88,
+          "DATING": 45
+        },
+        "childrenCount": {
+          "0": 355,
+          "1": 145
+        }
+      },
+      "pathEndingRate": 0.484
+    },
+    "RANDOM/LUCK": {
+      "endings": {
+        "ending_path_luk_wanderer": 18,
+        "ending_path_fit_teacher": 2,
+        "ending_path_int_teacher": 10,
+        "ending_genius_researcher": 2,
+        "ending_path_luk_patron": 23,
+        "ending_path_hea_young": 26,
+        "ending_ordinary_path": 65,
+        "ending_people_connector": 1,
+        "ending_path_hap_artist": 9,
+        "ending_path_hap_teacher": 14,
+        "ending_small_stage_big_memory": 7,
+        "ending_happy_creator": 8,
+        "ending_public_servant": 10,
+        "ending_path_hap_content": 1,
+        "ending_quiet_scholar": 174,
+        "ending_path_int_engineer": 3,
+        "ending_path_hea_recovered": 42,
+        "ending_unlucky_tragic": 1,
+        "ending_comedy_legend": 1,
+        "ending_kind_neighbor": 2,
+        "ending_family_centered": 1,
+        "ending_path_luk_small_win": 9,
+        "ending_path_luk_dodger": 27,
+        "ending_path_luk_loss": 4,
+        "ending_path_hea_chronic": 27,
+        "ending_path_hea_peaks": 12,
+        "ending_path_luk_jackpot": 1
+      },
+      "expectedTitles": {
+        "title_medal_door": 9,
+        "title_bucket_list": 132,
+        "title_fan_life": 3,
+        "title_interphone": 71,
+        "title_relay": 7,
+        "title_scholarship": 5,
+        "title_burnout_back": 3,
+        "title_patent": 3,
+        "title_crypto": 8,
+        "title_first_steps": 72,
+        "title_chick": 7,
+        "title_survivor": 8,
+        "title_gacha": 3,
+        "title_auto_door": 4,
+        "title_free_morning": 3,
+        "title_janggi": 12,
+        "title_cash_baby": 60,
+        "title_subject_a": 7,
+        "title_alarm_seven": 2,
+        "title_judge_baby": 81
+      },
+      "meanBigIncidents": 0.738,
+      "pathEndings": 82,
+      "bigIncidentHistogram": {
+        "0": 227,
+        "1": 196,
+        "2": 61,
+        "3": 13,
+        "4": 3
+      },
+      "runs": 500,
+      "deathPeriods": {
+        "MIDDLE": 8,
+        "OLD_AGE": 489,
+        "YOUNG_ADULT": 3
+      },
+      "factDistributions": {
+        "housingType": {"null": 500},
+        "wealthBand": {
+          "LOW": 368,
+          "LOWER_MIDDLE": 132
+        },
+        "educationLevel": {
+          "GRADUATE": 1,
+          "ARTS_HIGH": 55,
+          "UNIVERSITY": 251,
+          "null": 193
+        },
+        "careerLevel": {
+          "null": 159,
+          "ENTRY": 338,
+          "SENIOR": 3
+        },
+        "careerTrack": {
+          "PUBLIC_SERVANT": 69,
+          "null": 3,
+          "OFFICE": 251,
+          "ENGINEER": 10,
+          "PE_TEACHER": 2,
+          "PROFESSOR": 12,
+          "FREELANCER": 153
+        },
+        "employmentStatus": {
+          "UNEMPLOYED": 2,
+          "SELF_EMPLOYED": 153,
+          "null": 3,
+          "EMPLOYED": 337,
+          "RETIRED": 5
+        },
+        "fieldOfStudy": {
+          "SPORTS": 2,
+          "SCIENCE": 1,
+          "null": 490,
+          "ARTS": 7
+        },
+        "maritalStatus": {
+          "MARRIED": 271,
+          "DIVORCED": 11,
+          "SINGLE": 122,
+          "null": 68,
+          "DATING": 28
+        },
+        "childrenCount": {
+          "0": 340,
+          "1": 160
+        }
+      },
+      "pathEndingRate": 0.164
+    },
+    "TARGET/LUCK": {
+      "endings": {
+        "ending_path_luk_wanderer": 148,
+        "ending_path_int_researcher": 10,
+        "ending_path_fit_teacher": 3,
+        "ending_path_luk_dodger": 7,
+        "ending_path_luk_patron": 109,
+        "ending_quiet_scholar": 55,
+        "ending_path_hea_peaks": 89,
+        "ending_path_hea_young": 65,
+        "ending_path_int_burnout": 1,
+        "ending_ordinary_path": 12,
+        "ending_path_fit_injury": 1
+      },
+      "expectedTitles": {
+        "title_first_steps": 138,
+        "title_medal_door": 21,
+        "title_bucket_list": 304,
+        "title_burnout_back": 2,
+        "title_kongi_friend": 1,
+        "title_janggi": 7,
+        "title_cash_baby": 9,
+        "title_subject_a": 18
+      },
+      "meanBigIncidents": 0.73,
+      "pathEndings": 264,
+      "bigIncidentHistogram": {
+        "0": 229,
+        "1": 195,
+        "2": 60,
+        "3": 14,
+        "4": 2
+      },
+      "runs": 500,
+      "deathPeriods": {
+        "MIDDLE": 8,
+        "OLD_AGE": 492
+      },
+      "factDistributions": {
+        "housingType": {"null": 500},
+        "wealthBand": {
+          "LOW": 492,
+          "LOWER_MIDDLE": 8
+        },
+        "educationLevel": {
+          "GRADUATE": 19,
+          "UNIVERSITY": 481
+        },
+        "careerLevel": {
+          "null": 485,
+          "ENTRY": 5,
+          "SENIOR": 10
+        },
+        "careerTrack": {
+          "PE_TEACHER": 12,
+          "FREELANCER": 464,
+          "RESEARCHER": 19,
+          "ENGINEER": 5
+        },
+        "employmentStatus": {
+          "SELF_EMPLOYED": 464,
+          "EMPLOYED": 35,
+          "UNEMPLOYED": 1
+        },
+        "fieldOfStudy": {
+          "null": 484,
+          "SPORTS": 16
+        },
+        "maritalStatus": {
+          "MARRIED": 256,
+          "DIVORCED": 50,
+          "null": 184,
+          "DATING": 10
+        },
+        "childrenCount": {
+          "0": 353,
+          "1": 147
+        }
+      },
+      "pathEndingRate": 0.528
+    },
+    "RANDOM/SOCIAL": {
+      "endings": {
+        "ending_path_luk_wanderer": 1,
+        "ending_path_fit_teacher": 1,
+        "ending_path_luk_patron": 2,
+        "ending_path_soc_leader": 45,
+        "ending_path_hea_young": 33,
+        "ending_path_soc_family": 85,
+        "ending_path_hea_recovered": 22,
+        "ending_ordinary_path": 187,
+        "ending_kind_neighbor": 1,
+        "ending_path_soc_after_divorce": 4,
+        "ending_social_leader": 6,
+        "ending_family_centered": 6,
+        "ending_people_connector": 7,
+        "ending_path_hap_artist": 1,
+        "ending_path_hea_chronic": 20,
+        "ending_path_hea_peaks": 17,
+        "ending_path_hap_teacher": 2,
+        "ending_small_stage_big_memory": 8,
+        "ending_path_soc_connector": 52
+      },
+      "expectedTitles": {
+        "title_medal_door": 7,
+        "title_bucket_list": 138,
+        "title_fan_life": 3,
+        "title_interphone": 76,
+        "title_relay": 2,
+        "title_crypto": 9,
+        "title_first_steps": 61,
+        "title_chick": 7,
+        "title_survivor": 11,
+        "title_gacha": 3,
+        "title_forever_leader": 3,
+        "title_auto_door": 9,
+        "title_kongi_friend": 1,
+        "title_free_morning": 2,
+        "title_janggi": 9,
+        "title_cash_baby": 67,
+        "title_subject_a": 1,
+        "title_alarm_seven": 2,
+        "title_judge_baby": 89
+      },
+      "meanBigIncidents": 0.748,
+      "pathEndings": 186,
+      "bigIncidentHistogram": {
+        "0": 227,
+        "1": 193,
+        "2": 63,
+        "3": 14,
+        "4": 2,
+        "5": 1
+      },
+      "runs": 500,
+      "deathPeriods": {
+        "OLD_AGE": 487,
+        "YOUNG_ADULT": 2,
+        "MIDDLE": 9,
+        "TEEN": 2
+      },
+      "factDistributions": {
+        "housingType": {
+          "JEONSE": 28,
+          "null": 449,
+          "MONTHLY_RENT": 23
+        },
+        "wealthBand": {
+          "LOW": 232,
+          "LOWER_MIDDLE": 268
+        },
+        "educationLevel": {
+          "UNIVERSITY": 20,
+          "null": 6,
+          "ARTS_HIGH": 474
+        },
+        "careerLevel": {
+          "null": 147,
+          "ENTRY": 353
+        },
+        "careerTrack": {
+          "PUBLIC_SERVANT": 5,
+          "null": 3,
+          "OFFICE": 167,
+          "PE_TEACHER": 1,
+          "COUNSELOR": 121,
+          "FREELANCER": 143,
+          "SALES": 60
+        },
+        "employmentStatus": {
+          "UNEMPLOYED": 2,
+          "SELF_EMPLOYED": 143,
+          "null": 3,
+          "EMPLOYED": 349,
+          "RETIRED": 3
+        },
+        "fieldOfStudy": {
+          "null": 497,
+          "SPORTS": 1,
+          "ARTS": 2
+        },
+        "maritalStatus": {
+          "MARRIED": 276,
+          "DIVORCED": 28,
+          "SINGLE": 102,
+          "null": 69,
+          "DATING": 25
+        },
+        "childrenCount": {
+          "0": 380,
+          "1": 120
+        }
+      },
+      "pathEndingRate": 0.372
+    },
+    "TARGET/SOCIAL": {
+      "endings": {
+        "ending_kind_neighbor": 2,
+        "ending_people_connector": 1,
+        "ending_path_hea_peaks": 16,
+        "ending_path_hea_young": 5,
+        "ending_path_soc_family": 409,
+        "ending_small_stage_big_memory": 2,
+        "ending_ordinary_path": 14,
+        "ending_path_soc_connector": 51
+      },
+      "expectedTitles": {
+        "title_first_steps": 97,
+        "title_auto_door": 10,
+        "title_fifty_years": 1,
+        "title_janggi": 13,
+        "title_cash_baby": 370,
+        "title_burnout_back": 9
+      },
+      "meanBigIncidents": 0.726,
+      "pathEndings": 460,
+      "bigIncidentHistogram": {
+        "0": 232,
+        "1": 192,
+        "2": 59,
+        "3": 15,
+        "4": 2
+      },
+      "runs": 500,
+      "deathPeriods": {
+        "MIDDLE": 6,
+        "OLD_AGE": 493,
+        "TEEN": 1
+      },
+      "factDistributions": {
+        "housingType": {"null": 500},
+        "wealthBand": {
+          "LOW": 362,
+          "LOWER_MIDDLE": 138
+        },
+        "educationLevel": {
+          "null": 1,
+          "ARTS_HIGH": 499
+        },
+        "careerLevel": {
+          "null": 1,
+          "ENTRY": 499
+        },
+        "careerTrack": {
+          "PUBLIC_SERVANT": 2,
+          "COUNSELOR": 471,
+          "null": 1,
+          "OFFICE": 26
+        },
+        "employmentStatus": {
+          "null": 1,
+          "EMPLOYED": 496,
+          "UNEMPLOYED": 3
+        },
+        "fieldOfStudy": {"null": 500},
+        "maritalStatus": {
+          "MARRIED": 436,
+          "null": 61,
+          "DATING": 3
+        },
+        "childrenCount": {
+          "0": 402,
+          "1": 98
+        }
+      },
+      "pathEndingRate": 0.92
+    },
+    "RANDOM/HAPPINESS": {
+      "endings": {
+        "ending_path_luk_wanderer": 6,
+        "ending_public_servant": 12,
+        "ending_path_fit_teacher": 2,
+        "ending_path_luk_patron": 22,
+        "ending_path_soc_leader": 1,
+        "ending_path_hap_content": 3,
+        "ending_quiet_scholar": 6,
+        "ending_path_hea_young": 53,
+        "ending_path_hea_recovered": 40,
+        "ending_ordinary_path": 196,
+        "ending_kind_neighbor": 11,
+        "ending_family_centered": 12,
+        "ending_path_luk_small_win": 5,
+        "ending_path_luk_dodger": 24,
+        "ending_people_connector": 10,
+        "ending_path_hap_artist": 9,
+        "ending_path_hea_chronic": 23,
+        "ending_path_hea_peaks": 17,
+        "ending_path_hap_teacher": 12,
+        "ending_small_stage_big_memory": 29,
+        "ending_happy_creator": 5,
+        "ending_path_soc_connector": 2
+      },
+      "expectedTitles": {
+        "title_medal_door": 14,
+        "title_bucket_list": 135,
+        "title_fan_life": 2,
+        "title_interphone": 72,
+        "title_relay": 6,
+        "title_scholarship": 3,
+        "title_burnout_back": 2,
+        "title_crypto": 11,
+        "title_first_steps": 73,
+        "title_chick": 8,
+        "title_survivor": 7,
+        "title_gacha": 5,
+        "title_auto_door": 4,
+        "title_free_morning": 2,
+        "title_janggi": 9,
+        "title_cash_baby": 58,
+        "title_subject_a": 1,
+        "title_alarm_seven": 3,
+        "title_judge_baby": 85
+      },
+      "meanBigIncidents": 0.746,
+      "pathEndings": 24,
+      "bigIncidentHistogram": {
+        "0": 225,
+        "1": 198,
+        "2": 60,
+        "3": 14,
+        "4": 2,
+        "5": 1
+      },
+      "runs": 500,
+      "deathPeriods": {
+        "MIDDLE": 5,
+        "OLD_AGE": 495
+      },
+      "factDistributions": {
+        "housingType": {
+          "null": 499,
+          "MONTHLY_RENT": 1
+        },
+        "wealthBand": {
+          "LOW": 484,
+          "LOWER_MIDDLE": 16
+        },
+        "educationLevel": {
+          "UNIVERSITY": 122,
+          "null": 53,
+          "ARTS_HIGH": 325
+        },
+        "careerLevel": {
+          "null": 215,
+          "ENTRY": 285
+        },
+        "careerTrack": {
+          "PUBLIC_SERVANT": 47,
+          "PE_TEACHER": 2,
+          "COUNSELOR": 2,
+          "FREELANCER": 213,
+          "SALES": 1,
+          "OFFICE": 235
+        },
+        "employmentStatus": {
+          "UNEMPLOYED": 3,
+          "SELF_EMPLOYED": 213,
+          "EMPLOYED": 282,
+          "RETIRED": 2
+        },
+        "fieldOfStudy": {
+          "null": 489,
+          "SPORTS": 2,
+          "ARTS": 9
+        },
+        "maritalStatus": {
+          "MARRIED": 267,
+          "DIVORCED": 11,
+          "SINGLE": 123,
+          "null": 69,
+          "DATING": 30
+        },
+        "childrenCount": {
+          "0": 342,
+          "1": 158
+        }
+      },
+      "pathEndingRate": 0.048
+    },
+    "LOW_STATS/SOCIAL": {
+      "endings": {
+        "ending_path_hea_chronic": 14,
+        "ending_path_hea_peaks": 4,
+        "ending_path_hea_young": 3,
+        "ending_path_hea_recovered": 12,
+        "ending_ordinary_path": 110
+      },
+      "expectedTitles": {
+        "title_first_steps": 24,
+        "title_medal_door": 5,
+        "title_fan_life": 2,
+        "title_survivor": 9,
+        "title_burnout_back": 2,
+        "title_gacha": 1,
+        "title_auto_door": 5,
+        "title_janggi": 13,
+        "title_cash_baby": 61,
+        "title_subject_a": 1,
+        "title_alarm_seven": 1,
+        "title_judge_baby": 19
+      },
+      "meanBigIncidents": 0.8461538461538461,
+      "pathEndings": 0,
+      "bigIncidentHistogram": {
+        "0": 57,
+        "1": 57,
+        "2": 23,
+        "3": 6
+      },
+      "runs": 143,
+      "deathPeriods": {
+        "OLD_AGE": 125,
+        "YOUNG_ADULT": 2,
+        "MIDDLE": 14,
+        "TEEN": 2
+      },
+      "factDistributions": {
+        "housingType": {"null": 143},
+        "wealthBand": {"LOW": 143},
+        "educationLevel": {
+          "null": 1,
+          "ARTS_HIGH": 142
+        },
+        "careerLevel": {
+          "null": 67,
+          "ENTRY": 76
+        },
+        "careerTrack": {
+          "PUBLIC_SERVANT": 12,
+          "FREELANCER": 63,
+          "null": 4,
+          "OFFICE": 64
+        },
+        "employmentStatus": {
+          "UNEMPLOYED": 1,
+          "SELF_EMPLOYED": 63,
+          "null": 4,
+          "EMPLOYED": 75
+        },
+        "fieldOfStudy": {"null": 143},
+        "maritalStatus": {
+          "MARRIED": 69,
+          "SINGLE": 33,
+          "null": 34,
+          "DATING": 7
+        },
+        "childrenCount": {
+          "0": 97,
+          "1": 46
+        }
+      },
+      "pathEndingRate": 0
+    },
+    "TARGET/FITNESS": {
+      "endings": {
+        "ending_path_fit_legend": 175,
+        "ending_path_hea_peaks": 55,
+        "ending_people_connector": 1,
+        "ending_ordinary_path": 6,
+        "ending_path_fit_coach": 263
+      },
+      "expectedTitles": {
+        "title_first_steps": 179,
+        "title_bucket_list": 291,
+        "title_chick": 1,
+        "title_survivor": 18,
+        "title_interphone": 4,
+        "title_burnout_back": 1,
+        "title_auto_door": 4,
+        "title_janggi": 1,
+        "title_crypto": 1
+      },
+      "meanBigIncidents": 0.67,
+      "pathEndings": 438,
+      "bigIncidentHistogram": {
+        "0": 242,
+        "1": 192,
+        "2": 58,
+        "3": 5,
+        "4": 3
+      },
+      "runs": 500,
+      "deathPeriods": {
+        "MIDDLE": 7,
+        "OLD_AGE": 491,
+        "YOUNG_ADULT": 2
+      },
+      "factDistributions": {
+        "housingType": {"null": 500},
+        "wealthBand": {
+          "LOW": 403,
+          "LOWER_MIDDLE": 97
+        },
+        "educationLevel": {
+          "UNIVERSITY": 35,
+          "null": 26,
+          "ARTS_HIGH": 439
+        },
+        "careerLevel": {
+          "null": 489,
+          "ENTRY": 11
+        },
+        "careerTrack": {
+          "ATHLETE": 1,
+          "OFFICE": 11,
+          "COACH": 488
+        },
+        "employmentStatus": {"EMPLOYED": 500},
+        "fieldOfStudy": {"null": 500},
+        "maritalStatus": {
+          "MARRIED": 290,
+          "DIVORCED": 38,
+          "null": 136,
+          "DATING": 36
+        },
+        "childrenCount": {
+          "0": 311,
+          "1": 189
+        }
+      },
+      "pathEndingRate": 0.876
+    },
+    "TARGET/INTELLIGENCE": {
+      "endings": {
+        "ending_path_int_researcher": 280,
+        "ending_genius_researcher": 7,
+        "ending_quiet_scholar": 131,
+        "ending_path_hea_chronic": 9,
+        "ending_path_hea_peaks": 30,
+        "ending_path_hea_young": 21,
+        "ending_path_int_burnout": 7,
+        "ending_path_soc_family": 1,
+        "ending_path_hea_recovered": 14
+      },
+      "expectedTitles": {
+        "title_medal_door": 18,
+        "title_fan_life": 13,
+        "title_relay": 17,
+        "title_scholarship": 12,
+        "title_burnout_back": 24,
+        "title_first_steps": 73,
+        "title_survivor": 20,
+        "title_auto_door": 6,
+        "title_kongi_friend": 1,
+        "title_free_morning": 16,
+        "title_janggi": 14,
+        "title_subject_a": 2,
+        "title_judge_baby": 284
+      },
+      "meanBigIncidents": 0.676,
+      "pathEndings": 287,
+      "bigIncidentHistogram": {
+        "0": 243,
+        "1": 189,
+        "2": 55,
+        "3": 13
+      },
+      "runs": 500,
+      "deathPeriods": {
+        "OLD_AGE": 490,
+        "YOUNG_ADULT": 3,
+        "MIDDLE": 6,
+        "TEEN": 1
+      },
+      "factDistributions": {
+        "housingType": {
+          "JEONSE": 1,
+          "null": 499
+        },
+        "wealthBand": {
+          "MIDDLE": 240,
+          "LOWER_MIDDLE": 260
+        },
+        "educationLevel": {
+          "GRADUATE": 497,
+          "UNIVERSITY": 2,
+          "null": 1
+        },
+        "careerLevel": {
+          "null": 220,
+          "SENIOR": 280
+        },
+        "careerTrack": {
+          "null": 3,
+          "RESEARCHER": 497
+        },
+        "employmentStatus": {
+          "UNEMPLOYED": 4,
+          "null": 3,
+          "EMPLOYED": 471,
+          "RETIRED": 22
+        },
+        "fieldOfStudy": {"null": 500},
+        "maritalStatus": {
+          "MARRIED": 177,
+          "DIVORCED": 27,
+          "SINGLE": 294,
+          "null": 2
+        },
+        "childrenCount": {
+          "0": 419,
+          "1": 81
+        }
+      },
+      "pathEndingRate": 0.574
+    },
+    "RANDOM/INTELLIGENCE": {
+      "endings": {
+        "ending_path_int_researcher": 8,
+        "ending_path_int_teacher": 299,
+        "ending_genius_researcher": 1,
+        "ending_quiet_scholar": 33,
+        "ending_path_hea_chronic": 3,
+        "ending_path_hea_peaks": 8,
+        "ending_path_hea_young": 12,
+        "ending_path_int_engineer": 134,
+        "ending_balanced_life": 1,
+        "ending_path_hea_recovered": 1
+      },
+      "expectedTitles": {
+        "title_medal_door": 7,
+        "title_bucket_list": 26,
+        "title_fan_life": 3,
+        "title_interphone": 69,
+        "title_relay": 2,
+        "title_scholarship": 16,
+        "title_burnout_back": 4,
+        "title_patent": 129,
+        "title_crypto": 2,
+        "title_first_steps": 27,
+        "title_chick": 4,
+        "title_survivor": 13,
+        "title_gacha": 4,
+        "title_forever_leader": 1,
+        "title_auto_door": 5,
+        "title_kongi_friend": 1,
+        "title_free_morning": 2,
+        "title_janggi": 9,
+        "title_cash_baby": 97,
+        "title_subject_a": 6,
+        "title_judge_baby": 73
+      },
+      "meanBigIncidents": 0.68,
+      "pathEndings": 441,
+      "bigIncidentHistogram": {
+        "0": 238,
+        "1": 196,
+        "2": 54,
+        "3": 12
+      },
+      "runs": 500,
+      "deathPeriods": {
+        "OLD_AGE": 475,
+        "YOUNG_ADULT": 2,
+        "MIDDLE": 20,
+        "TEEN": 3
+      },
+      "factDistributions": {
+        "housingType": {
+          "JEONSE": 1,
+          "null": 499
+        },
+        "wealthBand": {
+          "MIDDLE": 327,
+          "LOWER_MIDDLE": 173
+        },
+        "educationLevel": {
+          "GRADUATE": 97,
+          "ARTS_HIGH": 4,
+          "UNIVERSITY": 243,
+          "null": 156
+        },
+        "careerLevel": {
+          "null": 109,
+          "ENTRY": 246,
+          "SENIOR": 145
+        },
+        "careerTrack": {
+          "PUBLIC_SERVANT": 4,
+          "null": 5,
+          "OFFICE": 7,
+          "ENGINEER": 136,
+          "PROFESSOR": 315,
+          "FREELANCER": 15,
+          "RESEARCHER": 18
+        },
+        "employmentStatus": {
+          "UNEMPLOYED": 2,
+          "SELF_EMPLOYED": 15,
+          "null": 5,
+          "EMPLOYED": 468,
+          "RETIRED": 10
+        },
+        "fieldOfStudy": {
+          "null": 446,
+          "ARTS": 1,
+          "SCIENCE": 53
+        },
+        "maritalStatus": {
+          "MARRIED": 221,
+          "DIVORCED": 8,
+          "SINGLE": 137,
+          "null": 119,
+          "DATING": 15
+        },
+        "childrenCount": {
+          "0": 407,
+          "1": 93
+        }
+      },
+      "pathEndingRate": 0.882
+    },
+    "BOUNDARY/HAPPINESS": {
+      "endings": {
+        "ending_path_luk_wanderer": 6,
+        "ending_public_servant": 1,
+        "ending_path_int_teacher": 9,
+        "ending_path_luk_patron": 3,
+        "ending_path_soc_leader": 7,
+        "ending_path_fit_coach": 2,
+        "ending_path_wea_exit": 1,
+        "ending_quiet_scholar": 1,
+        "ending_path_hea_young": 6,
+        "ending_path_soc_family": 10,
+        "ending_path_int_engineer": 1,
+        "ending_path_hea_recovered": 2,
+        "ending_ordinary_path": 29,
+        "ending_path_int_researcher": 1,
+        "ending_path_luk_small_win": 1,
+        "ending_path_luk_dodger": 3,
+        "ending_path_hap_artist": 24,
+        "ending_path_hea_chronic": 4,
+        "ending_path_fit_legend": 3,
+        "ending_path_hea_peaks": 2,
+        "ending_path_hap_teacher": 17,
+        "ending_path_luk_jackpot": 6,
+        "ending_small_stage_big_memory": 1,
+        "ending_path_soc_connector": 3
+      },
+      "expectedTitles": {
+        "title_medal_door": 1,
+        "title_bucket_list": 31,
+        "title_interphone": 24,
+        "title_relay": 2,
+        "title_scholarship": 1,
+        "title_burnout_back": 12,
+        "title_doorplate": 1,
+        "title_patent": 4,
+        "title_crypto": 3,
+        "title_first_steps": 6,
+        "title_chick": 1,
+        "title_survivor": 4,
+        "title_gacha": 1,
+        "title_auto_door": 3,
+        "title_founder": 1,
+        "title_janggi": 3,
+        "title_alarm_seven": 1,
+        "title_judge_baby": 44
+      },
+      "meanBigIncidents": 0.6363636363636364,
+      "pathEndings": 41,
+      "bigIncidentHistogram": {
+        "0": 70,
+        "1": 59,
+        "2": 12,
+        "3": 1,
+        "5": 1
+      },
+      "runs": 143,
+      "deathPeriods": {
+        "MIDDLE": 2,
+        "OLD_AGE": 140,
+        "YOUNG_ADULT": 1
+      },
+      "factDistributions": {
+        "housingType": {
+          "JEONSE": 13,
+          "null": 124,
+          "OWN_HOUSE": 2,
+          "MONTHLY_RENT": 1,
+          "WITH_PARENTS": 3
+        },
+        "wealthBand": {
+          "LOWER_MIDDLE": 50,
+          "HIGH": 11,
+          "MIDDLE": 31,
+          "LOW": 51
+        },
+        "educationLevel": {
+          "GRADUATE": 4,
+          "ARTS_HIGH": 50,
+          "UNIVERSITY": 56,
+          "null": 22,
+          "VOCATIONAL_HIGH": 11
+        },
+        "careerLevel": {
+          "MID": 1,
+          "ENTRY": 106,
+          "SENIOR": 5,
+          "null": 31
+        },
+        "careerTrack": {
+          "PUBLIC_SERVANT": 2,
+          "null": 1,
+          "OFFICE": 58,
+          "ENGINEER": 5,
+          "FOUNDER": 1,
+          "PROFESSOR": 40,
+          "COUNSELOR": 2,
+          "FREELANCER": 25,
+          "SALES": 1,
+          "RESEARCHER": 2,
+          "GYM_OWNER": 2,
+          "COACH": 4
+        },
+        "employmentStatus": {
+          "UNEMPLOYED": 2,
+          "SELF_EMPLOYED": 28,
+          "null": 1,
+          "EMPLOYED": 111,
+          "RETIRED": 1
+        },
+        "fieldOfStudy": {
+          "SPORTS": 20,
+          "SCIENCE": 4,
+          "null": 118,
+          "ARTS": 1
+        },
+        "maritalStatus": {
+          "MARRIED": 69,
+          "SINGLE": 38,
+          "null": 30,
+          "DATING": 6
+        },
+        "childrenCount": {
+          "0": 125,
+          "1": 18
+        }
+      },
+      "pathEndingRate": 0.2867132867132867
+    },
+    "LOW_STATS/WEALTH": {
+      "endings": {
+        "ending_path_hea_chronic": 8,
+        "ending_path_hea_peaks": 5,
+        "ending_path_hea_young": 7,
+        "ending_path_hea_recovered": 22,
+        "ending_ordinary_path": 101
+      },
+      "expectedTitles": {
+        "title_medal_door": 3,
+        "title_fan_life": 4,
+        "title_interphone": 50,
+        "title_relay": 3,
+        "title_crypto": 5,
+        "title_first_steps": 26,
+        "title_chick": 3,
+        "title_survivor": 8,
+        "title_gacha": 2,
+        "title_janggi": 2,
+        "title_cash_baby": 35,
+        "title_subject_a": 1,
+        "title_alarm_seven": 1
+      },
+      "meanBigIncidents": 0.7552447552447552,
+      "pathEndings": 0,
+      "bigIncidentHistogram": {
+        "0": 73,
+        "1": 40,
+        "2": 22,
+        "3": 8
+      },
+      "runs": 143,
+      "deathPeriods": {
+        "OLD_AGE": 128,
+        "YOUNG_ADULT": 2,
+        "MIDDLE": 10,
+        "TEEN": 3
+      },
+      "factDistributions": {
+        "housingType": {"null": 143},
+        "wealthBand": {"LOW": 143},
+        "educationLevel": {
+          "UNIVERSITY": 1,
+          "null": 2,
+          "ARTS_HIGH": 140
+        },
+        "careerLevel": {
+          "null": 79,
+          "ENTRY": 64
+        },
+        "careerTrack": {
+          "PUBLIC_SERVANT": 2,
+          "FREELANCER": 74,
+          "null": 5,
+          "OFFICE": 62
+        },
+        "employmentStatus": {
+          "SELF_EMPLOYED": 74,
+          "null": 5,
+          "EMPLOYED": 64
+        },
+        "fieldOfStudy": {"null": 143},
+        "maritalStatus": {
+          "MARRIED": 66,
+          "SINGLE": 34,
+          "null": 33,
+          "DATING": 10
+        },
+        "childrenCount": {
+          "0": 94,
+          "1": 49
+        }
+      },
+      "pathEndingRate": 0
+    },
+    "BOUNDARY/WEALTH": {
+      "endings": {
+        "ending_path_luk_wanderer": 2,
+        "ending_path_fit_teacher": 1,
+        "ending_path_int_teacher": 15,
+        "ending_path_luk_patron": 2,
+        "ending_path_fit_coach": 5,
+        "ending_path_hea_young": 4,
+        "ending_ordinary_path": 25,
+        "ending_path_soc_after_divorce": 1,
+        "ending_path_int_researcher": 3,
+        "ending_path_hap_artist": 6,
+        "ending_path_int_late": 1,
+        "ending_path_hap_teacher": 11,
+        "ending_path_soc_connector": 1,
+        "ending_path_wea_saver": 1,
+        "ending_path_wea_home": 9,
+        "ending_path_soc_leader": 5,
+        "ending_quiet_scholar": 1,
+        "ending_path_wea_stock": 6,
+        "ending_path_soc_family": 9,
+        "ending_path_wea_debt": 3,
+        "ending_path_int_engineer": 3,
+        "ending_path_hea_recovered": 6,
+        "ending_kind_neighbor": 1,
+        "ending_path_luk_dodger": 1,
+        "ending_path_hea_chronic": 6,
+        "ending_path_hea_peaks": 3,
+        "ending_path_luk_jackpot": 12
+      },
+      "expectedTitles": {
+        "title_bucket_list": 18,
+        "title_fan_life": 1,
+        "title_interphone": 33,
+        "title_burnout_back": 6,
+        "title_doorplate": 13,
+        "title_patent": 7,
+        "title_crypto": 3,
+        "title_first_steps": 7,
+        "title_chick": 1,
+        "title_survivor": 8,
+        "title_paid_off_home": 12,
+        "title_forever_leader": 1,
+        "title_janggi": 1,
+        "title_cash_baby": 30,
+        "title_subject_a": 1,
+        "title_alarm_seven": 1
+      },
+      "meanBigIncidents": 0.6293706293706294,
+      "pathEndings": 19,
+      "bigIncidentHistogram": {
+        "0": 85,
+        "1": 33,
+        "2": 18,
+        "3": 7
+      },
+      "runs": 143,
+      "deathPeriods": {
+        "MIDDLE": 2,
+        "OLD_AGE": 141
+      },
+      "factDistributions": {
+        "housingType": {
+          "OWN_APARTMENT": 9,
+          "JEONSE": 21,
+          "null": 102,
+          "OWN_HOUSE": 4,
+          "MONTHLY_RENT": 1,
+          "WITH_PARENTS": 6
+        },
+        "wealthBand": {
+          "LOWER_MIDDLE": 7,
+          "VERY_HIGH": 95,
+          "HIGH": 9,
+          "MIDDLE": 25,
+          "LOW": 7
+        },
+        "educationLevel": {
+          "GRADUATE": 8,
+          "ARTS_HIGH": 57,
+          "UNIVERSITY": 53,
+          "null": 11,
+          "VOCATIONAL_HIGH": 14
+        },
+        "careerLevel": {
+          "null": 37,
+          "ENTRY": 96,
+          "SENIOR": 10
+        },
+        "careerTrack": {
+          "OFFICE": 48,
+          "ENGINEER": 6,
+          "PROFESSOR": 46,
+          "COUNSELOR": 1,
+          "FREELANCER": 25,
+          "STARTUP": 11,
+          "RESEARCHER": 3,
+          "GYM_OWNER": 1,
+          "COACH": 2
+        },
+        "employmentStatus": {
+          "SELF_EMPLOYED": 30,
+          "EMPLOYED": 108,
+          "UNEMPLOYED": 5
+        },
+        "fieldOfStudy": {
+          "null": 123,
+          "SPORTS": 16,
+          "SCIENCE": 4
+        },
+        "maritalStatus": {
+          "MARRIED": 63,
+          "DIVORCED": 3,
+          "SINGLE": 35,
+          "null": 27,
+          "DATING": 15
+        },
+        "childrenCount": {
+          "0": 125,
+          "1": 18
+        }
+      },
+      "pathEndingRate": 0.13286713286713286
+    },
+    "LOW_HEALTH/INTELLIGENCE": {
+      "endings": {
+        "ending_path_int_researcher": 26,
+        "ending_path_int_teacher": 22,
+        "ending_quiet_scholar": 50,
+        "ending_path_hea_chronic": 6,
+        "ending_path_int_burnout": 4,
+        "ending_path_int_engineer": 34,
+        "ending_ordinary_path": 1
+      },
+      "expectedTitles": {
+        "title_first_steps": 33,
+        "title_fan_life": 3,
+        "title_survivor": 1,
+        "title_interphone": 54,
+        "title_scholarship": 3,
+        "title_gacha": 8,
+        "title_auto_door": 4,
+        "title_patent": 34,
+        "title_janggi": 1,
+        "title_crypto": 2
+      },
+      "meanBigIncidents": 0.6783216783216783,
+      "pathEndings": 86,
+      "bigIncidentHistogram": {
+        "0": 70,
+        "1": 49,
+        "2": 24
+      },
+      "runs": 143,
+      "deathPeriods": {
+        "OLD_AGE": 88,
+        "YOUNG_ADULT": 7,
+        "MIDDLE": 39,
+        "TEEN": 9
+      },
+      "factDistributions": {
+        "housingType": {
+          "JEONSE": 4,
+          "null": 139
+        },
+        "wealthBand": {
+          "MIDDLE": 114,
+          "LOWER_MIDDLE": 29
+        },
+        "educationLevel": {
+          "GRADUATE": 47,
+          "UNIVERSITY": 87,
+          "null": 9
+        },
+        "careerLevel": {
+          "null": 35,
+          "ENTRY": 48,
+          "SENIOR": 60
+        },
+        "careerTrack": {
+          "PATENT_ATTORNEY": 1,
+          "PROFESSOR": 22,
+          "null": 14,
+          "RESEARCHER": 47,
+          "OFFICE": 17,
+          "ENGINEER": 42
+        },
+        "employmentStatus": {
+          "null": 14,
+          "EMPLOYED": 128,
+          "UNEMPLOYED": 1
+        },
+        "fieldOfStudy": {"null": 143},
+        "maritalStatus": {
+          "MARRIED": 98,
+          "DIVORCED": 8,
+          "null": 36,
+          "DATING": 1
+        },
+        "childrenCount": {
+          "0": 101,
+          "1": 42
+        }
+      },
+      "pathEndingRate": 0.6013986013986014
+    },
+    "TARGET/WEALTH": {
+      "endings": {
+        "ending_path_hea_chronic": 7,
+        "ending_path_wea_home": 467,
+        "ending_path_hea_young": 17,
+        "ending_path_wea_debt": 9
+      },
+      "expectedTitles": {
+        "title_auto_door": 1,
+        "title_survivor": 3,
+        "title_paid_off_home": 484,
+        "title_doorplate": 12
+      },
+      "meanBigIncidents": 0.706,
+      "pathEndings": 476,
+      "bigIncidentHistogram": {
+        "0": 238,
+        "1": 182,
+        "2": 70,
+        "3": 9,
+        "4": 1
+      },
+      "runs": 500,
+      "deathPeriods": {
+        "MIDDLE": 3,
+        "OLD_AGE": 497
+      },
+      "factDistributions": {
+        "housingType": {
+          "JEONSE": 172,
+          "OWN_APARTMENT": 328
+        },
+        "wealthBand": {"VERY_HIGH": 500},
+        "educationLevel": {
+          "UNIVERSITY": 2,
+          "VOCATIONAL_HIGH": 498
+        },
+        "careerLevel": {"ENTRY": 500},
+        "careerTrack": {"OFFICE": 500},
+        "employmentStatus": {
+          "EMPLOYED": 483,
+          "RETIRED": 16,
+          "UNEMPLOYED": 1
+        },
+        "fieldOfStudy": {
+          "null": 498,
+          "SPORTS": 2
+        },
+        "maritalStatus": {
+          "DATING": 44,
+          "SINGLE": 456
+        },
+        "childrenCount": {"0": 500}
+      },
+      "pathEndingRate": 0.952
+    },
+    "LOW_STATS/HEALTH": {
+      "endings": {
+        "ending_path_hea_chronic": 13,
+        "ending_path_hea_peaks": 3,
+        "ending_path_hea_young": 7,
+        "ending_path_hea_recovered": 8,
+        "ending_unlucky_tragic": 2,
+        "ending_ordinary_path": 110
+      },
+      "expectedTitles": {
+        "title_first_steps": 15,
+        "title_medal_door": 2,
+        "title_fan_life": 2,
+        "title_survivor": 5,
+        "title_interphone": 21,
+        "title_relay": 1,
+        "title_gacha": 2,
+        "title_auto_door": 2,
+        "title_janggi": 7,
+        "title_cash_baby": 83,
+        "title_crypto": 1,
+        "title_judge_baby": 2
+      },
+      "meanBigIncidents": 0.8461538461538461,
+      "pathEndings": 31,
+      "bigIncidentHistogram": {
+        "0": 58,
+        "1": 56,
+        "2": 23,
+        "3": 5,
+        "4": 1
+      },
+      "runs": 143,
+      "deathPeriods": {
+        "OLD_AGE": 124,
+        "YOUNG_ADULT": 3,
+        "MIDDLE": 11,
+        "TEEN": 5
+      },
+      "factDistributions": {
+        "housingType": {"null": 143},
+        "wealthBand": {"LOW": 143},
+        "educationLevel": {
+          "null": 5,
+          "ARTS_HIGH": 138
+        },
+        "careerLevel": {
+          "null": 62,
+          "ENTRY": 81
+        },
+        "careerTrack": {
+          "PUBLIC_SERVANT": 6,
+          "FREELANCER": 54,
+          "null": 8,
+          "OFFICE": 75
+        },
+        "employmentStatus": {
+          "UNEMPLOYED": 1,
+          "SELF_EMPLOYED": 54,
+          "null": 8,
+          "EMPLOYED": 79,
+          "RETIRED": 1
+        },
+        "fieldOfStudy": {"null": 143},
+        "maritalStatus": {
+          "MARRIED": 51,
+          "SINGLE": 40,
+          "null": 38,
+          "DATING": 14
+        },
+        "childrenCount": {
+          "0": 110,
+          "1": 33
+        }
+      },
+      "pathEndingRate": 0.21678321678321677
+    },
+    "LOW_STATS/INTELLIGENCE": {
+      "endings": {
+        "ending_path_hea_chronic": 11,
+        "ending_path_hea_peaks": 3,
+        "ending_path_hea_young": 7,
+        "ending_path_hea_recovered": 13,
+        "ending_ordinary_path": 109
+      },
+      "expectedTitles": {
+        "title_medal_door": 4,
+        "title_fan_life": 2,
+        "title_interphone": 13,
+        "title_relay": 2,
+        "title_crypto": 3,
+        "title_first_steps": 18,
+        "title_chick": 3,
+        "title_survivor": 6,
+        "title_gacha": 4,
+        "title_auto_door": 6,
+        "title_kongi_friend": 1,
+        "title_free_morning": 3,
+        "title_janggi": 9,
+        "title_cash_baby": 7,
+        "title_alarm_seven": 2,
+        "title_judge_baby": 60
+      },
+      "meanBigIncidents": 0.8041958041958042,
+      "pathEndings": 0,
+      "bigIncidentHistogram": {
+        "0": 64,
+        "1": 47,
+        "2": 28,
+        "3": 4
+      },
+      "runs": 143,
+      "deathPeriods": {
+        "OLD_AGE": 125,
+        "YOUNG_ADULT": 3,
+        "MIDDLE": 10,
+        "TEEN": 5
+      },
+      "factDistributions": {
+        "housingType": {"null": 143},
+        "wealthBand": {"LOW": 143},
+        "educationLevel": {
+          "UNIVERSITY": 2,
+          "null": 4,
+          "ARTS_HIGH": 137
+        },
+        "careerLevel": {
+          "null": 62,
+          "ENTRY": 81
+        },
+        "careerTrack": {
+          "PUBLIC_SERVANT": 3,
+          "FREELANCER": 54,
+          "null": 8,
+          "OFFICE": 78
+        },
+        "employmentStatus": {
+          "UNEMPLOYED": 1,
+          "SELF_EMPLOYED": 54,
+          "null": 8,
+          "EMPLOYED": 77,
+          "RETIRED": 3
+        },
+        "fieldOfStudy": {"null": 143},
+        "maritalStatus": {
+          "MARRIED": 71,
+          "SINGLE": 30,
+          "null": 33,
+          "DATING": 9
+        },
+        "childrenCount": {
+          "0": 100,
+          "1": 43
+        }
+      },
+      "pathEndingRate": 0
+    },
+    "LOW_HEALTH/HEALTH": {
+      "endings": {
+        "ending_path_int_researcher": 32,
+        "ending_path_int_teacher": 14,
+        "ending_quiet_scholar": 42,
+        "ending_path_hea_chronic": 6,
+        "ending_path_int_burnout": 4,
+        "ending_path_int_engineer": 44,
+        "ending_ordinary_path": 1
+      },
+      "expectedTitles": {
+        "title_first_steps": 21,
+        "title_survivor": 3,
+        "title_interphone": 70,
+        "title_scholarship": 2,
+        "title_gacha": 1,
+        "title_patent": 44,
+        "title_crypto": 2
+      },
+      "meanBigIncidents": 0.7622377622377622,
+      "pathEndings": 6,
+      "bigIncidentHistogram": {
+        "0": 59,
+        "1": 62,
+        "2": 19,
+        "3": 3
+      },
+      "runs": 143,
+      "deathPeriods": {
+        "OLD_AGE": 85,
+        "YOUNG_ADULT": 10,
+        "MIDDLE": 41,
+        "TEEN": 7
+      },
+      "factDistributions": {
+        "housingType": {
+          "JEONSE": 1,
+          "null": 142
+        },
+        "wealthBand": {
+          "MIDDLE": 102,
+          "LOWER_MIDDLE": 41
+        },
+        "educationLevel": {
+          "GRADUATE": 58,
+          "UNIVERSITY": 78,
+          "null": 7
+        },
+        "careerLevel": {
+          "null": 41,
+          "ENTRY": 26,
+          "SENIOR": 76
+        },
+        "careerTrack": {
+          "PROFESSOR": 14,
+          "null": 15,
+          "RESEARCHER": 58,
+          "OFFICE": 8,
+          "ENGINEER": 48
+        },
+        "employmentStatus": {
+          "null": 15,
+          "EMPLOYED": 127,
+          "UNEMPLOYED": 1
+        },
+        "fieldOfStudy": {"null": 143},
+        "maritalStatus": {
+          "MARRIED": 97,
+          "DIVORCED": 10,
+          "null": 35,
+          "DATING": 1
+        },
+        "childrenCount": {
+          "0": 110,
+          "1": 33
+        }
+      },
+      "pathEndingRate": 0.04195804195804196
+    },
+    "LOW_HEALTH/FITNESS": {
+      "endings": {
+        "ending_path_int_researcher": 27,
+        "ending_path_int_teacher": 23,
+        "ending_quiet_scholar": 47,
+        "ending_path_hea_chronic": 9,
+        "ending_path_int_burnout": 2,
+        "ending_path_int_engineer": 34,
+        "ending_ordinary_path": 1
+      },
+      "expectedTitles": {
+        "title_first_steps": 21,
+        "title_fan_life": 4,
+        "title_survivor": 2,
+        "title_interphone": 62,
+        "title_scholarship": 2,
+        "title_gacha": 8,
+        "title_auto_door": 4,
+        "title_patent": 34,
+        "title_janggi": 4,
+        "title_crypto": 2
+      },
+      "meanBigIncidents": 0.6363636363636364,
+      "pathEndings": 0,
+      "bigIncidentHistogram": {
+        "0": 74,
+        "1": 48,
+        "2": 20,
+        "3": 1
+      },
+      "runs": 143,
+      "deathPeriods": {
+        "OLD_AGE": 91,
+        "YOUNG_ADULT": 7,
+        "MIDDLE": 41,
+        "TEEN": 4
+      },
+      "factDistributions": {
+        "housingType": {
+          "JEONSE": 1,
+          "null": 142
+        },
+        "wealthBand": {
+          "MIDDLE": 108,
+          "LOWER_MIDDLE": 35
+        },
+        "educationLevel": {
+          "GRADUATE": 60,
+          "UNIVERSITY": 79,
+          "null": 4
+        },
+        "careerLevel": {
+          "null": 40,
+          "ENTRY": 42,
+          "SENIOR": 61
+        },
+        "careerTrack": {
+          "PATENT_ATTORNEY": 1,
+          "PROFESSOR": 23,
+          "null": 7,
+          "RESEARCHER": 60,
+          "OFFICE": 12,
+          "ENGINEER": 40
+        },
+        "employmentStatus": {
+          "null": 7,
+          "EMPLOYED": 135,
+          "UNEMPLOYED": 1
+        },
+        "fieldOfStudy": {"null": 143},
+        "maritalStatus": {
+          "MARRIED": 96,
+          "null": 37,
+          "DIVORCED": 10
+        },
+        "childrenCount": {
+          "0": 116,
+          "1": 27
+        }
+      },
+      "pathEndingRate": 0
+    },
+    "LOW_HEALTH/SOCIAL": {
+      "endings": {
+        "ending_path_int_researcher": 38,
+        "ending_path_int_teacher": 18,
+        "ending_quiet_scholar": 40,
+        "ending_path_hea_chronic": 11,
+        "ending_path_int_engineer": 33,
+        "ending_ordinary_path": 2,
+        "ending_path_wea_ceo": 1
+      },
+      "expectedTitles": {
+        "title_first_steps": 22,
+        "title_fan_life": 2,
+        "title_survivor": 4,
+        "title_interphone": 58,
+        "title_scholarship": 2,
+        "title_gacha": 12,
+        "title_auto_door": 2,
+        "title_founder": 2,
+        "title_patent": 33,
+        "title_janggi": 2,
+        "title_crypto": 4
+      },
+      "meanBigIncidents": 0.7272727272727273,
+      "pathEndings": 0,
+      "bigIncidentHistogram": {
+        "0": 64,
+        "1": 57,
+        "2": 19,
+        "3": 3
+      },
+      "runs": 143,
+      "deathPeriods": {
+        "OLD_AGE": 86,
+        "YOUNG_ADULT": 9,
+        "MIDDLE": 41,
+        "TEEN": 7
+      },
+      "factDistributions": {
+        "housingType": {
+          "JEONSE": 7,
+          "null": 136
+        },
+        "wealthBand": {
+          "MIDDLE": 108,
+          "LOWER_MIDDLE": 33,
+          "HIGH": 2
+        },
+        "educationLevel": {
+          "GRADUATE": 61,
+          "UNIVERSITY": 75,
+          "null": 7
+        },
+        "careerLevel": {
+          "EXECUTIVE": 2,
+          "ENTRY": 32,
+          "SENIOR": 71,
+          "null": 38
+        },
+        "careerTrack": {
+          "FOUNDER": 2,
+          "PROFESSOR": 18,
+          "null": 15,
+          "RESEARCHER": 61,
+          "OFFICE": 9,
+          "ENGINEER": 38
+        },
+        "employmentStatus": {
+          "SELF_EMPLOYED": 2,
+          "null": 15,
+          "EMPLOYED": 126
+        },
+        "fieldOfStudy": {"null": 143},
+        "maritalStatus": {
+          "MARRIED": 96,
+          "DIVORCED": 6,
+          "null": 38,
+          "DATING": 3
+        },
+        "childrenCount": {
+          "0": 113,
+          "1": 30
+        }
+      },
+      "pathEndingRate": 0
+    },
+    "BOUNDARY/INTELLIGENCE": {
+      "endings": {
+        "ending_path_int_teacher": 49,
+        "ending_path_soc_leader": 2,
+        "ending_quiet_scholar": 21,
+        "ending_path_hea_young": 2,
+        "ending_path_soc_family": 10,
+        "ending_path_int_engineer": 20,
+        "ending_path_hea_recovered": 5,
+        "ending_ordinary_path": 9,
+        "ending_path_int_researcher": 5,
+        "ending_path_hap_artist": 4,
+        "ending_path_hea_chronic": 3,
+        "ending_path_int_late": 1,
+        "ending_path_hea_peaks": 1,
+        "ending_path_hap_teacher": 7,
+        "ending_path_luk_jackpot": 2,
+        "ending_path_soc_connector": 1,
+        "ending_path_wea_ceo": 1
+      },
+      "expectedTitles": {
+        "title_medal_door": 3,
+        "title_bucket_list": 5,
+        "title_fan_life": 3,
+        "title_interphone": 6,
+        "title_relay": 1,
+        "title_scholarship": 2,
+        "title_burnout_back": 2,
+        "title_doorplate": 11,
+        "title_patent": 17,
+        "title_first_steps": 12,
+        "title_chick": 2,
+        "title_survivor": 6,
+        "title_paid_off_home": 8,
+        "title_gacha": 3,
+        "title_auto_door": 1,
+        "title_janggi": 5,
+        "title_cash_baby": 4,
+        "title_judge_baby": 52
+      },
+      "meanBigIncidents": 0.6433566433566433,
+      "pathEndings": 75,
+      "bigIncidentHistogram": {
+        "0": 75,
+        "1": 46,
+        "2": 20,
+        "3": 2
+      },
+      "runs": 143,
+      "deathPeriods": {
+        "OLD_AGE": 137,
+        "YOUNG_ADULT": 1,
+        "MIDDLE": 4,
+        "TEEN": 1
+      },
+      "factDistributions": {
+        "housingType": {
+          "OWN_APARTMENT": 9,
+          "JEONSE": 24,
+          "null": 99,
+          "OWN_HOUSE": 3,
+          "WITH_PARENTS": 8
+        },
+        "wealthBand": {
+          "LOWER_MIDDLE": 24,
+          "VERY_HIGH": 44,
+          "HIGH": 33,
+          "MIDDLE": 27,
+          "LOW": 15
+        },
+        "educationLevel": {
+          "GRADUATE": 19,
+          "ARTS_HIGH": 27,
+          "UNIVERSITY": 67,
+          "null": 21,
+          "VOCATIONAL_HIGH": 9
+        },
+        "careerLevel": {
+          "EXECUTIVE": 1,
+          "MID": 1,
+          "ENTRY": 88,
+          "SENIOR": 25,
+          "null": 28
+        },
+        "careerTrack": {
+          "PUBLIC_SERVANT": 1,
+          "null": 2,
+          "OFFICE": 27,
+          "ENGINEER": 17,
+          "FOUNDER": 1,
+          "PROFESSOR": 73,
+          "COUNSELOR": 1,
+          "FREELANCER": 10,
+          "STARTUP": 1,
+          "RESEARCHER": 10
+        },
+        "employmentStatus": {
+          "UNEMPLOYED": 2,
+          "SELF_EMPLOYED": 14,
+          "null": 2,
+          "EMPLOYED": 125
+        },
+        "fieldOfStudy": {
+          "null": 124,
+          "SPORTS": 10,
+          "SCIENCE": 9
+        },
+        "maritalStatus": {
+          "MARRIED": 63,
+          "DIVORCED": 1,
+          "SINGLE": 34,
+          "null": 39,
+          "DATING": 6
+        },
+        "childrenCount": {
+          "0": 116,
+          "1": 27
+        }
+      },
+      "pathEndingRate": 0.5244755244755245
+    },
+    "BOUNDARY/HEALTH": {
+      "endings": {
+        "ending_path_luk_wanderer": 3,
+        "ending_path_fit_teacher": 9,
+        "ending_path_int_teacher": 10,
+        "ending_path_luk_patron": 3,
+        "ending_path_fit_coach": 1,
+        "ending_path_hea_young": 13,
+        "ending_ordinary_path": 20,
+        "ending_path_soc_after_divorce": 1,
+        "ending_path_int_researcher": 2,
+        "ending_people_connector": 1,
+        "ending_path_hap_artist": 8,
+        "ending_path_int_late": 1,
+        "ending_path_hap_teacher": 8,
+        "ending_balanced_life": 4,
+        "ending_path_soc_connector": 3,
+        "ending_path_wea_home": 1,
+        "ending_path_soc_leader": 3,
+        "ending_quiet_scholar": 1,
+        "ending_path_wea_stock": 1,
+        "ending_path_soc_family": 18,
+        "ending_path_wea_debt": 1,
+        "ending_path_int_engineer": 1,
+        "ending_path_hea_recovered": 4,
+        "ending_kind_neighbor": 2,
+        "ending_path_luk_dodger": 1,
+        "ending_path_luk_loss": 1,
+        "ending_path_hea_chronic": 8,
+        "ending_path_fit_legend": 1,
+        "ending_path_hea_peaks": 7,
+        "ending_path_luk_jackpot": 6
+      },
+      "expectedTitles": {
+        "title_medal_door": 2,
+        "title_bucket_list": 14,
+        "title_interphone": 16,
+        "title_relay": 1,
+        "title_burnout_back": 3,
+        "title_doorplate": 11,
+        "title_patent": 1,
+        "title_crypto": 1,
+        "title_first_steps": 8,
+        "title_chick": 1,
+        "title_survivor": 3,
+        "title_paid_off_home": 6,
+        "title_gacha": 2,
+        "title_forever_leader": 2,
+        "title_auto_door": 1,
+        "title_founder": 1,
+        "title_kongi_friend": 1,
+        "title_janggi": 6,
+        "title_cash_baby": 61,
+        "title_subject_a": 2
+      },
+      "meanBigIncidents": 0.7482517482517482,
+      "pathEndings": 32,
+      "bigIncidentHistogram": {
+        "0": 64,
+        "1": 57,
+        "2": 16,
+        "3": 6
+      },
+      "runs": 143,
+      "deathPeriods": {"OLD_AGE": 143},
+      "factDistributions": {
+        "housingType": {
+          "OWN_APARTMENT": 9,
+          "JEONSE": 16,
+          "null": 97,
+          "OWN_HOUSE": 8,
+          "MONTHLY_RENT": 6,
+          "WITH_PARENTS": 7
+        },
+        "wealthBand": {
+          "LOWER_MIDDLE": 19,
+          "VERY_HIGH": 18,
+          "HIGH": 28,
+          "MIDDLE": 51,
+          "LOW": 27
+        },
+        "educationLevel": {
+          "GRADUATE": 6,
+          "ARTS_HIGH": 61,
+          "UNIVERSITY": 44,
+          "null": 17,
+          "VOCATIONAL_HIGH": 15
+        },
+        "careerLevel": {
+          "MID": 2,
+          "ENTRY": 95,
+          "SENIOR": 3,
+          "null": 43
+        },
+        "careerTrack": {
+          "OFFICE": 64,
+          "ENGINEER": 4,
+          "FOUNDER": 3,
+          "PE_TEACHER": 4,
+          "PROFESSOR": 27,
+          "COUNSELOR": 3,
+          "FREELANCER": 30,
+          "STARTUP": 1,
+          "SALES": 2,
+          "RESEARCHER": 2,
+          "GYM_OWNER": 1,
+          "COACH": 2
+        },
+        "employmentStatus": {
+          "SELF_EMPLOYED": 34,
+          "EMPLOYED": 106,
+          "UNEMPLOYED": 3
+        },
+        "fieldOfStudy": {
+          "null": 121,
+          "SPORTS": 20,
+          "SCIENCE": 2
+        },
+        "maritalStatus": {
+          "MARRIED": 64,
+          "DIVORCED": 2,
+          "SINGLE": 35,
+          "null": 31,
+          "DATING": 11
+        },
+        "childrenCount": {
+          "0": 127,
+          "1": 16
+        }
+      },
+      "pathEndingRate": 0.22377622377622378
+    },
+    "LOW_HEALTH/WEALTH": {
+      "endings": {
+        "ending_path_int_researcher": 34,
+        "ending_path_int_teacher": 22,
+        "ending_quiet_scholar": 42,
+        "ending_path_hea_chronic": 10,
+        "ending_path_int_burnout": 3,
+        "ending_path_int_engineer": 30,
+        "ending_ordinary_path": 2
+      },
+      "expectedTitles": {
+        "title_first_steps": 27,
+        "title_fan_life": 1,
+        "title_survivor": 6,
+        "title_interphone": 67,
+        "title_scholarship": 2,
+        "title_gacha": 5,
+        "title_patent": 29,
+        "title_crypto": 6
+      },
+      "meanBigIncidents": 0.6853146853146853,
+      "pathEndings": 0,
+      "bigIncidentHistogram": {
+        "0": 76,
+        "1": 40,
+        "2": 23,
+        "3": 4
+      },
+      "runs": 143,
+      "deathPeriods": {
+        "OLD_AGE": 95,
+        "YOUNG_ADULT": 8,
+        "MIDDLE": 34,
+        "TEEN": 6
+      },
+      "factDistributions": {
+        "housingType": {
+          "JEONSE": 3,
+          "null": 140
+        },
+        "wealthBand": {
+          "MIDDLE": 106,
+          "LOWER_MIDDLE": 37
+        },
+        "educationLevel": {
+          "GRADUATE": 60,
+          "UNIVERSITY": 77,
+          "null": 6
+        },
+        "careerLevel": {
+          "null": 39,
+          "ENTRY": 40,
+          "SENIOR": 64
+        },
+        "careerTrack": {
+          "PROFESSOR": 22,
+          "null": 13,
+          "RESEARCHER": 60,
+          "OFFICE": 14,
+          "ENGINEER": 34
+        },
+        "employmentStatus": {
+          "null": 13,
+          "EMPLOYED": 130
+        },
+        "fieldOfStudy": {"null": 143},
+        "maritalStatus": {
+          "MARRIED": 99,
+          "DIVORCED": 11,
+          "null": 31,
+          "DATING": 2
+        },
+        "childrenCount": {
+          "0": 106,
+          "1": 37
+        }
+      },
+      "pathEndingRate": 0
+    },
+    "BOUNDARY/LUCK": {
+      "endings": {
+        "ending_path_luk_wanderer": 4,
+        "ending_path_fit_teacher": 1,
+        "ending_path_int_teacher": 29,
+        "ending_path_luk_patron": 2,
+        "ending_path_soc_leader": 7,
+        "ending_path_fit_coach": 5,
+        "ending_quiet_scholar": 2,
+        "ending_path_hea_young": 2,
+        "ending_path_soc_family": 9,
+        "ending_path_int_engineer": 5,
+        "ending_path_hea_recovered": 3,
+        "ending_ordinary_path": 24,
+        "ending_kind_neighbor": 1,
+        "ending_path_int_researcher": 3,
+        "ending_path_luk_dodger": 1,
+        "ending_path_hap_artist": 16,
+        "ending_path_hea_chronic": 9,
+        "ending_path_hea_peaks": 1,
+        "ending_path_hap_teacher": 10,
+        "ending_path_luk_jackpot": 8
+      },
+      "expectedTitles": {
+        "title_bucket_list": 41,
+        "title_fan_life": 1,
+        "title_interphone": 1,
+        "title_relay": 1,
+        "title_burnout_back": 8,
+        "title_doorplate": 6,
+        "title_patent": 6,
+        "title_crypto": 1,
+        "title_first_steps": 10,
+        "title_survivor": 4,
+        "title_paid_off_home": 1,
+        "title_forever_leader": 1,
+        "title_cash_baby": 13,
+        "title_subject_a": 2,
+        "title_alarm_seven": 1,
+        "title_judge_baby": 45
+      },
+      "meanBigIncidents": 0.5915492957746479,
+      "pathEndings": 15,
+      "bigIncidentHistogram": {
+        "0": 79,
+        "1": 43,
+        "2": 19,
+        "3": 1
+      },
+      "runs": 142,
+      "deathPeriods": {
+        "MIDDLE": 8,
+        "OLD_AGE": 134
+      },
+      "factDistributions": {
+        "housingType": {
+          "OWN_APARTMENT": 4,
+          "JEONSE": 11,
+          "null": 121,
+          "OWN_HOUSE": 5,
+          "MONTHLY_RENT": 1
+        },
+        "wealthBand": {
+          "LOWER_MIDDLE": 45,
+          "HIGH": 14,
+          "MIDDLE": 38,
+          "LOW": 45
+        },
+        "educationLevel": {
+          "GRADUATE": 8,
+          "ARTS_HIGH": 50,
+          "UNIVERSITY": 37,
+          "null": 33,
+          "VOCATIONAL_HIGH": 14
+        },
+        "careerLevel": {
+          "EXECUTIVE": 1,
+          "ENTRY": 90,
+          "SENIOR": 9,
+          "null": 42
+        },
+        "careerTrack": {
+          "PUBLIC_SERVANT": 3,
+          "OFFICE": 21,
+          "ENGINEER": 3,
+          "PROFESSOR": 78,
+          "FREELANCER": 33,
+          "RESEARCHER": 3,
+          "COACH": 1
+        },
+        "employmentStatus": {
+          "SELF_EMPLOYED": 38,
+          "EMPLOYED": 98,
+          "UNEMPLOYED": 6
+        },
+        "fieldOfStudy": {
+          "null": 132,
+          "SPORTS": 10
+        },
+        "maritalStatus": {
+          "MARRIED": 61,
+          "DIVORCED": 3,
+          "SINGLE": 37,
+          "null": 36,
+          "DATING": 5
+        },
+        "childrenCount": {
+          "0": 124,
+          "1": 18
+        }
+      },
+      "pathEndingRate": 0.1056338028169014
+    },
+    "TARGET/HAPPINESS": {
+      "endings": {
+        "ending_path_luk_wanderer": 1,
+        "ending_path_luk_dodger": 2,
+        "ending_people_connector": 1,
+        "ending_path_luk_patron": 1,
+        "ending_path_hap_artist": 452,
+        "ending_path_hea_chronic": 6,
+        "ending_ordinary_path": 37
+      },
+      "expectedTitles": {
+        "title_first_steps": 151,
+        "title_chick": 24,
+        "title_fan_life": 11,
+        "title_survivor": 6,
+        "title_interphone": 221,
+        "title_relay": 17,
+        "title_burnout_back": 34,
+        "title_gacha": 22,
+        "title_kongi_friend": 2,
+        "title_alarm_seven": 12
+      },
+      "meanBigIncidents": 0.734,
+      "pathEndings": 452,
+      "bigIncidentHistogram": {
+        "0": 230,
+        "1": 194,
+        "2": 57,
+        "3": 17,
+        "4": 2
+      },
+      "runs": 500,
+      "deathPeriods": {
+        "MIDDLE": 5,
+        "OLD_AGE": 494,
+        "TEEN": 1
+      },
+      "factDistributions": {
+        "housingType": {"null": 500},
+        "wealthBand": {
+          "LOW": 499,
+          "LOWER_MIDDLE": 1
+        },
+        "educationLevel": {
+          "null": 1,
+          "ARTS_HIGH": 499
+        },
+        "careerLevel": {
+          "null": 48,
+          "ENTRY": 452
+        },
+        "careerTrack": {
+          "null": 1,
+          "OFFICE": 452,
+          "FREELANCER": 47
+        },
+        "employmentStatus": {
+          "UNEMPLOYED": 2,
+          "SELF_EMPLOYED": 47,
+          "null": 1,
+          "EMPLOYED": 450
+        },
+        "fieldOfStudy": {
+          "null": 267,
+          "ARTS": 233
+        },
+        "maritalStatus": {
+          "MARRIED": 393,
+          "SINGLE": 99,
+          "null": 1,
+          "DATING": 7
+        },
+        "childrenCount": {
+          "0": 344,
+          "1": 156
+        }
+      },
+      "pathEndingRate": 0.904
+    },
+    "BOUNDARY/SOCIAL": {
+      "endings": {
+        "ending_path_int_teacher": 4,
+        "ending_path_luk_patron": 1,
+        "ending_path_fit_coach": 4,
+        "ending_path_hea_young": 2,
+        "ending_ordinary_path": 30,
+        "ending_social_leader": 2,
+        "ending_path_int_researcher": 1,
+        "ending_people_connector": 1,
+        "ending_path_hap_artist": 5,
+        "ending_path_hap_teacher": 4,
+        "ending_small_stage_big_memory": 1,
+        "ending_path_soc_connector": 10,
+        "ending_path_soc_leader": 20,
+        "ending_path_soc_family": 26,
+        "ending_path_int_engineer": 3,
+        "ending_path_hea_recovered": 2,
+        "ending_unlucky_tragic": 1,
+        "ending_kind_neighbor": 1,
+        "ending_family_centered": 1,
+        "ending_path_luk_dodger": 1,
+        "ending_path_luk_loss": 1,
+        "ending_path_hea_chronic": 5,
+        "ending_path_fit_legend": 2,
+        "ending_path_luk_jackpot": 13,
+        "ending_path_wea_ceo": 2
+      },
+      "expectedTitles": {
+        "title_bucket_list": 50,
+        "title_interphone": 3,
+        "title_burnout_back": 1,
+        "title_doorplate": 2,
+        "title_patent": 4,
+        "title_first_steps": 11,
+        "title_survivor": 5,
+        "title_paid_off_home": 3,
+        "title_forever_leader": 1,
+        "title_auto_door": 3,
+        "title_founder": 3,
+        "title_janggi": 4,
+        "title_cash_baby": 41,
+        "title_judge_baby": 12
+      },
+      "meanBigIncidents": 0.7482517482517482,
+      "pathEndings": 56,
+      "bigIncidentHistogram": {
+        "0": 63,
+        "1": 56,
+        "2": 21,
+        "3": 3
+      },
+      "runs": 143,
+      "deathPeriods": {
+        "MIDDLE": 4,
+        "OLD_AGE": 137,
+        "YOUNG_ADULT": 2
+      },
+      "factDistributions": {
+        "housingType": {
+          "OWN_APARTMENT": 4,
+          "JEONSE": 13,
+          "null": 112,
+          "OWN_HOUSE": 2,
+          "MONTHLY_RENT": 4,
+          "WITH_PARENTS": 8
+        },
+        "wealthBand": {
+          "LOWER_MIDDLE": 37,
+          "VERY_HIGH": 1,
+          "HIGH": 23,
+          "MIDDLE": 42,
+          "LOW": 40
+        },
+        "educationLevel": {
+          "GRADUATE": 5,
+          "ARTS_HIGH": 56,
+          "UNIVERSITY": 50,
+          "null": 20,
+          "VOCATIONAL_HIGH": 12
+        },
+        "careerLevel": {
+          "EXECUTIVE": 2,
+          "MID": 1,
+          "ENTRY": 97,
+          "SENIOR": 5,
+          "null": 38
+        },
+        "careerTrack": {
+          "CASTER": 1,
+          "ENGINEER": 10,
+          "PE_TEACHER": 1,
+          "FREELANCER": 27,
+          "GYM_OWNER": 2,
+          "COACH": 3,
+          "null": 1,
+          "OFFICE": 52,
+          "FOUNDER": 2,
+          "PROFESSOR": 24,
+          "COUNSELOR": 7,
+          "SALES": 10,
+          "RESEARCHER": 3
+        },
+        "employmentStatus": {
+          "SELF_EMPLOYED": 33,
+          "null": 1,
+          "EMPLOYED": 109
+        },
+        "fieldOfStudy": {
+          "null": 125,
+          "SPORTS": 18
+        },
+        "maritalStatus": {
+          "MARRIED": 81,
+          "DIVORCED": 4,
+          "SINGLE": 32,
+          "null": 19,
+          "DATING": 7
+        },
+        "childrenCount": {
+          "0": 116,
+          "1": 27
+        }
+      },
+      "pathEndingRate": 0.3916083916083916
+    },
+    "LOW_STATS/LUCK": {
+      "endings": {
+        "ending_path_hea_chronic": 10,
+        "ending_path_hea_peaks": 4,
+        "ending_path_hea_young": 8,
+        "ending_path_hea_recovered": 15,
+        "ending_ordinary_path": 105
+      },
+      "expectedTitles": {
+        "title_medal_door": 6,
+        "title_fan_life": 3,
+        "title_relay": 4,
+        "title_burnout_back": 1,
+        "title_crypto": 4,
+        "title_first_steps": 25,
+        "title_chick": 5,
+        "title_survivor": 7,
+        "title_gacha": 3,
+        "title_auto_door": 3,
+        "title_janggi": 6,
+        "title_cash_baby": 33,
+        "title_alarm_seven": 1,
+        "title_judge_baby": 41
+      },
+      "meanBigIncidents": 0.7887323943661971,
+      "pathEndings": 0,
+      "bigIncidentHistogram": {
+        "0": 65,
+        "1": 47,
+        "2": 26,
+        "3": 3,
+        "4": 1
+      },
+      "runs": 142,
+      "deathPeriods": {
+        "MIDDLE": 12,
+        "OLD_AGE": 125,
+        "TEEN": 5
+      },
+      "factDistributions": {
+        "housingType": {"null": 142},
+        "wealthBand": {"LOW": 142},
+        "educationLevel": {
+          "null": 2,
+          "ARTS_HIGH": 140
+        },
+        "careerLevel": {
+          "null": 88,
+          "ENTRY": 54
+        },
+        "careerTrack": {
+          "PUBLIC_SERVANT": 6,
+          "FREELANCER": 83,
+          "null": 5,
+          "OFFICE": 48
+        },
+        "employmentStatus": {
+          "UNEMPLOYED": 1,
+          "SELF_EMPLOYED": 83,
+          "null": 5,
+          "EMPLOYED": 53
+        },
+        "fieldOfStudy": {"null": 142},
+        "maritalStatus": {
+          "MARRIED": 67,
+          "SINGLE": 34,
+          "null": 34,
+          "DATING": 7
+        },
+        "childrenCount": {
+          "0": 93,
+          "1": 49
+        }
+      },
+      "pathEndingRate": 0
+    },
+    "RANDOM/FITNESS": {
+      "endings": {
+        "ending_public_servant": 1,
+        "ending_path_luk_patron": 1,
+        "ending_path_fit_coach": 154,
+        "ending_path_hea_young": 11,
+        "ending_path_hea_recovered": 16,
+        "ending_ordinary_path": 226,
+        "ending_path_fit_injury": 1,
+        "ending_comedy_legend": 1,
+        "ending_kind_neighbor": 1,
+        "ending_unexpected_local_star": 2,
+        "ending_family_centered": 2,
+        "ending_path_hea_chronic": 10,
+        "ending_path_fit_legend": 39,
+        "ending_path_hea_peaks": 14,
+        "ending_small_stage_big_memory": 18,
+        "ending_happy_creator": 2,
+        "ending_everyday_athlete": 1
+      },
+      "expectedTitles": {
+        "title_medal_door": 2,
+        "title_bucket_list": 131,
+        "title_fan_life": 6,
+        "title_interphone": 67,
+        "title_relay": 8,
+        "title_burnout_back": 1,
+        "title_crypto": 15,
+        "title_first_steps": 82,
+        "title_chick": 5,
+        "title_survivor": 12,
+        "title_gacha": 5,
+        "title_auto_door": 8,
+        "title_free_morning": 1,
+        "title_janggi": 15,
+        "title_cash_baby": 68,
+        "title_alarm_seven": 3,
+        "title_judge_baby": 71
+      },
+      "meanBigIncidents": 0.714,
+      "pathEndings": 194,
+      "bigIncidentHistogram": {
+        "0": 230,
+        "1": 197,
+        "2": 61,
+        "3": 10,
+        "4": 2
+      },
+      "runs": 500,
+      "deathPeriods": {
+        "OLD_AGE": 488,
+        "YOUNG_ADULT": 1,
+        "MIDDLE": 10,
+        "TEEN": 1
+      },
+      "factDistributions": {
+        "housingType": {"null": 500},
+        "wealthBand": {
+          "MIDDLE": 1,
+          "LOW": 304,
+          "LOWER_MIDDLE": 195
+        },
+        "educationLevel": {
+          "UNIVERSITY": 95,
+          "null": 19,
+          "ARTS_HIGH": 386
+        },
+        "careerLevel": {
+          "null": 369,
+          "ENTRY": 131
+        },
+        "careerTrack": {
+          "PUBLIC_SERVANT": 6,
+          "CASTER": 6,
+          "FREELANCER": 172,
+          "null": 2,
+          "OFFICE": 124,
+          "COACH": 190
+        },
+        "employmentStatus": {
+          "UNEMPLOYED": 1,
+          "SELF_EMPLOYED": 172,
+          "null": 3,
+          "EMPLOYED": 322,
+          "RETIRED": 2
+        },
+        "fieldOfStudy": {
+          "null": 421,
+          "SPORTS": 79
+        },
+        "maritalStatus": {
+          "MARRIED": 254,
+          "DIVORCED": 14,
+          "SINGLE": 116,
+          "null": 79,
+          "DATING": 37
+        },
+        "childrenCount": {
+          "0": 325,
+          "1": 175
+        }
+      },
+      "pathEndingRate": 0.388
+    },
+    "LOW_STATS/HAPPINESS": {
+      "endings": {
+        "ending_path_hea_chronic": 11,
+        "ending_path_hea_peaks": 2,
+        "ending_path_hea_young": 6,
+        "ending_path_hea_recovered": 13,
+        "ending_ordinary_path": 111
+      },
+      "expectedTitles": {
+        "title_medal_door": 1,
+        "title_bucket_list": 1,
+        "title_fan_life": 2,
+        "title_interphone": 42,
+        "title_relay": 9,
+        "title_burnout_back": 1,
+        "title_crypto": 6,
+        "title_first_steps": 25,
+        "title_chick": 4,
+        "title_survivor": 5,
+        "title_gacha": 1,
+        "title_auto_door": 3,
+        "title_kongi_friend": 1,
+        "title_free_morning": 3,
+        "title_janggi": 6,
+        "title_judge_baby": 33
+      },
+      "meanBigIncidents": 0.7272727272727273,
+      "pathEndings": 0,
+      "bigIncidentHistogram": {
+        "0": 61,
+        "1": 66,
+        "2": 12,
+        "3": 3,
+        "5": 1
+      },
+      "runs": 143,
+      "deathPeriods": {
+        "OLD_AGE": 131,
+        "YOUNG_ADULT": 4,
+        "MIDDLE": 6,
+        "TEEN": 2
+      },
+      "factDistributions": {
+        "housingType": {"null": 143},
+        "wealthBand": {"LOW": 143},
+        "educationLevel": {
+          "UNIVERSITY": 1,
+          "ARTS_HIGH": 142
+        },
+        "careerLevel": {
+          "null": 58,
+          "ENTRY": 85
+        },
+        "careerTrack": {
+          "PUBLIC_SERVANT": 13,
+          "FREELANCER": 52,
+          "null": 6,
+          "OFFICE": 72
+        },
+        "employmentStatus": {
+          "UNEMPLOYED": 1,
+          "SELF_EMPLOYED": 52,
+          "null": 6,
+          "EMPLOYED": 81,
+          "RETIRED": 3
+        },
+        "fieldOfStudy": {"null": 143},
+        "maritalStatus": {
+          "MARRIED": 73,
+          "SINGLE": 29,
+          "null": 30,
+          "DATING": 11
+        },
+        "childrenCount": {
+          "0": 87,
+          "1": 56
+        }
+      },
+      "pathEndingRate": 0
+    },
+    "BOUNDARY/FITNESS": {
+      "endings": {
+        "ending_path_hap_burnout": 1,
+        "ending_path_luk_wanderer": 1,
+        "ending_path_int_teacher": 7,
+        "ending_path_luk_patron": 4,
+        "ending_path_fit_coach": 30,
+        "ending_path_hea_young": 3,
+        "ending_ordinary_path": 32,
+        "ending_path_int_researcher": 3,
+        "ending_path_hap_artist": 2,
+        "ending_path_int_late": 2,
+        "ending_path_hap_teacher": 11,
+        "ending_small_stage_big_memory": 2,
+        "ending_path_soc_connector": 1,
+        "ending_path_soc_leader": 4,
+        "ending_path_hap_content": 1,
+        "ending_path_wea_exit": 1,
+        "ending_quiet_scholar": 1,
+        "ending_path_soc_family": 8,
+        "ending_path_int_engineer": 5,
+        "ending_path_hea_recovered": 4,
+        "ending_path_luk_small_win": 3,
+        "ending_path_luk_dodger": 1,
+        "ending_path_hea_chronic": 2,
+        "ending_path_fit_legend": 1,
+        "ending_path_hea_peaks": 3,
+        "ending_path_luk_jackpot": 4,
+        "ending_path_fit_gym": 6
+      },
+      "expectedTitles": {
+        "title_medal_door": 1,
+        "title_bucket_list": 42,
+        "title_interphone": 32,
+        "title_scholarship": 1,
+        "title_burnout_back": 4,
+        "title_doorplate": 9,
+        "title_patent": 6,
+        "title_first_steps": 8,
+        "title_chick": 1,
+        "title_survivor": 3,
+        "title_auto_door": 3,
+        "title_founder": 1,
+        "title_kongi_friend": 1,
+        "title_janggi": 6,
+        "title_cash_baby": 10,
+        "title_subject_a": 2,
+        "title_alarm_seven": 1,
+        "title_judge_baby": 12
+      },
+      "meanBigIncidents": 0.6503496503496503,
+      "pathEndings": 37,
+      "bigIncidentHistogram": {
+        "0": 74,
+        "1": 47,
+        "2": 20,
+        "3": 2
+      },
+      "runs": 143,
+      "deathPeriods": {
+        "MIDDLE": 7,
+        "OLD_AGE": 135,
+        "TEEN": 1
+      },
+      "factDistributions": {
+        "housingType": {
+          "OWN_APARTMENT": 4,
+          "JEONSE": 10,
+          "null": 121,
+          "OWN_HOUSE": 6,
+          "MONTHLY_RENT": 1,
+          "WITH_PARENTS": 1
+        },
+        "wealthBand": {
+          "LOWER_MIDDLE": 30,
+          "VERY_HIGH": 3,
+          "HIGH": 23,
+          "MIDDLE": 48,
+          "LOW": 39
+        },
+        "educationLevel": {
+          "GRADUATE": 8,
+          "ARTS_HIGH": 48,
+          "UNIVERSITY": 51,
+          "null": 19,
+          "VOCATIONAL_HIGH": 17
+        },
+        "careerLevel": {
+          "EXECUTIVE": 2,
+          "MID": 3,
+          "ENTRY": 74,
+          "SENIOR": 9,
+          "null": 55
+        },
+        "careerTrack": {
+          "null": 1,
+          "OFFICE": 39,
+          "ENGINEER": 9,
+          "FOUNDER": 3,
+          "PROFESSOR": 23,
+          "COUNSELOR": 1,
+          "FREELANCER": 31,
+          "SALES": 1,
+          "RESEARCHER": 4,
+          "GYM_OWNER": 11,
+          "COACH": 20
+        },
+        "employmentStatus": {
+          "UNEMPLOYED": 2,
+          "SELF_EMPLOYED": 48,
+          "null": 1,
+          "EMPLOYED": 90,
+          "RETIRED": 2
+        },
+        "fieldOfStudy": {
+          "null": 119,
+          "SPORTS": 22,
+          "SCIENCE": 2
+        },
+        "maritalStatus": {
+          "MARRIED": 60,
+          "DIVORCED": 2,
+          "SINGLE": 29,
+          "null": 44,
+          "DATING": 8
+        },
+        "childrenCount": {
+          "0": 123,
+          "1": 20
+        }
+      },
+      "pathEndingRate": 0.25874125874125875
+    },
+    "RANDOM/WEALTH": {
+      "endings": {
+        "ending_path_wea_home": 114,
+        "ending_public_servant": 1,
+        "ending_path_fit_teacher": 1,
+        "ending_path_wea_exit": 12,
+        "ending_quiet_scholar": 11,
+        "ending_path_wea_stock": 59,
+        "ending_path_hea_young": 21,
+        "ending_path_soc_family": 1,
+        "ending_path_wea_debt": 31,
+        "ending_lonely_rich": 2,
+        "ending_path_hea_recovered": 35,
+        "ending_unlucky_tragic": 1,
+        "ending_ordinary_path": 53,
+        "ending_burnout_worker": 20,
+        "ending_steady_app_maker": 2,
+        "ending_path_hea_chronic": 13,
+        "ending_path_hea_peaks": 5,
+        "ending_small_stage_big_memory": 1,
+        "ending_balanced_life": 8,
+        "ending_path_wea_ceo": 4,
+        "ending_path_wea_saver": 22,
+        "ending_small_business_owner": 83
+      },
+      "expectedTitles": {
+        "title_medal_door": 2,
+        "title_bucket_list": 44,
+        "title_fan_life": 1,
+        "title_interphone": 53,
+        "title_relay": 4,
+        "title_scholarship": 1,
+        "title_burnout_back": 6,
+        "title_doorplate": 33,
+        "title_crypto": 5,
+        "title_first_steps": 31,
+        "title_chick": 3,
+        "title_survivor": 9,
+        "title_paid_off_home": 129,
+        "title_gacha": 7,
+        "title_auto_door": 6,
+        "title_founder": 7,
+        "title_free_morning": 1,
+        "title_janggi": 6,
+        "title_cash_baby": 84,
+        "title_subject_a": 2,
+        "title_alarm_seven": 1,
+        "title_judge_baby": 65
+      },
+      "meanBigIncidents": 0.704,
+      "pathEndings": 242,
+      "bigIncidentHistogram": {
+        "0": 236,
+        "1": 190,
+        "2": 62,
+        "3": 10,
+        "4": 2
+      },
+      "runs": 500,
+      "deathPeriods": {
+        "OLD_AGE": 489,
+        "YOUNG_ADULT": 1,
+        "MIDDLE": 9,
+        "TEEN": 1
+      },
+      "factDistributions": {
+        "housingType": {
+          "OWN_APARTMENT": 58,
+          "JEONSE": 314,
+          "null": 57,
+          "OWN_HOUSE": 6,
+          "MONTHLY_RENT": 21,
+          "WITH_PARENTS": 44
+        },
+        "wealthBand": {
+          "MIDDLE": 90,
+          "VERY_HIGH": 156,
+          "HIGH": 254
+        },
+        "educationLevel": {
+          "ARTS_HIGH": 182,
+          "UNIVERSITY": 58,
+          "null": 23,
+          "VOCATIONAL_HIGH": 237
+        },
+        "careerLevel": {
+          "EXECUTIVE": 7,
+          "MID": 1,
+          "ENTRY": 361,
+          "null": 131
+        },
+        "careerTrack": {
+          "PUBLIC_SERVANT": 10,
+          "null": 1,
+          "OFFICE": 284,
+          "ENGINEER": 1,
+          "FOUNDER": 17,
+          "PE_TEACHER": 1,
+          "FREELANCER": 25,
+          "STARTUP": 161
+        },
+        "employmentStatus": {
+          "UNEMPLOYED": 95,
+          "SELF_EMPLOYED": 32,
+          "null": 1,
+          "EMPLOYED": 361,
+          "RETIRED": 11
+        },
+        "fieldOfStudy": {
+          "null": 499,
+          "SPORTS": 1
+        },
+        "maritalStatus": {
+          "MARRIED": 191,
+          "DIVORCED": 3,
+          "SINGLE": 136,
+          "null": 121,
+          "DATING": 49
+        },
+        "childrenCount": {
+          "0": 450,
+          "1": 50
+        }
+      },
+      "pathEndingRate": 0.484
+    },
+    "LOW_HEALTH/LUCK": {
+      "endings": {
+        "ending_path_int_researcher": 30,
+        "ending_path_int_teacher": 20,
+        "ending_quiet_scholar": 46,
+        "ending_path_hea_chronic": 8,
+        "ending_path_int_burnout": 3,
+        "ending_path_int_engineer": 33,
+        "ending_ordinary_path": 2
+      },
+      "expectedTitles": {
+        "title_first_steps": 32,
+        "title_fan_life": 5,
+        "title_survivor": 3,
+        "title_interphone": 58,
+        "title_gacha": 7,
+        "title_patent": 33,
+        "title_janggi": 1,
+        "title_crypto": 3
+      },
+      "meanBigIncidents": 0.6267605633802817,
+      "pathEndings": 0,
+      "bigIncidentHistogram": {
+        "0": 74,
+        "1": 49,
+        "2": 17,
+        "3": 2
+      },
+      "runs": 142,
+      "deathPeriods": {
+        "OLD_AGE": 93,
+        "YOUNG_ADULT": 8,
+        "MIDDLE": 38,
+        "TEEN": 3
+      },
+      "factDistributions": {
+        "housingType": {
+          "JEONSE": 1,
+          "null": 141
+        },
+        "wealthBand": {
+          "MIDDLE": 112,
+          "LOWER_MIDDLE": 30
+        },
+        "educationLevel": {
+          "GRADUATE": 61,
+          "UNIVERSITY": 78,
+          "null": 3
+        },
+        "careerLevel": {
+          "null": 39,
+          "ENTRY": 40,
+          "SENIOR": 63
+        },
+        "careerTrack": {
+          "PROFESSOR": 20,
+          "null": 8,
+          "RESEARCHER": 61,
+          "OFFICE": 12,
+          "ENGINEER": 41
+        },
+        "employmentStatus": {
+          "null": 8,
+          "EMPLOYED": 134
+        },
+        "fieldOfStudy": {"null": 142},
+        "maritalStatus": {
+          "MARRIED": 106,
+          "DIVORCED": 6,
+          "null": 29,
+          "DATING": 1
+        },
+        "childrenCount": {
+          "0": 99,
+          "1": 43
+        }
+      },
+      "pathEndingRate": 0
+    },
+    "LOW_STATS/FITNESS": {
+      "endings": {
+        "ending_path_hea_chronic": 10,
+        "ending_path_hea_peaks": 3,
+        "ending_path_hea_young": 5,
+        "ending_path_hea_recovered": 15,
+        "ending_ordinary_path": 110
+      },
+      "expectedTitles": {
+        "title_medal_door": 4,
+        "title_fan_life": 3,
+        "title_interphone": 56,
+        "title_relay": 2,
+        "title_burnout_back": 1,
+        "title_crypto": 1,
+        "title_first_steps": 22,
+        "title_chick": 4,
+        "title_survivor": 5,
+        "title_gacha": 1,
+        "title_auto_door": 7,
+        "title_kongi_friend": 1,
+        "title_janggi": 9,
+        "title_cash_baby": 9,
+        "title_subject_a": 1,
+        "title_alarm_seven": 3,
+        "title_judge_baby": 14
+      },
+      "meanBigIncidents": 0.7972027972027972,
+      "pathEndings": 0,
+      "bigIncidentHistogram": {
+        "0": 64,
+        "1": 48,
+        "2": 27,
+        "3": 4
+      },
+      "runs": 143,
+      "deathPeriods": {
+        "OLD_AGE": 119,
+        "YOUNG_ADULT": 3,
+        "MIDDLE": 15,
+        "TEEN": 6
+      },
+      "factDistributions": {
+        "housingType": {"null": 143},
+        "wealthBand": {"LOW": 143},
+        "educationLevel": {
+          "null": 3,
+          "ARTS_HIGH": 140
+        },
+        "careerLevel": {
+          "null": 72,
+          "ENTRY": 71
+        },
+        "careerTrack": {
+          "PUBLIC_SERVANT": 15,
+          "FREELANCER": 63,
+          "null": 9,
+          "OFFICE": 56
+        },
+        "employmentStatus": {
+          "SELF_EMPLOYED": 63,
+          "null": 9,
+          "EMPLOYED": 71
+        },
+        "fieldOfStudy": {"null": 143},
+        "maritalStatus": {
+          "MARRIED": 74,
+          "SINGLE": 26,
+          "null": 30,
+          "DATING": 13
+        },
+        "childrenCount": {
+          "0": 98,
+          "1": 45
+        }
+      },
+      "pathEndingRate": 0
+    },
+    "LOW_HEALTH/HAPPINESS": {
+      "endings": {
+        "ending_path_int_researcher": 37,
+        "ending_path_int_teacher": 19,
+        "ending_quiet_scholar": 32,
+        "ending_path_hea_chronic": 7,
+        "ending_path_int_burnout": 4,
+        "ending_path_int_engineer": 43,
+        "ending_ordinary_path": 1
+      },
+      "expectedTitles": {
+        "title_first_steps": 22,
+        "title_fan_life": 5,
+        "title_survivor": 4,
+        "title_interphone": 65,
+        "title_scholarship": 1,
+        "title_gacha": 2,
+        "title_patent": 42,
+        "title_crypto": 2
+      },
+      "meanBigIncidents": 0.6433566433566433,
+      "pathEndings": 0,
+      "bigIncidentHistogram": {
+        "0": 68,
+        "1": 62,
+        "2": 10,
+        "3": 2,
+        "4": 1
+      },
+      "runs": 143,
+      "deathPeriods": {
+        "OLD_AGE": 92,
+        "YOUNG_ADULT": 2,
+        "MIDDLE": 44,
+        "TEEN": 5
+      },
+      "factDistributions": {
+        "housingType": {
+          "JEONSE": 2,
+          "null": 141
+        },
+        "wealthBand": {
+          "MIDDLE": 109,
+          "LOWER_MIDDLE": 34
+        },
+        "educationLevel": {
+          "GRADUATE": 56,
+          "UNIVERSITY": 82,
+          "null": 5
+        },
+        "careerLevel": {
+          "null": 26,
+          "ENTRY": 37,
+          "SENIOR": 80
+        },
+        "careerTrack": {
+          "PROFESSOR": 19,
+          "null": 7,
+          "RESEARCHER": 56,
+          "OFFICE": 11,
+          "ENGINEER": 50
+        },
+        "employmentStatus": {
+          "null": 7,
+          "EMPLOYED": 134,
+          "UNEMPLOYED": 2
+        },
+        "fieldOfStudy": {"null": 143},
+        "maritalStatus": {
+          "MARRIED": 104,
+          "null": 29,
+          "DIVORCED": 10
+        },
+        "childrenCount": {
+          "0": 109,
+          "1": 34
+        }
+      },
+      "pathEndingRate": 0
+    }
+  },
+  "replayChecks": 20,
+  "invariantFailureRuns": 0,
+  "unseenEvents": [
+    "adult_002",
+    "adult_003",
+    "adult_010",
+    "adult_017",
+    "adult_018",
+    "adult_019",
+    "adult_020",
+    "adult_021",
+    "adult_024",
+    "adult_025",
+    "adult_029",
+    "adult_031",
+    "adult_071",
+    "child_007",
+    "child_018",
+    "child_020",
+    "child_029",
+    "child_030",
+    "child_031",
+    "child_032",
+    "child_033",
+    "child_034",
+    "child_035",
+    "child_036",
+    "child_037",
+    "infant_003",
+    "infant_004",
+    "infant_016",
+    "teen_002",
+    "teen_006",
+    "teen_012",
+    "teen_013",
+    "teen_020",
+    "teen_024",
+    "teen_025"
+  ],
+  "restorationSampleInterval": 250,
+  "seenEvents": 246,
+  "unseenEndings": [
+    "ending_ai_storyteller",
+    "ending_calm_recovery",
+    "ending_fragile_but_alive",
+    "ending_health_guardian",
+    "ending_late_blooming_developer",
+    "ending_lucky_adventurer",
+    "ending_rescue_survivor",
+    "ending_star_athlete",
+    "ending_tiny_startup_survivor",
+    "ending_wandering_freelancer",
+    "ending_warm_teacher",
+    "ending_wealth_builder"
+  ],
+  "sourceCommit": "6b3730e",
+  "runs": 10000,
+  "durationMs": 20616,
+  "seenEndings": 53
+}
