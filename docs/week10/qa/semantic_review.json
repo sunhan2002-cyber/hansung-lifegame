@@ -1,6 +1,6 @@
 {
-  "reviewedAt": "2026-10-26",
-  "reviewer": "AI first-pass semantic review for Kim Sunhan QA; not teammate approval",
+  "reviewedAt": "2026-10-29",
+  "reviewer": "AI semantic review against current event context; 45 changed/open entries reviewed individually on 2026-10-29",
   "scope": "All current MILESTONE/BIG_INCIDENT choices; ordinary choices retain existing author rationale and static audit only",
   "entries": [
     {
@@ -34,27 +34,19 @@
       "id": "child_004:A",
       "title": "학원 고르기",
       "label": "피아노.",
-      "requirements": {
-        "requiredStats": {
-          "행복": 52
-        }
-      },
-      "sourceHash": "c188cce2ff98a6251c991571289b6e148d4fd1c6e54120380b4abf982674190e",
-      "verdict": "CLARIFY_DESIGN",
-      "reason": "행동 의사와 수행 자격을 구분해야 한다. 고급 수행/선발/비용 등의 의도라면 문구·선행 사실·조건 근거를 명시해야 한다."
+      "requirements": {},
+      "sourceHash": "321d5c122777a097cb23d93f14b0a611ac9e178e88177ba07e8dc66b908f52f5",
+      "verdict": "KEEP_OPEN",
+      "reason": "피아노 학원 등록은 기초 학습의 시작이므로 선행 지력 자격을 요구하지 않는다."
     },
     {
       "id": "child_004:B",
       "title": "학원 고르기",
       "label": "태권도.",
-      "requirements": {
-        "requiredStats": {
-          "운동능력": 52
-        }
-      },
-      "sourceHash": "dd6b5df42f4a6587b9403cf821b2fddbaf20dfcdf75a6eea1bb73b84dd54062a",
-      "verdict": "CLARIFY_DESIGN",
-      "reason": "행동 의사와 수행 자격을 구분해야 한다. 고급 수행/선발/비용 등의 의도라면 문구·선행 사실·조건 근거를 명시해야 한다."
+      "requirements": {},
+      "sourceHash": "bd6d6b97bf5703bde63037f695ef8c370a145d756a82641bafefe0b14ebffb43",
+      "verdict": "KEEP_OPEN",
+      "reason": "태권도 학원 등록은 기초 운동의 시작이므로 선행 운동능력 자격을 요구하지 않는다."
     },
     {
       "id": "child_004:C",
@@ -69,27 +61,19 @@
       "id": "teen_019:A",
       "title": "고등학교 원서",
       "label": "인문계.",
-      "requirements": {
-        "requiredStats": {
-          "지력": 55
-        }
-      },
-      "sourceHash": "0c2f9905884d28ece0b5a24acb47d4eb97e60244452e2333abc7758111febe45",
-      "verdict": "CLARIFY_DESIGN",
-      "reason": "행동 의사와 수행 자격을 구분해야 한다. 고급 수행/선발/비용 등의 의도라면 문구·선행 사실·조건 근거를 명시해야 한다."
+      "requirements": {},
+      "sourceHash": "a14a3312fdf07c7c55497e0ac4add77d87443fdde28228113a611decf3520536",
+      "verdict": "KEEP_OPEN",
+      "reason": "일반 인문계 진로 지원 의사 자체는 열어두며 성적 선발을 자동 합격으로 취급하지 않는다."
     },
     {
       "id": "teen_019:B",
       "title": "고등학교 원서",
       "label": "특성화고.",
-      "requirements": {
-        "requiredStats": {
-          "경제력": 55
-        }
-      },
-      "sourceHash": "a3e0a042044c1a39b524192f03210715bad37ab85ca9946643fc68d251bd943e",
-      "verdict": "CHANGE_RECOMMENDED",
-      "reason": "특성화고 선택에 기존 경제력을 요구하는 근거가 약하다. 진학 의사와 선발 성과를 구분하고 비용/선행 사실이 필요한 경우 본문에 명시해야 한다."
+      "requirements": {},
+      "sourceHash": "818a2391dc352d7c70e58297a03878f50e83fb65c90733470e40aa20be3bbd2e",
+      "verdict": "KEEP_OPEN",
+      "reason": "특성화고는 다른 진로 선택이며 능력이 부족할 때만 고르는 선택으로 제한하지 않는다."
     },
     {
       "id": "teen_019:C",
@@ -131,27 +115,19 @@
       "id": "teen_039:A",
       "title": "졸업식 날",
       "label": "친구들한테 간다.",
-      "requirements": {
-        "requiredStats": {
-          "사회성": 55
-        }
-      },
-      "sourceHash": "6e6882a90ab15ed28c1e254856d639388a32db455d9f5bd79f9e099e483bee85",
-      "verdict": "CHANGE_RECOMMENDED",
-      "reason": "졸업식에 친구/가족과 함께 가는 기본 행동을 사회성 수치로 막기보다, 관계/행사 결과로 차이를 주는 편이 자연스럽다."
+      "requirements": {},
+      "sourceHash": "96937aafffed72dd5fd4a4a43ed7b5cf51d15d77a2b8a7e5285c60b1e6e8ddb1",
+      "verdict": "KEEP_OPEN",
+      "reason": "졸업식에 친구를 만나는 기본 행동을 사회성으로 제한하지 않는다."
     },
     {
       "id": "teen_039:B",
       "title": "졸업식 날",
       "label": "가족이랑 고깃집에 간다.",
-      "requirements": {
-        "requiredStats": {
-          "사회성": 55
-        }
-      },
-      "sourceHash": "e3612ffafe9a61aaa4406a47513e943cbfe81816bcd44807df78427b6ddc3e29",
-      "verdict": "CHANGE_RECOMMENDED",
-      "reason": "졸업식에 친구/가족과 함께 가는 기본 행동을 사회성 수치로 막기보다, 관계/행사 결과로 차이를 주는 편이 자연스럽다."
+      "requirements": {},
+      "sourceHash": "e0d1866cf03553b46d1e60967387e129e63b2c8d50be012c79b4be1b096e3f11",
+      "verdict": "KEEP_OPEN",
+      "reason": "가족 식사 참여는 기본 대안이다."
     },
     {
       "id": "teen_039:C",
@@ -179,14 +155,10 @@
       "id": "adult_001:B",
       "title": "대학이냐 취업이냐",
       "label": "취업.",
-      "requirements": {
-        "requiredStats": {
-          "경제력": 58
-        }
-      },
-      "sourceHash": "b711ced326d051eaeefd3ee8e5a264524fd336074657284fbde1bf279ac6214e",
-      "verdict": "CHANGE_RECOMMENDED",
-      "reason": "기본 취업 진입을 기존 경제력으로 막으면 가난한 플레이어가 취업할 수 없어진다. 준비/직무 요건과 결과 보상을 구분한다."
+      "requirements": {},
+      "sourceHash": "84d4e3cf24fac78585d2704160687764c56260790cd4fb6c5d78bfca9a942fa1",
+      "verdict": "KEEP_OPEN",
+      "reason": "이미 입사 합격 문자를 받은 상황에서 취업을 고르는 기본 진로 대안이다."
     },
     {
       "id": "adult_001:C",
@@ -201,14 +173,10 @@
       "id": "adult_032:A",
       "title": "결혼 이야기",
       "label": "결혼한다.",
-      "requirements": {
-        "requiredStats": {
-          "사회성": 58
-        }
-      },
-      "sourceHash": "911bed16be70dbcaf96819d3483e885c6348263b2b18ad2b35cc0bdcec303c1c",
-      "verdict": "CLARIFY_DESIGN",
-      "reason": "행동 의사와 수행 자격을 구분해야 한다. 고급 수행/선발/비용 등의 의도라면 문구·선행 사실·조건 근거를 명시해야 한다."
+      "requirements": {},
+      "sourceHash": "ed6645f28470241771ae15a0fde6c1e5fce386ec7e831263ffc205f83b6bba99",
+      "verdict": "KEEP_OPEN",
+      "reason": "이미 연인이 청혼한 맥락에서 결혼 의사를 정하는 행동은 사회성 자격과 구분한다."
     },
     {
       "id": "adult_032:B",
@@ -216,12 +184,12 @@
       "label": "파견부터 다녀온다.",
       "requirements": {
         "requiredStats": {
-          "경제력": 58
+          "지력": 55
         }
       },
-      "sourceHash": "193ba59c8c5d3e67cc485e51638faf8a81d754d6ec465fde0606cb537f5aa53a",
-      "verdict": "CLARIFY_DESIGN",
-      "reason": "행동 의사와 수행 자격을 구분해야 한다. 고급 수행/선발/비용 등의 의도라면 문구·선행 사실·조건 근거를 명시해야 한다."
+      "sourceHash": "3ce4e54080fb9639440e4f1b06ea32087b9b2b3bb78532c6fb2226add5cc44a5",
+      "verdict": "KEEP_CONDITION",
+      "reason": "회사 해외 파견을 먼저 수행하는 선택은 업무 대응 능력의 지력 조건을 유지한다."
     },
     {
       "id": "adult_032:C",
@@ -236,27 +204,19 @@
       "id": "adult_065:A",
       "title": "쉰 번째 생일",
       "label": "\"앞으로 하고 싶은 것 50개\"를 적는다.",
-      "requirements": {
-        "requiredStats": {
-          "행복": 60
-        }
-      },
-      "sourceHash": "260868cdb12c99563e959615d29725c1672c3432034d1817d4082da8b4bf4aeb",
-      "verdict": "CHANGE_RECOMMENDED",
-      "reason": "버킷리스트 작성/가족 사진 촬영을 행복이 낮다고 못 하게 할 근거가 약하다. 행복은 결과와 가족 사실에 반영한다."
+      "requirements": {},
+      "sourceHash": "37fedee39d4ee5f4c1d30c0918f5384ed32fbdd716839b11bb15a9e168e6c839",
+      "verdict": "KEEP_OPEN",
+      "reason": "희망 목록을 적는 회고 행동 자체를 제한하지 않는다."
     },
     {
       "id": "adult_065:B",
       "title": "쉰 번째 생일",
       "label": "가족과 사진을 찍는다.",
-      "requirements": {
-        "requiredStats": {
-          "행복": 60
-        }
-      },
-      "sourceHash": "666e8bd67a967d573c2af35ccae2827cc3923aa52eb1341801a6721d56cde502",
-      "verdict": "CHANGE_RECOMMENDED",
-      "reason": "버킷리스트 작성/가족 사진 촬영을 행복이 낮다고 못 하게 할 근거가 약하다. 행복은 결과와 가족 사실에 반영한다."
+      "requirements": {},
+      "sourceHash": "26278f706034787ce553a1cb1ae40468c49bd4146fb49e139bf578190fe7f3c8",
+      "verdict": "KEEP_OPEN",
+      "reason": "가족 사진 촬영은 열린 일상 대안이다."
     },
     {
       "id": "adult_065:C",
@@ -271,14 +231,10 @@
       "id": "adult_070:A",
       "title": "구조조정 통보",
       "label": "위로금을 받고 새 출발을 준비한다.",
-      "requirements": {
-        "requiredStats": {
-          "경제력": 58
-        }
-      },
-      "sourceHash": "b3d1b15742a2a76efad84c14f9b74d02aeaf369a6b275b5dd4010ed1f639cd6f",
-      "verdict": "CHANGE_RECOMMENDED",
-      "reason": "위로금을 수령하고 재출발하는 행동에 기존 경제력 최소값을 거는 것은 자연스럽지 않다. 수령 자격은 고용/해고 사실로 판단한다."
+      "requirements": {},
+      "sourceHash": "deb2cdfbd72a1f61556f98cc58ba28a30559f0d5cc95544c111b2c73dfaf19ee",
+      "verdict": "KEEP_OPEN",
+      "reason": "정리해고 통보에 따른 위로금 수령과 재출발은 열린 대안이다."
     },
     {
       "id": "adult_070:B",
@@ -308,25 +264,25 @@
       "label": "날짜에 맞춰 입대한다.",
       "requirements": {
         "requiredStats": {
-          "운동능력": 58
+          "건강": 50
         }
       },
-      "sourceHash": "2c818db37fafb8d11cdf1ad487ac84876a2a200352c0984217efbffcd4c932b4",
-      "verdict": "CHANGE_RECOMMENDED",
-      "reason": "입영 날짜 준수는 높은 운동능력과 다르다. 건강/징집 판정 또는 실제 입대 자격 사실로 표현해야 한다."
+      "sourceHash": "81eb4ad315804b3703cc0d4f19bf2dc9702bd9234b2622f6034c88599a675b77",
+      "verdict": "KEEP_CONDITION",
+      "reason": "현역 입대 수행에 신체 건강 50을 사용하는 게임 내 자격 조건을 유지한다. 실제 병역 판정 기준을 뜻하지 않는다."
     },
     {
       "id": "adult_071:B",
       "title": "입영 통지서",
       "label": "하던 공부와 일을 마무리하고 1년 뒤에 간다.",
       "requirements": {
-        "requiredStats": {
-          "지력": 58
-        }
+        "requiredFlags": [
+          "university"
+        ]
       },
-      "sourceHash": "5e6dc97c9b7fb37a7ed713545d296aaf797019ca9f7c80522245de1415c10b2c",
-      "verdict": "CHANGE_RECOMMENDED",
-      "reason": "입대 연기는 지력 수치보다 재학/자격 등 사유가 필요하다. 현재 행동과 조건의 관계가 불명확하다."
+      "sourceHash": "df803eb75ac17df3e8501febeea00a1e25975b1538ec8d60659e7aad030f84b9",
+      "verdict": "KEEP_CONDITION",
+      "reason": "대학 재학 플래그를 학업 연기 경로의 선행 사실로 사용한다."
     },
     {
       "id": "adult_071:C",
@@ -350,14 +306,10 @@
       "id": "adult_072:B",
       "title": "서른의 첫 명함",
       "label": "공무원 시험을 1년 더 본다.",
-      "requirements": {
-        "requiredStats": {
-          "지력": 55
-        }
-      },
-      "sourceHash": "86d20b099e7a4f536fb1f791a0dcab68b34928898caffd917454cadfe0b89edf",
-      "verdict": "CLARIFY_DESIGN",
-      "reason": "행동 의사와 수행 자격을 구분해야 한다. 고급 수행/선발/비용 등의 의도라면 문구·선행 사실·조건 근거를 명시해야 한다."
+      "requirements": {},
+      "sourceHash": "111d7daf814ec582e975d6a146b27e47b1d1ce99d75c904d5da1ea9f5ae5f767",
+      "verdict": "KEEP_OPEN",
+      "reason": "시험에 다시 응시하는 의사와 합격 능력을 구분해 응시 선택은 열어둔다."
     },
     {
       "id": "adult_072:C",
@@ -444,14 +396,10 @@
       "id": "special_003:A",
       "title": "낙엽 속의 장수말벌",
       "label": "\"선생님!! 저 죽어요!!\"",
-      "requirements": {
-        "requiredStats": {
-          "운": 52
-        }
-      },
-      "sourceHash": "2d400d51e9697231f2841220ce58fe83636726b6e7a11bc2bd776c10789581dd",
-      "verdict": "CHANGE_RECOMMENDED",
-      "reason": "도움을 요청하는 기본 행동을 운으로 잠그지 않는다. 운은 도움 도착/피해 결과 확률에 반영하는 편이 맞다."
+      "requirements": {},
+      "sourceHash": "9cf97f0c7ddaba828f1ac09f9a5e60a94f9a285bdce5b92346da777350309dda",
+      "verdict": "KEEP_OPEN",
+      "reason": "벌에 쏘인 뒤 선생님에게 구조를 요청하는 행동은 사회성과 무관하게 열어둔다."
     },
     {
       "id": "special_003:B",
@@ -479,14 +427,10 @@
       "id": "special_004:A",
       "title": "끝나지 않는 미역",
       "label": "뱉고 선생님을 부른다.",
-      "requirements": {
-        "requiredStats": {
-          "운": 52
-        }
-      },
-      "sourceHash": "42ff6e52857aa2f918c830241ca58cf742c61d9711de449c2fc231fdadbf1235",
-      "verdict": "CHANGE_RECOMMENDED",
-      "reason": "뱉고 교사를 부르는 기본 대응에 운을 요구하면 기본 도움 요청이 막힌다. 운은 결과에 사용한다."
+      "requirements": {},
+      "sourceHash": "b1df81e67d90f4991d252b3c175ee03775c6e02476044bc5be967baedc9694b8",
+      "verdict": "KEEP_OPEN",
+      "reason": "위급 상황에서 뱉고 도움을 청하는 기본 대안이다."
     },
     {
       "id": "special_004:B",
@@ -501,40 +445,28 @@
       "id": "special_004:C",
       "title": "끝나지 않는 미역",
       "label": "친구들한테 반대쪽 끝을 잡아 달라고 한다.",
-      "requirements": {
-        "requiredStats": {
-          "사회성": 52
-        }
-      },
-      "sourceHash": "f59f1f7d05c91b4e41998546d80e9d4d841c1bd4030f115727f377143b6cf635",
-      "verdict": "CLARIFY_DESIGN",
-      "reason": "행동 의사와 수행 자격을 구분해야 한다. 고급 수행/선발/비용 등의 의도라면 문구·선행 사실·조건 근거를 명시해야 한다."
+      "requirements": {},
+      "sourceHash": "f8b3130ec2cae3efc7f0719cd4a8e1ce8698205df51e0656b6cda89a12e24408",
+      "verdict": "KEEP_OPEN",
+      "reason": "친구에게 도움을 요청하는 의사 자체는 사회성 수행 자격을 요구하지 않는다."
     },
     {
       "id": "special_005:A",
       "title": "나를 거부하는 자동문",
       "label": "옆문으로 간다.",
-      "requirements": {
-        "requiredStats": {
-          "운": 55
-        }
-      },
-      "sourceHash": "dc232e94dec34c65a557c7a544188c90162ba47aed243b9283e4404a15c8d3b2",
-      "verdict": "CHANGE_RECOMMENDED",
-      "reason": "옆문으로 이동하는 행동 자체에 운을 요구할 근거가 없다. 관찰/판단 또는 결과 우연성과 구분한다."
+      "requirements": {},
+      "sourceHash": "8038dd98aa5c70e12633606968894f62aa66af4e395460f2826897b4615c6492",
+      "verdict": "KEEP_OPEN",
+      "reason": "옆문을 이용하는 기본 우회 행동이다."
     },
     {
       "id": "special_005:B",
       "title": "나를 거부하는 자동문",
       "label": "끝장을 본다.",
-      "requirements": {
-        "requiredStats": {
-          "사회성": 55
-        }
-      },
-      "sourceHash": "afa8c9af5e3ddecb459d2b4c243d388a4a9cf39256fe9b0c0e9c52e68828c70e",
-      "verdict": "CHANGE_RECOMMENDED",
-      "reason": "자동문과 끝장 보는 행동의 선행 능력이 사회성인 근거가 부족하다. 결과 보상을 조건으로 역추론했는지 검토한다."
+      "requirements": {},
+      "sourceHash": "65616a6bb9930430f60b917b0444eb91f7679e2534296e01568d3ec36cb7dacd",
+      "verdict": "KEEP_OPEN",
+      "reason": "고집스럽게 재시도하는 코믹 행동은 행복 수치와 수행 자격의 직접 관계가 없어 열어둔다."
     },
     {
       "id": "special_005:C",
@@ -564,12 +496,12 @@
       "label": "예언자처럼 행동한다.",
       "requirements": {
         "requiredStats": {
-          "운": 55
+          "사회성": 55
         }
       },
-      "sourceHash": "538edfddf0632322540976d155d434ff7c2d90d8b5c97c6131fa3d407ed27fa5",
-      "verdict": "CLARIFY_DESIGN",
-      "reason": "행동 의사와 수행 자격을 구분해야 한다. 고급 수행/선발/비용 등의 의도라면 문구·선행 사실·조건 근거를 명시해야 한다."
+      "sourceHash": "dc4e9198bb76a08e3504c8317ba877dc43f3aa880348a7ad2c0ed91b2e4744f3",
+      "verdict": "KEEP_CONDITION",
+      "reason": "사람들 앞에서 예언자 행세를 능청스럽게 수행하는 연출에 사회성 55를 유지한다."
     },
     {
       "id": "special_006:C",
@@ -584,14 +516,10 @@
       "id": "special_007:A",
       "title": "뚜껑 닫힌 물병",
       "label": "\"제가 많이 긴장했나 봅니다.\"",
-      "requirements": {
-        "requiredStats": {
-          "운": 58
-        }
-      },
-      "sourceHash": "83592f2652d2fc6ec721ec2a43b548308295044b27e36dd2842b057ab5d9e3de",
-      "verdict": "CHANGE_RECOMMENDED",
-      "reason": "긴장을 인정하는 말은 운과 관계없이 시도할 수 있다. 면접관 반응은 사회성/운 결과로 분리한다."
+      "requirements": {},
+      "sourceHash": "e49c531f858680edb47a3225b7699e14e2998ccd014af9d5a752b19a8fcef56a",
+      "verdict": "KEEP_OPEN",
+      "reason": "긴장을 인정하는 기본 대응은 누구나 고를 수 있다."
     },
     {
       "id": "special_007:B",
@@ -608,12 +536,12 @@
       "label": "뚜껑째로 한 번 더 마시는 척한다.",
       "requirements": {
         "requiredStats": {
-          "운": 58
+          "사회성": 58
         }
       },
-      "sourceHash": "e374deffb1a3b3d48c80b8b31bdf5a91f841ddb660841a8c003fbbedba7beaa0",
-      "verdict": "CLARIFY_DESIGN",
-      "reason": "행동 의사와 수행 자격을 구분해야 한다. 고급 수행/선발/비용 등의 의도라면 문구·선행 사실·조건 근거를 명시해야 한다."
+      "sourceHash": "5185d6145a322e6f27b40f58efc14d6a59a2a0b3d0b1ebe4bdbabe529a9b0ca0",
+      "verdict": "KEEP_CONDITION",
+      "reason": "면접 실수를 한 번 더 연기하며 분위기를 전환하는 고급 대응에 사회성 58을 유지한다."
     },
     {
       "id": "special_008:A",
@@ -621,25 +549,21 @@
       "label": "14층까지 참는다.",
       "requirements": {
         "requiredStats": {
-          "사회성": 58
+          "건강": 58
         }
       },
-      "sourceHash": "44d1486d6517241b969705e4124507528909ea38450178a73200d39e90a06fcf",
-      "verdict": "CHANGE_RECOMMENDED",
-      "reason": "참는 행동의 조건을 사회성으로 정한 근거가 약하다. 신체/건강 또는 주변 반응의 결과와 구분한다."
+      "sourceHash": "19bba72cf6b607f9976390331eb37babbb25f15c3b1b032209e6a86ea0e0046a",
+      "verdict": "KEEP_CONDITION",
+      "reason": "신체적 불편을 오래 참는 수행에 건강 58을 유지한다."
     },
     {
       "id": "special_008:B",
       "title": "엘리베이터 속 사장님",
       "label": "조용히 흘려보낸다.",
-      "requirements": {
-        "requiredStats": {
-          "운": 58
-        }
-      },
-      "sourceHash": "07993402b80bf14f42bf3bc6c28aa0a89e606c6f72969e83556c966c3619e7e1",
-      "verdict": "CLARIFY_DESIGN",
-      "reason": "행동 의사와 수행 자격을 구분해야 한다. 고급 수행/선발/비용 등의 의도라면 문구·선행 사실·조건 근거를 명시해야 한다."
+      "requirements": {},
+      "sourceHash": "ba1cffc4011565fa8c89a9a5580a6f708495bd8c6c2bfeb0f079be3d02fdffef",
+      "verdict": "KEEP_OPEN",
+      "reason": "참지 않고 흘려보내는 코믹 기본 대안은 열어둔다."
     },
     {
       "id": "special_008:C",
@@ -654,27 +578,19 @@
       "id": "special_009:A",
       "title": "너무 평범하게 건강한 사람",
       "label": "정중히 거절한다.",
-      "requirements": {
-        "requiredStats": {
-          "건강": 58
-        }
-      },
-      "sourceHash": "3783deeb8c4715457001caa5abd1dd547c0d1a7b4ce9d80867fd3444a44d94dc",
-      "verdict": "CHANGE_RECOMMENDED",
-      "reason": "연구 참여를 정중히 거절하는 행동은 건강 수치와 다르다. 정중함/선택 의사를 결과 조건과 구분한다."
+      "requirements": {},
+      "sourceHash": "7d3244bbcc47cbe39bc54e762ca476abdb14c88b03c9a88acc973250ee1daba7",
+      "verdict": "KEEP_OPEN",
+      "reason": "연구 참여를 거절하는 의사 자체는 사회성과 무관하게 열어둔다."
     },
     {
       "id": "special_009:B",
       "title": "너무 평범하게 건강한 사람",
       "label": "연구에 참여한다.",
-      "requirements": {
-        "requiredStats": {
-          "지력": 58
-        }
-      },
-      "sourceHash": "53640899771eec3a85c3b11ee4f98d9bcc11b99f30cef0286392278e51f9391c",
-      "verdict": "CLARIFY_DESIGN",
-      "reason": "행동 의사와 수행 자격을 구분해야 한다. 고급 수행/선발/비용 등의 의도라면 문구·선행 사실·조건 근거를 명시해야 한다."
+      "requirements": {},
+      "sourceHash": "5b522881f16c8bb12935acc61c64b173ef1f207aca0fa20cea2f2df55780496b",
+      "verdict": "KEEP_OPEN",
+      "reason": "연구에 동의하는 의사 선택은 기본 대안이다."
     },
     {
       "id": "special_009:C",
@@ -689,27 +605,19 @@
       "id": "special_010:A",
       "title": "공원 벤치의 장기 고수",
       "label": "조용히 자리를 뜬다.",
-      "requirements": {
-        "requiredStats": {
-          "행복": 58
-        }
-      },
-      "sourceHash": "474cd547c9f7563a48d493ecfe0b56c1101c09ecc950d611b560a1d236017ea9",
-      "verdict": "CHANGE_RECOMMENDED",
-      "reason": "조용히 자리를 떠나는 행동을 행복으로 막을 이유가 약하다."
+      "requirements": {},
+      "sourceHash": "4d2590701b21f9cffe2780a4e7598e5cbbc0c67bb6971d2188e1e0f7988ca689",
+      "verdict": "KEEP_OPEN",
+      "reason": "낯선 사람과의 대화를 끝내는 기본 대안이다."
     },
     {
       "id": "special_010:B",
       "title": "공원 벤치의 장기 고수",
       "label": "인생 상담을 받는다.",
-      "requirements": {
-        "requiredStats": {
-          "사회성": 58
-        }
-      },
-      "sourceHash": "81ba9f2cdeadbb0bec7cf0e9837f2ebe29c99d8f7a876ec9b2d9d99e7b691471",
-      "verdict": "CLARIFY_DESIGN",
-      "reason": "행동 의사와 수행 자격을 구분해야 한다. 고급 수행/선발/비용 등의 의도라면 문구·선행 사실·조건 근거를 명시해야 한다."
+      "requirements": {},
+      "sourceHash": "46394455e8371ba38f09fa80001723ad43c64e6010edabb8fd2c33ccb1ee4adb",
+      "verdict": "KEEP_OPEN",
+      "reason": "타인의 인생 상담을 듣는 선택 자체에 사회성 수행 조건을 두지 않는다."
     },
     {
       "id": "special_010:C",
@@ -726,12 +634,12 @@
       "label": "김밥을 던지고 천천히 내려간다.",
       "requirements": {
         "requiredStats": {
-          "운": 58
+          "지력": 58
         }
       },
-      "sourceHash": "3baaef0f5803d63abfd67e3142950698bc81b2c97cb4db49e82bc3c902101da0",
-      "verdict": "CHANGE_RECOMMENDED",
-      "reason": "음식을 던지고 물러나는 행동은 판단/움직임이며 운은 성공 확률 쪽이다."
+      "sourceHash": "68c7be813baf4e5211255fb4fef533ff574347701e0f46a8e0bf3cf035058ebe",
+      "verdict": "KEEP_CONDITION",
+      "reason": "멧돼지의 주의를 음식으로 돌리고 천천히 후퇴하는 상황 판단에 지력 58을 유지한다."
     },
     {
       "id": "special_011:B",
@@ -813,14 +721,10 @@
       "id": "special_014:A",
       "title": "미끄럼틀 정전기",
       "label": "손을 잡는다.",
-      "requirements": {
-        "requiredStats": {
-          "사회성": 52
-        }
-      },
-      "sourceHash": "4a1bc775f11e0ada5a4d7429386311c9a6d09317dde66daf18f37a4e30c34b47",
-      "verdict": "CLARIFY_DESIGN",
-      "reason": "행동 의사와 수행 자격을 구분해야 한다. 고급 수행/선발/비용 등의 의도라면 문구·선행 사실·조건 근거를 명시해야 한다."
+      "requirements": {},
+      "sourceHash": "e568220273396d79fc3436ee5de076a76c96c8c1f2dc4c97fe517baad486763e",
+      "verdict": "KEEP_OPEN",
+      "reason": "친구가 내민 손을 잡는 단순 행동은 사회성 수행 자격을 요구하지 않는다."
     },
     {
       "id": "special_014:B",
@@ -885,25 +789,21 @@
       "label": "고개를 숙여 피한다.",
       "requirements": {
         "requiredStats": {
-          "운": 55
+          "운동능력": 55
         }
       },
-      "sourceHash": "7aeb8c36e83398a3f1e9d70b6592784473fd6c849278af1808dc73cbd70eb1b6",
-      "verdict": "CHANGE_RECOMMENDED",
-      "reason": "날아오는 공을 피하는 능력은 운동능력/반응과 연결된다. 운은 결과 확률로 구분한다."
+      "sourceHash": "3b9e6b20ee95e1c02d04446566e35ed8f5e9cd38105f44bd70b1fa7b8e932169",
+      "verdict": "KEEP_CONDITION",
+      "reason": "날아오는 피구공을 순간적으로 피하는 신체 수행에 운동능력 55를 유지한다."
     },
     {
       "id": "special_016:B",
       "title": "피구공의 궤적",
       "label": "얼굴로 받는다.",
-      "requirements": {
-        "requiredStats": {
-          "사회성": 55
-        }
-      },
-      "sourceHash": "4edfb8f4ba163c7c45bd35acd60020ace791b3de8e190dcf10ae461a4555f2dc",
-      "verdict": "CHANGE_RECOMMENDED",
-      "reason": "얼굴로 공을 받는 행동은 사회성의 선행 조건과 연결되지 않는다. 주변 반응의 보상과 혼동하지 않는다."
+      "requirements": {},
+      "sourceHash": "d1d664c59abe2f4d96a778f869898815e867db26b3c28a1b5397985a4ff0e074",
+      "verdict": "KEEP_OPEN",
+      "reason": "피하지 못하거나 얼굴로 받는 대안은 기본 개방을 유지한다."
     },
     {
       "id": "special_016:C",
@@ -931,14 +831,10 @@
       "id": "special_017:B",
       "title": "멈춘 엘리베이터",
       "label": "긴장해서 혼잣말을 한다.",
-      "requirements": {
-        "requiredStats": {
-          "운": 55
-        }
-      },
-      "sourceHash": "322b51596d63cb940958f38e58ff58be3911db5c5ebdcfb0bbd7f8c18f153ce2",
-      "verdict": "CHANGE_RECOMMENDED",
-      "reason": "긴장해서 혼잣말을 하는 행동에 운이 필요하지 않다. 우연한 반응은 결과로 둔다."
+      "requirements": {},
+      "sourceHash": "eea06a1545c56a270f2ec78a04d7f7c32ae327c2cd0d3a7ff9a5b690c356d046",
+      "verdict": "KEEP_OPEN",
+      "reason": "긴장에 따른 혼잣말은 능력 자격을 요구하지 않는 기본 반응이다."
     },
     {
       "id": "special_017:C",
@@ -966,14 +862,10 @@
       "id": "special_018:B",
       "title": "회전문 무한 루프",
       "label": "회전문과 함께 계속 돈다.",
-      "requirements": {
-        "requiredStats": {
-          "행복": 58
-        }
-      },
-      "sourceHash": "808220e679cae720865fb9e561120c9b515231f3d94bbec4bd87b8bce9d35a3e",
-      "verdict": "CHANGE_RECOMMENDED",
-      "reason": "회전문과 계속 도는 행동의 선행 조건을 행복으로 둘 근거가 약하다."
+      "requirements": {},
+      "sourceHash": "b1b773e974336ceb1596305ef43f4d6e621909c33eb9d0019d9663ce872f11fb",
+      "verdict": "KEEP_OPEN",
+      "reason": "회전문에서 계속 도는 실패성 코믹 대안은 열어둔다."
     },
     {
       "id": "special_018:C",
@@ -1003,12 +895,12 @@
       "label": "끝까지 버틴다.",
       "requirements": {
         "requiredStats": {
-          "행복": 58
+          "건강": 58
         }
       },
-      "sourceHash": "53359496f8415e09bce81eaa955933f00e60f687d7bee453a73d19293dbc7dcb",
-      "verdict": "CHANGE_RECOMMENDED",
-      "reason": "안마의자를 끝까지 버티는 행동은 행복보다 신체/상황과 관련된다. 결과의 만족 보상을 자격으로 쓰지 않는다."
+      "sourceHash": "37dfa9cd670f987a3a2de2883386d07a80587d2e729b158c3e5447fc0b61d96a",
+      "verdict": "KEEP_CONDITION",
+      "reason": "안마의자의 압박을 버티는 신체 수행에 건강 58을 유지한다."
     },
     {
       "id": "special_019:C",
@@ -1045,14 +937,10 @@
       "id": "path_int_02:C",
       "title": "영재교육원 선발 시험",
       "label": "추천을 친구에게 양보한다.",
-      "requirements": {
-        "requiredStats": {
-          "사회성": 60
-        }
-      },
-      "sourceHash": "22de44a61728a0dd98da692c28f3ef5564e7df07c919e40ac355b3d0ba292c3a",
-      "verdict": "CLARIFY_DESIGN",
-      "reason": "행동 의사와 수행 자격을 구분해야 한다. 고급 수행/선발/비용 등의 의도라면 문구·선행 사실·조건 근거를 명시해야 한다."
+      "requirements": {},
+      "sourceHash": "cac62e0c0f899f1d89cb9c6916154e203d973d524dc27f6288e0ed2ebd22660e",
+      "verdict": "KEEP_OPEN",
+      "reason": "추천을 친구에게 양보하는 의사 자체는 사회성 자격과 구분해 열어둔다."
     },
     {
       "id": "path_int_03:A",
@@ -1223,12 +1111,12 @@
       "label": "내 이름을 건 체육관을 연다.",
       "requirements": {
         "requiredStats": {
-          "경제력": 60
+          "경제력": 40
         }
       },
-      "sourceHash": "dbcc0a3590c1e66dc5795c9b315db72c805af16c6788236377b7e96ea3be4cb2",
+      "sourceHash": "1293de6c48f6f189e1ec85c2231652d86d65d1193bb597b3e242009fccd5cb96",
       "verdict": "KEEP_CONDITION",
-      "reason": "행동에 필요한 수행 역량·자원·직업/경로 선행 사실과 연결된다. 수치 적정성은 시뮬레이션과 별도 조정한다."
+      "reason": "본인 체육관 개업은 초기 자금이 필요한 진로 수행이므로 경제력 40을 유지한다."
     },
     {
       "id": "path_fit_08:B",
@@ -1336,14 +1224,10 @@
       "id": "path_wea_03:B",
       "title": "세 장의 계약서",
       "label": "스타트업에 들어간다.",
-      "requirements": {
-        "requiredStats": {
-          "경제력": 65
-        }
-      },
-      "sourceHash": "1aa6d226eb418e0545f70d9b98ed6ef9b973c43c97bf10d20361f4492d4b9a06",
-      "verdict": "CHANGE_RECOMMENDED",
-      "reason": "스타트업 취업은 창업과 다르다. 자본이 아니라 직무/준비 조건이 필요한지 검토한다."
+      "requirements": {},
+      "sourceHash": "71770a87987a55dae2bc5147638c5930564edca32bcb6cbbfb291ac9912f5a27",
+      "verdict": "KEEP_OPEN",
+      "reason": "이미 스타트업 계약서가 주어진 맥락에서 아르바이트 경력을 필수 자격으로 삼지 않는다."
     },
     {
       "id": "path_wea_03:C",
@@ -1386,12 +1270,12 @@
       "label": "도시를 떠나 마당 있는 집을 산다.",
       "requirements": {
         "requiredStats": {
-          "행복": 70
+          "경제력": 60
         }
       },
-      "sourceHash": "37f3183dfbe1ed181f893bc3b43b64b38adcddbf7aac6dffd0a3f5f9e958bc42",
-      "verdict": "CLARIFY_DESIGN",
-      "reason": "행동 의사와 수행 자격을 구분해야 한다. 고급 수행/선발/비용 등의 의도라면 문구·선행 사실·조건 근거를 명시해야 한다."
+      "sourceHash": "bba2c900c1651b18ac0b90701b17e14144c5ee20e86830621aaa5ba9946f2c3b",
+      "verdict": "KEEP_CONDITION",
+      "reason": "마당 있는 주택 구매는 실제 자금이 필요한 선택으로 경제력 60을 유지한다."
     },
     {
       "id": "path_hap_03:A",
@@ -1406,14 +1290,10 @@
       "id": "path_hap_03:B",
       "title": "연봉이냐 저녁이냐",
       "label": "연봉 높은 회사에 간다.",
-      "requirements": {
-        "requiredStats": {
-          "경제력": 55
-        }
-      },
-      "sourceHash": "5c602f30d35ad7b5c603750806669d994d86791961eae117d576eab45cd0d7c3",
-      "verdict": "CHANGE_RECOMMENDED",
-      "reason": "높은 연봉의 회사에 입사하는 데 기존 경제력을 요구하면 소득 보상과 입사 자격이 뒤섞인다."
+      "requirements": {},
+      "sourceHash": "512c621b8de3c1de71ad368f3a2bd03773bd9ae1938518564c0b1324d5a9aebe",
+      "verdict": "KEEP_OPEN",
+      "reason": "이미 최종 합격한 회사를 선택하는 상황이므로 지력으로 다시 입사 자격을 잠그지 않는다."
     },
     {
       "id": "path_hap_03:C",
@@ -1456,12 +1336,12 @@
       "label": "동네 이야기로 30초를 꽉 채운다.",
       "requirements": {
         "requiredStats": {
-          "운": 66
+          "사회성": 58
         }
       },
-      "sourceHash": "f698d4bc00d842262ec14e16afdcf4e655dc88f2c68d4e730288bc3d7fa17b20",
-      "verdict": "CHANGE_RECOMMENDED",
-      "reason": "동네 이야기로 대화하는 능력은 사회성과 연결된다. 운은 우연한 만남/면접 결과로 반영하는 편이 자연스럽다."
+      "sourceHash": "ec94031d5570ab815ef0f9905f957d0c08c2170201510220770deec833169503",
+      "verdict": "KEEP_CONDITION",
+      "reason": "30초 동안 낯선 사람과 유창하게 대화를 이어가는 수행에 사회성 58을 유지한다."
     },
     {
       "id": "path_luk_04:B",
@@ -1542,6 +1422,41 @@
       "sourceHash": "a35ee2b16b7b8e5d15139a8b3728a5c538189ef1e299697d97f2ca602b9736a3",
       "verdict": "KEEP_OPEN",
       "reason": "시도 가능한 기본 행동·다른 진로·기본 대안의 개방을 유지한다. 무조건 성공한다는 뜻이 아니며 결과 분기는 별도 검수한다."
+    },
+    {
+      "id": "cross_07:A",
+      "title": "정년 퇴임식",
+      "sourceHash": "6100318e693b5497c011d3fcad418313910684051299aae2054ae0f5f9fdc9d7",
+      "label": "퇴임하고 쉰다.",
+      "requirements": {},
+      "verdict": "KEEP_OPEN",
+      "reason": "퇴임 후 휴식은 기본 대안이다."
+    },
+    {
+      "id": "cross_07:B",
+      "title": "정년 퇴임식",
+      "sourceHash": "2d06fb1f3132c04239a5f77384030052f353965f6c64e876a756aef123ca4f41",
+      "label": "계약직으로 2년 더 일한다.",
+      "requirements": {
+        "requiredStats": {
+          "건강": 55
+        }
+      },
+      "verdict": "KEEP_CONDITION",
+      "reason": "정년 이후 계속 근무하는 수행에 건강 55를 유지한다."
+    },
+    {
+      "id": "cross_07:C",
+      "title": "정년 퇴임식",
+      "sourceHash": "3783d9463255d4d4a0a7c7343e6f086e6c84ca61c6f6f4f5fa7dade3cde0109d",
+      "label": "신입 교육 강사로 재능을 기부한다.",
+      "requirements": {
+        "requiredStats": {
+          "사회성": 55
+        }
+      },
+      "verdict": "KEEP_CONDITION",
+      "reason": "신입을 가르치는 대인 전달 수행에 사회성 55를 유지한다."
     }
   ]
 }

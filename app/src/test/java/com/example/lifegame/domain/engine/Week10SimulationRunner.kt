@@ -18,6 +18,7 @@ object Week10SimulationRunner {
     private val facts = V4ContentParser.parseLifeFactRules(json("life_facts"))
     private val endings = V4ContentParser.parseEndings(json("endings"))
     private val titles = JSONArray(json("titles"))
+    private val appTitles = V4ContentParser.parseTitles(json("titles"))
     private val prefixes = listOf("hea", "fit", "int", "soc", "wea", "hap", "luk")
     private val labels = listOf("건강", "운동능력", "지력", "사회성", "경제력", "행복", "운")
     private val initialBoundaries = listOf(1, 34, 35, 59, 60, 69, 70, 79, 80, 99, 100)
@@ -95,7 +96,7 @@ object Week10SimulationRunner {
             put("durationMs", System.currentTimeMillis() - began)
             put("replayChecks", replayChecks)
             put("restorationSampleInterval", 250)
-            put("titleStatus", "QA_EXPECTATION_ONLY_NOT_APP_IMPLEMENTATION")
+            put("titleStatus", "ACTUAL_ENGINE_WITH_INDEPENDENT_QA_COMPARISON")
             put("assetSha256", JSONObject(assets.listFiles()!!.filter { it.extension == "json" }.associate {
                 it.name to MessageDigest.getInstance("SHA-256").digest(it.readBytes()).joinToString("") { b -> "%02x".format(b) }
             }))
@@ -178,6 +179,7 @@ object Week10SimulationRunner {
             }
         }
         val state = step.state
+        if (GameEngine().resolveTitle(state, appTitles).titleId != expectedTitle(state)) violations += "TITLE_RESOLVER_MISMATCH"
         if (!state.isEnding) violations += "DID_NOT_END_WITHIN_150"
         if (!state.isDead) violations += "ENDING_WITHOUT_FINAL_DEATH"
         if (state.lifeFacts.deathPeriod in setOf(LifePeriod.INFANT, LifePeriod.CHILD)) violations += "FORBIDDEN_EARLY_DEATH"
@@ -192,6 +194,7 @@ object Week10SimulationRunner {
             put("deathPeriod", state.lifeFacts.deathPeriod?.name ?: "UNKNOWN"); put("deathCause", state.lifeFacts.deathCause ?: "")
             put("stats", state.stats.toJson()); put("facts", factsJson(state.lifeFacts))
             put("flags", JSONArray(state.flags.sorted())); put("expectedTitleId", expectedTitle(state))
+            put("actualTitleId", GameEngine().resolveTitle(state, appTitles).titleId)
             put("bigIncidents", (0 until trace.length()).count { trace.getJSONObject(it).getString("kind") == "BIG_INCIDENT" })
             put("trace", trace); put("steps", steps); put("violations", JSONArray(violations.distinct()))
         }
@@ -201,7 +204,7 @@ object Week10SimulationRunner {
         (it.statDelta.values()[stat.ordinal] + if (stat == StatKey.HEALTH) it.lifeDelta else 0).toDouble() * it.chance
     } / choice.outcomes.sumOf { it.chance }
 
-    /** Independent QA expectation. The production app does not yet load titles. */
+    /** Independent QA expectation, compared with the production title resolver. */
     private fun expectedTitle(state: PeriodRunState): String {
         val all = (0 until titles.length()).map { titles.getJSONObject(it) }
         return (all.filterNot { it.optBoolean("isDefault") }.filter { title ->
@@ -222,6 +225,8 @@ object Week10SimulationRunner {
             put("pathEndingRate", runs.count { it.getBoolean("pathEnding") }.toDouble() / runs.size)
             put("endings", counts("endingId")); put("deathPeriods", counts("deathPeriod"))
             put("expectedTitles", counts("expectedTitleId"))
+            put("actualTitles", counts("actualTitleId"))
+            put("titleMismatches", runs.count { it.getString("actualTitleId") != it.getString("expectedTitleId") })
             put("bigIncidentHistogram", JSONObject(tracesBig.groupingBy { it.toString() }.eachCount()))
             put("meanBigIncidents", tracesBig.average())
             put("factDistributions", JSONObject(listOf("educationLevel", "fieldOfStudy", "careerTrack", "careerLevel", "employmentStatus", "maritalStatus", "childrenCount", "housingType", "wealthBand").associateWith { key ->
@@ -236,9 +241,9 @@ object Week10SimulationRunner {
         val s = c.stats
         val state = PeriodRunState(
             runId = "condition-witness", runSeed = 1, period = LifePeriod.OLD_AGE,
-            stats = Stats(s.minHealth ?: s.maxHealth ?: 50, s.minFitness ?: s.maxFitness ?: 50,
-                s.minIntelligence ?: s.maxIntelligence ?: 50, s.minSocial ?: s.maxSocial ?: 50,
-                s.minWealth ?: s.maxWealth ?: 50, s.minHappiness ?: s.maxHappiness ?: 50, s.minLuck ?: s.maxLuck ?: 50),
+            stats = Stats(s.minHealth ?: 0, s.minFitness ?: 0,
+                s.minIntelligence ?: 0, s.minSocial ?: 0,
+                s.minWealth ?: 0, s.minHappiness ?: 0, s.minLuck ?: 0),
             flags = c.requiredFlags,
             lifeFacts = LifeFacts(educationLevel = c.lifeFacts.educationLevel, fieldOfStudy = c.lifeFacts.fieldOfStudy,
                 careerTrack = c.lifeFacts.careerTrack, careerLevel = c.lifeFacts.careerLevel,
