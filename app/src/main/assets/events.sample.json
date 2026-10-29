@@ -10471,7 +10471,8 @@
           }
         ],
         "conditionReview": "confirmed",
-        "alwaysAvailableReason": "일반 인문계 진로 지원 의사 자체는 열어두며 성적 선발을 자동 합격으로 취급하지 않는다."
+        "alwaysAvailableReason": "일반 인문계 진로 지원 의사 자체는 열어두며 성적 선발을 자동 합격으로 취급하지 않는다.",
+        "alwaysAvailable": true
       },
       {
         "choiceId": "B",
@@ -16857,7 +16858,8 @@
           }
         ],
         "conditionReview": "confirmed",
-        "alwaysAvailableReason": "이미 연인이 청혼한 맥락에서 결혼 의사를 정하는 행동은 사회성 자격과 구분한다."
+        "alwaysAvailableReason": "이미 연인이 청혼한 맥락에서 결혼 의사를 정하는 행동은 사회성 자격과 구분한다.",
+        "alwaysAvailable": true
       },
       {
         "choiceId": "B",
@@ -22128,7 +22130,8 @@
           }
         ],
         "conditionReview": "confirmed",
-        "alwaysAvailableReason": "시험에 다시 응시하는 의사와 합격 능력을 구분해 응시 선택은 열어둔다."
+        "alwaysAvailableReason": "시험에 다시 응시하는 의사와 합격 능력을 구분해 응시 선택은 열어둔다.",
+        "alwaysAvailable": true
       },
       {
         "choiceId": "C",
@@ -24344,7 +24347,8 @@
           }
         ],
         "conditionReview": "confirmed",
-        "alwaysAvailableReason": "벌에 쏘인 뒤 선생님에게 구조를 요청하는 행동은 사회성과 무관하게 열어둔다."
+        "alwaysAvailableReason": "벌에 쏘인 뒤 선생님에게 구조를 요청하는 행동은 사회성과 무관하게 열어둔다.",
+        "alwaysAvailable": true
       },
       {
         "choiceId": "B",
@@ -24534,7 +24538,8 @@
             ]
           }
         ],
-        "alwaysAvailableReason": "친구에게 도움을 요청하는 의사 자체는 사회성 수행 자격을 요구하지 않는다."
+        "alwaysAvailableReason": "친구에게 도움을 요청하는 의사 자체는 사회성 수행 자격을 요구하지 않는다.",
+        "alwaysAvailable": true
       }
     ],
     "priority": 0,
@@ -24626,7 +24631,8 @@
           }
         ],
         "conditionReview": "confirmed",
-        "alwaysAvailableReason": "고집스럽게 재시도하는 코믹 행동은 행복 수치와 수행 자격의 직접 관계가 없어 열어둔다."
+        "alwaysAvailableReason": "고집스럽게 재시도하는 코믹 행동은 행복 수치와 수행 자격의 직접 관계가 없어 열어둔다.",
+        "alwaysAvailable": true
       },
       {
         "choiceId": "C",
@@ -25120,7 +25126,8 @@
           }
         ],
         "conditionReview": "confirmed",
-        "alwaysAvailableReason": "연구 참여를 거절하는 의사 자체는 사회성과 무관하게 열어둔다."
+        "alwaysAvailableReason": "연구 참여를 거절하는 의사 자체는 사회성과 무관하게 열어둔다.",
+        "alwaysAvailable": true
       },
       {
         "choiceId": "B",
@@ -25281,7 +25288,8 @@
           }
         ],
         "conditionReview": "confirmed",
-        "alwaysAvailableReason": "타인의 인생 상담을 듣는 선택 자체에 사회성 수행 조건을 두지 않는다."
+        "alwaysAvailableReason": "타인의 인생 상담을 듣는 선택 자체에 사회성 수행 조건을 두지 않는다.",
+        "alwaysAvailable": true
       },
       {
         "choiceId": "C",
@@ -25749,7 +25757,8 @@
           }
         ],
         "conditionReview": "confirmed",
-        "alwaysAvailableReason": "친구가 내민 손을 잡는 단순 행동은 사회성 수행 자격을 요구하지 않는다."
+        "alwaysAvailableReason": "친구가 내민 손을 잡는 단순 행동은 사회성 수행 자격을 요구하지 않는다.",
+        "alwaysAvailable": true
       },
       {
         "choiceId": "B",
@@ -26811,7 +26820,8 @@
           }
         ],
         "conditionReview": "confirmed",
-        "alwaysAvailableReason": "추천을 친구에게 양보하는 의사 자체는 사회성 자격과 구분해 열어둔다."
+        "alwaysAvailableReason": "추천을 친구에게 양보하는 의사 자체는 사회성 자격과 구분해 열어둔다.",
+        "alwaysAvailable": true
       }
     ],
     "priority": 0,
@@ -31330,7 +31340,8 @@
           }
         ],
         "conditionReview": "confirmed",
-        "alwaysAvailableReason": "이미 스타트업 계약서가 주어진 맥락에서 아르바이트 경력을 필수 자격으로 삼지 않는다."
+        "alwaysAvailableReason": "이미 스타트업 계약서가 주어진 맥락에서 아르바이트 경력을 필수 자격으로 삼지 않는다.",
+        "alwaysAvailable": true
       },
       {
         "choiceId": "C",
@@ -32753,7 +32764,8 @@
           }
         ],
         "conditionReview": "confirmed",
-        "alwaysAvailableReason": "이미 최종 합격한 회사를 선택하는 상황이므로 지력으로 다시 입사 자격을 잠그지 않는다."
+        "alwaysAvailableReason": "이미 최종 합격한 회사를 선택하는 상황이므로 지력으로 다시 입사 자격을 잠그지 않는다.",
+        "alwaysAvailable": true
       },
       {
         "choiceId": "C",
