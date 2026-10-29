@@ -50,11 +50,27 @@ internal object Week10ProgressCodec {
         put("lives", records.toJsonArray { it.toJson() })
     }.toString()
 
-    fun decodeCompletedLives(raw: String): List<CompletedLifeRecord> = runCatching {
+    data class CompletedLivesRead(
+        val records: List<CompletedLifeRecord> = emptyList(),
+        val damagedEntries: Int = 0,
+        val writable: Boolean = true,
+    )
+
+    fun decodeCompletedLives(raw: String): List<CompletedLifeRecord> = readCompletedLives(raw).records
+
+    fun readCompletedLives(raw: String): CompletedLivesRead = runCatching {
         val root = JSONObject(raw)
         require(root.optInt("saveFormatVersion", 1) in 1..VERSION)
-        root.optJSONArray("lives").objects { it.toCompletedLifeRecord() }
-    }.getOrDefault(emptyList())
+        val lives = root.getJSONArray("lives")
+        var damaged = 0
+        val records = buildList {
+            for (index in 0 until lives.length()) {
+                val record = runCatching { lives.getJSONObject(index).toCompletedLifeRecord() }.getOrNull()
+                if (record == null) damaged++ else add(record)
+            }
+        }
+        CompletedLivesRead(records, damaged)
+    }.getOrElse { CompletedLivesRead(writable = false) }
 
     private fun PeriodRunState.toJson() = JSONObject().apply {
         put("runId", runId); put("runSeed", runSeed); put("period", period.name)

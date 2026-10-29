@@ -56,6 +56,19 @@ class Week10ProgressCodecTest {
         assertNull(Week10ProgressCodec.decode("not-json"))
         assertNull(Week10ProgressCodec.decode("""{"saveFormatVersion":999,"state":{}}"""))
         assertTrue(Week10ProgressCodec.decodeCompletedLives("broken").isEmpty())
+        assertFalse(Week10ProgressCodec.readCompletedLives("broken").writable)
+        assertFalse(Week10ProgressCodec.readCompletedLives("""{"saveFormatVersion":999,"lives":[]}""").writable)
+    }
+
+    @Test fun damagedCompletedEntryDoesNotHideOtherLives() {
+        fun record(id: String) = CompletedLifeRecord(id, "사용자", "요약", null, null, null, null,
+            state.copy(runId = id), listOf(choice))
+        val root = org.json.JSONObject(Week10ProgressCodec.encodeCompletedLives(listOf(record("good"), record("damaged"))))
+        root.getJSONArray("lives").getJSONObject(1).remove("runId")
+        val read = Week10ProgressCodec.readCompletedLives(root.toString())
+        assertEquals(listOf("good"), read.records.map { it.runId })
+        assertEquals(1, read.damagedEntries)
+        assertTrue(read.writable)
     }
 
     @Test fun versionTwoSaveMigratesWithNewFieldsDefaulted() {
