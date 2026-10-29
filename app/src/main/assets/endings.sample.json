@@ -26,7 +26,8 @@
         "지력": 85
       },
       "requiredFlags": [
-        "study_focus"
+        "study_focus",
+        "career_researcher"
       ]
     },
     "summary": "어릴 때부터 쌓은 공부 습관과 호기심이 이어져, 남들이 지나친 문제를 끝까지 붙잡는 연구자가 되었다.",
@@ -42,7 +43,8 @@
       },
       "requiredFlags": [
         "sports_training",
-        "healthy_routine"
+        "healthy_routine",
+        "career_athlete"
       ]
     },
     "summary": "꾸준히 몸을 단련한 선택들이 결과로 이어져, 사람들에게 기억되는 운동선수가 되었다.",
@@ -180,10 +182,10 @@
         "사회성": 60
       },
       "requiredFlags": [
-        "part_time_job"
+        "own_shop"
       ]
     },
-    "summary": "아르바이트와 사람 상대 경험이 쌓여, 크지는 않아도 스스로 책임지는 가게를 운영하게 되었다.",
+    "summary": "사람을 상대하며 쌓은 경험으로 작은 가게를 열었다. 크지는 않아도 문을 열고 닫는 일을 끝까지 스스로 책임졌다.",
     "isDefault": false
   },
   {
@@ -212,7 +214,7 @@
         "사회성": 65
       },
       "requiredFlags": [
-        "responsibility"
+        "career_public_servant"
       ]
     },
     "summary": "성실함과 책임감이 쌓여, 눈에 띄지는 않아도 사회가 굴러가게 만드는 일을 맡게 되었다.",
@@ -228,7 +230,7 @@
         "운": 60
       },
       "requiredFlags": [
-        "creative_hobby"
+        "career_freelancer"
       ]
     },
     "summary": "정해진 길 대신 여러 일을 옮겨 다니며, 불안하지만 자유로운 방식으로 살아갔다.",
@@ -334,7 +336,8 @@
         "사회성": 50
       },
       "requiredFlags": [
-        "creative_hobby"
+        "creative_hobby",
+        "career_creator"
       ],
       "blockedFlags": []
     },
@@ -406,7 +409,7 @@
         "행복": 55
       },
       "requiredFlags": [
-        "responsibility"
+        "achv_app_launch"
       ],
       "blockedFlags": []
     },
@@ -424,7 +427,8 @@
         "행복": 50
       },
       "requiredFlags": [
-        "study_hard"
+        "study_hard",
+        "career_engineer"
       ],
       "blockedFlags": []
     },
