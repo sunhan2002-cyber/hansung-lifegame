@@ -15,6 +15,10 @@ def assess(summary):
         failures.append("F10-13: fewer than 10,000 actual lives")
     if summary["invariantFailureRuns"]:
         failures.append(f"F10-13: invariant failure runs={summary['invariantFailureRuns']}")
+    if summary.get("titleStatus") == "ACTUAL_ENGINE_WITH_INDEPENDENT_QA_COMPARISON":
+        mismatches = sum(group.get("titleMismatches", 0) for group in summary["groups"].values())
+        if mismatches:
+            failures.append(f"F10-07: actual title resolver mismatches={mismatches}")
     for path in PATHS:
         for policy in ("RANDOM", "TARGET"):
             g = summary["groups"].get(f"{policy}/{path}", {})
@@ -89,7 +93,7 @@ def main():
               "## 증거와 제한", "",
               f"동일 정책·시드 재실행 {summary['replayChecks']}회 비교. 매 {summary['restorationSampleInterval']}번째 실행의 각 phase에서 엔진 상태 복원을 검사했다. 이는 Android 저장소 또는 실제 프로세스 종료 시험을 대신하지 않는다.", "",
               "summary.json에는 경로별 교육·직업·가족·주거·경제력 분포가 있다. coverage.json은 실제 사건/선택/결과/잠금 및 시기별 돌발 노출 수, demo_seeds.json은 재현 선택 순서다. raw runs.jsonl은 별도 빌드 산출물이며 저장소에 대용량 원본을 넣지 않는다.", "",
-              "칭호 분포는 QA 독립 기대값이며 앱 칭호 기능의 실행 결과가 아니다. ending_witnesses.json은 합성 상태에서 조건·우선순위를 확인한 자료로, 정상 플레이로 도달했다는 증거가 아니다. 미관측/증인 불일치는 담당자 검토 대상으로 남긴다."]
+              ("칭호는 실제 엔진 판정과 독립 QA 기대값을 비교했다. 경로별 actualTitles/titleMismatches에서 확인한다." if summary.get("titleStatus") == "ACTUAL_ENGINE_WITH_INDEPENDENT_QA_COMPARISON" else "칭호 분포는 QA 독립 기대값이며 앱 칭호 기능의 실행 결과가 아니다.") + " ending_witnesses.json은 합성 상태에서 조건·우선순위를 확인한 자료로, 정상 플레이로 도달했다는 증거가 아니다. 미관측/증인 불일치는 담당자 검토 대상으로 남긴다."]
     (args.out / "simulation_report.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
     print(json.dumps(assessment, ensure_ascii=True, indent=2))
     return int(bool(args.acceptance and failures))
