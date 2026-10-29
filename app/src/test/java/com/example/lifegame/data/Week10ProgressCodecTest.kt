@@ -43,6 +43,15 @@ class Week10ProgressCodecTest {
         assertEquals(records, Week10ProgressCodec.decodeCompletedLives(Week10ProgressCodec.encodeCompletedLives(records)))
     }
 
+    @Test fun openedPathsSurviveSaveAndLegacyOutcomesRemainReadable() {
+        val saved = V4SavedRun("검사", state, pendingOutcome = outcome.copy(openedEvents = listOf("거실 연주회")))
+        val raw = Week10ProgressCodec.encode(saved)
+        assertEquals(listOf("거실 연주회"), Week10ProgressCodec.decode(raw)?.pendingOutcome?.openedEvents)
+        val legacy = org.json.JSONObject(raw)
+        legacy.getJSONObject("pendingOutcome").remove("openedEvents")
+        assertEquals(emptyList<String>(), Week10ProgressCodec.decode(legacy.toString())?.pendingOutcome?.openedEvents)
+    }
+
     @Test fun corruptOrFutureSaveFailsSafely() {
         assertNull(Week10ProgressCodec.decode("not-json"))
         assertNull(Week10ProgressCodec.decode("""{"saveFormatVersion":999,"state":{}}"""))

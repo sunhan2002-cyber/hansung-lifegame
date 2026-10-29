@@ -464,6 +464,7 @@ data class SavedOutcome(
     val beforeFacts: LifeFacts,
     val afterFacts: LifeFacts,
     val endsLife: Boolean,
+    val openedEvents: List<String> = emptyList(),
 )
 
 enum class BodyType {

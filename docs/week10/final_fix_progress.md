@@ -6,7 +6,7 @@
 | 순서 | 작업 | 상태 | 완료 근거 |
 |---|---|---|---|
 | 1 | 상태 플래그 제거 시 과거 업적 보존 | 완료 | Week10BackendContractTest 10개 통과, 01-achievement-test.log |
-| 2 | 결과 복원 시 새로 열린 길 보존 | 진행 중 | |
+| 2 | 결과 복원 시 새로 열린 길 보존 | 구현·저장 검사 완료 / Android 재검사 대기 | Week10ProgressCodecTest 5개 및 Debug/AndroidTest 빌드 통과, 02-opened-paths-build.log |
 | 3 | 플래그 재획득 시 사실 복원 순서 | 대기 | |
 | 4 | 이미지 검증기의 로컬 파일 의존 제거 | 대기 | |
 | 5 | 부분 손상 완료 기록 복구·보호 | 대기 | |

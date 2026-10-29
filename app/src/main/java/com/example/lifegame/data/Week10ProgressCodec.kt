@@ -147,6 +147,7 @@ internal object Week10ProgressCodec {
         put("choiceLabel", choiceLabel); put("resultText", resultText)
         put("beforeStats", beforeStats.toJson()); put("afterStats", afterStats.toJson())
         put("beforeFacts", beforeFacts.toJson()); put("afterFacts", afterFacts.toJson()); put("endsLife", endsLife)
+        put("openedEvents", JSONArray(openedEvents))
     }
 
     private fun JSONObject.toSavedOutcome() = SavedOutcome(
@@ -155,6 +156,7 @@ internal object Week10ProgressCodec {
         beforeStats = getJSONObject("beforeStats").toStats(), afterStats = getJSONObject("afterStats").toStats(),
         beforeFacts = getJSONObject("beforeFacts").toLifeFacts(), afterFacts = getJSONObject("afterFacts").toLifeFacts(),
         endsLife = optBoolean("endsLife", false),
+        openedEvents = optJSONArray("openedEvents").strings(),
     )
 
     private fun AvatarConfig.toJson() = JSONObject().apply {

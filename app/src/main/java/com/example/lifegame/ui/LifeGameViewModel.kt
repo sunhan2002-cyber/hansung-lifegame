@@ -413,6 +413,7 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
                 text = snapshot.resultText,
                 changes = statChanges(snapshot.beforeStats, snapshot.afterStats),
                 endsLife = snapshot.endsLife,
+                openedEvents = snapshot.openedEvents,
                 factChanges = factChanges(
                     buildLifeFacts(saved.state.copy(stats = snapshot.beforeStats, lifeFacts = snapshot.beforeFacts), factCatalog),
                     buildLifeFacts(saved.state.copy(stats = snapshot.afterStats, lifeFacts = snapshot.afterFacts), factCatalog),
@@ -492,6 +493,13 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
             momentImageId = content.decisions[decision.eventId]?.momentImageId,
         )
         runChoiceHistory += choiceRecord
+        val openedEvents = if (afterState.isEnding) emptyList() else newlyOpenedEvents(
+            before = beforeState.flags,
+            after = afterState.flags,
+            current = beforeState.period,
+            decisions = content.decisions.values,
+            periods = content.periods,
+        )
         pendingOutcomeSnapshot = SavedOutcome(
             eventId = decision.eventId,
             choiceId = choiceId,
@@ -503,6 +511,7 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
             beforeFacts = beforeState.lifeFacts,
             afterFacts = afterState.lifeFacts,
             endsLife = afterState.isDead,
+            openedEvents = openedEvents,
         )
         outcome = OutcomeUi(
             choiceLabel = label,
@@ -513,17 +522,7 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
                 buildLifeFacts(beforeState, factCatalog),
                 buildLifeFacts(afterState, factCatalog),
             ),
-            openedEvents = if (afterState.isEnding) {
-                emptyList()
-            } else {
-                newlyOpenedEvents(
-                    before = beforeState.flags,
-                    after = afterState.flags,
-                    current = beforeState.period,
-                    decisions = content.decisions.values,
-                    periods = content.periods,
-                )
-            },
+            openedEvents = openedEvents,
         )
         playStep = resolution.step
         publishPlay()
