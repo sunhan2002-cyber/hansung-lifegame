@@ -5,20 +5,42 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.lifecycle.AndroidViewModel
+import androidx.lifecycle.viewModelScope
 import com.example.lifegame.data.ContentRepository
 import com.example.lifegame.data.ProgressStore
 import com.example.lifegame.data.SavedGame
 import com.example.lifegame.data.V4ProgressStore
 import com.example.lifegame.data.V4SavedRun
+import com.example.lifegame.data.V4LoadResult
 import com.example.lifegame.domain.engine.GameEngine
 import com.example.lifegame.domain.engine.GameSession
 import com.example.lifegame.domain.engine.PeriodGameSession
+import com.example.lifegame.domain.model.AvatarConfig
+import com.example.lifegame.domain.model.AwardedTitle
 import com.example.lifegame.domain.model.Choice
+import com.example.lifegame.domain.model.CompletedLifeRecord
 import com.example.lifegame.domain.model.Ending
 import com.example.lifegame.domain.model.GameProgress
 import com.example.lifegame.domain.model.GameScreenState
+import com.example.lifegame.domain.model.RunChoiceRecord
+import com.example.lifegame.domain.model.SavedOutcome
 import com.example.lifegame.domain.model.TurnPhase
 import com.example.lifegame.domain.model.TurnStep
+import com.example.lifegame.domain.engine.bodyTypeFor
+import com.example.lifegame.domain.generation.FaceSheetRequest
+import com.example.lifegame.domain.generation.FakeGenerationClient
+import com.example.lifegame.domain.generation.FakeGenerationMode
+import com.example.lifegame.domain.generation.FutureLookRequest
+import com.example.lifegame.domain.generation.GenerationResult
+import com.example.lifegame.domain.generation.IMAGE_GENERATION_TIMEOUT_MS
+import com.example.lifegame.domain.model.PeriodRunState
+import com.example.lifegame.ui.avatar.avatarLookOf
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.Job
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
+import kotlinx.coroutines.withTimeoutOrNull
 
 class LifeGameViewModel(application: Application) : AndroidViewModel(application) {
 
@@ -132,6 +154,10 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
     private var characterImageIdForPlay: String? = null
     /** 고른 선택지 기록. 결말 화면의 "주요 선택"에 쓴다. */
     private val choiceLog = mutableListOf<ChoiceRecordUi>()
+    private val runChoiceHistory = mutableListOf<RunChoiceRecord>()
+    private var pendingOutcomeSnapshot: SavedOutcome? = null
+    private var avatarForPlay = AvatarConfig()
+    private var awardedTitleForRun: AwardedTitle? = null
     /** 끝난 판의 결말 (runId 기준으로 한 번만 고른다) */
     private var endingForRun: Pair<String, Ending?>? = null
     private var shownDecision: DecisionUi? = null
@@ -147,8 +173,52 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
     var playError by mutableStateOf<String?>(null)
         private set
 
-    var finishedLives by mutableStateOf<List<FinishedLifeUi>>(emptyList())
+    /** 완료 인생은 김우영 저장소(V4ProgressStore)가 원본이다. 화면은 여기서 읽기만 한다. */
+    var completedLives by mutableStateOf(v4ProgressStore.loadCompletedLives())
         private set
+
+    val finishedLives: List<FinishedLifeUi>
+        get() = completedLives.map { it.toFinishedLifeUi(recordContent.periods) }
+
+    /** 지금 끝난 인생의 기록증 · 주마등 (결말에 닿는 순간 저장된 기록에서 만든다) */
+    var currentRecord by mutableStateOf<LifeRecordUi?>(null)
+        private set
+
+    /** 미래 모습 생성 상태. 생성은 Fake이며 실패 · 시간 초과 · 취소는 기기 안 그림으로 대체한다. */
+    var futureLook by mutableStateOf<GenerationUi?>(null)
+        private set
+
+    /** 프로필의 사진 → 얼굴 시트 생성 상태 */
+    var faceSheet by mutableStateOf<GenerationUi?>(null)
+        private set
+
+    private var scenarioState by mutableStateOf(FakeScenario.SUCCESS)
+
+    /** 개발용: Fake 생성 응답 시나리오(성공 · 지연 · 실패 · 시간 초과 · 취소). 바꾸면 받은 미래 모습을 비워 다시 요청할 수 있다. */
+    var generationScenario: FakeScenario
+        get() = scenarioState
+        set(value) {
+            scenarioState = value
+            futureJob?.cancel()
+            futureLook = null
+        }
+
+    private var futureJob: Job? = null
+    private var faceJob: Job? = null
+    private var savedCompletedRunId: String? = null
+
+    private val recordContent: RecordContent by lazy {
+        val v4 = repository.loadV4Content()
+        RecordContent(
+            periods = v4.periods,
+            decisions = v4.decisions.associateBy { it.eventId },
+            factCatalog = factCatalog,
+            imageRouting = com.example.lifegame.data.ImageRoutingRepository(getApplication<Application>()).load(),
+            imageFiles = repository.loadImageAssets()
+                .filter { it.fileName.isNotBlank() }
+                .associate { it.imageId to it.fileName },
+        )
+    }
 
     /** 프로필 만들기의 타고난 기질. characters.sample.json에서 읽는다. */
     val starters: List<StarterUi> by lazy {
@@ -193,6 +263,7 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
                 focusLabel = current.focus?.label,
                 stats = current.stats,
                 lastLine = current.log.lastOrNull()?.text,
+                avatar = current.avatar,
             )
         } ?: v4ProgressStore.load()?.let { saved ->
             val content = repository.loadV4Content()
@@ -208,6 +279,7 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
                 focusLabel = focus?.label,
                 stats = saved.state.stats,
                 lastLine = saved.state.moments.lastOrNull()?.text,
+                avatar = avatarLookOf(saved.avatar, saved.state.period, saved.state.stats),
             )
         }
 
@@ -258,7 +330,15 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
         playSession = newSession
         playContent = playContentOf(content.periods, focuses, decisions)
         choiceLog.clear()
+        runChoiceHistory.clear()
+        pendingOutcomeSnapshot = null
+        avatarForPlay = profile.avatar
+        awardedTitleForRun = null
         endingForRun = null
+        currentRecord = null
+        futureLook = null
+        faceSheet = null
+        savedCompletedRunId = null
         playerNameForPlay = name
         characterImageIdForPlay = starter?.imageId
         shownDecision = null
@@ -273,9 +353,17 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
     }
 
     fun continueLife() {
-        val saved = v4ProgressStore.load() ?: run {
-            playError = "저장된 인생이 없습니다. 새 인생을 시작해 주세요."
-            return
+        val saved = when (val loaded = v4ProgressStore.loadResult()) {
+            V4LoadResult.Empty -> {
+                playError = "저장된 인생이 없습니다. 새 인생을 시작해 주세요."
+                return
+            }
+            V4LoadResult.Invalid -> {
+                v4ProgressStore.clear()
+                playError = "저장 데이터가 손상되었거나 새 버전과 호환되지 않습니다. 새 인생을 시작해 주세요."
+                return
+            }
+            is V4LoadResult.Loaded -> loaded.run
         }
         val content = repository.loadV4Content()
         val name = normalizePlayerName(saved.playerName)
@@ -283,10 +371,21 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
         val focuses = content.focuses.map { it.withPlayerName(name, nameCall) }
         val decisions = content.decisions.map { it.withPlayerName(name, nameCall) }
         playContent = playContentOf(content.periods, focuses, decisions)
-        // 고른 선택지 이름은 저장되지 않으므로 겪은 사건 제목으로 기록을 되살린다.
         choiceLog.clear()
-        choiceLog += choiceRecordsFromFlags(saved.state.flags, decisions.associateBy { it.eventId }, content.periods)
+        runChoiceHistory.clear()
+        runChoiceHistory += saved.choices
+        choiceLog += saved.choices.map { record ->
+            val periodName = content.periods.firstOrNull { it.period == record.period }?.displayName
+                ?: record.period.name
+            ChoiceRecordUi(periodName, record.yearInPeriod, record.eventTitle, record.choiceLabel)
+        }
+        pendingOutcomeSnapshot = saved.pendingOutcome
+        avatarForPlay = withReadablePhoto(saved.avatar)
+        awardedTitleForRun = saved.awardedTitle
         endingForRun = null
+        currentRecord = null
+        futureLook = null
+        savedCompletedRunId = null
         playSession = PeriodGameSession(
             content.periods,
             focuses,
@@ -307,7 +406,33 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
                 else -> null
             }
         }
-        shownDecision = null; outcome = null; decisionYear = null; died = saved.state.isDead; playError = null
+        shownDecision = null
+        outcome = saved.pendingOutcome?.let { snapshot ->
+            OutcomeUi(
+                choiceLabel = snapshot.choiceLabel,
+                text = snapshot.resultText,
+                changes = statChanges(snapshot.beforeStats, snapshot.afterStats),
+                endsLife = snapshot.endsLife,
+                openedEvents = snapshot.openedEvents,
+                factChanges = factChanges(
+                    buildLifeFacts(saved.state.copy(stats = snapshot.beforeStats, lifeFacts = snapshot.beforeFacts), factCatalog),
+                    buildLifeFacts(saved.state.copy(stats = snapshot.afterStats, lifeFacts = snapshot.afterFacts), factCatalog),
+                ),
+            )
+        }
+        // 결과 화면에서 꺼졌다면 그 사건 머리도 되살린다. 없으면 결정 화면이 비어 보인다.
+        shownDecision = saved.pendingOutcome?.let { snapshot ->
+            playContent?.decisions?.get(snapshot.eventId)?.let { event ->
+                restoredDecisionUi(event, playContent!!, saved.state.selectedFocusId, saved.state.period)
+            }
+        }
+        if (outcome != null && shownDecision == null) {
+            // 콘텐츠가 바뀌어 사건을 찾지 못하면 결과 확인을 건너뛰고 다음으로 넘어간다(이미 반영된 결과는 그대로).
+            outcome = null
+            pendingOutcomeSnapshot = null
+        }
+        decisionYear = saved.choices.lastOrNull()?.yearInPeriod.takeIf { outcome != null }
+        died = saved.state.isDead; playError = null
         applyStep(playSession!!.restoreSaved(saved.state))
     }
 
@@ -356,6 +481,39 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
         val periodName = content.periods.firstOrNull { it.period == beforeState.period }?.displayName
             ?: beforeState.period.name
         choiceLog += ChoiceRecordUi(periodName, beforeState.yearInPeriod, decision.title, label)
+        val choiceRecord = RunChoiceRecord(
+            eventId = decision.eventId,
+            choiceId = choiceId,
+            outcomeId = resolution.outcome.outcomeId,
+            period = beforeState.period,
+            yearInPeriod = beforeState.yearInPeriod,
+            eventTitle = decision.title,
+            choiceLabel = label,
+            resultText = resolution.outcome.resultText,
+            momentImageId = content.decisions[decision.eventId]?.momentImageId,
+            bodyType = bodyTypeFor(afterState.stats),
+        )
+        runChoiceHistory += choiceRecord
+        val openedEvents = if (afterState.isEnding) emptyList() else newlyOpenedEvents(
+            before = beforeState.flags,
+            after = afterState.flags,
+            current = beforeState.period,
+            decisions = content.decisions.values,
+            periods = content.periods,
+        )
+        pendingOutcomeSnapshot = SavedOutcome(
+            eventId = decision.eventId,
+            choiceId = choiceId,
+            outcomeId = resolution.outcome.outcomeId,
+            choiceLabel = label,
+            resultText = resolution.outcome.resultText,
+            beforeStats = beforeState.stats,
+            afterStats = afterState.stats,
+            beforeFacts = beforeState.lifeFacts,
+            afterFacts = afterState.lifeFacts,
+            endsLife = afterState.isDead,
+            openedEvents = openedEvents,
+        )
         outcome = OutcomeUi(
             choiceLabel = label,
             text = resolution.outcome.resultText,
@@ -365,17 +523,7 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
                 buildLifeFacts(beforeState, factCatalog),
                 buildLifeFacts(afterState, factCatalog),
             ),
-            openedEvents = if (afterState.isEnding) {
-                emptyList()
-            } else {
-                newlyOpenedEvents(
-                    before = beforeState.flags,
-                    after = afterState.flags,
-                    current = beforeState.period,
-                    decisions = content.decisions.values,
-                    periods = content.periods,
-                )
-            },
+            openedEvents = openedEvents,
         )
         playStep = resolution.step
         publishPlay()
@@ -385,6 +533,7 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
     fun continueAfterOutcome() {
         if (outcome == null) return
         outcome = null
+        pendingOutcomeSnapshot = null
         shownDecision = null
         decisionYear = null
         publishPlay()
@@ -401,17 +550,163 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
         publishPlay()
     }
 
-    /** 끝난 인생을 "지난 인생"에 남기고 홈으로 돌아간다. */
+    /**
+     * 끝난 인생을 "지난 인생"에 남기고 현재 슬롯을 비운다.
+     * 결말에 닿을 때 이미 같은 runId로 저장했으므로 여기서는 같은 기록을 다시 덮어쓸 뿐이다(중복 없음).
+     */
     fun finishLife() {
-        val ended = play?.takeIf { it.phase == PlayPhase.ENDED } ?: return
-        val summary = ended.ending?.headline ?: if (ended.isDead) {
-            "${ended.periodName}에 생을 마쳤다"
-        } else {
-            "${ended.periodName}까지 살았다"
-        }
-        finishedLives = listOf(FinishedLifeUi(ended.runKey, ended.playerName, summary)) + finishedLives
+        play?.takeIf { it.phase == PlayPhase.ENDED } ?: return
+        val finalState = playStep?.state ?: return
+        saveCompletedLife(finalState)
+        futureJob?.cancel()
         clearPlay()
+        currentRecord = null
+        futureLook = null
         v4ProgressStore.clear()
+    }
+
+    /** 홈의 지난 인생 / 기록 화면에서 다시 여는 기록 */
+    fun recordFor(runId: String): LifeRecordUi? =
+        completedLives.firstOrNull { it.runId == runId }?.let { buildLifeRecordUi(it, recordContent) }
+
+    fun titleCollection(): TitleCollectionUi =
+        buildTitleCollection(runCatching { repository.loadTitles() }.getOrElse { emptyList() }, completedLives)
+
+    /** 미래 모습을 요청한다. 같은 인생에서 이미 받았으면 다시 부르지 않는다(재진입 · 회전에도 한 번). */
+    fun requestFutureLook(runId: String) {
+        val current = futureLook
+        if (current != null && current.key == runId && current.status != GenerationStatus.IDLE) return
+        val record = completedLives.firstOrNull { it.runId == runId } ?: return
+        futureJob?.cancel()
+        futureLook = GenerationUi(runId, GenerationStatus.LOADING)
+        val scenario = generationScenario
+        val client = FakeGenerationClient(scenario.mode)
+        val state = record.finalState
+        futureJob = viewModelScope.launch {
+            val result = withTimeoutOrNull(scenario.timeoutMillis) {
+                withContext(Dispatchers.IO) {
+                    delay(scenario.latencyMillis)
+                    client.createFutureLook(
+                        FutureLookRequest(
+                            runId = runId,
+                            avatar = record.avatar,
+                            period = state.endingPeriod ?: state.period,
+                            bodyType = bodyTypeFor(state.stats),
+                            facts = state.lifeFacts,
+                            stats = state.stats,
+                        ),
+                    )
+                }
+            } ?: GenerationResult.TimedOut
+            futureLook = futureLookResult(runId, result)
+        }
+    }
+
+    fun cancelFutureLook() {
+        val key = futureLook?.key ?: return
+        if (futureLook?.status != GenerationStatus.LOADING) return
+        futureJob?.cancel()
+        futureLook = GenerationUi(key, GenerationStatus.FALLBACK, "취소해서 기본 그림으로 보여 줍니다.")
+    }
+
+    /** 사진 → 얼굴 시트. 동의가 없으면 부르지 않는다. 결과와 상관없이 기본 캐릭터 진행은 막지 않는다. */
+    fun requestFaceSheet(photoRef: String, consent: Boolean) {
+        faceJob?.cancel()
+        if (!consent) {
+            faceSheet = GenerationUi(photoRef, GenerationStatus.FALLBACK, "동의하지 않아 기본 모습으로 진행합니다.")
+            return
+        }
+        faceSheet = GenerationUi(photoRef, GenerationStatus.LOADING)
+        val scenario = generationScenario
+        val client = FakeGenerationClient(scenario.mode)
+        faceJob = viewModelScope.launch {
+            val result = withTimeoutOrNull(scenario.timeoutMillis) {
+                withContext(Dispatchers.IO) {
+                    delay(scenario.latencyMillis)
+                    client.createFaceSheet(FaceSheetRequest(runId = "profile", localPhotoRef = photoRef, consent = true))
+                }
+            } ?: GenerationResult.TimedOut
+            faceSheet = when (result) {
+                is GenerationResult.Success -> GenerationUi(
+                    photoRef,
+                    GenerationStatus.READY,
+                    "얼굴 시트 예시 응답을 받았습니다. 실제 생성 서버는 아직 연결되지 않아 화면에는 고른 기본 외형으로 보입니다.",
+                    value = result.value,
+                )
+                is GenerationResult.Failure -> GenerationUi(photoRef, GenerationStatus.FALLBACK, "얼굴을 만들지 못했습니다. 기본 모습으로 진행합니다.")
+                GenerationResult.TimedOut -> GenerationUi(photoRef, GenerationStatus.FALLBACK, "응답이 늦어 기본 모습으로 진행합니다.")
+                GenerationResult.Cancelled -> GenerationUi(photoRef, GenerationStatus.FALLBACK, "취소해서 기본 모습으로 진행합니다.")
+            }
+        }
+    }
+
+    fun cancelFaceSheet() {
+        val key = faceSheet?.key ?: return
+        if (faceSheet?.status != GenerationStatus.LOADING) return
+        faceJob?.cancel()
+        faceSheet = GenerationUi(key, GenerationStatus.FALLBACK, "취소해서 기본 모습으로 진행합니다.")
+    }
+
+    fun clearFaceSheet() {
+        faceJob?.cancel()
+        faceSheet = null
+    }
+
+    private fun futureLookResult(runId: String, result: GenerationResult<String>): GenerationUi = when (result) {
+        is GenerationResult.Success -> GenerationUi(
+            runId,
+            GenerationStatus.READY,
+            "생성 서버 연결 전이라 예시 응답을 받아, 기기 안 그림으로 보여 줍니다.",
+            value = result.value,
+        )
+        is GenerationResult.Failure -> GenerationUi(runId, GenerationStatus.FALLBACK, "미래 모습을 만들지 못해 기본 그림으로 보여 줍니다.")
+        GenerationResult.TimedOut -> GenerationUi(runId, GenerationStatus.FALLBACK, "응답이 늦어 기본 그림으로 보여 줍니다.")
+        GenerationResult.Cancelled -> GenerationUi(runId, GenerationStatus.FALLBACK, "취소해서 기본 그림으로 보여 줍니다.")
+    }
+
+    /** 결말에 닿은 상태를 완료 기록으로 만든다. 결말 · 칭호는 runId마다 한 번 고른 값을 쓴다. */
+    private fun completedRecordFor(finalState: PeriodRunState): CompletedLifeRecord {
+        val ending = endingFor(finalState)
+        val title = awardedTitleForRun ?: resolveTitleFor(finalState)?.also { awardedTitleForRun = it }
+        val periodName = playContent?.periods?.firstOrNull { it.period == (finalState.endingPeriod ?: finalState.period) }
+            ?.displayName ?: finalState.period.name
+        val summary = ending?.title ?: if (finalState.isDead) "${periodName}에 생을 마쳤다" else "${periodName}까지 살았다"
+        return CompletedLifeRecord(
+            runId = finalState.runId,
+            playerName = playerNameForPlay,
+            summary = title?.let { "$summary · ${it.text}" } ?: summary,
+            endingId = ending?.endingId,
+            endingTitle = ending?.title,
+            endingSummary = ending?.summary,
+            awardedTitle = title,
+            finalState = finalState,
+            choices = runChoiceHistory.toList(),
+            avatar = avatarForPlay,
+        )
+    }
+
+    /** runId 기준 upsert. 결말 화면을 다시 열거나 홈으로 가도 같은 기록 하나만 남는다. */
+    private fun saveCompletedLife(finalState: PeriodRunState): CompletedLifeRecord {
+        val record = completedRecordFor(finalState)
+        v4ProgressStore.saveCompletedLife(record)
+        savedCompletedRunId = record.runId
+        completedLives = v4ProgressStore.loadCompletedLives()
+        return record
+    }
+
+    /** 공유 URI 접근이 만료됐으면 사진 참조를 지우고 기본 외형으로 이어 간다. */
+    private fun withReadablePhoto(avatar: AvatarConfig): AvatarConfig {
+        val ref = avatar.portraitRef ?: return avatar
+        val readable = runCatching {
+            getApplication<Application>().contentResolver.openInputStream(android.net.Uri.parse(ref))?.use { true } ?: false
+        }.getOrDefault(false)
+        if (readable) return avatar
+        android.widget.Toast.makeText(
+            getApplication(),
+            "사진에 다시 접근할 수 없어 기본 모습으로 이어 갑니다.",
+            android.widget.Toast.LENGTH_LONG,
+        ).show()
+        return avatar.copy(portraitRef = null, faceSheetRef = null, photoConsent = false)
     }
 
     private inline fun runStep(block: () -> TurnStep) {
@@ -433,6 +728,18 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
         val step = playStep ?: return
         val content = playContent ?: return
         val ending = if (step.phase == TurnPhase.ENDING) endingFor(step.state) else null
+        if (step.phase == TurnPhase.ENDING && awardedTitleForRun == null) {
+            awardedTitleForRun = resolveTitleFor(step.state)
+        }
+        if (step.phase == TurnPhase.ENDING) {
+            // 결말에 닿는 순간 완료 기록을 저장한다. 주마등 도중 앱이 꺼져도 기록은 남고, 다시 저장해도 runId로 덮어쓴다.
+            val record = if (savedCompletedRunId == step.state.runId) {
+                completedLives.firstOrNull { it.runId == step.state.runId } ?: saveCompletedLife(step.state)
+            } else {
+                saveCompletedLife(step.state)
+            }
+            if (currentRecord?.runId != record.runId) currentRecord = buildLifeRecordUi(record, recordContent)
+        }
         play = buildPeriodPlayState(
             step = step,
             content = content,
@@ -447,8 +754,20 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
             choiceLog = choiceLog.toList(),
             endingTitle = ending?.title,
             endingSummary = ending?.summary,
+            avatar = avatarForPlay,
+            endingId = ending?.endingId,
         )
-        v4ProgressStore.save(V4SavedRun(playerNameForPlay, step.state))
+        v4ProgressStore.save(
+            V4SavedRun(
+                playerName = playerNameForPlay,
+                state = step.state,
+                choices = runChoiceHistory.toList(),
+                pendingOutcome = pendingOutcomeSnapshot,
+                avatar = avatarForPlay,
+                awardedTitle = awardedTitleForRun,
+                phase = step.phase,
+            ),
+        )
     }
 
     /**
@@ -469,6 +788,9 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
         return ending
     }
 
+    private fun resolveTitleFor(state: com.example.lifegame.domain.model.PeriodRunState): AwardedTitle? =
+        runCatching { GameEngine().resolveTitle(state, repository.loadTitles()) }.getOrNull()
+
     private fun clearPlay() {
         playSession = null
         playContent = null
@@ -478,6 +800,10 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
         outcome = null
         died = false
         choiceLog.clear()
+        runChoiceHistory.clear()
+        pendingOutcomeSnapshot = null
+        avatarForPlay = AvatarConfig()
+        awardedTitleForRun = null
         endingForRun = null
         play = null
     }

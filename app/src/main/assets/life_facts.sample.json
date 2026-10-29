@@ -646,5 +646,929 @@
     "fact": "achievement",
     "value": "startup_founder",
     "label": "창업 경험"
+  },
+  {
+    "flag": "career_instructor",
+    "fact": "careerTrack",
+    "value": "INSTRUCTOR",
+    "label": "강사"
+  },
+  {
+    "flag": "career_technician",
+    "fact": "careerTrack",
+    "value": "TECHNICIAN",
+    "label": "기술자"
+  },
+  {
+    "flag": "achv_patient_circle",
+    "fact": "achievement",
+    "value": "achv_patient_circle",
+    "label": "환우 모임 운영"
+  },
+  {
+    "flag": "achv_recovery_run",
+    "fact": "achievement",
+    "value": "achv_recovery_run",
+    "label": "완치 기념 하프 마라톤"
+  },
+  {
+    "flag": "achv_health_teacher",
+    "fact": "achievement",
+    "value": "achv_health_teacher",
+    "label": "동네 건강 체조 강사"
+  },
+  {
+    "flag": "achv_first_pupil",
+    "fact": "achievement",
+    "value": "achv_first_pupil",
+    "label": "첫 제자 대표 선발"
+  },
+  {
+    "flag": "achv_school_club",
+    "fact": "achievement",
+    "value": "achv_school_club",
+    "label": "학교 스포츠클럽 창단"
+  },
+  {
+    "flag": "achv_local_coach",
+    "fact": "achievement",
+    "value": "achv_local_coach",
+    "label": "조기축구회 감독"
+  },
+  {
+    "flag": "achv_first_paper",
+    "fact": "achievement",
+    "value": "achv_first_paper",
+    "label": "첫 논문 저자"
+  },
+  {
+    "flag": "achv_open_record",
+    "fact": "achievement",
+    "value": "achv_open_record",
+    "label": "실패 기록 공개"
+  },
+  {
+    "flag": "achv_memoir",
+    "fact": "achievement",
+    "value": "achv_memoir",
+    "label": "회고록 출간"
+  },
+  {
+    "flag": "achv_app_launch",
+    "fact": "achievement",
+    "value": "achv_app_launch",
+    "label": "앱 출시"
+  },
+  {
+    "flag": "achv_peacemaker",
+    "fact": "achievement",
+    "value": "achv_peacemaker",
+    "label": "친구들 화해 중재"
+  },
+  {
+    "flag": "achv_counsel_center",
+    "fact": "achievement",
+    "value": "achv_counsel_center",
+    "label": "상담 센터 개소"
+  },
+  {
+    "flag": "achv_reunion",
+    "fact": "achievement",
+    "value": "achv_reunion",
+    "label": "동창회 재결성"
+  },
+  {
+    "flag": "achv_rest_club",
+    "fact": "achievement",
+    "value": "achv_rest_club",
+    "label": "쉼 모임 운영"
+  },
+  {
+    "flag": "achv_student_concert",
+    "fact": "achievement",
+    "value": "achv_student_concert",
+    "label": "수강생 연주회"
+  },
+  {
+    "flag": "achv_scam_guard",
+    "fact": "achievement",
+    "value": "achv_scam_guard",
+    "label": "사기 예방 강의"
+  },
+  {
+    "flag": "job_employed__adult_072",
+    "fact": "employmentStatus",
+    "value": "EMPLOYED",
+    "label": "재직"
+  },
+  {
+    "flag": "career_office__adult_072",
+    "fact": "careerTrack",
+    "value": "OFFICE",
+    "label": "회사원"
+  },
+  {
+    "flag": "level_entry__adult_072",
+    "fact": "careerLevel",
+    "value": "ENTRY",
+    "label": "신입"
+  },
+  {
+    "flag": "career_freelancer__adult_072",
+    "fact": "careerTrack",
+    "value": "FREELANCER",
+    "label": "프리랜서"
+  },
+  {
+    "flag": "job_self_employed__adult_072",
+    "fact": "employmentStatus",
+    "value": "SELF_EMPLOYED",
+    "label": "자영업"
+  },
+  {
+    "flag": "married__adult_073",
+    "fact": "maritalStatus",
+    "value": "MARRIED",
+    "label": "결혼"
+  },
+  {
+    "flag": "single_life__adult_073",
+    "fact": "maritalStatus",
+    "value": "SINGLE",
+    "label": "혼자의 삶"
+  },
+  {
+    "flag": "dating__adult_074",
+    "fact": "maritalStatus",
+    "value": "DATING",
+    "label": "연애 중"
+  },
+  {
+    "flag": "dating__adult_075",
+    "fact": "maritalStatus",
+    "value": "DATING",
+    "label": "연애 중"
+  },
+  {
+    "flag": "dating__adult_076",
+    "fact": "maritalStatus",
+    "value": "DATING",
+    "label": "연애 중"
+  },
+  {
+    "flag": "dating__adult_077",
+    "fact": "maritalStatus",
+    "value": "DATING",
+    "label": "연애 중"
+  },
+  {
+    "flag": "dating__adult_078",
+    "fact": "maritalStatus",
+    "value": "DATING",
+    "label": "연애 중"
+  },
+  {
+    "flag": "career_engineer__path_int_05",
+    "fact": "careerTrack",
+    "value": "ENGINEER",
+    "label": "엔지니어"
+  },
+  {
+    "flag": "job_employed__path_int_05",
+    "fact": "employmentStatus",
+    "value": "EMPLOYED",
+    "label": "재직"
+  },
+  {
+    "flag": "level_entry__path_int_05",
+    "fact": "careerLevel",
+    "value": "ENTRY",
+    "label": "신입"
+  },
+  {
+    "flag": "career_engineer__path_int_06",
+    "fact": "careerTrack",
+    "value": "ENGINEER",
+    "label": "엔지니어"
+  },
+  {
+    "flag": "level_mid__path_int_06",
+    "fact": "careerLevel",
+    "value": "MID",
+    "label": "중간 관리자"
+  },
+  {
+    "flag": "job_employed__path_int_07",
+    "fact": "employmentStatus",
+    "value": "EMPLOYED",
+    "label": "재직"
+  },
+  {
+    "flag": "career_engineer__path_int_07",
+    "fact": "careerTrack",
+    "value": "ENGINEER",
+    "label": "엔지니어"
+  },
+  {
+    "flag": "level_entry__path_int_07",
+    "fact": "careerLevel",
+    "value": "ENTRY",
+    "label": "신입"
+  },
+  {
+    "flag": "career_patent_attorney__path_int_07",
+    "fact": "careerTrack",
+    "value": "PATENT_ATTORNEY",
+    "label": "변리사"
+  },
+  {
+    "flag": "career_professor__path_int_09",
+    "fact": "careerTrack",
+    "value": "PROFESSOR",
+    "label": "강단에 선 연구자"
+  },
+  {
+    "flag": "career_athlete__path_fit_05",
+    "fact": "careerTrack",
+    "value": "ATHLETE",
+    "label": "프로 선수"
+  },
+  {
+    "flag": "pro_athlete__path_fit_05",
+    "fact": "careerTrack",
+    "value": "ATHLETE",
+    "label": "프로 선수"
+  },
+  {
+    "flag": "job_employed__path_fit_05",
+    "fact": "employmentStatus",
+    "value": "EMPLOYED",
+    "label": "재직"
+  },
+  {
+    "flag": "career_coach__path_fit_05",
+    "fact": "careerTrack",
+    "value": "COACH",
+    "label": "코치·감독"
+  },
+  {
+    "flag": "career_pe_teacher__path_fit_05",
+    "fact": "careerTrack",
+    "value": "PE_TEACHER",
+    "label": "체육 교사"
+  },
+  {
+    "flag": "career_trainer__path_fit_05",
+    "fact": "careerTrack",
+    "value": "TRAINER",
+    "label": "재활 트레이너"
+  },
+  {
+    "flag": "career_coach__path_fit_07",
+    "fact": "careerTrack",
+    "value": "COACH",
+    "label": "코치·감독"
+  },
+  {
+    "flag": "coach_path__path_fit_07",
+    "fact": "careerTrack",
+    "value": "COACH",
+    "label": "코치"
+  },
+  {
+    "flag": "career_caster__path_fit_07",
+    "fact": "careerTrack",
+    "value": "CASTER",
+    "label": "해설위원"
+  },
+  {
+    "flag": "job_self_employed__path_fit_08",
+    "fact": "employmentStatus",
+    "value": "SELF_EMPLOYED",
+    "label": "자영업"
+  },
+  {
+    "flag": "career_coach__path_fit_08",
+    "fact": "careerTrack",
+    "value": "COACH",
+    "label": "코치·감독"
+  },
+  {
+    "flag": "dating__path_soc_03",
+    "fact": "maritalStatus",
+    "value": "DATING",
+    "label": "연애 중"
+  },
+  {
+    "flag": "job_employed__path_soc_04",
+    "fact": "employmentStatus",
+    "value": "EMPLOYED",
+    "label": "재직"
+  },
+  {
+    "flag": "level_entry__path_soc_04",
+    "fact": "careerLevel",
+    "value": "ENTRY",
+    "label": "신입"
+  },
+  {
+    "flag": "career_office__path_soc_04",
+    "fact": "careerTrack",
+    "value": "OFFICE",
+    "label": "회사원"
+  },
+  {
+    "flag": "career_counselor__path_soc_04",
+    "fact": "careerTrack",
+    "value": "COUNSELOR",
+    "label": "상담사"
+  },
+  {
+    "flag": "career_founder__path_soc_04",
+    "fact": "careerTrack",
+    "value": "FOUNDER",
+    "label": "창업가"
+  },
+  {
+    "flag": "job_self_employed__path_soc_04",
+    "fact": "employmentStatus",
+    "value": "SELF_EMPLOYED",
+    "label": "자영업"
+  },
+  {
+    "flag": "job_unemployed__path_soc_04",
+    "fact": "employmentStatus",
+    "value": "UNEMPLOYED",
+    "label": "실직"
+  },
+  {
+    "flag": "housing_jeonse__path_soc_05",
+    "fact": "housingType",
+    "value": "JEONSE",
+    "label": "전세"
+  },
+  {
+    "flag": "housing_monthly_rent__path_soc_05",
+    "fact": "housingType",
+    "value": "MONTHLY_RENT",
+    "label": "월세"
+  },
+  {
+    "flag": "single_life__path_soc_08",
+    "fact": "maritalStatus",
+    "value": "SINGLE",
+    "label": "혼자의 삶"
+  },
+  {
+    "flag": "career_office__path_wea_03",
+    "fact": "careerTrack",
+    "value": "OFFICE",
+    "label": "회사원"
+  },
+  {
+    "flag": "job_employed__path_wea_03",
+    "fact": "employmentStatus",
+    "value": "EMPLOYED",
+    "label": "재직"
+  },
+  {
+    "flag": "housing_monthly_rent__path_wea_03",
+    "fact": "housingType",
+    "value": "MONTHLY_RENT",
+    "label": "월세"
+  },
+  {
+    "flag": "level_entry__path_wea_03",
+    "fact": "careerLevel",
+    "value": "ENTRY",
+    "label": "신입"
+  },
+  {
+    "flag": "career_startup__path_wea_03",
+    "fact": "careerTrack",
+    "value": "STARTUP",
+    "label": "스타트업 직원"
+  },
+  {
+    "flag": "job_unemployed__path_wea_03",
+    "fact": "employmentStatus",
+    "value": "UNEMPLOYED",
+    "label": "실직"
+  },
+  {
+    "flag": "career_founder__path_wea_03",
+    "fact": "careerTrack",
+    "value": "FOUNDER",
+    "label": "창업가"
+  },
+  {
+    "flag": "job_self_employed__path_wea_03",
+    "fact": "employmentStatus",
+    "value": "SELF_EMPLOYED",
+    "label": "자영업"
+  },
+  {
+    "flag": "housing_jeonse__path_wea_04",
+    "fact": "housingType",
+    "value": "JEONSE",
+    "label": "전세"
+  },
+  {
+    "flag": "housing_with_parents__path_wea_04",
+    "fact": "housingType",
+    "value": "WITH_PARENTS",
+    "label": "부모님 집"
+  },
+  {
+    "flag": "home_owner__path_wea_05",
+    "fact": "housingType",
+    "value": "OWN_APARTMENT",
+    "label": "내 집 마련"
+  },
+  {
+    "flag": "housing_own_apartment__path_wea_05",
+    "fact": "housingType",
+    "value": "OWN_APARTMENT",
+    "label": "내 집(아파트)"
+  },
+  {
+    "flag": "housing_jeonse__path_wea_05",
+    "fact": "housingType",
+    "value": "JEONSE",
+    "label": "전세"
+  },
+  {
+    "flag": "comeback__path_wea_07",
+    "fact": "employmentStatus",
+    "value": "EMPLOYED",
+    "label": "재취업"
+  },
+  {
+    "flag": "job_unemployed__path_wea_07",
+    "fact": "employmentStatus",
+    "value": "UNEMPLOYED",
+    "label": "실직"
+  },
+  {
+    "flag": "career_office__path_wea_07",
+    "fact": "careerTrack",
+    "value": "OFFICE",
+    "label": "회사원"
+  },
+  {
+    "flag": "job_employed__path_wea_07",
+    "fact": "employmentStatus",
+    "value": "EMPLOYED",
+    "label": "재직"
+  },
+  {
+    "flag": "level_entry__path_wea_07",
+    "fact": "careerLevel",
+    "value": "ENTRY",
+    "label": "신입"
+  },
+  {
+    "flag": "job_retired__path_wea_08",
+    "fact": "employmentStatus",
+    "value": "RETIRED",
+    "label": "은퇴"
+  },
+  {
+    "flag": "level_executive__path_wea_08",
+    "fact": "careerLevel",
+    "value": "EXECUTIVE",
+    "label": "임원·대표"
+  },
+  {
+    "flag": "career_office__path_hap_03",
+    "fact": "careerTrack",
+    "value": "OFFICE",
+    "label": "회사원"
+  },
+  {
+    "flag": "job_employed__path_hap_03",
+    "fact": "employmentStatus",
+    "value": "EMPLOYED",
+    "label": "재직"
+  },
+  {
+    "flag": "level_entry__path_hap_03",
+    "fact": "careerLevel",
+    "value": "ENTRY",
+    "label": "신입"
+  },
+  {
+    "flag": "career_creator__path_hap_03",
+    "fact": "careerTrack",
+    "value": "CREATOR",
+    "label": "창작자"
+  },
+  {
+    "flag": "job_self_employed__path_hap_03",
+    "fact": "employmentStatus",
+    "value": "SELF_EMPLOYED",
+    "label": "자영업"
+  },
+  {
+    "flag": "married__path_hap_05",
+    "fact": "maritalStatus",
+    "value": "MARRIED",
+    "label": "결혼"
+  },
+  {
+    "flag": "single_life__path_hap_05",
+    "fact": "maritalStatus",
+    "value": "SINGLE",
+    "label": "혼자의 삶"
+  },
+  {
+    "flag": "career_office__path_luk_04",
+    "fact": "careerTrack",
+    "value": "OFFICE",
+    "label": "회사원"
+  },
+  {
+    "flag": "job_employed__path_luk_04",
+    "fact": "employmentStatus",
+    "value": "EMPLOYED",
+    "label": "재직"
+  },
+  {
+    "flag": "level_entry__path_luk_04",
+    "fact": "careerLevel",
+    "value": "ENTRY",
+    "label": "신입"
+  },
+  {
+    "flag": "career_freelancer__path_luk_04",
+    "fact": "careerTrack",
+    "value": "FREELANCER",
+    "label": "프리랜서"
+  },
+  {
+    "flag": "job_self_employed__path_luk_04",
+    "fact": "employmentStatus",
+    "value": "SELF_EMPLOYED",
+    "label": "자영업"
+  },
+  {
+    "flag": "career_trainer__path_fit_12",
+    "fact": "careerTrack",
+    "value": "TRAINER",
+    "label": "재활 트레이너"
+  },
+  {
+    "flag": "job_employed__path_fit_12",
+    "fact": "employmentStatus",
+    "value": "EMPLOYED",
+    "label": "재직"
+  },
+  {
+    "flag": "level_entry__path_fit_12",
+    "fact": "careerLevel",
+    "value": "ENTRY",
+    "label": "신입"
+  },
+  {
+    "flag": "career_athlete__path_fit_12",
+    "fact": "careerTrack",
+    "value": "ATHLETE",
+    "label": "프로 선수"
+  },
+  {
+    "flag": "pro_athlete__path_fit_12",
+    "fact": "careerTrack",
+    "value": "ATHLETE",
+    "label": "프로 선수"
+  },
+  {
+    "flag": "career_pe_teacher__path_fit_12",
+    "fact": "careerTrack",
+    "value": "PE_TEACHER",
+    "label": "체육 교사"
+  },
+  {
+    "flag": "career_coach__path_fit_12",
+    "fact": "careerTrack",
+    "value": "COACH",
+    "label": "코치·감독"
+  },
+  {
+    "flag": "career_coach__path_fit_14",
+    "fact": "careerTrack",
+    "value": "COACH",
+    "label": "코치·감독"
+  },
+  {
+    "flag": "career_caster__path_fit_14",
+    "fact": "careerTrack",
+    "value": "CASTER",
+    "label": "해설위원"
+  },
+  {
+    "flag": "career_patent_attorney__path_int_13",
+    "fact": "careerTrack",
+    "value": "PATENT_ATTORNEY",
+    "label": "변리사"
+  },
+  {
+    "flag": "job_employed__path_int_13",
+    "fact": "employmentStatus",
+    "value": "EMPLOYED",
+    "label": "재직"
+  },
+  {
+    "flag": "career_office__path_int_13",
+    "fact": "careerTrack",
+    "value": "OFFICE",
+    "label": "회사원"
+  },
+  {
+    "flag": "level_entry__path_int_13",
+    "fact": "careerLevel",
+    "value": "ENTRY",
+    "label": "신입"
+  },
+  {
+    "flag": "career_instructor__path_int_13",
+    "fact": "careerTrack",
+    "value": "INSTRUCTOR",
+    "label": "강사"
+  },
+  {
+    "flag": "career_professor__path_int_14",
+    "fact": "careerTrack",
+    "value": "PROFESSOR",
+    "label": "강단에 선 연구자"
+  },
+  {
+    "flag": "career_instructor__path_int_14",
+    "fact": "careerTrack",
+    "value": "INSTRUCTOR",
+    "label": "강사"
+  },
+  {
+    "flag": "job_self_employed__path_int_14",
+    "fact": "employmentStatus",
+    "value": "SELF_EMPLOYED",
+    "label": "자영업"
+  },
+  {
+    "flag": "level_mid__path_int_15",
+    "fact": "careerLevel",
+    "value": "MID",
+    "label": "중간 관리자"
+  },
+  {
+    "flag": "level_mid__path_int_18",
+    "fact": "careerLevel",
+    "value": "MID",
+    "label": "중간 관리자"
+  },
+  {
+    "flag": "single_life__path_soc_11",
+    "fact": "maritalStatus",
+    "value": "SINGLE",
+    "label": "혼자의 삶"
+  },
+  {
+    "flag": "housing_jeonse__path_soc_11",
+    "fact": "housingType",
+    "value": "JEONSE",
+    "label": "전세"
+  },
+  {
+    "flag": "housing_monthly_rent__path_soc_11",
+    "fact": "housingType",
+    "value": "MONTHLY_RENT",
+    "label": "월세"
+  },
+  {
+    "flag": "dating__path_soc_11",
+    "fact": "maritalStatus",
+    "value": "DATING",
+    "label": "연애 중"
+  },
+  {
+    "flag": "level_mid__path_soc_13",
+    "fact": "careerLevel",
+    "value": "MID",
+    "label": "중간 관리자"
+  },
+  {
+    "flag": "career_counselor__path_soc_13",
+    "fact": "careerTrack",
+    "value": "COUNSELOR",
+    "label": "상담사"
+  },
+  {
+    "flag": "job_self_employed__path_soc_14",
+    "fact": "employmentStatus",
+    "value": "SELF_EMPLOYED",
+    "label": "자영업"
+  },
+  {
+    "flag": "level_mid__path_wea_11",
+    "fact": "careerLevel",
+    "value": "MID",
+    "label": "중간 관리자"
+  },
+  {
+    "flag": "career_office__path_wea_11",
+    "fact": "careerTrack",
+    "value": "OFFICE",
+    "label": "회사원"
+  },
+  {
+    "flag": "comeback__path_wea_12",
+    "fact": "employmentStatus",
+    "value": "EMPLOYED",
+    "label": "재취업"
+  },
+  {
+    "flag": "job_employed__path_wea_12",
+    "fact": "employmentStatus",
+    "value": "EMPLOYED",
+    "label": "재직"
+  },
+  {
+    "flag": "career_office__path_wea_12",
+    "fact": "careerTrack",
+    "value": "OFFICE",
+    "label": "회사원"
+  },
+  {
+    "flag": "level_entry__path_wea_12",
+    "fact": "careerLevel",
+    "value": "ENTRY",
+    "label": "신입"
+  },
+  {
+    "flag": "job_self_employed__path_wea_12",
+    "fact": "employmentStatus",
+    "value": "SELF_EMPLOYED",
+    "label": "자영업"
+  },
+  {
+    "flag": "housing_jeonse__path_wea_13",
+    "fact": "housingType",
+    "value": "JEONSE",
+    "label": "전세"
+  },
+  {
+    "flag": "housing_with_parents__path_wea_13",
+    "fact": "housingType",
+    "value": "WITH_PARENTS",
+    "label": "부모님 집"
+  },
+  {
+    "flag": "housing_monthly_rent__path_wea_13",
+    "fact": "housingType",
+    "value": "MONTHLY_RENT",
+    "label": "월세"
+  },
+  {
+    "flag": "level_executive__path_wea_15",
+    "fact": "careerLevel",
+    "value": "EXECUTIVE",
+    "label": "임원·대표"
+  },
+  {
+    "flag": "career_founder__path_wea_15",
+    "fact": "careerTrack",
+    "value": "FOUNDER",
+    "label": "창업가"
+  },
+  {
+    "flag": "job_self_employed__path_wea_15",
+    "fact": "employmentStatus",
+    "value": "SELF_EMPLOYED",
+    "label": "자영업"
+  },
+  {
+    "flag": "job_employed__path_wea_16",
+    "fact": "employmentStatus",
+    "value": "EMPLOYED",
+    "label": "재직"
+  },
+  {
+    "flag": "career_creator__path_hap_14",
+    "fact": "careerTrack",
+    "value": "CREATOR",
+    "label": "창작자"
+  },
+  {
+    "flag": "job_self_employed__path_hap_14",
+    "fact": "employmentStatus",
+    "value": "SELF_EMPLOYED",
+    "label": "자영업"
+  },
+  {
+    "flag": "career_startup__path_luk_13",
+    "fact": "careerTrack",
+    "value": "STARTUP",
+    "label": "스타트업 직원"
+  },
+  {
+    "flag": "job_employed__path_luk_13",
+    "fact": "employmentStatus",
+    "value": "EMPLOYED",
+    "label": "재직"
+  },
+  {
+    "flag": "career_office__path_luk_13",
+    "fact": "careerTrack",
+    "value": "OFFICE",
+    "label": "회사원"
+  },
+  {
+    "flag": "comeback__path_luk_13",
+    "fact": "employmentStatus",
+    "value": "EMPLOYED",
+    "label": "재취업"
+  },
+  {
+    "flag": "housing_jeonse__cross_01",
+    "fact": "housingType",
+    "value": "JEONSE",
+    "label": "전세"
+  },
+  {
+    "flag": "housing_monthly_rent__cross_01",
+    "fact": "housingType",
+    "value": "MONTHLY_RENT",
+    "label": "월세"
+  },
+  {
+    "flag": "housing_with_parents__cross_01",
+    "fact": "housingType",
+    "value": "WITH_PARENTS",
+    "label": "부모님 집"
+  },
+  {
+    "flag": "housing_monthly_rent__cross_02",
+    "fact": "housingType",
+    "value": "MONTHLY_RENT",
+    "label": "월세"
+  },
+  {
+    "flag": "home_owner__cross_02",
+    "fact": "housingType",
+    "value": "OWN_APARTMENT",
+    "label": "내 집 마련"
+  },
+  {
+    "flag": "housing_own_apartment__cross_02",
+    "fact": "housingType",
+    "value": "OWN_APARTMENT",
+    "label": "내 집(아파트)"
+  },
+  {
+    "flag": "comeback__cross_06",
+    "fact": "employmentStatus",
+    "value": "EMPLOYED",
+    "label": "재취업"
+  },
+  {
+    "flag": "job_employed__cross_06",
+    "fact": "employmentStatus",
+    "value": "EMPLOYED",
+    "label": "재직"
+  },
+  {
+    "flag": "job_unemployed__cross_06",
+    "fact": "employmentStatus",
+    "value": "UNEMPLOYED",
+    "label": "실직"
+  },
+  {
+    "flag": "career_founder__cross_06",
+    "fact": "careerTrack",
+    "value": "FOUNDER",
+    "label": "창업가"
+  },
+  {
+    "flag": "job_self_employed__cross_06",
+    "fact": "employmentStatus",
+    "value": "SELF_EMPLOYED",
+    "label": "자영업"
+  },
+  {
+    "flag": "job_retired__cross_07",
+    "fact": "employmentStatus",
+    "value": "RETIRED",
+    "label": "은퇴"
+  },
+  {
+    "flag": "job_employed__cross_07",
+    "fact": "employmentStatus",
+    "value": "EMPLOYED",
+    "label": "재직"
+  },
+  {
+    "flag": "single_life__cross_10",
+    "fact": "maritalStatus",
+    "value": "SINGLE",
+    "label": "혼자의 삶"
   }
 ]

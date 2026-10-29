@@ -24,6 +24,11 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.testTag
+import androidx.compose.foundation.layout.size
+import com.example.lifegame.domain.model.LifePeriod
+import com.example.lifegame.ui.avatar.AvatarLook
+import com.example.lifegame.ui.avatar.PlayerAvatar
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.semantics.heading
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.font.FontWeight
@@ -123,18 +128,22 @@ fun ChapterFocusScreen(
     }
 }
 
-/** 실제 생애 시기에 연결된 이전 초상과 현재 초상. */
+/**
+ * 지난 시기 끝 모습 → 이번 시기 시작 모습. 같은 외형 · 같은 체형 규칙으로 조립한 한 인물이다.
+ * 두 그림을 같은 높이의 칸에 그려 실제로 자란 키 차이가 보인다.
+ */
 @Composable
 private fun GrowthStage(state: PeriodPlayUiState) {
-    Column(Modifier.fillMaxWidth().padding(vertical = 8.dp), horizontalAlignment = Alignment.CenterHorizontally) {
+    val previousPeriod = LifePeriod.entries.getOrNull(state.avatar.period.ordinal - 1)
+    Column(Modifier.fillMaxWidth().padding(vertical = 8.dp).testTag("growth_stage"), horizontalAlignment = Alignment.CenterHorizontally) {
         Row(verticalAlignment = Alignment.Bottom, horizontalArrangement = Arrangement.Center) {
-            if (state.previousPeriodName != null) {
-                FigureWithLabel(state.previousPortraitImages, 108, "${state.previousPeriodName} 끝", false)
-                Box(Modifier.padding(horizontal = 18.dp, vertical = 40.dp)) {
+            if (state.previousPeriodName != null && previousPeriod != null) {
+                GrowthFigure(state.avatar.copy(period = previousPeriod), "${state.previousPeriodName} 끝", false)
+                Box(Modifier.padding(horizontal = 22.dp, vertical = 48.dp)) {
                     Text("→", color = LifeGameInkTertiary, fontSize = 18.sp)
                 }
             }
-            FigureWithLabel(state.portraitImages, 132, "${state.periodName} 시작", true)
+            GrowthFigure(state.avatar, "${state.periodName} 시작", true)
         }
         Spacer(Modifier.height(4.dp))
         ThinRule(Modifier.width(240.dp))
@@ -142,15 +151,16 @@ private fun GrowthStage(state: PeriodPlayUiState) {
 }
 
 @Composable
-private fun FigureWithLabel(images: List<ImageCandidate>, width: Int, label: String, emphasized: Boolean) {
+private fun GrowthFigure(look: AvatarLook, label: String, emphasized: Boolean) {
     Column(horizontalAlignment = Alignment.CenterHorizontally) {
-        PixelAssetImage(images, label, Modifier.width(width.dp).aspectRatio(4f / 3f))
+        PlayerAvatar(look, Modifier.size(width = 84.dp, height = 132.dp))
         Spacer(Modifier.height(8.dp))
         Text(
             text = label,
             color = if (emphasized) LifeGameInk else LifeGameInkTertiary,
-            fontSize = 11.sp,
+            fontSize = 13.sp,
             fontWeight = if (emphasized) FontWeight.Bold else FontWeight.Normal,
         )
     }
 }
+

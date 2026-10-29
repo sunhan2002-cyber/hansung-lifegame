@@ -1,0 +1,26 @@
+{
+  "serial": "emulator-5580",
+  "avd": "Pixel_6a_API35 read-only no-snapshot",
+  "airplaneMode": "1",
+  "pending": {
+    "status": "PASS",
+    "oldPid": "15539",
+    "newPid": "15765",
+    "processChanged": true,
+    "samePersistedState": true,
+    "eventId": "infant_007"
+  },
+  "result": {
+    "status": "FAIL",
+    "oldPid": "15874",
+    "newPid": "16019",
+    "processChanged": true,
+    "resultVisibleBeforeKill": true,
+    "resultVisibleAfterContinue": false,
+    "beforeYear": 2,
+    "afterYear": 2,
+    "beforePending": null,
+    "afterPending": null
+  },
+  "scope": "Actual am force-stop and fresh process + UI Continue, not only ViewModel recreation"
+}

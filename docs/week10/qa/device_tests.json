@@ -1,0 +1,75 @@
+{
+  "sourceCommit": "6b3730e",
+  "serial": "emulator-5580",
+  "avdName": "Pixel_6a_API35",
+  "sdkInt": "36",
+  "androidRelease": "16",
+  "airplaneMode": "1",
+  "runIsolation": "-read-only -no-snapshot -no-window; original AVD changes are not saved",
+  "tests": [
+    {
+      "class": "com.example.lifegame.ui.Week8SaveIntegrationTest",
+      "test": "realSharedPreferencesRoundTripPreservesEveryPendingDecisionAndOutcome",
+      "statusCode": 0,
+      "status": "PASS"
+    },
+    {
+      "class": "com.example.lifegame.ui.Week8LifePathScreenTest",
+      "test": "earlyHealthDeathShowsTheRealPeriod",
+      "statusCode": 0,
+      "status": "PASS"
+    },
+    {
+      "class": "com.example.lifegame.ui.Week8LifePathScreenTest",
+      "test": "sevenStatEndingsAreDistinctAndFitOnASmallScreen",
+      "statusCode": 0,
+      "status": "PASS"
+    },
+    {
+      "class": "com.example.lifegame.ui.Week8LifePathScreenTest",
+      "test": "playingSummaryShowsFocusTopStatAndFacts",
+      "statusCode": 0,
+      "status": "PASS"
+    },
+    {
+      "class": "com.example.lifegame.ui.Week8LifePathScreenTest",
+      "test": "lockedChoiceShowsRealReasonsAndOutcomeShowsNewFacts",
+      "statusCode": 0,
+      "status": "PASS"
+    },
+    {
+      "class": "com.example.lifegame.ui.Week7FlowSmokeTest",
+      "test": "homeProfileChapterAutoProgressAndDecisionAreConnected",
+      "statusCode": 0,
+      "status": "PASS"
+    },
+    {
+      "class": "com.example.lifegame.ui.Week10AcceptanceProbeTest",
+      "test": "selectedResultSurvivesViewModelRecreationWithoutReapplyingReward",
+      "statusCode": -2,
+      "status": "FAIL"
+    },
+    {
+      "class": "com.example.lifegame.ui.Week10AcceptanceProbeTest",
+      "test": "threeCompletedLivesSurviveViewModelRecreation",
+      "statusCode": -2,
+      "status": "FAIL"
+    },
+    {
+      "class": "com.example.lifegame.ui.Week10AcceptanceProbeTest",
+      "test": "unsupportedFutureSaveVersionIsNotSilentlyLoaded",
+      "statusCode": -2,
+      "status": "FAIL"
+    },
+    {
+      "class": "com.example.lifegame.ui.Week10AcceptanceProbeTest",
+      "test": "pendingDecisionSurvivesViewModelRecreation",
+      "statusCode": 0,
+      "status": "PASS"
+    }
+  ],
+  "counts": {
+    "PASS": 7,
+    "FAIL": 3
+  }
+}

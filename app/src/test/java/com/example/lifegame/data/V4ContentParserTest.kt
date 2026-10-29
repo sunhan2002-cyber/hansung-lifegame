@@ -92,7 +92,7 @@ class V4ContentParserTest {
     }
 
     @Test
-    fun lifeDeltaDefaultsFollowIncidentRiskAndPositiveOutcome() {
+    fun authoredOutcomesDoNotReceiveImplicitIncidentDamage() {
         val events = V4ContentParser.parseDecisionEvents(
             """
             [
@@ -104,7 +104,7 @@ class V4ContentParserTest {
             """.trimIndent(),
         )
 
-        assertEquals(-25, events.first().choices.single().outcomes.single().lifeDelta)
+        assertEquals(0, events.first().choices.single().outcomes.single().lifeDelta)
         assertEquals(0, events.last().choices.single().outcomes.single().lifeDelta)
     }
 

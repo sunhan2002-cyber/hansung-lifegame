@@ -9,6 +9,7 @@ import com.example.lifegame.domain.model.EndingConditions
 import com.example.lifegame.domain.model.EndingTier
 import com.example.lifegame.domain.model.Focus
 import com.example.lifegame.domain.model.LifePeriod
+import com.example.lifegame.domain.model.LifeTitle
 import com.example.lifegame.domain.model.LifeFactConditions
 import com.example.lifegame.domain.model.LifeFactRule
 import com.example.lifegame.domain.model.Outcome
@@ -24,10 +25,34 @@ data class V4Content(
     val focuses: List<Focus>,
     val decisions: List<DecisionEvent>,
     val lifeFactRules: List<LifeFactRule> = emptyList(),
+    val titles: List<LifeTitle> = emptyList(),
 )
 
 /** PR #26의 v4 JSON을 Android Context 없이도 검증할 수 있는 순수 파서다. */
 object V4ContentParser {
+    fun parseTitles(json: String): List<LifeTitle> = JSONArray(json).mapObjects { item ->
+        val conditions = item.optJSONObject("conditions")
+        LifeTitle(
+            titleId = item.getString("titleId"),
+            text = item.getString("text"),
+            description = item.getString("description"),
+            priority = item.optInt("priority", 0),
+            conditions = EndingConditions(
+                stats = statConditions(
+                    conditions?.optJSONObject("minStats"),
+                    conditions?.optJSONObject("maxStats"),
+                ),
+                requiredFlags = conditions?.optJSONArray("requiredFlags").toStringSet(),
+                blockedFlags = conditions?.optJSONArray("blockedFlags").toStringSet(),
+                lifeFacts = conditions?.optJSONObject("lifeFacts").toLifeFactConditions(),
+            ),
+            isDefault = item.optBoolean("isDefault", false),
+        )
+    }.also { titles ->
+        require(titles.map { it.titleId }.distinct().size == titles.size) { "duplicate titleId" }
+        require(titles.count { it.isDefault } == 1) { "exactly one default title is required" }
+    }
+
     fun parseEndings(json: String): List<Ending> = JSONArray(json).mapObjects { item ->
         val conditions = item.optJSONObject("conditions")
         Ending(
@@ -40,7 +65,10 @@ object V4ContentParser {
                 ?.let { runCatching { EndingTier.valueOf(it.uppercase()) }.getOrNull() }
                 ?: if (item.optBoolean("isDefault", false)) EndingTier.DEFAULT else EndingTier.GENERAL_LIFE,
             conditions = EndingConditions(
-                stats = conditions?.optJSONObject("minStats").toStatConditions(),
+                stats = statConditions(
+                    conditions?.optJSONObject("minStats"),
+                    conditions?.optJSONObject("maxStats"),
+                ),
                 requiredFlags = conditions?.optJSONArray("requiredFlags").toStringSet(),
                 blockedFlags = conditions?.optJSONArray("blockedFlags").toStringSet(),
                 lifeFacts = conditions?.optJSONObject("lifeFacts").toLifeFactConditions(),
@@ -97,7 +125,10 @@ object V4ContentParser {
             yearInPeriod = item.optPositiveInt("yearInPeriod"),
             requiredFlags = conditions?.optJSONArray("requiredFlags").toStringSet(),
             blockedFlags = conditions?.optJSONArray("blockedFlags").toStringSet(),
-            statConditions = conditions?.optJSONObject("stats").toStatConditions(),
+            statConditions = statConditions(
+                conditions?.optJSONObject("stats") ?: conditions?.optJSONObject("minStats"),
+                conditions?.optJSONObject("maxStats"),
+            ),
             povImageId = item.optNullableString("povImageId")
                 ?: item.optNullableString("imageId"),
             momentImageId = item.optNullableString("momentImageId"),
@@ -110,19 +141,23 @@ object V4ContentParser {
         val fallbackDelta = optJSONObject("statDelta").toStatDelta()
         val fallbackText = optString("resultText")
         val fallbackFlags = optJSONArray("addFlags").toStringSet()
+        val fallbackRemovedFlags = optJSONArray("removeFlags").toStringSet()
         val parsedOutcomes = optJSONArray("outcomes")?.mapObjects { outcome ->
             Outcome(
                 outcomeId = outcome.getString("outcomeId"),
                 resultText = outcome.optString("text", fallbackText),
                 statDelta = outcome.optJSONObject("statDelta")?.toStatDelta() ?: fallbackDelta,
                 addFlags = outcome.optJSONArray("addFlags")?.toStringSet() ?: fallbackFlags,
+                removeFlags = outcome.optJSONArray("removeFlags")?.toStringSet() ?: fallbackRemovedFlags,
                 chance = outcome.getInt("chance"),
                 primary = outcome.optBoolean("primary", false),
                 chanceWeights = outcome.optJSONObject("chanceWeights").toChanceWeights(),
                 hidden = outcome.optBoolean("hidden", false),
                 death = outcome.optBoolean("death", false),
                 deathCause = outcome.optNullableString("deathCause"),
-                lifeDelta = outcome.optInt("lifeDelta", inferLifeDelta(kind, outcome)),
+                // 결과가 명시된 v4 사건은 저자가 적은 피해만 적용한다. BIG_INCIDENT라는 이유만으로
+                // 성공/회복 결과에 기본 피해를 주입하지 않는다.
+                lifeDelta = outcome.optInt("lifeDelta", 0),
             )
         }.orEmpty()
         val outcomes = parsedOutcomes.ifEmpty {
@@ -132,14 +167,17 @@ object V4ContentParser {
                     resultText = fallbackText,
                     statDelta = fallbackDelta,
                     addFlags = fallbackFlags,
+                    removeFlags = fallbackRemovedFlags,
                     chance = 100,
                     primary = true,
                     lifeDelta = inferLifeDelta(kind, fallbackDelta),
                 ),
             )
         }
-        val explicitStats = optJSONObject("requiredStats")?.toStatConditions()
-            ?: optJSONObject("stats")?.toStatConditions()
+        val explicitStats = statConditions(
+            optJSONObject("requiredStats") ?: optJSONObject("minStats") ?: optJSONObject("stats"),
+            optJSONObject("maxStats"),
+        )
         // Gates are authored in JSON. Outcome rewards must never create hidden locks,
         // particularly for alwaysAvailable fallbacks and ordinary incidents.
         return DecisionOption(
@@ -148,7 +186,7 @@ object V4ContentParser {
             outcomes = outcomes,
             requiredFlags = optJSONArray("requiredFlags").toStringSet(),
             blockedFlags = optJSONArray("blockedFlags").toStringSet(),
-            statConditions = explicitStats ?: StatConditions(),
+            statConditions = explicitStats,
             lifeFactConditions = optJSONObject("lifeFacts").toLifeFactConditions(),
         )
     }
@@ -177,12 +215,6 @@ object V4ContentParser {
         else -> null
     }
 
-    private fun inferLifeDelta(kind: DecisionKind, outcome: JSONObject): Int = when {
-        outcome.optBoolean("death", false) -> -100
-        kind == DecisionKind.BIG_INCIDENT -> -25
-        else -> 0
-    }
-
     private fun inferLifeDelta(kind: DecisionKind, delta: StatDelta): Int = when {
         kind == DecisionKind.BIG_INCIDENT -> -25
         else -> 0
@@ -208,15 +240,25 @@ object V4ContentParser {
         else -> DecisionKind.INCIDENT
     }
 
-    private fun JSONObject?.toStatConditions(): StatConditions = StatConditions(
-        minHealth = this?.optNullableInt("건강") ?: this?.optNullableInt("health"),
-        minFitness = this?.optNullableInt("운동능력") ?: this?.optNullableInt("fitness"),
-        minIntelligence = this?.optNullableInt("지력") ?: this?.optNullableInt("intelligence"),
-        minSocial = this?.optNullableInt("사회성") ?: this?.optNullableInt("social"),
-        minWealth = this?.optNullableInt("경제력") ?: this?.optNullableInt("wealth"),
-        minHappiness = this?.optNullableInt("행복") ?: this?.optNullableInt("happiness"),
-        minLuck = this?.optNullableInt("운") ?: this?.optNullableInt("luck"),
+    private fun statConditions(minimums: JSONObject?, maximums: JSONObject?): StatConditions = StatConditions(
+        minHealth = minimums.stat("건강", "health"),
+        minFitness = minimums.stat("운동능력", "fitness"),
+        minIntelligence = minimums.stat("지력", "intelligence"),
+        minSocial = minimums.stat("사회성", "social"),
+        minWealth = minimums.stat("경제력", "wealth"),
+        minHappiness = minimums.stat("행복", "happiness"),
+        minLuck = minimums.stat("운", "luck"),
+        maxHealth = maximums.stat("건강", "health"),
+        maxFitness = maximums.stat("운동능력", "fitness"),
+        maxIntelligence = maximums.stat("지력", "intelligence"),
+        maxSocial = maximums.stat("사회성", "social"),
+        maxWealth = maximums.stat("경제력", "wealth"),
+        maxHappiness = maximums.stat("행복", "happiness"),
+        maxLuck = maximums.stat("운", "luck"),
     )
+
+    private fun JSONObject?.stat(korean: String, english: String): Int? =
+        this?.optNullableInt(korean) ?: this?.optNullableInt(english)
 
     private fun JSONObject?.toStatDelta(): StatDelta = StatDelta(
         health = this?.optNullableInt("건강") ?: this?.optNullableInt("health") ?: 0,

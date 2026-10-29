@@ -23,14 +23,14 @@ class ImageRoutingTest {
     @Test fun `event then explicit focus then actual period portrait are ordered without random samples`() {
         val routing = ImageRouting.parse(manifest())
         val result = routing.candidates("img_pov_exam_paper_001", "focus_teen_study", LifePeriod.TEEN)
-        assertEquals(listOf("img_pov_exam_paper_001", "img_stat_intelligence_001", "img_portrait_default_teen_001"),
+        assertEquals(listOf("img_pov_exam_paper_001", "img_stat_intelligence_001", "img_week10_bg_teen", "img_portrait_default_teen_001"),
             result.map { it.imageId })
         assertEquals("design_preview/week7/img_pov_exam_paper_001.png", result.first().path)
     }
 
     @Test fun `unknown focus and image do not choose an unrelated stat scene`() {
         val routing = ImageRouting.parse(manifest())
-        assertEquals(listOf("img_portrait_default_child_001"),
+        assertEquals(listOf("img_week10_bg_child", "img_portrait_default_child_001"),
             routing.candidates("unknown", "new_story_focus", LifePeriod.CHILD).map { it.imageId })
         assertTrue(routing.candidates("unknown", "unknown", null).isEmpty())
     }
@@ -101,7 +101,7 @@ class ImageRoutingTest {
         val routing = ImageRouting.parse(manifest())
         assertEquals("img_stat_health_001", routing.eventCandidates("adult_058", null,
             "focus_teen_study", LifePeriod.MIDDLE).first().imageId)
-        assertEquals(listOf("img_portrait_default_child_001"), routing.eventCandidates(
+        assertEquals(listOf("img_week10_bg_child", "img_portrait_default_child_001"), routing.eventCandidates(
             "child_002", null, "focus_child_study", LifePeriod.CHILD).map { it.imageId })
     }
 
@@ -126,7 +126,7 @@ class ImageRoutingTest {
 
     @Test fun `generic scene failure still leaves the actual period portrait as next fallback`() {
         val routing = ImageRouting.parse(manifest())
-        assertEquals(listOf("img_stat_intelligence_001", "img_portrait_default_teen_001"),
+        assertEquals(listOf("img_stat_intelligence_001", "img_week10_bg_teen", "img_portrait_default_teen_001"),
             routing.eventCandidates("teen_007", null, "focus_teen_study", LifePeriod.TEEN).map { it.imageId })
     }
 

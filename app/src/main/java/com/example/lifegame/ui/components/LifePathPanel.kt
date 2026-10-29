@@ -97,13 +97,19 @@ fun LifePathSummary(
     }
 }
 
-/** 지금까지 쌓인 사실 전체. 값이 없는 항목도 기본 문구로 보인다. */
+/**
+ * 지금까지 쌓인 사실 전체. 값이 없는 항목도 기본 문구로 보인다.
+ * 10주차부터 플레이 화면의 초점 요약 박스를 없앴으므로, 이번 시기 초점도 이 창에서 확인한다.
+ */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun LifeFactsSheet(
     facts: LifeFactsUi,
     stats: Stats,
     onDismiss: () -> Unit,
+    place: String? = null,
+    focus: FocusOptionUi? = null,
+    showFocus: Boolean = false,
 ) {
     ModalBottomSheet(
         onDismissRequest = onDismiss,
@@ -119,6 +125,21 @@ fun LifeFactsSheet(
             verticalArrangement = Arrangement.spacedBy(14.dp),
         ) {
             Text("지금까지의 나", style = MaterialTheme.typography.headlineMedium)
+            if (place != null) {
+                Text(place, color = LifeGameInkTertiary, fontSize = 14.sp)
+            }
+            if (showFocus) {
+                SectionLabel("이번 시기 초점")
+                Column(Modifier.fillMaxWidth().testTag("details_focus"), verticalArrangement = Arrangement.spacedBy(4.dp)) {
+                    if (focus == null) {
+                        Text("이번 시기는 초점 없이 흘러간다", color = LifeGameInkTertiary, fontSize = 15.sp)
+                    } else {
+                        Text(focus.label, color = LifeGameInk, fontSize = 17.sp, fontWeight = FontWeight.Bold)
+                        Text("시기가 끝날 때까지 바꿀 수 없다", color = LifeGameInkTertiary, fontSize = 13.sp)
+                        if (focus.effects.isNotEmpty()) EffectText(focus.effects, fontSize = 14.sp)
+                    }
+                }
+            }
             SectionLabel("교육 · 직업")
             FactLines(facts.educationCareerLines())
             SectionLabel("가족 · 생활")
@@ -127,6 +148,12 @@ fun LifeFactsSheet(
             Achievements(facts.achievements)
             SectionLabel("능력치")
             StatGrid(stats)
+            Text(
+                "건강 상태: ${healthLevelOf(stats.health).label}",
+                color = LifeGameInkTertiary,
+                fontSize = 13.sp,
+                modifier = Modifier.testTag("details_health_text"),
+            )
         }
     }
 }

@@ -1,0 +1,211 @@
+INSTRUMENTATION_STATUS: class=com.example.lifegame.ui.Week8SaveIntegrationTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=10
+INSTRUMENTATION_STATUS: stream=
+com.example.lifegame.ui.Week8SaveIntegrationTest:
+INSTRUMENTATION_STATUS: test=realSharedPreferencesRoundTripPreservesEveryPendingDecisionAndOutcome
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.example.lifegame.ui.Week8SaveIntegrationTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=10
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=realSharedPreferencesRoundTripPreservesEveryPendingDecisionAndOutcome
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.example.lifegame.ui.Week8LifePathScreenTest
+INSTRUMENTATION_STATUS: current=2
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=10
+INSTRUMENTATION_STATUS: stream=
+com.example.lifegame.ui.Week8LifePathScreenTest:
+INSTRUMENTATION_STATUS: test=earlyHealthDeathShowsTheRealPeriod
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.example.lifegame.ui.Week8LifePathScreenTest
+INSTRUMENTATION_STATUS: current=2
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=10
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=earlyHealthDeathShowsTheRealPeriod
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.example.lifegame.ui.Week8LifePathScreenTest
+INSTRUMENTATION_STATUS: current=3
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=10
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=sevenStatEndingsAreDistinctAndFitOnASmallScreen
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.example.lifegame.ui.Week8LifePathScreenTest
+INSTRUMENTATION_STATUS: current=3
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=10
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=sevenStatEndingsAreDistinctAndFitOnASmallScreen
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.example.lifegame.ui.Week8LifePathScreenTest
+INSTRUMENTATION_STATUS: current=4
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=10
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=playingSummaryShowsFocusTopStatAndFacts
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.example.lifegame.ui.Week8LifePathScreenTest
+INSTRUMENTATION_STATUS: current=4
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=10
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=playingSummaryShowsFocusTopStatAndFacts
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.example.lifegame.ui.Week8LifePathScreenTest
+INSTRUMENTATION_STATUS: current=5
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=10
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=lockedChoiceShowsRealReasonsAndOutcomeShowsNewFacts
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.example.lifegame.ui.Week8LifePathScreenTest
+INSTRUMENTATION_STATUS: current=5
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=10
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=lockedChoiceShowsRealReasonsAndOutcomeShowsNewFacts
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.example.lifegame.ui.Week7FlowSmokeTest
+INSTRUMENTATION_STATUS: current=6
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=10
+INSTRUMENTATION_STATUS: stream=
+com.example.lifegame.ui.Week7FlowSmokeTest:
+INSTRUMENTATION_STATUS: test=homeProfileChapterAutoProgressAndDecisionAreConnected
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.example.lifegame.ui.Week7FlowSmokeTest
+INSTRUMENTATION_STATUS: current=6
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=10
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=homeProfileChapterAutoProgressAndDecisionAreConnected
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.example.lifegame.ui.Week10AcceptanceProbeTest
+INSTRUMENTATION_STATUS: current=7
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=10
+INSTRUMENTATION_STATUS: stream=
+com.example.lifegame.ui.Week10AcceptanceProbeTest:
+INSTRUMENTATION_STATUS: test=selectedResultSurvivesViewModelRecreationWithoutReapplyingReward
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.example.lifegame.ui.Week10AcceptanceProbeTest
+INSTRUMENTATION_STATUS: current=7
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=10
+INSTRUMENTATION_STATUS: stack=java.lang.AssertionError: F10-07: selected result must be restored, not skipped
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertNotNull(Assert.java:713)
+	at com.example.lifegame.ui.Week10AcceptanceProbeTest.selectedResultSurvivesViewModelRecreationWithoutReapplyingReward(Week10AcceptanceProbeTest.kt:50)
+
+INSTRUMENTATION_STATUS: stream=
+Error in selectedResultSurvivesViewModelRecreationWithoutReapplyingReward(com.example.lifegame.ui.Week10AcceptanceProbeTest):
+java.lang.AssertionError: F10-07: selected result must be restored, not skipped
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertNotNull(Assert.java:713)
+	at com.example.lifegame.ui.Week10AcceptanceProbeTest.selectedResultSurvivesViewModelRecreationWithoutReapplyingReward(Week10AcceptanceProbeTest.kt:50)
+
+INSTRUMENTATION_STATUS: test=selectedResultSurvivesViewModelRecreationWithoutReapplyingReward
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_STATUS: class=com.example.lifegame.ui.Week10AcceptanceProbeTest
+INSTRUMENTATION_STATUS: current=8
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=10
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=threeCompletedLivesSurviveViewModelRecreation
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.example.lifegame.ui.Week10AcceptanceProbeTest
+INSTRUMENTATION_STATUS: current=8
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=10
+INSTRUMENTATION_STATUS: stack=java.lang.AssertionError: F10-07: completed lives cannot live only in memory expected:<[FinishedLifeUi(key=run-1792994988563, playerName=검증, summary=열두 살 젊은 몸으로 산 사람), FinishedLifeUi(key=run-1792994988353, playerName=검증, summary=질문 하나로 평생을 산 연구자), FinishedLifeUi(key=run-1792994988149, playerName=검증, summary=질문 하나로 평생을 산 연구자)]> but was:<[]>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:120)
+	at com.example.lifegame.ui.Week10AcceptanceProbeTest.threeCompletedLivesSurviveViewModelRecreation(Week10AcceptanceProbeTest.kt:73)
+
+INSTRUMENTATION_STATUS: stream=
+Error in threeCompletedLivesSurviveViewModelRecreation(com.example.lifegame.ui.Week10AcceptanceProbeTest):
+java.lang.AssertionError: F10-07: completed lives cannot live only in memory expected:<[FinishedLifeUi(key=run-1792994988563, playerName=검증, summary=열두 살 젊은 몸으로 산 사람), FinishedLifeUi(key=run-1792994988353, playerName=검증, summary=질문 하나로 평생을 산 연구자), FinishedLifeUi(key=run-1792994988149, playerName=검증, summary=질문 하나로 평생을 산 연구자)]> but was:<[]>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:120)
+	at com.example.lifegame.ui.Week10AcceptanceProbeTest.threeCompletedLivesSurviveViewModelRecreation(Week10AcceptanceProbeTest.kt:73)
+
+INSTRUMENTATION_STATUS: test=threeCompletedLivesSurviveViewModelRecreation
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_STATUS: class=com.example.lifegame.ui.Week10AcceptanceProbeTest
+INSTRUMENTATION_STATUS: current=9
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=10
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=unsupportedFutureSaveVersionIsNotSilentlyLoaded
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.example.lifegame.ui.Week10AcceptanceProbeTest
+INSTRUMENTATION_STATUS: current=9
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=10
+INSTRUMENTATION_STATUS: stack=java.lang.AssertionError: F10-07: unknown future schema must be rejected or explicitly migrated expected null, but was:<V4SavedRun(playerName=검증, state=PeriodRunState(runId=future-schema, runSeed=1, period=INFANT, yearInPeriod=1, selectedFocusId=null, stats=Stats(health=50, fitness=50, intelligence=50, social=50, wealth=50, happiness=50, luck=50), flags=[], lifeFacts=LifeFacts(educationLevel=null, fieldOfStudy=null, careerTrack=null, careerLevel=null, employmentStatus=null, maritalStatus=null, childrenCount=0, housingType=null, wealthBand=MIDDLE, achievementFlags=[], deathPeriod=null, deathCause=null), dominantFocusStat=null, recentChoiceIds=[], pendingDecisionId=null, moments=[], isEnding=false, isDead=false, endingPeriod=null))>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotNull(Assert.java:756)
+	at org.junit.Assert.assertNull(Assert.java:738)
+	at com.example.lifegame.ui.Week10AcceptanceProbeTest.unsupportedFutureSaveVersionIsNotSilentlyLoaded(Week10AcceptanceProbeTest.kt:82)
+
+INSTRUMENTATION_STATUS: stream=
+Error in unsupportedFutureSaveVersionIsNotSilentlyLoaded(com.example.lifegame.ui.Week10AcceptanceProbeTest):
+java.lang.AssertionError: F10-07: unknown future schema must be rejected or explicitly migrated expected null, but was:<V4SavedRun(playerName=검증, state=PeriodRunState(runId=future-schema, runSeed=1, period=INFANT, yearInPeriod=1, selectedFocusId=null, stats=Stats(health=50, fitness=50, intelligence=50, social=50, wealth=50, happiness=50, luck=50), flags=[], lifeFacts=LifeFacts(educationLevel=null, fieldOfStudy=null, careerTrack=null, careerLevel=null, employmentStatus=null, maritalStatus=null, childrenCount=0, housingType=null, wealthBand=MIDDLE, achievementFlags=[], deathPeriod=null, deathCause=null), dominantFocusStat=null, recentChoiceIds=[], pendingDecisionId=null, moments=[], isEnding=false, isDead=false, endingPeriod=null))>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotNull(Assert.java:756)
+	at org.junit.Assert.assertNull(Assert.java:738)
+	at com.example.lifegame.ui.Week10AcceptanceProbeTest.unsupportedFutureSaveVersionIsNotSilentlyLoaded(Week10AcceptanceProbeTest.kt:82)
+
+INSTRUMENTATION_STATUS: test=unsupportedFutureSaveVersionIsNotSilentlyLoaded
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_STATUS: class=com.example.lifegame.ui.Week10AcceptanceProbeTest
+INSTRUMENTATION_STATUS: current=10
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=10
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=pendingDecisionSurvivesViewModelRecreation
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.example.lifegame.ui.Week10AcceptanceProbeTest
+INSTRUMENTATION_STATUS: current=10
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=10
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=pendingDecisionSurvivesViewModelRecreation
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_RESULT: stream=
+
+Time: 43.982
+There were 3 failures:
+1) selectedResultSurvivesViewModelRecreationWithoutReapplyingReward(com.example.lifegame.ui.Week10AcceptanceProbeTest)
+java.lang.AssertionError: F10-07: selected result must be restored, not skipped
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertNotNull(Assert.java:713)
+	at com.example.lifegame.ui.Week10AcceptanceProbeTest.selectedResultSurvivesViewModelRecreationWithoutReapplyingReward(Week10AcceptanceProbeTest.kt:50)
+2) threeCompletedLivesSurviveViewModelRecreation(com.example.lifegame.ui.Week10AcceptanceProbeTest)
+java.lang.AssertionError: F10-07: completed lives cannot live only in memory expected:<[FinishedLifeUi(key=run-1792994988563, playerName=검증, summary=열두 살 젊은 몸으로 산 사람), FinishedLifeUi(key=run-1792994988353, playerName=검증, summary=질문 하나로 평생을 산 연구자), FinishedLifeUi(key=run-1792994988149, playerName=검증, summary=질문 하나로 평생을 산 연구자)]> but was:<[]>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:120)
+	at com.example.lifegame.ui.Week10AcceptanceProbeTest.threeCompletedLivesSurviveViewModelRecreation(Week10AcceptanceProbeTest.kt:73)
+3) unsupportedFutureSaveVersionIsNotSilentlyLoaded(com.example.lifegame.ui.Week10AcceptanceProbeTest)
+java.lang.AssertionError: F10-07: unknown future schema must be rejected or explicitly migrated expected null, but was:<V4SavedRun(playerName=검증, state=PeriodRunState(runId=future-schema, runSeed=1, period=INFANT, yearInPeriod=1, selectedFocusId=null, stats=Stats(health=50, fitness=50, intelligence=50, social=50, wealth=50, happiness=50, luck=50), flags=[], lifeFacts=LifeFacts(educationLevel=null, fieldOfStudy=null, careerTrack=null, careerLevel=null, employmentStatus=null, maritalStatus=null, childrenCount=0, housingType=null, wealthBand=MIDDLE, achievementFlags=[], deathPeriod=null, deathCause=null), dominantFocusStat=null, recentChoiceIds=[], pendingDecisionId=null, moments=[], isEnding=false, isDead=false, endingPeriod=null))>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotNull(Assert.java:756)
+	at org.junit.Assert.assertNull(Assert.java:738)
+	at com.example.lifegame.ui.Week10AcceptanceProbeTest.unsupportedFutureSaveVersionIsNotSilentlyLoaded(Week10AcceptanceProbeTest.kt:82)
+
+FAILURES!!!
+Tests run: 10,  Failures: 3
+
+
+INSTRUMENTATION_CODE: -1

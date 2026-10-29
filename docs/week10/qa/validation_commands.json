@@ -1,0 +1,56 @@
+[
+  {
+    "command": [
+      "python",
+      "scripts/validate_content.py"
+    ],
+    "exitCode": 0
+  },
+  {
+    "command": [
+      "python",
+      "scripts/validate_images.py"
+    ],
+    "exitCode": 0
+  },
+  {
+    "command": [
+      "python",
+      "scripts/validate_week8_contracts.py"
+    ],
+    "exitCode": 0
+  },
+  {
+    "command": [
+      "python",
+      "scripts/audit_choice_conditions.py"
+    ],
+    "exitCode": 0
+  },
+  {
+    "command": [
+      "python",
+      "scripts/audit_event_stat_classification.py"
+    ],
+    "exitCode": 0
+  },
+  {
+    "command": [
+      "python",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "scripts/tests",
+      "-v"
+    ],
+    "exitCode": 0
+  },
+  {
+    "command": [
+      "python",
+      "scripts/validate_week10.py"
+    ],
+    "exitCode": 0
+  }
+]

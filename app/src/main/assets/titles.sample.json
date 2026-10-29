@@ -2,11 +2,10 @@
   {
     "titleId": "title_seven_sided",
     "text": "칠각형 인간",
-    "description": "일곱 가지 능력치가 전부 고르게 높았다. 친구들은 부러워하다 포기했다.",
+    "description": "건강 습관을 지키며 나머지 여섯 능력치까지 고르게 높였다. 친구들은 부러워하다 포기했다.",
     "priority": 88,
     "conditions": {
       "minStats": {
-        "건강": 65,
         "운동능력": 65,
         "지력": 65,
         "사회성": 65,
@@ -14,7 +13,9 @@
         "행복": 65,
         "운": 65
       },
-      "requiredFlags": [],
+      "requiredFlags": [
+        "healthy_routine"
+      ],
       "blockedFlags": []
     },
     "isDefault": false
@@ -188,7 +189,9 @@
       "requiredFlags": [
         "chicken_shop"
       ],
-      "blockedFlags": []
+      "blockedFlags": [
+        "shop_closed"
+      ]
     },
     "isDefault": false
   },
@@ -210,7 +213,7 @@
     "titleId": "title_first_steps",
     "text": "첫 걸음마를 본 부모",
     "description": "육아휴직을 내고 아이의 첫 세 걸음과 첫 엉덩방아를 봤다.",
-    "priority": 66,
+    "priority": 60,
     "conditions": {
       "minStats": {},
       "requiredFlags": [
@@ -310,7 +313,7 @@
     "titleId": "title_bucket_list",
     "text": "버킷리스트 해치운 사람",
     "description": "쉰 번째 생일에 적은 목록의 1번을 다음 달에 해치웠다.",
-    "priority": 60,
+    "priority": 35,
     "conditions": {
       "minStats": {},
       "requiredFlags": [
@@ -324,7 +327,7 @@
     "titleId": "title_cash_baby",
     "text": "돌잡이부터 5만 원",
     "description": "돌상에서 5만 원권을 잡고 끝까지 놓지 않았다.",
-    "priority": 60,
+    "priority": 25,
     "conditions": {
       "minStats": {},
       "requiredFlags": [
@@ -338,7 +341,7 @@
     "titleId": "title_relay",
     "text": "운동회 마지막 주자",
     "description": "계주 마지막 주자로 1등을 하고, 못 멈춰서 교장 선생님 천막에 들어갔다.",
-    "priority": 60,
+    "priority": 28,
     "conditions": {
       "minStats": {},
       "requiredFlags": [
@@ -394,7 +397,7 @@
     "titleId": "title_gacha",
     "text": "꽝 수집가",
     "description": "첫 용돈 5천 원을 전부 뽑기에 걸었다. 절망과 희망을 동시에 배웠다.",
-    "priority": 58,
+    "priority": 27,
     "conditions": {
       "minStats": {},
       "requiredFlags": [
@@ -422,7 +425,7 @@
     "titleId": "title_judge_baby",
     "text": "판사봉 쥔 아기",
     "description": "돌잡이 판사봉으로 아빠 이마를 두드렸다. \"땅! 땅!\"",
-    "priority": 55,
+    "priority": 24,
     "conditions": {
       "minStats": {},
       "requiredFlags": [
@@ -436,7 +439,7 @@
     "titleId": "title_interphone",
     "text": "아랫집 인터폰 단골",
     "description": "돌잡이 피아노 장난감 이후로 우리 집엔 음악이, 아랫집엔 인터폰이 끊이지 않았다.",
-    "priority": 55,
+    "priority": 24,
     "conditions": {
       "minStats": {},
       "requiredFlags": [
@@ -450,7 +453,7 @@
     "titleId": "title_chick",
     "text": "노랑이 보호자",
     "description": "학교 앞에서 500원에 데려온 병아리를 닭이 될 때까지 키웠다.",
-    "priority": 55,
+    "priority": 26,
     "conditions": {
       "minStats": {},
       "requiredFlags": [
@@ -478,7 +481,7 @@
     "titleId": "title_wall_artist",
     "text": "거실 벽 화백",
     "description": "크레파스로 거실 벽에 대작을 남겼다. 아빠는 몰래 사진을 찍어 뒀다.",
-    "priority": 52,
+    "priority": 23,
     "conditions": {
       "minStats": {},
       "requiredFlags": [
@@ -492,7 +495,7 @@
     "titleId": "title_loud_legend",
     "text": "어린이집 최고 목청",
     "description": "울음 한 번에 어린이집 전체가 합창을 시작했다.",
-    "priority": 52,
+    "priority": 22,
     "conditions": {
       "minStats": {},
       "requiredFlags": [
@@ -506,7 +509,7 @@
     "titleId": "title_first_love",
     "text": "첫사랑 보유자",
     "description": "학창 시절 첫사랑이 있었다. 그 노래가 나오면 지금도 볼륨을 줄인다.",
-    "priority": 50,
+    "priority": 34,
     "conditions": {
       "minStats": {},
       "requiredFlags": [
@@ -520,7 +523,7 @@
     "titleId": "title_gap_year",
     "text": "1년 쉬어 본 사람",
     "description": "스무 살에 1년을 쉬었다. 생각은 정리되지 않았지만 평생 친구가 생겼다.",
-    "priority": 50,
+    "priority": 32,
     "conditions": {
       "minStats": {},
       "requiredFlags": [
@@ -534,7 +537,7 @@
     "titleId": "title_plant_parent",
     "text": "안 죽는 화분 집사",
     "description": "화분 초록이에게 매일 말을 걸었다. 초록이는 쑥쑥 자랐다.",
-    "priority": 50,
+    "priority": 31,
     "conditions": {
       "minStats": {},
       "requiredFlags": [
@@ -548,7 +551,7 @@
     "titleId": "title_blinker",
     "text": "깜빡이 장인",
     "description": "운전면허를 땄다. 깜빡이는 지금도 남들보다 일찍 켠다.",
-    "priority": 48,
+    "priority": 30,
     "conditions": {
       "minStats": {},
       "requiredFlags": [
@@ -593,7 +596,7 @@
     "priority": 46,
     "conditions": {
       "minStats": {
-        "사회성": 85
+        "사회성": 95
       },
       "requiredFlags": [],
       "blockedFlags": []
@@ -621,9 +624,11 @@
     "priority": 46,
     "conditions": {
       "minStats": {
-        "행복": 85
+        "행복": 100
       },
-      "requiredFlags": [],
+      "requiredFlags": [
+        "content_life"
+      ],
       "blockedFlags": []
     },
     "isDefault": false
@@ -648,10 +653,10 @@
     "description": "독감이 돌 때마다 혼자 멀쩡했다. 그래서 늘 대신 출근했다.",
     "priority": 46,
     "conditions": {
-      "minStats": {
-        "건강": 85
-      },
-      "requiredFlags": [],
+      "minStats": {},
+      "requiredFlags": [
+        "achv_young_body"
+      ],
       "blockedFlags": []
     },
     "isDefault": false

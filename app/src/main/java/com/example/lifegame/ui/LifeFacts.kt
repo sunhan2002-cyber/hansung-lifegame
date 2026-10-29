@@ -200,6 +200,14 @@ enum class LifePathKind(val stat: String, val eventPrefix: String, val title: St
  * 경로 사건을 하나도 겪지 않았으면 가장 높은 능력치를 따른다.
  * 예: 지력 100에 지력 경로 4개, 건강 76에 건강 경로 5개 → 140 대 126으로 지력.
  */
+/**
+ * 기록에 쓸 인생 경로. 엔진이 고른 결말이 경로 결말(ending_path_<경로>_…)이면 그 경로를 그대로 따르고,
+ * 아니면 겪은 경로 사건 · 능력치로 고른다. 결말 제목과 경로 이름이 서로 다른 삶을 말하지 않게 한다.
+ */
+fun lifePathOf(endingId: String?, flags: Collection<String>, stats: Stats): LifePathKind =
+    LifePathKind.entries.firstOrNull { path -> endingId?.startsWith("ending_" + path.eventPrefix) == true }
+        ?: dominantPath(flags, stats)
+
 fun dominantPath(flags: Collection<String>, stats: Stats): LifePathKind {
     val values = stats.toDisplayMap()
     val counts = LifePathKind.entries.associateWith { path ->
@@ -402,9 +410,10 @@ fun buildEndingSummary(
     endingTitle: String?,
     endingSummary: String?,
     choices: List<ChoiceRecordUi>,
+    endingId: String? = null,
 ): EndingSummaryUi {
     val death = buildDeathInfo(state, periods)
-    val path = dominantPath(state.flags, state.stats)
+    val path = lifePathOf(endingId, state.flags, state.stats)
     val top = state.stats.topStat()
     val endPeriod = state.endingPeriod ?: state.moments.lastOrNull()?.period ?: state.period
     val endedAt = periods.firstOrNull { it.period == endPeriod }?.displayName ?: endPeriod.name

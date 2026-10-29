@@ -1,0 +1,457 @@
+[
+  {
+    "syntheticWitnessMatches": true,
+    "endingId": "ending_balanced_life",
+    "scope": "SYNTHETIC_CONDITION_ONLY_NOT_PLAY_REACHABILITY",
+    "syntheticResolverEnding": "ending_balanced_life",
+    "observedInSimulation": true
+  },
+  {
+    "syntheticWitnessMatches": true,
+    "endingId": "ending_genius_researcher",
+    "scope": "SYNTHETIC_CONDITION_ONLY_NOT_PLAY_REACHABILITY",
+    "syntheticResolverEnding": "ending_genius_researcher",
+    "observedInSimulation": true
+  },
+  {
+    "syntheticWitnessMatches": true,
+    "endingId": "ending_star_athlete",
+    "scope": "SYNTHETIC_CONDITION_ONLY_NOT_PLAY_REACHABILITY",
+    "syntheticResolverEnding": "ending_star_athlete",
+    "observedInSimulation": false
+  },
+  {
+    "syntheticWitnessMatches": false,
+    "endingId": "ending_social_leader",
+    "scope": "SYNTHETIC_CONDITION_ONLY_NOT_PLAY_REACHABILITY",
+    "syntheticResolverEnding": "ending_balanced_life",
+    "observedInSimulation": true
+  },
+  {
+    "syntheticWitnessMatches": true,
+    "endingId": "ending_wealth_builder",
+    "scope": "SYNTHETIC_CONDITION_ONLY_NOT_PLAY_REACHABILITY",
+    "syntheticResolverEnding": "ending_wealth_builder",
+    "observedInSimulation": false
+  },
+  {
+    "syntheticWitnessMatches": false,
+    "endingId": "ending_happy_creator",
+    "scope": "SYNTHETIC_CONDITION_ONLY_NOT_PLAY_REACHABILITY",
+    "syntheticResolverEnding": "ending_balanced_life",
+    "observedInSimulation": true
+  },
+  {
+    "syntheticWitnessMatches": true,
+    "endingId": "ending_lucky_adventurer",
+    "scope": "SYNTHETIC_CONDITION_ONLY_NOT_PLAY_REACHABILITY",
+    "syntheticResolverEnding": "ending_lucky_adventurer",
+    "observedInSimulation": false
+  },
+  {
+    "syntheticWitnessMatches": true,
+    "endingId": "ending_rescue_survivor",
+    "scope": "SYNTHETIC_CONDITION_ONLY_NOT_PLAY_REACHABILITY",
+    "syntheticResolverEnding": "ending_rescue_survivor",
+    "observedInSimulation": false
+  },
+  {
+    "syntheticWitnessMatches": false,
+    "endingId": "ending_kind_neighbor",
+    "scope": "SYNTHETIC_CONDITION_ONLY_NOT_PLAY_REACHABILITY",
+    "syntheticResolverEnding": "ending_balanced_life",
+    "observedInSimulation": true
+  },
+  {
+    "syntheticWitnessMatches": true,
+    "endingId": "ending_health_guardian",
+    "scope": "SYNTHETIC_CONDITION_ONLY_NOT_PLAY_REACHABILITY",
+    "syntheticResolverEnding": "ending_health_guardian",
+    "observedInSimulation": false
+  },
+  {
+    "syntheticWitnessMatches": true,
+    "endingId": "ending_quiet_scholar",
+    "scope": "SYNTHETIC_CONDITION_ONLY_NOT_PLAY_REACHABILITY",
+    "syntheticResolverEnding": "ending_quiet_scholar",
+    "observedInSimulation": true
+  },
+  {
+    "syntheticWitnessMatches": true,
+    "endingId": "ending_small_business_owner",
+    "scope": "SYNTHETIC_CONDITION_ONLY_NOT_PLAY_REACHABILITY",
+    "syntheticResolverEnding": "ending_small_business_owner",
+    "observedInSimulation": true
+  },
+  {
+    "syntheticWitnessMatches": false,
+    "endingId": "ending_family_centered",
+    "scope": "SYNTHETIC_CONDITION_ONLY_NOT_PLAY_REACHABILITY",
+    "syntheticResolverEnding": "ending_balanced_life",
+    "observedInSimulation": true
+  },
+  {
+    "syntheticWitnessMatches": true,
+    "endingId": "ending_public_servant",
+    "scope": "SYNTHETIC_CONDITION_ONLY_NOT_PLAY_REACHABILITY",
+    "syntheticResolverEnding": "ending_public_servant",
+    "observedInSimulation": true
+  },
+  {
+    "syntheticWitnessMatches": false,
+    "endingId": "ending_wandering_freelancer",
+    "scope": "SYNTHETIC_CONDITION_ONLY_NOT_PLAY_REACHABILITY",
+    "syntheticResolverEnding": "ending_balanced_life",
+    "observedInSimulation": false
+  },
+  {
+    "syntheticWitnessMatches": true,
+    "endingId": "ending_burnout_worker",
+    "scope": "SYNTHETIC_CONDITION_ONLY_NOT_PLAY_REACHABILITY",
+    "syntheticResolverEnding": "ending_burnout_worker",
+    "observedInSimulation": true
+  },
+  {
+    "syntheticWitnessMatches": true,
+    "endingId": "ending_fragile_but_alive",
+    "scope": "SYNTHETIC_CONDITION_ONLY_NOT_PLAY_REACHABILITY",
+    "syntheticResolverEnding": "ending_fragile_but_alive",
+    "observedInSimulation": false
+  },
+  {
+    "syntheticWitnessMatches": true,
+    "endingId": "ending_comedy_legend",
+    "scope": "SYNTHETIC_CONDITION_ONLY_NOT_PLAY_REACHABILITY",
+    "syntheticResolverEnding": "ending_comedy_legend",
+    "observedInSimulation": true
+  },
+  {
+    "syntheticWitnessMatches": true,
+    "endingId": "ending_lonely_rich",
+    "scope": "SYNTHETIC_CONDITION_ONLY_NOT_PLAY_REACHABILITY",
+    "syntheticResolverEnding": "ending_lonely_rich",
+    "observedInSimulation": true
+  },
+  {
+    "syntheticWitnessMatches": true,
+    "endingId": "ending_unlucky_tragic",
+    "scope": "SYNTHETIC_CONDITION_ONLY_NOT_PLAY_REACHABILITY",
+    "syntheticResolverEnding": "ending_unlucky_tragic",
+    "observedInSimulation": true
+  },
+  {
+    "syntheticWitnessMatches": true,
+    "endingId": "ending_ordinary_path",
+    "scope": "SYNTHETIC_CONDITION_ONLY_NOT_PLAY_REACHABILITY",
+    "syntheticResolverEnding": "ending_ordinary_path",
+    "observedInSimulation": true
+  },
+  {
+    "syntheticWitnessMatches": false,
+    "endingId": "ending_ai_storyteller",
+    "scope": "SYNTHETIC_CONDITION_ONLY_NOT_PLAY_REACHABILITY",
+    "syntheticResolverEnding": "ending_balanced_life",
+    "observedInSimulation": false
+  },
+  {
+    "syntheticWitnessMatches": true,
+    "endingId": "ending_calm_recovery",
+    "scope": "SYNTHETIC_CONDITION_ONLY_NOT_PLAY_REACHABILITY",
+    "syntheticResolverEnding": "ending_calm_recovery",
+    "observedInSimulation": false
+  },
+  {
+    "syntheticWitnessMatches": false,
+    "endingId": "ending_warm_teacher",
+    "scope": "SYNTHETIC_CONDITION_ONLY_NOT_PLAY_REACHABILITY",
+    "syntheticResolverEnding": "ending_balanced_life",
+    "observedInSimulation": false
+  },
+  {
+    "syntheticWitnessMatches": true,
+    "endingId": "ending_unexpected_local_star",
+    "scope": "SYNTHETIC_CONDITION_ONLY_NOT_PLAY_REACHABILITY",
+    "syntheticResolverEnding": "ending_unexpected_local_star",
+    "observedInSimulation": true
+  },
+  {
+    "syntheticWitnessMatches": true,
+    "endingId": "ending_steady_app_maker",
+    "scope": "SYNTHETIC_CONDITION_ONLY_NOT_PLAY_REACHABILITY",
+    "syntheticResolverEnding": "ending_steady_app_maker",
+    "observedInSimulation": true
+  },
+  {
+    "syntheticWitnessMatches": true,
+    "endingId": "ending_late_blooming_developer",
+    "scope": "SYNTHETIC_CONDITION_ONLY_NOT_PLAY_REACHABILITY",
+    "syntheticResolverEnding": "ending_late_blooming_developer",
+    "observedInSimulation": false
+  },
+  {
+    "syntheticWitnessMatches": true,
+    "endingId": "ending_everyday_athlete",
+    "scope": "SYNTHETIC_CONDITION_ONLY_NOT_PLAY_REACHABILITY",
+    "syntheticResolverEnding": "ending_everyday_athlete",
+    "observedInSimulation": true
+  },
+  {
+    "syntheticWitnessMatches": false,
+    "endingId": "ending_people_connector",
+    "scope": "SYNTHETIC_CONDITION_ONLY_NOT_PLAY_REACHABILITY",
+    "syntheticResolverEnding": "ending_balanced_life",
+    "observedInSimulation": true
+  },
+  {
+    "syntheticWitnessMatches": false,
+    "endingId": "ending_small_stage_big_memory",
+    "scope": "SYNTHETIC_CONDITION_ONLY_NOT_PLAY_REACHABILITY",
+    "syntheticResolverEnding": "ending_balanced_life",
+    "observedInSimulation": true
+  },
+  {
+    "syntheticWitnessMatches": true,
+    "endingId": "ending_tiny_startup_survivor",
+    "scope": "SYNTHETIC_CONDITION_ONLY_NOT_PLAY_REACHABILITY",
+    "syntheticResolverEnding": "ending_tiny_startup_survivor",
+    "observedInSimulation": false
+  },
+  {
+    "syntheticWitnessMatches": true,
+    "endingId": "ending_path_int_researcher",
+    "scope": "SYNTHETIC_CONDITION_ONLY_NOT_PLAY_REACHABILITY",
+    "syntheticResolverEnding": "ending_path_int_researcher",
+    "observedInSimulation": true
+  },
+  {
+    "syntheticWitnessMatches": true,
+    "endingId": "ending_path_int_engineer",
+    "scope": "SYNTHETIC_CONDITION_ONLY_NOT_PLAY_REACHABILITY",
+    "syntheticResolverEnding": "ending_path_int_engineer",
+    "observedInSimulation": true
+  },
+  {
+    "syntheticWitnessMatches": true,
+    "endingId": "ending_path_int_teacher",
+    "scope": "SYNTHETIC_CONDITION_ONLY_NOT_PLAY_REACHABILITY",
+    "syntheticResolverEnding": "ending_path_int_teacher",
+    "observedInSimulation": true
+  },
+  {
+    "syntheticWitnessMatches": true,
+    "endingId": "ending_path_int_late",
+    "scope": "SYNTHETIC_CONDITION_ONLY_NOT_PLAY_REACHABILITY",
+    "syntheticResolverEnding": "ending_path_int_late",
+    "observedInSimulation": true
+  },
+  {
+    "syntheticWitnessMatches": true,
+    "endingId": "ending_path_int_burnout",
+    "scope": "SYNTHETIC_CONDITION_ONLY_NOT_PLAY_REACHABILITY",
+    "syntheticResolverEnding": "ending_path_int_burnout",
+    "observedInSimulation": true
+  },
+  {
+    "syntheticWitnessMatches": true,
+    "endingId": "ending_path_fit_legend",
+    "scope": "SYNTHETIC_CONDITION_ONLY_NOT_PLAY_REACHABILITY",
+    "syntheticResolverEnding": "ending_path_fit_legend",
+    "observedInSimulation": true
+  },
+  {
+    "syntheticWitnessMatches": true,
+    "endingId": "ending_path_fit_coach",
+    "scope": "SYNTHETIC_CONDITION_ONLY_NOT_PLAY_REACHABILITY",
+    "syntheticResolverEnding": "ending_path_fit_coach",
+    "observedInSimulation": true
+  },
+  {
+    "syntheticWitnessMatches": true,
+    "endingId": "ending_path_fit_gym",
+    "scope": "SYNTHETIC_CONDITION_ONLY_NOT_PLAY_REACHABILITY",
+    "syntheticResolverEnding": "ending_path_fit_gym",
+    "observedInSimulation": true
+  },
+  {
+    "syntheticWitnessMatches": true,
+    "endingId": "ending_path_fit_teacher",
+    "scope": "SYNTHETIC_CONDITION_ONLY_NOT_PLAY_REACHABILITY",
+    "syntheticResolverEnding": "ending_path_fit_teacher",
+    "observedInSimulation": true
+  },
+  {
+    "syntheticWitnessMatches": true,
+    "endingId": "ending_path_fit_injury",
+    "scope": "SYNTHETIC_CONDITION_ONLY_NOT_PLAY_REACHABILITY",
+    "syntheticResolverEnding": "ending_path_fit_injury",
+    "observedInSimulation": true
+  },
+  {
+    "syntheticWitnessMatches": true,
+    "endingId": "ending_path_soc_leader",
+    "scope": "SYNTHETIC_CONDITION_ONLY_NOT_PLAY_REACHABILITY",
+    "syntheticResolverEnding": "ending_path_soc_leader",
+    "observedInSimulation": true
+  },
+  {
+    "syntheticWitnessMatches": true,
+    "endingId": "ending_path_soc_family",
+    "scope": "SYNTHETIC_CONDITION_ONLY_NOT_PLAY_REACHABILITY",
+    "syntheticResolverEnding": "ending_path_soc_family",
+    "observedInSimulation": true
+  },
+  {
+    "syntheticWitnessMatches": true,
+    "endingId": "ending_path_soc_connector",
+    "scope": "SYNTHETIC_CONDITION_ONLY_NOT_PLAY_REACHABILITY",
+    "syntheticResolverEnding": "ending_path_soc_connector",
+    "observedInSimulation": true
+  },
+  {
+    "syntheticWitnessMatches": true,
+    "endingId": "ending_path_soc_after_divorce",
+    "scope": "SYNTHETIC_CONDITION_ONLY_NOT_PLAY_REACHABILITY",
+    "syntheticResolverEnding": "ending_path_soc_after_divorce",
+    "observedInSimulation": true
+  },
+  {
+    "syntheticWitnessMatches": true,
+    "endingId": "ending_path_wea_exit",
+    "scope": "SYNTHETIC_CONDITION_ONLY_NOT_PLAY_REACHABILITY",
+    "syntheticResolverEnding": "ending_path_wea_exit",
+    "observedInSimulation": true
+  },
+  {
+    "syntheticWitnessMatches": true,
+    "endingId": "ending_path_wea_ceo",
+    "scope": "SYNTHETIC_CONDITION_ONLY_NOT_PLAY_REACHABILITY",
+    "syntheticResolverEnding": "ending_path_wea_ceo",
+    "observedInSimulation": true
+  },
+  {
+    "syntheticWitnessMatches": true,
+    "endingId": "ending_path_wea_home",
+    "scope": "SYNTHETIC_CONDITION_ONLY_NOT_PLAY_REACHABILITY",
+    "syntheticResolverEnding": "ending_path_wea_home",
+    "observedInSimulation": true
+  },
+  {
+    "syntheticWitnessMatches": true,
+    "endingId": "ending_path_wea_stock",
+    "scope": "SYNTHETIC_CONDITION_ONLY_NOT_PLAY_REACHABILITY",
+    "syntheticResolverEnding": "ending_path_wea_stock",
+    "observedInSimulation": true
+  },
+  {
+    "syntheticWitnessMatches": true,
+    "endingId": "ending_path_wea_saver",
+    "scope": "SYNTHETIC_CONDITION_ONLY_NOT_PLAY_REACHABILITY",
+    "syntheticResolverEnding": "ending_path_wea_saver",
+    "observedInSimulation": true
+  },
+  {
+    "syntheticWitnessMatches": true,
+    "endingId": "ending_path_wea_debt",
+    "scope": "SYNTHETIC_CONDITION_ONLY_NOT_PLAY_REACHABILITY",
+    "syntheticResolverEnding": "ending_path_wea_debt",
+    "observedInSimulation": true
+  },
+  {
+    "syntheticWitnessMatches": true,
+    "endingId": "ending_path_hap_artist",
+    "scope": "SYNTHETIC_CONDITION_ONLY_NOT_PLAY_REACHABILITY",
+    "syntheticResolverEnding": "ending_path_hap_artist",
+    "observedInSimulation": true
+  },
+  {
+    "syntheticWitnessMatches": true,
+    "endingId": "ending_path_hap_teacher",
+    "scope": "SYNTHETIC_CONDITION_ONLY_NOT_PLAY_REACHABILITY",
+    "syntheticResolverEnding": "ending_path_hap_teacher",
+    "observedInSimulation": true
+  },
+  {
+    "syntheticWitnessMatches": true,
+    "endingId": "ending_path_hap_content",
+    "scope": "SYNTHETIC_CONDITION_ONLY_NOT_PLAY_REACHABILITY",
+    "syntheticResolverEnding": "ending_path_hap_content",
+    "observedInSimulation": true
+  },
+  {
+    "syntheticWitnessMatches": true,
+    "endingId": "ending_path_hap_burnout",
+    "scope": "SYNTHETIC_CONDITION_ONLY_NOT_PLAY_REACHABILITY",
+    "syntheticResolverEnding": "ending_path_hap_burnout",
+    "observedInSimulation": true
+  },
+  {
+    "syntheticWitnessMatches": true,
+    "endingId": "ending_path_luk_jackpot",
+    "scope": "SYNTHETIC_CONDITION_ONLY_NOT_PLAY_REACHABILITY",
+    "syntheticResolverEnding": "ending_path_luk_jackpot",
+    "observedInSimulation": true
+  },
+  {
+    "syntheticWitnessMatches": true,
+    "endingId": "ending_path_luk_patron",
+    "scope": "SYNTHETIC_CONDITION_ONLY_NOT_PLAY_REACHABILITY",
+    "syntheticResolverEnding": "ending_path_luk_patron",
+    "observedInSimulation": true
+  },
+  {
+    "syntheticWitnessMatches": true,
+    "endingId": "ending_path_luk_wanderer",
+    "scope": "SYNTHETIC_CONDITION_ONLY_NOT_PLAY_REACHABILITY",
+    "syntheticResolverEnding": "ending_path_luk_wanderer",
+    "observedInSimulation": true
+  },
+  {
+    "syntheticWitnessMatches": true,
+    "endingId": "ending_path_luk_dodger",
+    "scope": "SYNTHETIC_CONDITION_ONLY_NOT_PLAY_REACHABILITY",
+    "syntheticResolverEnding": "ending_path_luk_dodger",
+    "observedInSimulation": true
+  },
+  {
+    "syntheticWitnessMatches": true,
+    "endingId": "ending_path_luk_small_win",
+    "scope": "SYNTHETIC_CONDITION_ONLY_NOT_PLAY_REACHABILITY",
+    "syntheticResolverEnding": "ending_path_luk_small_win",
+    "observedInSimulation": true
+  },
+  {
+    "syntheticWitnessMatches": true,
+    "endingId": "ending_path_luk_loss",
+    "scope": "SYNTHETIC_CONDITION_ONLY_NOT_PLAY_REACHABILITY",
+    "syntheticResolverEnding": "ending_path_luk_loss",
+    "observedInSimulation": true
+  },
+  {
+    "syntheticWitnessMatches": true,
+    "endingId": "ending_path_hea_peaks",
+    "scope": "SYNTHETIC_CONDITION_ONLY_NOT_PLAY_REACHABILITY",
+    "syntheticResolverEnding": "ending_path_hea_peaks",
+    "observedInSimulation": true
+  },
+  {
+    "syntheticWitnessMatches": true,
+    "endingId": "ending_path_hea_young",
+    "scope": "SYNTHETIC_CONDITION_ONLY_NOT_PLAY_REACHABILITY",
+    "syntheticResolverEnding": "ending_path_hea_young",
+    "observedInSimulation": true
+  },
+  {
+    "syntheticWitnessMatches": true,
+    "endingId": "ending_path_hea_recovered",
+    "scope": "SYNTHETIC_CONDITION_ONLY_NOT_PLAY_REACHABILITY",
+    "syntheticResolverEnding": "ending_path_hea_recovered",
+    "observedInSimulation": true
+  },
+  {
+    "syntheticWitnessMatches": true,
+    "endingId": "ending_path_hea_chronic",
+    "scope": "SYNTHETIC_CONDITION_ONLY_NOT_PLAY_REACHABILITY",
+    "syntheticResolverEnding": "ending_path_hea_chronic",
+    "observedInSimulation": true
+  }
+]

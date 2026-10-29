@@ -226,6 +226,246 @@
       "statTag": null,
       "description": "YOUNG_ADULT 도전 초점의 3인칭 도트 진행 장면",
       "fallbackText": "도전 초점 이미지 준비 중"
+    },
+    {
+      "imageId": "img_week10_bg_infant",
+      "assetPath": "week10/scenes/img_week10_bg_infant.png",
+      "fileName": "img_week10_bg_infant.png",
+      "usage": "scene",
+      "period": null,
+      "statTag": null,
+      "description": "A cozy Korean nursery, low toy shelf, folded yellow blanket, moon mobile, open central play mat, morning window.",
+      "fallbackText": "장면을 준비 중입니다"
+    },
+    {
+      "imageId": "img_week10_bg_child",
+      "assetPath": "week10/scenes/img_week10_bg_child.png",
+      "fileName": "img_week10_bg_child.png",
+      "usage": "scene",
+      "period": null,
+      "statTag": null,
+      "description": "A Korean elementary school courtyard, flowering tree at left, classroom building behind, empty sandy ground in center.",
+      "fallbackText": "장면을 준비 중입니다"
+    },
+    {
+      "imageId": "img_week10_bg_teen",
+      "assetPath": "week10/scenes/img_week10_bg_teen.png",
+      "fileName": "img_week10_bg_teen.png",
+      "usage": "scene",
+      "period": null,
+      "statTag": null,
+      "description": "Korean high school hallway at afternoon, lockers along left, sunny windows right, clear central floor.",
+      "fallbackText": "장면을 준비 중입니다"
+    },
+    {
+      "imageId": "img_week10_bg_young_adult",
+      "assetPath": "week10/scenes/img_week10_bg_young_adult.png",
+      "fileName": "img_week10_bg_young_adult.png",
+      "usage": "scene",
+      "period": null,
+      "statTag": null,
+      "description": "Korean neighborhood bus stop beside brick cafe, early summer, open pavement at center foreground.",
+      "fallbackText": "장면을 준비 중입니다"
+    },
+    {
+      "imageId": "img_week10_bg_middle",
+      "assetPath": "week10/scenes/img_week10_bg_middle.png",
+      "fileName": "img_week10_bg_middle.png",
+      "usage": "scene",
+      "period": null,
+      "statTag": null,
+      "description": "Quiet Korean riverside promenade, distant apartment skyline, bench left, center foreground open paved path.",
+      "fallbackText": "장면을 준비 중입니다"
+    },
+    {
+      "imageId": "img_week10_bg_old_age",
+      "assetPath": "week10/scenes/img_week10_bg_old_age.png",
+      "fileName": "img_week10_bg_old_age.png",
+      "usage": "scene",
+      "period": null,
+      "statTag": null,
+      "description": "Autumn community garden courtyard, persimmon tree, low stone wall, empty central garden path.",
+      "fallbackText": "장면을 준비 중입니다"
+    },
+    {
+      "imageId": "img_path_hea_09_001",
+      "assetPath": "week10/scenes/img_path_hea_09_001.png",
+      "fileName": "img_path_hea_09_001.png",
+      "usage": "pov",
+      "period": null,
+      "statTag": null,
+      "description": "First person seated on school infirmary cot after dizziness in gym, glass of water and sleep schedule on bedside table, blurred-in-pixel empty sports court beyond window.",
+      "fallbackText": "장면을 준비 중입니다"
+    },
+    {
+      "imageId": "img_path_hea_10_001",
+      "assetPath": "week10/scenes/img_path_hea_10_001.png",
+      "fileName": "img_path_hea_10_001.png",
+      "usage": "pov",
+      "period": null,
+      "statTag": null,
+      "description": "First person at office desk late at night, wall clock showing near midnight, energy drink beside unfinished work, empty desks beyond.",
+      "fallbackText": "장면을 준비 중입니다"
+    },
+    {
+      "imageId": "img_path_fit_09_001",
+      "assetPath": "week10/scenes/img_path_fit_09_001.png",
+      "fileName": "img_path_fit_09_001.png",
+      "usage": "pov",
+      "period": null,
+      "statTag": null,
+      "description": "First person standing behind start line of senior marathon, running shoes at bottom, race arch and fellow elderly runners ahead.",
+      "fallbackText": "장면을 준비 중입니다"
+    },
+    {
+      "imageId": "img_path_fit_10_001",
+      "assetPath": "week10/scenes/img_path_fit_10_001.png",
+      "fileName": "img_path_fit_10_001.png",
+      "usage": "pov",
+      "period": null,
+      "statTag": null,
+      "description": "First person holding worn running shoes in lap on empty afternoon school stadium bleachers after leaving the sports team.",
+      "fallbackText": "장면을 준비 중입니다"
+    },
+    {
+      "imageId": "img_path_int_09_001",
+      "assetPath": "week10/scenes/img_path_int_09_001.png",
+      "fileName": "img_path_int_09_001.png",
+      "usage": "pov",
+      "period": null,
+      "statTag": null,
+      "description": "First person at aging scientist desk, hands assembling final geometric research puzzle, notebooks and chalkboard in cozy study, no readable text.",
+      "fallbackText": "장면을 준비 중입니다"
+    },
+    {
+      "imageId": "img_path_int_10_001",
+      "assetPath": "week10/scenes/img_path_int_10_001.png",
+      "fileName": "img_path_int_10_001.png",
+      "usage": "pov",
+      "period": null,
+      "statTag": null,
+      "description": "First person lecturer at wooden podium, hands on open lecture notes, university audience facing viewer in warm lecture hall.",
+      "fallbackText": "장면을 준비 중입니다"
+    },
+    {
+      "imageId": "img_path_soc_09_001",
+      "assetPath": "week10/scenes/img_path_soc_09_001.png",
+      "fileName": "img_path_soc_09_001.png",
+      "usage": "pov",
+      "period": null,
+      "statTag": null,
+      "description": "First person at seventieth birthday guestbook table, hand holding pen over open blank book, flower bouquets and seated family beyond.",
+      "fallbackText": "장면을 준비 중입니다"
+    },
+    {
+      "imageId": "img_path_soc_10_001",
+      "assetPath": "week10/scenes/img_path_soc_10_001.png",
+      "fileName": "img_path_soc_10_001.png",
+      "usage": "pov",
+      "period": null,
+      "statTag": null,
+      "description": "First person looking at empty school festival courtyard after party, torn bunting, scattered cups, two groups of friends walking away separately.",
+      "fallbackText": "장면을 준비 중입니다"
+    },
+    {
+      "imageId": "img_path_wea_09_001",
+      "assetPath": "week10/scenes/img_path_wea_09_001.png",
+      "fileName": "img_path_wea_09_001.png",
+      "usage": "pov",
+      "period": null,
+      "statTag": null,
+      "description": "Create a replacement 4:3 pixel-art life-simulation event scene. Use input only as style/palette reference, not subject. Exact event: an older player is meeting a lawyer to decide how to distribute an inheritance. FIRST-PERSON seated view of the player's two mature hands at a polished lawyer's desk, neatly divided estate document folders, a simple family-tree diagram made of marks without readable words, a closed will envelope and pen. Across the desk only a lawyer's hands calmly indicating the distribution papers, shelves and subdued office window behind. Quiet consequential mood, no cash windfall celebration, no home budgeting, no invented family count, no legible text. Match reference's clean medium-fine warm pixel clusters, warm browns/cream/desaturated blue, 4:3 full scene.",
+      "fallbackText": "장면을 준비 중입니다"
+    },
+    {
+      "imageId": "img_path_wea_10_001",
+      "assetPath": "week10/scenes/img_path_wea_10_001.png",
+      "fileName": "img_path_wea_10_001.png",
+      "usage": "pov",
+      "period": null,
+      "statTag": null,
+      "description": "First person behind Korean convenience store checkout at midnight, hands near scanner, shelves of snacks, clock, empty street outside.",
+      "fallbackText": "장면을 준비 중입니다"
+    },
+    {
+      "imageId": "img_path_hap_09_001",
+      "assetPath": "week10/scenes/img_path_hap_09_001.png",
+      "fileName": "img_path_hap_09_001.png",
+      "usage": "pov",
+      "period": null,
+      "statTag": null,
+      "description": "First person at art high school painting easel, hands with paint brush, vibrant still life vase, classmates easels in sunlit art classroom.",
+      "fallbackText": "장면을 준비 중입니다"
+    },
+    {
+      "imageId": "img_path_hap_10_001",
+      "assetPath": "week10/scenes/img_path_hap_10_001.png",
+      "fileName": "img_path_hap_10_001.png",
+      "usage": "pov",
+      "period": null,
+      "statTag": null,
+      "description": "Create a replacement 4:3 pixel-art life-simulation event scene. Use input only as style/palette reference. Exact event: final exams are next week, friends invite the player to a PC cafe, and the player must choose how to balance studying and a painting hobby. FIRST-PERSON view at a Korean student's modest bedroom desk in evening. Two hands pause over an open sketchbook with an unfinished watercolor study; exam study books and a weekly planner sit immediately beside it, smartphone screen shows only tiny generic message marks with no readable words, art supplies organized to one side. Warm desk lamp and cool evening window, natural calm tension between study and creativity, no outdoor landscape painting session, no scenic travel. Match reference's clean medium-fine warm pixel clusters and restrained warm palette, no legible text, 4:3 full scene.",
+      "fallbackText": "장면을 준비 중입니다"
+    },
+    {
+      "imageId": "img_path_luk_09_001",
+      "assetPath": "week10/scenes/img_path_luk_09_001.png",
+      "fileName": "img_path_luk_09_001.png",
+      "usage": "pov",
+      "period": null,
+      "statTag": null,
+      "description": "First person reaching into vending machine tray discovering TWO drink cans instead of one, surprised open hand, coin return and glowing buttons, no logos or readable text.",
+      "fallbackText": "장면을 준비 중입니다"
+    },
+    {
+      "imageId": "img_path_luk_10_001",
+      "assetPath": "week10/scenes/img_path_luk_10_001.png",
+      "fileName": "img_path_luk_10_001.png",
+      "usage": "pov",
+      "period": null,
+      "statTag": null,
+      "description": "First person holding ringing smartphone showing abstract incoming call symbol, hand pausing above answer icon, cozy apartment doorway beyond, no text.",
+      "fallbackText": "장면을 준비 중입니다"
+    },
+    {
+      "imageId": "img_week10_ending_achievement",
+      "assetPath": "week10/scenes/img_week10_ending_achievement.png",
+      "fileName": "img_week10_ending_achievement.png",
+      "usage": "scene",
+      "period": null,
+      "statTag": null,
+      "description": "A quiet desk with modest framed abstract award, closed work notebook, fountain pen, evening city window, symbolic achievement without asserting specific profession. No people, center clear floor.",
+      "fallbackText": "장면을 준비 중입니다"
+    },
+    {
+      "imageId": "img_week10_ending_relationship",
+      "assetPath": "week10/scenes/img_week10_ending_relationship.png",
+      "fileName": "img_week10_ending_relationship.png",
+      "usage": "scene",
+      "period": null,
+      "statTag": null,
+      "description": "Warm Korean home dining room, two tea cups on table, photo frames showing abstract silhouettes, two empty chairs, sunset light, no people, clear floor center.",
+      "fallbackText": "장면을 준비 중입니다"
+    },
+    {
+      "imageId": "img_week10_ending_peace",
+      "assetPath": "week10/scenes/img_week10_ending_peace.png",
+      "fileName": "img_week10_ending_peace.png",
+      "usage": "scene",
+      "period": null,
+      "statTag": null,
+      "description": "Peaceful autumn lakeside bench beneath golden tree, mountains reflected in still water, one closed book, no people, open path center.",
+      "fallbackText": "장면을 준비 중입니다"
+    },
+    {
+      "imageId": "img_week10_ending_health",
+      "assetPath": "week10/scenes/img_week10_ending_health.png",
+      "fileName": "img_week10_ending_health.png",
+      "usage": "scene",
+      "period": null,
+      "statTag": null,
+      "description": "Calm bedroom recovery space, neatly folded blanket, glass of water, cane resting against chair, green garden visible through window. No people, open central floor.",
+      "fallbackText": "장면을 준비 중입니다"
     }
   ],
   "periodPortraits": {
@@ -938,6 +1178,244 @@
     ],
     "path_hea_08": [
       "health"
+    ],
+    "path_hea_09": [
+      "health"
+    ],
+    "path_hea_10": [
+      "health"
+    ],
+    "path_hea_11": [
+      "health"
+    ],
+    "path_hea_12": [
+      "health"
+    ],
+    "path_hea_13": [
+      "health"
+    ],
+    "path_hea_14": [
+      "health"
+    ],
+    "path_hea_15": [
+      "health"
+    ],
+    "path_hea_16": [
+      "health"
+    ],
+    "path_fit_10": [
+      "fitness"
+    ],
+    "path_fit_11": [
+      "fitness"
+    ],
+    "path_fit_12": [
+      "fitness"
+    ],
+    "path_fit_13": [
+      "fitness"
+    ],
+    "path_fit_14": [
+      "fitness"
+    ],
+    "path_fit_15": [
+      "fitness"
+    ],
+    "path_fit_16": [
+      "fitness"
+    ],
+    "path_fit_17": [
+      "fitness"
+    ],
+    "path_fit_18": [
+      "fitness"
+    ],
+    "path_int_11": [
+      "intelligence"
+    ],
+    "path_int_12": [
+      "intelligence"
+    ],
+    "path_int_13": [
+      "intelligence"
+    ],
+    "path_int_14": [
+      "intelligence"
+    ],
+    "path_int_15": [
+      "intelligence"
+    ],
+    "path_int_16": [
+      "intelligence"
+    ],
+    "path_int_17": [
+      "intelligence"
+    ],
+    "path_int_18": [
+      "intelligence"
+    ],
+    "path_soc_10": [
+      "social"
+    ],
+    "path_soc_11": [
+      "social"
+    ],
+    "path_soc_12": [
+      "social"
+    ],
+    "path_soc_13": [
+      "social"
+    ],
+    "path_soc_14": [
+      "social"
+    ],
+    "path_soc_15": [
+      "social"
+    ],
+    "path_soc_16": [
+      "social"
+    ],
+    "path_soc_17": [
+      "social"
+    ],
+    "path_soc_18": [
+      "social"
+    ],
+    "path_wea_10": [
+      "wealth"
+    ],
+    "path_wea_11": [
+      "wealth"
+    ],
+    "path_wea_12": [
+      "wealth"
+    ],
+    "path_wea_13": [
+      "wealth"
+    ],
+    "path_wea_14": [
+      "wealth"
+    ],
+    "path_wea_15": [
+      "wealth"
+    ],
+    "path_wea_16": [
+      "wealth"
+    ],
+    "path_wea_17": [
+      "wealth"
+    ],
+    "path_hap_09": [
+      "happiness"
+    ],
+    "path_hap_10": [
+      "happiness"
+    ],
+    "path_hap_11": [
+      "happiness"
+    ],
+    "path_hap_12": [
+      "happiness"
+    ],
+    "path_hap_13": [
+      "happiness"
+    ],
+    "path_hap_14": [
+      "happiness"
+    ],
+    "path_hap_15": [
+      "happiness"
+    ],
+    "path_hap_16": [
+      "happiness"
+    ],
+    "path_luk_09": [
+      "luck"
+    ],
+    "path_luk_10": [
+      "luck"
+    ],
+    "path_luk_11": [
+      "luck"
+    ],
+    "path_luk_12": [
+      "luck"
+    ],
+    "path_luk_13": [
+      "luck"
+    ],
+    "path_luk_14": [
+      "luck"
+    ],
+    "path_luk_15": [
+      "luck"
+    ],
+    "path_luk_16": [
+      "luck"
+    ],
+    "path_luk_17": [
+      "luck"
+    ],
+    "cross_01": [
+      "wealth",
+      "social"
+    ],
+    "cross_02": [
+      "wealth",
+      "happiness"
+    ],
+    "cross_03": [
+      "social",
+      "wealth"
+    ],
+    "cross_04": [
+      "happiness",
+      "social"
+    ],
+    "cross_05": [
+      "social",
+      "wealth"
+    ],
+    "cross_06": [
+      "wealth"
+    ],
+    "cross_07": [
+      "wealth",
+      "happiness"
+    ],
+    "cross_08": [
+      "health",
+      "wealth"
+    ],
+    "cross_09": [
+      "social",
+      "wealth"
+    ],
+    "cross_10": [
+      "social",
+      "happiness"
+    ],
+    "cross_11": [
+      "social",
+      "health"
+    ],
+    "cross_12": [
+      "wealth",
+      "intelligence"
     ]
+  },
+  "periodScenes": {
+    "INFANT": "img_week10_bg_infant",
+    "CHILD": "img_week10_bg_child",
+    "TEEN": "img_week10_bg_teen",
+    "YOUNG_ADULT": "img_week10_bg_young_adult",
+    "MIDDLE": "img_week10_bg_middle",
+    "OLD_AGE": "img_week10_bg_old_age"
+  },
+  "endingScenes": {
+    "achievement": "img_week10_ending_achievement",
+    "relationship": "img_week10_ending_relationship",
+    "peace": "img_week10_ending_peace",
+    "health": "img_week10_ending_health"
   }
 }

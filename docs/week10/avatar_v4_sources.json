@@ -1,0 +1,310 @@
+{
+  "young_adult_standard": {
+    "source": "C:\\Users\\bestw\\.codex\\generated_images\\01a18201-fe9b-7c92-83d5-fb63c765d04d\\exec-6ffdbbbc-278f-4969-90b4-b39744ee2869.png",
+    "prompt": "Edit target: the attached approved full-body pixel game character. Produce one final young adult standard-build complete sprite.\nChange ONLY the face contour: make cheeks subtly less circular, with a gentle oval taper and a softly defined chin; about 5 percent narrower across the lower cheek. Still friendly and cute. Do not make a pointy triangular chin, long realistic face or small realistic eyes.\nPreserve EXACTLY the approved head size relative to body, moderately short limbs, medium-fine pixel clusters, hairstyle, eyes, tiny smile, outfit (blue overshirt cream tee navy pants brown shoes), pose, lighting, palette and whole-body silhouette except subtle cheek contour. Natural coherent face/hair/neck junction is essential.\nFront view centered full body including shoes, no cropping. TRANSPARENT empty background with no halo or glow. No redesign, no realistic rendering, no text or decorations.",
+    "kind": "full_body",
+    "status": "accepted_style_with_subtle_oval_face",
+    "sha256": "a910e16866f73b3cc012e8f484e0f5a1e4814c86d1cc7819e98a6b372fabace5",
+    "neckRow": 449,
+    "deliveredLayerSource": true
+  },
+  "young_adult_slim": {
+    "source": "C:\\Users\\bestw\\.codex\\generated_images\\01a18201-fe9b-7c92-83d5-fb63c765d04d\\exec-d1f0a05c-01af-452d-86d2-6d5bd5722b27.png",
+    "prompt": "Input image 1 is the approved young-adult standard-build full sprite. Make ONE complete front-view young-adult variant of THE SAME PERSON. Preserve head, face, hairstyle, expression, head size, total height, foot level, limb lengths, pose, blue overshirt/cream tee/navy trousers/brown shoes, medium-fine pixel cluster size and palette. Natural restrained anatomy and integrated shoulder/neck are essential; do not merely scale the whole image. Empty genuinely transparent background, no glow/shadow/floor/text. Body change ONLY: naturally slim frame, subtly narrower shoulders, slender arms, narrower torso and thighs. Healthy, not skeletal, not a miniature copy. Clothes hang a little more loosely.",
+    "kind": "full_body",
+    "sha256": "01f21dce08fc8c2d004246bed75b622807ab8ed69bd0b2122d107d343c809762",
+    "neckRow": 446,
+    "deliveredLayerSource": true
+  },
+  "young_adult_muscular": {
+    "source": "C:\\Users\\bestw\\.codex\\generated_images\\01a18201-fe9b-7c92-83d5-fb63c765d04d\\exec-00cb1660-22fb-4b94-9514-6f3054caf8aa.png",
+    "prompt": "Input image 1 is the approved young-adult standard-build full sprite. Make ONE complete front-view young-adult variant of THE SAME PERSON. Preserve head, face, hairstyle, expression, head size, total height, foot level, limb lengths, pose, blue overshirt/cream tee/navy trousers/brown shoes, medium-fine pixel cluster size and palette. Natural restrained anatomy and integrated shoulder/neck are essential; do not merely scale the whole image. Empty genuinely transparent background, no glow/shadow/floor/text. Body change ONLY: naturally athletic muscular build, moderately wider shoulders/chest, visibly fuller upper arms/forearms and thighs with a gently tapered waist. Sleeves slightly fuller, no bodybuilder exaggeration, no balloon arms. Keep same height and same face.",
+    "kind": "full_body",
+    "sha256": "31b0189686ff55cdfbbbcf5a1629a168b11a02c2344ebbbbb30bec859abb91e8",
+    "neckRow": 445,
+    "deliveredLayerSource": true
+  },
+  "young_adult_hair_bob_brown": {
+    "source": "C:\\Users\\bestw\\.codex\\generated_images\\01a18201-fe9b-7c92-83d5-fb63c765d04d\\exec-f9a8c67f-5d4e-4f62-add8-36c9603cb823.png",
+    "prompt": "Edit the attached approved full-body character. Change ONLY hairstyle. Keep the EXACT SAME face contour, eye positions and eye shapes, nose, mouth, chin, ears, skin palette, head size, hairline position, neck, outfit, proportions, medium-fine pixel-art density, front pose, feet and canvas framing. Face must remain recognizable and naturally framed by hair. ONE complete front-view character, genuinely transparent background, no halo or text.A neat chestnut-brown bob with softly curved ends near the jaw and a modest side fringe, natural compact volume.",
+    "kind": "head_hairstyle_edit",
+    "sha256": "1eea78b7cb8676695758848aab6d7194eaed830806415a472d900ed04d97f518",
+    "neckRow": 431,
+    "deliveredLayerSource": false
+  },
+  "young_adult_hair_long_black": {
+    "source": "C:\\Users\\bestw\\.codex\\generated_images\\01a18201-fe9b-7c92-83d5-fb63c765d04d\\exec-6d7b5ae2-704f-4152-921c-3b360fda2334.png",
+    "prompt": "Edit the attached approved full-body character. Change ONLY hairstyle. Keep the EXACT SAME face contour, eye positions and eye shapes, nose, mouth, chin, ears, skin palette, head size, hairline position, neck, outfit, proportions, medium-fine pixel-art density, front pose, feet and canvas framing. Face must remain recognizable and naturally framed by hair. ONE complete front-view character, genuinely transparent background, no halo or text.Long softly straight black hair, parted gently to one side, falling behind shoulders to the upper chest; keep ears and eyes clear, front locks naturally frame cheeks.",
+    "kind": "head_hairstyle_edit",
+    "sha256": "1c9a1798d04ac02556d4a7bd37183cb6a2c9dfa852bd25aa03eed961a2fe0720",
+    "neckRow": 441,
+    "deliveredLayerSource": false
+  },
+  "young_adult_hair_curly_brown": {
+    "source": "C:\\Users\\bestw\\.codex\\generated_images\\01a18201-fe9b-7c92-83d5-fb63c765d04d\\exec-19149aa9-6194-4905-a56c-23a5601b8b1e.png",
+    "prompt": "Edit the attached approved full-body character. Change ONLY hairstyle. Keep the EXACT SAME face contour, eye positions and eye shapes, nose, mouth, chin, ears, skin palette, head size, hairline position, neck, outfit, proportions, medium-fine pixel-art density, front pose, feet and canvas framing. Face must remain recognizable and naturally framed by hair. ONE complete front-view character, genuinely transparent background, no halo or text.Short warm-brown loose curls, tidy rounded clusters with natural modest volume, forehead partly visible.",
+    "kind": "head_hairstyle_edit",
+    "sha256": "12cf72061d08732b8198e46173fd11e01ef9250dec02f596d32271a1cbceaca6",
+    "neckRow": 435,
+    "deliveredLayerSource": false
+  },
+  "infant_standard": {
+    "source": "C:\\Users\\bestw\\.codex\\generated_images\\01a18201-fe9b-7c92-83d5-fb63c765d04d\\exec-d971a06b-5500-4aea-a009-72d48972162c.png",
+    "prompt": "Use the input approved young-adult character as identity and medium-fine pixel-art STYLE reference. Create ONE new complete full-body sprite of THE SAME PERSON at a different life stage. An infant/toddler version of the same person, standing steadily. Age-appropriate soft cheeks but gently oval, a few short dark wisps with the same directional fringe, short toddler arms and legs, pale warm-yellow one-piece romper and soft brown booties. No adult muscles or adult clothing. About 2.3 heads tall. An ordinary, balanced healthy build. Keep the same recognizable eye spacing, simple large dark eyes with small highlights, small nose and friendly modest smile. Face gently oval, not perfectly round and not pointed. Keep crisp medium-fine pixel clusters, warm coherent limited colors, natural garment folds, no realistic skin/individual hair strands. Front view neutral relaxed arms at sides with slight air gap, feet on same horizontal line, full hair and shoes visible. Natural face/hair/neck/shoulder integration is most important. Transparent empty background, no glow/halo/floor/shadow/text, one character only.",
+    "kind": "full_body",
+    "sha256": "280e81da7e83f6307caa4124d11a09527c93b79e780c0dde06c70f8744070be7",
+    "neckRow": 515,
+    "deliveredLayerSource": true
+  },
+  "infant_slim": {
+    "source": "C:\\Users\\bestw\\.codex\\generated_images\\01a18201-fe9b-7c92-83d5-fb63c765d04d\\exec-fd1656e4-ad6a-4567-81ea-706f6086ca84.png",
+    "prompt": "Use the input approved young-adult character as identity and medium-fine pixel-art STYLE reference. Create ONE new complete full-body sprite of THE SAME PERSON at a different life stage. An infant/toddler version of the same person, standing steadily. Age-appropriate soft cheeks but gently oval, a few short dark wisps with the same directional fringe, short toddler arms and legs, pale warm-yellow one-piece romper and soft brown booties. No adult muscles or adult clothing. About 2.3 heads tall. A naturally slender frame, narrower torso and shoulders, slim arms and thighs. Healthy, not skeletal. Keep the same recognizable eye spacing, simple large dark eyes with small highlights, small nose and friendly modest smile. Face gently oval, not perfectly round and not pointed. Keep crisp medium-fine pixel clusters, warm coherent limited colors, natural garment folds, no realistic skin/individual hair strands. Front view neutral relaxed arms at sides with slight air gap, feet on same horizontal line, full hair and shoes visible. Natural face/hair/neck/shoulder integration is most important. Transparent empty background, no glow/halo/floor/shadow/text, one character only.",
+    "kind": "full_body",
+    "sha256": "471806ec68f48c358fa8a8e837d56f76741dc662bae1640a9322cbafa5bdafc2",
+    "neckRow": 512,
+    "deliveredLayerSource": true
+  },
+  "infant_muscular": {
+    "source": "C:\\Users\\bestw\\.codex\\generated_images\\01a18201-fe9b-7c92-83d5-fb63c765d04d\\exec-b65f904a-8985-4cad-8364-14761c61a58a.png",
+    "prompt": "Use the input approved young-adult character as identity and medium-fine pixel-art STYLE reference. Create ONE new complete full-body sprite of THE SAME PERSON at a different life stage. An infant/toddler version of the same person, standing steadily. Age-appropriate soft cheeks but gently oval, a few short dark wisps with the same directional fringe, short toddler arms and legs, pale warm-yellow one-piece romper and soft brown booties. No adult muscles or adult clothing. About 2.3 heads tall. The robust active toddler build: slightly sturdier limbs and shoulders, still completely age-appropriate, no adult muscle definition. Keep the same recognizable eye spacing, simple large dark eyes with small highlights, small nose and friendly modest smile. Face gently oval, not perfectly round and not pointed. Keep crisp medium-fine pixel clusters, warm coherent limited colors, natural garment folds, no realistic skin/individual hair strands. Front view neutral relaxed arms at sides with slight air gap, feet on same horizontal line, full hair and shoes visible. Natural face/hair/neck/shoulder integration is most important. Transparent empty background, no glow/halo/floor/shadow/text, one character only.",
+    "kind": "full_body",
+    "sha256": "47645863e00512cf8b785cec06ba76e2d81d50d5424f6b8b98e0ccfa1df66f99",
+    "neckRow": 498,
+    "deliveredLayerSource": true
+  },
+  "child_standard": {
+    "source": "C:\\Users\\bestw\\.codex\\generated_images\\01a18201-fe9b-7c92-83d5-fb63c765d04d\\exec-d659b222-e954-482a-88d2-ad8ea4b3cb19.png",
+    "prompt": "Use the input approved young-adult character as identity and medium-fine pixel-art STYLE reference. Create ONE new complete full-body sprite of THE SAME PERSON at a different life stage. An elementary-school child version of the same person. Similar slightly oval face and dark side-swept hairstyle, red-orange casual sweatshirt, blue knee-length shorts, cream socks and small brown sneakers. Natural child proportions, moderately short limbs, about 2.7 heads tall. An ordinary, balanced healthy build. Keep the same recognizable eye spacing, simple large dark eyes with small highlights, small nose and friendly modest smile. Face gently oval, not perfectly round and not pointed. Keep crisp medium-fine pixel clusters, warm coherent limited colors, natural garment folds, no realistic skin/individual hair strands. Front view neutral relaxed arms at sides with slight air gap, feet on same horizontal line, full hair and shoes visible. Natural face/hair/neck/shoulder integration is most important. Transparent empty background, no glow/halo/floor/shadow/text, one character only.",
+    "kind": "full_body",
+    "sha256": "5beacb6ac9788d4f24e576f38a263cc0f2c327fcb9b51886b23e39caedc4afe6",
+    "neckRow": 443,
+    "deliveredLayerSource": true
+  },
+  "child_slim": {
+    "source": "C:\\Users\\bestw\\.codex\\generated_images\\01a18201-fe9b-7c92-83d5-fb63c765d04d\\exec-758d8830-a18a-4ed6-9a08-6c17beeb5e27.png",
+    "prompt": "Use the input approved young-adult character as identity and medium-fine pixel-art STYLE reference. Create ONE new complete full-body sprite of THE SAME PERSON at a different life stage. An elementary-school child version of the same person. Similar slightly oval face and dark side-swept hairstyle, red-orange casual sweatshirt, blue knee-length shorts, cream socks and small brown sneakers. Natural child proportions, moderately short limbs, about 2.7 heads tall. A naturally slender frame, narrower torso and shoulders, slim arms and thighs. Healthy, not skeletal. Keep the same recognizable eye spacing, simple large dark eyes with small highlights, small nose and friendly modest smile. Face gently oval, not perfectly round and not pointed. Keep crisp medium-fine pixel clusters, warm coherent limited colors, natural garment folds, no realistic skin/individual hair strands. Front view neutral relaxed arms at sides with slight air gap, feet on same horizontal line, full hair and shoes visible. Natural face/hair/neck/shoulder integration is most important. Transparent empty background, no glow/halo/floor/shadow/text, one character only.",
+    "kind": "full_body",
+    "sha256": "37427d96100f98d56eaeeb0ce2a729f23d5f0244e1565d22cd29ae4500f41039",
+    "neckRow": 446,
+    "deliveredLayerSource": true
+  },
+  "child_muscular": {
+    "source": "C:\\Users\\bestw\\.codex\\generated_images\\01a18201-fe9b-7c92-83d5-fb63c765d04d\\exec-620cf205-ac8c-435b-8ad4-f39aadc9dab4.png",
+    "prompt": "Use the input approved young-adult character as identity and medium-fine pixel-art STYLE reference. Create ONE new complete full-body sprite of THE SAME PERSON at a different life stage. An elementary-school child version of the same person. Similar slightly oval face and dark side-swept hairstyle, red-orange casual sweatshirt, blue knee-length shorts, cream socks and small brown sneakers. Natural child proportions, moderately short limbs, about 2.7 heads tall. The sturdy active child build: moderately fuller shoulders/arms/thighs, still completely age-appropriate, no adult bodybuilder anatomy. Keep the same recognizable eye spacing, simple large dark eyes with small highlights, small nose and friendly modest smile. Face gently oval, not perfectly round and not pointed. Keep crisp medium-fine pixel clusters, warm coherent limited colors, natural garment folds, no realistic skin/individual hair strands. Front view neutral relaxed arms at sides with slight air gap, feet on same horizontal line, full hair and shoes visible. Natural face/hair/neck/shoulder integration is most important. Transparent empty background, no glow/halo/floor/shadow/text, one character only.",
+    "kind": "full_body",
+    "sha256": "a02659d1859b5fca38eb07898e720618258ab0f15590ef4b9c37b7ad2ba5d8dd",
+    "neckRow": 451,
+    "deliveredLayerSource": true
+  },
+  "teen_standard": {
+    "source": "C:\\Users\\bestw\\.codex\\generated_images\\01a18201-fe9b-7c92-83d5-fb63c765d04d\\exec-9ee8783e-3bf3-4389-9556-fb78c05011ff.png",
+    "prompt": "Use the input approved young-adult character as identity and medium-fine pixel-art STYLE reference. Create ONE new complete full-body sprite of THE SAME PERSON at a different life stage. A teenage version of the same person, same slightly oval face and short dark side-swept hair, simple navy school-style cardigan over cream collared shirt, charcoal trousers, small brown shoes. Youthful modest shoulders, about 3.1 heads tall. An ordinary, balanced healthy build. Keep the same recognizable eye spacing, simple large dark eyes with small highlights, small nose and friendly modest smile. Face gently oval, not perfectly round and not pointed. Keep crisp medium-fine pixel clusters, warm coherent limited colors, natural garment folds, no realistic skin/individual hair strands. Front view neutral relaxed arms at sides with slight air gap, feet on same horizontal line, full hair and shoes visible. Natural face/hair/neck/shoulder integration is most important. Transparent empty background, no glow/halo/floor/shadow/text, one character only.",
+    "kind": "full_body",
+    "sha256": "c0a84a080a918dae6c90e8d7bb23d1730ba8bfffb876a5071af05497b449bdd1",
+    "neckRow": 405,
+    "deliveredLayerSource": true
+  },
+  "teen_slim": {
+    "source": "C:\\Users\\bestw\\.codex\\generated_images\\01a18201-fe9b-7c92-83d5-fb63c765d04d\\exec-2b7bf948-1a47-4a41-846d-c2a4e7e389b9.png",
+    "prompt": "Use the input approved young-adult character as identity and medium-fine pixel-art STYLE reference. Create ONE new complete full-body sprite of THE SAME PERSON at a different life stage. A teenage version of the same person, same slightly oval face and short dark side-swept hair, simple navy school-style cardigan over cream collared shirt, charcoal trousers, small brown shoes. Youthful modest shoulders, about 3.1 heads tall. A naturally slender frame, narrower torso and shoulders, slim arms and thighs. Healthy, not skeletal. Keep the same recognizable eye spacing, simple large dark eyes with small highlights, small nose and friendly modest smile. Face gently oval, not perfectly round and not pointed. Keep crisp medium-fine pixel clusters, warm coherent limited colors, natural garment folds, no realistic skin/individual hair strands. Front view neutral relaxed arms at sides with slight air gap, feet on same horizontal line, full hair and shoes visible. Natural face/hair/neck/shoulder integration is most important. Transparent empty background, no glow/halo/floor/shadow/text, one character only.",
+    "kind": "full_body",
+    "sha256": "8e0cad81914427afb74c2c177085c2dbf10a9d80a74e5294565cc826639cc9f2",
+    "neckRow": 425,
+    "deliveredLayerSource": true
+  },
+  "teen_muscular": {
+    "source": "C:\\Users\\bestw\\.codex\\generated_images\\01a18201-fe9b-7c92-83d5-fb63c765d04d\\exec-303ec977-80cc-432d-8df6-8fbe917c2982.png",
+    "prompt": "Use the input approved young-adult character as identity and medium-fine pixel-art STYLE reference. Create ONE new complete full-body sprite of THE SAME PERSON at a different life stage. A teenage version of the same person, same slightly oval face and short dark side-swept hair, simple navy school-style cardigan over cream collared shirt, charcoal trousers, small brown shoes. Youthful modest shoulders, about 3.1 heads tall. A naturally athletic build: moderately broader shoulders/chest, fuller arms and thighs, gentle tapered waist. No exaggerated bulging muscles. Keep the same recognizable eye spacing, simple large dark eyes with small highlights, small nose and friendly modest smile. Face gently oval, not perfectly round and not pointed. Keep crisp medium-fine pixel clusters, warm coherent limited colors, natural garment folds, no realistic skin/individual hair strands. Front view neutral relaxed arms at sides with slight air gap, feet on same horizontal line, full hair and shoes visible. Natural face/hair/neck/shoulder integration is most important. Transparent empty background, no glow/halo/floor/shadow/text, one character only.",
+    "kind": "full_body",
+    "sha256": "c57e1b69f1865bd4b0323aa83d254f23b70c76fc6656d23699b8426a3d29c9d0",
+    "neckRow": 421,
+    "deliveredLayerSource": true
+  },
+  "middle_standard": {
+    "source": "C:\\Users\\bestw\\.codex\\generated_images\\01a18201-fe9b-7c92-83d5-fb63c765d04d\\exec-69a555f6-b75b-4a80-9073-cfb95b6cc0a1.png",
+    "prompt": "Use the input approved young-adult character as identity and medium-fine pixel-art STYLE reference. Create ONE new complete full-body sprite of THE SAME PERSON at a different life stage. A middle-aged version of the same person, recognizable face and side-swept dark hair with only a few gray strands at temples, subtle age lines without changing eye style. Muted teal overshirt over cream shirt, charcoal trousers, brown shoes. Mature posture, gently broader torso, same moderately shortened stylized limbs as approved adult. An ordinary, balanced healthy build. Keep the same recognizable eye spacing, simple large dark eyes with small highlights, small nose and friendly modest smile. Face gently oval, not perfectly round and not pointed. Keep crisp medium-fine pixel clusters, warm coherent limited colors, natural garment folds, no realistic skin/individual hair strands. Front view neutral relaxed arms at sides with slight air gap, feet on same horizontal line, full hair and shoes visible. Natural face/hair/neck/shoulder integration is most important. Transparent empty background, no glow/halo/floor/shadow/text, one character only.",
+    "kind": "full_body",
+    "sha256": "a19d31195b2327667d7d33700c76712b95d38d535eb368c7655f17b500b1828a",
+    "neckRow": 435,
+    "deliveredLayerSource": true
+  },
+  "middle_slim": {
+    "source": "C:\\Users\\bestw\\.codex\\generated_images\\01a18201-fe9b-7c92-83d5-fb63c765d04d\\exec-f035327d-4c84-4ff3-ad09-21935b3fd4b3.png",
+    "prompt": "Use the input approved young-adult character as identity and medium-fine pixel-art STYLE reference. Create ONE new complete full-body sprite of THE SAME PERSON at a different life stage. A middle-aged version of the same person, recognizable face and side-swept dark hair with only a few gray strands at temples, subtle age lines without changing eye style. Muted teal overshirt over cream shirt, charcoal trousers, brown shoes. Mature posture, gently broader torso, same moderately shortened stylized limbs as approved adult. A naturally slender frame, narrower torso and shoulders, slim arms and thighs. Healthy, not skeletal. Keep the same recognizable eye spacing, simple large dark eyes with small highlights, small nose and friendly modest smile. Face gently oval, not perfectly round and not pointed. Keep crisp medium-fine pixel clusters, warm coherent limited colors, natural garment folds, no realistic skin/individual hair strands. Front view neutral relaxed arms at sides with slight air gap, feet on same horizontal line, full hair and shoes visible. Natural face/hair/neck/shoulder integration is most important. Transparent empty background, no glow/halo/floor/shadow/text, one character only.",
+    "kind": "full_body",
+    "sha256": "b6411f8785b34fd8f557b4f845f86b242522a656508b5d1f94a0b77e85f20cde",
+    "neckRow": 426,
+    "deliveredLayerSource": true
+  },
+  "middle_muscular": {
+    "source": "C:\\Users\\bestw\\.codex\\generated_images\\01a18201-fe9b-7c92-83d5-fb63c765d04d\\exec-5b534ac8-f4ee-46d2-a76e-01cfbd5db1c4.png",
+    "prompt": "Use the input approved young-adult character as identity and medium-fine pixel-art STYLE reference. Create ONE new complete full-body sprite of THE SAME PERSON at a different life stage. A middle-aged version of the same person, recognizable face and side-swept dark hair with only a few gray strands at temples, subtle age lines without changing eye style. Muted teal overshirt over cream shirt, charcoal trousers, brown shoes. Mature posture, gently broader torso, same moderately shortened stylized limbs as approved adult. A naturally athletic build: moderately broader shoulders/chest, fuller arms and thighs, gentle tapered waist. No exaggerated bulging muscles. Keep the same recognizable eye spacing, simple large dark eyes with small highlights, small nose and friendly modest smile. Face gently oval, not perfectly round and not pointed. Keep crisp medium-fine pixel clusters, warm coherent limited colors, natural garment folds, no realistic skin/individual hair strands. Front view neutral relaxed arms at sides with slight air gap, feet on same horizontal line, full hair and shoes visible. Natural face/hair/neck/shoulder integration is most important. Transparent empty background, no glow/halo/floor/shadow/text, one character only.",
+    "kind": "full_body",
+    "sha256": "aee26e589f705652475e6c6ad13ab05d27afeed16f4aae629ca7330759796592",
+    "neckRow": 436,
+    "deliveredLayerSource": true
+  },
+  "old_age_standard": {
+    "source": "C:\\Users\\bestw\\.codex\\generated_images\\01a18201-fe9b-7c92-83d5-fb63c765d04d\\exec-ec0df737-a07b-41ac-8c70-c3e370cef255.png",
+    "prompt": "Use the input approved young-adult character as identity and medium-fine pixel-art STYLE reference. Create ONE new complete full-body sprite of THE SAME PERSON at a different life stage. An elderly version of the same person, recognizable gentle oval face, softly simplified fine age marks, silver-gray version of the same swept hairstyle, warm tan cardigan over cream shirt, brown trousers, small dark-brown shoes. Slight natural shoulder relaxation, upright independent stance without cane; moderately short limbs, not frail caricature. An ordinary, balanced healthy build. Keep the same recognizable eye spacing, simple large dark eyes with small highlights, small nose and friendly modest smile. Face gently oval, not perfectly round and not pointed. Keep crisp medium-fine pixel clusters, warm coherent limited colors, natural garment folds, no realistic skin/individual hair strands. Front view neutral relaxed arms at sides with slight air gap, feet on same horizontal line, full hair and shoes visible. Natural face/hair/neck/shoulder integration is most important. Transparent empty background, no glow/halo/floor/shadow/text, one character only.",
+    "kind": "full_body",
+    "sha256": "21c836deb84f964087d4f502448b37cb7df5a65345dd8f7bb6e429e6cdf0fcb3",
+    "neckRow": 453,
+    "deliveredLayerSource": true
+  },
+  "old_age_slim": {
+    "source": "C:\\Users\\bestw\\.codex\\generated_images\\01a18201-fe9b-7c92-83d5-fb63c765d04d\\exec-13abfdd5-1c35-4d21-a898-d8db23a2b777.png",
+    "prompt": "Use the input approved young-adult character as identity and medium-fine pixel-art STYLE reference. Create ONE new complete full-body sprite of THE SAME PERSON at a different life stage. An elderly version of the same person, recognizable gentle oval face, softly simplified fine age marks, silver-gray version of the same swept hairstyle, warm tan cardigan over cream shirt, brown trousers, small dark-brown shoes. Slight natural shoulder relaxation, upright independent stance without cane; moderately short limbs, not frail caricature. A naturally slender frame, narrower torso and shoulders, slim arms and thighs. Healthy, not skeletal. Keep the same recognizable eye spacing, simple large dark eyes with small highlights, small nose and friendly modest smile. Face gently oval, not perfectly round and not pointed. Keep crisp medium-fine pixel clusters, warm coherent limited colors, natural garment folds, no realistic skin/individual hair strands. Front view neutral relaxed arms at sides with slight air gap, feet on same horizontal line, full hair and shoes visible. Natural face/hair/neck/shoulder integration is most important. Transparent empty background, no glow/halo/floor/shadow/text, one character only.",
+    "kind": "full_body",
+    "sha256": "572050b3801143e2ea3b0585432b94931fe62d979cc12f18241e3fc9206e29e4",
+    "neckRow": 446,
+    "deliveredLayerSource": true
+  },
+  "old_age_muscular": {
+    "source": "C:\\Users\\bestw\\.codex\\generated_images\\01a18201-fe9b-7c92-83d5-fb63c765d04d\\exec-95fe76f2-bef1-4b84-99e3-6fb782be08bb.png",
+    "prompt": "Use the input approved young-adult character as identity and medium-fine pixel-art STYLE reference. Create ONE new complete full-body sprite of THE SAME PERSON at a different life stage. An elderly version of the same person, recognizable gentle oval face, softly simplified fine age marks, silver-gray version of the same swept hairstyle, warm tan cardigan over cream shirt, brown trousers, small dark-brown shoes. Slight natural shoulder relaxation, upright independent stance without cane; moderately short limbs, not frail caricature. A naturally athletic build: moderately broader shoulders/chest, fuller arms and thighs, gentle tapered waist. No exaggerated bulging muscles. Keep the same recognizable eye spacing, simple large dark eyes with small highlights, small nose and friendly modest smile. Face gently oval, not perfectly round and not pointed. Keep crisp medium-fine pixel clusters, warm coherent limited colors, natural garment folds, no realistic skin/individual hair strands. Front view neutral relaxed arms at sides with slight air gap, feet on same horizontal line, full hair and shoes visible. Natural face/hair/neck/shoulder integration is most important. Transparent empty background, no glow/halo/floor/shadow/text, one character only.",
+    "kind": "full_body",
+    "sha256": "b018e907deb78f29dd8fbb7448ee2e9498f160cdf8695f1b57156ba62537f69e",
+    "neckRow": 439,
+    "deliveredLayerSource": true
+  },
+  "eyes_big": {
+    "source": "C:\\Users\\bestw\\.codex\\generated_images\\01a18201-fe9b-7c92-83d5-fb63c765d04d\\exec-e493efc6-8941-4f49-b991-32c14873e46b.png",
+    "prompt": "Edit the approved full-body pixel character. Change ONLY BOTH EYES to slightly larger open eyes, only about 12 percent taller, same warm dark irises and small white highlight, subtle friendly gaze. Keep original eye centers, eye spacing, eyebrows, skin colors, facial outline, tiny nose, smile, hair, head/body ratio, clothes, pixel density, full-body pose and canvas placement EXACTLY unchanged. Do not add eyelashes or realistic rendering. One complete character on actual transparent empty background, no halo, text or shadow.",
+    "kind": "eye_expression_edit",
+    "sha256": "660a7ca86375a28ab6e81978f8cc3ccd4e4668ae8bbf01999a194394e319b946",
+    "templateEyeBoxes": [
+      [
+        62,
+        63,
+        75,
+        92
+      ],
+      [
+        104,
+        71,
+        119,
+        90
+      ]
+    ],
+    "deliveredLayerSource": false
+  },
+  "eyes_narrow": {
+    "source": "C:\\Users\\bestw\\.codex\\generated_images\\01a18201-fe9b-7c92-83d5-fb63c765d04d\\exec-e2af8a06-ac90-455a-ae48-5388b0e18d55.png",
+    "prompt": "Edit the approved full-body pixel character. Change ONLY BOTH EYES to gentle narrower relaxed smiling eyes, visibly thinner open almond shapes, tiny visible dark iris, still warm and friendly, not an angry squint. Keep original eye centers, eye spacing, eyebrows, skin colors, facial outline, tiny nose, smile, hair, head/body ratio, clothes, pixel density, full-body pose and canvas placement EXACTLY unchanged. Do not add eyelashes or realistic rendering. One complete character on actual transparent empty background, no halo, text or shadow.",
+    "kind": "eye_expression_edit",
+    "sha256": "fbc239dd4c807cdcf720ed289ff4bfea1bfd7ae3919bcf0aefc1dfb97620061b",
+    "templateEyeBoxes": [
+      [
+        62,
+        63,
+        75,
+        92
+      ],
+      [
+        104,
+        71,
+        119,
+        90
+      ]
+    ],
+    "deliveredLayerSource": false
+  },
+  "face_young_adult": {
+    "source": "C:\\Users\\bestw\\.codex\\generated_images\\01a18201-fe9b-7c92-83d5-fb63c765d04d\\exec-765598ce-060e-4679-9436-229df94a2eff.png",
+    "prompt": "Edit target input image. Remove ONLY all hair, eyebrows and both eyes, leaving a blank smooth warm skin area at those positions. Keep original softly oval facial contour, ears, tiny nose, small smile, age, natural forehead and chin, neck, outfit, body and all pixel-art colors and exact proportions unchanged. Give the person a natural bald oval scalp, not a huge sphere. This is a modular game skin layer source. ONE complete full-body character, same 1024x1536 portrait composition and original positions. Genuine transparent background with no glow, no text. Do not change the design or coarsen pixels.",
+    "kind": "independent_layer_source",
+    "sha256": "892d5b11ad13073484bf69c03433d5713bc5c8da9b683955643ccd0ffded9e78",
+    "neckRow": 377,
+    "deliveredLayerSource": true
+  },
+  "hair_extract_hair_default": {
+    "source": "C:\\Users\\bestw\\.codex\\generated_images\\01a18201-fe9b-7c92-83d5-fb63c765d04d\\exec-427c3667-10eb-452e-abc5-c06cfd5dba5c.png",
+    "prompt": "Extract ONLY the entire short dark hairstyle from the input character into its own transparent cutout sprite. Preserve precisely the input hair silhouette, side locks, pointed fringe, volume, dark palette and medium-fine pixel cluster size. Remove ALL face, skin, ears, eyebrows, eyes, neck, clothes and body. Transparent holes where the forehead/face used to be; do not fill the face with black. ONE isolated hair layer for overlay on the unchanged face. Front view. No head underneath, no wig stand, no halo, no shadow, no text.",
+    "kind": "independent_layer_source",
+    "sha256": "619f26c52ce44955ce946c23f0e65b5710dc2db71e2d7569f0157e00278cb358",
+    "deliveredLayerSource": true
+  },
+  "eye_extract_eyes_default": {
+    "source": "C:\\Users\\bestw\\.codex\\generated_images\\01a18201-fe9b-7c92-83d5-fb63c765d04d\\exec-69a6d3bc-1e5c-460b-821b-08be06f6437b.png",
+    "prompt": "Extract ONLY the input character's TWO EYES and TWO EYEBROWS into ONE transparent paired facial-feature layer. Keep their exact shapes, warm dark brown irises, white highlight, medium-fine pixel clusters, original relative positions/spacing, friendly expression and original size relation between brows and eyes. Remove all skin, nose, mouth, hair, face, head and body. The space between eyes and between eyebrows and eyes must be completely transparent. One paired eye-and-brow cutout ready to overlay on a blank face, no background or text.",
+    "kind": "independent_layer_source",
+    "sha256": "c5a055cfa78ab6c80936a774e58911c65d7d2fc541a7128fb75950fc94f8bb72",
+    "deliveredLayerSource": true
+  },
+  "face_infant": {
+    "source": "C:\\Users\\bestw\\.codex\\generated_images\\01a18201-fe9b-7c92-83d5-fb63c765d04d\\exec-65683988-126b-4576-844a-81866f6292f1.png",
+    "prompt": "Edit target input image. Remove ONLY all hair, eyebrows and both eyes, replacing the eyes/brows with smooth blank skin at their original positions. Keep the EXACT original softly oval face contour, ears, tiny nose, friendly small smile, age marks, skin palette, natural forehead, chin, neck, clothes, body and exact proportions unchanged. Natural bald oval scalp, not huge or spherical. This is an independent modular skin/face layer source, with no eyes or hair. ONE complete full-body character, same portrait composition and original position. Preserve original medium-fine pixel density. Actual transparent background, no halo, text or shadow.",
+    "kind": "independent_layer_source",
+    "sha256": "242b8221845f9888a93fc190d723ceac603415d9d786b36dce2d5f8cce64b641",
+    "neckRow": 387,
+    "deliveredLayerSource": true
+  },
+  "face_child": {
+    "source": "C:\\Users\\bestw\\.codex\\generated_images\\01a18201-fe9b-7c92-83d5-fb63c765d04d\\exec-e8278f7d-172d-4035-9422-64aa9976a93d.png",
+    "prompt": "Edit target input image. Remove ONLY all hair, eyebrows and both eyes, replacing the eyes/brows with smooth blank skin at their original positions. Keep the EXACT original softly oval face contour, ears, tiny nose, friendly small smile, age marks, skin palette, natural forehead, chin, neck, clothes, body and exact proportions unchanged. Natural bald oval scalp, not huge or spherical. This is an independent modular skin/face layer source, with no eyes or hair. ONE complete full-body character, same portrait composition and original position. Preserve original medium-fine pixel density. Actual transparent background, no halo, text or shadow.",
+    "kind": "independent_layer_source",
+    "sha256": "870d612237511d51eb62e61b0ad60c16528d117982cf02ed5f14c74b54b8e0af",
+    "neckRow": 331,
+    "deliveredLayerSource": true
+  },
+  "face_teen": {
+    "source": "C:\\Users\\bestw\\.codex\\generated_images\\01a18201-fe9b-7c92-83d5-fb63c765d04d\\exec-104d63e2-1041-4965-b17e-d1d98238433a.png",
+    "prompt": "Edit target input image. Remove ONLY all hair, eyebrows and both eyes, replacing the eyes/brows with smooth blank skin at their original positions. Keep the EXACT original softly oval face contour, ears, tiny nose, friendly small smile, age marks, skin palette, natural forehead, chin, neck, clothes, body and exact proportions unchanged. Natural bald oval scalp, not huge or spherical. This is an independent modular skin/face layer source, with no eyes or hair. ONE complete full-body character, same portrait composition and original position. Preserve original medium-fine pixel density. Actual transparent background, no halo, text or shadow.",
+    "kind": "independent_layer_source",
+    "sha256": "ea4c7c53a252edcbfc7376d6ba905b0a9d115b75705ca0cf065adfd0de73a3a0",
+    "neckRow": 321,
+    "deliveredLayerSource": true
+  },
+  "face_middle": {
+    "source": "C:\\Users\\bestw\\.codex\\generated_images\\01a18201-fe9b-7c92-83d5-fb63c765d04d\\exec-9bb28e66-416c-43db-92a7-60bd8e73c3ff.png",
+    "prompt": "Edit target input image. Remove ONLY all hair, eyebrows and both eyes, replacing the eyes/brows with smooth blank skin at their original positions. Keep the EXACT original softly oval face contour, ears, tiny nose, friendly small smile, age marks, skin palette, natural forehead, chin, neck, clothes, body and exact proportions unchanged. Natural bald oval scalp, not huge or spherical. This is an independent modular skin/face layer source, with no eyes or hair. ONE complete full-body character, same portrait composition and original position. Preserve original medium-fine pixel density. Actual transparent background, no halo, text or shadow.",
+    "kind": "independent_layer_source",
+    "sha256": "098c3874eded90d609bf9027944895250ff310dcd4bbe115d399135966e88c6a",
+    "neckRow": 339,
+    "deliveredLayerSource": true
+  },
+  "face_old_age": {
+    "source": "C:\\Users\\bestw\\.codex\\generated_images\\01a18201-fe9b-7c92-83d5-fb63c765d04d\\exec-4904b33a-1c11-42e0-ba48-ca22a0033519.png",
+    "prompt": "Edit target input image. Remove ONLY all hair, eyebrows and both eyes, replacing the eyes/brows with smooth blank skin at their original positions. Keep the EXACT original softly oval face contour, ears, tiny nose, friendly small smile, age marks, skin palette, natural forehead, chin, neck, clothes, body and exact proportions unchanged. Natural bald oval scalp, not huge or spherical. This is an independent modular skin/face layer source, with no eyes or hair. ONE complete full-body character, same portrait composition and original position. Preserve original medium-fine pixel density. Actual transparent background, no halo, text or shadow.",
+    "kind": "independent_layer_source",
+    "sha256": "4175133cd7a84f599d48fdeea0910cc0379c20b325e13f838ec824fc7e5e39e3",
+    "neckRow": 330,
+    "deliveredLayerSource": true
+  },
+  "hair_extract_hair_bob_brown": {
+    "source": "C:\\Users\\bestw\\.codex\\generated_images\\01a18201-fe9b-7c92-83d5-fb63c765d04d\\exec-5040a7c9-2ec1-40d0-8364-28854d7aab73.png",
+    "prompt": "Extract ONLY the ENTIRE hairstyle from this input into one independent transparent hair cutout. Preserve precisely its original front silhouette, natural volume, fringe, both side locks, colors, medium-fine pixel cluster size, and ALL long locks falling down beside the neck/shoulders if present. Remove ALL skin, face, ears, eyes, eyebrows, neck, clothes and body. The forehead and face opening must be truly transparent, not a black filled head shape. One hair layer for overlay on the same unchanged head. No wig stand, halo, shadow, text or extra objects.",
+    "kind": "independent_layer_source",
+    "sha256": "3ff08b2490ffb2da90df104b23c142cac487bc19fa60c22f8abc406f05c96d3f",
+    "deliveredLayerSource": true
+  },
+  "hair_extract_hair_long_black": {
+    "source": "C:\\Users\\bestw\\.codex\\generated_images\\01a18201-fe9b-7c92-83d5-fb63c765d04d\\exec-bed930df-7171-497d-85b3-12d615255b78.png",
+    "prompt": "Extract ONLY the ENTIRE hairstyle from this input into one independent transparent hair cutout. Preserve precisely its original front silhouette, natural volume, fringe, both side locks, colors, medium-fine pixel cluster size, and ALL long locks falling down beside the neck/shoulders if present. Remove ALL skin, face, ears, eyes, eyebrows, neck, clothes and body. The forehead and face opening must be truly transparent, not a black filled head shape. One hair layer for overlay on the same unchanged head. No wig stand, halo, shadow, text or extra objects.",
+    "kind": "independent_layer_source",
+    "sha256": "409dc78b292c03f4f3431ae88873b978b398660504a18051149f11ce439f012e",
+    "deliveredLayerSource": true
+  },
+  "hair_extract_hair_curly_brown": {
+    "source": "C:\\Users\\bestw\\.codex\\generated_images\\01a18201-fe9b-7c92-83d5-fb63c765d04d\\exec-9cf0ef36-6843-4c37-936a-cd0803b3ccea.png",
+    "prompt": "Extract ONLY the ENTIRE hairstyle from this input into one independent transparent hair cutout. Preserve precisely its original front silhouette, natural volume, fringe, both side locks, colors, medium-fine pixel cluster size, and ALL long locks falling down beside the neck/shoulders if present. Remove ALL skin, face, ears, eyes, eyebrows, neck, clothes and body. The forehead and face opening must be truly transparent, not a black filled head shape. One hair layer for overlay on the same unchanged head. No wig stand, halo, shadow, text or extra objects.",
+    "kind": "independent_layer_source",
+    "sha256": "c8af246c6585787a129be579940af734a5a3f1164ea51a07b228205763cf139d",
+    "deliveredLayerSource": true
+  },
+  "eye_extract_eyes_big": {
+    "source": "C:\\Users\\bestw\\.codex\\generated_images\\01a18201-fe9b-7c92-83d5-fb63c765d04d\\exec-2cf9dad9-288f-47d9-b9c1-8e6dd89071f7.png",
+    "prompt": "Extract ONLY the TWO EYES and TWO EYEBROWS of this input character into ONE independent paired transparent facial-feature layer. Keep EXACT eye shapes/expression (slightly larger open eyes), dark brown irises, small white highlights, original relative positions and spacing, and the same medium-fine pixel cluster size. Preserve the relative gap between brows and eyes. Remove ALL skin, nose, mouth, hair, head, body and background. All empty space between features must be truly transparent. One paired eye/brow cutout for overlay on a blank face, no text or halo.",
+    "kind": "independent_layer_source",
+    "sha256": "43c41ed1047201fe79125bd307aca102f864286aebe5e97330ddcc068f0556c3",
+    "deliveredLayerSource": true
+  },
+  "eye_extract_eyes_narrow": {
+    "source": "C:\\Users\\bestw\\.codex\\generated_images\\01a18201-fe9b-7c92-83d5-fb63c765d04d\\exec-aa143d47-2973-4fad-b34b-a26e4b62cfdb.png",
+    "prompt": "Extract ONLY the TWO EYES and TWO EYEBROWS of this input character into ONE independent paired transparent facial-feature layer. Keep EXACT eye shapes/expression (gentle narrow relaxed open smiling eyes), dark brown irises, small white highlights, original relative positions and spacing, and the same medium-fine pixel cluster size. Preserve the relative gap between brows and eyes. Remove ALL skin, nose, mouth, hair, head, body and background. All empty space between features must be truly transparent. One paired eye/brow cutout for overlay on a blank face, no text or halo.",
+    "kind": "independent_layer_source",
+    "sha256": "849150283e940f209d986caf2480d89cf9f9b5ebde2d5e78fceb038e459b2b3e",
+    "deliveredLayerSource": true
+  }
+}
