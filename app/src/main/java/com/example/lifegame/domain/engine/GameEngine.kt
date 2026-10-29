@@ -404,7 +404,8 @@ class GameEngine(
         val combinedDelta = resolveOutcomeStatDelta(state.period, outcome)
         val afterStats = state.stats.apply(combinedDelta, minHealth = healthFloor(state.period))
         val healthDepleted = afterStats.health <= 0
-        val nextFlags = (state.flags - outcome.removeFlags) + outcome.addFlags + completedEventFlag(event.eventId)
+        // Reacquired facts must replay after older facts when restoring a saved run.
+        val nextFlags = (state.flags - outcome.removeFlags - outcome.addFlags) + outcome.addFlags + completedEventFlag(event.eventId)
         val nextFacts = state.lifeFacts
             .removeRules(outcome.removeFlags, lifeFactRules)
             .applyRules(outcome.addFlags + completedEventFlag(event.eventId), lifeFactRules)

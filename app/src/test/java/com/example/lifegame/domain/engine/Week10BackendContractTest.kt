@@ -12,6 +12,22 @@ import org.junit.Test
 class Week10BackendContractTest {
     private val periods = listOf(PeriodDefinition(LifePeriod.YOUNG_ADULT, 0, 3))
 
+    @Test fun reacquiredFactKeepsLatestValueAfterRestore() {
+        val rules = listOf(
+            LifeFactRule("married", "maritalStatus", "MARRIED"),
+            LifeFactRule("divorced", "maritalStatus", "DIVORCED"),
+        )
+        val event = event(Outcome("again", "재혼", chance = 100, addFlags = setOf("married")))
+        val before = PeriodRunState("run", 1L, LifePeriod.YOUNG_ADULT,
+            flags = linkedSetOf("married", "divorced"),
+            lifeFacts = LifeFacts(maritalStatus = "DIVORCED"), pendingDecisionId = event.eventId)
+        val engine = GameEngine()
+        val after = engine.resolvePeriodDecision(before, event, "A", periods, rules).step.state
+        assertEquals("MARRIED", after.lifeFacts.maritalStatus)
+        assertEquals("MARRIED", engine.synchronizeLifeFacts(after, rules).lifeFacts.maritalStatus)
+        assertEquals(listOf("divorced", "married"), after.flags.filter { it in setOf("married", "divorced") })
+    }
+
     @Test fun parserReadsOutcomeRemoveFlagsAndMaxStats() {
         val event = V4ContentParser.parseDecisionEvents(
             """[{"eventId":"e","periods":["YOUNG_ADULT"],"kind":"INCIDENT","title":"t","text":"x","choices":[{"choiceId":"A","label":"a","maxStats":{"건강":34},"outcomes":[{"outcomeId":"o","text":"r","chance":100,"removeFlags":["married"]}]}]}]""",
