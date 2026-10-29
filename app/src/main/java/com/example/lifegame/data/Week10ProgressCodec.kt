@@ -149,6 +149,7 @@ internal object Week10ProgressCodec {
         put("eventId", eventId); put("choiceId", choiceId); put("outcomeId", outcomeId)
         put("period", period.name); put("year", yearInPeriod); put("eventTitle", eventTitle)
         put("choiceLabel", choiceLabel); put("resultText", resultText); put("momentImageId", momentImageId)
+        put("bodyType", bodyType?.name)
     }
 
     private fun JSONObject.toRunChoiceRecord() = RunChoiceRecord(
@@ -156,6 +157,7 @@ internal object Week10ProgressCodec {
         period = LifePeriod.valueOf(getString("period")), yearInPeriod = getInt("year"),
         eventTitle = getString("eventTitle"), choiceLabel = getString("choiceLabel"),
         resultText = getString("resultText"), momentImageId = nullableString("momentImageId"),
+        bodyType = nullableString("bodyType")?.let { com.example.lifegame.domain.model.BodyType.valueOf(it) },
     )
 
     private fun SavedOutcome.toJson() = JSONObject().apply {

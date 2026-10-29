@@ -78,6 +78,17 @@ class LifeRecordUiTest {
         assertEquals(HealthLevel.DANGER, healthLevelOf(0))
     }
 
+    @Test fun recapUsesBodySnapshotForEachChoiceInsteadOfFinalBody() {
+        val choices = listOf(
+            choice("slim", LifePeriod.TEEN, 1).copy(bodyType = BodyType.SLIM),
+            choice("fit", LifePeriod.YOUNG_ADULT, 1).copy(bodyType = BodyType.MUSCULAR),
+            choice("old-save", LifePeriod.MIDDLE, 1),
+        )
+        val ui = buildLifeRecordUi(record(choices = choices), content)
+        assertEquals(listOf(BodyType.SLIM, BodyType.MUSCULAR, BodyType.STANDARD), ui.recap.map { it.avatar?.bodyType })
+        assertEquals(listOf(LifePeriod.TEEN, LifePeriod.YOUNG_ADULT, LifePeriod.MIDDLE), ui.recap.map { it.avatar?.period })
+    }
+
     @Test
     fun certificateUsesSavedTitleFactsAndFinalLook() {
         val ui = buildLifeRecordUi(record(), content)

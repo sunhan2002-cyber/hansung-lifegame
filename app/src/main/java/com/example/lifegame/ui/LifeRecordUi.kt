@@ -125,7 +125,9 @@ fun recapMomentsUi(
             choiceLabel = choice.choiceLabel,
             resultText = choice.resultText,
             images = images,
-            avatar = lookAt(choice.period),
+            avatar = lookAt(choice.period)?.let { look ->
+                look.copy(bodyType = choice.bodyType ?: com.example.lifegame.domain.model.BodyType.STANDARD)
+            },
             eventImageId = imageId,
         )
     }

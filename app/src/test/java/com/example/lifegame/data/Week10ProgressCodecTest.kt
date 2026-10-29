@@ -52,6 +52,14 @@ class Week10ProgressCodecTest {
         assertEquals(emptyList<String>(), Week10ProgressCodec.decode(legacy.toString())?.pendingOutcome?.openedEvents)
     }
 
+    @Test fun choiceBodySnapshotsSurviveSaveAndMissingLegacyValueStaysUnknown() {
+        val run = V4SavedRun("검사", state, choices = listOf(choice.copy(bodyType = BodyType.SLIM)))
+        assertEquals(BodyType.SLIM, Week10ProgressCodec.decode(Week10ProgressCodec.encode(run))?.choices?.single()?.bodyType)
+        val legacy = org.json.JSONObject(Week10ProgressCodec.encode(run))
+        legacy.getJSONArray("choices").getJSONObject(0).remove("bodyType")
+        assertNull(Week10ProgressCodec.decode(legacy.toString())?.choices?.single()?.bodyType)
+    }
+
     @Test fun corruptOrFutureSaveFailsSafely() {
         assertNull(Week10ProgressCodec.decode("not-json"))
         assertNull(Week10ProgressCodec.decode("""{"saveFormatVersion":999,"state":{}}"""))

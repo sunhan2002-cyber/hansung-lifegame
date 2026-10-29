@@ -450,6 +450,8 @@ data class RunChoiceRecord(
     val choiceLabel: String,
     val resultText: String,
     val momentImageId: String? = null,
+    /** 체형은 선택 결과 당시의 스냅샷. 이전 저장에는 없으므로 null을 허용한다. */
+    val bodyType: BodyType? = null,
 )
 
 /** 결과 화면에서 종료되어도 같은 결과를 복원하기 위한 적용 완료 스냅샷. */

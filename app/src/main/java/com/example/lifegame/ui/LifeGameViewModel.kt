@@ -491,6 +491,7 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
             choiceLabel = label,
             resultText = resolution.outcome.resultText,
             momentImageId = content.decisions[decision.eventId]?.momentImageId,
+            bodyType = bodyTypeFor(afterState.stats),
         )
         runChoiceHistory += choiceRecord
         val openedEvents = if (afterState.isEnding) emptyList() else newlyOpenedEvents(
