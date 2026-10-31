@@ -1,0 +1,44 @@
+{
+  "asOf": "2026-10-31",
+  "sourceCommit": "3736cc9ff7ce0e321251f197865a318a0a0d0a36",
+  "remoteMainAtAudit": "4810e6354ef5ec8b19c5989e564c40275388e065",
+  "events": 352,
+  "choices": 1009,
+  "eventsWithPreferredFile": 17,
+  "eventsMissingPreferredFile": 335,
+  "pngFiles": 160,
+  "avatarPngFiles": 115,
+  "classificationStatus": "UNREVIEWED",
+  "approvedUniqueGroups": null,
+  "approvedReusableGroups": null,
+  "requiredProductionImages": null,
+  "productionQuantityStatus": "PENDING_SEMANTIC_CLASSIFICATION",
+  "assignment": {
+    "김선한": {
+      "total": 71,
+      "missingPreferredFile": 67,
+      "existingFileReview": 4
+    },
+    "김우영": {
+      "total": 71,
+      "missingPreferredFile": 67,
+      "existingFileReview": 4
+    },
+    "김재겸": {
+      "total": 70,
+      "missingPreferredFile": 67,
+      "existingFileReview": 3
+    },
+    "신기훈": {
+      "total": 70,
+      "missingPreferredFile": 67,
+      "existingFileReview": 3
+    },
+    "정원률": {
+      "total": 70,
+      "missingPreferredFile": 67,
+      "existingFileReview": 3
+    }
+  },
+  "scope": "Static file presence and classification allocation only. No semantic match, decoding, or production quantity is certified."
+}
