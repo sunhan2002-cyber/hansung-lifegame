@@ -150,6 +150,7 @@ internal object Week10ProgressCodec {
         put("period", period.name); put("year", yearInPeriod); put("eventTitle", eventTitle)
         put("choiceLabel", choiceLabel); put("resultText", resultText); put("momentImageId", momentImageId)
         put("bodyType", bodyType?.name)
+        put("eventImageId", eventImageId)
     }
 
     private fun JSONObject.toRunChoiceRecord() = RunChoiceRecord(
@@ -158,6 +159,7 @@ internal object Week10ProgressCodec {
         eventTitle = getString("eventTitle"), choiceLabel = getString("choiceLabel"),
         resultText = getString("resultText"), momentImageId = nullableString("momentImageId"),
         bodyType = nullableString("bodyType")?.let { com.example.lifegame.domain.model.BodyType.valueOf(it) },
+        eventImageId = nullableString("eventImageId"),
     )
 
     private fun SavedOutcome.toJson() = JSONObject().apply {
@@ -166,6 +168,7 @@ internal object Week10ProgressCodec {
         put("beforeStats", beforeStats.toJson()); put("afterStats", afterStats.toJson())
         put("beforeFacts", beforeFacts.toJson()); put("afterFacts", afterFacts.toJson()); put("endsLife", endsLife)
         put("openedEvents", JSONArray(openedEvents))
+        put("eventImageId", eventImageId)
     }
 
     private fun JSONObject.toSavedOutcome() = SavedOutcome(
@@ -175,6 +178,7 @@ internal object Week10ProgressCodec {
         beforeFacts = getJSONObject("beforeFacts").toLifeFacts(), afterFacts = getJSONObject("afterFacts").toLifeFacts(),
         endsLife = optBoolean("endsLife", false),
         openedEvents = optJSONArray("openedEvents").strings(),
+        eventImageId = nullableString("eventImageId"),
     )
 
     private fun AvatarConfig.toJson() = JSONObject().apply {

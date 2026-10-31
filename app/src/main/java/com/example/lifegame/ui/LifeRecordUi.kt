@@ -113,6 +113,7 @@ fun recapMomentsUi(
     }
     return picked.mapIndexed { index, choice ->
         val imageId = choice.momentImageId?.takeIf(String::isNotBlank)
+            ?: choice.eventImageId?.takeIf(String::isNotBlank)
             ?: content.decisions[choice.eventId]?.povImageId?.takeIf(String::isNotBlank)
         val images = content.imageRouting
             .eventCandidates(choice.eventId, imageId, null, choice.period, content.imageFiles)

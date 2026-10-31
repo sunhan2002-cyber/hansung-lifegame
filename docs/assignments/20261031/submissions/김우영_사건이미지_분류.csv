@@ -1,0 +1,72 @@
+eventId,place,mainAction,requiredObjects,peopleAndAge,timeOfDay,approvedPerspective,proposedGroupId,existingArtVerdict,reuseOrNewReason,classificationStatus
+adult_002,프로 구단 상담실,두 진로 제안을 비교한다,계약서와 모교 사진,청년 선수와 중년 스카우터,낮,FIRST_PERSON,career_sports_offer,MISSING_NEW,프로 입단과 코치 제안이 함께 보이는 신규 장면 필요,SELF_REVIEWED
+adult_007,술집 테이블,친구 모임에서 낯선 사람을 본다,술잔과 안주,청년 친구들,금요일 밤,FIRST_PERSON,social_night_meeting,MISSING_NEW,친구 모임과 첫 만남을 동시에 표현할 신규 장면 필요,SELF_REVIEWED
+adult_012,대학 동아리방,회장 제안과 성적표를 비교한다,성적표와 동아리 명단,대학생과 선배,낮,FIRST_PERSON,campus_grade_club,MISSING_NEW,학점과 동아리 선택을 함께 보여 줄 신규 장면 필요,SELF_REVIEWED
+adult_017,회사 회식 자리,팀장이 건넨 술잔을 바라본다,소주잔과 식탁,청년 직장인과 중년 팀장,밤,FIRST_PERSON,work_dinner_drink,MISSING_NEW,강권되는 술잔이 핵심인 신규 장면 필요,SELF_REVIEWED
+adult_022,집 안 침대 옆,밤늦은 업무 메시지를 확인한다,스마트폰과 시계,청년 또는 중년 직장인,밤 11시,FIRST_PERSON,late_work_message,MISSING_NEW,야간 업무 연락을 선명히 보여 줄 신규 장면 필요,SELF_REVIEWED
+adult_027,건강검진 상담 공간,검진 결과와 헬스장 전단을 본다,검진표와 전단지,청년 또는 중년 성인,낮,FIRST_PERSON,health_check_fitness,MISSING_NEW,운동 필요 문구와 등록 권유가 함께 보이는 신규 장면 필요,SELF_REVIEWED
+adult_032,집 거실,연인의 결혼 제안과 해외 파견 메일을 마주한다,반지 상자와 노트북,청년 연인 두 명,저녁,FIRST_PERSON,proposal_or_transfer,MISSING_NEW,결혼과 파견의 충돌을 선택 전에 표현할 신규 장면 필요,SELF_REVIEWED
+adult_037,야간 사무실,연봉 제안과 불 꺼지지 않는 회사를 본다,채용 제안 메일과 사무실 조명,청년 또는 중년 직장인,밤,FIRST_PERSON,job_offer_overtime,MISSING_NEW,연봉 상승과 과로 위험을 함께 암시할 신규 장면 필요,SELF_REVIEWED
+adult_042,이사 중인 방,먼지 쌓인 어린 시절 상자를 연다,이삿짐 상자와 오래된 사진,청년 또는 중년 성인,낮,FIRST_PERSON,childhood_memory_box,MISSING_NEW,과거를 발견하는 손과 상자가 핵심인 신규 장면 필요,SELF_REVIEWED
+adult_047,집 또는 카페,모바일 청첩장과 축의금 금액을 고민한다,스마트폰과 봉투,청년 성인,저녁,FIRST_PERSON,wedding_invite_budget,MISSING_NEW,애매한 관계의 청첩장 고민을 보여 줄 신규 장면 필요,SELF_REVIEWED
+adult_052,가족 식탁,마흔 번째 생일 촛불을 바라본다,케이크와 큰 초 네 개,중년 주인공과 가족,저녁,FIRST_PERSON,middle_birthday_reflection,MISSING_NEW,중년 생일과 회상을 과장 없이 담은 신규 장면 필요,SELF_REVIEWED
+adult_057,퇴직 후 집,치킨집 질문이 온 단톡방을 본다,스마트폰과 퇴직 서류,중년 퇴직자,낮,FIRST_PERSON,retirement_business_question,MISSING_NEW,퇴직 직후의 불안과 창업 농담을 담을 신규 장면 필요,SELF_REVIEWED
+adult_062,노년의 집,50년 전 사진을 받아 본다,스마트폰 속 아기 사진과 빨간 삽,노년 주인공,낮,FIRST_PERSON,old_friend_photo_memory,MISSING_NEW,현재 손과 50년 전 사진을 함께 담을 신규 장면 필요,SELF_REVIEWED
+adult_067,집 침실 또는 거실,월요일을 앞두고 시계를 바라본다,시계와 업무 가방,청년 또는 중년 직장인,일요일 밤 11시,FIRST_PERSON,sunday_night_anxiety,MISSING_NEW,일요일 밤의 압박을 상징하는 신규 장면 필요,SELF_REVIEWED
+adult_070,회사 출입 게이트,닫힌 게이트와 구조조정 메일을 확인한다,사원증과 빨간 게이트 표시,성인 직장인,월요일 아침,FIRST_PERSON,layoff_locked_gate,FIT_REUSE,기존 그림이 사원증과 닫힌 출입문을 정확히 표현함,SELF_REVIEWED
+adult_074,집 소파,소개팅 앱의 첫 매칭 프로필을 확인한다,스마트폰과 매칭 알림,청년 성인,저녁,FIRST_PERSON,dating_app_match,MISSING_NEW,첫 매칭 알림과 프로필을 보여 줄 신규 장면 필요,SELF_REVIEWED
+adult_079,회사 인사팀 앞,긴장한 사원증 사진을 받아 든다,사원증과 회사 출입구,청년 신입사원과 선배,낮,FIRST_PERSON,first_employee_badge,MISSING_NEW,입사 첫날 사원증을 중심으로 한 신규 장면 필요,SELF_REVIEWED
+child_002,집 거실,엄마의 집안일 호출을 듣는다,정리할 물건이나 빨래,아동과 보호자,낮,FIRST_PERSON,child_home_help,MISSING_NEW,집안일 도움 요청을 보여 줄 신규 장면 필요,SELF_REVIEWED
+child_007,초등학교 교실,장래 희망 발표를 준비한다,칠판과 발표 카드,초등학생들과 교사,낮,FIRST_PERSON,child_dream_presentation,MISSING_NEW,교실 발표 선택 순간의 신규 장면 필요,SELF_REVIEWED
+child_012,학교 동아리 안내판,세 문화부 반을 비교한다,실험 도구와 책과 바둑판,초등학생과 교사,낮,FIRST_PERSON,child_club_choice,MISSING_NEW,세 동아리 단서를 한 화면에 담은 신규 장면 필요,SELF_REVIEWED
+child_017,학교 운동장,계주 마지막 주자로 출발한다,배턴과 대형 현수막,초등학생과 가족 관중,낮,FIRST_PERSON,child_relay_race,MISSING_NEW,배턴과 과한 응원 현수막이 보이는 신규 장면 필요,SELF_REVIEWED
+child_022,학교 뒤 공터,친구들과 비밀 기지를 계획한다,판자와 암호 쪽지,초등학생 친구들,방과 후,FIRST_PERSON,child_secret_base,MISSING_NEW,비밀 기지 만들기 직전의 신규 장면 필요,SELF_REVIEWED
+child_027,집 식탁,첫 스마트폰 사용 계약서에 서명한다,스마트폰과 계약서와 펜,아동과 아버지,저녁,FIRST_PERSON,child_phone_contract,MISSING_NEW,첫 폰과 사용 규칙 서명을 보여 줄 신규 장면 필요,SELF_REVIEWED
+child_032,어린이 토론 대회장,상대 팀 주장을 듣는다,연단과 토론 주제판,초등학생들과 교사,낮,FIRST_PERSON,child_debate_contest,MISSING_NEW,상대 팀과 토론 주제가 보이는 신규 장면 필요,SELF_REVIEWED
+child_037,축구장 페널티 지점,마지막 승부차기를 준비한다,축구공과 골대,초등학생 선수와 감독과 가족,낮,FIRST_PERSON,child_penalty_kick,MISSING_NEW,마지막 키커 시점의 신규 장면 필요,SELF_REVIEWED
+child_042,동네 길,보조 바퀴 없는 자전거에 오른다,자전거와 뗀 보조 바퀴,아동과 아버지,낮,FIRST_PERSON,child_first_bicycle,MISSING_NEW,균형 잡기 직전의 손과 자전거가 보이는 신규 장면 필요,SELF_REVIEWED
+child_047,학교 앞 문방구,500원으로 살 것을 고민한다,동전과 문방구 진열대,초등학생 친구들,하굣길,FIRST_PERSON,child_stationery_shop,MISSING_NEW,손의 동전과 유혹적인 진열대를 담은 신규 장면 필요,SELF_REVIEWED
+cross_05,노년의 집 식탁,자녀의 독립 보증금 요청과 노후 통장을 비교한다,통장과 보증금 서류,노년 부모와 성인 자녀,저녁,FIRST_PERSON,old_parent_deposit,MISSING_NEW,노후 자금과 자녀 지원 갈등의 신규 장면 필요,SELF_REVIEWED
+cross_10,혼자 있는 집,이혼 후 첫 명절 초대 메시지를 본다,스마트폰과 명절 음식,중년 또는 노년 성인,명절 낮,FIRST_PERSON,divorce_first_holiday,MISSING_NEW,가족과 친구의 두 초대를 함께 보여 줄 신규 장면 필요,SELF_REVIEWED
+infant_003,집 거실 바닥,분해한 리모컨 조각을 들고 있다,리모컨 조각,영아와 아버지,낮,FIRST_PERSON,baby_broken_remote,MISSING_NEW,아기 손과 분해된 리모컨을 담은 신규 장면 필요,SELF_REVIEWED
+infant_008,소아과 진료실,예방접종 주사기를 바라본다,주사기와 진료대,영아와 간호사와 보호자,낮,FIRST_PERSON,baby_vaccination,MISSING_NEW,주사기를 본 아기 시점의 신규 장면 필요,SELF_REVIEWED
+infant_013,명절 친척집,줄 선 친척들을 바라본다,명절 음식과 거실,영아와 여러 성인 친척,낮,FIRST_PERSON,baby_relatives_gathering,MISSING_NEW,많은 친척이 다가오는 상황의 신규 장면 필요,SELF_REVIEWED
+infant_018,집 놀이방,사촌이 든 장난감 자동차를 바라본다,장난감 자동차,영아와 어린이 사촌,낮,FIRST_PERSON,baby_cousin_toy,MISSING_NEW,빼앗길 장난감이 핵심인 신규 장면 필요,SELF_REVIEWED
+infant_023,놀이공원 회전목마,말과 마차 중 하나를 고른다,회전목마 말과 마차,영아와 아버지,낮,FIRST_PERSON,baby_carousel_choice,MISSING_NEW,두 탈것 선택을 보여 줄 신규 장면 필요,SELF_REVIEWED
+infant_028,어린이집 파티,친구 케이크 촛불을 함께 끄려 한다,케이크와 초 다섯 개,영유아 친구들과 교사,낮,FIRST_PERSON,baby_birthday_cake,MISSING_NEW,촛불 앞 아이들 장면의 신규 그림 필요,SELF_REVIEWED
+path_fit_03,고등학교 교실,운동 특기생 제안과 성적표를 비교한다,성적표와 운동부 제안서,청소년과 감독과 담임,낮,FIRST_PERSON,teen_sports_scholarship,MISSING_NEW,훈련과 학업 갈림길을 보여 줄 신규 장면 필요,SELF_REVIEWED
+path_fit_08,은행 대출 상담 창구,체육관 창업과 학교 제안을 비교한다,대출 서류와 체육관 도면,중년 주인공과 상담사,낮,FIRST_PERSON,middle_gym_business,MISSING_NEW,체육관 창업 결정 전 장면이 필요,SELF_REVIEWED
+path_fit_15,학교 운동장 구석,아이들의 스포츠클럽 창단 제안을 듣는다,축구공과 빈 운동장,중년 교사와 학생들,점심,FIRST_PERSON,school_sports_club,MISSING_NEW,예산 없는 창단 제안 장면의 신규 그림 필요,SELF_REVIEWED
+path_hap_02,진로 상담실,성적 자료와 노트의 창작물을 비교한다,성적표와 가사 그림 노트,청소년과 담임,낮,FIRST_PERSON,teen_talent_or_grade,MISSING_NEW,좋아함과 잘함의 대비가 보이는 신규 장면 필요,SELF_REVIEWED
+path_hap_07,집 식탁,취미 지출과 적금을 비교한다,통장과 취미 영수증,중년 주인공과 가까운 성인,저녁,FIRST_PERSON,middle_hobby_savings,MISSING_NEW,행복과 노후 자금 갈등의 신규 장면 필요,SELF_REVIEWED
+path_hap_14,강습 공간,가득 찬 강습 일정과 악기를 본다,예약표와 취미 도구 또는 악기,중년 강사와 수강생,주말 낮,FIRST_PERSON,hobby_became_work,MISSING_NEW,취미가 일이 된 피로를 담은 신규 장면 필요,SELF_REVIEWED
+path_hea_03,집 또는 검진 상담실,경계 표시가 난 건강검진표를 읽는다,검진 결과지와 노란 형광 표시,청년 또는 중년 성인,낮,FIRST_PERSON,health_warning_report,MISSING_NEW,경계 문구가 핵심인 신규 장면 필요,SELF_REVIEWED
+path_hea_08,병원 대기실,번호표를 들고 정기 검진을 기다린다,번호표 47번과 대기 의자,노년 환자들,낮,FIRST_PERSON,old_hospital_waiting,MISSING_NEW,단골 환자와 긴 대기를 보여 줄 신규 장면 필요,SELF_REVIEWED
+path_hea_09,학교 보건실,어지럼증 뒤 침상에서 물과 질문을 받는다,침상과 물컵과 운동장 창문,청소년과 보건 교사,낮,FIRST_PERSON,teen_dizziness_nurse,FIT_REUSE,기존 그림이 보건실 침상과 운동장 맥락을 정확히 표현함,SELF_REVIEWED
+path_hea_15,보건소 상담 창구,사전연명의료의향서 안내를 읽는다,안내문과 상담 서류,노년 주인공과 상담사,낮,FIRST_PERSON,advance_care_directive,MISSING_NEW,선택 결과를 단정하지 않는 상담 전 신규 장면 필요,SELF_REVIEWED
+path_int_04,대학 게시판 앞,3.98 성적표와 인턴 공고를 함께 본다,성적표와 연구실 인턴 공고,대학생,낮,FIRST_PERSON,college_grade_intern,MISSING_NEW,장학금과 연구 기회의 대비를 보여 줄 신규 장면 필요,SELF_REVIEWED
+path_int_11,대학교 강의실,후회 여부를 묻는 교수 앞에서 고민한다,강의 자료와 칠판,대학생들과 교수,낮,FIRST_PERSON,unwanted_major_class,MISSING_NEW,손을 들기 직전의 강의실 장면이 필요,SELF_REVIEWED
+path_int_16,집 식탁,아이의 새로운 방식 수학 문제를 본다,수학 숙제와 연필,중년 또는 노년 보호자와 아이,저녁,FIRST_PERSON,parent_math_homework,MISSING_NEW,낯선 풀이법의 숙제를 중심으로 한 신규 장면 필요,SELF_REVIEWED
+path_luk_03,집 또는 길,의심스러운 당첨 문자의 링크를 본다,스마트폰 당첨 문자,청소년 또는 청년,낮,FIRST_PERSON,suspicious_prize_message,MISSING_NEW,사기 여부를 선택 전에 판단할 수 있는 신규 장면 필요,SELF_REVIEWED
+path_luk_08,공항 탑승구,닫힌 게이트와 다음 편 안내를 본다,항공권과 닫힌 게이트 전광판,청년 또는 중년 여행객과 직원,밤 또는 늦은 시간,FIRST_PERSON,missed_flight_gate,MISSING_NEW,놓친 비행기 상황의 신규 장면 필요,SELF_REVIEWED
+path_luk_10,집 거실,잘못 걸려 온 다급한 전화를 받는다,통화 중 스마트폰,청년 성인,낮,FIRST_PERSON,wrong_number_call,FIT_REUSE,기존 그림이 모르는 번호 통화와 망설이는 손을 정확히 표현함,SELF_REVIEWED
+path_luk_15,문구점 뽑기 기계 앞,손주가 든 동전과 기계를 본다,동전과 뽑기 기계,노년 조부모와 어린 손주,낮,FIRST_PERSON,grandchild_lucky_draw,MISSING_NEW,손주와 운 이야기를 담을 신규 장면 필요,SELF_REVIEWED
+path_soc_03,버스 안,같은 길 사람과 지나친 정류장을 확인한다,버스 창과 정류장 안내판,청소년 또는 청년 두 명,저녁,FIRST_PERSON,same_bus_crush,MISSING_NEW,둘만 남은 버스와 지난 정류장을 표현할 신규 장면 필요,SELF_REVIEWED
+path_soc_08,혼자 사는 집 식탁,2인분 미역국과 여러 축하 메시지를 본다,미역국 두 그릇과 스마트폰,중년 또는 노년 이혼자,저녁,FIRST_PERSON,solo_birthday_messages,MISSING_NEW,외로움과 관계망을 함께 담은 신규 장면 필요,SELF_REVIEWED
+path_soc_15,아파트 주민 회의,육아 품앗이 반장 제안을 받는다,회의 메모와 단톡방 화면,중년 부모 다섯 명,저녁,FIRST_PERSON,parenting_coop_meeting,MISSING_NEW,품앗이 첫 회의와 시선 집중을 담은 신규 장면 필요,SELF_REVIEWED
+path_wea_02,방 안 중고 거래 공간,닦은 물건과 쌓인 택배 상자를 본다,중고 물건과 박스와 스마트폰,청소년 또는 청년,낮,FIRST_PERSON,resale_side_business,MISSING_NEW,중고 거래가 사업으로 커지는 장면 필요,SELF_REVIEWED
+path_wea_07,가게 카운터,부족한 잔고와 월세 고지서를 확인한다,통장 화면과 월세 고지서와 대출 문자,청년 또는 중년 자영업자,낮,FIRST_PERSON,store_rent_shortfall,MISSING_NEW,현금 부족 위기를 담은 신규 장면 필요,SELF_REVIEWED
+path_wea_14,집 식탁,세 장의 학원비 고지서를 계산한다,학원 고지서와 계산기,중년 부모와 아이,저녁,FIRST_PERSON,child_tuition_bills,MISSING_NEW,교육비와 아이의 선호를 함께 보여 줄 신규 장면 필요,SELF_REVIEWED
+special_002,집 거실,강아지에게 목덜미를 물려 이동한다,강아지 집과 장난감,영아와 반려견,낮,FIRST_PERSON,baby_carried_by_dog,MISSING_NEW,위험 결과를 단정하지 않고 이동 중 상황을 담을 신규 장면 필요,SELF_REVIEWED
+special_007,면접실,닫힌 물병을 입에 댄 채 면접관을 본다,뚜껑 닫힌 물병과 면접 서류,청년 지원자와 성인 면접관 세 명,낮,FIRST_PERSON,interview_closed_bottle,MISSING_NEW,민망한 순간을 정확히 담을 신규 장면 필요,SELF_REVIEWED
+special_012,집 거실 바닥,옷자락이 걸린 로봇청소기에 끌려간다,로봇청소기와 옷자락,영아,낮,FIRST_PERSON,baby_robot_vacuum,MISSING_NEW,로봇청소기 납치 상황의 신규 장면 필요,SELF_REVIEWED
+special_017,멈춘 엘리베이터,짝사랑 상대와 갇힌 채 안내를 듣는다,층 표시등과 비상 통화 장치,청소년 두 명,저녁,FIRST_PERSON,teen_stuck_elevator,MISSING_NEW,둘만 남은 엘리베이터 긴장을 담은 신규 장면 필요,SELF_REVIEWED
+teen_003,중학교 동아리 홍보 복도,세 동아리 선배의 권유를 비교한다,운동 장비와 노트북과 악기,청소년 선후배,낮,FIRST_PERSON,teen_club_choice,MISSING_NEW,세 동아리 선택 단서를 담은 신규 장면 필요,SELF_REVIEWED
+teen_008,어질러진 방,세 번째 청소 잔소리를 듣는다,옷과 책과 쓰레기,청소년과 어머니,낮,FIRST_PERSON,teen_messy_room,MISSING_NEW,어질러진 방과 보호자 호출의 신규 장면 필요,SELF_REVIEWED
+teen_013,해커톤 작업실,잠든 팀원과 남은 시간을 확인한다,노트북과 8시간 타이머,청소년 팀원들,밤,FIRST_PERSON,teen_hackathon_deadline,MISSING_NEW,마감과 잠든 팀원을 함께 담은 신규 장면 필요,SELF_REVIEWED
+teen_018,동물병원 진료실,아픈 반려동물과 검사비를 확인한다,반려동물과 견적서,청소년과 수의사,낮,FIRST_PERSON,teen_pet_vet_cost,MISSING_NEW,아픈 동물과 비용 갈등의 신규 장면 필요,SELF_REVIEWED
+teen_023,학교 진로 안내판,문과와 이과 선택지를 비교한다,계열 선택서와 수학책과 인문책,청소년 친구들,낮,FIRST_PERSON,teen_track_choice,MISSING_NEW,문이과 갈림길을 담은 신규 장면 필요,SELF_REVIEWED
+teen_028,집 책상,52점 성적표와 부모 서명란을 본다,성적표와 펜,청소년,저녁,FIRST_PERSON,teen_report_signature,MISSING_NEW,점수와 빈 서명란이 핵심인 신규 장면 필요,SELF_REVIEWED
+teen_033,학교 사진 촬영장,망한 앞머리로 카메라를 바라본다,카메라와 거울,청소년과 사진사,낮,FIRST_PERSON,teen_yearbook_photo,MISSING_NEW,촬영 직전의 머리 고민을 담은 신규 장면 필요,SELF_REVIEWED
+teen_038,수능 시험장 앞,도시락과 수험표를 다시 확인한다,수험표와 도시락과 시험장 표지,청소년 수험생,아침,FIRST_PERSON,exam_day_morning,MISSING_NEW,수능 아침 준비물을 중심으로 한 신규 장면 필요,SELF_REVIEWED
+teen_042,학교 시험 교실,첫 수학 문제와 빠른 앞자리 학생을 본다,수학 시험지와 연필과 시계,청소년 수험생들,낮,FIRST_PERSON,teen_math_exam,FIT_REUSE,기존 그림이 1인칭 시험지와 교실 긴장을 정확히 표현함,SELF_REVIEWED

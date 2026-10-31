@@ -125,6 +125,26 @@ class PeriodPlayUiTest {
     }
 
     @Test
+    fun `restored outcome keeps the image captured when the choice was made`() {
+        val changedEvent = fever.copy(povImageId = "img_pov_after_content_update")
+        val restored = restoredDecisionUi(
+            event = changedEvent,
+            content = PlayContent(
+                periods = periods,
+                focuses = emptyList(),
+                decisions = mapOf(changedEvent.eventId to changedEvent),
+                imageFiles = mapOf("img_pov_saved" to "pov/saved.png"),
+            ),
+            focusId = null,
+            period = LifePeriod.TEEN,
+            savedEventImageId = "img_pov_saved",
+        )
+
+        assertEquals("img_pov_saved", restored.imageId)
+        assertEquals("pov/saved.png", restored.imageFile)
+    }
+
+    @Test
     fun `chapter step becomes the focus picking screen of that period`() {
         val step = TurnStep(
             state = PeriodRunState(runId = "run", runSeed = 1L, period = LifePeriod.TEEN),

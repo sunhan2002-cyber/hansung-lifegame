@@ -120,6 +120,15 @@ class LifeRecordUiTest {
     }
 
     @Test
+    fun recapUsesTheSavedEventImageInsteadOfAChangedContentMapping() {
+        val saved = choice("saved-event", LifePeriod.TEEN, 2)
+            .copy(eventImageId = "img_pov_saved_event")
+        val recap = recapMomentsUi(listOf(saved), content).single()
+
+        assertEquals("img_pov_saved_event", recap.eventImageId)
+    }
+
+    @Test
     fun recapPrefersMajorScenesAndSpreadsTheRestAcrossTheLife() {
         val many = (1..20).map { choice("e$it", if (it <= 10) LifePeriod.CHILD else LifePeriod.MIDDLE, (it % 5) + 1) }
         val withScene = many.mapIndexed { i, c -> if (i == 15) c.copy(momentImageId = "img_stat_wealth_001") else c }
