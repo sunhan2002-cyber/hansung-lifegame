@@ -191,13 +191,22 @@ class Week10PlayScreenTest {
     fun healthGaugeColorFollowsTheBoundariesWithoutNumbers() {
         var health by mutableStateOf(100)
         setScreen { DecisionScreen(state = playState(health = health), onChoose = {}, onContinue = {}) }
+        // 2026-10-31 후속 과제: 60~100 초록, 30~59 노랑, 11~29 주황, 0~10 빨강. 음수 · 100 초과도 막는다.
         val expected = listOf(
+            120 to HealthLevel.GOOD,
             100 to HealthLevel.GOOD,
-            80 to HealthLevel.GOOD,
-            79 to HealthLevel.CAUTION,
-            60 to HealthLevel.CAUTION,
-            59 to HealthLevel.DANGER,
-            5 to HealthLevel.DANGER,
+            61 to HealthLevel.GOOD,
+            60 to HealthLevel.GOOD,
+            59 to HealthLevel.CAUTION,
+            31 to HealthLevel.CAUTION,
+            30 to HealthLevel.CAUTION,
+            29 to HealthLevel.DANGER,
+            11 to HealthLevel.DANGER,
+            10 to HealthLevel.CRITICAL,
+            9 to HealthLevel.CRITICAL,
+            1 to HealthLevel.CRITICAL,
+            0 to HealthLevel.CRITICAL,
+            -5 to HealthLevel.CRITICAL,
         )
         expected.forEach { (value, level) ->
             health = value
@@ -206,12 +215,27 @@ class Week10PlayScreenTest {
             composeRule.onNodeWithTag("health_gauge").assert(
                 SemanticsMatcher.expectValue(SemanticsProperties.StateDescription, "건강 ${level.label}"),
             )
-            // 실제로 칠해진 색도 구간 색이다.
-            val fill = composeRule.onNodeWithTag("health_gauge_fill", useUnmergedTree = true).captureToImage().asAndroidBitmap()
-            val pixel = fill.getPixel(fill.width / 2, fill.height / 2)
-            assertColorNear(level.color, pixel, "health=$value")
+            val fills = composeRule.onAllNodesWithTag("health_gauge_fill", useUnmergedTree = true).fetchSemanticsNodes()
+            if (value <= 0) {
+                // 0 이하는 채움이 없다(빈 게이지).
+                assertTrue("health=$value 는 채움이 없어야 한다", fills.isEmpty())
+            } else {
+                // 실제로 칠해진 한 가지 색이 구간 색이다(분할 · 그라데이션 없음: 양 끝 색이 같다).
+                val fill = composeRule.onNodeWithTag("health_gauge_fill", useUnmergedTree = true).captureToImage().asAndroidBitmap()
+                val y = fill.height / 2
+                assertColorNear(level.color, fill.getPixel(fill.width / 2, y), "health=$value center")
+                if (fill.width > fill.height * 3) {
+                    // 둥근 끝을 피해 양쪽 안쪽 픽셀도 같은 색인지 본다.
+                    assertColorNear(level.color, fill.getPixel(fill.height, y), "health=$value left")
+                    assertColorNear(level.color, fill.getPixel(fill.width - fill.height - 1, y), "health=$value right")
+                }
+                if (value >= 100) {
+                    val gauge = composeRule.onNodeWithTag("health_gauge").fetchSemanticsNode().boundsInRoot
+                    assertTrue("100 초과는 게이지를 넘치지 않는다", fills.single().boundsInRoot.width <= gauge.width + 1f)
+                }
+            }
             composeRule.onAllNodesWithText("$value", substring = false).assertCountEquals(0)
-            if (value == 79 || value == 59) saveScreenshot("w10_health_$value.png")
+            if (value in listOf(60, 59, 29, 10)) saveScreenshot("followup_health_$value.png")
         }
     }
 
