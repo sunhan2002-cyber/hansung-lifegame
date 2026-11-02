@@ -21,12 +21,12 @@
 |img_path_fit_09_001|app/src/main/assets/images/week10/scenes/img_path_fit_09_001.png|path_fit_09: 시니어 마라톤 출발선|300×225|없음|imagegen|
 |img_path_fit_10_001|app/src/main/assets/images/week10/scenes/img_path_fit_10_001.png|path_fit_10: 운동부를 그만둔 뒤의 오후|300×225|없음|imagegen|
 |img_path_int_09_001|app/src/main/assets/images/week10/scenes/img_path_int_09_001.png|path_int_09: 평생 연구의 마지막 퍼즐|300×225|없음|imagegen|
-|img_path_int_10_001|app/src/main/assets/images/week10/scenes/img_path_int_10_001.png|path_int_10: 마지막 강의|300×225|없음|imagegen|
+|img_path_int_10_001|app/src/main/assets/images/week10/scenes/img_path_int_10_001.png|path_int_10: 마지막 강의|1448×1086|없음|imagegen|
 |img_path_soc_09_001|app/src/main/assets/images/week10/scenes/img_path_soc_09_001.png|path_soc_09: 칠순 잔치의 방명록|300×225|없음|imagegen|
 |img_path_soc_10_001|app/src/main/assets/images/week10/scenes/img_path_soc_10_001.png|path_soc_10: 축제가 끝나고 갈라진 무리|300×225|없음|imagegen|
 |img_path_wea_09_001|app/src/main/assets/images/week10/scenes/img_path_wea_09_001.png|path_wea_09: 통장 정리하는 날|300×225|없음|imagegen|
 |img_path_wea_10_001|app/src/main/assets/images/week10/scenes/img_path_wea_10_001.png|path_wea_10: 편의점 야간 알바 제안|300×225|없음|imagegen|
-|img_path_hap_09_001|app/src/main/assets/images/week10/scenes/img_path_hap_09_001.png|path_hap_09: 예술고 첫 학기|300×225|없음|imagegen|
+|img_path_hap_09_001|app/src/main/assets/images/week10/scenes/img_path_hap_09_001.png|path_hap_09: 예술고 첫 학기|1448×1086|없음|imagegen|
 |img_path_hap_10_001|app/src/main/assets/images/week10/scenes/img_path_hap_10_001.png|path_hap_10: 시험 끝난 날의 스케치북|300×225|없음|imagegen|
 |img_path_luk_09_001|app/src/main/assets/images/week10/scenes/img_path_luk_09_001.png|path_luk_09: 자판기에서 두 캔|300×225|없음|imagegen|
 |img_path_luk_10_001|app/src/main/assets/images/week10/scenes/img_path_luk_10_001.png|path_luk_10: 잘못 걸려 온 전화|300×225|없음|imagegen|

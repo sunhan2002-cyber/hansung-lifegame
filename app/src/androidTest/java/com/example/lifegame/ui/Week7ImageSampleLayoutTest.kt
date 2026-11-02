@@ -16,6 +16,7 @@ import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.assertTextEquals
 import androidx.compose.ui.test.captureToImage
 import androidx.compose.ui.test.hasTestTag
+import androidx.compose.ui.test.hasText
 import androidx.compose.ui.test.junit4.createComposeRule
 import androidx.compose.ui.test.onAllNodesWithText
 import androidx.compose.ui.test.onNodeWithTag
@@ -82,6 +83,9 @@ class Week7ImageSampleLayoutTest {
         composeRule.onNodeWithTag("image_sample_menu").performScrollTo().assertIsDisplayed().performClick()
         composeRule.onNodeWithTag("image_sample_select_7").performScrollTo().performClick()
         composeRule.runOnIdle { assertTrue(index == 7) }
-        composeRule.onNodeWithText("원본 1448×1086 · 4:3").performScrollTo().assertIsDisplayed()
+        // LazyColumn may not have composed the footer after the menu selection yet.
+        composeRule.onNodeWithTag("image_sample_content")
+            .performScrollToNode(hasText("원본 1448×1086 · 4:3"))
+        composeRule.onNodeWithText("원본 1448×1086 · 4:3").assertIsDisplayed()
     }
 }

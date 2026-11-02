@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "eventRoutingAndCatalog": 2,
+  "newPngMatchesApk": 2,
+  "previousOriginalsPreserved": 2,
+  "resolution": "1448x1086, native 4:3",
+  "imageRoutingTests": 12,
+  "testFailures": 0,
+  "testErrors": 0,
+  "apkSha256": "9dcda5b90cbdefe0f73137df198a4de74d23d7f3831f7a85f790b54ec3dcb01a",
+  "buildLog": "output/followup-20261103/applied-images-build.log",
+  "deviceVisualReview": "not rerun for these applied images",
+  "remotePublication": "not performed",
+  "verificationPhase": "Initial asset application, before preview UI changes"
+}

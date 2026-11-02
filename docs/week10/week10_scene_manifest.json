@@ -182,10 +182,10 @@
     "usage": "pov",
     "period": null,
     "statTag": null,
-    "description": "First person lecturer at wooden podium, hands on open lecture notes, university audience facing viewer in warm lecture hall.",
+    "description": "First-person elderly visitor at a neighborhood public library, speaking with a librarian pinning a wordless talk poster onto a noticeboard, bookshelves nearby, before the talk begins.",
     "fallbackText": "장면을 준비 중입니다",
     "key": "path_int_10",
-    "sha256": "dd50868444557afd6f22ffb7ed4507043133be4c32280bd951b2f16dc9d578fe",
+    "sha256": "2310c99efc4329e19add5e8c43043960ffb8a9ee27627a90eb91b72ec6efb348",
     "sourceSize": [
       1448,
       1086
@@ -262,10 +262,10 @@
     "usage": "pov",
     "period": null,
     "statTag": null,
-    "description": "First person at art high school painting easel, hands with paint brush, vibrant still life vase, classmates easels in sunlit art classroom.",
+    "description": "First-person high-school art practice room at night, dark indigo windows and warm task lights, teenage classmates in school clothing, hands painting an unfinished still life.",
     "fallbackText": "장면을 준비 중입니다",
     "key": "path_hap_09",
-    "sha256": "33a854ff328a70dcfc50b8e1bdf38635f05287e5e7e988e9d9a678dd0a272bb3",
+    "sha256": "9a2bebf47ec0e7bb06b4b9d9d3c53306ec77a0c33934567d4b0cc3875381196a",
     "sourceSize": [
       1448,
       1086

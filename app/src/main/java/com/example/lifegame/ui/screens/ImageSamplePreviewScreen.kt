@@ -1,5 +1,7 @@
 package com.example.lifegame.ui.screens
 
+import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.BoxWithConstraints
@@ -22,16 +24,22 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.heading
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.window.Dialog
+import androidx.compose.ui.window.DialogProperties
 import com.example.lifegame.ui.components.FilmMotion
 import com.example.lifegame.ui.components.FilmShot
 import com.example.lifegame.ui.components.FilmStrip
+import com.example.lifegame.ui.components.SceneBackdrop
+import com.example.lifegame.ui.images.ImageCandidate
 import com.example.lifegame.ui.preview.Week7ImageSamples
 import com.example.lifegame.ui.theme.Week7DesignTokens as Design
 
@@ -46,6 +54,26 @@ fun ImageSamplePreviewScreen(
     val index = selectedIndex.coerceIn(Week7ImageSamples.indices)
     val sample = Week7ImageSamples[index]
     var menuOpen by remember { mutableStateOf(false) }
+    var fullScreen by rememberSaveable(index) { mutableStateOf(false) }
+
+    if (fullScreen) {
+        Dialog(
+            onDismissRequest = { fullScreen = false },
+            properties = DialogProperties(usePlatformDefaultWidth = false, decorFitsSystemWindows = false),
+        ) {
+            Box(
+                Modifier.fillMaxSize().background(Color.Black)
+                    .clickable { fullScreen = false }
+                    .testTag("image_sample_fullscreen_image")
+                    .semantics { contentDescription = "${sample.title}, 화면을 터치하면 미리보기로 돌아갑니다" },
+            ) {
+                SceneBackdrop(
+                    candidates = listOf(ImageCandidate("image-sample:$index", sample.imageFile)),
+                    modifier = Modifier.fillMaxSize(),
+                )
+            }
+        }
+    }
 
     LazyColumn(
         modifier.fillMaxSize().safeDrawingPadding().testTag("image_sample_content"),
@@ -77,6 +105,14 @@ fun ImageSamplePreviewScreen(
             }
         }
         item {
+            OutlinedButton(
+                onClick = { fullScreen = true },
+                modifier = Modifier.fillMaxWidth().heightIn(min = Design.ButtonMinHeight)
+                    .testTag("image_sample_fullscreen"),
+                shape = RoundedCornerShape(Design.CardCorner),
+            ) { Text("장면 전체화면 보기") }
+        }
+        item {
             FlowRow(horizontalArrangement = Arrangement.spacedBy(Design.ChoiceGap),
                 verticalArrangement = Arrangement.spacedBy(Design.ChoiceGap)) {
                 OutlinedButton(onClick = {
@@ -106,7 +142,7 @@ fun ImageSamplePreviewScreen(
         item {
             Column(Modifier.fillMaxWidth(), verticalArrangement = Arrangement.spacedBy(4.dp)) {
                 Text("원본 1448×1086 · 4:3", style = MaterialTheme.typography.bodyMedium, color = Design.SecondaryInk)
-                Text("필름 안에서 잘림·색감·시점을 확인해 주세요. 검토용 후보이며 300×225 규격 처리는 보류 중입니다.",
+                Text("색감과 시점을 확인하고, 전체화면에서는 중요한 부분이 잘리지 않는지 봐 주세요. 화면을 터치하면 돌아옵니다.",
                     modifier = Modifier.fillMaxWidth(),
                     style = MaterialTheme.typography.bodyMedium, color = Design.SecondaryInk)
             }

@@ -1,0 +1,33 @@
+{
+  "date": "2026-11-03",
+  "status": "PASS",
+  "scope": "first-stage classification, visual-review records and two applied scenes",
+  "baseCommit": "a9237d8d4460add4893fa371ef9528557b909425",
+  "classificationRows": 70,
+  "sourceColumnsUnchanged": 11,
+  "candidateGroups": 70,
+  "approvedGroups": null,
+  "finalProductionQuantity": null,
+  "originalPngsReviewed": 17,
+  "originalVerdicts": {
+    "REUSE_CANDIDATE": 5,
+    "REVISE_REQUIRED": 7,
+    "REPLACE_REQUIRED": 5
+  },
+  "revisedPngsApplied": 2,
+  "remainingOriginalRevisionRequests": 10,
+  "markdownLinksAndWhitespace": "PASS",
+  "uniqueWeek10Scenes": 24,
+  "imageRoutingTests": 12,
+  "currentBranchAndroidPreviewTests": 2,
+  "separatePr47ColorTests": {
+    "sourceCommit": "cc8fb104147167bcde4076ab6ae0cace77051b4e",
+    "tests": 2
+  },
+  "debugAndAndroidTestBuild": "PASS",
+  "apkAssetsByteMatch": 2,
+  "apkSha256": "3ded4e9d9259ae3860d8bff85e61eabcecf538dad7af5131f236f10588e1c0a2",
+  "finalTeamAcceptance": "PENDING",
+  "sourceLogs": "output/followup-20261103 (local)",
+  "buildLog": "output/followup-20261103/pr-submission-build.log"
+}

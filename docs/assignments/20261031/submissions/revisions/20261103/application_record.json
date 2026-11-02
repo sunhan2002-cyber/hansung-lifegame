@@ -1,0 +1,30 @@
+{
+  "date": "2026-11-03",
+  "scope": "two user-approved revisions only",
+  "assets": [
+    {
+      "eventId": "path_hap_09",
+      "imageId": "img_path_hap_09_001",
+      "assetPath": "week10/scenes/img_path_hap_09_001.png",
+      "width": 1448,
+      "height": 1086,
+      "sha256": "9a2bebf47ec0e7bb06b4b9d9d3c53306ec77a0c33934567d4b0cc3875381196a",
+      "previousSha256": "33a854ff328a70dcfc50b8e1bdf38635f05287e5e7e988e9d9a678dd0a272bb3",
+      "originalSnapshot": "docs/assignments/20261031/submissions/revisions/20261103/originals/img_path_hap_09_001.png",
+      "status": "USER_APPROVED_APPLIED_LOCALLY",
+      "nativeResolutionPreserved": true
+    },
+    {
+      "eventId": "path_int_10",
+      "imageId": "img_path_int_10_001",
+      "assetPath": "week10/scenes/img_path_int_10_001.png",
+      "width": 1448,
+      "height": 1086,
+      "sha256": "2310c99efc4329e19add5e8c43043960ffb8a9ee27627a90eb91b72ec6efb348",
+      "previousSha256": "dd50868444557afd6f22ffb7ed4507043133be4c32280bd951b2f16dc9d578fe",
+      "originalSnapshot": "docs/assignments/20261031/submissions/revisions/20261103/originals/img_path_int_10_001.png",
+      "status": "USER_APPROVED_APPLIED_LOCALLY",
+      "nativeResolutionPreserved": true
+    }
+  ]
+}

@@ -29,7 +29,7 @@ class Week7ImageSamplePreviewTest {
     @get:Rule val composeRule = createAndroidComposeRule<MainActivity>()
 
     @Test
-    fun allEightOriginalsLoadAndCanBeBrowsedWithoutStartingGame() {
+    fun allSamplesLoadAndCanBeBrowsedWithoutStartingGame() {
         val context = InstrumentationRegistry.getInstrumentation().targetContext
         // 실물 후보가 debug APK에 원본 크기로 포함되었는지 확인한다.
         Week7ImageSamples.forEach { sample ->
@@ -51,6 +51,18 @@ class Week7ImageSamplePreviewTest {
             File(directory, "image-sample-${index + 1}.png").outputStream().use {
                 image.compress(Bitmap.CompressFormat.PNG, 100, it)
             }
+            composeRule.onNodeWithTag("image_sample_fullscreen").performScrollTo().performClick()
+            composeRule.onNodeWithTag("image_sample_fullscreen_image").assertIsDisplayed()
+            composeRule.waitForIdle()
+            if (sample.imageFile.startsWith("week10/scenes/")) {
+                val fullScreen = composeRule.onNodeWithTag("image_sample_fullscreen_image")
+                    .captureToImage().asAndroidBitmap()
+                File(directory, "applied-scene-${index + 1}-fullscreen.png").outputStream().use {
+                    fullScreen.compress(Bitmap.CompressFormat.PNG, 100, it)
+                }
+            }
+            composeRule.onNodeWithTag("image_sample_fullscreen_image").performClick()
+            composeRule.onNodeWithTag("image_sample_title").assertTextEquals(sample.title)
             composeRule.onNodeWithTag("image_sample_next").performScrollTo().performClick()
         }
         composeRule.onNodeWithTag("image_sample_title").assertTextEquals(Week7ImageSamples.first().title)
