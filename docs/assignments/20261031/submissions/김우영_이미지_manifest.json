@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-03",
+  "productionOwner": "김우영",
+  "phase": "PILOT_SUBMITTED_PENDING_REVIEW",
+  "sourceAssignment": "PR #51",
+  "assets": [
+    {
+      "groupId": "career_sports_offer",
+      "eventIds": [
+        "adult_002"
+      ],
+      "imageId": "img_adult_pro_offer_001",
+      "assetPath": "followup_20261031/img_adult_pro_offer_001.png",
+      "width": 300,
+      "height": 225,
+      "format": "PNG",
+      "sha256": "459173aa12c878351ba092e05219f56917e17a99cb28ea7c330072804b5fc328",
+      "generationMethod": "OpenAI built-in image generation, then nearest-neighbor resize to the required 300x225 size",
+      "prompt": "True first-person 16-bit pixel-art view inside a professional sports club consultation room in daytime. The player's gender-neutral hands rest beside an unsigned contract proposal; one adult scout sits across the desk; a smartphone shows only a non-readable notification icon for a separate former-school coach proposal. Use a crisp grid-aligned limited muted cream, ochre, brown, olive, dusty-blue, teal and charcoal palette. Keep the scout, unsigned proposal and phone in the central crop-safe area. No signed contract, signing pen, team uniform, coach in the room, whistle, celebration, trophy, readable text, logo, watermark, UI, gradient, dithering, blur, photorealism or result-confirming imagery.",
+      "selfReview": {
+        "firstPerson": true,
+        "unsignedProposal": true,
+        "coachOnlyAsPhoneNotification": true,
+        "resultNotPreselected": true,
+        "requiredObjectsReadableAt300x225": true,
+        "noReadableTextOrLogo": true,
+        "centerCropSafe": true,
+        "status": "PASS_PENDING_TEAM_REVIEW"
+      }
+    }
+  ],
+  "counts": {
+    "assigned": 70,
+    "delivered": 1,
+    "remaining": 69
+  },
+  "knownDependency": "나머지 69장은 공통 샘플과 5명 파일럿 검토가 끝난 뒤 제작한다."
+}

@@ -78,6 +78,16 @@
       "fallbackText": "현재 시기의 모습을 준비 중입니다"
     },
     {
+      "imageId": "img_adult_pro_offer_001",
+      "assetPath": "followup_20261031/img_adult_pro_offer_001.png",
+      "fileName": "img_adult_pro_offer_001.png",
+      "usage": "event",
+      "period": "YOUNG_ADULT",
+      "statTag": null,
+      "description": "프로 구단 상담실에서 서명 전 계약 제안서와 모교 코치의 별도 휴대폰 알림을 함께 확인하는 1인칭 장면.",
+      "fallbackText": "프로 구단의 제안을 표현한 장면을 준비 중입니다"
+    },
+    {
       "imageId": "img_stat_health_001",
       "assetPath": "week8/generic/img_stat_health_001.png",
       "fileName": "img_stat_health_001.png",
