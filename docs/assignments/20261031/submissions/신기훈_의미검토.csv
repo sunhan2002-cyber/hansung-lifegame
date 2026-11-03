@@ -1,353 +1,353 @@
-﻿eventId,title,classificationOwner,proposedGroupId,semanticVerdict,issue,requestedChange
-adult_001,대학이냐 취업이냐,김선한,,PENDING_CLASSIFICATION,,
-adult_002,프로 구단의 제안,김우영,career_sports_offer,FIX,모교 코치 제안은 같은 날 따로 온 것이라 구단 상담실에 함께 있을 수 없음. 사물도 서명 전임이 드러나야 함,"코치 제안은 휴대폰 메시지로. 계약서는 서명 전으로. 금지: 유니폼, 코치 호루라기를 든 모습"
-adult_003,음이탈 레전드,김재겸,grp_ya_viral_video_phone,OK,,
-adult_004,자취 첫 주,신기훈,grp_ya_fridge_coupons,SELF,,
-adult_005,이상형 발견,정원률,,PENDING_CLASSIFICATION,,
-adult_006,이상형과 눈이 마주쳤다,김선한,,PENDING_CLASSIFICATION,,
-adult_007,금요일 밤 술자리,김우영,social_night_meeting,FIX,"본문의 핵심은 친구가 데려온 친구가 이상형이라는 발견과 앉을 자리 세 곳인데 ""낯선 사람을 본다""로만 적혀 있고 불판이 빠져 있음. 그룹 이름도 일반 술자리처럼 읽힘","가게에 들어서는 순간, 테이블의 이상형·친구들 사이 빈자리·불판 앞 빈자리가 함께 보이게. 그룹 이름을 구체적으로"
-adult_008,이상형 옆자리,김재겸,grp_ya_drinks_ideal_pour,FIX,adult_007 에서 이어지는 친구 모임인데 주변 인물이 동료로 적혀 있고 시간도 저녁임,"주변 인물을 친구들로, 시간을 금요일 밤으로. adult_007·adult_009 와 같은 가게 배경으로"
-adult_009,건배사를 해라,신기훈,grp_ya_friends_toast_wait,SELF,,
-adult_010,고기 장인의 밤,정원률,,PENDING_CLASSIFICATION,,
-adult_011,열여섯 살 콩이,김선한,,PENDING_CLASSIFICATION,,
-adult_012,학점과 동아리,김우영,campus_grade_club,OK,,
-adult_013,최종 면접,김재겸,grp_ya_final_interview,OK,,
-adult_014,첫 출근길,신기훈,grp_ya_first_commute_packed_train,SELF,,
-adult_015,첫 월급,정원률,,PENDING_CLASSIFICATION,,
-adult_016,회식 자리 배치,김선한,,PENDING_CLASSIFICATION,,
-adult_017,팀장님의 잔,김우영,work_dinner_drink,OK,,
-adult_018,동기와 탈출 작전,김재겸,grp_ya_team_dinner_escape,OK,,
-adult_019,문 앞 자리의 기회,신기훈,grp_ya_grill_manager_peek,SELF,,
-adult_020,2차는 노래방,정원률,,PENDING_CLASSIFICATION,,
-adult_021,회식 다음 날 아침,김선한,,PENDING_CLASSIFICATION,,
-adult_022,밤 11시의 카톡,김우영,late_work_message,OK,,
-adult_023,길을 묻는 사람,김재겸,grp_adult_street_stranger,OK,,
-adult_024,거실 사무실 창업,신기훈,grp_ya_living_room_startup,SELF,,
-adult_025,특허가 될지도 모르는 아이디어,정원률,,PENDING_CLASSIFICATION,,
-adult_026,이번엔 진짜라는 친구,김선한,,PENDING_CLASSIFICATION,,
-adult_027,운동 필요,김우영,health_check_fitness,OK,,
-adult_028,첫 차,김재겸,grp_ya_used_car_lot,OK,,
-adult_029,휴가 사유란,신기훈,grp_adult_leave_form_blank,SELF,,
-adult_030,베프의 결혼식,정원률,,PENDING_CLASSIFICATION,,
-adult_031,결혼식 사회 부탁,김선한,,PENDING_CLASSIFICATION,,
-adult_032,결혼 이야기,김우영,proposal_or_transfer,FIX,"반지 상자는 본문에 없고 결혼이 확정된 것처럼 보임. 1인칭인데 인물이 ""연인 두 명""으로 적혀 있음","반지 상자를 빼고 연인의 손과 노트북 메일로. 인물은 나와 연인, 연인 성별은 고정하지 않음"
-adult_033,아빠와 팔씨름,김재겸,grp_adult_holiday_arm_wrestle,OK,,
-adult_034,주말 아침 플로깅,신기훈,grp_adult_plogging_chat_in_bed,SELF,,
-adult_035,10년 만의 동창회,정원률,,PENDING_CLASSIFICATION,,
-adult_036,20년 만의 타임캡슐,김선한,,PENDING_CLASSIFICATION,,
-adult_037,불 꺼지지 않는 회사,김우영,job_offer_overtime,FIX,야간 사무실은 지금 다니는 회사로 읽힘. 불이 안 꺼지는 곳은 제안받은 다른 회사임,밤거리에서 불 켜진 그 회사 건물을 올려다보며 휴대폰으로 헤드헌터 제안을 보는 장면으로
-adult_038,번아웃,김재겸,grp_adult_burnout_inbox,OK,,
-adult_039,첫 아이,신기훈,grp_adult_newborn_finger_call,SELF,,
-adult_040,30년 만의 의뢰,정원률,,PENDING_CLASSIFICATION,,
-adult_041,30년 만기 대출,김선한,,PENDING_CLASSIFICATION,,
-adult_042,이삿짐 속 상자,김우영,childhood_memory_box,FIX,상자를 여는 행동과 오래된 사진이 선택 A(열어 본다)를 미리 보여 줌. 겉의 플레이어 이름은 글자로 넣을 수 없음,닫힌 상자로. 겉면은 손글씨 형태만
-adult_043,엄마의 수술,김재겸,grp_adult_mom_surgery_call,OK,,
-adult_044,도로 주행 시험,신기훈,grp_ya_driving_test_start,SELF,,
-adult_045,첫 집들이,정원률,,PENDING_CLASSIFICATION,,
-adult_046,수상한 전화,김선한,,PENDING_CLASSIFICATION,,
-adult_047,애매한 사이의 청첩장,김우영,wedding_invite_budget,FIX,장소가 둘 이상으로 적혀 있어 한 장면으로 그릴 수 없음 (집 또는 카페),한 곳으로 확정
-adult_048,절대 안 죽는 화분,김재겸,grp_adult_housewarming_plant,OK,,
-adult_049,중고 거래 첫 문의,신기훈,grp_adult_secondhand_first_msg,SELF,,
-adult_050,워크숍 장기자랑,정원률,,PENDING_CLASSIFICATION,,
-adult_051,아빠의 칠순,김선한,,PENDING_CLASSIFICATION,,
-adult_052,마흔 번째 생일,김우영,middle_birthday_reflection,OK,,
-adult_053,팔이 짧아졌다,김재겸,grp_mid_menu_farsight,OK,,
-adult_054,회의 중 꿀잠,신기훈,grp_mid_meeting_doze_wake,SELF,,
-adult_055,닫힌 방문,정원률,,PENDING_CLASSIFICATION,,
-adult_056,희망퇴직 공고,김선한,,PENDING_CLASSIFICATION,,
-adult_057,퇴직하면 치킨집?,김우영,retirement_business_question,OK,,
-adult_058,재검 통지서,김재겸,grp_mid_checkup_recheck_letter,OK,,
-adult_059,키오스크 앞에서,신기훈,grp_old_kiosk_burger_queue,SELF,,
-adult_060,늦게 배운 덕질,정원률,,PENDING_CLASSIFICATION,,
-adult_061,생애 첫 10km,김선한,,PENDING_CLASSIFICATION,,
-adult_062,50년 지기,김우영,old_friend_photo_memory,OK,,
-adult_063,빈 방,김재겸,grp_old_empty_nest_room,OK,,
-adult_064,부모님의 봄,신기훈,grp_mid_parents_spring_doctor,SELF,,
-adult_065,쉰 번째 생일,정원률,,PENDING_CLASSIFICATION,,
-adult_066,퇴근길 편의점,김선한,,PENDING_CLASSIFICATION,,
-adult_067,일요일 밤 11시,김우영,sunday_night_anxiety,FIX,장소가 둘 이상으로 적혀 있어 한 장면으로 그릴 수 없음 (침실 또는 거실),한 곳으로 확정. adult_069 불면 장면과 구분되게
-adult_068,온몸이 두들겨 맞은 아침,김선한,,PENDING_CLASSIFICATION,,
-adult_069,승진 심사 전날,김재겸,grp_adult_promotion_eve_sleepless,FIX,성과 자료 서류철이 선택 A(성과를 숫자로 정리해 간다)를 미리 보여 줌,서류철을 빼고 걸어 둔 정장과 알람으로만 표현
-adult_070,구조조정 통보,김우영,layoff_locked_gate,OK,"실제 그림 확인: 사원증을 찍은 게이트에 빨간불, 옆 사람들은 통과. 본문과 잘 맞음. 메일은 안 보이지만 게이트가 핵심이라 허용. 파일이 design_preview 폴더에 있어 경로 정리 필요",
-adult_071,입영 통지서,신기훈,grp_ya_enlistment_mailbox,SELF,,
-adult_072,서른의 첫 명함,정원률,,PENDING_CLASSIFICATION,,
-adult_073,결혼식 하객만 세 번째,김선한,,PENDING_CLASSIFICATION,,
-adult_074,첫 매칭,김우영,dating_app_match,OK,,
-adult_075,모닥불 옆자리,김재겸,grp_ya_mt_campfire,OK,,
-adult_076,마감 같이 하는 사람,신기훈,grp_ya_closing_shift_lights,SELF,,
-adult_077,첫사랑의 연락,정원률,,PENDING_CLASSIFICATION,,
-adult_078,런닝머신 옆자리,김선한,,PENDING_CLASSIFICATION,,
-adult_079,사원증 사진,김우영,first_employee_badge,FIX,옆자리 선배가 말을 거는 사건이라 인사팀 앞과 회사 출입구가 아니라 내 자리임. 사원증 사진은 내 얼굴이 나오는 물건임,신입 자리 책상으로. 사원증의 얼굴 사진은 손가락으로 가리거나 형태만
-adult_080,늦게 받은 첫 월급,김재겸,grp_adult_first_paycheck_app,FIX,장소가 둘 이상으로 적혀 있어 한 장면으로 그릴 수 없음 (자취방 또는 출근길),한 곳으로 확정. cross_12 은행 앱과 구분되는 배경 권장
-adult_081,환영회의 밸런스 게임,신기훈,grp_adult_welcome_party_all_eyes,SELF,,
-adult_082,나보다 어린 사수,정원률,,PENDING_CLASSIFICATION,,
-child_001,방과 후 선택,김선한,,PENDING_CLASSIFICATION,,
-child_002,엄마의 호출,김우영,child_home_help,FIX,엄마 부르는 소리를 듣는 장면인데 거실로 적혀 있음. 선택은 자는 척·게임 중이므로 내가 있는 곳은 내 방임,내 방에서 열린 문 너머 엄마 목소리를 듣는 시점. 게임기와 이불이 함께 보이게
-child_003,반장 선거,김재겸,grp_child_class_election,OK,,
-child_004,학원 고르기,신기훈,grp_child_academy_flyers,SELF,,
-child_005,받아쓰기 전날,정원률,,PENDING_CLASSIFICATION,,
-child_006,첫 심부름,김선한,,PENDING_CLASSIFICATION,,
-child_007,장래 희망 발표,김우영,child_dream_presentation,OK,,
-child_008,첫 용돈,김재겸,grp_child_stationery_gacha,OK,,
-child_009,산타의 정체,신기훈,grp_child_santa_door_crack,SELF,,
-child_010,동아리 신청서,정원률,,PENDING_CLASSIFICATION,,
-child_011,운동부 종목 고르기,김선한,,PENDING_CLASSIFICATION,,
-child_012,문화부 반 고르기,김우영,child_club_choice,OK,,
-child_013,예술부 반 고르기,김재겸,grp_child_arts_club_pick,OK,,
-child_014,강아지 입양,신기훈,grp_child_puppy_box,SELF,,
-child_015,사라진 지우개,정원률,,PENDING_CLASSIFICATION,,
-child_016,밀린 방학 일기,김선한,,PENDING_CLASSIFICATION,,
-child_017,운동회 계주,김우영,child_relay_race,FIX,출발한다는 행동이 선택(전력 질주·양보)을 미리 보여 줌. 현수막의 플레이어 이름은 글자로 넣을 수 없음,배턴을 받기 직전으로. 현수막은 크기와 무늬로만 표현
-child_018,응원단장 스카우트,김재겸,grp_child_cheer_scout,OK,,
-child_019,과학의 날,신기훈,grp_child_science_day_two_kits,SELF,,
-child_020,고장 난 시계 해부,정원률,,PENDING_CLASSIFICATION,,
-child_021,독서왕 후보,김선한,,PENDING_CLASSIFICATION,,
-child_022,비밀 기지,김우영,child_secret_base,OK,,
-child_023,급식의 시금치,김재겸,grp_child_lunch_spinach,OK,,
-child_024,여름 수영 강습,신기훈,grp_child_swim_vs_game,SELF,,
-child_025,혼자 밥 먹는 전학생,정원률,,PENDING_CLASSIFICATION,,
-child_026,지호의 이사,김선한,,PENDING_CLASSIFICATION,,
-child_027,첫 스마트폰 계약서,김우영,child_phone_contract,OK,,
-child_028,누가 날 부른다,김재겸,grp_child_class_nap_dream,OK,,
-child_029,종료 3초 전,신기훈,grp_child_basket_last_3sec,SELF,,
-child_030,수영 대회 결승,정원률,,PENDING_CLASSIFICATION,,
-child_031,과학 경진대회,김선한,,PENDING_CLASSIFICATION,,
-child_032,숙제 토론 대회,김우영,child_debate_contest,OK,,
-child_033,어린이 바둑 대회,김재겸,grp_child_baduk_final,OK,,
-child_034,사생대회,신기훈,grp_child_sketch_blank_paper,SELF,,
-child_035,합창 대회 솔로,정원률,,PENDING_CLASSIFICATION,,
-child_036,학예회의 나무 3,김선한,,PENDING_CLASSIFICATION,,
-child_037,결승전 승부차기,김우영,child_penalty_kick,OK,,
-child_038,피아노 콩쿠르,김재겸,grp_child_piano_contest_offer,OK,,
-child_039,여름휴가 투표,신기훈,grp_child_vacation_vote,SELF,,
-child_040,구구단 7단,정원률,,PENDING_CLASSIFICATION,,
-child_041,그네 차례,김선한,,PENDING_CLASSIFICATION,,
-child_042,보조 바퀴 떼는 날,김우영,child_first_bicycle,OK,,
-child_043,학교 앞 병아리,김재겸,grp_child_school_gate_chicks,OK,,
-child_044,체험학습 버스 맨 뒷자리,신기훈,grp_child_bus_backseat_queasy,SELF,,
-child_045,학급 신문 기자,정원률,,PENDING_CLASSIFICATION,,
-child_046,쉬는 시간 10분,김선한,,PENDING_CLASSIFICATION,,
-child_047,하굣길 문방구,김우영,child_stationery_shop,OK,,
-cross_01,신혼집 계약서,김재겸,grp_adult_realtor_three_contracts,OK,,
-cross_02,혼자 살 집 고르기,신기훈,grp_adult_three_homes_map,SELF,,
-cross_03,새벽 3시의 아이 열,정원률,,PENDING_CLASSIFICATION,,
-cross_04,아이 없는 부부의 일요일,김선한,,PENDING_CLASSIFICATION,,
-cross_05,다 큰 아이의 독립 보증금,김우영,old_parent_deposit,OK,,
-cross_06,사업 종료 안내 메일,김재겸,grp_mid_business_closure_mail,OK,,
-cross_07,정년 퇴임식,신기훈,grp_old_retire_desk_plaque,SELF,,
-cross_08,재검 날과 실적 발표 날,정원률,,PENDING_CLASSIFICATION,,
-cross_09,주말 특근과 아이 운동회,김선한,,PENDING_CLASSIFICATION,,
-cross_10,이혼 후 첫 명절,김우영,divorce_first_holiday,FIX,혼자 있는 집에 명절 음식은 본문에 없음. 본문의 핵심은 부모님과 친구 단톡방의 두 초대임,명절 음식을 빼고 빈 식탁과 휴대폰 두 메시지로
-cross_11,계단에서 넘어진 엄마,김재겸,grp_mid_parent_fall_call,OK,,
-cross_12,학자금 대출 마지막 회차,신기훈,grp_adult_student_loan_last_payment,SELF,,
-infant_001,브로콜리 반찬,정원률,,PENDING_CLASSIFICATION,,
-infant_002,어금니가 나는 중,김선한,,PENDING_CLASSIFICATION,,
-infant_003,리모컨의 비밀,김우영,baby_broken_remote,OK,,
-infant_004,어린이집 최고 목청,김재겸,grp_infant_daycare_loud_cry,OK,,
-infant_005,5분 컷 목욕,신기훈,grp_infant_bath_duck_dad,SELF,,
-infant_006,새벽 1시의 자장가,정원률,,PENDING_CLASSIFICATION,,
-infant_007,돌잡이,김선한,,PENDING_CLASSIFICATION,,
-infant_008,예방접종 날,김우영,baby_vaccination,OK,,
-infant_009,첫 단어 내기,김재겸,grp_infant_first_word_bet,OK,,
-infant_010,첫 걸음마 녹화 중,신기훈,grp_infant_first_steps_filming,SELF,,
-infant_011,할머니의 그림책,정원률,,PENDING_CLASSIFICATION,,
-infant_012,공원의 비둘기 떼,김선한,,PENDING_CLASSIFICATION,,
-infant_013,명절 친척 모임,김우영,baby_relatives_gathering,OK,,
-infant_014,크레파스와 하얀 벽,김재겸,grp_infant_crayon_white_wall,OK,,
-infant_015,동요 타임,신기훈,grp_infant_song_phones_aimed,SELF,,
-infant_016,거꾸로가 좋아,정원률,,PENDING_CLASSIFICATION,,
-infant_017,놀이터 모래밭,김선한,,PENDING_CLASSIFICATION,,
-infant_018,사촌 형의 방문,김우영,baby_cousin_toy,OK,,
-infant_019,어린이집 첫날,김재겸,grp_infant_daycare_first_day,OK,,
-infant_020,거실 연주회,신기훈,grp_infant_toy_piano_audience,SELF,,
-infant_021,첫 미용실,정원률,,PENDING_CLASSIFICATION,,
-infant_022,오리 변기,김선한,,PENDING_CLASSIFICATION,,
-infant_023,회전목마,김우영,baby_carousel_choice,OK,,
-infant_024,엘리베이터 버튼,김재겸,grp_infant_elevator_buttons,OK,,
-infant_025,할머니 댁 마당의 닭,신기훈,grp_infant_rooster_stare,SELF,,
-infant_026,볼풀에서 잃어버린 신발,정원률,,PENDING_CLASSIFICATION,,
-infant_027,아빠의 잠자리 동화,김선한,,PENDING_CLASSIFICATION,,
-infant_028,친구의 생일 케이크,김우영,baby_birthday_cake,FIX,"""끄려 한다""가 선택 B(몰래 먼저 분다)와 겹침",다들 숨을 크게 들이마신 순간으로. 촛불은 아직 켜진 상태
-infant_029,낮잠 시간,김재겸,grp_infant_nap_curtain,OK,,
-infant_030,장난감 정리 시간,신기훈,grp_infant_cleanup_box,SELF,,
-path_fit_01,체육관 관장님의 명함,정원률,,PENDING_CLASSIFICATION,,
-path_fit_02,첫 대회 결승선,김선한,,PENDING_CLASSIFICATION,,
-path_fit_03,운동부 특기생 제안,김우영,teen_sports_scholarship,FIX,고등학교 교실로 적혀 있지만 아직 진학 전 사건임(선택이 일반고 진학). 고등학교 감독이 찾아온 곳은 지금 다니는 중학교 교실 앞임,"중학교 교실 앞으로, 감독과 성적표를 든 담임이 함께 보이게"
-path_fit_04,"전국체전 결승, 무릎의 소리",김재겸,grp_teen_final_knee_click,FIX,테이핑 테이프가 선택 A(테이핑하고 뛴다)를 미리 보여 줄 수 있음,테이프는 구급 상자 안에 두거나 빼기. 내 손에 들리지 않게
-path_fit_05,프로 입단 테스트,신기훈,grp_ya_pro_test_notice_bench,SELF,,
-path_fit_06,주전 경쟁,정원률,,PENDING_CLASSIFICATION,,
-path_fit_07,세 번째 수술 상담,김선한,,PENDING_CLASSIFICATION,,
-path_fit_08,내 이름을 건 체육관,김우영,middle_gym_business,OK,,
-path_fit_09,시니어 마라톤 출발선,김재겸,grp_old_senior_marathon_start,REPLACE,"실제 그림 확인: 내가 이미 출발선에 서 있어 응원석·5km 코스 선택과 어긋나고, 본문 핵심인 접수처에서 알아보는 순간이 없으며, 앞의 참가자들이 시니어로 보이지 않음",R 로 세지 말고 접수처 장면으로 교체 권고. 정원률 님 시각 판단과 맞춤. 이름은 글자로 그리지 않음
-path_fit_10,운동부를 그만둔 뒤의 오후,신기훈,grp_teen_after_quitting_stands,SELF,,
-path_fit_11,도장 관장님의 대회 추천,김재겸,grp_teen_taekwondo_belt,OK,,
-path_fit_12,프로 낙방 다음 날,신기훈,grp_ya_day_after_pro_fail_shoes,SELF,,
-path_fit_13,줄넘기 열 개를 못 넘는 제자,정원률,,PENDING_CLASSIFICATION,,
-path_fit_14,은퇴 경기 제안,김선한,,PENDING_CLASSIFICATION,,
-path_fit_15,학교 스포츠클럽 창단,김우영,school_sports_club,FIX,빈 운동장으로 적혀 있지만 본문은 구석에서 공을 차는 아이들이 핵심임,운동장 구석에서 공 차는 아이들을 넣기
-path_fit_16,비 오는 날 무릎이 먼저 안다,김재겸,grp_old_knee_window_call,OK,,
-path_fit_17,조기축구회 감독 제안,신기훈,grp_mid_old_soccer_club_all_eyes,SELF,,
-path_fit_18,체육대회 반 대표,정원률,,PENDING_CLASSIFICATION,,
-path_hap_01,주말의 비밀 취미,김선한,,PENDING_CLASSIFICATION,,
-path_hap_02,좋아하는 것과 잘하는 것,김우영,teen_talent_or_grade,OK,,
-path_hap_03,연봉이냐 저녁이냐,김재겸,grp_ya_two_offers_studio,OK,,
-path_hap_04,아무것도 재미없는 일요일,신기훈,grp_adult_sunday_numb_ceiling,SELF,,
-path_hap_05,취미 모임에서 만난 사람,정원률,,PENDING_CLASSIFICATION,,
-path_hap_06,첫 개인 공연 제안,김선한,,PENDING_CLASSIFICATION,,
-path_hap_07,통장과 웃음 사이,김우영,middle_hobby_savings,FIX,"본문이 ""배우자인지 친구인지 엄마인지 모를 누군가""라 인물을 특정하면 안 됨",얼굴 없이 목소리나 손으로만
-path_hap_08,문화센터 할머니 할아버지 선생님,김재겸,grp_old_welfare_board_guitar,FIX,공고의 플레이어 이름은 플레이어마다 달라 그림에 글자로 넣을 수 없음,포스터는 기타 그림으로만. 이름 글자 없음
-path_hap_09,예술고 첫 학기,정원률,,PENDING_CLASSIFICATION,,
-path_hap_10,시험 끝난 날의 스케치북,김선한,,PENDING_CLASSIFICATION,,
-path_hap_11,옷장 위의 기타 케이스,신기훈,grp_ya_guitar_case_moving,SELF,,
-path_hap_12,좋았던 일 하나 적기,정원률,,PENDING_CLASSIFICATION,,
-path_hap_13,합주 날과 부모님 방문,김선한,,PENDING_CLASSIFICATION,,
-path_hap_14,취미가 일이 된 뒤,김우영,hobby_became_work,OK,,
-path_hap_15,주민센터 로비의 첫 개인전,김재겸,grp_old_art_boxes_home,OK,,
-path_hap_16,30년 전 수첩의 빈칸,신기훈,grp_old_old_notebook_blank,SELF,,
-path_hea_01,급식 시간의 브로콜리,정원률,,PENDING_CLASSIFICATION,,
-path_hea_02,새벽 2시의 책상,김선한,,PENDING_CLASSIFICATION,,
-path_hea_03,종합검진 결과지,김우영,health_warning_report,FIX,장소가 둘 이상으로 적혀 있어 한 장면으로 그릴 수 없음 (집 또는 검진 상담실),한 곳으로 확정. 노란 형광펜이 핵심
-path_hea_04,주말 등산 모임 대장,김재겸,grp_adult_hiking_leader_offer,OK,,
-path_hea_05,진단서 한 장,신기훈,grp_mid_diagnosis_desk,SELF,,
-path_hea_06,건강 나이 측정,정원률,,PENDING_CLASSIFICATION,,
-path_hea_07,계단 앞에서,김선한,,PENDING_CLASSIFICATION,,
-path_hea_08,병원 대기실의 단골,김우영,old_hospital_waiting,OK,,
-path_hea_09,체육 시간의 어지럼증,김우영,teen_dizziness_nurse,OK,실제 그림 확인: 보건실 침상·물컵·창밖 운동장이 본문과 맞음. 보건 선생님은 안 보이지만 대사라서 허용,
-path_hea_10,입사 첫 주의 야근 문화,김재겸,grp_ya_first_week_overtime,REPLACE,"실제 그림 확인: 시계가 밤 9시가 아니라 12시 근처이고, 뒤쪽 자리가 비어 있어 ""다들 남긴 하더라""라는 압박이 안 보임. 쌓인 서류와 에너지 음료는 입사 첫 주보다 오래 야근한 사람처럼 보임","시계 9시, 뒤쪽 자리에 남아 있는 동료들로 수정 권고. R 대신 교체로 계산 제안"
-path_hea_11,아버지의 당뇨 진단,김재겸,grp_adult_father_diabetes_dinner,OK,,
-path_hea_12,약봉지와 회의 일정,신기훈,grp_mid_pills_meeting_schedule,SELF,,
-path_hea_13,완치 판정 1년 뒤,정원률,,PENDING_CLASSIFICATION,,
-path_hea_14,동네 건강 체조 강사,김선한,,PENDING_CLASSIFICATION,,
-path_hea_15,사전연명의료의향서,김우영,advance_care_directive,OK,,
-path_hea_16,가정 시간 요리 실습,김재겸,grp_teen_home_ec_vegetables,OK,,
-path_int_01,교내 수학 경시대회,신기훈,grp_child_math_contest_vs_party,SELF,,
-path_int_02,영재교육원 선발 시험,정원률,,PENDING_CLASSIFICATION,,
-path_int_03,수능 D-30,김선한,,PENDING_CLASSIFICATION,,
-path_int_04,3.98과 장학금 커트라인,김우영,college_grade_intern,OK,,
-path_int_05,"쉬어 가는 1년, 다시 수능",김재겸,grp_ya_gap_year_desk,OK,,
-path_int_06,퇴근 후 야간대학,신기훈,grp_adult_night_univ_banner,SELF,,
-path_int_07,졸업 앞의 세 갈래,정원률,,PENDING_CLASSIFICATION,,
-path_int_08,마감 D-1과 가족 모임,김선한,,PENDING_CLASSIFICATION,,
-path_int_09,평생 연구의 마지막 퍼즐,신기훈,grp_mid_last_research_puzzle,SELF,,
-path_int_10,마지막 강의,정원률,,PENDING_CLASSIFICATION,,
-path_int_11,원하지 않던 학과,김우영,unwanted_major_class,OK,,
-path_int_12,논문에서 빠진 내 이름,김재겸,grp_ya_lab_paper_authors,OK,,
-path_int_13,변리사 시험 두 번째 낙방,신기훈,grp_adult_second_fail_study_desk,SELF,,
-path_int_14,번아웃 뒤 다시 연 연구 노트,정원률,,PENDING_CLASSIFICATION,,
-path_int_15,취소된 프로젝트의 노트,김선한,,PENDING_CLASSIFICATION,,
-path_int_16,아이의 수학 숙제,김우영,parent_math_homework,OK,,
-path_int_17,복지관 스마트폰 교실,김재겸,grp_old_welfare_board_phone,OK,,
-path_int_18,독학 개발자의 사이드 프로젝트,신기훈,grp_adult_app_idea_commute,SELF,,
-path_luk_01,문구점 뽑기 3연속 1등,정원률,,PENDING_CLASSIFICATION,,
-path_luk_02,추첨으로 뽑힌 해외 연수,김선한,,PENDING_CLASSIFICATION,,
-path_luk_03,당첨 축하 문자,김우영,suspicious_prize_message,FIX,장소가 둘 이상으로 적혀 있어 한 장면으로 그릴 수 없음 (집 또는 길),한 곳으로 확정. 청소년~청년 공통이라 나이가 드러나지 않게
-path_luk_04,엘리베이터 안의 30초,김재겸,grp_ya_interview_elevator,OK,,
-path_luk_05,동창의 투자 제안,신기훈,grp_mid_reunion_invest_phone,SELF,,
-path_luk_06,주운 지갑의 주인,정원률,,PENDING_CLASSIFICATION,,
-path_luk_07,운으로 산 인생,김선한,,PENDING_CLASSIFICATION,,
-path_luk_08,놓친 비행기,김우영,missed_flight_gate,FIX,"시간이 ""밤 또는 늦은 시간""으로 적혀 있음",시간을 하나로 확정
-path_luk_09,자판기에서 두 캔,김선한,,PENDING_CLASSIFICATION,,
-path_luk_10,잘못 걸려 온 전화,김우영,wrong_number_call,OK,실제 그림 확인: 모르는 번호 전화와 망설이는 손이 맞음. 수신 대기 화면이라 본문의 통화 중과 약간 다르지만 허용,
-path_luk_11,바지 주머니 속 복권,김재겸,grp_adult_wet_lottery,OK,,
-path_luk_12,사기 문자의 두 번째 연락,신기훈,grp_adult_refund_scam_text,SELF,,
-path_luk_13,공항에서 만난 사람의 메일,정원률,,PENDING_CLASSIFICATION,,
-path_luk_14,투자 손실 다음 날,김선한,,PENDING_CLASSIFICATION,,
-path_luk_15,손주와 뽑기 기계,김우영,grandchild_lucky_draw,OK,,
-path_luk_16,경품 추첨 크루즈,김재겸,grp_old_cruise_prize_call,OK,,
-path_luk_17,분실물 보관함의 우산,신기훈,grp_teen_lostfound_umbrella,SELF,,
-path_soc_01,반장 선거 연설,정원률,,PENDING_CLASSIFICATION,,
-path_soc_02,축제 준비위원회의 밤,김선한,,PENDING_CLASSIFICATION,,
-path_soc_03,집에 가는 길이 같은 사람,김우영,same_bus_crush,OK,,
-path_soc_04,사람으로 들어온 일자리,김재겸,grp_ya_three_people_offers,OK,,
-path_soc_05,상견례 대참사,신기훈,grp_adult_sangyeon_fathers_rivals,SELF,,
-path_soc_06,동네가 나를 부른다,정원률,,PENDING_CLASSIFICATION,,
-path_soc_07,식탁 위의 침묵,김선한,,PENDING_CLASSIFICATION,,
-path_soc_08,혼자 차린 생일상,김우영,solo_birthday_messages,FIX,두 그릇은 두 사람이 먹는 상처럼 보임. 본문은 혼자 끓였는데 2인분이 된 것임,국 냄비에 2인분이 남고 그릇은 하나로
-path_soc_09,칠순 잔치의 방명록,김재겸,grp_old_70th_party_hands_up,OK,실제 그림 확인: 앞쪽 노부부가 주인공이고 내가 방명록을 쓰는 하객 시점이라 본문과 반대. 김재겸 님 교체 판정에 동의,
-path_soc_10,축제가 끝나고 갈라진 무리,신기훈,grp_teen_festival_split_groups,SELF,,
-path_soc_11,같이 살 집을 구하는 친구들,김재겸,grp_ya_friends_shared_house,OK,,
-path_soc_12,입사 동기 단톡방의 총무,신기훈,grp_adult_group_chat_treasurer,SELF,,
-path_soc_13,영업 1등의 슬럼프,정원률,,PENDING_CLASSIFICATION,,
-path_soc_14,상담실 창가의 화분,김선한,,PENDING_CLASSIFICATION,,
-path_soc_15,육아 품앗이 단톡방,김우영,parenting_coop_meeting,OK,,
-path_soc_16,현관에 쌓인 신문,김재겸,grp_old_neighbor_newspapers,OK,,
-path_soc_17,오래된 친구의 부고,신기훈,grp_old_obituary_text,SELF,,
-path_soc_18,전학 온 친구의 첫 점심,정원률,,PENDING_CLASSIFICATION,,
-path_wea_01,첫 월급 37만 원,김선한,,PENDING_CLASSIFICATION,,
-path_wea_02,중고 거래 사장님,김우영,resale_side_business,OK,,
-path_wea_03,세 장의 계약서,김재겸,grp_ya_three_contracts_desk,OK,,
-path_wea_04,전셋집 계약 전날,신기훈,grp_adult_jeonse_empty_room,SELF,,
-path_wea_05,내 집 마련 상담,정원률,,PENDING_CLASSIFICATION,,
-path_wea_06,가족 지출 명세서,김선한,,PENDING_CLASSIFICATION,,
-path_wea_07,월세 날의 통장 잔고,김우영,store_rent_shortfall,OK,,
-path_wea_08,회사를 사겠다는 전화,김재겸,grp_mid_acquisition_call,OK,,
-path_wea_09,통장 정리하는 날,정원률,,PENDING_CLASSIFICATION,,
-path_wea_10,편의점 야간 알바 제안,김선한,,PENDING_CLASSIFICATION,,
-path_wea_11,첫 승진 심사,신기훈,grp_adult_promotion_form_blank,SELF,,
-path_wea_12,실직 석 달째,정원률,,PENDING_CLASSIFICATION,,
-path_wea_13,월세에서 전세로,김선한,,PENDING_CLASSIFICATION,,
-path_wea_14,아이 학원비 계산서,김우영,child_tuition_bills,OK,,
-path_wea_15,임원 제안,김재겸,grp_mid_exec_offer_dinner,OK,,
-path_wea_16,첫 연금 수령일,신기훈,grp_old_first_pension_passbook,SELF,,
-path_wea_17,빚 정리 상담,정원률,,PENDING_CLASSIFICATION,,
-special_001,시식 코너의 유혹,김선한,,PENDING_CLASSIFICATION,,
-special_002,강아지의 새끼가 되었다,김우영,baby_carried_by_dog,OK,,
-special_003,낙엽 속의 장수말벌,김재겸,grp_child_picnic_hornet,OK,,
-special_004,끝나지 않는 미역,신기훈,grp_child_endless_seaweed,SELF,,
-special_005,나를 거부하는 자동문,정원률,,PENDING_CLASSIFICATION,,
-special_006,꿈속의 정답,김선한,,PENDING_CLASSIFICATION,,
-special_007,뚜껑 닫힌 물병,김우영,interview_closed_bottle,OK,,
-special_008,엘리베이터 속 사장님,김재겸,grp_adult_packed_elevator_boss,OK,,
-special_009,너무 평범하게 건강한 사람,신기훈,grp_adult_perfect_average_checkup,SELF,,
-special_010,공원 벤치의 장기 고수,정원률,,PENDING_CLASSIFICATION,,
-special_011,등산로의 멧돼지,김선한,,PENDING_CLASSIFICATION,,
-special_012,로봇청소기 납치 사건,김우영,baby_robot_vacuum,OK,,
-special_013,비눗방울 대참사,김재겸,grp_infant_soap_bubble_hiccup,OK,,
-special_014,미끄럼틀 정전기,신기훈,grp_child_static_hair_slide,SELF,,
-special_015,날아가는 탕수육 소스,정원률,,PENDING_CLASSIFICATION,,
-special_016,피구공의 궤적,김선한,,PENDING_CLASSIFICATION,,
-special_017,멈춘 엘리베이터,김우영,teen_stuck_elevator,OK,,
-special_018,회전문 무한 루프,김재겸,grp_adult_revolving_door,OK,,
-special_019,중고 안마의자의 역습,신기훈,grp_adult_massage_chair_trap,SELF,,
-teen_001,처음 입는 교복,정원률,,PENDING_CLASSIFICATION,,
-teen_002,거꾸로 입은 교복,김선한,,PENDING_CLASSIFICATION,,
-teen_003,중학교 동아리,김우영,teen_club_choice,OK,,
-teen_004,급식 새치기,김재겸,grp_teen_lunch_line_cut,OK,,
-teen_005,짝 바꾸는 날,신기훈,grp_teen_new_quiet_seatmate,SELF,,
-teen_006,점심 방송 사고,정원률,,PENDING_CLASSIFICATION,,
-teen_007,첫 중간고사,김선한,,PENDING_CLASSIFICATION,,
-teen_008,방 청소 잔소리,김우영,teen_messy_room,OK,,
-teen_009,오래달리기 측정,김재겸,grp_teen_endurance_run,OK,,
-teen_010,비 오는 하굣길,신기훈,grp_teen_rain_friend_umbrella,SELF,,
-teen_011,단톡방의 사진,정원률,,PENDING_CLASSIFICATION,,
-teen_012,축제 무대 사고,김선한,,PENDING_CLASSIFICATION,,
-teen_013,청소년 해커톤,김우영,teen_hackathon_deadline,OK,,
-teen_014,교내 토론대회,김재겸,grp_teen_debate_invite,OK,,
-teen_015,방학 아르바이트,신기훈,grp_teen_academy_flyer_offer,SELF,,
-teen_016,부모님 결혼기념일,정원률,,PENDING_CLASSIFICATION,,
-teen_017,스크린 타임 경고,김선한,,PENDING_CLASSIFICATION,,
-teen_018,아픈 콩이,김우영,teen_pet_vet_cost,FIX,콩이가 반려동물로만 적혀 있지만 has_dog 조건의 강아지임,강아지로 명시. child_014·adult_011 과 같은 개로 그려지게
-teen_019,고등학교 원서,김재겸,grp_teen_hs_application,OK,,
-teen_020,청소년 대표 선발,신기훈,grp_teen_tryout_vs_finals,SELF,,
-teen_021,축제와 짝사랑,정원률,,PENDING_CLASSIFICATION,,
-teen_022,수학여행의 밤,김선한,,PENDING_CLASSIFICATION,,
-teen_023,문과냐 이과냐,김우영,teen_track_choice,OK,,
-teen_024,선생님의 오답,김재겸,grp_teen_board_wrong_sign,OK,,
-teen_025,편의점의 진상 손님,신기훈,grp_teen_convenience_refund,SELF,,
-teen_026,새벽의 메시지,정원률,,PENDING_CLASSIFICATION,,
-teen_027,주차장의 아빠,김선한,,PENDING_CLASSIFICATION,,
-teen_028,성적표 사인,김우영,teen_report_signature,OK,,
-teen_029,4교시 매점 달리기,김재겸,grp_teen_store_bread_rush,FIX,달리는 장면과 뛰는 학생들이 선택 A(전력 질주)를 미리 보여 줌,4교시 종이 울린 순간 교실 문 쪽에서 복도로 뛰어나가는 아이들을 보는 시점으로. 나는 아직 출발 전. 크림빵 표현 방법은 정원률 님과 확인
-teen_030,반티 투표,신기훈,grp_teen_class_shirt_vote,SELF,,
-teen_031,스터디 카페,정원률,,PENDING_CLASSIFICATION,,
-teen_032,숙제냐 생일 파티냐,김선한,,PENDING_CLASSIFICATION,,
-teen_033,졸업앨범 촬영 날,김우영,teen_yearbook_photo,FIX,거울을 넣으면 내 얼굴이 나옴. 1인칭 장면에는 얼굴을 넣지 않음,거울을 빼고 시야 위쪽의 앞머리 끝과 카메라로
-teen_034,셀프 염색,김재겸,grp_teen_self_dye_store,OK,,
-teen_035,종점에서 눈을 떴다,신기훈,grp_teen_bus_terminal_wakeup,SELF,,
-teen_036,학생회장 선거 공약,정원률,,PENDING_CLASSIFICATION,,
-teen_037,수능 D-365,김선한,,PENDING_CLASSIFICATION,,
-teen_038,수능 날 아침,김우영,exam_day_morning,OK,,
-teen_039,졸업식 날,김재겸,grp_teen_graduation_flour,OK,,
-teen_040,야자 시간의 배고픔,신기훈,grp_teen_night_study_hungry,SELF,,
-teen_041,아무 일 없는 주말,정원률,,PENDING_CLASSIFICATION,,
-teen_042,기말고사 1교시,김우영,teen_math_exam,REPLACE,"실제 그림 확인: 시험지가 백지라 처음 보는 공식이 없고, 앞자리 친구가 장을 넘기지 않으며, 교사가 시험 중 판서를 함. ""정확히 표현함""은 과함. 지시서의 대표 사례(시험)이기도 함","시험지에 수식 모양, 앞자리 친구가 장을 넘기는 손으로 수정 권고. R 대신 교체로 계산 제안"
+﻿eventId,title,classificationOwner,proposedGroupId,semanticVerdict,issue,requestedChange,reviewRound
+adult_001,대학이냐 취업이냐,김선한,grp_sh_adult_001,FIX,장소가 정해지지 않아 한 장면으로 그릴 수 없음,합격 문자 두 통을 받는 장소를 하나로 정하기 (예: 수능 뒤 내 방 책상). 가족 단톡방은 알림 형태로,2차
+adult_002,프로 구단의 제안,김우영,career_sports_offer,FIX,모교 코치 제안은 같은 날 따로 온 것이라 구단 상담실에 함께 있을 수 없음. 사물도 서명 전임이 드러나야 함,"코치 제안은 휴대폰 메시지로. 계약서는 서명 전으로. 금지: 유니폼, 코치 호루라기를 든 모습",1차
+adult_003,음이탈 레전드,김재겸,grp_ya_viral_video_phone,OK,,,1차
+adult_004,자취 첫 주,신기훈,grp_ya_fridge_coupons,SELF,,,1차
+adult_005,이상형 발견,정원률,grp_wr_adult_005,OK,,,2차
+adult_006,이상형과 눈이 마주쳤다,김선한,grp_sh_adult_006,OK,,,2차
+adult_007,금요일 밤 술자리,김우영,social_night_meeting,FIX,"본문의 핵심은 친구가 데려온 친구가 이상형이라는 발견과 앉을 자리 세 곳인데 ""낯선 사람을 본다""로만 적혀 있고 불판이 빠져 있음. 그룹 이름도 일반 술자리처럼 읽힘","가게에 들어서는 순간, 테이블의 이상형·친구들 사이 빈자리·불판 앞 빈자리가 함께 보이게. 그룹 이름을 구체적으로",1차
+adult_008,이상형 옆자리,김재겸,grp_ya_drinks_ideal_pour,FIX,adult_007 에서 이어지는 친구 모임인데 주변 인물이 동료로 적혀 있고 시간도 저녁임,"주변 인물을 친구들로, 시간을 금요일 밤으로. adult_007·adult_009 와 같은 가게 배경으로",1차
+adult_009,건배사를 해라,신기훈,grp_ya_friends_toast_wait,SELF,,,1차
+adult_010,고기 장인의 밤,정원률,grp_wr_adult_010,FIX,"adult_007(친구 모임)에서 불판 앞 자리를 골라 이어지는 사건인데 주변 인물이 ""성인 동료들""로 적혀 있음",취한 친구들로. adult_007·adult_008·adult_009 와 같은 가게 배경,2차
+adult_011,열여섯 살 콩이,김선한,grp_sh_adult_011,FIX,"엄마가 ""주말에 한번 와""라고 연락하는 사건인데 장소가 콩이가 있는 본가이고 노령견이 곁에 있음. 이미 본가에 있으면 본문과 어긋남","주인공은 내 집에서 엄마 연락을 받고, 콩이는 휴대폰 속 사진으로. 강아지는 child_014·teen_018 과 같은 개",2차
+adult_012,학점과 동아리,김우영,campus_grade_club,OK,,,1차
+adult_013,최종 면접,김재겸,grp_ya_final_interview,OK,,,1차
+adult_014,첫 출근길,신기훈,grp_ya_first_commute_packed_train,SELF,,,1차
+adult_015,첫 월급,정원률,grp_wr_adult_015,FIX,휴대폰 근접 구도인데 배경 장소가 없어 다른 휴대폰 장면과 구분되지 않음. 대신 adult_080 과 같은 장면이라 한 그룹으로 묶을 수 있음 (재사용 표 참조),배경 장소를 adult_080 과 함께 하나로 정하고 그룹을 합치는 안을 김선한 님께 제안,2차
+adult_016,회식 자리 배치,김선한,grp_sh_adult_016,OK,첫 회식 자리 배치. 이어지는 adult_017·adult_018·adult_019 와 같은 고깃집 배경 권장,,2차
+adult_017,팀장님의 잔,김우영,work_dinner_drink,OK,,,1차
+adult_018,동기와 탈출 작전,김재겸,grp_ya_team_dinner_escape,OK,,,1차
+adult_019,문 앞 자리의 기회,신기훈,grp_ya_grill_manager_peek,SELF,,,1차
+adult_020,2차는 노래방,정원률,grp_wr_adult_020,OK,,,2차
+adult_021,회식 다음 날 아침,김선한,grp_sh_adult_021,OK,영상 속에서 춤추는 사람은 나이므로 얼굴 없는 실루엣이어야 함 (행에 적힌 대로),,2차
+adult_022,밤 11시의 카톡,김우영,late_work_message,OK,,,1차
+adult_023,길을 묻는 사람,김재겸,grp_adult_street_stranger,OK,,,1차
+adult_024,거실 사무실 창업,신기훈,grp_ya_living_room_startup,SELF,,,1차
+adult_025,특허가 될지도 모르는 아이디어,정원률,grp_wr_adult_025,OK,,,2차
+adult_026,이번엔 진짜라는 친구,김선한,grp_sh_adult_026,FIX,장소가 정해지지 않아 한 장면으로 그릴 수 없음,친구와 만난 장소 하나로 (예: 카페 테이블). 내미는 휴대폰은 그래프 모양만,2차
+adult_027,운동 필요,김우영,health_check_fitness,OK,,,1차
+adult_028,첫 차,김재겸,grp_ya_used_car_lot,OK,,,1차
+adult_029,휴가 사유란,신기훈,grp_adult_leave_form_blank,SELF,,,1차
+adult_030,베프의 결혼식,정원률,grp_wr_adult_030,FIX,베프가 결혼식 전에 축사를 부탁하는 사건인데 장소가 하객이 많은 결혼식장의 축사 위치이고 마이크가 있음. 시점이 결혼식 당일로 앞당겨지고 선택 A(축사를 맡는다)를 미리 보여 줌,부탁받는 결혼식 전 장소로 (예: 카페에서 청첩장을 받는 순간). 하객 300명은 본문으로,2차
+adult_031,결혼식 사회 부탁,김선한,grp_sh_adult_031,FIX,장소가 정해지지 않아 한 장면으로 그릴 수 없음. 하객은 아직 등장시키지 않는다는 판단은 맞음,부탁받는 장소 하나로 (예: 친구와 만난 식당). 결혼식장·마이크 앞은 금지,2차
+adult_032,결혼 이야기,김우영,proposal_or_transfer,FIX,"반지 상자는 본문에 없고 결혼이 확정된 것처럼 보임. 1인칭인데 인물이 ""연인 두 명""으로 적혀 있음","반지 상자를 빼고 연인의 손과 노트북 메일로. 인물은 나와 연인, 연인 성별은 고정하지 않음",1차
+adult_033,아빠와 팔씨름,김재겸,grp_adult_holiday_arm_wrestle,OK,,,1차
+adult_034,주말 아침 플로깅,신기훈,grp_adult_plogging_chat_in_bed,SELF,,,1차
+adult_035,10년 만의 동창회,정원률,grp_wr_adult_035,FIX,휴대폰 근접 구도인데 배경 장소가 없어 다른 휴대폰 장면과 구분되지 않음,공지를 보는 장소 하나로,2차
+adult_036,20년 만의 타임캡슐,김선한,grp_sh_adult_036,FIX,장소가 정해지지 않아 한 장면으로 그릴 수 없음,문자를 읽는 장소를 정하기. 놀이터는 회상이 아니라 창밖 풍경처럼 지금 장면에 있을 때만,2차
+adult_037,불 꺼지지 않는 회사,김우영,job_offer_overtime,FIX,야간 사무실은 지금 다니는 회사로 읽힘. 불이 안 꺼지는 곳은 제안받은 다른 회사임,밤거리에서 불 켜진 그 회사 건물을 올려다보며 휴대폰으로 헤드헌터 제안을 보는 장면으로,1차
+adult_038,번아웃,김재겸,grp_adult_burnout_inbox,OK,,,1차
+adult_039,첫 아이,신기훈,grp_adult_newborn_finger_call,SELF,,,1차
+adult_040,30년 만의 의뢰,정원률,grp_wr_adult_040,OK,,,2차
+adult_041,30년 만기 대출,김선한,grp_sh_adult_041,OK,재사용 후보: path_wea_05 와 같은 은행 창구 30년 대출 상담. 다만 같은 인생에 둘 다 나올 수 있음(adult_041 은 path_wea_05 이후만 막음). 하나로 묶을지는 시각 담당 판단,,2차
+adult_042,이삿짐 속 상자,김우영,childhood_memory_box,FIX,상자를 여는 행동과 오래된 사진이 선택 A(열어 본다)를 미리 보여 줌. 겉의 플레이어 이름은 글자로 넣을 수 없음,닫힌 상자로. 겉면은 손글씨 형태만,1차
+adult_043,엄마의 수술,김재겸,grp_adult_mom_surgery_call,OK,,,1차
+adult_044,도로 주행 시험,신기훈,grp_ya_driving_test_start,SELF,,,1차
+adult_045,첫 집들이,정원률,grp_wr_adult_045,OK,,,2차
+adult_046,수상한 전화,김선한,grp_sh_adult_046,FIX,장소가 정해지지 않아 한 장면으로 그릴 수 없음,전화를 받는 장소 하나로. 은행 앱·송금 화면 금지,2차
+adult_047,애매한 사이의 청첩장,김우영,wedding_invite_budget,FIX,장소가 둘 이상으로 적혀 있어 한 장면으로 그릴 수 없음 (집 또는 카페),한 곳으로 확정,1차
+adult_048,절대 안 죽는 화분,김재겸,grp_adult_housewarming_plant,OK,,,1차
+adult_049,중고 거래 첫 문의,신기훈,grp_adult_secondhand_first_msg,SELF,,,1차
+adult_050,워크숍 장기자랑,정원률,grp_wr_adult_050,OK,,,2차
+adult_051,아빠의 칠순,김선한,grp_sh_adult_051,FIX,장소가 정해지지 않아 한 장면으로 그릴 수 없음,단톡방 회의를 보는 장소 하나로 (예: 퇴근 뒤 거실 소파). adult_052·adult_065 생일 장면과 겹치지 않게,2차
+adult_052,마흔 번째 생일,김우영,middle_birthday_reflection,OK,,,1차
+adult_053,팔이 짧아졌다,김재겸,grp_mid_menu_farsight,OK,,,1차
+adult_054,회의 중 꿀잠,신기훈,grp_mid_meeting_doze_wake,SELF,,,1차
+adult_055,닫힌 방문,정원률,grp_wr_adult_055,OK,,,2차
+adult_056,희망퇴직 공고,김선한,grp_sh_adult_056,OK,,,2차
+adult_057,퇴직하면 치킨집?,김우영,retirement_business_question,OK,,,1차
+adult_058,재검 통지서,김재겸,grp_mid_checkup_recheck_letter,OK,,,1차
+adult_059,키오스크 앞에서,신기훈,grp_old_kiosk_burger_queue,SELF,,,1차
+adult_060,늦게 배운 덕질,정원률,grp_wr_adult_060,OK,,,2차
+adult_061,생애 첫 10km,김선한,grp_sh_adult_061,OK,,,2차
+adult_062,50년 지기,김우영,old_friend_photo_memory,OK,,,1차
+adult_063,빈 방,김재겸,grp_old_empty_nest_room,OK,,,1차
+adult_064,부모님의 봄,신기훈,grp_mid_parents_spring_doctor,SELF,,,1차
+adult_065,쉰 번째 생일,정원률,grp_wr_adult_065,OK,,,2차
+adult_066,퇴근길 편의점,김선한,grp_sh_adult_066,OK,,,2차
+adult_067,일요일 밤 11시,김우영,sunday_night_anxiety,FIX,장소가 둘 이상으로 적혀 있어 한 장면으로 그릴 수 없음 (침실 또는 거실),한 곳으로 확정. adult_069 불면 장면과 구분되게,1차
+adult_068,온몸이 두들겨 맞은 아침,김선한,grp_sh_adult_068,OK,의미는 맞음(침대·체온계·물컵·휴대폰). 김재겸 님 크롭 결과 휴대폰·물컵이 잘려 크롭 수정 전에는 재사용 불가,,2차
+adult_069,승진 심사 전날,김재겸,grp_adult_promotion_eve_sleepless,FIX,성과 자료 서류철이 선택 A(성과를 숫자로 정리해 간다)를 미리 보여 줌,서류철을 빼고 걸어 둔 정장과 알람으로만 표현,1차
+adult_070,구조조정 통보,김우영,layoff_locked_gate,OK,의미는 맞음. 김재겸 님 크롭 결과 사원증·빨간 표시등이 잘려 크롭 수정(또는 제안된 cropFocusX) 전에는 재사용 불가,,1차 → 2차 변경
+adult_071,입영 통지서,신기훈,grp_ya_enlistment_mailbox,SELF,,,1차
+adult_072,서른의 첫 명함,정원률,grp_wr_adult_072,OK,,,2차
+adult_073,결혼식 하객만 세 번째,김선한,grp_sh_adult_073,FIX,"장소가 ""결혼식 참석 이후 또는 식장 주변""으로 둘",부케가 옆 사람에게 간 직후의 식장 하객석으로 확정. 엄마 제안은 휴대폰 알림으로,2차
+adult_074,첫 매칭,김우영,dating_app_match,OK,,,1차
+adult_075,모닥불 옆자리,김재겸,grp_ya_mt_campfire,OK,,,1차
+adult_076,마감 같이 하는 사람,신기훈,grp_ya_closing_shift_lights,SELF,,,1차
+adult_077,첫사랑의 연락,정원률,grp_wr_adult_077,FIX,휴대폰 근접 구도인데 배경 장소가 없어 다른 휴대폰 장면과 구분되지 않음,문자를 받는 장소 하나로. adult_036(지호)·path_luk_12 문자 장면과 구분,2차
+adult_078,런닝머신 옆자리,김선한,grp_sh_adult_078,OK,,,2차
+adult_079,사원증 사진,김우영,first_employee_badge,FIX,옆자리 선배가 말을 거는 사건이라 인사팀 앞과 회사 출입구가 아니라 내 자리임. 사원증 사진은 내 얼굴이 나오는 물건임,신입 자리 책상으로. 사원증의 얼굴 사진은 손가락으로 가리거나 형태만,1차
+adult_080,늦게 받은 첫 월급,김재겸,grp_adult_first_paycheck_app,FIX,장소가 둘 이상으로 적혀 있어 한 장면으로 그릴 수 없음 (자취방 또는 출근길),한 곳으로 확정. cross_12 은행 앱과 구분되는 배경 권장,1차
+adult_081,환영회의 밸런스 게임,신기훈,grp_adult_welcome_party_all_eyes,SELF,,,1차
+adult_082,나보다 어린 사수,정원률,grp_wr_adult_082,OK,,,2차
+child_001,방과 후 선택,김선한,grp_sh_child_001,OK,,,2차
+child_002,엄마의 호출,김우영,child_home_help,FIX,엄마 부르는 소리를 듣는 장면인데 거실로 적혀 있음. 선택은 자는 척·게임 중이므로 내가 있는 곳은 내 방임,내 방에서 열린 문 너머 엄마 목소리를 듣는 시점. 게임기와 이불이 함께 보이게,1차
+child_003,반장 선거,김재겸,grp_child_class_election,OK,,,1차
+child_004,학원 고르기,신기훈,grp_child_academy_flyers,SELF,,,1차
+child_005,받아쓰기 전날,정원률,grp_wr_child_005,OK,,,2차
+child_006,첫 심부름,김선한,grp_sh_child_006,OK,,,2차
+child_007,장래 희망 발표,김우영,child_dream_presentation,OK,,,1차
+child_008,첫 용돈,김재겸,grp_child_stationery_gacha,OK,,,1차
+child_009,산타의 정체,신기훈,grp_child_santa_door_crack,SELF,,,1차
+child_010,동아리 신청서,정원률,grp_wr_child_010,OK,,,2차
+child_011,운동부 종목 고르기,김선한,grp_sh_child_011,OK,,,2차
+child_012,문화부 반 고르기,김우영,child_club_choice,OK,,,1차
+child_013,예술부 반 고르기,김재겸,grp_child_arts_club_pick,OK,,,1차
+child_014,강아지 입양,신기훈,grp_child_puppy_box,SELF,,,1차
+child_015,사라진 지우개,정원률,grp_wr_child_015,OK,,,2차
+child_016,밀린 방학 일기,김선한,grp_sh_child_016,OK,,,2차
+child_017,운동회 계주,김우영,child_relay_race,FIX,출발한다는 행동이 선택(전력 질주·양보)을 미리 보여 줌. 현수막의 플레이어 이름은 글자로 넣을 수 없음,배턴을 받기 직전으로. 현수막은 크기와 무늬로만 표현,1차
+child_018,응원단장 스카우트,김재겸,grp_child_cheer_scout,OK,,,1차
+child_019,과학의 날,신기훈,grp_child_science_day_two_kits,SELF,,,1차
+child_020,고장 난 시계 해부,정원률,grp_wr_child_020,FIX,"장소가 ""서랍 앞 또는 책상""으로 둘",하나로 확정,2차
+child_021,독서왕 후보,김선한,grp_sh_child_021,OK,,,2차
+child_022,비밀 기지,김우영,child_secret_base,OK,,,1차
+child_023,급식의 시금치,김재겸,grp_child_lunch_spinach,OK,,,1차
+child_024,여름 수영 강습,신기훈,grp_child_swim_vs_game,SELF,,,1차
+child_025,혼자 밥 먹는 전학생,정원률,grp_wr_child_025,OK,,,2차
+child_026,지호의 이사,김선한,grp_sh_child_026,OK,infant_017(빨간 삽)·adult_036·adult_062 와 이어지는 지호. 놀이터 배경 공유 권장,,2차
+child_027,첫 스마트폰 계약서,김우영,child_phone_contract,OK,,,1차
+child_028,누가 날 부른다,김재겸,grp_child_class_nap_dream,OK,,,1차
+child_029,종료 3초 전,신기훈,grp_child_basket_last_3sec,SELF,,,1차
+child_030,수영 대회 결승,정원률,grp_wr_child_030,OK,,,2차
+child_031,과학 경진대회,김선한,grp_sh_child_031,OK,,,2차
+child_032,숙제 토론 대회,김우영,child_debate_contest,OK,,,1차
+child_033,어린이 바둑 대회,김재겸,grp_child_baduk_final,OK,,,1차
+child_034,사생대회,신기훈,grp_child_sketch_blank_paper,SELF,,,1차
+child_035,합창 대회 솔로,정원률,grp_wr_child_035,OK,,,2차
+child_036,학예회의 나무 3,김선한,grp_sh_child_036,OK,,,2차
+child_037,결승전 승부차기,김우영,child_penalty_kick,OK,,,1차
+child_038,피아노 콩쿠르,김재겸,grp_child_piano_contest_offer,OK,,,1차
+child_039,여름휴가 투표,신기훈,grp_child_vacation_vote,SELF,,,1차
+child_040,구구단 7단,정원률,grp_wr_child_040,OK,,,2차
+child_041,그네 차례,김선한,grp_sh_child_041,OK,,,2차
+child_042,보조 바퀴 떼는 날,김우영,child_first_bicycle,OK,,,1차
+child_043,학교 앞 병아리,김재겸,grp_child_school_gate_chicks,OK,,,1차
+child_044,체험학습 버스 맨 뒷자리,신기훈,grp_child_bus_backseat_queasy,SELF,,,1차
+child_045,학급 신문 기자,정원률,grp_wr_child_045,OK,,,2차
+child_046,쉬는 시간 10분,김선한,grp_sh_child_046,OK,,,2차
+child_047,하굣길 문방구,김우영,child_stationery_shop,OK,,,1차
+cross_01,신혼집 계약서,김재겸,grp_adult_realtor_three_contracts,OK,,,1차
+cross_02,혼자 살 집 고르기,신기훈,grp_adult_three_homes_map,SELF,,,1차
+cross_03,새벽 3시의 아이 열,정원률,grp_wr_cross_03,OK,,,2차
+cross_04,아이 없는 부부의 일요일,김선한,grp_sh_cross_04,OK,,,2차
+cross_05,다 큰 아이의 독립 보증금,김우영,old_parent_deposit,OK,,,1차
+cross_06,사업 종료 안내 메일,김재겸,grp_mid_business_closure_mail,OK,,,1차
+cross_07,정년 퇴임식,신기훈,grp_old_retire_desk_plaque,SELF,,,1차
+cross_08,재검 날과 실적 발표 날,정원률,grp_wr_cross_08,OK,,,2차
+cross_09,주말 특근과 아이 운동회,김선한,grp_sh_cross_09,FIX,장소가 정해지지 않아 한 장면으로 그릴 수 없음,두 일정을 대조하는 장소 하나로 (예: 회사 책상 달력),2차
+cross_10,이혼 후 첫 명절,김우영,divorce_first_holiday,FIX,혼자 있는 집에 명절 음식은 본문에 없음. 본문의 핵심은 부모님과 친구 단톡방의 두 초대임,명절 음식을 빼고 빈 식탁과 휴대폰 두 메시지로,1차
+cross_11,계단에서 넘어진 엄마,김재겸,grp_mid_parent_fall_call,OK,,,1차
+cross_12,학자금 대출 마지막 회차,신기훈,grp_adult_student_loan_last_payment,SELF,,,1차
+infant_001,브로콜리 반찬,정원률,grp_wr_infant_001,OK,,,2차
+infant_002,어금니가 나는 중,김선한,grp_sh_infant_002,OK,,,2차
+infant_003,리모컨의 비밀,김우영,baby_broken_remote,OK,,,1차
+infant_004,어린이집 최고 목청,김재겸,grp_infant_daycare_loud_cry,OK,,,1차
+infant_005,5분 컷 목욕,신기훈,grp_infant_bath_duck_dad,SELF,,,1차
+infant_006,새벽 1시의 자장가,정원률,grp_wr_infant_006,OK,,,2차
+infant_007,돌잡이,김선한,grp_sh_infant_007,OK,,,2차
+infant_008,예방접종 날,김우영,baby_vaccination,OK,,,1차
+infant_009,첫 단어 내기,김재겸,grp_infant_first_word_bet,OK,,,1차
+infant_010,첫 걸음마 녹화 중,신기훈,grp_infant_first_steps_filming,SELF,,,1차
+infant_011,할머니의 그림책,정원률,grp_wr_infant_011,OK,,,2차
+infant_012,공원의 비둘기 떼,김선한,grp_sh_infant_012,OK,,,2차
+infant_013,명절 친척 모임,김우영,baby_relatives_gathering,OK,,,1차
+infant_014,크레파스와 하얀 벽,김재겸,grp_infant_crayon_white_wall,OK,,,1차
+infant_015,동요 타임,신기훈,grp_infant_song_phones_aimed,SELF,,,1차
+infant_016,거꾸로가 좋아,정원률,grp_wr_infant_016,OK,,,2차
+infant_017,놀이터 모래밭,김선한,grp_sh_infant_017,OK,,,2차
+infant_018,사촌 형의 방문,김우영,baby_cousin_toy,OK,,,1차
+infant_019,어린이집 첫날,김재겸,grp_infant_daycare_first_day,OK,,,1차
+infant_020,거실 연주회,신기훈,grp_infant_toy_piano_audience,SELF,,,1차
+infant_021,첫 미용실,정원률,grp_wr_infant_021,OK,,,2차
+infant_022,오리 변기,김선한,grp_sh_infant_022,OK,,,2차
+infant_023,회전목마,김우영,baby_carousel_choice,OK,,,1차
+infant_024,엘리베이터 버튼,김재겸,grp_infant_elevator_buttons,OK,,,1차
+infant_025,할머니 댁 마당의 닭,신기훈,grp_infant_rooster_stare,SELF,,,1차
+infant_026,볼풀에서 잃어버린 신발,정원률,grp_wr_infant_026,OK,,,2차
+infant_027,아빠의 잠자리 동화,김선한,grp_sh_infant_027,OK,,,2차
+infant_028,친구의 생일 케이크,김우영,baby_birthday_cake,FIX,"""끄려 한다""가 선택 B(몰래 먼저 분다)와 겹침",다들 숨을 크게 들이마신 순간으로. 촛불은 아직 켜진 상태,1차
+infant_029,낮잠 시간,김재겸,grp_infant_nap_curtain,OK,,,1차
+infant_030,장난감 정리 시간,신기훈,grp_infant_cleanup_box,SELF,,,1차
+path_fit_01,체육관 관장님의 명함,정원률,grp_wr_path_fit_01,OK,,,2차
+path_fit_02,첫 대회 결승선,김선한,grp_sh_path_fit_02,OK,,,2차
+path_fit_03,운동부 특기생 제안,김우영,teen_sports_scholarship,FIX,고등학교 교실로 적혀 있지만 아직 진학 전 사건임(선택이 일반고 진학). 고등학교 감독이 찾아온 곳은 지금 다니는 중학교 교실 앞임,"중학교 교실 앞으로, 감독과 성적표를 든 담임이 함께 보이게",1차
+path_fit_04,"전국체전 결승, 무릎의 소리",김재겸,grp_teen_final_knee_click,FIX,테이핑 테이프가 선택 A(테이핑하고 뛴다)를 미리 보여 줄 수 있음,테이프는 구급 상자 안에 두거나 빼기. 내 손에 들리지 않게,1차
+path_fit_05,프로 입단 테스트,신기훈,grp_ya_pro_test_notice_bench,SELF,,,1차
+path_fit_06,주전 경쟁,정원률,grp_wr_path_fit_06,OK,,,2차
+path_fit_07,세 번째 수술 상담,김선한,grp_sh_path_fit_07,OK,,,2차
+path_fit_08,내 이름을 건 체육관,김우영,middle_gym_business,OK,,,1차
+path_fit_09,시니어 마라톤 출발선,김재겸,grp_old_senior_marathon_start,REPLACE,"실제 그림 확인: 내가 이미 출발선에 서 있어 응원석·5km 코스 선택과 어긋나고, 본문 핵심인 접수처에서 알아보는 순간이 없으며, 앞의 참가자들이 시니어로 보이지 않음",R 로 세지 말고 접수처 장면으로 교체 권고. 정원률 님 시각 판단과 맞춤. 이름은 글자로 그리지 않음,1차
+path_fit_10,운동부를 그만둔 뒤의 오후,신기훈,grp_teen_after_quitting_stands,SELF,,,1차
+path_fit_11,도장 관장님의 대회 추천,김재겸,grp_teen_taekwondo_belt,OK,,,1차
+path_fit_12,프로 낙방 다음 날,신기훈,grp_ya_day_after_pro_fail_shoes,SELF,,,1차
+path_fit_13,줄넘기 열 개를 못 넘는 제자,정원률,grp_wr_path_fit_13,OK,,,2차
+path_fit_14,은퇴 경기 제안,김선한,grp_sh_path_fit_14,FIX,장소가 정해지지 않아 한 장면으로 그릴 수 없음,두 제안을 받는 장소 하나로 (예: 구단 라커룸 벤치). path_fit_05 라커룸과 다른 시기·소품으로,2차
+path_fit_15,학교 스포츠클럽 창단,김우영,school_sports_club,FIX,빈 운동장으로 적혀 있지만 본문은 구석에서 공을 차는 아이들이 핵심임,운동장 구석에서 공 차는 아이들을 넣기,1차
+path_fit_16,비 오는 날 무릎이 먼저 안다,김재겸,grp_old_knee_window_call,OK,,,1차
+path_fit_17,조기축구회 감독 제안,신기훈,grp_mid_old_soccer_club_all_eyes,SELF,,,1차
+path_fit_18,체육대회 반 대표,정원률,grp_wr_path_fit_18,OK,,,2차
+path_hap_01,주말의 비밀 취미,김선한,grp_sh_path_hap_01,OK,path_hap_11(옷장 위 기타 케이스)과 이어지는 기타. 같은 기타로 그리면 좋음,,2차
+path_hap_02,좋아하는 것과 잘하는 것,김우영,teen_talent_or_grade,OK,,,1차
+path_hap_03,연봉이냐 저녁이냐,김재겸,grp_ya_two_offers_studio,OK,,,1차
+path_hap_04,아무것도 재미없는 일요일,신기훈,grp_adult_sunday_numb_ceiling,SELF,,,1차
+path_hap_05,취미 모임에서 만난 사람,정원률,grp_wr_path_hap_05,OK,,,2차
+path_hap_06,첫 개인 공연 제안,김선한,grp_sh_path_hap_06,FIX,"""제안을 받는 자리""인데 작은 무대·빈 객석 단서가 함께 있어, 연락을 받는 곳인지 공연장을 둘러보는 곳인지 정해지지 않음","공연장을 둘러보는 장면이면 빈 무대·쉰 석 객석, 연락이면 내 집. 하나로",2차
+path_hap_07,통장과 웃음 사이,김우영,middle_hobby_savings,FIX,"본문이 ""배우자인지 친구인지 엄마인지 모를 누군가""라 인물을 특정하면 안 됨",얼굴 없이 목소리나 손으로만,1차
+path_hap_08,문화센터 할머니 할아버지 선생님,김재겸,grp_old_welfare_board_guitar,FIX,공고의 플레이어 이름은 플레이어마다 달라 그림에 글자로 넣을 수 없음,포스터는 기타 그림으로만. 이름 글자 없음,1차
+path_hap_09,예술고 첫 학기,정원률,grp_wr_path_hap_09,OK,"수정본(PR #50) 확인: 밤 실기실, 교복 학생들, 내 손의 팔레트와 붓. 본문과 맞아 의미 승인. 붓 든 손 잘림은 크롭 판단",,2차
+path_hap_10,시험 끝난 날의 스케치북,김선한,grp_sh_path_hap_10,OK,,,2차
+path_hap_11,옷장 위의 기타 케이스,신기훈,grp_ya_guitar_case_moving,SELF,,,1차
+path_hap_12,좋았던 일 하나 적기,정원률,grp_wr_path_hap_12,FIX,장소가 정해지지 않아 한 장면으로 그릴 수 없음,수첩에 적는 장소 하나로 (예: 상담 뒤 버스 정류장 벤치 또는 내 방),2차
+path_hap_13,합주 날과 부모님 방문,김선한,grp_sh_path_hap_13,OK,,,2차
+path_hap_14,취미가 일이 된 뒤,김우영,hobby_became_work,OK,,,1차
+path_hap_15,주민센터 로비의 첫 개인전,김재겸,grp_old_art_boxes_home,OK,,,1차
+path_hap_16,30년 전 수첩의 빈칸,신기훈,grp_old_old_notebook_blank,SELF,,,1차
+path_hea_01,급식 시간의 브로콜리,정원률,grp_wr_path_hea_01,OK,,,2차
+path_hea_02,새벽 2시의 책상,김선한,grp_sh_path_hea_02,OK,,,2차
+path_hea_03,종합검진 결과지,김우영,health_warning_report,FIX,장소가 둘 이상으로 적혀 있어 한 장면으로 그릴 수 없음 (집 또는 검진 상담실),한 곳으로 확정. 노란 형광펜이 핵심,1차
+path_hea_04,주말 등산 모임 대장,김재겸,grp_adult_hiking_leader_offer,OK,,,1차
+path_hea_05,진단서 한 장,신기훈,grp_mid_diagnosis_desk,SELF,,,1차
+path_hea_06,건강 나이 측정,정원률,grp_wr_path_hea_06,OK,,,2차
+path_hea_07,계단 앞에서,김선한,grp_sh_path_hea_07,OK,,,2차
+path_hea_08,병원 대기실의 단골,김우영,old_hospital_waiting,OK,,,1차
+path_hea_09,체육 시간의 어지럼증,김우영,teen_dizziness_nurse,OK,"의미는 맞음(보건 교사는 대사라 허용). 정원률 님의 시각 수정 의견(글자 흔적, 교사 추가)은 시각 판단으로 존중. 재사용 여부는 시각·크롭 결과를 따름",,1차 → 2차 변경
+path_hea_10,입사 첫 주의 야근 문화,김재겸,grp_ya_first_week_overtime,REPLACE,"실제 그림 확인: 시계가 밤 9시가 아니라 12시 근처이고, 뒤쪽 자리가 비어 있어 ""다들 남긴 하더라""라는 압박이 안 보임. 쌓인 서류와 에너지 음료는 입사 첫 주보다 오래 야근한 사람처럼 보임","시계 9시, 뒤쪽 자리에 남아 있는 동료들로 수정 권고. R 대신 교체로 계산 제안",1차
+path_hea_11,아버지의 당뇨 진단,김재겸,grp_adult_father_diabetes_dinner,OK,,,1차
+path_hea_12,약봉지와 회의 일정,신기훈,grp_mid_pills_meeting_schedule,SELF,,,1차
+path_hea_13,완치 판정 1년 뒤,정원률,grp_wr_path_hea_13,OK,,,2차
+path_hea_14,동네 건강 체조 강사,김선한,grp_sh_path_hea_14,OK,"path_hap_08·path_int_17 과 함께 노년 게시판 공고 장면 세 개. 포스터 그림(체조·기타·휴대폰)으로 구분, 게시판 배경은 공유 가능",,2차
+path_hea_15,사전연명의료의향서,김우영,advance_care_directive,OK,,,1차
+path_hea_16,가정 시간 요리 실습,김재겸,grp_teen_home_ec_vegetables,OK,,,1차
+path_int_01,교내 수학 경시대회,신기훈,grp_child_math_contest_vs_party,SELF,,,1차
+path_int_02,영재교육원 선발 시험,정원률,grp_wr_path_int_02,OK,,,2차
+path_int_03,수능 D-30,김선한,grp_sh_path_int_03,OK,,,2차
+path_int_04,3.98과 장학금 커트라인,김우영,college_grade_intern,OK,,,1차
+path_int_05,"쉬어 가는 1년, 다시 수능",김재겸,grp_ya_gap_year_desk,OK,,,1차
+path_int_06,퇴근 후 야간대학,신기훈,grp_adult_night_univ_banner,SELF,,,1차
+path_int_07,졸업 앞의 세 갈래,정원률,grp_wr_path_int_07,OK,,,2차
+path_int_08,마감 D-1과 가족 모임,김선한,grp_sh_path_int_08,OK,,,2차
+path_int_09,평생 연구의 마지막 퍼즐,신기훈,grp_mid_last_research_puzzle,SELF,,,1차
+path_int_10,마지막 강의,정원률,grp_wr_path_int_10,OK,"수정본(PR #50) 확인: 도서관 게시판에 포스터를 붙이며 돌아보는 사서, 노년 손. 본문과 맞아 의미 승인",,2차
+path_int_11,원하지 않던 학과,김우영,unwanted_major_class,OK,,,1차
+path_int_12,논문에서 빠진 내 이름,김재겸,grp_ya_lab_paper_authors,OK,,,1차
+path_int_13,변리사 시험 두 번째 낙방,신기훈,grp_adult_second_fail_study_desk,SELF,,,1차
+path_int_14,번아웃 뒤 다시 연 연구 노트,정원률,grp_wr_path_int_14,FIX,"장소가 ""집 또는 연구 책상""으로 둘",하나로 확정,2차
+path_int_15,취소된 프로젝트의 노트,김선한,grp_sh_path_int_15,OK,,,2차
+path_int_16,아이의 수학 숙제,김우영,parent_math_homework,OK,,,1차
+path_int_17,복지관 스마트폰 교실,김재겸,grp_old_welfare_board_phone,OK,,,1차
+path_int_18,독학 개발자의 사이드 프로젝트,신기훈,grp_adult_app_idea_commute,SELF,,,1차
+path_luk_01,문구점 뽑기 3연속 1등,정원률,grp_wr_path_luk_01,OK,,,2차
+path_luk_02,추첨으로 뽑힌 해외 연수,김선한,grp_sh_path_luk_02,OK,추첨지에 플레이어 이름 글자 금지,,2차
+path_luk_03,당첨 축하 문자,김우영,suspicious_prize_message,FIX,장소가 둘 이상으로 적혀 있어 한 장면으로 그릴 수 없음 (집 또는 길),한 곳으로 확정. 청소년~청년 공통이라 나이가 드러나지 않게,1차
+path_luk_04,엘리베이터 안의 30초,김재겸,grp_ya_interview_elevator,OK,,,1차
+path_luk_05,동창의 투자 제안,신기훈,grp_mid_reunion_invest_phone,SELF,,,1차
+path_luk_06,주운 지갑의 주인,정원률,grp_wr_path_luk_06,OK,,,2차
+path_luk_07,운으로 산 인생,김선한,grp_sh_path_luk_07,OK,,,2차
+path_luk_08,놓친 비행기,김우영,missed_flight_gate,FIX,"시간이 ""밤 또는 늦은 시간""으로 적혀 있음",시간을 하나로 확정,1차
+path_luk_09,자판기에서 두 캔,김선한,grp_sh_path_luk_09,REPLACE,"실제 그림 확인: 취출구의 캔은 2개(김재겸 님 확인과 같음, 위쪽 진열 칸 제외). 합본의 ""캔 3개"" 판정은 정정 필요. 다만 두 캔 색이 달라 ""콜라 두 캔""이 다른 음료처럼 보임",캔 수는 그대로 두고 두 캔을 같은 콜라 색으로 맞추는 가벼운 수정 권고,2차
+path_luk_10,잘못 걸려 온 전화,김우영,wrong_number_call,REPLACE,1차에서 허용했으나 정원률 님 지적에 동의: 본문은 이미 상대 목소리를 듣는 통화 중인데 그림은 받기 전 수신 화면,글자 없이 통화 중 화면으로 수정,1차 → 2차 변경
+path_luk_11,바지 주머니 속 복권,김재겸,grp_adult_wet_lottery,OK,,,1차
+path_luk_12,사기 문자의 두 번째 연락,신기훈,grp_adult_refund_scam_text,SELF,,,1차
+path_luk_13,공항에서 만난 사람의 메일,정원률,grp_wr_path_luk_13,FIX,장소가 정해지지 않아 한 장면으로 그릴 수 없음,메일을 확인하는 장소 하나로. 공항 회상은 금지라는 판단은 맞음,2차
+path_luk_14,투자 손실 다음 날,김선한,grp_sh_path_luk_14,OK,,,2차
+path_luk_15,손주와 뽑기 기계,김우영,grandchild_lucky_draw,OK,,,1차
+path_luk_16,경품 추첨 크루즈,김재겸,grp_old_cruise_prize_call,OK,,,1차
+path_luk_17,분실물 보관함의 우산,신기훈,grp_teen_lostfound_umbrella,SELF,,,1차
+path_soc_01,반장 선거 연설,정원률,grp_wr_path_soc_01,OK,,,2차
+path_soc_02,축제 준비위원회의 밤,김선한,grp_sh_path_soc_02,OK,,,2차
+path_soc_03,집에 가는 길이 같은 사람,김우영,same_bus_crush,OK,,,1차
+path_soc_04,사람으로 들어온 일자리,김재겸,grp_ya_three_people_offers,OK,,,1차
+path_soc_05,상견례 대참사,신기훈,grp_adult_sangyeon_fathers_rivals,SELF,,,1차
+path_soc_06,동네가 나를 부른다,정원률,grp_wr_path_soc_06,FIX,장소가 정해지지 않아 한 장면으로 그릴 수 없음,권유를 받는 장소 하나로. 그룹 아이콘이 많은 휴대폰은 좋음,2차
+path_soc_07,식탁 위의 침묵,김선한,grp_sh_path_soc_07,OK,,,2차
+path_soc_08,혼자 차린 생일상,김우영,solo_birthday_messages,FIX,두 그릇은 두 사람이 먹는 상처럼 보임. 본문은 혼자 끓였는데 2인분이 된 것임,국 냄비에 2인분이 남고 그릇은 하나로,1차
+path_soc_09,칠순 잔치의 방명록,김재겸,grp_old_70th_party_hands_up,OK,실제 그림 확인: 앞쪽 노부부가 주인공이고 내가 방명록을 쓰는 하객 시점이라 본문과 반대. 김재겸 님 교체 판정에 동의,,1차
+path_soc_10,축제가 끝나고 갈라진 무리,신기훈,grp_teen_festival_split_groups,SELF,,,1차
+path_soc_11,같이 살 집을 구하는 친구들,김재겸,grp_ya_friends_shared_house,OK,,,1차
+path_soc_12,입사 동기 단톡방의 총무,신기훈,grp_adult_group_chat_treasurer,SELF,,,1차
+path_soc_13,영업 1등의 슬럼프,정원률,grp_wr_path_soc_13,OK,,,2차
+path_soc_14,상담실 창가의 화분,김선한,grp_sh_path_soc_14,OK,,,2차
+path_soc_15,육아 품앗이 단톡방,김우영,parenting_coop_meeting,OK,,,1차
+path_soc_16,현관에 쌓인 신문,김재겸,grp_old_neighbor_newspapers,OK,,,1차
+path_soc_17,오래된 친구의 부고,신기훈,grp_old_obituary_text,SELF,,,1차
+path_soc_18,전학 온 친구의 첫 점심,정원률,grp_wr_path_soc_18,OK,,,2차
+path_wea_01,첫 월급 37만 원,김선한,grp_sh_path_wea_01,FIX,"장소가 정해지지 않아 한 장면으로 그릴 수 없음 (""급여 확인 자리"")",장소 하나로 (예: 편의점 마감 뒤 뒷문). 첫 월급 adult_015·adult_080 과 청소년·적금 광고로 구분,2차
+path_wea_02,중고 거래 사장님,김우영,resale_side_business,OK,,,1차
+path_wea_03,세 장의 계약서,김재겸,grp_ya_three_contracts_desk,OK,,,1차
+path_wea_04,전셋집 계약 전날,신기훈,grp_adult_jeonse_empty_room,SELF,,,1차
+path_wea_05,내 집 마련 상담,정원률,grp_wr_path_wea_05,OK,재사용 후보: adult_041 참조,,2차
+path_wea_06,가족 지출 명세서,김선한,grp_sh_path_wea_06,OK,,,2차
+path_wea_07,월세 날의 통장 잔고,김우영,store_rent_shortfall,OK,,,1차
+path_wea_08,회사를 사겠다는 전화,김재겸,grp_mid_acquisition_call,OK,,,1차
+path_wea_09,통장 정리하는 날,정원률,grp_wr_path_wea_09,OK,"실제 그림 확인: 변호사·서류·나누는 도식이 ""어떻게 나누실지""에 맞음. 재사용 동의",,2차
+path_wea_10,편의점 야간 알바 제안,김선한,grp_sh_path_wea_10,OK,,,2차
+path_wea_11,첫 승진 심사,신기훈,grp_adult_promotion_form_blank,SELF,,,1차
+path_wea_12,실직 석 달째,정원률,grp_wr_path_wea_12,OK,,,2차
+path_wea_13,월세에서 전세로,김선한,grp_sh_path_wea_13,OK,,,2차
+path_wea_14,아이 학원비 계산서,김우영,child_tuition_bills,OK,,,1차
+path_wea_15,임원 제안,김재겸,grp_mid_exec_offer_dinner,OK,,,1차
+path_wea_16,첫 연금 수령일,신기훈,grp_old_first_pension_passbook,SELF,,,1차
+path_wea_17,빚 정리 상담,정원률,grp_wr_path_wea_17,OK,,,2차
+special_001,시식 코너의 유혹,김선한,grp_sh_special_001,OK,,,2차
+special_002,강아지의 새끼가 되었다,김우영,baby_carried_by_dog,OK,,,1차
+special_003,낙엽 속의 장수말벌,김재겸,grp_child_picnic_hornet,OK,,,1차
+special_004,끝나지 않는 미역,신기훈,grp_child_endless_seaweed,SELF,,,1차
+special_005,나를 거부하는 자동문,정원률,grp_wr_special_005,OK,,,2차
+special_006,꿈속의 정답,김선한,grp_sh_special_006,OK,,,2차
+special_007,뚜껑 닫힌 물병,김우영,interview_closed_bottle,OK,,,1차
+special_008,엘리베이터 속 사장님,김재겸,grp_adult_packed_elevator_boss,OK,,,1차
+special_009,너무 평범하게 건강한 사람,신기훈,grp_adult_perfect_average_checkup,SELF,,,1차
+special_010,공원 벤치의 장기 고수,정원률,grp_wr_special_010,OK,,,2차
+special_011,등산로의 멧돼지,김선한,grp_sh_special_011,OK,,,2차
+special_012,로봇청소기 납치 사건,김우영,baby_robot_vacuum,OK,,,1차
+special_013,비눗방울 대참사,김재겸,grp_infant_soap_bubble_hiccup,OK,,,1차
+special_014,미끄럼틀 정전기,신기훈,grp_child_static_hair_slide,SELF,,,1차
+special_015,날아가는 탕수육 소스,정원률,grp_wr_special_015,OK,,,2차
+special_016,피구공의 궤적,김선한,grp_sh_special_016,OK,,,2차
+special_017,멈춘 엘리베이터,김우영,teen_stuck_elevator,OK,,,1차
+special_018,회전문 무한 루프,김재겸,grp_adult_revolving_door,OK,,,1차
+special_019,중고 안마의자의 역습,신기훈,grp_adult_massage_chair_trap,SELF,,,1차
+teen_001,처음 입는 교복,정원률,grp_wr_teen_001,OK,,,2차
+teen_002,거꾸로 입은 교복,김선한,grp_sh_teen_002,OK,,,2차
+teen_003,중학교 동아리,김우영,teen_club_choice,OK,,,1차
+teen_004,급식 새치기,김재겸,grp_teen_lunch_line_cut,OK,,,1차
+teen_005,짝 바꾸는 날,신기훈,grp_teen_new_quiet_seatmate,SELF,,,1차
+teen_006,점심 방송 사고,정원률,grp_wr_teen_006,OK,,,2차
+teen_007,첫 중간고사,김선한,grp_sh_teen_007,FIX,"장소가 ""하교 길 또는 책상""으로 둘",하나로 확정,2차
+teen_008,방 청소 잔소리,김우영,teen_messy_room,OK,,,1차
+teen_009,오래달리기 측정,김재겸,grp_teen_endurance_run,OK,,,1차
+teen_010,비 오는 하굣길,신기훈,grp_teen_rain_friend_umbrella,SELF,,,1차
+teen_011,단톡방의 사진,정원률,grp_wr_teen_011,FIX,휴대폰 근접 구도인데 배경 장소가 없어 다른 휴대폰 장면과 구분되지 않음,단톡방을 보는 장소 하나로,2차
+teen_012,축제 무대 사고,김선한,grp_sh_teen_012,OK,,,2차
+teen_013,청소년 해커톤,김우영,teen_hackathon_deadline,OK,,,1차
+teen_014,교내 토론대회,김재겸,grp_teen_debate_invite,OK,,,1차
+teen_015,방학 아르바이트,신기훈,grp_teen_academy_flyer_offer,SELF,,,1차
+teen_016,부모님 결혼기념일,정원률,grp_wr_teen_016,OK,,,2차
+teen_017,스크린 타임 경고,김선한,grp_sh_teen_017,OK,,,2차
+teen_018,아픈 콩이,김우영,teen_pet_vet_cost,FIX,콩이가 반려동물로만 적혀 있지만 has_dog 조건의 강아지임,강아지로 명시. child_014·adult_011 과 같은 개로 그려지게,1차
+teen_019,고등학교 원서,김재겸,grp_teen_hs_application,OK,,,1차
+teen_020,청소년 대표 선발,신기훈,grp_teen_tryout_vs_finals,SELF,,,1차
+teen_021,축제와 짝사랑,정원률,grp_wr_teen_021,OK,,,2차
+teen_022,수학여행의 밤,김선한,grp_sh_teen_022,OK,,,2차
+teen_023,문과냐 이과냐,김우영,teen_track_choice,OK,,,1차
+teen_024,선생님의 오답,김재겸,grp_teen_board_wrong_sign,OK,,,1차
+teen_025,편의점의 진상 손님,신기훈,grp_teen_convenience_refund,SELF,,,1차
+teen_026,새벽의 메시지,정원률,grp_wr_teen_026,FIX,"장소가 ""공부 자리 또는 침실""로 둘",하나로 확정 (수학 자료가 보이는 책상 권장),2차
+teen_027,주차장의 아빠,김선한,grp_sh_teen_027,OK,,,2차
+teen_028,성적표 사인,김우영,teen_report_signature,OK,,,1차
+teen_029,4교시 매점 달리기,김재겸,grp_teen_store_bread_rush,FIX,달리는 장면과 뛰는 학생들이 선택 A(전력 질주)를 미리 보여 줌,4교시 종이 울린 순간 교실 문 쪽에서 복도로 뛰어나가는 아이들을 보는 시점으로. 나는 아직 출발 전. 크림빵 표현 방법은 정원률 님과 확인,1차
+teen_030,반티 투표,신기훈,grp_teen_class_shirt_vote,SELF,,,1차
+teen_031,스터디 카페,정원률,grp_wr_teen_031,FIX,장소가 정해지지 않아 한 장면으로 그릴 수 없음,친구들이 제안하는 장소 하나로 (예: 하교 뒤 교실),2차
+teen_032,숙제냐 생일 파티냐,김선한,grp_sh_teen_032,OK,,,2차
+teen_033,졸업앨범 촬영 날,김우영,teen_yearbook_photo,FIX,거울을 넣으면 내 얼굴이 나옴. 1인칭 장면에는 얼굴을 넣지 않음,거울을 빼고 시야 위쪽의 앞머리 끝과 카메라로,1차
+teen_034,셀프 염색,김재겸,grp_teen_self_dye_store,OK,,,1차
+teen_035,종점에서 눈을 떴다,신기훈,grp_teen_bus_terminal_wakeup,SELF,,,1차
+teen_036,학생회장 선거 공약,정원률,grp_wr_teen_036,OK,,,2차
+teen_037,수능 D-365,김선한,grp_sh_teen_037,OK,칠판 글자가 핵심이라 글자 없이 다른 교실 장면과 구분이 약함. 시각 담당 판단 필요,,2차
+teen_038,수능 날 아침,김우영,exam_day_morning,OK,,,1차
+teen_039,졸업식 날,김재겸,grp_teen_graduation_flour,OK,,,1차
+teen_040,야자 시간의 배고픔,신기훈,grp_teen_night_study_hungry,SELF,,,1차
+teen_041,아무 일 없는 주말,정원률,grp_wr_teen_041,OK,,,2차
+teen_042,기말고사 1교시,김우영,teen_math_exam,REPLACE,"실제 그림 확인: 시험지가 백지라 처음 보는 공식이 없고, 앞자리 친구가 장을 넘기지 않으며, 교사가 시험 중 판서를 함. ""정확히 표현함""은 과함. 지시서의 대표 사례(시험)이기도 함","시험지에 수식 모양, 앞자리 친구가 장을 넘기는 손으로 수정 권고. R 대신 교체로 계산 제안",1차
