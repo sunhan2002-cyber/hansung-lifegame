@@ -164,7 +164,7 @@
       "usage": "pov",
       "period": "YOUNG_ADULT",
       "statTag": null,
-      "description": "몸살로 누운 채 천장과 체온계를 보는 1인칭 장면",
+      "description": "First-person morning sickbed with a wordless message phone, water glass on an over-bed tray and held thermometer stacked in the center for portrait cropping.",
       "fallbackText": "몸살 난 아침 장면 준비 중"
     },
     {
@@ -174,7 +174,7 @@
       "usage": "pov",
       "period": "YOUNG_ADULT",
       "statTag": null,
-      "description": "구조조정 통보 날, 사원증을 찍어도 열리지 않는 출입문 앞 1인칭 장면",
+      "description": "First-person closed office turnstile with a blank employee badge, red denial reader and closed barrier together in the center; commuters beyond.",
       "fallbackText": "구조조정 통보 장면 준비 중"
     },
     {
@@ -294,7 +294,7 @@
       "usage": "pov",
       "period": null,
       "statTag": null,
-      "description": "First person seated on school infirmary cot after dizziness in gym, glass of water and sleep schedule on bedside table, blurred-in-pixel empty sports court beyond window.",
+      "description": "First-person teenage school infirmary bed, centered glass of water on an over-bed tray, sports court through window and school nurse at the side; no written schedule.",
       "fallbackText": "장면을 준비 중입니다"
     },
     {
@@ -414,7 +414,7 @@
       "usage": "pov",
       "period": null,
       "statTag": null,
-      "description": "First person reaching into vending machine tray discovering TWO drink cans instead of one, surprised open hand, coin return and glowing buttons, no logos or readable text.",
+      "description": "First-person vending machine dispensing tray with exactly TWO matching red unbranded cola cans centered, surprised hands at sides; display cans above are separate.",
       "fallbackText": "장면을 준비 중입니다"
     },
     {

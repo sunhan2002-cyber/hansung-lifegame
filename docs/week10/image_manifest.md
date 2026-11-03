@@ -16,7 +16,7 @@
 |img_week10_bg_young_adult|app/src/main/assets/images/week10/scenes/img_week10_bg_young_adult.png|bg_young_adult: bg_young_adult|300×225|없음|imagegen|
 |img_week10_bg_middle|app/src/main/assets/images/week10/scenes/img_week10_bg_middle.png|bg_middle: bg_middle|300×225|없음|imagegen|
 |img_week10_bg_old_age|app/src/main/assets/images/week10/scenes/img_week10_bg_old_age.png|bg_old_age: bg_old_age|300×225|없음|imagegen|
-|img_path_hea_09_001|app/src/main/assets/images/week10/scenes/img_path_hea_09_001.png|path_hea_09: 체육 시간의 어지럼증|300×225|없음|imagegen|
+|img_path_hea_09_001|app/src/main/assets/images/week10/scenes/img_path_hea_09_001.png|path_hea_09: 체육 시간의 어지럼증|1448×1086|없음|imagegen|
 |img_path_hea_10_001|app/src/main/assets/images/week10/scenes/img_path_hea_10_001.png|path_hea_10: 입사 첫 주의 야근 문화|300×225|없음|imagegen|
 |img_path_fit_09_001|app/src/main/assets/images/week10/scenes/img_path_fit_09_001.png|path_fit_09: 시니어 마라톤 출발선|300×225|없음|imagegen|
 |img_path_fit_10_001|app/src/main/assets/images/week10/scenes/img_path_fit_10_001.png|path_fit_10: 운동부를 그만둔 뒤의 오후|300×225|없음|imagegen|
@@ -28,7 +28,7 @@
 |img_path_wea_10_001|app/src/main/assets/images/week10/scenes/img_path_wea_10_001.png|path_wea_10: 편의점 야간 알바 제안|300×225|없음|imagegen|
 |img_path_hap_09_001|app/src/main/assets/images/week10/scenes/img_path_hap_09_001.png|path_hap_09: 예술고 첫 학기|1448×1086|없음|imagegen|
 |img_path_hap_10_001|app/src/main/assets/images/week10/scenes/img_path_hap_10_001.png|path_hap_10: 시험 끝난 날의 스케치북|300×225|없음|imagegen|
-|img_path_luk_09_001|app/src/main/assets/images/week10/scenes/img_path_luk_09_001.png|path_luk_09: 자판기에서 두 캔|300×225|없음|imagegen|
+|img_path_luk_09_001|app/src/main/assets/images/week10/scenes/img_path_luk_09_001.png|path_luk_09: 자판기에서 두 캔|1448×1086|없음|imagegen|
 |img_path_luk_10_001|app/src/main/assets/images/week10/scenes/img_path_luk_10_001.png|path_luk_10: 잘못 걸려 온 전화|300×225|없음|imagegen|
 |img_week10_ending_achievement|app/src/main/assets/images/week10/scenes/img_week10_ending_achievement.png|ending_achievement: ending_achievement|300×225|없음|imagegen|
 |img_week10_ending_relationship|app/src/main/assets/images/week10/scenes/img_week10_ending_relationship.png|ending_relationship: ending_relationship|300×225|없음|imagegen|

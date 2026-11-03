@@ -1,0 +1,41 @@
+{
+  "date": "2026-11-03",
+  "assets": [
+    {
+      "eventId": "adult_068",
+      "tool": "built-in image_gen",
+      "sourceOriginal": "docs/assignments/20261031/submissions/revisions/20261103-round2/originals/img_pov_flu_morning_001.png",
+      "savedFile": "app/src/main/assets/images/design_preview/week7/img_pov_flu_morning_001.png",
+      "providerOutputFile": "exec-3ce32bb9-2879-4151-b915-5de6172d76ce.png",
+      "transparentBackground": false,
+      "prompt": "Edit this existing game scene, preserving its medium-density crisp pixel-art style, warm restrained palette, first-person bedridden viewpoint, morning bedroom, blanket, and neutral pre-choice state. Recompose for a very narrow centered portrait crop: ALL three story-critical objects must fit fully between x=36% and x=64% of the 4:3 image, stacked vertically rather than spread horizontally. At upper center, a small phone propped on a compact over-bed tray shows a single large wordless incoming message shape (NO letters/numerals). Below that and still centered, a clear water glass rests safely on that tray. In foreground lower center a patient's hand holds a compact digital thermometer with a blank/non-readable display; keep the whole thermometer and the holding fingers in central third too. Move the tray to in front of the patient rather than bedside off to right. Make all three easily recognizable in a centered portrait crop, no overlap hiding them. The bedroom sides are only context. No faces or reflection of protagonist. No readable text, temperature digits, logos, floating UI, medical diagnosis, or recovered/result state. Four-to-three landscape PNG, crisp pixel edges and coherent pixel scale, not blurred painted realism. This is a compositional correction of the reference, with the same lived-in morning feeling."
+    },
+    {
+      "eventId": "adult_070",
+      "tool": "built-in image_gen",
+      "sourceOriginal": "docs/assignments/20261031/submissions/revisions/20261103-round2/originals/img_pov_layoff_door_001.png",
+      "savedFile": "app/src/main/assets/images/design_preview/week7/img_pov_layoff_door_001.png",
+      "providerOutputFile": "exec-386d8234-464c-4aee-8ea5-631370d5675e.png",
+      "transparentBackground": false,
+      "prompt": "Edit this game illustration in the same crisp medium-density pixel-art style and restrained warm office daylight. Preserve first-person view stopped at a CLOSED office security turnstile, a few adult commuters beyond on other lanes. Crucial correction: center the employee's hand holding a small blank access badge AND the reader's RED denial indicator together entirely inside x=36%..64% of the 4:3 landscape image. Put a narrow reader pedestal at x=52%, red square light around x=53%, y=47%; the badge is presented just below-left at x=46%, y=60%, with foreground hand coming up from bottom CENTER. Closed horizontal gate/bar must also remain visible behind the central card. Place side lanes/commuters outside critical zone as secondary background. This should read instantly after cropping to ONLY the middle third: access badge, red denial light, closed barrier. Card has no portrait, letters or logo. No protagonist face, no readable text/UI. Do not show badge accepted, open gate, dismissal letter or later outcome. Preserve lobby architecture and mood, adjusting perspective coherently for this centered reader position. Output 4:3 PNG, pixel edges not photographic smoothing."
+    },
+    {
+      "eventId": "path_hea_09",
+      "tool": "built-in image_gen",
+      "sourceOriginal": "docs/assignments/20261031/submissions/revisions/20261103-round2/originals/img_path_hea_09_001.png",
+      "savedFile": "app/src/main/assets/images/week10/scenes/img_path_hea_09_001.png",
+      "providerOutputFile": "exec-8a37a649-2027-4c7f-872d-c8b9dc8c07ee.png",
+      "transparentBackground": false,
+      "prompt": "Edit the supplied first-person school infirmary game scene. Preserve medium-density crisp pixel art, muted warm daylight, school bed with teenage uniform-covered legs in foreground, curtain, school sports court visible through the window, quiet uncertain pre-choice moment. Remove the handwritten/gibberish note sheet entirely: no letters, numbers or scribbles anywhere in the image. Crucial narrow portrait safety: put a small over-bed table/tray directly ahead at center x=50%, y=62%, with a clear glass of water fully within x=42%..58%; not on a distant right bedside cabinet. Through the window in central x=36%..64% keep enough of the school sports court to recognize the setting. Keep foreground bed/legs central. A small portion of a school nurse's neutral clothed torso/hand beside the tray may establish the conversation but is optional; no need to show a person's face or invent diagnosis/injury. No medical test results, no readable chart/UI, no protagonist face. No world/choice outcome. Keep the calm original school infirmary composition but recenter the water and remove fake text. Four-to-three landscape PNG, clean coherent pixel art, not blurry or photorealistic."
+    },
+    {
+      "eventId": "path_luk_09",
+      "tool": "built-in image_gen",
+      "sourceOriginal": "docs/assignments/20261031/submissions/revisions/20261103-round2/originals/img_path_luk_09_001.png",
+      "savedFile": "app/src/main/assets/images/week10/scenes/img_path_luk_09_001.png",
+      "providerOutputFile": "exec-bd1987d8-dc9b-494d-bec8-cd68a21ec776.png",
+      "transparentBackground": false,
+      "prompt": "Edit this pixel-art vending machine game scene with a very limited correction. Preserve the orange vending machine, sunny outdoor setting, first-person two surprised hands, dispensing tray and TWO cans in the tray. Both dispensed cans must now have matching red cola-colored unbranded wraps, with a simple cream stripe and metallic ends. Change the green dispensed can to match the red one. EXACTLY TWO physical cans in the bottom dispensing tray, no third can; the product display above is separate and may stay multicolored. Keep both dispensed cans fully inside middle x=36%..64% as they are now for narrow centered portrait cropping. No readable brand, letters, numbers, logos, price labels or UI anywhere. Maintain same crisp medium-density pixel-art feel, composition, object count, daytime lighting and pre-choice moment. Do not add effects or extra objects. Four-to-three landscape PNG."
+    }
+  ]
+}

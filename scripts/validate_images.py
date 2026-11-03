@@ -103,7 +103,8 @@ def audit_routing(root):
                 errors.append(f"fileName mismatch: {image_id}")
             if item["usage"] != registered[image_id]["usage"]:
                 errors.append(f"usage mismatch: {image_id}")
-            actual = read_size(asset_dir / "images" / PurePosixPath(image_path))
+            packaged_image = asset_dir / "images" / PurePosixPath(image_path)
+            actual = read_size(packaged_image)
             if actual is None:
                 errors.append(f"missing or invalid PNG: {image_id} ({image_path})")
             elif not valid_dimensions(*actual):
@@ -111,6 +112,12 @@ def audit_routing(root):
             elif any(key in registered[image_id] for key in ("width", "height")):
                 if actual != (registered[image_id].get("width"), registered[image_id].get("height")):
                     errors.append(f"metadata dimensions mismatch: {image_id}")
+            # Android gives debug assets priority over main assets at the same path.
+            # A stale preview copy must not silently replace the reviewed game art.
+            debug_override = root / "app/src/debug/assets/images" / PurePosixPath(image_path)
+            if (actual is not None and debug_override.is_file()
+                    and debug_override.read_bytes() != packaged_image.read_bytes()):
+                errors.append(f"debug asset overrides reviewed image: {image_id} ({image_path})")
         portraits = routing["periodPortraits"]
         scenes = routing["statScenes"]
         focus_stats = routing["focusStats"]

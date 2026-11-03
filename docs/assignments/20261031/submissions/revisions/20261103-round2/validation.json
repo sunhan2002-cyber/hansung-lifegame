@@ -1,0 +1,155 @@
+{
+  "date": "2026-11-03",
+  "status": "PASS",
+  "scope": "round 2 feedback plus latest PR51 assignment and two common samples",
+  "branch": "feat/followup-20261031-wonryul-images",
+  "comparedWithCommit": "c81208cc4dd6e4fd45e979b950d6fe28398a2e32",
+  "classificationRows": 70,
+  "columns": 26,
+  "sourceColumnsUnchanged": 11,
+  "ownedSemanticRequests": 13,
+  "changedOwnedRows": 13,
+  "candidateGroupsWithinOwnedRows": 70,
+  "teamProductionGroups": 351,
+  "officialTeamAdditionalProduction": 346,
+  "officialOwnedAdditionalAssignment": 67,
+  "newOwnedSamplesSubmitted": 2,
+  "unproducedAfterSamples": 65,
+  "approvalAndProductionFieldsPreserved": true,
+  "reuseProposals": 2,
+  "originalPngHashesPreserved": 17,
+  "originalSnapshots": 6,
+  "currentVisualDecisionCounts": {
+    "REVISED_APPLIED_PENDING_TEAM_ACCEPTANCE": 4,
+    "REVISION_OR_REPLACEMENT_REQUIRED": 8,
+    "EXISTING_REUSE_SUPPORTED": 3,
+    "PREVIOUS_REVISION_REUSE_SUPPORTED": 2
+  },
+  "appliedPngsThisRound": 4,
+  "appliedPngsTotal": 6,
+  "nativeSize": [
+    1448,
+    1086
+  ],
+  "pngIntegrity": "CRC, zlib and dimensions PASS",
+  "week10UniqueScenes": 24,
+  "debugAssetsMatchingMain": true,
+  "staleDebugCopiesRemoved": 2,
+  "overrideRegression": {
+    "status": "PASS",
+    "staleOverrideRejected": true,
+    "restoredCleanAssetsPass": true
+  },
+  "apkAssetsByteMatch": 8,
+  "contentValidation": "PASS: 352 events, 1009 choices, 66 endings, 522 catalog IDs",
+  "imageValidation": "PASS: 45 routed images",
+  "imageRoutingTests": 12,
+  "debugAndAndroidTestBuild": "PASS",
+  "androidPreviewTests": 2,
+  "previewItems": 14,
+  "androidTestFlows": [
+    "all fourteen original PNGs decode",
+    "next/previous/menu/reset/exit",
+    "fullscreen/tap return",
+    "320x400dp with 2x font controls/footer"
+  ],
+  "device": {
+    "name": "Pixel_9",
+    "api": 36,
+    "physicalSize": [
+      1080,
+      2424
+    ],
+    "densityDpi": 420
+  },
+  "captures": [
+    {
+      "sample": 7,
+      "path": "output/followup-round2/device-captures-final/week7-uiux/applied-scene-7-fullscreen.png",
+      "size": [
+        1079,
+        2423
+      ],
+      "sha256": "086423622e064764fe8acee19beca77bce8f94494f1bc5de912cb84650817e9f"
+    },
+    {
+      "sample": 8,
+      "path": "output/followup-round2/device-captures-final/week7-uiux/applied-scene-8-fullscreen.png",
+      "size": [
+        1079,
+        2423
+      ],
+      "sha256": "319f22e4aed7f718afd30d1b38a41bfef74b94f9b9ed65572929cecba52ac463"
+    },
+    {
+      "sample": 9,
+      "path": "output/followup-round2/device-captures-final/week7-uiux/applied-scene-9-fullscreen.png",
+      "size": [
+        1079,
+        2423
+      ],
+      "sha256": "a6500e8ab4fdf0d7c2d625067285401a971d444677f9a3bb9854cea085d6a32a"
+    },
+    {
+      "sample": 10,
+      "path": "output/followup-round2/device-captures-final/week7-uiux/applied-scene-10-fullscreen.png",
+      "size": [
+        1079,
+        2423
+      ],
+      "sha256": "3a06b12cf2c650f326a4b1956dca4c7662f9ec69aecfdf20904429ef96d8ad00"
+    },
+    {
+      "sample": 11,
+      "path": "output/followup-round2/device-captures-final/week7-uiux/applied-scene-11-fullscreen.png",
+      "size": [
+        1079,
+        2423
+      ],
+      "sha256": "b60ee846ec84ed782729034ff14af7a5438fc6a4b74bbab6757efd7a39b19efb"
+    },
+    {
+      "sample": 12,
+      "path": "output/followup-round2/device-captures-final/week7-uiux/applied-scene-12-fullscreen.png",
+      "size": [
+        1079,
+        2423
+      ],
+      "sha256": "db66c5207db3c765de6acdecb2ec9abc196d4db7a7b680d012fd6332ad3779fa"
+    },
+    {
+      "sample": 13,
+      "path": "output/followup-round2/device-captures-final/week7-uiux/applied-scene-13-fullscreen.png",
+      "size": [
+        1079,
+        2423
+      ],
+      "sha256": "1833e3b6c29c9557a1acef852820091a5610c39198c6bcb54254c3d8193ac786"
+    },
+    {
+      "sample": 14,
+      "path": "output/followup-round2/device-captures-final/week7-uiux/applied-scene-14-fullscreen.png",
+      "size": [
+        1079,
+        2423
+      ],
+      "sha256": "ce85a2df094916beadd22253880c56983fc027b562657739fb3fdafda33a77cb"
+    }
+  ],
+  "cropReview": {
+    "adult_068": "Phone, water glass and full thermometer visible together; wrist partly cropped.",
+    "adult_070": "Badge, red denial light and closed gate visible together; side commuters cropped.",
+    "path_hea_09": "Water glass, bed/legs and school sports court visible; nurse at outer right cropped, accepted as optional speaker cue.",
+    "path_luk_09": "Exactly two matching red dispensed cans visible; peripheral hands cropped.",
+    "path_hap_09": "Prior revised image retained; unfinished still life, teen student and night lighting visible, right brush hand cropped.",
+    "path_int_10": "Prior revised image retained; librarian and poster visible, outer bookcases cropped.",
+    "path_hea_01": "Teacher, added floret in hand and original three florets on tray visible separately; outer classmates cropped.",
+    "adult_015": "Phone, incoming-deposit icon, adult hand and wooden desk visible; side lamp cropped."
+  },
+  "screenshotMethod": "Top app window including fullscreen Dialog, drawn on the UI thread after Compose idle; no System UI overlays",
+  "cropReviewBy": "정원률 담당 보조 검수(Codex); latest screenshots inspected after debug override fix; final team approval pending",
+  "apkSha256": "6623b2e2a28aba8e640eea6c79183b70c538e03f1a0f1e71615b313beebb6c59",
+  "logDirectory": "output/followup-round2 (local)",
+  "finalTeamAcceptance": "PENDING",
+  "mergedBranches": false
+}
