@@ -1,0 +1,89 @@
+[
+  {
+    "groupId": "grp_teen_after_quitting_stands",
+    "imageId": "img_path_fit_10_001",
+    "assetPath": "week10/scenes/img_path_fit_10_001.png",
+    "sha256": "9eeba2f8b99599c7549c20ec8ba06ad1dd03acd2c60047185b31116d74182cb9",
+    "approvalStatus": "APPROVED",
+    "semanticReviewer": "신기훈 2차 검토 afd2f6bf4e3d7bc4229027b928fc96635ddc1d00",
+    "visualReviewer": "정원률 원본 검토·김재겸 크롭 검토, 김선한 담당 Codex 재확인",
+    "eventIds": [
+      "path_fit_10"
+    ],
+    "eventSourceHashes": {
+      "path_fit_10": "8f5318e27dc1f4f8493a3304b7d0a8f9b6c5da889e2ab42e7c139494d420151b"
+    },
+    "reviewEvidence": {
+      "semanticSource": {
+        "commit": "afd2f6bf4e3d7bc4229027b928fc96635ddc1d00",
+        "file": "docs/assignments/20261031/submissions/신기훈_분류.csv"
+      },
+      "visualSource": {
+        "commit": "c81208cc4dd6e4fd45e979b950d6fe28398a2e32",
+        "file": "docs/assignments/20261031/submissions/정원률_분류.csv"
+      },
+      "cropSource": {
+        "commit": "4e055c74d80dab8f8b542620e40919922de0429d",
+        "file": "docs/assignments/20261031/submissions/김재겸_분류.csv"
+      }
+    }
+  },
+  {
+    "groupId": "grp_mid_last_research_puzzle",
+    "imageId": "img_path_int_09_001",
+    "assetPath": "week10/scenes/img_path_int_09_001.png",
+    "sha256": "bd3ccc519a6b9835df32581f10809774bae2c731534853cc8ed30b52766c5b64",
+    "approvalStatus": "APPROVED",
+    "semanticReviewer": "신기훈 2차 검토 afd2f6bf4e3d7bc4229027b928fc96635ddc1d00",
+    "visualReviewer": "정원률 원본 검토·김재겸 크롭 검토, 김선한 담당 Codex 재확인",
+    "eventIds": [
+      "path_int_09"
+    ],
+    "eventSourceHashes": {
+      "path_int_09": "2f3a43cc6deddfd14cf6b8e97f489731a362a8e877ffe116ae9c93d1125514cc"
+    },
+    "reviewEvidence": {
+      "semanticSource": {
+        "commit": "afd2f6bf4e3d7bc4229027b928fc96635ddc1d00",
+        "file": "docs/assignments/20261031/submissions/신기훈_분류.csv"
+      },
+      "visualSource": {
+        "commit": "c81208cc4dd6e4fd45e979b950d6fe28398a2e32",
+        "file": "docs/assignments/20261031/submissions/정원률_분류.csv"
+      },
+      "cropSource": {
+        "commit": "4e055c74d80dab8f8b542620e40919922de0429d",
+        "file": "docs/assignments/20261031/submissions/김재겸_분류.csv"
+      }
+    }
+  },
+  {
+    "groupId": "grp_wr_path_wea_09",
+    "imageId": "img_path_wea_09_001",
+    "assetPath": "week10/scenes/img_path_wea_09_001.png",
+    "sha256": "ca2f641b36d0aa698c3666a3364327d98f79582d3a7ee38955c426350f53e282",
+    "approvalStatus": "APPROVED",
+    "semanticReviewer": "신기훈 2차 검토 afd2f6bf4e3d7bc4229027b928fc96635ddc1d00",
+    "visualReviewer": "정원률 원본 검토·김재겸 크롭 검토, 김선한 담당 Codex 재확인",
+    "eventIds": [
+      "path_wea_09"
+    ],
+    "eventSourceHashes": {
+      "path_wea_09": "b69f72b5ce70f90979f0ae5a6a5c98fc3b3249b8ffa3c4e84390426769ca40ce"
+    },
+    "reviewEvidence": {
+      "semanticSource": {
+        "commit": "afd2f6bf4e3d7bc4229027b928fc96635ddc1d00",
+        "file": "docs/assignments/20261031/submissions/신기훈_분류.csv"
+      },
+      "visualSource": {
+        "commit": "c81208cc4dd6e4fd45e979b950d6fe28398a2e32",
+        "file": "docs/assignments/20261031/submissions/정원률_분류.csv"
+      },
+      "cropSource": {
+        "commit": "4e055c74d80dab8f8b542620e40919922de0429d",
+        "file": "docs/assignments/20261031/submissions/김재겸_분류.csv"
+      }
+    }
+  }
+]
