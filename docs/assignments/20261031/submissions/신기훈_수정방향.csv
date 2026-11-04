@@ -1,5 +1,5 @@
 ﻿eventId,title,classificationOwner,basis,semanticVerdictBefore,finalDirection,ownerAction,existingArtReuse,status
-adult_002,프로 구단의 제안,김우영,의미,FIX,"코치 제안은 휴대폰 메시지, 계약서는 서명 전",분류 행 수정,파일 없음,OWNER_TO_UPDATE_ROW
+adult_002,프로 구단의 제안,김우영,의미,FIX,"코치 제안은 휴대폰 메시지, 계약서는 서명 전",분류 행 수정,파일 없음,PNG_REVISE (크롭·종목)
 adult_007,금요일 밤 술자리,김우영,의미,FIX,이상형 발견과 빈자리 세 곳(이상형 옆·친구 사이·불판 앞)을 한 장면에,"분류 행 수정, 그룹 이름 구체화",파일 없음,OWNER_TO_UPDATE_ROW
 adult_008,이상형 옆자리,김재겸,의미,FIX,"주변 인물은 친구들, 금요일 밤. adult_007·adult_009·adult_010 과 같은 가게",분류 행 수정,파일 없음,OWNER_TO_UPDATE_ROW
 adult_032,결혼 이야기,김우영,의미,FIX,"반지 상자 제외, 연인의 손과 노트북 메일. 연인 성별 고정 안 함",분류 행 수정,파일 없음,OWNER_TO_UPDATE_ROW
@@ -8,7 +8,7 @@ adult_042,이삿짐 속 상자,김우영,의미,FIX,"닫힌 상자, 겉면은 �
 adult_047,애매한 사이의 청첩장,김우영,의미,FIX,장소를 하나로,분류 행 수정,파일 없음,OWNER_TO_UPDATE_ROW
 adult_067,일요일 밤 11시,김우영,의미,FIX,"장소를 하나로, adult_069 와 구분",분류 행 수정,파일 없음,OWNER_TO_UPDATE_ROW
 adult_069,승진 심사 전날,김재겸,의미,FIX,"성과 서류철 제외, 정장과 알람으로만",분류 행 수정,파일 없음,OWNER_TO_UPDATE_ROW
-adult_070,구조조정 통보,김우영,시각·크롭,OK,의미는 맞음. 사원증과 빨간 표시등이 크롭에 남게 재구도 또는 cropFocusX,정원률 수정 또는 김재겸 cropFocusX 제안 합의,수정 뒤 R,VISUAL_OR_CROP_DECISION
+adult_070,구조조정 통보,김우영,시각·크롭,OK,의미는 맞음. 사원증과 빨간 표시등이 크롭에 남게 재구도 또는 cropFocusX,정원률 수정 또는 김재겸 cropFocusX 제안 합의,수정 뒤 R,PNG_PASS_PENDING_TEAM
 adult_079,사원증 사진,김우영,의미,FIX,"내 자리 책상, 사원증 얼굴은 손가락으로 가리거나 형태만",분류 행 수정,파일 없음,OWNER_TO_UPDATE_ROW
 adult_080,늦게 받은 첫 월급,김재겸,의미,FIX,장소 하나로. adult_015 와 한 그룹으로 합치는 안(조건이 서로 배타),"분류 행 수정, 그룹 합치기는 김선한 결정",파일 없음,OWNER_TO_UPDATE_ROW
 child_002,엄마의 호출,김우영,의미,FIX,내 방에서 열린 문 너머 엄마 목소리를 듣는 시점,분류 행 수정,파일 없음,OWNER_TO_UPDATE_ROW
@@ -21,15 +21,15 @@ path_fit_09,시니어 마라톤 출발선,김재겸,의미·시각 일치,REPLAC
 path_fit_15,학교 스포츠클럽 창단,김우영,의미,FIX,운동장 구석에서 공 차는 아이들,분류 행 수정,파일 없음,OWNER_TO_UPDATE_ROW
 path_hap_07,통장과 웃음 사이,김우영,의미,FIX,말하는 사람은 얼굴 없이 목소리나 손으로만,분류 행 수정,파일 없음,OWNER_TO_UPDATE_ROW
 path_hap_08,문화센터 할머니 할아버지 선생님,김재겸,의미,FIX,"포스터는 기타 그림으로만, 이름 글자 없음",분류 행 수정,파일 없음,OWNER_TO_UPDATE_ROW
-path_hap_09,예술고 첫 학기,정원률,시각(수정본 제출됨),PENDING_CLASSIFICATION,수정본 의미 승인. 붓 든 손 잘림은 크롭 판단,"김재겸 크롭 수용 여부, 정원률 재구도 여부",수정본 사용 (교체 완료분),VISUAL_OR_CROP_DECISION
+path_hap_09,예술고 첫 학기,정원률,시각(수정본 제출됨),PENDING_CLASSIFICATION,수정본 의미 승인. 붓 든 손 잘림은 크롭 판단,"김재겸 크롭 수용 여부, 정원률 재구도 여부",수정본 사용 (교체 완료분),PNG_PASS_PENDING_TEAM
 path_hap_10,시험 끝난 날의 스케치북,김선한,시각·김선한,PENDING_CLASSIFICATION,선택 전 서랍·스케치북·이어폰 장면으로 수정,수정 제작 (M),R 제외,TO_PRODUCTION
 path_hea_03,종합검진 결과지,김우영,의미,FIX,"장소 하나로, 노란 형광펜이 핵심",분류 행 수정,파일 없음,OWNER_TO_UPDATE_ROW
-path_hea_09,체육 시간의 어지럼증,김우영,시각,OK,의미는 맞음. 시각 수정(글자 흔적·교사) 여부는 정원률 판단,정원률 결정,시각 결과에 따름,VISUAL_OR_CROP_DECISION
+path_hea_09,체육 시간의 어지럼증,김우영,시각,OK,의미는 맞음. 시각 수정(글자 흔적·교사) 여부는 정원률 판단,정원률 결정,시각 결과에 따름,PNG_PASS_PENDING_TEAM
 path_hea_10,입사 첫 주의 야근 문화,김재겸,의미·시각 일치,REPLACE,"시계 9시, 뒤쪽에 남아 있는 동료들",수정 제작 (M),R 제외,TO_PRODUCTION
-path_int_10,마지막 강의,정원률,시각(수정본 제출됨),PENDING_CLASSIFICATION,수정본 의미 승인,김재겸 크롭 수용 여부,수정본 사용 (교체 완료분),VISUAL_OR_CROP_DECISION
+path_int_10,마지막 강의,정원률,시각(수정본 제출됨),PENDING_CLASSIFICATION,수정본 의미 승인,김재겸 크롭 수용 여부,수정본 사용 (교체 완료분),PNG_PASS_PENDING_TEAM
 path_luk_03,당첨 축하 문자,김우영,의미,FIX,"장소 하나로, 나이가 드러나지 않게",분류 행 수정,파일 없음,OWNER_TO_UPDATE_ROW
 path_luk_08,놓친 비행기,김우영,의미,FIX,시간 하나로,분류 행 수정,파일 없음,OWNER_TO_UPDATE_ROW
-path_luk_09,자판기에서 두 캔,김선한,김선한·시각·크롭,PENDING_CLASSIFICATION,캔은 원본에서도 2개라 수 수정은 불필요. 두 캔을 같은 콜라 색으로 맞추는 가벼운 수정 권고,"김선한 판정 정정, 정원률 색 보정 여부 결정",색 보정 뒤 R,VISUAL_OR_CROP_DECISION
+path_luk_09,자판기에서 두 캔,김선한,김선한·시각·크롭,PENDING_CLASSIFICATION,캔은 원본에서도 2개라 수 수정은 불필요. 두 캔을 같은 콜라 색으로 맞추는 가벼운 수정 권고,"김선한 판정 정정, 정원률 색 보정 여부 결정",색 보정 뒤 R,PNG_PASS_PENDING_TEAM
 path_luk_10,잘못 걸려 온 전화,김우영,시각,OK,통화 중 화면으로 수정 (1차 허용 판정을 바꿈),수정 제작 (M),R 제외,TO_PRODUCTION
 path_soc_08,혼자 차린 생일상,김우영,의미,FIX,"국 냄비에 2인분, 그릇은 하나",분류 행 수정,파일 없음,OWNER_TO_UPDATE_ROW
 path_soc_09,칠순 잔치의 방명록,김재겸,의미·시각 일치,OK,교체: 주인공 시점의 두 번째 방명록·손 든 하객·사회자,교체 제작 (M),R 제외,TO_PRODUCTION
