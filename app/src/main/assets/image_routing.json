@@ -466,6 +466,13 @@
       "statTag": null,
       "description": "Calm bedroom recovery space, neatly folded blanket, glass of water, cane resting against chair, green garden visible through window. No people, open central floor.",
       "fallbackText": "장면을 준비 중입니다"
+    },
+    {
+      "imageId": "img_adult_crossroad_001",
+      "assetPath": "followup_20261031/img_adult_crossroad_001.png",
+      "usage": "event",
+      "fallbackText": "대학과 회사의 합격 연락을 함께 받은 장면",
+      "fileName": "img_adult_crossroad_001.png"
     }
   ],
   "periodPortraits": {

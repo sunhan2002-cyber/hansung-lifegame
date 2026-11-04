@@ -1,0 +1,204 @@
+{
+  "date": "2026-11-04",
+  "scope": "Local integration candidate verification; no merge to main and no final team art acceptance",
+  "sourceHeads": {
+    "sunhanBase": "dc7e6e9a3939e807bb6c182c76b0bb426a9f62da",
+    "jaegyeom": "4e055c74d80dab8f8b542620e40919922de0429d",
+    "wooyoung": "b1dc24b7b9ffe8eb834b3b1b7ec0fde6d2e00373",
+    "kihoon": "afd2f6bf4e3d7bc4229027b928fc96635ddc1d00",
+    "wonryul": "96f680ba1887cbfffc5d5c31a695221bb1748a67"
+  },
+  "localCandidateCommit": "fdc0724570b216db3e6f41291b3796498a440fdb",
+  "candidateOnlyRoutes": [
+    "adult_001",
+    "path_hea_01",
+    "adult_015"
+  ],
+  "productionPrRoutes": [
+    "adult_001"
+  ],
+  "unitTests": {
+    "testDebugUnitTest": {
+      "tests": 178,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "testReleaseUnitTest": {
+      "tests": 178,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  },
+  "pythonTests": {
+    "tests": 26,
+    "failures": 0
+  },
+  "android": {
+    "api": 36,
+    "resolution": "1080x2400",
+    "tests": 54,
+    "failures": 0,
+    "seconds": 239.516,
+    "runnerFinished": true,
+    "command": "adb -s emulator-5580 shell am instrument -w -r com.example.lifegame.test/androidx.test.runner.AndroidJUnitRunner",
+    "deviceDataIsolated": true,
+    "animatorDurationScale": 1
+  },
+  "cropReports": [
+    {
+      "file": "crop_report_360x740.tsv",
+      "events": 21,
+      "minimumPixelMatch": 1.0,
+      "sha256": "6bb321893892724649ed8653d51db65d10f9630ad5b11ab56bda07c74e9ad7a1"
+    },
+    {
+      "file": "crop_report_phone.tsv",
+      "events": 21,
+      "minimumPixelMatch": 1.0,
+      "sha256": "1d59fa29b50bd036c8bdc46b83a76c3e3410cab1d152f9ba255835cb68db8556"
+    }
+  ],
+  "visualReview": {
+    "manuallyReviewedActualAppCaptures": 9,
+    "revisionRequests": [
+      "adult_002"
+    ],
+    "notesPendingTeam": [
+      "path_hea_09",
+      "path_int_10"
+    ]
+  },
+  "packagedAssetMatches": {
+    "apkSha256": "a7e8eb77a1d600b7340e52444650c2d840d7bbfc2078d359e91a14d812f9fc02",
+    "checks": [
+      {
+        "groupId": "grp_sh_adult_001",
+        "sha256": "ec79e3c382851860713b4890286f3f8492e52900dd50693628ce4125312648a6",
+        "matchesApk": true
+      },
+      {
+        "groupId": "career_sports_offer",
+        "sha256": "459173aa12c878351ba092e05219f56917e17a99cb28ea7c330072804b5fc328",
+        "matchesApk": true
+      },
+      {
+        "groupId": "grp_sh_adult_068",
+        "sha256": "faeb5151de8c89893624a09475f0608207d774ff113e603d2f30d5d516dce328",
+        "matchesApk": true
+      },
+      {
+        "groupId": "layoff_locked_gate",
+        "sha256": "71a0260b7bb0377f21d5ce5c17a6c33750c4ed36b173456dbf268f9159ed742e",
+        "matchesApk": true
+      },
+      {
+        "groupId": "grp_wr_path_hap_09",
+        "sha256": "9a2bebf47ec0e7bb06b4b9d9d3c53306ec77a0c33934567d4b0cc3875381196a",
+        "matchesApk": true
+      },
+      {
+        "groupId": "grp_wr_path_int_10",
+        "sha256": "2310c99efc4329e19add5e8c43043960ffb8a9ee27627a90eb91b72ec6efb348",
+        "matchesApk": true
+      },
+      {
+        "groupId": "teen_dizziness_nurse",
+        "sha256": "fd8fd6f57bf296e85c8064113b67f65c674cd33a6291336e517305a2fc30f84d",
+        "matchesApk": true
+      },
+      {
+        "groupId": "grp_sh_path_luk_09",
+        "sha256": "2c49a65a54344fa134df732fe69ff3445f6d2f7e7430d27d34dc865e8fab46c5",
+        "matchesApk": true
+      },
+      {
+        "groupId": "grp_wr_path_hea_01",
+        "sha256": "15c9a71b89befca539190feea3cf946788aae03c134008934dc400a0fc25d065",
+        "matchesApk": true
+      },
+      {
+        "groupId": "grp_shared_salary_deposit",
+        "sha256": "a1b8eb68850b089f510d6c8ececbd4884891d34a1894bf1051ca323766d89698",
+        "matchesApk": true
+      }
+    ]
+  },
+  "apk": {
+    "fileName": "인생게임_후속숙제_검증후보_20261104.apk",
+    "sha256": "a7e8eb77a1d600b7340e52444650c2d840d7bbfc2078d359e91a14d812f9fc02",
+    "distributionStatus": "LOCAL_QA_CANDIDATE_ONLY"
+  },
+  "productionCounters": {
+    "totalProductionTarget": 348,
+    "pngSubmittedGroups": 10,
+    "unproducedGroups": 338,
+    "sunhanAssigned": 70,
+    "sunhanOwnPngSubmitted": 1,
+    "sunhanAssistedRevisionsSubmitted": 2,
+    "sunhanUnproduced": 67
+  },
+  "finalAcceptance": {
+    "status": "INCOMPLETE",
+    "approvedSemanticEvents": 3,
+    "pendingEvents": 349,
+    "expectedExitCode": 1
+  },
+  "knownLimits": [
+    "Team semantic/visual/crop approvals for new samples and pilots are pending; reviewer signatures not filled on their behalf.",
+    "adult_080 salary shared-art routing remains to be integrated with source fingerprints updated.",
+    "Remaining 67 Sunhan images await the agreed sample/pilot cross-review gate.",
+    "Real device testing not performed."
+  ],
+  "testEnvironmentCorrections": [
+    "Initial run used animator_duration_scale=0, activating reduced motion; corrected to 1 before final full run.",
+    "A subsequent run finished 54 assertions but adb disconnected and UiAutomation teardown failed. Final rerun completed normally with OK (54 tests)."
+  ],
+  "logs": [
+    {
+      "file": "integration-build.log",
+      "sha256": "ccc9358c18045bc1e2e52cca3480d35db697b49fce842177a96b61f54852377b"
+    },
+    {
+      "file": "integration-with-pilot-build.log",
+      "sha256": "cd39ae49d71d842fd86fd5f2bc8fd0d7937b43163716c0f6fcc8f636e28acf8a"
+    },
+    {
+      "file": "integration-unit-final.log",
+      "sha256": "b09ce23088f6202152f051834bc3c05bfd577b64eb69ee940dbaf9bbfd144912"
+    },
+    {
+      "file": "integration-android-final.log",
+      "sha256": "5330047e8bd15912faa118ead15a7e4d0d13792b00056e91764ff6fdea44b955"
+    },
+    {
+      "file": "python-tests.log",
+      "sha256": "53fd08b08722502a2aaee571b4c8fb135a1446df28c60e40a1a49848a42851cc"
+    },
+    {
+      "file": "own-content.log",
+      "sha256": "5260c564b8ece6ba51e5aa901840a4f945f2b91033ae44a4be73a3f0dd243150"
+    },
+    {
+      "file": "own-final-acceptance.log",
+      "sha256": "7e3b7969a58138c28dff95bd23770c4ad2ea898ad169f51b822b48cdccdbcdbb"
+    },
+    {
+      "file": "integrated-content.log",
+      "sha256": "fc3d20e6d460ee699dd0d4ffc4cd75cd344051a36fc7348de72b02619cb33eff"
+    },
+    {
+      "file": "integrated-images.log",
+      "sha256": "3ed254484a3512755bb517f3570d257e8f086859209d32bffab1aeebb204a40e"
+    },
+    {
+      "file": "android-runner-crash.log",
+      "sha256": "de300dc22dcc1a0ce9f57fe7ad80bd6de16c6ff3ef842d0e2d1321cbe757f585"
+    },
+    {
+      "file": "apk-asset-match.json",
+      "sha256": "91e1be76b2e86ec34fd38bc1fe366b00d08d6e313438c9143173451242541665"
+    }
+  ]
+}

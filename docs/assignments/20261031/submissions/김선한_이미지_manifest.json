@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-04",
+  "productionOwner": "김선한",
+  "phase": "PILOT_SUBMITTED_PENDING_CROSS_REVIEW",
+  "sourceAssignment": {
+    "pr": 51,
+    "commit": "dc7e6e9a3939e807bb6c182c76b0bb426a9f62da"
+  },
+  "assets": [
+    {
+      "groupId": "grp_sh_adult_001",
+      "eventIds": [
+        "adult_001"
+      ],
+      "imageId": "img_adult_crossroad_001",
+      "assetPath": "followup_20261031/img_adult_crossroad_001.png",
+      "width": 1448,
+      "height": 1086,
+      "format": "PNG",
+      "generationMethod": "OpenAI built-in image_gen; unmodified generated PNG copied into project",
+      "prompt": "Use case: illustration-story. Asset: one opaque 4:3 pixel art background for Android life game event adult_001, \"University or employment\". Create one coherent scene, NOT UI or collage.\nScene: first-person young adult sitting at their wooden desk in a modest Korean home bedroom, pondering TWO simultaneous acceptance messages on ONE smartphone. The phone must show two clearly separate large nonverbal message cards: a university/building-and-graduation-cap icon on one, a briefcase/company-building icon on the other; equal importance, neither selected. Below them a smaller family group-chat notification with several anonymous round icons and opposing reply blocks, WITHOUT text or numbers. Young adult gender-neutral hands naturally hold the phone; no face or reflection. Quiet neutral indoor lighting; time of day unspecified. Family appears only via group-chat symbols, nobody else physically present.\nComposition: landscape 4:3 image but keep ENTIRE phone, all three notification groups and both holding hands compactly stacked inside the middle 32 percent of image width so they survive a very narrow portrait CENTER CROP (33.1–66.9% of source width). Phone center at x=50%, top 25%, bottom 75%; desk and bedroom extend to sides as atmosphere. Phone screen large and easily distinguishable icons, not tiny microtext. Natural first person eye level looking slightly downward.\nStyle: crisp medium-density 16-bit pixel art, visible consistent square pixel grid, flat limited color steps, warm muted cream/ochre/wood brown, olive and dusty blue/teal; clear object silhouettes, restrained highlights, like cozy narrative life-simulation game backgrounds.\nAvoid all readable letters/numerals/pseudo-writing/logos/watermarks/game interface, health bars, buttons, cinematic frames, faces, graduation ceremony, signed contract, office work, career chosen, victory celebration, split screen, blur, gradients, dithering, photorealism, 3D. This is BEFORE any choice; show only the competing notifications and contemplation. Save an actual PNG image and return its local file path.",
+      "selfReview": {
+        "status": "PASS_SELF_QA_PENDING_TEAM",
+        "notes": [
+          "대학·회사 두 알림과 가족 대화가 모두 남음. 손 가장자리 일부만 잘림.",
+          "주인공 얼굴·문자·결과 선택 없음. 실제 생성 원본과 앱 중앙 크롭을 직접 확인."
+        ]
+      },
+      "semanticReview": {
+        "status": "PENDING_TEAM_REVIEW"
+      },
+      "visualReview": {
+        "status": "PENDING_TEAM_REVIEW"
+      },
+      "cropReview": {
+        "status": "PASS_SELF_QA_PENDING_TEAM",
+        "reviewer": "김선한 담당 Codex",
+        "screen": "1080x2400",
+        "captureSha256": "06c14fa56833593b2d865e4a0a39fe71bdb3406914187e3fe7666763e24a962d"
+      },
+      "sha256": "ec79e3c382851860713b4890286f3f8492e52900dd50693628ce4125312648a6"
+    }
+  ],
+  "counts": {
+    "assigned": 70,
+    "ownPngSubmitted": 1,
+    "assistedRevisionsSubmitted": 2,
+    "unproduced": 67,
+    "finalAccepted": 0
+  },
+  "bulkProductionGate": "공통 샘플과 파일럿의 팀 교차 검토 후 나머지 대량 제작. 팀 검토자를 대신 기입하지 않음."
+}
