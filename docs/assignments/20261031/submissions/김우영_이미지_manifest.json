@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "date": "2026-11-03",
+  "date": "2026-11-04",
   "productionOwner": "김우영",
-  "phase": "PILOT_SUBMITTED_PENDING_REVIEW",
+  "phase": "PILOT_REVISION_SUBMITTED_PENDING_TEAM_REVIEW",
   "sourceAssignment": "PR #51",
   "assets": [
     {
@@ -15,9 +15,35 @@
       "width": 300,
       "height": 225,
       "format": "PNG",
-      "sha256": "459173aa12c878351ba092e05219f56917e17a99cb28ea7c330072804b5fc328",
-      "generationMethod": "OpenAI built-in image generation, then nearest-neighbor resize to the required 300x225 size",
-      "prompt": "True first-person 16-bit pixel-art view inside a professional sports club consultation room in daytime. The player's gender-neutral hands rest beside an unsigned contract proposal; one adult scout sits across the desk; a smartphone shows only a non-readable notification icon for a separate former-school coach proposal. Use a crisp grid-aligned limited muted cream, ochre, brown, olive, dusty-blue, teal and charcoal palette. Keep the scout, unsigned proposal and phone in the central crop-safe area. No signed contract, signing pen, team uniform, coach in the room, whistle, celebration, trophy, readable text, logo, watermark, UI, gradient, dithering, blur, photorealism or result-confirming imagery.",
+      "sha256": "139eab183dc567989f7cb4c5dc3790be1eaf06f7c9f29063549a4851c51ab81b",
+      "generationMethod": "OpenAI built-in image editing, then nearest-neighbor resize to the required 300x225 size",
+      "prompt": "Move only the smartphone farther inward so the entire phone is completely inside the center 34% of the full image width. Place the phone immediately beside and slightly overlapping the proposal's upper-right edge, between the proposal and the scout's clasped hands. The phone must remain fully visible in a narrow portrait center crop. Keep the scout centered and the unsigned proposal centered. Preserve the pixel-art style, first-person hands, scout, consultation room, daylight, unsigned proposal, colors and lighting. Show only a simple notification icon with no readable text. Do not add logos, watermark, uniform, whistle, acceptance, rejection, celebration or any committed outcome.",
+      "reviewHistory": [
+        {
+          "date": "2026-11-03",
+          "sha256": "459173aa12c878351ba092e05219f56917e17a99cb28ea7c330072804b5fc328",
+          "status": "REVISION_REQUIRED",
+          "reviewSource": "PR #51 actual app crop review",
+          "finding": "1080x2400 중앙 크롭에서 코치 알림용 휴대폰 전체가 사라짐. 제안서와 휴대폰을 중앙 x=34~66% 안에 재배치 필요."
+        },
+        {
+          "date": "2026-11-04",
+          "sha256": "139eab183dc567989f7cb4c5dc3790be1eaf06f7c9f29063549a4851c51ab81b",
+          "status": "REVISION_SUBMITTED_PENDING_TEAM_REVIEW",
+          "finding": "스카우터, 서명 전 제안서, 코치 알림 휴대폰을 실제 앱 세로 중앙 크롭에 함께 남도록 재배치."
+        }
+      ],
+      "actualAppCropReview": {
+        "device": "Pixel_7 emulator",
+        "api": 37,
+        "physicalSize": "1080x2400",
+        "densityDpi": 420,
+        "testViewport": "360x740dp",
+        "testClass": "com.example.lifegame.ui.Adult002CropReviewTest",
+        "result": "OK (1 test)",
+        "appCropScreenshotSha256": "aef156310accbeb3a9f179824fa710bddce01191afcf2a662d7610e94ebde0dc",
+        "visualFinding": "실제 SceneImage 중앙 크롭에서 스카우터, 서명 전 제안서, 휴대폰 알림이 모두 식별 가능. 검토 캡처는 저장소에 커밋하지 않음."
+      },
       "selfReview": {
         "firstPerson": true,
         "unsignedProposal": true,
@@ -30,10 +56,17 @@
       }
     }
   ],
+  "coordination": {
+    "doNotReproduce": [
+      "adult_070",
+      "path_hea_09"
+    ],
+    "reason": "정원률 보완 제출과 PR #51 통합 크롭 검토가 있으므로 반려될 때만 해당 파일을 추가 보완한다."
+  },
   "counts": {
     "assigned": 70,
     "delivered": 1,
     "remaining": 69
   },
-  "knownDependency": "나머지 69장은 공통 샘플과 5명 파일럿 검토가 끝난 뒤 제작한다."
+  "knownDependency": "수정 파일럿과 공통 샘플의 팀 검토가 끝난 뒤 PR #51 제작대장의 미제출 69장을 제작한다. 제출과 최종 승인을 구분한다."
 }
