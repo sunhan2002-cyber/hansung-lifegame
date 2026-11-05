@@ -74,9 +74,13 @@ class SceneCropReviewTest {
     /** 스탯 · 시기 · 초상 공용 그림은 사건 그림으로 세지 않는다. */
     private val genericIds = routing.statScenes.values + routing.periodScenes.values + routing.periodPortraits.values
 
+    private val requestedEvents = InstrumentationRegistry.getArguments()
+        .getString("eventIds")?.split(",")?.filter(String::isNotBlank)?.toSet()
+
     private val routedEvents: List<DecisionEvent> = events.filter { event ->
         val id = event.povImageId.orEmpty()
-        id in routing.assets && id !in genericIds
+        id in routing.assets && id !in genericIds &&
+            (requestedEvents == null || event.eventId in requestedEvents!!)
     }
 
     private fun asset(name: String) = context.assets.open(name).bufferedReader().use { it.readText() }
@@ -123,7 +127,9 @@ class SceneCropReviewTest {
     }
 
     private fun reviewAll(label: String, frame: @Composable (@Composable () -> Unit) -> Unit) {
-        assertTrue("수정본 두 사건이 사건 그림 경로에 있어야 한다", routedEvents.map { it.eventId }.containsAll(listOf("path_hap_09", "path_int_10")))
+        val expectedEvents = requestedEvents ?: setOf("path_hap_09", "path_int_10")
+        assertTrue("요청한 사건이 모두 실제 이미지 경로에 있어야 한다", routedEvents.map { it.eventId }.containsAll(expectedEvents))
+        assertTrue("검토 대상 사건이 비어 있으면 통과할 수 없다", routedEvents.isNotEmpty())
         var decision by mutableStateOf(decisionOf(routedEvents.first()))
         composeRule.mainClock.autoAdvance = false
         composeRule.setContent {

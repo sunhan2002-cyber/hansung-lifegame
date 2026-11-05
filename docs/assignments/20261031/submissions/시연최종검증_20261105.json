@@ -1,0 +1,33 @@
+{
+  "date": "2026-11-05",
+  "scope": "시연용 통합. 최종 이미지 전수 인수 아님.",
+  "sourcePrHeads": {
+    "51": "ef5ada0d7aa41968bf6eb97383fe461890548ae1",
+    "50": "5793205185a6b1eff81173bacff5d5f41be076c7",
+    "49": "13bf1666c7f44b865aab87d6e1c22f6e3e88fb8f",
+    "48": "f9d05b2e415b75c89abfa7776590e23110558612",
+    "47": "9588596d33b1d73b3f771df64fcd8e162a380f87"
+  },
+  "unitTests": {
+    "testDebugUnitTest": 178,
+    "testReleaseUnitTest": 178
+  },
+  "pythonTests": 26,
+  "finalAndroidTests": 16,
+  "finalAndroidClasses": [
+    "FollowupTypingTest",
+    "Week10PlayScreenTest",
+    "SceneCropReviewTest"
+  ],
+  "previousFullAndroidTests": 55,
+  "androidLogSha256": "5dfbf9a62a7a43e632bf4ce45a7c43cc2f1c9e00331b6ed3b486d5a5e521d04b",
+  "apkSha256": "be7836cc1e8c1466a3e3fe4998e978a029967cdb371bdaaff28b59516fad2eda",
+  "dataChecks": "content, images, followup coverage, week8 contracts, choice conditions, event stat classification, week10: exit 0",
+  "approvedGroups": 15,
+  "approvedEvents": 16,
+  "pendingGroups": 336,
+  "stagedUnapprovedPngs": 9,
+  "notYetGeneratedGroups": 327,
+  "evidenceDirectory": "C:\\lifegame-followup-completion-20261105\\output",
+  "mergeStatus": "PRE_MERGE_VERIFIED; actual merge SHA is recorded by the GitHub PR"
+}
