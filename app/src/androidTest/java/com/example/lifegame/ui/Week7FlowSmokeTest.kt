@@ -47,8 +47,9 @@ class Week7FlowSmokeTest {
         }
         waitForAny("profile_content")
         composeRule.onNodeWithText("남").performClick()
-        composeRule.onNodeWithText("우렁찬 아기").performScrollTo().performClick()
-        composeRule.onNodeWithText("이 아기로 시작하기").performClick()
+        composeRule.onNodeWithTag("dice_roll").performScrollTo().performClick()
+        composeRule.waitUntil(5_000) { composeRule.onAllNodesWithTag("dice_tendency").fetchSemanticsNodes().isNotEmpty() }
+        composeRule.onNodeWithText("이 인생 시작하기").performClick()
 
         // 영아기는 초점 없이 바로 진행되고(매해 사건 보장), 첫 장 표지는 유년기에 나온다.
         // 결정 화면과 장 표지를 한 번씩 볼 때까지 진행한다.

@@ -19,7 +19,8 @@ class AvatarSpriteTest {
         val paths = AvatarLayerAssets.layers(base).map { it.path }
         val edits = listOf(
             base.copy(skinToneId = "skin_deep") to setOf(1),
-            base.copy(hairId = "hair_long_black") to setOf(3),
+            // 머리를 바꾸면 머리 아래 그림자(음영) 레이어도 같이 바뀐다.
+            base.copy(hairId = "hair_long_black") to setOf(3, 4),
             base.copy(eyesId = "eyes_narrow") to setOf(2),
             base.copy(bodyType = BodyType.MUSCULAR) to setOf(0, 1),
         )
@@ -27,7 +28,7 @@ class AvatarSpriteTest {
             val next = AvatarLayerAssets.layers(look).map { it.path }
             assertEquals(expectedChangedLayers, paths.indices.filter { paths[it] != next[it] }.toSet())
         }
-        assertEquals(listOf("avatar_body", "avatar_skin", "avatar_eyes", "avatar_hair"),
+        assertEquals(listOf("avatar_body", "avatar_skin", "avatar_eyes", "avatar_shade", "avatar_hair"),
             AvatarLayerAssets.layers(base).map { it.imageId })
     }
 

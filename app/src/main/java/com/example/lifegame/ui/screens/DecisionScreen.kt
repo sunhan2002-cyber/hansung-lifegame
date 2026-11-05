@@ -77,6 +77,7 @@ import com.example.lifegame.ui.DecisionUi
 import com.example.lifegame.ui.OutcomeUi
 import com.example.lifegame.ui.PeriodPlayUiState
 import com.example.lifegame.ui.avatar.PlayerAvatar
+import com.example.lifegame.ui.avatar.PlayerPortrait
 import com.example.lifegame.ui.components.DISTORT_MAX_DP
 import com.example.lifegame.ui.components.DISTORT_MILLIS
 import com.example.lifegame.ui.components.DecisionKindMark
@@ -281,7 +282,7 @@ fun DecisionScreen(
                     modifier = Modifier.windowInsetsPadding(
                         WindowInsets.safeDrawing.only(WindowInsetsSides.Top + WindowInsetsSides.Horizontal),
                     ),
-                    avatar = { avatarModifier -> PlayerAvatar(state.avatar, avatarModifier) },
+                    avatar = { avatarModifier -> PlayerPortrait(state.avatar, avatarModifier) },
                 )
                 Column(
                     Modifier

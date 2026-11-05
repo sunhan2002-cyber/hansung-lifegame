@@ -103,6 +103,7 @@ fun LifeGameApp(
                     CharacterSelectScreen(
                         starters = gameViewModel.starters,
                         faceSheet = gameViewModel.faceSheet,
+                        aiFace = gameViewModel.usesRealFaceGeneration,
                         onRequestFaceSheet = gameViewModel::requestFaceSheet,
                         onCancelFaceSheet = gameViewModel::cancelFaceSheet,
                         onClearFaceSheet = gameViewModel::clearFaceSheet,

@@ -3,7 +3,10 @@ package com.example.lifegame.ui.theme
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalDensity
+import androidx.compose.ui.unit.Density
 
 private val LifeGameColorScheme = lightColorScheme(
     // 주 버튼은 필름과 같은 먹색
@@ -41,13 +44,29 @@ private val LifeGameColorScheme = lightColorScheme(
     outlineVariant = LifeGameRule,
 )
 
+/**
+ * 앱 글씨 배율 (2026-11-05 피드백 "게임 글씨가 조금 작다").
+ * 화면마다 sp를 하나씩 고치지 않고 시스템 글꼴 배율에 곱한다.
+ * 다만 시스템 최대 글꼴(200%)보다 커지지는 않게 한다. 큰 글꼴 배치는 200% 기준으로 검증돼 있다.
+ */
+const val APP_TEXT_SCALE = 1.12f
+private const val MAX_TEXT_SCALE = 2f
+
+fun appFontScale(systemFontScale: Float): Float =
+    (systemFontScale * APP_TEXT_SCALE).coerceAtMost(maxOf(systemFontScale, MAX_TEXT_SCALE))
+
 @Composable
 fun LifeGameTheme(
     content: @Composable () -> Unit
 ) {
-    MaterialTheme(
-        colorScheme = LifeGameColorScheme,
-        typography = LifeGameTypography,
-        content = content
-    )
+    val density = LocalDensity.current
+    CompositionLocalProvider(
+        LocalDensity provides Density(density.density, appFontScale(density.fontScale)),
+    ) {
+        MaterialTheme(
+            colorScheme = LifeGameColorScheme,
+            typography = LifeGameTypography,
+            content = content
+        )
+    }
 }

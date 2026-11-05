@@ -120,7 +120,10 @@ data class StarterUi(
 data class NewLifeProfile(
     val name: String,
     val gender: Gender,
+    /** 성향. 주사위로 정하면 굴린 능력치와 가장 닮은 성향이 들어온다. */
     val starterId: String?,
+    /** 주사위로 정한 시작 능력치 보정. null이면 성향의 기본 보정을 쓴다. */
+    val rolledDelta: StatDelta? = null,
     /** 사진 없이 고른 외형과(선택) 사진 참조. 저장 모델에 그대로 들어간다. */
     val avatar: AvatarConfig = AvatarConfig(),
 )
@@ -198,6 +201,8 @@ data class PlayContent(
     val factCatalog: LifeFactCatalog = LifeFactCatalog.EMPTY,
     /** 잠금 이유에 쓸 플래그 이름표 */
     val lookup: FlagLookup = FlagLookup(catalog = factCatalog),
+    /** 해마다 흘러가는 일상 이야기 (yearly_stories.sample.json) */
+    val yearlyStories: YearlyStoryBook = YearlyStoryBook.EMPTY,
     val imageRouting: ImageRouting = ImageRouting(),
 )
 
@@ -382,17 +387,6 @@ private fun DecisionOption.healthEffectText(): String? {
     }
 }
 
-fun buildLogLines(moments: List<LifeMoment>, periods: List<PeriodDefinition>): List<LogLineUi> {
-    val names = periods.associate { it.period to it.displayName }
-    return moments.mapIndexed { index, moment ->
-        LogLineUi(
-            key = "$index",
-            label = "${names[moment.period] ?: moment.period.name} · ${moment.yearInPeriod}번째 해",
-            text = moment.text,
-        )
-    }
-}
-
 /**
  * 엔진의 한 걸음을 화면 상태로 바꾼다.
  * [decisionYear]는 결정 결과를 보여 주는 동안 그 결정이 걸린 해를 붙잡아 둘 때 쓴다.
@@ -470,7 +464,7 @@ fun buildPeriodPlayState(
         focusOptions = content.focuses.filter { it.period == state.period }.map { it.toOptionUi() },
         sceneImageId = sceneImageId,
         sceneFile = content.imageFiles[sceneImageId],
-        log = buildLogLines(state.moments, periods),
+        log = buildLogLines(state.moments, periods, content.yearlyStories, state.runSeed),
         yearKey = "${state.runId}:${state.period}:$shownYear:${state.moments.size}",
         decision = decision ?: step.pendingDecision?.let { pending ->
             buildDecisionUi(
@@ -513,7 +507,7 @@ fun buildPeriodPlayState(
     )
 }
 
-/** characters.sample.json → 타고난 기질 목록. 읽지 못하면 빈 목록. */
+/** characters.sample.json → 성향 목록. 읽지 못하면 빈 목록. */
 fun parseStarters(json: String): List<StarterUi> = runCatching {
     val array = JSONArray(json)
     List(array.length()) { index ->

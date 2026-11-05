@@ -54,6 +54,7 @@ import com.example.lifegame.ui.theme.LifeGameTheme
 import java.io.File
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertFalse
+import org.junit.Assert.assertNotNull
 import org.junit.Assert.assertNull
 import org.junit.Assert.assertTrue
 import org.junit.Rule
@@ -265,7 +266,8 @@ class Week10EndingFlowTest {
         setScreen { CharacterSelectScreen(starters = emptyList(), onStart = {}) }
         fun pick(id: String, description: String) {
             composeRule.onNodeWithTag("option_$id").performScrollTo().performClick()
-            composeRule.onAllNodes(hasContentDescription(description, substring = true)).assertCountEquals(3)
+            // 미리보기는 영아 · 청소년 · 중년 · 노년 네 장이다.
+            composeRule.onAllNodes(hasContentDescription(description, substring = true)).assertCountEquals(4)
         }
         pick("hair_long_black", "밝은 피부, 긴 생머리, 둥근 눈")
         pick("skin_deep", "짙은 피부, 긴 생머리, 둥근 눈")
@@ -275,7 +277,7 @@ class Week10EndingFlowTest {
         pick("skin_tan", "구릿빛 피부, 갈색 단발, 큰 눈")
         composeRule.onNodeWithTag("appearance_preview").performScrollTo()
         composeRule.waitUntil(15000) {
-            composeRule.onAllNodesWithTag("player_avatar_layers").fetchSemanticsNodes().size == 3
+            composeRule.onAllNodesWithTag("player_avatar_layers").fetchSemanticsNodes().size == 4
         }
         saveScreenshot("w10_independent_appearance.png")
     }
@@ -285,14 +287,14 @@ class Week10EndingFlowTest {
         var started: NewLifeProfile? = null
         setScreen {
             CharacterSelectScreen(
-                starters = listOf(StarterUi("s1", "골똘한 아기", "뭐든 뜯어보는 아기", null, com.example.lifegame.domain.model.StatDelta(), emptySet())),
+                starters = listOf(StarterUi("s1", "파고드는 편", "궁금한 건 끝까지 알아낸다.", null, com.example.lifegame.domain.model.StatDelta(intelligence = 5), emptySet())),
                 onStart = { started = it },
             )
         }
         composeRule.onNodeWithTag("option_hair_curly_brown").performScrollTo().performClick()
         composeRule.onNodeWithTag("option_skin_deep").performScrollTo().performClick()
-        // 미리보기 세 시기 모두 고른 외형으로 다시 그려진다.
-        composeRule.onAllNodes(hasContentDescription("짙은 피부, 곱슬머리", substring = true)).assertCountEquals(3)
+        // 미리보기 네 시기(영아 · 청소년 · 중년 · 노년) 모두 고른 외형으로 다시 그려진다.
+        composeRule.onAllNodes(hasContentDescription("짙은 피부, 곱슬머리", substring = true)).assertCountEquals(4)
 
         composeRule.onNodeWithTag("photo_pick").performScrollTo().performClick()
         composeRule.onNodeWithTag("photo_consent_no").performClick()
@@ -300,9 +302,15 @@ class Week10EndingFlowTest {
         saveScreenshot("w10_profile_consent_declined.png")
 
         composeRule.onNodeWithText("남").performScrollTo().performClick()
-        composeRule.onNodeWithText("골똘한 아기").performScrollTo().performClick()
-        composeRule.onNodeWithText("이 아기로 시작하기").performClick()
+        // 성향은 고르지 않고 주사위로 정한다. 굴리기 전에는 시작할 수 없다.
+        composeRule.onNodeWithText("주사위를 굴려 주세요").assertExists()
+        composeRule.onNodeWithTag("dice_roll").performScrollTo().performClick()
+        composeRule.waitUntil(5_000) { composeRule.onAllNodesWithTag("dice_tendency").fetchSemanticsNodes().isNotEmpty() }
+        composeRule.onNodeWithTag("dice_tendency").assertTextContains("성향: 파고드는 편")
+        composeRule.onNodeWithText("이 인생 시작하기").performClick()
         val profile = requireNotNull(started)
+        assertEquals("s1", profile.starterId)
+        assertNotNull(profile.rolledDelta)
         assertEquals("hair_curly_brown", profile.avatar.hairId)
         assertEquals("skin_deep", profile.avatar.skinToneId)
         assertNull(profile.avatar.portraitRef)

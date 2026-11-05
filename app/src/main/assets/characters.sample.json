@@ -1,8 +1,8 @@
 [
   {
     "starterId": "starter_loud",
-    "name": "우렁찬 아기",
-    "description": "신생아실에서 목청이 제일 컸던 아기. 어디서든 존재감이 있다.",
+    "name": "활발한 편",
+    "description": "어디서든 목소리가 크고 사람들 사이에 쉽게 섞인다.",
     "imageId": "img_baby_loud_001",
     "startStatDelta": {
       "운동능력": 5,
@@ -15,8 +15,8 @@
   },
   {
     "starterId": "starter_curious",
-    "name": "골똘한 아기",
-    "description": "뭐든 뜯어보고 싶은 아기. 집 안 리모컨이 온전히 남아나지 않는다.",
+    "name": "파고드는 편",
+    "description": "궁금한 건 뜯어보고 끝까지 알아내야 직성이 풀린다.",
     "imageId": "img_baby_curious_001",
     "startStatDelta": {
       "지력": 5,
@@ -29,8 +29,8 @@
   },
   {
     "starterId": "starter_quirky",
-    "name": "엉뚱한 아기",
-    "description": "예측이 안 되는 아기. 이상하게 황당한 일이 자주 생긴다.",
+    "name": "엉뚱한 편",
+    "description": "생각이 남다르고, 이상하게 황당한 일이 자주 생긴다.",
     "imageId": "img_baby_quirky_001",
     "startStatDelta": {
       "행복": 5,

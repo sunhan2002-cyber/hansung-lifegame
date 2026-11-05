@@ -262,7 +262,7 @@ private fun EmptyLifeCard() {
             fontSize = 16.sp,
         )
         Text(
-            text = "이름과 성별, 타고난 기질을 정하면 영아기부터 시작한다.",
+            text = "이름과 성별을 정하고 주사위로 타고난 능력치를 굴리면 영아기부터 시작한다.",
             color = LifeGameInkSecondary,
             fontSize = 13.sp,
         )
