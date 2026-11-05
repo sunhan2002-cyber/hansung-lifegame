@@ -1,0 +1,65 @@
+{
+  "date": "2026-11-05",
+  "pngs": 3,
+  "dimensions": "1448x1086; exact 4:3; no resizing",
+  "sha256": "3/3 match",
+  "ledgerChangedEventIds": [
+    "adult_005",
+    "adult_010",
+    "adult_020"
+  ],
+  "previewEntries": "15-17; source paths present",
+  "reportImageLinks": "3/3 resolve",
+  "quantityAccounting": {
+    "assignedGroups": 69,
+    "previouslyApproved": 4,
+    "newPngsPendingReview": 3,
+    "notYetProduced": 62,
+    "remainingUnapproved": 65
+  },
+  "checks": {
+    "imageRouting": {
+      "exitCode": 0,
+      "result": {
+        "errors": [],
+        "metrics": {
+          "routed_images": 51,
+          "required_new_images": 13,
+          "event_image_mappings": 287,
+          "portrait_periods": 6,
+          "stat_scenes": 7,
+          "focus_image_mappings": 30
+        }
+      }
+    },
+    "followupCoverage": {
+      "exitCode": 0,
+      "result": {
+        "metrics": {
+          "events": 352,
+          "classifiedRows": 352,
+          "uniqueClassifiedIds": 352,
+          "classificationByOwner": {
+            "김선한": 71,
+            "김우영": 71,
+            "김재겸": 70,
+            "신기훈": 70,
+            "정원률": 70
+          },
+          "proposedUniqueGroups": 351,
+          "preferredFileEvents": 24,
+          "fallbackNeededEvents": 328,
+          "approvedSemanticEvents": 16,
+          "approvedSemanticCoverage": 0.045454545454545456,
+          "approvedRoutedGroups": 15
+        },
+        "errors": [],
+        "pendingEvents": 336
+      }
+    }
+  },
+  "gitDiffCheck": "PASS",
+  "androidRuntime": "NOT_RUN: ADB server connection failed",
+  "androidBuild": "NOT_RUN",
+  "teamReview": "PENDING"
+}

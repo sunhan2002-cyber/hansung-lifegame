@@ -1,0 +1,981 @@
+{
+  "date": "2026-11-05",
+  "productionOwner": "정원률",
+  "assignedGroups": 69,
+  "presentPngs": 69,
+  "uniqueFileHashes": 69,
+  "newBatchPngs": 65,
+  "previouslyApproved": 4,
+  "notYetProduced": 0,
+  "runtimeAcceptance": "NOT_COMPLETED",
+  "totalBytes": 110555990,
+  "assets": [
+    {
+      "groupId": "grp_wr_adult_005",
+      "eventIds": [
+        "adult_005"
+      ],
+      "assetPath": "followup_20261031/img_adult_ideal_type_001.png",
+      "width": 1448,
+      "height": 1086,
+      "bytes": 1956201,
+      "sha256": "8e8a7daadb34b3a5c01a848feb5e81a7b32853ce717861487f2981d44b44f2d7",
+      "pngChunkCrc": "PASS",
+      "productionStatus": "PNG_PRODUCED_PENDING_REVIEW",
+      "artApprovalStatus": "PENDING_PNG_REVIEW"
+    },
+    {
+      "groupId": "grp_wr_adult_010",
+      "eventIds": [
+        "adult_010"
+      ],
+      "assetPath": "followup_20261031/img_adult_drinks_grill_001.png",
+      "width": 1448,
+      "height": 1086,
+      "bytes": 1827561,
+      "sha256": "346efb2dca677728b49749e9cb7eb3be2970db3b366a38edf70517f838e4c27b",
+      "pngChunkCrc": "PASS",
+      "productionStatus": "PNG_PRODUCED_PENDING_REVIEW",
+      "artApprovalStatus": "PENDING_PNG_REVIEW"
+    },
+    {
+      "groupId": "grp_shared_salary_deposit",
+      "eventIds": [
+        "adult_015",
+        "adult_080"
+      ],
+      "assetPath": "followup_20261031/img_adult_first_salary_001.png",
+      "width": 1448,
+      "height": 1086,
+      "bytes": 1539333,
+      "sha256": "a1b8eb68850b089f510d6c8ececbd4884891d34a1894bf1051ca323766d89698",
+      "pngChunkCrc": "PASS",
+      "productionStatus": "ACCEPTED_IN_INTEGRATION_BRANCH",
+      "artApprovalStatus": "APPROVED"
+    },
+    {
+      "groupId": "grp_wr_adult_020",
+      "eventIds": [
+        "adult_020"
+      ],
+      "assetPath": "followup_20261031/img_adult_company_dinner_001.png",
+      "width": 1448,
+      "height": 1086,
+      "bytes": 1877246,
+      "sha256": "e0dfb063f0fe868e2df8b5205b41e2c9b3e04205412f56f280c0e7596d1d1998",
+      "pngChunkCrc": "PASS",
+      "productionStatus": "PNG_PRODUCED_PENDING_REVIEW",
+      "artApprovalStatus": "PENDING_PNG_REVIEW"
+    },
+    {
+      "groupId": "grp_wr_adult_025",
+      "eventIds": [
+        "adult_025"
+      ],
+      "assetPath": "followup_20261031/img_adult_patent_001.png",
+      "width": 1448,
+      "height": 1086,
+      "bytes": 1972303,
+      "sha256": "d5a88223c2f149b536754836fbb6529f74b30eace87d668460718888caa5630d",
+      "pngChunkCrc": "PASS",
+      "productionStatus": "PNG_PRODUCED_PENDING_REVIEW",
+      "artApprovalStatus": "PENDING_PNG_REVIEW"
+    },
+    {
+      "groupId": "grp_wr_adult_030",
+      "eventIds": [
+        "adult_030"
+      ],
+      "assetPath": "followup_20261031/img_adult_wedding_speech_001.png",
+      "width": 1448,
+      "height": 1086,
+      "bytes": 1602200,
+      "sha256": "85f34bbca71e9222a1b64e73a06c807fe51c08a3533cd9193a3399efa124a84d",
+      "pngChunkCrc": "PASS",
+      "productionStatus": "PNG_PRODUCED_PENDING_REVIEW",
+      "artApprovalStatus": "PENDING_PNG_REVIEW"
+    },
+    {
+      "groupId": "grp_wr_adult_035",
+      "eventIds": [
+        "adult_035"
+      ],
+      "assetPath": "followup_20261031/img_adult_reunion_001.png",
+      "width": 1448,
+      "height": 1086,
+      "bytes": 1388898,
+      "sha256": "ede1e4f60f038878ffedc6a86de6f0c29f45631b6e216f46f18411e7b63ccede",
+      "pngChunkCrc": "PASS",
+      "productionStatus": "PNG_PRODUCED_PENDING_REVIEW",
+      "artApprovalStatus": "PENDING_PNG_REVIEW"
+    },
+    {
+      "groupId": "grp_wr_adult_040",
+      "eventIds": [
+        "adult_040"
+      ],
+      "assetPath": "followup_20261031/img_adult_mural_001.png",
+      "width": 1448,
+      "height": 1086,
+      "bytes": 1535355,
+      "sha256": "a9b3b7ebf4156d414b7903a64cfed752673b7d8ec2660c3320827a87162c9fe2",
+      "pngChunkCrc": "PASS",
+      "productionStatus": "PNG_PRODUCED_PENDING_REVIEW",
+      "artApprovalStatus": "PENDING_PNG_REVIEW"
+    },
+    {
+      "groupId": "grp_wr_adult_045",
+      "eventIds": [
+        "adult_045"
+      ],
+      "assetPath": "followup_20261031/img_adult_housewarming_001.png",
+      "width": 1448,
+      "height": 1086,
+      "bytes": 1588074,
+      "sha256": "570318afed4e8c670657861e352187d66893ccaeef842d07c30e8c7db5f8b539",
+      "pngChunkCrc": "PASS",
+      "productionStatus": "PNG_PRODUCED_PENDING_REVIEW",
+      "artApprovalStatus": "PENDING_PNG_REVIEW"
+    },
+    {
+      "groupId": "grp_wr_adult_050",
+      "eventIds": [
+        "adult_050"
+      ],
+      "assetPath": "followup_20261031/img_adult_talent_show_001.png",
+      "width": 1448,
+      "height": 1086,
+      "bytes": 1444885,
+      "sha256": "137f813e7f7c352f35692a49f3995bbd9c30486496d2eef0977653b1c6604ae4",
+      "pngChunkCrc": "PASS",
+      "productionStatus": "PNG_PRODUCED_PENDING_REVIEW",
+      "artApprovalStatus": "PENDING_PNG_REVIEW"
+    },
+    {
+      "groupId": "grp_wr_adult_055",
+      "eventIds": [
+        "adult_055"
+      ],
+      "assetPath": "followup_20261031/img_adult_teen_child_001.png",
+      "width": 1448,
+      "height": 1086,
+      "bytes": 1315176,
+      "sha256": "9e7f9e493ad4302e07be9746e3ea2a60a3e5c8d48f6a58a7a7f7ed19635645d7",
+      "pngChunkCrc": "PASS",
+      "productionStatus": "PNG_PRODUCED_PENDING_REVIEW",
+      "artApprovalStatus": "PENDING_PNG_REVIEW"
+    },
+    {
+      "groupId": "grp_wr_adult_060",
+      "eventIds": [
+        "adult_060"
+      ],
+      "assetPath": "followup_20261031/img_adult_fandom_001.png",
+      "width": 1448,
+      "height": 1086,
+      "bytes": 1328881,
+      "sha256": "772cca645eb5c710125e4a46ba80d00a7bd4c5394b3040825dc175c9b7e9d48c",
+      "pngChunkCrc": "PASS",
+      "productionStatus": "PNG_PRODUCED_PENDING_REVIEW",
+      "artApprovalStatus": "PENDING_PNG_REVIEW"
+    },
+    {
+      "groupId": "grp_wr_adult_065",
+      "eventIds": [
+        "adult_065"
+      ],
+      "assetPath": "followup_20261031/img_adult_fiftieth_birthday_001.png",
+      "width": 1448,
+      "height": 1086,
+      "bytes": 1396082,
+      "sha256": "a75673a87cf23495fe8d58505d8b307eed300c16e0a982ef4e16d8e0dd4fdb5f",
+      "pngChunkCrc": "PASS",
+      "productionStatus": "PNG_PRODUCED_PENDING_REVIEW",
+      "artApprovalStatus": "PENDING_PNG_REVIEW"
+    },
+    {
+      "groupId": "grp_wr_adult_072",
+      "eventIds": [
+        "adult_072"
+      ],
+      "assetPath": "followup_20261031/img_pov_first_card_001.png",
+      "width": 1448,
+      "height": 1086,
+      "bytes": 1628219,
+      "sha256": "9c51d3cb4cd4b71be8fc433f25fb47cf7594cddd1f3fb63a42139be05aee934e",
+      "pngChunkCrc": "PASS",
+      "productionStatus": "PNG_PRODUCED_PENDING_REVIEW",
+      "artApprovalStatus": "PENDING_PNG_REVIEW"
+    },
+    {
+      "groupId": "grp_wr_adult_077",
+      "eventIds": [
+        "adult_077"
+      ],
+      "assetPath": "followup_20261031/img_pov_first_love_text_001.png",
+      "width": 1448,
+      "height": 1086,
+      "bytes": 1473050,
+      "sha256": "826e5d0282f99df80f76addf66520037f9334ad16e8ce78611f7c9df54a8db6b",
+      "pngChunkCrc": "PASS",
+      "productionStatus": "PNG_PRODUCED_PENDING_REVIEW",
+      "artApprovalStatus": "PENDING_PNG_REVIEW"
+    },
+    {
+      "groupId": "grp_wr_adult_082",
+      "eventIds": [
+        "adult_082"
+      ],
+      "assetPath": "followup_20261031/img_pov_young_mentor_001.png",
+      "width": 1448,
+      "height": 1086,
+      "bytes": 1538128,
+      "sha256": "521362f434e0160083b6132d7b9635900f25d20f8668c86e16f02f83730437cf",
+      "pngChunkCrc": "PASS",
+      "productionStatus": "PNG_PRODUCED_PENDING_REVIEW",
+      "artApprovalStatus": "PENDING_PNG_REVIEW"
+    },
+    {
+      "groupId": "grp_wr_child_005",
+      "eventIds": [
+        "child_005"
+      ],
+      "assetPath": "followup_20261031/img_child_dictation_001.png",
+      "width": 1448,
+      "height": 1086,
+      "bytes": 1610996,
+      "sha256": "6355e8c80de7a04ec04fcd79c50592d02a30069a8ca631b41e510a0989b7fd15",
+      "pngChunkCrc": "PASS",
+      "productionStatus": "PNG_PRODUCED_PENDING_REVIEW",
+      "artApprovalStatus": "PENDING_PNG_REVIEW"
+    },
+    {
+      "groupId": "grp_wr_child_010",
+      "eventIds": [
+        "child_010"
+      ],
+      "assetPath": "followup_20261031/img_child_club_001.png",
+      "width": 1448,
+      "height": 1086,
+      "bytes": 1642734,
+      "sha256": "8952d44384a983e18fa1128861c134f96cb025317a8141f883b114d142d7afba",
+      "pngChunkCrc": "PASS",
+      "productionStatus": "PNG_PRODUCED_PENDING_REVIEW",
+      "artApprovalStatus": "PENDING_PNG_REVIEW"
+    },
+    {
+      "groupId": "grp_wr_child_015",
+      "eventIds": [
+        "child_015"
+      ],
+      "assetPath": "followup_20261031/img_child_eraser_001.png",
+      "width": 1448,
+      "height": 1086,
+      "bytes": 1508758,
+      "sha256": "5bbe2d3b388d4a9b4a4bf9d59c2e208155ec0088a4ec4da30c7cf9119c4e239b",
+      "pngChunkCrc": "PASS",
+      "productionStatus": "PNG_PRODUCED_PENDING_REVIEW",
+      "artApprovalStatus": "PENDING_PNG_REVIEW"
+    },
+    {
+      "groupId": "grp_wr_child_020",
+      "eventIds": [
+        "child_020"
+      ],
+      "assetPath": "followup_20261031/img_child_clock_001.png",
+      "width": 1448,
+      "height": 1086,
+      "bytes": 1539754,
+      "sha256": "7f36ec3269e386b8d6577e5c08e724a588e4758fdd52dba10ecb6dbf13b3a7d2",
+      "pngChunkCrc": "PASS",
+      "productionStatus": "PNG_PRODUCED_PENDING_REVIEW",
+      "artApprovalStatus": "PENDING_PNG_REVIEW"
+    },
+    {
+      "groupId": "grp_wr_child_025",
+      "eventIds": [
+        "child_025"
+      ],
+      "assetPath": "followup_20261031/img_child_new_student_001.png",
+      "width": 1448,
+      "height": 1086,
+      "bytes": 1788348,
+      "sha256": "b13f3a05ff3a7c5a5245f4c3188a72053019d906896ed26289a7b608c865286a",
+      "pngChunkCrc": "PASS",
+      "productionStatus": "PNG_PRODUCED_PENDING_REVIEW",
+      "artApprovalStatus": "PENDING_PNG_REVIEW"
+    },
+    {
+      "groupId": "grp_wr_child_030",
+      "eventIds": [
+        "child_030"
+      ],
+      "assetPath": "followup_20261031/img_child_swim_meet_001.png",
+      "width": 1448,
+      "height": 1086,
+      "bytes": 1526882,
+      "sha256": "9fd01e77cd524b8b14568bf3056feda7c1accff2ae495a9c8a41385631e1a9cc",
+      "pngChunkCrc": "PASS",
+      "productionStatus": "PNG_PRODUCED_PENDING_REVIEW",
+      "artApprovalStatus": "PENDING_PNG_REVIEW"
+    },
+    {
+      "groupId": "grp_wr_child_035",
+      "eventIds": [
+        "child_035"
+      ],
+      "assetPath": "followup_20261031/img_child_choir_001.png",
+      "width": 1448,
+      "height": 1086,
+      "bytes": 1641588,
+      "sha256": "b15123ece4a90b2a5d2a297528a7de581df234b9295a9ac7d1b84924a5ca0317",
+      "pngChunkCrc": "PASS",
+      "productionStatus": "PNG_PRODUCED_PENDING_REVIEW",
+      "artApprovalStatus": "PENDING_PNG_REVIEW"
+    },
+    {
+      "groupId": "grp_wr_child_040",
+      "eventIds": [
+        "child_040"
+      ],
+      "assetPath": "followup_20261031/img_child_times_table_001.png",
+      "width": 1448,
+      "height": 1086,
+      "bytes": 1546566,
+      "sha256": "8ef85f0c8b5c685c958f2916d4f9c1c3e025941c413116668785adc3bd4baf01",
+      "pngChunkCrc": "PASS",
+      "productionStatus": "PNG_PRODUCED_PENDING_REVIEW",
+      "artApprovalStatus": "PENDING_PNG_REVIEW"
+    },
+    {
+      "groupId": "grp_wr_child_045",
+      "eventIds": [
+        "child_045"
+      ],
+      "assetPath": "followup_20261031/img_child_class_newspaper_001.png",
+      "width": 1448,
+      "height": 1086,
+      "bytes": 1547544,
+      "sha256": "224c2c581701e86632e99d23a3cf4d861da27c7dee2bf94759614d51e907f815",
+      "pngChunkCrc": "PASS",
+      "productionStatus": "PNG_PRODUCED_PENDING_REVIEW",
+      "artApprovalStatus": "PENDING_PNG_REVIEW"
+    },
+    {
+      "groupId": "grp_wr_cross_03",
+      "eventIds": [
+        "cross_03"
+      ],
+      "assetPath": "followup_20261031/img_cross_03_001.png",
+      "width": 1448,
+      "height": 1086,
+      "bytes": 1580620,
+      "sha256": "fdd58cccb7ec925a145c1b2d195a2f4f239c854fd562b61cf92cd8d27968995f",
+      "pngChunkCrc": "PASS",
+      "productionStatus": "PNG_PRODUCED_PENDING_REVIEW",
+      "artApprovalStatus": "PENDING_PNG_REVIEW"
+    },
+    {
+      "groupId": "grp_wr_cross_08",
+      "eventIds": [
+        "cross_08"
+      ],
+      "assetPath": "followup_20261031/img_cross_08_001.png",
+      "width": 1448,
+      "height": 1086,
+      "bytes": 1481126,
+      "sha256": "0f0d1cbd8d130cf9292ab70960eb6219d1c004be243fc8f5e45e55b0bfbcd3c3",
+      "pngChunkCrc": "PASS",
+      "productionStatus": "PNG_PRODUCED_PENDING_REVIEW",
+      "artApprovalStatus": "PENDING_PNG_REVIEW"
+    },
+    {
+      "groupId": "grp_wr_infant_001",
+      "eventIds": [
+        "infant_001"
+      ],
+      "assetPath": "followup_20261031/img_infant_baby_food_001.png",
+      "width": 1448,
+      "height": 1086,
+      "bytes": 1491748,
+      "sha256": "4a832dd58d61493f2cbf089442dd650cfdcc728c0ce47f8edfc75960084c7442",
+      "pngChunkCrc": "PASS",
+      "productionStatus": "PNG_PRODUCED_PENDING_REVIEW",
+      "artApprovalStatus": "PENDING_PNG_REVIEW"
+    },
+    {
+      "groupId": "grp_wr_infant_006",
+      "eventIds": [
+        "infant_006"
+      ],
+      "assetPath": "followup_20261031/img_infant_night_001.png",
+      "width": 1448,
+      "height": 1086,
+      "bytes": 1626623,
+      "sha256": "ae98e785be99722ce52a4d1c59a78033c97db62032166f9eb01837feafe5da54",
+      "pngChunkCrc": "PASS",
+      "productionStatus": "PNG_PRODUCED_PENDING_REVIEW",
+      "artApprovalStatus": "PENDING_PNG_REVIEW"
+    },
+    {
+      "groupId": "grp_wr_infant_011",
+      "eventIds": [
+        "infant_011"
+      ],
+      "assetPath": "followup_20261031/img_infant_picture_book_001.png",
+      "width": 1448,
+      "height": 1086,
+      "bytes": 1748577,
+      "sha256": "88b497e33c94fad668ed5e0f1cb983a1769ab3e869be773114bf1cef91742c7f",
+      "pngChunkCrc": "PASS",
+      "productionStatus": "PNG_PRODUCED_PENDING_REVIEW",
+      "artApprovalStatus": "PENDING_PNG_REVIEW"
+    },
+    {
+      "groupId": "grp_wr_infant_016",
+      "eventIds": [
+        "infant_016"
+      ],
+      "assetPath": "followup_20261031/img_infant_upside_down_001.png",
+      "width": 1448,
+      "height": 1086,
+      "bytes": 1488338,
+      "sha256": "c9a067c26cc6ee5d2ebbce11f8cec68ff60d48afe9fec76b77406d89541fd0bf",
+      "pngChunkCrc": "PASS",
+      "productionStatus": "PNG_PRODUCED_PENDING_REVIEW",
+      "artApprovalStatus": "PENDING_PNG_REVIEW"
+    },
+    {
+      "groupId": "grp_wr_infant_021",
+      "eventIds": [
+        "infant_021"
+      ],
+      "assetPath": "followup_20261031/img_infant_first_haircut_001.png",
+      "width": 1448,
+      "height": 1086,
+      "bytes": 1574135,
+      "sha256": "c533527ca88c970e95fc6c94297934af48d52b35f554f61c7b6d2dd5604057ff",
+      "pngChunkCrc": "PASS",
+      "productionStatus": "PNG_PRODUCED_PENDING_REVIEW",
+      "artApprovalStatus": "PENDING_PNG_REVIEW"
+    },
+    {
+      "groupId": "grp_wr_infant_026",
+      "eventIds": [
+        "infant_026"
+      ],
+      "assetPath": "followup_20261031/img_infant_ball_pit_001.png",
+      "width": 1448,
+      "height": 1086,
+      "bytes": 1511260,
+      "sha256": "cf113e30bdc4c2fed4461c7af564fc5b7819f2fb203109e321bff4c42e6a3822",
+      "pngChunkCrc": "PASS",
+      "productionStatus": "PNG_PRODUCED_PENDING_REVIEW",
+      "artApprovalStatus": "PENDING_PNG_REVIEW"
+    },
+    {
+      "groupId": "grp_wr_path_fit_01",
+      "eventIds": [
+        "path_fit_01"
+      ],
+      "assetPath": "followup_20261031/img_path_fit_01_001.png",
+      "width": 1448,
+      "height": 1086,
+      "bytes": 1804594,
+      "sha256": "78b6d0fbe453e85cc726c1214f53741cd86c95ce76015dccf3f0a0b95a00cee9",
+      "pngChunkCrc": "PASS",
+      "productionStatus": "PNG_PRODUCED_PENDING_REVIEW",
+      "artApprovalStatus": "PENDING_PNG_REVIEW"
+    },
+    {
+      "groupId": "grp_wr_path_fit_06",
+      "eventIds": [
+        "path_fit_06"
+      ],
+      "assetPath": "followup_20261031/img_path_fit_06_001.png",
+      "width": 1448,
+      "height": 1086,
+      "bytes": 1481770,
+      "sha256": "b7876b0b50b597c08c75a27b7268bf319bafc07a050f7b080eeeeb445207c91b",
+      "pngChunkCrc": "PASS",
+      "productionStatus": "PNG_PRODUCED_PENDING_REVIEW",
+      "artApprovalStatus": "PENDING_PNG_REVIEW"
+    },
+    {
+      "groupId": "grp_wr_path_fit_13",
+      "eventIds": [
+        "path_fit_13"
+      ],
+      "assetPath": "followup_20261031/img_path_fit_13_001.png",
+      "width": 1448,
+      "height": 1086,
+      "bytes": 1533227,
+      "sha256": "4ffa0b7410d1a33a7699e627f8098f685b75f8e5fe709c9741952023d55daa9f",
+      "pngChunkCrc": "PASS",
+      "productionStatus": "PNG_PRODUCED_PENDING_REVIEW",
+      "artApprovalStatus": "PENDING_PNG_REVIEW"
+    },
+    {
+      "groupId": "grp_wr_path_fit_18",
+      "eventIds": [
+        "path_fit_18"
+      ],
+      "assetPath": "followup_20261031/img_path_fit_18_001.png",
+      "width": 1448,
+      "height": 1086,
+      "bytes": 1867409,
+      "sha256": "252f7b41c1b371d191638d1ef4fe92d6f700a39605010926d77dd4096f0f2aa9",
+      "pngChunkCrc": "PASS",
+      "productionStatus": "PNG_PRODUCED_PENDING_REVIEW",
+      "artApprovalStatus": "PENDING_PNG_REVIEW"
+    },
+    {
+      "groupId": "grp_wr_path_hap_05",
+      "eventIds": [
+        "path_hap_05"
+      ],
+      "assetPath": "followup_20261031/img_path_hap_05_001.png",
+      "width": 1448,
+      "height": 1086,
+      "bytes": 1640701,
+      "sha256": "8d61d864c3cb3890dfe8ece1cf25b22df8be68dc8e2fb86afc7a83b7cdb5d160",
+      "pngChunkCrc": "PASS",
+      "productionStatus": "PNG_PRODUCED_PENDING_REVIEW",
+      "artApprovalStatus": "PENDING_PNG_REVIEW"
+    },
+    {
+      "groupId": "grp_wr_path_hap_09",
+      "eventIds": [
+        "path_hap_09"
+      ],
+      "assetPath": "week10/scenes/img_path_hap_09_001.png",
+      "width": 1448,
+      "height": 1086,
+      "bytes": 2086229,
+      "sha256": "9a2bebf47ec0e7bb06b4b9d9d3c53306ec77a0c33934567d4b0cc3875381196a",
+      "pngChunkCrc": "PASS",
+      "productionStatus": "ACCEPTED_IN_INTEGRATION_BRANCH",
+      "artApprovalStatus": "APPROVED"
+    },
+    {
+      "groupId": "grp_wr_path_hap_12",
+      "eventIds": [
+        "path_hap_12"
+      ],
+      "assetPath": "followup_20261031/img_path_hap_12_001.png",
+      "width": 1448,
+      "height": 1086,
+      "bytes": 1483841,
+      "sha256": "e223eb400da3149a3c251868037dc5e1d5ad935ab89cf1ce41f674581f6a93be",
+      "pngChunkCrc": "PASS",
+      "productionStatus": "PNG_PRODUCED_PENDING_REVIEW",
+      "artApprovalStatus": "PENDING_PNG_REVIEW"
+    },
+    {
+      "groupId": "grp_wr_path_hea_01",
+      "eventIds": [
+        "path_hea_01"
+      ],
+      "assetPath": "followup_20261031/img_path_hea_01_001.png",
+      "width": 1448,
+      "height": 1086,
+      "bytes": 1676626,
+      "sha256": "15c9a71b89befca539190feea3cf946788aae03c134008934dc400a0fc25d065",
+      "pngChunkCrc": "PASS",
+      "productionStatus": "ACCEPTED_IN_INTEGRATION_BRANCH",
+      "artApprovalStatus": "APPROVED"
+    },
+    {
+      "groupId": "grp_wr_path_hea_06",
+      "eventIds": [
+        "path_hea_06"
+      ],
+      "assetPath": "followup_20261031/img_path_hea_06_001.png",
+      "width": 1448,
+      "height": 1086,
+      "bytes": 1490299,
+      "sha256": "e7ea54eb9ada1ed48db9038e237266635806d4a2e222616cdf80b437e8ce67fb",
+      "pngChunkCrc": "PASS",
+      "productionStatus": "PNG_PRODUCED_PENDING_REVIEW",
+      "artApprovalStatus": "PENDING_PNG_REVIEW"
+    },
+    {
+      "groupId": "grp_wr_path_hea_13",
+      "eventIds": [
+        "path_hea_13"
+      ],
+      "assetPath": "followup_20261031/img_path_hea_13_001.png",
+      "width": 1448,
+      "height": 1086,
+      "bytes": 1524508,
+      "sha256": "f2d38b3daf3e3af2d669eb3caab9cd933de671f13f3b4eff85c447e02a2facfe",
+      "pngChunkCrc": "PASS",
+      "productionStatus": "PNG_PRODUCED_PENDING_REVIEW",
+      "artApprovalStatus": "PENDING_PNG_REVIEW"
+    },
+    {
+      "groupId": "grp_wr_path_int_02",
+      "eventIds": [
+        "path_int_02"
+      ],
+      "assetPath": "followup_20261031/img_path_int_02_001.png",
+      "width": 1448,
+      "height": 1086,
+      "bytes": 1591091,
+      "sha256": "8c262d37f7194d95631a99d8fa686100efe33bf11b6e6c95712514cbe43cf2bd",
+      "pngChunkCrc": "PASS",
+      "productionStatus": "PNG_PRODUCED_PENDING_REVIEW",
+      "artApprovalStatus": "PENDING_PNG_REVIEW"
+    },
+    {
+      "groupId": "grp_wr_path_int_07",
+      "eventIds": [
+        "path_int_07"
+      ],
+      "assetPath": "followup_20261031/img_path_int_07_001.png",
+      "width": 1448,
+      "height": 1086,
+      "bytes": 1533153,
+      "sha256": "202725d563e46489f753d1e380f76f8e5a5acd06c47b92f27db5d06e522fa5cb",
+      "pngChunkCrc": "PASS",
+      "productionStatus": "PNG_PRODUCED_PENDING_REVIEW",
+      "artApprovalStatus": "PENDING_PNG_REVIEW"
+    },
+    {
+      "groupId": "grp_wr_path_int_10",
+      "eventIds": [
+        "path_int_10"
+      ],
+      "assetPath": "week10/scenes/img_path_int_10_001.png",
+      "width": 1448,
+      "height": 1086,
+      "bytes": 1844382,
+      "sha256": "2310c99efc4329e19add5e8c43043960ffb8a9ee27627a90eb91b72ec6efb348",
+      "pngChunkCrc": "PASS",
+      "productionStatus": "ACCEPTED_IN_INTEGRATION_BRANCH",
+      "artApprovalStatus": "APPROVED"
+    },
+    {
+      "groupId": "grp_wr_path_int_14",
+      "eventIds": [
+        "path_int_14"
+      ],
+      "assetPath": "followup_20261031/img_path_int_14_001.png",
+      "width": 1448,
+      "height": 1086,
+      "bytes": 1459311,
+      "sha256": "4fff088f1e7b969a39d02408426bf9eb0c26b1dfe902e29320b0f5b89176ffdc",
+      "pngChunkCrc": "PASS",
+      "productionStatus": "PNG_PRODUCED_PENDING_REVIEW",
+      "artApprovalStatus": "PENDING_PNG_REVIEW"
+    },
+    {
+      "groupId": "grp_wr_path_luk_01",
+      "eventIds": [
+        "path_luk_01"
+      ],
+      "assetPath": "followup_20261031/img_path_luk_01_001.png",
+      "width": 1448,
+      "height": 1086,
+      "bytes": 1548815,
+      "sha256": "783a28d52bc3f51a2ce0a99fdd3a7563c1eae3aecc4a4e58eaa7673d59eb4bcf",
+      "pngChunkCrc": "PASS",
+      "productionStatus": "PNG_PRODUCED_PENDING_REVIEW",
+      "artApprovalStatus": "PENDING_PNG_REVIEW"
+    },
+    {
+      "groupId": "grp_wr_path_luk_06",
+      "eventIds": [
+        "path_luk_06"
+      ],
+      "assetPath": "followup_20261031/img_path_luk_06_001.png",
+      "width": 1448,
+      "height": 1086,
+      "bytes": 1634807,
+      "sha256": "0a996ea10c833c16f3b2ff0944ee2f3affce69cc68082be8f0c37976b0cf32ca",
+      "pngChunkCrc": "PASS",
+      "productionStatus": "PNG_PRODUCED_PENDING_REVIEW",
+      "artApprovalStatus": "PENDING_PNG_REVIEW"
+    },
+    {
+      "groupId": "grp_wr_path_luk_13",
+      "eventIds": [
+        "path_luk_13"
+      ],
+      "assetPath": "followup_20261031/img_path_luk_13_001.png",
+      "width": 1448,
+      "height": 1086,
+      "bytes": 1420702,
+      "sha256": "08f27edf124e340655a6e582a2fc356d7a692efba52e2d6b723c9158bd4d8502",
+      "pngChunkCrc": "PASS",
+      "productionStatus": "PNG_PRODUCED_PENDING_REVIEW",
+      "artApprovalStatus": "PENDING_PNG_REVIEW"
+    },
+    {
+      "groupId": "grp_wr_path_soc_01",
+      "eventIds": [
+        "path_soc_01"
+      ],
+      "assetPath": "followup_20261031/img_path_soc_01_001.png",
+      "width": 1448,
+      "height": 1086,
+      "bytes": 1680760,
+      "sha256": "35491a86566c7c6a36e6b4184350009081e3a8b7bae3504f0786fc548e3a2ffc",
+      "pngChunkCrc": "PASS",
+      "productionStatus": "PNG_PRODUCED_PENDING_REVIEW",
+      "artApprovalStatus": "PENDING_PNG_REVIEW"
+    },
+    {
+      "groupId": "grp_wr_path_soc_06",
+      "eventIds": [
+        "path_soc_06"
+      ],
+      "assetPath": "followup_20261031/img_path_soc_06_001.png",
+      "width": 1448,
+      "height": 1086,
+      "bytes": 1610688,
+      "sha256": "0a0c6c44f60f053fd0a83f565d127e5aed48fdad57c1d4f3d381ec21ca0a235e",
+      "pngChunkCrc": "PASS",
+      "productionStatus": "PNG_PRODUCED_PENDING_REVIEW",
+      "artApprovalStatus": "PENDING_PNG_REVIEW"
+    },
+    {
+      "groupId": "grp_wr_path_soc_13",
+      "eventIds": [
+        "path_soc_13"
+      ],
+      "assetPath": "followup_20261031/img_path_soc_13_001.png",
+      "width": 1448,
+      "height": 1086,
+      "bytes": 1698326,
+      "sha256": "4deb203e2577577f604dd9e48a4426c2db898d78239321a4a72f2e7f72bd3b99",
+      "pngChunkCrc": "PASS",
+      "productionStatus": "PNG_PRODUCED_PENDING_REVIEW",
+      "artApprovalStatus": "PENDING_PNG_REVIEW"
+    },
+    {
+      "groupId": "grp_wr_path_soc_18",
+      "eventIds": [
+        "path_soc_18"
+      ],
+      "assetPath": "followup_20261031/img_path_soc_18_001.png",
+      "width": 1448,
+      "height": 1086,
+      "bytes": 1680104,
+      "sha256": "39e157645b8863264e361cbf9989267a729e6d66bd48cee0d6e0092435bc5062",
+      "pngChunkCrc": "PASS",
+      "productionStatus": "PNG_PRODUCED_PENDING_REVIEW",
+      "artApprovalStatus": "PENDING_PNG_REVIEW"
+    },
+    {
+      "groupId": "grp_wr_path_wea_05",
+      "eventIds": [
+        "path_wea_05"
+      ],
+      "assetPath": "followup_20261031/img_path_wea_05_001.png",
+      "width": 1448,
+      "height": 1086,
+      "bytes": 1483940,
+      "sha256": "a11e9f4f914910682232e40fd68c07332ed94f31f6a04ded2bac644615792b34",
+      "pngChunkCrc": "PASS",
+      "productionStatus": "PNG_PRODUCED_PENDING_REVIEW",
+      "artApprovalStatus": "PENDING_PNG_REVIEW"
+    },
+    {
+      "groupId": "grp_wr_path_wea_12",
+      "eventIds": [
+        "path_wea_12"
+      ],
+      "assetPath": "followup_20261031/img_path_wea_12_001.png",
+      "width": 1448,
+      "height": 1086,
+      "bytes": 1453159,
+      "sha256": "b4248f0bc9145f14d15c90bbcb4528508673a8171a44fbc64da0e99ebe2319d2",
+      "pngChunkCrc": "PASS",
+      "productionStatus": "PNG_PRODUCED_PENDING_REVIEW",
+      "artApprovalStatus": "PENDING_PNG_REVIEW"
+    },
+    {
+      "groupId": "grp_wr_path_wea_17",
+      "eventIds": [
+        "path_wea_17"
+      ],
+      "assetPath": "followup_20261031/img_path_wea_17_001.png",
+      "width": 1448,
+      "height": 1086,
+      "bytes": 1620067,
+      "sha256": "8c0826957c77e34056b3d444bbb8b2d33630303f0bf05ed45147d64c3175ce0b",
+      "pngChunkCrc": "PASS",
+      "productionStatus": "PNG_PRODUCED_PENDING_REVIEW",
+      "artApprovalStatus": "PENDING_PNG_REVIEW"
+    },
+    {
+      "groupId": "grp_wr_special_005",
+      "eventIds": [
+        "special_005"
+      ],
+      "assetPath": "followup_20261031/img_special_auto_door_001.png",
+      "width": 1448,
+      "height": 1086,
+      "bytes": 1791679,
+      "sha256": "3f622e6783f8b4c1a9bd6aac6f3aae00a3fbe760b38385ed16d0c74e664dc2f3",
+      "pngChunkCrc": "PASS",
+      "productionStatus": "PNG_PRODUCED_PENDING_REVIEW",
+      "artApprovalStatus": "PENDING_PNG_REVIEW"
+    },
+    {
+      "groupId": "grp_wr_special_010",
+      "eventIds": [
+        "special_010"
+      ],
+      "assetPath": "followup_20261031/img_special_janggi_001.png",
+      "width": 1448,
+      "height": 1086,
+      "bytes": 1885391,
+      "sha256": "d46d0592bfad77d1c9fc52aa6092a7ca69057daa20abe21379f0996d0a02bc90",
+      "pngChunkCrc": "PASS",
+      "productionStatus": "PNG_PRODUCED_PENDING_REVIEW",
+      "artApprovalStatus": "PENDING_PNG_REVIEW"
+    },
+    {
+      "groupId": "grp_wr_special_015",
+      "eventIds": [
+        "special_015"
+      ],
+      "assetPath": "followup_20261031/img_special_sauce_001.png",
+      "width": 1448,
+      "height": 1086,
+      "bytes": 1690803,
+      "sha256": "f006809010606ffa7ade7f2af64be453df15a804e8b20a11df303f154f64c7d0",
+      "pngChunkCrc": "PASS",
+      "productionStatus": "PNG_PRODUCED_PENDING_REVIEW",
+      "artApprovalStatus": "PENDING_PNG_REVIEW"
+    },
+    {
+      "groupId": "grp_wr_teen_001",
+      "eventIds": [
+        "teen_001"
+      ],
+      "assetPath": "followup_20261031/img_teen_uniform_001.png",
+      "width": 1448,
+      "height": 1086,
+      "bytes": 1794855,
+      "sha256": "afa8a2c135d230e4952c85ae520818820aaa2f1f6d17bc6abe6e67688d9249d4",
+      "pngChunkCrc": "PASS",
+      "productionStatus": "PNG_PRODUCED_PENDING_REVIEW",
+      "artApprovalStatus": "PENDING_PNG_REVIEW"
+    },
+    {
+      "groupId": "grp_wr_teen_006",
+      "eventIds": [
+        "teen_006"
+      ],
+      "assetPath": "followup_20261031/img_teen_broadcast_001.png",
+      "width": 1448,
+      "height": 1086,
+      "bytes": 1634577,
+      "sha256": "e5b2201364befd97ba11e9276fb07fece456949f11f1619a93771ba0bef92b5c",
+      "pngChunkCrc": "PASS",
+      "productionStatus": "PNG_PRODUCED_PENDING_REVIEW",
+      "artApprovalStatus": "PENDING_PNG_REVIEW"
+    },
+    {
+      "groupId": "grp_wr_teen_011",
+      "eventIds": [
+        "teen_011"
+      ],
+      "assetPath": "followup_20261031/img_teen_group_chat_001.png",
+      "width": 1448,
+      "height": 1086,
+      "bytes": 1475665,
+      "sha256": "9ed25a078d3bca18d46116c03dfd18d1ffed5bb32771943cfc11909443ebbc99",
+      "pngChunkCrc": "PASS",
+      "productionStatus": "PNG_PRODUCED_PENDING_REVIEW",
+      "artApprovalStatus": "PENDING_PNG_REVIEW"
+    },
+    {
+      "groupId": "grp_wr_teen_016",
+      "eventIds": [
+        "teen_016"
+      ],
+      "assetPath": "followup_20261031/img_teen_parents_anniversary_001.png",
+      "width": 1448,
+      "height": 1086,
+      "bytes": 1465189,
+      "sha256": "266289a35ce08dd1048f5c566f076dd7605845d4072caa912ad90eef1886d413",
+      "pngChunkCrc": "PASS",
+      "productionStatus": "PNG_PRODUCED_PENDING_REVIEW",
+      "artApprovalStatus": "PENDING_PNG_REVIEW"
+    },
+    {
+      "groupId": "grp_wr_teen_021",
+      "eventIds": [
+        "teen_021"
+      ],
+      "assetPath": "followup_20261031/img_teen_crush_001.png",
+      "width": 1448,
+      "height": 1086,
+      "bytes": 1595531,
+      "sha256": "f283a70a8c7487c9b2013e2526b145e27716b20445d2d13a070504734983152c",
+      "pngChunkCrc": "PASS",
+      "productionStatus": "PNG_PRODUCED_PENDING_REVIEW",
+      "artApprovalStatus": "PENDING_PNG_REVIEW"
+    },
+    {
+      "groupId": "grp_wr_teen_026",
+      "eventIds": [
+        "teen_026"
+      ],
+      "assetPath": "followup_20261031/img_teen_midnight_message_001.png",
+      "width": 1448,
+      "height": 1086,
+      "bytes": 1415165,
+      "sha256": "15fb33e292a0a8d7d8df80253c754d69844666889c54534ef95e1fa9975432b7",
+      "pngChunkCrc": "PASS",
+      "productionStatus": "PNG_PRODUCED_PENDING_REVIEW",
+      "artApprovalStatus": "PENDING_PNG_REVIEW"
+    },
+    {
+      "groupId": "grp_wr_teen_031",
+      "eventIds": [
+        "teen_031"
+      ],
+      "assetPath": "followup_20261031/img_teen_study_cafe_001.png",
+      "width": 1448,
+      "height": 1086,
+      "bytes": 1633191,
+      "sha256": "dcde43150904f9d1f2681cd203d599b5ae5c49d6ef6b890a1f27e347bbca030f",
+      "pngChunkCrc": "PASS",
+      "productionStatus": "PNG_PRODUCED_PENDING_REVIEW",
+      "artApprovalStatus": "PENDING_PNG_REVIEW"
+    },
+    {
+      "groupId": "grp_wr_teen_036",
+      "eventIds": [
+        "teen_036"
+      ],
+      "assetPath": "followup_20261031/img_teen_student_council_001.png",
+      "width": 1448,
+      "height": 1086,
+      "bytes": 1577344,
+      "sha256": "f2b77dc11bc9652a9899a7cb3726b29f8638974a963269bf7af2901abbf4d622",
+      "pngChunkCrc": "PASS",
+      "productionStatus": "PNG_PRODUCED_PENDING_REVIEW",
+      "artApprovalStatus": "PENDING_PNG_REVIEW"
+    },
+    {
+      "groupId": "grp_wr_teen_041",
+      "eventIds": [
+        "teen_041"
+      ],
+      "assetPath": "followup_20261031/img_teen_free_weekend_001.png",
+      "width": 1448,
+      "height": 1086,
+      "bytes": 1480902,
+      "sha256": "33e5dba278ad327cf7d6f35e4e3968b09a50b3bc58e3ab0e5dcea44b9c0225eb",
+      "pngChunkCrc": "PASS",
+      "productionStatus": "PNG_PRODUCED_PENDING_REVIEW",
+      "artApprovalStatus": "PENDING_PNG_REVIEW"
+    }
+  ]
+}
