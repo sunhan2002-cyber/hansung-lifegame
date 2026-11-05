@@ -1,5 +1,5 @@
 ﻿eventId,title,classificationOwner,basis,semanticVerdictBefore,finalDirection,ownerAction,existingArtReuse,status
-adult_002,프로 구단의 제안,김우영,의미,FIX,"코치 제안은 휴대폰 메시지, 계약서는 서명 전",분류 행 수정,파일 없음,PNG_REVISE (크롭·종목)
+adult_002,프로 구단의 제안,김우영,의미,FIX,"코치 제안은 휴대폰 메시지, 계약서는 서명 전",분류 행 수정,파일 없음,"PNG_REVISE (크롭 해결, 종목 단서 남음)"
 adult_007,금요일 밤 술자리,김우영,의미,FIX,이상형 발견과 빈자리 세 곳(이상형 옆·친구 사이·불판 앞)을 한 장면에,"분류 행 수정, 그룹 이름 구체화",파일 없음,OWNER_TO_UPDATE_ROW
 adult_008,이상형 옆자리,김재겸,의미,FIX,"주변 인물은 친구들, 금요일 밤. adult_007·adult_009·adult_010 과 같은 가게",분류 행 수정,파일 없음,OWNER_TO_UPDATE_ROW
 adult_032,결혼 이야기,김우영,의미,FIX,"반지 상자 제외, 연인의 손과 노트북 메일. 연인 성별 고정 안 함",분류 행 수정,파일 없음,OWNER_TO_UPDATE_ROW

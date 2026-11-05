@@ -1,6 +1,6 @@
 ﻿eventId,title,classificationOwner,proposedGroupId,semanticVerdict,issue,requestedChange,reviewRound,resolutionStatus
 adult_001,대학이냐 취업이냐,김선한,grp_sh_adult_001,FIX,장소가 정해지지 않아 한 장면으로 그릴 수 없음,합격 문자 두 통을 받는 장소를 하나로 정하기 (예: 수능 뒤 내 방 책상). 가족 단톡방은 알림 형태로,2차,PNG_PASS ec79e3c3 (#51 파일럿)
-adult_002,프로 구단의 제안,김우영,career_sports_offer,FIX,모교 코치 제안은 같은 날 따로 온 것이라 구단 상담실에 함께 있을 수 없음. 사물도 서명 전임이 드러나야 함,"코치 제안은 휴대폰 메시지로. 계약서는 서명 전으로. 금지: 유니폼, 코치 호루라기를 든 모습",1차,PNG_REVISE 459173aa (#48 파일럿: 크롭·종목)
+adult_002,프로 구단의 제안,김우영,career_sports_offer,FIX,모교 코치 제안은 같은 날 따로 온 것이라 구단 상담실에 함께 있을 수 없음. 사물도 서명 전임이 드러나야 함,"코치 제안은 휴대폰 메시지로. 계약서는 서명 전으로. 금지: 유니폼, 코치 호루라기를 든 모습",1차,"PNG_REVISE 139eab18 (#48 수정본: 크롭 해결, 종목 단서 남음)"
 adult_003,음이탈 레전드,김재겸,grp_ya_viral_video_phone,OK,,,1차,
 adult_004,자취 첫 주,신기훈,grp_ya_fridge_coupons,SELF,,,1차,
 adult_005,이상형 발견,정원률,grp_wr_adult_005,OK,,,2차,
@@ -24,7 +24,7 @@ adult_022,밤 11시의 카톡,김우영,late_work_message,OK,,,1차,
 adult_023,길을 묻는 사람,김재겸,grp_adult_street_stranger,OK,,,1차,
 adult_024,거실 사무실 창업,신기훈,grp_ya_living_room_startup,SELF,,,1차,
 adult_025,특허가 될지도 모르는 아이디어,정원률,grp_wr_adult_025,OK,,,2차,
-adult_026,이번엔 진짜라는 친구,김선한,grp_sh_adult_026,FIX,장소가 정해지지 않아 한 장면으로 그릴 수 없음,친구와 만난 장소 하나로 (예: 카페 테이블). 내미는 휴대폰은 그래프 모양만,2차,
+adult_026,이번엔 진짜라는 친구,김선한,grp_sh_adult_026,FIX,장소가 정해지지 않아 한 장면으로 그릴 수 없음,친구와 만난 장소 하나로 (예: 카페 테이블). 내미는 휴대폰은 그래프 모양만,2차,PNG_PASS eeacba1a (#47 파일럿)
 adult_027,운동 필요,김우영,health_check_fitness,OK,,,1차,
 adult_028,첫 차,김재겸,grp_ya_used_car_lot,OK,,,1차,
 adult_029,휴가 사유란,신기훈,grp_adult_leave_form_blank,SELF,,,1차,
@@ -212,7 +212,7 @@ path_hea_05,진단서 한 장,신기훈,grp_mid_diagnosis_desk,SELF,,,1차,
 path_hea_06,건강 나이 측정,정원률,grp_wr_path_hea_06,OK,,,2차,
 path_hea_07,계단 앞에서,김선한,grp_sh_path_hea_07,OK,,,2차,
 path_hea_08,병원 대기실의 단골,김우영,old_hospital_waiting,OK,,,1차,
-path_hea_09,체육 시간의 어지럼증,김우영,teen_dizziness_nurse,OK,"의미는 맞음(보건 교사는 대사라 허용). 정원률 님의 시각 수정 의견(글자 흔적, 교사 추가)은 시각 판단으로 존중. 재사용 여부는 시각·크롭 결과를 따름",,1차 → 2차 변경,PNG_PASS fd8fd6f5 (#50 보완)
+path_hea_09,체육 시간의 어지럼증,김우영,teen_dizziness_nurse,OK,"의미는 맞음(보건 교사는 대사라 허용). 정원률 님의 시각 수정 의견(글자 흔적, 교사 추가)은 시각 판단으로 존중. 재사용 여부는 시각·크롭 결과를 따름",,1차 → 2차 변경,PNG_PASS fd8fd6f5 (#50 보완); 11/05 주인공 손 없이 의미 수용
 path_hea_10,입사 첫 주의 야근 문화,김재겸,grp_ya_first_week_overtime,REPLACE,"실제 그림 확인: 시계가 밤 9시가 아니라 12시 근처이고, 뒤쪽 자리가 비어 있어 ""다들 남긴 하더라""라는 압박이 안 보임. 쌓인 서류와 에너지 음료는 입사 첫 주보다 오래 야근한 사람처럼 보임","시계 9시, 뒤쪽 자리에 남아 있는 동료들로 수정 권고. R 대신 교체로 계산 제안",1차,
 path_hea_11,아버지의 당뇨 진단,김재겸,grp_adult_father_diabetes_dinner,OK,,,1차,
 path_hea_12,약봉지와 회의 일정,신기훈,grp_mid_pills_meeting_schedule,SELF,,,1차,

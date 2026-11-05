@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "date": "2026-11-04",
+  "date": "2026-11-05",
   "productionOwner": "신기훈",
-  "phase": "PILOT_SUBMITTED_PENDING_CROSS_REVIEW",
+  "phase": "PILOT_SUBMITTED_VISUAL_AND_CROP_PASSED_SEMANTIC_PENDING_INDEPENDENT",
   "sourceAssignment": {
     "pr": 51,
     "commit": "ef5ada0d",
@@ -45,17 +45,23 @@
       },
       "semanticReview": {
         "status": "SELF_ONLY_PENDING_INDEPENDENT",
-        "note": "제작자가 의미 담당이기도 해서 자체 의미 검수만 했다. 독립 의미 검토는 다른 팀원이 해 주어야 한다"
+        "note": "제작자가 의미 담당이기도 해서 자체 의미 검수만 했다. 독립 의미 검토가 남아 있으며, 자체 검수를 팀 승인으로 세지 않는다"
       },
       "visualReview": {
-        "status": "PENDING_TEAM_REVIEW",
-        "reviewer": "정원률"
+        "status": "PASS",
+        "reviewer": "정원률",
+        "date": "2026-11-04",
+        "evidence": [
+          "PR #49 댓글 6624867674: \"화풍 좋아용 창 밖 풍경 좋고 손도 확인했습니당\"",
+          "PR #50 5793205 정원률_파일럿_화풍검수_20261104.md: 통과 · 기존 의견 재사용 (SHA-256 31350b7b… 일치)"
+        ]
       },
       "cropReview": {
-        "status": "PASS_SELF_SIMULATED_PENDING_DEVICE",
-        "method": "PIL로 가운데 크롭을 재현. 360x800·1080x2400 보이는 폭 33.75% = 원본 x 424~856, 360x740 36.49% = x 406~874",
-        "result": "노트북 화면의 메일 카드(지구·비행기), 두 손, 연인 소매 끝이 모두 남는다. 램프·창·TV는 잘린다",
-        "device": "미실행 (김재겸 님 실제 화면 확인 대기)"
+        "status": "PASS",
+        "reviewer": "김재겸",
+        "date": "2026-11-04",
+        "evidence": "PR #47 9588596 김재겸_크롭검수_20261104.csv: CROP_OK, API 36 에뮬레이터 1080x2400, 보이는 폭 x 0.331~0.669, 캡처 SHA-256 6ceded62fbb387f598575dbe504471695278d77b03980a245d2a91016ad730e5",
+        "selfSimulation": "PIL 가운데 크롭 재현(x 424~856)과 결과 일치"
       }
     }
   ],
