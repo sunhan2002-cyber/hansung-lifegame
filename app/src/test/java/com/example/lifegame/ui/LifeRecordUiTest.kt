@@ -68,14 +68,20 @@ class LifeRecordUiTest {
         avatar = AvatarConfig(skinToneId = "skin_tan", hairId = "hair_curly_brown", eyesId = "eyes_big"),
     )
 
+    /** 2026-10-31 후속 과제 경계: 60은 초록, 30은 노랑, 10은 빨강. 음수 · 100 초과도 방어한다. */
     @Test
     fun healthGaugeColorBoundaries() {
-        assertEquals(HealthLevel.GOOD, healthLevelOf(100))
-        assertEquals(HealthLevel.GOOD, healthLevelOf(80))
-        assertEquals(HealthLevel.CAUTION, healthLevelOf(79))
-        assertEquals(HealthLevel.CAUTION, healthLevelOf(60))
-        assertEquals(HealthLevel.DANGER, healthLevelOf(59))
-        assertEquals(HealthLevel.DANGER, healthLevelOf(0))
+        val expected = mapOf(
+            120 to HealthLevel.GOOD, 100 to HealthLevel.GOOD, 61 to HealthLevel.GOOD, 60 to HealthLevel.GOOD,
+            59 to HealthLevel.CAUTION, 31 to HealthLevel.CAUTION, 30 to HealthLevel.CAUTION,
+            29 to HealthLevel.DANGER, 11 to HealthLevel.DANGER,
+            10 to HealthLevel.CRITICAL, 9 to HealthLevel.CRITICAL, 1 to HealthLevel.CRITICAL,
+            0 to HealthLevel.CRITICAL, -5 to HealthLevel.CRITICAL,
+        )
+        expected.forEach { (value, level) -> assertEquals("health=$value", level, healthLevelOf(value)) }
+        assertEquals(listOf("좋음", "주의", "위험", "위급"), HealthLevel.entries.map { it.label })
+        // 네 색은 서로 다르다.
+        assertEquals(4, HealthLevel.entries.map { it.color }.distinct().size)
     }
 
     @Test fun recapUsesBodySnapshotForEachChoiceInsteadOfFinalBody() {
@@ -117,6 +123,15 @@ class LifeRecordUiTest {
         assertEquals("img_stat_intelligence_001", recap.last().images.first().imageId)
         // 사람이 그려진 기본 초상은 주마등 배경으로 쓰지 않는다(같은 인물을 따로 세운다).
         assertTrue(recap.all { moment -> moment.images.none { it.usage == "character" } })
+    }
+
+    @Test
+    fun recapUsesTheSavedEventImageInsteadOfAChangedContentMapping() {
+        val saved = choice("saved-event", LifePeriod.TEEN, 2)
+            .copy(eventImageId = "img_pov_saved_event")
+        val recap = recapMomentsUi(listOf(saved), content).single()
+
+        assertEquals("img_pov_saved_event", recap.eventImageId)
     }
 
     @Test

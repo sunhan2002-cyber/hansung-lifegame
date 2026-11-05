@@ -1,0 +1,302 @@
+{
+  "date": "2026-11-03",
+  "sourceHeads": [
+    {
+      "pr": 47,
+      "url": "https://github.com/sunhan2002-cyber/hansung-lifegame/pull/47",
+      "sha": "4e055c74d80dab8f8b542620e40919922de0429d",
+      "branch": "feat/followup-20261031-jaegyeom-frontend"
+    },
+    {
+      "pr": 49,
+      "url": "https://github.com/sunhan2002-cyber/hansung-lifegame/pull/49",
+      "sha": "afd2f6bf4e3d7bc4229027b928fc96635ddc1d00",
+      "branch": "feat/followup-20261031-kihoon-scenario"
+    },
+    {
+      "pr": 51,
+      "url": "https://github.com/sunhan2002-cyber/hansung-lifegame/pull/51",
+      "sha": "997a499a15837399e4231141fa43b5e433dfe761",
+      "branch": "codex/followup-sunhan-qa-20261103"
+    }
+  ],
+  "semanticRequests": [
+    {
+      "eventId": "adult_010",
+      "title": "고기 장인의 밤",
+      "classificationOwner": "정원률",
+      "proposedGroupId": "grp_wr_adult_010",
+      "semanticVerdict": "FIX",
+      "issue": "adult_007(친구 모임)에서 불판 앞 자리를 골라 이어지는 사건인데 주변 인물이 \"성인 동료들\"로 적혀 있음",
+      "requestedChange": "취한 친구들로. adult_007·adult_008·adult_009 와 같은 가게 배경",
+      "reviewRound": "2차"
+    },
+    {
+      "eventId": "adult_015",
+      "title": "첫 월급",
+      "classificationOwner": "정원률",
+      "proposedGroupId": "grp_wr_adult_015",
+      "semanticVerdict": "FIX",
+      "issue": "휴대폰 근접 구도인데 배경 장소가 없어 다른 휴대폰 장면과 구분되지 않음. 대신 adult_080 과 같은 장면이라 한 그룹으로 묶을 수 있음 (재사용 표 참조)",
+      "requestedChange": "배경 장소를 adult_080 과 함께 하나로 정하고 그룹을 합치는 안을 김선한 님께 제안",
+      "reviewRound": "2차"
+    },
+    {
+      "eventId": "adult_030",
+      "title": "베프의 결혼식",
+      "classificationOwner": "정원률",
+      "proposedGroupId": "grp_wr_adult_030",
+      "semanticVerdict": "FIX",
+      "issue": "베프가 결혼식 전에 축사를 부탁하는 사건인데 장소가 하객이 많은 결혼식장의 축사 위치이고 마이크가 있음. 시점이 결혼식 당일로 앞당겨지고 선택 A(축사를 맡는다)를 미리 보여 줌",
+      "requestedChange": "부탁받는 결혼식 전 장소로 (예: 카페에서 청첩장을 받는 순간). 하객 300명은 본문으로",
+      "reviewRound": "2차"
+    },
+    {
+      "eventId": "adult_035",
+      "title": "10년 만의 동창회",
+      "classificationOwner": "정원률",
+      "proposedGroupId": "grp_wr_adult_035",
+      "semanticVerdict": "FIX",
+      "issue": "휴대폰 근접 구도인데 배경 장소가 없어 다른 휴대폰 장면과 구분되지 않음",
+      "requestedChange": "공지를 보는 장소 하나로",
+      "reviewRound": "2차"
+    },
+    {
+      "eventId": "adult_077",
+      "title": "첫사랑의 연락",
+      "classificationOwner": "정원률",
+      "proposedGroupId": "grp_wr_adult_077",
+      "semanticVerdict": "FIX",
+      "issue": "휴대폰 근접 구도인데 배경 장소가 없어 다른 휴대폰 장면과 구분되지 않음",
+      "requestedChange": "문자를 받는 장소 하나로. adult_036(지호)·path_luk_12 문자 장면과 구분",
+      "reviewRound": "2차"
+    },
+    {
+      "eventId": "child_020",
+      "title": "고장 난 시계 해부",
+      "classificationOwner": "정원률",
+      "proposedGroupId": "grp_wr_child_020",
+      "semanticVerdict": "FIX",
+      "issue": "장소가 \"서랍 앞 또는 책상\"으로 둘",
+      "requestedChange": "하나로 확정",
+      "reviewRound": "2차"
+    },
+    {
+      "eventId": "path_hap_12",
+      "title": "좋았던 일 하나 적기",
+      "classificationOwner": "정원률",
+      "proposedGroupId": "grp_wr_path_hap_12",
+      "semanticVerdict": "FIX",
+      "issue": "장소가 정해지지 않아 한 장면으로 그릴 수 없음",
+      "requestedChange": "수첩에 적는 장소 하나로 (예: 상담 뒤 버스 정류장 벤치 또는 내 방)",
+      "reviewRound": "2차"
+    },
+    {
+      "eventId": "path_int_14",
+      "title": "번아웃 뒤 다시 연 연구 노트",
+      "classificationOwner": "정원률",
+      "proposedGroupId": "grp_wr_path_int_14",
+      "semanticVerdict": "FIX",
+      "issue": "장소가 \"집 또는 연구 책상\"으로 둘",
+      "requestedChange": "하나로 확정",
+      "reviewRound": "2차"
+    },
+    {
+      "eventId": "path_luk_13",
+      "title": "공항에서 만난 사람의 메일",
+      "classificationOwner": "정원률",
+      "proposedGroupId": "grp_wr_path_luk_13",
+      "semanticVerdict": "FIX",
+      "issue": "장소가 정해지지 않아 한 장면으로 그릴 수 없음",
+      "requestedChange": "메일을 확인하는 장소 하나로. 공항 회상은 금지라는 판단은 맞음",
+      "reviewRound": "2차"
+    },
+    {
+      "eventId": "path_soc_06",
+      "title": "동네가 나를 부른다",
+      "classificationOwner": "정원률",
+      "proposedGroupId": "grp_wr_path_soc_06",
+      "semanticVerdict": "FIX",
+      "issue": "장소가 정해지지 않아 한 장면으로 그릴 수 없음",
+      "requestedChange": "권유를 받는 장소 하나로. 그룹 아이콘이 많은 휴대폰은 좋음",
+      "reviewRound": "2차"
+    },
+    {
+      "eventId": "teen_011",
+      "title": "단톡방의 사진",
+      "classificationOwner": "정원률",
+      "proposedGroupId": "grp_wr_teen_011",
+      "semanticVerdict": "FIX",
+      "issue": "휴대폰 근접 구도인데 배경 장소가 없어 다른 휴대폰 장면과 구분되지 않음",
+      "requestedChange": "단톡방을 보는 장소 하나로",
+      "reviewRound": "2차"
+    },
+    {
+      "eventId": "teen_026",
+      "title": "새벽의 메시지",
+      "classificationOwner": "정원률",
+      "proposedGroupId": "grp_wr_teen_026",
+      "semanticVerdict": "FIX",
+      "issue": "장소가 \"공부 자리 또는 침실\"로 둘",
+      "requestedChange": "하나로 확정 (수학 자료가 보이는 책상 권장)",
+      "reviewRound": "2차"
+    },
+    {
+      "eventId": "teen_031",
+      "title": "스터디 카페",
+      "classificationOwner": "정원률",
+      "proposedGroupId": "grp_wr_teen_031",
+      "semanticVerdict": "FIX",
+      "issue": "장소가 정해지지 않아 한 장면으로 그릴 수 없음",
+      "requestedChange": "친구들이 제안하는 장소 하나로 (예: 하교 뒤 교실)",
+      "reviewRound": "2차"
+    }
+  ],
+  "cropRequests": [
+    {
+      "eventId": "adult_068",
+      "imageId": "img_pov_flu_morning_001",
+      "assetPath": "design_preview/week7/img_pov_flu_morning_001.png",
+      "sha256": "727b612683268c43b776fad5e0b6fa1bf06b0fb843abc4ecc34259bb1d3e3d37",
+      "fileSource": "main a9237d8",
+      "appConnection": "MATCH 1.000 / 1.000",
+      "visibleX_1080x2400": "0.331..0.669",
+      "visibleX_360x740dp": "0.318..0.682",
+      "existingArtVerdict": "REUSE_CANDIDATE",
+      "requiredObjects": "체온계, 침구, 물컵, 휴대폰",
+      "visibleInCrop": "체온계를 든 손(화면 부분), 이불, 천장 등",
+      "lostInCrop": "물컵, 휴대폰, 창문",
+      "cropVerdict": "CROP_KEY_LOST",
+      "note": "본문의 엄마 톡을 받는 휴대폰과 물컵이 빠진다. 재사용하려면 체온계·휴대폰을 가운데 1/3 안에 두는 재구도가 필요."
+    },
+    {
+      "eventId": "adult_070",
+      "imageId": "img_pov_layoff_door_001",
+      "assetPath": "design_preview/week7/img_pov_layoff_door_001.png",
+      "sha256": "606ebbf050845fff51d2ca3a417b7af4af439c21aed58a56d5259f8b9ac4bdee",
+      "fileSource": "main a9237d8",
+      "appConnection": "MATCH 1.000 / 1.000",
+      "visibleX_1080x2400": "0.331..0.669",
+      "visibleX_360x740dp": "0.318..0.682",
+      "existingArtVerdict": "FIT_WITH_NOTE",
+      "requiredObjects": "사원증과 빨간 게이트 표시",
+      "visibleInCrop": "개찰 게이트 바, 유리문, 로비",
+      "lostInCrop": "사원증 든 손, 빨간 표시등, 출근하는 사람들",
+      "cropVerdict": "CROP_KEY_LOST",
+      "note": "'사원증을 찍었는데 안 열린다'의 사원증·빨간 표시가 오른쪽으로 잘린다. 둘을 가운데로 옮겨야 한다."
+    },
+    {
+      "eventId": "path_int_10",
+      "imageId": "img_path_int_10_001",
+      "assetPath": "week10/scenes/img_path_int_10_001.png",
+      "sha256": "2310c99efc4329e19add5e8c43043960ffb8a9ee27627a90eb91b72ec6efb348",
+      "fileSource": "PR #50 c81208c 수정본",
+      "appConnection": "MATCH 1.000 / 1.000",
+      "visibleX_1080x2400": "0.331..0.669",
+      "visibleX_360x740dp": "0.318..0.682",
+      "existingArtVerdict": "REPLACE_REQUIRED",
+      "requiredObjects": "책장; 게시판; 무문자 강연 포스터; 사서 손",
+      "visibleInCrop": "포스터를 붙이는 사서(얼굴·두 손), 글자 없는 포스터, 게시판, 명찰",
+      "lostInCrop": "책장 대부분, 주인공 노년 손 일부",
+      "cropVerdict": "CROP_OK_NOTE",
+      "note": "핵심 행동(포스터를 붙이며 말을 거는 사서)은 다 보여 사용 가능. 도서관 단서인 책장이 거의 빠지므로 다시 손볼 때는 사서 뒤 책장 띠를 가운데 1/3에."
+    },
+    {
+      "eventId": "path_hea_09",
+      "imageId": "img_path_hea_09_001",
+      "assetPath": "week10/scenes/img_path_hea_09_001.png",
+      "sha256": "c842df0b453899b6796eeb3f4d975430278055c73ed6272d5f0ab1120b908c59",
+      "fileSource": "main a9237d8",
+      "appConnection": "MATCH 1.000 / 1.000",
+      "visibleX_1080x2400": "0.331..0.669",
+      "visibleX_360x740dp": "0.318..0.682",
+      "existingArtVerdict": "FIT_WITH_NOTE",
+      "requiredObjects": "침상과 물컵과 운동장 창문",
+      "visibleInCrop": "운동장이 보이는 창, 커튼, 의자, 침상 위 다리",
+      "lostInCrop": "물컵·메모(오른쪽), 보건실 약장(왼쪽)",
+      "cropVerdict": "CROP_OK_NOTE",
+      "note": "물컵이 빠지고 보건실 단서가 약하다. 물컵을 가운데로 옮기면 충분."
+    },
+    {
+      "eventId": "path_hap_09",
+      "imageId": "img_path_hap_09_001",
+      "assetPath": "week10/scenes/img_path_hap_09_001.png",
+      "sha256": "9a2bebf47ec0e7bb06b4b9d9d3c53306ec77a0c33934567d4b0cc3875381196a",
+      "fileSource": "PR #50 c81208c 수정본",
+      "appConnection": "MATCH 1.000 / 1.000",
+      "visibleX_1080x2400": "0.331..0.669",
+      "visibleX_360x740dp": "0.318..0.682",
+      "existingArtVerdict": "REVISE_REQUIRED",
+      "requiredObjects": "작업 중 미완성 그림; 이젤; 옆자리 학생; 실내등",
+      "visibleInCrop": "이젤 위 미완성 정물화, 팔레트 든 왼손, 작업등, 뒤쪽 교복 학생 1명, 밤 창 일부",
+      "lostInCrop": "붓 든 오른손, 양옆 연습생 2명, 큰 밤 창",
+      "cropVerdict": "CROP_OK_NOTE",
+      "note": "늦은 실기실과 연습 중인 학생은 남아 사용 가능. '옆자리 친구'는 뒤쪽 학생으로만 남으므로 다시 손볼 때는 옆자리 연습생 1명과 밤 창을 가운데 1/3에."
+    },
+    {
+      "eventId": "path_luk_09",
+      "imageId": "img_path_luk_09_001",
+      "assetPath": "week10/scenes/img_path_luk_09_001.png",
+      "sha256": "8ada5c8a67a7559f924fc856b04dcfb2f3709a27eed358af6e8d587380af6094",
+      "fileSource": "main a9237d8",
+      "appConnection": "MATCH 1.000 / 1.000",
+      "visibleX_1080x2400": "0.331..0.669",
+      "visibleX_360x740dp": "0.318..0.682",
+      "existingArtVerdict": "REVISE_REQUIRED",
+      "requiredObjects": "자판기, 콜라 캔 정확히 두 개, 손",
+      "visibleInCrop": "취출구의 캔 2개, 위 진열칸",
+      "lostInCrop": "꺼내려는 손, 동전 투입구, 놀란 손",
+      "cropVerdict": "CROP_OK_NOTE",
+      "note": "취출구 캔은 원본에서도 2개로 보인다(위 진열칸 제외). 합본의 '캔 3개' 판정 재확인 요청. 손은 잘린다."
+    }
+  ],
+  "countCorrection": "PR #49 comment says 12, but semantic CSV contains 13 owned FIX rows; all 13 addressed",
+  "notes": "Read-only source evidence; no merge, no peer CSV overwritten",
+  "latestProductionAssignment": {
+    "pr": 51,
+    "sha": "dc7e6e9a3939e807bb6c182c76b0bb426a9f62da",
+    "counts": {
+      "events": 352,
+      "groups": 351,
+      "newImages": 334,
+      "pendingRevisions": 12,
+      "alreadyDeliveredRevisions": 2,
+      "unchangedReuse": 3,
+      "totalProductionIncludingDelivered": 348,
+      "remainingProduction": 346,
+      "availableImagesIncludingUnmergedDeliveries": 5
+    },
+    "quota": {
+      "owner": "정원률",
+      "total": 69,
+      "delivered": 2,
+      "remaining": 67,
+      "pilotEventId": "path_hea_01"
+    },
+    "groupingDecision": {
+      "sharedEventIds": [
+        "adult_015",
+        "adult_080"
+      ],
+      "reason": "둘 다 성인 주인공이 급여 입금 뒤 집 목재 책상에서 통장 앱을 새로고침하는 동일 구도. 손의 연령 단서를 고정하지 않고, 두 사건의 선행 플래그는 상호 배타적이다.",
+      "otherReuseCandidateRejected": "adult_041/path_wea_05는 동일 인생에 재노출될 수 있고 별도 시각 합의가 없어 분리 유지"
+    },
+    "commonSamples": [
+      {
+        "eventId": "path_hea_01",
+        "status": "READY_TO_CREATE",
+        "owner": "정원률"
+      },
+      {
+        "eventId": "adult_015",
+        "status": "READY_TO_CREATE",
+        "owner": "정원률"
+      },
+      {
+        "eventId": "path_int_10",
+        "status": "DELIVERED_REVIEWED",
+        "owner": "정원률"
+      }
+    ]
+  }
+}

@@ -1,0 +1,655 @@
+[
+  {
+    "groupId": "grp_teen_after_quitting_stands",
+    "imageId": "img_path_fit_10_001",
+    "assetPath": "week10/scenes/img_path_fit_10_001.png",
+    "sha256": "9eeba2f8b99599c7549c20ec8ba06ad1dd03acd2c60047185b31116d74182cb9",
+    "approvalStatus": "APPROVED",
+    "semanticReviewer": "신기훈 2차 검토 afd2f6bf4e3d7bc4229027b928fc96635ddc1d00",
+    "visualReviewer": "정원률 원본 검토·김재겸 크롭 검토, 김선한 담당 Codex 재확인",
+    "eventIds": [
+      "path_fit_10"
+    ],
+    "eventSourceHashes": {
+      "path_fit_10": "8f5318e27dc1f4f8493a3304b7d0a8f9b6c5da889e2ab42e7c139494d420151b"
+    },
+    "reviewEvidence": {
+      "semanticSource": {
+        "commit": "afd2f6bf4e3d7bc4229027b928fc96635ddc1d00",
+        "file": "docs/assignments/20261031/submissions/신기훈_분류.csv"
+      },
+      "visualSource": {
+        "commit": "c81208cc4dd6e4fd45e979b950d6fe28398a2e32",
+        "file": "docs/assignments/20261031/submissions/정원률_분류.csv"
+      },
+      "cropSource": {
+        "commit": "4e055c74d80dab8f8b542620e40919922de0429d",
+        "file": "docs/assignments/20261031/submissions/김재겸_분류.csv"
+      }
+    }
+  },
+  {
+    "groupId": "grp_mid_last_research_puzzle",
+    "imageId": "img_path_int_09_001",
+    "assetPath": "week10/scenes/img_path_int_09_001.png",
+    "sha256": "bd3ccc519a6b9835df32581f10809774bae2c731534853cc8ed30b52766c5b64",
+    "approvalStatus": "APPROVED",
+    "semanticReviewer": "신기훈 2차 검토 afd2f6bf4e3d7bc4229027b928fc96635ddc1d00",
+    "visualReviewer": "정원률 원본 검토·김재겸 크롭 검토, 김선한 담당 Codex 재확인",
+    "eventIds": [
+      "path_int_09"
+    ],
+    "eventSourceHashes": {
+      "path_int_09": "2f3a43cc6deddfd14cf6b8e97f489731a362a8e877ffe116ae9c93d1125514cc"
+    },
+    "reviewEvidence": {
+      "semanticSource": {
+        "commit": "afd2f6bf4e3d7bc4229027b928fc96635ddc1d00",
+        "file": "docs/assignments/20261031/submissions/신기훈_분류.csv"
+      },
+      "visualSource": {
+        "commit": "c81208cc4dd6e4fd45e979b950d6fe28398a2e32",
+        "file": "docs/assignments/20261031/submissions/정원률_분류.csv"
+      },
+      "cropSource": {
+        "commit": "4e055c74d80dab8f8b542620e40919922de0429d",
+        "file": "docs/assignments/20261031/submissions/김재겸_분류.csv"
+      }
+    }
+  },
+  {
+    "groupId": "grp_wr_path_wea_09",
+    "imageId": "img_path_wea_09_001",
+    "assetPath": "week10/scenes/img_path_wea_09_001.png",
+    "sha256": "ca2f641b36d0aa698c3666a3364327d98f79582d3a7ee38955c426350f53e282",
+    "approvalStatus": "APPROVED",
+    "semanticReviewer": "신기훈 2차 검토 afd2f6bf4e3d7bc4229027b928fc96635ddc1d00",
+    "visualReviewer": "정원률 원본 검토·김재겸 크롭 검토, 김선한 담당 Codex 재확인",
+    "eventIds": [
+      "path_wea_09"
+    ],
+    "eventSourceHashes": {
+      "path_wea_09": "b69f72b5ce70f90979f0ae5a6a5c98fc3b3249b8ffa3c4e84390426769ca40ce"
+    },
+    "reviewEvidence": {
+      "semanticSource": {
+        "commit": "afd2f6bf4e3d7bc4229027b928fc96635ddc1d00",
+        "file": "docs/assignments/20261031/submissions/신기훈_분류.csv"
+      },
+      "visualSource": {
+        "commit": "c81208cc4dd6e4fd45e979b950d6fe28398a2e32",
+        "file": "docs/assignments/20261031/submissions/정원률_분류.csv"
+      },
+      "cropSource": {
+        "commit": "4e055c74d80dab8f8b542620e40919922de0429d",
+        "file": "docs/assignments/20261031/submissions/김재겸_분류.csv"
+      }
+    }
+  },
+  {
+    "groupId": "grp_sh_adult_001",
+    "imageId": "img_adult_crossroad_001",
+    "assetPath": "followup_20261031/img_adult_crossroad_001.png",
+    "sha256": "ec79e3c382851860713b4890286f3f8492e52900dd50693628ce4125312648a6",
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "adult_001"
+    ],
+    "eventSourceHashes": {
+      "adult_001": "e843922be0e3f125d248bcd436097c5b39f620dd2d3406f17b4e9e48aa8bbb34"
+    },
+    "semanticReviewer": "신기훈 제출 검토 재사용",
+    "visualReviewer": "정원률 제출 화풍 검토 재사용",
+    "cropReviewer": "김재겸 크롭 판정 재사용 (PNG 해시 동일)",
+    "reviewEvidence": {
+      "groupId": "grp_sh_adult_001",
+      "eventIds": [
+        "adult_001"
+      ],
+      "assetPath": "followup_20261031/img_adult_crossroad_001.png",
+      "sha256": "ec79e3c382851860713b4890286f3f8492e52900dd50693628ce4125312648a6",
+      "actualProducer": "김선한",
+      "semantic": {
+        "status": "PASS",
+        "reviewer": "신기훈 제출 검토 재사용",
+        "evidence": "Same PNG passed Kihoon semantic, Wonryul style and Jaegyeom crop reviews. Both acceptance notices and family chat visible.",
+        "source": "submissions/신기훈_공통샘플검수.csv; submissions/신기훈_보완파일럿검수.csv; PR #49 기존 path_hap_09 검토"
+      },
+      "visual": {
+        "status": "PASS",
+        "reviewer": "정원률 제출 화풍 검토 재사용",
+        "source": "submissions/정원률_파일럿_화풍검수_20261104.md; samples/20261103/manifest.json; revisions/20261103-round2/validation.json"
+      },
+      "crop": {
+        "status": "PASS",
+        "reviewer": "김재겸 크롭 판정 재사용 (PNG 해시 동일)",
+        "source": "docs/assignments/20261031/submissions/김재겸_크롭검수_20261104.csv",
+        "note": "의미 있는 파일 변경 없음. 새 통합본의 실제 경로 픽셀 검사도 별도 수행."
+      },
+      "resolution": "Same PNG passed Kihoon semantic, Wonryul style and Jaegyeom crop reviews. Both acceptance notices and family chat visible."
+    },
+    "resolvedIssueEvidence": {
+      "adult_001": "Same PNG passed Kihoon semantic, Wonryul style and Jaegyeom crop reviews. Both acceptance notices and family chat visible."
+    }
+  },
+  {
+    "groupId": "career_sports_offer",
+    "imageId": "img_adult_pro_offer_001",
+    "assetPath": "followup_20261031/img_adult_pro_offer_001.png",
+    "sha256": "ab7ee09ee79c9261bba480c62db49ab264e708c2f934d91d1157a0c29e964c75",
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "adult_002"
+    ],
+    "eventSourceHashes": {
+      "adult_002": "51104de8bc82d564e2a1a87c890f4d16e6f2cbb84f012e9d0074c17437cd91d5"
+    },
+    "semanticReviewer": "김선한 담당 Codex, 2026-11-05 대행 검토",
+    "visualReviewer": "김선한 담당 Codex, 2026-11-05 수정본 자체 검토",
+    "cropReviewer": "김선한 담당 Codex 실제 앱 캡처 직접 검토 2026-11-05",
+    "reviewEvidence": {
+      "groupId": "career_sports_offer",
+      "eventIds": [
+        "adult_002"
+      ],
+      "assetPath": "followup_20261031/img_adult_pro_offer_001.png",
+      "sha256": "ab7ee09ee79c9261bba480c62db49ab264e708c2f934d91d1157a0c29e964c75",
+      "actualProducer": "김우영 원본 / 김선한 담당 Codex 수정",
+      "semantic": {
+        "status": "PASS",
+        "reviewer": "김선한 담당 Codex, 2026-11-05 대행 검토",
+        "evidence": "Codex 2026-11-05 edit removes soccer ball, soccer-player wall picture and soccer-ball contract emblem; plain shield and neutral decor. Unsigned offer and phone remain central. Original and edited files inspected directly; no committed choice.",
+        "source": "submissions/통합_그림검토_20261105.json"
+      },
+      "visual": {
+        "status": "PASS",
+        "reviewer": "김선한 담당 Codex, 2026-11-05 수정본 자체 검토",
+        "source": "submissions/정원률_파일럿_화풍검수_20261104.md; samples/20261103/manifest.json; revisions/20261103-round2/validation.json"
+      },
+      "crop": {
+        "status": "PASS",
+        "reviewer": "김선한 담당 Codex 실제 앱 캡처 직접 검토 2026-11-05",
+        "evidence": "원본의 축구 단서 제거 확인. 실제 앱에서 스카우터·무서명 제안서·알림 휴대폰 모두 남음.",
+        "screen": "1080x2400",
+        "capturePath": "output\\runtime-crops\\adult_002_phone_scene.png",
+        "captureSha256": "9b7bbd387db030de10514901df1317bbdbd30163083f12bd76b7246d39c9376a"
+      },
+      "resolution": "Codex 2026-11-05 edit removes soccer ball, soccer-player wall picture and soccer-ball contract emblem; plain shield and neutral decor. Unsigned offer and phone remain central. Original and edited files inspected directly; no committed choice."
+    },
+    "resolvedIssueEvidence": {
+      "adult_002": "Codex 2026-11-05 edit removes soccer ball, soccer-player wall picture and soccer-ball contract emblem; plain shield and neutral decor. Unsigned offer and phone remain central. Original and edited files inspected directly; no committed choice."
+    }
+  },
+  {
+    "groupId": "grp_sh_adult_026",
+    "imageId": "img_adult_crypto_001",
+    "assetPath": "followup_20261031/img_adult_crypto_001.png",
+    "sha256": "eeacba1a3d1e38aeadf0a2171fcc9c21b29d110a52b40aeb50b744a289a1806a",
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "adult_026"
+    ],
+    "eventSourceHashes": {
+      "adult_026": "4acfa3e3bf9f1ddf5a8afe3cc3237251f1b73deecb77e5996f1ac43f0f456c36"
+    },
+    "semanticReviewer": "김선한 담당 Codex, 2026-11-05 대행 검토",
+    "visualReviewer": "정원률 제출 화풍 검토 재사용",
+    "cropReviewer": "김선한 담당 Codex 실제 앱 캡처 직접 검토 2026-11-05",
+    "reviewEvidence": {
+      "groupId": "grp_sh_adult_026",
+      "eventIds": [
+        "adult_026"
+      ],
+      "assetPath": "followup_20261031/img_adult_crypto_001.png",
+      "sha256": "eeacba1a3d1e38aeadf0a2171fcc9c21b29d110a52b40aeb50b744a289a1806a",
+      "actualProducer": "김재겸",
+      "semantic": {
+        "status": "PASS",
+        "reviewer": "김선한 담당 Codex, 2026-11-05 대행 검토",
+        "evidence": "Codex read current event and choices: the friend pitches a coin before purchase. Rising historical chart explains persuasion, not a guaranteed future return. Protagonist hands hold cup/rest on table, no buy action, no portfolio profit. Wonryul style PASS reused by exact hash.",
+        "source": "submissions/통합_그림검토_20261105.json"
+      },
+      "visual": {
+        "status": "PASS",
+        "reviewer": "정원률 제출 화풍 검토 재사용",
+        "source": "submissions/정원률_파일럿_화풍검수_20261104.md; samples/20261103/manifest.json; revisions/20261103-round2/validation.json"
+      },
+      "crop": {
+        "status": "PASS",
+        "reviewer": "김선한 담당 Codex 실제 앱 캡처 직접 검토 2026-11-05",
+        "evidence": "친구 얼굴·내미는 휴대폰·매수 전 그래프·주인공 컵이 실제 앱에 남음.",
+        "screen": "1080x2400",
+        "capturePath": "output\\runtime-crops\\adult_026_phone_scene.png",
+        "captureSha256": "a9fba495ef6067cabb13cc937362dde43919e01c756b75bcfca10931b071f2ac"
+      },
+      "resolution": "Codex read current event and choices: the friend pitches a coin before purchase. Rising historical chart explains persuasion, not a guaranteed future return. Protagonist hands hold cup/rest on table, no buy action, no portfolio profit. Wonryul style PASS reused by exact hash."
+    },
+    "resolvedIssueEvidence": {
+      "adult_026": "Codex read current event and choices: the friend pitches a coin before purchase. Rising historical chart explains persuasion, not a guaranteed future return. Protagonist hands hold cup/rest on table, no buy action, no portfolio profit. Wonryul style PASS reused by exact hash."
+    }
+  },
+  {
+    "groupId": "proposal_or_transfer",
+    "imageId": "img_adult_proposal_001",
+    "assetPath": "followup_20261031/img_adult_proposal_001.png",
+    "sha256": "31350b7bd373f80bd8719a6464c5b144725493a3f9455f739e9de8b88ac15374",
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "adult_032"
+    ],
+    "eventSourceHashes": {
+      "adult_032": "c3810212d9242c6a3325fb9c8eeee607490f3a90388f6670a245f3cdc75703bd"
+    },
+    "semanticReviewer": "김선한 담당 Codex, 2026-11-05 대행 검토",
+    "visualReviewer": "정원률 제출 화풍 검토 재사용",
+    "cropReviewer": "김선한 담당 Codex 실제 앱 캡처 직접 검토 2026-11-05",
+    "reviewEvidence": {
+      "groupId": "proposal_or_transfer",
+      "eventIds": [
+        "adult_032"
+      ],
+      "assetPath": "followup_20261031/img_adult_proposal_001.png",
+      "sha256": "31350b7bd373f80bd8719a6464c5b144725493a3f9455f739e9de8b88ac15374",
+      "actualProducer": "신기훈",
+      "semantic": {
+        "status": "PASS",
+        "reviewer": "김선한 담당 Codex, 2026-11-05 대행 검토",
+        "evidence": "Codex independent review of another creator: dating flag present, no marriage yet; partner hand and globe/airplane email present together, no ring/wedding/packed suitcase/flight outcome. Overseas offer and marriage discussion are both represented.",
+        "source": "submissions/통합_그림검토_20261105.json"
+      },
+      "visual": {
+        "status": "PASS",
+        "reviewer": "정원률 제출 화풍 검토 재사용",
+        "source": "submissions/정원률_파일럿_화풍검수_20261104.md; samples/20261103/manifest.json; revisions/20261103-round2/validation.json"
+      },
+      "crop": {
+        "status": "PASS",
+        "reviewer": "김선한 담당 Codex 실제 앱 캡처 직접 검토 2026-11-05",
+        "evidence": "연인 손과 해외 파견 메일이 실제 앱 화면 위아래에 함께 남음.",
+        "screen": "1080x2400",
+        "capturePath": "output\\runtime-crops\\adult_032_phone_scene.png",
+        "captureSha256": "bf559e8d5d98250b12848cc8d01124b6f4ca4138876056701555a63978ba5740"
+      },
+      "resolution": "Codex independent review of another creator: dating flag present, no marriage yet; partner hand and globe/airplane email present together, no ring/wedding/packed suitcase/flight outcome. Overseas offer and marriage discussion are both represented."
+    },
+    "resolvedIssueEvidence": {
+      "adult_032": "Codex independent review of another creator: dating flag present, no marriage yet; partner hand and globe/airplane email present together, no ring/wedding/packed suitcase/flight outcome. Overseas offer and marriage discussion are both represented."
+    }
+  },
+  {
+    "groupId": "grp_wr_path_hea_01",
+    "imageId": "img_path_hea_01_001",
+    "assetPath": "followup_20261031/img_path_hea_01_001.png",
+    "sha256": "15c9a71b89befca539190feea3cf946788aae03c134008934dc400a0fc25d065",
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "path_hea_01"
+    ],
+    "eventSourceHashes": {
+      "path_hea_01": "4f85f19b48d63c7897ad9116c43e176f71381a41adc8e61714d773a4248501a2"
+    },
+    "semanticReviewer": "신기훈 제출 검토 재사용",
+    "visualReviewer": "정원률 제출 화풍 검토 재사용",
+    "cropReviewer": "김재겸 크롭 판정 재사용 (PNG 해시 동일)",
+    "reviewEvidence": {
+      "groupId": "grp_wr_path_hea_01",
+      "eventIds": [
+        "path_hea_01"
+      ],
+      "assetPath": "followup_20261031/img_path_hea_01_001.png",
+      "sha256": "15c9a71b89befca539190feea3cf946788aae03c134008934dc400a0fc25d065",
+      "actualProducer": "정원률",
+      "semantic": {
+        "status": "PASS",
+        "reviewer": "신기훈 제출 검토 재사용",
+        "evidence": "Three existing florets plus one offered, nutrition teacher, before eating; existing same-hash meaning/crop/self-style records reused.",
+        "source": "submissions/신기훈_공통샘플검수.csv; submissions/신기훈_보완파일럿검수.csv; PR #49 기존 path_hap_09 검토"
+      },
+      "visual": {
+        "status": "PASS",
+        "reviewer": "정원률 제출 화풍 검토 재사용",
+        "source": "submissions/정원률_파일럿_화풍검수_20261104.md; samples/20261103/manifest.json; revisions/20261103-round2/validation.json"
+      },
+      "crop": {
+        "status": "PASS",
+        "reviewer": "김재겸 크롭 판정 재사용 (PNG 해시 동일)",
+        "source": "docs/assignments/20261031/submissions/김재겸_크롭검수_20261104.csv",
+        "note": "의미 있는 파일 변경 없음. 새 통합본의 실제 경로 픽셀 검사도 별도 수행."
+      },
+      "resolution": "Three existing florets plus one offered, nutrition teacher, before eating; existing same-hash meaning/crop/self-style records reused."
+    },
+    "resolvedIssueEvidence": {
+      "path_hea_01": "Three existing florets plus one offered, nutrition teacher, before eating; existing same-hash meaning/crop/self-style records reused."
+    }
+  },
+  {
+    "groupId": "grp_shared_salary_deposit",
+    "imageId": "img_adult_first_salary_001",
+    "assetPath": "followup_20261031/img_adult_first_salary_001.png",
+    "sha256": "a1b8eb68850b089f510d6c8ececbd4884891d34a1894bf1051ca323766d89698",
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "adult_015",
+      "adult_080"
+    ],
+    "eventSourceHashes": {
+      "adult_015": "ac0ac7b2b187566a18de7f40d51010cc705f8fc3da449b04cdc52b2fba91ce28",
+      "adult_080": "c4112a9084eca88bb7b5e2a4dcf8c0157f10710603a5d788c1310c044770f49e"
+    },
+    "semanticReviewer": "신기훈 제출 검토 재사용",
+    "visualReviewer": "정원률 제출 화풍 검토 재사용",
+    "cropReviewer": "김선한 담당 Codex 실제 앱 캡처 직접 검토 2026-11-05",
+    "reviewEvidence": {
+      "groupId": "grp_shared_salary_deposit",
+      "eventIds": [
+        "adult_015",
+        "adult_080"
+      ],
+      "assetPath": "followup_20261031/img_adult_first_salary_001.png",
+      "sha256": "a1b8eb68850b089f510d6c8ececbd4884891d34a1894bf1051ca323766d89698",
+      "actualProducer": "정원률",
+      "semantic": {
+        "status": "PASS",
+        "reviewer": "신기훈 제출 검토 재사용",
+        "evidence": "Same shared salary scene fits both exclusive early/late salary events, without age or amount. Official preferred image connected for both; runtime validation pending.",
+        "source": "submissions/신기훈_공통샘플검수.csv; submissions/신기훈_보완파일럿검수.csv; PR #49 기존 path_hap_09 검토"
+      },
+      "visual": {
+        "status": "PASS",
+        "reviewer": "정원률 제출 화풍 검토 재사용",
+        "source": "submissions/정원률_파일럿_화풍검수_20261104.md; samples/20261103/manifest.json; revisions/20261103-round2/validation.json"
+      },
+      "crop": {
+        "status": "PASS",
+        "reviewer": "김선한 담당 Codex 실제 앱 캡처 직접 검토 2026-11-05",
+        "evidence": "adult_080도 임시 경로가 아닌 통합 후보본의 정식 povImageId로 공유 급여 그림을 표시함.",
+        "screen": "1080x2400",
+        "capturePath": "output\\runtime-crops\\adult_015_phone_scene.png",
+        "captureSha256": "5f95ff7e61d999aeba87bfc1d36433286f72c145130bb30e82bc924e2859ec2b"
+      },
+      "resolution": "Same shared salary scene fits both exclusive early/late salary events, without age or amount. Official preferred image connected for both; runtime validation pending."
+    },
+    "resolvedIssueEvidence": {
+      "adult_015": "Same shared salary scene fits both exclusive early/late salary events, without age or amount. Official preferred image connected for both; runtime validation pending.",
+      "adult_080": "Same shared salary scene fits both exclusive early/late salary events, without age or amount. Official preferred image connected for both; runtime validation pending."
+    }
+  },
+  {
+    "groupId": "grp_sh_adult_068",
+    "imageId": "img_pov_flu_morning_001",
+    "assetPath": "design_preview/week7/img_pov_flu_morning_001.png",
+    "sha256": "faeb5151de8c89893624a09475f0608207d774ff113e603d2f30d5d516dce328",
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "adult_068"
+    ],
+    "eventSourceHashes": {
+      "adult_068": "a0ae7dba130e0df248e3f3bb852ace5d8e8866e69e1815e757ec7a6a60b2d86d"
+    },
+    "semanticReviewer": "신기훈 제출 검토 재사용",
+    "visualReviewer": "정원률 제출 화풍 검토 재사용",
+    "cropReviewer": "김재겸 크롭 판정 재사용 (PNG 해시 동일)",
+    "reviewEvidence": {
+      "groupId": "grp_sh_adult_068",
+      "eventIds": [
+        "adult_068"
+      ],
+      "assetPath": "design_preview/week7/img_pov_flu_morning_001.png",
+      "sha256": "faeb5151de8c89893624a09475f0608207d774ff113e603d2f30d5d516dce328",
+      "actualProducer": "정원률",
+      "semantic": {
+        "status": "PASS",
+        "reviewer": "신기훈 제출 검토 재사용",
+        "evidence": "Same-hash revision includes phone, water, thermometer together centrally; meaning and crop PASS reused.",
+        "source": "submissions/신기훈_공통샘플검수.csv; submissions/신기훈_보완파일럿검수.csv; PR #49 기존 path_hap_09 검토"
+      },
+      "visual": {
+        "status": "PASS",
+        "reviewer": "정원률 제출 화풍 검토 재사용",
+        "source": "submissions/정원률_파일럿_화풍검수_20261104.md; samples/20261103/manifest.json; revisions/20261103-round2/validation.json"
+      },
+      "crop": {
+        "status": "PASS",
+        "reviewer": "김재겸 크롭 판정 재사용 (PNG 해시 동일)",
+        "source": "docs/assignments/20261031/submissions/김재겸_크롭검수_20261104.csv",
+        "note": "의미 있는 파일 변경 없음. 새 통합본의 실제 경로 픽셀 검사도 별도 수행."
+      },
+      "resolution": "Same-hash revision includes phone, water, thermometer together centrally; meaning and crop PASS reused."
+    },
+    "resolvedIssueEvidence": {
+      "adult_068": "Same-hash revision includes phone, water, thermometer together centrally; meaning and crop PASS reused."
+    }
+  },
+  {
+    "groupId": "layoff_locked_gate",
+    "imageId": "img_pov_layoff_door_001",
+    "assetPath": "design_preview/week7/img_pov_layoff_door_001.png",
+    "sha256": "71a0260b7bb0377f21d5ce5c17a6c33750c4ed36b173456dbf268f9159ed742e",
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "adult_070"
+    ],
+    "eventSourceHashes": {
+      "adult_070": "cca53572fd2791a39dd6a9f20cfb2c53ee8637e731630af7086d4f0bcef9e156"
+    },
+    "semanticReviewer": "신기훈 제출 검토 재사용",
+    "visualReviewer": "정원률 제출 화풍 검토 재사용",
+    "cropReviewer": "김재겸 크롭 판정 재사용 (PNG 해시 동일)",
+    "reviewEvidence": {
+      "groupId": "layoff_locked_gate",
+      "eventIds": [
+        "adult_070"
+      ],
+      "assetPath": "design_preview/week7/img_pov_layoff_door_001.png",
+      "sha256": "71a0260b7bb0377f21d5ce5c17a6c33750c4ed36b173456dbf268f9159ed742e",
+      "actualProducer": "정원률",
+      "semantic": {
+        "status": "PASS",
+        "reviewer": "신기훈 제출 검토 재사용",
+        "evidence": "Same-hash revision shows badge, rejection light, closed gate; meaning/crop PASS reused.",
+        "source": "submissions/신기훈_공통샘플검수.csv; submissions/신기훈_보완파일럿검수.csv; PR #49 기존 path_hap_09 검토"
+      },
+      "visual": {
+        "status": "PASS",
+        "reviewer": "정원률 제출 화풍 검토 재사용",
+        "source": "submissions/정원률_파일럿_화풍검수_20261104.md; samples/20261103/manifest.json; revisions/20261103-round2/validation.json"
+      },
+      "crop": {
+        "status": "PASS",
+        "reviewer": "김재겸 크롭 판정 재사용 (PNG 해시 동일)",
+        "source": "docs/assignments/20261031/submissions/김재겸_크롭검수_20261104.csv",
+        "note": "의미 있는 파일 변경 없음. 새 통합본의 실제 경로 픽셀 검사도 별도 수행."
+      },
+      "resolution": "Same-hash revision shows badge, rejection light, closed gate; meaning/crop PASS reused."
+    },
+    "resolvedIssueEvidence": {
+      "adult_070": "Same-hash revision shows badge, rejection light, closed gate; meaning/crop PASS reused."
+    }
+  },
+  {
+    "groupId": "teen_dizziness_nurse",
+    "imageId": "img_path_hea_09_001",
+    "assetPath": "week10/scenes/img_path_hea_09_001.png",
+    "sha256": "fd8fd6f57bf296e85c8064113b67f65c674cd33a6291336e517305a2fc30f84d",
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "path_hea_09"
+    ],
+    "eventSourceHashes": {
+      "path_hea_09": "91d227ea0b9d97fa3e0e9b2d5b20bb7d12deea5fc4a71fb119eb528ec0fffbec"
+    },
+    "semanticReviewer": "신기훈 제출 검토 재사용",
+    "visualReviewer": "정원률 제출 화풍 검토 재사용",
+    "cropReviewer": "김선한 담당 Codex 실제 앱 캡처 직접 검토 2026-11-05",
+    "reviewEvidence": {
+      "groupId": "teen_dizziness_nurse",
+      "eventIds": [
+        "path_hea_09"
+      ],
+      "assetPath": "week10/scenes/img_path_hea_09_001.png",
+      "sha256": "fd8fd6f57bf296e85c8064113b67f65c674cd33a6291336e517305a2fc30f84d",
+      "actualProducer": "정원률",
+      "semantic": {
+        "status": "PASS",
+        "reviewer": "신기훈 제출 검토 재사용",
+        "evidence": "Accept explicit scene-brief exception: prone viewpoint with own knees establishes first person; protagonist hand is not required by event text. School field, bed, water and curtain/medicine remain; teacher question is in prose. Kihoon meaning PASS and Wonryul retain-current-image recommendation supported. Do not add a fictitious hand requirement.",
+        "source": "submissions/신기훈_공통샘플검수.csv; submissions/신기훈_보완파일럿검수.csv; PR #49 기존 path_hap_09 검토"
+      },
+      "visual": {
+        "status": "PASS",
+        "reviewer": "정원률 제출 화풍 검토 재사용",
+        "source": "submissions/정원률_파일럿_화풍검수_20261104.md; samples/20261103/manifest.json; revisions/20261103-round2/validation.json"
+      },
+      "crop": {
+        "status": "PASS",
+        "reviewer": "김선한 담당 Codex 실제 앱 캡처 직접 검토 2026-11-05",
+        "evidence": "체육복 무릎·침상·물컵·학교 운동장·약병이 실제 앱에 남음. 손 필수 명세 예외를 명시적으로 수용.",
+        "screen": "1080x2400",
+        "capturePath": "output\\runtime-crops\\path_hea_09_phone_scene.png",
+        "captureSha256": "04e1b28e6044a9ee1da5e6243fd4318603667bfdc8488263f2bfbf789798c5eb"
+      },
+      "resolution": "Accept explicit scene-brief exception: prone viewpoint with own knees establishes first person; protagonist hand is not required by event text. School field, bed, water and curtain/medicine remain; teacher question is in prose. Kihoon meaning PASS and Wonryul retain-current-image recommendation supported. Do not add a fictitious hand requirement."
+    },
+    "resolvedIssueEvidence": {
+      "path_hea_09": "Accept explicit scene-brief exception: prone viewpoint with own knees establishes first person; protagonist hand is not required by event text. School field, bed, water and curtain/medicine remain; teacher question is in prose. Kihoon meaning PASS and Wonryul retain-current-image recommendation supported. Do not add a fictitious hand requirement."
+    }
+  },
+  {
+    "groupId": "grp_sh_path_luk_09",
+    "imageId": "img_path_luk_09_001",
+    "assetPath": "week10/scenes/img_path_luk_09_001.png",
+    "sha256": "2c49a65a54344fa134df732fe69ff3445f6d2f7e7430d27d34dc865e8fab46c5",
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "path_luk_09"
+    ],
+    "eventSourceHashes": {
+      "path_luk_09": "10a4ee240806a51300766be5389a649c4c176da88c93e956f0d05a564afbb5ae"
+    },
+    "semanticReviewer": "신기훈 제출 검토 재사용",
+    "visualReviewer": "정원률 제출 화풍 검토 재사용",
+    "cropReviewer": "김재겸 크롭 판정 재사용 (PNG 해시 동일)",
+    "reviewEvidence": {
+      "groupId": "grp_sh_path_luk_09",
+      "eventIds": [
+        "path_luk_09"
+      ],
+      "assetPath": "week10/scenes/img_path_luk_09_001.png",
+      "sha256": "2c49a65a54344fa134df732fe69ff3445f6d2f7e7430d27d34dc865e8fab46c5",
+      "actualProducer": "정원률",
+      "semantic": {
+        "status": "PASS",
+        "reviewer": "신기훈 제출 검토 재사용",
+        "evidence": "Two matching cola cans present, not three; same-hash meaning/crop PASS reused.",
+        "source": "submissions/신기훈_공통샘플검수.csv; submissions/신기훈_보완파일럿검수.csv; PR #49 기존 path_hap_09 검토"
+      },
+      "visual": {
+        "status": "PASS",
+        "reviewer": "정원률 제출 화풍 검토 재사용",
+        "source": "submissions/정원률_파일럿_화풍검수_20261104.md; samples/20261103/manifest.json; revisions/20261103-round2/validation.json"
+      },
+      "crop": {
+        "status": "PASS",
+        "reviewer": "김재겸 크롭 판정 재사용 (PNG 해시 동일)",
+        "source": "docs/assignments/20261031/submissions/김재겸_크롭검수_20261104.csv",
+        "note": "의미 있는 파일 변경 없음. 새 통합본의 실제 경로 픽셀 검사도 별도 수행."
+      },
+      "resolution": "Two matching cola cans present, not three; same-hash meaning/crop PASS reused."
+    },
+    "resolvedIssueEvidence": {
+      "path_luk_09": "Two matching cola cans present, not three; same-hash meaning/crop PASS reused."
+    }
+  },
+  {
+    "groupId": "grp_wr_path_int_10",
+    "imageId": "img_path_int_10_001",
+    "assetPath": "week10/scenes/img_path_int_10_001.png",
+    "sha256": "2310c99efc4329e19add5e8c43043960ffb8a9ee27627a90eb91b72ec6efb348",
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "path_int_10"
+    ],
+    "eventSourceHashes": {
+      "path_int_10": "eec445afdeccbd278c48f895f3d5e4d51870737fcdee63be51f962b1fedfa2ac"
+    },
+    "semanticReviewer": "신기훈 제출 검토 재사용",
+    "visualReviewer": "정원률 제출 화풍 검토 재사용",
+    "cropReviewer": "김재겸 크롭 판정 재사용 (PNG 해시 동일)",
+    "reviewEvidence": {
+      "groupId": "grp_wr_path_int_10",
+      "eventIds": [
+        "path_int_10"
+      ],
+      "assetPath": "week10/scenes/img_path_int_10_001.png",
+      "sha256": "2310c99efc4329e19add5e8c43043960ffb8a9ee27627a90eb91b72ec6efb348",
+      "actualProducer": "정원률",
+      "semantic": {
+        "status": "PASS",
+        "reviewer": "신기훈 제출 검토 재사용",
+        "evidence": "Same reviewed PNG: librarian and poster remain; shelves may crop. Prior meaning/style/crop records reused.",
+        "source": "submissions/신기훈_공통샘플검수.csv; submissions/신기훈_보완파일럿검수.csv; PR #49 기존 path_hap_09 검토"
+      },
+      "visual": {
+        "status": "PASS",
+        "reviewer": "정원률 제출 화풍 검토 재사용",
+        "source": "submissions/정원률_파일럿_화풍검수_20261104.md; samples/20261103/manifest.json; revisions/20261103-round2/validation.json"
+      },
+      "crop": {
+        "status": "PASS",
+        "reviewer": "김재겸 크롭 판정 재사용 (PNG 해시 동일)",
+        "source": "docs/assignments/20261031/submissions/김재겸_크롭검수_20261104.csv",
+        "note": "의미 있는 파일 변경 없음. 새 통합본의 실제 경로 픽셀 검사도 별도 수행."
+      },
+      "resolution": "Same reviewed PNG: librarian and poster remain; shelves may crop. Prior meaning/style/crop records reused."
+    },
+    "resolvedIssueEvidence": {
+      "path_int_10": "Same reviewed PNG: librarian and poster remain; shelves may crop. Prior meaning/style/crop records reused."
+    }
+  },
+  {
+    "groupId": "grp_wr_path_hap_09",
+    "imageId": "img_path_hap_09_001",
+    "assetPath": "week10/scenes/img_path_hap_09_001.png",
+    "sha256": "9a2bebf47ec0e7bb06b4b9d9d3c53306ec77a0c33934567d4b0cc3875381196a",
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "path_hap_09"
+    ],
+    "eventSourceHashes": {
+      "path_hap_09": "b201c87331c075dd19f7338edad6cb6121da3589643a190446b9864a8460ec48"
+    },
+    "semanticReviewer": "신기훈 제출 검토 재사용",
+    "visualReviewer": "정원률 제출 화풍 검토 재사용",
+    "cropReviewer": "김재겸 크롭 판정 재사용 (PNG 해시 동일)",
+    "reviewEvidence": {
+      "groupId": "grp_wr_path_hap_09",
+      "eventIds": [
+        "path_hap_09"
+      ],
+      "assetPath": "week10/scenes/img_path_hap_09_001.png",
+      "sha256": "9a2bebf47ec0e7bb06b4b9d9d3c53306ec77a0c33934567d4b0cc3875381196a",
+      "actualProducer": "정원률",
+      "semantic": {
+        "status": "PASS",
+        "reviewer": "신기훈 제출 검토 재사용",
+        "evidence": "Same reviewed PNG: unfinished still life, palette, lamp and nearby student remain; cropped right hand accepted in existing reviews.",
+        "source": "submissions/신기훈_공통샘플검수.csv; submissions/신기훈_보완파일럿검수.csv; PR #49 기존 path_hap_09 검토"
+      },
+      "visual": {
+        "status": "PASS",
+        "reviewer": "정원률 제출 화풍 검토 재사용",
+        "source": "submissions/정원률_파일럿_화풍검수_20261104.md; samples/20261103/manifest.json; revisions/20261103-round2/validation.json"
+      },
+      "crop": {
+        "status": "PASS",
+        "reviewer": "김재겸 크롭 판정 재사용 (PNG 해시 동일)",
+        "source": "docs/assignments/20261031/submissions/김재겸_크롭검수_20261104.csv",
+        "note": "의미 있는 파일 변경 없음. 새 통합본의 실제 경로 픽셀 검사도 별도 수행."
+      },
+      "resolution": "Same reviewed PNG: unfinished still life, palette, lamp and nearby student remain; cropped right hand accepted in existing reviews."
+    },
+    "resolvedIssueEvidence": {
+      "path_hap_09": "Same reviewed PNG: unfinished still life, palette, lamp and nearby student remain; cropped right hand accepted in existing reviews."
+    }
+  }
+]

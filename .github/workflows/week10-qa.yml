@@ -41,6 +41,7 @@ jobs:
           python scripts/audit_event_stat_classification.py
           python -m unittest discover -s scripts/tests -v
           python scripts/validate_week10.py --report build/week10/content_audit.json
+          python scripts/validate_followup_image_coverage.py --report build/week10/event_image_coverage.json
       - name: Ensure Android 35 packages
         run: |
           python - <<'PY'
@@ -63,6 +64,7 @@ jobs:
         if: ${{ github.event_name == 'workflow_dispatch' && inputs.final_acceptance }}
         run: |
           python scripts/validate_week10.py --report build/week10/content_audit.json --acceptance
+          python scripts/validate_followup_image_coverage.py --report build/week10/event_image_coverage.json --acceptance
           python scripts/summarize_week10.py --input build/week10/simulation --out build/week10/assessment --acceptance
       - name: Preserve QA evidence even on failure
         if: always()

@@ -1,0 +1,75 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-05",
+  "productionOwner": "신기훈",
+  "phase": "PILOT_SUBMITTED_VISUAL_AND_CROP_PASSED_SEMANTIC_PENDING_INDEPENDENT",
+  "sourceAssignment": {
+    "pr": 51,
+    "commit": "ef5ada0d",
+    "spec": "docs/assignments/20261031/이미지제작_착수명세.json",
+    "groupId": "proposal_or_transfer"
+  },
+  "assets": [
+    {
+      "groupId": "proposal_or_transfer",
+      "eventIds": [
+        "adult_032"
+      ],
+      "imageId": "img_adult_proposal_001",
+      "assetPath": "followup_20261031/img_adult_proposal_001.png",
+      "width": 1280,
+      "height": 960,
+      "format": "PNG",
+      "sha256": "31350b7bd373f80bd8719a6464c5b144725493a3f9455f739e9de8b88ac15374",
+      "generationMethod": "Figma AI generate_image (model gpt-image-2.5-flare) in the producer's own Figma team file; unmodified generated PNG downloaded from the Figma asset URL and copied into the project. 1448x1086 was requested; the model returned 1280x960 (exact 4:3), kept at native size without resizing.",
+      "prompt": "Use case: illustration-story. Asset: one opaque landscape 4:3 pixel art background for Android life game event adult_032 \"Marriage talk\". Create one coherent scene, NOT UI or collage.\nScene: first-person view of a young adult sitting on a sofa in a modest Korean apartment living room in the evening, warm floor-lamp light, dark window with evening city lights at the side. On a low wooden coffee table directly in front, an open laptop shows ONE wordless email card with a simple globe-and-airplane icon meaning an overseas work assignment offer; no letters, numbers or logos on the screen. At the same moment the partner, seated beside the protagonist, gently rests their hand on top of the protagonist's hand on the sofa cushion, as if having just asked \"shall we get married?\". Only the partner's hand, wrist and a plain sweater sleeve are visible; the partner's face is out of frame; the partner's gender is not identifiable (neutral hand, plain knit sleeve, no nail polish, no jewelry). The protagonist's own young-adult hand is under the partner's hand. Mood: earnest, quiet, undecided — the marriage question and the work email arrived in the same week.\nComposition: keep the laptop screen with the globe-and-airplane email card AND the two touching hands together inside the middle 30 percent of the image width (x 35% to 65%), stacked vertically: laptop screen upper-middle center, touching hands lower-middle center, so both survive a narrow portrait center crop. Sofa, lamp, window and room extend to the sides only as atmosphere. Natural first-person eye level looking slightly downward.\nStyle: crisp medium-density 16-bit pixel art, visible consistent square pixel grid, flat limited color steps, warm muted cream, ochre, wood brown, olive and dusty blue/teal; clear object silhouettes, restrained highlights, cozy narrative life-simulation game background.\nAvoid: any ring or ring box, bouquet, wedding dress, wedding hall, champagne, kneeling, suitcase, passport, boarding pass, airport, packed boxes, readable letters, numerals, pseudo-writing, logos, watermarks, game interface, health bars, buttons, the protagonist's face, reflections, split screen, blur, gradients, dithering, photorealism, 3D. This is BEFORE any choice is made.",
+      "scene": {
+        "place": "집 거실",
+        "mainAction": "연인의 결혼 제안과 해외 파견 메일을 마주한다",
+        "requiredObjects": "연인의 손, 해외 파견 제안 메일이 열린 노트북; 반지 상자 없음",
+        "peopleAndAge": "주인공과 연인 한 명; 상대 성별 고정 없음",
+        "timeOfDay": "저녁",
+        "perspective": "FIRST_PERSON"
+      },
+      "routedIntoEvents": false,
+      "selfReview": {
+        "status": "PASS_SELF_QA_PENDING_TEAM",
+        "notes": [
+          "본문: 연인 \"{nameCall}, 우리… 결혼할까?\" 같은 주, 회사에서 \"2년 해외 파견 가능하신가요?\" 메일. 그림은 저녁 거실 소파 1인칭으로, 노트북에 봉투·지구·비행기 아이콘의 글자 없는 메일 카드가 열려 있고 연인의 손이 내 손 위에 얹혀 있다",
+          "명세 수정 지시(반지 상자 제외, 연인 성별 고정 안 함)를 지켰다. 연인은 니트 소매와 손만 보이고 얼굴이 없다",
+          "결혼한다·파견부터 다녀온다·같이 파견 가자 세 선택 어느 쪽도 보이지 않는다. 반지·꽃·예식장·여행 가방·여권·공항이 없다",
+          "주인공 얼굴, 읽을 글자, 숫자, 로고, 게임 UI가 없다",
+          "메모: 창밖 야경 오른쪽에 탑 실루엣이 있다(글자 없음). 특정 장소 암시가 문제면 정원률 님 판단",
+          "메모: 연인 손에 핏줄이 약간 보이지만 나이·성별을 단정할 정도는 아니다"
+        ]
+      },
+      "semanticReview": {
+        "status": "SELF_ONLY_PENDING_INDEPENDENT",
+        "note": "제작자가 의미 담당이기도 해서 자체 의미 검수만 했다. 독립 의미 검토가 남아 있으며, 자체 검수를 팀 승인으로 세지 않는다"
+      },
+      "visualReview": {
+        "status": "PASS",
+        "reviewer": "정원률",
+        "date": "2026-11-04",
+        "evidence": [
+          "PR #49 댓글 6624867674: \"화풍 좋아용 창 밖 풍경 좋고 손도 확인했습니당\"",
+          "PR #50 5793205 정원률_파일럿_화풍검수_20261104.md: 통과 · 기존 의견 재사용 (SHA-256 31350b7b… 일치)"
+        ]
+      },
+      "cropReview": {
+        "status": "PASS",
+        "reviewer": "김재겸",
+        "date": "2026-11-04",
+        "evidence": "PR #47 9588596 김재겸_크롭검수_20261104.csv: CROP_OK, API 36 에뮬레이터 1080x2400, 보이는 폭 x 0.331~0.669, 캡처 SHA-256 6ceded62fbb387f598575dbe504471695278d77b03980a245d2a91016ad730e5",
+        "selfSimulation": "PIL 가운데 크롭 재현(x 424~856)과 결과 일치"
+      }
+    }
+  ],
+  "counts": {
+    "assigned": 69,
+    "ownPngSubmitted": 1,
+    "unproduced": 68,
+    "finalAccepted": 0
+  },
+  "bulkProductionGate": "공통 샘플과 파일럿의 팀 교차 검토 뒤 나머지 68장 제작. 팀 검토자 칸을 대신 채우지 않는다."
+}

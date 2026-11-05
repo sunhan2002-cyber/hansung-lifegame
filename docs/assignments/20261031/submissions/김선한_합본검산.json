@@ -1,0 +1,77 @@
+{
+  "asOf": "2026-11-03",
+  "phase": "PRODUCTION_ASSIGNED_PILOTS_OPEN",
+  "baselineCommit": "a9237d8d4460add4893fa371ef9528557b909425",
+  "classifiedEvents": 352,
+  "ownClassifiedEvents": 71,
+  "uniqueProductionGroups": 351,
+  "counts": {
+    "events": 352,
+    "groups": 351,
+    "newImages": 334,
+    "pendingRevisions": 12,
+    "alreadyDeliveredRevisions": 2,
+    "unchangedReuse": 3,
+    "totalProductionIncludingDelivered": 348,
+    "remainingProduction": 346,
+    "availableImagesIncludingUnmergedDeliveries": 5
+  },
+  "quotas": [
+    {
+      "owner": "김선한",
+      "total": 70,
+      "delivered": 0,
+      "remaining": 70,
+      "pilotEventId": "adult_001"
+    },
+    {
+      "owner": "김우영",
+      "total": 70,
+      "delivered": 0,
+      "remaining": 70,
+      "pilotEventId": "adult_002"
+    },
+    {
+      "owner": "김재겸",
+      "total": 70,
+      "delivered": 0,
+      "remaining": 70,
+      "pilotEventId": "adult_026"
+    },
+    {
+      "owner": "신기훈",
+      "total": 69,
+      "delivered": 0,
+      "remaining": 69,
+      "pilotEventId": "adult_032"
+    },
+    {
+      "owner": "정원률",
+      "total": 69,
+      "delivered": 2,
+      "remaining": 67,
+      "pilotEventId": "path_hea_01"
+    }
+  ],
+  "sourceSubmissions": {
+    "김재겸": {
+      "commit": "4e055c74d80dab8f8b542620e40919922de0429d",
+      "file": "docs/assignments/20261031/submissions/김재겸_분류.csv"
+    },
+    "김우영": {
+      "commit": "97d150ea5852e2eaf8071e327462a52effda9402",
+      "file": "docs/assignments/20261031/submissions/김우영_사건이미지_분류.csv"
+    },
+    "신기훈": {
+      "commit": "afd2f6bf4e3d7bc4229027b928fc96635ddc1d00",
+      "file": "docs/assignments/20261031/submissions/신기훈_분류.csv"
+    },
+    "정원률": {
+      "commit": "c81208cc4dd6e4fd45e979b950d6fe28398a2e32",
+      "file": "docs/assignments/20261031/submissions/정원률_분류.csv"
+    }
+  },
+  "semanticReviewStatus": "352건 의미 검토 회수, FIX 53건·REPLACE 5건 제작 지시 반영",
+  "productionGate": "INDIVIDUAL_PILOTS_OPEN_BULK_AFTER_COMMON_SAMPLE_REVIEW",
+  "finalImageAcceptance": "349_EVENTS_PENDING_IN_CURRENT_MAIN_BASED_BRANCH"
+}

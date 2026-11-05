@@ -1,0 +1,289 @@
+{
+  "date": "2026-11-05",
+  "assets": [
+    {
+      "eventId": "adult_006",
+      "prompt": "Use case: illustration-story. Produce one opaque exact 4:3 landscape PNG life-game event background, adult_006 'Meeting someone again on the street'. FIRST PERSON adult viewpoint standing on a pedestrian street, encountering a previously familiar adult who has also recognized the viewer and paused. The other person stands facing viewer at conversational distance in central x=40..60%, quietly surprised recognition and eye contact, NO touching, NO exchanged phone, NO established relationship, no marriage, no date outcome. Include viewer's stopped shoes at bottom center and the other person's shoes/stance clearly paused, simple neutral street side context; daytime is staging, not a narrative claim. Keep whole recognizable person and stopped-feet cues within central x=34..66% for narrow phone portrait center crop. Match warm muted wood/cream/olive/dusty-blue medium-density crisp pixel-art life game, square clean pixel edges, limited flat shade steps, grounded proportions. No protagonist face/reflection, readable text, letters, numerals, logos, speech balloons, game UI, photo realism, blur, framing or watermark. Choose unassuming gender-neutral adult clothing, no overt romantic accessories. Before the player chooses whether to ask for phone number, leave or walk along. Actual PNG original for Android asset, not a mockup.",
+      "generatedPath": "C:\\Users\\hansung\\.codex\\generated_images\\01a09e37-a516-77f3-91c6-bc47b74f8b3d\\exec-001d8706-caee-4aa4-ba4f-7c4acbaa1a49.png",
+      "groupId": "grp_sh_adult_006",
+      "assignmentOwner": "김선한",
+      "actualProducer": "김선한 담당 Codex (사용자 요청으로 대행)",
+      "assetPath": "followup_20261031/img_adult_ideal_type_star_001.png",
+      "sha256": "312546be4f6977bf9728ffebabf620629ccd7aa7460d23ae486aaa39c3dfca3f",
+      "width": 1448,
+      "height": 1086,
+      "generationMethod": "built-in image_gen; original PNG copied without resizing",
+      "status": "STAGED_NOT_ROUTED_PENDING_REVIEW",
+      "selfReview": {
+        "groupId": "grp_sh_adult_006",
+        "eventIds": [
+          "adult_006"
+        ],
+        "assetPath": "followup_20261031/img_adult_ideal_type_star_001.png",
+        "sha256": "312546be4f6977bf9728ffebabf620629ccd7aa7460d23ae486aaa39c3dfca3f",
+        "actualProducer": "김선한 담당 Codex (사용자 요청으로 대행)",
+        "semantic": {
+          "status": "PASS",
+          "reviewer": "김선한 담당 Codex 생성 후 본문·원본 대조 자체 검토",
+          "evidence": "상대가 길에서 멈추어 알아보는 상황, 주인공 발이 아래에 있고 번호 교환·접촉·연애 결과 없음. 상대 의상/외형은 본문 미지정 연출."
+        },
+        "visual": {
+          "status": "PASS",
+          "reviewer": "김선한 담당 Codex 원본 직접 자체 검토",
+          "evidence": "불투명 4:3, 도트풍, 무문자, 1인칭. 실제 앱 가독성 별도 검토."
+        },
+        "crop": {
+          "status": "PENDING_RUNTIME",
+          "reviewer": "김선한 담당 Codex"
+        },
+        "resolution": "상대가 길에서 멈추어 알아보는 상황, 주인공 발이 아래에 있고 번호 교환·접촉·연애 결과 없음. 상대 의상/외형은 본문 미지정 연출."
+      },
+      "stagingPath": "docs/assignments/20261031/submissions/pending_images_20261105/img_adult_ideal_type_star_001.png"
+    },
+    {
+      "eventId": "adult_011",
+      "prompt": "Use case: illustration-story. Make one exact landscape 4:3 opaque PNG, first-person cozy Korean life-game medium-density crisp pixel-art scene adult_011 'Sixteen-year-old Kong'. Current story: mother contacts adult protagonist living separately to say elderly childhood pet dog Kong has difficulty walking and asks for a weekend visit. The player has NOT chosen to visit, postpone, or video call. Show protagonist seated in their modest apartment living-room sofa holding smartphone, with a small wordless incoming message icon ABOVE a large still photo of an elderly small cream/tan mixed-breed dog with softly graying muzzle lying awake calmly on mother's home cushion. Dog exists ONLY inside the phone photograph; no actual dog or mother in protagonist room; no active video call controls, no veterinary procedure, no death/injury or chosen outcome. Keep phone ENTIRELY inside central x=39..61% and y=25..74%, centered foreground hand below, couch fabric surrounding. A plain domestic room as side context, warm muted cream/wood/olive/dusty blue palette with coherent visible square pixel edges and limited flat shade steps. Dog appearance is a staging choice to remain consistent with later child_014 and teen_018 assets. No face/reflection of protagonist, no readable writing, letters, digits, logos, watermark, blur, photorealism, game UI. Phone icons only, no text. Before choice, quiet concern, not catastrophe. Output actual PNG.",
+      "generatedPath": "C:\\Users\\hansung\\.codex\\generated_images\\01a09e37-a516-77f3-91c6-bc47b74f8b3d\\exec-2da70269-a5fb-4f65-8ef6-6132aaf08415.png",
+      "groupId": "grp_sh_adult_011",
+      "assignmentOwner": "김선한",
+      "actualProducer": "김선한 담당 Codex (사용자 요청으로 대행)",
+      "assetPath": "followup_20261031/img_adult_old_dog_001.png",
+      "sha256": "f90caa10043ead64a002ce742dd7ca5140a3b294945f102b95e9d9938b591d3d",
+      "width": 1448,
+      "height": 1086,
+      "generationMethod": "built-in image_gen; original PNG copied without resizing",
+      "status": "STAGED_NOT_ROUTED_PENDING_REVIEW",
+      "selfReview": {
+        "groupId": "grp_sh_adult_011",
+        "eventIds": [
+          "adult_011"
+        ],
+        "assetPath": "followup_20261031/img_adult_old_dog_001.png",
+        "sha256": "f90caa10043ead64a002ce742dd7ca5140a3b294945f102b95e9d9938b591d3d",
+        "actualProducer": "김선한 담당 Codex (사용자 요청으로 대행)",
+        "semantic": {
+          "status": "PASS",
+          "reviewer": "김선한 담당 Codex 생성 후 본문·원본 대조 자체 검토",
+          "evidence": "독립 거실에서 엄마 연락과 휴대폰 속 노령견 정지 사진을 보는 장면. 강아지 실물·진료·사망·영상 통화 선택 없음. 크림색 털·연갈색 귀는 향후 동일 반려견 일관성 연출 기준."
+        },
+        "visual": {
+          "status": "PASS",
+          "reviewer": "김선한 담당 Codex 원본 직접 자체 검토",
+          "evidence": "불투명 4:3, 도트풍, 무문자, 1인칭. 실제 앱 가독성 별도 검토."
+        },
+        "crop": {
+          "status": "PENDING_RUNTIME",
+          "reviewer": "김선한 담당 Codex"
+        },
+        "resolution": "독립 거실에서 엄마 연락과 휴대폰 속 노령견 정지 사진을 보는 장면. 강아지 실물·진료·사망·영상 통화 선택 없음. 크림색 털·연갈색 귀는 향후 동일 반려견 일관성 연출 기준."
+      },
+      "stagingPath": "docs/assignments/20261031/submissions/pending_images_20261105/img_adult_old_dog_001.png"
+    },
+    {
+      "eventId": "adult_016",
+      "prompt": "Use case: precise-object-edit. Redesign composition of this first-person pixel-art company barbecue dinner scene so ALL TWO coworkers and EXACTLY THREE empty chairs are in narrow CENTER THIRD x=34..66%. Landscape 4:3 canvas preserved. Place long narrow table receding STRAIGHT vertically through center, NOT diagonally. View from standing at near short end. Empty chair 1 at near end CENTER BOTTOM. Empty chair 2 farther up LEFT side of table, alongside older team leader; empty chair 3 farther up RIGHT side beside younger coworker. Make scene objects smaller and zoom OUT enough that both coworkers heads at x=43% and 57% and all three empty chair seats x=39..61% lie within middle third. Table entire width x=40..60%. Far-side door visible behind table within center. Expand side restaurant walls as peripheral context. Nothing should rely on side thirds. No extra foreground knees suggesting already seated; viewer is standing and has not chosen seat. Keep warm wood Korean barbecue restaurant, central tabletop grill, uncooked pork on plate, clean muted pixel art, no writing/UI/labels/number badges/logos. Exactly 3 empty seats at this table. No choice made.",
+      "generatedPath": "C:\\Users\\hansung\\.codex\\generated_images\\01a09e37-a516-77f3-91c6-bc47b74f8b3d\\exec-ac16430a-cb7c-4534-8f92-a52fc05ef9e1.png",
+      "groupId": "grp_sh_adult_016",
+      "assignmentOwner": "김선한",
+      "actualProducer": "김선한 담당 Codex (사용자 요청으로 대행)",
+      "assetPath": "followup_20261031/img_adult_dinner_seats_001.png",
+      "sha256": "64f42dff8fe6f853e46117db5739e5d01568e2d17a82aa8020f6ad523b344ec4",
+      "width": 1448,
+      "height": 1086,
+      "generationMethod": "built-in image_gen; original PNG copied without resizing",
+      "status": "STAGED_NOT_ROUTED_PENDING_REVIEW",
+      "selfReview": {
+        "groupId": "grp_sh_adult_016",
+        "eventIds": [
+          "adult_016"
+        ],
+        "assetPath": "followup_20261031/img_adult_dinner_seats_001.png",
+        "sha256": "64f42dff8fe6f853e46117db5739e5d01568e2d17a82aa8020f6ad523b344ec4",
+        "actualProducer": "김선한 담당 Codex (사용자 요청으로 대행)",
+        "semantic": {
+          "status": "PENDING",
+          "reviewer": "김선한 담당 Codex 생성 후 본문·원본 대조 자체 검토",
+          "evidence": "중앙 테이블과 동료 두 명, 빈자리 세 개가 보임. 자리 선택 전 서 있는 시점. 문과 자리의 상대 위치 및 세로 크롭을 추가 검토할 때까지 승인 보류."
+        },
+        "visual": {
+          "status": "PASS",
+          "reviewer": "김선한 담당 Codex 원본 직접 자체 검토",
+          "evidence": "불투명 4:3, 도트풍, 무문자, 1인칭. 실제 앱 가독성 별도 검토."
+        },
+        "crop": {
+          "status": "PENDING_RUNTIME",
+          "reviewer": "김선한 담당 Codex"
+        },
+        "resolution": "중앙 테이블과 동료 두 명, 빈자리 세 개가 보임. 자리 선택 전 서 있는 시점. 문과 자리의 상대 위치 및 세로 크롭을 추가 검토할 때까지 승인 보류."
+      },
+      "stagingPath": "docs/assignments/20261031/submissions/pending_images_20261105/img_adult_dinner_seats_001.png"
+    },
+    {
+      "eventId": "adult_021",
+      "prompt": "Use case: precise-object-edit. Correct perspective in this exact 4:3 pixel-art scene. REMOVE the entire brown-haired head and the hand gripping that head from the left foreground. Replace that whole area with ordinary rumpled blue-and-cream bedding. There must be NO visible human head, hair, face or reflection anywhere outside the tiny anonymous dancing thumbnail on the phone. Keep the phone in same central position with same dancing thumbnail, right hand holding it, ringing alarm above, morning bedroom, colors and clean pixel style. First person reclining in bed: only one right hand holding phone and blanket over knees visible. Remove floating headache zigzags outside phone. Keep phone and alarm within middle x34..66% so both survive phone crop. No writing/numerals/UI overlays; preserve exact four-to-three ratio.",
+      "generatedPath": "C:\\Users\\hansung\\.codex\\generated_images\\01a09e37-a516-77f3-91c6-bc47b74f8b3d\\exec-520fe9b8-943a-4ce0-a2db-140000d306aa.png",
+      "previousPrompt": "Use case: illustration-story. Create ONE opaque exact landscape 4:3 PNG scene for a Korean narrative life game. Event: adult_021 회식 다음 날 아침.\nCurrent story (not text to render): 알람이 울린다. 8시 10분. 머리가 깨질 것 같다. 단톡방엔 어젯밤 내가 팀장님과 춤추는 영상이 올라와 있다.\nReviewed scene specification: {\"place\":\"회식 다음 날 침실\",\"mainAction\":\"알람과 단톡방 영상을 보고 당황\",\"requiredObjects\":\"알람, 휴대폰 영상 썸네일, 침구\",\"peopleAndAge\":\"주인공; 영상 속 팀장은 식별 불필요\",\"timeOfDay\":\"아침 8시 10분\",\"perspective\":\"FIRST_PERSON\"}\nConstraints from semantic review: adult_021: 지각 확정·해고·출근 완료를 그리지 않음. 영상은 무문자 춤 실루엣 정도\nThe player has NOT yet chosen: 숙취해소제 두 병을 마시고 출근한다. / 반차를 쓴다. / 영상에 '좋아요'를 누른다.. Do not depict these future actions or their outcomes.\nFirst-person protagonist eye-level view. Only other people explicitly in scene; no protagonist face or reflection. Main action and ALL required objects must remain entirely in central vertical x=34..66% (phone portrait CENTER CROP). Make key objects compact and vertically stacked, with side surroundings as atmosphere only. Match crisp medium-density square pixel art, restrained warm cream/wood-brown/olive/dusty-blue palette, flat limited shade steps, natural proportions. No readable text, letters, numbers, logos, fake writing, speech bubbles, game UI, watermark, photo realism or blur. UI belongs only inside real objects such as phone screens and uses wordless pictograms. Do not use image title to override current event text. Output actual PNG.\nThe phone shows a tiny anonymous two-person dancing silhouette VIDEO THUMBNAIL with play triangle, not identifiable protagonist face, and a simple ringing alarm icon. No medication bottles or thumbs-up selected. Morning bedding visible.",
+      "previousGeneratedPath": "C:\\Users\\hansung\\.codex\\generated_images\\01a09e37-a516-77f3-91c6-bc47b74f8b3d\\exec-18a8f10d-32ec-4283-8fd9-bba8761317e1.png",
+      "groupId": "grp_sh_adult_021",
+      "assignmentOwner": "김선한",
+      "actualProducer": "김선한 담당 Codex (사용자 요청으로 대행)",
+      "assetPath": "followup_20261031/img_adult_hangover_001.png",
+      "sha256": "df9702608d03ef90b99b7cb4329b1d17b3c195f0544ac2b66e856fcb263a635f",
+      "width": 1448,
+      "height": 1086,
+      "generationMethod": "built-in image_gen; original PNG copied without resizing",
+      "status": "STAGED_NOT_ROUTED_PENDING_REVIEW",
+      "selfReview": {
+        "groupId": "grp_sh_adult_021",
+        "eventIds": [
+          "adult_021"
+        ],
+        "assetPath": "followup_20261031/img_adult_hangover_001.png",
+        "sha256": "df9702608d03ef90b99b7cb4329b1d17b3c195f0544ac2b66e856fcb263a635f",
+        "actualProducer": "김선한 담당 Codex (사용자 요청으로 대행)",
+        "semantic": {
+          "status": "PASS",
+          "reviewer": "김선한 담당 Codex 생성 후 본문·원본 대조 자체 검토",
+          "evidence": "침구 안에서 알람과 단톡방 춤 영상 썸네일 확인. 1차 잘못 생성된 뒤통수 제거 후 1인칭 손·이불만 유지. 숙취약·반차·좋아요 선택 없음."
+        },
+        "visual": {
+          "status": "PASS",
+          "reviewer": "김선한 담당 Codex 원본 직접 자체 검토",
+          "evidence": "불투명 4:3, 도트풍, 무문자, 1인칭. 실제 앱 가독성 별도 검토."
+        },
+        "crop": {
+          "status": "PENDING_RUNTIME",
+          "reviewer": "김선한 담당 Codex"
+        },
+        "resolution": "침구 안에서 알람과 단톡방 춤 영상 썸네일 확인. 1차 잘못 생성된 뒤통수 제거 후 1인칭 손·이불만 유지. 숙취약·반차·좋아요 선택 없음."
+      },
+      "stagingPath": "docs/assignments/20261031/submissions/pending_images_20261105/img_adult_hangover_001.png"
+    },
+    {
+      "eventId": "adult_031",
+      "prompt": "Use case: illustration-story. Create ONE opaque exact landscape 4:3 PNG scene for a Korean narrative life game. Event: adult_031 결혼식 사회 부탁.\nCurrent story (not text to render): 친구: \"{nameCall}, 네 목소리면 마이크도 필요 없잖아. 내 결혼식 사회 좀.\" 하객은 200명이다.\nReviewed scene specification: {\"place\":\"친구와 만난 식당 테이블(연출 확정)\",\"mainAction\":\"결혼식 전에 친구에게 사회를 부탁받음\",\"requiredObjects\":\"청첩장, 식당 테이블; 무대·마이크 앞 구도는 제외\",\"peopleAndAge\":\"친구와 주인공; 하객은 아직 등장시키지 않음\",\"timeOfDay\":\"미지정\",\"perspective\":\"FIRST_PERSON\"}\nConstraints from semantic review: adult_031: 200명 하객 앞에서 이미 사회에 성공한 장면 금지 / 제작 명세는 2차 의미·크롭 검토 반영본을 따른다.\nThe player has NOT yet chosen: 수락한다. / \"축의금을 더 낼게.\" / 사회는 보되 대본을 안 쓴다.. Do not depict these future actions or their outcomes.\nFirst-person protagonist eye-level view. Only other people explicitly in scene; no protagonist face or reflection. Main action and ALL required objects must remain entirely in central vertical x=34..66% (phone portrait CENTER CROP). Make key objects compact and vertically stacked, with side surroundings as atmosphere only. Match crisp medium-density square pixel art, restrained warm cream/wood-brown/olive/dusty-blue palette, flat limited shade steps, natural proportions. No readable text, letters, numbers, logos, fake writing, speech bubbles, game UI, watermark, photo realism or blur. UI belongs only inside real objects such as phone screens and uses wordless pictograms. Do not use image title to override current event text. Output actual PNG.\n",
+      "generatedPath": "C:\\Users\\hansung\\.codex\\generated_images\\01a09e37-a516-77f3-91c6-bc47b74f8b3d\\exec-bed8f182-ce79-4fb3-b661-0d3de5103cd4.png",
+      "groupId": "grp_sh_adult_031",
+      "assignmentOwner": "김선한",
+      "actualProducer": "김선한 담당 Codex (사용자 요청으로 대행)",
+      "assetPath": "followup_20261031/img_adult_wedding_mc_001.png",
+      "sha256": "fa85906aa88b0d9103ab487ea8891658d06486aba4e2c48f0fe0c56cb3e84d32",
+      "width": 1448,
+      "height": 1086,
+      "generationMethod": "built-in image_gen; original PNG copied without resizing",
+      "status": "STAGED_NOT_ROUTED_PENDING_REVIEW",
+      "selfReview": {
+        "groupId": "grp_sh_adult_031",
+        "eventIds": [
+          "adult_031"
+        ],
+        "assetPath": "followup_20261031/img_adult_wedding_mc_001.png",
+        "sha256": "fa85906aa88b0d9103ab487ea8891658d06486aba4e2c48f0fe0c56cb3e84d32",
+        "actualProducer": "김선한 담당 Codex (사용자 요청으로 대행)",
+        "semantic": {
+          "status": "PASS",
+          "reviewer": "김선한 담당 Codex 생성 후 본문·원본 대조 자체 검토",
+          "evidence": "식당에서 친구가 청첩장을 내밀며 부탁하는 장면. 실제 예식장·마이크·사회 진행 없음. 청첩장 속 결혼 그림은 친구의 예정 행사 안내이며 주인공 결과가 아님."
+        },
+        "visual": {
+          "status": "PASS",
+          "reviewer": "김선한 담당 Codex 원본 직접 자체 검토",
+          "evidence": "불투명 4:3, 도트풍, 무문자, 1인칭. 실제 앱 가독성 별도 검토."
+        },
+        "crop": {
+          "status": "PENDING_RUNTIME",
+          "reviewer": "김선한 담당 Codex"
+        },
+        "resolution": "식당에서 친구가 청첩장을 내밀며 부탁하는 장면. 실제 예식장·마이크·사회 진행 없음. 청첩장 속 결혼 그림은 친구의 예정 행사 안내이며 주인공 결과가 아님."
+      },
+      "stagingPath": "docs/assignments/20261031/submissions/pending_images_20261105/img_adult_wedding_mc_001.png"
+    },
+    {
+      "eventId": "adult_036",
+      "prompt": "Use case: illustration-story. Create ONE opaque exact landscape 4:3 PNG scene for a Korean narrative life game. Event: adult_036 20년 만의 타임캡슐.\nCurrent story (not text to render): 모르는 번호로 문자가 왔다. '{nameCall}, 나 지호야. 우리 놀이터 기억나? 이번 주말이 딱 20년이야.'\nReviewed scene specification: {\"place\":\"집 방 책상(연출 확정)\",\"mainAction\":\"옛 친구 지호의 주말 약속 문자를 읽음\",\"requiredObjects\":\"지호에게서 온 연락 알림의 휴대폰, 책상; 놀이터 회상 없음\",\"peopleAndAge\":\"주인공, 지호는 연락\",\"timeOfDay\":\"미지정\",\"perspective\":\"FIRST_PERSON\"}\nConstraints from semantic review: adult_036: 아직 타임캡슐을 파거나 약속 장소에 도착한 것으로 확정하지 않음 / 제작 명세는 2차 의미·크롭 검토 반영본을 따른다.\nThe player has NOT yet chosen: 주말에 놀이터로 간다. / \"요즘 바빠서… 다음에 보자.\". Do not depict these future actions or their outcomes.\nFirst-person protagonist eye-level view. Only other people explicitly in scene; no protagonist face or reflection. Main action and ALL required objects must remain entirely in central vertical x=34..66% (phone portrait CENTER CROP). Make key objects compact and vertically stacked, with side surroundings as atmosphere only. Match crisp medium-density square pixel art, restrained warm cream/wood-brown/olive/dusty-blue palette, flat limited shade steps, natural proportions. No readable text, letters, numbers, logos, fake writing, speech bubbles, game UI, watermark, photo realism or blur. UI belongs only inside real objects such as phone screens and uses wordless pictograms. Do not use image title to override current event text. Output actual PNG.\n",
+      "generatedPath": "C:\\Users\\hansung\\.codex\\generated_images\\01a09e37-a516-77f3-91c6-bc47b74f8b3d\\exec-7daeaabd-b725-4ecc-ae81-740f47aff01e.png",
+      "groupId": "grp_sh_adult_036",
+      "assignmentOwner": "김선한",
+      "actualProducer": "김선한 담당 Codex (사용자 요청으로 대행)",
+      "assetPath": "followup_20261031/img_adult_time_capsule_001.png",
+      "sha256": "440d2a4755ac8dfc8bab8c686699a0c390d4f520e685417e8c2d7fd191761ca1",
+      "width": 1448,
+      "height": 1086,
+      "generationMethod": "built-in image_gen; original PNG copied without resizing",
+      "status": "STAGED_NOT_ROUTED_PENDING_REVIEW",
+      "selfReview": {
+        "groupId": "grp_sh_adult_036",
+        "eventIds": [
+          "adult_036"
+        ],
+        "assetPath": "followup_20261031/img_adult_time_capsule_001.png",
+        "sha256": "440d2a4755ac8dfc8bab8c686699a0c390d4f520e685417e8c2d7fd191761ca1",
+        "actualProducer": "김선한 담당 Codex (사용자 요청으로 대행)",
+        "semantic": {
+          "status": "PASS",
+          "reviewer": "김선한 담당 Codex 생성 후 본문·원본 대조 자체 검토",
+          "evidence": "집 책상에서 옛 친구의 문자를 읽는 장면. 인사·놀이터·달력 아이콘은 연락 내용 표현이며 실제 놀이터 이동·타임캡슐 발굴·재회 결과 없음."
+        },
+        "visual": {
+          "status": "PASS",
+          "reviewer": "김선한 담당 Codex 원본 직접 자체 검토",
+          "evidence": "불투명 4:3, 도트풍, 무문자, 1인칭. 실제 앱 가독성 별도 검토."
+        },
+        "crop": {
+          "status": "PENDING_RUNTIME",
+          "reviewer": "김선한 담당 Codex"
+        },
+        "resolution": "집 책상에서 옛 친구의 문자를 읽는 장면. 인사·놀이터·달력 아이콘은 연락 내용 표현이며 실제 놀이터 이동·타임캡슐 발굴·재회 결과 없음."
+      },
+      "stagingPath": "docs/assignments/20261031/submissions/pending_images_20261105/img_adult_time_capsule_001.png"
+    },
+    {
+      "eventId": "adult_046",
+      "prompt": "Use case: illustration-story. One opaque exact 4:3 landscape PNG for Android Korean life-game. Event adult_046 수상한 전화. Current text (do not render words): \"고객님 계좌가 범죄에 연루되었습니다.\" 수화기 너머 목소리가 너무 진지하다.. Locked staging: {\"place\":\"집 거실 소파(연출 확정)\",\"mainAction\":\"계좌 연루라는 전화를 의심하며 들음\",\"requiredObjects\":\"통화 중 휴대폰, 소파; 은행 앱·송금 화면 없음\",\"peopleAndAge\":\"주인공; 발신자는 화면 밖\",\"timeOfDay\":\"미지정\",\"perspective\":\"FIRST_PERSON\"}. Rules: adult_046: 송금·체포·계좌 잠금 결과를 확정하지 않음 / 제작 명세는 2차 의미·크롭 검토 반영본을 따른다.. UNCHOSEN actions: 바로 끊고 은행에 확인한다. / 대화를 질질 끌어 본다. / 부모님께도 바로 알린다. — don't show any chosen outcome. First-person with protagonist hands ONLY, NEVER protagonist head/hair/face/reflection. Scene objects and other people only where specified. All story-essential items fully within central x=34..66% for narrow portrait CENTER CROP. Compact vertical arrangement, decorative sides. Match warm muted medium-density clean square pixel art, wood/cream/olive/dusty-blue, limited flat shade steps. No readable writing/numerals/fake letters, logos, game UI, watermarks, blur, photographic texture. Real phones can show simple wordless icons. No split screen or diagram.\nOnly an ACTIVE audio phone call with anonymous silhouette and handset icon, not bank app, transfer, police, handcuffs. Person seated on couch looking at call screen; caller offscreen.\n",
+      "generatedPath": "C:\\Users\\hansung\\.codex\\generated_images\\01a09e37-a516-77f3-91c6-bc47b74f8b3d\\exec-204780d0-e699-4dd9-999b-9005a82299e3.png",
+      "groupId": "grp_sh_adult_046",
+      "assignmentOwner": "김선한",
+      "actualProducer": "김선한 담당 Codex (사용자 요청으로 대행)",
+      "assetPath": "followup_20261031/img_adult_scam_call_001.png",
+      "sha256": "028673d112d499ea54531189b0034fbe6c3e964ca45ac280ab7d5965898fa925",
+      "width": 1448,
+      "height": 1086,
+      "generationMethod": "built-in image_gen; original PNG copied without resizing",
+      "status": "STAGED_NOT_ROUTED_PENDING_REVIEW",
+      "stagingPath": "docs/assignments/20261031/submissions/pending_images_20261105/img_adult_scam_call_001.png"
+    },
+    {
+      "eventId": "adult_051",
+      "prompt": "Use case: illustration-story. One opaque exact 4:3 landscape PNG for Android Korean life-game. Event adult_051 아빠의 칠순. Current text (do not render words): 아빠 칠순이 다가온다. 가족 단톡방에서 어떻게 할지 회의가 열렸다.. Locked staging: {\"place\":\"퇴근 뒤 집 거실 소파(연출 확정)\",\"mainAction\":\"아빠 칠순 준비 방식 논의\",\"requiredObjects\":\"가족 단톡방 회의 알림, 휴대폰; 실제 칠순 행사 없음\",\"peopleAndAge\":\"주인공, 가족은 대화 알림\",\"timeOfDay\":\"행사 전\",\"perspective\":\"FIRST_PERSON\"}. Rules: adult_051: 이미 칠순 잔치를 열거나 여행 중인 장면 금지 / 제작 명세는 2차 의미·크롭 검토 반영본을 따른다.. UNCHOSEN actions: 한정식집에서 잔치를 연다. / 부모님 여행을 보내 드린다. / 가족 영상 편지를 만든다. — don't show any chosen outcome. First-person with protagonist hands ONLY, NEVER protagonist head/hair/face/reflection. Scene objects and other people only where specified. All story-essential items fully within central x=34..66% for narrow portrait CENTER CROP. Compact vertical arrangement, decorative sides. Match warm muted medium-density clean square pixel art, wood/cream/olive/dusty-blue, limited flat shade steps. No readable writing/numerals/fake letters, logos, game UI, watermarks, blur, photographic texture. Real phones can show simple wordless icons. No split screen or diagram.\n\nFamily group chat planning an upcoming older father's birthday: small several-user group icon and neutral gift/calendar icon in phone chat. NO birthday cake in room, no actual party or travel, no readable age.",
+      "generatedPath": "C:\\Users\\hansung\\.codex\\generated_images\\01a09e37-a516-77f3-91c6-bc47b74f8b3d\\exec-bb4439d9-ab42-4125-ac50-bec6a5c284ef.png",
+      "groupId": "grp_sh_adult_051",
+      "assignmentOwner": "김선한",
+      "actualProducer": "김선한 담당 Codex (사용자 요청으로 대행)",
+      "assetPath": "followup_20261031/img_adult_father_70th_001.png",
+      "sha256": "fe8553e1ee5fd6343bd6742ca2487833d1d030d6e44930094e1ece5dc482d513",
+      "width": 1448,
+      "height": 1086,
+      "generationMethod": "built-in image_gen; original PNG copied without resizing",
+      "status": "STAGED_NOT_ROUTED_PENDING_REVIEW",
+      "stagingPath": "docs/assignments/20261031/submissions/pending_images_20261105/img_adult_father_70th_001.png"
+    },
+    {
+      "eventId": "adult_041",
+      "prompt": "Use case: precise-object-edit. Correct this exact landscape 4:3 pixel art bank consultation. REMOVE THE ENTIRE FLOATING THOUGHT BUBBLE, all of its outline, tail, piggy bank, coin and childhood room. Replace with normal bank background. NO thought bubbles, flashback, inset, comic, overlay or memory illustration anywhere. Move calculator from far right to directly ABOVE the unsigned document, next to the banker's pointing hand, whole calculator within center x=44..61%. Keep banker face centered x=50%, paper centered below, protagonist hands at lower edge, no signing, no money changing hands, no house purchase. Keep muted pixel art and existing warm cream/wood palette. All main items within central x=34..66% phone crop. No text/numbers/logos/watermarks/game UI. Remove floating yellow speech lines as well. Natural single scene only.",
+      "generatedPath": "C:\\Users\\hansung\\.codex\\generated_images\\01a09e37-a516-77f3-91c6-bc47b74f8b3d\\exec-aa2affc3-6897-4d72-8899-2555e64df8a2.png",
+      "previousPrompt": "Use case: illustration-story. One opaque exact 4:3 landscape PNG for Android Korean life-game. Event adult_041 30년 만기 대출. Current text (do not render words): 은행원: \"{name} 님, 대출 기간은 30년입니다.\" 어릴 적 돼지 저금통이 떠오른다.. Locked staging: {\"place\":\"은행 대출 상담 창구\",\"mainAction\":\"30년 대출 설명을 들음\",\"requiredObjects\":\"미서명 상담 서류, 계산기, 창구\",\"peopleAndAge\":\"은행원과 주인공\",\"timeOfDay\":\"은행 영업 시간(연출 제안)\",\"perspective\":\"FIRST_PERSON\"}. Rules: adult_041: 집 구매·대출 계약 체결·현금 수령 전 상담 상태. UNCHOSEN actions: 집을 산다. / 전세로 더 모은다. / \"돼지 저금통 깨면 얼마나 될까요?\" — don't show any chosen outcome. First-person with protagonist hands ONLY, NEVER protagonist head/hair/face/reflection. Scene objects and other people only where specified. All story-essential items fully within central x=34..66% for narrow portrait CENTER CROP. Compact vertical arrangement, decorative sides. Match warm muted medium-density clean square pixel art, wood/cream/olive/dusty-blue, limited flat shade steps. No readable writing/numerals/fake letters, logos, game UI, watermarks, blur, photographic texture. Real phones can show simple wordless icons. No split screen or diagram.\n\n",
+      "previousGeneratedPath": "C:\\Users\\hansung\\.codex\\generated_images\\01a09e37-a516-77f3-91c6-bc47b74f8b3d\\exec-a2476fad-ecd8-4aa1-a986-c1bbe33d20d5.png",
+      "groupId": "grp_sh_adult_041",
+      "assignmentOwner": "김선한",
+      "actualProducer": "김선한 담당 Codex (사용자 요청으로 대행)",
+      "assetPath": "followup_20261031/img_adult_house_001.png",
+      "sha256": "8e9924b82a9ced5f4fc431e5862c06da989717223d2924b1445cfe3de415c0ea",
+      "width": 1448,
+      "height": 1086,
+      "generationMethod": "built-in image_gen; original PNG copied without resizing",
+      "status": "STAGED_NOT_ROUTED_PENDING_REVIEW",
+      "stagingPath": "docs/assignments/20261031/submissions/pending_images_20261105/img_adult_house_001.png"
+    }
+  ],
+  "demoScope": "2026-11-05 사용자 요청으로 대량 제작 중단. 이 9장은 검토 대기 보관본이며 APK에 포함하거나 승인 완료로 집계하지 않는다. assetPath는 향후 검토 통과 시 설치할 예정 경로다."
+}

@@ -1,0 +1,79 @@
+{
+  "date": "2026-11-03",
+  "sourcePr": 51,
+  "sourceCommit": "dc7e6e9a3939e807bb6c182c76b0bb426a9f62da",
+  "assignment": {
+    "owner": "정원률",
+    "total": 69,
+    "delivered": 2,
+    "remaining": 67,
+    "pilotEventId": "path_hea_01"
+  },
+  "newCommonSamples": [
+    {
+      "groupId": "grp_wr_path_hea_01",
+      "eventIds": [
+        "path_hea_01"
+      ],
+      "imageId": "img_path_hea_01_001",
+      "assetPath": "followup_20261031/img_path_hea_01_001.png",
+      "width": 1448,
+      "height": 1086,
+      "sha256": "15c9a71b89befca539190feea3cf946788aae03c134008934dc400a0fc25d065",
+      "productionOwner": "정원률",
+      "productionBriefCommit": "dc7e6e9a3939e807bb6c182c76b0bb426a9f62da",
+      "status": "SAMPLE_SUBMITTED_PENDING_MEANING_CROP_AND_STYLE_REVIEW",
+      "routedIntoEvents": false,
+      "tool": "built-in image_gen",
+      "prompt": "Create one finished landscape 4:3 PNG illustration for a Korean life-simulation Android game. Medium-density crisp pixel art, visible coherent square pixel steps, limited warm restrained palette, gentle daylight, environmental storytelling. FIRST-PERSON elementary-school pupil viewpoint seated at a Korean school cafeteria lunch table at noon. Lower foreground: the pupil's stainless compartment lunch tray, rice and soup in secondary compartments, and EXACTLY THREE distinct broccoli florets already resting in the vegetable compartment. At the current moment a neighboring elementary pupil's hand is sneakily holding ONE additional broccoli floret just ABOVE the tray, about to set it down, so the three already on the tray can still be counted separately. In upper middle distance a single ADULT school nutrition teacher, clearly adult in pale food-service apron and hair covering, is watching this table. Other children's silhouettes and cafeteria furniture are quiet side context. CRUCIAL NARROW PORTRAIT CROP: put all THREE existing broccoli florets, the extra floret in the transferring hand, and the watching nutrition teacher entirely in the CENTER vertical band x=36%..64% of the image. Stack these story details vertically: teacher upper center, transfer hand/floret middle center, tray and three florets lower center, with no overlap obscuring count. Tray may extend to sides but its vegetable compartment and all broccoli must stay central. Do not depict eating, refusal, success or any chosen result yet. No protagonist face or reflection, no readable writing, digits, school signs, logos, labels, floating icons or game interface. Non-protagonist nutrition teacher may have a simple unobtrusive adult pixel face. No speech bubbles. Landscape exact four-to-three composition, consistent crisp pixel edges rather than soft painted realism.",
+      "providerOutputFile": "exec-c0b26311-18a3-4d7a-9f0e-2e4bb652e8e8.png",
+      "nativeResolutionPreserved": true,
+      "sourceScene": {
+        "place": "초등학교 급식실",
+        "mainAction": "짝꿍이 브로콜리를 내 급식판으로 옮김",
+        "requiredObjects": "급식판의 원래 브로콜리 세 송이; 추가하는 손; 영양사",
+        "peopleAndAge": "초등학생 주인공·짝꿍; 성인 영양사",
+        "timeOfDay": "점심",
+        "perspective": "FIRST_PERSON"
+      },
+      "selfReview": "PASS: first-person, no readable text/UI or protagonist face, no choice outcome, central key objects",
+      "teamAcceptance": "PENDING"
+    },
+    {
+      "groupId": "grp_shared_salary_deposit",
+      "eventIds": [
+        "adult_015",
+        "adult_080"
+      ],
+      "imageId": "img_adult_first_salary_001",
+      "assetPath": "followup_20261031/img_adult_first_salary_001.png",
+      "width": 1448,
+      "height": 1086,
+      "sha256": "a1b8eb68850b089f510d6c8ececbd4884891d34a1894bf1051ca323766d89698",
+      "productionOwner": "정원률",
+      "productionBriefCommit": "dc7e6e9a3939e807bb6c182c76b0bb426a9f62da",
+      "status": "SAMPLE_SUBMITTED_PENDING_MEANING_CROP_AND_STYLE_REVIEW",
+      "routedIntoEvents": false,
+      "tool": "built-in image_gen",
+      "prompt": "Create one finished landscape exact 4:3 PNG illustration for a Korean life-simulation Android game shared by events 'first salary' and 'late first salary'. Medium-density crisp pixel art with coherent visible square steps, warm restrained palette, same grounded environmental game illustration quality. FIRST-PERSON adult at a simple wooden desk in their home in the evening, warm desk lamp, dim neutral wall or dark window in side background. In the lower CENTRAL area the adult's naturally posed hand holds one modern smartphone vertically above the wooden desktop. Phone entirely inside central x=39%..60%, y=32%..78%, hand below it inside central third. The screen shows a clear, simple WORDLESS bank-deposit notification: one subdued blue app area, a large pale incoming-transfer icon with arrow INTO a simple wallet/purse outline, and perhaps two blank horizontal rounded shapes. NO letters, numbers, currency symbols, bank logos, balances, names, dates or readable text. It should suggest incoming salary and checking an account without making an exact amount or refresh count visible. No chat bubbles (this is a bank app, not a text message), no successful purchase, gift, saving enrollment, promotion or celebration objects. Adult hand must have neutral age cues suitable for young and middle adulthood, no jewelry or extreme wrinkles, no protagonist face/reflection. Wooden desk is unmistakable even in a narrow CENTER portrait crop: keep phone, hand, incoming-deposit shape and an area of wooden desk all visible within x=36%..64%. Lamp and room edges may crop away. Natural calm uncertain moment before deciding what to do with the salary. No floating game UI, captions, watermarks, photorealistic gradients or blur; clean coherent pixel art. Four-to-three landscape PNG.",
+      "providerOutputFile": "exec-ce567eeb-8923-41f0-a3ad-aaa57178c401.png",
+      "nativeResolutionPreserved": true,
+      "sourceScene": {
+        "place": "집 목재 책상(연출 확정)",
+        "mainAction": "급여 입금 알림을 확인하며 은행 앱을 새로고침",
+        "requiredObjects": "휴대폰의 입금 알림 모양, 목재 책상",
+        "peopleAndAge": "성인 손만, 구체적 연령 단서는 없음",
+        "timeOfDay": "저녁(연출 확정)",
+        "perspective": "FIRST_PERSON"
+      },
+      "selfReview": "PASS: first-person, no readable text/UI or protagonist face, no choice outcome, central key objects",
+      "teamAcceptance": "PENDING"
+    }
+  ],
+  "thirdCommonSample": {
+    "eventId": "path_int_10",
+    "status": "DELIVERED_REVIEWED_IN_PR51",
+    "sourcePr": 50
+  },
+  "quantityAccounting": "67 newly assigned; 2 common samples produced here, 65 awaiting common-sample approval. Four cross-owner corrections do not reduce this quota. Official ledger not overwritten."
+}

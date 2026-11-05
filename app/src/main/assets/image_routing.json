@@ -78,6 +78,13 @@
       "fallbackText": "현재 시기의 모습을 준비 중입니다"
     },
     {
+      "imageId": "img_adult_pro_offer_001",
+      "assetPath": "followup_20261031/img_adult_pro_offer_001.png",
+      "usage": "event",
+      "fileName": "img_adult_pro_offer_001.png",
+      "fallbackText": "이미지 준비 전에는 '프로 구단의 제안' 상황 이미지 영역으로 대체 표시"
+    },
+    {
       "imageId": "img_stat_health_001",
       "assetPath": "week8/generic/img_stat_health_001.png",
       "fileName": "img_stat_health_001.png",
@@ -160,21 +167,15 @@
     {
       "imageId": "img_pov_flu_morning_001",
       "assetPath": "design_preview/week7/img_pov_flu_morning_001.png",
-      "fileName": "img_pov_flu_morning_001.png",
       "usage": "pov",
-      "period": "YOUNG_ADULT",
-      "statTag": null,
-      "description": "몸살로 누운 채 천장과 체온계를 보는 1인칭 장면",
+      "fileName": "img_pov_flu_morning_001.png",
       "fallbackText": "몸살 난 아침 장면 준비 중"
     },
     {
       "imageId": "img_pov_layoff_door_001",
       "assetPath": "design_preview/week7/img_pov_layoff_door_001.png",
-      "fileName": "img_pov_layoff_door_001.png",
       "usage": "pov",
-      "period": "YOUNG_ADULT",
-      "statTag": null,
-      "description": "구조조정 통보 날, 사원증을 찍어도 열리지 않는 출입문 앞 1인칭 장면",
+      "fileName": "img_pov_layoff_door_001.png",
       "fallbackText": "구조조정 통보 장면 준비 중"
     },
     {
@@ -290,11 +291,8 @@
     {
       "imageId": "img_path_hea_09_001",
       "assetPath": "week10/scenes/img_path_hea_09_001.png",
-      "fileName": "img_path_hea_09_001.png",
       "usage": "pov",
-      "period": null,
-      "statTag": null,
-      "description": "First person seated on school infirmary cot after dizziness in gym, glass of water and sleep schedule on bedside table, blurred-in-pixel empty sports court beyond window.",
+      "fileName": "img_path_hea_09_001.png",
       "fallbackText": "장면을 준비 중입니다"
     },
     {
@@ -340,11 +338,8 @@
     {
       "imageId": "img_path_int_10_001",
       "assetPath": "week10/scenes/img_path_int_10_001.png",
-      "fileName": "img_path_int_10_001.png",
       "usage": "pov",
-      "period": null,
-      "statTag": null,
-      "description": "First person lecturer at wooden podium, hands on open lecture notes, university audience facing viewer in warm lecture hall.",
+      "fileName": "img_path_int_10_001.png",
       "fallbackText": "장면을 준비 중입니다"
     },
     {
@@ -390,11 +385,8 @@
     {
       "imageId": "img_path_hap_09_001",
       "assetPath": "week10/scenes/img_path_hap_09_001.png",
-      "fileName": "img_path_hap_09_001.png",
       "usage": "pov",
-      "period": null,
-      "statTag": null,
-      "description": "First person at art high school painting easel, hands with paint brush, vibrant still life vase, classmates easels in sunlit art classroom.",
+      "fileName": "img_path_hap_09_001.png",
       "fallbackText": "장면을 준비 중입니다"
     },
     {
@@ -410,11 +402,8 @@
     {
       "imageId": "img_path_luk_09_001",
       "assetPath": "week10/scenes/img_path_luk_09_001.png",
-      "fileName": "img_path_luk_09_001.png",
       "usage": "pov",
-      "period": null,
-      "statTag": null,
-      "description": "First person reaching into vending machine tray discovering TWO drink cans instead of one, surprised open hand, coin return and glowing buttons, no logos or readable text.",
+      "fileName": "img_path_luk_09_001.png",
       "fallbackText": "장면을 준비 중입니다"
     },
     {
@@ -466,6 +455,41 @@
       "statTag": null,
       "description": "Calm bedroom recovery space, neatly folded blanket, glass of water, cane resting against chair, green garden visible through window. No people, open central floor.",
       "fallbackText": "장면을 준비 중입니다"
+    },
+    {
+      "imageId": "img_adult_crossroad_001",
+      "assetPath": "followup_20261031/img_adult_crossroad_001.png",
+      "usage": "event",
+      "fileName": "img_adult_crossroad_001.png",
+      "fallbackText": "이미지 준비 전에는 '대학이냐 취업이냐' 상황 이미지 영역으로 대체 표시"
+    },
+    {
+      "imageId": "img_adult_crypto_001",
+      "assetPath": "followup_20261031/img_adult_crypto_001.png",
+      "usage": "event",
+      "fileName": "img_adult_crypto_001.png",
+      "fallbackText": "이미지 준비 전에는 '이번엔 진짜라는 친구' 상황 이미지 영역으로 대체 표시"
+    },
+    {
+      "imageId": "img_adult_proposal_001",
+      "assetPath": "followup_20261031/img_adult_proposal_001.png",
+      "usage": "event",
+      "fileName": "img_adult_proposal_001.png",
+      "fallbackText": "이미지 준비 전에는 '결혼 이야기' 상황 이미지 영역으로 대체 표시"
+    },
+    {
+      "imageId": "img_path_hea_01_001",
+      "assetPath": "followup_20261031/img_path_hea_01_001.png",
+      "usage": "pov",
+      "fileName": "img_path_hea_01_001.png",
+      "fallbackText": "급식 시간의 브로콜리 장면 준비 중"
+    },
+    {
+      "imageId": "img_adult_first_salary_001",
+      "assetPath": "followup_20261031/img_adult_first_salary_001.png",
+      "usage": "event",
+      "fileName": "img_adult_first_salary_001.png",
+      "fallbackText": "이미지 준비 전에는 '첫 월급' 상황 이미지 영역으로 대체 표시"
     }
   ],
   "periodPortraits": {

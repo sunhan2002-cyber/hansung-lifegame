@@ -1,0 +1,53 @@
+{
+  "date": "2026-11-03",
+  "integrationCommit": "cf6980d4eb924bd0c3ddffc03292b54337083596",
+  "sourcePullRequests": [
+    47,
+    48,
+    50
+  ],
+  "runtimeScope": "Temporary local integration only; not merged into main",
+  "unitTests": {
+    "testDebugUnitTest": {
+      "tests": 177,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "testReleaseUnitTest": {
+      "tests": 177,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  },
+  "androidTests": {
+    "tests": 52,
+    "failures": 0,
+    "durationSeconds": 276.045,
+    "api": 36
+  },
+  "pythonTests": {
+    "tests": 26,
+    "failures": 0
+  },
+  "classificationAudit": "PASS_STRUCTURAL_ONLY",
+  "imageFinalAcceptance": "EXPECTED_FAIL_PENDING_352_APPROVALS",
+  "ownClassificationRows": 71,
+  "mergedClassificationRows": 352,
+  "productionImagesCreated": 0,
+  "finalAssignmentComplete": false,
+  "waitingFor": [
+    "141 newly received classifications semantic review",
+    "40 cross-review correction items",
+    "group N/R/M approval",
+    "three approved samples and personal production allocation"
+  ],
+  "evidenceSha256": {
+    "integration-build.log": "de9edc5bd2bc3646bbfc86ba024b015fc72fd2ef24547668f07839ad15697d22",
+    "integration-android.log": "ee961483c1dc15e648e11dbfb4fabb8bd35482fd4cbb451c8c67f8fc232b5b9d",
+    "python-tests.log": "6232870d162e04a510c22b76058263fe834784109f84cd663b09408bb64541df",
+    "classification-audit.json": "49e1445b6860a14982ef68a9b7e26826537eb9a79e4789713b05c3d02be85377",
+    "acceptance-audit.json": "49e1445b6860a14982ef68a9b7e26826537eb9a79e4789713b05c3d02be85377"
+  }
+}

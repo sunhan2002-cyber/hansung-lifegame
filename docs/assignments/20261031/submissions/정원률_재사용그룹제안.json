@@ -1,0 +1,28 @@
+{
+  "date": "2026-11-03",
+  "latestIntegratorCommit": "dc7e6e9a3939e807bb6c182c76b0bb426a9f62da",
+  "scope": "proposal reconciled with latest assigned production brief; no team quota edited",
+  "groups": [
+    {
+      "groupId": "grp_shared_salary_deposit",
+      "eventIds": [
+        "adult_015",
+        "adult_080"
+      ],
+      "decision": "SHARED_IN_PRODUCTION_BRIEF",
+      "place": "집 목재 책상(연출 확정)",
+      "status": "PNG_SAMPLE_SUBMITTED_PENDING_TEAM_REVIEW",
+      "sourceCommit": "dc7e6e9a3939e807bb6c182c76b0bb426a9f62da"
+    },
+    {
+      "eventIds": [
+        "adult_041",
+        "path_wea_05"
+      ],
+      "decision": "SEPARATE_PER_LATEST_INTEGRATOR_DECISION",
+      "reason": "adult_041/path_wea_05는 동일 인생에 재노출될 수 있고 별도 시각 합의가 없어 분리 유지",
+      "status": "SPLIT_PRESERVED",
+      "sourceCommit": "dc7e6e9a3939e807bb6c182c76b0bb426a9f62da"
+    }
+  ]
+}

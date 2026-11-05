@@ -20,7 +20,9 @@ def main():
     titles={e['eventId']:e['title'] for e in events}
     for x in scenes:
         use=titles.get(x['key'],x['key'])
-        lines.append(f'|{x["imageId"]}|app/src/main/assets/images/{x["assetPath"]}|{x["key"]}: {use}|300×225|없음|imagegen|')
+        with Image.open(A/'images'/x['assetPath']) as scene_image:
+            width,height=scene_image.size
+        lines.append(f'|{x["imageId"]}|app/src/main/assets/images/{x["assetPath"]}|{x["key"]}: {use}|{width}×{height}|없음|imagegen|')
     lines+=['','## 최신 main 대비 신규 사건 매핑','',
         f'현재 콘텐츠 352사건·1009선택지·66결말. origin/main 대비 신규 사건은 {len(new)}개이며, 아래에서 전용과 테마 대체를 구분한다. 대체를 전용 그림 수로 가산하지 않는다.',
         '', '후보 순서: 명시 사건 imageId/기존 파일명 → 사건에 맞는 스탯 테마 → 시기 배경 → 기존 시기 초상 → placeholder. 기본 초상 6 ID와 스탯 7 ID를 보존했다. 종료 대체는 endingScenes의 achievement/relationship/peace/health이며 특정 학교·직업·가족 수를 사실로 확정하는 사진이 아니다.',

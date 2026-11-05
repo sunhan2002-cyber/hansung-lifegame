@@ -60,6 +60,44 @@ class Week10ProgressCodecTest {
         assertNull(Week10ProgressCodec.decode(legacy.toString())?.choices?.single()?.bodyType)
     }
 
+    @Test fun eventImageIdentitySurvivesOutcomeContinueAndCompletedRecordSave() {
+        val imageId = "img_pov_same_event_001"
+        val imageChoice = choice.copy(eventImageId = imageId)
+        val imageOutcome = outcome.copy(eventImageId = imageId)
+        val current = V4SavedRun("검사", state, choices = listOf(imageChoice), pendingOutcome = imageOutcome)
+        val restored = requireNotNull(Week10ProgressCodec.decode(Week10ProgressCodec.encode(current)))
+        assertEquals(imageId, restored.choices.single().eventImageId)
+        assertEquals(imageId, restored.pendingOutcome?.eventImageId)
+
+        val completed = CompletedLifeRecord(
+            "image-life", "검사", "요약", null, null, null, null, state, listOf(imageChoice),
+        )
+        val completedRestored = Week10ProgressCodec.decodeCompletedLives(
+            Week10ProgressCodec.encodeCompletedLives(listOf(completed)),
+        ).single()
+        assertEquals(imageId, completedRestored.choices.single().eventImageId)
+    }
+
+    @Test fun legacyRecordsWithoutEventImageRemainReadable() {
+        val run = V4SavedRun("검사", state, choices = listOf(choice), pendingOutcome = outcome)
+        val legacy = org.json.JSONObject(Week10ProgressCodec.encode(run))
+        legacy.getJSONArray("choices").getJSONObject(0).remove("eventImageId")
+        legacy.getJSONObject("pendingOutcome").remove("eventImageId")
+        val restored = requireNotNull(Week10ProgressCodec.decode(legacy.toString()))
+        assertNull(restored.choices.single().eventImageId)
+        assertNull(restored.pendingOutcome?.eventImageId)
+    }
+
+    @Test fun healthTenIsSavedExactlyAndDoesNotBecomeDeathByDisplayRule() {
+        val aliveAtTen = state.copy(stats = state.stats.copy(health = 10), isDead = false, isEnding = false)
+        val restored = requireNotNull(
+            Week10ProgressCodec.decode(Week10ProgressCodec.encode(V4SavedRun("검사", aliveAtTen))),
+        ).state
+        assertEquals(10, restored.stats.health)
+        assertFalse(restored.isDead)
+        assertFalse(restored.isEnding)
+    }
+
     @Test fun corruptOrFutureSaveFailsSafely() {
         assertNull(Week10ProgressCodec.decode("not-json"))
         assertNull(Week10ProgressCodec.decode("""{"saveFormatVersion":999,"state":{}}"""))

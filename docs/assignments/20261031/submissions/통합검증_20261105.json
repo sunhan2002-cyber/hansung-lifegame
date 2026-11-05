@@ -1,0 +1,32 @@
+{
+  "date": "2026-11-05",
+  "branch": "codex/followup-completion-20261105",
+  "sourcePrHeads": {
+    "47": "9588596d33b1d73b3f771df64fcd8e162a380f87",
+    "48": "f9d05b2e415b75c89abfa7776590e23110558612",
+    "49": "8b989f995d7d1decdcdc3c3c7dc06210825aa77b",
+    "50": "5793205185a6b1eff81173bacff5d5f41be076c7",
+    "51": "ef5ada0d7aa41968bf6eb97383fe461890548ae1"
+  },
+  "unitTests": {
+    "debug": 178,
+    "release": 178,
+    "failures": 0
+  },
+  "pythonTests": 26,
+  "androidTests": 55,
+  "androidLogSha256": "42ff63bae0c930fe0646fc6024f2be53701d87add829aab89719077ed8e38b97",
+  "cropReports": {
+    "crop_report_phone.tsv": {
+      "events": 24,
+      "minimumMatch": 1.0,
+      "sha256": "35919922254c2bee1d10201cb945e85b588c42328bea3960b555ccedb250eb7a"
+    }
+  },
+  "apkSha256": "21d3618f54ab9b614ad58689bcb115f1db01ad51a45a37113a48771393959135",
+  "apkPngHashMatches": 12,
+  "device": "Separate userdata, Medium Phone API 36.1, 1080x2400 420dpi",
+  "evidenceFolder": "C:\\lifegame-followup-completion-20261105\\output",
+  "scope": "Existing 12 delivered groups plus 3 original reuse groups. Does not approve unproduced images.",
+  "mainMerged": false
+}

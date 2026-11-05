@@ -9,18 +9,16 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clipToBounds
-import androidx.compose.ui.graphics.asAndroidBitmap
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.semantics.SemanticsActions
 import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.assertTextEquals
-import androidx.compose.ui.test.captureToImage
 import androidx.compose.ui.test.hasTestTag
+import androidx.compose.ui.test.hasText
 import androidx.compose.ui.test.junit4.createComposeRule
 import androidx.compose.ui.test.onAllNodesWithText
 import androidx.compose.ui.test.onNodeWithTag
 import androidx.compose.ui.test.onNodeWithText
-import androidx.compose.ui.test.onRoot
 import androidx.compose.ui.test.performClick
 import androidx.compose.ui.test.performScrollTo
 import androidx.compose.ui.test.performScrollToNode
@@ -70,7 +68,8 @@ class Week7ImageSampleLayoutTest {
         val context = InstrumentationRegistry.getInstrumentation().targetContext
         val directory = requireNotNull(context.getExternalFilesDir("week7-uiux"))
         assertTrue(directory.isDirectory || directory.mkdirs())
-        val image = composeRule.onRoot().captureToImage().asAndroidBitmap()
+        composeRule.waitForIdle()
+        val image = captureAppWindow()
         File(directory, "image-sample-small-large-text.png").outputStream().use {
             image.compress(Bitmap.CompressFormat.PNG, 100, it)
         }
@@ -82,6 +81,9 @@ class Week7ImageSampleLayoutTest {
         composeRule.onNodeWithTag("image_sample_menu").performScrollTo().assertIsDisplayed().performClick()
         composeRule.onNodeWithTag("image_sample_select_7").performScrollTo().performClick()
         composeRule.runOnIdle { assertTrue(index == 7) }
-        composeRule.onNodeWithText("원본 1448×1086 · 4:3").performScrollTo().assertIsDisplayed()
+        // LazyColumn may not have composed the footer after the menu selection yet.
+        composeRule.onNodeWithTag("image_sample_content")
+            .performScrollToNode(hasText("원본 1448×1086 · 4:3"))
+        composeRule.onNodeWithText("원본 1448×1086 · 4:3").assertIsDisplayed()
     }
 }
