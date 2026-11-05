@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "previewItems": 10,
+  "newItems": {
+    "9": "예술고 첫 학기",
+    "10": "마지막 강의"
+  },
+  "androidUiTests": 2,
+  "testFailures": 0,
+  "testedFlows": [
+    "all ten original PNGs decode",
+    "next/previous/menu/reset/back",
+    "fullscreen/tap return",
+    "320x400dp with 2x font controls and footer"
+  ],
+  "device": "Pixel_9 API36",
+  "fullScreenRendering": "same SceneBackdrop center crop as game",
+  "cropApproval": "pending user/team review; original edges are cropped",
+  "apkSha256": "3ded4e9d9259ae3860d8bff85e61eabcecf538dad7af5131f236f10588e1c0a2",
+  "log": "output/followup-20261103/scene-preview-instrumentation-final.log"
+}

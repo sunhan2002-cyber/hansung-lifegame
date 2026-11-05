@@ -1,0 +1,54 @@
+{
+  "date": "2026-11-03",
+  "scope": "four targeted feedback edits, no group approval or bulk production",
+  "assets": [
+    {
+      "eventId": "adult_068",
+      "imageId": "img_pov_flu_morning_001",
+      "assetPath": "design_preview/week7/img_pov_flu_morning_001.png",
+      "width": 1448,
+      "height": 1086,
+      "sha256": "faeb5151de8c89893624a09475f0608207d774ff113e603d2f30d5d516dce328",
+      "previousSha256": "727b612683268c43b776fad5e0b6fa1bf06b0fb843abc4ecc34259bb1d3e3d37",
+      "originalSnapshot": "docs/assignments/20261031/submissions/revisions/20261103-round2/originals/img_pov_flu_morning_001.png",
+      "nativeResolutionPreserved": true,
+      "status": "APPLIED_PENDING_TEAM_ACCEPTANCE"
+    },
+    {
+      "eventId": "adult_070",
+      "imageId": "img_pov_layoff_door_001",
+      "assetPath": "design_preview/week7/img_pov_layoff_door_001.png",
+      "width": 1448,
+      "height": 1086,
+      "sha256": "71a0260b7bb0377f21d5ce5c17a6c33750c4ed36b173456dbf268f9159ed742e",
+      "previousSha256": "606ebbf050845fff51d2ca3a417b7af4af439c21aed58a56d5259f8b9ac4bdee",
+      "originalSnapshot": "docs/assignments/20261031/submissions/revisions/20261103-round2/originals/img_pov_layoff_door_001.png",
+      "nativeResolutionPreserved": true,
+      "status": "APPLIED_PENDING_TEAM_ACCEPTANCE"
+    },
+    {
+      "eventId": "path_hea_09",
+      "imageId": "img_path_hea_09_001",
+      "assetPath": "week10/scenes/img_path_hea_09_001.png",
+      "width": 1448,
+      "height": 1086,
+      "sha256": "fd8fd6f57bf296e85c8064113b67f65c674cd33a6291336e517305a2fc30f84d",
+      "previousSha256": "c842df0b453899b6796eeb3f4d975430278055c73ed6272d5f0ab1120b908c59",
+      "originalSnapshot": "docs/assignments/20261031/submissions/revisions/20261103-round2/originals/img_path_hea_09_001.png",
+      "nativeResolutionPreserved": true,
+      "status": "APPLIED_PENDING_TEAM_ACCEPTANCE"
+    },
+    {
+      "eventId": "path_luk_09",
+      "imageId": "img_path_luk_09_001",
+      "assetPath": "week10/scenes/img_path_luk_09_001.png",
+      "width": 1448,
+      "height": 1086,
+      "sha256": "2c49a65a54344fa134df732fe69ff3445f6d2f7e7430d27d34dc865e8fab46c5",
+      "previousSha256": "8ada5c8a67a7559f924fc856b04dcfb2f3709a27eed358af6e8d587380af6094",
+      "originalSnapshot": "docs/assignments/20261031/submissions/revisions/20261103-round2/originals/img_path_luk_09_001.png",
+      "nativeResolutionPreserved": true,
+      "status": "APPLIED_PENDING_TEAM_ACCEPTANCE"
+    }
+  ]
+}

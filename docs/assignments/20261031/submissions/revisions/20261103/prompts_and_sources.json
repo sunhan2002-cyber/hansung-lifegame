@@ -1,0 +1,28 @@
+{
+  "date": "2026-11-03",
+  "scope": "사용자가 확인 후 적용을 요청한 두 사건 수정본; 앱 자산 및 관련 메타데이터에 반영; 팀 전체 그룹/수량 확정은 별도",
+  "assets": [
+    {
+      "eventId": "path_hap_09",
+      "sourceOriginal": "docs/assignments/20261031/submissions/revisions/20261103/originals/img_path_hap_09_001.png",
+      "savedFile": "img_path_hap_09_001_v2.png",
+      "tool": "built-in image_gen",
+      "transparentBackground": false,
+      "prompt": "Use case: precise-object-edit with lighting-weather.\nAsset: one revised pixel-art scene for the Korean Android life game, event path_hap_09 \"First term at an arts high school\".\nImage 1 is the EDIT TARGET. Preserve its first-person student viewpoint, painting desk/easel, unfinished still-life study, palette/brush, general studio layout, warm restrained colors, crisp medium-density raster pixel-art style and same level of pixel detail.\nRequired changes: it is a LATE EVENING high-school art practice room, not a sunny daytime adult studio. All windows show dark indigo night, with no sunlight or bright sky. Warm overhead and desk lights illuminate the unfinished work. The neighboring learners look like 16–18-year-old high-school students in simple school shirts/cardigans, still practicing, rather than adult hobby painters. Show a neighboring teen student concentrating on unfinished work, with no victory/award or finished masterpiece.\nFraming: horizontal exact 4:3 composition. Retain the familiar composition but move essential brush/unfinished work and one nearby student toward the central vertical third, so the scene still communicates night practice when a portrait phone view crops the outer sides. Keep the protagonist's face absent; only naturally posed student hands are allowed.\nNo readable text, letters, digits, brand names, clock numerals, school signs, game interface, captions, UI, watermark, gradient haze, photorealism, 3D or dithering. All posters/book spines are wordless shapes. No collage or before/after layout. Deliver a single opaque 4:3 PNG scene.",
+      "status": "USER_APPROVED_APPLIED_LOCALLY_PENDING_DEVICE_CROP_REVIEW",
+      "providerOutputFile": "exec-6a5ace42-097c-423a-a363-163ad6442c03.png",
+      "appliedAsset": "app/src/main/assets/images/week10/scenes/img_path_hap_09_001.png"
+    },
+    {
+      "eventId": "path_int_10",
+      "sourceOriginal": "docs/assignments/20261031/submissions/revisions/20261103/originals/img_path_int_10_001.png",
+      "savedFile": "img_path_int_10_001_v2.png",
+      "tool": "built-in image_gen",
+      "transparentBackground": false,
+      "prompt": "Use case: style-transfer / scene replacement.\nAsset: one revised pixel-art scene for the Korean Android life game, event path_int_10 \"The last lecture\".\nImage 1 is the scene to REPLACE. Preserve only its crisp medium-density raster pixel-art treatment, restrained warm wood/paper palette and first-person viewpoint. Remove the university lecture hall, lectern, rows of students, school crest, equations and textbook.\nStory to depict exactly: an elderly protagonist has been asked to give a talk at a NEIGHBORHOOD PUBLIC LIBRARY. The talk topic is still undecided. A librarian, in the act of pinning a talk poster on the library noticeboard, turns slightly toward the viewer to ask about their life of study. This is a quiet conversation before the talk, NOT the lecture already happening.\nShow book shelves and a noticeboard as clear library cues. Use the elderly protagonist's first-person eye level; only a small natural pair of aged hands may enter the lower frame, no protagonist face, mirror, portrait or photo. The adult librarian is an ordinary staff member in simple clothing, not a professor lecturing. The poster is plain cream paper with a small abstract wordless illustration, absolutely no writing or fake glyphs.\nFraming: single horizontal EXACT 4:3 image. Place the noticeboard poster, the librarian's pinning hand and upper body together in the CENTRAL VERTICAL THIRD (roughly x 34–66%); nearby shelves frame this center so the key action remains visible in a center-cropped portrait phone screen. Calm, welcoming everyday library lighting, no dramatic award or farewell ceremony.\nNo audience, classroom seating, lecture in progress, completed life outcome, diploma, medical imagery, readable text, letters, digits, logos, signage text, UI, captions, watermark, photorealism, 3D, gradients or dithering. One opaque PNG illustration, no collage or border.",
+      "status": "USER_APPROVED_APPLIED_LOCALLY_PENDING_DEVICE_CROP_REVIEW",
+      "providerOutputFile": "exec-883415e6-d0ff-491e-8753-ba8cf6120715.png",
+      "appliedAsset": "app/src/main/assets/images/week10/scenes/img_path_int_10_001.png"
+    }
+  ]
+}
