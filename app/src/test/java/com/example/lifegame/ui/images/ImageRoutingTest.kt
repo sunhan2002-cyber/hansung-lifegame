@@ -97,6 +97,16 @@ class ImageRoutingTest {
         assertEquals("img_stat_intelligence_001", result[1].imageId)
     }
 
+    @Test fun `wooyoung pilot event resolves to its packaged image before generic fallbacks`() {
+        val routing = ImageRouting.parse(manifest())
+        val result = routing.eventCandidates("adult_002", "img_adult_pro_offer_001",
+            "focus_young_adult_career", LifePeriod.YOUNG_ADULT)
+        val pilot = result.first()
+        assertEquals("img_adult_pro_offer_001", pilot.imageId)
+        assertEquals("followup_20261031/img_adult_pro_offer_001.png", pilot.path)
+        assertTrue(File(assetDir(), "images/${pilot.path}").isFile)
+    }
+
     @Test fun `unrelated focus does not replace a health event with study art`() {
         val routing = ImageRouting.parse(manifest())
         assertEquals("img_stat_health_001", routing.eventCandidates("adult_058", null,

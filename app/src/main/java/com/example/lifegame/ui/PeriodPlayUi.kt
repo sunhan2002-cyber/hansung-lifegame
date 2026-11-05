@@ -349,8 +349,10 @@ fun restoredDecisionUi(
     content: PlayContent,
     focusId: String?,
     period: LifePeriod?,
+    savedEventImageId: String? = null,
 ): DecisionUi {
-    val imageId = event.povImageId.orEmpty()
+    // 결과 확인 중 저장했다가 이어할 때는 콘텐츠가 갱신됐더라도 선택 당시 그림을 유지한다.
+    val imageId = savedEventImageId?.takeIf(String::isNotBlank) ?: event.povImageId.orEmpty()
     return DecisionUi(
         eventId = event.eventId,
         kind = event.kind,

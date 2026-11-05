@@ -452,6 +452,8 @@ data class RunChoiceRecord(
     val momentImageId: String? = null,
     /** 체형은 선택 결과 당시의 스냅샷. 이전 저장에는 없으므로 null을 허용한다. */
     val bodyType: BodyType? = null,
+    /** 선택 당시 사건 화면 식별자. povImageId를 우선하고 없으면 imageId를 사용한다. */
+    val eventImageId: String? = null,
 )
 
 /** 결과 화면에서 종료되어도 같은 결과를 복원하기 위한 적용 완료 스냅샷. */
@@ -467,6 +469,8 @@ data class SavedOutcome(
     val afterFacts: LifeFacts,
     val endsLife: Boolean,
     val openedEvents: List<String> = emptyList(),
+    /** 결과 화면과 앱 재실행 뒤에도 같은 사건 그림을 복원하기 위한 불변 스냅샷. */
+    val eventImageId: String? = null,
 )
 
 enum class BodyType {

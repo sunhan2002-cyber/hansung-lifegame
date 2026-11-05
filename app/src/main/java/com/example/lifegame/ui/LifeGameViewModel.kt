@@ -423,7 +423,13 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
         // 결과 화면에서 꺼졌다면 그 사건 머리도 되살린다. 없으면 결정 화면이 비어 보인다.
         shownDecision = saved.pendingOutcome?.let { snapshot ->
             playContent?.decisions?.get(snapshot.eventId)?.let { event ->
-                restoredDecisionUi(event, playContent!!, saved.state.selectedFocusId, saved.state.period)
+                restoredDecisionUi(
+                    event,
+                    playContent!!,
+                    saved.state.selectedFocusId,
+                    saved.state.period,
+                    savedEventImageId = snapshot.eventImageId,
+                )
             }
         }
         if (outcome != null && shownDecision == null) {
@@ -492,6 +498,7 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
             resultText = resolution.outcome.resultText,
             momentImageId = content.decisions[decision.eventId]?.momentImageId,
             bodyType = bodyTypeFor(afterState.stats),
+            eventImageId = decision.imageId.takeIf(String::isNotBlank),
         )
         runChoiceHistory += choiceRecord
         val openedEvents = if (afterState.isEnding) emptyList() else newlyOpenedEvents(
@@ -513,6 +520,7 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
             afterFacts = afterState.lifeFacts,
             endsLife = afterState.isDead,
             openedEvents = openedEvents,
+            eventImageId = decision.imageId.takeIf(String::isNotBlank),
         )
         outcome = OutcomeUi(
             choiceLabel = label,
