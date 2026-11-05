@@ -1,0 +1,71 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-04",
+  "productionOwner": "김재겸",
+  "phase": "PILOT_SUBMITTED_PENDING_CROSS_REVIEW",
+  "sourceAssignment": {
+    "pr": 51,
+    "commit": "ef5ada0",
+    "spec": "docs/assignments/20261031/이미지제작_착수명세.json grp_sh_adult_026"
+  },
+  "assets": [
+    {
+      "groupId": "grp_sh_adult_026",
+      "eventIds": [
+        "adult_026"
+      ],
+      "imageId": "img_adult_crypto_001",
+      "assetPath": "followup_20261031/img_adult_crypto_001.png",
+      "width": 1448,
+      "height": 1086,
+      "format": "PNG",
+      "generationMethod": "OpenAI built-in image_gen through Codex CLI 0.157.1 (codex exec, model gpt-6-sol); unmodified generated PNG copied into project",
+      "generatedOriginal": "~/.codex/generated_images/01a1a58f-bb4f-71a0-b524-5197387e81eb/exec-c7ecb16e-d75b-4127-bb50-08a68550e157.png (same SHA-256, kept locally)",
+      "prompt": "Use case: illustration-story. Asset: one opaque 4:3 pixel art background for Android life game event adult_026, \"This time it's real, says the friend\". Create one coherent scene, NOT UI or collage.\nEvent text (before any choice): a friend says \"This time it's real. Buy this coin.\" It is the fourth time the friend has said \"this time it's real\".\nScene: first-person view of a young adult seated at a small wooden table in a cozy neighborhood cafe, across from ONE friend (young adult, casual clothes, eager smile, leaning forward). The friend holds a smartphone out toward the viewer with one hand, screen facing the viewer. The phone screen shows only a simple price-chart SHAPE: one plain jagged line rising and dipping over a soft grid, plus one plain round coin icon with no symbol. No arrows, no up/down colors, no profit or loss marking, no buy button. The protagonist is skeptical and only listening: both of the protagonist's hands rest on the table near a coffee cup, one hand loosely around the cup, NOT reaching for the phone. Neutral daytime cafe light; time of day unspecified. Nobody else is prominent; other cafe guests may appear only as small blurred-free background silhouettes at the far sides.\nComposition: landscape 4:3 image but keep the ENTIRE phone with its chart, the friend's hand holding it, the friend's face and shoulders, the coffee cup and the protagonist's two hands compactly stacked inside the middle 32 percent of image width so they survive a very narrow portrait CENTER CROP (33.1-66.9% of source width). Phone center at x=50%, around y=45%; friend's face directly above the phone; cup and hands at bottom center. Cafe interior (counter, plants, window, shelves) extends to both sides only as atmosphere. Phone screen large with an easily readable chart silhouette, not tiny details. Natural first-person eye level looking slightly down at the table.\nStyle: crisp medium-density 16-bit pixel art, visible consistent square pixel grid, flat limited color steps, warm muted cream/ochre/wood brown, olive and dusty blue/teal; clear object silhouettes, restrained highlights, like cozy narrative life-simulation game backgrounds. Match a calm, slightly nostalgic mood.\nAvoid all readable letters/numerals/pseudo-writing/logos/brand marks/currency symbols/watermarks/game interface, health bars, buttons, speech bubbles, cinematic frames, the protagonist's face or reflection, money changing hands, a purchase being made, celebration, despair, crashing or soaring charts, red/green market colors, split screen, blur, gradients, dithering, photorealism, 3D. This is BEFORE any choice; show only the friend's pitch and the protagonist's skeptical listening.\nOutput: exactly 4:3 landscape (for example 1448x1086). Save an actual PNG image and return its local file path.",
+      "sceneSpec": {
+        "place": "친구와 만난 카페 테이블(연출 확정)",
+        "mainAction": "네 번째 코인 권유를 의심하며 들음",
+        "requiredObjects": "친구가 내미는 휴대폰, 매수 전의 그래프 모양",
+        "peopleAndAge": "친구와 주인공",
+        "timeOfDay": "미지정",
+        "perspective": "FIRST_PERSON"
+      },
+      "selfReview": {
+        "status": "PASS_SELF_QA_PENDING_TEAM",
+        "notes": [
+          "카페 테이블 한 곳, 친구 1명이 휴대폰을 내민다. 화면은 기호 없는 코인 아이콘과 그래프 선 모양뿐이며 매수 버튼·수익/손실 표시·숫자·글자가 없다.",
+          "주인공은 한 손으로 컵을 잡고 한 손은 테이블 위에 둔 채 휴대폰에 손을 뻗지 않는다(선택 전). 주인공 얼굴·반사 없음.",
+          "그래프 선이 전체적으로 오른쪽 위로 오른다. 친구의 권유 모양이지 플레이어의 수익 결과는 아니라고 판단했지만, '결과를 확정하지 않음' 해당 여부는 의미 검토(신기훈) 확인 필요.",
+          "'네 번째'라는 횟수는 그림으로 표현하지 않았다(본문이 전달)."
+        ]
+      },
+      "semanticReview": {
+        "status": "PENDING_TEAM_REVIEW"
+      },
+      "visualReview": {
+        "status": "PENDING_TEAM_REVIEW"
+      },
+      "cropReview": {
+        "status": "PASS_SELF_QA_PENDING_TEAM",
+        "reviewer": "김재겸 담당 Claude 직접 확인(본인 제작물)",
+        "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi / 945x1943",
+        "visibleX": "0.331..0.669 / 0.318..0.682",
+        "result": "친구 얼굴·휴대폰 전체·친구 손·커피잔이 남고 내 두 손은 가장자리 일부만 남는다.",
+        "captureSha256": "ac25ab72ce4d206236d612d1e56e41e4a0b512f3283e44cf96171c5ea90eabb0",
+        "localCandidate": "f1b42b7 (로컬 검토용 경로, 미배포)"
+      },
+      "appConnection": {
+        "status": "NOT_CONNECTED",
+        "note": "image_routing.json에 등록하지 않았다. 사건의 imageId는 이미 img_adult_crypto_001이므로 경로 한 줄만 추가하면 된다. 중앙 JSON은 김선한 합본 순서로 연결한다."
+      },
+      "sha256": "eeacba1a3d1e38aeadf0a2171fcc9c21b29d110a52b40aeb50b744a289a1806a"
+    }
+  ],
+  "counts": {
+    "assigned": 70,
+    "ownPngSubmitted": 1,
+    "unproduced": 69,
+    "finalAccepted": 0
+  },
+  "bulkProductionGate": "공통 샘플 3종과 파일럿 팀 교차 검토 뒤 나머지 69그룹 제작. 다른 팀원의 승인 칸을 대신 채우지 않음."
+}

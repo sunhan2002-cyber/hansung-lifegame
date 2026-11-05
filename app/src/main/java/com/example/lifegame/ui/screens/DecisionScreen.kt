@@ -10,7 +10,10 @@ import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.gestures.awaitEachGesture
+import androidx.compose.foundation.gestures.awaitFirstDown
 import androidx.compose.foundation.gestures.detectTapGestures
+import androidx.compose.foundation.gestures.waitForUpOrCancellation
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.BoxWithConstraints
@@ -38,6 +41,7 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberUpdatedState
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
@@ -50,6 +54,8 @@ import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.hapticfeedback.HapticFeedbackType
+import androidx.compose.ui.composed
+import androidx.compose.ui.input.pointer.PointerEventPass
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.platform.LocalHapticFeedback
 import androidx.compose.ui.platform.testTag
@@ -57,6 +63,7 @@ import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.semantics.clearAndSetSemantics
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.heading
+import androidx.compose.ui.semantics.onClick
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.semantics.stateDescription
 import androidx.compose.ui.text.TextStyle
@@ -105,6 +112,35 @@ import kotlin.random.Random
 
 private val PopupEasing = CubicBezierEasing(0.2f, 0.7f, 0.2f, 1f)
 
+/** 본문 한 글자가 나오는 간격 */
+internal const val TYPE_MILLIS = 18L
+
+/** 완성 터치 뒤 연타를 무시하는 시간 */
+internal const val TAP_GUARD_MILLIS = 300L
+
+/**
+ * 켜져 있는 동안 화면의 모든 탭을 가로채 [onTap]만 부른다.
+ * 부모가 Initial 단계에서 손을 뗀 이벤트를 먼저 소비하므로 아래 선택지 · 장면 보기 버튼의 클릭은 취소된다.
+ * 누른 이벤트는 소비하지 않아 스크롤은 그대로 된다.
+ */
+private fun Modifier.completeTextOnTap(enabled: Boolean, onTap: () -> Unit): Modifier = composed {
+    val currentTap by rememberUpdatedState(onTap)
+    if (!enabled) {
+        this
+    } else {
+        pointerInput(Unit) {
+            awaitEachGesture {
+                awaitFirstDown(requireUnconsumed = false, pass = PointerEventPass.Initial)
+                val up = waitForUpOrCancellation(pass = PointerEventPass.Initial)
+                if (up != null) {
+                    up.consume()
+                    currentTap()
+                }
+            }
+        }
+    }
+}
+
 /**
  * 결정 · 돌발 화면 (10주차 최종 시안).
  * 위: 투명 배경의 캐릭터와 두꺼운 건강 게이지. 가운데: 사건 분류 글자 효과 · 제목 · 본문(가운데 정렬).
@@ -131,6 +167,16 @@ fun DecisionScreen(
     val popupClosed = remember { Channel<Unit>(Channel.CONFLATED) }
     val haptic = LocalHapticFeedback.current
     val reduceMotion = rememberReduceMotion()
+    val textLength = decision.text.length
+    // 완성 터치 직후 아주 짧게 이어지는 연타도 삼켜, 본문을 보려던 손가락이 선택을 확정하지 않게 한다.
+    var swallowTaps by remember(introKey) { mutableStateOf(false) }
+    val typing = introDone && outcome == null && !sceneOnly && typedChars < textLength
+    val completeText: () -> Unit = {
+        if (typedChars < textLength) {
+            typedChars = textLength
+            swallowTaps = true
+        }
+    }
 
     LaunchedEffect(introKey) {
         if (introDone) return@LaunchedEffect
@@ -161,14 +207,22 @@ fun DecisionScreen(
 
     LaunchedEffect(introKey, introDone) {
         if (!introDone || outcome != null) return@LaunchedEffect
-        if (typedChars >= decision.text.length) return@LaunchedEffect
         if (reduceMotion) {
-            typedChars = decision.text.length
-        } else {
-            for (index in typedChars until decision.text.length) {
-                typedChars = index + 1
-                delay(18)
-            }
+            typedChars = textLength
+            return@LaunchedEffect
+        }
+        // 매번 지금 값을 다시 읽는다. 터치로 전문을 채우면 바로 끝나고, 작은 값으로 다시 덮어쓰지 않는다.
+        while (typedChars < textLength) {
+            // 이모지처럼 두 칸을 쓰는 글자는 한 번에 넘겨 반쪽 글자가 보이지 않게 한다.
+            typedChars = (typedChars + Character.charCount(decision.text.codePointAt(typedChars))).coerceAtMost(textLength)
+            delay(TYPE_MILLIS)
+        }
+    }
+
+    LaunchedEffect(swallowTaps) {
+        if (swallowTaps) {
+            delay(TAP_GUARD_MILLIS)
+            swallowTaps = false
         }
     }
 
@@ -178,7 +232,9 @@ fun DecisionScreen(
     BoxWithConstraints(
         modifier
             .fillMaxSize()
-            .background(LifeGameInk),
+            .background(LifeGameInk)
+            // 본문이 나오는 동안의 터치는 어디를 눌러도 본문 완성만 한다(선택 · 장면 보기 · 진행으로 가지 않는다).
+            .completeTextOnTap(enabled = typing || swallowTaps, onTap = completeText),
     ) {
         SceneImage(
             shot = FilmShot(
@@ -193,7 +249,8 @@ fun DecisionScreen(
                 // 배경만 흐리게 한다. 사건 글자와 선택지는 그 위에 선명하게 얹힌다.
                 .blur(if (sceneOnly) 0.dp else 8.dp)
                 .testTag(if (sceneOnly) "scene_clear" else "scene_blurred"),
-            fitWholeImage = sceneOnly,
+            // 장면 보기에서도 화면 전체를 채운다(위아래 여백 없음). 블러만 풀린다.
+            fitWholeImage = false,
         )
         if (sceneOnly) {
             // 장면 보기: 그림만 남기고 모든 UI를 숨긴다. 한 번 누르면 그대로 돌아온다.
@@ -238,9 +295,10 @@ fun DecisionScreen(
                         NarrativeReveal(
                             decision = decision,
                             typedText = decision.text.take(typedChars),
-                            ready = introDone && typedChars >= decision.text.length,
+                            ready = introDone && typedChars >= textLength,
                             animateMark = !reduceMotion,
                             onReveal = { sceneOnly = true },
+                            onCompleteText = completeText.takeIf { typing },
                         )
                     } else {
                         DecisionText(decision = decision, onReveal = { sceneOnly = true })
@@ -293,6 +351,7 @@ private fun NarrativeReveal(
     ready: Boolean,
     animateMark: Boolean,
     onReveal: () -> Unit,
+    onCompleteText: (() -> Unit)? = null,
 ) {
     Column(
         Modifier
@@ -332,7 +391,14 @@ private fun NarrativeReveal(
                 lineHeight = 27.sp,
                 textAlign = TextAlign.Center,
                 style = TextStyle(shadow = OnSceneShadow),
-                modifier = Modifier.testTag("decision_body"),
+                modifier = Modifier
+                    .testTag("decision_body")
+                    .semantics {
+                        // 스크린리더 사용자도 본문을 바로 끝까지 볼 수 있다.
+                        if (onCompleteText != null) {
+                            onClick(label = "본문 전체 보기") { onCompleteText(); true }
+                        }
+                    },
             )
         }
         SceneViewButton(onClick = onReveal, enabled = ready)

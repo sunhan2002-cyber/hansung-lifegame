@@ -63,21 +63,29 @@ import com.example.lifegame.ui.theme.LifeGameSpecial
 
 /**
  * 10주차 최종 시안의 플레이 화면 부품.
- * 상단: 투명 배경 위 캐릭터 + 두꺼운 건강 게이지(숫자 없음, 상태별 색).
+ * 상단: 투명 배경 위 캐릭터 + 두꺼운 건강 게이지(숫자 없음, 4단계 색).
  * 하단: -O-O-O- 시기선. 사건 분류는 버튼이 아닌 글자 효과.
  */
 
-/** 건강 게이지 색 구간. 80~100 초록, 60~79 주황, 0~59 빨강. 화면에는 숫자를 쓰지 않는다. */
+/**
+ * 건강 게이지 색 구간 (2026-10-31 후속 과제). 60~100 초록, 30~59 노랑, 11~29 주황, 0~10 빨강.
+ * 경계는 60은 초록, 30은 노랑, 10은 빨강이다. 게이지 전체가 현재 값의 한 가지 색으로 칠해지며
+ * 구획 분할 · 그라데이션은 쓰지 않는다. 화면 표시 전용이고 생존 · 사망 판정에는 쓰지 않는다.
+ * 노랑은 밝은 종이색 트랙에서도 구분되도록 채도를 높인 황금색 계열을 쓴다.
+ */
 enum class HealthLevel(val label: String, val color: Color) {
     GOOD("좋음", Color(0xFF2E9D5B)),
-    CAUTION("주의", Color(0xFFE38A1C)),
-    DANGER("위험", Color(0xFFD8403A)),
+    CAUTION("주의", Color(0xFFE2B000)),
+    DANGER("위험", Color(0xFFEE7A1F)),
+    CRITICAL("위급", Color(0xFFD63A33)),
 }
 
-fun healthLevelOf(health: Int): HealthLevel = when {
-    health >= 80 -> HealthLevel.GOOD
-    health >= 60 -> HealthLevel.CAUTION
-    else -> HealthLevel.DANGER
+/** 음수 · 100 초과 값도 0~100으로 묶어 같은 구간 규칙을 쓴다. */
+fun healthLevelOf(health: Int): HealthLevel = when (health.coerceIn(0, 100)) {
+    in 60..100 -> HealthLevel.GOOD
+    in 30..59 -> HealthLevel.CAUTION
+    in 11..29 -> HealthLevel.DANGER
+    else -> HealthLevel.CRITICAL
 }
 
 /** 테스트가 게이지 색 구간을 읽을 수 있게 둔 의미 속성. 화면에는 보이지 않는다. */
