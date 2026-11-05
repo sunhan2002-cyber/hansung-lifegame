@@ -1,0 +1,16 @@
+{
+  "date": "2026-11-05",
+  "generator": "built-in image_gen",
+  "assets": [
+    {
+      "eventId": "adult_006",
+      "prompt": "Use case: illustration-story. Produce one opaque exact 4:3 landscape PNG life-game event background, adult_006 'Meeting someone again on the street'. FIRST PERSON adult viewpoint standing on a pedestrian street, encountering a previously familiar adult who has also recognized the viewer and paused. The other person stands facing viewer at conversational distance in central x=40..60%, quietly surprised recognition and eye contact, NO touching, NO exchanged phone, NO established relationship, no marriage, no date outcome. Include viewer's stopped shoes at bottom center and the other person's shoes/stance clearly paused, simple neutral street side context; daytime is staging, not a narrative claim. Keep whole recognizable person and stopped-feet cues within central x=34..66% for narrow phone portrait center crop. Match warm muted wood/cream/olive/dusty-blue medium-density crisp pixel-art life game, square clean pixel edges, limited flat shade steps, grounded proportions. No protagonist face/reflection, readable text, letters, numerals, logos, speech balloons, game UI, photo realism, blur, framing or watermark. Choose unassuming gender-neutral adult clothing, no overt romantic accessories. Before the player chooses whether to ask for phone number, leave or walk along. Actual PNG original for Android asset, not a mockup.",
+      "generatedPath": "C:\\Users\\hansung\\.codex\\generated_images\\01a09e37-a516-77f3-91c6-bc47b74f8b3d\\exec-001d8706-caee-4aa4-ba4f-7c4acbaa1a49.png"
+    },
+    {
+      "eventId": "adult_011",
+      "prompt": "Use case: illustration-story. Make one exact landscape 4:3 opaque PNG, first-person cozy Korean life-game medium-density crisp pixel-art scene adult_011 'Sixteen-year-old Kong'. Current story: mother contacts adult protagonist living separately to say elderly childhood pet dog Kong has difficulty walking and asks for a weekend visit. The player has NOT chosen to visit, postpone, or video call. Show protagonist seated in their modest apartment living-room sofa holding smartphone, with a small wordless incoming message icon ABOVE a large still photo of an elderly small cream/tan mixed-breed dog with softly graying muzzle lying awake calmly on mother's home cushion. Dog exists ONLY inside the phone photograph; no actual dog or mother in protagonist room; no active video call controls, no veterinary procedure, no death/injury or chosen outcome. Keep phone ENTIRELY inside central x=39..61% and y=25..74%, centered foreground hand below, couch fabric surrounding. A plain domestic room as side context, warm muted cream/wood/olive/dusty blue palette with coherent visible square pixel edges and limited flat shade steps. Dog appearance is a staging choice to remain consistent with later child_014 and teen_018 assets. No face/reflection of protagonist, no readable writing, letters, digits, logos, watermark, blur, photorealism, game UI. Phone icons only, no text. Before choice, quiet concern, not catastrophe. Output actual PNG.",
+      "generatedPath": "C:\\Users\\hansung\\.codex\\generated_images\\01a09e37-a516-77f3-91c6-bc47b74f8b3d\\exec-2da70269-a5fb-4f65-8ef6-6132aaf08415.png"
+    }
+  ]
+}

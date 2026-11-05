@@ -1,0 +1,355 @@
+{
+  "eventId": "adult_080",
+  "before": {
+    "eventId": "adult_080",
+    "stage": "ADULT",
+    "type": "NORMAL",
+    "isFallback": false,
+    "isMilestone": false,
+    "title": "늦게 받은 첫 월급",
+    "text": "알림: '급여가 입금되었습니다.' 친구들은 벌써 몇 년째 받던 월급이다. 통장 앱을 열 번 새로고침했다.",
+    "imageId": "img_pov_late_paycheck_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [
+        "level_entry",
+        "job_employed"
+      ],
+      "blockedFlags": [
+        "early_job",
+        "promoted",
+        "promotion_missed",
+        "v4:event:adult_069",
+        "level_mid",
+        "level_senior",
+        "level_executive",
+        "career_athlete",
+        "pro_athlete",
+        "career_coach",
+        "coach_path",
+        "career_caster",
+        "career_trainer",
+        "career_gym_owner",
+        "career_founder",
+        "career_creator",
+        "career_freelancer",
+        "job_self_employed",
+        "early_retire",
+        "job_retired"
+      ]
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "부모님께 용돈 봉투를 드린다.",
+        "statDelta": {
+          "사회성": 2,
+          "행복": 2,
+          "경제력": -2
+        },
+        "resultText": "봉투를 받은 엄마가 한참 말이 없었다. 그날 저녁 반찬이 다섯 개 늘었다.",
+        "addFlags": [
+          "family_bond"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "a_parents",
+            "text": "봉투를 받은 엄마가 한참 말이 없었다. 그날 저녁 반찬이 다섯 개 늘었다.",
+            "chance": 100,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "사회성": 2,
+              "행복": 2,
+              "경제력": -2
+            },
+            "addFlags": [
+              "family_bond"
+            ]
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week8_late_newcomer"
+      },
+      {
+        "choiceId": "B",
+        "label": "적금부터 든다.",
+        "statDelta": {
+          "경제력": 3,
+          "행복": -1
+        },
+        "resultText": "월급의 절반이 적금으로 빠져나갔다. 남은 돈으로 한 달을 버티는 게 첫 업무보다 어려웠다.",
+        "addFlags": [
+          "saving_habit"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "b_save",
+            "text": "월급의 절반이 적금으로 빠져나갔다. 남은 돈으로 한 달을 버티는 게 첫 업무보다 어려웠다.",
+            "chance": 70,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "경제력": 3,
+              "행복": -1
+            },
+            "addFlags": [
+              "saving_habit"
+            ],
+            "chanceWeights": {
+              "경제력": 1
+            }
+          },
+          {
+            "outcomeId": "b_wedding",
+            "text": "적금을 들자마자 결혼식이 세 개, 돌잔치가 하나 잡혔다. 적금은 둘째 달부터 시작했다.",
+            "chance": 30,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "사회성": 2,
+              "경제력": -2
+            },
+            "addFlags": [],
+            "chanceWeights": {
+              "운": -2
+            }
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week8_late_newcomer"
+      },
+      {
+        "choiceId": "C",
+        "label": "학자금 대출부터 갚는다.",
+        "statDelta": {
+          "행복": 3,
+          "경제력": -1
+        },
+        "resultText": "대출 잔액이 처음으로 줄었다. 은행 앱의 숫자가 이렇게 반가울 줄 몰랐다.",
+        "addFlags": [],
+        "outcomes": [
+          {
+            "outcomeId": "c_loan",
+            "text": "대출 잔액이 처음으로 줄었다. 은행 앱의 숫자가 이렇게 반가울 줄 몰랐다.",
+            "chance": 100,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 3,
+              "경제력": -1
+            },
+            "addFlags": []
+          }
+        ],
+        "requiredFlags": [
+          "student_loan"
+        ],
+        "conditionReview": "confirmed",
+        "conditionBasis": "week8_late_newcomer"
+      }
+    ],
+    "priority": 0,
+    "kind": "INCIDENT",
+    "periods": [
+      "YOUNG_ADULT",
+      "MIDDLE"
+    ],
+    "weight": 10,
+    "view": "FIRST_PERSON",
+    "relatedPaths": [
+      "WEALTH"
+    ],
+    "pathRole": "늦은 취업 신입 — 첫 수입의 쓰임",
+    "followUps": [
+      "adult_069",
+      "path_wea_05"
+    ]
+  },
+  "after": {
+    "eventId": "adult_080",
+    "stage": "ADULT",
+    "type": "NORMAL",
+    "isFallback": false,
+    "isMilestone": false,
+    "title": "늦게 받은 첫 월급",
+    "text": "알림: '급여가 입금되었습니다.' 친구들은 벌써 몇 년째 받던 월급이다. 통장 앱을 열 번 새로고침했다.",
+    "imageId": "img_pov_late_paycheck_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [
+        "level_entry",
+        "job_employed"
+      ],
+      "blockedFlags": [
+        "early_job",
+        "promoted",
+        "promotion_missed",
+        "v4:event:adult_069",
+        "level_mid",
+        "level_senior",
+        "level_executive",
+        "career_athlete",
+        "pro_athlete",
+        "career_coach",
+        "coach_path",
+        "career_caster",
+        "career_trainer",
+        "career_gym_owner",
+        "career_founder",
+        "career_creator",
+        "career_freelancer",
+        "job_self_employed",
+        "early_retire",
+        "job_retired"
+      ]
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "부모님께 용돈 봉투를 드린다.",
+        "statDelta": {
+          "사회성": 2,
+          "행복": 2,
+          "경제력": -2
+        },
+        "resultText": "봉투를 받은 엄마가 한참 말이 없었다. 그날 저녁 반찬이 다섯 개 늘었다.",
+        "addFlags": [
+          "family_bond"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "a_parents",
+            "text": "봉투를 받은 엄마가 한참 말이 없었다. 그날 저녁 반찬이 다섯 개 늘었다.",
+            "chance": 100,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "사회성": 2,
+              "행복": 2,
+              "경제력": -2
+            },
+            "addFlags": [
+              "family_bond"
+            ]
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week8_late_newcomer"
+      },
+      {
+        "choiceId": "B",
+        "label": "적금부터 든다.",
+        "statDelta": {
+          "경제력": 3,
+          "행복": -1
+        },
+        "resultText": "월급의 절반이 적금으로 빠져나갔다. 남은 돈으로 한 달을 버티는 게 첫 업무보다 어려웠다.",
+        "addFlags": [
+          "saving_habit"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "b_save",
+            "text": "월급의 절반이 적금으로 빠져나갔다. 남은 돈으로 한 달을 버티는 게 첫 업무보다 어려웠다.",
+            "chance": 70,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "경제력": 3,
+              "행복": -1
+            },
+            "addFlags": [
+              "saving_habit"
+            ],
+            "chanceWeights": {
+              "경제력": 1
+            }
+          },
+          {
+            "outcomeId": "b_wedding",
+            "text": "적금을 들자마자 결혼식이 세 개, 돌잔치가 하나 잡혔다. 적금은 둘째 달부터 시작했다.",
+            "chance": 30,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "사회성": 2,
+              "경제력": -2
+            },
+            "addFlags": [],
+            "chanceWeights": {
+              "운": -2
+            }
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week8_late_newcomer"
+      },
+      {
+        "choiceId": "C",
+        "label": "학자금 대출부터 갚는다.",
+        "statDelta": {
+          "행복": 3,
+          "경제력": -1
+        },
+        "resultText": "대출 잔액이 처음으로 줄었다. 은행 앱의 숫자가 이렇게 반가울 줄 몰랐다.",
+        "addFlags": [],
+        "outcomes": [
+          {
+            "outcomeId": "c_loan",
+            "text": "대출 잔액이 처음으로 줄었다. 은행 앱의 숫자가 이렇게 반가울 줄 몰랐다.",
+            "chance": 100,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 3,
+              "경제력": -1
+            },
+            "addFlags": []
+          }
+        ],
+        "requiredFlags": [
+          "student_loan"
+        ],
+        "conditionReview": "confirmed",
+        "conditionBasis": "week8_late_newcomer"
+      }
+    ],
+    "priority": 0,
+    "kind": "INCIDENT",
+    "periods": [
+      "YOUNG_ADULT",
+      "MIDDLE"
+    ],
+    "weight": 10,
+    "view": "FIRST_PERSON",
+    "relatedPaths": [
+      "WEALTH"
+    ],
+    "pathRole": "늦은 취업 신입 — 첫 수입의 쓰임",
+    "followUps": [
+      "adult_069",
+      "path_wea_05"
+    ],
+    "povImageId": "img_adult_first_salary_001"
+  },
+  "reason": "Reviewed shared salary illustration; presentation preference only.",
+  "oldHash": "a8278693bc96b3b60f20134f84a332b5bc6222f78e801401e9129082e9e3b44a",
+  "newHash": "c4112a9084eca88bb7b5e2a4dcf8c0157f10710603a5d788c1310c044770f49e"
+}
