@@ -5,6 +5,11 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.offset
+import androidx.compose.foundation.layout.requiredSize
+import androidx.compose.foundation.layout.wrapContentSize
+import androidx.compose.ui.draw.clipToBounds
+import androidx.compose.ui.unit.dp
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
@@ -47,8 +52,10 @@ data class AvatarLook(
     val eyesId: String = AvatarOptions.eyes.first().id,
     val period: LifePeriod = LifePeriod.INFANT,
     val bodyType: BodyType = BodyType.STANDARD,
-    /** 사진 기반 얼굴 시트가 준비된 경우(지금은 Fake 응답) 표시용 표식 */
+    /** 사진 기반 얼굴 시트가 준비된 경우 표시용 표식 */
     val usesPhotoFace: Boolean = false,
+    /** AI가 만든 얼굴 시트 파일 경로. 있으면 이 시기 칸의 머리를 기본 머리 대신 쓴다. */
+    val photoFaceSheet: String? = null,
 ) {
     val description: String
         get() = "${period.koreanName()} ${bodyType.koreanName()} 체형, " +
@@ -62,6 +69,7 @@ fun avatarLookOf(config: AvatarConfig, period: LifePeriod, stats: Stats): Avatar
     period = period,
     bodyType = bodyTypeFor(stats),
     usesPhotoFace = config.photoConsent && !config.faceSheetRef.isNullOrBlank(),
+    photoFaceSheet = if (config.photoConsent) PhotoFaceSheet.pathOf(config.faceSheetRef) else null,
 )
 
 fun LifePeriod.koreanName(): String = when (this) {
@@ -116,14 +124,27 @@ object AvatarOptions {
 val AvatarAssetLookKey = SemanticsPropertyKey<String>("AvatarAssetLook")
 
 object AvatarLayerAssets {
+    /** 중년 · 노년 얼굴(주름 · 흰머리)과 시기마다의 음영 레이어. scripts/build_aged_avatar_layers.py가 만든다. */
+    const val AGE_ROOT = "avatar_age"
+
     fun layers(look: AvatarLook): List<ImageCandidate> {
         val period = look.period.name.lowercase()
         val root = "avatar_v4"
+        val aged = look.period == LifePeriod.MIDDLE || look.period == LifePeriod.OLD_AGE
         return listOf(
             ImageCandidate("avatar_body", "$root/body/body_${period}_${look.bodyType.name.lowercase()}.png", "avatar"),
             ImageCandidate("avatar_skin", "$root/face/skin_${period}_${look.skinToneId}_${look.bodyType.name.lowercase()}.png", "avatar"),
-            ImageCandidate("avatar_eyes", "$root/face/eyes_${period}_${look.eyesId}.png", "avatar"),
-            ImageCandidate("avatar_hair", "$root/face/hair_${period}_${look.hairId}.png", "avatar"),
+            ImageCandidate(
+                "avatar_eyes",
+                if (aged) "$AGE_ROOT/eyes_aged_${period}_${look.eyesId}.png" else "$root/face/eyes_${period}_${look.eyesId}.png",
+                "avatar",
+            ),
+            ImageCandidate("avatar_shade", "$AGE_ROOT/shade_${period}_${look.hairId}.png", "avatar"),
+            ImageCandidate(
+                "avatar_hair",
+                if (aged) "$AGE_ROOT/hair_aged_${period}_${look.hairId}.png" else "$root/face/hair_${period}_${look.hairId}.png",
+                "avatar",
+            ),
         )
     }
 }
@@ -144,6 +165,13 @@ fun PlayerAvatar(look: AvatarLook, modifier: Modifier = Modifier) {
     ) {
         val width = with(density) { maxWidth.roundToPx() }.coerceAtLeast(1)
         val height = with(density) { maxHeight.roundToPx() }.coerceAtLeast(1)
+        var photo by remember { mutableStateOf<Pair<AvatarLook, android.graphics.Bitmap>?>(null) }
+        LaunchedEffect(look) {
+            val sheet = look.photoFaceSheet
+            photo = if (sheet == null) null else withContext(Dispatchers.IO) {
+                runCatching { PhotoFaceSheet.compose(context, look, sheet) }.getOrNull()
+            }?.let { look to it }
+        }
         var displayed by remember { mutableStateOf<Pair<AvatarLook, List<LoadedPixelAsset>>?>(null) }
         LaunchedEffect(look, width, height) {
             val next = withContext(Dispatchers.IO) {
@@ -153,7 +181,16 @@ fun PlayerAvatar(look: AvatarLook, modifier: Modifier = Modifier) {
             displayed = if (next.all { it != null }) look to next.filterNotNull() else null
         }
         val ready = displayed
-        if (ready != null) {
+        val photoReady = photo?.takeIf { it.first == look }
+        if (photoReady != null) {
+            Image(
+                painter = BitmapPainter(photoReady.second.asImageBitmap(), filterQuality = FilterQuality.None),
+                contentDescription = null,
+                modifier = Modifier.fillMaxSize().testTag("player_avatar_photo"),
+                contentScale = ContentScale.Fit,
+                alignment = Alignment.BottomCenter,
+            )
+        } else if (ready != null) {
             Box(Modifier.fillMaxSize().testTag("player_avatar_layers")
                 .semantics { this[AvatarAssetLookKey] = ready.first.description }) {
                 ready.second.forEach { loaded ->
@@ -169,6 +206,33 @@ fun PlayerAvatar(look: AvatarLook, modifier: Modifier = Modifier) {
         } else {
             PixelAvatar(look, Modifier.fillMaxSize())
         }
+    }
+}
+
+/**
+ * 얼굴이 잘 보이게 머리 · 어깨만 확대한 모습 (2026-11-05 피드백 5번). 상단 줄처럼 작은 자리에 쓴다.
+ * 같은 [PlayerAvatar]를 크게 그린 뒤 시기별 머리 자리([PhotoFaceSheet.headBox])만 잘라 보여 준다.
+ */
+@Composable
+fun PlayerPortrait(look: AvatarLook, modifier: Modifier = Modifier) {
+    BoxWithConstraints(modifier.clipToBounds().testTag("player_portrait")) {
+        val box = PhotoFaceSheet.headBox(look.period)
+        val regionLeft = box.left - 8
+        val regionTop = box.top - 2
+        val regionW = (box.right + 8) - regionLeft
+        val regionH = (box.chin + 22) - regionTop
+        val scale = minOf(maxWidth.value / regionW, maxHeight.value / regionH)
+        val extraX = (maxWidth.value - regionW * scale) / 2
+        PlayerAvatar(
+            look = look,
+            modifier = Modifier
+                .wrapContentSize(align = Alignment.TopStart, unbounded = true)
+                .offset(x = (extraX - regionLeft * scale).dp, y = (-regionTop * scale).dp)
+                .requiredSize(
+                    width = (PhotoFaceSheet.CANVAS_WIDTH * scale).dp,
+                    height = (PhotoFaceSheet.CANVAS_HEIGHT * scale).dp,
+                ),
+        )
     }
 }
 

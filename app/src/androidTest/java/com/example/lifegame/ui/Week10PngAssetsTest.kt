@@ -54,7 +54,7 @@ class Week10PngAssetsTest {
                     for (eye in com.example.lifegame.ui.avatar.AvatarOptions.eyes) {
                         val look = AvatarLook(skin.id, hair.id, eye.id, period, build)
                         com.example.lifegame.ui.avatar.AvatarLayerAssets.layers(look).forEach { candidate ->
-                            org.junit.Assert.assertTrue(candidate.path, candidate.path.startsWith("avatar_v4/"))
+                            org.junit.Assert.assertTrue(candidate.path, candidate.path.startsWith("avatar_v4/") || candidate.path.startsWith("avatar_age/"))
                             val image = com.example.lifegame.ui.images.PixelAssetLoader.load(context, listOf(candidate), 192, 312)
                             org.junit.Assert.assertNotNull(candidate.path, image)
                             org.junit.Assert.assertEquals(192, image!!.bitmap.width)
@@ -88,7 +88,7 @@ class Week10PngAssetsTest {
         listOf(BodyType.SLIM, BodyType.STANDARD, BodyType.MUSCULAR).forEach { build ->
             val look = AvatarLook(period = LifePeriod.YOUNG_ADULT, bodyType = build)
             com.example.lifegame.ui.avatar.AvatarLayerAssets.layers(look).forEach { candidate ->
-                org.junit.Assert.assertTrue(candidate.path, candidate.path.startsWith("avatar_v4/"))
+                org.junit.Assert.assertTrue(candidate.path, candidate.path.startsWith("avatar_v4/") || candidate.path.startsWith("avatar_age/"))
                 val loaded = com.example.lifegame.ui.images.PixelAssetLoader.load(
                     InstrumentationRegistry.getInstrumentation().targetContext, listOf(candidate), 192, 312)
                 org.junit.Assert.assertNotNull(candidate.path, loaded)

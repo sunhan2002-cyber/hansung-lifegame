@@ -1,8 +1,19 @@
+import java.util.Properties
+
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
     id("org.jetbrains.kotlin.plugin.compose")
 }
+
+// 사진 → AI 얼굴 시트(2026-11-05 피드백 2번). 키는 Git에 올리지 않는 local.properties에서만 읽는다.
+// 키가 없으면 빈 값이 들어가고, 앱은 기존 Fake 응답으로 동작한다.
+val localProperties = Properties().apply {
+    val file = rootProject.file("local.properties")
+    if (file.isFile) file.inputStream().use { load(it) }
+}
+fun localValue(key: String, default: String = ""): String =
+    (localProperties.getProperty(key) ?: default).trim().replace("\\", "\\\\").replace("\"", "\\\"")
 
 android {
     namespace = "com.example.lifegame"
@@ -16,6 +27,9 @@ android {
         versionName = "0.1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
+        buildConfigField("String", "OPENAI_API_KEY", "\"${localValue("OPENAI_API_KEY")}\"")
+        buildConfigField("String", "OPENAI_IMAGE_MODEL", "\"${localValue("OPENAI_IMAGE_MODEL", "gpt-image-2.5-flare")}\"")
     }
 
     buildTypes {

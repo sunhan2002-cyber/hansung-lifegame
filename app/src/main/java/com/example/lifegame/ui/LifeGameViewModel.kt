@@ -27,7 +27,10 @@ import com.example.lifegame.domain.model.SavedOutcome
 import com.example.lifegame.domain.model.TurnPhase
 import com.example.lifegame.domain.model.TurnStep
 import com.example.lifegame.domain.engine.bodyTypeFor
+import com.example.lifegame.BuildConfig
+import com.example.lifegame.data.OpenAiFaceSheetClient
 import com.example.lifegame.domain.generation.FaceSheetRequest
+import com.example.lifegame.domain.generation.GenerationClient
 import com.example.lifegame.domain.generation.FakeGenerationClient
 import com.example.lifegame.domain.generation.FakeGenerationMode
 import com.example.lifegame.domain.generation.FutureLookRequest
@@ -205,6 +208,20 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
 
     private var futureJob: Job? = null
     private var faceJob: Job? = null
+    private var faceRequestId: String? = null
+
+    /**
+     * 사진 → 얼굴 시트 실제 생성(OpenAI). local.properties에 OPENAI_API_KEY가 있을 때만 만든다.
+     * 없으면 기존 Fake 응답으로 동작한다(테스트 · 키 없는 빌드).
+     */
+    private val realFaceClient: GenerationClient? by lazy {
+        BuildConfig.OPENAI_API_KEY.takeIf { it.isNotBlank() }?.let {
+            OpenAiFaceSheetClient(getApplication(), it, BuildConfig.OPENAI_IMAGE_MODEL)
+        }
+    }
+
+    /** 프로필 화면 문구(동의 · 안내)를 실제 전송 기준으로 바꿀지 */
+    val usesRealFaceGeneration: Boolean get() = realFaceClient != null
     private var savedCompletedRunId: String? = null
 
     private val recordContent: RecordContent by lazy {
@@ -220,11 +237,18 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
         )
     }
 
-    /** 프로필 만들기의 타고난 기질. characters.sample.json에서 읽는다. */
+    /** 성향 목록 (characters.sample.json). 주사위 결과와 가장 닮은 성향의 플래그 · 아기 그림을 쓴다. */
     val starters: List<StarterUi> by lazy {
         runCatching {
             getApplication<Application>().assets.open(CHARACTERS_FILE).bufferedReader().use { it.readText() }
         }.map(::parseStarters).getOrElse { emptyList() }
+    }
+
+    /** 해마다의 일상 이야기. 파일이 없거나 깨져도 게임은 기존 기록만으로 진행한다. */
+    private val yearlyStories: YearlyStoryBook by lazy {
+        runCatching {
+            getApplication<Application>().assets.open(YEARLY_STORIES_FILE).bufferedReader().use { it.readText() }
+        }.map(YearlyStoryBook::parse).getOrElse { YearlyStoryBook.EMPTY }
     }
 
     /** 플래그 → 인생 사실 (life_facts.sample.json). 없으면 빈 카탈로그로 기본 문구만 보인다. */
@@ -248,6 +272,7 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
         imageRouting = com.example.lifegame.data.ImageRoutingRepository(getApplication<Application>()).load(),
         factCatalog = factCatalog,
         lookup = FlagLookup.from(decisions, factCatalog),
+        yearlyStories = yearlyStories,
     )
 
     /** 홈 화면에 보여 줄 진행 중인 인생. 끝났거나 없으면 null. */
@@ -309,7 +334,7 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
         val starter = starters.firstOrNull { it.starterId == profile.starterId }
         val step = runCatching {
             val first = newSession.start().state
-            // 타고난 기질과 성별은 시작 능력치 · 플래그로 넣는다. 남자는 청년기에 입영 통지서를 받는다.
+            // 주사위로 정한 시작 능력치 · 성향 플래그 · 성별을 넣는다. 남자는 청년기에 입영 통지서를 받는다.
             val startFlags = buildSet {
                 addAll(starter?.startFlags.orEmpty())
                 add(profile.gender.flag)
@@ -317,7 +342,7 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
             }
             newSession.restore(
                 first.copy(
-                    stats = starter?.let { first.stats.plusClamped(it.statDelta) } ?: first.stats,
+                    stats = (profile.rolledDelta ?: starter?.statDelta)?.let { first.stats.plusClamped(it) } ?: first.stats,
                     flags = first.flags + startFlags,
                 ),
             )
@@ -619,12 +644,39 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
 
     /** 사진 → 얼굴 시트. 동의가 없으면 부르지 않는다. 결과와 상관없이 기본 캐릭터 진행은 막지 않는다. */
     fun requestFaceSheet(photoRef: String, consent: Boolean) {
-        faceJob?.cancel()
+        cancelRunningFaceRequest()
         if (!consent) {
             faceSheet = GenerationUi(photoRef, GenerationStatus.FALLBACK, "동의하지 않아 기본 모습으로 진행합니다.")
             return
         }
+        discardUnusedFaceSheet()
         faceSheet = GenerationUi(photoRef, GenerationStatus.LOADING)
+        val real = realFaceClient
+        if (real != null) {
+            val requestId = "profile-${System.nanoTime()}"
+            faceRequestId = requestId
+            faceJob = viewModelScope.launch {
+                val result = withTimeoutOrNull(REAL_FACE_TIMEOUT_MS) {
+                    withContext(Dispatchers.IO) {
+                        real.createFaceSheet(FaceSheetRequest(runId = requestId, localPhotoRef = photoRef, consent = true))
+                    }
+                } ?: GenerationResult.TimedOut.also { real.cancel(requestId) }
+                if (faceRequestId != requestId) return@launch
+                faceRequestId = null
+                faceSheet = when (result) {
+                    is GenerationResult.Success -> GenerationUi(
+                        photoRef,
+                        GenerationStatus.READY,
+                        "사진으로 얼굴을 만들었습니다. 시기마다 이 얼굴로 나이 들어 갑니다.",
+                        value = result.value,
+                    )
+                    is GenerationResult.Failure -> GenerationUi(photoRef, GenerationStatus.FALLBACK, "${result.reason} 기본 모습으로도 시작할 수 있습니다.")
+                    GenerationResult.TimedOut -> GenerationUi(photoRef, GenerationStatus.FALLBACK, "응답이 너무 늦어 멈췄습니다. 다시 시도하거나 기본 모습으로 시작할 수 있습니다.")
+                    GenerationResult.Cancelled -> GenerationUi(photoRef, GenerationStatus.FALLBACK, "취소해서 기본 모습으로 진행합니다.")
+                }
+            }
+            return
+        }
         val scenario = generationScenario
         val client = FakeGenerationClient(scenario.mode)
         faceJob = viewModelScope.launch {
@@ -638,7 +690,7 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
                 is GenerationResult.Success -> GenerationUi(
                     photoRef,
                     GenerationStatus.READY,
-                    "얼굴 시트 예시 응답을 받았습니다. 실제 생성 서버는 아직 연결되지 않아 화면에는 고른 기본 외형으로 보입니다.",
+                    "얼굴 시트 예시 응답을 받았습니다. 생성 서버 키가 없는 빌드라 화면에는 고른 기본 외형으로 보입니다.",
                     value = result.value,
                 )
                 is GenerationResult.Failure -> GenerationUi(photoRef, GenerationStatus.FALLBACK, "얼굴을 만들지 못했습니다. 기본 모습으로 진행합니다.")
@@ -651,13 +703,28 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
     fun cancelFaceSheet() {
         val key = faceSheet?.key ?: return
         if (faceSheet?.status != GenerationStatus.LOADING) return
-        faceJob?.cancel()
+        cancelRunningFaceRequest()
         faceSheet = GenerationUi(key, GenerationStatus.FALLBACK, "취소해서 기본 모습으로 진행합니다.")
     }
 
+    /** 사진 지우기: 진행 중인 요청을 끊고, 아직 어떤 인생에도 쓰지 않은 생성 결과 파일도 지운다. */
     fun clearFaceSheet() {
-        faceJob?.cancel()
+        cancelRunningFaceRequest()
+        discardUnusedFaceSheet()
         faceSheet = null
+    }
+
+    private fun cancelRunningFaceRequest() {
+        faceJob?.cancel()
+        faceRequestId?.let { id -> realFaceClient?.cancel(id) }
+        faceRequestId = null
+    }
+
+    private fun discardUnusedFaceSheet() {
+        val path = com.example.lifegame.ui.avatar.PhotoFaceSheet.pathOf(faceSheet?.value) ?: return
+        val inUse = avatarForPlay.faceSheetRef == faceSheet?.value ||
+            completedLives.any { it.avatar.faceSheetRef == faceSheet?.value }
+        if (!inUse) runCatching { java.io.File(path).delete() }
     }
 
     private fun futureLookResult(runId: String, result: GenerationResult<String>): GenerationUi = when (result) {
@@ -702,9 +769,10 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
         return record
     }
 
-    /** 공유 URI 접근이 만료됐으면 사진 참조를 지우고 기본 외형으로 이어 간다. */
+    /** 공유 URI 접근이 만료됐으면 사진 참조를 지우고 기본 외형으로 이어 간다. 이미 만든 얼굴 시트는 원본 사진 없이도 쓴다. */
     private fun withReadablePhoto(avatar: AvatarConfig): AvatarConfig {
         val ref = avatar.portraitRef ?: return avatar
+        if (com.example.lifegame.ui.avatar.PhotoFaceSheet.pathOf(avatar.faceSheetRef) != null) return avatar
         val readable = runCatching {
             getApplication<Application>().contentResolver.openInputStream(android.net.Uri.parse(ref))?.use { true } ?: false
         }.getOrDefault(false)
@@ -858,6 +926,9 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
     private companion object {
         const val CHARACTERS_FILE = "characters.sample.json"
         const val LIFE_FACTS_FILE = "life_facts.sample.json"
+        const val YEARLY_STORIES_FILE = "yearly_stories.sample.json"
+        /** 실제 이미지 생성은 30초~1분 넘게 걸릴 수 있다. 이보다 길면 끊고 기본 모습을 권한다. */
+        const val REAL_FACE_TIMEOUT_MS = 150_000L
         const val MAX_SKIP_YEARS = 200
     }
 }

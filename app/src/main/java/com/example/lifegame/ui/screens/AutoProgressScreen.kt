@@ -28,6 +28,7 @@ import androidx.compose.foundation.layout.safeDrawing
 import androidx.compose.foundation.layout.windowInsetsPadding
 import androidx.compose.ui.unit.Dp
 import com.example.lifegame.ui.avatar.PlayerAvatar
+import com.example.lifegame.ui.avatar.PlayerPortrait
 import com.example.lifegame.ui.components.PeriodTrack
 import com.example.lifegame.ui.components.PlayTopBar
 import com.example.lifegame.ui.components.SceneBackdrop
@@ -121,7 +122,7 @@ fun AutoProgressScreen(
                 modifier = Modifier.windowInsetsPadding(
                     WindowInsets.safeDrawing.only(WindowInsetsSides.Top + WindowInsetsSides.Horizontal),
                 ),
-                avatar = { avatarModifier -> PlayerAvatar(state.avatar, avatarModifier) },
+                avatar = { avatarModifier -> PlayerPortrait(state.avatar, avatarModifier) },
             )
             Column(
                 Modifier
@@ -132,7 +133,8 @@ fun AutoProgressScreen(
             ) {
                 CharacterStage(state, height = stageHeight, onOpenDetails = { detailsOpen = true })
                 YearTimer(progress = { yearProgress.value }, playing = state.autoPlaying)
-                YearLog(lines = state.log.takeLast(3))
+                // 최신 기록이 맨 위. 방금 고른 선택 결과를 스크롤 없이 바로 본다 (2026-11-05 피드백 4번).
+                YearLog(lines = state.log.takeLast(YEAR_LOG_LINES).asReversed())
             }
             PeriodTrack(marks = state.periodMarks, yearLabel = "${state.yearInPeriod}번째 해")
             PlaybackBar(
@@ -190,8 +192,8 @@ private fun CharacterStage(state: PeriodPlayUiState, height: Dp, onOpenDetails: 
             PlayerAvatar(
                 look = state.avatar,
                 modifier = Modifier
-                    .padding(bottom = height * 0.06f)
-                    .height(height * 0.74f)
+                    .padding(bottom = height * 0.05f)
+                    .height(height * 0.82f)
                     .aspectRatio(0.62f),
             )
         }
@@ -221,7 +223,9 @@ private fun YearTimer(progress: () -> Float, playing: Boolean) {
     }
 }
 
-/** 지난해는 흐리게, 올해는 크게. 맨 아래가 지금이다. */
+private const val YEAR_LOG_LINES = 5
+
+/** 최신순. 맨 위가 지금이고 아래로 갈수록 지난 기록이라 흐려진다. */
 @Composable
 private fun YearLog(lines: List<LogLineUi>) {
     Column(
@@ -232,14 +236,15 @@ private fun YearLog(lines: List<LogLineUi>) {
         verticalArrangement = Arrangement.spacedBy(12.dp),
     ) {
         lines.forEachIndexed { index, line ->
-            val isNow = index == lines.lastIndex
-            val fade = when (lines.size - 1 - index) {
+            val isNow = index == 0
+            val fade = when (index) {
                 0 -> 1f
-                1 -> 0.65f
-                else -> 0.45f
+                1 -> 0.72f
+                2 -> 0.56f
+                else -> 0.42f
             }
             Column(
-                modifier = Modifier.fillMaxWidth(),
+                modifier = Modifier.fillMaxWidth().testTag("year_log_line_$index"),
                 verticalArrangement = Arrangement.spacedBy(2.dp),
             ) {
                 Text(
