@@ -1,0 +1,139 @@
+{
+  "date": "2026-11-05",
+  "batch": "wonryul-01",
+  "baselineCommit": "9ec953d41381a2640cb7febdad5707e3d7fdad7a",
+  "productionOwner": "정원률",
+  "actualProducer": "정원률 담당 Codex (사용자 요청)",
+  "tool": "built-in image_gen",
+  "status": "PNG_PRODUCED_PENDING_TEAM_AND_RUNTIME_REVIEW",
+  "runtimeRouted": false,
+  "assets": [
+    {
+      "eventId": "adult_005",
+      "generatedPath": "C:\\Users\\bestw\\.codex\\generated_images\\01a1aa53-bb4d-7873-8d79-17cfcd5f69ef\\exec-4cfe243a-16e4-48c9-8399-5feed0e8790d.png",
+      "generationPrompt": "Use case: illustration-story. Create ONE finished exact landscape 4:3 PNG, opaque full scene, for the Korean LifeGame Android game. Medium-density clean crisp pixel art, visibly stepped square pixels, restrained warm brown/cream/olive palette, clear silhouettes and simple tonal planes, matching a calm vintage life simulation, no photographic or painterly texture. Scene: FIRST-PERSON young adult walking along an ordinary neighborhood sidewalk has just stopped because one attractive SAME-AGE YOUNG ADULT is standing a short distance ahead. The other person's gender should remain visually ambiguous: simple short-to-medium neutral hairstyle, plain neutral casual jacket and trousers, no gender-emphasizing features. ONE person ahead, slight three-quarter view, gaze casually to the side, not looking romantically at viewer. The visual story is noticing someone before deciding whether to approach. Natural street depth and pavement are essential; understated residential facades/greenery far to either side, no readable signs, no extra romantic props. Do not predetermine meeting, confession, contact exchange or relationship success. Composition is designed for narrow portrait center crop: keep the ENTIRE other person's head and full standing body, a clear piece of sidewalk and forward walking depth inside central x=38%..62%, y=15%..86%. Moderate person size, not a giant close-up. Quiet surroundings extend across full 4:3 landscape. Soft natural daylight is an artistic staging choice; no specific city identity. No protagonist body or face or reflection, no hearts, no phone, no speech bubbles, no letters/digits/logos/signage, no game UI, no panels or crop guides, no watermark, no dithering or blur. One cohesive original illustration.",
+      "completedEditPrompts": [
+        "Edit this existing LifeGame pixel-art illustration. Keep original exact 4:3 landscape, warm restrained pixel style, sidewalk, trees, street, houses, standing person's position and size centered in the same narrow safe band. Change ONLY the person ahead to a truly ambiguous-gender young adult seen mostly FROM BEHIND, head turned only slightly so eyes/jawline are NOT visible. Loose neutral casual jacket and straight trousers, simple unstyled hair reaching the nape, and neutral stance. Do not show gender-emphasizing body/face/clothing. This is a first-person pedestrian just noticing a same-age stranger ahead BEFORE choosing to approach: stranger is standing still, not interacting with viewer, no romance or outcome yet. Keep full head-to-shoes silhouette and pavement within central x=38%..62%, y=15%..86%, at natural adult scale. Do not add a protagonist face, couple, hearts, phone, signs, writing, letters, digits, UI, watermarks or new story objects. Keep the wider setting unchanged. Opaque PNG, exact 4:3."
+      ],
+      "reviewer": "Codex 자체 검토",
+      "semanticReview": "SELF_REVIEW_ONLY",
+      "visualReview": "SELF_REVIEW_ONLY",
+      "runtimeCropReview": "NOT_RUN",
+      "teamAcceptance": "PENDING",
+      "groupId": "grp_wr_adult_005",
+      "imageId": "img_adult_ideal_type_001",
+      "assetPath": "followup_20261031/img_adult_ideal_type_001.png",
+      "width": 1448,
+      "height": 1086,
+      "sha256": "8e8a7daadb34b3a5c01a848feb5e81a7b32853ce717861487f2981d44b44f2d7",
+      "title": "이상형 발견",
+      "eventText": "길을 가다 멈췄다. 저 앞에 이상형이 서 있다. 심장이 너무 시끄럽다.",
+      "eventFingerprint": "c1b4f07d1b474c17ba797315f634c88faac492365c23dd7475322529a67f9351",
+      "sourceScene": {
+        "place": "보행 중인 길; 세부 지역 미지정",
+        "mainAction": "걸음을 멈춘 시선 앞에 호감 가는 동년배 한 명",
+        "requiredObjects": "보도와 앞서 있는 인물",
+        "peopleAndAge": "청년 주인공 시점; 청년 상대; 성별 고정 금지",
+        "timeOfDay": "본문 미지정",
+        "perspective": "FIRST_PERSON",
+        "productionInstructions": "adult_005: 연애 성사나 고백 이후를 그리지 않는다. 축제에서 말을 거는 teen_021과 장소·연령·행동이 다르다."
+      },
+      "nativeResolutionPreserved": true,
+      "pixelPostprocessing": false,
+      "userFeedback": "사용자: 나머지는 괜찮은 것 같음. 2026-11-05 그림 방향 확인; 팀 의미/기기 검수 승인과 구분."
+    },
+    {
+      "eventId": "adult_010",
+      "generatedPath": "C:/Users/bestw/.codex/generated_images/01a1aa53-bb4d-7873-8d79-17cfcd5f69ef/exec-aee3e485-36ae-4a3f-886a-59e8f2d6d7e5.png",
+      "generationPrompt": "Use case: illustration-story. Create ONE finished exact landscape 4:3 PNG illustration, opaque background, for Korean LifeGame Android game. Clean medium-density crisp pixel art with coherent visible square pixel steps, warm restrained wood-brown, cream and muted amber palette, simplified tonal planes, no photorealism, no painterly smoothing, no dithering/noise. FIRST-PERSON seated young adult viewpoint at Korean barbecue restaurant table on Friday night, after cooking for adult FRIENDS who are now tipsy. Across table one or two adult friends show relaxed slumped shoulders/tired eyes, no workplace suits or boss hierarchy. The crucial choice-before-action moment: EXACTLY ONE remaining small piece of cooked meat rests on an otherwise EMPTY round tabletop grill; at the FAR EDGE OF THE TABLE sits a small receipt sheet with only blank ruled bands/shapes, no readable marks. A small plain drinking glass rests nearby. No one has taken the final piece, reached for or paid the receipt. Hands are resting/not acting. CRITICAL portrait crop composition: vertically stack a small visible portion of the tipsy friends upper-center, receipt at the far table edge around x=47%..55%, y=38%..49%, round grill below at x=38%..62%, y=53%..78% with the SINGLE meat piece centered, and the entire small glass around x=56%..61%, y=44%..52%. All essential items (receipt, the meat, drinking glass, central grill) must survive cropping to center x=34%..66%. Receipt must be visibly ON the far table edge just behind the grill, separated from grill/not cooking on it. Leave full quiet restaurant environment at both sides. Secondary used plates may sit only to sides but contain NO meat. No new serving, no eating, payment, clinking or celebrating. No protagonist face/reflection, no writing, letters, digits, prices, labels, brands, dialogue bubbles, game UI, panels, border, watermark, gradients or blur. One coherent perspective.",
+      "completedEditPrompts": [
+        "Edit ONLY the composition of this existing 4:3 pixel art illustration for a narrow central portrait crop. Keep the exact same clean warm pixel-art style, barbecue restaurant at night, first-person table viewpoint, EXACTLY ONE cooked meat piece on the empty grill, blank receipt at far table edge, and small drinking glass. Keep no readable text or UI and no choice outcome. The two tipsy adult friends are currently far apart and their faces disappear in a central x=34%..66% crop. Reframe them together as a SMALLER compact pair at the far side of the table, heads COMPLETELY inside central x=37%..63%, one head around x=43% and the other x=57%, both around y=29%. Show their slumped relaxed posture and flushed sleepy cheeks, still adult friends, hands relaxed and not taking food. Their torsos may spread outside center but BOTH heads must remain visible in this narrow crop. Keep receipt entirely central BELOW their faces, on the far edge of the table, and single meat piece central further down. Make round grill slightly smaller if needed; glass entirely within x=55%..62%. Retain the whole landscape restaurant setting at sides, no borders, no crop guides, no extra people or extra meat. Preserve 4:3 landscape original composition size and opaque background. This is a modest camera-distance/layout correction, not a new story."
+      ],
+      "reviewer": "Codex 자체 검토",
+      "semanticReview": "SELF_REVIEW_ONLY",
+      "visualReview": "SELF_REVIEW_ONLY",
+      "runtimeCropReview": "NOT_RUN",
+      "teamAcceptance": "PENDING",
+      "groupId": "grp_wr_adult_010",
+      "imageId": "img_adult_drinks_grill_001",
+      "assetPath": "followup_20261031/img_adult_drinks_grill_001.png",
+      "width": 1448,
+      "height": 1086,
+      "sha256": "346efb2dca677728b49749e9cb7eb3be2970db3b366a38edf70517f838e4c27b",
+      "title": "고기 장인의 밤",
+      "eventText": "고기를 다 굽고 보니 다들 취해 있다. 불판 위엔 마지막 한 점, 테이블 끝엔 계산서가 있다.",
+      "eventFingerprint": "9de9cfa70190862bd7f025f82334728519bfc4db9227656d01af36f2347224d3",
+      "sourceScene": {
+        "place": "adult_007·008·009와 같은 고깃집 테이블",
+        "mainAction": "다 구운 뒤 마지막 고기와 계산서를 내려다봄",
+        "requiredObjects": "불판의 고기 한 점; 테이블 끝 계산서; 잔",
+        "peopleAndAge": "성인 주인공과 취한 친구들",
+        "timeOfDay": "금요일 밤",
+        "perspective": "FIRST_PERSON",
+        "productionInstructions": "adult_010: 계산서 글자·가격은 생략한다. 노래방 제안 adult_020과 핵심 물체가 달라 별도 그룹. / 제작 명세는 2차 의미·크롭 검토 반영본을 따른다."
+      },
+      "nativeResolutionPreserved": true,
+      "pixelPostprocessing": false,
+      "userFeedback": "사용자: 나머지는 괜찮은 것 같음. 2026-11-05 그림 방향 확인; 팀 의미/기기 검수 승인과 구분."
+    },
+    {
+      "eventId": "adult_020",
+      "generatedPath": "C:\\Users\\bestw\\.codex\\generated_images\\01a1aa53-bb4d-7873-8d79-17cfcd5f69ef\\exec-5f522f0e-68a7-4505-80bc-8b5b9d617cf0.png",
+      "generationPrompt": "Use case: illustration-story. Create ONE finished exact landscape 4:3 opaque PNG illustration for Korean LifeGame Android game. Calm vintage medium-density clean pixel art, clearly stepped square pixels, restrained warm brown/cream/muted neutral palette and distinct silhouettes, no photorealism, gradients, dithering, painterly blur or noise. FIRST-PERSON YOUNG ADULT employee seated at a company dinner table AFTER eating. The ADULT TEAM LEADER across the table is looking directly toward the viewer and making a gentle open-handed inviting gesture to suggest going to karaoke next, while TWO other adult coworkers remain silent with subdued expressions, looking down or aside. Ordinary office shirts, no logos/name badges; leader's authority conveyed through center position, age and attention, not aggressive pose. These are coworkers at dinner, not friends grilling meat. Clearly show used plates/bowls and cups on the company meal table, but keep them secondary. The setting is still the RESTAURANT; nobody has gone to karaoke. CENTRAL PORTRAIT CROP requirement: leader's whole head, torso, inviting hand and a recognizable table area must all sit entirely within x=37%..63%, from y=16%..85%; gesture hand below face near x=50%, y=53%. Quiet coworkers flank near the leader enough to leave part of lowered gazes/shoulders readable in central crop, with rest of room extending into side landscape. Suggestion has not yet been accepted or rejected. No microphone, karaoke stage, music notes, lyric screen, singing, dancing, victory or refusal outcome. No protagonist face/body/reflection, no speech balloons, readable writing/digits/letters/signs, logos, game buttons/UI, frames, panels, crop guides or watermark. Muted warm indoor lighting after dinner is an artistic staging choice, not an invented story result.",
+      "completedEditPrompts": [
+        "Edit ONLY the framing/layout of this existing landscape 4:3 pixel-art company dinner scene. Preserve its exact warm clean pixel style, restaurant setting with dinner table/used dishes, first-person employee viewpoint, mature team leader smiling and inviting viewer with an open hand, and two silent office coworkers. No protagonist face, no text or UI, NO microphone/stage/singing or karaoke room, no decision outcome. CRITICAL fix: current coworkers disappear in central portrait crop. Pull the camera BACK to make the central group smaller, and arrange the leader and coworkers as a compact cluster across the far side of the table. The leader's ENTIRE head, full inviting hand and important tabletop must fit within x=43%..57%. Place coworker heads just to either side, both ENTIRELY inside the full-image central band x=34%..66%: left coworker head x=35%..43%, right coworker head x=57%..65%. Their heads can sit slightly higher/farther back than leader; preserve their silent lowered or averted gaze and ordinary office shirts. All THREE faces and the leader's open palm must survive narrow center x=34%..66% crop TOGETHER, at a smaller natural medium-distance scale. Keep plenty of table in foreground and full wider room at side edges, but add no new focal people. Pixel faces stay readable; no cutouts, collage, panels, frames or crop guides. The leader is inviting, nobody is answering. Keep exact 4:3 opaque landscape PNG.",
+        "Revise the central composition of this 4:3 warm crisp pixel-art company dinner illustration. Keep same first-person restaurant dinner scene, table of finished food, leader inviting viewer with open palm and two silent coworkers, same style and lighting. The figures MUST form a tightly packed central group, like three people leaning together for a compact group portrait, but NOT posing or looking at a camera: leader looks toward viewer; coworkers still avert eyes silently. Portrait crop safety takes priority. Use exact layout: central older leader face centered x=50%, top of head y=30%, head WIDTH ONLY 9% of total canvas. Left silent coworker face center x=40%, head width 7%, y=38%; right silent coworker face center x=60%, width 7%, y=38%. Both coworkers sit a little behind leader and shoulders overlap behind his arms naturally. All heads MUST be fully between x=35% and65%; NO important face outside that central 30%. Leader open palm center x=47%, y=53%, entirely inside central band. The current left and right people are too far apart: bring them inward by a clear visible amount, moving their chairs inward too. Keep dinner table large in foreground, full room at sides as secondary scenery. No figures cut out or pasted, no collage, panels, written text, logos, microphones, karaoke stage, speech balloons, music notes, UI, crop guides, protagonist face or decision outcomes. Exact landscape 4:3 opaque PNG.",
+        "Edit the attached existing 4:3 pixel-art LifeGame company dinner scene. Main correction: the THREE foreground coworkers are unnaturally piled on top of each other, as though the manager sits on their laps. Completely fix their SEATING AND SPATIAL ARRANGEMENT while preserving warm clean pixel-art style, characters, restaurant dinner context, first-person viewpoint and the manager inviting the viewer to go to karaoke. NATURAL PHYSICAL SPACING IS THE TOP PRIORITY. Use a rectangular dinner table. The manager sits alone on HIS OWN clearly separate chair at the FAR CENTER end of the table, facing the viewer, torso upright, relaxed open-palm invitation. The two silent coworkers sit on separate chairs at the LEFT and RIGHT SIDES of the table, one on each side, at a natural distance from the manager, facing diagonally inward. Show CLEAR gaps and visible chair/table separation between ALL THREE torsos and shoulders. No one sits in front of another person, behind another person's shoulders, on another person's knees, or touching/leaning against another person. Their body silhouettes must NOT overlap. Keep manager head around x=50%, inviting hand entirely in central x=40%..60%; keep coworkers around x=24% and x=77%, natural separated chairs along the table sides. It is EXPECTED and ACCEPTABLE for a narrow center portrait crop to omit part or all of the side coworkers: do NOT cram them into the center. The crop only needs manager's face, inviting hand and dinner table. Both coworkers retain bored/silent averted gazes, not responding. Make seating perspective and individual personal table places convincing, with used dishes/cups in front of each own place. Normal adults, natural anatomically consistent hands and proportions. First-person viewer sits at the near end of table, no protagonist face/reflection. Preserve same restrained brown/cream/warm amber pixel palette, exact landscape 4:3 opaque PNG, no smoothing. Keep restaurant context at side edges, no new story objects or chosen outcome. No karaoke room, microphones, singing, music notes, speech balloons, writing, digits, brand logos, game UI, frames or crop guides. The scene remains BEFORE the player answers the manager."
+      ],
+      "reviewer": "Codex 자체 검토",
+      "semanticReview": "SELF_REVIEW_ONLY",
+      "visualReview": "SELF_REVIEW_ONLY",
+      "runtimeCropReview": "NOT_RUN",
+      "teamAcceptance": "PENDING",
+      "groupId": "grp_wr_adult_020",
+      "imageId": "img_adult_company_dinner_001",
+      "assetPath": "followup_20261031/img_adult_company_dinner_001.png",
+      "width": 1448,
+      "height": 1086,
+      "sha256": "e0dfb063f0fe868e2df8b5205b41e2c9b3e04205412f56f280c0e7596d1d1998",
+      "title": "2차는 노래방",
+      "eventText": "팀장님: \"자~ 2차 노래방 갈 사람?\" 정적. 팀장님이 나를 본다. \"{name} 씨?\"",
+      "eventFingerprint": "5b4cc5ff8544fc93a2a077085530f25ed54c05b76e091fe317e6425f9622d2f5",
+      "sourceScene": {
+        "place": "회식 장소; 식사 직후로 연출 제안",
+        "mainAction": "노래방 제안을 한 팀장이 나를 보고 동료들은 침묵",
+        "requiredObjects": "회식 식탁; 팀장의 권유 손짓",
+        "peopleAndAge": "청년 직원 시점; 성인 팀장·동료",
+        "timeOfDay": "본문 미지정; 회식 후",
+        "perspective": "FIRST_PERSON",
+        "productionInstructions": "adult_020: 아직 노래방에 가지 않았다. 노래방 무대나 노래 중인 주인공을 그리지 않는다."
+      },
+      "nativeResolutionPreserved": true,
+      "pixelPostprocessing": false,
+      "revisionHistory": [
+        {
+          "reason": "사용자: 인물이 중앙에 과하게 몰려 무릎 위에 앉은 것처럼 보임. 자연스러운 좌석 간격 요청.",
+          "previousGeneratedPath": "C:\\Users\\bestw\\.codex\\generated_images\\01a1aa53-bb4d-7873-8d79-17cfcd5f69ef\\exec-cb8928b6-13e6-4af5-b973-732593f649bd.png",
+          "previousSha256": "9ec9ee9972533489e8e5460c9990676432a8cd2a3d006c3d8ffb6efc3a8f9279",
+          "previousReviewNote": "식사 후 팀장의 권유 손짓과 침묵하는 두 동료를 중앙에 모음. 노래방으로 이동하거나 수락하지 않은 상태.",
+          "replacementMethod": "built-in image_gen; original PNG copied without resizing"
+        }
+      ],
+      "userFeedback": "사용자: 좌석 간격 수정본에 ㅇㅋ라고 응답. 2026-11-05 그림 방향 확인; 팀 의미/기기 검수 승인과 구분."
+    }
+  ],
+  "reviewNotes": {
+    "adult_005": "성별을 특정하는 얼굴 묘사를 줄인 뒷모습. 앞선 인물은 상대이며 주인공은 화면에 없음. 길에서 발견한 선택 전 상태. 성별 중립성은 팀 의미 검토 대기.",
+    "adult_010": "마지막 고기 한 점, 무문자 계산서, 잔, 취한 친구를 중앙에 모음. 고기를 먹거나 계산하지 않은 상태.",
+    "adult_020": "자연스러운 좌석 간격 우선. 팀장은 식탁 맞은편 별도 의자, 두 직원은 양옆 별도 의자. 몸 겹침 없음. 중앙에는 팀장 얼굴·권유 손짓·식탁, 세로 크롭에서 양옆 직원 일부 또는 전부가 제외되는 것은 의도된 절충. 실제 기기 검수 대기.",
+    "crop": "adult_005/010은 중앙 대역 기준 자체 시각 검토. adult_020은 사용자 피드백에 따라 원본의 자연스러운 좌석 간격과 중앙 팀장·손짓을 우선. 세 사람 전체를 중앙에 강제로 넣지 않음. 실제 SceneBackdrop/기기 검수 완료 아님.",
+    "runtime": "ADB 연결 실패로 실제 기기 검수 미실행. 검토용 미리보기 목록만 연결. 사건 라우팅 및 중앙 승인 manifest 변경 없음."
+  },
+  "quantityAccounting": {
+    "assignedGroups": 69,
+    "previouslyApproved": 4,
+    "newPngsPendingReview": 3,
+    "notYetProduced": 62,
+    "remainingUnapproved": 65
+  }
+}
