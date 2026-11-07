@@ -65,8 +65,8 @@ fun LifeGauge(health: Int, modifier: Modifier = Modifier) {
     val value = health.coerceIn(0, 100)
     Column(modifier.fillMaxWidth(), verticalArrangement = Arrangement.spacedBy(4.dp)) {
         Row(Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
-            Text("건강", color = LifeGameInkSecondary, fontSize = 11.5.sp, modifier = Modifier.weight(1f))
-            Text("$value / 100", color = LifeGameStatDown, fontSize = 11.5.sp, fontWeight = FontWeight.Bold)
+            Text("건강", color = LifeGameInkSecondary, fontSize = 12.5.sp, modifier = Modifier.weight(1f))
+            Text("$value / 100", color = LifeGameStatDown, fontSize = 12.5.sp, fontWeight = FontWeight.Bold)
         }
         Box(
             Modifier
@@ -184,7 +184,7 @@ fun PeriodProgress(
                         dark -> LifeMutedOnDark
                         else -> LifeGameInkTertiary
                     },
-                    fontSize = 10.sp,
+                    fontSize = 12.5.sp,
                     fontWeight = if (mark.isCurrent) FontWeight.Bold else FontWeight.Normal,
                     maxLines = 1,
                 )
@@ -405,7 +405,7 @@ fun SectionLabel(text: String, modifier: Modifier = Modifier, trailing: String? 
             modifier = Modifier.weight(1f).semantics { heading() },
         )
         if (trailing != null) {
-            Text(trailing, color = LifeGameInkTertiary, fontSize = 11.5.sp)
+            Text(trailing, color = LifeGameInkTertiary, fontSize = 12.5.sp)
         }
     }
 }

@@ -205,8 +205,8 @@ private fun Lifeline(age: Int, modifier: Modifier = Modifier) {
             text = "$LIFELINE_MAX_AGE",
             modifier = Modifier.align(Alignment.TopEnd).background(LifeGamePaper),
             color = LifeGameInkTertiary,
-            fontSize = 10.sp,
-            lineHeight = 10.sp,
+            fontSize = 11.5.sp,
+            lineHeight = 12.sp,
         )
     }
 }
@@ -234,7 +234,7 @@ fun PullHint(recordCount: Int, modifier: Modifier = Modifier) {
                 "고른 일은 여기 위에 기록으로 쌓여요"
             },
             color = LifeGameInkTertiary,
-            fontSize = 11.5.sp,
+            fontSize = 12.5.sp,
         )
     }
 }

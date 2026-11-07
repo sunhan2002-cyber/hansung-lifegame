@@ -109,6 +109,16 @@ class Week7FlowSmokeTest {
             composeRule.onNodeWithText("사건 보기").performScrollTo().performClick()
             composeRule.waitForIdle()
         }
+        // 본문 → 사건 그림 선노출 → 선택지 (2026-11-06). 선노출이 뜨면 한 번 눌러 넘긴다.
+        var sawPreview = false
+        composeRule.waitUntil(timeoutMillis = 20_000) {
+            if (composeRule.onAllNodesWithTag("scene_preview").fetchSemanticsNodes().isNotEmpty()) {
+                if (screenshot && !sawPreview) saveScreenshot("05_scene_preview.png")
+                sawPreview = true
+                composeRule.onNodeWithTag("scene_preview").performClick()
+            }
+            composeRule.onAllNodesWithTag("decision_choice_A").fetchSemanticsNodes().isNotEmpty()
+        }
         composeRule.onNodeWithTag("decision_choice_A").performScrollTo().assertIsDisplayed()
         if (screenshot) {
             saveScreenshot("05_decision.png")

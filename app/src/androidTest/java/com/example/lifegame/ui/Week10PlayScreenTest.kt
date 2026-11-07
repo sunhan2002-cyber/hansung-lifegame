@@ -191,6 +191,9 @@ class Week10PlayScreenTest {
     fun healthGaugeColorFollowsTheBoundariesWithoutNumbers() {
         var health by mutableStateOf(100)
         setScreen { DecisionScreen(state = playState(health = health), onChoose = {}, onContinue = {}) }
+        // 본문 → 사건 그림 선노출(상단 줄이 숨는다) → 선택지까지 지나간 뒤 게이지를 본다 (2026-11-06).
+        composeRule.mainClock.advanceTimeBy(10_000)
+        composeRule.waitUntil(5_000) { composeRule.onAllNodesWithTag("decision_choice_A").fetchSemanticsNodes().isNotEmpty() }
         // 2026-10-31 후속 과제: 60~100 초록, 30~59 노랑, 11~29 주황, 0~10 빨강. 음수 · 100 초과도 막는다.
         val expected = listOf(
             120 to HealthLevel.GOOD,

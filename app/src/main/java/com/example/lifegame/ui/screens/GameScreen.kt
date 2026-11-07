@@ -462,7 +462,7 @@ private fun EventText(frame: YearFrame, result: UiChoiceResult?, modifier: Modif
                 verticalArrangement = Arrangement.spacedBy(4.dp),
             ) {
                 Text("돌발 사건", style = MarkLabelStyle, color = LifeGameSpecial)
-                Text("이번 생 ${frame.specialOrdinal}번째 돌발 사건", color = LifeGameInkSecondary, fontSize = 11.5.sp)
+                Text("이번 생 ${frame.specialOrdinal}번째 돌발 사건", color = LifeGameInkSecondary, fontSize = 12.5.sp)
             }
         }
         Text(
@@ -628,7 +628,7 @@ private fun ChoiceCard(
                 Text(
                     text = affected.joinToString(" · "),
                     color = LifeGameInkTertiary,
-                    fontSize = 11.5.sp,
+                    fontSize = 12.5.sp,
                     lineHeight = 15.5.sp,
                 )
             }
@@ -696,7 +696,7 @@ private fun SpecialEventPopup(frame: YearFrame, progress: () -> Float, onOpen: (
                     verticalArrangement = Arrangement.spacedBy(4.dp),
                 ) {
                     Text("돌발 사건", style = MarkLabelStyle, color = LifeGameSpecial)
-                    Text("이번 생 ${frame.specialOrdinal}번째", color = LifeGameInkSecondary, fontSize = 11.5.sp)
+                    Text("이번 생 ${frame.specialOrdinal}번째", color = LifeGameInkSecondary, fontSize = 12.5.sp)
                 }
                 Text(
                     text = frame.event.title,
