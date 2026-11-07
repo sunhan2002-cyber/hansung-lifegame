@@ -1,0 +1,6 @@
+
+com.example.lifegame.ui.PhotoFaceSheetTest:...
+
+Time: 21.603
+
+OK (3 tests)

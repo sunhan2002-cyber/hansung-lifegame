@@ -1,0 +1,65 @@
+{
+  "date": "2026-11-07",
+  "productionOwner": "정원률",
+  "userReview": "APPROVED_FOR_LOCAL_REPLACEMENT",
+  "teamAcceptance": "PENDING",
+  "runtimeRoutingChanged": false,
+  "dimensions": "1448x1086, exact 4:3",
+  "revisedPngs": 6,
+  "assets": [
+    {
+      "eventId": "child_020",
+      "groupId": "grp_wr_child_020",
+      "assetPath": "followup_20261031/img_child_clock_001.png",
+      "previousSha256": "7f36ec3269e386b8d6577e5c08e724a588e4758fdd52dba10ecb6dbf13b3a7d2",
+      "sha256": "b0b23172232c22d2214304e4b7cbde3192f49efa6d8f5db15284d5b08f9664e5",
+      "bytes": 1667139,
+      "change": "드라이버를 시계 아래로 이동"
+    },
+    {
+      "eventId": "child_035",
+      "groupId": "grp_wr_child_035",
+      "assetPath": "followup_20261031/img_child_choir_001.png",
+      "previousSha256": "b15123ece4a90b2a5d2a297528a7de581df234b9295a9ac7d1b84924a5ca0317",
+      "sha256": "40a7faa38286fbf7f7eb2cae6bc475e28dd9c380b83abf490910a141cc67d266",
+      "bytes": 1743724,
+      "change": "선생님과 마이크를 중앙에 배치"
+    },
+    {
+      "eventId": "path_wea_17",
+      "groupId": "grp_wr_path_wea_17",
+      "assetPath": "followup_20261031/img_path_wea_17_001.png",
+      "previousSha256": "8c0826957c77e34056b3d444bbb8b2d33630303f0bf05ed45147d64c3175ce0b",
+      "sha256": "b413af301f323b07190e7e2aa977bee5afbca7b425db30d42bca3083711e8e99",
+      "bytes": 1735463,
+      "change": "대출 서류를 카드 위로 이동"
+    },
+    {
+      "eventId": "special_005",
+      "groupId": "grp_wr_special_005",
+      "assetPath": "followup_20261031/img_special_auto_door_001.png",
+      "previousSha256": "3f622e6783f8b4c1a9bd6aac6f3aae00a3fbe760b38385ed16d0c74e664dc2f3",
+      "sha256": "2ca914cbb0da59c3e08526e170e033e590828fffb77ed80b46aa15b8d0cacadf",
+      "bytes": 1741670,
+      "change": "옆에서 박수치는 손을 중앙에 가까이 배치"
+    },
+    {
+      "eventId": "child_030",
+      "groupId": "grp_wr_child_030",
+      "assetPath": "followup_20261031/img_child_swim_meet_001.png",
+      "previousSha256": "9fd01e77cd524b8b14568bf3056feda7c1accff2ae495a9c8a41385631e1a9cc",
+      "sha256": "1082e904e95ea68e07c8bc86999cd5b33f2c15216a33bd22e6dc8dbe213bf41f",
+      "bytes": 1590005,
+      "change": "심판과 호루라기를 맞은편 풀 가장자리에 배치"
+    },
+    {
+      "eventId": "teen_006",
+      "groupId": "grp_wr_teen_006",
+      "assetPath": "followup_20261031/img_teen_broadcast_001.png",
+      "previousSha256": "e5b2201364befd97ba11e9276fb07fece456949f11f1619a93771ba0bef92b5c",
+      "sha256": "aa531e4a86466ec10e768eed5d827ff8867140e4a548983faec0c7c242acccac",
+      "bytes": 1817141,
+      "change": "친구의 얼굴과 손짓을 마이크 옆으로 이동"
+    }
+  ]
+}

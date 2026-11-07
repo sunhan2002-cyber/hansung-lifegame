@@ -1,0 +1,37 @@
+{
+  "date": "2026-11-07",
+  "scope": "정원률 11주차 제출 자료",
+  "submission": {
+    "assignedGroups": 69,
+    "existingApproved": 4,
+    "producedPendingTeamReview": 65,
+    "unproduced": 0,
+    "revised": 6
+  },
+  "pngChecks": {
+    "pngFilesReadable": 65,
+    "exact4To3": 65,
+    "sha256MatchesLedger": 65,
+    "uniqueSha256": 65
+  },
+  "coverageCheck": {
+    "command": "python scripts/validate_followup_image_coverage.py --report output/week11-wonryul-coverage.json",
+    "exitCode": 0,
+    "errors": [],
+    "approvedGroups": 15,
+    "approvedEvents": 16,
+    "pendingEvents": 336
+  },
+  "emulator": {
+    "device": "Pixel_9",
+    "display": "1080x2424",
+    "faceSheetTestsPassed": 3,
+    "originalImagePreviewsChecked": [
+      "child_030",
+      "teen_001",
+      "teen_006"
+    ],
+    "revisedImageComparison": "360x800 center crop simulation"
+  },
+  "teamAcceptance": "PENDING"
+}
