@@ -143,9 +143,17 @@ class SceneCropReviewTest {
                 composeRule.onNodeWithText("사건 보기").performClick()
                 advance(400)
             }
-            // 본문 출력 중이면 한 번 터치로 완성한다. 이미 완성됐으면 아무것도 바뀌지 않는다.
-            composeRule.onNodeWithTag("decision_body", useUnmergedTree = true).performTouchInput { click(center) }
-            advance(TAP_GUARD_MILLIS + 50)
+            // 본문 출력 중이면 한 번 터치로 완성한다. 이미 완성돼 사건 그림 선노출(2026-11-06)이 떠 있으면 본문은 숨어 있다.
+            if (composeRule.onAllNodesWithTag("decision_body", useUnmergedTree = true).fetchSemanticsNodes().isNotEmpty()) {
+                composeRule.onNodeWithTag("decision_body", useUnmergedTree = true).performTouchInput { click(center) }
+                advance(TAP_GUARD_MILLIS + 50)
+                advance(com.example.lifegame.ui.screens.PREVIEW_DELAY_MILLIS + 16)
+            }
+            // 선노출은 아래 제목이 겹치므로 한 번 터치로 넘긴 뒤 장면 보기로 크롭을 잰다.
+            if (composeRule.onAllNodesWithTag("scene_preview").fetchSemanticsNodes().isNotEmpty()) {
+                composeRule.onNodeWithTag("scene_preview").performTouchInput { click(center) }
+                advance(TAP_GUARD_MILLIS + 50)
+            }
             composeRule.onNodeWithTag("scene_view_button", useUnmergedTree = true).performTouchInput { click(center) }
             advance(16)
 

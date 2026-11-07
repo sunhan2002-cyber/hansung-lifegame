@@ -51,12 +51,15 @@ fun buildLogLines(
     periods: List<PeriodDefinition>,
     stories: YearlyStoryBook = YearlyStoryBook.EMPTY,
     runSeed: Long = 0L,
+    /** 선택 결과 문장. 여기에 든 기록은 [LogKind.CHOICE]로 표시한다. */
+    outcomeTexts: Set<String> = emptySet(),
 ): List<LogLineUi> {
+    fun kindOf(text: String) = if (text in outcomeTexts) LogKind.CHOICE else LogKind.RECORD
     val names = periods.associate { it.period to it.displayName }
     fun label(period: LifePeriod, year: Int) = "${names[period] ?: period.name} · ${year}번째 해"
     if (stories.isEmpty) {
         return moments.mapIndexed { index, moment ->
-            LogLineUi(key = "$index", label = label(moment.period, moment.yearInPeriod), text = moment.text)
+            LogLineUi(key = "$index", label = label(moment.period, moment.yearInPeriod), text = moment.text, kind = kindOf(moment.text))
         }
     }
     val lines = mutableListOf<LogLineUi>()
@@ -65,11 +68,18 @@ fun buildLogLines(
         val year = moment.period to moment.yearInPeriod
         val story = stories.lineFor(runSeed, moment.period, moment.yearInPeriod)
         if (year != lastYear) {
-            story?.let { lines += LogLineUi(key = "story-${moment.period.name}-${moment.yearInPeriod}", label = label(moment.period, moment.yearInPeriod), text = it) }
+            story?.let {
+                lines += LogLineUi(
+                    key = "story-${moment.period.name}-${moment.yearInPeriod}",
+                    label = label(moment.period, moment.yearInPeriod),
+                    text = it,
+                    kind = LogKind.STORY,
+                )
+            }
             lastYear = year
         }
         if (story != null && FILLER_RECORD.matches(moment.text)) return@forEachIndexed
-        lines += LogLineUi(key = "$index", label = label(moment.period, moment.yearInPeriod), text = moment.text)
+        lines += LogLineUi(key = "$index", label = label(moment.period, moment.yearInPeriod), text = moment.text, kind = kindOf(moment.text))
     }
     return lines
 }

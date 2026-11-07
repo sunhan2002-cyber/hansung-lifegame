@@ -97,7 +97,7 @@ fun RunEndScreen(
             SectionLabel("지나온 해", trailing = "${state.log.size}줄")
             state.log.forEach { line ->
                 Column(Modifier.fillMaxWidth()) {
-                    Text(line.label, color = LifeGameInkTertiary, fontSize = 11.sp)
+                    Text(line.label, color = LifeGameInkTertiary, fontSize = 12.5.sp)
                     Text(
                         text = line.text,
                         color = LifeGameInk,
@@ -198,7 +198,7 @@ private fun ChoiceRecord(record: ChoiceRecordUi) {
             text = listOf(record.periodName, record.yearInPeriod.takeIf { it > 0 }?.let { "${it}번째 해" })
                 .filterNot { it.isNullOrBlank() }.joinToString(" · "),
             color = LifeGameInkTertiary,
-            fontSize = 11.sp,
+            fontSize = 12.5.sp,
         )
         Text(
             text = record.choiceLabel?.let { "${record.title} → $it" } ?: record.title,

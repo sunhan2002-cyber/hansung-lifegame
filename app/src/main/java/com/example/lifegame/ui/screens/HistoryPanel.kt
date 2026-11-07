@@ -183,7 +183,7 @@ private fun RecordRow(record: LifeRecord, showDivider: Boolean) {
                 verticalArrangement = Arrangement.spacedBy(4.dp),
             ) {
                 if (record.isSpecial) {
-                    Text("돌발 사건", color = LifeGameSpecial, fontSize = 11.5.sp, fontWeight = FontWeight.Bold)
+                    Text("돌발 사건", color = LifeGameSpecial, fontSize = 12.5.sp, fontWeight = FontWeight.Bold)
                 }
                 Text(
                     text = record.title,
@@ -240,7 +240,7 @@ private fun BackToNowBar(nowAge: Int, nowTitle: String, nowIsSpecial: Boolean, o
                     .clip(RoundedCornerShape(2.dp))
                     .background(LifeGameRule),
             )
-            Text("맨 아래에서 위로 올리면 지금으로", color = LifeGameInkTertiary, fontSize = 11.5.sp)
+            Text("맨 아래에서 위로 올리면 지금으로", color = LifeGameInkTertiary, fontSize = 12.5.sp)
         }
         PerforationBand(Modifier.fillMaxWidth().height(21.dp))
         Row(
@@ -259,7 +259,7 @@ private fun BackToNowBar(nowAge: Int, nowTitle: String, nowIsSpecial: Boolean, o
                     .background(if (nowIsSpecial) LifeGameSpecialPicture else LifeGamePicture),
             )
             Column(Modifier.weight(1f)) {
-                Text("지금 · ${nowAge}세", color = LifeGameInkSecondary, fontSize = 11.5.sp)
+                Text("지금 · ${nowAge}세", color = LifeGameInkSecondary, fontSize = 12.5.sp)
                 Text(
                     text = nowTitle,
                     color = LifeGameInk,

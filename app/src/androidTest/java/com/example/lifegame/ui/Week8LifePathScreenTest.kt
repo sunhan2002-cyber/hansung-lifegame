@@ -160,7 +160,11 @@ class Week8LifePathScreenTest {
         setSmallScreen {
             DecisionScreen(state = state, onChoose = {}, onContinue = {})
         }
-        composeRule.waitForIdle()
+        // 본문 → 사건 그림 선노출 → 선택지 (2026-11-06). 선택지가 나올 때까지 시계를 앞당긴다.
+        composeRule.mainClock.advanceTimeBy(10_000)
+        composeRule.waitUntil(5_000) {
+            composeRule.onAllNodesWithTag("decision_choice_B").fetchSemanticsNodes().isNotEmpty()
+        }
         composeRule.onNodeWithTag("decision_content").performScrollToNode(hasText("지력 82 필요 (지금 64)"))
         listOf("지력 82 필요 (지금 64)", "대학 진학 필요", "「고등학교 원서」 이후 가능").forEach { assertTextFits(it) }
         saveScreenshot("decision_locked_reasons.png")
