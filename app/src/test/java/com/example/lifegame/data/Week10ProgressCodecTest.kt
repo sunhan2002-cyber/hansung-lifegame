@@ -129,5 +129,48 @@ class Week10ProgressCodecTest {
         assertTrue(migrated.choices.isEmpty())
         assertNull(migrated.pendingOutcome)
         assertEquals(AvatarConfig(), migrated.avatar)
+        assertEquals(PresentationState(), migrated.presentation)
+        assertTrue(migrated.narrativeRecords.isEmpty())
+    }
+
+    @Test fun week11PresentationAndNarrativeRecordsSurviveRoundTrip() {
+        val presentation = PresentationState(
+            photoFlow = PhotoFlowStatus.FALLBACK,
+            photoFailureReason = "권한 거절",
+            cutscene = CutsceneStatus.SKIPPED,
+            exposedEventId = "adult_012",
+            eventImageExposure = EventImageExposureStatus.SHOWN,
+            resultDisplayId = "run:event:choice:outcome",
+            resultAnimation = ResultAnimationStatus.CONSUMED,
+        )
+        val records = listOf(
+            RunNarrativeRecord(
+                "year-1", RunNarrativeKind.YEARLY_STORY, LifePeriod.MIDDLE, 1, "평범한 하루를 보냈다.",
+            ),
+            RunNarrativeRecord(
+                "choice-1", RunNarrativeKind.CHOICE_RESULT, LifePeriod.MIDDLE, 2, "제안을 받아들였다.",
+                eventId = "adult_012", choiceId = "A",
+            ),
+        )
+        val run = V4SavedRun("우영", state, presentation = presentation, narrativeRecords = records)
+
+        val restored = requireNotNull(Week10ProgressCodec.decode(Week10ProgressCodec.encode(run)))
+        assertEquals(presentation, restored.presentation)
+        assertEquals(records, restored.narrativeRecords)
+        assertEquals(state.stats, restored.state.stats)
+        assertEquals(state.isDead, restored.state.isDead)
+    }
+
+    @Test fun versionThreeSaveDefaultsWeek11DisplayStateWithoutChangingHealth() {
+        val v3 = org.json.JSONObject(Week10ProgressCodec.encode(V4SavedRun("이전", state)))
+        v3.put("saveFormatVersion", 3)
+        v3.remove("presentation")
+        v3.remove("narrativeRecords")
+
+        val restored = requireNotNull(Week10ProgressCodec.decode(v3.toString()))
+        assertEquals(PresentationState(), restored.presentation)
+        assertTrue(restored.narrativeRecords.isEmpty())
+        assertEquals(72, restored.state.stats.health)
+        assertFalse(restored.state.isDead)
     }
 }

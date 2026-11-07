@@ -7,7 +7,14 @@ import com.example.lifegame.domain.model.LifeFacts
 import com.example.lifegame.domain.model.LifeMoment
 import com.example.lifegame.domain.model.LifePeriod
 import com.example.lifegame.domain.model.PeriodRunState
+import com.example.lifegame.domain.model.PhotoFlowStatus
+import com.example.lifegame.domain.model.PresentationState
+import com.example.lifegame.domain.model.CutsceneStatus
+import com.example.lifegame.domain.model.EventImageExposureStatus
+import com.example.lifegame.domain.model.ResultAnimationStatus
 import com.example.lifegame.domain.model.RunChoiceRecord
+import com.example.lifegame.domain.model.RunNarrativeKind
+import com.example.lifegame.domain.model.RunNarrativeRecord
 import com.example.lifegame.domain.model.SavedOutcome
 import com.example.lifegame.domain.model.StatKey
 import com.example.lifegame.domain.model.Stats
@@ -17,7 +24,7 @@ import org.json.JSONObject
 
 /** SharedPreferences와 분리한 순수 JSON 코덱. JVM 테스트에서 마이그레이션까지 검증한다. */
 internal object Week10ProgressCodec {
-    private const val VERSION = 3
+    private const val VERSION = 4
 
     fun encode(run: V4SavedRun): String = JSONObject().apply {
         put("saveFormatVersion", VERSION)
@@ -28,6 +35,8 @@ internal object Week10ProgressCodec {
         put("avatar", run.avatar.toJson())
         put("awardedTitle", run.awardedTitle?.toJson())
         put("phase", run.phase?.name)
+        put("presentation", run.presentation.toJson())
+        put("narrativeRecords", run.narrativeRecords.toJsonArray { it.toJson() })
     }.toString()
 
     fun decode(raw: String): V4SavedRun? = runCatching {
@@ -42,6 +51,8 @@ internal object Week10ProgressCodec {
             avatar = root.optJSONObject("avatar")?.toAvatar() ?: AvatarConfig(),
             awardedTitle = root.optJSONObject("awardedTitle")?.toAwardedTitle(),
             phase = root.nullableString("phase")?.let { TurnPhase.valueOf(it) },
+            presentation = root.optJSONObject("presentation")?.toPresentationState() ?: PresentationState(),
+            narrativeRecords = root.optJSONArray("narrativeRecords").objects { it.toRunNarrativeRecord() },
         )
     }.getOrNull()
 
@@ -181,6 +192,41 @@ internal object Week10ProgressCodec {
         eventImageId = nullableString("eventImageId"),
     )
 
+    private fun PresentationState.toJson() = JSONObject().apply {
+        put("photoFlow", photoFlow.name)
+        put("photoFailureReason", photoFailureReason)
+        put("cutscene", cutscene.name)
+        put("exposedEventId", exposedEventId)
+        put("eventImageExposure", eventImageExposure.name)
+        put("resultDisplayId", resultDisplayId)
+        put("resultAnimation", resultAnimation.name)
+    }
+
+    private fun JSONObject.toPresentationState() = PresentationState(
+        photoFlow = enumOrDefault("photoFlow", PhotoFlowStatus.NOT_REQUESTED),
+        photoFailureReason = nullableString("photoFailureReason"),
+        cutscene = enumOrDefault("cutscene", CutsceneStatus.NOT_STARTED),
+        exposedEventId = nullableString("exposedEventId"),
+        eventImageExposure = enumOrDefault("eventImageExposure", EventImageExposureStatus.NOT_REQUIRED),
+        resultDisplayId = nullableString("resultDisplayId"),
+        resultAnimation = enumOrDefault("resultAnimation", ResultAnimationStatus.NONE),
+    )
+
+    private fun RunNarrativeRecord.toJson() = JSONObject().apply {
+        put("recordId", recordId); put("kind", kind.name); put("period", period.name)
+        put("year", yearInPeriod); put("text", text); put("eventId", eventId); put("choiceId", choiceId)
+    }
+
+    private fun JSONObject.toRunNarrativeRecord() = RunNarrativeRecord(
+        recordId = getString("recordId"),
+        kind = RunNarrativeKind.valueOf(getString("kind")),
+        period = LifePeriod.valueOf(getString("period")),
+        yearInPeriod = getInt("year"),
+        text = getString("text"),
+        eventId = nullableString("eventId"),
+        choiceId = nullableString("choiceId"),
+    )
+
     private fun AvatarConfig.toJson() = JSONObject().apply {
         put("skinToneId", skinToneId); put("hairId", hairId); put("eyesId", eyesId)
         put("portraitRef", portraitRef); put("faceSheetRef", faceSheetRef); put("photoConsent", photoConsent)
@@ -218,6 +264,9 @@ internal object Week10ProgressCodec {
 
     private fun JSONObject.nullableString(name: String): String? =
         optString(name).takeIf { it.isNotBlank() && it != "null" }
+
+    private inline fun <reified T : Enum<T>> JSONObject.enumOrDefault(name: String, default: T): T =
+        nullableString(name)?.let { value -> enumValues<T>().firstOrNull { it.name == value } } ?: default
 
     private fun JSONArray?.strings(): List<String> =
         if (this == null) emptyList() else List(length()) { getString(it) }

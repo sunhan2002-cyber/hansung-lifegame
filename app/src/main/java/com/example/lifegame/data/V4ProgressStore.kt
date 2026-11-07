@@ -5,7 +5,9 @@ import com.example.lifegame.domain.model.AvatarConfig
 import com.example.lifegame.domain.model.AwardedTitle
 import com.example.lifegame.domain.model.CompletedLifeRecord
 import com.example.lifegame.domain.model.PeriodRunState
+import com.example.lifegame.domain.model.PresentationState
 import com.example.lifegame.domain.model.RunChoiceRecord
+import com.example.lifegame.domain.model.RunNarrativeRecord
 import com.example.lifegame.domain.model.SavedOutcome
 import com.example.lifegame.domain.model.TurnPhase
 
@@ -17,6 +19,8 @@ data class V4SavedRun(
     val avatar: AvatarConfig = AvatarConfig(),
     val awardedTitle: AwardedTitle? = null,
     val phase: TurnPhase? = null,
+    val presentation: PresentationState = PresentationState(),
+    val narrativeRecords: List<RunNarrativeRecord> = emptyList(),
 )
 
 sealed interface V4LoadResult {

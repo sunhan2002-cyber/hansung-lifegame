@@ -23,7 +23,13 @@ import com.example.lifegame.domain.model.Ending
 import com.example.lifegame.domain.model.GameProgress
 import com.example.lifegame.domain.model.GameScreenState
 import com.example.lifegame.domain.model.RunChoiceRecord
+import com.example.lifegame.domain.model.RunNarrativeKind
+import com.example.lifegame.domain.model.RunNarrativeRecord
 import com.example.lifegame.domain.model.SavedOutcome
+import com.example.lifegame.domain.model.PresentationState
+import com.example.lifegame.domain.model.PhotoFlowStatus
+import com.example.lifegame.domain.model.CutsceneStatus
+import com.example.lifegame.domain.model.appendOnce
 import com.example.lifegame.domain.model.TurnPhase
 import com.example.lifegame.domain.model.TurnStep
 import com.example.lifegame.domain.engine.bodyTypeFor
@@ -158,6 +164,8 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
     /** 고른 선택지 기록. 결말 화면의 "주요 선택"에 쓴다. */
     private val choiceLog = mutableListOf<ChoiceRecordUi>()
     private val runChoiceHistory = mutableListOf<RunChoiceRecord>()
+    private var narrativeRecords = emptyList<RunNarrativeRecord>()
+    private var presentationForRun = PresentationState()
     private var pendingOutcomeSnapshot: SavedOutcome? = null
     private var avatarForPlay = AvatarConfig()
     private var awardedTitleForRun: AwardedTitle? = null
@@ -356,6 +364,8 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
         playContent = playContentOf(content.periods, focuses, decisions)
         choiceLog.clear()
         runChoiceHistory.clear()
+        narrativeRecords = emptyList()
+        presentationForRun = PresentationState()
         pendingOutcomeSnapshot = null
         avatarForPlay = profile.avatar
         awardedTitleForRun = null
@@ -399,6 +409,8 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
         choiceLog.clear()
         runChoiceHistory.clear()
         runChoiceHistory += saved.choices
+        narrativeRecords = saved.narrativeRecords
+        presentationForRun = saved.presentation
         choiceLog += saved.choices.map { record ->
             val periodName = content.periods.firstOrNull { it.period == record.period }?.displayName
                 ?: record.period.name
@@ -526,6 +538,19 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
             eventImageId = decision.imageId.takeIf(String::isNotBlank),
         )
         runChoiceHistory += choiceRecord
+        val displayId = "${beforeState.runId}:${decision.eventId}:$choiceId:${resolution.outcome.outcomeId}"
+        narrativeRecords = narrativeRecords.appendOnce(
+            RunNarrativeRecord(
+                recordId = displayId,
+                kind = RunNarrativeKind.CHOICE_RESULT,
+                period = beforeState.period,
+                yearInPeriod = beforeState.yearInPeriod,
+                text = resolution.outcome.resultText,
+                eventId = decision.eventId,
+                choiceId = choiceId,
+            ),
+        )
+        presentationForRun = presentationForRun.requestResultAnimation(displayId)
         val openedEvents = if (afterState.isEnding) emptyList() else newlyOpenedEvents(
             before = beforeState.flags,
             after = afterState.flags,
@@ -569,6 +594,31 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
         pendingOutcomeSnapshot = null
         shownDecision = null
         decisionYear = null
+        publishPlay()
+    }
+
+    /** 화면 연출 확인만 저장한다. 엔진 선택이나 보상 적용을 다시 호출하지 않는다. */
+    fun markEventImageShown(eventId: String) {
+        presentationForRun = presentationForRun.markEventImageShown(eventId)
+        publishPlay()
+    }
+
+    /** 애니메이션 재생 완료만 기록한다. 능력치 변화는 이미 엔진에서 한 번 적용된 상태다. */
+    fun markResultAnimationConsumed(displayId: String) {
+        presentationForRun = presentationForRun.consumeResultAnimation(displayId)
+        publishPlay()
+    }
+
+    fun setCutsceneStatus(status: CutsceneStatus) {
+        presentationForRun = presentationForRun.copy(cutscene = status)
+        publishPlay()
+    }
+
+    fun setPhotoFlowStatus(status: PhotoFlowStatus, failureReason: String? = null) {
+        presentationForRun = presentationForRun.copy(
+            photoFlow = status,
+            photoFailureReason = failureReason.takeIf { status == PhotoFlowStatus.FALLBACK },
+        )
         publishPlay()
     }
 
@@ -797,6 +847,21 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
         playStep = step
         died = died || step.state.isDead
         decisionYear = if (step.phase == TurnPhase.DECISION) step.state.yearInPeriod else null
+        if (step.phase == TurnPhase.AUTO_PROGRESS && !step.recordText.isNullOrBlank()) {
+            val recordId = "${step.state.runId}:year:${step.state.period}:${step.state.yearInPeriod}:${step.state.moments.size}"
+            narrativeRecords = narrativeRecords.appendOnce(
+                RunNarrativeRecord(
+                    recordId = recordId,
+                    kind = RunNarrativeKind.YEARLY_STORY,
+                    period = step.state.period,
+                    yearInPeriod = step.state.yearInPeriod,
+                    text = step.recordText,
+                ),
+            )
+        }
+        if (step.phase == TurnPhase.DECISION) {
+            presentationForRun = presentationForRun.requestEventImage(step.pendingDecision?.eventId)
+        }
         publishPlay()
     }
 
@@ -842,6 +907,8 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
                 avatar = avatarForPlay,
                 awardedTitle = awardedTitleForRun,
                 phase = step.phase,
+                presentation = presentationForRun,
+                narrativeRecords = narrativeRecords,
             ),
         )
     }
@@ -877,6 +944,8 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
         died = false
         choiceLog.clear()
         runChoiceHistory.clear()
+        narrativeRecords = emptyList()
+        presentationForRun = PresentationState()
         pendingOutcomeSnapshot = null
         avatarForPlay = AvatarConfig()
         awardedTitleForRun = null
