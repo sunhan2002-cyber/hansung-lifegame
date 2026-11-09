@@ -129,10 +129,12 @@ fun AutoProgressScreen(
                     .weight(1f)
                     .windowInsetsPadding(WindowInsets.safeDrawing.only(WindowInsetsSides.Horizontal)),
             ) {
-                // 장면은 4:3. 작은 화면 · 큰 글꼴에서는 최신 기록 첫 줄(이름 줄 · 진행 막대 포함) 자리를 먼저 남기고
+                // 장면은 4:3. 작은 화면 · 큰 글꼴에서는 최신 기록 두 줄(이름 줄 · 진행 막대 포함) 자리를 먼저 남기고
                 // 남은 높이만 무대에 준다. 기록을 보려고 스크롤하지 않게 한다 (2026-11-06 요구 4).
-                val logReserve = 150.dp + 40.dp * fontScale
-                val stageHeight = min((maxWidth - 32.dp) * 0.75f, (maxHeight - logReserve).coerceAtLeast(88.dp))
+                // 2026-11-09: 실기기 360×640dp · 글꼴 130%(상태 표시줄 · 내비게이션 바 포함)에서 무대가 최소 88dp에 걸려
+                // 최신 기록 둘째 줄이 시기 막대에 가렸다. 무대는 56dp까지 줄이고, 그보다 작아야 하면 접는다(얼굴은 위 초상).
+                val logReserve = 150.dp + 67.dp * fontScale
+                val stageHeight = min((maxWidth - 32.dp) * 0.75f, maxHeight - logReserve)
                 Column(
                     Modifier
                         .fillMaxSize()
@@ -171,6 +173,9 @@ fun AutoProgressScreen(
     }
 }
 
+/** 이보다 낮으면 무대(장면 · 전신)를 접는다. 얼굴은 위쪽 초상에 남는다. */
+private val STAGE_MIN_HEIGHT = 56.dp
+
 /**
  * 사건이 없을 때 계속 보이는 3인칭 무대. 배경(지금 초점의 장면)과 캐릭터를 따로 겹친다.
  * 배경 후보에서 사람이 그려진 시기 초상은 빼서 캐릭터가 두 번 보이지 않게 한다.
@@ -184,7 +189,7 @@ private fun CharacterStage(state: PeriodPlayUiState, height: Dp, onOpenDetails: 
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.spacedBy(6.dp),
     ) {
-        Box(
+        if (height >= STAGE_MIN_HEIGHT) Box(
             Modifier
                 .fillMaxWidth()
                 .height(height)

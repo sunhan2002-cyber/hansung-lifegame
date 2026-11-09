@@ -1,6 +1,8 @@
 package com.example.lifegame.ui.screens
 
 import androidx.compose.foundation.layout.ColumnScope
+import androidx.compose.foundation.layout.ExperimentalLayoutApi
+import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.core.MutableTransitionState
 import androidx.compose.animation.core.animateDpAsState
@@ -10,7 +12,6 @@ import androidx.compose.animation.slideInVertically
 import androidx.compose.animation.slideOutVertically
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.interaction.collectIsPressedAsState
-import androidx.compose.foundation.layout.offset
 import androidx.compose.ui.semantics.LiveRegionMode
 import androidx.compose.ui.semantics.liveRegion
 import com.example.lifegame.ui.StatChangeUi
@@ -64,6 +65,7 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.layout.layout
 import androidx.compose.ui.draw.blur
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.drawBehind
@@ -84,6 +86,7 @@ import androidx.compose.ui.semantics.heading
 import androidx.compose.ui.semantics.onClick
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.semantics.stateDescription
+import androidx.compose.ui.semantics.testTag
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
@@ -655,7 +658,7 @@ private fun DecisionChoiceCard(
         choice.likelihood?.let(::add)
         if (choice.statTags.isNotEmpty()) add("능력치 영향 ${choice.statTags.joinToString(", ")}")
         choice.healthEffectText?.let(::add)
-    }.joinToString(". ")
+    }.map { it.trimEnd().removeSuffix(".") }.joinToString(". ") // "잡는다.. 능력치"처럼 마침표가 겹치지 않게
     Box(
         modifier = Modifier
             .fillMaxWidth()
@@ -864,32 +867,45 @@ private fun OutcomeBlock(outcome: OutcomeUi, changeKey: String, reduceMotion: Bo
  * 순수 표시용이라 반영은 VM에서 이미 한 번 끝났다. 같은 결과에서는 다시 재생하지 않는다(복원 포함).
  * 스크린리더에는 나타날 때 한 번 읽힌다.
  */
+@OptIn(ExperimentalLayoutApi::class)
 @Composable
 private fun FloatingChanges(changes: List<StatChangeUi>, key: String, modifier: Modifier = Modifier) {
     var played by rememberSaveable(key) { mutableStateOf(false) }
     val visible = remember(key) { MutableTransitionState(false) }
     LaunchedEffect(key) {
         if (played) return@LaunchedEffect
+        // 시작하자마자 재생함으로 남긴다: 떠 있는 도중 화면이 다시 만들어져도(회전 등) 처음부터 다시 띄우지 않는다.
+        played = true
         visible.targetState = true
         delay(CHANGE_HOLD_MILLIS)
         visible.targetState = false
-        played = true
     }
     val spoken = "능력치 변화: " + changes.joinToString(", ") { "${it.name} ${signed(it.delta)}" }
     AnimatedVisibility(
         visibleState = visible,
-        modifier = modifier.offset(y = (-24).dp),
+        // 칩 묶음의 아래쪽 12dp만 결과 카드 위에 걸치고 나머지는 카드 위로 띄운다. 작은 화면 · 큰 글씨에서
+        // 칩이 두 줄이 돼도 카드의 선택 문구를 덮지 않는다(한 줄이면 예전처럼 24dp쯤 위).
+        modifier = modifier
+            .fillMaxWidth()
+            .layout { measurable, constraints ->
+                val placeable = measurable.measure(constraints)
+                val overlap = 12.dp.roundToPx()
+                layout(placeable.width, placeable.height) { placeable.place(0, -(placeable.height - overlap)) }
+            },
         enter = fadeIn(tween(200)) + slideInVertically(tween(260)) { it / 2 },
         exit = fadeOut(tween(320)) + slideOutVertically(tween(320)) { -it / 2 },
     ) {
-        Row(
+        // 칩이 한 줄에 다 들어가지 않으면 다음 줄로 넘긴다(한 칩을 좁혀 글자가 세로로 꺾이지 않게).
+        FlowRow(
             Modifier
+                .fillMaxWidth()
                 .semantics {
                     liveRegion = LiveRegionMode.Polite
                     contentDescription = spoken
                 }
                 .testTag("outcome_floating_changes"),
-            horizontalArrangement = Arrangement.spacedBy(6.dp),
+            horizontalArrangement = Arrangement.spacedBy(6.dp, Alignment.CenterHorizontally),
+            verticalArrangement = Arrangement.spacedBy(4.dp),
         ) {
             changes.forEach { change ->
                 val up = change.delta > 0
@@ -898,12 +914,15 @@ private fun FloatingChanges(changes: List<StatChangeUi>, key: String, modifier: 
                     color = if (up) LifeGameStatUp else LifeGameStatDown,
                     fontSize = 14.sp,
                     fontWeight = FontWeight.Bold,
+                    maxLines = 1,
+                    softWrap = false,
                     modifier = Modifier
                         .clip(RoundedCornerShape(999.dp))
                         .background(if (up) LifeGameStatUpSoft else LifeGameStatDownSoft)
                         .border(1.dp, (if (up) LifeGameStatUp else LifeGameStatDown).copy(alpha = 0.35f), RoundedCornerShape(999.dp))
                         .padding(horizontal = 10.dp, vertical = 5.dp)
-                        .clearAndSetSemantics { },
+                        // 칩 하나하나는 읽지 않는다(묶음 설명으로 한 번). 테스트 표시만 남긴다.
+                        .clearAndSetSemantics { testTag = "outcome_change_chip" },
                 )
             }
         }

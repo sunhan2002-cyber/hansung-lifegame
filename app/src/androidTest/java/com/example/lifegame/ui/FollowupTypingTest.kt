@@ -13,6 +13,9 @@ import androidx.compose.ui.graphics.asAndroidBitmap
 import androidx.compose.ui.semantics.SemanticsProperties
 import androidx.compose.ui.semantics.getOrNull
 import androidx.compose.ui.semantics.SemanticsActions
+import androidx.compose.ui.text.TextLayoutResult
+import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.test.SemanticsMatcher
 import androidx.compose.ui.test.assert
 import androidx.compose.ui.test.assertCountEquals
@@ -21,7 +24,6 @@ import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.assertTextEquals
 import androidx.compose.ui.test.captureToImage
 import androidx.compose.ui.test.click
-import androidx.compose.ui.test.junit4.StateRestorationTester
 import androidx.compose.ui.test.junit4.createComposeRule
 import androidx.compose.ui.test.onAllNodesWithTag
 import androidx.compose.ui.test.onNodeWithTag
@@ -268,7 +270,7 @@ class FollowupTypingTest {
 
     @Test
     fun completedBodySurvivesStateRestoration() {
-        val restoration = StateRestorationTester(composeRule)
+        val restoration = ManualRestoreHost(composeRule)
         val decision = longMilestone
         composeRule.mainClock.autoAdvance = false
         restoration.setContent {
@@ -282,8 +284,8 @@ class FollowupTypingTest {
         tapCenterOf("decision_body")
         assertEquals(decision.text, shownBody())
         passPreview()
-        restoration.emulateSavedInstanceStateRestore()
-        composeRule.mainClock.advanceTimeByFrame()
+        restoration.recreate()
+        assertEquals(1, restoration.recreations)
         assertEquals("복원 뒤에도 다시 타이핑하지 않는다", decision.text, shownBody())
         // 그림 선노출도 다시 띄우지 않고 선택지를 바로 보여 준다.
         advance(PREVIEW_DELAY_MILLIS + 16)
@@ -397,13 +399,38 @@ class FollowupTypingTest {
                 node.config.getOrNull(SemanticsProperties.ContentDescription).orEmpty().joinToString().contains("능력치 영향 사회성, 행복")
             },
         )
+        // 2026-11-09 보완 3번: 행동 제목이 건강 회복 문구보다 먼저(위 · 크게 · 읽기 순서 앞) 온다.
+        val description = composeRule.onNodeWithTag("decision_choice_A").fetchSemanticsNode()
+            .config.getOrNull(SemanticsProperties.ContentDescription).orEmpty().joinToString()
+        assertTrue("설명은 행동 제목으로 시작: $description", description.startsWith("선택지 A. 주말마다 봉사를 나간다."))
+        assertTrue("건강 문구는 제목 뒤", description.indexOf("건강 +10 회복") > description.indexOf("주말마다 봉사를 나간다."))
+        val label = textStyleOf("choice_label_A")
+        val summary = textStyleOf("choice_summary_A")
+        assertTrue("제목 글자가 보조 줄보다 크다", label.fontSize.value > summary.fontSize.value)
+        assertTrue("보조 줄은 제목보다 흐리다", summary.color.alpha < label.color.alpha)
+        assertTrue("제목이 보조 줄보다 위", topOf("choice_label_A") < topOf("choice_summary_A"))
         saveScreenshot("iter_choice_cards_folded.png")
         tapCenterOf("choice_details_toggle")
         composeRule.onNodeWithTag("choice_tags_A", useUnmergedTree = true).assertTextEquals("영향: 사회성 · 행복")
         composeRule.onNodeWithTag("choice_tags_B", useUnmergedTree = true).assertTextEquals("영향: 건강 · 행복")
+        // 보완 4번: 펼친 사회성 · 행복 태그도 제목보다 작고 흐리며 제목 아래에 있다(색 · 굵기 강조 없음).
+        val tags = textStyleOf("choice_tags_A")
+        assertTrue("태그 글자는 보조 줄 이하", tags.fontSize.value <= summary.fontSize.value)
+        assertTrue("태그는 제목보다 흐리다", tags.color.alpha < label.color.alpha)
+        assertTrue("태그는 굵게 강조하지 않는다", (tags.fontWeight ?: FontWeight.Normal) < FontWeight.SemiBold)
+        assertTrue("태그는 제목 아래", topOf("choice_label_A") < topOf("choice_tags_A"))
         saveScreenshot("iter_choice_cards_expanded.png")
         assertEquals(0, chooseCount)
     }
+
+    private fun textStyleOf(tag: String): TextStyle {
+        val results = mutableListOf<TextLayoutResult>()
+        composeRule.onNodeWithTag(tag, useUnmergedTree = true).performSemanticsAction(SemanticsActions.GetTextLayoutResult) { it(results) }
+        return results.first().layoutInput.style
+    }
+
+    private fun topOf(tag: String): Float =
+        composeRule.onNodeWithTag(tag, useUnmergedTree = true).fetchSemanticsNode().positionInRoot.y
 
     private fun saveScreenshot(fileName: String) {
         composeRule.mainClock.advanceTimeByFrame()

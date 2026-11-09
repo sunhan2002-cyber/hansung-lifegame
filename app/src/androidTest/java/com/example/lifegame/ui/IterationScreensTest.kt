@@ -63,11 +63,11 @@ class IterationScreensTest {
         }
     }
 
-    private fun setSmall(content: @Composable () -> Unit) {
+    private fun setSmall(height: Int = 640, content: @Composable () -> Unit) {
         compose.setContent {
             val density = LocalDensity.current.density
             CompositionLocalProvider(LocalDensity provides Density(density, fontScale = 1.3f)) {
-                LifeGameTheme { Box(Modifier.requiredSize(360.dp, 640.dp).clipToBounds()) { content() } }
+                LifeGameTheme { Box(Modifier.requiredSize(360.dp, height.dp).clipToBounds()) { content() } }
             }
         }
     }
@@ -145,7 +145,9 @@ class IterationScreensTest {
             avatar = AvatarLook(period = LifePeriod.OLD_AGE, usesPhotoFace = true, photoFaceSheet = sheet.path),
         )
         setSmall { AutoProgressScreen(state, onAdvanceYear = {}, onTogglePlaying = {}, onSpeedChange = {}, onSkipToDecision = {}) }
-        compose.waitUntil(10_000) { compose.onAllNodesWithTag("player_avatar_photo", useUnmergedTree = true).fetchSemanticsNodes().size >= 2 }
+        // 2026-11-09: 이 높이(API 36은 테스트 화면도 상태 표시줄 · 내비게이션 바까지 덮는다)에서는 기록 두 줄 자리를 먼저 남기느라
+        // 무대가 접히고, 사진 얼굴은 위쪽 초상에 남는다.
+        compose.waitUntil(10_000) { compose.onAllNodesWithTag("player_avatar_photo", useUnmergedTree = true).fetchSemanticsNodes().isNotEmpty() }
         save("small_auto_photo_old_age.png")
         // 맨 위가 가장 최근 선택 결과, 그 아래가 같은 해 이야기.
         compose.onNodeWithTag("year_log_line_0", useUnmergedTree = true).assertExists()
@@ -155,6 +157,50 @@ class IterationScreensTest {
         assertTrue("최신 기록이 위", top < older)
         compose.onAllNodesWithTag("log_kind_choice", useUnmergedTree = true).fetchSemanticsNodes().let { assertTrue(it.isNotEmpty()) }
         compose.onAllNodesWithTag("log_kind_story", useUnmergedTree = true).fetchSemanticsNodes().let { assertTrue(it.isNotEmpty()) }
+    }
+
+    /**
+     * 2026-11-09 실기기(720×1280 · 320dpi = 360×640dp, 글꼴 130%)에서는 상태 표시줄 · 내비게이션 바만큼 높이가 줄어
+     * 무대가 최소 88dp에 걸리고 최신 기록 둘째 줄이 시기 막대에 가렸다. 같은 높이(360×592dp)에서 두 줄이 다 보인다.
+     */
+    @Test
+    fun newestTwoLineLogStaysWholeOnASmallPhoneWithSystemBars() {
+        val newest = "친구가 초를 끄고 제일 큰 조각을 가져가는 걸 끝까지 기다렸다."
+        val state = PeriodPlayUiState(
+            runKey = "small-bars",
+            playerName = "플레이어",
+            phase = PlayPhase.AUTO,
+            periodName = "영아기",
+            chapterLabel = "제1장",
+            periodYears = 5,
+            periodIntro = "",
+            yearInPeriod = 3,
+            periodMarks = listOf("영아", "유년", "청소년", "청년", "중년", "노년").mapIndexed { i, p -> PeriodMarkUi(p, if (i == 0) 0.6f else 0f, i == 0) },
+            previousPeriodName = null,
+            stats = Stats(health = 72),
+            focus = null,
+            focusOptions = emptyList(),
+            sceneImageId = "",
+            sceneFile = null,
+            log = listOf(
+                LogLineUi("story-2", "영아기 · 2번째 해", "하루 종일 치발기를 물고 다녔다.", LogKind.STORY),
+                LogLineUi("3", "영아기 · 3번째 해", newest, LogKind.CHOICE),
+            ),
+            yearKey = "small-bars:3",
+            decision = null,
+            outcome = null,
+            isDead = false,
+            autoPlaying = true,
+            speed = 1,
+        )
+        setSmall(height = 592) { AutoProgressScreen(state, onAdvanceYear = {}, onTogglePlaying = {}, onSpeedChange = {}, onSkipToDecision = {}) }
+        compose.waitForIdle()
+        val viewport = compose.onNodeWithTag("auto_progress_content").fetchSemanticsNode().boundsInRoot
+        val text = compose.onNodeWithText(newest).fetchSemanticsNode()
+        val bottom = text.positionInRoot.y + text.size.height
+        assertTrue("최신 기록이 두 줄 이상으로 나온다", text.size.height > 40 * InstrumentationRegistry.getInstrumentation().targetContext.resources.displayMetrics.density)
+        assertTrue("최신 기록 전체가 스크롤 없이 보인다 (아래 ${bottom - viewport.bottom}px 가림)", bottom <= viewport.bottom + 0.5f)
+        save("small_auto_two_line_log_592.png")
     }
 
     @Test

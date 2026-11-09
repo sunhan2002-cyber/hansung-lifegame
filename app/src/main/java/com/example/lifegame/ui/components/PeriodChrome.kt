@@ -4,6 +4,8 @@ import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.ExperimentalLayoutApi
+import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -391,21 +393,28 @@ fun PixelFigurePlaceholder(
 val LifePaperOnDark = Color(0xFFF6F4EF)
 val LifeMutedOnDark = Color(0xFF8C867C)
 
+@OptIn(ExperimentalLayoutApi::class)
 @Composable
 fun SectionLabel(text: String, modifier: Modifier = Modifier, trailing: String? = null) {
-    Row(
+    // 넓으면 제목은 왼쪽 · 안내는 오른쪽 한 줄. 좁은 화면 · 큰 글씨에서 둘이 한 줄에 안 들어가면 제목을 좁히지 않고
+    // 안내를 다음 줄로 내린다(2026-11-09 실기 360×640dp · 글꼴 130%: "이번 시 / 기에 집 / 중할 것"으로 꺾였다).
+    FlowRow(
         modifier = modifier.fillMaxWidth(),
-        verticalAlignment = Alignment.Bottom,
+        horizontalArrangement = Arrangement.SpaceBetween,
+        verticalArrangement = Arrangement.spacedBy(2.dp),
     ) {
         Text(
             text = text,
             color = LifeGameInk,
             fontSize = 13.sp,
             fontWeight = FontWeight.Bold,
-            modifier = Modifier.weight(1f).semantics { heading() },
+            modifier = Modifier
+                .align(Alignment.Bottom)
+                .padding(end = 8.dp)
+                .semantics { heading() },
         )
         if (trailing != null) {
-            Text(trailing, color = LifeGameInkTertiary, fontSize = 12.5.sp)
+            Text(trailing, color = LifeGameInkTertiary, fontSize = 12.5.sp, modifier = Modifier.align(Alignment.Bottom))
         }
     }
 }

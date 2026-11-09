@@ -220,7 +220,7 @@ class PeriodPlayUiTest {
     fun `starters are parsed from the characters file`() {
         val starters = parseStarters(
             """
-            [{"starterId":"starter_loud","name":"활발한 편","description":"어디서든 목소리가 크다.",
+            [{"starterId":"starter_loud","name":"활발한 편","description":"사람들 사이에 쉽게 섞인다.",
               "startStatDelta":{"운동능력":5,"사회성":3,"지력":-3},"startFlags":["starter_loud"]}]
             """.trimIndent(),
         )

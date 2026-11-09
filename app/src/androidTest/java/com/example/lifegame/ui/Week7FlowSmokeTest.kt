@@ -167,6 +167,8 @@ class Week7FlowSmokeTest {
             }
             found != null
         }
+        // 화면이 바뀐 직후 0.3초는 앞 화면 연타가 새 버튼을 누르지 않게 터치를 막는다(2026-11-09). 사람처럼 그 뒤에 누른다.
+        composeRule.waitUntil(5_000) { composeRule.onAllNodesWithTag("screen_change_tap_guard").fetchSemanticsNodes().isEmpty() }
         return requireNotNull(found)
     }
 
