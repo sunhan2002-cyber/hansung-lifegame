@@ -220,12 +220,12 @@ class PeriodPlayUiTest {
     fun `starters are parsed from the characters file`() {
         val starters = parseStarters(
             """
-            [{"starterId":"starter_loud","name":"우렁찬 아기","description":"목청이 크다.",
+            [{"starterId":"starter_loud","name":"활발한 편","description":"사람들 사이에 쉽게 섞인다.",
               "startStatDelta":{"운동능력":5,"사회성":3,"지력":-3},"startFlags":["starter_loud"]}]
             """.trimIndent(),
         )
         val starter = starters.single()
-        assertEquals("우렁찬 아기", starter.name)
+        assertEquals("활발한 편", starter.name)
         assertEquals(StatDelta(fitness = 5, social = 3, intelligence = -3), starter.statDelta)
         assertEquals(setOf("starter_loud"), starter.startFlags)
         assertTrue(parseStarters("not json").isEmpty())

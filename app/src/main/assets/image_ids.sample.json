@@ -1845,25 +1845,25 @@
     "imageId": "img_baby_loud_001",
     "usage": "character",
     "stage": "유아기",
-    "description": "캐릭터 선택 화면의 '우렁찬 아기' 기본 아기 이미지",
+    "description": "캐릭터 선택 화면의 '활발한 편' 기본 캐릭터 이미지",
     "fileName": "img_baby_loud_001.png",
-    "fallbackText": "이미지 준비 전에는 '우렁찬 아기' 이름과 성향 설명으로 대체 표시"
+    "fallbackText": "이미지 준비 전에는 '활발한 편' 이름과 성향 설명으로 대체 표시"
   },
   {
     "imageId": "img_baby_curious_001",
     "usage": "character",
     "stage": "유아기",
-    "description": "캐릭터 선택 화면의 '골똘한 아기' 기본 아기 이미지",
+    "description": "캐릭터 선택 화면의 '파고드는 편' 기본 캐릭터 이미지",
     "fileName": "img_baby_curious_001.png",
-    "fallbackText": "이미지 준비 전에는 '골똘한 아기' 이름과 성향 설명으로 대체 표시"
+    "fallbackText": "이미지 준비 전에는 '파고드는 편' 이름과 성향 설명으로 대체 표시"
   },
   {
     "imageId": "img_baby_quirky_001",
     "usage": "character",
     "stage": "유아기",
-    "description": "캐릭터 선택 화면의 '엉뚱한 아기' 기본 아기 이미지",
+    "description": "캐릭터 선택 화면의 '엉뚱한 편' 기본 캐릭터 이미지",
     "fileName": "img_baby_quirky_001.png",
-    "fallbackText": "이미지 준비 전에는 '엉뚱한 아기' 이름과 성향 설명으로 대체 표시"
+    "fallbackText": "이미지 준비 전에는 '엉뚱한 편' 이름과 성향 설명으로 대체 표시"
   },
   {
     "imageId": "img_adult_reading_glasses_001",
