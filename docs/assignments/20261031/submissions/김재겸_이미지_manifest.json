@@ -100,10 +100,18 @@
         "centerBandLost": "주방, 의자, 창밖 야경"
       },
       "semanticReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "신기훈",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "visualReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "정원률",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "cropReview": {
         "status": "CROP_OK",
@@ -113,13 +121,32 @@
         "sceneMatch": "1.000 / 1.000",
         "result": "실기기 크롭에 핵심 사물이 남는다: 휴대폰 전체(썸네일·알림·작가 카드), 두 손, 이불.",
         "captureSha256": "78153f89409189629f7df8dc610f56a4ed2a902d733c58911ba505870fe5270e",
-        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)"
+        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)",
+        "smallScreen": {
+          "status": "CROP_OK",
+          "screen": "API 36 에뮬레이터 720x1280 320dpi(360x640dp) 글꼴 130%, DecisionScreen 장면 보기",
+          "visibleX": "0.289..0.711",
+          "sceneMatch": "1.000",
+          "result": "보이는 가로 범위가 1080x2400(0.331..0.669)보다 넓어 1080x2400 판정이 하한이다. 새로 잃는 사물 없음.",
+          "captureSha256": "d3aae9d965456c58ad7c63dc05e180e49547a49ed929602aed756d4fb0f58c57",
+          "localCandidate": "tmp/verify-20261109 a13d21f (main + #61 + #62 + 검토용 경로, 미배포)"
+        }
       },
       "appConnection": {
         "status": "NOT_CONNECTED",
         "note": "image_routing.json · image_ids.sample.json · 제작대장에 등록하지 않았다. 중앙 연결은 김선한 병합 순서. 사건이 이미 이 imageId를 고르므로 경로 한 줄만 추가하면 된다."
       },
-      "sha256": "032615ad7b72c8c7375cec4470f3b96e89e21fcc0648fefe72fb6a3f390181c9"
+      "sha256": "032615ad7b72c8c7375cec4470f3b96e89e21fcc0648fefe72fb6a3f390181c9",
+      "approval": {
+        "status": "NOT_APPROVED",
+        "requires": [
+          "신기훈 의미 검수 PASS",
+          "정원률 화풍 검수 PASS",
+          "김재겸 실기기 크롭 CROP_OK 또는 CROP_OK_NOTE (같은 SHA-256)",
+          "김선한 승인 manifest 등록 · image_routing.json 연결"
+        ],
+        "note": "자체 검수만으로는 승인하지 않는다."
+      }
     },
     {
       "groupId": "grp_ya_drinks_ideal_pour",
@@ -155,10 +182,18 @@
         "centerBandLost": "사이다병, 양옆 친구들, 반찬 대부분"
       },
       "semanticReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "신기훈",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "visualReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "정원률",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "cropReview": {
         "status": "CROP_OK_NOTE",
@@ -168,13 +203,32 @@
         "sceneMatch": "1.000 / 1.000",
         "result": "이상형·따르는 손·채워지는 잔·내 손이 남는다. 선택지 B의 사이다병은 크롭 밖.",
         "captureSha256": "47709d79cfb0da3543a935c4f95debf227710c98bf0b807c0a4d229141973109",
-        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)"
+        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)",
+        "smallScreen": {
+          "status": "CROP_OK_NOTE",
+          "screen": "API 36 에뮬레이터 720x1280 320dpi(360x640dp) 글꼴 130%, DecisionScreen 장면 보기",
+          "visibleX": "0.289..0.711",
+          "sceneMatch": "1.000",
+          "result": "보이는 가로 범위가 1080x2400(0.331..0.669)보다 넓어 1080x2400 판정이 하한이다. 새로 잃는 사물 없음.",
+          "captureSha256": "e1433d3a04625fb9454ad63737e164e959b19aabe5f93d6efab5bef3f5dbf42d",
+          "localCandidate": "tmp/verify-20261109 a13d21f (main + #61 + #62 + 검토용 경로, 미배포)"
+        }
       },
       "appConnection": {
         "status": "NOT_CONNECTED",
         "note": "image_routing.json · image_ids.sample.json · 제작대장에 등록하지 않았다. 중앙 연결은 김선한 병합 순서. 사건이 이미 이 imageId를 고르므로 경로 한 줄만 추가하면 된다."
       },
-      "sha256": "8dbd91b7d0c4c4e6d121a108c95bf4a55cd6dd600a8bdc8d0e52c3b9c644bd56"
+      "sha256": "8dbd91b7d0c4c4e6d121a108c95bf4a55cd6dd600a8bdc8d0e52c3b9c644bd56",
+      "approval": {
+        "status": "NOT_APPROVED",
+        "requires": [
+          "신기훈 의미 검수 PASS",
+          "정원률 화풍 검수 PASS",
+          "김재겸 실기기 크롭 CROP_OK 또는 CROP_OK_NOTE (같은 SHA-256)",
+          "김선한 승인 manifest 등록 · image_routing.json 연결"
+        ],
+        "note": "자체 검수만으로는 승인하지 않는다."
+      }
     },
     {
       "groupId": "grp_ya_final_interview",
@@ -210,10 +264,18 @@
         "centerBandLost": "양옆 면접관 대부분"
       },
       "semanticReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "신기훈",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "visualReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "정원률",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "cropReview": {
         "status": "CROP_OK_NOTE",
@@ -223,13 +285,32 @@
         "sceneMatch": "1.000 / 1.000",
         "result": "질문하는 가운데 면접관과 이력서·물컵이 남고 양옆 면접관은 어깨만 남는다.",
         "captureSha256": "505eb11169392f697d1aa2dea06bf57542c039feaeb7eb44e69a855bff73a665",
-        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)"
+        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)",
+        "smallScreen": {
+          "status": "CROP_OK_NOTE",
+          "screen": "API 36 에뮬레이터 720x1280 320dpi(360x640dp) 글꼴 130%, DecisionScreen 장면 보기",
+          "visibleX": "0.289..0.711",
+          "sceneMatch": "1.000",
+          "result": "보이는 가로 범위가 1080x2400(0.331..0.669)보다 넓어 1080x2400 판정이 하한이다. 새로 잃는 사물 없음.",
+          "captureSha256": "c5292ff8864b6d85d68b36ba925476d39e0b015d9fdbcb90f92aeb7ca6391cf7",
+          "localCandidate": "tmp/verify-20261109 a13d21f (main + #61 + #62 + 검토용 경로, 미배포)"
+        }
       },
       "appConnection": {
         "status": "NOT_CONNECTED",
         "note": "image_routing.json · image_ids.sample.json · 제작대장에 등록하지 않았다. 중앙 연결은 김선한 병합 순서. 사건이 이미 이 imageId를 고르므로 경로 한 줄만 추가하면 된다."
       },
-      "sha256": "f3d56c44877695089f3c029c5bca25fcb7ce7babd78d8ef1ce5d9c1841eaceab"
+      "sha256": "f3d56c44877695089f3c029c5bca25fcb7ce7babd78d8ef1ce5d9c1841eaceab",
+      "approval": {
+        "status": "NOT_APPROVED",
+        "requires": [
+          "신기훈 의미 검수 PASS",
+          "정원률 화풍 검수 PASS",
+          "김재겸 실기기 크롭 CROP_OK 또는 CROP_OK_NOTE (같은 SHA-256)",
+          "김선한 승인 manifest 등록 · image_routing.json 연결"
+        ],
+        "note": "자체 검수만으로는 승인하지 않는다."
+      }
     },
     {
       "groupId": "grp_ya_team_dinner_escape",
@@ -265,10 +346,18 @@
         "centerBandLost": "양옆 상사들 대부분"
       },
       "semanticReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "신기훈",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "visualReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "정원률",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "cropReview": {
         "status": "CROP_OK",
@@ -278,13 +367,32 @@
         "sceneMatch": "1.000 / 1.000",
         "result": "실기기 크롭에 핵심 사물이 남는다: 휴대폰 톡 화면, 일어나 나가는 동기 뒷모습, 불판.",
         "captureSha256": "ece24fde73b260b7e872cf37c1f5ef6a39ccb0fd2d0d2a9d9de875fff5a08409",
-        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)"
+        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)",
+        "smallScreen": {
+          "status": "CROP_OK",
+          "screen": "API 36 에뮬레이터 720x1280 320dpi(360x640dp) 글꼴 130%, DecisionScreen 장면 보기",
+          "visibleX": "0.289..0.711",
+          "sceneMatch": "1.000",
+          "result": "보이는 가로 범위가 1080x2400(0.331..0.669)보다 넓어 1080x2400 판정이 하한이다. 새로 잃는 사물 없음.",
+          "captureSha256": "cb969598d3ecdb97f6ffa23472c115cb6c84c0a28f0def59a656f46efa8517f1",
+          "localCandidate": "tmp/verify-20261109 a13d21f (main + #61 + #62 + 검토용 경로, 미배포)"
+        }
       },
       "appConnection": {
         "status": "NOT_CONNECTED",
         "note": "image_routing.json · image_ids.sample.json · 제작대장에 등록하지 않았다. 중앙 연결은 김선한 병합 순서. 사건이 이미 이 imageId를 고르므로 경로 한 줄만 추가하면 된다."
       },
-      "sha256": "3bc304d4ab52f04e08b02a92566227239e434ef581f8810e9d670385f45c2be7"
+      "sha256": "3bc304d4ab52f04e08b02a92566227239e434ef581f8810e9d670385f45c2be7",
+      "approval": {
+        "status": "NOT_APPROVED",
+        "requires": [
+          "신기훈 의미 검수 PASS",
+          "정원률 화풍 검수 PASS",
+          "김재겸 실기기 크롭 CROP_OK 또는 CROP_OK_NOTE (같은 SHA-256)",
+          "김선한 승인 manifest 등록 · image_routing.json 연결"
+        ],
+        "note": "자체 검수만으로는 승인하지 않는다."
+      }
     },
     {
       "groupId": "grp_adult_street_stranger",
@@ -320,10 +428,18 @@
         "centerBandLost": "양옆 보행자·가게"
       },
       "semanticReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "신기훈",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "visualReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "정원률",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "cropReview": {
         "status": "CROP_OK",
@@ -333,13 +449,32 @@
         "sceneMatch": "1.000 / 1.000",
         "result": "실기기 크롭에 핵심 사물이 남는다: 행인 얼굴·반짝이는 눈·손짓, 역 출구 픽토그램.",
         "captureSha256": "e277063d9d1a3a868af5a328bde3c0ae79a0309db71c2c35562cc7689950a679",
-        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)"
+        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)",
+        "smallScreen": {
+          "status": "CROP_OK",
+          "screen": "API 36 에뮬레이터 720x1280 320dpi(360x640dp) 글꼴 130%, DecisionScreen 장면 보기",
+          "visibleX": "0.289..0.711",
+          "sceneMatch": "1.000",
+          "result": "보이는 가로 범위가 1080x2400(0.331..0.669)보다 넓어 1080x2400 판정이 하한이다. 새로 잃는 사물 없음.",
+          "captureSha256": "02b64f3336d9233e3ff1880b1f17cc9b68cb8e7a9990acddd47783d10e25e840",
+          "localCandidate": "tmp/verify-20261109 a13d21f (main + #61 + #62 + 검토용 경로, 미배포)"
+        }
       },
       "appConnection": {
         "status": "NOT_CONNECTED",
         "note": "image_routing.json · image_ids.sample.json · 제작대장에 등록하지 않았다. 중앙 연결은 김선한 병합 순서. 사건이 이미 이 imageId를 고르므로 경로 한 줄만 추가하면 된다."
       },
-      "sha256": "3180760eadf03062c25cb3356b5f8715343b9f477438a7f99f28602d8e1741c3"
+      "sha256": "3180760eadf03062c25cb3356b5f8715343b9f477438a7f99f28602d8e1741c3",
+      "approval": {
+        "status": "NOT_APPROVED",
+        "requires": [
+          "신기훈 의미 검수 PASS",
+          "정원률 화풍 검수 PASS",
+          "김재겸 실기기 크롭 CROP_OK 또는 CROP_OK_NOTE (같은 SHA-256)",
+          "김선한 승인 manifest 등록 · image_routing.json 연결"
+        ],
+        "note": "자체 검수만으로는 승인하지 않는다."
+      }
     },
     {
       "groupId": "grp_ya_used_car_lot",
@@ -375,10 +510,18 @@
         "centerBandLost": "앞유리 빈 가격 카드, 왼쪽 중고차 줄, 버스 정류장"
       },
       "semanticReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "신기훈",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "visualReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "정원률",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "cropReview": {
         "status": "CROP_OK_NOTE",
@@ -388,7 +531,16 @@
         "sceneMatch": "1.000 / 1.000",
         "result": "직원 얼굴·권하는 손·중고 경차·전시장 새 차가 남는다. 숫자 없는 가격 카드는 크롭 밖.",
         "captureSha256": "bc128ba7359ce4383fb850dbfdf01340950a090776584e722aca637f4b0de4be",
-        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)"
+        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)",
+        "smallScreen": {
+          "status": "CROP_OK_NOTE",
+          "screen": "API 36 에뮬레이터 720x1280 320dpi(360x640dp) 글꼴 130%, DecisionScreen 장면 보기",
+          "visibleX": "0.289..0.711",
+          "sceneMatch": "1.000",
+          "result": "보이는 가로 범위가 1080x2400(0.331..0.669)보다 넓어 1080x2400 판정이 하한이다. 새로 잃는 사물 없음.",
+          "captureSha256": "e34155a2d848c3940143a4bc1ac28d18c6daac53225e984f254968670bfeb40b",
+          "localCandidate": "tmp/verify-20261109 a13d21f (main + #61 + #62 + 검토용 경로, 미배포)"
+        }
       },
       "appConnection": {
         "status": "NOT_CONNECTED",
@@ -403,7 +555,17 @@
           "reason": "판매 직원 얼굴(x≈31%)이 세로 크롭 왼쪽 밖, 손짓만 남음",
           "kept": "local only (C:/HSU/3-2/mobile/img_20261108), not committed"
         }
-      ]
+      ],
+      "approval": {
+        "status": "NOT_APPROVED",
+        "requires": [
+          "신기훈 의미 검수 PASS",
+          "정원률 화풍 검수 PASS",
+          "김재겸 실기기 크롭 CROP_OK 또는 CROP_OK_NOTE (같은 SHA-256)",
+          "김선한 승인 manifest 등록 · image_routing.json 연결"
+        ],
+        "note": "자체 검수만으로는 승인하지 않는다."
+      }
     },
     {
       "groupId": "grp_adult_holiday_arm_wrestle",
@@ -439,10 +601,18 @@
         "centerBandLost": "양옆 친척들, 과일"
       },
       "semanticReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "신기훈",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "visualReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "정원률",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "cropReview": {
         "status": "CROP_OK",
@@ -452,13 +622,32 @@
         "sceneMatch": "1.000 / 1.000",
         "result": "실기기 크롭에 핵심 사물이 남는다: 아빠 얼굴·손, 맞잡기 직전의 두 손, 전 접시.",
         "captureSha256": "7d80781de1f995ad6341c8db7a06df5c610678de95f56fa964d2de1a28b84276",
-        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)"
+        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)",
+        "smallScreen": {
+          "status": "CROP_OK",
+          "screen": "API 36 에뮬레이터 720x1280 320dpi(360x640dp) 글꼴 130%, DecisionScreen 장면 보기",
+          "visibleX": "0.289..0.711",
+          "sceneMatch": "1.000",
+          "result": "보이는 가로 범위가 1080x2400(0.331..0.669)보다 넓어 1080x2400 판정이 하한이다. 새로 잃는 사물 없음.",
+          "captureSha256": "125225275be6f4fe2faef678ce15dde5d487c11b0a39f621f6f6365d3188092e",
+          "localCandidate": "tmp/verify-20261109 a13d21f (main + #61 + #62 + 검토용 경로, 미배포)"
+        }
       },
       "appConnection": {
         "status": "NOT_CONNECTED",
         "note": "image_routing.json · image_ids.sample.json · 제작대장에 등록하지 않았다. 중앙 연결은 김선한 병합 순서. 사건이 이미 이 imageId를 고르므로 경로 한 줄만 추가하면 된다."
       },
-      "sha256": "ee13872d7058eb552257687becd6fbb04f072b95e8be4a215ae392221e03cd78"
+      "sha256": "ee13872d7058eb552257687becd6fbb04f072b95e8be4a215ae392221e03cd78",
+      "approval": {
+        "status": "NOT_APPROVED",
+        "requires": [
+          "신기훈 의미 검수 PASS",
+          "정원률 화풍 검수 PASS",
+          "김재겸 실기기 크롭 CROP_OK 또는 CROP_OK_NOTE (같은 SHA-256)",
+          "김선한 승인 manifest 등록 · image_routing.json 연결"
+        ],
+        "note": "자체 검수만으로는 승인하지 않는다."
+      }
     },
     {
       "groupId": "grp_adult_burnout_inbox",
@@ -494,10 +683,18 @@
         "centerBandLost": "빨간 배지, 서류 더미, 커피"
       },
       "semanticReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "신기훈",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "visualReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "정원률",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "cropReview": {
         "status": "CROP_OK_NOTE",
@@ -507,13 +704,32 @@
         "sceneMatch": "1.000 / 1.000",
         "result": "메일함 목록·팀장 메신저·힘없는 두 손이 남는다. 빨간 미확인 배지와 서류 더미는 크롭 밖.",
         "captureSha256": "8b311fd0a17e37a6a0d52bf9c0e7eba2408331cea73f2af085f6f09a3b5f25a4",
-        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)"
+        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)",
+        "smallScreen": {
+          "status": "CROP_OK_NOTE",
+          "screen": "API 36 에뮬레이터 720x1280 320dpi(360x640dp) 글꼴 130%, DecisionScreen 장면 보기",
+          "visibleX": "0.289..0.711",
+          "sceneMatch": "1.000",
+          "result": "보이는 가로 범위가 1080x2400(0.331..0.669)보다 넓어 1080x2400 판정이 하한이다. 새로 잃는 사물 없음.",
+          "captureSha256": "bc13f4f5796c71cb77bdb119cec848cfeaa8efdd5e8d1104404a8c79ffaa8e68",
+          "localCandidate": "tmp/verify-20261109 a13d21f (main + #61 + #62 + 검토용 경로, 미배포)"
+        }
       },
       "appConnection": {
         "status": "NOT_CONNECTED",
         "note": "image_routing.json · image_ids.sample.json · 제작대장에 등록하지 않았다. 중앙 연결은 김선한 병합 순서. 사건이 이미 이 imageId를 고르므로 경로 한 줄만 추가하면 된다."
       },
-      "sha256": "65a5fb425d571a362b552245081f5d35f4953cd64bd09fc21d9e3b7b4c973ecf"
+      "sha256": "65a5fb425d571a362b552245081f5d35f4953cd64bd09fc21d9e3b7b4c973ecf",
+      "approval": {
+        "status": "NOT_APPROVED",
+        "requires": [
+          "신기훈 의미 검수 PASS",
+          "정원률 화풍 검수 PASS",
+          "김재겸 실기기 크롭 CROP_OK 또는 CROP_OK_NOTE (같은 SHA-256)",
+          "김선한 승인 manifest 등록 · image_routing.json 연결"
+        ],
+        "note": "자체 검수만으로는 승인하지 않는다."
+      }
     },
     {
       "groupId": "grp_adult_mom_surgery_call",
@@ -549,10 +765,18 @@
         "centerBandLost": "서류 더미 일부, 노트북, 양옆 동료"
       },
       "semanticReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "신기훈",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "visualReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "정원률",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "cropReview": {
         "status": "CROP_OK",
@@ -562,13 +786,32 @@
         "sceneMatch": "1.000 / 1.000",
         "result": "실기기 크롭에 핵심 사물이 남는다: 엄마 통화 화면, 빼곡한 달력, 손.",
         "captureSha256": "f548af5592b375f182815c16f2e3f96a12247fe2b914b390d94b2cba9d6aa9d7",
-        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)"
+        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)",
+        "smallScreen": {
+          "status": "CROP_OK",
+          "screen": "API 36 에뮬레이터 720x1280 320dpi(360x640dp) 글꼴 130%, DecisionScreen 장면 보기",
+          "visibleX": "0.289..0.711",
+          "sceneMatch": "1.000",
+          "result": "보이는 가로 범위가 1080x2400(0.331..0.669)보다 넓어 1080x2400 판정이 하한이다. 새로 잃는 사물 없음.",
+          "captureSha256": "e162eb3d2db021b6b47b42f90e13a50e770e8cb9c1cb903f9083b9ab2afcc8ce",
+          "localCandidate": "tmp/verify-20261109 a13d21f (main + #61 + #62 + 검토용 경로, 미배포)"
+        }
       },
       "appConnection": {
         "status": "NOT_CONNECTED",
         "note": "image_routing.json · image_ids.sample.json · 제작대장에 등록하지 않았다. 중앙 연결은 김선한 병합 순서. 사건이 이미 이 imageId를 고르므로 경로 한 줄만 추가하면 된다."
       },
-      "sha256": "35ad64e0089064bf9c12c2f4dc589f814a6d4176aa196714f8cadb2b12705654"
+      "sha256": "35ad64e0089064bf9c12c2f4dc589f814a6d4176aa196714f8cadb2b12705654",
+      "approval": {
+        "status": "NOT_APPROVED",
+        "requires": [
+          "신기훈 의미 검수 PASS",
+          "정원률 화풍 검수 PASS",
+          "김재겸 실기기 크롭 CROP_OK 또는 CROP_OK_NOTE (같은 SHA-256)",
+          "김선한 승인 manifest 등록 · image_routing.json 연결"
+        ],
+        "note": "자체 검수만으로는 승인하지 않는다."
+      }
     },
     {
       "groupId": "grp_adult_housewarming_plant",
@@ -604,10 +847,18 @@
         "centerBandLost": "이삿짐 상자, 창, 러그"
       },
       "semanticReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "신기훈",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "visualReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "정원률",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "cropReview": {
         "status": "CROP_OK",
@@ -617,13 +868,32 @@
         "sceneMatch": "1.000 / 1.000",
         "result": "실기기 크롭에 핵심 사물이 남는다: 화분·리본, 친구 손과 내 두 손, 친구 얼굴.",
         "captureSha256": "cf1d9007a9c08813ace1deaf732324fbb2ea30a54a1fd312b9d5842445ccab91",
-        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)"
+        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)",
+        "smallScreen": {
+          "status": "CROP_OK",
+          "screen": "API 36 에뮬레이터 720x1280 320dpi(360x640dp) 글꼴 130%, DecisionScreen 장면 보기",
+          "visibleX": "0.289..0.711",
+          "sceneMatch": "1.000",
+          "result": "보이는 가로 범위가 1080x2400(0.331..0.669)보다 넓어 1080x2400 판정이 하한이다. 새로 잃는 사물 없음.",
+          "captureSha256": "9110154ce950c1f95c48baa88284f9a19eddc5f5bf4b4f98c3eaab379328694b",
+          "localCandidate": "tmp/verify-20261109 a13d21f (main + #61 + #62 + 검토용 경로, 미배포)"
+        }
       },
       "appConnection": {
         "status": "NOT_CONNECTED",
         "note": "image_routing.json · image_ids.sample.json · 제작대장에 등록하지 않았다. 중앙 연결은 김선한 병합 순서. 사건이 이미 이 imageId를 고르므로 경로 한 줄만 추가하면 된다."
       },
-      "sha256": "5271697aa395ac01931b548f6a0580533deed55e0846675107df3be6f3aa2b0f"
+      "sha256": "5271697aa395ac01931b548f6a0580533deed55e0846675107df3be6f3aa2b0f",
+      "approval": {
+        "status": "NOT_APPROVED",
+        "requires": [
+          "신기훈 의미 검수 PASS",
+          "정원률 화풍 검수 PASS",
+          "김재겸 실기기 크롭 CROP_OK 또는 CROP_OK_NOTE (같은 SHA-256)",
+          "김선한 승인 manifest 등록 · image_routing.json 연결"
+        ],
+        "note": "자체 검수만으로는 승인하지 않는다."
+      }
     },
     {
       "groupId": "grp_mid_menu_farsight",
@@ -659,10 +929,18 @@
         "centerBandLost": "양옆 손님, 주방, 수저통"
       },
       "semanticReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "신기훈",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "visualReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "정원률",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "cropReview": {
         "status": "CROP_OK",
@@ -672,13 +950,32 @@
         "sceneMatch": "1.000 / 1.000",
         "result": "실기기 크롭에 핵심 사물이 남는다: 메뉴판 전체, 뻗은 팔, 물컵.",
         "captureSha256": "bebe92cb72ee363ccdced9ef225191788ad09bcd1a59b69e42aa1016f01f97eb",
-        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)"
+        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)",
+        "smallScreen": {
+          "status": "CROP_OK",
+          "screen": "API 36 에뮬레이터 720x1280 320dpi(360x640dp) 글꼴 130%, DecisionScreen 장면 보기",
+          "visibleX": "0.289..0.711",
+          "sceneMatch": "1.000",
+          "result": "보이는 가로 범위가 1080x2400(0.331..0.669)보다 넓어 1080x2400 판정이 하한이다. 새로 잃는 사물 없음.",
+          "captureSha256": "70c4c065d1f41b52ea4c543c47e2b20c160269873208004dc67953a87137d489",
+          "localCandidate": "tmp/verify-20261109 a13d21f (main + #61 + #62 + 검토용 경로, 미배포)"
+        }
       },
       "appConnection": {
         "status": "NOT_CONNECTED",
         "note": "image_routing.json · image_ids.sample.json · 제작대장에 등록하지 않았다. 중앙 연결은 김선한 병합 순서. 사건이 이미 이 imageId를 고르므로 경로 한 줄만 추가하면 된다."
       },
-      "sha256": "d35a164e2fe03d0dce7973137819470a30751f840d3c8d1927781d797ef57e24"
+      "sha256": "d35a164e2fe03d0dce7973137819470a30751f840d3c8d1927781d797ef57e24",
+      "approval": {
+        "status": "NOT_APPROVED",
+        "requires": [
+          "신기훈 의미 검수 PASS",
+          "정원률 화풍 검수 PASS",
+          "김재겸 실기기 크롭 CROP_OK 또는 CROP_OK_NOTE (같은 SHA-256)",
+          "김선한 승인 manifest 등록 · image_routing.json 연결"
+        ],
+        "note": "자체 검수만으로는 승인하지 않는다."
+      }
     },
     {
       "groupId": "grp_mid_checkup_recheck_letter",
@@ -714,10 +1011,18 @@
         "centerBandLost": "창가 화분, 가구"
       },
       "semanticReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "신기훈",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "visualReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "정원률",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "cropReview": {
         "status": "CROP_OK",
@@ -727,13 +1032,32 @@
         "sceneMatch": "1.000 / 1.000",
         "result": "실기기 크롭에 핵심 사물이 남는다: 결과지와 빨간 표시, 두 손, 봉투·안경.",
         "captureSha256": "361ae9eafb2b0f0c51ca7c83203fada82775dd8a29f773c1891655d8fccee20e",
-        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)"
+        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)",
+        "smallScreen": {
+          "status": "CROP_OK",
+          "screen": "API 36 에뮬레이터 720x1280 320dpi(360x640dp) 글꼴 130%, DecisionScreen 장면 보기",
+          "visibleX": "0.289..0.711",
+          "sceneMatch": "1.000",
+          "result": "보이는 가로 범위가 1080x2400(0.331..0.669)보다 넓어 1080x2400 판정이 하한이다. 새로 잃는 사물 없음.",
+          "captureSha256": "383ad06536943837bb28878b3b6b6325fd22064e1fd9debfea560f9d41e77137",
+          "localCandidate": "tmp/verify-20261109 a13d21f (main + #61 + #62 + 검토용 경로, 미배포)"
+        }
       },
       "appConnection": {
         "status": "NOT_CONNECTED",
         "note": "image_routing.json · image_ids.sample.json · 제작대장에 등록하지 않았다. 중앙 연결은 김선한 병합 순서. 사건이 이미 이 imageId를 고르므로 경로 한 줄만 추가하면 된다."
       },
-      "sha256": "0c95258890a0890cd52a05829e3ea8a2adfc0eecd551f7d850401dd0c204853d"
+      "sha256": "0c95258890a0890cd52a05829e3ea8a2adfc0eecd551f7d850401dd0c204853d",
+      "approval": {
+        "status": "NOT_APPROVED",
+        "requires": [
+          "신기훈 의미 검수 PASS",
+          "정원률 화풍 검수 PASS",
+          "김재겸 실기기 크롭 CROP_OK 또는 CROP_OK_NOTE (같은 SHA-256)",
+          "김선한 승인 manifest 등록 · image_routing.json 연결"
+        ],
+        "note": "자체 검수만으로는 승인하지 않는다."
+      }
     },
     {
       "groupId": "grp_old_empty_nest_room",
@@ -769,10 +1093,18 @@
         "centerBandLost": "창, 화분, 문틀을 짚은 손"
       },
       "semanticReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "신기훈",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "visualReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "정원률",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "cropReview": {
         "status": "CROP_OK",
@@ -782,7 +1114,16 @@
         "sceneMatch": "1.000 / 1.000",
         "result": "실기기 크롭에 핵심 사물이 남는다: 빈 침대, 기타 포스터, 빈 책장 왼쪽 일부.",
         "captureSha256": "1ae589b0daf5f9079262724a3548298e54fff7b731a3b2c56c512d3f8577570c",
-        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)"
+        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)",
+        "smallScreen": {
+          "status": "CROP_OK",
+          "screen": "API 36 에뮬레이터 720x1280 320dpi(360x640dp) 글꼴 130%, DecisionScreen 장면 보기",
+          "visibleX": "0.289..0.711",
+          "sceneMatch": "1.000",
+          "result": "보이는 가로 범위가 1080x2400(0.331..0.669)보다 넓어 1080x2400 판정이 하한이다. 새로 잃는 사물 없음.",
+          "captureSha256": "d97525df3b202209485059fd81cad5f012e90246b60d30fd7017a12286b197f8",
+          "localCandidate": "tmp/verify-20261109 a13d21f (main + #61 + #62 + 검토용 경로, 미배포)"
+        }
       },
       "appConnection": {
         "status": "NOT_CONNECTED",
@@ -797,7 +1138,17 @@
           "reason": "벽 포스터의 눈 덮인 원뿔 산이 후지산처럼 읽혀 한국 가정 배경과 어긋날 수 있음 → 포스터 소재 교체",
           "kept": "local only (C:/HSU/3-2/mobile/img_20261108), not committed"
         }
-      ]
+      ],
+      "approval": {
+        "status": "NOT_APPROVED",
+        "requires": [
+          "신기훈 의미 검수 PASS",
+          "정원률 화풍 검수 PASS",
+          "김재겸 실기기 크롭 CROP_OK 또는 CROP_OK_NOTE (같은 SHA-256)",
+          "김선한 승인 manifest 등록 · image_routing.json 연결"
+        ],
+        "note": "자체 검수만으로는 승인하지 않는다."
+      }
     },
     {
       "groupId": "grp_adult_promotion_eve_sleepless",
@@ -833,10 +1184,18 @@
         "centerBandLost": "책장, 창, 화분"
       },
       "semanticReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "신기훈",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "visualReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "정원률",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "cropReview": {
         "status": "CROP_OK",
@@ -846,13 +1205,32 @@
         "sceneMatch": "1.000 / 1.000",
         "result": "실기기 크롭에 핵심 사물이 남는다: 걸어 둔 정장, 알람시계, 이불.",
         "captureSha256": "6cdf878084520ec42ac0cd987a9a4186100d297142fcc32234d4d4c9ed90effd",
-        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)"
+        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)",
+        "smallScreen": {
+          "status": "CROP_OK",
+          "screen": "API 36 에뮬레이터 720x1280 320dpi(360x640dp) 글꼴 130%, DecisionScreen 장면 보기",
+          "visibleX": "0.289..0.711",
+          "sceneMatch": "1.000",
+          "result": "보이는 가로 범위가 1080x2400(0.331..0.669)보다 넓어 1080x2400 판정이 하한이다. 새로 잃는 사물 없음.",
+          "captureSha256": "2f2cb8efa09cc8fcd51b0441c4a669ef17729e5aa2b85ad9eef8a2448f98ba2f",
+          "localCandidate": "tmp/verify-20261109 a13d21f (main + #61 + #62 + 검토용 경로, 미배포)"
+        }
       },
       "appConnection": {
         "status": "NOT_CONNECTED",
         "note": "image_routing.json · image_ids.sample.json · 제작대장에 등록하지 않았다. 중앙 연결은 김선한 병합 순서. 사건이 이미 이 imageId를 고르므로 경로 한 줄만 추가하면 된다."
       },
-      "sha256": "0a002fec7def270dcb256aa260a5a78adda2f4a39c948417ac8c2ffedb4ebfba"
+      "sha256": "0a002fec7def270dcb256aa260a5a78adda2f4a39c948417ac8c2ffedb4ebfba",
+      "approval": {
+        "status": "NOT_APPROVED",
+        "requires": [
+          "신기훈 의미 검수 PASS",
+          "정원률 화풍 검수 PASS",
+          "김재겸 실기기 크롭 CROP_OK 또는 CROP_OK_NOTE (같은 SHA-256)",
+          "김선한 승인 manifest 등록 · image_routing.json 연결"
+        ],
+        "note": "자체 검수만으로는 승인하지 않는다."
+      }
     },
     {
       "groupId": "grp_ya_mt_campfire",
@@ -888,10 +1266,18 @@
         "centerBandLost": "왼쪽 텐트, 오른쪽 기타 머리 일부"
       },
       "semanticReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "신기훈",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "visualReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "정원률",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "cropReview": {
         "status": "CROP_OK",
@@ -901,13 +1287,32 @@
         "sceneMatch": "1.000 / 1.000",
         "result": "실기기 크롭에 핵심 사물이 남는다: 동아리원 얼굴, 마시멜로 꼬치, 기타 일부, 모닥불.",
         "captureSha256": "1e8ba5fdf44a87e8a7e5f67fb4fb70e4af4f2980ed2eb7330249cce240ab3613",
-        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)"
+        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)",
+        "smallScreen": {
+          "status": "CROP_OK",
+          "screen": "API 36 에뮬레이터 720x1280 320dpi(360x640dp) 글꼴 130%, DecisionScreen 장면 보기",
+          "visibleX": "0.289..0.711",
+          "sceneMatch": "1.000",
+          "result": "보이는 가로 범위가 1080x2400(0.331..0.669)보다 넓어 1080x2400 판정이 하한이다. 새로 잃는 사물 없음.",
+          "captureSha256": "ac92f17483955c2936356b84e6e2b2a210d54e9c0ad7f4b5836be93fc8305379",
+          "localCandidate": "tmp/verify-20261109 a13d21f (main + #61 + #62 + 검토용 경로, 미배포)"
+        }
       },
       "appConnection": {
         "status": "NOT_CONNECTED",
         "note": "image_routing.json · image_ids.sample.json · 제작대장에 등록하지 않았다. 중앙 연결은 김선한 병합 순서. 사건이 이미 이 imageId를 고르므로 경로 한 줄만 추가하면 된다."
       },
-      "sha256": "294430f0669a350a655776c24d7affa68bc922faca0c0201be28a9f92ae79a6a"
+      "sha256": "294430f0669a350a655776c24d7affa68bc922faca0c0201be28a9f92ae79a6a",
+      "approval": {
+        "status": "NOT_APPROVED",
+        "requires": [
+          "신기훈 의미 검수 PASS",
+          "정원률 화풍 검수 PASS",
+          "김재겸 실기기 크롭 CROP_OK 또는 CROP_OK_NOTE (같은 SHA-256)",
+          "김선한 승인 manifest 등록 · image_routing.json 연결"
+        ],
+        "note": "자체 검수만으로는 승인하지 않는다."
+      }
     },
     {
       "groupId": "grp_child_class_election",
@@ -943,10 +1348,18 @@
         "centerBandLost": "투표함, 셋째 후보 칸 일부, 양옆 아이들"
       },
       "semanticReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "신기훈",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "visualReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "정원률",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "cropReview": {
         "status": "CROP_OK_NOTE",
@@ -956,13 +1369,32 @@
         "sceneMatch": "1.000 / 1.000",
         "result": "친구의 부추김과 칠판 후보 칸이 남는다. 투표함은 크롭 밖.",
         "captureSha256": "5c3eedb6864ff44515f72b2941e28ef7598c0a02f3d9405c5cde364312450fe5",
-        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)"
+        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)",
+        "smallScreen": {
+          "status": "CROP_OK_NOTE",
+          "screen": "API 36 에뮬레이터 720x1280 320dpi(360x640dp) 글꼴 130%, DecisionScreen 장면 보기",
+          "visibleX": "0.289..0.711",
+          "sceneMatch": "1.000",
+          "result": "보이는 가로 범위가 1080x2400(0.331..0.669)보다 넓어 1080x2400 판정이 하한이다. 새로 잃는 사물 없음.",
+          "captureSha256": "79692edf6c29c222bc951887efd48c67b7859599b0d4eef0af6a96156e7cc26d",
+          "localCandidate": "tmp/verify-20261109 a13d21f (main + #61 + #62 + 검토용 경로, 미배포)"
+        }
       },
       "appConnection": {
         "status": "NOT_CONNECTED",
         "note": "image_routing.json · image_ids.sample.json · 제작대장에 등록하지 않았다. 중앙 연결은 김선한 병합 순서. 사건이 이미 이 imageId를 고르므로 경로 한 줄만 추가하면 된다."
       },
-      "sha256": "4e4755cc86236e58909e0dd6f5910fa93364930b7988164309a8f1105b6c9f12"
+      "sha256": "4e4755cc86236e58909e0dd6f5910fa93364930b7988164309a8f1105b6c9f12",
+      "approval": {
+        "status": "NOT_APPROVED",
+        "requires": [
+          "신기훈 의미 검수 PASS",
+          "정원률 화풍 검수 PASS",
+          "김재겸 실기기 크롭 CROP_OK 또는 CROP_OK_NOTE (같은 SHA-256)",
+          "김선한 승인 manifest 등록 · image_routing.json 연결"
+        ],
+        "note": "자체 검수만으로는 승인하지 않는다."
+      }
     },
     {
       "groupId": "grp_child_stationery_gacha",
@@ -998,10 +1430,18 @@
         "centerBandLost": "거리, 문구점 진열대"
       },
       "semanticReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "신기훈",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "visualReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "정원률",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "cropReview": {
         "status": "CROP_OK",
@@ -1011,13 +1451,32 @@
         "sceneMatch": "1.000 / 1.000",
         "result": "실기기 크롭에 핵심 사물이 남는다: 뽑기 기계·황금 카드 그림, 지폐 든 손.",
         "captureSha256": "66bb47af5870d57aaa0ce224f5ddbca0e4d29b51b166735e25b64a42a7ad9d69",
-        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)"
+        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)",
+        "smallScreen": {
+          "status": "CROP_OK",
+          "screen": "API 36 에뮬레이터 720x1280 320dpi(360x640dp) 글꼴 130%, DecisionScreen 장면 보기",
+          "visibleX": "0.289..0.711",
+          "sceneMatch": "1.000",
+          "result": "보이는 가로 범위가 1080x2400(0.331..0.669)보다 넓어 1080x2400 판정이 하한이다. 새로 잃는 사물 없음.",
+          "captureSha256": "e3228a17d15a2859cd08a94d1b13953d5db72e54674ef9fd2b66b8fea1cd5167",
+          "localCandidate": "tmp/verify-20261109 a13d21f (main + #61 + #62 + 검토용 경로, 미배포)"
+        }
       },
       "appConnection": {
         "status": "NOT_CONNECTED",
         "note": "image_routing.json · image_ids.sample.json · 제작대장에 등록하지 않았다. 중앙 연결은 김선한 병합 순서. 사건이 이미 이 imageId를 고르므로 경로 한 줄만 추가하면 된다."
       },
-      "sha256": "bb485c0a9cbf98198618c898956b29feae6964075a2595adda15519aa5fd184a"
+      "sha256": "bb485c0a9cbf98198618c898956b29feae6964075a2595adda15519aa5fd184a",
+      "approval": {
+        "status": "NOT_APPROVED",
+        "requires": [
+          "신기훈 의미 검수 PASS",
+          "정원률 화풍 검수 PASS",
+          "김재겸 실기기 크롭 CROP_OK 또는 CROP_OK_NOTE (같은 SHA-256)",
+          "김선한 승인 manifest 등록 · image_routing.json 연결"
+        ],
+        "note": "자체 검수만으로는 승인하지 않는다."
+      }
     },
     {
       "groupId": "grp_child_arts_club_pick",
@@ -1053,10 +1512,18 @@
         "centerBandLost": "양옆 복도 창·교실 문"
       },
       "semanticReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "신기훈",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "visualReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "정원률",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "cropReview": {
         "status": "CROP_OK",
@@ -1066,7 +1533,16 @@
         "sceneMatch": "1.000 / 1.000",
         "result": "실기기 크롭에 핵심 사물이 남는다: 선배, 이젤·팔레트, 악보 보면대, 가면 포스터.",
         "captureSha256": "f00c216a31411610fcb06194051dc546d82f3c28780b7f4c1b818a9339d37b50",
-        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)"
+        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)",
+        "smallScreen": {
+          "status": "CROP_OK",
+          "screen": "API 36 에뮬레이터 720x1280 320dpi(360x640dp) 글꼴 130%, DecisionScreen 장면 보기",
+          "visibleX": "0.289..0.711",
+          "sceneMatch": "1.000",
+          "result": "보이는 가로 범위가 1080x2400(0.331..0.669)보다 넓어 1080x2400 판정이 하한이다. 새로 잃는 사물 없음.",
+          "captureSha256": "0b7c221a3deb22748085934e36fd95489c4492ef1dbfb2b5f280aac802ad7955",
+          "localCandidate": "tmp/verify-20261109 a13d21f (main + #61 + #62 + 검토용 경로, 미배포)"
+        }
       },
       "appConnection": {
         "status": "NOT_CONNECTED",
@@ -1081,7 +1557,17 @@
           "reason": "세 동아리 소품을 모두 보여야 하는데 이젤·팔레트(미술반)가 세로 크롭 왼쪽 밖으로 거의 빠짐",
           "kept": "local only (C:/HSU/3-2/mobile/img_20261108), not committed"
         }
-      ]
+      ],
+      "approval": {
+        "status": "NOT_APPROVED",
+        "requires": [
+          "신기훈 의미 검수 PASS",
+          "정원률 화풍 검수 PASS",
+          "김재겸 실기기 크롭 CROP_OK 또는 CROP_OK_NOTE (같은 SHA-256)",
+          "김선한 승인 manifest 등록 · image_routing.json 연결"
+        ],
+        "note": "자체 검수만으로는 승인하지 않는다."
+      }
     },
     {
       "groupId": "grp_child_cheer_scout",
@@ -1117,10 +1603,18 @@
         "centerBandLost": "골대, 뛰는 아이들 일부"
       },
       "semanticReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "신기훈",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "visualReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "정원률",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "cropReview": {
         "status": "CROP_OK",
@@ -1130,13 +1624,32 @@
         "sceneMatch": "1.000 / 1.000",
         "result": "실기기 크롭에 핵심 사물이 남는다: 선생님 얼굴, 내미는 메가폰, 응원 수술 일부.",
         "captureSha256": "f36fa31338a79db96e4c5de6cfc29920a7e4e228e597a5e3c34fddf92b3166e2",
-        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)"
+        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)",
+        "smallScreen": {
+          "status": "CROP_OK",
+          "screen": "API 36 에뮬레이터 720x1280 320dpi(360x640dp) 글꼴 130%, DecisionScreen 장면 보기",
+          "visibleX": "0.289..0.711",
+          "sceneMatch": "1.000",
+          "result": "보이는 가로 범위가 1080x2400(0.331..0.669)보다 넓어 1080x2400 판정이 하한이다. 새로 잃는 사물 없음.",
+          "captureSha256": "c891980cba6f4801fa8a346dd27f38d28ecc4434eb8920b6470d7e1283a84f0b",
+          "localCandidate": "tmp/verify-20261109 a13d21f (main + #61 + #62 + 검토용 경로, 미배포)"
+        }
       },
       "appConnection": {
         "status": "NOT_CONNECTED",
         "note": "image_routing.json · image_ids.sample.json · 제작대장에 등록하지 않았다. 중앙 연결은 김선한 병합 순서. 사건이 이미 이 imageId를 고르므로 경로 한 줄만 추가하면 된다."
       },
-      "sha256": "4f2f3816c01ad04c9d44dbd67f92524f4837a1696b41f9ffc5c06c56346a68f1"
+      "sha256": "4f2f3816c01ad04c9d44dbd67f92524f4837a1696b41f9ffc5c06c56346a68f1",
+      "approval": {
+        "status": "NOT_APPROVED",
+        "requires": [
+          "신기훈 의미 검수 PASS",
+          "정원률 화풍 검수 PASS",
+          "김재겸 실기기 크롭 CROP_OK 또는 CROP_OK_NOTE (같은 SHA-256)",
+          "김선한 승인 manifest 등록 · image_routing.json 연결"
+        ],
+        "note": "자체 검수만으로는 승인하지 않는다."
+      }
     },
     {
       "groupId": "grp_child_lunch_spinach",
@@ -1172,10 +1685,18 @@
         "centerBandLost": "짝꿍 얼굴 오른쪽 일부, 양옆 아이들"
       },
       "semanticReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "신기훈",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "visualReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "정원률",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "cropReview": {
         "status": "CROP_OK",
@@ -1185,13 +1706,32 @@
         "sceneMatch": "1.000 / 1.000",
         "result": "실기기 크롭에 핵심 사물이 남는다: 식판·시금치, 짝꿍의 속삭이는 입·뻗는 손, 검사하는 선생님 일부.",
         "captureSha256": "d206acfb136f5dc21d03863a170db075941fbbf17edba23a15c832a3ec65e0f7",
-        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)"
+        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)",
+        "smallScreen": {
+          "status": "CROP_OK",
+          "screen": "API 36 에뮬레이터 720x1280 320dpi(360x640dp) 글꼴 130%, DecisionScreen 장면 보기",
+          "visibleX": "0.289..0.711",
+          "sceneMatch": "1.000",
+          "result": "보이는 가로 범위가 1080x2400(0.331..0.669)보다 넓어 1080x2400 판정이 하한이다. 새로 잃는 사물 없음.",
+          "captureSha256": "0c1d3f14ce14d99b24200bda396406a81718c59fe9f58a91ed18cab9a678d2e9",
+          "localCandidate": "tmp/verify-20261109 a13d21f (main + #61 + #62 + 검토용 경로, 미배포)"
+        }
       },
       "appConnection": {
         "status": "NOT_CONNECTED",
         "note": "image_routing.json · image_ids.sample.json · 제작대장에 등록하지 않았다. 중앙 연결은 김선한 병합 순서. 사건이 이미 이 imageId를 고르므로 경로 한 줄만 추가하면 된다."
       },
-      "sha256": "3948bb839738b6468252b8538f92f6a198d5a44acbf6e01df61fe3e400f4c664"
+      "sha256": "3948bb839738b6468252b8538f92f6a198d5a44acbf6e01df61fe3e400f4c664",
+      "approval": {
+        "status": "NOT_APPROVED",
+        "requires": [
+          "신기훈 의미 검수 PASS",
+          "정원률 화풍 검수 PASS",
+          "김재겸 실기기 크롭 CROP_OK 또는 CROP_OK_NOTE (같은 SHA-256)",
+          "김선한 승인 manifest 등록 · image_routing.json 연결"
+        ],
+        "note": "자체 검수만으로는 승인하지 않는다."
+      }
     },
     {
       "groupId": "grp_child_class_nap_dream",
@@ -1227,10 +1767,18 @@
         "centerBandLost": "양옆 웃는 친구들"
       },
       "semanticReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "신기훈",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "visualReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "정원률",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "cropReview": {
         "status": "CROP_OK",
@@ -1240,13 +1788,32 @@
         "sceneMatch": "1.000 / 1.000",
         "result": "실기기 크롭에 핵심 사물이 남는다: 꿈 구름·떡볶이, 선생님 실루엣, 엎드린 팔.",
         "captureSha256": "0badc58a71e66e6100777fe2987025eb38ff3c729537cc9a5aa14aa8099d27b5",
-        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)"
+        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)",
+        "smallScreen": {
+          "status": "CROP_OK",
+          "screen": "API 36 에뮬레이터 720x1280 320dpi(360x640dp) 글꼴 130%, DecisionScreen 장면 보기",
+          "visibleX": "0.289..0.711",
+          "sceneMatch": "1.000",
+          "result": "보이는 가로 범위가 1080x2400(0.331..0.669)보다 넓어 1080x2400 판정이 하한이다. 새로 잃는 사물 없음.",
+          "captureSha256": "f07a8602f61a31abf9c6d2c42cb2604e8b3b20f7761761e55d967a9f8c5b73ee",
+          "localCandidate": "tmp/verify-20261109 a13d21f (main + #61 + #62 + 검토용 경로, 미배포)"
+        }
       },
       "appConnection": {
         "status": "NOT_CONNECTED",
         "note": "image_routing.json · image_ids.sample.json · 제작대장에 등록하지 않았다. 중앙 연결은 김선한 병합 순서. 사건이 이미 이 imageId를 고르므로 경로 한 줄만 추가하면 된다."
       },
-      "sha256": "01e6b708365fe95658d74e80ca7e4bdbdc4900d6b1728147bbae264dc82bc64a"
+      "sha256": "01e6b708365fe95658d74e80ca7e4bdbdc4900d6b1728147bbae264dc82bc64a",
+      "approval": {
+        "status": "NOT_APPROVED",
+        "requires": [
+          "신기훈 의미 검수 PASS",
+          "정원률 화풍 검수 PASS",
+          "김재겸 실기기 크롭 CROP_OK 또는 CROP_OK_NOTE (같은 SHA-256)",
+          "김선한 승인 manifest 등록 · image_routing.json 연결"
+        ],
+        "note": "자체 검수만으로는 승인하지 않는다."
+      }
     },
     {
       "groupId": "grp_child_baduk_final",
@@ -1282,10 +1849,18 @@
         "centerBandLost": "대국 시계, 따낸 돌 뚜껑, 심판 대부분, 옆 대국"
       },
       "semanticReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "신기훈",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "visualReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "정원률",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "cropReview": {
         "status": "CROP_OK_NOTE",
@@ -1295,13 +1870,32 @@
         "sceneMatch": "1.000 / 1.000",
         "result": "바둑판·무표정한 상대·백돌 두는 손이 남는다. 대국 시계와 따낸 돌 뚜껑은 크롭 밖.",
         "captureSha256": "575a980f4e240c664f53290c57252c4b8630a32287b5d273fdeee4e64449ef13",
-        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)"
+        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)",
+        "smallScreen": {
+          "status": "CROP_OK_NOTE",
+          "screen": "API 36 에뮬레이터 720x1280 320dpi(360x640dp) 글꼴 130%, DecisionScreen 장면 보기",
+          "visibleX": "0.289..0.711",
+          "sceneMatch": "1.000",
+          "result": "보이는 가로 범위가 1080x2400(0.331..0.669)보다 넓어 1080x2400 판정이 하한이다. 새로 잃는 사물 없음.",
+          "captureSha256": "fd4fbdd60871e16bb81dfe7cfc557174b690de61ab7d38019c000fb186231b81",
+          "localCandidate": "tmp/verify-20261109 a13d21f (main + #61 + #62 + 검토용 경로, 미배포)"
+        }
       },
       "appConnection": {
         "status": "NOT_CONNECTED",
         "note": "image_routing.json · image_ids.sample.json · 제작대장에 등록하지 않았다. 중앙 연결은 김선한 병합 순서. 사건이 이미 이 imageId를 고르므로 경로 한 줄만 추가하면 된다."
       },
-      "sha256": "b3f088f44877a6dbdaacf53a2b66f16faae2d9ad478a9149d19955a10a0e6a9e"
+      "sha256": "b3f088f44877a6dbdaacf53a2b66f16faae2d9ad478a9149d19955a10a0e6a9e",
+      "approval": {
+        "status": "NOT_APPROVED",
+        "requires": [
+          "신기훈 의미 검수 PASS",
+          "정원률 화풍 검수 PASS",
+          "김재겸 실기기 크롭 CROP_OK 또는 CROP_OK_NOTE (같은 SHA-256)",
+          "김선한 승인 manifest 등록 · image_routing.json 연결"
+        ],
+        "note": "자체 검수만으로는 승인하지 않는다."
+      }
     },
     {
       "groupId": "grp_child_piano_contest_offer",
@@ -1337,10 +1931,18 @@
         "centerBandLost": "선생님 얼굴 오른쪽 반, 책장, 창"
       },
       "semanticReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "신기훈",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "visualReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "정원률",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "cropReview": {
         "status": "CROP_OK_NOTE",
@@ -1350,13 +1952,32 @@
         "sceneMatch": "1.000 / 1.000",
         "result": "네 쪽 악보 대부분·메트로놈·건반 위 손이 남고 선생님 얼굴은 오른쪽 가장자리에 반쯤 남는다.",
         "captureSha256": "11da5ff388ef3bc5cc247db6636cede2c2dbccf21f4cf62e4b10881a9d2f09f2",
-        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)"
+        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)",
+        "smallScreen": {
+          "status": "CROP_OK_NOTE",
+          "screen": "API 36 에뮬레이터 720x1280 320dpi(360x640dp) 글꼴 130%, DecisionScreen 장면 보기",
+          "visibleX": "0.289..0.711",
+          "sceneMatch": "1.000",
+          "result": "보이는 가로 범위가 1080x2400(0.331..0.669)보다 넓어 1080x2400 판정이 하한이다. 새로 잃는 사물 없음.",
+          "captureSha256": "8f711e2289bdd9eb40986a10c5c6333d9ff09431e519cde77150e3d1f0933889",
+          "localCandidate": "tmp/verify-20261109 a13d21f (main + #61 + #62 + 검토용 경로, 미배포)"
+        }
       },
       "appConnection": {
         "status": "NOT_CONNECTED",
         "note": "image_routing.json · image_ids.sample.json · 제작대장에 등록하지 않았다. 중앙 연결은 김선한 병합 순서. 사건이 이미 이 imageId를 고르므로 경로 한 줄만 추가하면 된다."
       },
-      "sha256": "127900a548dd8dc1e21a1ca352ff0fb36b1e4b5e097246d70c322235e46e63d2"
+      "sha256": "127900a548dd8dc1e21a1ca352ff0fb36b1e4b5e097246d70c322235e46e63d2",
+      "approval": {
+        "status": "NOT_APPROVED",
+        "requires": [
+          "신기훈 의미 검수 PASS",
+          "정원률 화풍 검수 PASS",
+          "김재겸 실기기 크롭 CROP_OK 또는 CROP_OK_NOTE (같은 SHA-256)",
+          "김선한 승인 manifest 등록 · image_routing.json 연결"
+        ],
+        "note": "자체 검수만으로는 승인하지 않는다."
+      }
     },
     {
       "groupId": "grp_child_school_gate_chicks",
@@ -1392,10 +2013,18 @@
         "centerBandLost": "양옆 친구들, 교문 일부"
       },
       "semanticReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "신기훈",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "visualReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "정원률",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "cropReview": {
         "status": "CROP_OK",
@@ -1405,13 +2034,32 @@
         "sceneMatch": "1.000 / 1.000",
         "result": "실기기 크롭에 핵심 사물이 남는다: 병아리 상자, 상인, 동전 든 손.",
         "captureSha256": "c404fed3138e0a46ea1c788b217cef536c7718e129ddb05b5b809ec7156344e7",
-        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)"
+        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)",
+        "smallScreen": {
+          "status": "CROP_OK",
+          "screen": "API 36 에뮬레이터 720x1280 320dpi(360x640dp) 글꼴 130%, DecisionScreen 장면 보기",
+          "visibleX": "0.289..0.711",
+          "sceneMatch": "1.000",
+          "result": "보이는 가로 범위가 1080x2400(0.331..0.669)보다 넓어 1080x2400 판정이 하한이다. 새로 잃는 사물 없음.",
+          "captureSha256": "5d7f273475e818f6460b467affb6de2215d830f3c0ddc4b3f77559ce268475c1",
+          "localCandidate": "tmp/verify-20261109 a13d21f (main + #61 + #62 + 검토용 경로, 미배포)"
+        }
       },
       "appConnection": {
         "status": "NOT_CONNECTED",
         "note": "image_routing.json · image_ids.sample.json · 제작대장에 등록하지 않았다. 중앙 연결은 김선한 병합 순서. 사건이 이미 이 imageId를 고르므로 경로 한 줄만 추가하면 된다."
       },
-      "sha256": "9146436172d7ab15013231fbfb19a45cefe8442574773b09df0f84414cefbb7f"
+      "sha256": "9146436172d7ab15013231fbfb19a45cefe8442574773b09df0f84414cefbb7f",
+      "approval": {
+        "status": "NOT_APPROVED",
+        "requires": [
+          "신기훈 의미 검수 PASS",
+          "정원률 화풍 검수 PASS",
+          "김재겸 실기기 크롭 CROP_OK 또는 CROP_OK_NOTE (같은 SHA-256)",
+          "김선한 승인 manifest 등록 · image_routing.json 연결"
+        ],
+        "note": "자체 검수만으로는 승인하지 않는다."
+      }
     },
     {
       "groupId": "grp_adult_realtor_three_contracts",
@@ -1447,10 +2095,18 @@
         "centerBandLost": "도장·인주, 양옆 계약서 바깥쪽, 책장"
       },
       "semanticReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "신기훈",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "visualReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "정원률",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "cropReview": {
         "status": "CROP_OK_NOTE",
@@ -1460,13 +2116,32 @@
         "sceneMatch": "1.000 / 1.000",
         "result": "사장님·가운데 월세 계약서·전세 열쇠 아이콘·부모님 댁 지붕 일부·두 사람 손이 남는다. 도장·인주와 양끝 계약서 바깥쪽은 크롭 밖.",
         "captureSha256": "cdf6668dae02fc8fe4950babbf06917327f471173ae89be7c2f5d6f480faac77",
-        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)"
+        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)",
+        "smallScreen": {
+          "status": "CROP_OK_NOTE",
+          "screen": "API 36 에뮬레이터 720x1280 320dpi(360x640dp) 글꼴 130%, DecisionScreen 장면 보기",
+          "visibleX": "0.289..0.711",
+          "sceneMatch": "1.000",
+          "result": "보이는 가로 범위가 1080x2400(0.331..0.669)보다 넓어 1080x2400 판정이 하한이다. 새로 잃는 사물 없음.",
+          "captureSha256": "4407b2b2b88f5ab99357d82275b3cab82b218c9fed36e331e1b5b63a0d42ff88",
+          "localCandidate": "tmp/verify-20261109 a13d21f (main + #61 + #62 + 검토용 경로, 미배포)"
+        }
       },
       "appConnection": {
         "status": "NOT_CONNECTED",
         "note": "image_routing.json · image_ids.sample.json · 제작대장에 등록하지 않았다. 중앙 연결은 김선한 병합 순서. 사건이 이미 이 imageId를 고르므로 경로 한 줄만 추가하면 된다."
       },
-      "sha256": "1ef454ccb0eba362aae7659c1b054629fe6c1ad21136af5d7c1927e369697d1f"
+      "sha256": "1ef454ccb0eba362aae7659c1b054629fe6c1ad21136af5d7c1927e369697d1f",
+      "approval": {
+        "status": "NOT_APPROVED",
+        "requires": [
+          "신기훈 의미 검수 PASS",
+          "정원률 화풍 검수 PASS",
+          "김재겸 실기기 크롭 CROP_OK 또는 CROP_OK_NOTE (같은 SHA-256)",
+          "김선한 승인 manifest 등록 · image_routing.json 연결"
+        ],
+        "note": "자체 검수만으로는 승인하지 않는다."
+      }
     },
     {
       "groupId": "grp_mid_business_closure_mail",
@@ -1502,10 +2177,18 @@
         "centerBandLost": "도시락, 커피, 자판기"
       },
       "semanticReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "신기훈",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "visualReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "정원률",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "cropReview": {
         "status": "CROP_OK",
@@ -1515,13 +2198,32 @@
         "sceneMatch": "1.000 / 1.000",
         "result": "실기기 크롭에 핵심 사물이 남는다: 휴대폰 메일 화면, 말없는 동료 셋, 두 손.",
         "captureSha256": "762aaaffdc8d3a4f65a730d5bc5841f0777006463d95094a60c11c36a73dd964",
-        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)"
+        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)",
+        "smallScreen": {
+          "status": "CROP_OK",
+          "screen": "API 36 에뮬레이터 720x1280 320dpi(360x640dp) 글꼴 130%, DecisionScreen 장면 보기",
+          "visibleX": "0.289..0.711",
+          "sceneMatch": "1.000",
+          "result": "보이는 가로 범위가 1080x2400(0.331..0.669)보다 넓어 1080x2400 판정이 하한이다. 새로 잃는 사물 없음.",
+          "captureSha256": "8c713df6e73c8db3b37012712efacc3c15b32dffba5c123a284251f9d26a33e5",
+          "localCandidate": "tmp/verify-20261109 a13d21f (main + #61 + #62 + 검토용 경로, 미배포)"
+        }
       },
       "appConnection": {
         "status": "NOT_CONNECTED",
         "note": "image_routing.json · image_ids.sample.json · 제작대장에 등록하지 않았다. 중앙 연결은 김선한 병합 순서. 사건이 이미 이 imageId를 고르므로 경로 한 줄만 추가하면 된다."
       },
-      "sha256": "06381995592f3e8e01361449fe568d930c9bc9fceb485c0c9d4a5491bd86fd73"
+      "sha256": "06381995592f3e8e01361449fe568d930c9bc9fceb485c0c9d4a5491bd86fd73",
+      "approval": {
+        "status": "NOT_APPROVED",
+        "requires": [
+          "신기훈 의미 검수 PASS",
+          "정원률 화풍 검수 PASS",
+          "김재겸 실기기 크롭 CROP_OK 또는 CROP_OK_NOTE (같은 SHA-256)",
+          "김선한 승인 manifest 등록 · image_routing.json 연결"
+        ],
+        "note": "자체 검수만으로는 승인하지 않는다."
+      }
     },
     {
       "groupId": "grp_mid_parent_fall_call",
@@ -1557,10 +2259,18 @@
         "centerBandLost": "소파, 화분, 스탠드 일부, 찻잔"
       },
       "semanticReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "신기훈",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "visualReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "정원률",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "cropReview": {
         "status": "CROP_OK",
@@ -1570,13 +2280,32 @@
         "sceneMatch": "1.000 / 1.000",
         "result": "실기기 크롭에 핵심 사물이 남는다: 부모님 사진 액자, 아버지 통화 화면, 손.",
         "captureSha256": "ca5b3a42e38f8a9ff743f6ebfc502f4db979349f359eea9a713f34370e2de813",
-        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)"
+        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)",
+        "smallScreen": {
+          "status": "CROP_OK",
+          "screen": "API 36 에뮬레이터 720x1280 320dpi(360x640dp) 글꼴 130%, DecisionScreen 장면 보기",
+          "visibleX": "0.289..0.711",
+          "sceneMatch": "1.000",
+          "result": "보이는 가로 범위가 1080x2400(0.331..0.669)보다 넓어 1080x2400 판정이 하한이다. 새로 잃는 사물 없음.",
+          "captureSha256": "c9ae13a4ca0cad044c2026d07ed354d81bf14ba9404693d9f179785d8789f2b0",
+          "localCandidate": "tmp/verify-20261109 a13d21f (main + #61 + #62 + 검토용 경로, 미배포)"
+        }
       },
       "appConnection": {
         "status": "NOT_CONNECTED",
         "note": "image_routing.json · image_ids.sample.json · 제작대장에 등록하지 않았다. 중앙 연결은 김선한 병합 순서. 사건이 이미 이 imageId를 고르므로 경로 한 줄만 추가하면 된다."
       },
-      "sha256": "bafa1404d7bb450d5475c65c39a261194bf66fbaaf90d67ea2ffdbdf21c799da"
+      "sha256": "bafa1404d7bb450d5475c65c39a261194bf66fbaaf90d67ea2ffdbdf21c799da",
+      "approval": {
+        "status": "NOT_APPROVED",
+        "requires": [
+          "신기훈 의미 검수 PASS",
+          "정원률 화풍 검수 PASS",
+          "김재겸 실기기 크롭 CROP_OK 또는 CROP_OK_NOTE (같은 SHA-256)",
+          "김선한 승인 manifest 등록 · image_routing.json 연결"
+        ],
+        "note": "자체 검수만으로는 승인하지 않는다."
+      }
     },
     {
       "groupId": "grp_infant_daycare_loud_cry",
@@ -1612,10 +2341,18 @@
         "centerBandLost": "인형·장난감 선반, 두 아이 바깥쪽"
       },
       "semanticReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "신기훈",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "visualReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "정원률",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "cropReview": {
         "status": "CROP_OK",
@@ -1625,13 +2362,32 @@
         "sceneMatch": "1.000 / 1.000",
         "result": "실기기 크롭에 핵심 사물이 남는다: 선생님 얼굴·두 손, 두 아이 안쪽 절반, 내 두 주먹.",
         "captureSha256": "528eed94ad435a33fa2a53b84e04dec25f939d93df39629b5287b3bb7119a4cf",
-        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)"
+        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)",
+        "smallScreen": {
+          "status": "CROP_OK",
+          "screen": "API 36 에뮬레이터 720x1280 320dpi(360x640dp) 글꼴 130%, DecisionScreen 장면 보기",
+          "visibleX": "0.289..0.711",
+          "sceneMatch": "1.000",
+          "result": "보이는 가로 범위가 1080x2400(0.331..0.669)보다 넓어 1080x2400 판정이 하한이다. 새로 잃는 사물 없음.",
+          "captureSha256": "502a98c6c75f10b41ae16b46d002923f73e8265829e0fc55fd5b08acdf999989",
+          "localCandidate": "tmp/verify-20261109 a13d21f (main + #61 + #62 + 검토용 경로, 미배포)"
+        }
       },
       "appConnection": {
         "status": "NOT_CONNECTED",
         "note": "image_routing.json · image_ids.sample.json · 제작대장에 등록하지 않았다. 중앙 연결은 김선한 병합 순서. 사건이 이미 이 imageId를 고르므로 경로 한 줄만 추가하면 된다."
       },
-      "sha256": "2cae5e38dbf70c18faf4ff3b57c8b0778777a9c5abef630dc25e996a2fa31048"
+      "sha256": "2cae5e38dbf70c18faf4ff3b57c8b0778777a9c5abef630dc25e996a2fa31048",
+      "approval": {
+        "status": "NOT_APPROVED",
+        "requires": [
+          "신기훈 의미 검수 PASS",
+          "정원률 화풍 검수 PASS",
+          "김재겸 실기기 크롭 CROP_OK 또는 CROP_OK_NOTE (같은 SHA-256)",
+          "김선한 승인 manifest 등록 · image_routing.json 연결"
+        ],
+        "note": "자체 검수만으로는 승인하지 않는다."
+      }
     },
     {
       "groupId": "grp_infant_first_word_bet",
@@ -1667,10 +2423,18 @@
         "centerBandLost": "거실 소파·TV"
       },
       "semanticReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "신기훈",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "visualReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "정원률",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "cropReview": {
         "status": "CROP_OK",
@@ -1680,13 +2444,32 @@
         "sceneMatch": "1.000 / 1.000",
         "result": "실기기 크롭에 핵심 사물이 남는다: 엄마·아빠 얼굴, 내기 지폐, 강아지, 아기 두 주먹.",
         "captureSha256": "320aa0db3c302c548a6f5c83e051993a85e4223c9c1698b27eda5692f0f5d735",
-        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)"
+        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)",
+        "smallScreen": {
+          "status": "CROP_OK",
+          "screen": "API 36 에뮬레이터 720x1280 320dpi(360x640dp) 글꼴 130%, DecisionScreen 장면 보기",
+          "visibleX": "0.289..0.711",
+          "sceneMatch": "1.000",
+          "result": "보이는 가로 범위가 1080x2400(0.331..0.669)보다 넓어 1080x2400 판정이 하한이다. 새로 잃는 사물 없음.",
+          "captureSha256": "7de76174d5ae070c19849af33e9a710fafa33ba6814f1ccc08da93c6b71ccada",
+          "localCandidate": "tmp/verify-20261109 a13d21f (main + #61 + #62 + 검토용 경로, 미배포)"
+        }
       },
       "appConnection": {
         "status": "NOT_CONNECTED",
         "note": "image_routing.json · image_ids.sample.json · 제작대장에 등록하지 않았다. 중앙 연결은 김선한 병합 순서. 사건이 이미 이 imageId를 고르므로 경로 한 줄만 추가하면 된다."
       },
-      "sha256": "cf357b70ef809a9880ce3380a4acb00bba2f599834bdaf939b7c6f2525997c3a"
+      "sha256": "cf357b70ef809a9880ce3380a4acb00bba2f599834bdaf939b7c6f2525997c3a",
+      "approval": {
+        "status": "NOT_APPROVED",
+        "requires": [
+          "신기훈 의미 검수 PASS",
+          "정원률 화풍 검수 PASS",
+          "김재겸 실기기 크롭 CROP_OK 또는 CROP_OK_NOTE (같은 SHA-256)",
+          "김선한 승인 manifest 등록 · image_routing.json 연결"
+        ],
+        "note": "자체 검수만으로는 승인하지 않는다."
+      }
     },
     {
       "groupId": "grp_infant_crayon_white_wall",
@@ -1722,10 +2505,18 @@
         "centerBandLost": "엄마 뒷모습, 크레파스 상자, 소파"
       },
       "semanticReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "신기훈",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "visualReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "정원률",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "cropReview": {
         "status": "CROP_OK_NOTE",
@@ -1735,13 +2526,32 @@
         "sceneMatch": "1.000 / 1.000",
         "result": "빈 하얀 벽·스케치북·크레파스 쥔 손이 남는다. 설거지하는 엄마 뒷모습은 크롭 밖(부재는 본문이 전달).",
         "captureSha256": "4d8242ab9939bcd3b5cee39384e118abf186ed4249e84c9bae9c340a833364af",
-        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)"
+        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)",
+        "smallScreen": {
+          "status": "CROP_OK_NOTE",
+          "screen": "API 36 에뮬레이터 720x1280 320dpi(360x640dp) 글꼴 130%, DecisionScreen 장면 보기",
+          "visibleX": "0.289..0.711",
+          "sceneMatch": "1.000",
+          "result": "보이는 가로 범위가 1080x2400(0.331..0.669)보다 넓어 1080x2400 판정이 하한이다. 새로 잃는 사물 없음.",
+          "captureSha256": "de296789d1cef2d7c51dae0a029de0d565690af37015900f656e252bb56731e3",
+          "localCandidate": "tmp/verify-20261109 a13d21f (main + #61 + #62 + 검토용 경로, 미배포)"
+        }
       },
       "appConnection": {
         "status": "NOT_CONNECTED",
         "note": "image_routing.json · image_ids.sample.json · 제작대장에 등록하지 않았다. 중앙 연결은 김선한 병합 순서. 사건이 이미 이 imageId를 고르므로 경로 한 줄만 추가하면 된다."
       },
-      "sha256": "5d053cfe8fcedf2d2e1400a95ceda9c019f8a4dfb00d76fd30c0b4d4b57d9a53"
+      "sha256": "5d053cfe8fcedf2d2e1400a95ceda9c019f8a4dfb00d76fd30c0b4d4b57d9a53",
+      "approval": {
+        "status": "NOT_APPROVED",
+        "requires": [
+          "신기훈 의미 검수 PASS",
+          "정원률 화풍 검수 PASS",
+          "김재겸 실기기 크롭 CROP_OK 또는 CROP_OK_NOTE (같은 SHA-256)",
+          "김선한 승인 manifest 등록 · image_routing.json 연결"
+        ],
+        "note": "자체 검수만으로는 승인하지 않는다."
+      }
     },
     {
       "groupId": "grp_infant_daycare_first_day",
@@ -1777,10 +2587,18 @@
         "centerBandLost": "선생님 손·얼굴, 신발장, 창"
       },
       "semanticReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "신기훈",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "visualReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "정원률",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "cropReview": {
         "status": "CROP_OK_NOTE",
@@ -1790,13 +2608,32 @@
         "sceneMatch": "1.000 / 1.000",
         "result": "손 흔드는 엄마와 교실 안 우는 세 아이가 남는다. 선생님 손과 신발장은 크롭 밖.",
         "captureSha256": "075cdb5adb6ce31b19a09c6a93dab4bd5c52e3795aa79f466bba2ebfbd5d0d6c",
-        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)"
+        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)",
+        "smallScreen": {
+          "status": "CROP_OK_NOTE",
+          "screen": "API 36 에뮬레이터 720x1280 320dpi(360x640dp) 글꼴 130%, DecisionScreen 장면 보기",
+          "visibleX": "0.289..0.711",
+          "sceneMatch": "1.000",
+          "result": "보이는 가로 범위가 1080x2400(0.331..0.669)보다 넓어 1080x2400 판정이 하한이다. 새로 잃는 사물 없음.",
+          "captureSha256": "27f7ecc8a819625e29e9fa2996444d17bdf106e03b09a2332190655abfb3fd20",
+          "localCandidate": "tmp/verify-20261109 a13d21f (main + #61 + #62 + 검토용 경로, 미배포)"
+        }
       },
       "appConnection": {
         "status": "NOT_CONNECTED",
         "note": "image_routing.json · image_ids.sample.json · 제작대장에 등록하지 않았다. 중앙 연결은 김선한 병합 순서. 사건이 이미 이 imageId를 고르므로 경로 한 줄만 추가하면 된다."
       },
-      "sha256": "97bd22a4259157f719c77a6e7164b28f07d8206aacecac5c32cdf6b93ae63022"
+      "sha256": "97bd22a4259157f719c77a6e7164b28f07d8206aacecac5c32cdf6b93ae63022",
+      "approval": {
+        "status": "NOT_APPROVED",
+        "requires": [
+          "신기훈 의미 검수 PASS",
+          "정원률 화풍 검수 PASS",
+          "김재겸 실기기 크롭 CROP_OK 또는 CROP_OK_NOTE (같은 SHA-256)",
+          "김선한 승인 manifest 등록 · image_routing.json 연결"
+        ],
+        "note": "자체 검수만으로는 승인하지 않는다."
+      }
     },
     {
       "groupId": "grp_infant_elevator_buttons",
@@ -1832,10 +2669,18 @@
         "centerBandLost": "장바구니, 할머니 오른쪽, 창"
       },
       "semanticReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "신기훈",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "visualReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "정원률",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "cropReview": {
         "status": "CROP_OK_NOTE",
@@ -1845,13 +2690,32 @@
         "sceneMatch": "1.000 / 1.000",
         "result": "버튼 패널·엄마 손·할머니 얼굴 왼쪽 반이 남는다. 장바구니는 크롭 밖.",
         "captureSha256": "405cdd8ffc08dd95721195441f7cf916cae5f747d7c4f6b29ba1e331813aef2a",
-        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)"
+        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)",
+        "smallScreen": {
+          "status": "CROP_OK_NOTE",
+          "screen": "API 36 에뮬레이터 720x1280 320dpi(360x640dp) 글꼴 130%, DecisionScreen 장면 보기",
+          "visibleX": "0.289..0.711",
+          "sceneMatch": "1.000",
+          "result": "보이는 가로 범위가 1080x2400(0.331..0.669)보다 넓어 1080x2400 판정이 하한이다. 새로 잃는 사물 없음.",
+          "captureSha256": "1d4bb76310378c287c0dc52fa4c895c9641b112d7f2e6889f62655868bcd46f1",
+          "localCandidate": "tmp/verify-20261109 a13d21f (main + #61 + #62 + 검토용 경로, 미배포)"
+        }
       },
       "appConnection": {
         "status": "NOT_CONNECTED",
         "note": "image_routing.json · image_ids.sample.json · 제작대장에 등록하지 않았다. 중앙 연결은 김선한 병합 순서. 사건이 이미 이 imageId를 고르므로 경로 한 줄만 추가하면 된다."
       },
-      "sha256": "67b83d1cbabc11564df4062b2999bb5c318ebc957add2b13e4488fe4757e3af5"
+      "sha256": "67b83d1cbabc11564df4062b2999bb5c318ebc957add2b13e4488fe4757e3af5",
+      "approval": {
+        "status": "NOT_APPROVED",
+        "requires": [
+          "신기훈 의미 검수 PASS",
+          "정원률 화풍 검수 PASS",
+          "김재겸 실기기 크롭 CROP_OK 또는 CROP_OK_NOTE (같은 SHA-256)",
+          "김선한 승인 manifest 등록 · image_routing.json 연결"
+        ],
+        "note": "자체 검수만으로는 승인하지 않는다."
+      }
     },
     {
       "groupId": "grp_infant_nap_curtain",
@@ -1887,10 +2751,18 @@
         "centerBandLost": "벽시계, 아기 침대, 장난감 선반"
       },
       "semanticReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "신기훈",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "visualReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "정원률",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "cropReview": {
         "status": "CROP_OK_NOTE",
@@ -1900,13 +2772,32 @@
         "sceneMatch": "1.000 / 1.000",
         "result": "커튼 치는 엄마와 좁아지는 햇빛, 이불이 남는다. 2시 근처 벽시계는 크롭 밖.",
         "captureSha256": "a72e95276e55bbf5ea354c6ae2fe2efa5badd5ec9951d8ecbf82359a8bc8336e",
-        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)"
+        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)",
+        "smallScreen": {
+          "status": "CROP_OK_NOTE",
+          "screen": "API 36 에뮬레이터 720x1280 320dpi(360x640dp) 글꼴 130%, DecisionScreen 장면 보기",
+          "visibleX": "0.289..0.711",
+          "sceneMatch": "1.000",
+          "result": "보이는 가로 범위가 1080x2400(0.331..0.669)보다 넓어 1080x2400 판정이 하한이다. 새로 잃는 사물 없음.",
+          "captureSha256": "419f4ab2cf88b1a2bf70ab62882d31ea485139aad098a3d44ca16c96cea468c0",
+          "localCandidate": "tmp/verify-20261109 a13d21f (main + #61 + #62 + 검토용 경로, 미배포)"
+        }
       },
       "appConnection": {
         "status": "NOT_CONNECTED",
         "note": "image_routing.json · image_ids.sample.json · 제작대장에 등록하지 않았다. 중앙 연결은 김선한 병합 순서. 사건이 이미 이 imageId를 고르므로 경로 한 줄만 추가하면 된다."
       },
-      "sha256": "51f4f9ccbff03352b1cb17a58c0a0bdf67a19187704084cb809a2b606dc4579d"
+      "sha256": "51f4f9ccbff03352b1cb17a58c0a0bdf67a19187704084cb809a2b606dc4579d",
+      "approval": {
+        "status": "NOT_APPROVED",
+        "requires": [
+          "신기훈 의미 검수 PASS",
+          "정원률 화풍 검수 PASS",
+          "김재겸 실기기 크롭 CROP_OK 또는 CROP_OK_NOTE (같은 SHA-256)",
+          "김선한 승인 manifest 등록 · image_routing.json 연결"
+        ],
+        "note": "자체 검수만으로는 승인하지 않는다."
+      }
     },
     {
       "groupId": "grp_teen_final_knee_click",
@@ -1942,10 +2833,18 @@
         "centerBandLost": "벤치·수건·가방, 양옆 선수"
       },
       "semanticReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "신기훈",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "visualReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "정원률",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "cropReview": {
         "status": "CROP_OK",
@@ -1955,13 +2854,32 @@
         "sceneMatch": "1.000 / 1.000",
         "result": "실기기 크롭에 핵심 사물이 남는다: 무릎과 소리 표시, 운동화, 구급 상자 왼쪽 일부, 트랙.",
         "captureSha256": "e1daffb2c36e143d35b020fb705fec2c981acc65778748d3bd2d3f8d01ab4a23",
-        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)"
+        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)",
+        "smallScreen": {
+          "status": "CROP_OK",
+          "screen": "API 36 에뮬레이터 720x1280 320dpi(360x640dp) 글꼴 130%, DecisionScreen 장면 보기",
+          "visibleX": "0.289..0.711",
+          "sceneMatch": "1.000",
+          "result": "보이는 가로 범위가 1080x2400(0.331..0.669)보다 넓어 1080x2400 판정이 하한이다. 새로 잃는 사물 없음.",
+          "captureSha256": "1bc785f2f89b2214d39828505972e7127a230fa9713319fc13d89a77c6950922",
+          "localCandidate": "tmp/verify-20261109 a13d21f (main + #61 + #62 + 검토용 경로, 미배포)"
+        }
       },
       "appConnection": {
         "status": "NOT_CONNECTED",
         "note": "image_routing.json · image_ids.sample.json · 제작대장에 등록하지 않았다. 중앙 연결은 김선한 병합 순서. 사건이 이미 이 imageId를 고르므로 경로 한 줄만 추가하면 된다."
       },
-      "sha256": "ca0c97b0f1af8039c66a651127ceda003b86c86158a5c992ec218536bede9b14"
+      "sha256": "ca0c97b0f1af8039c66a651127ceda003b86c86158a5c992ec218536bede9b14",
+      "approval": {
+        "status": "NOT_APPROVED",
+        "requires": [
+          "신기훈 의미 검수 PASS",
+          "정원률 화풍 검수 PASS",
+          "김재겸 실기기 크롭 CROP_OK 또는 CROP_OK_NOTE (같은 SHA-256)",
+          "김선한 승인 manifest 등록 · image_routing.json 연결"
+        ],
+        "note": "자체 검수만으로는 승인하지 않는다."
+      }
     },
     {
       "groupId": "grp_old_senior_marathon_start",
@@ -1997,10 +2915,18 @@
         "centerBandLost": "배번·옷핀, 종이컵, 양옆 노년 참가자, 풍선 아치"
       },
       "semanticReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "신기훈",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "visualReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "정원률",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "cropReview": {
         "status": "CROP_OK_NOTE",
@@ -2010,13 +2936,32 @@
         "sceneMatch": "1.000 / 1.000",
         "result": "놀라며 알아보는 접수 봉사자·명단 판·노년의 손이 남는다. 배번·옷핀 더미와 뒤쪽 노년 참가자는 크롭 밖.",
         "captureSha256": "67919abec32b7ac08ef97e23ba51b9c47c3033790456b45be81a37b2c40123a8",
-        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)"
+        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)",
+        "smallScreen": {
+          "status": "CROP_OK_NOTE",
+          "screen": "API 36 에뮬레이터 720x1280 320dpi(360x640dp) 글꼴 130%, DecisionScreen 장면 보기",
+          "visibleX": "0.289..0.711",
+          "sceneMatch": "1.000",
+          "result": "보이는 가로 범위가 1080x2400(0.331..0.669)보다 넓어 1080x2400 판정이 하한이다. 새로 잃는 사물 없음.",
+          "captureSha256": "ae574cc845fd12c114454c084182038f452436596293570c0916fa3096e39071",
+          "localCandidate": "tmp/verify-20261109 a13d21f (main + #61 + #62 + 검토용 경로, 미배포)"
+        }
       },
       "appConnection": {
         "status": "NOT_CONNECTED",
         "note": "image_routing.json · image_ids.sample.json · 제작대장에 등록하지 않았다. 중앙 연결은 김선한 병합 순서. 사건은 아직 기존 week10 imageId를 고르므로 새 imageId 지정 또는 경로 교체 결정이 필요하다."
       },
-      "sha256": "2bec5f8feaabf77442af2ac9d57c4e5d89e283388c3aae415fd74b4ecb3cb086"
+      "sha256": "2bec5f8feaabf77442af2ac9d57c4e5d89e283388c3aae415fd74b4ecb3cb086",
+      "approval": {
+        "status": "NOT_APPROVED",
+        "requires": [
+          "신기훈 의미 검수 PASS",
+          "정원률 화풍 검수 PASS",
+          "김재겸 실기기 크롭 CROP_OK 또는 CROP_OK_NOTE (같은 SHA-256)",
+          "김선한 승인 manifest 등록 · image_routing.json 연결"
+        ],
+        "note": "자체 검수만으로는 승인하지 않는다."
+      }
     },
     {
       "groupId": "grp_teen_taekwondo_belt",
@@ -2052,10 +2997,18 @@
         "centerBandLost": "창, 매트 양끝, 거울"
       },
       "semanticReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "신기훈",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "visualReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "정원률",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "cropReview": {
         "status": "CROP_OK",
@@ -2065,7 +3018,16 @@
         "sceneMatch": "1.000 / 1.000",
         "result": "실기기 크롭에 핵심 사물이 남는다: 관장님 얼굴·손, 빨간 띠 매듭, 호구 선반.",
         "captureSha256": "88822daf17509d1e42c1fa7f31b130ea45fb7e78cc570101b84f5a2960f3cb25",
-        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)"
+        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)",
+        "smallScreen": {
+          "status": "CROP_OK",
+          "screen": "API 36 에뮬레이터 720x1280 320dpi(360x640dp) 글꼴 130%, DecisionScreen 장면 보기",
+          "visibleX": "0.289..0.711",
+          "sceneMatch": "1.000",
+          "result": "보이는 가로 범위가 1080x2400(0.331..0.669)보다 넓어 1080x2400 판정이 하한이다. 새로 잃는 사물 없음.",
+          "captureSha256": "29e739781ee0913bd7d016ead41e1bdca6b6386668e64660197e62d5df7ef3ce",
+          "localCandidate": "tmp/verify-20261109 a13d21f (main + #61 + #62 + 검토용 경로, 미배포)"
+        }
       },
       "appConnection": {
         "status": "NOT_CONNECTED",
@@ -2080,7 +3042,17 @@
           "reason": "관장님이 매 주는 내 띠가 검은 띠로 보여 선택지 C(검은 띠까지만 하고 그만둔다)와 어긋남 → 빨간 띠로 교체",
           "kept": "local only (C:/HSU/3-2/mobile/img_20261108), not committed"
         }
-      ]
+      ],
+      "approval": {
+        "status": "NOT_APPROVED",
+        "requires": [
+          "신기훈 의미 검수 PASS",
+          "정원률 화풍 검수 PASS",
+          "김재겸 실기기 크롭 CROP_OK 또는 CROP_OK_NOTE (같은 SHA-256)",
+          "김선한 승인 manifest 등록 · image_routing.json 연결"
+        ],
+        "note": "자체 검수만으로는 승인하지 않는다."
+      }
     },
     {
       "groupId": "grp_old_knee_window_call",
@@ -2116,10 +3088,18 @@
         "centerBandLost": "찜질팩 대부분, 소파, 화병"
       },
       "semanticReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "신기훈",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "visualReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "정원률",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "cropReview": {
         "status": "CROP_OK",
@@ -2129,7 +3109,16 @@
         "sceneMatch": "1.000 / 1.000",
         "result": "실기기 크롭에 핵심 사물이 남는다: 통화 휴대폰, 맑은 창, 팀 사진·메달, 찜질팩 일부.",
         "captureSha256": "b4e88d05c45afab9b3a4b2e37c910626f91d3cd2f08b5f9829faf2a27e31016f",
-        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)"
+        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)",
+        "smallScreen": {
+          "status": "CROP_OK",
+          "screen": "API 36 에뮬레이터 720x1280 320dpi(360x640dp) 글꼴 130%, DecisionScreen 장면 보기",
+          "visibleX": "0.289..0.711",
+          "sceneMatch": "1.000",
+          "result": "보이는 가로 범위가 1080x2400(0.331..0.669)보다 넓어 1080x2400 판정이 하한이다. 새로 잃는 사물 없음.",
+          "captureSha256": "ffdcda2c5ecfbc8195709c5f7694bde96e424dce4dc7fddae5b9892c6a671330",
+          "localCandidate": "tmp/verify-20261109 a13d21f (main + #61 + #62 + 검토용 경로, 미배포)"
+        }
       },
       "appConnection": {
         "status": "NOT_CONNECTED",
@@ -2144,7 +3133,17 @@
           "reason": "옛 동료 통화 휴대폰(x≈61~79%)이 세로 크롭 오른쪽 밖으로 빠져 전화라는 계기가 사라짐",
           "kept": "local only (C:/HSU/3-2/mobile/img_20261108), not committed"
         }
-      ]
+      ],
+      "approval": {
+        "status": "NOT_APPROVED",
+        "requires": [
+          "신기훈 의미 검수 PASS",
+          "정원률 화풍 검수 PASS",
+          "김재겸 실기기 크롭 CROP_OK 또는 CROP_OK_NOTE (같은 SHA-256)",
+          "김선한 승인 manifest 등록 · image_routing.json 연결"
+        ],
+        "note": "자체 검수만으로는 승인하지 않는다."
+      }
     },
     {
       "groupId": "grp_ya_two_offers_studio",
@@ -2181,10 +3180,18 @@
         "centerBandLost": "스탠드, 머그, 창밖 야경, 통지 바깥쪽"
       },
       "semanticReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "신기훈",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "visualReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "정원률",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "cropReview": {
         "status": "CROP_OK",
@@ -2194,13 +3201,32 @@
         "sceneMatch": "1.000 / 1.000",
         "result": "실기기 크롭에 핵심 사물이 남는다: 두 통지의 아이콘 안쪽, 작업실 스케치·열쇠, 휴대폰.",
         "captureSha256": "c28d82ffc0c18bee96d9d8dc34d1b2e76afb6f69e6bcd6b3caacf6b261dec2bb",
-        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)"
+        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)",
+        "smallScreen": {
+          "status": "CROP_OK",
+          "screen": "API 36 에뮬레이터 720x1280 320dpi(360x640dp) 글꼴 130%, DecisionScreen 장면 보기",
+          "visibleX": "0.289..0.711",
+          "sceneMatch": "1.000",
+          "result": "보이는 가로 범위가 1080x2400(0.331..0.669)보다 넓어 1080x2400 판정이 하한이다. 새로 잃는 사물 없음.",
+          "captureSha256": "122026ed6586c6d9ee7fc09cc71ccf9fc501956d9f08740255512228fb122b61",
+          "localCandidate": "tmp/verify-20261109 a13d21f (main + #61 + #62 + 검토용 경로, 미배포)"
+        }
       },
       "appConnection": {
         "status": "NOT_CONNECTED",
         "note": "image_routing.json · image_ids.sample.json · 제작대장에 등록하지 않았다. 중앙 연결은 김선한 병합 순서. 사건이 이미 이 imageId를 고르므로 경로 한 줄만 추가하면 된다."
       },
-      "sha256": "a7af4eb457ed03b3d5f7988e64bed8157cbc76bbb77f838b483ff93f079aca50"
+      "sha256": "a7af4eb457ed03b3d5f7988e64bed8157cbc76bbb77f838b483ff93f079aca50",
+      "approval": {
+        "status": "NOT_APPROVED",
+        "requires": [
+          "신기훈 의미 검수 PASS",
+          "정원률 화풍 검수 PASS",
+          "김재겸 실기기 크롭 CROP_OK 또는 CROP_OK_NOTE (같은 SHA-256)",
+          "김선한 승인 manifest 등록 · image_routing.json 연결"
+        ],
+        "note": "자체 검수만으로는 승인하지 않는다."
+      }
     },
     {
       "groupId": "grp_old_welfare_board_guitar",
@@ -2236,10 +3262,18 @@
         "centerBandLost": "양옆 어르신들, 작은 꽃 그림 게시물"
       },
       "semanticReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "신기훈",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "visualReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "정원률",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "cropReview": {
         "status": "CROP_OK",
@@ -2249,13 +3283,32 @@
         "sceneMatch": "1.000 / 1.000",
         "result": "실기기 크롭에 핵심 사물이 남는다: 기타 공고, 스티커 신청표, 내 손.",
         "captureSha256": "b702653e76f8523c5f6c7c5bc8227fd7524b3dc4b69fbfabf2d0daa165c1b297",
-        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)"
+        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)",
+        "smallScreen": {
+          "status": "CROP_OK",
+          "screen": "API 36 에뮬레이터 720x1280 320dpi(360x640dp) 글꼴 130%, DecisionScreen 장면 보기",
+          "visibleX": "0.289..0.711",
+          "sceneMatch": "1.000",
+          "result": "보이는 가로 범위가 1080x2400(0.331..0.669)보다 넓어 1080x2400 판정이 하한이다. 새로 잃는 사물 없음.",
+          "captureSha256": "8496e1dca6eac08c0f767fca6bfb1a140d0b30971c7597fd8ff92ab6373e150e",
+          "localCandidate": "tmp/verify-20261109 a13d21f (main + #61 + #62 + 검토용 경로, 미배포)"
+        }
       },
       "appConnection": {
         "status": "NOT_CONNECTED",
         "note": "image_routing.json · image_ids.sample.json · 제작대장에 등록하지 않았다. 중앙 연결은 김선한 병합 순서. 사건이 이미 이 imageId를 고르므로 경로 한 줄만 추가하면 된다."
       },
-      "sha256": "eac93c3eb7a2fc9fd7474a8565b247158b5bd52b613624b3606ce5810d02bdad"
+      "sha256": "eac93c3eb7a2fc9fd7474a8565b247158b5bd52b613624b3606ce5810d02bdad",
+      "approval": {
+        "status": "NOT_APPROVED",
+        "requires": [
+          "신기훈 의미 검수 PASS",
+          "정원률 화풍 검수 PASS",
+          "김재겸 실기기 크롭 CROP_OK 또는 CROP_OK_NOTE (같은 SHA-256)",
+          "김선한 승인 manifest 등록 · image_routing.json 연결"
+        ],
+        "note": "자체 검수만으로는 승인하지 않는다."
+      }
     },
     {
       "groupId": "grp_old_art_boxes_home",
@@ -2291,10 +3344,18 @@
         "centerBandLost": "창, 소파, 찻잔, 양끝 상자 바깥쪽"
       },
       "semanticReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "신기훈",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "visualReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "정원률",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "cropReview": {
         "status": "CROP_OK",
@@ -2304,7 +3365,16 @@
         "sceneMatch": "1.000 / 1.000",
         "result": "실기기 크롭에 핵심 사물이 남는다: 가운데 상자 열과 양옆 일부, 대관 안내문, 손 일부.",
         "captureSha256": "13e2ec04dae029e25eef353b4ee54a098f1bcbb99cb0a53a5351d6a2f9e9208c",
-        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)"
+        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)",
+        "smallScreen": {
+          "status": "CROP_OK",
+          "screen": "API 36 에뮬레이터 720x1280 320dpi(360x640dp) 글꼴 130%, DecisionScreen 장면 보기",
+          "visibleX": "0.289..0.711",
+          "sceneMatch": "1.000",
+          "result": "보이는 가로 범위가 1080x2400(0.331..0.669)보다 넓어 1080x2400 판정이 하한이다. 새로 잃는 사물 없음.",
+          "captureSha256": "a32c3075a22caeaa94fe5854bdb5ab067f7879fecd409fda48baabec9efa0a39",
+          "localCandidate": "tmp/verify-20261109 a13d21f (main + #61 + #62 + 검토용 경로, 미배포)"
+        }
       },
       "appConnection": {
         "status": "NOT_CONNECTED",
@@ -2319,7 +3389,17 @@
           "reason": "탁자 위 대관 안내문의 건물 간판에 한글처럼 보이는 가짜 글자",
           "kept": "local only (C:/HSU/3-2/mobile/img_20261108), not committed"
         }
-      ]
+      ],
+      "approval": {
+        "status": "NOT_APPROVED",
+        "requires": [
+          "신기훈 의미 검수 PASS",
+          "정원률 화풍 검수 PASS",
+          "김재겸 실기기 크롭 CROP_OK 또는 CROP_OK_NOTE (같은 SHA-256)",
+          "김선한 승인 manifest 등록 · image_routing.json 연결"
+        ],
+        "note": "자체 검수만으로는 승인하지 않는다."
+      }
     },
     {
       "groupId": "grp_adult_hiking_leader_offer",
@@ -2355,10 +3435,18 @@
         "centerBandLost": "양옆 회원 일부, 쉼터 지붕, 탁자"
       },
       "semanticReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "신기훈",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "visualReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "정원률",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "cropReview": {
         "status": "CROP_OK",
@@ -2368,13 +3456,32 @@
         "sceneMatch": "1.000 / 1.000",
         "result": "실기기 크롭에 핵심 사물이 남는다: 대장 얼굴·깃발, 박수 단톡 휴대폰.",
         "captureSha256": "c147acc851aa05aef2275e0e71210542ad9095cccf1bb4e57eaa9d87ac65508f",
-        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)"
+        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)",
+        "smallScreen": {
+          "status": "CROP_OK",
+          "screen": "API 36 에뮬레이터 720x1280 320dpi(360x640dp) 글꼴 130%, DecisionScreen 장면 보기",
+          "visibleX": "0.289..0.711",
+          "sceneMatch": "1.000",
+          "result": "보이는 가로 범위가 1080x2400(0.331..0.669)보다 넓어 1080x2400 판정이 하한이다. 새로 잃는 사물 없음.",
+          "captureSha256": "ee022fb33677be7c7186a4813d74b1875ee80da0ee8f23d9bee4fe11f655d26e",
+          "localCandidate": "tmp/verify-20261109 a13d21f (main + #61 + #62 + 검토용 경로, 미배포)"
+        }
       },
       "appConnection": {
         "status": "NOT_CONNECTED",
         "note": "image_routing.json · image_ids.sample.json · 제작대장에 등록하지 않았다. 중앙 연결은 김선한 병합 순서. 사건이 이미 이 imageId를 고르므로 경로 한 줄만 추가하면 된다."
       },
-      "sha256": "0d44da57cc255e52d4ddeda522156f08ffa2b654e81c1278437d7fc464890cec"
+      "sha256": "0d44da57cc255e52d4ddeda522156f08ffa2b654e81c1278437d7fc464890cec",
+      "approval": {
+        "status": "NOT_APPROVED",
+        "requires": [
+          "신기훈 의미 검수 PASS",
+          "정원률 화풍 검수 PASS",
+          "김재겸 실기기 크롭 CROP_OK 또는 CROP_OK_NOTE (같은 SHA-256)",
+          "김선한 승인 manifest 등록 · image_routing.json 연결"
+        ],
+        "note": "자체 검수만으로는 승인하지 않는다."
+      }
     },
     {
       "groupId": "grp_ya_first_week_overtime",
@@ -2410,10 +3517,18 @@
         "centerBandLost": "유리 회의실, 창, 팀장 오른쪽 어깨"
       },
       "semanticReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "신기훈",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "visualReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "정원률",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "cropReview": {
         "status": "CROP_OK",
@@ -2423,13 +3538,32 @@
         "sceneMatch": "1.000 / 1.000",
         "result": "실기기 크롭에 핵심 사물이 남는다: 벽시계 9시, 남은 동료들, 팀장 얼굴·머그, 가방 쥔 손.",
         "captureSha256": "22599f47f4c9ea264b54a2ac638d4c71343a3d90898f463fe85fdbe164c643fd",
-        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)"
+        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)",
+        "smallScreen": {
+          "status": "CROP_OK",
+          "screen": "API 36 에뮬레이터 720x1280 320dpi(360x640dp) 글꼴 130%, DecisionScreen 장면 보기",
+          "visibleX": "0.289..0.711",
+          "sceneMatch": "1.000",
+          "result": "보이는 가로 범위가 1080x2400(0.331..0.669)보다 넓어 1080x2400 판정이 하한이다. 새로 잃는 사물 없음.",
+          "captureSha256": "f8e94ec6264a48dbc6b7b2f202d0010588ce7162b56ecdf8237211da79f3341d",
+          "localCandidate": "tmp/verify-20261109 a13d21f (main + #61 + #62 + 검토용 경로, 미배포)"
+        }
       },
       "appConnection": {
         "status": "NOT_CONNECTED",
         "note": "image_routing.json · image_ids.sample.json · 제작대장에 등록하지 않았다. 중앙 연결은 김선한 병합 순서. 사건은 아직 기존 week10 imageId를 고르므로 새 imageId 지정 또는 경로 교체 결정이 필요하다."
       },
-      "sha256": "d679a5135152445b5aa017de62ca5554fbe823dbdd0a1921912f5c9739c8a93c"
+      "sha256": "d679a5135152445b5aa017de62ca5554fbe823dbdd0a1921912f5c9739c8a93c",
+      "approval": {
+        "status": "NOT_APPROVED",
+        "requires": [
+          "신기훈 의미 검수 PASS",
+          "정원률 화풍 검수 PASS",
+          "김재겸 실기기 크롭 CROP_OK 또는 CROP_OK_NOTE (같은 SHA-256)",
+          "김선한 승인 manifest 등록 · image_routing.json 연결"
+        ],
+        "note": "자체 검수만으로는 승인하지 않는다."
+      }
     },
     {
       "groupId": "grp_adult_father_diabetes_dinner",
@@ -2465,10 +3599,18 @@
         "centerBandLost": "양옆 가족, 반찬 일부"
       },
       "semanticReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "신기훈",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "visualReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "정원률",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "cropReview": {
         "status": "CROP_OK",
@@ -2478,13 +3620,32 @@
         "sceneMatch": "1.000 / 1.000",
         "result": "실기기 크롭에 핵심 사물이 남는다: 아버지 얼굴·몸짓, 진단서, 잡채.",
         "captureSha256": "9d2946c5399e78bd744413b5e44f53cd3ff1a431108c5e9061105a9693364d0e",
-        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)"
+        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)",
+        "smallScreen": {
+          "status": "CROP_OK",
+          "screen": "API 36 에뮬레이터 720x1280 320dpi(360x640dp) 글꼴 130%, DecisionScreen 장면 보기",
+          "visibleX": "0.289..0.711",
+          "sceneMatch": "1.000",
+          "result": "보이는 가로 범위가 1080x2400(0.331..0.669)보다 넓어 1080x2400 판정이 하한이다. 새로 잃는 사물 없음.",
+          "captureSha256": "038ef21b5fd429c02f2fa1477ff8b621739518f8c8dbf2cea9aaee1e591f0061",
+          "localCandidate": "tmp/verify-20261109 a13d21f (main + #61 + #62 + 검토용 경로, 미배포)"
+        }
       },
       "appConnection": {
         "status": "NOT_CONNECTED",
         "note": "image_routing.json · image_ids.sample.json · 제작대장에 등록하지 않았다. 중앙 연결은 김선한 병합 순서. 사건이 이미 이 imageId를 고르므로 경로 한 줄만 추가하면 된다."
       },
-      "sha256": "769b1132789267cc1aa9026a16614fba535e03b56a94c8ea79f215292a17de08"
+      "sha256": "769b1132789267cc1aa9026a16614fba535e03b56a94c8ea79f215292a17de08",
+      "approval": {
+        "status": "NOT_APPROVED",
+        "requires": [
+          "신기훈 의미 검수 PASS",
+          "정원률 화풍 검수 PASS",
+          "김재겸 실기기 크롭 CROP_OK 또는 CROP_OK_NOTE (같은 SHA-256)",
+          "김선한 승인 manifest 등록 · image_routing.json 연결"
+        ],
+        "note": "자체 검수만으로는 승인하지 않는다."
+      }
     },
     {
       "groupId": "grp_teen_home_ec_vegetables",
@@ -2520,10 +3681,18 @@
         "centerBandLost": "뒤 선생님, 다른 조"
       },
       "semanticReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "신기훈",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "visualReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "정원률",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "cropReview": {
         "status": "CROP_OK",
@@ -2533,13 +3702,32 @@
         "sceneMatch": "1.000 / 1.000",
         "result": "실기기 크롭에 핵심 사물이 남는다: 도마와 세 가지 채소, 조원 둘 안쪽.",
         "captureSha256": "1e3667807e65a0ad999f07658961b2918041557f98296832e7868cfd43cb20e5",
-        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)"
+        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)",
+        "smallScreen": {
+          "status": "CROP_OK",
+          "screen": "API 36 에뮬레이터 720x1280 320dpi(360x640dp) 글꼴 130%, DecisionScreen 장면 보기",
+          "visibleX": "0.289..0.711",
+          "sceneMatch": "1.000",
+          "result": "보이는 가로 범위가 1080x2400(0.331..0.669)보다 넓어 1080x2400 판정이 하한이다. 새로 잃는 사물 없음.",
+          "captureSha256": "740bc634ae96d27611a33bfc6bb5b654e23ff82bf7c29aff93a149ba551bbc63",
+          "localCandidate": "tmp/verify-20261109 a13d21f (main + #61 + #62 + 검토용 경로, 미배포)"
+        }
       },
       "appConnection": {
         "status": "NOT_CONNECTED",
         "note": "image_routing.json · image_ids.sample.json · 제작대장에 등록하지 않았다. 중앙 연결은 김선한 병합 순서. 사건이 이미 이 imageId를 고르므로 경로 한 줄만 추가하면 된다."
       },
-      "sha256": "bb0443474c47d3a62ac170f6bbb556466e08f3cacd38b3fbbf28d31d57f81cba"
+      "sha256": "bb0443474c47d3a62ac170f6bbb556466e08f3cacd38b3fbbf28d31d57f81cba",
+      "approval": {
+        "status": "NOT_APPROVED",
+        "requires": [
+          "신기훈 의미 검수 PASS",
+          "정원률 화풍 검수 PASS",
+          "김재겸 실기기 크롭 CROP_OK 또는 CROP_OK_NOTE (같은 SHA-256)",
+          "김선한 승인 manifest 등록 · image_routing.json 연결"
+        ],
+        "note": "자체 검수만으로는 승인하지 않는다."
+      }
     },
     {
       "groupId": "grp_ya_gap_year_desk",
@@ -2575,10 +3763,18 @@
         "centerBandLost": "필통, 스탠드 받침, 텀블러, 노트"
       },
       "semanticReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "신기훈",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "visualReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "정원률",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "cropReview": {
         "status": "CROP_OK",
@@ -2588,13 +3784,32 @@
         "sceneMatch": "1.000 / 1.000",
         "result": "실기기 크롭에 핵심 사물이 남는다: 두 책, 휴대폰, 두 손.",
         "captureSha256": "b95081831ee579c03fd81705ad52b15f733fbb1b32c864f9897733ff70c0f1e2",
-        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)"
+        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)",
+        "smallScreen": {
+          "status": "CROP_OK",
+          "screen": "API 36 에뮬레이터 720x1280 320dpi(360x640dp) 글꼴 130%, DecisionScreen 장면 보기",
+          "visibleX": "0.289..0.711",
+          "sceneMatch": "1.000",
+          "result": "보이는 가로 범위가 1080x2400(0.331..0.669)보다 넓어 1080x2400 판정이 하한이다. 새로 잃는 사물 없음.",
+          "captureSha256": "4af8983298c09a350bb40ac6be2ae597d58b8301c6286d055243841f7bb9bc9e",
+          "localCandidate": "tmp/verify-20261109 a13d21f (main + #61 + #62 + 검토용 경로, 미배포)"
+        }
       },
       "appConnection": {
         "status": "NOT_CONNECTED",
         "note": "image_routing.json · image_ids.sample.json · 제작대장에 등록하지 않았다. 중앙 연결은 김선한 병합 순서. 사건이 이미 이 imageId를 고르므로 경로 한 줄만 추가하면 된다."
       },
-      "sha256": "a8d84237f74e78b362fbfbc75760fbd8ff2da0ae5599c45e6399a2a08d5c5ceb"
+      "sha256": "a8d84237f74e78b362fbfbc75760fbd8ff2da0ae5599c45e6399a2a08d5c5ceb",
+      "approval": {
+        "status": "NOT_APPROVED",
+        "requires": [
+          "신기훈 의미 검수 PASS",
+          "정원률 화풍 검수 PASS",
+          "김재겸 실기기 크롭 CROP_OK 또는 CROP_OK_NOTE (같은 SHA-256)",
+          "김선한 승인 manifest 등록 · image_routing.json 연결"
+        ],
+        "note": "자체 검수만으로는 승인하지 않는다."
+      }
     },
     {
       "groupId": "grp_ya_lab_paper_authors",
@@ -2630,10 +3845,18 @@
         "centerBandLost": "실험 노트, 원심분리기, 현미경"
       },
       "semanticReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "신기훈",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "visualReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "정원률",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "cropReview": {
         "status": "CROP_OK",
@@ -2643,13 +3866,32 @@
         "sceneMatch": "1.000 / 1.000",
         "result": "실기기 크롭에 핵심 사물이 남는다: 논문 저자 아이콘 줄과 빈 자리, 선배 얼굴·몸짓.",
         "captureSha256": "8614c62a632052d93a51b2d801106787a96294d0aead0c37a39a6b7b6cc0bb3f",
-        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)"
+        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)",
+        "smallScreen": {
+          "status": "CROP_OK",
+          "screen": "API 36 에뮬레이터 720x1280 320dpi(360x640dp) 글꼴 130%, DecisionScreen 장면 보기",
+          "visibleX": "0.289..0.711",
+          "sceneMatch": "1.000",
+          "result": "보이는 가로 범위가 1080x2400(0.331..0.669)보다 넓어 1080x2400 판정이 하한이다. 새로 잃는 사물 없음.",
+          "captureSha256": "c891a65e3e9db58b1adb52d9c84ba9163094edfc50f2c6941378650eb849f577",
+          "localCandidate": "tmp/verify-20261109 a13d21f (main + #61 + #62 + 검토용 경로, 미배포)"
+        }
       },
       "appConnection": {
         "status": "NOT_CONNECTED",
         "note": "image_routing.json · image_ids.sample.json · 제작대장에 등록하지 않았다. 중앙 연결은 김선한 병합 순서. 사건이 이미 이 imageId를 고르므로 경로 한 줄만 추가하면 된다."
       },
-      "sha256": "ba02a9e32db0d842911c56fd34de5b355e8573753ab6a338f2a1f74587cbfcf3"
+      "sha256": "ba02a9e32db0d842911c56fd34de5b355e8573753ab6a338f2a1f74587cbfcf3",
+      "approval": {
+        "status": "NOT_APPROVED",
+        "requires": [
+          "신기훈 의미 검수 PASS",
+          "정원률 화풍 검수 PASS",
+          "김재겸 실기기 크롭 CROP_OK 또는 CROP_OK_NOTE (같은 SHA-256)",
+          "김선한 승인 manifest 등록 · image_routing.json 연결"
+        ],
+        "note": "자체 검수만으로는 승인하지 않는다."
+      }
     },
     {
       "groupId": "grp_old_welfare_board_phone",
@@ -2685,10 +3927,18 @@
         "centerBandLost": "양옆 어르신들, 작은 메모 게시물"
       },
       "semanticReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "신기훈",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "visualReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "정원률",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "cropReview": {
         "status": "CROP_OK",
@@ -2698,13 +3948,32 @@
         "sceneMatch": "1.000 / 1.000",
         "result": "실기기 크롭에 핵심 사물이 남는다: 모집 포스터, 내 손의 스마트폰.",
         "captureSha256": "f3032c61cd366e61f8e2dc83ca63ff0ef9f9879a99bb921c5eaa6ea7fb5ac706",
-        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)"
+        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)",
+        "smallScreen": {
+          "status": "CROP_OK",
+          "screen": "API 36 에뮬레이터 720x1280 320dpi(360x640dp) 글꼴 130%, DecisionScreen 장면 보기",
+          "visibleX": "0.289..0.711",
+          "sceneMatch": "1.000",
+          "result": "보이는 가로 범위가 1080x2400(0.331..0.669)보다 넓어 1080x2400 판정이 하한이다. 새로 잃는 사물 없음.",
+          "captureSha256": "2e00ff3161546180f21bc3fbb3d0f40f6dcab7762c150e90e91e8a509a9f8aaa",
+          "localCandidate": "tmp/verify-20261109 a13d21f (main + #61 + #62 + 검토용 경로, 미배포)"
+        }
       },
       "appConnection": {
         "status": "NOT_CONNECTED",
         "note": "image_routing.json · image_ids.sample.json · 제작대장에 등록하지 않았다. 중앙 연결은 김선한 병합 순서. 사건이 이미 이 imageId를 고르므로 경로 한 줄만 추가하면 된다."
       },
-      "sha256": "605605e6b299ac5d2cc4a82942566cff0ccd6a7b9de733064d46792badbf06c1"
+      "sha256": "605605e6b299ac5d2cc4a82942566cff0ccd6a7b9de733064d46792badbf06c1",
+      "approval": {
+        "status": "NOT_APPROVED",
+        "requires": [
+          "신기훈 의미 검수 PASS",
+          "정원률 화풍 검수 PASS",
+          "김재겸 실기기 크롭 CROP_OK 또는 CROP_OK_NOTE (같은 SHA-256)",
+          "김선한 승인 manifest 등록 · image_routing.json 연결"
+        ],
+        "note": "자체 검수만으로는 승인하지 않는다."
+      }
     },
     {
       "groupId": "grp_ya_interview_elevator",
@@ -2740,10 +4009,18 @@
         "centerBandLost": "창, 화분, 손잡이"
       },
       "semanticReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "신기훈",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "visualReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "정원률",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "cropReview": {
         "status": "CROP_OK",
@@ -2753,13 +4030,32 @@
         "sceneMatch": "1.000 / 1.000",
         "result": "실기기 크롭에 핵심 사물이 남는다: 직장인 얼굴, 이력서 파일, 층 표시.",
         "captureSha256": "79cf95c01e1ed060d492acb60d002baad6f02e2bff661306e2ac1dd4f9c38625",
-        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)"
+        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)",
+        "smallScreen": {
+          "status": "CROP_OK",
+          "screen": "API 36 에뮬레이터 720x1280 320dpi(360x640dp) 글꼴 130%, DecisionScreen 장면 보기",
+          "visibleX": "0.289..0.711",
+          "sceneMatch": "1.000",
+          "result": "보이는 가로 범위가 1080x2400(0.331..0.669)보다 넓어 1080x2400 판정이 하한이다. 새로 잃는 사물 없음.",
+          "captureSha256": "7d044cb873bf0d7665ac8cd6bae583451f81fbf50adfec4bc1a28e2eaa4eb420",
+          "localCandidate": "tmp/verify-20261109 a13d21f (main + #61 + #62 + 검토용 경로, 미배포)"
+        }
       },
       "appConnection": {
         "status": "NOT_CONNECTED",
         "note": "image_routing.json · image_ids.sample.json · 제작대장에 등록하지 않았다. 중앙 연결은 김선한 병합 순서. 사건이 이미 이 imageId를 고르므로 경로 한 줄만 추가하면 된다."
       },
-      "sha256": "430dba39ab864f4299b0540f16e7b862163a8cd247e4c467f5135dfb0d93ed3c"
+      "sha256": "430dba39ab864f4299b0540f16e7b862163a8cd247e4c467f5135dfb0d93ed3c",
+      "approval": {
+        "status": "NOT_APPROVED",
+        "requires": [
+          "신기훈 의미 검수 PASS",
+          "정원률 화풍 검수 PASS",
+          "김재겸 실기기 크롭 CROP_OK 또는 CROP_OK_NOTE (같은 SHA-256)",
+          "김선한 승인 manifest 등록 · image_routing.json 연결"
+        ],
+        "note": "자체 검수만으로는 승인하지 않는다."
+      }
     },
     {
       "groupId": "grp_adult_wet_lottery",
@@ -2795,10 +4091,18 @@
         "centerBandLost": "빨래 바구니, 세제, 수건 선반"
       },
       "semanticReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "신기훈",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "visualReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "정원률",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "cropReview": {
         "status": "CROP_OK",
@@ -2808,13 +4112,32 @@
         "sceneMatch": "1.000 / 1.000",
         "result": "실기기 크롭에 핵심 사물이 남는다: 번진 복권, 두 손, 젖은 바지, 세탁기 문.",
         "captureSha256": "5fc3adaf68af9ae05d70f9981bffdfa914afa6ff32f9d6318e3492b12ffe9539",
-        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)"
+        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)",
+        "smallScreen": {
+          "status": "CROP_OK",
+          "screen": "API 36 에뮬레이터 720x1280 320dpi(360x640dp) 글꼴 130%, DecisionScreen 장면 보기",
+          "visibleX": "0.289..0.711",
+          "sceneMatch": "1.000",
+          "result": "보이는 가로 범위가 1080x2400(0.331..0.669)보다 넓어 1080x2400 판정이 하한이다. 새로 잃는 사물 없음.",
+          "captureSha256": "081b7d723585babf11ecd5d6f7ae295d56d9e2d1df5cde43292b1ba1f7ba1639",
+          "localCandidate": "tmp/verify-20261109 a13d21f (main + #61 + #62 + 검토용 경로, 미배포)"
+        }
       },
       "appConnection": {
         "status": "NOT_CONNECTED",
         "note": "image_routing.json · image_ids.sample.json · 제작대장에 등록하지 않았다. 중앙 연결은 김선한 병합 순서. 사건이 이미 이 imageId를 고르므로 경로 한 줄만 추가하면 된다."
       },
-      "sha256": "bf603ab3795b9b58c5f8d09b7e50d6ec9e55f425661d41ea9d62cfbc207928ed"
+      "sha256": "bf603ab3795b9b58c5f8d09b7e50d6ec9e55f425661d41ea9d62cfbc207928ed",
+      "approval": {
+        "status": "NOT_APPROVED",
+        "requires": [
+          "신기훈 의미 검수 PASS",
+          "정원률 화풍 검수 PASS",
+          "김재겸 실기기 크롭 CROP_OK 또는 CROP_OK_NOTE (같은 SHA-256)",
+          "김선한 승인 manifest 등록 · image_routing.json 연결"
+        ],
+        "note": "자체 검수만으로는 승인하지 않는다."
+      }
     },
     {
       "groupId": "grp_old_cruise_prize_call",
@@ -2850,10 +4173,18 @@
         "centerBandLost": "영수증 일부, TV, 가족사진, 부엌"
       },
       "semanticReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "신기훈",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "visualReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "정원률",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "cropReview": {
         "status": "CROP_OK",
@@ -2863,13 +4194,32 @@
         "sceneMatch": "1.000 / 1.000",
         "result": "실기기 크롭에 핵심 사물이 남는다: 착신 휴대폰·선물 아이콘, 크루즈 전단, 응모권.",
         "captureSha256": "debc8d83b6da162d4b656faa0cf0d5f1a0580498a68c110e0ed4ab7087a02d92",
-        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)"
+        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)",
+        "smallScreen": {
+          "status": "CROP_OK",
+          "screen": "API 36 에뮬레이터 720x1280 320dpi(360x640dp) 글꼴 130%, DecisionScreen 장면 보기",
+          "visibleX": "0.289..0.711",
+          "sceneMatch": "1.000",
+          "result": "보이는 가로 범위가 1080x2400(0.331..0.669)보다 넓어 1080x2400 판정이 하한이다. 새로 잃는 사물 없음.",
+          "captureSha256": "ef6de835c4fd40f99d588a9e4ac7cafc4278a9ce250e5fc0f9e48b529b8d1476",
+          "localCandidate": "tmp/verify-20261109 a13d21f (main + #61 + #62 + 검토용 경로, 미배포)"
+        }
       },
       "appConnection": {
         "status": "NOT_CONNECTED",
         "note": "image_routing.json · image_ids.sample.json · 제작대장에 등록하지 않았다. 중앙 연결은 김선한 병합 순서. 사건이 이미 이 imageId를 고르므로 경로 한 줄만 추가하면 된다."
       },
-      "sha256": "2c0575ee2f1505034ba1e6eca9c090216a571d3809116d7771712d8a6cb39e04"
+      "sha256": "2c0575ee2f1505034ba1e6eca9c090216a571d3809116d7771712d8a6cb39e04",
+      "approval": {
+        "status": "NOT_APPROVED",
+        "requires": [
+          "신기훈 의미 검수 PASS",
+          "정원률 화풍 검수 PASS",
+          "김재겸 실기기 크롭 CROP_OK 또는 CROP_OK_NOTE (같은 SHA-256)",
+          "김선한 승인 manifest 등록 · image_routing.json 연결"
+        ],
+        "note": "자체 검수만으로는 승인하지 않는다."
+      }
     },
     {
       "groupId": "grp_ya_three_people_offers",
@@ -2905,10 +4255,18 @@
         "centerBandLost": "침대, 스탠드, 창"
       },
       "semanticReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "신기훈",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "visualReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "정원률",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "cropReview": {
         "status": "CROP_OK",
@@ -2918,13 +4276,32 @@
         "sceneMatch": "1.000 / 1.000",
         "result": "실기기 크롭에 핵심 사물이 남는다: 세 사람 메시지 휴대폰, 동아리 사진.",
         "captureSha256": "10ba2192d1de23924a120d25937032e1888654c98101cc282c1ef3f058e7f075",
-        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)"
+        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)",
+        "smallScreen": {
+          "status": "CROP_OK",
+          "screen": "API 36 에뮬레이터 720x1280 320dpi(360x640dp) 글꼴 130%, DecisionScreen 장면 보기",
+          "visibleX": "0.289..0.711",
+          "sceneMatch": "1.000",
+          "result": "보이는 가로 범위가 1080x2400(0.331..0.669)보다 넓어 1080x2400 판정이 하한이다. 새로 잃는 사물 없음.",
+          "captureSha256": "6e637b79fa2e52c57afd0e3e8fad2e7b31d2f83cb599d12db90bfac038ce4324",
+          "localCandidate": "tmp/verify-20261109 a13d21f (main + #61 + #62 + 검토용 경로, 미배포)"
+        }
       },
       "appConnection": {
         "status": "NOT_CONNECTED",
         "note": "image_routing.json · image_ids.sample.json · 제작대장에 등록하지 않았다. 중앙 연결은 김선한 병합 순서. 사건이 이미 이 imageId를 고르므로 경로 한 줄만 추가하면 된다."
       },
-      "sha256": "97e00f2695d66f76a2449104799105522a7850ebb05d9be4325e48e8eed1fa7d"
+      "sha256": "97e00f2695d66f76a2449104799105522a7850ebb05d9be4325e48e8eed1fa7d",
+      "approval": {
+        "status": "NOT_APPROVED",
+        "requires": [
+          "신기훈 의미 검수 PASS",
+          "정원률 화풍 검수 PASS",
+          "김재겸 실기기 크롭 CROP_OK 또는 CROP_OK_NOTE (같은 SHA-256)",
+          "김선한 승인 manifest 등록 · image_routing.json 연결"
+        ],
+        "note": "자체 검수만으로는 승인하지 않는다."
+      }
     },
     {
       "groupId": "grp_old_70th_party_hands_up",
@@ -2960,10 +4337,18 @@
         "centerBandLost": "사회자, 양옆 하객 일부, 방명록 바깥쪽"
       },
       "semanticReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "신기훈",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "visualReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "정원률",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "cropReview": {
         "status": "CROP_OK_NOTE",
@@ -2973,13 +4358,32 @@
         "sceneMatch": "1.000 / 1.000",
         "result": "방명록 두 권과 손 든 하객·가족 테이블이 남는다. 마이크 든 사회자는 크롭 밖.",
         "captureSha256": "aeede787d6b7474b3d4891f408322b754b1cd9044463a250b93f06e2dd8751f9",
-        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)"
+        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)",
+        "smallScreen": {
+          "status": "CROP_OK_NOTE",
+          "screen": "API 36 에뮬레이터 720x1280 320dpi(360x640dp) 글꼴 130%, DecisionScreen 장면 보기",
+          "visibleX": "0.289..0.711",
+          "sceneMatch": "1.000",
+          "result": "보이는 가로 범위가 1080x2400(0.331..0.669)보다 넓어 1080x2400 판정이 하한이다. 새로 잃는 사물 없음.",
+          "captureSha256": "83daa5b0db782ecf9c386220e5035df7c277d7e29ced661ce2fcbc4ae86ec761",
+          "localCandidate": "tmp/verify-20261109 a13d21f (main + #61 + #62 + 검토용 경로, 미배포)"
+        }
       },
       "appConnection": {
         "status": "NOT_CONNECTED",
         "note": "image_routing.json · image_ids.sample.json · 제작대장에 등록하지 않았다. 중앙 연결은 김선한 병합 순서. 사건은 아직 기존 week10 imageId를 고르므로 새 imageId 지정 또는 경로 교체 결정이 필요하다."
       },
-      "sha256": "8cef5c99e16bb65d4161349470ca0fe774075d76d9ef28be2b7901b27f8aff12"
+      "sha256": "8cef5c99e16bb65d4161349470ca0fe774075d76d9ef28be2b7901b27f8aff12",
+      "approval": {
+        "status": "NOT_APPROVED",
+        "requires": [
+          "신기훈 의미 검수 PASS",
+          "정원률 화풍 검수 PASS",
+          "김재겸 실기기 크롭 CROP_OK 또는 CROP_OK_NOTE (같은 SHA-256)",
+          "김선한 승인 manifest 등록 · image_routing.json 연결"
+        ],
+        "note": "자체 검수만으로는 승인하지 않는다."
+      }
     },
     {
       "groupId": "grp_ya_friends_shared_house",
@@ -3015,10 +4419,18 @@
         "centerBandLost": "봉투 더미 대부분, 침대, 부엌"
       },
       "semanticReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "신기훈",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "visualReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "정원률",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "cropReview": {
         "status": "CROP_OK",
@@ -3028,13 +4440,32 @@
         "sceneMatch": "1.000 / 1.000",
         "result": "실기기 크롭에 핵심 사물이 남는다: 두 친구 얼굴, 평면도, 통장 왼쪽.",
         "captureSha256": "51dd6c0c2ae9fa7ca9b0826a9911a4b96a8b0d4dff28e9596c27ef19d39d7947",
-        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)"
+        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)",
+        "smallScreen": {
+          "status": "CROP_OK",
+          "screen": "API 36 에뮬레이터 720x1280 320dpi(360x640dp) 글꼴 130%, DecisionScreen 장면 보기",
+          "visibleX": "0.289..0.711",
+          "sceneMatch": "1.000",
+          "result": "보이는 가로 범위가 1080x2400(0.331..0.669)보다 넓어 1080x2400 판정이 하한이다. 새로 잃는 사물 없음.",
+          "captureSha256": "90f4286acd62f9a43597286b67e7b2cc40f93cacb9d7cb5a57163ecaaa4d7456",
+          "localCandidate": "tmp/verify-20261109 a13d21f (main + #61 + #62 + 검토용 경로, 미배포)"
+        }
       },
       "appConnection": {
         "status": "NOT_CONNECTED",
         "note": "image_routing.json · image_ids.sample.json · 제작대장에 등록하지 않았다. 중앙 연결은 김선한 병합 순서. 사건이 이미 이 imageId를 고르므로 경로 한 줄만 추가하면 된다."
       },
-      "sha256": "74d4186dbfdce4f8a225b95d007c6f26db01817f955b3b80b6488381b40a9a1a"
+      "sha256": "74d4186dbfdce4f8a225b95d007c6f26db01817f955b3b80b6488381b40a9a1a",
+      "approval": {
+        "status": "NOT_APPROVED",
+        "requires": [
+          "신기훈 의미 검수 PASS",
+          "정원률 화풍 검수 PASS",
+          "김재겸 실기기 크롭 CROP_OK 또는 CROP_OK_NOTE (같은 SHA-256)",
+          "김선한 승인 manifest 등록 · image_routing.json 연결"
+        ],
+        "note": "자체 검수만으로는 승인하지 않는다."
+      }
     },
     {
       "groupId": "grp_old_neighbor_newspapers",
@@ -3070,10 +4501,18 @@
         "centerBandLost": "초인종과 누르는 손 전부, 복도 난간, 화분"
       },
       "semanticReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "신기훈",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "visualReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "정원률",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "cropReview": {
         "status": "CROP_OK_NOTE",
@@ -3083,13 +4522,32 @@
         "sceneMatch": "1.000 / 1.000",
         "result": "현관문과 쌓인 신문 세 부가 남는다. 초인종과 누르는 손은 크롭 밖.",
         "captureSha256": "c7240ab46978136298448a1ab23fb64d73fb437d85ab6d8540136127771c31d0",
-        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)"
+        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)",
+        "smallScreen": {
+          "status": "CROP_OK_NOTE",
+          "screen": "API 36 에뮬레이터 720x1280 320dpi(360x640dp) 글꼴 130%, DecisionScreen 장면 보기",
+          "visibleX": "0.289..0.711",
+          "sceneMatch": "1.000",
+          "result": "보이는 가로 범위가 1080x2400(0.331..0.669)보다 넓어 1080x2400 판정이 하한이다. 새로 잃는 사물 없음.",
+          "captureSha256": "893cf7ec5e966312622614e79bbe7c3ccfb5ac309f8eaf89030511bc074d29ec",
+          "localCandidate": "tmp/verify-20261109 a13d21f (main + #61 + #62 + 검토용 경로, 미배포)"
+        }
       },
       "appConnection": {
         "status": "NOT_CONNECTED",
         "note": "image_routing.json · image_ids.sample.json · 제작대장에 등록하지 않았다. 중앙 연결은 김선한 병합 순서. 사건이 이미 이 imageId를 고르므로 경로 한 줄만 추가하면 된다."
       },
-      "sha256": "1991d7a6101f7a0e687841e1c15b224c48d13a1af24c17de02f98d4278aea8ae"
+      "sha256": "1991d7a6101f7a0e687841e1c15b224c48d13a1af24c17de02f98d4278aea8ae",
+      "approval": {
+        "status": "NOT_APPROVED",
+        "requires": [
+          "신기훈 의미 검수 PASS",
+          "정원률 화풍 검수 PASS",
+          "김재겸 실기기 크롭 CROP_OK 또는 CROP_OK_NOTE (같은 SHA-256)",
+          "김선한 승인 manifest 등록 · image_routing.json 연결"
+        ],
+        "note": "자체 검수만으로는 승인하지 않는다."
+      }
     },
     {
       "groupId": "grp_ya_three_contracts_desk",
@@ -3127,10 +4585,18 @@
         "centerBandLost": "스탠드, 머그, 책, 창밖 야경 일부"
       },
       "semanticReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "신기훈",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "visualReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "정원률",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "cropReview": {
         "status": "CROP_OK_NOTE",
@@ -3140,13 +4606,32 @@
         "sceneMatch": "1.000 / 1.000",
         "result": "가운데 스톡옵션 계약서와 펜 든 손이 남고 양옆 계약서는 빌딩·가게 아이콘 일부만 남는다.",
         "captureSha256": "09cf5e6c5b687089ecf6079b30376a606596602fbdc1caa29548d4cd04be7644",
-        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)"
+        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)",
+        "smallScreen": {
+          "status": "CROP_OK_NOTE",
+          "screen": "API 36 에뮬레이터 720x1280 320dpi(360x640dp) 글꼴 130%, DecisionScreen 장면 보기",
+          "visibleX": "0.289..0.711",
+          "sceneMatch": "1.000",
+          "result": "보이는 가로 범위가 1080x2400(0.331..0.669)보다 넓어 1080x2400 판정이 하한이다. 새로 잃는 사물 없음.",
+          "captureSha256": "de8a9875a6a2d93ac3980a453027269df0b1ae92fe5338a7910d55aec2caec59",
+          "localCandidate": "tmp/verify-20261109 a13d21f (main + #61 + #62 + 검토용 경로, 미배포)"
+        }
       },
       "appConnection": {
         "status": "NOT_CONNECTED",
         "note": "image_routing.json · image_ids.sample.json · 제작대장에 등록하지 않았다. 중앙 연결은 김선한 병합 순서. 사건이 이미 이 imageId를 고르므로 경로 한 줄만 추가하면 된다."
       },
-      "sha256": "a0de7b1fbeb84a8f81eac0154a3de2067c3d6115381dea2b9d5ba41adb644b43"
+      "sha256": "a0de7b1fbeb84a8f81eac0154a3de2067c3d6115381dea2b9d5ba41adb644b43",
+      "approval": {
+        "status": "NOT_APPROVED",
+        "requires": [
+          "신기훈 의미 검수 PASS",
+          "정원률 화풍 검수 PASS",
+          "김재겸 실기기 크롭 CROP_OK 또는 CROP_OK_NOTE (같은 SHA-256)",
+          "김선한 승인 manifest 등록 · image_routing.json 연결"
+        ],
+        "note": "자체 검수만으로는 승인하지 않는다."
+      }
     },
     {
       "groupId": "grp_mid_acquisition_call",
@@ -3182,10 +4667,18 @@
         "centerBandLost": "노트북, 팀 사진, 커피"
       },
       "semanticReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "신기훈",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "visualReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "정원률",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "cropReview": {
         "status": "CROP_OK",
@@ -3195,13 +4688,32 @@
         "sceneMatch": "1.000 / 1.000",
         "result": "실기기 크롭에 핵심 사물이 남는다: 착신 휴대폰, 유리벽 너머 직원들.",
         "captureSha256": "e60ec8204762761f1170d14ea53959539577ead652923082392d7b2d754829ff",
-        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)"
+        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)",
+        "smallScreen": {
+          "status": "CROP_OK",
+          "screen": "API 36 에뮬레이터 720x1280 320dpi(360x640dp) 글꼴 130%, DecisionScreen 장면 보기",
+          "visibleX": "0.289..0.711",
+          "sceneMatch": "1.000",
+          "result": "보이는 가로 범위가 1080x2400(0.331..0.669)보다 넓어 1080x2400 판정이 하한이다. 새로 잃는 사물 없음.",
+          "captureSha256": "a67e7c253bd5f872934851a8633c4c82473edc5a12f857f57729516c95ea0578",
+          "localCandidate": "tmp/verify-20261109 a13d21f (main + #61 + #62 + 검토용 경로, 미배포)"
+        }
       },
       "appConnection": {
         "status": "NOT_CONNECTED",
         "note": "image_routing.json · image_ids.sample.json · 제작대장에 등록하지 않았다. 중앙 연결은 김선한 병합 순서. 사건이 이미 이 imageId를 고르므로 경로 한 줄만 추가하면 된다."
       },
-      "sha256": "87e874120c8d0c14e0a433882443ebd15ea9fd6ed0ed0716773d9b1edc46be31"
+      "sha256": "87e874120c8d0c14e0a433882443ebd15ea9fd6ed0ed0716773d9b1edc46be31",
+      "approval": {
+        "status": "NOT_APPROVED",
+        "requires": [
+          "신기훈 의미 검수 PASS",
+          "정원률 화풍 검수 PASS",
+          "김재겸 실기기 크롭 CROP_OK 또는 CROP_OK_NOTE (같은 SHA-256)",
+          "김선한 승인 manifest 등록 · image_routing.json 연결"
+        ],
+        "note": "자체 검수만으로는 승인하지 않는다."
+      }
     },
     {
       "groupId": "grp_mid_exec_offer_dinner",
@@ -3237,10 +4749,18 @@
         "centerBandLost": "창밖 야경, 꽃병, 다른 테이블"
       },
       "semanticReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "신기훈",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "visualReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "정원률",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "cropReview": {
         "status": "CROP_OK",
@@ -3250,13 +4770,32 @@
         "sceneMatch": "1.000 / 1.000",
         "result": "실기기 크롭에 핵심 사물이 남는다: 대표 얼굴·내민 손, 접시·촛불, 와인잔 일부.",
         "captureSha256": "38d7b50caca63eb1ca6fc381a0fa734a2d01942cf42de37e16fbfab2a3406ac0",
-        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)"
+        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)",
+        "smallScreen": {
+          "status": "CROP_OK",
+          "screen": "API 36 에뮬레이터 720x1280 320dpi(360x640dp) 글꼴 130%, DecisionScreen 장면 보기",
+          "visibleX": "0.289..0.711",
+          "sceneMatch": "1.000",
+          "result": "보이는 가로 범위가 1080x2400(0.331..0.669)보다 넓어 1080x2400 판정이 하한이다. 새로 잃는 사물 없음.",
+          "captureSha256": "6cd4f79d53a1a026837eb63bad0b64ff0ed8a36b31ac1f5e1e74b7591b77d7a0",
+          "localCandidate": "tmp/verify-20261109 a13d21f (main + #61 + #62 + 검토용 경로, 미배포)"
+        }
       },
       "appConnection": {
         "status": "NOT_CONNECTED",
         "note": "image_routing.json · image_ids.sample.json · 제작대장에 등록하지 않았다. 중앙 연결은 김선한 병합 순서. 사건이 이미 이 imageId를 고르므로 경로 한 줄만 추가하면 된다."
       },
-      "sha256": "a9de12a225296ef213c19e7aaf46585a6c297bc7e3264c375e41305e3c8d9ca0"
+      "sha256": "a9de12a225296ef213c19e7aaf46585a6c297bc7e3264c375e41305e3c8d9ca0",
+      "approval": {
+        "status": "NOT_APPROVED",
+        "requires": [
+          "신기훈 의미 검수 PASS",
+          "정원률 화풍 검수 PASS",
+          "김재겸 실기기 크롭 CROP_OK 또는 CROP_OK_NOTE (같은 SHA-256)",
+          "김선한 승인 manifest 등록 · image_routing.json 연결"
+        ],
+        "note": "자체 검수만으로는 승인하지 않는다."
+      }
     },
     {
       "groupId": "grp_child_picnic_hornet",
@@ -3292,10 +4831,18 @@
         "centerBandLost": "놀란 친구들 대부분, 가방"
       },
       "semanticReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "신기훈",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "visualReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "정원률",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "cropReview": {
         "status": "CROP_OK_NOTE",
@@ -3305,13 +4852,32 @@
         "sceneMatch": "1.000 / 1.000",
         "result": "장수말벌·떨어지는 단풍잎·김밥 도시락·멀리 선생님이 남는다. 놀란 친구들은 크롭 밖.",
         "captureSha256": "c558746bfe85e7017a2a9222c70e0f5f9cd0296ea2747711519e91b0888acc0f",
-        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)"
+        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)",
+        "smallScreen": {
+          "status": "CROP_OK_NOTE",
+          "screen": "API 36 에뮬레이터 720x1280 320dpi(360x640dp) 글꼴 130%, DecisionScreen 장면 보기",
+          "visibleX": "0.289..0.711",
+          "sceneMatch": "1.000",
+          "result": "보이는 가로 범위가 1080x2400(0.331..0.669)보다 넓어 1080x2400 판정이 하한이다. 새로 잃는 사물 없음.",
+          "captureSha256": "ae8d0d07a3b6b5fbd6264a5ea0dd271ff17d0d7cc6f3716b732e7d6fd42e5701",
+          "localCandidate": "tmp/verify-20261109 a13d21f (main + #61 + #62 + 검토용 경로, 미배포)"
+        }
       },
       "appConnection": {
         "status": "NOT_CONNECTED",
         "note": "image_routing.json · image_ids.sample.json · 제작대장에 등록하지 않았다. 중앙 연결은 김선한 병합 순서. 사건이 이미 이 imageId를 고르므로 경로 한 줄만 추가하면 된다."
       },
-      "sha256": "8b7caf6fe98a443b4375ac009a7aba0545be9c464f7563243cd4046c6223d86a"
+      "sha256": "8b7caf6fe98a443b4375ac009a7aba0545be9c464f7563243cd4046c6223d86a",
+      "approval": {
+        "status": "NOT_APPROVED",
+        "requires": [
+          "신기훈 의미 검수 PASS",
+          "정원률 화풍 검수 PASS",
+          "김재겸 실기기 크롭 CROP_OK 또는 CROP_OK_NOTE (같은 SHA-256)",
+          "김선한 승인 manifest 등록 · image_routing.json 연결"
+        ],
+        "note": "자체 검수만으로는 승인하지 않는다."
+      }
     },
     {
       "groupId": "grp_adult_packed_elevator_boss",
@@ -3347,10 +4913,18 @@
         "centerBandLost": "사장님 얼굴 오른쪽, 양옆 직장인"
       },
       "semanticReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "신기훈",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "visualReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "정원률",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "cropReview": {
         "status": "CROP_OK",
@@ -3360,13 +4934,32 @@
         "sceneMatch": "1.000 / 1.000",
         "result": "실기기 크롭에 핵심 사물이 남는다: 층 표시, 사장님 얼굴 왼쪽·어깨, 배를 누르는 손.",
         "captureSha256": "c8dd0c4b36715486969071a0cc63d754b5ee81c9e2cddf354102040d3a28a175",
-        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)"
+        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)",
+        "smallScreen": {
+          "status": "CROP_OK",
+          "screen": "API 36 에뮬레이터 720x1280 320dpi(360x640dp) 글꼴 130%, DecisionScreen 장면 보기",
+          "visibleX": "0.289..0.711",
+          "sceneMatch": "1.000",
+          "result": "보이는 가로 범위가 1080x2400(0.331..0.669)보다 넓어 1080x2400 판정이 하한이다. 새로 잃는 사물 없음.",
+          "captureSha256": "fb1d70c2fb4c7ec685e024cf6360779a0706ad3b6c3bad738810ea146bd2a045",
+          "localCandidate": "tmp/verify-20261109 a13d21f (main + #61 + #62 + 검토용 경로, 미배포)"
+        }
       },
       "appConnection": {
         "status": "NOT_CONNECTED",
         "note": "image_routing.json · image_ids.sample.json · 제작대장에 등록하지 않았다. 중앙 연결은 김선한 병합 순서. 사건이 이미 이 imageId를 고르므로 경로 한 줄만 추가하면 된다."
       },
-      "sha256": "988aa3ab5f9c3aa64d5e75e3161f2389f90c1a1f8de66226724665a2d771559e"
+      "sha256": "988aa3ab5f9c3aa64d5e75e3161f2389f90c1a1f8de66226724665a2d771559e",
+      "approval": {
+        "status": "NOT_APPROVED",
+        "requires": [
+          "신기훈 의미 검수 PASS",
+          "정원률 화풍 검수 PASS",
+          "김재겸 실기기 크롭 CROP_OK 또는 CROP_OK_NOTE (같은 SHA-256)",
+          "김선한 승인 manifest 등록 · image_routing.json 연결"
+        ],
+        "note": "자체 검수만으로는 승인하지 않는다."
+      }
     },
     {
       "groupId": "grp_infant_soap_bubble_hiccup",
@@ -3402,10 +4995,18 @@
         "centerBandLost": "양 구석의 병·막대 든 손, 한옥 마루"
       },
       "semanticReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "신기훈",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "visualReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "정원률",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "cropReview": {
         "status": "CROP_OK",
@@ -3415,7 +5016,16 @@
         "sceneMatch": "1.000 / 1.000",
         "result": "실기기 크롭에 핵심 사물이 남는다: 입에서 올라가는 비눗방울 줄과 딸꾹 선, 멀리 엄마.",
         "captureSha256": "baec91929c121a6599658b8cb9a4210c378cabf05644cb3c3ddba0eaa6164556",
-        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)"
+        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)",
+        "smallScreen": {
+          "status": "CROP_OK",
+          "screen": "API 36 에뮬레이터 720x1280 320dpi(360x640dp) 글꼴 130%, DecisionScreen 장면 보기",
+          "visibleX": "0.289..0.711",
+          "sceneMatch": "1.000",
+          "result": "보이는 가로 범위가 1080x2400(0.331..0.669)보다 넓어 1080x2400 판정이 하한이다. 새로 잃는 사물 없음.",
+          "captureSha256": "44b844219f093289f349b9cb4a4ebdabf55b10d0cd67c476b713e8876915b68d",
+          "localCandidate": "tmp/verify-20261109 a13d21f (main + #61 + #62 + 검토용 경로, 미배포)"
+        }
       },
       "appConnection": {
         "status": "NOT_CONNECTED",
@@ -3430,7 +5040,17 @@
           "reason": "비눗방울이 막대에서 이어져 나와 평범한 비눗방울 놀이로 읽힘(딸꾹질할 때 입에서 나오는 방울이 아님)",
           "kept": "local only (C:/HSU/3-2/mobile/img_20261108), not committed"
         }
-      ]
+      ],
+      "approval": {
+        "status": "NOT_APPROVED",
+        "requires": [
+          "신기훈 의미 검수 PASS",
+          "정원률 화풍 검수 PASS",
+          "김재겸 실기기 크롭 CROP_OK 또는 CROP_OK_NOTE (같은 SHA-256)",
+          "김선한 승인 manifest 등록 · image_routing.json 연결"
+        ],
+        "note": "자체 검수만으로는 승인하지 않는다."
+      }
     },
     {
       "groupId": "grp_adult_revolving_door",
@@ -3466,10 +5086,18 @@
         "centerBandLost": "양옆 걸어가는 직장인"
       },
       "semanticReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "신기훈",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "visualReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "정원률",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "cropReview": {
         "status": "CROP_OK",
@@ -3479,13 +5107,32 @@
         "sceneMatch": "1.000 / 1.000",
         "result": "실기기 크롭에 핵심 사물이 남는다: 유리 칸·기둥, 로비 시계, 사원증, 안내 데스크.",
         "captureSha256": "c94b2252b430754434332d87a6d48f96511e311a7c2018104f6762a0171ee599",
-        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)"
+        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)",
+        "smallScreen": {
+          "status": "CROP_OK",
+          "screen": "API 36 에뮬레이터 720x1280 320dpi(360x640dp) 글꼴 130%, DecisionScreen 장면 보기",
+          "visibleX": "0.289..0.711",
+          "sceneMatch": "1.000",
+          "result": "보이는 가로 범위가 1080x2400(0.331..0.669)보다 넓어 1080x2400 판정이 하한이다. 새로 잃는 사물 없음.",
+          "captureSha256": "a310f24537f6c71c9dda6f45d547d9ccf26478e32947618596471449fbe1d9a9",
+          "localCandidate": "tmp/verify-20261109 a13d21f (main + #61 + #62 + 검토용 경로, 미배포)"
+        }
       },
       "appConnection": {
         "status": "NOT_CONNECTED",
         "note": "image_routing.json · image_ids.sample.json · 제작대장에 등록하지 않았다. 중앙 연결은 김선한 병합 순서. 사건이 이미 이 imageId를 고르므로 경로 한 줄만 추가하면 된다."
       },
-      "sha256": "2090848e90dd24d366c093c3129da4b9a47c68ad12eb6396e846cb6e9d92bfc5"
+      "sha256": "2090848e90dd24d366c093c3129da4b9a47c68ad12eb6396e846cb6e9d92bfc5",
+      "approval": {
+        "status": "NOT_APPROVED",
+        "requires": [
+          "신기훈 의미 검수 PASS",
+          "정원률 화풍 검수 PASS",
+          "김재겸 실기기 크롭 CROP_OK 또는 CROP_OK_NOTE (같은 SHA-256)",
+          "김선한 승인 manifest 등록 · image_routing.json 연결"
+        ],
+        "note": "자체 검수만으로는 승인하지 않는다."
+      }
     },
     {
       "groupId": "grp_teen_lunch_line_cut",
@@ -3521,10 +5168,18 @@
         "centerBandLost": "양옆 줄 선 학생들"
       },
       "semanticReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "신기훈",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "visualReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "정원률",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "cropReview": {
         "status": "CROP_OK",
@@ -3534,13 +5189,32 @@
         "sceneMatch": "1.000 / 1.000",
         "result": "실기기 크롭에 핵심 사물이 남는다: 새치기 학생 얼굴·손짓, 배식대, 빈 식판.",
         "captureSha256": "6de32b3b2027148beb3ebcd08a20251acbeeb63fefd9bf9d64b0cbcc87978fac",
-        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)"
+        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)",
+        "smallScreen": {
+          "status": "CROP_OK",
+          "screen": "API 36 에뮬레이터 720x1280 320dpi(360x640dp) 글꼴 130%, DecisionScreen 장면 보기",
+          "visibleX": "0.289..0.711",
+          "sceneMatch": "1.000",
+          "result": "보이는 가로 범위가 1080x2400(0.331..0.669)보다 넓어 1080x2400 판정이 하한이다. 새로 잃는 사물 없음.",
+          "captureSha256": "6afc51d4d20007f659961e735c7b36912787cc499c56e96cd10d668be26bff7e",
+          "localCandidate": "tmp/verify-20261109 a13d21f (main + #61 + #62 + 검토용 경로, 미배포)"
+        }
       },
       "appConnection": {
         "status": "NOT_CONNECTED",
         "note": "image_routing.json · image_ids.sample.json · 제작대장에 등록하지 않았다. 중앙 연결은 김선한 병합 순서. 사건이 이미 이 imageId를 고르므로 경로 한 줄만 추가하면 된다."
       },
-      "sha256": "f0438e671f68f6dc8b50cfda9e3383a0cd31b8c72fd7500c17b96a939c7ae5fb"
+      "sha256": "f0438e671f68f6dc8b50cfda9e3383a0cd31b8c72fd7500c17b96a939c7ae5fb",
+      "approval": {
+        "status": "NOT_APPROVED",
+        "requires": [
+          "신기훈 의미 검수 PASS",
+          "정원률 화풍 검수 PASS",
+          "김재겸 실기기 크롭 CROP_OK 또는 CROP_OK_NOTE (같은 SHA-256)",
+          "김선한 승인 manifest 등록 · image_routing.json 연결"
+        ],
+        "note": "자체 검수만으로는 승인하지 않는다."
+      }
     },
     {
       "groupId": "grp_teen_endurance_run",
@@ -3576,10 +5250,18 @@
         "centerBandLost": "골대, 벤치, 선생님 오른쪽"
       },
       "semanticReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "신기훈",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "visualReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "정원률",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "cropReview": {
         "status": "CROP_OK",
@@ -3589,13 +5271,32 @@
         "sceneMatch": "1.000 / 1.000",
         "result": "실기기 크롭에 핵심 사물이 남는다: 앞서 달리는 친구들, 옆구리 누른 손, 선생님 얼굴·스톱워치 일부.",
         "captureSha256": "dd4d57098f3326a13e8136b5cab1f8a52e977ded98e1c582cc5d38698318e718",
-        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)"
+        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)",
+        "smallScreen": {
+          "status": "CROP_OK",
+          "screen": "API 36 에뮬레이터 720x1280 320dpi(360x640dp) 글꼴 130%, DecisionScreen 장면 보기",
+          "visibleX": "0.289..0.711",
+          "sceneMatch": "1.000",
+          "result": "보이는 가로 범위가 1080x2400(0.331..0.669)보다 넓어 1080x2400 판정이 하한이다. 새로 잃는 사물 없음.",
+          "captureSha256": "0bb96cf8349357ff1cf158dceb530b7f5c3b1482f7c2b55c4827dee682b7c8dd",
+          "localCandidate": "tmp/verify-20261109 a13d21f (main + #61 + #62 + 검토용 경로, 미배포)"
+        }
       },
       "appConnection": {
         "status": "NOT_CONNECTED",
         "note": "image_routing.json · image_ids.sample.json · 제작대장에 등록하지 않았다. 중앙 연결은 김선한 병합 순서. 사건이 이미 이 imageId를 고르므로 경로 한 줄만 추가하면 된다."
       },
-      "sha256": "de2741a0b0bd6b58dd577e3b4dfd7a361876dced00678307d0b52dd8ed7b86bd"
+      "sha256": "de2741a0b0bd6b58dd577e3b4dfd7a361876dced00678307d0b52dd8ed7b86bd",
+      "approval": {
+        "status": "NOT_APPROVED",
+        "requires": [
+          "신기훈 의미 검수 PASS",
+          "정원률 화풍 검수 PASS",
+          "김재겸 실기기 크롭 CROP_OK 또는 CROP_OK_NOTE (같은 SHA-256)",
+          "김선한 승인 manifest 등록 · image_routing.json 연결"
+        ],
+        "note": "자체 검수만으로는 승인하지 않는다."
+      }
     },
     {
       "groupId": "grp_teen_debate_invite",
@@ -3631,10 +5332,18 @@
         "centerBandLost": "책 더미, 포스터 오른쪽, 창"
       },
       "semanticReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "신기훈",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "visualReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "정원률",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "cropReview": {
         "status": "CROP_OK_NOTE",
@@ -3644,13 +5353,32 @@
         "sceneMatch": "1.000 / 1.000",
         "result": "선생님·대진표가 남고 전교 회장 포스터는 오른쪽 가장자리에 조금만 남는다. 책 더미는 크롭 밖.",
         "captureSha256": "30ccb60ca1322615e1efa6da1e3f492f5a7f7450f17b45769f1af72f2ce09bac",
-        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)"
+        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)",
+        "smallScreen": {
+          "status": "CROP_OK_NOTE",
+          "screen": "API 36 에뮬레이터 720x1280 320dpi(360x640dp) 글꼴 130%, DecisionScreen 장면 보기",
+          "visibleX": "0.289..0.711",
+          "sceneMatch": "1.000",
+          "result": "보이는 가로 범위가 1080x2400(0.331..0.669)보다 넓어 1080x2400 판정이 하한이다. 새로 잃는 사물 없음.",
+          "captureSha256": "c5941db37b521cd5e12071d801cebfd38d64200a3d09304eb81a0c6bf93f617e",
+          "localCandidate": "tmp/verify-20261109 a13d21f (main + #61 + #62 + 검토용 경로, 미배포)"
+        }
       },
       "appConnection": {
         "status": "NOT_CONNECTED",
         "note": "image_routing.json · image_ids.sample.json · 제작대장에 등록하지 않았다. 중앙 연결은 김선한 병합 순서. 사건이 이미 이 imageId를 고르므로 경로 한 줄만 추가하면 된다."
       },
-      "sha256": "b2296d69c03669b88c708924cf1d9194fabd75853f36d96c4016cd37d8c2cb8a"
+      "sha256": "b2296d69c03669b88c708924cf1d9194fabd75853f36d96c4016cd37d8c2cb8a",
+      "approval": {
+        "status": "NOT_APPROVED",
+        "requires": [
+          "신기훈 의미 검수 PASS",
+          "정원률 화풍 검수 PASS",
+          "김재겸 실기기 크롭 CROP_OK 또는 CROP_OK_NOTE (같은 SHA-256)",
+          "김선한 승인 manifest 등록 · image_routing.json 연결"
+        ],
+        "note": "자체 검수만으로는 승인하지 않는다."
+      }
     },
     {
       "groupId": "grp_teen_hs_application",
@@ -3686,10 +5414,18 @@
         "centerBandLost": "진학 안내 책자, 책장, 창"
       },
       "semanticReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "신기훈",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "visualReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "정원률",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "cropReview": {
         "status": "CROP_OK",
@@ -3699,13 +5435,32 @@
         "sceneMatch": "1.000 / 1.000",
         "result": "실기기 크롭에 핵심 사물이 남는다: 원서, 담임·엄마 얼굴, 펜 일부.",
         "captureSha256": "bc1c64a33b1581b8ca691be5901f860c3b3807e247513ba26aac7a762b906a52",
-        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)"
+        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)",
+        "smallScreen": {
+          "status": "CROP_OK",
+          "screen": "API 36 에뮬레이터 720x1280 320dpi(360x640dp) 글꼴 130%, DecisionScreen 장면 보기",
+          "visibleX": "0.289..0.711",
+          "sceneMatch": "1.000",
+          "result": "보이는 가로 범위가 1080x2400(0.331..0.669)보다 넓어 1080x2400 판정이 하한이다. 새로 잃는 사물 없음.",
+          "captureSha256": "aee9005262fc867492f6614b672afba062905e28839bdfc6afbd99c9bd617b76",
+          "localCandidate": "tmp/verify-20261109 a13d21f (main + #61 + #62 + 검토용 경로, 미배포)"
+        }
       },
       "appConnection": {
         "status": "NOT_CONNECTED",
         "note": "image_routing.json · image_ids.sample.json · 제작대장에 등록하지 않았다. 중앙 연결은 김선한 병합 순서. 사건이 이미 이 imageId를 고르므로 경로 한 줄만 추가하면 된다."
       },
-      "sha256": "e2ccf5cf612a03148f59dccd2d1d3b4a962f1ed90bd47625231fdf0959697df8"
+      "sha256": "e2ccf5cf612a03148f59dccd2d1d3b4a962f1ed90bd47625231fdf0959697df8",
+      "approval": {
+        "status": "NOT_APPROVED",
+        "requires": [
+          "신기훈 의미 검수 PASS",
+          "정원률 화풍 검수 PASS",
+          "김재겸 실기기 크롭 CROP_OK 또는 CROP_OK_NOTE (같은 SHA-256)",
+          "김선한 승인 manifest 등록 · image_routing.json 연결"
+        ],
+        "note": "자체 검수만으로는 승인하지 않는다."
+      }
     },
     {
       "groupId": "grp_teen_board_wrong_sign",
@@ -3741,10 +5496,18 @@
         "centerBandLost": "선생님 대부분, 양옆 학생"
       },
       "semanticReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "신기훈",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "visualReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "정원률",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "cropReview": {
         "status": "CROP_OK",
@@ -3754,13 +5517,32 @@
         "sceneMatch": "1.000 / 1.000",
         "result": "실기기 크롭에 핵심 사물이 남는다: 칠판 세 줄(셋째 줄 − 포함), 내 공책, 선생님 일부.",
         "captureSha256": "01d66a9f657e8097fec4415908075c0ca116fed320223f5dd7314139c676497c",
-        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)"
+        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)",
+        "smallScreen": {
+          "status": "CROP_OK",
+          "screen": "API 36 에뮬레이터 720x1280 320dpi(360x640dp) 글꼴 130%, DecisionScreen 장면 보기",
+          "visibleX": "0.289..0.711",
+          "sceneMatch": "1.000",
+          "result": "보이는 가로 범위가 1080x2400(0.331..0.669)보다 넓어 1080x2400 판정이 하한이다. 새로 잃는 사물 없음.",
+          "captureSha256": "8b3dcc7b625eecffbf545919b0163f54e0bb3382cbd6ffe048e5f729fc41ae00",
+          "localCandidate": "tmp/verify-20261109 a13d21f (main + #61 + #62 + 검토용 경로, 미배포)"
+        }
       },
       "appConnection": {
         "status": "NOT_CONNECTED",
         "note": "image_routing.json · image_ids.sample.json · 제작대장에 등록하지 않았다. 중앙 연결은 김선한 병합 순서. 사건이 이미 이 imageId를 고르므로 경로 한 줄만 추가하면 된다."
       },
-      "sha256": "5d31de411e494ce85686f8f5bc2910c30cecd9a1206aee5ae6d01542d6919622"
+      "sha256": "5d31de411e494ce85686f8f5bc2910c30cecd9a1206aee5ae6d01542d6919622",
+      "approval": {
+        "status": "NOT_APPROVED",
+        "requires": [
+          "신기훈 의미 검수 PASS",
+          "정원률 화풍 검수 PASS",
+          "김재겸 실기기 크롭 CROP_OK 또는 CROP_OK_NOTE (같은 SHA-256)",
+          "김선한 승인 manifest 등록 · image_routing.json 연결"
+        ],
+        "note": "자체 검수만으로는 승인하지 않는다."
+      }
     },
     {
       "groupId": "grp_teen_store_bread_rush",
@@ -3796,10 +5578,18 @@
         "centerBandLost": "교실 게시판, 창, 문틀 짚은 손"
       },
       "semanticReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "신기훈",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "visualReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "정원률",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "cropReview": {
         "status": "CROP_OK",
@@ -3809,13 +5599,32 @@
         "sceneMatch": "1.000 / 1.000",
         "result": "실기기 크롭에 핵심 사물이 남는다: 열린 문, 뛰어가는 학생들, 울리는 종.",
         "captureSha256": "08e5e2f84ceda8293051c2a33de125686ddc44ee82893a83674ac33e24204096",
-        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)"
+        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)",
+        "smallScreen": {
+          "status": "CROP_OK",
+          "screen": "API 36 에뮬레이터 720x1280 320dpi(360x640dp) 글꼴 130%, DecisionScreen 장면 보기",
+          "visibleX": "0.289..0.711",
+          "sceneMatch": "1.000",
+          "result": "보이는 가로 범위가 1080x2400(0.331..0.669)보다 넓어 1080x2400 판정이 하한이다. 새로 잃는 사물 없음.",
+          "captureSha256": "66d59b34a83b9b1fd378d33ba56fe8f0575f5436f61c515534ddb56bc8cf8fe2",
+          "localCandidate": "tmp/verify-20261109 a13d21f (main + #61 + #62 + 검토용 경로, 미배포)"
+        }
       },
       "appConnection": {
         "status": "NOT_CONNECTED",
         "note": "image_routing.json · image_ids.sample.json · 제작대장에 등록하지 않았다. 중앙 연결은 김선한 병합 순서. 사건이 이미 이 imageId를 고르므로 경로 한 줄만 추가하면 된다."
       },
-      "sha256": "6655f8ce3a429dee1b75803f9888a6c2d770757ed83eb714d912147b67efe565"
+      "sha256": "6655f8ce3a429dee1b75803f9888a6c2d770757ed83eb714d912147b67efe565",
+      "approval": {
+        "status": "NOT_APPROVED",
+        "requires": [
+          "신기훈 의미 검수 PASS",
+          "정원률 화풍 검수 PASS",
+          "김재겸 실기기 크롭 CROP_OK 또는 CROP_OK_NOTE (같은 SHA-256)",
+          "김선한 승인 manifest 등록 · image_routing.json 연결"
+        ],
+        "note": "자체 검수만으로는 승인하지 않는다."
+      }
     },
     {
       "groupId": "grp_teen_self_dye_store",
@@ -3851,10 +5660,18 @@
         "centerBandLost": "과자 진열대, 음료 냉장고, 창"
       },
       "semanticReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "신기훈",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "visualReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "정원률",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "cropReview": {
         "status": "CROP_OK",
@@ -3864,13 +5681,32 @@
         "sceneMatch": "1.000 / 1.000",
         "result": "실기기 크롭에 핵심 사물이 남는다: 염색약 진열대, 친구 사진 휴대폰.",
         "captureSha256": "7b3c54c68cc839690ecdb2b57bd63d7e9db59af5214a9aad32d4269a28c2d09f",
-        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)"
+        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)",
+        "smallScreen": {
+          "status": "CROP_OK",
+          "screen": "API 36 에뮬레이터 720x1280 320dpi(360x640dp) 글꼴 130%, DecisionScreen 장면 보기",
+          "visibleX": "0.289..0.711",
+          "sceneMatch": "1.000",
+          "result": "보이는 가로 범위가 1080x2400(0.331..0.669)보다 넓어 1080x2400 판정이 하한이다. 새로 잃는 사물 없음.",
+          "captureSha256": "06fbda03acaf4f5a73c484d6eb732f3e52a75f52d6dd5a1b9ccfd6ece2c4e972",
+          "localCandidate": "tmp/verify-20261109 a13d21f (main + #61 + #62 + 검토용 경로, 미배포)"
+        }
       },
       "appConnection": {
         "status": "NOT_CONNECTED",
         "note": "image_routing.json · image_ids.sample.json · 제작대장에 등록하지 않았다. 중앙 연결은 김선한 병합 순서. 사건이 이미 이 imageId를 고르므로 경로 한 줄만 추가하면 된다."
       },
-      "sha256": "da074a59a9769df3d83be351d4fc29aff5309fd67b6fc0824546a32022b04df3"
+      "sha256": "da074a59a9769df3d83be351d4fc29aff5309fd67b6fc0824546a32022b04df3",
+      "approval": {
+        "status": "NOT_APPROVED",
+        "requires": [
+          "신기훈 의미 검수 PASS",
+          "정원률 화풍 검수 PASS",
+          "김재겸 실기기 크롭 CROP_OK 또는 CROP_OK_NOTE (같은 SHA-256)",
+          "김선한 승인 manifest 등록 · image_routing.json 연결"
+        ],
+        "note": "자체 검수만으로는 승인하지 않는다."
+      }
     },
     {
       "groupId": "grp_teen_graduation_flour",
@@ -3906,10 +5742,18 @@
         "centerBandLost": "양옆 가족들, 꽃다발 대부분, 교문 기둥"
       },
       "semanticReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "신기훈",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "visualReview": {
-        "status": "PENDING_TEAM_REVIEW"
+        "status": "PENDING_TEAM_REVIEW",
+        "assignedReviewer": "정원률",
+        "requestedAt": "2026-11-09",
+        "sheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
+        "allowed": "PASS | REVISE | REJECT"
       },
       "cropReview": {
         "status": "CROP_OK",
@@ -3919,7 +5763,16 @@
         "sceneMatch": "1.000 / 1.000",
         "result": "실기기 크롭에 핵심 사물이 남는다: 밀가루 든 친구들, 엄마 메시지 휴대폰, 꽃다발 일부.",
         "captureSha256": "50ffabc1ff41851d14d1890741b8e67513003b217d102f15130b23fe8bdd12d7",
-        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)"
+        "localCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)",
+        "smallScreen": {
+          "status": "CROP_OK",
+          "screen": "API 36 에뮬레이터 720x1280 320dpi(360x640dp) 글꼴 130%, DecisionScreen 장면 보기",
+          "visibleX": "0.289..0.711",
+          "sceneMatch": "1.000",
+          "result": "보이는 가로 범위가 1080x2400(0.331..0.669)보다 넓어 1080x2400 판정이 하한이다. 새로 잃는 사물 없음.",
+          "captureSha256": "6e193379ebabb77042a84e52a64f77467c351840f3d5c841930d800a9166956b",
+          "localCandidate": "tmp/verify-20261109 a13d21f (main + #61 + #62 + 검토용 경로, 미배포)"
+        }
       },
       "appConnection": {
         "status": "NOT_CONNECTED",
@@ -3934,7 +5787,17 @@
           "reason": "벚꽃이 만발해 2월 고등학교 졸업식 계절과 맞지 않음 → 겨울(맨 나무·외투)로 교체",
           "kept": "local only (C:/HSU/3-2/mobile/img_20261108), not committed"
         }
-      ]
+      ],
+      "approval": {
+        "status": "NOT_APPROVED",
+        "requires": [
+          "신기훈 의미 검수 PASS",
+          "정원률 화풍 검수 PASS",
+          "김재겸 실기기 크롭 CROP_OK 또는 CROP_OK_NOTE (같은 SHA-256)",
+          "김선한 승인 manifest 등록 · image_routing.json 연결"
+        ],
+        "note": "자체 검수만으로는 승인하지 않는다."
+      }
     }
   ],
   "pending": [],
@@ -3947,8 +5810,13 @@
     "selfCropReviewedOnDevice": 69,
     "teamSemanticReviewed": 0,
     "routedThisPr": 0,
-    "finalAcceptedThisPr": 0
+    "finalAcceptedThisPr": 0,
+    "smallScreenCropReviewedOnDevice": 69,
+    "teamVisualReviewed": 0,
+    "approvedByTeamReview": 0
   },
   "reviewCandidate": "883d91e (tmp/review-20261108, 로컬 검토용 경로, 미배포)",
-  "rules": "자체 검수는 승인이 아니다. 다른 팀원의 의미·화풍 검토 칸은 비워 둔다(PENDING_TEAM_REVIEW). 의미 검수·크롭·라우팅 전에는 완료로 세지 않는다."
+  "rules": "자체 검수는 승인이 아니다. 다른 팀원의 의미·화풍 검토 칸은 비워 둔다(PENDING_TEAM_REVIEW). 의미 검수·크롭·라우팅 전에는 완료로 세지 않는다. 2026-11-09: 승인은 신기훈 의미 검수 PASS + 정원률 화풍 검수 PASS + 김재겸 실기기 크롭(같은 SHA-256) + 김선한 승인 manifest · 라우팅 연결이 모두 있을 때만이다. 검수자 칸은 각 담당자만 채운다. 2026-11-09: 승인은 신기훈 의미 검수 PASS + 정원률 화풍 검수 PASS + 김재겸 실기기 크롭(같은 SHA-256) + 김선한 승인 manifest · 라우팅 연결이 모두 있을 때만이다. 검수자 칸은 각 담당자만 채운다.",
+  "updated": "2026-11-09",
+  "teamReviewSheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv"
 }
