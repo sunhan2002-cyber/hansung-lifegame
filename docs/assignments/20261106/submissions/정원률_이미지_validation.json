@@ -1,12 +1,13 @@
 {
-  "date": "2026-11-07",
+  "date": "2026-11-09",
   "scope": "정원률 11주차 제출 자료",
   "submission": {
     "assignedGroups": 69,
     "existingApproved": 4,
     "producedPendingTeamReview": 65,
     "unproduced": 0,
-    "revised": 6
+    "revised": 7,
+    "revisedOn20261109": 2
   },
   "pngChecks": {
     "pngFilesReadable": 65,

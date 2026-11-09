@@ -1,11 +1,11 @@
 {
-  "date": "2026-11-07",
+  "date": "2026-11-09",
   "productionOwner": "정원률",
   "assignedGroups": 69,
   "previouslyApprovedGroups": 4,
   "submittedPngsPendingTeamReview": 65,
   "notYetProduced": 0,
-  "revisedAfterUserReview": 6,
+  "revisedAfterUserReview": 7,
   "assetRoot": "app/src/main/assets/images",
   "assets": [
     {
@@ -423,10 +423,11 @@
       "assetPath": "followup_20261031/img_infant_upside_down_001.png",
       "width": 1448,
       "height": 1086,
-      "bytes": 1488338,
-      "sha256": "c9a067c26cc6ee5d2ebbce11f8cec68ff60d48afe9fec76b77406d89541fd0bf",
+      "bytes": 1954931,
+      "sha256": "c369ea803f64ee64b87db926a5fba035405402b5530aa6f1ac7d2a8718dbec8c",
       "artApprovalStatus": "PENDING_PNG_REVIEW",
-      "revisedOn20261107": false
+      "revisedOn20261107": false,
+      "revisedOn20261109": true
     },
     {
       "groupId": "grp_wr_infant_021",
@@ -759,10 +760,11 @@
       "assetPath": "followup_20261031/img_special_auto_door_001.png",
       "width": 1448,
       "height": 1086,
-      "bytes": 1741670,
-      "sha256": "2ca914cbb0da59c3e08526e170e033e590828fffb77ed80b46aa15b8d0cacadf",
+      "bytes": 1956124,
+      "sha256": "88d9b1997e89b304c332568c3bf7b8e94f172b3fae5a3aff6d00e32b93b040f3",
       "artApprovalStatus": "PENDING_PNG_REVIEW",
-      "revisedOn20261107": true
+      "revisedOn20261107": true,
+      "revisedOn20261109": true
     },
     {
       "groupId": "grp_wr_special_010",

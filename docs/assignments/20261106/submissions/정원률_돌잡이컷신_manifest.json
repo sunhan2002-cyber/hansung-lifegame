@@ -1,0 +1,22 @@
+{
+  "date": "2026-11-09",
+  "productionOwner": "정원률",
+  "eventId": "infant_007",
+  "usage": "CUTSCENE_FULL_4_3",
+  "userReview": "APPROVED_FOR_LOCAL_ADDITION",
+  "teamAcceptance": "PENDING",
+  "runtimeConnection": "PENDING",
+  "assetPath": "cutscenes/week11/img_doljabi_intro_001.png",
+  "width": 1448,
+  "height": 1086,
+  "sha256": "08b678f4411e15cc96c61b6af980ccf16f1726a46348ee015ae1de92f5fe8fd7",
+  "bytes": 1609351,
+  "frames": 1,
+  "fadeInMillis": 200,
+  "holdMillis": 1800,
+  "objects": [
+    "피아노 장난감",
+    "판사봉",
+    "5만 원권 한 장"
+  ]
+}
