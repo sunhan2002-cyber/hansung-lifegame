@@ -1,0 +1,133 @@
+{
+ "date": "2026-11-09",
+ "reviewer": "신기훈",
+ "scope": "11/07·11/09 의미 검수에서 수정 필요로 판정한 2사건(infant_016, special_005)의 수정 전·후 기록",
+ "rules": [
+  "수정 전 PNG는 승인하지 않는다(REVISE_REQUIRED 유지).",
+  "여기서 통과는 의미 검수만이다. 화풍(정원률)·실기기 크롭(김재겸)·라우팅·승인 manifest(김선한)는 끝나지 않았다.",
+  "중앙 image_routing.json, image_ids.sample.json, 이미지그룹_승인manifest.json, 제작대장은 고치지 않았다."
+ ],
+ "events": [
+  {
+   "eventId": "infant_016",
+   "title": "거꾸로가 좋아",
+   "groupId": "grp_wr_infant_016",
+   "imageId": "img_infant_upside_down_001",
+   "eventSourceHash": "88d5bfdf7985d7aecf1cf2593902dc18fe3dc3cfb7bce57f21617e977b0114ce",
+   "productionOwner": "정원률",
+   "revisionReason": "수정 전 그림은 두 신발이 정상 방향(벨크로 바깥쪽)이라 본문 핵심인 \"좌우가 바뀐 신발\"이 보이지 않았다.",
+   "versions": [
+    {
+     "role": "BEFORE_SUPERSEDED",
+     "producer": "정원률",
+     "source": "main (#55)",
+     "assetPath": "app/src/main/assets/images/followup_20261031/img_infant_upside_down_001.png",
+     "width": 1448,
+     "height": 1086,
+     "ratio4x3": true,
+     "sha256": "c9a067c26cc6ee5d2ebbce11f8cec68ff60d48afe9fec76b77406d89541fd0bf",
+     "bytes": 1488338,
+     "semanticVerdict": "REVISE_REQUIRED",
+     "note": "승인하지 않음. 좌우 바뀜 단서 없음(11/07 판정)."
+    },
+    {
+     "role": "REVISION",
+     "producer": "정원률",
+     "source": "PR #66 codex/week11-wonryul-followup (같은 경로 덮어쓰기)",
+     "assetPath": "app/src/main/assets/images/followup_20261031/img_infant_upside_down_001.png",
+     "width": 1448,
+     "height": 1086,
+     "ratio4x3": true,
+     "sha256": "c369ea803f64ee64b87db926a5fba035405402b5530aa6f1ac7d2a8718dbec8c",
+     "bytes": 1954931,
+     "semanticVerdict": "REVISE_REQUIRED",
+     "reviewerIndependence": "INDEPENDENT",
+     "evidence": "벨크로가 안쪽으로 붙고 앞코가 조금 바깥으로 벌어져 단서가 생겼지만, 두 신발 모양이 거의 대칭이라 세로 화면 크기에서는 평범하게 신은 신발로 읽힌다. 요청한 \"명확히 보이도록\"에 못 미친다.",
+     "centerCrop": "두 발과 신발, 엄마 손 크롭 안. 단서 자체가 작아 크롭과 무관하게 약함."
+    },
+    {
+     "role": "REVISION",
+     "producer": "신기훈",
+     "source": "이 PR (Figma AI generate_image, gpt-image-2.5-flare, file 44sRMgrz6OkXdqDgfKVE2J node 10:2, 1448x1086 요청 → 1280x960 원본 그대로)",
+     "assetPath": "app/src/main/assets/images/followup_20261031/img_infant_upside_down_001_rev20261109.png",
+     "width": 1280,
+     "height": 960,
+     "ratio4x3": true,
+     "sha256": "26c1e4ec8149a3be870006465c27ccf05206d2439de7fd8cec557eef5cf58b78",
+     "bytes": 1418704,
+     "prompt": "Use case: illustration-story. Asset: one opaque landscape 4:3 pixel art background for an Android life-simulation game event \"거꾸로가 좋아\" (infant_016). Create one coherent scene, NOT UI or collage.\nEvent text for meaning only (do NOT render any of this text): 엄마가 신발을 신겨 줬다. 뭔가 이상하다. 좌우가 바뀐 채로 신는 게 훨씬 편하다.\nScene, first-person view (the protagonist's own face is never visible): place = 집 현관 앞 마루, 신발을 신기는 자리; current moment = 엄마가 막 신겨 준 신발이 좌우가 바뀐 채 신겨진 작은 발을 내려다봄; required visible objects = 좌우가 바뀐 한 쌍의 아기 신발, 작은 두 발, 엄마 손; people and ages = 나(영아, 아래보기 시점), 엄마(성인, 손만); time of day = 낮.\nThe protagonist is a toddler: looking straight down at the own legs and feet while sitting on the floor. Hands are gender-neutral (no nail polish, no jewelry). Other people may appear only as described; do not add extra characters.\nThis is the moment BEFORE the player makes a choice: show the situation only, not any decision or outcome. Must NOT show: 걷는 모습, 신발을 벗어 던진 모습, 엄마 신발, 거울, 주인공 얼굴.\nComposition: a close top-down view of the toddler's two small feet side by side at the exact center (feet x 40% to 60%), wearing a pair of strongly asymmetric toddler shoes put on the WRONG feet: each shoe has a clearly curved, banana-shaped sole and a pointed rounded toe box that bends toward the big-toe side, and because they are swapped, the two toe tips point sharply OUTWARD away from each other, forming an obvious wide V shape, while the heels nearly touch; the hook-and-loop straps fasten on the INNER sides facing each other; each shoe has a small half-heart patch that is meant to join into one heart when worn correctly, but now the two half-hearts face outward and do not meet. The mother's two adult hands rest lightly on the shoes from the top of the frame, having just finished. Keep both feet, both shoes and the mother's hands inside x 36% to 64% so they survive a narrow portrait center crop; the wooden floor and a rug extend to the sides only as atmosphere. Natural first-person downward view.\nStyle: crisp medium-density 16-bit pixel art, visible consistent square pixel grid, flat limited color steps, warm muted cream, ochre, wood brown, olive and dusty blue/teal palette; clear object silhouettes, restrained highlights, cozy narrative life-simulation game background.\nAvoid: readable letters, Korean or English text, numerals, pseudo-writing, logos, brand names, watermarks, game interface, health bars, buttons, speech bubbles with text, the protagonist's face, mirror or window reflections of the protagonist, split screen, arrows, blur, gradients, dithering, photorealism, 3D.",
+     "semanticVerdict": "PASS",
+     "reviewerIndependence": "SELF_PRODUCER",
+     "evidence": "현관 마루 아래보기 시점. 두 신발 앞코가 바깥쪽으로 크게 벌어져 V자가 되고, 맞대면 하나가 되는 반쪽 하트 무늬가 서로 바깥을 향해 만나지 않으며, 벨크로는 안쪽에서 엇갈린다. 엄마 두 손은 막 신겨 준 자리. 걷기·벗어 던지기·엄마 신발·거울·얼굴 없음.",
+     "centerCrop": "두 신발, 반쪽 하트 두 개, 엇갈린 벨크로, 바지·양말 크롭 안. 앞코 끝은 양쪽 경계에 조금 걸리지만 V자 모양은 남는다. 엄마 손은 한쪽 일부.",
+     "note": "제작자가 의미 담당이라 자체 검수다. 다른 팀원의 의미 교차 확인이 필요하다. 채택하면 이미지 ID는 그대로 두고 경로만 이 파일로 바꾸거나, 기존 경로 파일을 이 PNG로 교체한다(김선한 결정)."
+    }
+   ],
+   "finalSemanticDecision": {
+    "verdict": "PASS",
+    "adoptedFile": "app/src/main/assets/images/followup_20261031/img_infant_upside_down_001_rev20261109.png",
+    "sha256": "26c1e4ec8149a3be870006465c27ccf05206d2439de7fd8cec557eef5cf58b78",
+    "note": "의미 통과는 신기훈 수정본. #66 정원률 수정본은 단서가 약해 수정 필요. 독립 교차 확인 대기."
+   }
+  },
+  {
+   "eventId": "special_005",
+   "title": "나를 거부하는 자동문",
+   "groupId": "grp_wr_special_005",
+   "imageId": "img_special_auto_door_001",
+   "eventSourceHash": "19d105baaf8e3f6e51900e3af223f6bfc616d6bce35fde3e57186fb68ac8aafb",
+   "productionOwner": "정원률",
+   "revisionReason": "본문 \"뒤에 줄 선 애들이 박수\"인데 박수치는 학생이 한 명뿐이고 세로 화면에서 빠졌다(#55). #60에서는 크롭 안에 들어왔지만 여전히 한 명이고, 두 손을 크게 벌린 자세가 선택 C(팔을 휘저으며 춤춘다)를 암시했다.",
+   "versions": [
+    {
+     "role": "BEFORE_SUPERSEDED",
+     "producer": "정원률",
+     "source": "main (#55)",
+     "assetPath": "app/src/main/assets/images/followup_20261031/img_special_auto_door_001.png",
+     "width": 1448,
+     "height": 1086,
+     "ratio4x3": true,
+     "sha256": "3f622e6783f8b4c1a9bd6aac6f3aae00a3fbe760b38385ed16d0c74e664dc2f3",
+     "bytes": 1791679,
+     "semanticVerdict": "REVISE_REQUIRED",
+     "note": "승인하지 않음(11/07 판정)."
+    },
+    {
+     "role": "BEFORE_SUPERSEDED",
+     "producer": "정원률",
+     "source": "PR #60 feat/Week11/wonryul",
+     "assetPath": "app/src/main/assets/images/followup_20261031/img_special_auto_door_001.png",
+     "width": 1448,
+     "height": 1086,
+     "ratio4x3": true,
+     "sha256": "2ca914cbb0da59c3e08526e170e033e590828fffb77ed80b46aa15b8d0cacadf",
+     "bytes": 1741670,
+     "semanticVerdict": "REVISE_REQUIRED",
+     "note": "승인하지 않음(11/09 낮 판정)."
+    },
+    {
+     "role": "REVISION",
+     "producer": "정원률",
+     "source": "PR #66 codex/week11-wonryul-followup (같은 경로 덮어쓰기)",
+     "assetPath": "app/src/main/assets/images/followup_20261031/img_special_auto_door_001.png",
+     "width": 1448,
+     "height": 1086,
+     "ratio4x3": true,
+     "sha256": "88d9b1997e89b304c332568c3bf7b8e94f172b3fae5a3aff6d00e32b93b040f3",
+     "bytes": 1956124,
+     "semanticVerdict": "PASS",
+     "reviewerIndependence": "INDEPENDENT",
+     "evidence": "닫힌 학교 센서 자동문 옆에 교복 학생 셋이 한 줄로 서서 웃으며 박수친다. 문은 열리지 않았고, 선택 C를 암시하던 내 두 손이 빠졌다. 옆문 이동·춤 결과 없음.",
+     "centerCrop": "학생 셋의 박수 손 모두와 닫힌 자동문이 크롭 안.",
+     "note": "메모: 내 손이 빠져 문 앞에 선 사람이 나라는 1인칭 단서는 본문이 전달한다(수정 필수 아님)."
+    }
+   ],
+   "finalSemanticDecision": {
+    "verdict": "PASS",
+    "adoptedFile": "app/src/main/assets/images/followup_20261031/img_special_auto_door_001.png",
+    "sha256": "88d9b1997e89b304c332568c3bf7b8e94f172b3fae5a3aff6d00e32b93b040f3",
+    "note": "#66 정원률 수정본(해시 기준). main·#60의 같은 경로 파일은 승인하지 않는다. 신기훈이 따로 만들지 않았다(같은 그룹 중복 제작 방지)."
+   }
+  }
+ ]
+}
