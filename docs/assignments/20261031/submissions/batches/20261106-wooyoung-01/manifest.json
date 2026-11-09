@@ -10,6 +10,22 @@
   "runtimeRouted": false,
   "assets": [
     {
+      "groupId": "social_night_meeting",
+      "eventIds": ["adult_007"],
+      "imageId": "img_adult_friends_drinks_001",
+      "assetPath": "followup_20261031/img_adult_friends_drinks_001.png",
+      "width": 300,
+      "height": 225,
+      "sha256": "7c242b11d4a02a565c6bf0a0b359806a1afa5f3a24c56bce76c28bdea0f78d9e",
+      "promptSummary": "금요일 밤 고깃집 입구의 1인칭 시점에서 이상형 옆·친구 사이·불판 앞의 서로 다른 빈자리 세 곳을 선택 전에 함께 보여 주는 장면",
+      "generationPrompt": "동일 고깃집 화풍을 유지하고 세 빈 의자를 중앙 x=34~66% 안에 각각 분리 배치한다. 앞쪽 중앙 의자 1개, 테이블 건너편 x=40%와 x=55% 의자 2개, 오른쪽 의자 옆 이상형 인물과 친구들을 유지한다. 착석·연애·건배·음주·조리 결과는 보여 주지 않는다.",
+      "completedEdit": "초기 후보는 중앙 크롭에서 빈자리 한 곳이 사라져 반려했다. 두 번째 후보는 세 빈자리는 남았으나 이상형 단서가 약해 재편집했다. 최종 후보는 세 의자 전체와 오른쪽 이상형 일부가 중앙 계산 크롭에 남는다.",
+      "semanticReview": "SELF_REVIEW_PASS_PENDING_TEAM_REVIEW",
+      "centerCropReview": "CALCULATED_CENTER_CROP_PASS_AFTER_RECOMPOSITION",
+      "runtimeCropReview": "BLOCKED_BY_WHPX_DISABLED",
+      "teamAcceptance": "PENDING"
+    },
+    {
       "groupId": "campus_grade_club",
       "eventIds": ["adult_012"],
       "imageId": "img_adult_campus_001",
@@ -71,7 +87,9 @@
     {
       "eventId": "adult_007",
       "reason": "세 빈자리 단서가 중앙 x=34~66% 계산 크롭에 함께 남지 않아 제출 제외",
-      "status": "REQUIRES_RECOMPOSITION"
+      "status": "REQUIRES_RECOMPOSITION",
+      "recordType": "PRESERVED_PREVIOUS_DRAFT_REVIEW",
+      "replacementCandidateSha256": "7c242b11d4a02a565c6bf0a0b359806a1afa5f3a24c56bce76c28bdea0f78d9e"
     }
   ],
   "validation": {
