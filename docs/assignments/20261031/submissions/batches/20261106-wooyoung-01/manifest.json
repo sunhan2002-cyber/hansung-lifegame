@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-06",
+  "batch": "wooyoung-01",
+  "baselineCommit": "0c9d748",
+  "productionOwner": "김우영",
+  "actualProducer": "김우영 담당 Codex (사용자 요청)",
+  "tool": "OpenAI built-in image_gen",
+  "status": "PNG_PRODUCED_PENDING_TEAM_AND_RUNTIME_REVIEW",
+  "runtimeRouted": false,
+  "assets": [
+    {
+      "groupId": "campus_grade_club",
+      "eventIds": ["adult_012"],
+      "imageId": "img_adult_campus_001",
+      "assetPath": "followup_20261031/img_adult_campus_001.png",
+      "width": 300,
+      "height": 225,
+      "sha256": "c85215f5d1310e76d50953148c8a59c20112ac31ce147fc70c1619c06f56c593",
+      "promptSummary": "대학 동아리방에서 성적표와 동아리 명단·회장 제안을 비교하는 선택 전 1인칭 장면",
+      "semanticReview": "SELF_REVIEW_PASS",
+      "centerCropReview": "CALCULATED_CENTER_CROP_PASS",
+      "runtimeCropReview": "BLOCKED_BY_WHPX_DISABLED",
+      "teamAcceptance": "PENDING"
+    },
+    {
+      "groupId": "work_dinner_drink",
+      "eventIds": ["adult_017"],
+      "imageId": "img_adult_dinner_boss_001",
+      "assetPath": "followup_20261031/img_adult_dinner_boss_001.png",
+      "width": 300,
+      "height": 225,
+      "sha256": "757ac8c1227a608c8a9afe3fefc28682e7f474415ba69475402aeb43afd345ab",
+      "promptSummary": "회사 회식에서 팀장이 건넨 빈 술잔을 바라보는 선택 전 1인칭 장면",
+      "semanticReview": "SELF_REVIEW_PASS",
+      "centerCropReview": "CALCULATED_CENTER_CROP_PASS",
+      "runtimeCropReview": "BLOCKED_BY_WHPX_DISABLED",
+      "teamAcceptance": "PENDING"
+    },
+    {
+      "groupId": "late_work_message",
+      "eventIds": ["adult_022"],
+      "imageId": "img_adult_late_message_001",
+      "assetPath": "followup_20261031/img_adult_late_message_001.png",
+      "width": 300,
+      "height": 225,
+      "sha256": "0c8443ac744e34b0f14e13290816fe99ddd9b0eb7448a9062f1d2eccbcb70c99",
+      "promptSummary": "밤 11시 침대 옆에서 업무 메시지 휴대폰과 시계를 함께 확인하는 선택 전 1인칭 장면",
+      "completedEdit": "시계가 중앙 크롭 밖으로 사라진 1차본을 반려하고 휴대폰 바로 옆 중앙 대역으로 이동",
+      "semanticReview": "SELF_REVIEW_PASS",
+      "centerCropReview": "CALCULATED_CENTER_CROP_PASS_AFTER_EDIT",
+      "runtimeCropReview": "BLOCKED_BY_WHPX_DISABLED",
+      "teamAcceptance": "PENDING"
+    },
+    {
+      "groupId": "health_check_fitness",
+      "eventIds": ["adult_027"],
+      "imageId": "img_adult_gym_001",
+      "assetPath": "followup_20261031/img_adult_gym_001.png",
+      "width": 300,
+      "height": 225,
+      "sha256": "002a080d87558edd60dff4d1ced6fb244fafd3effa8ae03aa2f9a3e69edf104a",
+      "promptSummary": "건강검진 상담에서 무문자 검진표와 덤벨 표시 전단을 비교하는 선택 전 1인칭 장면",
+      "semanticReview": "SELF_REVIEW_PASS",
+      "centerCropReview": "CALCULATED_CENTER_CROP_PASS",
+      "runtimeCropReview": "BLOCKED_BY_WHPX_DISABLED",
+      "teamAcceptance": "PENDING"
+    }
+  ],
+  "rejectedDrafts": [
+    {
+      "eventId": "adult_007",
+      "reason": "세 빈자리 단서가 중앙 x=34~66% 계산 크롭에 함께 남지 않아 제출 제외",
+      "status": "REQUIRES_RECOMPOSITION"
+    }
+  ],
+  "validation": {
+    "latestMainAssembleDebug": "PASS",
+    "avd": "Pixel_7 x86_64",
+    "avdResult": "BLOCKED: WHPX hardware acceleration disabled",
+    "centralRoutingFilesChanged": false,
+    "eventLogicChanged": false
+  }
+}
