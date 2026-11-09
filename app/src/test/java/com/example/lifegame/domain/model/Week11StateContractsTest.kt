@@ -34,6 +34,32 @@ class Week11StateContractsTest {
         assertEquals(ResultAnimationStatus.CONSUMED, consumed.resultAnimation)
     }
 
+    @Test fun photoFailureKeepsReasonOnlyForFallback() {
+        val fallback = PresentationState().updatePhotoFlow(PhotoFlowStatus.FALLBACK, "사진 읽기 실패")
+        val retry = fallback.updatePhotoFlow(PhotoFlowStatus.PROCESSING, "남아서는 안 됨")
+
+        assertEquals("사진 읽기 실패", fallback.photoFailureReason)
+        assertEquals(PhotoFlowStatus.PROCESSING, retry.photoFlow)
+        assertEquals(null, retry.photoFailureReason)
+    }
+
+    @Test fun rapidRepeatedChoiceInputIsAcceptedOnlyOnce() {
+        val guard = ChoiceApplicationGuard()
+        val input = "run:adult_012:A"
+
+        assertEquals(true, guard.tryBegin(input))
+        repeat(20) { assertEquals(false, guard.tryBegin(input)) }
+    }
+
+    @Test fun failedChoiceInputCanBeRetriedButAppliedInputCannot() {
+        val guard = ChoiceApplicationGuard()
+        val input = "run:adult_017:B"
+        assertEquals(true, guard.tryBegin(input))
+        guard.release(input)
+        assertEquals(true, guard.tryBegin(input))
+        assertEquals(false, guard.tryBegin(input))
+    }
+
     @Test fun repeatedNarrativeRecordIsStoredOnce() {
         val record = yearly("run:year:1")
         val records = emptyList<RunNarrativeRecord>().appendOnce(record).appendOnce(record)

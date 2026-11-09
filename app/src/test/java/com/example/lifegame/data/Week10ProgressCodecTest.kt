@@ -133,6 +133,23 @@ class Week10ProgressCodecTest {
         assertTrue(migrated.narrativeRecords.isEmpty())
     }
 
+    @Test fun versionOneSaveMigratesWithPresentationDefaultsAndPreservesEngineState() {
+        val v1 = """{
+          "playerName":"최초 사용자",
+          "state":{"runId":"v1-old","runSeed":1,"period":"YOUNG_ADULT","year":3,
+          "stats":{"life":64,"fitness":55,"intelligence":61,"social":49,"wealth":42,"happiness":58,"luck":51},
+          "flags":["legacy_flag"],"moments":[],"ending":false,"dead":false}
+        }""".trimIndent()
+
+        val restored = requireNotNull(Week10ProgressCodec.decode(v1))
+        assertEquals("최초 사용자", restored.playerName)
+        assertEquals(64, restored.state.stats.health)
+        assertEquals(setOf("legacy_flag"), restored.state.flags)
+        assertFalse(restored.state.isDead)
+        assertEquals(PresentationState(), restored.presentation)
+        assertTrue(restored.narrativeRecords.isEmpty())
+    }
+
     @Test fun week11PresentationAndNarrativeRecordsSurviveRoundTrip() {
         val presentation = PresentationState(
             photoFlow = PhotoFlowStatus.FALLBACK,

@@ -42,6 +42,12 @@ data class PresentationState(
     val resultDisplayId: String? = null,
     val resultAnimation: ResultAnimationStatus = ResultAnimationStatus.NONE,
 ) {
+    fun updatePhotoFlow(status: PhotoFlowStatus, failureReason: String? = null): PresentationState =
+        copy(
+            photoFlow = status,
+            photoFailureReason = failureReason.takeIf { status == PhotoFlowStatus.FALLBACK },
+        )
+
     fun requestEventImage(eventId: String?): PresentationState =
         if (eventId.isNullOrBlank()) copy(exposedEventId = null, eventImageExposure = EventImageExposureStatus.NOT_REQUIRED)
         else if (exposedEventId == eventId && eventImageExposure == EventImageExposureStatus.SHOWN) this
@@ -56,6 +62,22 @@ data class PresentationState(
 
     fun consumeResultAnimation(displayId: String): PresentationState =
         if (resultDisplayId == displayId) copy(resultAnimation = ResultAnimationStatus.CONSUMED) else this
+}
+
+/**
+ * 한 선택 입력을 엔진에 한 번만 전달하는 작은 경계다. Compose의 빠른 연타나 재구성이
+ * 같은 콜백을 반복해도 첫 입력만 통과하며, 엔진 실패 때만 재시도를 허용한다.
+ */
+internal class ChoiceApplicationGuard {
+    private val accepted = mutableSetOf<String>()
+
+    fun tryBegin(inputId: String): Boolean = inputId.isNotBlank() && accepted.add(inputId)
+
+    fun release(inputId: String) {
+        accepted.remove(inputId)
+    }
+
+    fun clear() = accepted.clear()
 }
 
 enum class RunNarrativeKind {

@@ -29,6 +29,7 @@ import com.example.lifegame.domain.model.SavedOutcome
 import com.example.lifegame.domain.model.PresentationState
 import com.example.lifegame.domain.model.PhotoFlowStatus
 import com.example.lifegame.domain.model.CutsceneStatus
+import com.example.lifegame.domain.model.ChoiceApplicationGuard
 import com.example.lifegame.domain.model.appendOnce
 import com.example.lifegame.domain.model.TurnPhase
 import com.example.lifegame.domain.model.TurnStep
@@ -166,6 +167,8 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
     private val runChoiceHistory = mutableListOf<RunChoiceRecord>()
     private var narrativeRecords = emptyList<RunNarrativeRecord>()
     private var presentationForRun = PresentationState()
+    private var profilePhotoPresentation = PresentationState()
+    private val choiceApplicationGuard = ChoiceApplicationGuard()
     private var pendingOutcomeSnapshot: SavedOutcome? = null
     private var avatarForPlay = AvatarConfig()
     private var awardedTitleForRun: AwardedTitle? = null
@@ -365,7 +368,9 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
         choiceLog.clear()
         runChoiceHistory.clear()
         narrativeRecords = emptyList()
-        presentationForRun = PresentationState()
+        presentationForRun = profilePhotoPresentation
+        profilePhotoPresentation = PresentationState()
+        choiceApplicationGuard.clear()
         pendingOutcomeSnapshot = null
         avatarForPlay = profile.avatar
         awardedTitleForRun = null
@@ -514,7 +519,10 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
         val before = beforeState.stats
         val content = playContent ?: return
         val label = decision.choices.firstOrNull { it.choiceId == choiceId }?.label ?: return
+        val inputId = "${beforeState.runId}:${decision.eventId}:$choiceId"
+        if (!choiceApplicationGuard.tryBegin(inputId)) return
         val resolution = runCatching { current.choose(choiceId) }.getOrElse {
+            choiceApplicationGuard.release(inputId)
             playError = "선택을 반영하지 못했습니다."
             return
         }
@@ -615,11 +623,11 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
     }
 
     fun setPhotoFlowStatus(status: PhotoFlowStatus, failureReason: String? = null) {
-        presentationForRun = presentationForRun.copy(
-            photoFlow = status,
-            photoFailureReason = failureReason.takeIf { status == PhotoFlowStatus.FALLBACK },
-        )
-        publishPlay()
+        profilePhotoPresentation = profilePhotoPresentation.updatePhotoFlow(status, failureReason)
+        if (playSession != null) {
+            presentationForRun = presentationForRun.updatePhotoFlow(status, failureReason)
+            publishPlay()
+        }
     }
 
     fun togglePlaying() {
@@ -897,6 +905,7 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
             endingSummary = ending?.summary,
             avatar = avatarForPlay,
             endingId = ending?.endingId,
+            presentation = presentationForRun,
         )
         v4ProgressStore.save(
             V4SavedRun(
@@ -946,6 +955,8 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
         runChoiceHistory.clear()
         narrativeRecords = emptyList()
         presentationForRun = PresentationState()
+        profilePhotoPresentation = PresentationState()
+        choiceApplicationGuard.clear()
         pendingOutcomeSnapshot = null
         avatarForPlay = AvatarConfig()
         awardedTitleForRun = null

@@ -95,6 +95,7 @@ import com.example.lifegame.ui.theme.LifeGameInkTertiary
 import com.example.lifegame.ui.theme.LifeGamePaper
 import com.example.lifegame.ui.theme.LifeGameRule
 import com.example.lifegame.ui.theme.LifeGameSerif
+import com.example.lifegame.domain.model.PhotoFlowStatus
 
 /**
  * 프로필 만들기: 이름 · 성별 · 주사위로 정하는 타고난 능력치 · 모습(피부 · 머리 · 눈) · 사진(선택).
@@ -113,6 +114,7 @@ fun CharacterSelectScreen(
     onRequestFaceSheet: (photoRef: String, consent: Boolean) -> Unit = { _, _ -> },
     onCancelFaceSheet: () -> Unit = {},
     onClearFaceSheet: () -> Unit = {},
+    onPhotoFlowChanged: (PhotoFlowStatus, String?) -> Unit = { _, _ -> },
     aiFace: Boolean = false,
 ) {
     var nameInput by rememberSaveable { mutableStateOf("") }
@@ -133,6 +135,7 @@ fun CharacterSelectScreen(
     val picker = rememberLauncherForActivityResult(ActivityResultContracts.PickVisualMedia()) { uri ->
         if (uri == null) {
             photoMessage = "사진 고르기를 취소했습니다. 기본 모습으로 진행합니다."
+            onPhotoFlowChanged(PhotoFlowStatus.FALLBACK, photoMessage)
             return@rememberLauncherForActivityResult
         }
         val readable = runCatching {
@@ -140,6 +143,7 @@ fun CharacterSelectScreen(
         }.getOrDefault(false)
         if (!readable) {
             photoMessage = "사진을 읽지 못했습니다. 기본 모습으로 진행합니다."
+            onPhotoFlowChanged(PhotoFlowStatus.FALLBACK, photoMessage)
             return@rememberLauncherForActivityResult
         }
         // 다시 켜도 같은 사진을 쓸 수 있으면 권한을 유지한다. 지원하지 않는 제공자면 이번 실행에서만 쓴다.
@@ -148,7 +152,17 @@ fun CharacterSelectScreen(
         }
         photoRef = uri.toString()
         photoMessage = null
+        onPhotoFlowChanged(PhotoFlowStatus.PROCESSING, null)
         onRequestFaceSheet(uri.toString(), true)
+    }
+
+    LaunchedEffect(sheet?.status, sheet?.message) {
+        when (sheet?.status) {
+            GenerationStatus.LOADING -> onPhotoFlowChanged(PhotoFlowStatus.PROCESSING, null)
+            GenerationStatus.READY -> onPhotoFlowChanged(PhotoFlowStatus.READY, null)
+            GenerationStatus.FALLBACK -> onPhotoFlowChanged(PhotoFlowStatus.FALLBACK, sheet.message)
+            else -> Unit
+        }
     }
 
     BackHandler(enabled = sheet?.status == GenerationStatus.LOADING) { onCancelFaceSheet() }
@@ -253,7 +267,10 @@ fun CharacterSelectScreen(
                 photoRef = photoRef,
                 sheet = sheet,
                 message = photoMessage,
-                onPick = { consentOpen = true },
+                onPick = {
+                    consentOpen = true
+                    onPhotoFlowChanged(PhotoFlowStatus.CONSENT_REQUIRED, null)
+                },
                 onCancel = onCancelFaceSheet,
                 onRetry = { photoRef?.let { onRequestFaceSheet(it, true) } },
                 onRemove = {
@@ -268,6 +285,7 @@ fun CharacterSelectScreen(
                     photoRef = null
                     onClearFaceSheet()
                     photoMessage = "사진 참조를 지웠습니다. 기본 모습으로 진행합니다."
+                    onPhotoFlowChanged(PhotoFlowStatus.NOT_REQUESTED, null)
                 },
             )
         }
@@ -327,6 +345,7 @@ fun CharacterSelectScreen(
             confirmButton = {
                 TextButton(onClick = {
                     consentOpen = false
+                    onPhotoFlowChanged(PhotoFlowStatus.PERMISSION_REQUIRED, null)
                     picker.launch(PickVisualMediaRequest(ActivityResultContracts.PickVisualMedia.ImageOnly))
                 }, modifier = Modifier.testTag("photo_consent_yes")) { Text("동의하고 사진 고르기", color = LifeGameInk, fontWeight = FontWeight.Bold) }
             },
@@ -334,6 +353,7 @@ fun CharacterSelectScreen(
                 TextButton(onClick = {
                     consentOpen = false
                     photoMessage = "동의하지 않아 기본 모습으로 진행합니다."
+                    onPhotoFlowChanged(PhotoFlowStatus.FALLBACK, photoMessage)
                 }, modifier = Modifier.testTag("photo_consent_no")) { Text("동의하지 않음", color = LifeGameInkSecondary) }
             },
         )

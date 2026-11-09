@@ -15,6 +15,7 @@ import com.example.lifegame.ui.images.ImageRouting
 import com.example.lifegame.domain.model.Outcome
 import com.example.lifegame.domain.model.PendingDecision
 import com.example.lifegame.domain.model.PeriodDefinition
+import com.example.lifegame.domain.model.PresentationState
 import com.example.lifegame.domain.model.StatDelta
 import com.example.lifegame.domain.model.Stats
 import com.example.lifegame.domain.model.TurnPhase
@@ -187,6 +188,8 @@ data class PeriodPlayUiState(
     val sceneImages: List<ImageCandidate> = emptyList(),
     /** 지금 시기 · 체형 · 외형으로 조립할 플레이어 모습 (10주차) */
     val avatar: AvatarLook = AvatarLook(),
+    /** 화면 연출 전용 상태. 엔진 진행·보상·사망 판정에는 전달하지 않는다. */
+    val presentation: PresentationState = PresentationState(),
 ) {
     val place: String get() = "$periodName · ${yearInPeriod}번째 해"
 }
@@ -407,6 +410,7 @@ fun buildPeriodPlayState(
     endingSummary: String? = null,
     avatar: AvatarConfig = AvatarConfig(),
     endingId: String? = null,
+    presentation: PresentationState = PresentationState(),
 ): PeriodPlayUiState {
     val state = step.state
     val periods = content.periods.sortedBy { it.order }
@@ -504,6 +508,7 @@ fun buildPeriodPlayState(
         previousPortraitImages = content.imageRouting.portrait(periods.getOrNull(periodIndex - 1)?.period),
         sceneImages = content.imageRouting.candidates(sceneImageId, state.selectedFocusId, state.period, content.imageFiles),
         avatar = avatarLookOf(avatar, imagePeriod, state.stats),
+        presentation = presentation,
     )
 }
 
