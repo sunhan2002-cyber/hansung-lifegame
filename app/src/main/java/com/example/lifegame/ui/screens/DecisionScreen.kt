@@ -52,6 +52,11 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.layout.windowInsetsPadding
 import androidx.compose.foundation.rememberScrollState
+import androidx.compose.runtime.withFrameNanos
+import androidx.compose.foundation.relocation.bringIntoViewRequester
+import androidx.compose.foundation.relocation.BringIntoViewRequester
+import androidx.compose.foundation.ScrollState
+import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Text
@@ -181,6 +186,7 @@ private fun Modifier.completeTextOnTap(enabled: Boolean, onTap: () -> Unit): Mod
  * 순서 (2026-11-06 요구 8): 제목 · 본문 타이핑 → 사건 그림 선노출(블러 없이, 짧게 또는 한 번 터치까지) → 선택지.
  * 타이핑 중 터치는 본문 완성만 하고, 그림 선노출을 끝내는 터치도 바로 아래 선택지로 이어지지 않는다.
  */
+@OptIn(ExperimentalFoundationApi::class)
 @Composable
 fun DecisionScreen(
     state: PeriodPlayUiState,
@@ -285,6 +291,21 @@ fun DecisionScreen(
         }
     }
 
+    // 본문 스크롤은 사건마다 새로 시작하고, 장면 보기에서 돌아와도 위치를 지킨다.
+    val contentScroll = rememberSaveable(introKey, saver = ScrollState.Saver) { ScrollState(0) }
+    // 선노출 뒤 선택지가 처음 나타나면 첫 카드가 다 보일 만큼만 한 번 스크롤한다(이미 보이면 움직이지 않는다).
+    // 작은 화면 · 큰 글씨에서 선택지가 첫 화면 아래에 있어 카드 A 윗부분만 보이던 문제(2026-11-09).
+    // 선택지 묶음 전체를 맞추면 긴 본문에서 "장면 보기" 버튼이 위로 밀려나므로 첫 카드까지만 맞춘다.
+    // 복원 때는 다시 스크롤하지 않는다(스크롤 위치도 복원된다).
+    val choicesInView = remember(introKey) { BringIntoViewRequester() }
+    var choicesRevealed by rememberSaveable(introKey) { mutableStateOf(previewDone) }
+    LaunchedEffect(introKey, previewDone, outcome == null) {
+        if (!previewDone || outcome != null || choicesRevealed) return@LaunchedEffect
+        choicesRevealed = true
+        withFrameNanos { } // 선택지가 한 번 배치된 뒤에 잰다.
+        choicesInView.bringIntoView()
+    }
+
     BackHandler(enabled = popupOpen) { popupClosed.trySend(Unit) }
     BackHandler(enabled = sceneOnly && !popupOpen) { sceneOnly = false }
     BackHandler(enabled = previewing && !popupOpen) { endPreview(false) }
@@ -357,7 +378,7 @@ fun DecisionScreen(
                         .weight(1f)
                         .fillMaxWidth()
                         .windowInsetsPadding(WindowInsets.safeDrawing.only(WindowInsetsSides.Horizontal))
-                        .verticalScroll(rememberScrollState())
+                        .verticalScroll(contentScroll)
                         .testTag("decision_content"),
                 ) {
                     if (outcome == null) {
@@ -375,6 +396,7 @@ fun DecisionScreen(
                     // 선택지는 사건 그림을 먼저 본 뒤에 나온다. 결과 화면은 그대로.
                     if (outcome != null || previewDone) {
                         DecisionSheet(
+                            firstChoiceModifier = Modifier.bringIntoViewRequester(choicesInView),
                             decision = decision,
                             outcome = outcome,
                             enabled = introDone && chosenId == null,
@@ -568,6 +590,7 @@ private fun DecisionText(decision: DecisionUi, onReveal: () -> Unit) {
 
 @Composable
 private fun DecisionSheet(
+    firstChoiceModifier: Modifier = Modifier,
     decision: DecisionUi,
     outcome: OutcomeUi?,
     enabled: Boolean,
@@ -590,8 +613,9 @@ private fun DecisionSheet(
             if (hasDetails) {
                 ChoiceDetailsToggle(expanded = showChoiceDetails, onToggle = onToggleDetails)
             }
-            decision.choices.forEach { choice ->
+            decision.choices.forEachIndexed { index, choice ->
                 DecisionChoiceCard(
+                    modifier = if (index == 0) firstChoiceModifier else Modifier,
                     choice = choice,
                     enabled = enabled && choice.available,
                     showDetails = showChoiceDetails,
@@ -636,6 +660,7 @@ private fun ColumnScope.ChoiceDetailsToggle(expanded: Boolean, onToggle: () -> U
  */
 @Composable
 private fun DecisionChoiceCard(
+    modifier: Modifier = Modifier,
     choice: DecisionChoiceUi,
     enabled: Boolean,
     showDetails: Boolean,
@@ -660,7 +685,7 @@ private fun DecisionChoiceCard(
         choice.healthEffectText?.let(::add)
     }.map { it.trimEnd().removeSuffix(".") }.joinToString(". ") // "잡는다.. 능력치"처럼 마침표가 겹치지 않게
     Box(
-        modifier = Modifier
+        modifier = modifier
             .fillMaxWidth()
             .heightIn(min = 72.dp)
             .graphicsLayer {

@@ -196,9 +196,38 @@ class SmallScreenLayoutAuditTest {
         save("small_result_chips.png")
     }
 
-    private fun setSmall(content: @androidx.compose.runtime.Composable () -> Unit) {
+    /**
+     * 2026-11-09 자동 스크롤: 작은 화면에서 선노출 뒤 선택지가 첫 화면 아래(카드 A 윗부분만)에 있었다.
+     * 선택지가 처음 나타나면 한 번 스크롤해 첫 카드가 다 보이고, 사용자가 위로 다시 올리거나 화면이 다시 만들어져도
+     * 다시 끌어내리지 않는다.
+     */
+    @Test
+    fun choicesScrollIntoViewOnceAfterThePreview() {
+        val event = events.maxBy { e -> e.text.length + e.choices.sumOf { it.label.length } }
+        val host = ManualRestoreHost(compose)
+        setSmall(host) { DecisionScreen(playState(decisionOf(event)), onChoose = {}, onContinue = {}) }
+        reachChoices()
+        advance(1_000)
+        val viewport = compose.onNodeWithTag("decision_content").fetchSemanticsNode().boundsInRoot
+        val first = cardBounds("A")
+        assertTrue("${event.eventId}: 선택지가 나타나면 첫 카드가 다 보인다 ($first / $viewport)", first.top >= viewport.top - 0.5f && first.bottom <= viewport.bottom + 0.5f)
+        val scrolled = scrollRange().value()
+        assertTrue("${event.eventId}: 작은 화면에서는 실제로 스크롤했다", scrolled > 0f)
+        save("small_choices_auto_scrolled.png")
+        // 사용자가 본문을 다시 보려고 위로 올리면 그대로 둔다.
+        scrollContentBy(-scrolled)
+        advance(1_000)
+        assertEquals(0f, scrollRange().value(), 0.5f)
+        // 화면이 다시 만들어져도(회전 등) 다시 스크롤하지 않고, 위치도 그대로다.
+        host.recreate()
+        advance(1_000)
+        assertEquals(1, host.recreations)
+        assertEquals(0f, scrollRange().value(), 0.5f)
+    }
+
+    private fun setSmall(host: ManualRestoreHost? = null, content: @androidx.compose.runtime.Composable () -> Unit) {
         compose.mainClock.autoAdvance = false
-        compose.setContent {
+        val framed: @androidx.compose.runtime.Composable () -> Unit = {
             val density = LocalDensity.current.density
             CompositionLocalProvider(LocalDensity provides Density(density, fontScale = 1.3f)) {
                 LifeGameTheme {
@@ -206,6 +235,8 @@ class SmallScreenLayoutAuditTest {
                 }
             }
         }
+        if (host != null) host.setContent(framed) else compose.setContent(framed)
+        compose.mainClock.advanceTimeByFrame()
     }
 
     private fun audit(expandTags: Boolean) {
@@ -213,20 +244,27 @@ class SmallScreenLayoutAuditTest {
         var decision by mutableStateOf(decisionOf(events.first()))
         setSmall { DecisionScreen(playState(decision), onChoose = {}, onContinue = {}) }
         val issues = mutableListOf<String>()
-        val report = StringBuilder("eventId\tchoices\tmaxLabelLines\tlastCardBelowFoldDp\tneedsScroll\tissues\n")
+        val report = StringBuilder("eventId\tchoices\tmaxLabelLines\tlastCardBelowFoldDp\tneedsScroll\tautoScrollDp\tissues\n")
         val heaviest = events.sortedByDescending { e -> e.choices.sumOf { it.label.length } }.take(4).map { it.eventId }.toSet()
         var toggled = false
         events.forEachIndexed { index, event ->
             android.util.Log.i("SmallAudit", "$mode ${index + 1}/${events.size} ${event.eventId}")
             decision = decisionOf(event)
             reachChoices()
+            val found = mutableListOf<String>()
+            val root = compose.onRoot().fetchSemanticsNode().boundsInRoot
+            // 선택지가 나타나면 자동 스크롤로 첫 카드가 다 보인다(2026-11-09).
+            advance(1_000)
+            val shownViewport = compose.onNodeWithTag("decision_content").fetchSemanticsNode().boundsInRoot
+            val firstShown = cardBounds(decision.choices.first().key)
+            if (firstShown.top < shownViewport.top - 0.5f || firstShown.bottom > shownViewport.bottom + 0.5f) found += "선택지가 나타난 뒤 첫 카드가 다 보이지 않음"
+            val autoScrollDp = scrollRange().value() / density()
+            // 사용자가 직접 펼치면 카드가 길어지므로 자동 스크롤 확인 뒤에 펼친다(다음 사건부터는 펼친 채 나타난다).
             if (expandTags && !toggled && compose.onAllNodesWithTag("choice_details_toggle", useUnmergedTree = true).fetchSemanticsNodes().isNotEmpty()) {
                 compose.onNodeWithTag("choice_details_toggle", useUnmergedTree = true).performTouchInput { click(center) }
                 compose.mainClock.advanceTimeByFrame()
                 toggled = true
             }
-            val found = mutableListOf<String>()
-            val root = compose.onRoot().fetchSemanticsNode().boundsInRoot
             // 맨 위(제목)부터 본 상태에서 마지막 카드가 얼마나 아래에 있는지 잰다. 스크롤 위치는 사건이 바뀌어도 남으므로 먼저 0으로.
             scrollRange().value().takeIf { it > 0f }?.let { scrollContentBy(-it) }
             val viewport = compose.onNodeWithTag("decision_content").fetchSemanticsNode().boundsInRoot
@@ -271,7 +309,7 @@ class SmallScreenLayoutAuditTest {
                 val last = cardBounds(keys.last())
                 if (last.bottom > viewport.bottom + 0.5f) found += "스크롤 뒤에도 마지막 카드 아래가 잘림"
             }
-            report.append("${event.eventId}\t${keys.size}\t$maxLabelLines\t${"%.0f".format(belowFoldDp)}\t${belowFoldDp > 0.5f}\t${found.joinToString("; ")}\n")
+            report.append("${event.eventId}\t${keys.size}\t$maxLabelLines\t${"%.0f".format(belowFoldDp)}\t${belowFoldDp > 0.5f}\t${"%.0f".format(autoScrollDp)}\t${found.joinToString("; ")}\n")
             issues += found.map { "${event.eventId}: $it" }
         }
         File(outputDir(), "layout_report_$mode.tsv").writeText(report.toString())
