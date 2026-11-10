@@ -1,0 +1,29 @@
+{
+  "date": "2026-11-09",
+  "productionOwner": "정원률",
+  "userReview": "APPROVED_FOR_LOCAL_REPLACEMENT",
+  "teamAcceptance": "PENDING",
+  "runtimeRoutingChanged": false,
+  "revisedPngs": 2,
+  "dimensions": "1448x1086, exact 4:3",
+  "assets": [
+    {
+      "eventId": "infant_016",
+      "groupId": "grp_wr_infant_016",
+      "assetPath": "followup_20261031/img_infant_upside_down_001.png",
+      "previousSha256": "c9a067c26cc6ee5d2ebbce11f8cec68ff60d48afe9fec76b77406d89541fd0bf",
+      "sha256": "c369ea803f64ee64b87db926a5fba035405402b5530aa6f1ac7d2a8718dbec8c",
+      "bytes": 1954931,
+      "change": "두 신발의 앞코를 바깥으로 벌리고 벨크로 끝을 안쪽으로 배치"
+    },
+    {
+      "eventId": "special_005",
+      "groupId": "grp_wr_special_005",
+      "assetPath": "followup_20261031/img_special_auto_door_001.png",
+      "previousSha256": "2ca914cbb0da59c3e08526e170e033e590828fffb77ed80b46aa15b8d0cacadf",
+      "sha256": "88d9b1997e89b304c332568c3bf7b8e94f172b3fae5a3aff6d00e32b93b040f3",
+      "bytes": 1956124,
+      "change": "닫힌 문 옆에서 학생 세 명이 박수. 주인공의 들어 올린 두 손을 제거"
+    }
+  ]
+}
