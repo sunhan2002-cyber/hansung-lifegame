@@ -43,6 +43,7 @@ import com.example.lifegame.domain.model.AvatarConfig
 import com.example.lifegame.domain.model.AwardedTitle
 import com.example.lifegame.domain.model.CompletedLifeRecord
 import com.example.lifegame.domain.model.LifeTitle
+import com.example.lifegame.domain.model.PhotoFlowStatus
 import com.example.lifegame.domain.model.RunChoiceRecord
 import com.example.lifegame.domain.model.TurnPhase
 import com.example.lifegame.ui.screens.CharacterSelectScreen
@@ -285,10 +286,12 @@ class Week10EndingFlowTest {
     @Test
     fun profileStartsWithoutPhotoAndDecliningConsentKeepsTheDefaultLook() {
         var started: NewLifeProfile? = null
+        val photoStates = mutableListOf<Pair<PhotoFlowStatus, String?>>()
         setScreen {
             CharacterSelectScreen(
                 starters = listOf(StarterUi("s1", "파고드는 편", "궁금한 건 끝까지 알아낸다.", null, com.example.lifegame.domain.model.StatDelta(intelligence = 5), emptySet())),
                 onStart = { started = it },
+                onPhotoFlowChanged = { status, reason -> photoStates += status to reason },
             )
         }
         composeRule.onNodeWithTag("option_hair_curly_brown").performScrollTo().performClick()
@@ -297,8 +300,11 @@ class Week10EndingFlowTest {
         composeRule.onAllNodes(hasContentDescription("짙은 피부, 곱슬머리", substring = true)).assertCountEquals(4)
 
         composeRule.onNodeWithTag("photo_pick").performScrollTo().performClick()
+        assertEquals(PhotoFlowStatus.CONSENT_REQUIRED, photoStates.last().first)
         composeRule.onNodeWithTag("photo_consent_no").performClick()
         composeRule.onNodeWithTag("photo_message").assertTextContains("동의하지 않아 기본 모습으로 진행합니다.")
+        assertEquals(PhotoFlowStatus.FALLBACK, photoStates.last().first)
+        assertTrue(photoStates.last().second.orEmpty().contains("동의하지 않아"))
         saveScreenshot("w10_profile_consent_declined.png")
 
         composeRule.onNodeWithText("남").performScrollTo().performClick()

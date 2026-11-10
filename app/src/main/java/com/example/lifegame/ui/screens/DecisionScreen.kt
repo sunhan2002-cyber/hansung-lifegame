@@ -72,6 +72,8 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.lifegame.domain.model.DecisionKind
+import com.example.lifegame.domain.model.EventImageExposureStatus
+import com.example.lifegame.domain.model.ResultAnimationStatus
 import com.example.lifegame.ui.DecisionChoiceUi
 import com.example.lifegame.ui.DecisionUi
 import com.example.lifegame.ui.OutcomeUi
@@ -153,6 +155,8 @@ fun DecisionScreen(
     state: PeriodPlayUiState,
     onChoose: (choiceId: String) -> Unit,
     onContinue: () -> Unit,
+    onEventImageShown: (eventId: String) -> Unit = {},
+    onResultAnimationConsumed: (displayId: String) -> Unit = {},
     modifier: Modifier = Modifier,
 ) {
     val decision = state.decision ?: return
@@ -168,6 +172,10 @@ fun DecisionScreen(
     val popupClosed = remember { Channel<Unit>(Channel.CONFLATED) }
     val haptic = LocalHapticFeedback.current
     val reduceMotion = rememberReduceMotion()
+    val resultDisplayId = state.presentation.resultDisplayId
+    val resultProgress = remember(resultDisplayId) {
+        Animatable(if (state.presentation.resultAnimation == ResultAnimationStatus.CONSUMED) 1f else 0f)
+    }
     val textLength = decision.text.length
     // 완성 터치 직후 아주 짧게 이어지는 연타도 삼켜, 본문을 보려던 손가락이 선택을 확정하지 않게 한다.
     var swallowTaps by remember(introKey) { mutableStateOf(false) }
@@ -204,6 +212,25 @@ fun DecisionScreen(
             popupOpen = false
         }
         introDone = true
+    }
+
+    // 실제 사건 그림이 화면에 구성된 뒤 연출 상태만 확인한다. 엔진에는 아무 입력도 보내지 않는다.
+    LaunchedEffect(decision.eventId, state.presentation.eventImageExposure) {
+        if (state.presentation.eventImageExposure == EventImageExposureStatus.PENDING) {
+            onEventImageShown(decision.eventId)
+        }
+    }
+
+    // 선택 결과 보상은 ViewModel에서 이미 한 번 적용됐다. 여기서는 결과 카드의 표시 애니메이션만 소비한다.
+    LaunchedEffect(outcome, resultDisplayId, state.presentation.resultAnimation) {
+        if (outcome == null || resultDisplayId == null) return@LaunchedEffect
+        if (state.presentation.resultAnimation == ResultAnimationStatus.PENDING) {
+            if (reduceMotion) resultProgress.snapTo(1f)
+            else resultProgress.animateTo(1f, tween(260, easing = PopupEasing))
+            onResultAnimationConsumed(resultDisplayId)
+        } else if (state.presentation.resultAnimation == ResultAnimationStatus.CONSUMED) {
+            resultProgress.snapTo(1f)
+        }
     }
 
     LaunchedEffect(introKey, introDone) {
@@ -310,6 +337,7 @@ fun DecisionScreen(
                         enabled = introDone,
                         onChoose = onChoose,
                         onContinue = onContinue,
+                        resultProgress = { resultProgress.value },
                     )
                 }
                 PeriodTrack(
@@ -449,6 +477,7 @@ private fun DecisionSheet(
     enabled: Boolean,
     onChoose: (String) -> Unit,
     onContinue: () -> Unit,
+    resultProgress: () -> Float = { 1f },
 ) {
     Column(
         modifier = Modifier
@@ -465,7 +494,15 @@ private fun DecisionSheet(
                 )
             }
         } else {
-            OutcomeBlock(outcome)
+            OutcomeBlock(
+                outcome,
+                Modifier.graphicsLayer {
+                    val progress = resultProgress()
+                    alpha = progress
+                    scaleX = 0.98f + progress * 0.02f
+                    scaleY = 0.98f + progress * 0.02f
+                },
+            )
             InkButton(
                 text = if (outcome.endsLife) "인생 정리하기" else "계속하기",
                 onClick = onContinue,
@@ -586,10 +623,10 @@ private fun ChoiceArrow(color: Color) {
 }
 
 @Composable
-private fun OutcomeBlock(outcome: OutcomeUi) {
+private fun OutcomeBlock(outcome: OutcomeUi, modifier: Modifier = Modifier) {
     val shape = RoundedCornerShape(12.dp)
     Column(
-        modifier = Modifier
+        modifier = modifier
             .fillMaxWidth()
             .clip(shape)
             .background(LifeGamePaper.copy(alpha = 0.97f))

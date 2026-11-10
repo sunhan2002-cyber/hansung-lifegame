@@ -107,6 +107,7 @@ fun LifeGameApp(
                         onRequestFaceSheet = gameViewModel::requestFaceSheet,
                         onCancelFaceSheet = gameViewModel::cancelFaceSheet,
                         onClearFaceSheet = gameViewModel::clearFaceSheet,
+                        onPhotoFlowChanged = gameViewModel::setPhotoFlowStatus,
                         onStart = { profile ->
                             gameViewModel.startNewLife(profile)
                             navController.navigateOnce(Routes.PLAY) {
@@ -156,6 +157,8 @@ private fun PlayHost(
                 state = play,
                 onChoose = gameViewModel::chooseDecision,
                 onContinue = gameViewModel::continueAfterOutcome,
+                onEventImageShown = gameViewModel::markEventImageShown,
+                onResultAnimationConsumed = gameViewModel::markResultAnimationConsumed,
             )
         }
         PlayPhase.ENDED -> {
