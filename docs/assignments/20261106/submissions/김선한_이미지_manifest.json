@@ -3,7 +3,7 @@
   "createdAt": "2026-11-09",
   "owner": "김선한",
   "count": 67,
-  "note": "실제 PNG 제출물. 의미·크롭·화풍·라우팅·팀 승인은 완료 처리하지 않음.",
+  "note": "67개 PNG 제출 및 김선한 1차 의미·크롭·화풍 검수 PASS. 팀 교차 승인·실기기 라우팅은 별도 대기.",
   "items": [
     {
       "groupId": "grp_sh_adult_006",
@@ -17,12 +17,13 @@
       "aspectRatio": "4:3",
       "sha256": "26f536f7f5a08ffc7a698546e40f192c87535693c1416489c4c5d12b484163c8",
       "productionOwner": "김선한",
-      "status": "PNG_PRODUCED_PENDING_MEANING_CROP_STYLE_AND_ROUTING_REVIEW",
-      "meaningReview": "PENDING",
-      "cropReview": "PENDING",
-      "styleReview": "PENDING",
+      "status": "SELF_REVIEW_PASS_PENDING_TEAM_ACCEPTANCE_AND_ROUTING",
+      "meaningReview": "PASS",
+      "cropReview": "PASS",
+      "styleReview": "PASS",
       "runtimeRouted": false,
-      "teamAcceptance": "PENDING"
+      "teamAcceptance": "PENDING",
+      "selfReview": "PASS"
     },
     {
       "groupId": "grp_sh_adult_011",
@@ -36,12 +37,13 @@
       "aspectRatio": "4:3",
       "sha256": "efccb3d092cf2e26723ae96c2a626828c44767618fbe8292ecf615a2fcd41f0f",
       "productionOwner": "김선한",
-      "status": "PNG_PRODUCED_PENDING_MEANING_CROP_STYLE_AND_ROUTING_REVIEW",
-      "meaningReview": "PENDING",
-      "cropReview": "PENDING",
-      "styleReview": "PENDING",
+      "status": "SELF_REVIEW_PASS_PENDING_TEAM_ACCEPTANCE_AND_ROUTING",
+      "meaningReview": "PASS",
+      "cropReview": "PASS",
+      "styleReview": "PASS",
       "runtimeRouted": false,
-      "teamAcceptance": "PENDING"
+      "teamAcceptance": "PENDING",
+      "selfReview": "PASS"
     },
     {
       "groupId": "grp_sh_adult_016",
@@ -55,12 +57,13 @@
       "aspectRatio": "4:3",
       "sha256": "6edf29f0f1211da3c03dbb099430a659192e42b90a1ec811d1768be2978a7af2",
       "productionOwner": "김선한",
-      "status": "PNG_PRODUCED_PENDING_MEANING_CROP_STYLE_AND_ROUTING_REVIEW",
-      "meaningReview": "PENDING",
-      "cropReview": "PENDING",
-      "styleReview": "PENDING",
+      "status": "SELF_REVIEW_PASS_PENDING_TEAM_ACCEPTANCE_AND_ROUTING",
+      "meaningReview": "PASS",
+      "cropReview": "PASS",
+      "styleReview": "PASS",
       "runtimeRouted": false,
-      "teamAcceptance": "PENDING"
+      "teamAcceptance": "PENDING",
+      "selfReview": "PASS"
     },
     {
       "groupId": "grp_sh_adult_021",
@@ -74,12 +77,13 @@
       "aspectRatio": "4:3",
       "sha256": "da47441a49ee36b0effae2cd3e2b56baaa0bcf4a3d6e4070d38475d0b2035f73",
       "productionOwner": "김선한",
-      "status": "PNG_PRODUCED_PENDING_MEANING_CROP_STYLE_AND_ROUTING_REVIEW",
-      "meaningReview": "PENDING",
-      "cropReview": "PENDING",
-      "styleReview": "PENDING",
+      "status": "SELF_REVIEW_PASS_PENDING_TEAM_ACCEPTANCE_AND_ROUTING",
+      "meaningReview": "PASS",
+      "cropReview": "PASS",
+      "styleReview": "PASS",
       "runtimeRouted": false,
-      "teamAcceptance": "PENDING"
+      "teamAcceptance": "PENDING",
+      "selfReview": "PASS"
     },
     {
       "groupId": "grp_sh_adult_031",
@@ -93,12 +97,13 @@
       "aspectRatio": "4:3",
       "sha256": "d09e9049e7724711a52cf427d7a496e4d2b49636f1b7fabb48ad3092926e2020",
       "productionOwner": "김선한",
-      "status": "PNG_PRODUCED_PENDING_MEANING_CROP_STYLE_AND_ROUTING_REVIEW",
-      "meaningReview": "PENDING",
-      "cropReview": "PENDING",
-      "styleReview": "PENDING",
+      "status": "SELF_REVIEW_PASS_PENDING_TEAM_ACCEPTANCE_AND_ROUTING",
+      "meaningReview": "PASS",
+      "cropReview": "PASS",
+      "styleReview": "PASS",
       "runtimeRouted": false,
-      "teamAcceptance": "PENDING"
+      "teamAcceptance": "PENDING",
+      "selfReview": "PASS"
     },
     {
       "groupId": "grp_sh_adult_036",
@@ -112,12 +117,13 @@
       "aspectRatio": "4:3",
       "sha256": "580ea7c27a59271da2368e12e94fc4c2a3c23baab3239d51a48a429770b77c45",
       "productionOwner": "김선한",
-      "status": "PNG_PRODUCED_PENDING_MEANING_CROP_STYLE_AND_ROUTING_REVIEW",
-      "meaningReview": "PENDING",
-      "cropReview": "PENDING",
-      "styleReview": "PENDING",
+      "status": "SELF_REVIEW_PASS_PENDING_TEAM_ACCEPTANCE_AND_ROUTING",
+      "meaningReview": "PASS",
+      "cropReview": "PASS",
+      "styleReview": "PASS",
       "runtimeRouted": false,
-      "teamAcceptance": "PENDING"
+      "teamAcceptance": "PENDING",
+      "selfReview": "PASS"
     },
     {
       "groupId": "grp_sh_adult_041",
@@ -131,12 +137,13 @@
       "aspectRatio": "4:3",
       "sha256": "9cef323ca59a11dd42c802976236d1cadbf39c4d466f85974d468944971645e6",
       "productionOwner": "김선한",
-      "status": "PNG_PRODUCED_PENDING_MEANING_CROP_STYLE_AND_ROUTING_REVIEW",
-      "meaningReview": "PENDING",
-      "cropReview": "PENDING",
-      "styleReview": "PENDING",
+      "status": "SELF_REVIEW_PASS_PENDING_TEAM_ACCEPTANCE_AND_ROUTING",
+      "meaningReview": "PASS",
+      "cropReview": "PASS",
+      "styleReview": "PASS",
       "runtimeRouted": false,
-      "teamAcceptance": "PENDING"
+      "teamAcceptance": "PENDING",
+      "selfReview": "PASS"
     },
     {
       "groupId": "grp_sh_adult_046",
@@ -150,12 +157,13 @@
       "aspectRatio": "4:3",
       "sha256": "9270f999c4db0b6cdf7affaaa07c103714af241ff083b31fff98ec86602dbc80",
       "productionOwner": "김선한",
-      "status": "PNG_PRODUCED_PENDING_MEANING_CROP_STYLE_AND_ROUTING_REVIEW",
-      "meaningReview": "PENDING",
-      "cropReview": "PENDING",
-      "styleReview": "PENDING",
+      "status": "SELF_REVIEW_PASS_PENDING_TEAM_ACCEPTANCE_AND_ROUTING",
+      "meaningReview": "PASS",
+      "cropReview": "PASS",
+      "styleReview": "PASS",
       "runtimeRouted": false,
-      "teamAcceptance": "PENDING"
+      "teamAcceptance": "PENDING",
+      "selfReview": "PASS"
     },
     {
       "groupId": "grp_sh_adult_051",
@@ -169,12 +177,13 @@
       "aspectRatio": "4:3",
       "sha256": "aa5a0e8bdf1dbf0b7cbffd4bf58d9f48909abb83bd8b41c76ccb9958a17af025",
       "productionOwner": "김선한",
-      "status": "PNG_PRODUCED_PENDING_MEANING_CROP_STYLE_AND_ROUTING_REVIEW",
-      "meaningReview": "PENDING",
-      "cropReview": "PENDING",
-      "styleReview": "PENDING",
+      "status": "SELF_REVIEW_PASS_PENDING_TEAM_ACCEPTANCE_AND_ROUTING",
+      "meaningReview": "PASS",
+      "cropReview": "PASS",
+      "styleReview": "PASS",
       "runtimeRouted": false,
-      "teamAcceptance": "PENDING"
+      "teamAcceptance": "PENDING",
+      "selfReview": "PASS"
     },
     {
       "groupId": "grp_sh_adult_056",
@@ -188,12 +197,13 @@
       "aspectRatio": "4:3",
       "sha256": "575134a62b4c18c93dfdeb428b53745f4563069dac1ea306b2a0b0e99af5d3e9",
       "productionOwner": "김선한",
-      "status": "PNG_PRODUCED_PENDING_MEANING_CROP_STYLE_AND_ROUTING_REVIEW",
-      "meaningReview": "PENDING",
-      "cropReview": "PENDING",
-      "styleReview": "PENDING",
+      "status": "SELF_REVIEW_PASS_PENDING_TEAM_ACCEPTANCE_AND_ROUTING",
+      "meaningReview": "PASS",
+      "cropReview": "PASS",
+      "styleReview": "PASS",
       "runtimeRouted": false,
-      "teamAcceptance": "PENDING"
+      "teamAcceptance": "PENDING",
+      "selfReview": "PASS"
     },
     {
       "groupId": "grp_sh_adult_061",
@@ -207,12 +217,13 @@
       "aspectRatio": "4:3",
       "sha256": "863ac7e7206e3ee6d71e3e5cb769e4b2e094eab4ccb4c59badb4fdcb589d37f5",
       "productionOwner": "김선한",
-      "status": "PNG_PRODUCED_PENDING_MEANING_CROP_STYLE_AND_ROUTING_REVIEW",
-      "meaningReview": "PENDING",
-      "cropReview": "PENDING",
-      "styleReview": "PENDING",
+      "status": "SELF_REVIEW_PASS_PENDING_TEAM_ACCEPTANCE_AND_ROUTING",
+      "meaningReview": "PASS",
+      "cropReview": "PASS",
+      "styleReview": "PASS",
       "runtimeRouted": false,
-      "teamAcceptance": "PENDING"
+      "teamAcceptance": "PENDING",
+      "selfReview": "PASS"
     },
     {
       "groupId": "grp_sh_adult_066",
@@ -226,12 +237,13 @@
       "aspectRatio": "4:3",
       "sha256": "043f1e73f2209c3b1e43ea7b2aebe1bc936f3bad8d8c18b28d1c0a20e72f5533",
       "productionOwner": "김선한",
-      "status": "PNG_PRODUCED_PENDING_MEANING_CROP_STYLE_AND_ROUTING_REVIEW",
-      "meaningReview": "PENDING",
-      "cropReview": "PENDING",
-      "styleReview": "PENDING",
+      "status": "SELF_REVIEW_PASS_PENDING_TEAM_ACCEPTANCE_AND_ROUTING",
+      "meaningReview": "PASS",
+      "cropReview": "PASS",
+      "styleReview": "PASS",
       "runtimeRouted": false,
-      "teamAcceptance": "PENDING"
+      "teamAcceptance": "PENDING",
+      "selfReview": "PASS"
     },
     {
       "groupId": "grp_sh_adult_073",
@@ -245,12 +257,13 @@
       "aspectRatio": "4:3",
       "sha256": "823766de5ebc3795595275b7e2d585d60332bd74c06ef512d3832dcd5310eedf",
       "productionOwner": "김선한",
-      "status": "PNG_PRODUCED_PENDING_MEANING_CROP_STYLE_AND_ROUTING_REVIEW",
-      "meaningReview": "PENDING",
-      "cropReview": "PENDING",
-      "styleReview": "PENDING",
+      "status": "SELF_REVIEW_PASS_PENDING_TEAM_ACCEPTANCE_AND_ROUTING",
+      "meaningReview": "PASS",
+      "cropReview": "PASS",
+      "styleReview": "PASS",
       "runtimeRouted": false,
-      "teamAcceptance": "PENDING"
+      "teamAcceptance": "PENDING",
+      "selfReview": "PASS"
     },
     {
       "groupId": "grp_sh_adult_078",
@@ -264,12 +277,13 @@
       "aspectRatio": "4:3",
       "sha256": "d105101c8a6668798ac9bcb05e5e5b8384705efb2f4675feffef4cec3377e187",
       "productionOwner": "김선한",
-      "status": "PNG_PRODUCED_PENDING_MEANING_CROP_STYLE_AND_ROUTING_REVIEW",
-      "meaningReview": "PENDING",
-      "cropReview": "PENDING",
-      "styleReview": "PENDING",
+      "status": "SELF_REVIEW_PASS_PENDING_TEAM_ACCEPTANCE_AND_ROUTING",
+      "meaningReview": "PASS",
+      "cropReview": "PASS",
+      "styleReview": "PASS",
       "runtimeRouted": false,
-      "teamAcceptance": "PENDING"
+      "teamAcceptance": "PENDING",
+      "selfReview": "PASS"
     },
     {
       "groupId": "grp_sh_child_001",
@@ -283,12 +297,13 @@
       "aspectRatio": "4:3",
       "sha256": "8eb5db9c69f1bdaa56646b482c300edc77f8fa927d0c8f4ff2e9ae0c5521af1c",
       "productionOwner": "김선한",
-      "status": "PNG_PRODUCED_PENDING_MEANING_CROP_STYLE_AND_ROUTING_REVIEW",
-      "meaningReview": "PENDING",
-      "cropReview": "PENDING",
-      "styleReview": "PENDING",
+      "status": "SELF_REVIEW_PASS_PENDING_TEAM_ACCEPTANCE_AND_ROUTING",
+      "meaningReview": "PASS",
+      "cropReview": "PASS",
+      "styleReview": "PASS",
       "runtimeRouted": false,
-      "teamAcceptance": "PENDING"
+      "teamAcceptance": "PENDING",
+      "selfReview": "PASS"
     },
     {
       "groupId": "grp_sh_child_006",
@@ -302,12 +317,13 @@
       "aspectRatio": "4:3",
       "sha256": "8a30ec2ad256b6867bb08f991281ea37f3b2d206c995642d08e367a716f13aa1",
       "productionOwner": "김선한",
-      "status": "PNG_PRODUCED_PENDING_MEANING_CROP_STYLE_AND_ROUTING_REVIEW",
-      "meaningReview": "PENDING",
-      "cropReview": "PENDING",
-      "styleReview": "PENDING",
+      "status": "SELF_REVIEW_PASS_PENDING_TEAM_ACCEPTANCE_AND_ROUTING",
+      "meaningReview": "PASS",
+      "cropReview": "PASS",
+      "styleReview": "PASS",
       "runtimeRouted": false,
-      "teamAcceptance": "PENDING"
+      "teamAcceptance": "PENDING",
+      "selfReview": "PASS"
     },
     {
       "groupId": "grp_sh_child_011",
@@ -321,12 +337,13 @@
       "aspectRatio": "4:3",
       "sha256": "ceef121dcb1a8857475cb79d84cdc00f0f8274f79d8205012077249e0f932a40",
       "productionOwner": "김선한",
-      "status": "PNG_PRODUCED_PENDING_MEANING_CROP_STYLE_AND_ROUTING_REVIEW",
-      "meaningReview": "PENDING",
-      "cropReview": "PENDING",
-      "styleReview": "PENDING",
+      "status": "SELF_REVIEW_PASS_PENDING_TEAM_ACCEPTANCE_AND_ROUTING",
+      "meaningReview": "PASS",
+      "cropReview": "PASS",
+      "styleReview": "PASS",
       "runtimeRouted": false,
-      "teamAcceptance": "PENDING"
+      "teamAcceptance": "PENDING",
+      "selfReview": "PASS"
     },
     {
       "groupId": "grp_sh_child_016",
@@ -340,12 +357,13 @@
       "aspectRatio": "4:3",
       "sha256": "ad3ef1d534e45216e34024512dec3629f48427b730bee187085fd35970f6993a",
       "productionOwner": "김선한",
-      "status": "PNG_PRODUCED_PENDING_MEANING_CROP_STYLE_AND_ROUTING_REVIEW",
-      "meaningReview": "PENDING",
-      "cropReview": "PENDING",
-      "styleReview": "PENDING",
+      "status": "SELF_REVIEW_PASS_PENDING_TEAM_ACCEPTANCE_AND_ROUTING",
+      "meaningReview": "PASS",
+      "cropReview": "PASS",
+      "styleReview": "PASS",
       "runtimeRouted": false,
-      "teamAcceptance": "PENDING"
+      "teamAcceptance": "PENDING",
+      "selfReview": "PASS"
     },
     {
       "groupId": "grp_sh_child_021",
@@ -359,12 +377,13 @@
       "aspectRatio": "4:3",
       "sha256": "024344f6a6dc26ad852a227fec54634d8e7dbbe19043d6847a3a11e56b646255",
       "productionOwner": "김선한",
-      "status": "PNG_PRODUCED_PENDING_MEANING_CROP_STYLE_AND_ROUTING_REVIEW",
-      "meaningReview": "PENDING",
-      "cropReview": "PENDING",
-      "styleReview": "PENDING",
+      "status": "SELF_REVIEW_PASS_PENDING_TEAM_ACCEPTANCE_AND_ROUTING",
+      "meaningReview": "PASS",
+      "cropReview": "PASS",
+      "styleReview": "PASS",
       "runtimeRouted": false,
-      "teamAcceptance": "PENDING"
+      "teamAcceptance": "PENDING",
+      "selfReview": "PASS"
     },
     {
       "groupId": "grp_sh_child_026",
@@ -378,12 +397,13 @@
       "aspectRatio": "4:3",
       "sha256": "66e6a6bd9aa831378ae3e56433fff23b9545cc0538c132cb8ebb32d085eb7343",
       "productionOwner": "김선한",
-      "status": "PNG_PRODUCED_PENDING_MEANING_CROP_STYLE_AND_ROUTING_REVIEW",
-      "meaningReview": "PENDING",
-      "cropReview": "PENDING",
-      "styleReview": "PENDING",
+      "status": "SELF_REVIEW_PASS_PENDING_TEAM_ACCEPTANCE_AND_ROUTING",
+      "meaningReview": "PASS",
+      "cropReview": "PASS",
+      "styleReview": "PASS",
       "runtimeRouted": false,
-      "teamAcceptance": "PENDING"
+      "teamAcceptance": "PENDING",
+      "selfReview": "PASS"
     },
     {
       "groupId": "grp_sh_child_031",
@@ -397,12 +417,13 @@
       "aspectRatio": "4:3",
       "sha256": "de9d13d34b7feb0260892493571347434c63f52fcec060351ffbdea0b68b42ab",
       "productionOwner": "김선한",
-      "status": "PNG_PRODUCED_PENDING_MEANING_CROP_STYLE_AND_ROUTING_REVIEW",
-      "meaningReview": "PENDING",
-      "cropReview": "PENDING",
-      "styleReview": "PENDING",
+      "status": "SELF_REVIEW_PASS_PENDING_TEAM_ACCEPTANCE_AND_ROUTING",
+      "meaningReview": "PASS",
+      "cropReview": "PASS",
+      "styleReview": "PASS",
       "runtimeRouted": false,
-      "teamAcceptance": "PENDING"
+      "teamAcceptance": "PENDING",
+      "selfReview": "PASS"
     },
     {
       "groupId": "grp_sh_child_036",
@@ -416,12 +437,13 @@
       "aspectRatio": "4:3",
       "sha256": "0c7ad683be7d2e4bf9240d0f0e1d907b97276aeb5f45fdf4fe68e7e63b57889e",
       "productionOwner": "김선한",
-      "status": "PNG_PRODUCED_PENDING_MEANING_CROP_STYLE_AND_ROUTING_REVIEW",
-      "meaningReview": "PENDING",
-      "cropReview": "PENDING",
-      "styleReview": "PENDING",
+      "status": "SELF_REVIEW_PASS_PENDING_TEAM_ACCEPTANCE_AND_ROUTING",
+      "meaningReview": "PASS",
+      "cropReview": "PASS",
+      "styleReview": "PASS",
       "runtimeRouted": false,
-      "teamAcceptance": "PENDING"
+      "teamAcceptance": "PENDING",
+      "selfReview": "PASS"
     },
     {
       "groupId": "grp_sh_child_041",
@@ -435,12 +457,13 @@
       "aspectRatio": "4:3",
       "sha256": "5f1499826e9b6f26c6a0bb2a3b6182b0281548e64b4487c3c40f4b507aab9ca4",
       "productionOwner": "김선한",
-      "status": "PNG_PRODUCED_PENDING_MEANING_CROP_STYLE_AND_ROUTING_REVIEW",
-      "meaningReview": "PENDING",
-      "cropReview": "PENDING",
-      "styleReview": "PENDING",
+      "status": "SELF_REVIEW_PASS_PENDING_TEAM_ACCEPTANCE_AND_ROUTING",
+      "meaningReview": "PASS",
+      "cropReview": "PASS",
+      "styleReview": "PASS",
       "runtimeRouted": false,
-      "teamAcceptance": "PENDING"
+      "teamAcceptance": "PENDING",
+      "selfReview": "PASS"
     },
     {
       "groupId": "grp_sh_child_046",
@@ -454,12 +477,13 @@
       "aspectRatio": "4:3",
       "sha256": "e6321addaa7baa8d3bf8f57c0ec2ff3f272e1cd86a9d78c75ceaddf29265a3a5",
       "productionOwner": "김선한",
-      "status": "PNG_PRODUCED_PENDING_MEANING_CROP_STYLE_AND_ROUTING_REVIEW",
-      "meaningReview": "PENDING",
-      "cropReview": "PENDING",
-      "styleReview": "PENDING",
+      "status": "SELF_REVIEW_PASS_PENDING_TEAM_ACCEPTANCE_AND_ROUTING",
+      "meaningReview": "PASS",
+      "cropReview": "PASS",
+      "styleReview": "PASS",
       "runtimeRouted": false,
-      "teamAcceptance": "PENDING"
+      "teamAcceptance": "PENDING",
+      "selfReview": "PASS"
     },
     {
       "groupId": "grp_sh_cross_04",
@@ -473,12 +497,13 @@
       "aspectRatio": "4:3",
       "sha256": "c2809463f9a9efb7da751dc215cb2d0bad4453fec27f21cc880041fbbc3cdce3",
       "productionOwner": "김선한",
-      "status": "PNG_PRODUCED_PENDING_MEANING_CROP_STYLE_AND_ROUTING_REVIEW",
-      "meaningReview": "PENDING",
-      "cropReview": "PENDING",
-      "styleReview": "PENDING",
+      "status": "SELF_REVIEW_PASS_PENDING_TEAM_ACCEPTANCE_AND_ROUTING",
+      "meaningReview": "PASS",
+      "cropReview": "PASS",
+      "styleReview": "PASS",
       "runtimeRouted": false,
-      "teamAcceptance": "PENDING"
+      "teamAcceptance": "PENDING",
+      "selfReview": "PASS"
     },
     {
       "groupId": "grp_sh_cross_09",
@@ -492,12 +517,13 @@
       "aspectRatio": "4:3",
       "sha256": "d59c80f02246edadf5c5edbb3e2e722458c9d4d8104a43cd0c5fd5186f60ee13",
       "productionOwner": "김선한",
-      "status": "PNG_PRODUCED_PENDING_MEANING_CROP_STYLE_AND_ROUTING_REVIEW",
-      "meaningReview": "PENDING",
-      "cropReview": "PENDING",
-      "styleReview": "PENDING",
+      "status": "SELF_REVIEW_PASS_PENDING_TEAM_ACCEPTANCE_AND_ROUTING",
+      "meaningReview": "PASS",
+      "cropReview": "PASS",
+      "styleReview": "PASS",
       "runtimeRouted": false,
-      "teamAcceptance": "PENDING"
+      "teamAcceptance": "PENDING",
+      "selfReview": "PASS"
     },
     {
       "groupId": "grp_sh_infant_002",
@@ -511,12 +537,13 @@
       "aspectRatio": "4:3",
       "sha256": "e6f1ddecd39f9bed066607e7b57d8780ef02e30658e1284ef21361790fcac548",
       "productionOwner": "김선한",
-      "status": "PNG_PRODUCED_PENDING_MEANING_CROP_STYLE_AND_ROUTING_REVIEW",
-      "meaningReview": "PENDING",
-      "cropReview": "PENDING",
-      "styleReview": "PENDING",
+      "status": "SELF_REVIEW_PASS_PENDING_TEAM_ACCEPTANCE_AND_ROUTING",
+      "meaningReview": "PASS",
+      "cropReview": "PASS",
+      "styleReview": "PASS",
       "runtimeRouted": false,
-      "teamAcceptance": "PENDING"
+      "teamAcceptance": "PENDING",
+      "selfReview": "PASS"
     },
     {
       "groupId": "grp_sh_infant_007",
@@ -530,12 +557,13 @@
       "aspectRatio": "4:3",
       "sha256": "fead891fd8b114a00f69477bdc9e87670de88a18a821b0312a7585667571a867",
       "productionOwner": "김선한",
-      "status": "PNG_PRODUCED_PENDING_MEANING_CROP_STYLE_AND_ROUTING_REVIEW",
-      "meaningReview": "PENDING",
-      "cropReview": "PENDING",
-      "styleReview": "PENDING",
+      "status": "SELF_REVIEW_PASS_PENDING_TEAM_ACCEPTANCE_AND_ROUTING",
+      "meaningReview": "PASS",
+      "cropReview": "PASS",
+      "styleReview": "PASS",
       "runtimeRouted": false,
-      "teamAcceptance": "PENDING"
+      "teamAcceptance": "PENDING",
+      "selfReview": "PASS"
     },
     {
       "groupId": "grp_sh_infant_012",
@@ -549,12 +577,13 @@
       "aspectRatio": "4:3",
       "sha256": "75f1b29734aabfda8adb8cfcc9e866e18a2dfacd0f54b7395e9915b60ba70731",
       "productionOwner": "김선한",
-      "status": "PNG_PRODUCED_PENDING_MEANING_CROP_STYLE_AND_ROUTING_REVIEW",
-      "meaningReview": "PENDING",
-      "cropReview": "PENDING",
-      "styleReview": "PENDING",
+      "status": "SELF_REVIEW_PASS_PENDING_TEAM_ACCEPTANCE_AND_ROUTING",
+      "meaningReview": "PASS",
+      "cropReview": "PASS",
+      "styleReview": "PASS",
       "runtimeRouted": false,
-      "teamAcceptance": "PENDING"
+      "teamAcceptance": "PENDING",
+      "selfReview": "PASS"
     },
     {
       "groupId": "grp_sh_infant_017",
@@ -568,12 +597,13 @@
       "aspectRatio": "4:3",
       "sha256": "cafb20d4b7f1ce0af7829ea17b6b101315d3748b8535dc9214de74665f243cd1",
       "productionOwner": "김선한",
-      "status": "PNG_PRODUCED_PENDING_MEANING_CROP_STYLE_AND_ROUTING_REVIEW",
-      "meaningReview": "PENDING",
-      "cropReview": "PENDING",
-      "styleReview": "PENDING",
+      "status": "SELF_REVIEW_PASS_PENDING_TEAM_ACCEPTANCE_AND_ROUTING",
+      "meaningReview": "PASS",
+      "cropReview": "PASS",
+      "styleReview": "PASS",
       "runtimeRouted": false,
-      "teamAcceptance": "PENDING"
+      "teamAcceptance": "PENDING",
+      "selfReview": "PASS"
     },
     {
       "groupId": "grp_sh_infant_022",
@@ -587,12 +617,13 @@
       "aspectRatio": "4:3",
       "sha256": "31e20afdbfd044b5e81b614eed852741aa1e11e9eb8ee30cc1916ec381292875",
       "productionOwner": "김선한",
-      "status": "PNG_PRODUCED_PENDING_MEANING_CROP_STYLE_AND_ROUTING_REVIEW",
-      "meaningReview": "PENDING",
-      "cropReview": "PENDING",
-      "styleReview": "PENDING",
+      "status": "SELF_REVIEW_PASS_PENDING_TEAM_ACCEPTANCE_AND_ROUTING",
+      "meaningReview": "PASS",
+      "cropReview": "PASS",
+      "styleReview": "PASS",
       "runtimeRouted": false,
-      "teamAcceptance": "PENDING"
+      "teamAcceptance": "PENDING",
+      "selfReview": "PASS"
     },
     {
       "groupId": "grp_sh_infant_027",
@@ -606,12 +637,13 @@
       "aspectRatio": "4:3",
       "sha256": "3fcd9c1b7b5dc156044a4ce6ff4f3f0c1c6fa85d1376e5964e2a4a694bd8c30f",
       "productionOwner": "김선한",
-      "status": "PNG_PRODUCED_PENDING_MEANING_CROP_STYLE_AND_ROUTING_REVIEW",
-      "meaningReview": "PENDING",
-      "cropReview": "PENDING",
-      "styleReview": "PENDING",
+      "status": "SELF_REVIEW_PASS_PENDING_TEAM_ACCEPTANCE_AND_ROUTING",
+      "meaningReview": "PASS",
+      "cropReview": "PASS",
+      "styleReview": "PASS",
       "runtimeRouted": false,
-      "teamAcceptance": "PENDING"
+      "teamAcceptance": "PENDING",
+      "selfReview": "PASS"
     },
     {
       "groupId": "grp_sh_path_fit_02",
@@ -625,12 +657,13 @@
       "aspectRatio": "4:3",
       "sha256": "326e8e57550c1e86e1f9e4888825922178f74241e4ed67aacc52154bc149df7a",
       "productionOwner": "김선한",
-      "status": "PNG_PRODUCED_PENDING_MEANING_CROP_STYLE_AND_ROUTING_REVIEW",
-      "meaningReview": "PENDING",
-      "cropReview": "PENDING",
-      "styleReview": "PENDING",
+      "status": "SELF_REVIEW_PASS_PENDING_TEAM_ACCEPTANCE_AND_ROUTING",
+      "meaningReview": "PASS",
+      "cropReview": "PASS",
+      "styleReview": "PASS",
       "runtimeRouted": false,
-      "teamAcceptance": "PENDING"
+      "teamAcceptance": "PENDING",
+      "selfReview": "PASS"
     },
     {
       "groupId": "grp_sh_path_fit_07",
@@ -644,12 +677,13 @@
       "aspectRatio": "4:3",
       "sha256": "ab65bded85273474969bd09d767df0fe7bc9861c07301d0f0cbd22d784384990",
       "productionOwner": "김선한",
-      "status": "PNG_PRODUCED_PENDING_MEANING_CROP_STYLE_AND_ROUTING_REVIEW",
-      "meaningReview": "PENDING",
-      "cropReview": "PENDING",
-      "styleReview": "PENDING",
+      "status": "SELF_REVIEW_PASS_PENDING_TEAM_ACCEPTANCE_AND_ROUTING",
+      "meaningReview": "PASS",
+      "cropReview": "PASS",
+      "styleReview": "PASS",
       "runtimeRouted": false,
-      "teamAcceptance": "PENDING"
+      "teamAcceptance": "PENDING",
+      "selfReview": "PASS"
     },
     {
       "groupId": "grp_sh_path_fit_14",
@@ -663,12 +697,13 @@
       "aspectRatio": "4:3",
       "sha256": "8b82a2785ca2733457e8dbc8cdaeaed7e47797ace46f2ee44339c9ba83b2997c",
       "productionOwner": "김선한",
-      "status": "PNG_PRODUCED_PENDING_MEANING_CROP_STYLE_AND_ROUTING_REVIEW",
-      "meaningReview": "PENDING",
-      "cropReview": "PENDING",
-      "styleReview": "PENDING",
+      "status": "SELF_REVIEW_PASS_PENDING_TEAM_ACCEPTANCE_AND_ROUTING",
+      "meaningReview": "PASS",
+      "cropReview": "PASS",
+      "styleReview": "PASS",
       "runtimeRouted": false,
-      "teamAcceptance": "PENDING"
+      "teamAcceptance": "PENDING",
+      "selfReview": "PASS"
     },
     {
       "groupId": "grp_sh_path_hap_01",
@@ -682,12 +717,13 @@
       "aspectRatio": "4:3",
       "sha256": "a5af70fe0021a89749d249d62493174cfd5fc3122dd820ab1ddc7dd02073f342",
       "productionOwner": "김선한",
-      "status": "PNG_PRODUCED_PENDING_MEANING_CROP_STYLE_AND_ROUTING_REVIEW",
-      "meaningReview": "PENDING",
-      "cropReview": "PENDING",
-      "styleReview": "PENDING",
+      "status": "SELF_REVIEW_PASS_PENDING_TEAM_ACCEPTANCE_AND_ROUTING",
+      "meaningReview": "PASS",
+      "cropReview": "PASS",
+      "styleReview": "PASS",
       "runtimeRouted": false,
-      "teamAcceptance": "PENDING"
+      "teamAcceptance": "PENDING",
+      "selfReview": "PASS"
     },
     {
       "groupId": "grp_sh_path_hap_06",
@@ -701,12 +737,13 @@
       "aspectRatio": "4:3",
       "sha256": "3e02fc43f3456847268e7ebdf10f59a476cae03d035acb968649da6be720c31b",
       "productionOwner": "김선한",
-      "status": "PNG_PRODUCED_PENDING_MEANING_CROP_STYLE_AND_ROUTING_REVIEW",
-      "meaningReview": "PENDING",
-      "cropReview": "PENDING",
-      "styleReview": "PENDING",
+      "status": "SELF_REVIEW_PASS_PENDING_TEAM_ACCEPTANCE_AND_ROUTING",
+      "meaningReview": "PASS",
+      "cropReview": "PASS",
+      "styleReview": "PASS",
       "runtimeRouted": false,
-      "teamAcceptance": "PENDING"
+      "teamAcceptance": "PENDING",
+      "selfReview": "PASS"
     },
     {
       "groupId": "grp_sh_path_hap_10",
@@ -720,12 +757,13 @@
       "aspectRatio": "4:3",
       "sha256": "3b4f30a622051dd6180c27739f472971925d4d68176d616a22d6677d46a54aff",
       "productionOwner": "김선한",
-      "status": "PNG_PRODUCED_PENDING_MEANING_CROP_STYLE_AND_ROUTING_REVIEW",
-      "meaningReview": "PENDING",
-      "cropReview": "PENDING",
-      "styleReview": "PENDING",
+      "status": "SELF_REVIEW_PASS_PENDING_TEAM_ACCEPTANCE_AND_ROUTING",
+      "meaningReview": "PASS",
+      "cropReview": "PASS",
+      "styleReview": "PASS",
       "runtimeRouted": false,
-      "teamAcceptance": "PENDING"
+      "teamAcceptance": "PENDING",
+      "selfReview": "PASS"
     },
     {
       "groupId": "grp_sh_path_hap_13",
@@ -739,12 +777,13 @@
       "aspectRatio": "4:3",
       "sha256": "2e6b8a590fcca9eb6abb80cf37692072c1cf65fa1e809a7e125fbab5c7190cd4",
       "productionOwner": "김선한",
-      "status": "PNG_PRODUCED_PENDING_MEANING_CROP_STYLE_AND_ROUTING_REVIEW",
-      "meaningReview": "PENDING",
-      "cropReview": "PENDING",
-      "styleReview": "PENDING",
+      "status": "SELF_REVIEW_PASS_PENDING_TEAM_ACCEPTANCE_AND_ROUTING",
+      "meaningReview": "PASS",
+      "cropReview": "PASS",
+      "styleReview": "PASS",
       "runtimeRouted": false,
-      "teamAcceptance": "PENDING"
+      "teamAcceptance": "PENDING",
+      "selfReview": "PASS"
     },
     {
       "groupId": "grp_sh_path_hea_02",
@@ -758,12 +797,13 @@
       "aspectRatio": "4:3",
       "sha256": "1bce94dcf80e40a87c1cba4f56ba266290332424dd3bfc018e2df2699c83c3d0",
       "productionOwner": "김선한",
-      "status": "PNG_PRODUCED_PENDING_MEANING_CROP_STYLE_AND_ROUTING_REVIEW",
-      "meaningReview": "PENDING",
-      "cropReview": "PENDING",
-      "styleReview": "PENDING",
+      "status": "SELF_REVIEW_PASS_PENDING_TEAM_ACCEPTANCE_AND_ROUTING",
+      "meaningReview": "PASS",
+      "cropReview": "PASS",
+      "styleReview": "PASS",
       "runtimeRouted": false,
-      "teamAcceptance": "PENDING"
+      "teamAcceptance": "PENDING",
+      "selfReview": "PASS"
     },
     {
       "groupId": "grp_sh_path_hea_07",
@@ -777,12 +817,13 @@
       "aspectRatio": "4:3",
       "sha256": "2354be9a235c514585a4fff4435fa392ffd17188ed47c86b519d295234029b3d",
       "productionOwner": "김선한",
-      "status": "PNG_PRODUCED_PENDING_MEANING_CROP_STYLE_AND_ROUTING_REVIEW",
-      "meaningReview": "PENDING",
-      "cropReview": "PENDING",
-      "styleReview": "PENDING",
+      "status": "SELF_REVIEW_PASS_PENDING_TEAM_ACCEPTANCE_AND_ROUTING",
+      "meaningReview": "PASS",
+      "cropReview": "PASS",
+      "styleReview": "PASS",
       "runtimeRouted": false,
-      "teamAcceptance": "PENDING"
+      "teamAcceptance": "PENDING",
+      "selfReview": "PASS"
     },
     {
       "groupId": "grp_sh_path_hea_14",
@@ -796,12 +837,13 @@
       "aspectRatio": "4:3",
       "sha256": "725a7892e0ec0565b6d423b8ec94a1d67dae30bd554fe50c7e3e4d94ad9e9f40",
       "productionOwner": "김선한",
-      "status": "PNG_PRODUCED_PENDING_MEANING_CROP_STYLE_AND_ROUTING_REVIEW",
-      "meaningReview": "PENDING",
-      "cropReview": "PENDING",
-      "styleReview": "PENDING",
+      "status": "SELF_REVIEW_PASS_PENDING_TEAM_ACCEPTANCE_AND_ROUTING",
+      "meaningReview": "PASS",
+      "cropReview": "PASS",
+      "styleReview": "PASS",
       "runtimeRouted": false,
-      "teamAcceptance": "PENDING"
+      "teamAcceptance": "PENDING",
+      "selfReview": "PASS"
     },
     {
       "groupId": "grp_sh_path_int_03",
@@ -815,12 +857,13 @@
       "aspectRatio": "4:3",
       "sha256": "0ae6e13671624be8feed7991d77206c5d891dcdc15302164244c4aee4048f184",
       "productionOwner": "김선한",
-      "status": "PNG_PRODUCED_PENDING_MEANING_CROP_STYLE_AND_ROUTING_REVIEW",
-      "meaningReview": "PENDING",
-      "cropReview": "PENDING",
-      "styleReview": "PENDING",
+      "status": "SELF_REVIEW_PASS_PENDING_TEAM_ACCEPTANCE_AND_ROUTING",
+      "meaningReview": "PASS",
+      "cropReview": "PASS",
+      "styleReview": "PASS",
       "runtimeRouted": false,
-      "teamAcceptance": "PENDING"
+      "teamAcceptance": "PENDING",
+      "selfReview": "PASS"
     },
     {
       "groupId": "grp_sh_path_int_08",
@@ -834,12 +877,13 @@
       "aspectRatio": "4:3",
       "sha256": "d1a870fbca2ac23b092d3f00535ea142feed09c07af2d117ff5a8e836d193bc1",
       "productionOwner": "김선한",
-      "status": "PNG_PRODUCED_PENDING_MEANING_CROP_STYLE_AND_ROUTING_REVIEW",
-      "meaningReview": "PENDING",
-      "cropReview": "PENDING",
-      "styleReview": "PENDING",
+      "status": "SELF_REVIEW_PASS_PENDING_TEAM_ACCEPTANCE_AND_ROUTING",
+      "meaningReview": "PASS",
+      "cropReview": "PASS",
+      "styleReview": "PASS",
       "runtimeRouted": false,
-      "teamAcceptance": "PENDING"
+      "teamAcceptance": "PENDING",
+      "selfReview": "PASS"
     },
     {
       "groupId": "grp_sh_path_int_15",
@@ -853,12 +897,13 @@
       "aspectRatio": "4:3",
       "sha256": "21f5f7460f5646fad381e40ebec744042960b2d90103d6c051b6768059f163da",
       "productionOwner": "김선한",
-      "status": "PNG_PRODUCED_PENDING_MEANING_CROP_STYLE_AND_ROUTING_REVIEW",
-      "meaningReview": "PENDING",
-      "cropReview": "PENDING",
-      "styleReview": "PENDING",
+      "status": "SELF_REVIEW_PASS_PENDING_TEAM_ACCEPTANCE_AND_ROUTING",
+      "meaningReview": "PASS",
+      "cropReview": "PASS",
+      "styleReview": "PASS",
       "runtimeRouted": false,
-      "teamAcceptance": "PENDING"
+      "teamAcceptance": "PENDING",
+      "selfReview": "PASS"
     },
     {
       "groupId": "grp_sh_path_luk_02",
@@ -872,12 +917,13 @@
       "aspectRatio": "4:3",
       "sha256": "4d2b443a57e1c77944eb7fc5e5a8a350918cf4a86ab6ccbbcac0866ea93a7047",
       "productionOwner": "김선한",
-      "status": "PNG_PRODUCED_PENDING_MEANING_CROP_STYLE_AND_ROUTING_REVIEW",
-      "meaningReview": "PENDING",
-      "cropReview": "PENDING",
-      "styleReview": "PENDING",
+      "status": "SELF_REVIEW_PASS_PENDING_TEAM_ACCEPTANCE_AND_ROUTING",
+      "meaningReview": "PASS",
+      "cropReview": "PASS",
+      "styleReview": "PASS",
       "runtimeRouted": false,
-      "teamAcceptance": "PENDING"
+      "teamAcceptance": "PENDING",
+      "selfReview": "PASS"
     },
     {
       "groupId": "grp_sh_path_luk_07",
@@ -891,12 +937,13 @@
       "aspectRatio": "4:3",
       "sha256": "b0e9ec2b102fc4f69e1b7c16f1f160d0a2c52654e487d21f1b04aefea4cee192",
       "productionOwner": "김선한",
-      "status": "PNG_PRODUCED_PENDING_MEANING_CROP_STYLE_AND_ROUTING_REVIEW",
-      "meaningReview": "PENDING",
-      "cropReview": "PENDING",
-      "styleReview": "PENDING",
+      "status": "SELF_REVIEW_PASS_PENDING_TEAM_ACCEPTANCE_AND_ROUTING",
+      "meaningReview": "PASS",
+      "cropReview": "PASS",
+      "styleReview": "PASS",
       "runtimeRouted": false,
-      "teamAcceptance": "PENDING"
+      "teamAcceptance": "PENDING",
+      "selfReview": "PASS"
     },
     {
       "groupId": "grp_sh_path_luk_14",
@@ -910,12 +957,13 @@
       "aspectRatio": "4:3",
       "sha256": "f7fde6b124eb93a2ee81375806175de872ede0832b49299f0664b28eba0ef5f5",
       "productionOwner": "김선한",
-      "status": "PNG_PRODUCED_PENDING_MEANING_CROP_STYLE_AND_ROUTING_REVIEW",
-      "meaningReview": "PENDING",
-      "cropReview": "PENDING",
-      "styleReview": "PENDING",
+      "status": "SELF_REVIEW_PASS_PENDING_TEAM_ACCEPTANCE_AND_ROUTING",
+      "meaningReview": "PASS",
+      "cropReview": "PASS",
+      "styleReview": "PASS",
       "runtimeRouted": false,
-      "teamAcceptance": "PENDING"
+      "teamAcceptance": "PENDING",
+      "selfReview": "PASS"
     },
     {
       "groupId": "grp_sh_path_soc_02",
@@ -929,12 +977,13 @@
       "aspectRatio": "4:3",
       "sha256": "24c77ff766ad2583fbab3932fc1be33757ec70823809b4f3dc2d6ad75d8ed324",
       "productionOwner": "김선한",
-      "status": "PNG_PRODUCED_PENDING_MEANING_CROP_STYLE_AND_ROUTING_REVIEW",
-      "meaningReview": "PENDING",
-      "cropReview": "PENDING",
-      "styleReview": "PENDING",
+      "status": "SELF_REVIEW_PASS_PENDING_TEAM_ACCEPTANCE_AND_ROUTING",
+      "meaningReview": "PASS",
+      "cropReview": "PASS",
+      "styleReview": "PASS",
       "runtimeRouted": false,
-      "teamAcceptance": "PENDING"
+      "teamAcceptance": "PENDING",
+      "selfReview": "PASS"
     },
     {
       "groupId": "grp_sh_path_soc_07",
@@ -948,12 +997,13 @@
       "aspectRatio": "4:3",
       "sha256": "1963294f6feb47107a06dc719db07e1ce25c6aecd0db694ac000c5afca64d50c",
       "productionOwner": "김선한",
-      "status": "PNG_PRODUCED_PENDING_MEANING_CROP_STYLE_AND_ROUTING_REVIEW",
-      "meaningReview": "PENDING",
-      "cropReview": "PENDING",
-      "styleReview": "PENDING",
+      "status": "SELF_REVIEW_PASS_PENDING_TEAM_ACCEPTANCE_AND_ROUTING",
+      "meaningReview": "PASS",
+      "cropReview": "PASS",
+      "styleReview": "PASS",
       "runtimeRouted": false,
-      "teamAcceptance": "PENDING"
+      "teamAcceptance": "PENDING",
+      "selfReview": "PASS"
     },
     {
       "groupId": "grp_sh_path_soc_14",
@@ -967,12 +1017,13 @@
       "aspectRatio": "4:3",
       "sha256": "2ac18f1682261ad230ae15169fb4d543fc2a935a3aeaaa41b9d8b9b5d5bb9451",
       "productionOwner": "김선한",
-      "status": "PNG_PRODUCED_PENDING_MEANING_CROP_STYLE_AND_ROUTING_REVIEW",
-      "meaningReview": "PENDING",
-      "cropReview": "PENDING",
-      "styleReview": "PENDING",
+      "status": "SELF_REVIEW_PASS_PENDING_TEAM_ACCEPTANCE_AND_ROUTING",
+      "meaningReview": "PASS",
+      "cropReview": "PASS",
+      "styleReview": "PASS",
       "runtimeRouted": false,
-      "teamAcceptance": "PENDING"
+      "teamAcceptance": "PENDING",
+      "selfReview": "PASS"
     },
     {
       "groupId": "grp_sh_path_wea_01",
@@ -986,12 +1037,13 @@
       "aspectRatio": "4:3",
       "sha256": "1bedd6969d8c8cec4cd95edeba6b6094c300adbfc8a33cc419d05f1fcbd0e1ba",
       "productionOwner": "김선한",
-      "status": "PNG_PRODUCED_PENDING_MEANING_CROP_STYLE_AND_ROUTING_REVIEW",
-      "meaningReview": "PENDING",
-      "cropReview": "PENDING",
-      "styleReview": "PENDING",
+      "status": "SELF_REVIEW_PASS_PENDING_TEAM_ACCEPTANCE_AND_ROUTING",
+      "meaningReview": "PASS",
+      "cropReview": "PASS",
+      "styleReview": "PASS",
       "runtimeRouted": false,
-      "teamAcceptance": "PENDING"
+      "teamAcceptance": "PENDING",
+      "selfReview": "PASS"
     },
     {
       "groupId": "grp_sh_path_wea_06",
@@ -1005,12 +1057,13 @@
       "aspectRatio": "4:3",
       "sha256": "03cccf9bf63472c058900877327d03171e388525101546d32f6585d14f61cc32",
       "productionOwner": "김선한",
-      "status": "PNG_PRODUCED_PENDING_MEANING_CROP_STYLE_AND_ROUTING_REVIEW",
-      "meaningReview": "PENDING",
-      "cropReview": "PENDING",
-      "styleReview": "PENDING",
+      "status": "SELF_REVIEW_PASS_PENDING_TEAM_ACCEPTANCE_AND_ROUTING",
+      "meaningReview": "PASS",
+      "cropReview": "PASS",
+      "styleReview": "PASS",
       "runtimeRouted": false,
-      "teamAcceptance": "PENDING"
+      "teamAcceptance": "PENDING",
+      "selfReview": "PASS"
     },
     {
       "groupId": "grp_sh_path_wea_10",
@@ -1024,12 +1077,13 @@
       "aspectRatio": "4:3",
       "sha256": "396dda4fb0e6d3a714269629930216c1279e518dfb687d47dfb46bb558495022",
       "productionOwner": "김선한",
-      "status": "PNG_PRODUCED_PENDING_MEANING_CROP_STYLE_AND_ROUTING_REVIEW",
-      "meaningReview": "PENDING",
-      "cropReview": "PENDING",
-      "styleReview": "PENDING",
+      "status": "SELF_REVIEW_PASS_PENDING_TEAM_ACCEPTANCE_AND_ROUTING",
+      "meaningReview": "PASS",
+      "cropReview": "PASS",
+      "styleReview": "PASS",
       "runtimeRouted": false,
-      "teamAcceptance": "PENDING"
+      "teamAcceptance": "PENDING",
+      "selfReview": "PASS"
     },
     {
       "groupId": "grp_sh_path_wea_13",
@@ -1043,12 +1097,13 @@
       "aspectRatio": "4:3",
       "sha256": "2a817f1b756d0d7f1242f6efd4c5303711e774ea7a7bce652ebeac359f7c5aa3",
       "productionOwner": "김선한",
-      "status": "PNG_PRODUCED_PENDING_MEANING_CROP_STYLE_AND_ROUTING_REVIEW",
-      "meaningReview": "PENDING",
-      "cropReview": "PENDING",
-      "styleReview": "PENDING",
+      "status": "SELF_REVIEW_PASS_PENDING_TEAM_ACCEPTANCE_AND_ROUTING",
+      "meaningReview": "PASS",
+      "cropReview": "PASS",
+      "styleReview": "PASS",
       "runtimeRouted": false,
-      "teamAcceptance": "PENDING"
+      "teamAcceptance": "PENDING",
+      "selfReview": "PASS"
     },
     {
       "groupId": "grp_sh_special_001",
@@ -1062,12 +1117,13 @@
       "aspectRatio": "4:3",
       "sha256": "b9a8a803dfd0ac42b3fd55000f151727ce0497742846a96a50e61b22bb8ee2aa",
       "productionOwner": "김선한",
-      "status": "PNG_PRODUCED_PENDING_MEANING_CROP_STYLE_AND_ROUTING_REVIEW",
-      "meaningReview": "PENDING",
-      "cropReview": "PENDING",
-      "styleReview": "PENDING",
+      "status": "SELF_REVIEW_PASS_PENDING_TEAM_ACCEPTANCE_AND_ROUTING",
+      "meaningReview": "PASS",
+      "cropReview": "PASS",
+      "styleReview": "PASS",
       "runtimeRouted": false,
-      "teamAcceptance": "PENDING"
+      "teamAcceptance": "PENDING",
+      "selfReview": "PASS"
     },
     {
       "groupId": "grp_sh_special_006",
@@ -1081,12 +1137,13 @@
       "aspectRatio": "4:3",
       "sha256": "fbd76499eadb1156ef888fb1797da9f678b302b148a0d6a16d1178d8bf4898af",
       "productionOwner": "김선한",
-      "status": "PNG_PRODUCED_PENDING_MEANING_CROP_STYLE_AND_ROUTING_REVIEW",
-      "meaningReview": "PENDING",
-      "cropReview": "PENDING",
-      "styleReview": "PENDING",
+      "status": "SELF_REVIEW_PASS_PENDING_TEAM_ACCEPTANCE_AND_ROUTING",
+      "meaningReview": "PASS",
+      "cropReview": "PASS",
+      "styleReview": "PASS",
       "runtimeRouted": false,
-      "teamAcceptance": "PENDING"
+      "teamAcceptance": "PENDING",
+      "selfReview": "PASS"
     },
     {
       "groupId": "grp_sh_special_011",
@@ -1100,12 +1157,13 @@
       "aspectRatio": "4:3",
       "sha256": "e4249f74988f2588159f356f11fce41cf7d28a064ab01da7fd0bd74f1b6cfac0",
       "productionOwner": "김선한",
-      "status": "PNG_PRODUCED_PENDING_MEANING_CROP_STYLE_AND_ROUTING_REVIEW",
-      "meaningReview": "PENDING",
-      "cropReview": "PENDING",
-      "styleReview": "PENDING",
+      "status": "SELF_REVIEW_PASS_PENDING_TEAM_ACCEPTANCE_AND_ROUTING",
+      "meaningReview": "PASS",
+      "cropReview": "PASS",
+      "styleReview": "PASS",
       "runtimeRouted": false,
-      "teamAcceptance": "PENDING"
+      "teamAcceptance": "PENDING",
+      "selfReview": "PASS"
     },
     {
       "groupId": "grp_sh_special_016",
@@ -1119,12 +1177,13 @@
       "aspectRatio": "4:3",
       "sha256": "6b9bb1ccb4d9ee8bfd79f1500c57e84370f9456a31f729592f1bf513b90bbc7a",
       "productionOwner": "김선한",
-      "status": "PNG_PRODUCED_PENDING_MEANING_CROP_STYLE_AND_ROUTING_REVIEW",
-      "meaningReview": "PENDING",
-      "cropReview": "PENDING",
-      "styleReview": "PENDING",
+      "status": "SELF_REVIEW_PASS_PENDING_TEAM_ACCEPTANCE_AND_ROUTING",
+      "meaningReview": "PASS",
+      "cropReview": "PASS",
+      "styleReview": "PASS",
       "runtimeRouted": false,
-      "teamAcceptance": "PENDING"
+      "teamAcceptance": "PENDING",
+      "selfReview": "PASS"
     },
     {
       "groupId": "grp_sh_teen_002",
@@ -1138,12 +1197,13 @@
       "aspectRatio": "4:3",
       "sha256": "d3d1c4359afe45e3e67026e34bc16627b44ee8a6e133da433ab2f54b5208f345",
       "productionOwner": "김선한",
-      "status": "PNG_PRODUCED_PENDING_MEANING_CROP_STYLE_AND_ROUTING_REVIEW",
-      "meaningReview": "PENDING",
-      "cropReview": "PENDING",
-      "styleReview": "PENDING",
+      "status": "SELF_REVIEW_PASS_PENDING_TEAM_ACCEPTANCE_AND_ROUTING",
+      "meaningReview": "PASS",
+      "cropReview": "PASS",
+      "styleReview": "PASS",
       "runtimeRouted": false,
-      "teamAcceptance": "PENDING"
+      "teamAcceptance": "PENDING",
+      "selfReview": "PASS"
     },
     {
       "groupId": "grp_sh_teen_007",
@@ -1157,12 +1217,13 @@
       "aspectRatio": "4:3",
       "sha256": "62703ed8e403d7fefe52e2de0d106851003924b7caf8454f6a1509766cc164b4",
       "productionOwner": "김선한",
-      "status": "PNG_PRODUCED_PENDING_MEANING_CROP_STYLE_AND_ROUTING_REVIEW",
-      "meaningReview": "PENDING",
-      "cropReview": "PENDING",
-      "styleReview": "PENDING",
+      "status": "SELF_REVIEW_PASS_PENDING_TEAM_ACCEPTANCE_AND_ROUTING",
+      "meaningReview": "PASS",
+      "cropReview": "PASS",
+      "styleReview": "PASS",
       "runtimeRouted": false,
-      "teamAcceptance": "PENDING"
+      "teamAcceptance": "PENDING",
+      "selfReview": "PASS"
     },
     {
       "groupId": "grp_sh_teen_012",
@@ -1176,12 +1237,13 @@
       "aspectRatio": "4:3",
       "sha256": "e69cab787aab7ff24beec23913b1b70e84d793875e49debbb792f15d6128a0a0",
       "productionOwner": "김선한",
-      "status": "PNG_PRODUCED_PENDING_MEANING_CROP_STYLE_AND_ROUTING_REVIEW",
-      "meaningReview": "PENDING",
-      "cropReview": "PENDING",
-      "styleReview": "PENDING",
+      "status": "SELF_REVIEW_PASS_PENDING_TEAM_ACCEPTANCE_AND_ROUTING",
+      "meaningReview": "PASS",
+      "cropReview": "PASS",
+      "styleReview": "PASS",
       "runtimeRouted": false,
-      "teamAcceptance": "PENDING"
+      "teamAcceptance": "PENDING",
+      "selfReview": "PASS"
     },
     {
       "groupId": "grp_sh_teen_017",
@@ -1195,12 +1257,13 @@
       "aspectRatio": "4:3",
       "sha256": "eaa267978b6813bc39df816a8bcebe0367876a70d9d1aa78e5f193c31ddcf072",
       "productionOwner": "김선한",
-      "status": "PNG_PRODUCED_PENDING_MEANING_CROP_STYLE_AND_ROUTING_REVIEW",
-      "meaningReview": "PENDING",
-      "cropReview": "PENDING",
-      "styleReview": "PENDING",
+      "status": "SELF_REVIEW_PASS_PENDING_TEAM_ACCEPTANCE_AND_ROUTING",
+      "meaningReview": "PASS",
+      "cropReview": "PASS",
+      "styleReview": "PASS",
       "runtimeRouted": false,
-      "teamAcceptance": "PENDING"
+      "teamAcceptance": "PENDING",
+      "selfReview": "PASS"
     },
     {
       "groupId": "grp_sh_teen_022",
@@ -1214,12 +1277,13 @@
       "aspectRatio": "4:3",
       "sha256": "ad24e46550f23b063506b34b679f85ecaf6c568547af6695a921c4acd33dd694",
       "productionOwner": "김선한",
-      "status": "PNG_PRODUCED_PENDING_MEANING_CROP_STYLE_AND_ROUTING_REVIEW",
-      "meaningReview": "PENDING",
-      "cropReview": "PENDING",
-      "styleReview": "PENDING",
+      "status": "SELF_REVIEW_PASS_PENDING_TEAM_ACCEPTANCE_AND_ROUTING",
+      "meaningReview": "PASS",
+      "cropReview": "PASS",
+      "styleReview": "PASS",
       "runtimeRouted": false,
-      "teamAcceptance": "PENDING"
+      "teamAcceptance": "PENDING",
+      "selfReview": "PASS"
     },
     {
       "groupId": "grp_sh_teen_027",
@@ -1233,12 +1297,13 @@
       "aspectRatio": "4:3",
       "sha256": "abd97f8796ae18e0def72fce8675d26b60b7d55d4e9152d68c37c9ee8c08b89a",
       "productionOwner": "김선한",
-      "status": "PNG_PRODUCED_PENDING_MEANING_CROP_STYLE_AND_ROUTING_REVIEW",
-      "meaningReview": "PENDING",
-      "cropReview": "PENDING",
-      "styleReview": "PENDING",
+      "status": "SELF_REVIEW_PASS_PENDING_TEAM_ACCEPTANCE_AND_ROUTING",
+      "meaningReview": "PASS",
+      "cropReview": "PASS",
+      "styleReview": "PASS",
       "runtimeRouted": false,
-      "teamAcceptance": "PENDING"
+      "teamAcceptance": "PENDING",
+      "selfReview": "PASS"
     },
     {
       "groupId": "grp_sh_teen_032",
@@ -1252,12 +1317,13 @@
       "aspectRatio": "4:3",
       "sha256": "f0cfc21911beec3ddf32f84158f43fbb9c3e596aeb9e432fdd055aad03c990b6",
       "productionOwner": "김선한",
-      "status": "PNG_PRODUCED_PENDING_MEANING_CROP_STYLE_AND_ROUTING_REVIEW",
-      "meaningReview": "PENDING",
-      "cropReview": "PENDING",
-      "styleReview": "PENDING",
+      "status": "SELF_REVIEW_PASS_PENDING_TEAM_ACCEPTANCE_AND_ROUTING",
+      "meaningReview": "PASS",
+      "cropReview": "PASS",
+      "styleReview": "PASS",
       "runtimeRouted": false,
-      "teamAcceptance": "PENDING"
+      "teamAcceptance": "PENDING",
+      "selfReview": "PASS"
     },
     {
       "groupId": "grp_sh_teen_037",
@@ -1271,12 +1337,14 @@
       "aspectRatio": "4:3",
       "sha256": "d9a75778397fcda9a3739f60892adfe7f7be1c554d9cc813798e38ff40c89c91",
       "productionOwner": "김선한",
-      "status": "PNG_PRODUCED_PENDING_MEANING_CROP_STYLE_AND_ROUTING_REVIEW",
-      "meaningReview": "PENDING",
-      "cropReview": "PENDING",
-      "styleReview": "PENDING",
+      "status": "SELF_REVIEW_PASS_PENDING_TEAM_ACCEPTANCE_AND_ROUTING",
+      "meaningReview": "PASS",
+      "cropReview": "PASS",
+      "styleReview": "PASS",
       "runtimeRouted": false,
-      "teamAcceptance": "PENDING"
+      "teamAcceptance": "PENDING",
+      "selfReview": "PASS"
     }
-  ]
-}
+  ],
+  "selfReviewEvidence": "김선한 67장 contact sheet 및 원본 SHA-256/4:3 구조 검증"
+}\n
