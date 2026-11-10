@@ -98,6 +98,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.lifegame.domain.model.DecisionKind
+import com.example.lifegame.domain.model.ResultAnimationStatus
 import com.example.lifegame.ui.DecisionChoiceUi
 import com.example.lifegame.ui.DecisionUi
 import com.example.lifegame.ui.OutcomeUi
@@ -192,6 +193,8 @@ fun DecisionScreen(
     state: PeriodPlayUiState,
     onChoose: (choiceId: String) -> Unit,
     onContinue: () -> Unit,
+    onEventImageShown: (eventId: String) -> Unit = {},
+    onResultAnimationConsumed: (displayId: String) -> Unit = {},
     modifier: Modifier = Modifier,
 ) {
     val decision = state.decision ?: return
@@ -212,6 +215,7 @@ fun DecisionScreen(
     val popupClosed = remember { Channel<Unit>(Channel.CONFLATED) }
     val haptic = LocalHapticFeedback.current
     val reduceMotion = rememberReduceMotion()
+    val resultDisplayId = state.presentation.resultDisplayId
     val textLength = decision.text.length
     // 완성 터치 직후 아주 짧게 이어지는 연타도 삼켜, 본문을 보려던 손가락이 선택을 확정하지 않게 한다.
     var swallowTaps by remember(introKey) { mutableStateOf(false) }
@@ -228,6 +232,24 @@ fun DecisionScreen(
             previewing = false
             previewDone = true
             if (byTap) swallowTaps = true
+        }
+    }
+
+    // 화면 연출 상태만 소비한다. 엔진 진행, 보상, 기록, 사망 판정은 다시 호출하지 않는다.
+    LaunchedEffect(decision.eventId) {
+        onEventImageShown(decision.eventId)
+    }
+
+    LaunchedEffect(outcome, resultDisplayId, state.presentation.resultAnimation, reduceMotion) {
+        if (
+            outcome != null &&
+            resultDisplayId != null &&
+            state.presentation.resultAnimation == ResultAnimationStatus.PENDING
+        ) {
+            if (!reduceMotion && outcome.changes.isNotEmpty()) {
+                delay(CHANGE_HOLD_MILLIS)
+            }
+            onResultAnimationConsumed(resultDisplayId)
         }
     }
 
