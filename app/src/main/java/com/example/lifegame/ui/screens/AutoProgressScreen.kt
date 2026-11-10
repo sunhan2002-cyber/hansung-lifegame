@@ -60,6 +60,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.min
 import androidx.compose.ui.unit.sp
+import com.example.lifegame.ui.LogKind
 import com.example.lifegame.ui.LogLineUi
 import com.example.lifegame.ui.PLAY_SPEEDS
 import com.example.lifegame.ui.PeriodPlayUiState
@@ -112,8 +113,7 @@ fun AutoProgressScreen(
             .fillMaxSize()
             .background(LifeGamePaper),
     ) {
-        // 장면은 4:3. 작은 화면에서는 높이를 줄여 기록이 보이게 한다.
-        val stageHeight = min((maxWidth - 32.dp) * 0.75f, maxHeight * 0.38f)
+        val fontScale = LocalDensity.current.fontScale
         Column(Modifier.fillMaxSize()) {
             PlayTopBar(
                 health = state.stats.health,
@@ -124,17 +124,28 @@ fun AutoProgressScreen(
                 ),
                 avatar = { avatarModifier -> PlayerPortrait(state.avatar, avatarModifier) },
             )
-            Column(
+            BoxWithConstraints(
                 Modifier
                     .weight(1f)
-                    .windowInsetsPadding(WindowInsets.safeDrawing.only(WindowInsetsSides.Horizontal))
-                    .verticalScroll(rememberScrollState())
-                    .testTag("auto_progress_content"),
+                    .windowInsetsPadding(WindowInsets.safeDrawing.only(WindowInsetsSides.Horizontal)),
             ) {
-                CharacterStage(state, height = stageHeight, onOpenDetails = { detailsOpen = true })
-                YearTimer(progress = { yearProgress.value }, playing = state.autoPlaying)
-                // 최신 기록이 맨 위. 방금 고른 선택 결과를 스크롤 없이 바로 본다 (2026-11-05 피드백 4번).
-                YearLog(lines = state.log.takeLast(YEAR_LOG_LINES).asReversed())
+                // 장면은 4:3. 작은 화면 · 큰 글꼴에서는 최신 기록 두 줄(이름 줄 · 진행 막대 포함) 자리를 먼저 남기고
+                // 남은 높이만 무대에 준다. 기록을 보려고 스크롤하지 않게 한다 (2026-11-06 요구 4).
+                // 2026-11-09: 실기기 360×640dp · 글꼴 130%(상태 표시줄 · 내비게이션 바 포함)에서 무대가 최소 88dp에 걸려
+                // 최신 기록 둘째 줄이 시기 막대에 가렸다. 무대는 56dp까지 줄이고, 그보다 작아야 하면 접는다(얼굴은 위 초상).
+                val logReserve = 150.dp + 67.dp * fontScale
+                val stageHeight = min((maxWidth - 32.dp) * 0.75f, maxHeight - logReserve)
+                Column(
+                    Modifier
+                        .fillMaxSize()
+                        .verticalScroll(rememberScrollState())
+                        .testTag("auto_progress_content"),
+                ) {
+                    CharacterStage(state, height = stageHeight, onOpenDetails = { detailsOpen = true })
+                    YearTimer(progress = { yearProgress.value }, playing = state.autoPlaying)
+                    // 최신 기록이 맨 위. 방금 고른 선택 결과를 스크롤 없이 바로 본다 (2026-11-05 피드백 4번).
+                    YearLog(lines = state.log.takeLast(YEAR_LOG_LINES).asReversed())
+                }
             }
             PeriodTrack(marks = state.periodMarks, yearLabel = "${state.yearInPeriod}번째 해")
             PlaybackBar(
@@ -162,6 +173,9 @@ fun AutoProgressScreen(
     }
 }
 
+/** 이보다 낮으면 무대(장면 · 전신)를 접는다. 얼굴은 위쪽 초상에 남는다. */
+private val STAGE_MIN_HEIGHT = 56.dp
+
 /**
  * 사건이 없을 때 계속 보이는 3인칭 무대. 배경(지금 초점의 장면)과 캐릭터를 따로 겹친다.
  * 배경 후보에서 사람이 그려진 시기 초상은 빼서 캐릭터가 두 번 보이지 않게 한다.
@@ -171,11 +185,11 @@ private fun CharacterStage(state: PeriodPlayUiState, height: Dp, onOpenDetails: 
     Column(
         Modifier
             .fillMaxWidth()
-            .padding(horizontal = 16.dp, vertical = 10.dp),
+            .padding(start = 16.dp, end = 16.dp, top = 8.dp, bottom = 4.dp),
         horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.spacedBy(8.dp),
+        verticalArrangement = Arrangement.spacedBy(6.dp),
     ) {
-        Box(
+        if (height >= STAGE_MIN_HEIGHT) Box(
             Modifier
                 .fillMaxWidth()
                 .height(height)
@@ -197,28 +211,37 @@ private fun CharacterStage(state: PeriodPlayUiState, height: Dp, onOpenDetails: 
                     .aspectRatio(0.62f),
             )
         }
-        Text(state.playerName, color = LifeGameInk, fontSize = 20.sp, fontWeight = FontWeight.Bold)
-        Text(
-            text = "${state.periodName} · 다음 사건을 기다리는 중",
-            color = LifeGameInkSecondary,
-            fontFamily = LifeGameSerif,
-            fontSize = 14.sp,
-        )
+        // 이름과 시기를 한 줄로 줄여 아래 기록 자리를 넓힌다.
+        Row(verticalAlignment = Alignment.Bottom, horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+            Text(state.playerName, color = LifeGameInk, fontSize = 19.sp, fontWeight = FontWeight.Bold, maxLines = 1)
+            Text(
+                text = "${state.periodName} · 다음 사건을 기다리는 중",
+                color = LifeGameInkSecondary,
+                fontFamily = LifeGameSerif,
+                fontSize = 14.sp,
+                maxLines = 1,
+                overflow = androidx.compose.ui.text.style.TextOverflow.Ellipsis,
+            )
+        }
     }
 }
 
+/** 다음 해까지 남은 시간. 선과 상태 글자를 한 줄에 둬 아래 기록 자리를 넓힌다. */
 @Composable
 private fun YearTimer(progress: () -> Float, playing: Boolean) {
-    Column(Modifier.fillMaxWidth().padding(start = 20.dp, end = 20.dp, top = 12.dp)) {
-        Canvas(Modifier.fillMaxWidth().height(2.dp)) {
+    Row(
+        Modifier.fillMaxWidth().padding(start = 20.dp, end = 20.dp, top = 2.dp),
+        verticalAlignment = Alignment.CenterVertically,
+        horizontalArrangement = Arrangement.spacedBy(10.dp),
+    ) {
+        Canvas(Modifier.weight(1f).height(2.dp)) {
             drawRect(LifeGameRule)
             drawRect(LifeGameInk, size = Size(size.width * progress(), size.height))
         }
         Text(
             text = if (playing) "다음 해까지" else "멈춤",
-            modifier = Modifier.align(Alignment.End).padding(top = 4.dp),
             color = LifeGameInkTertiary,
-            fontSize = 11.sp,
+            fontSize = 12.sp,
         )
     }
 }
@@ -247,12 +270,15 @@ private fun YearLog(lines: List<LogLineUi>) {
                 modifier = Modifier.fillMaxWidth().testTag("year_log_line_$index"),
                 verticalArrangement = Arrangement.spacedBy(2.dp),
             ) {
-                Text(
-                    text = line.label,
-                    color = (if (isNow) LifeGameInk else LifeGameInkTertiary).copy(alpha = fade),
-                    fontSize = 11.sp,
-                    fontWeight = if (isNow) FontWeight.Bold else FontWeight.Normal,
-                )
+                Row(horizontalArrangement = Arrangement.spacedBy(8.dp), verticalAlignment = Alignment.CenterVertically) {
+                    Text(
+                        text = line.label,
+                        color = (if (isNow) LifeGameInk else LifeGameInkTertiary).copy(alpha = fade),
+                        fontSize = 12.5.sp,
+                        fontWeight = if (isNow) FontWeight.Bold else FontWeight.Normal,
+                    )
+                    LogKindTag(line.kind, fade)
+                }
                 Text(
                     text = line.text,
                     color = LifeGameInk.copy(alpha = fade),
@@ -263,6 +289,28 @@ private fun YearLog(lines: List<LogLineUi>) {
             }
         }
     }
+}
+
+/** 선택 결과와 자동 이야기를 글자로 구분한다. 일반 기록(초점 등)은 표시하지 않는다. */
+@Composable
+private fun LogKindTag(kind: LogKind, fade: Float) {
+    val text = when (kind) {
+        LogKind.CHOICE -> "내 선택"
+        LogKind.STORY -> "그해 이야기"
+        LogKind.RECORD -> return
+    }
+    val shape = RoundedCornerShape(6.dp)
+    Text(
+        text = text,
+        color = (if (kind == LogKind.CHOICE) LifeGameCard else LifeGameInkSecondary).copy(alpha = fade),
+        fontSize = 12.sp,
+        fontWeight = FontWeight.Medium,
+        modifier = Modifier
+            .clip(shape)
+            .background(if (kind == LogKind.CHOICE) LifeGameInk.copy(alpha = fade) else LifeGameRule.copy(alpha = fade))
+            .padding(horizontal = 6.dp, vertical = 1.dp)
+            .testTag("log_kind_${kind.name.lowercase()}"),
+    )
 }
 
 /** 일시정지 · 배속 1×/2×/4× · 다음 결정까지 (R-20). */

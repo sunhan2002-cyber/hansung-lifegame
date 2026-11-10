@@ -109,6 +109,16 @@ class Week7FlowSmokeTest {
             composeRule.onNodeWithText("사건 보기").performScrollTo().performClick()
             composeRule.waitForIdle()
         }
+        // 본문 → 사건 그림 선노출 → 선택지 (2026-11-06). 선노출이 뜨면 한 번 눌러 넘긴다.
+        var sawPreview = false
+        composeRule.waitUntil(timeoutMillis = 20_000) {
+            if (composeRule.onAllNodesWithTag("scene_preview").fetchSemanticsNodes().isNotEmpty()) {
+                if (screenshot && !sawPreview) saveScreenshot("05_scene_preview.png")
+                sawPreview = true
+                composeRule.onNodeWithTag("scene_preview").performClick()
+            }
+            composeRule.onAllNodesWithTag("decision_choice_A").fetchSemanticsNodes().isNotEmpty()
+        }
         composeRule.onNodeWithTag("decision_choice_A").performScrollTo().assertIsDisplayed()
         if (screenshot) {
             saveScreenshot("05_decision.png")
@@ -157,6 +167,8 @@ class Week7FlowSmokeTest {
             }
             found != null
         }
+        // 화면이 바뀐 직후 0.3초는 앞 화면 연타가 새 버튼을 누르지 않게 터치를 막는다(2026-11-09). 사람처럼 그 뒤에 누른다.
+        composeRule.waitUntil(5_000) { composeRule.onAllNodesWithTag("screen_change_tap_guard").fetchSemanticsNodes().isEmpty() }
         return requireNotNull(found)
     }
 

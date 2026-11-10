@@ -2,6 +2,7 @@ package com.example.lifegame.ui
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
@@ -10,8 +11,15 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.input.pointer.PointerEventPass
+import androidx.compose.ui.input.pointer.pointerInput
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.viewmodel.compose.viewModel
@@ -32,9 +40,11 @@ import com.example.lifegame.ui.screens.EndingStep
 import com.example.lifegame.ui.screens.TitleCollectionScreen
 import com.example.lifegame.ui.screens.HomeScreen
 import com.example.lifegame.ui.screens.RunEndScreen
+import com.example.lifegame.ui.screens.TAP_GUARD_MILLIS
 import com.example.lifegame.ui.theme.LifeGameInkSecondary
 import com.example.lifegame.ui.theme.LifeGamePaper
 import com.example.lifegame.ui.theme.LifeGameTheme
+import kotlinx.coroutines.delay
 
 /** v4 화면 흐름: 홈 → 프로필 만들기 → 플레이(장 표지 · 자동 진행 · 결정 · 끝). */
 object Routes {
@@ -132,11 +142,44 @@ fun LifeGameApp(
 }
 
 @Composable
-private fun PlayHost(
+internal fun PlayHost(
     gameViewModel: LifeGameViewModel,
     onGoHome: () -> Unit,
 ) {
     val play = gameViewModel.play
+    // 화면이 바뀐 직후 잠깐(연타 보호 시간) 터치를 받지 않는다. "계속하기"를 빠르게 여러 번 누르면 첫 터치로 화면이 바뀌고
+    // 남은 터치가 새 화면의 같은 자리 버튼(배속 · 초점 고르기 등)을 눌렀다(2026-11-09 작은 화면 실기 확인).
+    // 보호는 화면이 바뀐 그 프레임부터 켠다(효과에서 켜면 한두 프레임 늦어 그 사이 터치가 새 화면에 닿는다).
+    val phase = play?.phase
+    var settledPhase by remember { mutableStateOf<PlayPhase?>(null) }
+    val guardingTaps = settledPhase != phase
+    LaunchedEffect(phase) {
+        delay(TAP_GUARD_MILLIS)
+        settledPhase = phase
+    }
+    Box(Modifier.fillMaxSize()) {
+        PlayPhaseScreen(play, gameViewModel, onGoHome)
+        if (guardingTaps) {
+            Box(
+                Modifier
+                    .matchParentSize()
+                    .testTag("screen_change_tap_guard")
+                    .pointerInput(Unit) {
+                        awaitPointerEventScope {
+                            while (true) awaitPointerEvent(PointerEventPass.Initial).changes.forEach { it.consume() }
+                        }
+                    },
+            )
+        }
+    }
+}
+
+@Composable
+private fun PlayPhaseScreen(
+    play: PeriodPlayUiState?,
+    gameViewModel: LifeGameViewModel,
+    onGoHome: () -> Unit,
+) {
     when (play?.phase) {
         PlayPhase.CHAPTER -> ChapterFocusScreen(
             state = play,
@@ -151,7 +194,7 @@ private fun PlayHost(
         )
         PlayPhase.DECISION -> if (play.decision == null) {
             // 사건 머리를 되살리지 못한 결과 화면은 빈 화면 대신 다음 진행으로 넘긴다.
-            androidx.compose.runtime.LaunchedEffect(play.yearKey) { gameViewModel.continueAfterOutcome() }
+            LaunchedEffect(play.yearKey) { gameViewModel.continueAfterOutcome() }
         } else {
             DecisionScreen(
                 state = play,

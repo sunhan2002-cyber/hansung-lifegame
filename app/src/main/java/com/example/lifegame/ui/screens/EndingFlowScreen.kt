@@ -438,8 +438,10 @@ private fun CertificateView(
                     } else {
                         Text("칭호 기록 없음", color = LifeGameInkTertiary, fontSize = 14.sp, modifier = Modifier.testTag("certificate_title"))
                     }
-                    if (record.usesPhotoFace) {
-                        Text("사진 얼굴: 예시 응답(서버 연결 전)", color = LifeGameInkTertiary, fontSize = 12.5.sp)
+                    if (record.avatar.photoFaceSheet != null) {
+                        Text("사진으로 만든 얼굴", color = LifeGameInkTertiary, fontSize = 13.sp, modifier = Modifier.testTag("certificate_photo_face"))
+                    } else if (record.usesPhotoFace) {
+                        Text("사진 얼굴: 예시 응답(생성 키 없는 빌드)", color = LifeGameInkTertiary, fontSize = 13.sp)
                     }
                 }
             }

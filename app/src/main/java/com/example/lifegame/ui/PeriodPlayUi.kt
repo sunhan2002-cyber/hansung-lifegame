@@ -66,7 +66,10 @@ data class FocusOptionUi(
     val effects: List<StatChangeUi>,
 )
 
-data class LogLineUi(val key: String, val label: String, val text: String)
+/** 기록 한 줄의 출처. 화면에서 선택 결과와 자동 이야기를 구분해 보여 준다 (2026-11-06 요구 4). */
+enum class LogKind { CHOICE, STORY, RECORD }
+
+data class LogLineUi(val key: String, val label: String, val text: String, val kind: LogKind = LogKind.RECORD)
 
 data class DecisionChoiceUi(
     val choiceId: String,
@@ -80,7 +83,15 @@ data class DecisionChoiceUi(
     val lockReason: String? = null,
     /** 잠긴 이유를 하나씩. 예: "지력 60 필요 (지금 52)", "대학 진학 필요" (8주차) */
     val lockReasons: List<String> = emptyList(),
-)
+) {
+    private val hintParts: List<String> get() = hint.split(" · ").map { it.trim() }.filter { it.isNotEmpty() }
+
+    /** "가능성 높음"처럼 결과가 갈리는 정도. 결과가 하나뿐이면 null. */
+    val likelihood: String? get() = hintParts.firstOrNull { it.startsWith("가능성") }
+
+    /** 사회성 · 행복 같은 보조 능력치 태그. 선택지 카드에서는 기본으로 접어 둔다 (2026-11-06 요구 7). */
+    val statTags: List<String> get() = hintParts.filterNot { it.startsWith("가능성") }
+}
 
 data class DecisionUi(
     val eventId: String,
@@ -207,7 +218,15 @@ data class PlayContent(
     /** 해마다 흘러가는 일상 이야기 (yearly_stories.sample.json) */
     val yearlyStories: YearlyStoryBook = YearlyStoryBook.EMPTY,
     val imageRouting: ImageRouting = ImageRouting(),
-)
+) {
+    /** 선택 결과 문장 모음(이름 치환이 끝난 문장). 기록 줄이 선택 결과인지 가려낼 때 쓴다. */
+    val outcomeTexts: Set<String> by lazy {
+        decisions.values
+            .flatMap { event -> event.choices.flatMap { option -> option.outcomes.map { it.resultText } } }
+            .filter { it.isNotBlank() }
+            .toSet()
+    }
+}
 
 fun StatDelta.toChanges(): List<StatChangeUi> =
     toDisplayMap()
@@ -468,7 +487,7 @@ fun buildPeriodPlayState(
         focusOptions = content.focuses.filter { it.period == state.period }.map { it.toOptionUi() },
         sceneImageId = sceneImageId,
         sceneFile = content.imageFiles[sceneImageId],
-        log = buildLogLines(state.moments, periods, content.yearlyStories, state.runSeed),
+        log = buildLogLines(state.moments, periods, content.yearlyStories, state.runSeed, content.outcomeTexts),
         yearKey = "${state.runId}:${state.period}:$shownYear:${state.moments.size}",
         decision = decision ?: step.pendingDecision?.let { pending ->
             buildDecisionUi(
