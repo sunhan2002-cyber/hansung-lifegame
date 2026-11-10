@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "date": "2026-11-07",
+  "date": "2026-11-10",
   "productionOwner": "신기훈",
   "phase": "ALL_ASSIGNED_PNG_SUBMITTED_SELF_QA_ONLY_TEAM_REVIEW_PENDING",
   "sourceAssignment": {
@@ -78,14 +78,14 @@
       "width": 1280,
       "height": 960,
       "format": "PNG",
-      "sha256": "de00bc2f7e317ebd2b7404074baf2d842021e9dc148b8b69f8c269296bc0dd6a",
+      "sha256": "444187678a5597c0daf856b65d1c3a43ce4e872852d40e7c65217d921e2802e9",
       "generationMethod": "Figma AI generate_image (model gpt-image-2.5-flare) in the producer's own Figma team file; unmodified generated PNG downloaded from the Figma asset URL and copied into the project. 1448x1086 was requested; the model returned 1280x960 (exact 4:3), kept at native size without resizing.",
       "figma": {
         "fileKey": "44sRMgrz6OkXdqDgfKVE2J",
-        "nodeId": "2:2"
+        "nodeId": "11:2"
       },
-      "prompt": "Use case: illustration-story. Asset: one opaque landscape 4:3 pixel art background for an Android life-simulation game event \"자취 첫 주\" (adult_004). Create one coherent scene, NOT UI or collage.\nEvent text for meaning only (do NOT render any of this text): 엄마: \"the player, 밥은 꼭 해 먹어.\" 냉장고엔 반찬 네 통, 폰에는 배달 쿠폰 네 장.\nScene, first-person view (the protagonist's own face is never visible): place = 자취방 작은 주방; current moment = 문을 연 냉장고 속 반찬 네 통과 손의 휴대폰 배달 쿠폰을 번갈아 봄; required visible objects = 냉장고, 반찬 통 4개, 휴대폰(쿠폰 그림, 글자 판독 불필요); people and ages = 나(청년, 손), 엄마는 대사만; time of day = 저녁(추정).\nThe protagonist is a young adult in their 20s: young adult hands, plain sleeves. Hands are gender-neutral (no nail polish, no jewelry). Other people may appear only as described; do not add extra characters.\nThis is the moment BEFORE the player makes a choice: show the situation only, not any decision or outcome. Must NOT show: 요리 중이거나 배달 음식이 온 모습.\nComposition: place the key action and every required object together inside the middle 30 percent of the image width (x 35% to 65%) so they all survive a narrow portrait center crop; the room or surroundings extend to the sides only as atmosphere. Natural first-person eye level.\nStyle: crisp medium-density 16-bit pixel art, visible consistent square pixel grid, flat limited color steps, warm muted cream, ochre, wood brown, olive and dusty blue/teal palette; clear object silhouettes, restrained highlights, cozy narrative life-simulation game background.\nAvoid: readable letters, Korean or English text, numerals, pseudo-writing, logos, brand names, watermarks, game interface, health bars, buttons, speech bubbles with text, the protagonist's face, mirror or window reflections of the protagonist, split screen, blur, gradients, dithering, photorealism, 3D.",
-      "promptNote": "공통 템플릿 그대로 보낸 프롬프트",
+      "prompt": "Use case: illustration-story. Asset: one opaque landscape 4:3 pixel art background for an Android life-simulation game event \"자취 첫 주\" (adult_004). Create one coherent scene, NOT UI or collage.\nEvent text for meaning only (do NOT render any of this text): 엄마: \"the player, 밥은 꼭 해 먹어.\" 냉장고엔 반찬 네 통, 폰에는 배달 쿠폰 네 장.\nScene, first-person view (the protagonist's own face is never visible): place = 자취방 작은 주방; current moment = 문을 연 냉장고 속 반찬 네 통과 손의 휴대폰 배달 쿠폰을 번갈아 봄; required visible objects = 냉장고, 반찬 통 4개, 휴대폰(쿠폰 그림, 글자 판독 불필요); people and ages = 나(청년, 손), 엄마는 대사만; time of day = 저녁(추정).\nThe protagonist is a young adult in their 20s: young adult hands, plain sleeves. Hands are gender-neutral (no nail polish, no jewelry). Other people may appear only as described; do not add extra characters.\nThis is the moment BEFORE the player makes a choice: show the situation only, not any decision or outcome. Must NOT show: 요리 중이거나 배달 음식이 온 모습.\nComposition: a narrow, centered view into an open small refrigerator whose middle shelf holds exactly four lidded side-dish containers in a row at the center (x 38% to 62%); one hand holds a smartphone up IN FRONT of the lower part of the open fridge, directly below the four containers and fully inside the center (phone x 42% to 58%), its whole screen visible and showing four simple coupon cards with food icons (no text, no numbers); keep the four containers and the entire phone together inside x 36% to 64% so both survive a narrow portrait center crop; the small kitchen extends to the sides only as atmosphere. Natural first-person eye level.\nStyle: crisp medium-density 16-bit pixel art, visible consistent square pixel grid, flat limited color steps, warm muted cream, ochre, wood brown, olive and dusty blue/teal palette; clear object silhouettes, restrained highlights, cozy narrative life-simulation game background.\nAvoid: readable letters, Korean or English text, numerals, pseudo-writing, logos, brand names, watermarks, game interface, health bars, buttons, speech bubbles with text, the protagonist's face, mirror or window reflections of the protagonist, split screen, blur, gradients, dithering, photorealism, 3D.",
+      "promptNote": "공통 템플릿에서 Composition 줄(또는 명시한 부분)만 재시도 때 고쳐 보낸 최종 프롬프트",
       "scene": {
         "place": "자취방 작은 주방",
         "mainAction": "문을 연 냉장고 속 반찬 네 통과 손의 휴대폰 배달 쿠폰을 번갈아 봄",
@@ -98,18 +98,32 @@
         "adult_004": "d9331664dd771823cfa5bc9591ee93d4dd00dc730aa1184c9737575653aaf139"
       },
       "routedIntoEvents": false,
+      "week12Revision": {
+        "date": "2026-11-10",
+        "reason": "정원률 2026-11-09 화풍 검수 수정 요청: 반찬 통 네 개는 남지만 배달 쿠폰 휴대폰 오른쪽이 잘린다.",
+        "previousSha256": "de00bc2f7e317ebd2b7404074baf2d842021e9dc148b8b69f8c269296bc0dd6a",
+        "previousStatus": "SUPERSEDED_NOT_APPROVED",
+        "newSha256": "444187678a5597c0daf856b65d1c3a43ce4e872852d40e7c65217d921e2802e9"
+      },
       "attempts": [
         {
           "attempt": 1,
           "sha256": "de00bc2f7e317ebd2b7404074baf2d842021e9dc148b8b69f8c269296bc0dd6a",
           "figmaNodeId": "2:2",
+          "result": "SUPERSEDED_WAS_COMMITTED_NOT_APPROVED",
+          "reason": "11/09 정원률 화풍 검수 수정 요청: 반찬 통 네 개는 남지만 배달 쿠폰 휴대폰 오른쪽이 잘린다. (main·이전 PR에 커밋됐던 판, 2026-11-10 교체)"
+        },
+        {
+          "attempt": 2,
+          "sha256": "444187678a5597c0daf856b65d1c3a43ce4e872852d40e7c65217d921e2802e9",
+          "figmaNodeId": "11:2",
           "result": "ACCEPTED"
         }
       ],
       "selfReview": {
         "status": "PASS_SELF_QA_PENDING_TEAM",
-        "verdict": "PASS_WITH_NOTE",
-        "semantic": "자취방 주방에서 문 연 냉장고 속 반찬 통 4개와 손의 휴대폰 쿠폰 그림(음식 아이콘, 글자 없음)을 함께 봄. 요리 중·배달 도착 없음, 엄마 미등장.",
+        "verdict": "PASS",
+        "semantic": "자취방 주방의 열린 냉장고 가운데 칸에 반찬 통 네 개, 그 바로 아래에서 든 휴대폰 화면 전체에 음식 그림 쿠폰 네 장(글자·숫자 없음). 요리·배달 도착 없음, 엄마 미등장.",
         "checks": "본문·장면 명세 대조, 선택 전 상태, 금지 요소, 주인공 얼굴·읽을 글자·숫자·로고·UI 없음, 세로 가운데 크롭"
       },
       "semanticReview": {
@@ -124,7 +138,7 @@
         "status": "PENDING",
         "reviewer": "",
         "selfSimulation": "PIL 360x800 가운데 크롭 재현(원본 x 424~856)",
-        "selfNote": "냉장고와 반찬 통 4개는 크롭 안. 휴대폰은 오른쪽 경계에 절반 걸리지만 쿠폰 그림 일부가 보임."
+        "selfNote": "휴대폰 화면 전체와 반찬 통 크롭 안(통 하나는 오른쪽 경계에 일부). 수정 요청 해결."
       }
     },
     {
@@ -573,13 +587,13 @@
       "width": 1280,
       "height": 960,
       "format": "PNG",
-      "sha256": "3777be34f034a946c7ac0bf329b1558a43d60e370464c214276f81e3b38de2ba",
+      "sha256": "a45462844eee36a1b65339de9f7c470b34814a2d02075f656dd00a8ea6e97eaa",
       "generationMethod": "Figma AI generate_image (model gpt-image-2.5-flare) in the producer's own Figma team file; unmodified generated PNG downloaded from the Figma asset URL and copied into the project. 1448x1086 was requested; the model returned 1280x960 (exact 4:3), kept at native size without resizing.",
       "figma": {
         "fileKey": "44sRMgrz6OkXdqDgfKVE2J",
-        "nodeId": "4:2"
+        "nodeId": "11:11"
       },
-      "prompt": "Use case: illustration-story. Asset: one opaque landscape 4:3 pixel art background for an Android life-simulation game event \"도로 주행 시험\" (adult_044). Create one coherent scene, NOT UI or collage.\nEvent text for meaning only (do NOT render any of this text): 운전면허 도로 주행 시험. 감독관이 클립보드를 들고 말했다. \"출발하세요.\"\nScene, first-person view (the protagonist's own face is never visible): place = 시험용 승용차 운전석; current moment = 시동 건 차에서 핸들을 잡고 옆 감독관의 출발 지시를 들음; required visible objects = 핸들, 앞 유리 너머 도로 코스, 감독관의 클립보드; people and ages = 나(청년, 손), 감독관(중년); time of day = 낮.\nThe protagonist is a young adult in their 20s: young adult hands, plain sleeves. Hands are gender-neutral (no nail polish, no jewelry). Other people may appear only as described; do not add extra characters.\nThis is the moment BEFORE the player makes a choice: show the situation only, not any decision or outcome. Must NOT show: 와이퍼 작동(선택 B), 합격·불합격 표시.\nComposition: seen from the driver's seat, both hands grip the steering wheel slightly left of center (x 34% to 52%); the middle-aged examiner sits INSIDE the car in the front passenger seat immediately to the right (never standing outside the car), shown from shoulder to lap with the face turned toward the viewer, holding a clipboard on their lap, the clipboard placed just right of center (x 52% to 64%); the empty test course road with a few traffic cones is visible through the windshield at the center. Keep the hands, the wheel, the clipboard and the road view together inside x 34% to 66% so they survive a narrow portrait center crop; the car doors extend to the sides only as atmosphere. Natural first-person eye level.\nStyle: crisp medium-density 16-bit pixel art, visible consistent square pixel grid, flat limited color steps, warm muted cream, ochre, wood brown, olive and dusty blue/teal palette; clear object silhouettes, restrained highlights, cozy narrative life-simulation game background.\nAvoid: readable letters, Korean or English text, numerals, pseudo-writing, logos, brand names, watermarks, game interface, health bars, buttons, speech bubbles with text, the protagonist's face, mirror or window reflections of the protagonist, split screen, blur, gradients, dithering, photorealism, 3D.",
+      "prompt": "Use case: illustration-story. Asset: one opaque landscape 4:3 pixel art background for an Android life-simulation game event \"도로 주행 시험\" (adult_044). Create one coherent scene, NOT UI or collage.\nEvent text for meaning only (do NOT render any of this text): 운전면허 도로 주행 시험. 감독관이 클립보드를 들고 말했다. \"출발하세요.\"\nScene, first-person view (the protagonist's own face is never visible): place = 시험용 승용차 운전석; current moment = 시동 건 차에서 핸들을 잡고 옆 감독관의 출발 지시를 들음; required visible objects = 핸들, 앞 유리 너머 도로 코스, 감독관의 클립보드; people and ages = 나(청년, 손), 감독관(중년); time of day = 낮.\nThe protagonist is a young adult in their 20s: young adult hands, plain sleeves. Hands are gender-neutral (no nail polish, no jewelry). Other people may appear only as described; do not add extra characters.\nThis is the moment BEFORE the player makes a choice: show the situation only, not any decision or outcome. Must NOT show: 와이퍼 작동(선택 B), 합격·불합격 표시.\nComposition: seen from the driver's seat with the camera turned slightly toward the passenger side, so the steering wheel with both hands sits at the lower center-left (x 34% to 50%) and the middle-aged examiner in the front passenger seat is right next to it near the center (examiner's face and upper body x 50% to 64%), looking at the viewer and pointing forward through the windshield with one hand while holding a clipboard upright against the chest in the other hand (clipboard x 52% to 62%); through the windshield at the top center the empty test course road with a few traffic cones is visible; keep the wheel, the hands, the examiner's face, the pointing hand, the clipboard and the road together inside x 34% to 66% so they survive a narrow portrait center crop; the car doors extend to the sides only as atmosphere. Natural first-person eye level.\nStyle: crisp medium-density 16-bit pixel art, visible consistent square pixel grid, flat limited color steps, warm muted cream, ochre, wood brown, olive and dusty blue/teal palette; clear object silhouettes, restrained highlights, cozy narrative life-simulation game background.\nAvoid: readable letters, Korean or English text, numerals, pseudo-writing, logos, brand names, watermarks, game interface, health bars, buttons, speech bubbles with text, the protagonist's face, mirror or window reflections of the protagonist, split screen, blur, gradients, dithering, photorealism, 3D.",
       "promptNote": "공통 템플릿에서 Composition 줄(또는 명시한 부분)만 재시도 때 고쳐 보낸 최종 프롬프트",
       "scene": {
         "place": "시험용 승용차 운전석",
@@ -593,6 +607,13 @@
         "adult_044": "02672d75e7cb276b7bebca5d44b866e68a2a8187d6d841d07a047441d80e5a34"
       },
       "routedIntoEvents": false,
+      "week12Revision": {
+        "date": "2026-11-10",
+        "reason": "정원률 2026-11-09 화풍 검수 수정 요청: 세로 화면에서 감독관 얼굴이 빠지고 클립보드는 가장자리만 남는다.",
+        "previousSha256": "3777be34f034a946c7ac0bf329b1558a43d60e370464c214276f81e3b38de2ba",
+        "previousStatus": "SUPERSEDED_NOT_APPROVED",
+        "newSha256": "a45462844eee36a1b65339de9f7c470b34814a2d02075f656dd00a8ea6e97eaa"
+      },
       "attempts": [
         {
           "attempt": 1,
@@ -605,13 +626,27 @@
           "attempt": 2,
           "sha256": "3777be34f034a946c7ac0bf329b1558a43d60e370464c214276f81e3b38de2ba",
           "figmaNodeId": "4:2",
+          "result": "SUPERSEDED_WAS_COMMITTED_NOT_APPROVED",
+          "reason": "11/09 정원률 화풍 검수 수정 요청: 세로 화면에서 감독관 얼굴이 빠지고 클립보드는 가장자리만 남는다. (main·이전 PR에 커밋됐던 판, 2026-11-10 교체)"
+        },
+        {
+          "attempt": 3,
+          "sha256": "b7f56b36a8c63c8950e4f7ad2f96cebc81639c45613660f2807c348691584234",
+          "figmaNodeId": "11:3",
+          "result": "REJECTED_NOT_COMMITTED",
+          "reason": "가리키는 손은 들어왔지만 클립보드가 여전히 크롭 오른쪽 밖"
+        },
+        {
+          "attempt": 4,
+          "sha256": "a45462844eee36a1b65339de9f7c470b34814a2d02075f656dd00a8ea6e97eaa",
+          "figmaNodeId": "11:11",
           "result": "ACCEPTED"
         }
       ],
       "selfReview": {
         "status": "PASS_SELF_QA_PENDING_TEAM",
-        "verdict": "PASS_WITH_NOTE",
-        "semantic": "운전석에서 핸들을 잡은 손, 앞 유리 너머 콘이 놓인 시험 코스, 조수석에 앉아 클립보드를 든 중년 감독관. 와이퍼·합격 표시 없음.",
+        "verdict": "PASS",
+        "semantic": "운전석에서 핸들을 잡은 손, 조수석 감독관이 앞을 가리키며 콘 배치 코스 그림(글자 없음) 클립보드를 가운데에 들어 보임, 앞 유리 너머 콘이 놓인 시험 코스. 와이퍼·합격 표시 없음.",
         "checks": "본문·장면 명세 대조, 선택 전 상태, 금지 요소, 주인공 얼굴·읽을 글자·숫자·로고·UI 없음, 세로 가운데 크롭"
       },
       "semanticReview": {
@@ -626,7 +661,7 @@
         "status": "PENDING",
         "reviewer": "",
         "selfSimulation": "PIL 360x800 가운데 크롭 재현(원본 x 424~856)",
-        "selfNote": "핸들, 손, 콘 코스 유지. 감독관 클립보드는 크롭 오른쪽 경계에 일부만 보임."
+        "selfNote": "클립보드 전체, 가리키는 손, 코스가 크롭 중앙. 감독관 얼굴은 오른쪽 경계에 일부. 수정 요청 해결."
       }
     },
     {
@@ -974,13 +1009,13 @@
       "width": 1280,
       "height": 960,
       "format": "PNG",
-      "sha256": "72e02b2b009bc53b48887cba059dd6ff9e55b75b95da4832967d4c3f1e8a6eb4",
+      "sha256": "bff042e40de4d94b8237d096842e9b227ea1f1726f5ac64f352857105474eff4",
       "generationMethod": "Figma AI generate_image (model gpt-image-2.5-flare) in the producer's own Figma team file; unmodified generated PNG downloaded from the Figma asset URL and copied into the project. 1448x1086 was requested; the model returned 1280x960 (exact 4:3), kept at native size without resizing.",
       "figma": {
         "fileKey": "44sRMgrz6OkXdqDgfKVE2J",
-        "nodeId": "5:2"
+        "nodeId": "11:4"
       },
-      "prompt": "Use case: illustration-story. Asset: one opaque landscape 4:3 pixel art background for an Android life-simulation game event \"마감 같이 하는 사람\" (adult_076). Create one coherent scene, NOT UI or collage.\nEvent text for meaning only (do NOT render any of this text): 알바든 회사든, 매일 마감을 같이 하는 사람이 있다. 오늘은 둘만 남았다. 그 사람이 불을 끄며 묻는다. \"the player 씨, 배 안 고파요?\"\nScene, first-person view (the protagonist's own face is never visible): place = 마감 중인 일터 출입문 앞; current moment = 동료가 전등 스위치를 끄며 나를 돌아보고 말을 건넴; required visible objects = 전등 스위치, 어두워지는 실내, 출입문; people and ages = 나(청년, 손), 동료(청년, 성별 고정 안 함); time of day = 밤.\nThe protagonist is a young adult in their 20s: young adult hands, plain sleeves. Hands are gender-neutral (no nail polish, no jewelry). Other people may appear only as described; do not add extra characters.\nThis is the moment BEFORE the player makes a choice: show the situation only, not any decision or outcome. Must NOT show: 국밥집, 둘이 걷는 모습.\nComposition: the young coworker stands at the exact center right beside the open entrance door, half turned back toward the viewer while one hand presses the wall light switch next to them; the light switch, the coworker's hand and the edge of the open entrance door are all together inside x 40% to 62%; behind them the workplace interior is dimming with half the lights already off; keep everything important inside x 35% to 65% so it survives a narrow portrait center crop; the walls extend to the sides only as atmosphere. The protagonist's hands are not raised or reaching. Natural first-person eye level.\nStyle: crisp medium-density 16-bit pixel art, visible consistent square pixel grid, flat limited color steps, warm muted cream, ochre, wood brown, olive and dusty blue/teal palette; clear object silhouettes, restrained highlights, cozy narrative life-simulation game background.\nAvoid: readable letters, Korean or English text, numerals, pseudo-writing, logos, brand names, watermarks, game interface, health bars, buttons, speech bubbles with text, the protagonist's face, mirror or window reflections of the protagonist, split screen, blur, gradients, dithering, photorealism, 3D.",
+      "prompt": "Use case: illustration-story. Asset: one opaque landscape 4:3 pixel art background for an Android life-simulation game event \"마감 같이 하는 사람\" (adult_076). Create one coherent scene, NOT UI or collage.\nEvent text for meaning only (do NOT render any of this text): 알바든 회사든, 매일 마감을 같이 하는 사람이 있다. 오늘은 둘만 남았다. 그 사람이 불을 끄며 묻는다. \"the player 씨, 배 안 고파요?\"\nScene, first-person view (the protagonist's own face is never visible): place = 마감 중인 일터 출입문 앞; current moment = 동료가 전등 스위치를 끄며 나를 돌아보고 말을 건넴; required visible objects = 전등 스위치, 어두워지는 실내, 출입문; people and ages = 나(청년, 손), 동료(청년, 성별 고정 안 함); time of day = 밤.\nThe protagonist is a young adult in their 20s: young adult hands, plain sleeves. Hands are gender-neutral (no nail polish, no jewelry). Other people may appear only as described; do not add extra characters.\nThis is the moment BEFORE the player makes a choice: show the situation only, not any decision or outcome. Must NOT show: 국밥집, 둘이 걷는 모습.\nComposition: a centered view of the workplace exit at night: a plain wall light switch panel is mounted on the wall at the EXACT CENTER of the image (switch x 47% to 53%, at shoulder height), with the frame of the open entrance door immediately to its right (door frame x 54% to 64%); the young coworker (gender not identifiable: short simple hair, plain work apron over a plain shirt) stands at center-left (x 36% to 48%), body half turned back toward the viewer with a gentle questioning look, and that coworker's index finger is pressing the switch at the center; behind them the workplace interior is dimming with half the ceiling lights already off; keep the switch, the pressing finger, the coworker's face and the door frame together inside x 36% to 64% so they survive a narrow portrait center crop; the walls extend to the sides only as atmosphere. The protagonist's hands are not raised or reaching. Natural first-person eye level.\nStyle: crisp medium-density 16-bit pixel art, visible consistent square pixel grid, flat limited color steps, warm muted cream, ochre, wood brown, olive and dusty blue/teal palette; clear object silhouettes, restrained highlights, cozy narrative life-simulation game background.\nAvoid: readable letters, Korean or English text, numerals, pseudo-writing, logos, brand names, watermarks, game interface, health bars, buttons, speech bubbles with text, the protagonist's face, mirror or window reflections of the protagonist, split screen, blur, gradients, dithering, photorealism, 3D.",
       "promptNote": "공통 템플릿에서 Composition 줄(또는 명시한 부분)만 재시도 때 고쳐 보낸 최종 프롬프트",
       "scene": {
         "place": "마감 중인 일터 출입문 앞",
@@ -994,6 +1029,13 @@
         "adult_076": "faf9ba0e4cf43412b9fc024ddf5ff24d3634c8f2c1a98d69d1d81129e777c52f"
       },
       "routedIntoEvents": false,
+      "week12Revision": {
+        "date": "2026-11-10",
+        "reason": "정원률 2026-11-09 화풍 검수 수정 요청: 전등 스위치와 누르는 손가락이 세로 크롭 밖이다.",
+        "previousSha256": "72e02b2b009bc53b48887cba059dd6ff9e55b75b95da4832967d4c3f1e8a6eb4",
+        "previousStatus": "SUPERSEDED_NOT_APPROVED",
+        "newSha256": "bff042e40de4d94b8237d096842e9b227ea1f1726f5ac64f352857105474eff4"
+      },
       "attempts": [
         {
           "attempt": 1,
@@ -1006,13 +1048,20 @@
           "attempt": 2,
           "sha256": "72e02b2b009bc53b48887cba059dd6ff9e55b75b95da4832967d4c3f1e8a6eb4",
           "figmaNodeId": "5:2",
+          "result": "SUPERSEDED_WAS_COMMITTED_NOT_APPROVED",
+          "reason": "11/09 정원률 화풍 검수 수정 요청: 전등 스위치와 누르는 손가락이 세로 크롭 밖이다. (main·이전 PR에 커밋됐던 판, 2026-11-10 교체)"
+        },
+        {
+          "attempt": 3,
+          "sha256": "bff042e40de4d94b8237d096842e9b227ea1f1726f5ac64f352857105474eff4",
+          "figmaNodeId": "11:4",
           "result": "ACCEPTED"
         }
       ],
       "selfReview": {
         "status": "PASS_SELF_QA_PENDING_TEAM",
-        "verdict": "PASS_WITH_NOTE",
-        "semantic": "밤 일터 출입문 옆에서 동료가 전등 스위치를 누르며 나를 돌아보고 말을 건넴, 뒤쪽 사무실은 반쯤 소등. 국밥집·함께 걷는 모습 없음. 동료 성별 단서 약함.",
+        "verdict": "PASS",
+        "semantic": "밤 일터 출입문 옆에서 앞치마 동료(성별 단서 약함)가 벽 스위치를 손가락으로 누르며 나를 돌아봄, 열린 출입문, 반쯤 꺼진 실내. 국밥집·함께 걷기 없음, 내 손 뻗지 않음.",
         "checks": "본문·장면 명세 대조, 선택 전 상태, 금지 요소, 주인공 얼굴·읽을 글자·숫자·로고·UI 없음, 세로 가운데 크롭"
       },
       "semanticReview": {
@@ -1027,7 +1076,7 @@
         "status": "PENDING",
         "reviewer": "",
         "selfSimulation": "PIL 360x800 가운데 크롭 재현(원본 x 424~856)",
-        "selfNote": "동료와 어두워지는 실내는 크롭 안. 스위치와 출입문은 크롭 오른쪽 경계 밖이라 세로 화면에서는 동료가 팔을 뻗는 모습만 보임(팀 크롭 검토 필요)."
+        "selfNote": "스위치, 누르는 손가락, 문틀 크롭 안. 동료 얼굴은 왼쪽 경계에 반. 수정 요청 해결."
       }
     },
     {
@@ -2175,14 +2224,14 @@
       "width": 1280,
       "height": 960,
       "format": "PNG",
-      "sha256": "358b228f0f3c21aa838ed193b93800cfe52457fabbe92536f703fe98fad9ed9e",
+      "sha256": "da120b615a741a7ce479f5f3f8b7d1064270610c4da46f477abdc9730eef090c",
       "generationMethod": "Figma AI generate_image (model gpt-image-2.5-flare) in the producer's own Figma team file; unmodified generated PNG downloaded from the Figma asset URL and copied into the project. 1448x1086 was requested; the model returned 1280x960 (exact 4:3), kept at native size without resizing.",
       "figma": {
         "fileKey": "44sRMgrz6OkXdqDgfKVE2J",
-        "nodeId": "6:17"
+        "nodeId": "11:5"
       },
-      "prompt": "Use case: illustration-story. Asset: one opaque landscape 4:3 pixel art background for an Android life-simulation game event \"장난감 정리 시간\" (infant_030). Create one coherent scene, NOT UI or collage.\nEvent text for meaning only (do NOT render any of this text): 엄마: \"the player, 정리하자~ 정리 노래 나간다~\"\nScene, first-person view (the protagonist's own face is never visible): place = 집 거실; current moment = 흩어진 장난감과 빈 상자 앞에서 엄마가 정리 노래를 부름; required visible objects = 흩어진 블록·인형, 빈 상자; people and ages = 나(영아, 작은 손), 엄마; time of day = 낮.\nThe protagonist is a baby/toddler: very low eye level near the floor or a high chair, tiny chubby baby hands if hands appear. Hands are gender-neutral (no nail polish, no jewelry). Other people may appear only as described; do not add extra characters.\nThis is the moment BEFORE the player makes a choice: show the situation only, not any decision or outcome. Must NOT show: 상자에 들어가 앉은 모습.\nComposition: place the key action and every required object together inside the middle 30 percent of the image width (x 35% to 65%) so they all survive a narrow portrait center crop; the room or surroundings extend to the sides only as atmosphere. Natural first-person eye level.\nStyle: crisp medium-density 16-bit pixel art, visible consistent square pixel grid, flat limited color steps, warm muted cream, ochre, wood brown, olive and dusty blue/teal palette; clear object silhouettes, restrained highlights, cozy narrative life-simulation game background.\nAvoid: readable letters, Korean or English text, numerals, pseudo-writing, logos, brand names, watermarks, game interface, health bars, buttons, speech bubbles with text, the protagonist's face, mirror or window reflections of the protagonist, split screen, blur, gradients, dithering, photorealism, 3D.",
-      "promptNote": "공통 템플릿 그대로 보낸 프롬프트",
+      "prompt": "Use case: illustration-story. Asset: one opaque landscape 4:3 pixel art background for an Android life-simulation game event \"장난감 정리 시간\" (infant_030). Create one coherent scene, NOT UI or collage.\nEvent text for meaning only (do NOT render any of this text): 엄마: \"the player, 정리하자~ 정리 노래 나간다~\"\nScene, first-person view (the protagonist's own face is never visible): place = 집 거실; current moment = 흩어진 장난감과 빈 상자 앞에서 엄마가 정리 노래를 부름; required visible objects = 흩어진 블록·인형, 빈 상자; people and ages = 나(영아, 작은 손), 엄마; time of day = 낮.\nThe protagonist is a baby/toddler: very low eye level near the floor or a high chair, tiny chubby baby hands if hands appear. Hands are gender-neutral (no nail polish, no jewelry). Other people may appear only as described; do not add extra characters.\nThis is the moment BEFORE the player makes a choice: show the situation only, not any decision or outcome. Must NOT show: 상자에 들어가 앉은 모습.\nComposition: very low toddler eye level on a play mat: an open, EMPTY toy box with its open top clearly facing the viewer sits at the exact center (box x 40% to 60%), its empty inside visible; scattered toy blocks and a small plush doll lie on the mat directly in front of and around the box, inside x 36% to 64%; the mother kneels right behind the box at the center, clapping gently and singing with a happy face; keep the open empty box, the toys and the mother together inside x 36% to 64% so they survive a narrow portrait center crop; the living room extends to the sides only as atmosphere. Natural first-person eye level.\nStyle: crisp medium-density 16-bit pixel art, visible consistent square pixel grid, flat limited color steps, warm muted cream, ochre, wood brown, olive and dusty blue/teal palette; clear object silhouettes, restrained highlights, cozy narrative life-simulation game background.\nAvoid: readable letters, Korean or English text, numerals, pseudo-writing, logos, brand names, watermarks, game interface, health bars, buttons, speech bubbles with text, the protagonist's face, mirror or window reflections of the protagonist, split screen, blur, gradients, dithering, photorealism, 3D.",
+      "promptNote": "공통 템플릿에서 Composition 줄(또는 명시한 부분)만 재시도 때 고쳐 보낸 최종 프롬프트",
       "scene": {
         "place": "집 거실",
         "mainAction": "흩어진 장난감과 빈 상자 앞에서 엄마가 정리 노래를 부름",
@@ -2195,18 +2244,32 @@
         "infant_030": "b460e7fb1c3d109100b02d87554eec9e561c8a7c58081288a94970ee6f06a114"
       },
       "routedIntoEvents": false,
+      "week12Revision": {
+        "date": "2026-11-10",
+        "reason": "정원률 2026-11-09 화풍 검수 수정 요청: 세로 표시에서 빈 상자 입구가 거의 잘린다.",
+        "previousSha256": "358b228f0f3c21aa838ed193b93800cfe52457fabbe92536f703fe98fad9ed9e",
+        "previousStatus": "SUPERSEDED_NOT_APPROVED",
+        "newSha256": "da120b615a741a7ce479f5f3f8b7d1064270610c4da46f477abdc9730eef090c"
+      },
       "attempts": [
         {
           "attempt": 1,
           "sha256": "358b228f0f3c21aa838ed193b93800cfe52457fabbe92536f703fe98fad9ed9e",
           "figmaNodeId": "6:17",
+          "result": "SUPERSEDED_WAS_COMMITTED_NOT_APPROVED",
+          "reason": "11/09 정원률 화풍 검수 수정 요청: 세로 표시에서 빈 상자 입구가 거의 잘린다. (main·이전 PR에 커밋됐던 판, 2026-11-10 교체)"
+        },
+        {
+          "attempt": 2,
+          "sha256": "da120b615a741a7ce479f5f3f8b7d1064270610c4da46f477abdc9730eef090c",
+          "figmaNodeId": "11:5",
           "result": "ACCEPTED"
         }
       ],
       "selfReview": {
         "status": "PASS_SELF_QA_PENDING_TEAM",
         "verdict": "PASS",
-        "semantic": "거실 바닥에 흩어진 블록·인형과 빈 상자, 노래하듯 손뼉 치는 엄마. 상자에 들어간 모습 없음.",
+        "semantic": "거실 놀이 매트 위 영아 눈높이, 입구가 보이는 빈 장난감 상자를 가운데에 두고 블록·인형이 흩어져 있고 뒤에서 엄마가 손뼉 치며 노래함. 상자에 들어간 모습 없음.",
         "checks": "본문·장면 명세 대조, 선택 전 상태, 금지 요소, 주인공 얼굴·읽을 글자·숫자·로고·UI 없음, 세로 가운데 크롭"
       },
       "semanticReview": {
@@ -2221,7 +2284,7 @@
         "status": "PENDING",
         "reviewer": "",
         "selfSimulation": "PIL 360x800 가운데 크롭 재현(원본 x 424~856)",
-        "selfNote": "엄마, 빈 상자, 블록·인형 크롭 안."
+        "selfNote": "빈 상자 입구, 블록, 엄마 크롭 안. 인형은 오른쪽 경계. 수정 요청 해결."
       }
     },
     {
@@ -2487,14 +2550,14 @@
       "width": 1280,
       "height": 960,
       "format": "PNG",
-      "sha256": "9c775d6959621e5e9316f1fac8e1ec089e0f86ac3b630bc72e5979944d0937d1",
+      "sha256": "065f3e02dee897446e36604bca817f125f701cc00dba37e38f470eeccdc52be9",
       "generationMethod": "Figma AI generate_image (model gpt-image-2.5-flare) in the producer's own Figma team file; unmodified generated PNG downloaded from the Figma asset URL and copied into the project. 1448x1086 was requested; the model returned 1280x960 (exact 4:3), kept at native size without resizing.",
       "figma": {
         "fileKey": "44sRMgrz6OkXdqDgfKVE2J",
-        "nodeId": "6:26"
+        "nodeId": "11:12"
       },
-      "prompt": "Use case: illustration-story. Asset: one opaque landscape 4:3 pixel art background for an Android life-simulation game event \"옷장 위의 기타 케이스\" (path_hap_11). Create one coherent scene, NOT UI or collage.\nEvent text for meaning only (do NOT render any of this text): 이사하다가 옷장 위에서 먼지 쌓인 기타 케이스를 찾았다. 줄은 녹슬었는데, 손가락이 코드 하나를 기억한다.\nScene, first-person view (the protagonist's own face is never visible): place = 이사 중인 방 옷장 앞; current moment = 옷장 위에서 내린 먼지 쌓인 기타 케이스를 염; required visible objects = 기타 케이스, 먼지, 녹슨 줄, 이삿짐 상자; people and ages = 나(청년, 손); time of day = 낮.\nThe protagonist is a young adult in their 20s: young adult hands, plain sleeves. Hands are gender-neutral (no nail polish, no jewelry). Other people may appear only as described; do not add extra characters.\nThis is the moment BEFORE the player makes a choice: show the situation only, not any decision or outcome. Must NOT show: 연주, 모임, 중고 판매.\nComposition: place the key action and every required object together inside the middle 30 percent of the image width (x 35% to 65%) so they all survive a narrow portrait center crop; the room or surroundings extend to the sides only as atmosphere. Natural first-person eye level.\nStyle: crisp medium-density 16-bit pixel art, visible consistent square pixel grid, flat limited color steps, warm muted cream, ochre, wood brown, olive and dusty blue/teal palette; clear object silhouettes, restrained highlights, cozy narrative life-simulation game background.\nAvoid: readable letters, Korean or English text, numerals, pseudo-writing, logos, brand names, watermarks, game interface, health bars, buttons, speech bubbles with text, the protagonist's face, mirror or window reflections of the protagonist, split screen, blur, gradients, dithering, photorealism, 3D.",
-      "promptNote": "공통 템플릿 그대로 보낸 프롬프트",
+      "prompt": "Use case: illustration-story. Asset: one opaque landscape 4:3 pixel art background for an Android life-simulation game event \"옷장 위의 기타 케이스\" (path_hap_11). Create one coherent scene, NOT UI or collage.\nEvent text for meaning only (do NOT render any of this text): 이사하다가 옷장 위에서 먼지 쌓인 기타 케이스를 찾았다. 줄은 녹슬었는데, 손가락이 코드 하나를 기억한다.\nScene, first-person view (the protagonist's own face is never visible): place = 이사 중인 방 옷장 앞; current moment = 옷장 위에서 내린 먼지 쌓인 기타 케이스를 염; required visible objects = 기타 케이스, 먼지, 녹슨 줄, 이삿짐 상자; people and ages = 나(청년, 손), time of day = 낮.\nThe protagonist is a young adult in their 20s: young adult hands, plain sleeves. Hands are gender-neutral (no nail polish, no jewelry). Other people may appear only as described; do not add extra characters.\nThis is the moment BEFORE the player makes a choice: show the situation only, not any decision or outcome. Must NOT show: 연주, 모임, 중고 판매.\nComposition: looking down at the floor of a room being moved out of: a dusty guitar case lies open at the center (case x 38% to 58%), its lid lifted by the protagonist's two hands, showing an old acoustic guitar inside with dull rust-brown strings and a light layer of dust; one open cardboard moving box stands right beside the case at center-right, touching it (box x 56% to 64%), with a few packed items peeking out; the wardrobe is behind at the top center; keep the open case, the guitar, the dust, the hands and the moving box together inside x 36% to 64% so they survive a narrow portrait center crop; the room extends to the sides only as atmosphere. The guitar has no logo or letters on the headstock. Natural first-person eye level.\nStyle: crisp medium-density 16-bit pixel art, visible consistent square pixel grid, flat limited color steps, warm muted cream, ochre, wood brown, olive and dusty blue/teal palette; clear object silhouettes, restrained highlights, cozy narrative life-simulation game background.\nAvoid: readable letters, Korean or English text, numerals, pseudo-writing, logos, brand names, watermarks, game interface, health bars, buttons, speech bubbles with text, the protagonist's face, mirror or window reflections of the protagonist, split screen, blur, gradients, dithering, photorealism, 3D.",
+      "promptNote": "공통 템플릿에서 Composition 줄(또는 명시한 부분)만 재시도 때 고쳐 보낸 최종 프롬프트",
       "scene": {
         "place": "이사 중인 방 옷장 앞",
         "mainAction": "옷장 위에서 내린 먼지 쌓인 기타 케이스를 염",
@@ -2507,18 +2570,39 @@
         "path_hap_11": "9f7c028b75854cdbfd66b48ceb04d3c5439dd1b4759eec906058e7d04523ede8"
       },
       "routedIntoEvents": false,
+      "week12Revision": {
+        "date": "2026-11-10",
+        "reason": "정원률 2026-11-09 화풍 검수 수정 요청: 기타 케이스는 남는데 이삿짐 상자가 사라진다.",
+        "previousSha256": "9c775d6959621e5e9316f1fac8e1ec089e0f86ac3b630bc72e5979944d0937d1",
+        "previousStatus": "SUPERSEDED_NOT_APPROVED",
+        "newSha256": "065f3e02dee897446e36604bca817f125f701cc00dba37e38f470eeccdc52be9"
+      },
       "attempts": [
         {
           "attempt": 1,
           "sha256": "9c775d6959621e5e9316f1fac8e1ec089e0f86ac3b630bc72e5979944d0937d1",
           "figmaNodeId": "6:26",
+          "result": "SUPERSEDED_WAS_COMMITTED_NOT_APPROVED",
+          "reason": "11/09 정원률 화풍 검수 수정 요청: 기타 케이스는 남는데 이삿짐 상자가 사라진다. (main·이전 PR에 커밋됐던 판, 2026-11-10 교체)"
+        },
+        {
+          "attempt": 2,
+          "sha256": "8b0d24810e0145a617d7ab35aedb56784d8ed361ef801ff37d92e307ea2115d8",
+          "figmaNodeId": "11:6",
+          "result": "REJECTED_NOT_COMMITTED",
+          "reason": "이삿짐 상자가 케이스 오른쪽 크롭 경계 밖으로 빠짐"
+        },
+        {
+          "attempt": 3,
+          "sha256": "065f3e02dee897446e36604bca817f125f701cc00dba37e38f470eeccdc52be9",
+          "figmaNodeId": "11:12",
           "result": "ACCEPTED"
         }
       ],
       "selfReview": {
         "status": "PASS_SELF_QA_PENDING_TEAM",
-        "verdict": "PASS_WITH_NOTE",
-        "semantic": "이사 중인 방에서 먼지 쌓인 기타 케이스를 열어 낡은 기타가 보임, 내 손이 케이스에. 연주·모임·판매 없음. 줄의 녹은 뚜렷하지 않음.",
+        "verdict": "PASS",
+        "semantic": "이사 중인 방 바닥에서 두 손으로 연 먼지 낀 기타 케이스와 낡은 기타(헤드 글자 없음), 케이스 바로 위 열린 이삿짐 상자, 뒤 옷장. 연주·모임·판매 없음. 메모: 줄의 녹은 색으로만 약하게 표현.",
         "checks": "본문·장면 명세 대조, 선택 전 상태, 금지 요소, 주인공 얼굴·읽을 글자·숫자·로고·UI 없음, 세로 가운데 크롭"
       },
       "semanticReview": {
@@ -2533,7 +2617,7 @@
         "status": "PENDING",
         "reviewer": "",
         "selfSimulation": "PIL 360x800 가운데 크롭 재현(원본 x 424~856)",
-        "selfNote": "기타 케이스와 기타 크롭 안. 이삿짐 상자는 크롭 왼쪽 밖."
+        "selfNote": "케이스, 기타, 이삿짐 상자 크롭 중앙. 수정 요청 해결."
       }
     },
     {
@@ -2548,14 +2632,14 @@
       "width": 1280,
       "height": 960,
       "format": "PNG",
-      "sha256": "110cc2e61df9481604e92b9727d943530bb52baaa61c5cb8c700c29425aaab1a",
+      "sha256": "f513fa526354e83fc0afc1f15fee451a65dd97fdff0ee7b6606e33f040374f16",
       "generationMethod": "Figma AI generate_image (model gpt-image-2.5-flare) in the producer's own Figma team file; unmodified generated PNG downloaded from the Figma asset URL and copied into the project. 1448x1086 was requested; the model returned 1280x960 (exact 4:3), kept at native size without resizing.",
       "figma": {
         "fileKey": "44sRMgrz6OkXdqDgfKVE2J",
-        "nodeId": "6:27"
+        "nodeId": "11:7"
       },
-      "prompt": "Use case: illustration-story. Asset: one opaque landscape 4:3 pixel art background for an Android life-simulation game event \"30년 전 수첩의 빈칸\" (path_hap_16). Create one coherent scene, NOT UI or collage.\nEvent text for meaning only (do NOT render any of this text): 서랍 정리를 하다가 30년 전 수첩을 찾았다. 마지막 장: '아무것도 재미없다.' 그 아래 빈칸이 길다.\nScene, first-person view (the protagonist's own face is never visible): place = 노년의 집 서랍 앞; current moment = 서랍에서 찾은 수첩의 마지막 장과 긴 빈칸을 내려다봄; required visible objects = 서랍, 낡은 수첩, 돋보기 안경; people and ages = 나(노년, 손); time of day = 낮.\nThe protagonist is an elderly person (70s): elderly hands with gentle wrinkles, plain cardigan sleeves. Hands are gender-neutral (no nail polish, no jewelry). Other people may appear only as described; do not add extra characters.\nThis is the moment BEFORE the player makes a choice: show the situation only, not any decision or outcome. Must NOT show: 빈칸에 글을 쓰거나 마당에서 태우는 모습.\nComposition: place the key action and every required object together inside the middle 30 percent of the image width (x 35% to 65%) so they all survive a narrow portrait center crop; the room or surroundings extend to the sides only as atmosphere. Natural first-person eye level.\nStyle: crisp medium-density 16-bit pixel art, visible consistent square pixel grid, flat limited color steps, warm muted cream, ochre, wood brown, olive and dusty blue/teal palette; clear object silhouettes, restrained highlights, cozy narrative life-simulation game background.\nAvoid: readable letters, Korean or English text, numerals, pseudo-writing, logos, brand names, watermarks, game interface, health bars, buttons, speech bubbles with text, the protagonist's face, mirror or window reflections of the protagonist, split screen, blur, gradients, dithering, photorealism, 3D.",
-      "promptNote": "공통 템플릿 그대로 보낸 프롬프트",
+      "prompt": "Use case: illustration-story. Asset: one opaque landscape 4:3 pixel art background for an Android life-simulation game event \"30년 전 수첩의 빈칸\" (path_hap_16). Create one coherent scene, NOT UI or collage.\nEvent text for meaning only (do NOT render any of this text): 서랍 정리를 하다가 30년 전 수첩을 찾았다. 마지막 장: '아무것도 재미없다.' 그 아래 빈칸이 길다.\nScene, first-person view (the protagonist's own face is never visible): place = 노년의 집 서랍 앞; current moment = 서랍에서 찾은 수첩의 마지막 장과 긴 빈칸을 내려다봄; required visible objects = 서랍, 낡은 수첩, 돋보기 안경; people and ages = 나(노년, 손); time of day = 낮.\nThe protagonist is an elderly person (70s): elderly hands with gentle wrinkles, plain cardigan sleeves. Hands are gender-neutral (no nail polish, no jewelry). Other people may appear only as described; do not add extra characters.\nThis is the moment BEFORE the player makes a choice: show the situation only, not any decision or outcome. Must NOT show: 빈칸에 글을 쓰거나 마당에서 태우는 모습.\nComposition: one continuous, seamless scene (no panels, no vertical seams or splits): looking down at an open wooden drawer; the elderly hands hold an old faded notebook open at the center (notebook x 38% to 62%), showing its last page: at the very top of the page only one short faded ink smudge mark (a small blotted stroke, clearly NOT letters and NOT handwriting), and below it many long, completely EMPTY ruled lines filling the rest of the page; a pair of reading glasses rests in the drawer right below the notebook at the center; keep the drawer edge, the notebook page and the reading glasses together inside x 36% to 64% so they survive a narrow portrait center crop; the warm room extends to the sides only as atmosphere. No pen anywhere. Natural first-person downward view.\nStyle: crisp medium-density 16-bit pixel art, visible consistent square pixel grid, flat limited color steps, warm muted cream, ochre, wood brown, olive and dusty blue/teal palette; clear object silhouettes, restrained highlights, cozy narrative life-simulation game background.\nAvoid: readable letters, Korean or English text, handwriting, cursive, numerals, pseudo-writing, logos, brand names, watermarks, game interface, health bars, buttons, speech bubbles with text, the protagonist's face, mirror or window reflections of the protagonist, split screen, seams, blur, gradients, dithering, photorealism, 3D.",
+      "promptNote": "공통 템플릿에서 Composition 줄(또는 명시한 부분)만 재시도 때 고쳐 보낸 최종 프롬프트",
       "scene": {
         "place": "노년의 집 서랍 앞",
         "mainAction": "서랍에서 찾은 수첩의 마지막 장과 긴 빈칸을 내려다봄",
@@ -2568,18 +2652,32 @@
         "path_hap_16": "09657beef59bf412925ce735661cb0d191a9197a716f394e0996a976bd2867ea"
       },
       "routedIntoEvents": false,
+      "week12Revision": {
+        "date": "2026-11-10",
+        "reason": "정원률 2026-11-09 화풍 검수 수정 요청: 수첩에 영문 필기처럼 읽히는 두 줄이 있고, 원본 좌우에 직선 이음새가 보인다.",
+        "previousSha256": "110cc2e61df9481604e92b9727d943530bb52baaa61c5cb8c700c29425aaab1a",
+        "previousStatus": "SUPERSEDED_NOT_APPROVED",
+        "newSha256": "f513fa526354e83fc0afc1f15fee451a65dd97fdff0ee7b6606e33f040374f16"
+      },
       "attempts": [
         {
           "attempt": 1,
           "sha256": "110cc2e61df9481604e92b9727d943530bb52baaa61c5cb8c700c29425aaab1a",
           "figmaNodeId": "6:27",
+          "result": "SUPERSEDED_WAS_COMMITTED_NOT_APPROVED",
+          "reason": "11/09 정원률 화풍 검수 수정 요청: 수첩에 영문 필기처럼 읽히는 두 줄이 있고, 원본 좌우에 직선 이음새가 보인다. (main·이전 PR에 커밋됐던 판, 2026-11-10 교체)"
+        },
+        {
+          "attempt": 2,
+          "sha256": "f513fa526354e83fc0afc1f15fee451a65dd97fdff0ee7b6606e33f040374f16",
+          "figmaNodeId": "11:7",
           "result": "ACCEPTED"
         }
       ],
       "selfReview": {
         "status": "PASS_SELF_QA_PENDING_TEAM",
-        "verdict": "PASS_WITH_NOTE",
-        "semantic": "노년의 손이 서랍에서 꺼낸 낡은 수첩의 마지막 장을 펼침, 서랍 안 돋보기 안경. 빈칸에 쓰거나 태우는 모습 없음. 메모: 마지막 장의 한 줄은 판독 불가한 필기 흔적이고 아래가 비어 있음(본문상 필요한 요소, 화풍 검토자 판단 요청).",
+        "verdict": "PASS",
+        "semantic": "노년의 손이 서랍에서 꺼낸 낡은 수첩 마지막 장을 펼침: 맨 위에 짧은 잉크 번짐 하나(글자 아님)와 그 아래 긴 빈 줄들, 서랍 안 돋보기 안경. 쓰기·태우기 없음, 펜 없음. 한 장면으로 이음새 없음.",
         "checks": "본문·장면 명세 대조, 선택 전 상태, 금지 요소, 주인공 얼굴·읽을 글자·숫자·로고·UI 없음, 세로 가운데 크롭"
       },
       "semanticReview": {
@@ -2594,7 +2692,7 @@
         "status": "PENDING",
         "reviewer": "",
         "selfSimulation": "PIL 360x800 가운데 크롭 재현(원본 x 424~856)",
-        "selfNote": "수첩, 서랍, 돋보기 크롭 안."
+        "selfNote": "수첩 마지막 장, 빈 줄, 돋보기 안경 크롭 안. 수정 요청(글자형 획·이음새) 해결."
       }
     },
     {
@@ -2670,14 +2768,14 @@
       "width": 1280,
       "height": 960,
       "format": "PNG",
-      "sha256": "2e37d60642dd351f2d8f42727885116f6070473a5fc5f23c701b43723f76526e",
+      "sha256": "5f2055517936ab64d52ce670c66010d9fe84d64c70ef2db18390991d882053a1",
       "generationMethod": "Figma AI generate_image (model gpt-image-2.5-flare) in the producer's own Figma team file; unmodified generated PNG downloaded from the Figma asset URL and copied into the project. 1448x1086 was requested; the model returned 1280x960 (exact 4:3), kept at native size without resizing.",
       "figma": {
         "fileKey": "44sRMgrz6OkXdqDgfKVE2J",
-        "nodeId": "6:29"
+        "nodeId": "11:8"
       },
-      "prompt": "Use case: illustration-story. Asset: one opaque landscape 4:3 pixel art background for an Android life-simulation game event \"약봉지와 회의 일정\" (path_hea_12). Create one coherent scene, NOT UI or collage.\nEvent text for meaning only (do NOT render any of this text): 아침 약, 점심 약, 저녁 약. 회의는 하루에 다섯 개다. 의사: \"the player 님, 일을 줄이셔야 약이 듣습니다.\"\nScene, first-person view (the protagonist's own face is never visible): place = 회사 내 책상; current moment = 아침·점심·저녁 약봉지 세 개와 빽빽한 회의 일정표를 내려다봄; required visible objects = 약봉지 3개, 회의 일정표(칸만, 글자 판독 불필요), 물컵; people and ages = 나(중년, 손), 의사는 대사만; time of day = 아침(추정).\nThe protagonist is a middle-aged adult (40s to 50s): middle-aged hands, plain sleeves. Hands are gender-neutral (no nail polish, no jewelry). Other people may appear only as described; do not add extra characters.\nThis is the moment BEFORE the player makes a choice: show the situation only, not any decision or outcome. Must NOT show: 단축 근무 서류, 환우 모임.\nComposition: place the key action and every required object together inside the middle 30 percent of the image width (x 35% to 65%) so they all survive a narrow portrait center crop; the room or surroundings extend to the sides only as atmosphere. Natural first-person eye level.\nStyle: crisp medium-density 16-bit pixel art, visible consistent square pixel grid, flat limited color steps, warm muted cream, ochre, wood brown, olive and dusty blue/teal palette; clear object silhouettes, restrained highlights, cozy narrative life-simulation game background.\nAvoid: readable letters, Korean or English text, numerals, pseudo-writing, logos, brand names, watermarks, game interface, health bars, buttons, speech bubbles with text, the protagonist's face, mirror or window reflections of the protagonist, split screen, blur, gradients, dithering, photorealism, 3D.",
-      "promptNote": "공통 템플릿 그대로 보낸 프롬프트",
+      "prompt": "Use case: illustration-story. Asset: one opaque landscape 4:3 pixel art background for an Android life-simulation game event \"약봉지와 회의 일정\" (path_hea_12). Create one coherent scene, NOT UI or collage.\nEvent text for meaning only (do NOT render any of this text): 아침 약, 점심 약, 저녁 약. 회의는 하루에 다섯 개다. 의사: \"the player 님, 일을 줄이셔야 약이 듣습니다.\"\nScene, first-person view (the protagonist's own face is never visible): place = 회사 내 책상; current moment = 아침·점심·저녁 약봉지 세 개와 빽빽한 회의 일정표를 내려다봄; required visible objects = 약봉지 3개, 회의 일정표(칸만, 글자 판독 불필요), 물컵; people and ages = 나(중년, 손), 의사는 대사만; time of day = 아침(추정).\nThe protagonist is a middle-aged adult (40s to 50s): middle-aged hands, plain sleeves. Hands are gender-neutral (no nail polish, no jewelry). Other people may appear only as described; do not add extra characters.\nThis is the moment BEFORE the player makes a choice: show the situation only, not any decision or outcome. Must NOT show: 단축 근무 서류, 환우 모임.\nComposition: looking down at an office desk: a printed meeting schedule sheet densely filled with colored blocks (no letters, no numbers) lies at the center (x 38% to 62%); a clear glass of water stands directly ON the top edge of the schedule sheet at the center (glass x 46% to 54%); three small medicine pouches with simple sun, sun and moon icons lie in a row along the bottom edge of the sheet at the center (x 38% to 62%); the protagonist's hands rest at the lower corners; keep the schedule, the water glass and all three pouches together inside x 36% to 64% so they survive a narrow portrait center crop; the office desk extends to the sides only as atmosphere. Natural first-person downward view.\nStyle: crisp medium-density 16-bit pixel art, visible consistent square pixel grid, flat limited color steps, warm muted cream, ochre, wood brown, olive and dusty blue/teal palette; clear object silhouettes, restrained highlights, cozy narrative life-simulation game background.\nAvoid: readable letters, Korean or English text, numerals, pseudo-writing, logos, brand names, watermarks, game interface, health bars, buttons, speech bubbles with text, the protagonist's face, mirror or window reflections of the protagonist, split screen, blur, gradients, dithering, photorealism, 3D.",
+      "promptNote": "공통 템플릿에서 Composition 줄(또는 명시한 부분)만 재시도 때 고쳐 보낸 최종 프롬프트",
       "scene": {
         "place": "회사 내 책상",
         "mainAction": "아침·점심·저녁 약봉지 세 개와 빽빽한 회의 일정표를 내려다봄",
@@ -2690,18 +2788,32 @@
         "path_hea_12": "05e44e7f276de285ec929e5a13302f155821f8e92c910da34d52c3b2d000851c"
       },
       "routedIntoEvents": false,
+      "week12Revision": {
+        "date": "2026-11-10",
+        "reason": "정원률 2026-11-09 화풍 검수 수정 요청: 약봉지와 일정표는 남지만 물컵이 잘린다.",
+        "previousSha256": "2e37d60642dd351f2d8f42727885116f6070473a5fc5f23c701b43723f76526e",
+        "previousStatus": "SUPERSEDED_NOT_APPROVED",
+        "newSha256": "5f2055517936ab64d52ce670c66010d9fe84d64c70ef2db18390991d882053a1"
+      },
       "attempts": [
         {
           "attempt": 1,
           "sha256": "2e37d60642dd351f2d8f42727885116f6070473a5fc5f23c701b43723f76526e",
           "figmaNodeId": "6:29",
+          "result": "SUPERSEDED_WAS_COMMITTED_NOT_APPROVED",
+          "reason": "11/09 정원률 화풍 검수 수정 요청: 약봉지와 일정표는 남지만 물컵이 잘린다. (main·이전 PR에 커밋됐던 판, 2026-11-10 교체)"
+        },
+        {
+          "attempt": 2,
+          "sha256": "5f2055517936ab64d52ce670c66010d9fe84d64c70ef2db18390991d882053a1",
+          "figmaNodeId": "11:8",
           "result": "ACCEPTED"
         }
       ],
       "selfReview": {
         "status": "PASS_SELF_QA_PENDING_TEAM",
-        "verdict": "PASS_WITH_NOTE",
-        "semantic": "회사 책상 위 해·해·달 그림 약봉지 3개와 색 칸만 있는 빽빽한 회의 일정표. 단축 근무 서류·환우 모임 없음.",
+        "verdict": "PASS",
+        "semantic": "회사 책상에서 색 칸만 있는 빽빽한 회의 일정표, 그 위 물컵, 아래 해·해·달 그림 약봉지 세 개. 단축 근무 서류·환우 모임 없음.",
         "checks": "본문·장면 명세 대조, 선택 전 상태, 금지 요소, 주인공 얼굴·읽을 글자·숫자·로고·UI 없음, 세로 가운데 크롭"
       },
       "semanticReview": {
@@ -2716,7 +2828,7 @@
         "status": "PENDING",
         "reviewer": "",
         "selfSimulation": "PIL 360x800 가운데 크롭 재현(원본 x 424~856)",
-        "selfNote": "약봉지 3개와 일정표 크롭 안. 물컵은 크롭 오른쪽 밖."
+        "selfNote": "물컵, 일정표, 약봉지 셋 크롭 안(세 번째 봉지는 오른쪽 경계). 수정 요청 해결."
       }
     },
     {
@@ -3226,13 +3338,13 @@
       "width": 1280,
       "height": 960,
       "format": "PNG",
-      "sha256": "a63a2115bfea5adc36ab2d56ca159e374b0e05b962fe07527d93c10a6b654b2e",
+      "sha256": "f107b768649e567cff24ef2281d5e14e0b288d091b886f860fe9bf2f99bee640",
       "generationMethod": "Figma AI generate_image (model gpt-image-2.5-flare) in the producer's own Figma team file; unmodified generated PNG downloaded from the Figma asset URL and copied into the project. 1448x1086 was requested; the model returned 1280x960 (exact 4:3), kept at native size without resizing.",
       "figma": {
         "fileKey": "44sRMgrz6OkXdqDgfKVE2J",
-        "nodeId": "8:12"
+        "nodeId": "11:13"
       },
-      "prompt": "Use case: illustration-story. Asset: one opaque landscape 4:3 pixel art background for an Android life-simulation game event \"축제가 끝나고 갈라진 무리\" (path_soc_10). Create one coherent scene, NOT UI or collage.\nEvent text for meaning only (do NOT render any of this text): 축제 예산 문제로 친구들이 두 편으로 갈렸다. 단톡방 두 개에 다 내가 있다. 둘 다 내 대답만 기다린다.\nScene, first-person view (the protagonist's own face is never visible): place = 축제가 끝난 학교 마당; current moment = 축제 뒤 두 무리로 갈라져 걸어가는 친구들을 봄; required visible objects = 두 무리를 나타내는 두 단톡방 알림과 축제 뒤의 공간; 두 무리 핵심을 중앙 양옆으로 좁힘; people and ages = 나(청소년), 친구들(청소년); time of day = 해 질 녘.\nThe protagonist is a teenage student: teen hands, plain school-uniform or casual sleeves. Hands are gender-neutral (no nail polish, no jewelry). Other people may appear only as described; do not add extra characters.\nThis is the moment BEFORE the player makes a choice: show the situation only, not any decision or outcome.\nComposition: the teen's hand holds a smartphone at the exact center (x 40% to 60%) showing two separate group-chat notification cards stacked one above the other, each a plain colored bubble with a few tiny round avatar dots and no text, both waiting for a reply; behind the phone is the school yard after the festival at sunset with leftover festival decorations (string pennant flags, a folded booth tent, scattered paper cups); two small groups of teenage friends walk away from each other in opposite directions just left and just right of the phone (left group x 35% to 44%, right group x 56% to 65%), both groups glancing back toward the viewer; keep the phone and both groups together inside x 35% to 65% so they survive a narrow portrait center crop; the yard extends to the sides only as atmosphere. Natural first-person eye level.\nStyle: crisp medium-density 16-bit pixel art, visible consistent square pixel grid, flat limited color steps, warm muted cream, ochre, wood brown, olive and dusty blue/teal palette; clear object silhouettes, restrained highlights, cozy narrative life-simulation game background.\nAvoid: readable letters, Korean or English text, numerals, pseudo-writing, logos, brand names, watermarks, game interface, health bars, buttons, speech bubbles with text, the protagonist's face, mirror or window reflections of the protagonist, split screen, blur, gradients, dithering, photorealism, 3D.",
+      "prompt": "Use case: illustration-story. Asset: one opaque landscape 4:3 pixel art background for an Android life-simulation game event \"축제가 끝나고 갈라진 무리\" (path_soc_10). Create one coherent scene, NOT UI or collage.\nEvent text for meaning only (do NOT render any of this text): 축제 예산 문제로 친구들이 두 편으로 갈렸다. 단톡방 두 개에 다 내가 있다. 둘 다 내 대답만 기다린다.\nScene, first-person view (the protagonist's own face is never visible): place = 축제가 끝난 학교 마당; current moment = 축제 뒤 두 무리로 갈라져 걸어가는 친구들을 봄; required visible objects = 두 무리를 나타내는 두 단톡방 알림과 축제 뒤의 공간; 두 무리 핵심을 중앙 양옆으로 좁힘; people and ages = 나(청소년), 친구들(청소년); time of day = 해 질 녘.\nThe protagonist is a teenage student: teen hands, plain school-uniform or casual sleeves. Hands are gender-neutral (no nail polish, no jewelry). Other people may appear only as described; do not add extra characters.\nThis is the moment BEFORE the player makes a choice: show the situation only, not any decision or outcome.\nComposition: a narrow, centered view: the teen's hand holds a smartphone low at the bottom center (phone x 43% to 57%, lower third) showing two separate group-chat notification cards stacked one above the other, each a plain colored bubble (one teal, one ochre) with a few tiny round avatar dots and no text; directly above the phone, in the near middle distance of the school yard after the festival at sunset, two teenage friends stand close to the center, one representing each group: the left friend in a teal jacket at x 37% to 46% walking left, the right friend in an ochre jacket at x 54% to 63% walking right, both looking back over the shoulder at the viewer, with other members of each group only faintly behind them; between them at the exact center lie festival leftovers (pennant flags, a folded booth tent, paper cups); keep the phone and both representative friends together inside x 36% to 64% so they survive a narrow portrait center crop; the yard extends to the sides only as atmosphere. Natural first-person eye level.\nStyle: crisp medium-density 16-bit pixel art, visible consistent square pixel grid, flat limited color steps, warm muted cream, ochre, wood brown, olive and dusty blue/teal palette; clear object silhouettes, restrained highlights, cozy narrative life-simulation game background.\nAvoid: readable letters, Korean or English text, numerals, pseudo-writing, logos, brand names, watermarks, game interface, health bars, buttons, speech bubbles with text, the protagonist's face, mirror or window reflections of the protagonist, split screen, blur, gradients, dithering, photorealism, 3D.",
       "promptNote": "공통 템플릿에서 Composition 줄(또는 명시한 부분)만 재시도 때 고쳐 보낸 최종 프롬프트",
       "scene": {
         "place": "축제가 끝난 학교 마당",
@@ -3246,6 +3358,13 @@
         "path_soc_10": "be0ee1d481603b53b3c1eecd7bb1f0d0a31d5333c14e9da7a2f66ea24b625771"
       },
       "routedIntoEvents": false,
+      "week12Revision": {
+        "date": "2026-11-10",
+        "reason": "정원률 2026-11-09 화풍 검수 수정 요청: 양쪽 친구 무리가 화면 밖으로 빠져 휴대폰 알림만 두드러진다.",
+        "previousSha256": "a63a2115bfea5adc36ab2d56ca159e374b0e05b962fe07527d93c10a6b654b2e",
+        "previousStatus": "SUPERSEDED_NOT_APPROVED",
+        "newSha256": "f107b768649e567cff24ef2281d5e14e0b288d091b886f860fe9bf2f99bee640"
+      },
       "attempts": [
         {
           "attempt": 1,
@@ -3258,13 +3377,27 @@
           "attempt": 2,
           "sha256": "a63a2115bfea5adc36ab2d56ca159e374b0e05b962fe07527d93c10a6b654b2e",
           "figmaNodeId": "8:12",
+          "result": "SUPERSEDED_WAS_COMMITTED_NOT_APPROVED",
+          "reason": "11/09 정원률 화풍 검수 수정 요청: 양쪽 친구 무리가 화면 밖으로 빠져 휴대폰 알림만 두드러진다. (main·이전 PR에 커밋됐던 판, 2026-11-10 교체)"
+        },
+        {
+          "attempt": 3,
+          "sha256": "6be3e0b62737ae2f8c07637d2e517d9264000ee95b26a7cdac2994757432971b",
+          "figmaNodeId": "11:9",
+          "result": "REJECTED_NOT_COMMITTED",
+          "reason": "두 대표 친구가 크롭 양쪽 경계 밖으로 빠짐"
+        },
+        {
+          "attempt": 4,
+          "sha256": "f107b768649e567cff24ef2281d5e14e0b288d091b886f860fe9bf2f99bee640",
+          "figmaNodeId": "11:13",
           "result": "ACCEPTED"
         }
       ],
       "selfReview": {
         "status": "PASS_SELF_QA_PENDING_TEAM",
-        "verdict": "PASS_WITH_NOTE",
-        "semantic": "해 질 녘 축제가 끝난 학교 마당(깃발 줄, 접힌 천막, 종이컵) 앞에서 내 손의 휴대폰에 서로 다른 단톡방 알림 카드 2개(아바타 점만, 글자 없음)가 대답을 기다림, 뒤로 두 무리 친구들이 양쪽으로 갈라져 걸어감. 어느 편에 서거나 부르는 모습 없음. 2026-11-03 REVISE 지적(두 단톡방이 내 대답을 기다리는 상황 없음)을 중앙 휴대폰으로 해결.",
+        "verdict": "PASS",
+        "semantic": "해 질 녘 축제가 끝난 학교 마당에서 청록 재킷·황토 재킷 친구 둘이 서로 반대쪽을 향해 서서 나를 돌아보고, 뒤로 각 무리가 양쪽으로 걸어감. 내 휴대폰에 청록·황토 단톡 알림 카드 두 개(글자 없음). 어느 편에 서거나 부르는 모습 없음.",
         "checks": "본문·장면 명세 대조, 선택 전 상태, 금지 요소, 주인공 얼굴·읽을 글자·숫자·로고·UI 없음, 세로 가운데 크롭"
       },
       "semanticReview": {
@@ -3279,7 +3412,7 @@
         "status": "PENDING",
         "reviewer": "",
         "selfSimulation": "PIL 360x800 가운데 크롭 재현(원본 x 424~856)",
-        "selfNote": "휴대폰의 두 단톡방 알림과 축제 잔해는 크롭 중앙. 두 무리는 크롭 양쪽 경계에 한두 명씩만 남음(두 단톡방 카드가 두 무리를 대신 나타냄, 팀 크롭 판단 요청)."
+        "selfNote": "두 무리 대표 친구와 휴대폰 두 알림이 모두 크롭 안, 접힌 천막도 남음. 수정 요청 해결."
       }
     },
     {
@@ -4211,14 +4344,14 @@
       "width": 1280,
       "height": 960,
       "format": "PNG",
-      "sha256": "ed3921f10db4751fb4f02061da9138884975096597ce04b44d85be7995bc130d",
+      "sha256": "44f60c1ddf2d974a8cef21dfcbf6920b2776bb1cd09c5c935a24397c1f677adc",
       "generationMethod": "Figma AI generate_image (model gpt-image-2.5-flare) in the producer's own Figma team file; unmodified generated PNG downloaded from the Figma asset URL and copied into the project. 1448x1086 was requested; the model returned 1280x960 (exact 4:3), kept at native size without resizing.",
       "figma": {
         "fileKey": "44sRMgrz6OkXdqDgfKVE2J",
-        "nodeId": "9:15"
+        "nodeId": "11:10"
       },
-      "prompt": "Use case: illustration-story. Asset: one opaque landscape 4:3 pixel art background for an Android life-simulation game event \"반티 투표\" (teen_030). Create one coherent scene, NOT UI or collage.\nEvent text for meaning only (do NOT render any of this text): 체육대회 반티 투표. 후보는 흰 티, 공룡 잠옷, 각자 자유.\nScene, first-person view (the protagonist's own face is never visible): place = 중학교 교실; current moment = 반티 후보 흰 티와 공룡 잠옷 샘플을 앞에 두고 투표함; required visible objects = 흰 티 샘플, 공룡 잠옷 샘플, 투표 쪽지; people and ages = 나(청소년, 손), 반 친구들; time of day = 낮.\nThe protagonist is a teenage student: teen hands, plain school-uniform or casual sleeves. Hands are gender-neutral (no nail polish, no jewelry). Other people may appear only as described; do not add extra characters.\nThis is the moment BEFORE the player makes a choice: show the situation only, not any decision or outcome. Must NOT show: 체육대회에서 입은 모습.\nComposition: place the key action and every required object together inside the middle 30 percent of the image width (x 35% to 65%) so they all survive a narrow portrait center crop; the room or surroundings extend to the sides only as atmosphere. Natural first-person eye level.\nStyle: crisp medium-density 16-bit pixel art, visible consistent square pixel grid, flat limited color steps, warm muted cream, ochre, wood brown, olive and dusty blue/teal palette; clear object silhouettes, restrained highlights, cozy narrative life-simulation game background.\nAvoid: readable letters, Korean or English text, numerals, pseudo-writing, logos, brand names, watermarks, game interface, health bars, buttons, speech bubbles with text, the protagonist's face, mirror or window reflections of the protagonist, split screen, blur, gradients, dithering, photorealism, 3D.",
-      "promptNote": "공통 템플릿 그대로 보낸 프롬프트",
+      "prompt": "Use case: illustration-story. Asset: one opaque landscape 4:3 pixel art background for an Android life-simulation game event \"반티 투표\" (teen_030). Create one coherent scene, NOT UI or collage.\nEvent text for meaning only (do NOT render any of this text): 체육대회 반티 투표. 후보는 흰 티, 공룡 잠옷, 각자 자유.\nScene, first-person view (the protagonist's own face is never visible): place = 중학교 교실; current moment = 반티 후보 흰 티와 공룡 잠옷 샘플을 앞에 두고 투표함; required visible objects = 흰 티 샘플, 공룡 잠옷 샘플, 투표 쪽지; people and ages = 나(청소년, 손), 반 친구들; time of day = 낮.\nThe protagonist is a teenage student: teen hands, plain school-uniform or casual sleeves. Hands are gender-neutral (no nail polish, no jewelry). Other people may appear only as described; do not add extra characters.\nThis is the moment BEFORE the player makes a choice: show the situation only, not any decision or outcome. Must NOT show: 체육대회에서 입은 모습.\nComposition: in a middle-school classroom, two sample class shirts hang side by side on a small rolling rack right behind the ballot box at the center: a plain white T-shirt at x 39% to 49% and a green dinosaur onesie pajama with a hood at x 51% to 61%, both fully visible; a simple ballot box sits on the front desk at the center below them (x 44% to 56%); the protagonist's hand holds one blank folded ballot slip just above the box at the lower center, not yet inserted; classmates sit and chat behind; keep both shirts, the ballot box and the slip together inside x 36% to 64% so they survive a narrow portrait center crop; the classroom extends to the sides only as atmosphere. Natural first-person eye level.\nStyle: crisp medium-density 16-bit pixel art, visible consistent square pixel grid, flat limited color steps, warm muted cream, ochre, wood brown, olive and dusty blue/teal palette; clear object silhouettes, restrained highlights, cozy narrative life-simulation game background.\nAvoid: readable letters, Korean or English text, numerals, pseudo-writing, logos, brand names, watermarks, game interface, health bars, buttons, speech bubbles with text, the protagonist's face, mirror or window reflections of the protagonist, split screen, blur, gradients, dithering, photorealism, 3D.",
+      "promptNote": "공통 템플릿에서 Composition 줄(또는 명시한 부분)만 재시도 때 고쳐 보낸 최종 프롬프트",
       "scene": {
         "place": "중학교 교실",
         "mainAction": "반티 후보 흰 티와 공룡 잠옷 샘플을 앞에 두고 투표함",
@@ -4231,18 +4364,32 @@
         "teen_030": "e388bd33a1f1ade5c6ad5be377d8a2f3e1308821c32b5b1b3c3e1592b57ad336"
       },
       "routedIntoEvents": false,
+      "week12Revision": {
+        "date": "2026-11-10",
+        "reason": "정원률 2026-11-09 화풍 검수 수정 요청: 흰 반티가 반쯤 잘리고 공룡 잠옷은 오른쪽 일부만 남는다.",
+        "previousSha256": "ed3921f10db4751fb4f02061da9138884975096597ce04b44d85be7995bc130d",
+        "previousStatus": "SUPERSEDED_NOT_APPROVED",
+        "newSha256": "44f60c1ddf2d974a8cef21dfcbf6920b2776bb1cd09c5c935a24397c1f677adc"
+      },
       "attempts": [
         {
           "attempt": 1,
           "sha256": "ed3921f10db4751fb4f02061da9138884975096597ce04b44d85be7995bc130d",
           "figmaNodeId": "9:15",
+          "result": "SUPERSEDED_WAS_COMMITTED_NOT_APPROVED",
+          "reason": "11/09 정원률 화풍 검수 수정 요청: 흰 반티가 반쯤 잘리고 공룡 잠옷은 오른쪽 일부만 남는다. (main·이전 PR에 커밋됐던 판, 2026-11-10 교체)"
+        },
+        {
+          "attempt": 2,
+          "sha256": "44f60c1ddf2d974a8cef21dfcbf6920b2776bb1cd09c5c935a24397c1f677adc",
+          "figmaNodeId": "11:10",
           "result": "ACCEPTED"
         }
       ],
       "selfReview": {
         "status": "PASS_SELF_QA_PENDING_TEAM",
         "verdict": "PASS",
-        "semantic": "교실에서 옷걸이의 흰 티와 공룡 잠옷 샘플, 투표함 앞 빈 쪽지를 든 손, 반 친구들. 어느 후보에 넣는지 보이지 않음, 체육대회 착용 없음.",
+        "semantic": "교실 옷걸이 위 흰 티와 공룡 잠옷 샘플이 나란히, 그 아래 투표함과 아직 넣지 않은 빈 쪽지를 든 손, 뒤 반 친구들. 어느 후보에 넣는지 보이지 않음, 체육대회 착용 없음.",
         "checks": "본문·장면 명세 대조, 선택 전 상태, 금지 요소, 주인공 얼굴·읽을 글자·숫자·로고·UI 없음, 세로 가운데 크롭"
       },
       "semanticReview": {
@@ -4257,7 +4404,7 @@
         "status": "PENDING",
         "reviewer": "",
         "selfSimulation": "PIL 360x800 가운데 크롭 재현(원본 x 424~856)",
-        "selfNote": "흰 티, 공룡 잠옷, 투표함, 쪽지 크롭 안."
+        "selfNote": "두 옷 전체, 투표함, 쪽지 크롭 안. 수정 요청 해결."
       }
     },
     {
