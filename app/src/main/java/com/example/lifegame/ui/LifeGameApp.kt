@@ -200,8 +200,6 @@ private fun PlayPhaseScreen(
                 state = play,
                 onChoose = gameViewModel::chooseDecision,
                 onContinue = gameViewModel::continueAfterOutcome,
-                onEventImageShown = gameViewModel::markEventImageShown,
-                onResultAnimationConsumed = gameViewModel::markResultAnimationConsumed,
             )
         }
         PlayPhase.ENDED -> {
