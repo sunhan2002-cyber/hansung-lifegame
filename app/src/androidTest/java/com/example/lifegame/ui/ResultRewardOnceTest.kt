@@ -5,6 +5,12 @@ import android.os.ParcelFileDescriptor
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.requiredSize
 import androidx.compose.runtime.Composable
+import com.example.lifegame.domain.model.ResultAnimationStatus
+import com.example.lifegame.domain.model.EventImageExposureStatus
+import androidx.compose.runtime.setValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.key
+import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clipToBounds
 import androidx.compose.ui.test.assertCountEquals
@@ -259,6 +265,77 @@ class ResultRewardOnceTest {
             }
             else -> error("계속하기 뒤 화면: ${state().phase}")
         }
+        assertEquals(recorded, saved().choices.size)
+    }
+
+    /**
+     * 2026-11-11 #70 연결: 앱을 완전히 닫았다 연 경우(화면 저장 상태 없음). 저장된 연출 상태(#63)로
+     * 이미 본 선노출과 이미 끝난 결과 칩은 다시 보여 주지 않고, 보상도 다시 반영하지 않는다.
+     * 타이핑 중에 꺼지면 아직 그림을 보지 않았으므로 "표시함"으로 남지 않는다.
+     */
+    @Test
+    fun appRestartDoesNotReplayASeenPreviewOrFinishedResultChips() {
+        startAtFirstDecision()
+        var current by mutableStateOf(vm)
+        var generation by mutableStateOf(0)
+        compose.mainClock.autoAdvance = false
+        compose.setContent {
+            LifeGameTheme {
+                Box(Modifier.requiredSize(360.dp, 740.dp).clipToBounds()) {
+                    // generation이 바뀌면 새 composition 그룹이 되어 rememberSaveable이 되살아나지 않는다(프로세스 종료와 같음).
+                    key(generation) {
+                        val model = current
+                        model.play?.takeIf { it.decision != null }?.let { s ->
+                            DecisionScreen(
+                                s,
+                                onChoose = model::chooseDecision,
+                                onContinue = model::continueAfterOutcome,
+                                onEventImageShown = model::markEventImageShown,
+                                onResultAnimationConsumed = model::markResultAnimationConsumed,
+                            )
+                        }
+                    }
+                }
+            }
+        }
+        compose.mainClock.advanceTimeByFrame()
+        fun restartApp() {
+            compose.runOnUiThread {
+                vm = LifeGameViewModel(app).apply { continueLife() }
+                current = vm
+            }
+            generation++
+            compose.mainClock.advanceTimeByFrame()
+        }
+
+        advance(TYPE_MILLIS * 3)
+        assertEquals("타이핑 중에는 아직 그림을 보지 않았다", EventImageExposureStatus.PENDING, saved().presentation.eventImageExposure)
+        revealChoices()
+        assertEquals(EventImageExposureStatus.SHOWN, saved().presentation.eventImageExposure)
+
+        // 선노출을 본 뒤 재시작: 팝업 · 타이핑 · 선노출 없이 바로 선택지.
+        restartApp()
+        advance(PREVIEW_DELAY_MILLIS + 50)
+        compose.onAllNodesWithTag("scene_preview").assertCountEquals(0)
+        compose.onAllNodesWithTag("incident_popup").assertCountEquals(0)
+        compose.onNodeWithTag("decision_choice_A").assertExists()
+
+        tap("decision_choice_${firstAvailableKey()}")
+        val outcome = requireNotNull(state().outcome)
+        val after = state().stats
+        val recorded = saved().choices.size
+        advance(300)
+        compose.onNodeWithTag("outcome_floating_changes", useUnmergedTree = true).assertExists()
+        advance(CHANGE_HOLD_MILLIS + 800)
+        assertEquals(ResultAnimationStatus.CONSUMED, saved().presentation.resultAnimation)
+
+        // 결과 칩이 끝난 뒤 재시작: 결과는 그대로, 칩은 다시 뜨지 않고, 보상도 다시 반영하지 않는다.
+        restartApp()
+        advance(300)
+        compose.onNodeWithTag("outcome_text").assertExists()
+        compose.onAllNodesWithTag("outcome_floating_changes", useUnmergedTree = true).assertCountEquals(0)
+        assertEquals(outcome, state().outcome)
+        assertEquals(after, state().stats)
         assertEquals(recorded, saved().choices.size)
     }
 }
