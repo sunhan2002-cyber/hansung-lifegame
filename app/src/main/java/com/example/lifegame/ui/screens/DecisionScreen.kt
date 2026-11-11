@@ -98,6 +98,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.lifegame.domain.model.DecisionKind
+import com.example.lifegame.domain.model.EventImageExposureStatus
 import com.example.lifegame.domain.model.ResultAnimationStatus
 import com.example.lifegame.ui.DecisionChoiceUi
 import com.example.lifegame.ui.DecisionUi
@@ -200,14 +201,20 @@ fun DecisionScreen(
     val decision = state.decision ?: return
     val outcome = state.outcome
     val introKey = "${decision.eventId}:${state.yearKey}"
-    var introDone by rememberSaveable(introKey) { mutableStateOf(outcome != null) }
+    // 앱을 완전히 닫았다 연 경우(화면 저장 상태가 없음)에도, 저장된 연출 상태(#63)상 이미 선노출까지 본 사건이면
+    // 팝업 · 타이핑 · 선노출을 다시 하지 않고 바로 선택지를 보여 준다.
+    val previewShownBefore = state.presentation.exposedEventId == decision.eventId &&
+        state.presentation.eventImageExposure == EventImageExposureStatus.SHOWN
+    var introDone by rememberSaveable(introKey) { mutableStateOf(outcome != null || previewShownBefore) }
     var sceneOnly by rememberSaveable(introKey) { mutableStateOf(false) }
     // 그림 선노출은 사건마다 한 번. 복원돼도 다시 보여 주지 않는다.
-    var previewDone by rememberSaveable(introKey) { mutableStateOf(outcome != null) }
+    var previewDone by rememberSaveable(introKey) { mutableStateOf(outcome != null || previewShownBefore) }
     var previewing by rememberSaveable(introKey) { mutableStateOf(false) }
     var showChoiceDetails by rememberSaveable { mutableStateOf(false) }
     var chosenId by remember(introKey) { mutableStateOf<String?>(null) }
-    var typedChars by rememberSaveable(introKey) { mutableStateOf(if (outcome != null) decision.text.length else 0) }
+    var typedChars by rememberSaveable(introKey) {
+        mutableStateOf(if (outcome != null || previewShownBefore) decision.text.length else 0)
+    }
     var detailsOpen by remember { mutableStateOf(false) }
     var motion by remember { mutableStateOf(FilmMotion()) }
     var popupOpen by remember { mutableStateOf(false) }
@@ -236,8 +243,10 @@ fun DecisionScreen(
     }
 
     // 화면 연출 상태만 소비한다. 엔진 진행, 보상, 기록, 사망 판정은 다시 호출하지 않는다.
-    LaunchedEffect(decision.eventId) {
-        onEventImageShown(decision.eventId)
+    // 그림 선노출을 실제로 보여 주고 넘어간 뒤에만 "표시함"으로 저장한다. 결정 화면이 뜨자마자 저장하면
+    // 타이핑 중에 앱이 꺼진 경우도 표시한 것으로 남아, 다시 열었을 때 그림을 못 보고 지나간다.
+    LaunchedEffect(introKey, previewDone) {
+        if (previewDone && outcome == null) onEventImageShown(decision.eventId)
     }
 
     LaunchedEffect(outcome, resultDisplayId, state.presentation.resultAnimation, reduceMotion) {
@@ -434,6 +443,9 @@ fun DecisionScreen(
                             },
                             onContinue = onContinue,
                             changeKey = introKey,
+                            // 저장된 연출 상태상 이미 끝난 결과 칩은 앱을 다시 열어도 다시 띄우지 않는다.
+                            resultChangesShownBefore = resultDisplayId != null &&
+                                state.presentation.resultAnimation == ResultAnimationStatus.CONSUMED,
                             reduceMotion = reduceMotion,
                         )
                     }
@@ -622,6 +634,7 @@ private fun DecisionSheet(
     onChoose: (String) -> Unit,
     onContinue: () -> Unit,
     changeKey: String,
+    resultChangesShownBefore: Boolean = false,
     reduceMotion: Boolean,
 ) {
     Column(
@@ -647,7 +660,7 @@ private fun DecisionSheet(
                 )
             }
         } else {
-            OutcomeBlock(outcome, changeKey = changeKey, reduceMotion = reduceMotion)
+            OutcomeBlock(outcome, changeKey = changeKey, reduceMotion = reduceMotion, changesShownBefore = resultChangesShownBefore)
             InkButton(
                 text = if (outcome.endsLife) "인생 정리하기" else "계속하기",
                 onClick = onContinue,
@@ -835,7 +848,7 @@ private fun ChoiceArrow(color: Color) {
 }
 
 @Composable
-private fun OutcomeBlock(outcome: OutcomeUi, changeKey: String, reduceMotion: Boolean) {
+private fun OutcomeBlock(outcome: OutcomeUi, changeKey: String, reduceMotion: Boolean, changesShownBefore: Boolean = false) {
     val shape = RoundedCornerShape(12.dp)
     Box(Modifier.fillMaxWidth()) {
         Column(
@@ -903,6 +916,7 @@ private fun OutcomeBlock(outcome: OutcomeUi, changeKey: String, reduceMotion: Bo
             FloatingChanges(
                 changes = outcome.changes,
                 key = changeKey,
+                shownBefore = changesShownBefore,
                 modifier = Modifier.align(Alignment.TopCenter),
             )
         }
@@ -916,8 +930,8 @@ private fun OutcomeBlock(outcome: OutcomeUi, changeKey: String, reduceMotion: Bo
  */
 @OptIn(ExperimentalLayoutApi::class)
 @Composable
-private fun FloatingChanges(changes: List<StatChangeUi>, key: String, modifier: Modifier = Modifier) {
-    var played by rememberSaveable(key) { mutableStateOf(false) }
+private fun FloatingChanges(changes: List<StatChangeUi>, key: String, shownBefore: Boolean = false, modifier: Modifier = Modifier) {
+    var played by rememberSaveable(key) { mutableStateOf(shownBefore) }
     val visible = remember(key) { MutableTransitionState(false) }
     LaunchedEffect(key) {
         if (played) return@LaunchedEffect
