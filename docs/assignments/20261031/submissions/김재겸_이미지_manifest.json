@@ -135,6 +135,16 @@
           "result": "보이는 가로 범위가 1080x2400(0.331..0.669)보다 넓어 1080x2400 판정이 하한이다. 새로 잃는 사물 없음.",
           "captureSha256": "d3aae9d965456c58ad7c63dc05e180e49547a49ed929602aed756d4fb0f58c57",
           "localCandidate": "tmp/verify-20261109 a13d21f (main + #61 + #62 + 검토용 경로, 미배포)"
+        },
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_adult_audition_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "78153f89409189629f7df8dc610f56a4ed2a902d733c58911ba505870fe5270e"
         }
       },
       "appConnection": {
@@ -222,6 +232,16 @@
           "result": "보이는 가로 범위가 1080x2400(0.331..0.669)보다 넓어 1080x2400 판정이 하한이다. 새로 잃는 사물 없음.",
           "captureSha256": "e1433d3a04625fb9454ad63737e164e959b19aabe5f93d6efab5bef3f5dbf42d",
           "localCandidate": "tmp/verify-20261109 a13d21f (main + #61 + #62 + 검토용 경로, 미배포)"
+        },
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_adult_drinks_ideal_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "47709d79cfb0da3543a935c4f95debf227710c98bf0b807c0a4d229141973109"
         }
       },
       "appConnection": {
@@ -309,6 +329,16 @@
           "result": "보이는 가로 범위가 1080x2400(0.331..0.669)보다 넓어 1080x2400 판정이 하한이다. 새로 잃는 사물 없음.",
           "captureSha256": "c5292ff8864b6d85d68b36ba925476d39e0b015d9fdbcb90f92aeb7ca6391cf7",
           "localCandidate": "tmp/verify-20261109 a13d21f (main + #61 + #62 + 검토용 경로, 미배포)"
+        },
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_adult_interview_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "505eb11169392f697d1aa2dea06bf57542c039feaeb7eb44e69a855bff73a665"
         }
       },
       "appConnection": {
@@ -396,6 +426,16 @@
           "result": "보이는 가로 범위가 1080x2400(0.331..0.669)보다 넓어 1080x2400 판정이 하한이다. 새로 잃는 사물 없음.",
           "captureSha256": "cb969598d3ecdb97f6ffa23472c115cb6c84c0a28f0def59a656f46efa8517f1",
           "localCandidate": "tmp/verify-20261109 a13d21f (main + #61 + #62 + 검토용 경로, 미배포)"
+        },
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_adult_dinner_escape_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "ece24fde73b260b7e872cf37c1f5ef6a39ccb0fd2d0d2a9d9de875fff5a08409"
         }
       },
       "appConnection": {
@@ -483,6 +523,16 @@
           "result": "보이는 가로 범위가 1080x2400(0.331..0.669)보다 넓어 1080x2400 판정이 하한이다. 새로 잃는 사물 없음.",
           "captureSha256": "02b64f3336d9233e3ff1880b1f17cc9b68cb8e7a9990acddd47783d10e25e840",
           "localCandidate": "tmp/verify-20261109 a13d21f (main + #61 + #62 + 검토용 경로, 미배포)"
+        },
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_adult_asking_way_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "e277063d9d1a3a868af5a328bde3c0ae79a0309db71c2c35562cc7689950a679"
         }
       },
       "appConnection": {
@@ -570,6 +620,16 @@
           "result": "보이는 가로 범위가 1080x2400(0.331..0.669)보다 넓어 1080x2400 판정이 하한이다. 새로 잃는 사물 없음.",
           "captureSha256": "e34155a2d848c3940143a4bc1ac28d18c6daac53225e984f254968670bfeb40b",
           "localCandidate": "tmp/verify-20261109 a13d21f (main + #61 + #62 + 검토용 경로, 미배포)"
+        },
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_adult_first_car_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "bc128ba7359ce4383fb850dbfdf01340950a090776584e722aca637f4b0de4be"
         }
       },
       "appConnection": {
@@ -666,6 +726,16 @@
           "result": "보이는 가로 범위가 1080x2400(0.331..0.669)보다 넓어 1080x2400 판정이 하한이다. 새로 잃는 사물 없음.",
           "captureSha256": "125225275be6f4fe2faef678ce15dde5d487c11b0a39f621f6f6365d3188092e",
           "localCandidate": "tmp/verify-20261109 a13d21f (main + #61 + #62 + 검토용 경로, 미배포)"
+        },
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_adult_arm_wrestling_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "7d80781de1f995ad6341c8db7a06df5c610678de95f56fa964d2de1a28b84276"
         }
       },
       "appConnection": {
@@ -753,6 +823,16 @@
           "result": "보이는 가로 범위가 1080x2400(0.331..0.669)보다 넓어 1080x2400 판정이 하한이다. 새로 잃는 사물 없음.",
           "captureSha256": "bc13f4f5796c71cb77bdb119cec848cfeaa8efdd5e8d1104404a8c79ffaa8e68",
           "localCandidate": "tmp/verify-20261109 a13d21f (main + #61 + #62 + 검토용 경로, 미배포)"
+        },
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_adult_burnout_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "8b311fd0a17e37a6a0d52bf9c0e7eba2408331cea73f2af085f6f09a3b5f25a4"
         }
       },
       "appConnection": {
@@ -840,6 +920,16 @@
           "result": "보이는 가로 범위가 1080x2400(0.331..0.669)보다 넓어 1080x2400 판정이 하한이다. 새로 잃는 사물 없음.",
           "captureSha256": "e162eb3d2db021b6b47b42f90e13a50e770e8cb9c1cb903f9083b9ab2afcc8ce",
           "localCandidate": "tmp/verify-20261109 a13d21f (main + #61 + #62 + 검토용 경로, 미배포)"
+        },
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_adult_hospital_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "f548af5592b375f182815c16f2e3f96a12247fe2b914b390d94b2cba9d6aa9d7"
         }
       },
       "appConnection": {
@@ -927,6 +1017,16 @@
           "result": "보이는 가로 범위가 1080x2400(0.331..0.669)보다 넓어 1080x2400 판정이 하한이다. 새로 잃는 사물 없음.",
           "captureSha256": "9110154ce950c1f95c48baa88284f9a19eddc5f5bf4b4f98c3eaab379328694b",
           "localCandidate": "tmp/verify-20261109 a13d21f (main + #61 + #62 + 검토용 경로, 미배포)"
+        },
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_adult_office_plant_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "cf1d9007a9c08813ace1deaf732324fbb2ea30a54a1fd312b9d5842445ccab91"
         }
       },
       "appConnection": {
@@ -1014,6 +1114,16 @@
           "result": "보이는 가로 범위가 1080x2400(0.331..0.669)보다 넓어 1080x2400 판정이 하한이다. 새로 잃는 사물 없음.",
           "captureSha256": "70c4c065d1f41b52ea4c543c47e2b20c160269873208004dc67953a87137d489",
           "localCandidate": "tmp/verify-20261109 a13d21f (main + #61 + #62 + 검토용 경로, 미배포)"
+        },
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_adult_reading_glasses_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "bebe92cb72ee363ccdced9ef225191788ad09bcd1a59b69e42aa1016f01f97eb"
         }
       },
       "appConnection": {
@@ -1101,6 +1211,16 @@
           "result": "보이는 가로 범위가 1080x2400(0.331..0.669)보다 넓어 1080x2400 판정이 하한이다. 새로 잃는 사물 없음.",
           "captureSha256": "383ad06536943837bb28878b3b6b6325fd22064e1fd9debfea560f9d41e77137",
           "localCandidate": "tmp/verify-20261109 a13d21f (main + #61 + #62 + 검토용 경로, 미배포)"
+        },
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_adult_health_recheck_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "361ae9eafb2b0f0c51ca7c83203fada82775dd8a29f773c1891655d8fccee20e"
         }
       },
       "appConnection": {
@@ -1188,6 +1308,16 @@
           "result": "보이는 가로 범위가 1080x2400(0.331..0.669)보다 넓어 1080x2400 판정이 하한이다. 새로 잃는 사물 없음.",
           "captureSha256": "d97525df3b202209485059fd81cad5f012e90246b60d30fd7017a12286b197f8",
           "localCandidate": "tmp/verify-20261109 a13d21f (main + #61 + #62 + 검토용 경로, 미배포)"
+        },
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_adult_empty_nest_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "1ae589b0daf5f9079262724a3548298e54fff7b731a3b2c56c512d3f8577570c"
         }
       },
       "appConnection": {
@@ -1284,6 +1414,16 @@
           "result": "보이는 가로 범위가 1080x2400(0.331..0.669)보다 넓어 1080x2400 판정이 하한이다. 새로 잃는 사물 없음.",
           "captureSha256": "2f2cb8efa09cc8fcd51b0441c4a669ef17729e5aa2b85ad9eef8a2448f98ba2f",
           "localCandidate": "tmp/verify-20261109 a13d21f (main + #61 + #62 + 검토용 경로, 미배포)"
+        },
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_pov_promotion_review_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "6cdf878084520ec42ac0cd987a9a4186100d297142fcc32234d4d4c9ed90effd"
         }
       },
       "appConnection": {
@@ -1371,6 +1511,16 @@
           "result": "보이는 가로 범위가 1080x2400(0.331..0.669)보다 넓어 1080x2400 판정이 하한이다. 새로 잃는 사물 없음.",
           "captureSha256": "ac92f17483955c2936356b84e6e2b2a210d54e9c0ad7f4b5836be93fc8305379",
           "localCandidate": "tmp/verify-20261109 a13d21f (main + #61 + #62 + 검토용 경로, 미배포)"
+        },
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_pov_campfire_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "1e8ba5fdf44a87e8a7e5f67fb4fb70e4af4f2980ed2eb7330249cce240ab3613"
         }
       },
       "appConnection": {
@@ -1458,6 +1608,16 @@
           "result": "보이는 가로 범위가 1080x2400(0.331..0.669)보다 넓어 1080x2400 판정이 하한이다. 새로 잃는 사물 없음.",
           "captureSha256": "79692edf6c29c222bc951887efd48c67b7859599b0d4eef0af6a96156e7cc26d",
           "localCandidate": "tmp/verify-20261109 a13d21f (main + #61 + #62 + 검토용 경로, 미배포)"
+        },
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_child_election_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "5c3eedb6864ff44515f72b2941e28ef7598c0a02f3d9405c5cde364312450fe5"
         }
       },
       "appConnection": {
@@ -1523,19 +1683,29 @@
         "note": "이전 PNG REVISE: 손에 든 5천 원권이 기계의 황금 카드와 색과 형태가 비슷해 보인다. 우리나라 지폐처럼 지폐 오른쪽에 작고 단순한 인물 윤곽을 넣어 종이 지폐로 읽히게 한다. 실제 인물의 세부 묘사나 읽을 수 있는 글자·숫자는 넣지 않고, 기계의 황금 카드와 색·무늬도 구분한다. → 반영해 다시 만듦, 재검수 필요"
       },
       "cropReview": {
-        "status": "PENDING_DEVICE_CROP"
+        "checkedAt": "2026-11-11",
+        "route": "검토용 임시 경로(미배포) — 재검수 전 미연결",
+        "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+        "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+        "imageShown": "img_child_allowance_001",
+        "visibleX": "0.331..0.669 / 0.318..0.682",
+        "sceneMatch": "1.000 / 1.000",
+        "captureSha256": "5d8eed99c7596893838871d8898f316b396ad47eb3c893d33e1f94a4c9bd8fff",
+        "status": "CROP_OK",
+        "reviewer": "김재겸",
+        "result": "가챠 기계 전체 · 앞판 황금 카드 · 지폐(테두리 무늬와 오른쪽 인물 윤곽)가 크롭 안에 남는다. 지폐 오른쪽 끝만 조금 잘림.",
+        "smallScreenNote": "360x640dp(720x1280) 화면은 보이는 범위가 더 넓어(0.289..0.711) 이 판정이 하한"
       },
       "appConnection": {
         "status": "NOT_CONNECTED",
-        "note": "신기훈 의미 검수 대기(다시 만든 PNG) / 정원률 화풍 재검수 대기(다시 만든 PNG) / 실기기 크롭 미통과"
+        "note": "신기훈 의미 검수 대기(다시 만든 PNG) / 정원률 화풍 재검수 대기(다시 만든 PNG)"
       },
       "sha256": "bbbfa34100b983a95ebdbe27d6ab55132a029030c08370540552d1b837ef9eae",
       "approval": {
         "status": "NOT_APPROVED",
         "pending": [
           "신기훈 의미 검수 대기(다시 만든 PNG)",
-          "정원률 화풍 재검수 대기(다시 만든 PNG)",
-          "실기기 크롭 미통과"
+          "정원률 화풍 재검수 대기(다시 만든 PNG)"
         ]
       },
       "rejectedAttempts": [
@@ -1615,6 +1785,16 @@
           "result": "보이는 가로 범위가 1080x2400(0.331..0.669)보다 넓어 1080x2400 판정이 하한이다. 새로 잃는 사물 없음.",
           "captureSha256": "0b7c221a3deb22748085934e36fd95489c4492ef1dbfb2b5f280aac802ad7955",
           "localCandidate": "tmp/verify-20261109 a13d21f (main + #61 + #62 + 검토용 경로, 미배포)"
+        },
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_child_arts_pick_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "f00c216a31411610fcb06194051dc546d82f3c28780b7f4c1b818a9339d37b50"
         }
       },
       "appConnection": {
@@ -1711,6 +1891,16 @@
           "result": "보이는 가로 범위가 1080x2400(0.331..0.669)보다 넓어 1080x2400 판정이 하한이다. 새로 잃는 사물 없음.",
           "captureSha256": "c891980cba6f4801fa8a346dd27f38d28ecc4434eb8920b6470d7e1283a84f0b",
           "localCandidate": "tmp/verify-20261109 a13d21f (main + #61 + #62 + 검토용 경로, 미배포)"
+        },
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_child_cheer_leader_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "f36fa31338a79db96e4c5de6cfc29920a7e4e228e597a5e3c34fddf92b3166e2"
         }
       },
       "appConnection": {
@@ -1798,6 +1988,16 @@
           "result": "보이는 가로 범위가 1080x2400(0.331..0.669)보다 넓어 1080x2400 판정이 하한이다. 새로 잃는 사물 없음.",
           "captureSha256": "0c1d3f14ce14d99b24200bda396406a81718c59fe9f58a91ed18cab9a678d2e9",
           "localCandidate": "tmp/verify-20261109 a13d21f (main + #61 + #62 + 검토용 경로, 미배포)"
+        },
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_child_lunch_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "d206acfb136f5dc21d03863a170db075941fbbf17edba23a15c832a3ec65e0f7"
         }
       },
       "appConnection": {
@@ -1885,6 +2085,16 @@
           "result": "보이는 가로 범위가 1080x2400(0.331..0.669)보다 넓어 1080x2400 판정이 하한이다. 새로 잃는 사물 없음.",
           "captureSha256": "f07a8602f61a31abf9c6d2c42cb2604e8b3b20f7761761e55d967a9f8c5b73ee",
           "localCandidate": "tmp/verify-20261109 a13d21f (main + #61 + #62 + 검토용 경로, 미배포)"
+        },
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_child_class_nap_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "0badc58a71e66e6100777fe2987025eb38ff3c729537cc9a5aa14aa8099d27b5"
         }
       },
       "appConnection": {
@@ -1972,6 +2182,16 @@
           "result": "보이는 가로 범위가 1080x2400(0.331..0.669)보다 넓어 1080x2400 판정이 하한이다. 새로 잃는 사물 없음.",
           "captureSha256": "fd4fbdd60871e16bb81dfe7cfc557174b690de61ab7d38019c000fb186231b81",
           "localCandidate": "tmp/verify-20261109 a13d21f (main + #61 + #62 + 검토용 경로, 미배포)"
+        },
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_child_baduk_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "575a980f4e240c664f53290c57252c4b8630a32287b5d273fdeee4e64449ef13"
         }
       },
       "appConnection": {
@@ -2059,6 +2279,16 @@
           "result": "보이는 가로 범위가 1080x2400(0.331..0.669)보다 넓어 1080x2400 판정이 하한이다. 새로 잃는 사물 없음.",
           "captureSha256": "8f711e2289bdd9eb40986a10c5c6333d9ff09431e519cde77150e3d1f0933889",
           "localCandidate": "tmp/verify-20261109 a13d21f (main + #61 + #62 + 검토용 경로, 미배포)"
+        },
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_child_piano_contest_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "11da5ff388ef3bc5cc247db6636cede2c2dbccf21f4cf62e4b10881a9d2f09f2"
         }
       },
       "appConnection": {
@@ -2146,6 +2376,16 @@
           "result": "보이는 가로 범위가 1080x2400(0.331..0.669)보다 넓어 1080x2400 판정이 하한이다. 새로 잃는 사물 없음.",
           "captureSha256": "5d7f273475e818f6460b467affb6de2215d830f3c0ddc4b3f77559ce268475c1",
           "localCandidate": "tmp/verify-20261109 a13d21f (main + #61 + #62 + 검토용 경로, 미배포)"
+        },
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_child_chick_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "c404fed3138e0a46ea1c788b217cef536c7718e129ddb05b5b809ec7156344e7"
         }
       },
       "appConnection": {
@@ -2233,6 +2473,16 @@
           "result": "보이는 가로 범위가 1080x2400(0.331..0.669)보다 넓어 1080x2400 판정이 하한이다. 새로 잃는 사물 없음.",
           "captureSha256": "4407b2b2b88f5ab99357d82275b3cab82b218c9fed36e331e1b5b63a0d42ff88",
           "localCandidate": "tmp/verify-20261109 a13d21f (main + #61 + #62 + 검토용 경로, 미배포)"
+        },
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_cross_01_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "cdf6668dae02fc8fe4950babbf06917327f471173ae89be7c2f5d6f480faac77"
         }
       },
       "appConnection": {
@@ -2320,6 +2570,16 @@
           "result": "보이는 가로 범위가 1080x2400(0.331..0.669)보다 넓어 1080x2400 판정이 하한이다. 새로 잃는 사물 없음.",
           "captureSha256": "8c713df6e73c8db3b37012712efacc3c15b32dffba5c123a284251f9d26a33e5",
           "localCandidate": "tmp/verify-20261109 a13d21f (main + #61 + #62 + 검토용 경로, 미배포)"
+        },
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_cross_06_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "762aaaffdc8d3a4f65a730d5bc5841f0777006463d95094a60c11c36a73dd964"
         }
       },
       "appConnection": {
@@ -2407,6 +2667,16 @@
           "result": "보이는 가로 범위가 1080x2400(0.331..0.669)보다 넓어 1080x2400 판정이 하한이다. 새로 잃는 사물 없음.",
           "captureSha256": "c9ae13a4ca0cad044c2026d07ed354d81bf14ba9404693d9f179785d8789f2b0",
           "localCandidate": "tmp/verify-20261109 a13d21f (main + #61 + #62 + 검토용 경로, 미배포)"
+        },
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_cross_11_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "ca5b3a42e38f8a9ff743f6ebfc502f4db979349f359eea9a713f34370e2de813"
         }
       },
       "appConnection": {
@@ -2494,6 +2764,16 @@
           "result": "보이는 가로 범위가 1080x2400(0.331..0.669)보다 넓어 1080x2400 판정이 하한이다. 새로 잃는 사물 없음.",
           "captureSha256": "502a98c6c75f10b41ae16b46d002923f73e8265829e0fc55fd5b08acdf999989",
           "localCandidate": "tmp/verify-20261109 a13d21f (main + #61 + #62 + 검토용 경로, 미배포)"
+        },
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_infant_loud_cry_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "528eed94ad435a33fa2a53b84e04dec25f939d93df39629b5287b3bb7119a4cf"
         }
       },
       "appConnection": {
@@ -2581,6 +2861,16 @@
           "result": "보이는 가로 범위가 1080x2400(0.331..0.669)보다 넓어 1080x2400 판정이 하한이다. 새로 잃는 사물 없음.",
           "captureSha256": "7de76174d5ae070c19849af33e9a710fafa33ba6814f1ccc08da93c6b71ccada",
           "localCandidate": "tmp/verify-20261109 a13d21f (main + #61 + #62 + 검토용 경로, 미배포)"
+        },
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_infant_first_word_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "320aa0db3c302c548a6f5c83e051993a85e4223c9c1698b27eda5692f0f5d735"
         }
       },
       "appConnection": {
@@ -2668,6 +2958,16 @@
           "result": "보이는 가로 범위가 1080x2400(0.331..0.669)보다 넓어 1080x2400 판정이 하한이다. 새로 잃는 사물 없음.",
           "captureSha256": "de296789d1cef2d7c51dae0a029de0d565690af37015900f656e252bb56731e3",
           "localCandidate": "tmp/verify-20261109 a13d21f (main + #61 + #62 + 검토용 경로, 미배포)"
+        },
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_infant_crayon_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "4d8242ab9939bcd3b5cee39384e118abf186ed4249e84c9bae9c340a833364af"
         }
       },
       "appConnection": {
@@ -2755,6 +3055,16 @@
           "result": "보이는 가로 범위가 1080x2400(0.331..0.669)보다 넓어 1080x2400 판정이 하한이다. 새로 잃는 사물 없음.",
           "captureSha256": "27f7ecc8a819625e29e9fa2996444d17bdf106e03b09a2332190655abfb3fd20",
           "localCandidate": "tmp/verify-20261109 a13d21f (main + #61 + #62 + 검토용 경로, 미배포)"
+        },
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_infant_daycare_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "075cdb5adb6ce31b19a09c6a93dab4bd5c52e3795aa79f466bba2ebfbd5d0d6c"
         }
       },
       "appConnection": {
@@ -2842,6 +3152,16 @@
           "result": "보이는 가로 범위가 1080x2400(0.331..0.669)보다 넓어 1080x2400 판정이 하한이다. 새로 잃는 사물 없음.",
           "captureSha256": "1d4bb76310378c287c0dc52fa4c895c9641b112d7f2e6889f62655868bcd46f1",
           "localCandidate": "tmp/verify-20261109 a13d21f (main + #61 + #62 + 검토용 경로, 미배포)"
+        },
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_infant_elevator_button_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "405cdd8ffc08dd95721195441f7cf916cae5f747d7c4f6b29ba1e331813aef2a"
         }
       },
       "appConnection": {
@@ -2929,6 +3249,16 @@
           "result": "보이는 가로 범위가 1080x2400(0.331..0.669)보다 넓어 1080x2400 판정이 하한이다. 새로 잃는 사물 없음.",
           "captureSha256": "419f4ab2cf88b1a2bf70ab62882d31ea485139aad098a3d44ca16c96cea468c0",
           "localCandidate": "tmp/verify-20261109 a13d21f (main + #61 + #62 + 검토용 경로, 미배포)"
+        },
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_infant_nap_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "a72e95276e55bbf5ea354c6ae2fe2efa5badd5ec9951d8ecbf82359a8bc8336e"
         }
       },
       "appConnection": {
@@ -3016,6 +3346,16 @@
           "result": "보이는 가로 범위가 1080x2400(0.331..0.669)보다 넓어 1080x2400 판정이 하한이다. 새로 잃는 사물 없음.",
           "captureSha256": "1bc785f2f89b2214d39828505972e7127a230fa9713319fc13d89a77c6950922",
           "localCandidate": "tmp/verify-20261109 a13d21f (main + #61 + #62 + 검토용 경로, 미배포)"
+        },
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_path_fit_04_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "e1daffb2c36e143d35b020fb705fec2c981acc65778748d3bd2d3f8d01ab4a23"
         }
       },
       "appConnection": {
@@ -3186,6 +3526,16 @@
           "result": "보이는 가로 범위가 1080x2400(0.331..0.669)보다 넓어 1080x2400 판정이 하한이다. 새로 잃는 사물 없음.",
           "captureSha256": "29e739781ee0913bd7d016ead41e1bdca6b6386668e64660197e62d5df7ef3ce",
           "localCandidate": "tmp/verify-20261109 a13d21f (main + #61 + #62 + 검토용 경로, 미배포)"
+        },
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_path_fit_11_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "88822daf17509d1e42c1fa7f31b130ea45fb7e78cc570101b84f5a2960f3cb25"
         }
       },
       "appConnection": {
@@ -3282,6 +3632,16 @@
           "result": "보이는 가로 범위가 1080x2400(0.331..0.669)보다 넓어 1080x2400 판정이 하한이다. 새로 잃는 사물 없음.",
           "captureSha256": "ffdcda2c5ecfbc8195709c5f7694bde96e424dce4dc7fddae5b9892c6a671330",
           "localCandidate": "tmp/verify-20261109 a13d21f (main + #61 + #62 + 검토용 경로, 미배포)"
+        },
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_path_fit_16_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "b4e88d05c45afab9b3a4b2e37c910626f91d3cd2f08b5f9829faf2a27e31016f"
         }
       },
       "appConnection": {
@@ -3379,6 +3739,16 @@
           "result": "보이는 가로 범위가 1080x2400(0.331..0.669)보다 넓어 1080x2400 판정이 하한이다. 새로 잃는 사물 없음.",
           "captureSha256": "122026ed6586c6d9ee7fc09cc71ccf9fc501956d9f08740255512228fb122b61",
           "localCandidate": "tmp/verify-20261109 a13d21f (main + #61 + #62 + 검토용 경로, 미배포)"
+        },
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_path_hap_03_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "c28d82ffc0c18bee96d9d8dc34d1b2e76afb6f69e6bcd6b3caacf6b261dec2bb"
         }
       },
       "appConnection": {
@@ -3466,6 +3836,16 @@
           "result": "보이는 가로 범위가 1080x2400(0.331..0.669)보다 넓어 1080x2400 판정이 하한이다. 새로 잃는 사물 없음.",
           "captureSha256": "8496e1dca6eac08c0f767fca6bfb1a140d0b30971c7597fd8ff92ab6373e150e",
           "localCandidate": "tmp/verify-20261109 a13d21f (main + #61 + #62 + 검토용 경로, 미배포)"
+        },
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_path_hap_08_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "b702653e76f8523c5f6c7c5bc8227fd7524b3dc4b69fbfabf2d0daa165c1b297"
         }
       },
       "appConnection": {
@@ -3553,6 +3933,16 @@
           "result": "보이는 가로 범위가 1080x2400(0.331..0.669)보다 넓어 1080x2400 판정이 하한이다. 새로 잃는 사물 없음.",
           "captureSha256": "a32c3075a22caeaa94fe5854bdb5ab067f7879fecd409fda48baabec9efa0a39",
           "localCandidate": "tmp/verify-20261109 a13d21f (main + #61 + #62 + 검토용 경로, 미배포)"
+        },
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_path_hap_15_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "13e2ec04dae029e25eef353b4ee54a098f1bcbb99cb0a53a5351d6a2f9e9208c"
         }
       },
       "appConnection": {
@@ -3649,6 +4039,16 @@
           "result": "보이는 가로 범위가 1080x2400(0.331..0.669)보다 넓어 1080x2400 판정이 하한이다. 새로 잃는 사물 없음.",
           "captureSha256": "ee022fb33677be7c7186a4813d74b1875ee80da0ee8f23d9bee4fe11f655d26e",
           "localCandidate": "tmp/verify-20261109 a13d21f (main + #61 + #62 + 검토용 경로, 미배포)"
+        },
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_path_hea_04_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "c147acc851aa05aef2275e0e71210542ad9095cccf1bb4e57eaa9d87ac65508f"
         }
       },
       "appConnection": {
@@ -3819,6 +4219,16 @@
           "result": "보이는 가로 범위가 1080x2400(0.331..0.669)보다 넓어 1080x2400 판정이 하한이다. 새로 잃는 사물 없음.",
           "captureSha256": "038ef21b5fd429c02f2fa1477ff8b621739518f8c8dbf2cea9aaee1e591f0061",
           "localCandidate": "tmp/verify-20261109 a13d21f (main + #61 + #62 + 검토용 경로, 미배포)"
+        },
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_path_hea_11_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "9d2946c5399e78bd744413b5e44f53cd3ff1a431108c5e9061105a9693364d0e"
         }
       },
       "appConnection": {
@@ -3906,6 +4316,16 @@
           "result": "보이는 가로 범위가 1080x2400(0.331..0.669)보다 넓어 1080x2400 판정이 하한이다. 새로 잃는 사물 없음.",
           "captureSha256": "740bc634ae96d27611a33bfc6bb5b654e23ff82bf7c29aff93a149ba551bbc63",
           "localCandidate": "tmp/verify-20261109 a13d21f (main + #61 + #62 + 검토용 경로, 미배포)"
+        },
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_path_hea_16_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "1e3667807e65a0ad999f07658961b2918041557f98296832e7868cfd43cb20e5"
         }
       },
       "appConnection": {
@@ -3993,6 +4413,16 @@
           "result": "보이는 가로 범위가 1080x2400(0.331..0.669)보다 넓어 1080x2400 판정이 하한이다. 새로 잃는 사물 없음.",
           "captureSha256": "4af8983298c09a350bb40ac6be2ae597d58b8301c6286d055243841f7bb9bc9e",
           "localCandidate": "tmp/verify-20261109 a13d21f (main + #61 + #62 + 검토용 경로, 미배포)"
+        },
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_path_int_05_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "b95081831ee579c03fd81705ad52b15f733fbb1b32c864f9897733ff70c0f1e2"
         }
       },
       "appConnection": {
@@ -4080,6 +4510,16 @@
           "result": "보이는 가로 범위가 1080x2400(0.331..0.669)보다 넓어 1080x2400 판정이 하한이다. 새로 잃는 사물 없음.",
           "captureSha256": "c891a65e3e9db58b1adb52d9c84ba9163094edfc50f2c6941378650eb849f577",
           "localCandidate": "tmp/verify-20261109 a13d21f (main + #61 + #62 + 검토용 경로, 미배포)"
+        },
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_path_int_12_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "8614c62a632052d93a51b2d801106787a96294d0aead0c37a39a6b7b6cc0bb3f"
         }
       },
       "appConnection": {
@@ -4167,6 +4607,16 @@
           "result": "보이는 가로 범위가 1080x2400(0.331..0.669)보다 넓어 1080x2400 판정이 하한이다. 새로 잃는 사물 없음.",
           "captureSha256": "2e00ff3161546180f21bc3fbb3d0f40f6dcab7762c150e90e91e8a509a9f8aaa",
           "localCandidate": "tmp/verify-20261109 a13d21f (main + #61 + #62 + 검토용 경로, 미배포)"
+        },
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_path_int_17_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "f3032c61cd366e61f8e2dc83ca63ff0ef9f9879a99bb921c5eaa6ea7fb5ac706"
         }
       },
       "appConnection": {
@@ -4254,6 +4704,16 @@
           "result": "보이는 가로 범위가 1080x2400(0.331..0.669)보다 넓어 1080x2400 판정이 하한이다. 새로 잃는 사물 없음.",
           "captureSha256": "7d044cb873bf0d7665ac8cd6bae583451f81fbf50adfec4bc1a28e2eaa4eb420",
           "localCandidate": "tmp/verify-20261109 a13d21f (main + #61 + #62 + 검토용 경로, 미배포)"
+        },
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_path_luk_04_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "79cf95c01e1ed060d492acb60d002baad6f02e2bff661306e2ac1dd4f9c38625"
         }
       },
       "appConnection": {
@@ -4341,6 +4801,16 @@
           "result": "보이는 가로 범위가 1080x2400(0.331..0.669)보다 넓어 1080x2400 판정이 하한이다. 새로 잃는 사물 없음.",
           "captureSha256": "081b7d723585babf11ecd5d6f7ae295d56d9e2d1df5cde43292b1ba1f7ba1639",
           "localCandidate": "tmp/verify-20261109 a13d21f (main + #61 + #62 + 검토용 경로, 미배포)"
+        },
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_path_luk_11_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "5fc3adaf68af9ae05d70f9981bffdfa914afa6ff32f9d6318e3492b12ffe9539"
         }
       },
       "appConnection": {
@@ -4428,6 +4898,16 @@
           "result": "보이는 가로 범위가 1080x2400(0.331..0.669)보다 넓어 1080x2400 판정이 하한이다. 새로 잃는 사물 없음.",
           "captureSha256": "ef6de835c4fd40f99d588a9e4ac7cafc4278a9ce250e5fc0f9e48b529b8d1476",
           "localCandidate": "tmp/verify-20261109 a13d21f (main + #61 + #62 + 검토용 경로, 미배포)"
+        },
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_path_luk_16_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "debc8d83b6da162d4b656faa0cf0d5f1a0580498a68c110e0ed4ab7087a02d92"
         }
       },
       "appConnection": {
@@ -4515,6 +4995,16 @@
           "result": "보이는 가로 범위가 1080x2400(0.331..0.669)보다 넓어 1080x2400 판정이 하한이다. 새로 잃는 사물 없음.",
           "captureSha256": "6e637b79fa2e52c57afd0e3e8fad2e7b31d2f83cb599d12db90bfac038ce4324",
           "localCandidate": "tmp/verify-20261109 a13d21f (main + #61 + #62 + 검토용 경로, 미배포)"
+        },
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_path_soc_04_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "10ba2192d1de23924a120d25937032e1888654c98101cc282c1ef3f058e7f075"
         }
       },
       "appConnection": {
@@ -4685,6 +5175,16 @@
           "result": "보이는 가로 범위가 1080x2400(0.331..0.669)보다 넓어 1080x2400 판정이 하한이다. 새로 잃는 사물 없음.",
           "captureSha256": "90f4286acd62f9a43597286b67e7b2cc40f93cacb9d7cb5a57163ecaaa4d7456",
           "localCandidate": "tmp/verify-20261109 a13d21f (main + #61 + #62 + 검토용 경로, 미배포)"
+        },
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_path_soc_11_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "51dd6c0c2ae9fa7ca9b0826a9911a4b96a8b0d4dff28e9596c27ef19d39d7947"
         }
       },
       "appConnection": {
@@ -4750,19 +5250,29 @@
         "note": "이전 PNG REVISE: 360×800 가운데 예상에서 신문과 문만 남고, 제출자 실기기 기록에도 초인종과 누르는 손 전부가 잘린다. 초인종과 검지를 문틀 안쪽 가까이 배치해 신문과 함께 남긴다. → 반영해 다시 만듦, 재검수 필요"
       },
       "cropReview": {
-        "status": "PENDING_DEVICE_CROP"
+        "checkedAt": "2026-11-11",
+        "route": "검토용 임시 경로(미배포) — 재검수 전 미연결",
+        "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+        "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+        "imageShown": "img_path_soc_16_001",
+        "visibleX": "0.331..0.669 / 0.318..0.682",
+        "sceneMatch": "1.000 / 1.000",
+        "captureSha256": "1f966edbf2cdcbf7b1edf8587fa0356f6f567d8f1df12a1ee6b7caf21167a006",
+        "status": "CROP_OK",
+        "reviewer": "김재겸",
+        "result": "닫힌 현관문 · 문틀 옆 초인종과 누르는 주름진 검지 · 문 앞 신문 세 부가 모두 크롭 안에 남는다.",
+        "smallScreenNote": "360x640dp(720x1280) 화면은 보이는 범위가 더 넓어(0.289..0.711) 이 판정이 하한"
       },
       "appConnection": {
         "status": "NOT_CONNECTED",
-        "note": "신기훈 의미 검수 대기(다시 만든 PNG) / 정원률 화풍 재검수 대기(다시 만든 PNG) / 실기기 크롭 미통과"
+        "note": "신기훈 의미 검수 대기(다시 만든 PNG) / 정원률 화풍 재검수 대기(다시 만든 PNG)"
       },
       "sha256": "79cc06817c0196e70d0dea3937548e39f8ad8b20fccd58d36c62774e869d7d4a",
       "approval": {
         "status": "NOT_APPROVED",
         "pending": [
           "신기훈 의미 검수 대기(다시 만든 PNG)",
-          "정원률 화풍 재검수 대기(다시 만든 PNG)",
-          "실기기 크롭 미통과"
+          "정원률 화풍 재검수 대기(다시 만든 PNG)"
         ]
       },
       "rejectedAttempts": [
@@ -4844,6 +5354,16 @@
           "result": "보이는 가로 범위가 1080x2400(0.331..0.669)보다 넓어 1080x2400 판정이 하한이다. 새로 잃는 사물 없음.",
           "captureSha256": "de8a9875a6a2d93ac3980a453027269df0b1ae92fe5338a7910d55aec2caec59",
           "localCandidate": "tmp/verify-20261109 a13d21f (main + #61 + #62 + 검토용 경로, 미배포)"
+        },
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_path_wea_03_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "09cf5e6c5b687089ecf6079b30376a606596602fbdc1caa29548d4cd04be7644"
         }
       },
       "appConnection": {
@@ -4931,6 +5451,16 @@
           "result": "보이는 가로 범위가 1080x2400(0.331..0.669)보다 넓어 1080x2400 판정이 하한이다. 새로 잃는 사물 없음.",
           "captureSha256": "a67e7c253bd5f872934851a8633c4c82473edc5a12f857f57729516c95ea0578",
           "localCandidate": "tmp/verify-20261109 a13d21f (main + #61 + #62 + 검토용 경로, 미배포)"
+        },
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_path_wea_08_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "e60ec8204762761f1170d14ea53959539577ead652923082392d7b2d754829ff"
         }
       },
       "appConnection": {
@@ -5018,6 +5548,16 @@
           "result": "보이는 가로 범위가 1080x2400(0.331..0.669)보다 넓어 1080x2400 판정이 하한이다. 새로 잃는 사물 없음.",
           "captureSha256": "6cd4f79d53a1a026837eb63bad0b64ff0ed8a36b31ac1f5e1e74b7591b77d7a0",
           "localCandidate": "tmp/verify-20261109 a13d21f (main + #61 + #62 + 검토용 경로, 미배포)"
+        },
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_path_wea_15_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "38d7b50caca63eb1ca6fc381a0fa734a2d01942cf42de37e16fbfab2a3406ac0"
         }
       },
       "appConnection": {
@@ -5105,6 +5645,16 @@
           "result": "보이는 가로 범위가 1080x2400(0.331..0.669)보다 넓어 1080x2400 판정이 하한이다. 새로 잃는 사물 없음.",
           "captureSha256": "ae8d0d07a3b6b5fbd6264a5ea0dd271ff17d0d7cc6f3716b732e7d6fd42e5701",
           "localCandidate": "tmp/verify-20261109 a13d21f (main + #61 + #62 + 검토용 경로, 미배포)"
+        },
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_special_hornet_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "c558746bfe85e7017a2a9222c70e0f5f9cd0296ea2747711519e91b0888acc0f"
         }
       },
       "appConnection": {
@@ -5192,6 +5742,16 @@
           "result": "보이는 가로 범위가 1080x2400(0.331..0.669)보다 넓어 1080x2400 판정이 하한이다. 새로 잃는 사물 없음.",
           "captureSha256": "fb1d70c2fb4c7ec685e024cf6360779a0706ad3b6c3bad738810ea146bd2a045",
           "localCandidate": "tmp/verify-20261109 a13d21f (main + #61 + #62 + 검토용 경로, 미배포)"
+        },
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_special_elevator_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "c8dd0c4b36715486969071a0cc63d754b5ee81c9e2cddf354102040d3a28a175"
         }
       },
       "appConnection": {
@@ -5279,6 +5839,16 @@
           "result": "보이는 가로 범위가 1080x2400(0.331..0.669)보다 넓어 1080x2400 판정이 하한이다. 새로 잃는 사물 없음.",
           "captureSha256": "44b844219f093289f349b9cb4a4ebdabf55b10d0cd67c476b713e8876915b68d",
           "localCandidate": "tmp/verify-20261109 a13d21f (main + #61 + #62 + 검토용 경로, 미배포)"
+        },
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_special_bubble_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "baec91929c121a6599658b8cb9a4210c378cabf05644cb3c3ddba0eaa6164556"
         }
       },
       "appConnection": {
@@ -5375,6 +5945,16 @@
           "result": "보이는 가로 범위가 1080x2400(0.331..0.669)보다 넓어 1080x2400 판정이 하한이다. 새로 잃는 사물 없음.",
           "captureSha256": "a310f24537f6c71c9dda6f45d547d9ccf26478e32947618596471449fbe1d9a9",
           "localCandidate": "tmp/verify-20261109 a13d21f (main + #61 + #62 + 검토용 경로, 미배포)"
+        },
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_special_revolving_door_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "c94b2252b430754434332d87a6d48f96511e311a7c2018104f6762a0171ee599"
         }
       },
       "appConnection": {
@@ -5462,6 +6042,16 @@
           "result": "보이는 가로 범위가 1080x2400(0.331..0.669)보다 넓어 1080x2400 판정이 하한이다. 새로 잃는 사물 없음.",
           "captureSha256": "6afc51d4d20007f659961e735c7b36912787cc499c56e96cd10d668be26bff7e",
           "localCandidate": "tmp/verify-20261109 a13d21f (main + #61 + #62 + 검토용 경로, 미배포)"
+        },
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_teen_lunch_line_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "6de32b3b2027148beb3ebcd08a20251acbeeb63fefd9bf9d64b0cbcc87978fac"
         }
       },
       "appConnection": {
@@ -5549,6 +6139,16 @@
           "result": "보이는 가로 범위가 1080x2400(0.331..0.669)보다 넓어 1080x2400 판정이 하한이다. 새로 잃는 사물 없음.",
           "captureSha256": "0bb96cf8349357ff1cf158dceb530b7f5c3b1482f7c2b55c4827dee682b7c8dd",
           "localCandidate": "tmp/verify-20261109 a13d21f (main + #61 + #62 + 검토용 경로, 미배포)"
+        },
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_teen_running_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "dd4d57098f3326a13e8136b5cab1f8a52e977ded98e1c582cc5d38698318e718"
         }
       },
       "appConnection": {
@@ -5636,6 +6236,16 @@
           "result": "보이는 가로 범위가 1080x2400(0.331..0.669)보다 넓어 1080x2400 판정이 하한이다. 새로 잃는 사물 없음.",
           "captureSha256": "c5941db37b521cd5e12071d801cebfd38d64200a3d09304eb81a0c6bf93f617e",
           "localCandidate": "tmp/verify-20261109 a13d21f (main + #61 + #62 + 검토용 경로, 미배포)"
+        },
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_teen_debate_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "30ccb60ca1322615e1efa6da1e3f492f5a7f7450f17b45769f1af72f2ce09bac"
         }
       },
       "appConnection": {
@@ -5723,6 +6333,16 @@
           "result": "보이는 가로 범위가 1080x2400(0.331..0.669)보다 넓어 1080x2400 판정이 하한이다. 새로 잃는 사물 없음.",
           "captureSha256": "aee9005262fc867492f6614b672afba062905e28839bdfc6afbd99c9bd617b76",
           "localCandidate": "tmp/verify-20261109 a13d21f (main + #61 + #62 + 검토용 경로, 미배포)"
+        },
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_teen_high_school_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "bc1c64a33b1581b8ca691be5901f860c3b3807e247513ba26aac7a762b906a52"
         }
       },
       "appConnection": {
@@ -5810,6 +6430,16 @@
           "result": "보이는 가로 범위가 1080x2400(0.331..0.669)보다 넓어 1080x2400 판정이 하한이다. 새로 잃는 사물 없음.",
           "captureSha256": "8b3dcc7b625eecffbf545919b0163f54e0bb3382cbd6ffe048e5f729fc41ae00",
           "localCandidate": "tmp/verify-20261109 a13d21f (main + #61 + #62 + 검토용 경로, 미배포)"
+        },
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_teen_wrong_answer_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "01d66a9f657e8097fec4415908075c0ca116fed320223f5dd7314139c676497c"
         }
       },
       "appConnection": {
@@ -5897,6 +6527,16 @@
           "result": "보이는 가로 범위가 1080x2400(0.331..0.669)보다 넓어 1080x2400 판정이 하한이다. 새로 잃는 사물 없음.",
           "captureSha256": "66d59b34a83b9b1fd378d33ba56fe8f0575f5436f61c515534ddb56bc8cf8fe2",
           "localCandidate": "tmp/verify-20261109 a13d21f (main + #61 + #62 + 검토용 경로, 미배포)"
+        },
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_teen_school_store_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "08e5e2f84ceda8293051c2a33de125686ddc44ee82893a83674ac33e24204096"
         }
       },
       "appConnection": {
@@ -5984,6 +6624,16 @@
           "result": "보이는 가로 범위가 1080x2400(0.331..0.669)보다 넓어 1080x2400 판정이 하한이다. 새로 잃는 사물 없음.",
           "captureSha256": "06fbda03acaf4f5a73c484d6eb732f3e52a75f52d6dd5a1b9ccfd6ece2c4e972",
           "localCandidate": "tmp/verify-20261109 a13d21f (main + #61 + #62 + 검토용 경로, 미배포)"
+        },
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_teen_hair_dye_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "7b3c54c68cc839690ecdb2b57bd63d7e9db59af5214a9aad32d4269a28c2d09f"
         }
       },
       "appConnection": {
@@ -6071,6 +6721,16 @@
           "result": "보이는 가로 범위가 1080x2400(0.331..0.669)보다 넓어 1080x2400 판정이 하한이다. 새로 잃는 사물 없음.",
           "captureSha256": "6e193379ebabb77042a84e52a64f77467c351840f3d5c841930d800a9166956b",
           "localCandidate": "tmp/verify-20261109 a13d21f (main + #61 + #62 + 검토용 경로, 미배포)"
+        },
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_teen_graduation_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "50ffabc1ff41851d14d1890741b8e67513003b217d102f15130b23fe8bdd12d7"
         }
       },
       "appConnection": {
@@ -6107,11 +6767,11 @@
     "ownPngSubmittedTotal": 70,
     "unproduced": 0,
     "selfCropReviewedOnDevice": 69,
-    "teamSemanticReviewed": 0,
+    "teamSemanticReviewed": 67,
     "routedThisPr": 0,
     "finalAcceptedThisPr": 0,
     "smallScreenCropReviewedOnDevice": 69,
-    "teamVisualReviewed": 0,
+    "teamVisualReviewed": 67,
     "approvedByTeamReview": 0,
     "teamSemanticPass": 67,
     "teamVisualPass": 67,
@@ -6124,33 +6784,7 @@
   "rules": "자체 검수는 승인이 아니다. 다른 팀원의 의미·화풍 검토 칸은 비워 둔다(PENDING_TEAM_REVIEW). 의미 검수·크롭·라우팅 전에는 완료로 세지 않는다. 2026-11-09: 승인은 신기훈 의미 검수 PASS + 정원률 화풍 검수 PASS + 김재겸 실기기 크롭(같은 SHA-256) + 김선한 승인 manifest · 라우팅 연결이 모두 있을 때만이다. 검수자 칸은 각 담당자만 채운다. 2026-11-09: 승인은 신기훈 의미 검수 PASS + 정원률 화풍 검수 PASS + 김재겸 실기기 크롭(같은 SHA-256) + 김선한 승인 manifest · 라우팅 연결이 모두 있을 때만이다. 검수자 칸은 각 담당자만 채운다.",
   "updated": "2026-11-11",
   "teamReviewSheet": "docs/assignments/20261106/submissions/김재겸_이미지_팀검수요청_20261109.csv",
-  "catalogDimensionFixes": [
-    "img_pov_promotion_review_001: 300x225 -> 1448x1086",
-    "img_pov_campfire_001: 300x225 -> 1448x1086",
-    "img_cross_01_001: 300x225 -> 1448x1086",
-    "img_cross_06_001: 300x225 -> 1448x1086",
-    "img_cross_11_001: 300x225 -> 1448x1086",
-    "img_path_fit_04_001: 300x225 -> 1448x1086",
-    "img_path_fit_11_001: 300x225 -> 1448x1086",
-    "img_path_fit_16_001: 300x225 -> 1448x1086",
-    "img_path_hap_03_001: 300x225 -> 1448x1086",
-    "img_path_hap_08_001: 300x225 -> 1448x1086",
-    "img_path_hap_15_001: 300x225 -> 1448x1086",
-    "img_path_hea_04_001: 300x225 -> 1448x1086",
-    "img_path_hea_11_001: 300x225 -> 1448x1086",
-    "img_path_hea_16_001: 300x225 -> 1448x1086",
-    "img_path_int_05_001: 300x225 -> 1448x1086",
-    "img_path_int_12_001: 300x225 -> 1448x1086",
-    "img_path_int_17_001: 300x225 -> 1448x1086",
-    "img_path_luk_04_001: 300x225 -> 1448x1086",
-    "img_path_luk_11_001: 300x225 -> 1448x1086",
-    "img_path_luk_16_001: 300x225 -> 1448x1086",
-    "img_path_soc_04_001: 300x225 -> 1448x1086",
-    "img_path_soc_11_001: 300x225 -> 1448x1086",
-    "img_path_wea_03_001: 300x225 -> 1448x1086",
-    "img_path_wea_08_001: 300x225 -> 1448x1086",
-    "img_path_wea_15_001: 300x225 -> 1448x1086"
-  ],
+  "catalogDimensionFixes": [],
   "week12": {
     "assignment": "docs/assignments/20261110/통합지시서.md",
     "candidates": "docs/assignments/20261110/submissions/김재겸_승인후보_20261111.json",

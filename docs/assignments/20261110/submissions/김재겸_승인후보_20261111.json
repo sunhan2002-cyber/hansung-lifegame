@@ -13,7 +13,7 @@
     },
     "semanticReviewer": "신기훈 2026-11-09 PASS (docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09))",
     "visualReviewer": "정원률 2026-11-09 PASS (docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09))",
-    "cropReviewer": "김재겸 SceneCropReviewTest (1080x2400 · 360x740 프레임 · 360x640dp 글꼴 130%), 2026-11-11 실제 라우팅",
+    "cropReviewer": "김재겸 SceneCropReviewTest 실제 라우팅 2026-11-11 (1080x2400 · 360x740 프레임, 일치도 1.000) + 2026-11-09 360x640dp 글꼴 130%",
     "reviewEvidence": {
       "actualProducer": "김재겸",
       "semantic": {
@@ -34,7 +34,17 @@
         "reviewer": "김재겸",
         "visibleX_1080x2400": "0.331..0.669 / 0.318..0.682",
         "visibleX_360x640": "0.289..0.711",
-        "captureSha256": "78153f89409189629f7df8dc610f56a4ed2a902d733c58911ba505870fe5270e"
+        "captureSha256": "78153f89409189629f7df8dc610f56a4ed2a902d733c58911ba505870fe5270e",
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_adult_audition_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "78153f89409189629f7df8dc610f56a4ed2a902d733c58911ba505870fe5270e"
+        }
       }
     },
     "resolvedIssueEvidence": {
@@ -55,7 +65,7 @@
     },
     "semanticReviewer": "신기훈 2026-11-09 PASS (docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09))",
     "visualReviewer": "정원률 2026-11-09 PASS (docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09))",
-    "cropReviewer": "김재겸 SceneCropReviewTest (1080x2400 · 360x740 프레임 · 360x640dp 글꼴 130%), 2026-11-11 실제 라우팅",
+    "cropReviewer": "김재겸 SceneCropReviewTest 실제 라우팅 2026-11-11 (1080x2400 · 360x740 프레임, 일치도 1.000) + 2026-11-09 360x640dp 글꼴 130%",
     "reviewEvidence": {
       "actualProducer": "김재겸",
       "semantic": {
@@ -76,7 +86,17 @@
         "reviewer": "김재겸",
         "visibleX_1080x2400": "0.331..0.669 / 0.318..0.682",
         "visibleX_360x640": "0.289..0.711",
-        "captureSha256": "47709d79cfb0da3543a935c4f95debf227710c98bf0b807c0a4d229141973109"
+        "captureSha256": "47709d79cfb0da3543a935c4f95debf227710c98bf0b807c0a4d229141973109",
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_adult_drinks_ideal_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "47709d79cfb0da3543a935c4f95debf227710c98bf0b807c0a4d229141973109"
+        }
       }
     },
     "resolvedIssueEvidence": {
@@ -97,7 +117,7 @@
     },
     "semanticReviewer": "신기훈 2026-11-09 PASS (docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09))",
     "visualReviewer": "정원률 2026-11-09 PASS (docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09))",
-    "cropReviewer": "김재겸 SceneCropReviewTest (1080x2400 · 360x740 프레임 · 360x640dp 글꼴 130%), 2026-11-11 실제 라우팅",
+    "cropReviewer": "김재겸 SceneCropReviewTest 실제 라우팅 2026-11-11 (1080x2400 · 360x740 프레임, 일치도 1.000) + 2026-11-09 360x640dp 글꼴 130%",
     "reviewEvidence": {
       "actualProducer": "김재겸",
       "semantic": {
@@ -118,7 +138,17 @@
         "reviewer": "김재겸",
         "visibleX_1080x2400": "0.331..0.669 / 0.318..0.682",
         "visibleX_360x640": "0.289..0.711",
-        "captureSha256": "505eb11169392f697d1aa2dea06bf57542c039feaeb7eb44e69a855bff73a665"
+        "captureSha256": "505eb11169392f697d1aa2dea06bf57542c039feaeb7eb44e69a855bff73a665",
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_adult_interview_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "505eb11169392f697d1aa2dea06bf57542c039feaeb7eb44e69a855bff73a665"
+        }
       }
     },
     "resolvedIssueEvidence": {
@@ -139,7 +169,7 @@
     },
     "semanticReviewer": "신기훈 2026-11-09 PASS (docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09))",
     "visualReviewer": "정원률 2026-11-09 PASS (docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09))",
-    "cropReviewer": "김재겸 SceneCropReviewTest (1080x2400 · 360x740 프레임 · 360x640dp 글꼴 130%), 2026-11-11 실제 라우팅",
+    "cropReviewer": "김재겸 SceneCropReviewTest 실제 라우팅 2026-11-11 (1080x2400 · 360x740 프레임, 일치도 1.000) + 2026-11-09 360x640dp 글꼴 130%",
     "reviewEvidence": {
       "actualProducer": "김재겸",
       "semantic": {
@@ -160,7 +190,17 @@
         "reviewer": "김재겸",
         "visibleX_1080x2400": "0.331..0.669 / 0.318..0.682",
         "visibleX_360x640": "0.289..0.711",
-        "captureSha256": "ece24fde73b260b7e872cf37c1f5ef6a39ccb0fd2d0d2a9d9de875fff5a08409"
+        "captureSha256": "ece24fde73b260b7e872cf37c1f5ef6a39ccb0fd2d0d2a9d9de875fff5a08409",
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_adult_dinner_escape_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "ece24fde73b260b7e872cf37c1f5ef6a39ccb0fd2d0d2a9d9de875fff5a08409"
+        }
       }
     },
     "resolvedIssueEvidence": {
@@ -181,7 +221,7 @@
     },
     "semanticReviewer": "신기훈 2026-11-09 PASS (docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09))",
     "visualReviewer": "정원률 2026-11-09 PASS (docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09))",
-    "cropReviewer": "김재겸 SceneCropReviewTest (1080x2400 · 360x740 프레임 · 360x640dp 글꼴 130%), 2026-11-11 실제 라우팅",
+    "cropReviewer": "김재겸 SceneCropReviewTest 실제 라우팅 2026-11-11 (1080x2400 · 360x740 프레임, 일치도 1.000) + 2026-11-09 360x640dp 글꼴 130%",
     "reviewEvidence": {
       "actualProducer": "김재겸",
       "semantic": {
@@ -202,7 +242,17 @@
         "reviewer": "김재겸",
         "visibleX_1080x2400": "0.331..0.669 / 0.318..0.682",
         "visibleX_360x640": "0.289..0.711",
-        "captureSha256": "e277063d9d1a3a868af5a328bde3c0ae79a0309db71c2c35562cc7689950a679"
+        "captureSha256": "e277063d9d1a3a868af5a328bde3c0ae79a0309db71c2c35562cc7689950a679",
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_adult_asking_way_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "e277063d9d1a3a868af5a328bde3c0ae79a0309db71c2c35562cc7689950a679"
+        }
       }
     },
     "resolvedIssueEvidence": {
@@ -223,7 +273,7 @@
     },
     "semanticReviewer": "신기훈 2026-11-09 PASS_WITH_NOTE (docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09))",
     "visualReviewer": "정원률 2026-11-09 PASS (docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09))",
-    "cropReviewer": "김재겸 SceneCropReviewTest (1080x2400 · 360x740 프레임 · 360x640dp 글꼴 130%), 2026-11-11 실제 라우팅",
+    "cropReviewer": "김재겸 SceneCropReviewTest 실제 라우팅 2026-11-11 (1080x2400 · 360x740 프레임, 일치도 1.000) + 2026-11-09 360x640dp 글꼴 130%",
     "reviewEvidence": {
       "actualProducer": "김재겸",
       "semantic": {
@@ -244,7 +294,17 @@
         "reviewer": "김재겸",
         "visibleX_1080x2400": "0.331..0.669 / 0.318..0.682",
         "visibleX_360x640": "0.289..0.711",
-        "captureSha256": "bc128ba7359ce4383fb850dbfdf01340950a090776584e722aca637f4b0de4be"
+        "captureSha256": "bc128ba7359ce4383fb850dbfdf01340950a090776584e722aca637f4b0de4be",
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_adult_first_car_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "bc128ba7359ce4383fb850dbfdf01340950a090776584e722aca637f4b0de4be"
+        }
       }
     },
     "resolvedIssueEvidence": {
@@ -265,7 +325,7 @@
     },
     "semanticReviewer": "신기훈 2026-11-09 PASS (docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09))",
     "visualReviewer": "정원률 2026-11-09 PASS (docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09))",
-    "cropReviewer": "김재겸 SceneCropReviewTest (1080x2400 · 360x740 프레임 · 360x640dp 글꼴 130%), 2026-11-11 실제 라우팅",
+    "cropReviewer": "김재겸 SceneCropReviewTest 실제 라우팅 2026-11-11 (1080x2400 · 360x740 프레임, 일치도 1.000) + 2026-11-09 360x640dp 글꼴 130%",
     "reviewEvidence": {
       "actualProducer": "김재겸",
       "semantic": {
@@ -286,7 +346,17 @@
         "reviewer": "김재겸",
         "visibleX_1080x2400": "0.331..0.669 / 0.318..0.682",
         "visibleX_360x640": "0.289..0.711",
-        "captureSha256": "7d80781de1f995ad6341c8db7a06df5c610678de95f56fa964d2de1a28b84276"
+        "captureSha256": "7d80781de1f995ad6341c8db7a06df5c610678de95f56fa964d2de1a28b84276",
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_adult_arm_wrestling_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "7d80781de1f995ad6341c8db7a06df5c610678de95f56fa964d2de1a28b84276"
+        }
       }
     },
     "resolvedIssueEvidence": {
@@ -307,7 +377,7 @@
     },
     "semanticReviewer": "신기훈 2026-11-09 PASS_WITH_NOTE (docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09))",
     "visualReviewer": "정원률 2026-11-09 PASS (docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09))",
-    "cropReviewer": "김재겸 SceneCropReviewTest (1080x2400 · 360x740 프레임 · 360x640dp 글꼴 130%), 2026-11-11 실제 라우팅",
+    "cropReviewer": "김재겸 SceneCropReviewTest 실제 라우팅 2026-11-11 (1080x2400 · 360x740 프레임, 일치도 1.000) + 2026-11-09 360x640dp 글꼴 130%",
     "reviewEvidence": {
       "actualProducer": "김재겸",
       "semantic": {
@@ -328,7 +398,17 @@
         "reviewer": "김재겸",
         "visibleX_1080x2400": "0.331..0.669 / 0.318..0.682",
         "visibleX_360x640": "0.289..0.711",
-        "captureSha256": "8b311fd0a17e37a6a0d52bf9c0e7eba2408331cea73f2af085f6f09a3b5f25a4"
+        "captureSha256": "8b311fd0a17e37a6a0d52bf9c0e7eba2408331cea73f2af085f6f09a3b5f25a4",
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_adult_burnout_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "8b311fd0a17e37a6a0d52bf9c0e7eba2408331cea73f2af085f6f09a3b5f25a4"
+        }
       }
     },
     "resolvedIssueEvidence": {
@@ -349,7 +429,7 @@
     },
     "semanticReviewer": "신기훈 2026-11-09 PASS (docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09))",
     "visualReviewer": "정원률 2026-11-09 PASS (docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09))",
-    "cropReviewer": "김재겸 SceneCropReviewTest (1080x2400 · 360x740 프레임 · 360x640dp 글꼴 130%), 2026-11-11 실제 라우팅",
+    "cropReviewer": "김재겸 SceneCropReviewTest 실제 라우팅 2026-11-11 (1080x2400 · 360x740 프레임, 일치도 1.000) + 2026-11-09 360x640dp 글꼴 130%",
     "reviewEvidence": {
       "actualProducer": "김재겸",
       "semantic": {
@@ -370,7 +450,17 @@
         "reviewer": "김재겸",
         "visibleX_1080x2400": "0.331..0.669 / 0.318..0.682",
         "visibleX_360x640": "0.289..0.711",
-        "captureSha256": "f548af5592b375f182815c16f2e3f96a12247fe2b914b390d94b2cba9d6aa9d7"
+        "captureSha256": "f548af5592b375f182815c16f2e3f96a12247fe2b914b390d94b2cba9d6aa9d7",
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_adult_hospital_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "f548af5592b375f182815c16f2e3f96a12247fe2b914b390d94b2cba9d6aa9d7"
+        }
       }
     },
     "resolvedIssueEvidence": {
@@ -391,7 +481,7 @@
     },
     "semanticReviewer": "신기훈 2026-11-09 PASS (docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09))",
     "visualReviewer": "정원률 2026-11-09 PASS (docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09))",
-    "cropReviewer": "김재겸 SceneCropReviewTest (1080x2400 · 360x740 프레임 · 360x640dp 글꼴 130%), 2026-11-11 실제 라우팅",
+    "cropReviewer": "김재겸 SceneCropReviewTest 실제 라우팅 2026-11-11 (1080x2400 · 360x740 프레임, 일치도 1.000) + 2026-11-09 360x640dp 글꼴 130%",
     "reviewEvidence": {
       "actualProducer": "김재겸",
       "semantic": {
@@ -412,7 +502,17 @@
         "reviewer": "김재겸",
         "visibleX_1080x2400": "0.331..0.669 / 0.318..0.682",
         "visibleX_360x640": "0.289..0.711",
-        "captureSha256": "cf1d9007a9c08813ace1deaf732324fbb2ea30a54a1fd312b9d5842445ccab91"
+        "captureSha256": "cf1d9007a9c08813ace1deaf732324fbb2ea30a54a1fd312b9d5842445ccab91",
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_adult_office_plant_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "cf1d9007a9c08813ace1deaf732324fbb2ea30a54a1fd312b9d5842445ccab91"
+        }
       }
     },
     "resolvedIssueEvidence": {
@@ -433,7 +533,7 @@
     },
     "semanticReviewer": "신기훈 2026-11-09 PASS (docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09))",
     "visualReviewer": "정원률 2026-11-09 PASS (docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09))",
-    "cropReviewer": "김재겸 SceneCropReviewTest (1080x2400 · 360x740 프레임 · 360x640dp 글꼴 130%), 2026-11-11 실제 라우팅",
+    "cropReviewer": "김재겸 SceneCropReviewTest 실제 라우팅 2026-11-11 (1080x2400 · 360x740 프레임, 일치도 1.000) + 2026-11-09 360x640dp 글꼴 130%",
     "reviewEvidence": {
       "actualProducer": "김재겸",
       "semantic": {
@@ -454,7 +554,17 @@
         "reviewer": "김재겸",
         "visibleX_1080x2400": "0.331..0.669 / 0.318..0.682",
         "visibleX_360x640": "0.289..0.711",
-        "captureSha256": "bebe92cb72ee363ccdced9ef225191788ad09bcd1a59b69e42aa1016f01f97eb"
+        "captureSha256": "bebe92cb72ee363ccdced9ef225191788ad09bcd1a59b69e42aa1016f01f97eb",
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_adult_reading_glasses_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "bebe92cb72ee363ccdced9ef225191788ad09bcd1a59b69e42aa1016f01f97eb"
+        }
       }
     },
     "resolvedIssueEvidence": {
@@ -475,7 +585,7 @@
     },
     "semanticReviewer": "신기훈 2026-11-09 PASS (docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09))",
     "visualReviewer": "정원률 2026-11-09 PASS (docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09))",
-    "cropReviewer": "김재겸 SceneCropReviewTest (1080x2400 · 360x740 프레임 · 360x640dp 글꼴 130%), 2026-11-11 실제 라우팅",
+    "cropReviewer": "김재겸 SceneCropReviewTest 실제 라우팅 2026-11-11 (1080x2400 · 360x740 프레임, 일치도 1.000) + 2026-11-09 360x640dp 글꼴 130%",
     "reviewEvidence": {
       "actualProducer": "김재겸",
       "semantic": {
@@ -496,7 +606,17 @@
         "reviewer": "김재겸",
         "visibleX_1080x2400": "0.331..0.669 / 0.318..0.682",
         "visibleX_360x640": "0.289..0.711",
-        "captureSha256": "361ae9eafb2b0f0c51ca7c83203fada82775dd8a29f773c1891655d8fccee20e"
+        "captureSha256": "361ae9eafb2b0f0c51ca7c83203fada82775dd8a29f773c1891655d8fccee20e",
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_adult_health_recheck_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "361ae9eafb2b0f0c51ca7c83203fada82775dd8a29f773c1891655d8fccee20e"
+        }
       }
     },
     "resolvedIssueEvidence": {
@@ -517,7 +637,7 @@
     },
     "semanticReviewer": "신기훈 2026-11-09 PASS (docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09))",
     "visualReviewer": "정원률 2026-11-09 PASS (docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09))",
-    "cropReviewer": "김재겸 SceneCropReviewTest (1080x2400 · 360x740 프레임 · 360x640dp 글꼴 130%), 2026-11-11 실제 라우팅",
+    "cropReviewer": "김재겸 SceneCropReviewTest 실제 라우팅 2026-11-11 (1080x2400 · 360x740 프레임, 일치도 1.000) + 2026-11-09 360x640dp 글꼴 130%",
     "reviewEvidence": {
       "actualProducer": "김재겸",
       "semantic": {
@@ -538,7 +658,17 @@
         "reviewer": "김재겸",
         "visibleX_1080x2400": "0.331..0.669 / 0.318..0.682",
         "visibleX_360x640": "0.289..0.711",
-        "captureSha256": "1ae589b0daf5f9079262724a3548298e54fff7b731a3b2c56c512d3f8577570c"
+        "captureSha256": "1ae589b0daf5f9079262724a3548298e54fff7b731a3b2c56c512d3f8577570c",
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_adult_empty_nest_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "1ae589b0daf5f9079262724a3548298e54fff7b731a3b2c56c512d3f8577570c"
+        }
       }
     },
     "resolvedIssueEvidence": {
@@ -559,7 +689,7 @@
     },
     "semanticReviewer": "신기훈 2026-11-09 PASS (docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09))",
     "visualReviewer": "정원률 2026-11-09 PASS (docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09))",
-    "cropReviewer": "김재겸 SceneCropReviewTest (1080x2400 · 360x740 프레임 · 360x640dp 글꼴 130%), 2026-11-11 실제 라우팅",
+    "cropReviewer": "김재겸 SceneCropReviewTest 실제 라우팅 2026-11-11 (1080x2400 · 360x740 프레임, 일치도 1.000) + 2026-11-09 360x640dp 글꼴 130%",
     "reviewEvidence": {
       "actualProducer": "김재겸",
       "semantic": {
@@ -580,7 +710,17 @@
         "reviewer": "김재겸",
         "visibleX_1080x2400": "0.331..0.669 / 0.318..0.682",
         "visibleX_360x640": "0.289..0.711",
-        "captureSha256": "6cdf878084520ec42ac0cd987a9a4186100d297142fcc32234d4d4c9ed90effd"
+        "captureSha256": "6cdf878084520ec42ac0cd987a9a4186100d297142fcc32234d4d4c9ed90effd",
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_pov_promotion_review_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "6cdf878084520ec42ac0cd987a9a4186100d297142fcc32234d4d4c9ed90effd"
+        }
       }
     },
     "resolvedIssueEvidence": {
@@ -601,7 +741,7 @@
     },
     "semanticReviewer": "신기훈 2026-11-09 PASS (docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09))",
     "visualReviewer": "정원률 2026-11-09 PASS (docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09))",
-    "cropReviewer": "김재겸 SceneCropReviewTest (1080x2400 · 360x740 프레임 · 360x640dp 글꼴 130%), 2026-11-11 실제 라우팅",
+    "cropReviewer": "김재겸 SceneCropReviewTest 실제 라우팅 2026-11-11 (1080x2400 · 360x740 프레임, 일치도 1.000) + 2026-11-09 360x640dp 글꼴 130%",
     "reviewEvidence": {
       "actualProducer": "김재겸",
       "semantic": {
@@ -622,7 +762,17 @@
         "reviewer": "김재겸",
         "visibleX_1080x2400": "0.331..0.669 / 0.318..0.682",
         "visibleX_360x640": "0.289..0.711",
-        "captureSha256": "1e8ba5fdf44a87e8a7e5f67fb4fb70e4af4f2980ed2eb7330249cce240ab3613"
+        "captureSha256": "1e8ba5fdf44a87e8a7e5f67fb4fb70e4af4f2980ed2eb7330249cce240ab3613",
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_pov_campfire_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "1e8ba5fdf44a87e8a7e5f67fb4fb70e4af4f2980ed2eb7330249cce240ab3613"
+        }
       }
     },
     "resolvedIssueEvidence": {
@@ -643,7 +793,7 @@
     },
     "semanticReviewer": "신기훈 2026-11-09 PASS (docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09))",
     "visualReviewer": "정원률 2026-11-09 PASS (docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09))",
-    "cropReviewer": "김재겸 SceneCropReviewTest (1080x2400 · 360x740 프레임 · 360x640dp 글꼴 130%), 2026-11-11 실제 라우팅",
+    "cropReviewer": "김재겸 SceneCropReviewTest 실제 라우팅 2026-11-11 (1080x2400 · 360x740 프레임, 일치도 1.000) + 2026-11-09 360x640dp 글꼴 130%",
     "reviewEvidence": {
       "actualProducer": "김재겸",
       "semantic": {
@@ -664,7 +814,17 @@
         "reviewer": "김재겸",
         "visibleX_1080x2400": "0.331..0.669 / 0.318..0.682",
         "visibleX_360x640": "0.289..0.711",
-        "captureSha256": "5c3eedb6864ff44515f72b2941e28ef7598c0a02f3d9405c5cde364312450fe5"
+        "captureSha256": "5c3eedb6864ff44515f72b2941e28ef7598c0a02f3d9405c5cde364312450fe5",
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_child_election_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "5c3eedb6864ff44515f72b2941e28ef7598c0a02f3d9405c5cde364312450fe5"
+        }
       }
     },
     "resolvedIssueEvidence": {
@@ -685,7 +845,7 @@
     },
     "semanticReviewer": "신기훈 2026-11-09 PASS (docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09))",
     "visualReviewer": "정원률 2026-11-09 PASS (docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09))",
-    "cropReviewer": "김재겸 SceneCropReviewTest (1080x2400 · 360x740 프레임 · 360x640dp 글꼴 130%), 2026-11-11 실제 라우팅",
+    "cropReviewer": "김재겸 SceneCropReviewTest 실제 라우팅 2026-11-11 (1080x2400 · 360x740 프레임, 일치도 1.000) + 2026-11-09 360x640dp 글꼴 130%",
     "reviewEvidence": {
       "actualProducer": "김재겸",
       "semantic": {
@@ -706,7 +866,17 @@
         "reviewer": "김재겸",
         "visibleX_1080x2400": "0.331..0.669 / 0.318..0.682",
         "visibleX_360x640": "0.289..0.711",
-        "captureSha256": "f00c216a31411610fcb06194051dc546d82f3c28780b7f4c1b818a9339d37b50"
+        "captureSha256": "f00c216a31411610fcb06194051dc546d82f3c28780b7f4c1b818a9339d37b50",
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_child_arts_pick_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "f00c216a31411610fcb06194051dc546d82f3c28780b7f4c1b818a9339d37b50"
+        }
       }
     },
     "resolvedIssueEvidence": {
@@ -727,7 +897,7 @@
     },
     "semanticReviewer": "신기훈 2026-11-09 PASS (docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09))",
     "visualReviewer": "정원률 2026-11-09 PASS (docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09))",
-    "cropReviewer": "김재겸 SceneCropReviewTest (1080x2400 · 360x740 프레임 · 360x640dp 글꼴 130%), 2026-11-11 실제 라우팅",
+    "cropReviewer": "김재겸 SceneCropReviewTest 실제 라우팅 2026-11-11 (1080x2400 · 360x740 프레임, 일치도 1.000) + 2026-11-09 360x640dp 글꼴 130%",
     "reviewEvidence": {
       "actualProducer": "김재겸",
       "semantic": {
@@ -748,7 +918,17 @@
         "reviewer": "김재겸",
         "visibleX_1080x2400": "0.331..0.669 / 0.318..0.682",
         "visibleX_360x640": "0.289..0.711",
-        "captureSha256": "f36fa31338a79db96e4c5de6cfc29920a7e4e228e597a5e3c34fddf92b3166e2"
+        "captureSha256": "f36fa31338a79db96e4c5de6cfc29920a7e4e228e597a5e3c34fddf92b3166e2",
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_child_cheer_leader_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "f36fa31338a79db96e4c5de6cfc29920a7e4e228e597a5e3c34fddf92b3166e2"
+        }
       }
     },
     "resolvedIssueEvidence": {
@@ -769,7 +949,7 @@
     },
     "semanticReviewer": "신기훈 2026-11-09 PASS (docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09))",
     "visualReviewer": "정원률 2026-11-09 PASS (docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09))",
-    "cropReviewer": "김재겸 SceneCropReviewTest (1080x2400 · 360x740 프레임 · 360x640dp 글꼴 130%), 2026-11-11 실제 라우팅",
+    "cropReviewer": "김재겸 SceneCropReviewTest 실제 라우팅 2026-11-11 (1080x2400 · 360x740 프레임, 일치도 1.000) + 2026-11-09 360x640dp 글꼴 130%",
     "reviewEvidence": {
       "actualProducer": "김재겸",
       "semantic": {
@@ -790,7 +970,17 @@
         "reviewer": "김재겸",
         "visibleX_1080x2400": "0.331..0.669 / 0.318..0.682",
         "visibleX_360x640": "0.289..0.711",
-        "captureSha256": "d206acfb136f5dc21d03863a170db075941fbbf17edba23a15c832a3ec65e0f7"
+        "captureSha256": "d206acfb136f5dc21d03863a170db075941fbbf17edba23a15c832a3ec65e0f7",
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_child_lunch_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "d206acfb136f5dc21d03863a170db075941fbbf17edba23a15c832a3ec65e0f7"
+        }
       }
     },
     "resolvedIssueEvidence": {
@@ -811,7 +1001,7 @@
     },
     "semanticReviewer": "신기훈 2026-11-09 PASS (docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09))",
     "visualReviewer": "정원률 2026-11-09 PASS (docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09))",
-    "cropReviewer": "김재겸 SceneCropReviewTest (1080x2400 · 360x740 프레임 · 360x640dp 글꼴 130%), 2026-11-11 실제 라우팅",
+    "cropReviewer": "김재겸 SceneCropReviewTest 실제 라우팅 2026-11-11 (1080x2400 · 360x740 프레임, 일치도 1.000) + 2026-11-09 360x640dp 글꼴 130%",
     "reviewEvidence": {
       "actualProducer": "김재겸",
       "semantic": {
@@ -832,7 +1022,17 @@
         "reviewer": "김재겸",
         "visibleX_1080x2400": "0.331..0.669 / 0.318..0.682",
         "visibleX_360x640": "0.289..0.711",
-        "captureSha256": "0badc58a71e66e6100777fe2987025eb38ff3c729537cc9a5aa14aa8099d27b5"
+        "captureSha256": "0badc58a71e66e6100777fe2987025eb38ff3c729537cc9a5aa14aa8099d27b5",
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_child_class_nap_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "0badc58a71e66e6100777fe2987025eb38ff3c729537cc9a5aa14aa8099d27b5"
+        }
       }
     },
     "resolvedIssueEvidence": {
@@ -853,7 +1053,7 @@
     },
     "semanticReviewer": "신기훈 2026-11-09 PASS_WITH_NOTE (docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09))",
     "visualReviewer": "정원률 2026-11-09 PASS (docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09))",
-    "cropReviewer": "김재겸 SceneCropReviewTest (1080x2400 · 360x740 프레임 · 360x640dp 글꼴 130%), 2026-11-11 실제 라우팅",
+    "cropReviewer": "김재겸 SceneCropReviewTest 실제 라우팅 2026-11-11 (1080x2400 · 360x740 프레임, 일치도 1.000) + 2026-11-09 360x640dp 글꼴 130%",
     "reviewEvidence": {
       "actualProducer": "김재겸",
       "semantic": {
@@ -874,7 +1074,17 @@
         "reviewer": "김재겸",
         "visibleX_1080x2400": "0.331..0.669 / 0.318..0.682",
         "visibleX_360x640": "0.289..0.711",
-        "captureSha256": "575a980f4e240c664f53290c57252c4b8630a32287b5d273fdeee4e64449ef13"
+        "captureSha256": "575a980f4e240c664f53290c57252c4b8630a32287b5d273fdeee4e64449ef13",
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_child_baduk_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "575a980f4e240c664f53290c57252c4b8630a32287b5d273fdeee4e64449ef13"
+        }
       }
     },
     "resolvedIssueEvidence": {
@@ -895,7 +1105,7 @@
     },
     "semanticReviewer": "신기훈 2026-11-09 PASS (docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09))",
     "visualReviewer": "정원률 2026-11-09 PASS (docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09))",
-    "cropReviewer": "김재겸 SceneCropReviewTest (1080x2400 · 360x740 프레임 · 360x640dp 글꼴 130%), 2026-11-11 실제 라우팅",
+    "cropReviewer": "김재겸 SceneCropReviewTest 실제 라우팅 2026-11-11 (1080x2400 · 360x740 프레임, 일치도 1.000) + 2026-11-09 360x640dp 글꼴 130%",
     "reviewEvidence": {
       "actualProducer": "김재겸",
       "semantic": {
@@ -916,7 +1126,17 @@
         "reviewer": "김재겸",
         "visibleX_1080x2400": "0.331..0.669 / 0.318..0.682",
         "visibleX_360x640": "0.289..0.711",
-        "captureSha256": "11da5ff388ef3bc5cc247db6636cede2c2dbccf21f4cf62e4b10881a9d2f09f2"
+        "captureSha256": "11da5ff388ef3bc5cc247db6636cede2c2dbccf21f4cf62e4b10881a9d2f09f2",
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_child_piano_contest_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "11da5ff388ef3bc5cc247db6636cede2c2dbccf21f4cf62e4b10881a9d2f09f2"
+        }
       }
     },
     "resolvedIssueEvidence": {
@@ -937,7 +1157,7 @@
     },
     "semanticReviewer": "신기훈 2026-11-09 PASS (docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09))",
     "visualReviewer": "정원률 2026-11-09 PASS (docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09))",
-    "cropReviewer": "김재겸 SceneCropReviewTest (1080x2400 · 360x740 프레임 · 360x640dp 글꼴 130%), 2026-11-11 실제 라우팅",
+    "cropReviewer": "김재겸 SceneCropReviewTest 실제 라우팅 2026-11-11 (1080x2400 · 360x740 프레임, 일치도 1.000) + 2026-11-09 360x640dp 글꼴 130%",
     "reviewEvidence": {
       "actualProducer": "김재겸",
       "semantic": {
@@ -958,7 +1178,17 @@
         "reviewer": "김재겸",
         "visibleX_1080x2400": "0.331..0.669 / 0.318..0.682",
         "visibleX_360x640": "0.289..0.711",
-        "captureSha256": "c404fed3138e0a46ea1c788b217cef536c7718e129ddb05b5b809ec7156344e7"
+        "captureSha256": "c404fed3138e0a46ea1c788b217cef536c7718e129ddb05b5b809ec7156344e7",
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_child_chick_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "c404fed3138e0a46ea1c788b217cef536c7718e129ddb05b5b809ec7156344e7"
+        }
       }
     },
     "resolvedIssueEvidence": {
@@ -979,7 +1209,7 @@
     },
     "semanticReviewer": "신기훈 2026-11-09 PASS (docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09))",
     "visualReviewer": "정원률 2026-11-09 PASS (docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09))",
-    "cropReviewer": "김재겸 SceneCropReviewTest (1080x2400 · 360x740 프레임 · 360x640dp 글꼴 130%), 2026-11-11 실제 라우팅",
+    "cropReviewer": "김재겸 SceneCropReviewTest 실제 라우팅 2026-11-11 (1080x2400 · 360x740 프레임, 일치도 1.000) + 2026-11-09 360x640dp 글꼴 130%",
     "reviewEvidence": {
       "actualProducer": "김재겸",
       "semantic": {
@@ -1000,7 +1230,17 @@
         "reviewer": "김재겸",
         "visibleX_1080x2400": "0.331..0.669 / 0.318..0.682",
         "visibleX_360x640": "0.289..0.711",
-        "captureSha256": "cdf6668dae02fc8fe4950babbf06917327f471173ae89be7c2f5d6f480faac77"
+        "captureSha256": "cdf6668dae02fc8fe4950babbf06917327f471173ae89be7c2f5d6f480faac77",
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_cross_01_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "cdf6668dae02fc8fe4950babbf06917327f471173ae89be7c2f5d6f480faac77"
+        }
       }
     },
     "resolvedIssueEvidence": {
@@ -1021,7 +1261,7 @@
     },
     "semanticReviewer": "신기훈 2026-11-09 PASS (docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09))",
     "visualReviewer": "정원률 2026-11-09 PASS (docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09))",
-    "cropReviewer": "김재겸 SceneCropReviewTest (1080x2400 · 360x740 프레임 · 360x640dp 글꼴 130%), 2026-11-11 실제 라우팅",
+    "cropReviewer": "김재겸 SceneCropReviewTest 실제 라우팅 2026-11-11 (1080x2400 · 360x740 프레임, 일치도 1.000) + 2026-11-09 360x640dp 글꼴 130%",
     "reviewEvidence": {
       "actualProducer": "김재겸",
       "semantic": {
@@ -1042,7 +1282,17 @@
         "reviewer": "김재겸",
         "visibleX_1080x2400": "0.331..0.669 / 0.318..0.682",
         "visibleX_360x640": "0.289..0.711",
-        "captureSha256": "762aaaffdc8d3a4f65a730d5bc5841f0777006463d95094a60c11c36a73dd964"
+        "captureSha256": "762aaaffdc8d3a4f65a730d5bc5841f0777006463d95094a60c11c36a73dd964",
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_cross_06_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "762aaaffdc8d3a4f65a730d5bc5841f0777006463d95094a60c11c36a73dd964"
+        }
       }
     },
     "resolvedIssueEvidence": {
@@ -1063,7 +1313,7 @@
     },
     "semanticReviewer": "신기훈 2026-11-09 PASS (docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09))",
     "visualReviewer": "정원률 2026-11-09 PASS (docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09))",
-    "cropReviewer": "김재겸 SceneCropReviewTest (1080x2400 · 360x740 프레임 · 360x640dp 글꼴 130%), 2026-11-11 실제 라우팅",
+    "cropReviewer": "김재겸 SceneCropReviewTest 실제 라우팅 2026-11-11 (1080x2400 · 360x740 프레임, 일치도 1.000) + 2026-11-09 360x640dp 글꼴 130%",
     "reviewEvidence": {
       "actualProducer": "김재겸",
       "semantic": {
@@ -1084,7 +1334,17 @@
         "reviewer": "김재겸",
         "visibleX_1080x2400": "0.331..0.669 / 0.318..0.682",
         "visibleX_360x640": "0.289..0.711",
-        "captureSha256": "ca5b3a42e38f8a9ff743f6ebfc502f4db979349f359eea9a713f34370e2de813"
+        "captureSha256": "ca5b3a42e38f8a9ff743f6ebfc502f4db979349f359eea9a713f34370e2de813",
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_cross_11_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "ca5b3a42e38f8a9ff743f6ebfc502f4db979349f359eea9a713f34370e2de813"
+        }
       }
     },
     "resolvedIssueEvidence": {
@@ -1105,7 +1365,7 @@
     },
     "semanticReviewer": "신기훈 2026-11-09 PASS_WITH_NOTE (docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09))",
     "visualReviewer": "정원률 2026-11-09 PASS (docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09))",
-    "cropReviewer": "김재겸 SceneCropReviewTest (1080x2400 · 360x740 프레임 · 360x640dp 글꼴 130%), 2026-11-11 실제 라우팅",
+    "cropReviewer": "김재겸 SceneCropReviewTest 실제 라우팅 2026-11-11 (1080x2400 · 360x740 프레임, 일치도 1.000) + 2026-11-09 360x640dp 글꼴 130%",
     "reviewEvidence": {
       "actualProducer": "김재겸",
       "semantic": {
@@ -1126,7 +1386,17 @@
         "reviewer": "김재겸",
         "visibleX_1080x2400": "0.331..0.669 / 0.318..0.682",
         "visibleX_360x640": "0.289..0.711",
-        "captureSha256": "528eed94ad435a33fa2a53b84e04dec25f939d93df39629b5287b3bb7119a4cf"
+        "captureSha256": "528eed94ad435a33fa2a53b84e04dec25f939d93df39629b5287b3bb7119a4cf",
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_infant_loud_cry_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "528eed94ad435a33fa2a53b84e04dec25f939d93df39629b5287b3bb7119a4cf"
+        }
       }
     },
     "resolvedIssueEvidence": {
@@ -1147,7 +1417,7 @@
     },
     "semanticReviewer": "신기훈 2026-11-09 PASS (docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09))",
     "visualReviewer": "정원률 2026-11-09 PASS (docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09))",
-    "cropReviewer": "김재겸 SceneCropReviewTest (1080x2400 · 360x740 프레임 · 360x640dp 글꼴 130%), 2026-11-11 실제 라우팅",
+    "cropReviewer": "김재겸 SceneCropReviewTest 실제 라우팅 2026-11-11 (1080x2400 · 360x740 프레임, 일치도 1.000) + 2026-11-09 360x640dp 글꼴 130%",
     "reviewEvidence": {
       "actualProducer": "김재겸",
       "semantic": {
@@ -1168,7 +1438,17 @@
         "reviewer": "김재겸",
         "visibleX_1080x2400": "0.331..0.669 / 0.318..0.682",
         "visibleX_360x640": "0.289..0.711",
-        "captureSha256": "320aa0db3c302c548a6f5c83e051993a85e4223c9c1698b27eda5692f0f5d735"
+        "captureSha256": "320aa0db3c302c548a6f5c83e051993a85e4223c9c1698b27eda5692f0f5d735",
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_infant_first_word_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "320aa0db3c302c548a6f5c83e051993a85e4223c9c1698b27eda5692f0f5d735"
+        }
       }
     },
     "resolvedIssueEvidence": {
@@ -1189,7 +1469,7 @@
     },
     "semanticReviewer": "신기훈 2026-11-09 PASS (docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09))",
     "visualReviewer": "정원률 2026-11-09 PASS (docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09))",
-    "cropReviewer": "김재겸 SceneCropReviewTest (1080x2400 · 360x740 프레임 · 360x640dp 글꼴 130%), 2026-11-11 실제 라우팅",
+    "cropReviewer": "김재겸 SceneCropReviewTest 실제 라우팅 2026-11-11 (1080x2400 · 360x740 프레임, 일치도 1.000) + 2026-11-09 360x640dp 글꼴 130%",
     "reviewEvidence": {
       "actualProducer": "김재겸",
       "semantic": {
@@ -1210,7 +1490,17 @@
         "reviewer": "김재겸",
         "visibleX_1080x2400": "0.331..0.669 / 0.318..0.682",
         "visibleX_360x640": "0.289..0.711",
-        "captureSha256": "4d8242ab9939bcd3b5cee39384e118abf186ed4249e84c9bae9c340a833364af"
+        "captureSha256": "4d8242ab9939bcd3b5cee39384e118abf186ed4249e84c9bae9c340a833364af",
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_infant_crayon_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "4d8242ab9939bcd3b5cee39384e118abf186ed4249e84c9bae9c340a833364af"
+        }
       }
     },
     "resolvedIssueEvidence": {
@@ -1231,7 +1521,7 @@
     },
     "semanticReviewer": "신기훈 2026-11-09 PASS (docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09))",
     "visualReviewer": "정원률 2026-11-09 PASS (docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09))",
-    "cropReviewer": "김재겸 SceneCropReviewTest (1080x2400 · 360x740 프레임 · 360x640dp 글꼴 130%), 2026-11-11 실제 라우팅",
+    "cropReviewer": "김재겸 SceneCropReviewTest 실제 라우팅 2026-11-11 (1080x2400 · 360x740 프레임, 일치도 1.000) + 2026-11-09 360x640dp 글꼴 130%",
     "reviewEvidence": {
       "actualProducer": "김재겸",
       "semantic": {
@@ -1252,7 +1542,17 @@
         "reviewer": "김재겸",
         "visibleX_1080x2400": "0.331..0.669 / 0.318..0.682",
         "visibleX_360x640": "0.289..0.711",
-        "captureSha256": "075cdb5adb6ce31b19a09c6a93dab4bd5c52e3795aa79f466bba2ebfbd5d0d6c"
+        "captureSha256": "075cdb5adb6ce31b19a09c6a93dab4bd5c52e3795aa79f466bba2ebfbd5d0d6c",
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_infant_daycare_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "075cdb5adb6ce31b19a09c6a93dab4bd5c52e3795aa79f466bba2ebfbd5d0d6c"
+        }
       }
     },
     "resolvedIssueEvidence": {
@@ -1273,7 +1573,7 @@
     },
     "semanticReviewer": "신기훈 2026-11-09 PASS (docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09))",
     "visualReviewer": "정원률 2026-11-09 PASS (docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09))",
-    "cropReviewer": "김재겸 SceneCropReviewTest (1080x2400 · 360x740 프레임 · 360x640dp 글꼴 130%), 2026-11-11 실제 라우팅",
+    "cropReviewer": "김재겸 SceneCropReviewTest 실제 라우팅 2026-11-11 (1080x2400 · 360x740 프레임, 일치도 1.000) + 2026-11-09 360x640dp 글꼴 130%",
     "reviewEvidence": {
       "actualProducer": "김재겸",
       "semantic": {
@@ -1294,7 +1594,17 @@
         "reviewer": "김재겸",
         "visibleX_1080x2400": "0.331..0.669 / 0.318..0.682",
         "visibleX_360x640": "0.289..0.711",
-        "captureSha256": "405cdd8ffc08dd95721195441f7cf916cae5f747d7c4f6b29ba1e331813aef2a"
+        "captureSha256": "405cdd8ffc08dd95721195441f7cf916cae5f747d7c4f6b29ba1e331813aef2a",
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_infant_elevator_button_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "405cdd8ffc08dd95721195441f7cf916cae5f747d7c4f6b29ba1e331813aef2a"
+        }
       }
     },
     "resolvedIssueEvidence": {
@@ -1315,7 +1625,7 @@
     },
     "semanticReviewer": "신기훈 2026-11-09 PASS (docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09))",
     "visualReviewer": "정원률 2026-11-09 PASS (docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09))",
-    "cropReviewer": "김재겸 SceneCropReviewTest (1080x2400 · 360x740 프레임 · 360x640dp 글꼴 130%), 2026-11-11 실제 라우팅",
+    "cropReviewer": "김재겸 SceneCropReviewTest 실제 라우팅 2026-11-11 (1080x2400 · 360x740 프레임, 일치도 1.000) + 2026-11-09 360x640dp 글꼴 130%",
     "reviewEvidence": {
       "actualProducer": "김재겸",
       "semantic": {
@@ -1336,7 +1646,17 @@
         "reviewer": "김재겸",
         "visibleX_1080x2400": "0.331..0.669 / 0.318..0.682",
         "visibleX_360x640": "0.289..0.711",
-        "captureSha256": "a72e95276e55bbf5ea354c6ae2fe2efa5badd5ec9951d8ecbf82359a8bc8336e"
+        "captureSha256": "a72e95276e55bbf5ea354c6ae2fe2efa5badd5ec9951d8ecbf82359a8bc8336e",
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_infant_nap_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "a72e95276e55bbf5ea354c6ae2fe2efa5badd5ec9951d8ecbf82359a8bc8336e"
+        }
       }
     },
     "resolvedIssueEvidence": {
@@ -1357,7 +1677,7 @@
     },
     "semanticReviewer": "신기훈 2026-11-09 PASS (docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09))",
     "visualReviewer": "정원률 2026-11-09 PASS (docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09))",
-    "cropReviewer": "김재겸 SceneCropReviewTest (1080x2400 · 360x740 프레임 · 360x640dp 글꼴 130%), 2026-11-11 실제 라우팅",
+    "cropReviewer": "김재겸 SceneCropReviewTest 실제 라우팅 2026-11-11 (1080x2400 · 360x740 프레임, 일치도 1.000) + 2026-11-09 360x640dp 글꼴 130%",
     "reviewEvidence": {
       "actualProducer": "김재겸",
       "semantic": {
@@ -1378,7 +1698,17 @@
         "reviewer": "김재겸",
         "visibleX_1080x2400": "0.331..0.669 / 0.318..0.682",
         "visibleX_360x640": "0.289..0.711",
-        "captureSha256": "e1daffb2c36e143d35b020fb705fec2c981acc65778748d3bd2d3f8d01ab4a23"
+        "captureSha256": "e1daffb2c36e143d35b020fb705fec2c981acc65778748d3bd2d3f8d01ab4a23",
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_path_fit_04_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "e1daffb2c36e143d35b020fb705fec2c981acc65778748d3bd2d3f8d01ab4a23"
+        }
       }
     },
     "resolvedIssueEvidence": {
@@ -1399,7 +1729,7 @@
     },
     "semanticReviewer": "신기훈 2026-11-09 PASS (docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09))",
     "visualReviewer": "정원률 2026-11-09 PASS (docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09))",
-    "cropReviewer": "김재겸 SceneCropReviewTest (1080x2400 · 360x740 프레임 · 360x640dp 글꼴 130%), 2026-11-11 실제 라우팅",
+    "cropReviewer": "김재겸 SceneCropReviewTest 실제 라우팅 2026-11-11 (1080x2400 · 360x740 프레임, 일치도 1.000) + 2026-11-09 360x640dp 글꼴 130%",
     "reviewEvidence": {
       "actualProducer": "김재겸",
       "semantic": {
@@ -1420,7 +1750,17 @@
         "reviewer": "김재겸",
         "visibleX_1080x2400": "0.331..0.669 / 0.318..0.682",
         "visibleX_360x640": "0.289..0.711",
-        "captureSha256": "88822daf17509d1e42c1fa7f31b130ea45fb7e78cc570101b84f5a2960f3cb25"
+        "captureSha256": "88822daf17509d1e42c1fa7f31b130ea45fb7e78cc570101b84f5a2960f3cb25",
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_path_fit_11_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "88822daf17509d1e42c1fa7f31b130ea45fb7e78cc570101b84f5a2960f3cb25"
+        }
       }
     },
     "resolvedIssueEvidence": {
@@ -1441,7 +1781,7 @@
     },
     "semanticReviewer": "신기훈 2026-11-09 PASS (docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09))",
     "visualReviewer": "정원률 2026-11-09 PASS (docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09))",
-    "cropReviewer": "김재겸 SceneCropReviewTest (1080x2400 · 360x740 프레임 · 360x640dp 글꼴 130%), 2026-11-11 실제 라우팅",
+    "cropReviewer": "김재겸 SceneCropReviewTest 실제 라우팅 2026-11-11 (1080x2400 · 360x740 프레임, 일치도 1.000) + 2026-11-09 360x640dp 글꼴 130%",
     "reviewEvidence": {
       "actualProducer": "김재겸",
       "semantic": {
@@ -1462,7 +1802,17 @@
         "reviewer": "김재겸",
         "visibleX_1080x2400": "0.331..0.669 / 0.318..0.682",
         "visibleX_360x640": "0.289..0.711",
-        "captureSha256": "b4e88d05c45afab9b3a4b2e37c910626f91d3cd2f08b5f9829faf2a27e31016f"
+        "captureSha256": "b4e88d05c45afab9b3a4b2e37c910626f91d3cd2f08b5f9829faf2a27e31016f",
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_path_fit_16_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "b4e88d05c45afab9b3a4b2e37c910626f91d3cd2f08b5f9829faf2a27e31016f"
+        }
       }
     },
     "resolvedIssueEvidence": {
@@ -1483,7 +1833,7 @@
     },
     "semanticReviewer": "신기훈 2026-11-09 PASS (docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09))",
     "visualReviewer": "정원률 2026-11-09 PASS (docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09))",
-    "cropReviewer": "김재겸 SceneCropReviewTest (1080x2400 · 360x740 프레임 · 360x640dp 글꼴 130%), 2026-11-11 실제 라우팅",
+    "cropReviewer": "김재겸 SceneCropReviewTest 실제 라우팅 2026-11-11 (1080x2400 · 360x740 프레임, 일치도 1.000) + 2026-11-09 360x640dp 글꼴 130%",
     "reviewEvidence": {
       "actualProducer": "김재겸",
       "semantic": {
@@ -1504,7 +1854,17 @@
         "reviewer": "김재겸",
         "visibleX_1080x2400": "0.331..0.669 / 0.318..0.682",
         "visibleX_360x640": "0.289..0.711",
-        "captureSha256": "c28d82ffc0c18bee96d9d8dc34d1b2e76afb6f69e6bcd6b3caacf6b261dec2bb"
+        "captureSha256": "c28d82ffc0c18bee96d9d8dc34d1b2e76afb6f69e6bcd6b3caacf6b261dec2bb",
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_path_hap_03_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "c28d82ffc0c18bee96d9d8dc34d1b2e76afb6f69e6bcd6b3caacf6b261dec2bb"
+        }
       }
     },
     "resolvedIssueEvidence": {
@@ -1525,7 +1885,7 @@
     },
     "semanticReviewer": "신기훈 2026-11-09 PASS (docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09))",
     "visualReviewer": "정원률 2026-11-09 PASS (docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09))",
-    "cropReviewer": "김재겸 SceneCropReviewTest (1080x2400 · 360x740 프레임 · 360x640dp 글꼴 130%), 2026-11-11 실제 라우팅",
+    "cropReviewer": "김재겸 SceneCropReviewTest 실제 라우팅 2026-11-11 (1080x2400 · 360x740 프레임, 일치도 1.000) + 2026-11-09 360x640dp 글꼴 130%",
     "reviewEvidence": {
       "actualProducer": "김재겸",
       "semantic": {
@@ -1546,7 +1906,17 @@
         "reviewer": "김재겸",
         "visibleX_1080x2400": "0.331..0.669 / 0.318..0.682",
         "visibleX_360x640": "0.289..0.711",
-        "captureSha256": "b702653e76f8523c5f6c7c5bc8227fd7524b3dc4b69fbfabf2d0daa165c1b297"
+        "captureSha256": "b702653e76f8523c5f6c7c5bc8227fd7524b3dc4b69fbfabf2d0daa165c1b297",
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_path_hap_08_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "b702653e76f8523c5f6c7c5bc8227fd7524b3dc4b69fbfabf2d0daa165c1b297"
+        }
       }
     },
     "resolvedIssueEvidence": {
@@ -1567,7 +1937,7 @@
     },
     "semanticReviewer": "신기훈 2026-11-09 PASS (docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09))",
     "visualReviewer": "정원률 2026-11-09 PASS (docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09))",
-    "cropReviewer": "김재겸 SceneCropReviewTest (1080x2400 · 360x740 프레임 · 360x640dp 글꼴 130%), 2026-11-11 실제 라우팅",
+    "cropReviewer": "김재겸 SceneCropReviewTest 실제 라우팅 2026-11-11 (1080x2400 · 360x740 프레임, 일치도 1.000) + 2026-11-09 360x640dp 글꼴 130%",
     "reviewEvidence": {
       "actualProducer": "김재겸",
       "semantic": {
@@ -1588,7 +1958,17 @@
         "reviewer": "김재겸",
         "visibleX_1080x2400": "0.331..0.669 / 0.318..0.682",
         "visibleX_360x640": "0.289..0.711",
-        "captureSha256": "13e2ec04dae029e25eef353b4ee54a098f1bcbb99cb0a53a5351d6a2f9e9208c"
+        "captureSha256": "13e2ec04dae029e25eef353b4ee54a098f1bcbb99cb0a53a5351d6a2f9e9208c",
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_path_hap_15_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "13e2ec04dae029e25eef353b4ee54a098f1bcbb99cb0a53a5351d6a2f9e9208c"
+        }
       }
     },
     "resolvedIssueEvidence": {
@@ -1609,7 +1989,7 @@
     },
     "semanticReviewer": "신기훈 2026-11-09 PASS (docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09))",
     "visualReviewer": "정원률 2026-11-09 PASS (docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09))",
-    "cropReviewer": "김재겸 SceneCropReviewTest (1080x2400 · 360x740 프레임 · 360x640dp 글꼴 130%), 2026-11-11 실제 라우팅",
+    "cropReviewer": "김재겸 SceneCropReviewTest 실제 라우팅 2026-11-11 (1080x2400 · 360x740 프레임, 일치도 1.000) + 2026-11-09 360x640dp 글꼴 130%",
     "reviewEvidence": {
       "actualProducer": "김재겸",
       "semantic": {
@@ -1630,7 +2010,17 @@
         "reviewer": "김재겸",
         "visibleX_1080x2400": "0.331..0.669 / 0.318..0.682",
         "visibleX_360x640": "0.289..0.711",
-        "captureSha256": "c147acc851aa05aef2275e0e71210542ad9095cccf1bb4e57eaa9d87ac65508f"
+        "captureSha256": "c147acc851aa05aef2275e0e71210542ad9095cccf1bb4e57eaa9d87ac65508f",
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_path_hea_04_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "c147acc851aa05aef2275e0e71210542ad9095cccf1bb4e57eaa9d87ac65508f"
+        }
       }
     },
     "resolvedIssueEvidence": {
@@ -1651,7 +2041,7 @@
     },
     "semanticReviewer": "신기훈 2026-11-09 PASS (docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09))",
     "visualReviewer": "정원률 2026-11-09 PASS (docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09))",
-    "cropReviewer": "김재겸 SceneCropReviewTest (1080x2400 · 360x740 프레임 · 360x640dp 글꼴 130%), 2026-11-11 실제 라우팅",
+    "cropReviewer": "김재겸 SceneCropReviewTest 실제 라우팅 2026-11-11 (1080x2400 · 360x740 프레임, 일치도 1.000) + 2026-11-09 360x640dp 글꼴 130%",
     "reviewEvidence": {
       "actualProducer": "김재겸",
       "semantic": {
@@ -1672,7 +2062,17 @@
         "reviewer": "김재겸",
         "visibleX_1080x2400": "0.331..0.669 / 0.318..0.682",
         "visibleX_360x640": "0.289..0.711",
-        "captureSha256": "9d2946c5399e78bd744413b5e44f53cd3ff1a431108c5e9061105a9693364d0e"
+        "captureSha256": "9d2946c5399e78bd744413b5e44f53cd3ff1a431108c5e9061105a9693364d0e",
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_path_hea_11_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "9d2946c5399e78bd744413b5e44f53cd3ff1a431108c5e9061105a9693364d0e"
+        }
       }
     },
     "resolvedIssueEvidence": {
@@ -1693,7 +2093,7 @@
     },
     "semanticReviewer": "신기훈 2026-11-09 PASS (docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09))",
     "visualReviewer": "정원률 2026-11-09 PASS (docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09))",
-    "cropReviewer": "김재겸 SceneCropReviewTest (1080x2400 · 360x740 프레임 · 360x640dp 글꼴 130%), 2026-11-11 실제 라우팅",
+    "cropReviewer": "김재겸 SceneCropReviewTest 실제 라우팅 2026-11-11 (1080x2400 · 360x740 프레임, 일치도 1.000) + 2026-11-09 360x640dp 글꼴 130%",
     "reviewEvidence": {
       "actualProducer": "김재겸",
       "semantic": {
@@ -1714,7 +2114,17 @@
         "reviewer": "김재겸",
         "visibleX_1080x2400": "0.331..0.669 / 0.318..0.682",
         "visibleX_360x640": "0.289..0.711",
-        "captureSha256": "1e3667807e65a0ad999f07658961b2918041557f98296832e7868cfd43cb20e5"
+        "captureSha256": "1e3667807e65a0ad999f07658961b2918041557f98296832e7868cfd43cb20e5",
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_path_hea_16_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "1e3667807e65a0ad999f07658961b2918041557f98296832e7868cfd43cb20e5"
+        }
       }
     },
     "resolvedIssueEvidence": {
@@ -1735,7 +2145,7 @@
     },
     "semanticReviewer": "신기훈 2026-11-09 PASS (docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09))",
     "visualReviewer": "정원률 2026-11-09 PASS (docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09))",
-    "cropReviewer": "김재겸 SceneCropReviewTest (1080x2400 · 360x740 프레임 · 360x640dp 글꼴 130%), 2026-11-11 실제 라우팅",
+    "cropReviewer": "김재겸 SceneCropReviewTest 실제 라우팅 2026-11-11 (1080x2400 · 360x740 프레임, 일치도 1.000) + 2026-11-09 360x640dp 글꼴 130%",
     "reviewEvidence": {
       "actualProducer": "김재겸",
       "semantic": {
@@ -1756,7 +2166,17 @@
         "reviewer": "김재겸",
         "visibleX_1080x2400": "0.331..0.669 / 0.318..0.682",
         "visibleX_360x640": "0.289..0.711",
-        "captureSha256": "b95081831ee579c03fd81705ad52b15f733fbb1b32c864f9897733ff70c0f1e2"
+        "captureSha256": "b95081831ee579c03fd81705ad52b15f733fbb1b32c864f9897733ff70c0f1e2",
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_path_int_05_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "b95081831ee579c03fd81705ad52b15f733fbb1b32c864f9897733ff70c0f1e2"
+        }
       }
     },
     "resolvedIssueEvidence": {
@@ -1777,7 +2197,7 @@
     },
     "semanticReviewer": "신기훈 2026-11-09 PASS (docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09))",
     "visualReviewer": "정원률 2026-11-09 PASS (docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09))",
-    "cropReviewer": "김재겸 SceneCropReviewTest (1080x2400 · 360x740 프레임 · 360x640dp 글꼴 130%), 2026-11-11 실제 라우팅",
+    "cropReviewer": "김재겸 SceneCropReviewTest 실제 라우팅 2026-11-11 (1080x2400 · 360x740 프레임, 일치도 1.000) + 2026-11-09 360x640dp 글꼴 130%",
     "reviewEvidence": {
       "actualProducer": "김재겸",
       "semantic": {
@@ -1798,7 +2218,17 @@
         "reviewer": "김재겸",
         "visibleX_1080x2400": "0.331..0.669 / 0.318..0.682",
         "visibleX_360x640": "0.289..0.711",
-        "captureSha256": "8614c62a632052d93a51b2d801106787a96294d0aead0c37a39a6b7b6cc0bb3f"
+        "captureSha256": "8614c62a632052d93a51b2d801106787a96294d0aead0c37a39a6b7b6cc0bb3f",
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_path_int_12_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "8614c62a632052d93a51b2d801106787a96294d0aead0c37a39a6b7b6cc0bb3f"
+        }
       }
     },
     "resolvedIssueEvidence": {
@@ -1819,7 +2249,7 @@
     },
     "semanticReviewer": "신기훈 2026-11-09 PASS (docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09))",
     "visualReviewer": "정원률 2026-11-09 PASS (docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09))",
-    "cropReviewer": "김재겸 SceneCropReviewTest (1080x2400 · 360x740 프레임 · 360x640dp 글꼴 130%), 2026-11-11 실제 라우팅",
+    "cropReviewer": "김재겸 SceneCropReviewTest 실제 라우팅 2026-11-11 (1080x2400 · 360x740 프레임, 일치도 1.000) + 2026-11-09 360x640dp 글꼴 130%",
     "reviewEvidence": {
       "actualProducer": "김재겸",
       "semantic": {
@@ -1840,7 +2270,17 @@
         "reviewer": "김재겸",
         "visibleX_1080x2400": "0.331..0.669 / 0.318..0.682",
         "visibleX_360x640": "0.289..0.711",
-        "captureSha256": "f3032c61cd366e61f8e2dc83ca63ff0ef9f9879a99bb921c5eaa6ea7fb5ac706"
+        "captureSha256": "f3032c61cd366e61f8e2dc83ca63ff0ef9f9879a99bb921c5eaa6ea7fb5ac706",
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_path_int_17_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "f3032c61cd366e61f8e2dc83ca63ff0ef9f9879a99bb921c5eaa6ea7fb5ac706"
+        }
       }
     },
     "resolvedIssueEvidence": {
@@ -1861,7 +2301,7 @@
     },
     "semanticReviewer": "신기훈 2026-11-09 PASS (docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09))",
     "visualReviewer": "정원률 2026-11-09 PASS (docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09))",
-    "cropReviewer": "김재겸 SceneCropReviewTest (1080x2400 · 360x740 프레임 · 360x640dp 글꼴 130%), 2026-11-11 실제 라우팅",
+    "cropReviewer": "김재겸 SceneCropReviewTest 실제 라우팅 2026-11-11 (1080x2400 · 360x740 프레임, 일치도 1.000) + 2026-11-09 360x640dp 글꼴 130%",
     "reviewEvidence": {
       "actualProducer": "김재겸",
       "semantic": {
@@ -1882,7 +2322,17 @@
         "reviewer": "김재겸",
         "visibleX_1080x2400": "0.331..0.669 / 0.318..0.682",
         "visibleX_360x640": "0.289..0.711",
-        "captureSha256": "79cf95c01e1ed060d492acb60d002baad6f02e2bff661306e2ac1dd4f9c38625"
+        "captureSha256": "79cf95c01e1ed060d492acb60d002baad6f02e2bff661306e2ac1dd4f9c38625",
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_path_luk_04_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "79cf95c01e1ed060d492acb60d002baad6f02e2bff661306e2ac1dd4f9c38625"
+        }
       }
     },
     "resolvedIssueEvidence": {
@@ -1903,7 +2353,7 @@
     },
     "semanticReviewer": "신기훈 2026-11-09 PASS (docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09))",
     "visualReviewer": "정원률 2026-11-09 PASS (docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09))",
-    "cropReviewer": "김재겸 SceneCropReviewTest (1080x2400 · 360x740 프레임 · 360x640dp 글꼴 130%), 2026-11-11 실제 라우팅",
+    "cropReviewer": "김재겸 SceneCropReviewTest 실제 라우팅 2026-11-11 (1080x2400 · 360x740 프레임, 일치도 1.000) + 2026-11-09 360x640dp 글꼴 130%",
     "reviewEvidence": {
       "actualProducer": "김재겸",
       "semantic": {
@@ -1924,7 +2374,17 @@
         "reviewer": "김재겸",
         "visibleX_1080x2400": "0.331..0.669 / 0.318..0.682",
         "visibleX_360x640": "0.289..0.711",
-        "captureSha256": "5fc3adaf68af9ae05d70f9981bffdfa914afa6ff32f9d6318e3492b12ffe9539"
+        "captureSha256": "5fc3adaf68af9ae05d70f9981bffdfa914afa6ff32f9d6318e3492b12ffe9539",
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_path_luk_11_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "5fc3adaf68af9ae05d70f9981bffdfa914afa6ff32f9d6318e3492b12ffe9539"
+        }
       }
     },
     "resolvedIssueEvidence": {
@@ -1945,7 +2405,7 @@
     },
     "semanticReviewer": "신기훈 2026-11-09 PASS (docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09))",
     "visualReviewer": "정원률 2026-11-09 PASS (docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09))",
-    "cropReviewer": "김재겸 SceneCropReviewTest (1080x2400 · 360x740 프레임 · 360x640dp 글꼴 130%), 2026-11-11 실제 라우팅",
+    "cropReviewer": "김재겸 SceneCropReviewTest 실제 라우팅 2026-11-11 (1080x2400 · 360x740 프레임, 일치도 1.000) + 2026-11-09 360x640dp 글꼴 130%",
     "reviewEvidence": {
       "actualProducer": "김재겸",
       "semantic": {
@@ -1966,7 +2426,17 @@
         "reviewer": "김재겸",
         "visibleX_1080x2400": "0.331..0.669 / 0.318..0.682",
         "visibleX_360x640": "0.289..0.711",
-        "captureSha256": "debc8d83b6da162d4b656faa0cf0d5f1a0580498a68c110e0ed4ab7087a02d92"
+        "captureSha256": "debc8d83b6da162d4b656faa0cf0d5f1a0580498a68c110e0ed4ab7087a02d92",
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_path_luk_16_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "debc8d83b6da162d4b656faa0cf0d5f1a0580498a68c110e0ed4ab7087a02d92"
+        }
       }
     },
     "resolvedIssueEvidence": {
@@ -1987,7 +2457,7 @@
     },
     "semanticReviewer": "신기훈 2026-11-09 PASS (docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09))",
     "visualReviewer": "정원률 2026-11-09 PASS (docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09))",
-    "cropReviewer": "김재겸 SceneCropReviewTest (1080x2400 · 360x740 프레임 · 360x640dp 글꼴 130%), 2026-11-11 실제 라우팅",
+    "cropReviewer": "김재겸 SceneCropReviewTest 실제 라우팅 2026-11-11 (1080x2400 · 360x740 프레임, 일치도 1.000) + 2026-11-09 360x640dp 글꼴 130%",
     "reviewEvidence": {
       "actualProducer": "김재겸",
       "semantic": {
@@ -2008,7 +2478,17 @@
         "reviewer": "김재겸",
         "visibleX_1080x2400": "0.331..0.669 / 0.318..0.682",
         "visibleX_360x640": "0.289..0.711",
-        "captureSha256": "10ba2192d1de23924a120d25937032e1888654c98101cc282c1ef3f058e7f075"
+        "captureSha256": "10ba2192d1de23924a120d25937032e1888654c98101cc282c1ef3f058e7f075",
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_path_soc_04_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "10ba2192d1de23924a120d25937032e1888654c98101cc282c1ef3f058e7f075"
+        }
       }
     },
     "resolvedIssueEvidence": {
@@ -2029,7 +2509,7 @@
     },
     "semanticReviewer": "신기훈 2026-11-09 PASS (docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09))",
     "visualReviewer": "정원률 2026-11-09 PASS (docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09))",
-    "cropReviewer": "김재겸 SceneCropReviewTest (1080x2400 · 360x740 프레임 · 360x640dp 글꼴 130%), 2026-11-11 실제 라우팅",
+    "cropReviewer": "김재겸 SceneCropReviewTest 실제 라우팅 2026-11-11 (1080x2400 · 360x740 프레임, 일치도 1.000) + 2026-11-09 360x640dp 글꼴 130%",
     "reviewEvidence": {
       "actualProducer": "김재겸",
       "semantic": {
@@ -2050,7 +2530,17 @@
         "reviewer": "김재겸",
         "visibleX_1080x2400": "0.331..0.669 / 0.318..0.682",
         "visibleX_360x640": "0.289..0.711",
-        "captureSha256": "51dd6c0c2ae9fa7ca9b0826a9911a4b96a8b0d4dff28e9596c27ef19d39d7947"
+        "captureSha256": "51dd6c0c2ae9fa7ca9b0826a9911a4b96a8b0d4dff28e9596c27ef19d39d7947",
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_path_soc_11_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "51dd6c0c2ae9fa7ca9b0826a9911a4b96a8b0d4dff28e9596c27ef19d39d7947"
+        }
       }
     },
     "resolvedIssueEvidence": {
@@ -2071,7 +2561,7 @@
     },
     "semanticReviewer": "신기훈 2026-11-09 PASS_WITH_NOTE (docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09))",
     "visualReviewer": "정원률 2026-11-09 PASS (docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09))",
-    "cropReviewer": "김재겸 SceneCropReviewTest (1080x2400 · 360x740 프레임 · 360x640dp 글꼴 130%), 2026-11-11 실제 라우팅",
+    "cropReviewer": "김재겸 SceneCropReviewTest 실제 라우팅 2026-11-11 (1080x2400 · 360x740 프레임, 일치도 1.000) + 2026-11-09 360x640dp 글꼴 130%",
     "reviewEvidence": {
       "actualProducer": "김재겸",
       "semantic": {
@@ -2092,7 +2582,17 @@
         "reviewer": "김재겸",
         "visibleX_1080x2400": "0.331..0.669 / 0.318..0.682",
         "visibleX_360x640": "0.289..0.711",
-        "captureSha256": "09cf5e6c5b687089ecf6079b30376a606596602fbdc1caa29548d4cd04be7644"
+        "captureSha256": "09cf5e6c5b687089ecf6079b30376a606596602fbdc1caa29548d4cd04be7644",
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_path_wea_03_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "09cf5e6c5b687089ecf6079b30376a606596602fbdc1caa29548d4cd04be7644"
+        }
       }
     },
     "resolvedIssueEvidence": {
@@ -2113,7 +2613,7 @@
     },
     "semanticReviewer": "신기훈 2026-11-09 PASS (docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09))",
     "visualReviewer": "정원률 2026-11-09 PASS (docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09))",
-    "cropReviewer": "김재겸 SceneCropReviewTest (1080x2400 · 360x740 프레임 · 360x640dp 글꼴 130%), 2026-11-11 실제 라우팅",
+    "cropReviewer": "김재겸 SceneCropReviewTest 실제 라우팅 2026-11-11 (1080x2400 · 360x740 프레임, 일치도 1.000) + 2026-11-09 360x640dp 글꼴 130%",
     "reviewEvidence": {
       "actualProducer": "김재겸",
       "semantic": {
@@ -2134,7 +2634,17 @@
         "reviewer": "김재겸",
         "visibleX_1080x2400": "0.331..0.669 / 0.318..0.682",
         "visibleX_360x640": "0.289..0.711",
-        "captureSha256": "e60ec8204762761f1170d14ea53959539577ead652923082392d7b2d754829ff"
+        "captureSha256": "e60ec8204762761f1170d14ea53959539577ead652923082392d7b2d754829ff",
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_path_wea_08_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "e60ec8204762761f1170d14ea53959539577ead652923082392d7b2d754829ff"
+        }
       }
     },
     "resolvedIssueEvidence": {
@@ -2155,7 +2665,7 @@
     },
     "semanticReviewer": "신기훈 2026-11-09 PASS (docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09))",
     "visualReviewer": "정원률 2026-11-09 PASS (docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09))",
-    "cropReviewer": "김재겸 SceneCropReviewTest (1080x2400 · 360x740 프레임 · 360x640dp 글꼴 130%), 2026-11-11 실제 라우팅",
+    "cropReviewer": "김재겸 SceneCropReviewTest 실제 라우팅 2026-11-11 (1080x2400 · 360x740 프레임, 일치도 1.000) + 2026-11-09 360x640dp 글꼴 130%",
     "reviewEvidence": {
       "actualProducer": "김재겸",
       "semantic": {
@@ -2176,7 +2686,17 @@
         "reviewer": "김재겸",
         "visibleX_1080x2400": "0.331..0.669 / 0.318..0.682",
         "visibleX_360x640": "0.289..0.711",
-        "captureSha256": "38d7b50caca63eb1ca6fc381a0fa734a2d01942cf42de37e16fbfab2a3406ac0"
+        "captureSha256": "38d7b50caca63eb1ca6fc381a0fa734a2d01942cf42de37e16fbfab2a3406ac0",
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_path_wea_15_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "38d7b50caca63eb1ca6fc381a0fa734a2d01942cf42de37e16fbfab2a3406ac0"
+        }
       }
     },
     "resolvedIssueEvidence": {
@@ -2197,7 +2717,7 @@
     },
     "semanticReviewer": "신기훈 2026-11-09 PASS (docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09))",
     "visualReviewer": "정원률 2026-11-09 PASS (docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09))",
-    "cropReviewer": "김재겸 SceneCropReviewTest (1080x2400 · 360x740 프레임 · 360x640dp 글꼴 130%), 2026-11-11 실제 라우팅",
+    "cropReviewer": "김재겸 SceneCropReviewTest 실제 라우팅 2026-11-11 (1080x2400 · 360x740 프레임, 일치도 1.000) + 2026-11-09 360x640dp 글꼴 130%",
     "reviewEvidence": {
       "actualProducer": "김재겸",
       "semantic": {
@@ -2218,7 +2738,17 @@
         "reviewer": "김재겸",
         "visibleX_1080x2400": "0.331..0.669 / 0.318..0.682",
         "visibleX_360x640": "0.289..0.711",
-        "captureSha256": "c558746bfe85e7017a2a9222c70e0f5f9cd0296ea2747711519e91b0888acc0f"
+        "captureSha256": "c558746bfe85e7017a2a9222c70e0f5f9cd0296ea2747711519e91b0888acc0f",
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_special_hornet_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "c558746bfe85e7017a2a9222c70e0f5f9cd0296ea2747711519e91b0888acc0f"
+        }
       }
     },
     "resolvedIssueEvidence": {
@@ -2239,7 +2769,7 @@
     },
     "semanticReviewer": "신기훈 2026-11-09 PASS_WITH_NOTE (docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09))",
     "visualReviewer": "정원률 2026-11-09 PASS (docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09))",
-    "cropReviewer": "김재겸 SceneCropReviewTest (1080x2400 · 360x740 프레임 · 360x640dp 글꼴 130%), 2026-11-11 실제 라우팅",
+    "cropReviewer": "김재겸 SceneCropReviewTest 실제 라우팅 2026-11-11 (1080x2400 · 360x740 프레임, 일치도 1.000) + 2026-11-09 360x640dp 글꼴 130%",
     "reviewEvidence": {
       "actualProducer": "김재겸",
       "semantic": {
@@ -2260,7 +2790,17 @@
         "reviewer": "김재겸",
         "visibleX_1080x2400": "0.331..0.669 / 0.318..0.682",
         "visibleX_360x640": "0.289..0.711",
-        "captureSha256": "c8dd0c4b36715486969071a0cc63d754b5ee81c9e2cddf354102040d3a28a175"
+        "captureSha256": "c8dd0c4b36715486969071a0cc63d754b5ee81c9e2cddf354102040d3a28a175",
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_special_elevator_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "c8dd0c4b36715486969071a0cc63d754b5ee81c9e2cddf354102040d3a28a175"
+        }
       }
     },
     "resolvedIssueEvidence": {
@@ -2281,7 +2821,7 @@
     },
     "semanticReviewer": "신기훈 2026-11-09 PASS (docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09))",
     "visualReviewer": "정원률 2026-11-09 PASS (docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09))",
-    "cropReviewer": "김재겸 SceneCropReviewTest (1080x2400 · 360x740 프레임 · 360x640dp 글꼴 130%), 2026-11-11 실제 라우팅",
+    "cropReviewer": "김재겸 SceneCropReviewTest 실제 라우팅 2026-11-11 (1080x2400 · 360x740 프레임, 일치도 1.000) + 2026-11-09 360x640dp 글꼴 130%",
     "reviewEvidence": {
       "actualProducer": "김재겸",
       "semantic": {
@@ -2302,7 +2842,17 @@
         "reviewer": "김재겸",
         "visibleX_1080x2400": "0.331..0.669 / 0.318..0.682",
         "visibleX_360x640": "0.289..0.711",
-        "captureSha256": "baec91929c121a6599658b8cb9a4210c378cabf05644cb3c3ddba0eaa6164556"
+        "captureSha256": "baec91929c121a6599658b8cb9a4210c378cabf05644cb3c3ddba0eaa6164556",
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_special_bubble_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "baec91929c121a6599658b8cb9a4210c378cabf05644cb3c3ddba0eaa6164556"
+        }
       }
     },
     "resolvedIssueEvidence": {
@@ -2323,7 +2873,7 @@
     },
     "semanticReviewer": "신기훈 2026-11-09 PASS_WITH_NOTE (docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09))",
     "visualReviewer": "정원률 2026-11-09 PASS (docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09))",
-    "cropReviewer": "김재겸 SceneCropReviewTest (1080x2400 · 360x740 프레임 · 360x640dp 글꼴 130%), 2026-11-11 실제 라우팅",
+    "cropReviewer": "김재겸 SceneCropReviewTest 실제 라우팅 2026-11-11 (1080x2400 · 360x740 프레임, 일치도 1.000) + 2026-11-09 360x640dp 글꼴 130%",
     "reviewEvidence": {
       "actualProducer": "김재겸",
       "semantic": {
@@ -2344,7 +2894,17 @@
         "reviewer": "김재겸",
         "visibleX_1080x2400": "0.331..0.669 / 0.318..0.682",
         "visibleX_360x640": "0.289..0.711",
-        "captureSha256": "c94b2252b430754434332d87a6d48f96511e311a7c2018104f6762a0171ee599"
+        "captureSha256": "c94b2252b430754434332d87a6d48f96511e311a7c2018104f6762a0171ee599",
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_special_revolving_door_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "c94b2252b430754434332d87a6d48f96511e311a7c2018104f6762a0171ee599"
+        }
       }
     },
     "resolvedIssueEvidence": {
@@ -2365,7 +2925,7 @@
     },
     "semanticReviewer": "신기훈 2026-11-09 PASS (docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09))",
     "visualReviewer": "정원률 2026-11-09 PASS (docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09))",
-    "cropReviewer": "김재겸 SceneCropReviewTest (1080x2400 · 360x740 프레임 · 360x640dp 글꼴 130%), 2026-11-11 실제 라우팅",
+    "cropReviewer": "김재겸 SceneCropReviewTest 실제 라우팅 2026-11-11 (1080x2400 · 360x740 프레임, 일치도 1.000) + 2026-11-09 360x640dp 글꼴 130%",
     "reviewEvidence": {
       "actualProducer": "김재겸",
       "semantic": {
@@ -2386,7 +2946,17 @@
         "reviewer": "김재겸",
         "visibleX_1080x2400": "0.331..0.669 / 0.318..0.682",
         "visibleX_360x640": "0.289..0.711",
-        "captureSha256": "6de32b3b2027148beb3ebcd08a20251acbeeb63fefd9bf9d64b0cbcc87978fac"
+        "captureSha256": "6de32b3b2027148beb3ebcd08a20251acbeeb63fefd9bf9d64b0cbcc87978fac",
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_teen_lunch_line_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "6de32b3b2027148beb3ebcd08a20251acbeeb63fefd9bf9d64b0cbcc87978fac"
+        }
       }
     },
     "resolvedIssueEvidence": {
@@ -2407,7 +2977,7 @@
     },
     "semanticReviewer": "신기훈 2026-11-09 PASS (docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09))",
     "visualReviewer": "정원률 2026-11-09 PASS (docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09))",
-    "cropReviewer": "김재겸 SceneCropReviewTest (1080x2400 · 360x740 프레임 · 360x640dp 글꼴 130%), 2026-11-11 실제 라우팅",
+    "cropReviewer": "김재겸 SceneCropReviewTest 실제 라우팅 2026-11-11 (1080x2400 · 360x740 프레임, 일치도 1.000) + 2026-11-09 360x640dp 글꼴 130%",
     "reviewEvidence": {
       "actualProducer": "김재겸",
       "semantic": {
@@ -2428,7 +2998,17 @@
         "reviewer": "김재겸",
         "visibleX_1080x2400": "0.331..0.669 / 0.318..0.682",
         "visibleX_360x640": "0.289..0.711",
-        "captureSha256": "dd4d57098f3326a13e8136b5cab1f8a52e977ded98e1c582cc5d38698318e718"
+        "captureSha256": "dd4d57098f3326a13e8136b5cab1f8a52e977ded98e1c582cc5d38698318e718",
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_teen_running_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "dd4d57098f3326a13e8136b5cab1f8a52e977ded98e1c582cc5d38698318e718"
+        }
       }
     },
     "resolvedIssueEvidence": {
@@ -2449,7 +3029,7 @@
     },
     "semanticReviewer": "신기훈 2026-11-09 PASS (docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09))",
     "visualReviewer": "정원률 2026-11-09 PASS (docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09))",
-    "cropReviewer": "김재겸 SceneCropReviewTest (1080x2400 · 360x740 프레임 · 360x640dp 글꼴 130%), 2026-11-11 실제 라우팅",
+    "cropReviewer": "김재겸 SceneCropReviewTest 실제 라우팅 2026-11-11 (1080x2400 · 360x740 프레임, 일치도 1.000) + 2026-11-09 360x640dp 글꼴 130%",
     "reviewEvidence": {
       "actualProducer": "김재겸",
       "semantic": {
@@ -2470,7 +3050,17 @@
         "reviewer": "김재겸",
         "visibleX_1080x2400": "0.331..0.669 / 0.318..0.682",
         "visibleX_360x640": "0.289..0.711",
-        "captureSha256": "30ccb60ca1322615e1efa6da1e3f492f5a7f7450f17b45769f1af72f2ce09bac"
+        "captureSha256": "30ccb60ca1322615e1efa6da1e3f492f5a7f7450f17b45769f1af72f2ce09bac",
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_teen_debate_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "30ccb60ca1322615e1efa6da1e3f492f5a7f7450f17b45769f1af72f2ce09bac"
+        }
       }
     },
     "resolvedIssueEvidence": {
@@ -2491,7 +3081,7 @@
     },
     "semanticReviewer": "신기훈 2026-11-09 PASS (docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09))",
     "visualReviewer": "정원률 2026-11-09 PASS (docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09))",
-    "cropReviewer": "김재겸 SceneCropReviewTest (1080x2400 · 360x740 프레임 · 360x640dp 글꼴 130%), 2026-11-11 실제 라우팅",
+    "cropReviewer": "김재겸 SceneCropReviewTest 실제 라우팅 2026-11-11 (1080x2400 · 360x740 프레임, 일치도 1.000) + 2026-11-09 360x640dp 글꼴 130%",
     "reviewEvidence": {
       "actualProducer": "김재겸",
       "semantic": {
@@ -2512,7 +3102,17 @@
         "reviewer": "김재겸",
         "visibleX_1080x2400": "0.331..0.669 / 0.318..0.682",
         "visibleX_360x640": "0.289..0.711",
-        "captureSha256": "bc1c64a33b1581b8ca691be5901f860c3b3807e247513ba26aac7a762b906a52"
+        "captureSha256": "bc1c64a33b1581b8ca691be5901f860c3b3807e247513ba26aac7a762b906a52",
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_teen_high_school_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "bc1c64a33b1581b8ca691be5901f860c3b3807e247513ba26aac7a762b906a52"
+        }
       }
     },
     "resolvedIssueEvidence": {
@@ -2533,7 +3133,7 @@
     },
     "semanticReviewer": "신기훈 2026-11-09 PASS (docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09))",
     "visualReviewer": "정원률 2026-11-09 PASS (docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09))",
-    "cropReviewer": "김재겸 SceneCropReviewTest (1080x2400 · 360x740 프레임 · 360x640dp 글꼴 130%), 2026-11-11 실제 라우팅",
+    "cropReviewer": "김재겸 SceneCropReviewTest 실제 라우팅 2026-11-11 (1080x2400 · 360x740 프레임, 일치도 1.000) + 2026-11-09 360x640dp 글꼴 130%",
     "reviewEvidence": {
       "actualProducer": "김재겸",
       "semantic": {
@@ -2554,7 +3154,17 @@
         "reviewer": "김재겸",
         "visibleX_1080x2400": "0.331..0.669 / 0.318..0.682",
         "visibleX_360x640": "0.289..0.711",
-        "captureSha256": "01d66a9f657e8097fec4415908075c0ca116fed320223f5dd7314139c676497c"
+        "captureSha256": "01d66a9f657e8097fec4415908075c0ca116fed320223f5dd7314139c676497c",
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_teen_wrong_answer_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "01d66a9f657e8097fec4415908075c0ca116fed320223f5dd7314139c676497c"
+        }
       }
     },
     "resolvedIssueEvidence": {
@@ -2575,7 +3185,7 @@
     },
     "semanticReviewer": "신기훈 2026-11-09 PASS (docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09))",
     "visualReviewer": "정원률 2026-11-09 PASS (docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09))",
-    "cropReviewer": "김재겸 SceneCropReviewTest (1080x2400 · 360x740 프레임 · 360x640dp 글꼴 130%), 2026-11-11 실제 라우팅",
+    "cropReviewer": "김재겸 SceneCropReviewTest 실제 라우팅 2026-11-11 (1080x2400 · 360x740 프레임, 일치도 1.000) + 2026-11-09 360x640dp 글꼴 130%",
     "reviewEvidence": {
       "actualProducer": "김재겸",
       "semantic": {
@@ -2596,7 +3206,17 @@
         "reviewer": "김재겸",
         "visibleX_1080x2400": "0.331..0.669 / 0.318..0.682",
         "visibleX_360x640": "0.289..0.711",
-        "captureSha256": "08e5e2f84ceda8293051c2a33de125686ddc44ee82893a83674ac33e24204096"
+        "captureSha256": "08e5e2f84ceda8293051c2a33de125686ddc44ee82893a83674ac33e24204096",
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_teen_school_store_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "08e5e2f84ceda8293051c2a33de125686ddc44ee82893a83674ac33e24204096"
+        }
       }
     },
     "resolvedIssueEvidence": {
@@ -2617,7 +3237,7 @@
     },
     "semanticReviewer": "신기훈 2026-11-09 PASS (docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09))",
     "visualReviewer": "정원률 2026-11-09 PASS (docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09))",
-    "cropReviewer": "김재겸 SceneCropReviewTest (1080x2400 · 360x740 프레임 · 360x640dp 글꼴 130%), 2026-11-11 실제 라우팅",
+    "cropReviewer": "김재겸 SceneCropReviewTest 실제 라우팅 2026-11-11 (1080x2400 · 360x740 프레임, 일치도 1.000) + 2026-11-09 360x640dp 글꼴 130%",
     "reviewEvidence": {
       "actualProducer": "김재겸",
       "semantic": {
@@ -2638,7 +3258,17 @@
         "reviewer": "김재겸",
         "visibleX_1080x2400": "0.331..0.669 / 0.318..0.682",
         "visibleX_360x640": "0.289..0.711",
-        "captureSha256": "7b3c54c68cc839690ecdb2b57bd63d7e9db59af5214a9aad32d4269a28c2d09f"
+        "captureSha256": "7b3c54c68cc839690ecdb2b57bd63d7e9db59af5214a9aad32d4269a28c2d09f",
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_teen_hair_dye_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "7b3c54c68cc839690ecdb2b57bd63d7e9db59af5214a9aad32d4269a28c2d09f"
+        }
       }
     },
     "resolvedIssueEvidence": {
@@ -2659,7 +3289,7 @@
     },
     "semanticReviewer": "신기훈 2026-11-09 PASS (docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09))",
     "visualReviewer": "정원률 2026-11-09 PASS (docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09))",
-    "cropReviewer": "김재겸 SceneCropReviewTest (1080x2400 · 360x740 프레임 · 360x640dp 글꼴 130%), 2026-11-11 실제 라우팅",
+    "cropReviewer": "김재겸 SceneCropReviewTest 실제 라우팅 2026-11-11 (1080x2400 · 360x740 프레임, 일치도 1.000) + 2026-11-09 360x640dp 글꼴 130%",
     "reviewEvidence": {
       "actualProducer": "김재겸",
       "semantic": {
@@ -2680,7 +3310,17 @@
         "reviewer": "김재겸",
         "visibleX_1080x2400": "0.331..0.669 / 0.318..0.682",
         "visibleX_360x640": "0.289..0.711",
-        "captureSha256": "50ffabc1ff41851d14d1890741b8e67513003b217d102f15130b23fe8bdd12d7"
+        "captureSha256": "50ffabc1ff41851d14d1890741b8e67513003b217d102f15130b23fe8bdd12d7",
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_teen_graduation_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "50ffabc1ff41851d14d1890741b8e67513003b217d102f15130b23fe8bdd12d7"
+        }
       }
     },
     "resolvedIssueEvidence": {

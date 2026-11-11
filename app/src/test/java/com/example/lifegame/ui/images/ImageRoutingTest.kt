@@ -74,7 +74,14 @@ class ImageRoutingTest {
             Triple("teen_041", "focus_teen_rest", "happiness"),
             Triple("adult_019", "focus_young_adult_adventure", "luck"),
         )
-        for ((id, focus, tag) in cases) {
+        // 전용 그림이 실제 파일로 있는 사건은 "대기 사건"이 아니다. 예시 사건에 전용 그림이 연결되면(2026-11-11 김재겸 64그룹 연결로
+        // adult_058이 그렇다) 같은 능력치 태그를 가진, 아직 전용 그림이 없는 다른 실제 사건으로 같은 대체 규칙을 확인한다.
+        fun hasDedicatedArt(eventId: String): Boolean =
+            routing.candidates(events.getValue(eventId).povImageId, null, null, files)
+                .any { File(assetDir(), "images/${it.path}").isFile }
+        for ((preferred, focus, tag) in cases) {
+            val id = preferred.takeUnless(::hasDedicatedArt)
+                ?: events.keys.sorted().first { tag in routing.eventStatTags[it].orEmpty() && !hasDedicatedArt(it) }
             val event = events.getValue(id)
             val period = event.periods.first()
             val pending = PendingDecision(id, event.kind, event.title, event.text, emptyList(), event.povImageId)
