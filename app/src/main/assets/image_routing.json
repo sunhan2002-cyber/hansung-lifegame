@@ -938,6 +938,502 @@
       "usage": "event",
       "fileName": "img_teen_graduation_001.png",
       "fallbackText": "이미지 준비 전에는 '졸업식 날' 상황 이미지 영역으로 대체 표시"
+    },
+    {
+      "imageId": "img_adult_job_offer_001",
+      "assetPath": "followup_20261031/img_adult_job_offer_001.png",
+      "fileName": "img_adult_job_offer_001.png",
+      "usage": "event",
+      "description": "불 꺼지지 않는 회사 사건 이미지",
+      "fallbackText": "불 꺼지지 않는 회사 장면 이미지"
+    },
+    {
+      "imageId": "img_adult_childhood_box_001",
+      "assetPath": "followup_20261031/img_adult_childhood_box_001.png",
+      "fileName": "img_adult_childhood_box_001.png",
+      "usage": "event",
+      "description": "이삿짐 속 상자 사건 이미지",
+      "fallbackText": "이삿짐 속 상자 장면 이미지"
+    },
+    {
+      "imageId": "img_adult_wedding_invite_001",
+      "assetPath": "followup_20261031/img_adult_wedding_invite_001.png",
+      "fileName": "img_adult_wedding_invite_001.png",
+      "usage": "event",
+      "description": "애매한 사이의 청첩장 사건 이미지",
+      "fallbackText": "애매한 사이의 청첩장 장면 이미지"
+    },
+    {
+      "imageId": "img_adult_birthday_001",
+      "assetPath": "followup_20261031/img_adult_birthday_001.png",
+      "fileName": "img_adult_birthday_001.png",
+      "usage": "event",
+      "description": "마흔 번째 생일 사건 이미지",
+      "fallbackText": "마흔 번째 생일 장면 이미지"
+    },
+    {
+      "imageId": "img_adult_second_career_001",
+      "assetPath": "followup_20261031/img_adult_second_career_001.png",
+      "fileName": "img_adult_second_career_001.png",
+      "usage": "event",
+      "description": "퇴직하면 치킨집? 사건 이미지",
+      "fallbackText": "퇴직하면 치킨집? 장면 이미지"
+    },
+    {
+      "imageId": "img_adult_lifelong_friend_001",
+      "assetPath": "followup_20261031/img_adult_lifelong_friend_001.png",
+      "fileName": "img_adult_lifelong_friend_001.png",
+      "usage": "event",
+      "description": "50년 지기 사건 이미지",
+      "fallbackText": "50년 지기 장면 이미지"
+    },
+    {
+      "imageId": "img_adult_sunday_night_001",
+      "assetPath": "followup_20261031/img_adult_sunday_night_001.png",
+      "fileName": "img_adult_sunday_night_001.png",
+      "usage": "event",
+      "description": "일요일 밤 11시 사건 이미지",
+      "fallbackText": "일요일 밤 11시 장면 이미지"
+    },
+    {
+      "imageId": "img_pov_dating_app_001",
+      "assetPath": "followup_20261031/img_pov_dating_app_001.png",
+      "fileName": "img_pov_dating_app_001.png",
+      "usage": "pov",
+      "description": "첫 매칭 사건 이미지",
+      "fallbackText": "첫 매칭 장면 이미지"
+    },
+    {
+      "imageId": "img_pov_id_badge_001",
+      "assetPath": "followup_20261031/img_pov_id_badge_001.png",
+      "fileName": "img_pov_id_badge_001.png",
+      "usage": "pov",
+      "description": "사원증 사진 사건 이미지",
+      "fallbackText": "사원증 사진 장면 이미지"
+    },
+    {
+      "imageId": "img_child_mom_calling_001",
+      "assetPath": "followup_20261031/img_child_mom_calling_001.png",
+      "fileName": "img_child_mom_calling_001.png",
+      "usage": "event",
+      "description": "엄마의 호출 사건 이미지",
+      "fallbackText": "엄마의 호출 장면 이미지"
+    },
+    {
+      "imageId": "img_child_dream_001",
+      "assetPath": "followup_20261031/img_child_dream_001.png",
+      "fileName": "img_child_dream_001.png",
+      "usage": "event",
+      "description": "장래 희망 발표 사건 이미지",
+      "fallbackText": "장래 희망 발표 장면 이미지"
+    },
+    {
+      "imageId": "img_child_culture_pick_001",
+      "assetPath": "followup_20261031/img_child_culture_pick_001.png",
+      "fileName": "img_child_culture_pick_001.png",
+      "usage": "event",
+      "description": "문화부 반 고르기 사건 이미지",
+      "fallbackText": "문화부 반 고르기 장면 이미지"
+    },
+    {
+      "imageId": "img_child_relay_001",
+      "assetPath": "followup_20261031/img_child_relay_001.png",
+      "fileName": "img_child_relay_001.png",
+      "usage": "event",
+      "description": "운동회 계주 사건 이미지",
+      "fallbackText": "운동회 계주 장면 이미지"
+    },
+    {
+      "imageId": "img_child_secret_base_001",
+      "assetPath": "followup_20261031/img_child_secret_base_001.png",
+      "fileName": "img_child_secret_base_001.png",
+      "usage": "event",
+      "description": "비밀 기지 사건 이미지",
+      "fallbackText": "비밀 기지 장면 이미지"
+    },
+    {
+      "imageId": "img_child_smartphone_001",
+      "assetPath": "followup_20261031/img_child_smartphone_001.png",
+      "fileName": "img_child_smartphone_001.png",
+      "usage": "event",
+      "description": "첫 스마트폰 계약서 사건 이미지",
+      "fallbackText": "첫 스마트폰 계약서 장면 이미지"
+    },
+    {
+      "imageId": "img_child_debate_001",
+      "assetPath": "followup_20261031/img_child_debate_001.png",
+      "fileName": "img_child_debate_001.png",
+      "usage": "event",
+      "description": "숙제 토론 대회 사건 이미지",
+      "fallbackText": "숙제 토론 대회 장면 이미지"
+    },
+    {
+      "imageId": "img_child_penalty_001",
+      "assetPath": "followup_20261031/img_child_penalty_001.png",
+      "fileName": "img_child_penalty_001.png",
+      "usage": "event",
+      "description": "결승전 승부차기 사건 이미지",
+      "fallbackText": "결승전 승부차기 장면 이미지"
+    },
+    {
+      "imageId": "img_child_bicycle_001",
+      "assetPath": "followup_20261031/img_child_bicycle_001.png",
+      "fileName": "img_child_bicycle_001.png",
+      "usage": "event",
+      "description": "보조 바퀴 떼는 날 사건 이미지",
+      "fallbackText": "보조 바퀴 떼는 날 장면 이미지"
+    },
+    {
+      "imageId": "img_child_stationery_001",
+      "assetPath": "followup_20261031/img_child_stationery_001.png",
+      "fileName": "img_child_stationery_001.png",
+      "usage": "event",
+      "description": "하굣길 문방구 사건 이미지",
+      "fallbackText": "하굣길 문방구 장면 이미지"
+    },
+    {
+      "imageId": "img_cross_05_001",
+      "assetPath": "followup_20261031/img_cross_05_001.png",
+      "fileName": "img_cross_05_001.png",
+      "usage": "pov",
+      "description": "다 큰 아이의 독립 보증금 사건 이미지",
+      "fallbackText": "다 큰 아이의 독립 보증금 장면 이미지"
+    },
+    {
+      "imageId": "img_cross_10_001",
+      "assetPath": "followup_20261031/img_cross_10_001.png",
+      "fileName": "img_cross_10_001.png",
+      "usage": "pov",
+      "description": "이혼 후 첫 명절 사건 이미지",
+      "fallbackText": "이혼 후 첫 명절 장면 이미지"
+    },
+    {
+      "imageId": "img_infant_remote_001",
+      "assetPath": "followup_20261031/img_infant_remote_001.png",
+      "fileName": "img_infant_remote_001.png",
+      "usage": "event",
+      "description": "리모컨의 비밀 사건 이미지",
+      "fallbackText": "리모컨의 비밀 장면 이미지"
+    },
+    {
+      "imageId": "img_infant_vaccine_001",
+      "assetPath": "followup_20261031/img_infant_vaccine_001.png",
+      "fileName": "img_infant_vaccine_001.png",
+      "usage": "event",
+      "description": "예방접종 날 사건 이미지",
+      "fallbackText": "예방접종 날 장면 이미지"
+    },
+    {
+      "imageId": "img_infant_holiday_001",
+      "assetPath": "followup_20261031/img_infant_holiday_001.png",
+      "fileName": "img_infant_holiday_001.png",
+      "usage": "event",
+      "description": "명절 친척 모임 사건 이미지",
+      "fallbackText": "명절 친척 모임 장면 이미지"
+    },
+    {
+      "imageId": "img_infant_cousin_001",
+      "assetPath": "followup_20261031/img_infant_cousin_001.png",
+      "fileName": "img_infant_cousin_001.png",
+      "usage": "event",
+      "description": "사촌 형의 방문 사건 이미지",
+      "fallbackText": "사촌 형의 방문 장면 이미지"
+    },
+    {
+      "imageId": "img_infant_carousel_001",
+      "assetPath": "followup_20261031/img_infant_carousel_001.png",
+      "fileName": "img_infant_carousel_001.png",
+      "usage": "event",
+      "description": "회전목마 사건 이미지",
+      "fallbackText": "회전목마 장면 이미지"
+    },
+    {
+      "imageId": "img_infant_birthday_cake_001",
+      "assetPath": "followup_20261031/img_infant_birthday_cake_001.png",
+      "fileName": "img_infant_birthday_cake_001.png",
+      "usage": "event",
+      "description": "친구의 생일 케이크 사건 이미지",
+      "fallbackText": "친구의 생일 케이크 장면 이미지"
+    },
+    {
+      "imageId": "img_path_fit_03_001",
+      "assetPath": "followup_20261031/img_path_fit_03_001.png",
+      "fileName": "img_path_fit_03_001.png",
+      "usage": "pov",
+      "description": "운동부 특기생 제안 사건 이미지",
+      "fallbackText": "운동부 특기생 제안 장면 이미지"
+    },
+    {
+      "imageId": "img_path_fit_08_001",
+      "assetPath": "followup_20261031/img_path_fit_08_001.png",
+      "fileName": "img_path_fit_08_001.png",
+      "usage": "pov",
+      "description": "내 이름을 건 체육관 사건 이미지",
+      "fallbackText": "내 이름을 건 체육관 장면 이미지"
+    },
+    {
+      "imageId": "img_path_fit_15_001",
+      "assetPath": "followup_20261031/img_path_fit_15_001.png",
+      "fileName": "img_path_fit_15_001.png",
+      "usage": "pov",
+      "description": "학교 스포츠클럽 창단 사건 이미지",
+      "fallbackText": "학교 스포츠클럽 창단 장면 이미지"
+    },
+    {
+      "imageId": "img_path_hap_02_001",
+      "assetPath": "followup_20261031/img_path_hap_02_001.png",
+      "fileName": "img_path_hap_02_001.png",
+      "usage": "pov",
+      "description": "좋아하는 것과 잘하는 것 사건 이미지",
+      "fallbackText": "좋아하는 것과 잘하는 것 장면 이미지"
+    },
+    {
+      "imageId": "img_path_hap_07_001",
+      "assetPath": "followup_20261031/img_path_hap_07_001.png",
+      "fileName": "img_path_hap_07_001.png",
+      "usage": "pov",
+      "description": "통장과 웃음 사이 사건 이미지",
+      "fallbackText": "통장과 웃음 사이 장면 이미지"
+    },
+    {
+      "imageId": "img_path_hap_14_001",
+      "assetPath": "followup_20261031/img_path_hap_14_001.png",
+      "fileName": "img_path_hap_14_001.png",
+      "usage": "pov",
+      "description": "취미가 일이 된 뒤 사건 이미지",
+      "fallbackText": "취미가 일이 된 뒤 장면 이미지"
+    },
+    {
+      "imageId": "img_path_hea_03_001",
+      "assetPath": "followup_20261031/img_path_hea_03_001.png",
+      "fileName": "img_path_hea_03_001.png",
+      "usage": "pov",
+      "description": "종합검진 결과지 사건 이미지",
+      "fallbackText": "종합검진 결과지 장면 이미지"
+    },
+    {
+      "imageId": "img_path_hea_08_001",
+      "assetPath": "followup_20261031/img_path_hea_08_001.png",
+      "fileName": "img_path_hea_08_001.png",
+      "usage": "pov",
+      "description": "병원 대기실의 단골 사건 이미지",
+      "fallbackText": "병원 대기실의 단골 장면 이미지"
+    },
+    {
+      "imageId": "img_path_hea_15_001",
+      "assetPath": "followup_20261031/img_path_hea_15_001.png",
+      "fileName": "img_path_hea_15_001.png",
+      "usage": "pov",
+      "description": "사전연명의료의향서 사건 이미지",
+      "fallbackText": "사전연명의료의향서 장면 이미지"
+    },
+    {
+      "imageId": "img_path_int_04_001",
+      "assetPath": "followup_20261031/img_path_int_04_001.png",
+      "fileName": "img_path_int_04_001.png",
+      "usage": "pov",
+      "description": "3.98과 장학금 커트라인 사건 이미지",
+      "fallbackText": "3.98과 장학금 커트라인 장면 이미지"
+    },
+    {
+      "imageId": "img_path_int_11_001",
+      "assetPath": "followup_20261031/img_path_int_11_001.png",
+      "fileName": "img_path_int_11_001.png",
+      "usage": "pov",
+      "description": "원하지 않던 학과 사건 이미지",
+      "fallbackText": "원하지 않던 학과 장면 이미지"
+    },
+    {
+      "imageId": "img_path_int_16_001",
+      "assetPath": "followup_20261031/img_path_int_16_001.png",
+      "fileName": "img_path_int_16_001.png",
+      "usage": "pov",
+      "description": "아이의 수학 숙제 사건 이미지",
+      "fallbackText": "아이의 수학 숙제 장면 이미지"
+    },
+    {
+      "imageId": "img_path_luk_03_001",
+      "assetPath": "followup_20261031/img_path_luk_03_001.png",
+      "fileName": "img_path_luk_03_001.png",
+      "usage": "pov",
+      "description": "당첨 축하 문자 사건 이미지",
+      "fallbackText": "당첨 축하 문자 장면 이미지"
+    },
+    {
+      "imageId": "img_path_luk_08_001",
+      "assetPath": "followup_20261031/img_path_luk_08_001.png",
+      "fileName": "img_path_luk_08_001.png",
+      "usage": "pov",
+      "description": "놓친 비행기 사건 이미지",
+      "fallbackText": "놓친 비행기 장면 이미지"
+    },
+    {
+      "imageId": "img_path_luk_10_001_followup_v2",
+      "assetPath": "followup_20261031/img_path_luk_10_001_followup_v2.png",
+      "fileName": "img_path_luk_10_001_followup_v2.png",
+      "usage": "event",
+      "description": "잘못 걸려 온 전화 사건 이미지",
+      "fallbackText": "잘못 걸려 온 전화 장면 이미지"
+    },
+    {
+      "imageId": "img_path_luk_15_001",
+      "assetPath": "followup_20261031/img_path_luk_15_001.png",
+      "fileName": "img_path_luk_15_001.png",
+      "usage": "pov",
+      "description": "손주와 뽑기 기계 사건 이미지",
+      "fallbackText": "손주와 뽑기 기계 장면 이미지"
+    },
+    {
+      "imageId": "img_path_soc_03_001",
+      "assetPath": "followup_20261031/img_path_soc_03_001.png",
+      "fileName": "img_path_soc_03_001.png",
+      "usage": "pov",
+      "description": "집에 가는 길이 같은 사람 사건 이미지",
+      "fallbackText": "집에 가는 길이 같은 사람 장면 이미지"
+    },
+    {
+      "imageId": "img_path_soc_08_001",
+      "assetPath": "followup_20261031/img_path_soc_08_001.png",
+      "fileName": "img_path_soc_08_001.png",
+      "usage": "pov",
+      "description": "혼자 차린 생일상 사건 이미지",
+      "fallbackText": "혼자 차린 생일상 장면 이미지"
+    },
+    {
+      "imageId": "img_path_soc_15_001",
+      "assetPath": "followup_20261031/img_path_soc_15_001.png",
+      "fileName": "img_path_soc_15_001.png",
+      "usage": "pov",
+      "description": "육아 품앗이 단톡방 사건 이미지",
+      "fallbackText": "육아 품앗이 단톡방 장면 이미지"
+    },
+    {
+      "imageId": "img_path_wea_02_001",
+      "assetPath": "followup_20261031/img_path_wea_02_001.png",
+      "fileName": "img_path_wea_02_001.png",
+      "usage": "pov",
+      "description": "중고 거래 사장님 사건 이미지",
+      "fallbackText": "중고 거래 사장님 장면 이미지"
+    },
+    {
+      "imageId": "img_path_wea_07_001",
+      "assetPath": "followup_20261031/img_path_wea_07_001.png",
+      "fileName": "img_path_wea_07_001.png",
+      "usage": "pov",
+      "description": "월세 날의 통장 잔고 사건 이미지",
+      "fallbackText": "월세 날의 통장 잔고 장면 이미지"
+    },
+    {
+      "imageId": "img_path_wea_14_001",
+      "assetPath": "followup_20261031/img_path_wea_14_001.png",
+      "fileName": "img_path_wea_14_001.png",
+      "usage": "pov",
+      "description": "아이 학원비 계산서 사건 이미지",
+      "fallbackText": "아이 학원비 계산서 장면 이미지"
+    },
+    {
+      "imageId": "img_special_dog_carry_001",
+      "assetPath": "followup_20261031/img_special_dog_carry_001.png",
+      "fileName": "img_special_dog_carry_001.png",
+      "usage": "event",
+      "description": "강아지의 새끼가 되었다 사건 이미지",
+      "fallbackText": "강아지의 새끼가 되었다 장면 이미지"
+    },
+    {
+      "imageId": "img_special_water_bottle_001",
+      "assetPath": "followup_20261031/img_special_water_bottle_001.png",
+      "fileName": "img_special_water_bottle_001.png",
+      "usage": "event",
+      "description": "뚜껑 닫힌 물병 사건 이미지",
+      "fallbackText": "뚜껑 닫힌 물병 장면 이미지"
+    },
+    {
+      "imageId": "img_special_robot_vacuum_001",
+      "assetPath": "followup_20261031/img_special_robot_vacuum_001.png",
+      "fileName": "img_special_robot_vacuum_001.png",
+      "usage": "event",
+      "description": "로봇청소기 납치 사건 사건 이미지",
+      "fallbackText": "로봇청소기 납치 사건 장면 이미지"
+    },
+    {
+      "imageId": "img_special_stuck_elevator_001",
+      "assetPath": "followup_20261031/img_special_stuck_elevator_001.png",
+      "fileName": "img_special_stuck_elevator_001.png",
+      "usage": "event",
+      "description": "멈춘 엘리베이터 사건 이미지",
+      "fallbackText": "멈춘 엘리베이터 장면 이미지"
+    },
+    {
+      "imageId": "img_teen_club_001",
+      "assetPath": "followup_20261031/img_teen_club_001.png",
+      "fileName": "img_teen_club_001.png",
+      "usage": "event",
+      "description": "중학교 동아리 사건 이미지",
+      "fallbackText": "중학교 동아리 장면 이미지"
+    },
+    {
+      "imageId": "img_teen_room_001",
+      "assetPath": "followup_20261031/img_teen_room_001.png",
+      "fileName": "img_teen_room_001.png",
+      "usage": "event",
+      "description": "방 청소 잔소리 사건 이미지",
+      "fallbackText": "방 청소 잔소리 장면 이미지"
+    },
+    {
+      "imageId": "img_teen_hackathon_001",
+      "assetPath": "followup_20261031/img_teen_hackathon_001.png",
+      "fileName": "img_teen_hackathon_001.png",
+      "usage": "event",
+      "description": "청소년 해커톤 사건 이미지",
+      "fallbackText": "청소년 해커톤 장면 이미지"
+    },
+    {
+      "imageId": "img_teen_sick_dog_001",
+      "assetPath": "followup_20261031/img_teen_sick_dog_001.png",
+      "fileName": "img_teen_sick_dog_001.png",
+      "usage": "event",
+      "description": "아픈 콩이 사건 이미지",
+      "fallbackText": "아픈 콩이 장면 이미지"
+    },
+    {
+      "imageId": "img_teen_career_001",
+      "assetPath": "followup_20261031/img_teen_career_001.png",
+      "fileName": "img_teen_career_001.png",
+      "usage": "event",
+      "description": "문과냐 이과냐 사건 이미지",
+      "fallbackText": "문과냐 이과냐 장면 이미지"
+    },
+    {
+      "imageId": "img_teen_report_card_001",
+      "assetPath": "followup_20261031/img_teen_report_card_001.png",
+      "fileName": "img_teen_report_card_001.png",
+      "usage": "event",
+      "description": "성적표 사인 사건 이미지",
+      "fallbackText": "성적표 사인 장면 이미지"
+    },
+    {
+      "imageId": "img_teen_yearbook_photo_001",
+      "assetPath": "followup_20261031/img_teen_yearbook_photo_001.png",
+      "fileName": "img_teen_yearbook_photo_001.png",
+      "usage": "event",
+      "description": "졸업앨범 촬영 날 사건 이미지",
+      "fallbackText": "졸업앨범 촬영 날 장면 이미지"
+    },
+    {
+      "imageId": "img_teen_exam_day_001",
+      "assetPath": "followup_20261031/img_teen_exam_day_001.png",
+      "fileName": "img_teen_exam_day_001.png",
+      "usage": "event",
+      "description": "수능 날 아침 사건 이미지",
+      "fallbackText": "수능 날 아침 장면 이미지"
+    },
+    {
+      "imageId": "img_pov_exam_paper_001_followup_v2",
+      "assetPath": "followup_20261031/img_pov_exam_paper_001_followup_v2.png",
+      "fileName": "img_pov_exam_paper_001_followup_v2.png",
+      "usage": "event",
+      "description": "기말고사 1교시 사건 이미지",
+      "fallbackText": "기말고사 1교시 장면 이미지"
     }
   ],
   "periodPortraits": {
