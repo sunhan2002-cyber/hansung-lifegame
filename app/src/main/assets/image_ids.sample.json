@@ -166,8 +166,8 @@
     "description": "아동기 school 상황을 표현하는 사건 이미지",
     "fileName": "img_child_school_001.png",
     "fallbackText": "이미지 준비 전에는 '아동기 school' 상황 설명으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_child_classroom_002",
@@ -648,8 +648,8 @@
     "description": "유아기 '브로콜리 반찬' 사건을 표현하는 이미지",
     "fileName": "img_infant_baby_food_001.png",
     "fallbackText": "이미지 준비 전에는 '브로콜리 반찬' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_infant_first_tooth_001",
@@ -658,8 +658,8 @@
     "description": "유아기 '첫 이가 나는 중' 사건을 표현하는 이미지",
     "fileName": "img_infant_first_tooth_001.png",
     "fallbackText": "이미지 준비 전에는 '첫 이가 나는 중' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_infant_bath_001",
@@ -668,8 +668,8 @@
     "description": "유아기 '5분 컷 목욕' 사건을 표현하는 이미지",
     "fileName": "img_infant_bath_001.png",
     "fallbackText": "이미지 준비 전에는 '5분 컷 목욕' 상황 이미지 영역으로 대체 표시",
-    "width": 1280,
-    "height": 960
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_infant_night_001",
@@ -678,8 +678,8 @@
     "description": "유아기 '새벽 1시의 자장가' 사건을 표현하는 이미지",
     "fileName": "img_infant_night_001.png",
     "fallbackText": "이미지 준비 전에는 '새벽 1시의 자장가' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_infant_toys_001",
@@ -688,8 +688,8 @@
     "description": "유아기 '돌잡이' 사건을 표현하는 이미지",
     "fileName": "img_infant_toys_001.png",
     "fallbackText": "이미지 준비 전에는 '돌잡이' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_infant_vaccine_001",
@@ -698,8 +698,8 @@
     "description": "유아기 '예방접종 날' 사건을 표현하는 이미지",
     "fileName": "img_infant_vaccine_001.png",
     "fallbackText": "이미지 준비 전에는 '예방접종 날' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_infant_first_word_001",
@@ -708,8 +708,8 @@
     "description": "유아기 '첫 단어 내기' 사건을 표현하는 이미지",
     "fileName": "img_infant_first_word_001.png",
     "fallbackText": "이미지 준비 전에는 '첫 단어 내기' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_infant_first_steps_001",
@@ -718,8 +718,8 @@
     "description": "유아기 '첫 걸음마 녹화 중' 사건을 표현하는 이미지",
     "fileName": "img_infant_first_steps_001.png",
     "fallbackText": "이미지 준비 전에는 '첫 걸음마 녹화 중' 상황 이미지 영역으로 대체 표시",
-    "width": 1280,
-    "height": 960
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_infant_picture_book_001",
@@ -728,8 +728,8 @@
     "description": "유아기 '할머니의 그림책' 사건을 표현하는 이미지",
     "fileName": "img_infant_picture_book_001.png",
     "fallbackText": "이미지 준비 전에는 '할머니의 그림책' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_infant_park_001",
@@ -738,8 +738,8 @@
     "description": "유아기 '공원의 비둘기 떼' 사건을 표현하는 이미지",
     "fileName": "img_infant_park_001.png",
     "fallbackText": "이미지 준비 전에는 '공원의 비둘기 떼' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_infant_holiday_001",
@@ -748,8 +748,8 @@
     "description": "유아기 '명절 친척 모임' 사건을 표현하는 이미지",
     "fileName": "img_infant_holiday_001.png",
     "fallbackText": "이미지 준비 전에는 '명절 친척 모임' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_infant_crayon_001",
@@ -758,8 +758,8 @@
     "description": "유아기 '크레파스와 하얀 벽' 사건을 표현하는 이미지",
     "fileName": "img_infant_crayon_001.png",
     "fallbackText": "이미지 준비 전에는 '크레파스와 하얀 벽' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_infant_song_001",
@@ -768,8 +768,8 @@
     "description": "유아기 '동요 타임' 사건을 표현하는 이미지",
     "fileName": "img_infant_song_001.png",
     "fallbackText": "이미지 준비 전에는 '동요 타임' 상황 이미지 영역으로 대체 표시",
-    "width": 1280,
-    "height": 960
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_infant_sandbox_001",
@@ -778,8 +778,8 @@
     "description": "유아기 '놀이터 모래밭' 사건을 표현하는 이미지",
     "fileName": "img_infant_sandbox_001.png",
     "fallbackText": "이미지 준비 전에는 '놀이터 모래밭' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_infant_cousin_001",
@@ -788,8 +788,8 @@
     "description": "유아기 '사촌 형의 방문' 사건을 표현하는 이미지",
     "fileName": "img_infant_cousin_001.png",
     "fallbackText": "이미지 준비 전에는 '사촌 형의 방문' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_infant_daycare_001",
@@ -798,8 +798,8 @@
     "description": "유아기 '어린이집 첫날' 사건을 표현하는 이미지",
     "fileName": "img_infant_daycare_001.png",
     "fallbackText": "이미지 준비 전에는 '어린이집 첫날' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_infant_concert_001",
@@ -808,8 +808,8 @@
     "description": "유아기 '거실 연주회' 사건을 표현하는 이미지",
     "fileName": "img_infant_concert_001.png",
     "fallbackText": "이미지 준비 전에는 '거실 연주회' 상황 이미지 영역으로 대체 표시",
-    "width": 1280,
-    "height": 960
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_infant_nap_001",
@@ -818,8 +818,8 @@
     "description": "유아기 '낮잠 시간' 사건을 표현하는 이미지",
     "fileName": "img_infant_nap_001.png",
     "fallbackText": "이미지 준비 전에는 '낮잠 시간' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_infant_cleanup_001",
@@ -828,8 +828,8 @@
     "description": "유아기 '장난감 정리 시간' 사건을 표현하는 이미지",
     "fileName": "img_infant_cleanup_001.png",
     "fallbackText": "이미지 준비 전에는 '장난감 정리 시간' 상황 이미지 영역으로 대체 표시",
-    "width": 1280,
-    "height": 960
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_child_mom_calling_001",
@@ -838,8 +838,8 @@
     "description": "아동기 '엄마의 호출' 사건을 표현하는 이미지",
     "fileName": "img_child_mom_calling_001.png",
     "fallbackText": "이미지 준비 전에는 '엄마의 호출' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_child_election_001",
@@ -848,8 +848,8 @@
     "description": "아동기 '반장 선거' 사건을 표현하는 이미지",
     "fileName": "img_child_election_001.png",
     "fallbackText": "이미지 준비 전에는 '반장 선거' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_child_academy_001",
@@ -858,8 +858,8 @@
     "description": "아동기 '학원 고르기' 사건을 표현하는 이미지",
     "fileName": "img_child_academy_001.png",
     "fallbackText": "이미지 준비 전에는 '학원 고르기' 상황 이미지 영역으로 대체 표시",
-    "width": 1280,
-    "height": 960
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_child_dictation_001",
@@ -868,8 +868,8 @@
     "description": "아동기 '받아쓰기 전날' 사건을 표현하는 이미지",
     "fileName": "img_child_dictation_001.png",
     "fallbackText": "이미지 준비 전에는 '받아쓰기 전날' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_child_first_errand_001",
@@ -878,8 +878,8 @@
     "description": "아동기 '첫 심부름' 사건을 표현하는 이미지",
     "fileName": "img_child_first_errand_001.png",
     "fallbackText": "이미지 준비 전에는 '첫 심부름' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_child_allowance_001",
@@ -888,8 +888,8 @@
     "description": "아동기 '첫 용돈' 사건을 표현하는 이미지",
     "fileName": "img_child_allowance_001.png",
     "fallbackText": "이미지 준비 전에는 '첫 용돈' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_child_christmas_001",
@@ -898,8 +898,8 @@
     "description": "아동기 '산타의 정체' 사건을 표현하는 이미지",
     "fileName": "img_child_christmas_001.png",
     "fallbackText": "이미지 준비 전에는 '산타의 정체' 상황 이미지 영역으로 대체 표시",
-    "width": 1280,
-    "height": 960
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_child_club_001",
@@ -908,8 +908,8 @@
     "description": "아동기 '동아리 신청서' 사건을 표현하는 이미지",
     "fileName": "img_child_club_001.png",
     "fallbackText": "이미지 준비 전에는 '동아리 신청서' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_child_sports_pick_001",
@@ -918,8 +918,8 @@
     "description": "아동기 '운동부 종목 고르기' 사건을 표현하는 이미지",
     "fileName": "img_child_sports_pick_001.png",
     "fallbackText": "이미지 준비 전에는 '운동부 종목 고르기' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_child_culture_pick_001",
@@ -928,8 +928,8 @@
     "description": "아동기 '문화부 반 고르기' 사건을 표현하는 이미지",
     "fileName": "img_child_culture_pick_001.png",
     "fallbackText": "이미지 준비 전에는 '문화부 반 고르기' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_child_arts_pick_001",
@@ -938,8 +938,8 @@
     "description": "아동기 '예술부 반 고르기' 사건을 표현하는 이미지",
     "fileName": "img_child_arts_pick_001.png",
     "fallbackText": "이미지 준비 전에는 '예술부 반 고르기' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_child_puppy_001",
@@ -948,8 +948,8 @@
     "description": "아동기 '강아지 입양' 사건을 표현하는 이미지",
     "fileName": "img_child_puppy_001.png",
     "fallbackText": "이미지 준비 전에는 '강아지 입양' 상황 이미지 영역으로 대체 표시",
-    "width": 1280,
-    "height": 960
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_child_eraser_001",
@@ -958,8 +958,8 @@
     "description": "아동기 '사라진 지우개' 사건을 표현하는 이미지",
     "fileName": "img_child_eraser_001.png",
     "fallbackText": "이미지 준비 전에는 '사라진 지우개' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_child_diary_001",
@@ -968,8 +968,8 @@
     "description": "아동기 '밀린 방학 일기' 사건을 표현하는 이미지",
     "fileName": "img_child_diary_001.png",
     "fallbackText": "이미지 준비 전에는 '밀린 방학 일기' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_child_relay_001",
@@ -978,8 +978,8 @@
     "description": "아동기 '운동회 계주' 사건을 표현하는 이미지",
     "fileName": "img_child_relay_001.png",
     "fallbackText": "이미지 준비 전에는 '운동회 계주' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_child_science_day_001",
@@ -988,8 +988,8 @@
     "description": "아동기 '과학의 날' 사건을 표현하는 이미지",
     "fileName": "img_child_science_day_001.png",
     "fallbackText": "이미지 준비 전에는 '과학의 날' 상황 이미지 영역으로 대체 표시",
-    "width": 1280,
-    "height": 960
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_child_library_001",
@@ -998,8 +998,8 @@
     "description": "아동기 '독서왕 후보' 사건을 표현하는 이미지",
     "fileName": "img_child_library_001.png",
     "fallbackText": "이미지 준비 전에는 '독서왕 후보' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_child_secret_base_001",
@@ -1008,8 +1008,8 @@
     "description": "아동기 '비밀 기지' 사건을 표현하는 이미지",
     "fileName": "img_child_secret_base_001.png",
     "fallbackText": "이미지 준비 전에는 '비밀 기지' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_child_lunch_001",
@@ -1018,8 +1018,8 @@
     "description": "아동기 '급식의 시금치' 사건을 표현하는 이미지",
     "fileName": "img_child_lunch_001.png",
     "fallbackText": "이미지 준비 전에는 '급식의 시금치' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_child_swimming_001",
@@ -1028,8 +1028,8 @@
     "description": "아동기 '여름 수영 강습' 사건을 표현하는 이미지",
     "fileName": "img_child_swimming_001.png",
     "fallbackText": "이미지 준비 전에는 '여름 수영 강습' 상황 이미지 영역으로 대체 표시",
-    "width": 1280,
-    "height": 960
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_child_new_student_001",
@@ -1038,8 +1038,8 @@
     "description": "아동기 '혼자 밥 먹는 전학생' 사건을 표현하는 이미지",
     "fileName": "img_child_new_student_001.png",
     "fallbackText": "이미지 준비 전에는 '혼자 밥 먹는 전학생' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_child_friend_moving_001",
@@ -1048,8 +1048,8 @@
     "description": "아동기 '지호의 이사' 사건을 표현하는 이미지",
     "fileName": "img_child_friend_moving_001.png",
     "fallbackText": "이미지 준비 전에는 '지호의 이사' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_child_smartphone_001",
@@ -1058,8 +1058,8 @@
     "description": "아동기 '첫 스마트폰 계약서' 사건을 표현하는 이미지",
     "fileName": "img_child_smartphone_001.png",
     "fallbackText": "이미지 준비 전에는 '첫 스마트폰 계약서' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_child_class_nap_001",
@@ -1068,8 +1068,8 @@
     "description": "아동기 '누가 날 부른다' 사건을 표현하는 이미지",
     "fileName": "img_child_class_nap_001.png",
     "fallbackText": "이미지 준비 전에는 '누가 날 부른다' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_child_basketball_001",
@@ -1078,8 +1078,8 @@
     "description": "아동기 '종료 3초 전' 사건을 표현하는 이미지",
     "fileName": "img_child_basketball_001.png",
     "fallbackText": "이미지 준비 전에는 '종료 3초 전' 상황 이미지 영역으로 대체 표시",
-    "width": 1280,
-    "height": 960
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_child_swim_meet_001",
@@ -1088,8 +1088,8 @@
     "description": "아동기 '수영 대회 결승' 사건을 표현하는 이미지",
     "fileName": "img_child_swim_meet_001.png",
     "fallbackText": "이미지 준비 전에는 '수영 대회 결승' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_child_science_fair_001",
@@ -1098,8 +1098,8 @@
     "description": "아동기 '과학 경진대회' 사건을 표현하는 이미지",
     "fileName": "img_child_science_fair_001.png",
     "fallbackText": "이미지 준비 전에는 '과학 경진대회' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_child_debate_001",
@@ -1108,8 +1108,8 @@
     "description": "아동기 '숙제 토론 대회' 사건을 표현하는 이미지",
     "fileName": "img_child_debate_001.png",
     "fallbackText": "이미지 준비 전에는 '숙제 토론 대회' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_child_baduk_001",
@@ -1118,8 +1118,8 @@
     "description": "아동기 '어린이 바둑 대회' 사건을 표현하는 이미지",
     "fileName": "img_child_baduk_001.png",
     "fallbackText": "이미지 준비 전에는 '어린이 바둑 대회' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_child_drawing_contest_001",
@@ -1128,8 +1128,8 @@
     "description": "아동기 '사생대회' 사건을 표현하는 이미지",
     "fileName": "img_child_drawing_contest_001.png",
     "fallbackText": "이미지 준비 전에는 '사생대회' 상황 이미지 영역으로 대체 표시",
-    "width": 1280,
-    "height": 960
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_child_choir_001",
@@ -1138,8 +1138,8 @@
     "description": "아동기 '합창 대회 솔로' 사건을 표현하는 이미지",
     "fileName": "img_child_choir_001.png",
     "fallbackText": "이미지 준비 전에는 '합창 대회 솔로' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_child_school_play_001",
@@ -1148,8 +1148,8 @@
     "description": "아동기 '학예회의 나무 3' 사건을 표현하는 이미지",
     "fileName": "img_child_school_play_001.png",
     "fallbackText": "이미지 준비 전에는 '학예회의 나무 3' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_child_penalty_001",
@@ -1158,8 +1158,8 @@
     "description": "아동기 '결승전 승부차기' 사건을 표현하는 이미지",
     "fileName": "img_child_penalty_001.png",
     "fallbackText": "이미지 준비 전에는 '결승전 승부차기' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_child_piano_contest_001",
@@ -1168,8 +1168,8 @@
     "description": "아동기 '피아노 콩쿠르' 사건을 표현하는 이미지",
     "fileName": "img_child_piano_contest_001.png",
     "fallbackText": "이미지 준비 전에는 '피아노 콩쿠르' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_child_vacation_001",
@@ -1178,8 +1178,8 @@
     "description": "아동기 '여름휴가 투표' 사건을 표현하는 이미지",
     "fileName": "img_child_vacation_001.png",
     "fallbackText": "이미지 준비 전에는 '여름휴가 투표' 상황 이미지 영역으로 대체 표시",
-    "width": 1280,
-    "height": 960
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_child_break_time_001",
@@ -1188,8 +1188,8 @@
     "description": "아동기 '쉬는 시간 10분' 사건을 표현하는 이미지",
     "fileName": "img_child_break_time_001.png",
     "fallbackText": "이미지 준비 전에는 '쉬는 시간 10분' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_child_stationery_001",
@@ -1198,8 +1198,8 @@
     "description": "아동기 '하굣길 문방구' 사건을 표현하는 이미지",
     "fileName": "img_child_stationery_001.png",
     "fallbackText": "이미지 준비 전에는 '하굣길 문방구' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_teen_uniform_001",
@@ -1208,8 +1208,8 @@
     "description": "청소년기 '처음 입는 교복' 사건을 표현하는 이미지",
     "fileName": "img_teen_uniform_001.png",
     "fallbackText": "이미지 준비 전에는 '처음 입는 교복' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_teen_club_001",
@@ -1218,8 +1218,8 @@
     "description": "청소년기 '중학교 동아리' 사건을 표현하는 이미지",
     "fileName": "img_teen_club_001.png",
     "fallbackText": "이미지 준비 전에는 '중학교 동아리' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_teen_lunch_line_001",
@@ -1228,8 +1228,8 @@
     "description": "청소년기 '급식 새치기' 사건을 표현하는 이미지",
     "fileName": "img_teen_lunch_line_001.png",
     "fallbackText": "이미지 준비 전에는 '급식 새치기' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_teen_new_seatmate_001",
@@ -1238,8 +1238,8 @@
     "description": "청소년기 '짝 바꾸는 날' 사건을 표현하는 이미지",
     "fileName": "img_teen_new_seatmate_001.png",
     "fallbackText": "이미지 준비 전에는 '짝 바꾸는 날' 상황 이미지 영역으로 대체 표시",
-    "width": 1280,
-    "height": 960
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_teen_midterm_001",
@@ -1248,8 +1248,8 @@
     "description": "청소년기 '첫 중간고사' 사건을 표현하는 이미지",
     "fileName": "img_teen_midterm_001.png",
     "fallbackText": "이미지 준비 전에는 '첫 중간고사' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_teen_room_001",
@@ -1258,8 +1258,8 @@
     "description": "청소년기 '방 청소 잔소리' 사건을 표현하는 이미지",
     "fileName": "img_teen_room_001.png",
     "fallbackText": "이미지 준비 전에는 '방 청소 잔소리' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_teen_running_001",
@@ -1268,8 +1268,8 @@
     "description": "청소년기 '오래달리기 측정' 사건을 표현하는 이미지",
     "fileName": "img_teen_running_001.png",
     "fallbackText": "이미지 준비 전에는 '오래달리기 측정' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_teen_rainy_day_001",
@@ -1278,8 +1278,8 @@
     "description": "청소년기 '비 오는 하굣길' 사건을 표현하는 이미지",
     "fileName": "img_teen_rainy_day_001.png",
     "fallbackText": "이미지 준비 전에는 '비 오는 하굣길' 상황 이미지 영역으로 대체 표시",
-    "width": 1280,
-    "height": 960
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_teen_group_chat_001",
@@ -1288,8 +1288,8 @@
     "description": "청소년기 '단톡방의 사진' 사건을 표현하는 이미지",
     "fileName": "img_teen_group_chat_001.png",
     "fallbackText": "이미지 준비 전에는 '단톡방의 사진' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_teen_band_stage_001",
@@ -1298,8 +1298,8 @@
     "description": "청소년기 '축제 무대 사고' 사건을 표현하는 이미지",
     "fileName": "img_teen_band_stage_001.png",
     "fallbackText": "이미지 준비 전에는 '축제 무대 사고' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_teen_hackathon_001",
@@ -1308,8 +1308,8 @@
     "description": "청소년기 '청소년 해커톤' 사건을 표현하는 이미지",
     "fileName": "img_teen_hackathon_001.png",
     "fallbackText": "이미지 준비 전에는 '청소년 해커톤' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_teen_debate_001",
@@ -1318,8 +1318,8 @@
     "description": "청소년기 '교내 토론대회' 사건을 표현하는 이미지",
     "fileName": "img_teen_debate_001.png",
     "fallbackText": "이미지 준비 전에는 '교내 토론대회' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_teen_part_time_001",
@@ -1328,8 +1328,8 @@
     "description": "청소년기 '방학 아르바이트' 사건을 표현하는 이미지",
     "fileName": "img_teen_part_time_001.png",
     "fallbackText": "이미지 준비 전에는 '방학 아르바이트' 상황 이미지 영역으로 대체 표시",
-    "width": 1280,
-    "height": 960
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_teen_parents_anniversary_001",
@@ -1338,8 +1338,8 @@
     "description": "청소년기 '부모님 결혼기념일' 사건을 표현하는 이미지",
     "fileName": "img_teen_parents_anniversary_001.png",
     "fallbackText": "이미지 준비 전에는 '부모님 결혼기념일' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_teen_screen_time_001",
@@ -1348,8 +1348,8 @@
     "description": "청소년기 '스크린 타임 경고' 사건을 표현하는 이미지",
     "fileName": "img_teen_screen_time_001.png",
     "fallbackText": "이미지 준비 전에는 '스크린 타임 경고' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_teen_sick_dog_001",
@@ -1358,8 +1358,8 @@
     "description": "청소년기 '아픈 콩이' 사건을 표현하는 이미지",
     "fileName": "img_teen_sick_dog_001.png",
     "fallbackText": "이미지 준비 전에는 '아픈 콩이' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_teen_high_school_001",
@@ -1368,8 +1368,8 @@
     "description": "청소년기 '고등학교 원서' 사건을 표현하는 이미지",
     "fileName": "img_teen_high_school_001.png",
     "fallbackText": "이미지 준비 전에는 '고등학교 원서' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_teen_tryout_001",
@@ -1378,8 +1378,8 @@
     "description": "청소년기 '청소년 대표 선발' 사건을 표현하는 이미지",
     "fileName": "img_teen_tryout_001.png",
     "fallbackText": "이미지 준비 전에는 '청소년 대표 선발' 상황 이미지 영역으로 대체 표시",
-    "width": 1280,
-    "height": 960
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_teen_crush_001",
@@ -1388,8 +1388,8 @@
     "description": "청소년기 '축제와 짝사랑' 사건을 표현하는 이미지",
     "fileName": "img_teen_crush_001.png",
     "fallbackText": "이미지 준비 전에는 '축제와 짝사랑' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_teen_school_trip_001",
@@ -1398,8 +1398,8 @@
     "description": "청소년기 '수학여행의 밤' 사건을 표현하는 이미지",
     "fileName": "img_teen_school_trip_001.png",
     "fallbackText": "이미지 준비 전에는 '수학여행의 밤' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_teen_career_001",
@@ -1408,8 +1408,8 @@
     "description": "청소년기 '문과냐 이과냐' 사건을 표현하는 이미지",
     "fileName": "img_teen_career_001.png",
     "fallbackText": "이미지 준비 전에는 '문과냐 이과냐' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_teen_convenience_store_001",
@@ -1418,8 +1418,8 @@
     "description": "청소년기 '편의점의 진상 손님' 사건을 표현하는 이미지",
     "fileName": "img_teen_convenience_store_001.png",
     "fallbackText": "이미지 준비 전에는 '편의점의 진상 손님' 상황 이미지 영역으로 대체 표시",
-    "width": 1280,
-    "height": 960
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_teen_midnight_message_001",
@@ -1428,8 +1428,8 @@
     "description": "청소년기 '새벽의 메시지' 사건을 표현하는 이미지",
     "fileName": "img_teen_midnight_message_001.png",
     "fallbackText": "이미지 준비 전에는 '새벽의 메시지' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_teen_father_car_001",
@@ -1438,8 +1438,8 @@
     "description": "청소년기 '주차장의 아빠' 사건을 표현하는 이미지",
     "fileName": "img_teen_father_car_001.png",
     "fallbackText": "이미지 준비 전에는 '주차장의 아빠' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_teen_d100_001",
@@ -1448,8 +1448,8 @@
     "description": "청소년기 '수능 D-365' 사건을 표현하는 이미지",
     "fileName": "img_teen_d100_001.png",
     "fallbackText": "이미지 준비 전에는 '수능 D-365' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_teen_graduation_001",
@@ -1458,8 +1458,8 @@
     "description": "청소년기 '졸업식 날' 사건을 표현하는 이미지",
     "fileName": "img_teen_graduation_001.png",
     "fallbackText": "이미지 준비 전에는 '졸업식 날' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_teen_night_study_001",
@@ -1468,8 +1468,8 @@
     "description": "청소년기 '야자 시간의 배고픔' 사건을 표현하는 이미지",
     "fileName": "img_teen_night_study_001.png",
     "fallbackText": "이미지 준비 전에는 '야자 시간의 배고픔' 상황 이미지 영역으로 대체 표시",
-    "width": 1280,
-    "height": 960
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_teen_free_weekend_001",
@@ -1478,8 +1478,8 @@
     "description": "청소년기 '아무 일 없는 주말' 사건을 표현하는 이미지",
     "fileName": "img_teen_free_weekend_001.png",
     "fallbackText": "이미지 준비 전에는 '아무 일 없는 주말' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_adult_crossroad_001",
@@ -1488,8 +1488,8 @@
     "description": "성인기 '대학이냐 취업이냐' 사건을 표현하는 이미지",
     "fileName": "img_adult_crossroad_001.png",
     "fallbackText": "이미지 준비 전에는 '대학이냐 취업이냐' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_adult_pro_offer_001",
@@ -1498,8 +1498,8 @@
     "description": "성인기 '프로 구단의 제안' 사건을 표현하는 이미지",
     "fileName": "img_adult_pro_offer_001.png",
     "fallbackText": "이미지 준비 전에는 '프로 구단의 제안' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_adult_audition_001",
@@ -1508,8 +1508,8 @@
     "description": "성인기 '음이탈 레전드' 사건을 표현하는 이미지",
     "fileName": "img_adult_audition_001.png",
     "fallbackText": "이미지 준비 전에는 '음이탈 레전드' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_adult_living_alone_001",
@@ -1518,8 +1518,8 @@
     "description": "성인기 '자취 첫 주' 사건을 표현하는 이미지",
     "fileName": "img_adult_living_alone_001.png",
     "fallbackText": "이미지 준비 전에는 '자취 첫 주' 상황 이미지 영역으로 대체 표시",
-    "width": 1280,
-    "height": 960
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_adult_ideal_type_001",
@@ -1528,8 +1528,8 @@
     "description": "성인기 '이상형 발견' 사건을 표현하는 이미지",
     "fileName": "img_adult_ideal_type_001.png",
     "fallbackText": "이미지 준비 전에는 '이상형 발견' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_adult_ideal_type_star_001",
@@ -1538,8 +1538,8 @@
     "description": "성인기 '이상형과 눈이 마주쳤다' 사건을 표현하는 이미지",
     "fileName": "img_adult_ideal_type_star_001.png",
     "fallbackText": "이미지 준비 전에는 '이상형과 눈이 마주쳤다' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_adult_friends_drinks_001",
@@ -1558,8 +1558,8 @@
     "description": "성인기 '이상형 옆자리' 사건을 표현하는 이미지",
     "fileName": "img_adult_drinks_ideal_001.png",
     "fallbackText": "이미지 준비 전에는 '이상형 옆자리' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_adult_drinks_toast_001",
@@ -1568,8 +1568,8 @@
     "description": "성인기 '건배사를 해라' 사건을 표현하는 이미지",
     "fileName": "img_adult_drinks_toast_001.png",
     "fallbackText": "이미지 준비 전에는 '건배사를 해라' 상황 이미지 영역으로 대체 표시",
-    "width": 1280,
-    "height": 960
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_adult_drinks_grill_001",
@@ -1578,8 +1578,8 @@
     "description": "성인기 '고기 장인의 밤' 사건을 표현하는 이미지",
     "fileName": "img_adult_drinks_grill_001.png",
     "fallbackText": "이미지 준비 전에는 '고기 장인의 밤' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_adult_old_dog_001",
@@ -1588,8 +1588,8 @@
     "description": "성인기 '열여섯 살 콩이' 사건을 표현하는 이미지",
     "fileName": "img_adult_old_dog_001.png",
     "fallbackText": "이미지 준비 전에는 '열여섯 살 콩이' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_adult_campus_001",
@@ -1608,8 +1608,8 @@
     "description": "성인기 '최종 면접' 사건을 표현하는 이미지",
     "fileName": "img_adult_interview_001.png",
     "fallbackText": "이미지 준비 전에는 '최종 면접' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_adult_first_commute_001",
@@ -1618,8 +1618,8 @@
     "description": "성인기 '첫 출근길' 사건을 표현하는 이미지",
     "fileName": "img_adult_first_commute_001.png",
     "fallbackText": "이미지 준비 전에는 '첫 출근길' 상황 이미지 영역으로 대체 표시",
-    "width": 1280,
-    "height": 960
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_adult_first_salary_001",
@@ -1628,8 +1628,8 @@
     "description": "성인기 '첫 월급' 사건을 표현하는 이미지",
     "fileName": "img_adult_first_salary_001.png",
     "fallbackText": "이미지 준비 전에는 '첫 월급' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_adult_dinner_seats_001",
@@ -1638,8 +1638,8 @@
     "description": "성인기 '회식 자리 배치' 사건을 표현하는 이미지",
     "fileName": "img_adult_dinner_seats_001.png",
     "fallbackText": "이미지 준비 전에는 '회식 자리 배치' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_adult_dinner_boss_001",
@@ -1658,8 +1658,8 @@
     "description": "성인기 '동기와 탈출 작전' 사건을 표현하는 이미지",
     "fileName": "img_adult_dinner_escape_001.png",
     "fallbackText": "이미지 준비 전에는 '동기와 탈출 작전' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_adult_dinner_door_001",
@@ -1668,8 +1668,8 @@
     "description": "성인기 '문 앞 자리의 기회' 사건을 표현하는 이미지",
     "fileName": "img_adult_dinner_door_001.png",
     "fallbackText": "이미지 준비 전에는 '문 앞 자리의 기회' 상황 이미지 영역으로 대체 표시",
-    "width": 1280,
-    "height": 960
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_adult_company_dinner_001",
@@ -1678,8 +1678,8 @@
     "description": "성인기 '첫 회식' 사건을 표현하는 이미지",
     "fileName": "img_adult_company_dinner_001.png",
     "fallbackText": "이미지 준비 전에는 '첫 회식' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_adult_hangover_001",
@@ -1688,8 +1688,8 @@
     "description": "성인기 '회식 다음 날 아침' 사건을 표현하는 이미지",
     "fileName": "img_adult_hangover_001.png",
     "fallbackText": "이미지 준비 전에는 '회식 다음 날 아침' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_adult_late_message_001",
@@ -1708,8 +1708,8 @@
     "description": "성인기 '길을 묻는 사람' 사건을 표현하는 이미지",
     "fileName": "img_adult_asking_way_001.png",
     "fallbackText": "이미지 준비 전에는 '길을 묻는 사람' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_adult_startup_001",
@@ -1718,8 +1718,8 @@
     "description": "성인기 '거실 사무실 창업' 사건을 표현하는 이미지",
     "fileName": "img_adult_startup_001.png",
     "fallbackText": "이미지 준비 전에는 '거실 사무실 창업' 상황 이미지 영역으로 대체 표시",
-    "width": 1280,
-    "height": 960
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_adult_crypto_001",
@@ -1728,8 +1728,8 @@
     "description": "성인기 '이번엔 진짜라는 친구' 사건을 표현하는 이미지",
     "fileName": "img_adult_crypto_001.png",
     "fallbackText": "이미지 준비 전에는 '이번엔 진짜라는 친구' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_adult_gym_001",
@@ -1748,8 +1748,8 @@
     "description": "성인기 '첫 차' 사건을 표현하는 이미지",
     "fileName": "img_adult_first_car_001.png",
     "fallbackText": "이미지 준비 전에는 '첫 차' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_adult_wedding_speech_001",
@@ -1758,8 +1758,8 @@
     "description": "성인기 '베프의 결혼식' 사건을 표현하는 이미지",
     "fileName": "img_adult_wedding_speech_001.png",
     "fallbackText": "이미지 준비 전에는 '베프의 결혼식' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_adult_proposal_001",
@@ -1768,8 +1768,8 @@
     "description": "성인기 '결혼 이야기' 사건을 표현하는 이미지",
     "fileName": "img_adult_proposal_001.png",
     "fallbackText": "이미지 준비 전에는 '결혼 이야기' 상황 이미지 영역으로 대체 표시",
-    "width": 1280,
-    "height": 960
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_adult_arm_wrestling_001",
@@ -1778,8 +1778,8 @@
     "description": "성인기 '아빠와 팔씨름' 사건을 표현하는 이미지",
     "fileName": "img_adult_arm_wrestling_001.png",
     "fallbackText": "이미지 준비 전에는 '아빠와 팔씨름' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_adult_plogging_001",
@@ -1788,8 +1788,8 @@
     "description": "성인기 '주말 아침 플로깅' 사건을 표현하는 이미지",
     "fileName": "img_adult_plogging_001.png",
     "fallbackText": "이미지 준비 전에는 '주말 아침 플로깅' 상황 이미지 영역으로 대체 표시",
-    "width": 1280,
-    "height": 960
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_adult_reunion_001",
@@ -1798,8 +1798,8 @@
     "description": "성인기 '10년 만의 동창회' 사건을 표현하는 이미지",
     "fileName": "img_adult_reunion_001.png",
     "fallbackText": "이미지 준비 전에는 '10년 만의 동창회' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_adult_time_capsule_001",
@@ -1808,8 +1808,8 @@
     "description": "성인기 '20년 만의 타임캡슐' 사건을 표현하는 이미지",
     "fileName": "img_adult_time_capsule_001.png",
     "fallbackText": "이미지 준비 전에는 '20년 만의 타임캡슐' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_adult_job_offer_001",
@@ -1818,8 +1818,8 @@
     "description": "성인기 '불 꺼지지 않는 회사' 사건을 표현하는 이미지",
     "fileName": "img_adult_job_offer_001.png",
     "fallbackText": "이미지 준비 전에는 '불 꺼지지 않는 회사' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_adult_burnout_001",
@@ -1828,8 +1828,8 @@
     "description": "성인기 '번아웃' 사건을 표현하는 이미지",
     "fileName": "img_adult_burnout_001.png",
     "fallbackText": "이미지 준비 전에는 '번아웃' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_adult_newborn_001",
@@ -1838,8 +1838,8 @@
     "description": "성인기 '첫 아이' 사건을 표현하는 이미지",
     "fileName": "img_adult_newborn_001.png",
     "fallbackText": "이미지 준비 전에는 '첫 아이' 상황 이미지 영역으로 대체 표시",
-    "width": 1280,
-    "height": 960
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_adult_mural_001",
@@ -1848,8 +1848,8 @@
     "description": "성인기 '30년 만의 의뢰' 사건을 표현하는 이미지",
     "fileName": "img_adult_mural_001.png",
     "fallbackText": "이미지 준비 전에는 '30년 만의 의뢰' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_adult_house_001",
@@ -1858,8 +1858,8 @@
     "description": "성인기 '30년 만기 대출' 사건을 표현하는 이미지",
     "fileName": "img_adult_house_001.png",
     "fallbackText": "이미지 준비 전에는 '30년 만기 대출' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_adult_childhood_box_001",
@@ -1868,8 +1868,8 @@
     "description": "성인기 '이삿짐 속 상자' 사건을 표현하는 이미지",
     "fileName": "img_adult_childhood_box_001.png",
     "fallbackText": "이미지 준비 전에는 '이삿짐 속 상자' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_adult_hospital_001",
@@ -1878,8 +1878,8 @@
     "description": "성인기 '엄마의 수술' 사건을 표현하는 이미지",
     "fileName": "img_adult_hospital_001.png",
     "fallbackText": "이미지 준비 전에는 '엄마의 수술' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_adult_birthday_001",
@@ -1888,8 +1888,8 @@
     "description": "성인기 '마흔 번째 생일' 사건을 표현하는 이미지",
     "fileName": "img_adult_birthday_001.png",
     "fallbackText": "이미지 준비 전에는 '마흔 번째 생일' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_adult_convenience_night_001",
@@ -1898,8 +1898,8 @@
     "description": "성인기 '퇴근길 편의점' 사건을 표현하는 이미지",
     "fileName": "img_adult_convenience_night_001.png",
     "fallbackText": "이미지 준비 전에는 '퇴근길 편의점' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_adult_sunday_night_001",
@@ -1908,8 +1908,8 @@
     "description": "성인기 '일요일 밤 11시' 사건을 표현하는 이미지",
     "fileName": "img_adult_sunday_night_001.png",
     "fallbackText": "이미지 준비 전에는 '일요일 밤 11시' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_special_dumpling_001",
@@ -1918,8 +1918,8 @@
     "description": "유아기 '시식 코너의 유혹' 사건을 표현하는 이미지",
     "fileName": "img_special_dumpling_001.png",
     "fallbackText": "이미지 준비 전에는 '시식 코너의 유혹' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_special_dog_carry_001",
@@ -1928,8 +1928,8 @@
     "description": "유아기 '강아지의 새끼가 되었다' 사건을 표현하는 이미지",
     "fileName": "img_special_dog_carry_001.png",
     "fallbackText": "이미지 준비 전에는 '강아지의 새끼가 되었다' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_special_hornet_001",
@@ -1938,8 +1938,8 @@
     "description": "아동기 '낙엽 속의 장수말벌' 사건을 표현하는 이미지",
     "fileName": "img_special_hornet_001.png",
     "fallbackText": "이미지 준비 전에는 '낙엽 속의 장수말벌' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_special_seaweed_001",
@@ -1948,8 +1948,8 @@
     "description": "아동기 '끝나지 않는 미역' 사건을 표현하는 이미지",
     "fileName": "img_special_seaweed_001.png",
     "fallbackText": "이미지 준비 전에는 '끝나지 않는 미역' 상황 이미지 영역으로 대체 표시",
-    "width": 1280,
-    "height": 960
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_special_auto_door_001",
@@ -1958,8 +1958,8 @@
     "description": "청소년기 '나를 거부하는 자동문' 사건을 표현하는 이미지",
     "fileName": "img_special_auto_door_001.png",
     "fallbackText": "이미지 준비 전에는 '나를 거부하는 자동문' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_special_dream_answer_001",
@@ -1968,8 +1968,8 @@
     "description": "청소년기 '꿈속의 정답' 사건을 표현하는 이미지",
     "fileName": "img_special_dream_answer_001.png",
     "fallbackText": "이미지 준비 전에는 '꿈속의 정답' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_special_water_bottle_001",
@@ -1978,8 +1978,8 @@
     "description": "성인기 '뚜껑 닫힌 물병' 사건을 표현하는 이미지",
     "fileName": "img_special_water_bottle_001.png",
     "fallbackText": "이미지 준비 전에는 '뚜껑 닫힌 물병' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_special_elevator_001",
@@ -1988,8 +1988,8 @@
     "description": "성인기 '엘리베이터 속 사장님' 사건을 표현하는 이미지",
     "fileName": "img_special_elevator_001.png",
     "fallbackText": "이미지 준비 전에는 '엘리베이터 속 사장님' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_special_health_research_001",
@@ -1998,8 +1998,8 @@
     "description": "성인기 '너무 평범하게 건강한 사람' 사건을 표현하는 이미지",
     "fileName": "img_special_health_research_001.png",
     "fallbackText": "이미지 준비 전에는 '너무 평범하게 건강한 사람' 상황 이미지 영역으로 대체 표시",
-    "width": 1280,
-    "height": 960
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_special_janggi_001",
@@ -2008,8 +2008,8 @@
     "description": "성인기 '공원 벤치의 장기 고수' 사건을 표현하는 이미지",
     "fileName": "img_special_janggi_001.png",
     "fallbackText": "이미지 준비 전에는 '공원 벤치의 장기 고수' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_infant_remote_001",
@@ -2018,8 +2018,8 @@
     "description": "유아기 '리모컨의 비밀' 사건을 표현하는 이미지",
     "fileName": "img_infant_remote_001.png",
     "fallbackText": "이미지 준비 전에는 '리모컨의 비밀' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_infant_loud_cry_001",
@@ -2028,8 +2028,8 @@
     "description": "유아기 '신생아실 최고 목청' 사건을 표현하는 이미지",
     "fileName": "img_infant_loud_cry_001.png",
     "fallbackText": "이미지 준비 전에는 '신생아실 최고 목청' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_infant_upside_down_001",
@@ -2038,8 +2038,8 @@
     "description": "유아기 '거꾸로가 좋아' 사건을 표현하는 이미지",
     "fileName": "img_infant_upside_down_001.png",
     "fallbackText": "이미지 준비 전에는 '거꾸로가 좋아' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_child_dream_001",
@@ -2048,8 +2048,8 @@
     "description": "아동기 '장래 희망 발표' 사건을 표현하는 이미지",
     "fileName": "img_child_dream_001.png",
     "fallbackText": "이미지 준비 전에는 '장래 희망 발표' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_child_cheer_leader_001",
@@ -2058,8 +2058,8 @@
     "description": "아동기 '응원단장 스카우트' 사건을 표현하는 이미지",
     "fileName": "img_child_cheer_leader_001.png",
     "fallbackText": "이미지 준비 전에는 '응원단장 스카우트' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_child_clock_001",
@@ -2068,8 +2068,8 @@
     "description": "아동기 '고장 난 시계 해부' 사건을 표현하는 이미지",
     "fileName": "img_child_clock_001.png",
     "fallbackText": "이미지 준비 전에는 '고장 난 시계 해부' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_teen_backwards_uniform_001",
@@ -2078,8 +2078,8 @@
     "description": "청소년기 '거꾸로 입은 교복' 사건을 표현하는 이미지",
     "fileName": "img_teen_backwards_uniform_001.png",
     "fallbackText": "이미지 준비 전에는 '거꾸로 입은 교복' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_teen_broadcast_001",
@@ -2088,8 +2088,8 @@
     "description": "청소년기 '점심 방송 사고' 사건을 표현하는 이미지",
     "fileName": "img_teen_broadcast_001.png",
     "fallbackText": "이미지 준비 전에는 '점심 방송 사고' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_teen_wrong_answer_001",
@@ -2098,8 +2098,8 @@
     "description": "청소년기 '선생님의 오답' 사건을 표현하는 이미지",
     "fileName": "img_teen_wrong_answer_001.png",
     "fallbackText": "이미지 준비 전에는 '선생님의 오답' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_adult_patent_001",
@@ -2108,8 +2108,8 @@
     "description": "성인기 '특허가 될지도 모르는 아이디어' 사건을 표현하는 이미지",
     "fileName": "img_adult_patent_001.png",
     "fallbackText": "이미지 준비 전에는 '특허가 될지도 모르는 아이디어' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_adult_leave_form_001",
@@ -2118,8 +2118,8 @@
     "description": "성인기 '휴가 사유란' 사건을 표현하는 이미지",
     "fileName": "img_adult_leave_form_001.png",
     "fallbackText": "이미지 준비 전에는 '휴가 사유란' 상황 이미지 영역으로 대체 표시",
-    "width": 1280,
-    "height": 960
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_adult_wedding_mc_001",
@@ -2128,8 +2128,8 @@
     "description": "성인기 '결혼식 사회 부탁' 사건을 표현하는 이미지",
     "fileName": "img_adult_wedding_mc_001.png",
     "fallbackText": "이미지 준비 전에는 '결혼식 사회 부탁' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_baby_loud_001",
@@ -2162,8 +2162,8 @@
     "description": "성인기 '팔이 짧아졌다' 사건을 표현하는 이미지",
     "fileName": "img_adult_reading_glasses_001.png",
     "fallbackText": "이미지 준비 전에는 '팔이 짧아졌다' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_adult_meeting_nap_001",
@@ -2172,8 +2172,8 @@
     "description": "성인기 '회의 중 꿀잠' 사건을 표현하는 이미지",
     "fileName": "img_adult_meeting_nap_001.png",
     "fallbackText": "이미지 준비 전에는 '회의 중 꿀잠' 상황 이미지 영역으로 대체 표시",
-    "width": 1280,
-    "height": 960
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_adult_teen_child_001",
@@ -2182,8 +2182,8 @@
     "description": "성인기 '닫힌 방문' 사건을 표현하는 이미지",
     "fileName": "img_adult_teen_child_001.png",
     "fallbackText": "이미지 준비 전에는 '닫힌 방문' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_adult_early_retire_001",
@@ -2192,8 +2192,8 @@
     "description": "성인기 '희망퇴직 공고' 사건을 표현하는 이미지",
     "fileName": "img_adult_early_retire_001.png",
     "fallbackText": "이미지 준비 전에는 '희망퇴직 공고' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_adult_second_career_001",
@@ -2202,8 +2202,8 @@
     "description": "성인기 '퇴직하면 치킨집?' 사건을 표현하는 이미지",
     "fileName": "img_adult_second_career_001.png",
     "fallbackText": "이미지 준비 전에는 '퇴직하면 치킨집?' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_adult_health_recheck_001",
@@ -2212,8 +2212,8 @@
     "description": "성인기 '재검 통지서' 사건을 표현하는 이미지",
     "fileName": "img_adult_health_recheck_001.png",
     "fallbackText": "이미지 준비 전에는 '재검 통지서' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_adult_kiosk_001",
@@ -2222,8 +2222,8 @@
     "description": "성인기 '키오스크 앞에서' 사건을 표현하는 이미지",
     "fileName": "img_adult_kiosk_001.png",
     "fallbackText": "이미지 준비 전에는 '키오스크 앞에서' 상황 이미지 영역으로 대체 표시",
-    "width": 1280,
-    "height": 960
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_adult_fandom_001",
@@ -2232,8 +2232,8 @@
     "description": "성인기 '늦게 배운 덕질' 사건을 표현하는 이미지",
     "fileName": "img_adult_fandom_001.png",
     "fallbackText": "이미지 준비 전에는 '늦게 배운 덕질' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_adult_marathon_001",
@@ -2242,8 +2242,8 @@
     "description": "성인기 '생애 첫 10km' 사건을 표현하는 이미지",
     "fileName": "img_adult_marathon_001.png",
     "fallbackText": "이미지 준비 전에는 '생애 첫 10km' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_adult_lifelong_friend_001",
@@ -2252,8 +2252,8 @@
     "description": "성인기 '50년 지기' 사건을 표현하는 이미지",
     "fileName": "img_adult_lifelong_friend_001.png",
     "fallbackText": "이미지 준비 전에는 '50년 지기' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_adult_empty_nest_001",
@@ -2262,8 +2262,8 @@
     "description": "성인기 '빈 방' 사건을 표현하는 이미지",
     "fileName": "img_adult_empty_nest_001.png",
     "fallbackText": "이미지 준비 전에는 '빈 방' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_adult_parents_spring_001",
@@ -2272,8 +2272,8 @@
     "description": "성인기 '부모님의 봄' 사건을 표현하는 이미지",
     "fileName": "img_adult_parents_spring_001.png",
     "fallbackText": "이미지 준비 전에는 '부모님의 봄' 상황 이미지 영역으로 대체 표시",
-    "width": 1280,
-    "height": 960
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_adult_fiftieth_birthday_001",
@@ -2282,8 +2282,8 @@
     "description": "성인기 '쉰 번째 생일' 사건을 표현하는 이미지",
     "fileName": "img_adult_fiftieth_birthday_001.png",
     "fallbackText": "이미지 준비 전에는 '쉰 번째 생일' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_special_boar_001",
@@ -2292,8 +2292,8 @@
     "description": "성인기 '등산로의 멧돼지' 사건을 표현하는 이미지",
     "fileName": "img_special_boar_001.png",
     "fallbackText": "이미지 준비 전에는 '등산로의 멧돼지' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_infant_first_haircut_001",
@@ -2302,8 +2302,8 @@
     "description": "유아기 '첫 미용실' 사건을 표현하는 이미지",
     "fileName": "img_infant_first_haircut_001.png",
     "fallbackText": "이미지 준비 전에는 '첫 미용실' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_infant_potty_001",
@@ -2312,8 +2312,8 @@
     "description": "유아기 '오리 변기' 사건을 표현하는 이미지",
     "fileName": "img_infant_potty_001.png",
     "fallbackText": "이미지 준비 전에는 '오리 변기' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_infant_carousel_001",
@@ -2322,8 +2322,8 @@
     "description": "유아기 '회전목마' 사건을 표현하는 이미지",
     "fileName": "img_infant_carousel_001.png",
     "fallbackText": "이미지 준비 전에는 '회전목마' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_infant_elevator_button_001",
@@ -2332,8 +2332,8 @@
     "description": "유아기 '엘리베이터 버튼' 사건을 표현하는 이미지",
     "fileName": "img_infant_elevator_button_001.png",
     "fallbackText": "이미지 준비 전에는 '엘리베이터 버튼' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_infant_rooster_001",
@@ -2342,8 +2342,8 @@
     "description": "유아기 '할머니 댁 마당의 닭' 사건을 표현하는 이미지",
     "fileName": "img_infant_rooster_001.png",
     "fallbackText": "이미지 준비 전에는 '할머니 댁 마당의 닭' 상황 이미지 영역으로 대체 표시",
-    "width": 1280,
-    "height": 960
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_infant_ball_pit_001",
@@ -2352,8 +2352,8 @@
     "description": "유아기 '볼풀에서 잃어버린 신발' 사건을 표현하는 이미지",
     "fileName": "img_infant_ball_pit_001.png",
     "fallbackText": "이미지 준비 전에는 '볼풀에서 잃어버린 신발' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_infant_bedtime_story_001",
@@ -2362,8 +2362,8 @@
     "description": "유아기 '아빠의 잠자리 동화' 사건을 표현하는 이미지",
     "fileName": "img_infant_bedtime_story_001.png",
     "fallbackText": "이미지 준비 전에는 '아빠의 잠자리 동화' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_infant_birthday_cake_001",
@@ -2372,8 +2372,8 @@
     "description": "유아기 '친구의 생일 케이크' 사건을 표현하는 이미지",
     "fileName": "img_infant_birthday_cake_001.png",
     "fallbackText": "이미지 준비 전에는 '친구의 생일 케이크' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_child_times_table_001",
@@ -2382,8 +2382,8 @@
     "description": "아동기 '구구단 7단' 사건을 표현하는 이미지",
     "fileName": "img_child_times_table_001.png",
     "fallbackText": "이미지 준비 전에는 '구구단 7단' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_child_swing_line_001",
@@ -2392,8 +2392,8 @@
     "description": "아동기 '그네 차례' 사건을 표현하는 이미지",
     "fileName": "img_child_swing_line_001.png",
     "fallbackText": "이미지 준비 전에는 '그네 차례' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_child_bicycle_001",
@@ -2402,8 +2402,8 @@
     "description": "아동기 '보조 바퀴 떼는 날' 사건을 표현하는 이미지",
     "fileName": "img_child_bicycle_001.png",
     "fallbackText": "이미지 준비 전에는 '보조 바퀴 떼는 날' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_child_chick_001",
@@ -2412,8 +2412,8 @@
     "description": "아동기 '학교 앞 병아리' 사건을 표현하는 이미지",
     "fileName": "img_child_chick_001.png",
     "fallbackText": "이미지 준비 전에는 '학교 앞 병아리' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_child_bus_trip_001",
@@ -2422,8 +2422,8 @@
     "description": "아동기 '체험학습 버스 맨 뒷자리' 사건을 표현하는 이미지",
     "fileName": "img_child_bus_trip_001.png",
     "fallbackText": "이미지 준비 전에는 '체험학습 버스 맨 뒷자리' 상황 이미지 영역으로 대체 표시",
-    "width": 1280,
-    "height": 960
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_child_class_newspaper_001",
@@ -2432,8 +2432,8 @@
     "description": "아동기 '학급 신문 기자' 사건을 표현하는 이미지",
     "fileName": "img_child_class_newspaper_001.png",
     "fallbackText": "이미지 준비 전에는 '학급 신문 기자' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_teen_report_card_001",
@@ -2442,8 +2442,8 @@
     "description": "청소년기 '성적표 사인' 사건을 표현하는 이미지",
     "fileName": "img_teen_report_card_001.png",
     "fallbackText": "이미지 준비 전에는 '성적표 사인' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_teen_school_store_001",
@@ -2452,8 +2452,8 @@
     "description": "청소년기 '4교시 매점 달리기' 사건을 표현하는 이미지",
     "fileName": "img_teen_school_store_001.png",
     "fallbackText": "이미지 준비 전에는 '4교시 매점 달리기' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_teen_class_shirt_001",
@@ -2462,8 +2462,8 @@
     "description": "청소년기 '반티 투표' 사건을 표현하는 이미지",
     "fileName": "img_teen_class_shirt_001.png",
     "fallbackText": "이미지 준비 전에는 '반티 투표' 상황 이미지 영역으로 대체 표시",
-    "width": 1280,
-    "height": 960
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_teen_study_cafe_001",
@@ -2472,8 +2472,8 @@
     "description": "청소년기 '스터디 카페' 사건을 표현하는 이미지",
     "fileName": "img_teen_study_cafe_001.png",
     "fallbackText": "이미지 준비 전에는 '스터디 카페' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_teen_party_or_homework_001",
@@ -2482,8 +2482,8 @@
     "description": "청소년기 '숙제냐 생일 파티냐' 사건을 표현하는 이미지",
     "fileName": "img_teen_party_or_homework_001.png",
     "fallbackText": "이미지 준비 전에는 '숙제냐 생일 파티냐' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_teen_yearbook_photo_001",
@@ -2492,8 +2492,8 @@
     "description": "청소년기 '졸업앨범 촬영 날' 사건을 표현하는 이미지",
     "fileName": "img_teen_yearbook_photo_001.png",
     "fallbackText": "이미지 준비 전에는 '졸업앨범 촬영 날' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_teen_hair_dye_001",
@@ -2502,8 +2502,8 @@
     "description": "청소년기 '셀프 염색' 사건을 표현하는 이미지",
     "fileName": "img_teen_hair_dye_001.png",
     "fallbackText": "이미지 준비 전에는 '셀프 염색' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_teen_bus_terminal_001",
@@ -2512,8 +2512,8 @@
     "description": "청소년기 '종점에서 눈을 떴다' 사건을 표현하는 이미지",
     "fileName": "img_teen_bus_terminal_001.png",
     "fallbackText": "이미지 준비 전에는 '종점에서 눈을 떴다' 상황 이미지 영역으로 대체 표시",
-    "width": 1280,
-    "height": 960
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_teen_student_council_001",
@@ -2522,8 +2522,8 @@
     "description": "청소년기 '학생회장 선거 공약' 사건을 표현하는 이미지",
     "fileName": "img_teen_student_council_001.png",
     "fallbackText": "이미지 준비 전에는 '학생회장 선거 공약' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_teen_exam_day_001",
@@ -2532,8 +2532,8 @@
     "description": "청소년기 '수능 날 아침' 사건을 표현하는 이미지",
     "fileName": "img_teen_exam_day_001.png",
     "fallbackText": "이미지 준비 전에는 '수능 날 아침' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_adult_driving_test_001",
@@ -2542,8 +2542,8 @@
     "description": "성인기 '도로 주행 시험' 사건을 표현하는 이미지",
     "fileName": "img_adult_driving_test_001.png",
     "fallbackText": "이미지 준비 전에는 '도로 주행 시험' 상황 이미지 영역으로 대체 표시",
-    "width": 1280,
-    "height": 960
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_adult_housewarming_001",
@@ -2552,8 +2552,8 @@
     "description": "성인기 '첫 집들이' 사건을 표현하는 이미지",
     "fileName": "img_adult_housewarming_001.png",
     "fallbackText": "이미지 준비 전에는 '첫 집들이' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_adult_scam_call_001",
@@ -2562,8 +2562,8 @@
     "description": "성인기 '수상한 전화' 사건을 표현하는 이미지",
     "fileName": "img_adult_scam_call_001.png",
     "fallbackText": "이미지 준비 전에는 '수상한 전화' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_adult_wedding_invite_001",
@@ -2572,8 +2572,8 @@
     "description": "성인기 '애매한 사이의 청첩장' 사건을 표현하는 이미지",
     "fileName": "img_adult_wedding_invite_001.png",
     "fallbackText": "이미지 준비 전에는 '애매한 사이의 청첩장' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_adult_office_plant_001",
@@ -2582,8 +2582,8 @@
     "description": "성인기 '절대 안 죽는 화분' 사건을 표현하는 이미지",
     "fileName": "img_adult_office_plant_001.png",
     "fallbackText": "이미지 준비 전에는 '절대 안 죽는 화분' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_adult_secondhand_001",
@@ -2592,8 +2592,8 @@
     "description": "성인기 '중고 거래 첫 문의' 사건을 표현하는 이미지",
     "fileName": "img_adult_secondhand_001.png",
     "fallbackText": "이미지 준비 전에는 '중고 거래 첫 문의' 상황 이미지 영역으로 대체 표시",
-    "width": 1280,
-    "height": 960
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_adult_talent_show_001",
@@ -2602,8 +2602,8 @@
     "description": "성인기 '워크숍 장기자랑' 사건을 표현하는 이미지",
     "fileName": "img_adult_talent_show_001.png",
     "fallbackText": "이미지 준비 전에는 '워크숍 장기자랑' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_adult_father_70th_001",
@@ -2612,8 +2612,8 @@
     "description": "성인기 '아빠의 칠순' 사건을 표현하는 이미지",
     "fileName": "img_adult_father_70th_001.png",
     "fallbackText": "이미지 준비 전에는 '아빠의 칠순' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_special_robot_vacuum_001",
@@ -2622,8 +2622,8 @@
     "description": "유아기 '로봇청소기 납치 사건' 사건을 표현하는 이미지",
     "fileName": "img_special_robot_vacuum_001.png",
     "fallbackText": "이미지 준비 전에는 '로봇청소기 납치 사건' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_special_bubble_001",
@@ -2632,8 +2632,8 @@
     "description": "유아기 '비눗방울 대참사' 사건을 표현하는 이미지",
     "fileName": "img_special_bubble_001.png",
     "fallbackText": "이미지 준비 전에는 '비눗방울 대참사' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_special_static_slide_001",
@@ -2642,8 +2642,8 @@
     "description": "아동기 '미끄럼틀 정전기' 사건을 표현하는 이미지",
     "fileName": "img_special_static_slide_001.png",
     "fallbackText": "이미지 준비 전에는 '미끄럼틀 정전기' 상황 이미지 영역으로 대체 표시",
-    "width": 1280,
-    "height": 960
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_special_sauce_001",
@@ -2652,8 +2652,8 @@
     "description": "아동기 '날아가는 탕수육 소스' 사건을 표현하는 이미지",
     "fileName": "img_special_sauce_001.png",
     "fallbackText": "이미지 준비 전에는 '날아가는 탕수육 소스' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_special_dodgeball_001",
@@ -2662,8 +2662,8 @@
     "description": "청소년기 '피구공의 궤적' 사건을 표현하는 이미지",
     "fileName": "img_special_dodgeball_001.png",
     "fallbackText": "이미지 준비 전에는 '피구공의 궤적' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_special_stuck_elevator_001",
@@ -2672,8 +2672,8 @@
     "description": "청소년기 '멈춘 엘리베이터' 사건을 표현하는 이미지",
     "fileName": "img_special_stuck_elevator_001.png",
     "fallbackText": "이미지 준비 전에는 '멈춘 엘리베이터' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_special_revolving_door_001",
@@ -2682,8 +2682,8 @@
     "description": "성인기 '회전문 무한 루프' 사건을 표현하는 이미지",
     "fileName": "img_special_revolving_door_001.png",
     "fallbackText": "이미지 준비 전에는 '회전문 무한 루프' 상황 이미지 영역으로 대체 표시",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_special_massage_chair_001",
@@ -2692,8 +2692,8 @@
     "description": "성인기 '중고 안마의자의 역습' 사건을 표현하는 이미지",
     "fileName": "img_special_massage_chair_001.png",
     "fallbackText": "이미지 준비 전에는 '중고 안마의자의 역습' 상황 이미지 영역으로 대체 표시",
-    "width": 1280,
-    "height": 960
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_scene_infant_bonding_001",
@@ -3350,8 +3350,8 @@
     "description": "승진 심사 전날 밤 책상 위 보고서를 보는 1인칭 장면",
     "fileName": "img_pov_promotion_review_001.png",
     "fallbackText": "승진 심사 전날 장면 준비 중",
-    "width": 1448,
-    "height": 1086,
+    "width": 720,
+    "height": 540,
     "style": "pixel_art",
     "perspective": "first_person"
   },
@@ -3398,8 +3398,8 @@
     "description": "우편함에서 꺼낸 입영 통지서 봉투를 든 1인칭 장면",
     "fileName": "img_pov_enlistment_letter_001.png",
     "fallbackText": "입영 통지서 장면 준비 중",
-    "width": 1280,
-    "height": 960,
+    "width": 720,
+    "height": 540,
     "style": "pixel_art",
     "perspective": "first_person"
   },
@@ -3542,8 +3542,8 @@
     "description": "교실 게시판의 경시대회 공고와 생일 초대장을 번갈아 보는 1인칭",
     "fileName": "img_path_int_01_001.png",
     "fallbackText": "교내 수학 경시대회 장면 준비 중",
-    "width": 1280,
-    "height": 960,
+    "width": 720,
+    "height": 540,
     "style": "pixel_art",
     "perspective": "first_person"
   },
@@ -3554,8 +3554,8 @@
     "description": "복도 게시판의 선발 공문을 올려다보는 1인칭",
     "fileName": "img_path_int_02_001.png",
     "fallbackText": "영재교육원 선발 시험 장면 준비 중",
-    "width": 1448,
-    "height": 1086,
+    "width": 720,
+    "height": 540,
     "style": "pixel_art",
     "perspective": "first_person"
   },
@@ -3566,8 +3566,8 @@
     "description": "문제집 탑과 달력의 D-30 표시가 보이는 책상 1인칭",
     "fileName": "img_path_int_03_001.png",
     "fallbackText": "수능 D-30 장면 준비 중",
-    "width": 1448,
-    "height": 1086,
+    "width": 720,
+    "height": 540,
     "style": "pixel_art",
     "perspective": "first_person"
   },
@@ -3578,8 +3578,8 @@
     "description": "성적 조회 화면 3.98과 연구실 공지를 함께 보는 1인칭",
     "fileName": "img_path_int_04_001.png",
     "fallbackText": "3.98과 장학금 커트라인 장면 준비 중",
-    "width": 1448,
-    "height": 1086,
+    "width": 720,
+    "height": 540,
     "style": "pixel_art",
     "perspective": "first_person"
   },
@@ -3590,8 +3590,8 @@
     "description": "독서실 책상 위 문제집과 코딩 책을 내려다보는 1인칭",
     "fileName": "img_path_int_05_001.png",
     "fallbackText": "쉬어 가는 1년, 다시 수능 장면 준비 중",
-    "width": 1448,
-    "height": 1086,
+    "width": 720,
+    "height": 540,
     "style": "pixel_art",
     "perspective": "first_person"
   },
@@ -3602,8 +3602,8 @@
     "description": "퇴근길 회사 앞 야간대학 현수막을 올려다보는 1인칭",
     "fileName": "img_path_int_06_001.png",
     "fallbackText": "퇴근 후 야간대학 장면 준비 중",
-    "width": 1280,
-    "height": 960,
+    "width": 720,
+    "height": 540,
     "style": "pixel_art",
     "perspective": "first_person"
   },
@@ -3614,8 +3614,8 @@
     "description": "노트북 화면의 합격 메일과 시험 접수 페이지를 보는 1인칭",
     "fileName": "img_path_int_07_001.png",
     "fallbackText": "졸업 앞의 세 갈래 장면 준비 중",
-    "width": 1448,
-    "height": 1086,
+    "width": 720,
+    "height": 540,
     "style": "pixel_art",
     "perspective": "first_person"
   },
@@ -3626,8 +3626,8 @@
     "description": "모니터의 미완성 보고서와 휴대폰 단톡 알림을 함께 보는 1인칭",
     "fileName": "img_path_int_08_001.png",
     "fallbackText": "마감 D-1과 가족 모임 장면 준비 중",
-    "width": 1448,
-    "height": 1086,
+    "width": 720,
+    "height": 540,
     "style": "pixel_art",
     "perspective": "first_person"
   },
@@ -3662,8 +3662,8 @@
     "description": "운동회 결승선 옆에서 명함을 받아 드는 1인칭",
     "fileName": "img_path_fit_01_001.png",
     "fallbackText": "체육관 관장님의 명함 장면 준비 중",
-    "width": 1448,
-    "height": 1086,
+    "width": 720,
+    "height": 540,
     "style": "pixel_art",
     "perspective": "first_person"
   },
@@ -3674,8 +3674,8 @@
     "description": "출발선에 엎드린 채 풀린 신발 끈을 내려다보는 1인칭",
     "fileName": "img_path_fit_02_001.png",
     "fallbackText": "첫 대회 결승선 장면 준비 중",
-    "width": 1448,
-    "height": 1086,
+    "width": 720,
+    "height": 540,
     "style": "pixel_art",
     "perspective": "first_person"
   },
@@ -3686,8 +3686,8 @@
     "description": "교실 앞 복도에서 감독님과 담임 사이에 선 1인칭",
     "fileName": "img_path_fit_03_001.png",
     "fallbackText": "운동부 특기생 제안 장면 준비 중",
-    "width": 1448,
-    "height": 1086,
+    "width": 720,
+    "height": 540,
     "style": "pixel_art",
     "perspective": "first_person"
   },
@@ -3698,8 +3698,8 @@
     "description": "경기장 트랙 위에서 자신의 무릎을 내려다보는 1인칭",
     "fileName": "img_path_fit_04_001.png",
     "fallbackText": "전국체전 결승, 무릎의 소리 장면 준비 중",
-    "width": 1448,
-    "height": 1086,
+    "width": 720,
+    "height": 540,
     "style": "pixel_art",
     "perspective": "first_person"
   },
@@ -3710,8 +3710,8 @@
     "description": "라커룸 벤치 위에 통지서와 합격 문자가 뜬 휴대폰을 놓고 보는 1인칭",
     "fileName": "img_path_fit_05_001.png",
     "fallbackText": "프로 입단 테스트 장면 준비 중",
-    "width": 1280,
-    "height": 960,
+    "width": 720,
+    "height": 540,
     "style": "pixel_art",
     "perspective": "first_person"
   },
@@ -3722,8 +3722,8 @@
     "description": "훈련장 전광판의 명단을 올려다보는 1인칭",
     "fileName": "img_path_fit_06_001.png",
     "fallbackText": "주전 경쟁 장면 준비 중",
-    "width": 1448,
-    "height": 1086,
+    "width": 720,
+    "height": 540,
     "style": "pixel_art",
     "perspective": "first_person"
   },
@@ -3734,8 +3734,8 @@
     "description": "진료실 엑스레이 사진 앞 1인칭",
     "fileName": "img_path_fit_07_001.png",
     "fallbackText": "세 번째 수술 상담 장면 준비 중",
-    "width": 1448,
-    "height": 1086,
+    "width": 720,
+    "height": 540,
     "style": "pixel_art",
     "perspective": "first_person"
   },
@@ -3746,8 +3746,8 @@
     "description": "빈 체육관 바닥에 서서 거울 벽을 보는 1인칭",
     "fileName": "img_path_fit_08_001.png",
     "fallbackText": "내 이름을 건 체육관 장면 준비 중",
-    "width": 1448,
-    "height": 1086,
+    "width": 720,
+    "height": 540,
     "style": "pixel_art",
     "perspective": "first_person"
   },
@@ -3770,8 +3770,8 @@
     "description": "교탁 앞에 서서 반 친구들을 바라보는 1인칭",
     "fileName": "img_path_soc_01_001.png",
     "fallbackText": "반장 선거 연설 장면 준비 중",
-    "width": 1448,
-    "height": 1086,
+    "width": 720,
+    "height": 540,
     "style": "pixel_art",
     "perspective": "first_person"
   },
@@ -3782,8 +3782,8 @@
     "description": "어두운 교실에서 두 무리 사이에 선 1인칭",
     "fileName": "img_path_soc_02_001.png",
     "fallbackText": "축제 준비위원회의 밤 장면 준비 중",
-    "width": 1448,
-    "height": 1086,
+    "width": 720,
+    "height": 540,
     "style": "pixel_art",
     "perspective": "first_person"
   },
@@ -3794,8 +3794,8 @@
     "description": "저녁 버스 창가에 비친 두 사람의 그림자를 보는 1인칭",
     "fileName": "img_path_soc_03_001.png",
     "fallbackText": "집에 가는 길이 같은 사람 장면 준비 중",
-    "width": 1448,
-    "height": 1086,
+    "width": 720,
+    "height": 540,
     "style": "pixel_art",
     "perspective": "first_person"
   },
@@ -3806,8 +3806,8 @@
     "description": "휴대폰에 온 세 개의 메시지를 나란히 보는 1인칭",
     "fileName": "img_path_soc_04_001.png",
     "fallbackText": "사람으로 들어온 일자리 장면 준비 중",
-    "width": 1448,
-    "height": 1086,
+    "width": 720,
+    "height": 540,
     "style": "pixel_art",
     "perspective": "first_person"
   },
@@ -3818,8 +3818,8 @@
     "description": "한정식 상 위로 오가는 두 아버지의 손짓을 보는 1인칭",
     "fileName": "img_path_soc_05_001.png",
     "fallbackText": "상견례 대참사 장면 준비 중",
-    "width": 1280,
-    "height": 960,
+    "width": 720,
+    "height": 540,
     "style": "pixel_art",
     "perspective": "first_person"
   },
@@ -3830,8 +3830,8 @@
     "description": "꽉 찬 연락처 목록을 스크롤하는 1인칭",
     "fileName": "img_path_soc_06_001.png",
     "fallbackText": "동네가 나를 부른다 장면 준비 중",
-    "width": 1448,
-    "height": 1086,
+    "width": 720,
+    "height": 540,
     "style": "pixel_art",
     "perspective": "first_person"
   },
@@ -3842,8 +3842,8 @@
     "description": "식탁 맞은편 빈 의자와 식은 찌개를 보는 1인칭",
     "fileName": "img_path_soc_07_001.png",
     "fallbackText": "식탁 위의 침묵 장면 준비 중",
-    "width": 1448,
-    "height": 1086,
+    "width": 720,
+    "height": 540,
     "style": "pixel_art",
     "perspective": "first_person"
   },
@@ -3854,8 +3854,8 @@
     "description": "식탁 위 미역국 두 그릇과 울리는 휴대폰을 보는 1인칭",
     "fileName": "img_path_soc_08_001.png",
     "fallbackText": "혼자 차린 생일상 장면 준비 중",
-    "width": 1448,
-    "height": 1086,
+    "width": 720,
+    "height": 540,
     "style": "pixel_art",
     "perspective": "first_person"
   },
@@ -3878,8 +3878,8 @@
     "description": "은행 앱 잔액 37만 원을 보는 1인칭",
     "fileName": "img_path_wea_01_001.png",
     "fallbackText": "첫 월급 37만 원 장면 준비 중",
-    "width": 1448,
-    "height": 1086,
+    "width": 720,
+    "height": 540,
     "style": "pixel_art",
     "perspective": "first_person"
   },
@@ -3890,8 +3890,8 @@
     "description": "방구석에 쌓인 택배 박스와 거래 앱 알림을 보는 1인칭",
     "fileName": "img_path_wea_02_001.png",
     "fallbackText": "중고 거래 사장님 장면 준비 중",
-    "width": 1448,
-    "height": 1086,
+    "width": 720,
+    "height": 540,
     "style": "pixel_art",
     "perspective": "first_person"
   },
@@ -3902,8 +3902,8 @@
     "description": "책상 위 계약서 세 장과 볼펜을 내려다보는 1인칭",
     "fileName": "img_path_wea_03_001.png",
     "fallbackText": "세 장의 계약서 장면 준비 중",
-    "width": 1448,
-    "height": 1086,
+    "width": 720,
+    "height": 540,
     "style": "pixel_art",
     "perspective": "first_person"
   },
@@ -3914,8 +3914,8 @@
     "description": "빈 거실 창밖을 보며 계약서를 쥔 1인칭",
     "fileName": "img_path_wea_04_001.png",
     "fallbackText": "전셋집 계약 전날 장면 준비 중",
-    "width": 1280,
-    "height": 960,
+    "width": 720,
+    "height": 540,
     "style": "pixel_art",
     "perspective": "first_person"
   },
@@ -3926,8 +3926,8 @@
     "description": "은행 창구 너머 대출 상담 서류를 보는 1인칭",
     "fileName": "img_path_wea_05_001.png",
     "fallbackText": "내 집 마련 상담 장면 준비 중",
-    "width": 1448,
-    "height": 1086,
+    "width": 720,
+    "height": 540,
     "style": "pixel_art",
     "perspective": "first_person"
   },
@@ -3938,8 +3938,8 @@
     "description": "식탁 위 카드 명세서와 가족 단톡방 알림을 함께 보는 1인칭",
     "fileName": "img_path_wea_06_001.png",
     "fallbackText": "가족 지출 명세서 장면 준비 중",
-    "width": 1448,
-    "height": 1086,
+    "width": 720,
+    "height": 540,
     "style": "pixel_art",
     "perspective": "first_person"
   },
@@ -3950,8 +3950,8 @@
     "description": "텅 빈 가게 계산대와 통장 잔고 화면을 보는 1인칭",
     "fileName": "img_path_wea_07_001.png",
     "fallbackText": "월세 날의 통장 잔고 장면 준비 중",
-    "width": 1448,
-    "height": 1086,
+    "width": 720,
+    "height": 540,
     "style": "pixel_art",
     "perspective": "first_person"
   },
@@ -3962,8 +3962,8 @@
     "description": "사장실 창밖으로 일하는 직원들을 내려다보는 1인칭",
     "fileName": "img_path_wea_08_001.png",
     "fallbackText": "회사를 사겠다는 전화 장면 준비 중",
-    "width": 1448,
-    "height": 1086,
+    "width": 720,
+    "height": 540,
     "style": "pixel_art",
     "perspective": "first_person"
   },
@@ -3986,8 +3986,8 @@
     "description": "창고 먼지 속에서 낡은 기타를 꺼내 드는 1인칭",
     "fileName": "img_path_hap_01_001.png",
     "fallbackText": "주말의 비밀 취미 장면 준비 중",
-    "width": 1448,
-    "height": 1086,
+    "width": 720,
+    "height": 540,
     "style": "pixel_art",
     "perspective": "first_person"
   },
@@ -3998,8 +3998,8 @@
     "description": "진로 상담지 위에 낙서가 가득한 노트를 겹쳐 보는 1인칭",
     "fileName": "img_path_hap_02_001.png",
     "fallbackText": "좋아하는 것과 잘하는 것 장면 준비 중",
-    "width": 1448,
-    "height": 1086,
+    "width": 720,
+    "height": 540,
     "style": "pixel_art",
     "perspective": "first_person"
   },
@@ -4010,8 +4010,8 @@
     "description": "저녁 6시와 밤 11시를 가리키는 두 시계를 보는 1인칭",
     "fileName": "img_path_hap_03_001.png",
     "fallbackText": "연봉이냐 저녁이냐 장면 준비 중",
-    "width": 1448,
-    "height": 1086,
+    "width": 720,
+    "height": 540,
     "style": "pixel_art",
     "perspective": "first_person"
   },
@@ -4022,8 +4022,8 @@
     "description": "소파에 누워 천장을 올려다보는 1인칭",
     "fileName": "img_path_hap_04_001.png",
     "fallbackText": "아무것도 재미없는 일요일 장면 준비 중",
-    "width": 1280,
-    "height": 960,
+    "width": 720,
+    "height": 540,
     "style": "pixel_art",
     "perspective": "first_person"
   },
@@ -4034,8 +4034,8 @@
     "description": "합주실 앰프 너머로 웃는 사람을 보는 1인칭",
     "fileName": "img_path_hap_05_001.png",
     "fallbackText": "취미 모임에서 만난 사람 장면 준비 중",
-    "width": 1448,
-    "height": 1086,
+    "width": 720,
+    "height": 540,
     "style": "pixel_art",
     "perspective": "first_person"
   },
@@ -4046,8 +4046,8 @@
     "description": "빈 소극장 객석 쉰 석을 무대에서 내려다보는 1인칭",
     "fileName": "img_path_hap_06_001.png",
     "fallbackText": "첫 개인 공연 제안 장면 준비 중",
-    "width": 1448,
-    "height": 1086,
+    "width": 720,
+    "height": 540,
     "style": "pixel_art",
     "perspective": "first_person"
   },
@@ -4058,8 +4058,8 @@
     "description": "악기 영수증과 적금 통장을 나란히 펼친 1인칭",
     "fileName": "img_path_hap_07_001.png",
     "fallbackText": "통장과 웃음 사이 장면 준비 중",
-    "width": 1448,
-    "height": 1086,
+    "width": 720,
+    "height": 540,
     "style": "pixel_art",
     "perspective": "first_person"
   },
@@ -4070,8 +4070,8 @@
     "description": "복지관 교실에서 기타를 든 노인들을 바라보는 1인칭",
     "fileName": "img_path_hap_08_001.png",
     "fallbackText": "문화센터 할머니 할아버지 선생님 장면 준비 중",
-    "width": 1448,
-    "height": 1086,
+    "width": 720,
+    "height": 540,
     "style": "pixel_art",
     "perspective": "first_person"
   },
@@ -4082,8 +4082,8 @@
     "description": "뽑기 기계에서 나온 1등 쪽지 세 장을 쥔 1인칭",
     "fileName": "img_path_luk_01_001.png",
     "fallbackText": "문구점 뽑기 3연속 1등 장면 준비 중",
-    "width": 1448,
-    "height": 1086,
+    "width": 720,
+    "height": 540,
     "style": "pixel_art",
     "perspective": "first_person"
   },
@@ -4094,8 +4094,8 @@
     "description": "강당 무대 위 추첨 상자와 교감 선생님 손을 보는 1인칭",
     "fileName": "img_path_luk_02_001.png",
     "fallbackText": "추첨으로 뽑힌 해외 연수 장면 준비 중",
-    "width": 1448,
-    "height": 1086,
+    "width": 720,
+    "height": 540,
     "style": "pixel_art",
     "perspective": "first_person"
   },
@@ -4106,8 +4106,8 @@
     "description": "휴대폰 화면의 당첨 문자와 링크를 보는 1인칭",
     "fileName": "img_path_luk_03_001.png",
     "fallbackText": "당첨 축하 문자 장면 준비 중",
-    "width": 1448,
-    "height": 1086,
+    "width": 720,
+    "height": 540,
     "style": "pixel_art",
     "perspective": "first_person"
   },
@@ -4118,8 +4118,8 @@
     "description": "엘리베이터 층수 표시와 옆 사람 손에 든 서류를 보는 1인칭",
     "fileName": "img_path_luk_04_001.png",
     "fallbackText": "엘리베이터 안의 30초 장면 준비 중",
-    "width": 1448,
-    "height": 1086,
+    "width": 720,
+    "height": 540,
     "style": "pixel_art",
     "perspective": "first_person"
   },
@@ -4130,8 +4130,8 @@
     "description": "술잔 너머로 내밀어진 휴대폰 속 투자 자료를 보는 1인칭",
     "fileName": "img_path_luk_05_001.png",
     "fallbackText": "동창의 투자 제안 장면 준비 중",
-    "width": 1280,
-    "height": 960,
+    "width": 720,
+    "height": 540,
     "style": "pixel_art",
     "perspective": "first_person"
   },
@@ -4142,8 +4142,8 @@
     "description": "길바닥에서 주운 지갑 속 신분증을 보는 1인칭",
     "fileName": "img_path_luk_06_001.png",
     "fallbackText": "주운 지갑의 주인 장면 준비 중",
-    "width": 1448,
-    "height": 1086,
+    "width": 720,
+    "height": 540,
     "style": "pixel_art",
     "perspective": "first_person"
   },
@@ -4154,8 +4154,8 @@
     "description": "닫힌 탑승 게이트 앞에서 캐리어 손잡이를 쥔 1인칭",
     "fileName": "img_path_luk_08_001.png",
     "fallbackText": "놓친 비행기 장면 준비 중",
-    "width": 1448,
-    "height": 1086,
+    "width": 720,
+    "height": 540,
     "style": "pixel_art",
     "perspective": "first_person"
   },
@@ -4166,8 +4166,8 @@
     "description": "놀이터 벤치에서 옆집 아이의 눈을 마주 보는 1인칭",
     "fileName": "img_path_luk_07_001.png",
     "fallbackText": "운으로 산 인생 장면 준비 중",
-    "width": 1448,
-    "height": 1086,
+    "width": 720,
+    "height": 540,
     "style": "pixel_art",
     "perspective": "first_person"
   },
@@ -4178,8 +4178,8 @@
     "description": "급식판 위 브로콜리 다섯 송이를 내려다보는 1인칭",
     "fileName": "img_path_hea_01_001.png",
     "fallbackText": "급식 시간의 브로콜리 장면 준비 중",
-    "width": 1448,
-    "height": 1086,
+    "width": 720,
+    "height": 540,
     "style": "pixel_art",
     "perspective": "first_person"
   },
@@ -4190,8 +4190,8 @@
     "description": "새벽 2시를 가리키는 탁상시계와 켜진 스탠드를 보는 1인칭",
     "fileName": "img_path_hea_02_001.png",
     "fallbackText": "새벽 2시의 책상 장면 준비 중",
-    "width": 1448,
-    "height": 1086,
+    "width": 720,
+    "height": 540,
     "style": "pixel_art",
     "perspective": "first_person"
   },
@@ -4202,8 +4202,8 @@
     "description": "검진 결과지의 노란 형광펜 줄을 보는 1인칭",
     "fileName": "img_path_hea_03_001.png",
     "fallbackText": "종합검진 결과지 장면 준비 중",
-    "width": 1448,
-    "height": 1086,
+    "width": 720,
+    "height": 540,
     "style": "pixel_art",
     "perspective": "first_person"
   },
@@ -4214,8 +4214,8 @@
     "description": "산 정상 표지석 옆에서 회원들을 내려다보는 1인칭",
     "fileName": "img_path_hea_04_001.png",
     "fallbackText": "주말 등산 모임 대장 장면 준비 중",
-    "width": 1448,
-    "height": 1086,
+    "width": 720,
+    "height": 540,
     "style": "pixel_art",
     "perspective": "first_person"
   },
@@ -4226,8 +4226,8 @@
     "description": "진료실 책상 위 진단서와 안내문을 보는 1인칭",
     "fileName": "img_path_hea_05_001.png",
     "fallbackText": "진단서 한 장 장면 준비 중",
-    "width": 1280,
-    "height": 960,
+    "width": 720,
+    "height": 540,
     "style": "pixel_art",
     "perspective": "first_person"
   },
@@ -4238,8 +4238,8 @@
     "description": "측정기 화면의 건강 나이 숫자를 보는 1인칭",
     "fileName": "img_path_hea_06_001.png",
     "fallbackText": "건강 나이 측정 장면 준비 중",
-    "width": 1448,
-    "height": 1086,
+    "width": 720,
+    "height": 540,
     "style": "pixel_art",
     "perspective": "first_person"
   },
@@ -4250,8 +4250,8 @@
     "description": "높은 계단을 올려다보는 1인칭",
     "fileName": "img_path_hea_07_001.png",
     "fallbackText": "계단 앞에서 장면 준비 중",
-    "width": 1448,
-    "height": 1086,
+    "width": 720,
+    "height": 540,
     "style": "pixel_art",
     "perspective": "first_person"
   },
@@ -4262,8 +4262,8 @@
     "description": "대기실 번호표 47번과 전광판을 보는 1인칭",
     "fileName": "img_path_hea_08_001.png",
     "fallbackText": "병원 대기실의 단골 장면 준비 중",
-    "width": 1448,
-    "height": 1086,
+    "width": 720,
+    "height": 540,
     "style": "pixel_art",
     "perspective": "first_person"
   },
@@ -4274,8 +4274,8 @@
     "description": "책상 위 새 명함 상자와 시험 접수증을 내려다보는 1인칭",
     "fileName": "img_pov_first_card_001.png",
     "fallbackText": "서른의 첫 명함 장면 준비 중",
-    "width": 1448,
-    "height": 1086,
+    "width": 720,
+    "height": 540,
     "style": "pixel_art",
     "perspective": "first_person"
   },
@@ -4286,8 +4286,8 @@
     "description": "결혼식장 하객석에서 날아가는 부케를 올려다보는 1인칭",
     "fileName": "img_pov_wedding_guest_001.png",
     "fallbackText": "결혼식 하객 장면 준비 중",
-    "width": 1448,
-    "height": 1086,
+    "width": 720,
+    "height": 540,
     "style": "pixel_art",
     "perspective": "first_person"
   },
@@ -4298,8 +4298,8 @@
     "description": "휴대폰 화면의 매칭 알림과 상대 프로필을 보는 1인칭",
     "fileName": "img_pov_dating_app_001.png",
     "fallbackText": "첫 매칭 장면 준비 중",
-    "width": 1448,
-    "height": 1086,
+    "width": 720,
+    "height": 540,
     "style": "pixel_art",
     "perspective": "first_person"
   },
@@ -4310,8 +4310,8 @@
     "description": "MT 밤 모닥불 앞에서 마시멜로 꼬치를 든 옆사람을 보는 1인칭",
     "fileName": "img_pov_campfire_001.png",
     "fallbackText": "모닥불 옆자리 장면 준비 중",
-    "width": 1448,
-    "height": 1086,
+    "width": 720,
+    "height": 540,
     "style": "pixel_art",
     "perspective": "first_person"
   },
@@ -4322,8 +4322,8 @@
     "description": "불 꺼진 가게에서 셔터를 내리는 동료를 보는 1인칭",
     "fileName": "img_pov_closing_shift_001.png",
     "fallbackText": "마감 같이 하는 사람 장면 준비 중",
-    "width": 1280,
-    "height": 960,
+    "width": 720,
+    "height": 540,
     "style": "pixel_art",
     "perspective": "first_person"
   },
@@ -4334,8 +4334,8 @@
     "description": "휴대폰에 온 모르는 번호의 문자와 옛 축제 사진을 함께 보는 1인칭",
     "fileName": "img_pov_first_love_text_001.png",
     "fallbackText": "첫사랑의 연락 장면 준비 중",
-    "width": 1448,
-    "height": 1086,
+    "width": 720,
+    "height": 540,
     "style": "pixel_art",
     "perspective": "first_person"
   },
@@ -4346,8 +4346,8 @@
     "description": "새벽 헬스장 옆 런닝머신 아래 떨어진 이어폰을 내려다보는 1인칭",
     "fileName": "img_pov_treadmill_001.png",
     "fallbackText": "런닝머신 옆자리 장면 준비 중",
-    "width": 1448,
-    "height": 1086,
+    "width": 720,
+    "height": 540,
     "style": "pixel_art",
     "perspective": "first_person"
   },
@@ -4358,8 +4358,8 @@
     "description": "인사팀이 건넨 사원증 속 긴장한 얼굴 사진을 내려다보는 1인칭",
     "fileName": "img_pov_id_badge_001.png",
     "fallbackText": "사원증 사진 장면 준비 중",
-    "width": 1448,
-    "height": 1086,
+    "width": 720,
+    "height": 540,
     "style": "pixel_art",
     "perspective": "first_person"
   },
@@ -4370,8 +4370,8 @@
     "description": "신입 환영회 테이블에서 동기들과 팀장님 시선이 쏠리는 1인칭",
     "fileName": "img_pov_welcome_party_001.png",
     "fallbackText": "환영회의 밸런스 게임 장면 준비 중",
-    "width": 1280,
-    "height": 960,
+    "width": 720,
+    "height": 540,
     "style": "pixel_art",
     "perspective": "first_person"
   },
@@ -4382,8 +4382,8 @@
     "description": "사무실 책상 앞에서 나보다 어린 사수와 마주 선 1인칭",
     "fileName": "img_pov_young_mentor_001.png",
     "fallbackText": "나보다 어린 사수 장면 준비 중",
-    "width": 1448,
-    "height": 1086,
+    "width": 720,
+    "height": 540,
     "style": "pixel_art",
     "perspective": "first_person"
   },
@@ -4561,8 +4561,8 @@
     "description": "식탁 위 진단서와 잡채가 수북한 앞접시를 바라보는 1인칭",
     "fileName": "img_path_hea_11_001.png",
     "fallbackText": "아버지의 당뇨 진단 장면 준비 중",
-    "width": 1448,
-    "height": 1086,
+    "width": 720,
+    "height": 540,
     "style": "pixel_art",
     "perspective": "first_person"
   },
@@ -4573,8 +4573,8 @@
     "description": "약봉지 세 개와 빽빽한 회의 일정표가 놓인 책상 1인칭",
     "fileName": "img_path_hea_12_001.png",
     "fallbackText": "약봉지와 회의 일정 장면 준비 중",
-    "width": 1280,
-    "height": 960,
+    "width": 720,
+    "height": 540,
     "style": "pixel_art",
     "perspective": "first_person"
   },
@@ -4585,8 +4585,8 @@
     "description": "냉장고 속 저염 반찬 통과 프로젝트 제안 메일을 번갈아 보는 1인칭",
     "fileName": "img_path_hea_13_001.png",
     "fallbackText": "완치 판정 1년 뒤 장면 준비 중",
-    "width": 1448,
-    "height": 1086,
+    "width": 720,
+    "height": 540,
     "style": "pixel_art",
     "perspective": "first_person"
   },
@@ -4597,8 +4597,8 @@
     "description": "공원 정자 앞에 모인 어르신들을 마주 보고 선 1인칭",
     "fileName": "img_path_hea_14_001.png",
     "fallbackText": "동네 건강 체조 강사 장면 준비 중",
-    "width": 1448,
-    "height": 1086,
+    "width": 720,
+    "height": 540,
     "style": "pixel_art",
     "perspective": "first_person"
   },
@@ -4609,8 +4609,8 @@
     "description": "보건소 상담 창구의 안내문과 빈 서류를 내려다보는 1인칭",
     "fileName": "img_path_hea_15_001.png",
     "fallbackText": "사전연명의료의향서 장면 준비 중",
-    "width": 1448,
-    "height": 1086,
+    "width": 720,
+    "height": 540,
     "style": "pixel_art",
     "perspective": "first_person"
   },
@@ -4621,8 +4621,8 @@
     "description": "실습실 도마 위 브로콜리와 프라이팬을 내려다보는 1인칭",
     "fileName": "img_path_hea_16_001.png",
     "fallbackText": "가정 시간 요리 실습 장면 준비 중",
-    "width": 1448,
-    "height": 1086,
+    "width": 720,
+    "height": 540,
     "style": "pixel_art",
     "perspective": "first_person"
   },
@@ -4645,8 +4645,8 @@
     "description": "도장 거울 앞에서 검은 띠를 고쳐 매는 관장님 손을 내려다보는 1인칭",
     "fileName": "img_path_fit_11_001.png",
     "fallbackText": "도장 관장님의 대회 추천 장면 준비 중",
-    "width": 1448,
-    "height": 1086,
+    "width": 720,
+    "height": 540,
     "style": "pixel_art",
     "perspective": "first_person"
   },
@@ -4657,8 +4657,8 @@
     "description": "현관에서 운동화 끈을 묶다 휴대폰 문자를 보는 1인칭",
     "fileName": "img_path_fit_12_001.png",
     "fallbackText": "프로 낙방 다음 날 장면 준비 중",
-    "width": 1280,
-    "height": 960,
+    "width": 720,
+    "height": 540,
     "style": "pixel_art",
     "perspective": "first_person"
   },
@@ -4669,8 +4669,8 @@
     "description": "체육관 바닥에 엉킨 줄넘기와 아이의 운동화를 내려다보는 1인칭",
     "fileName": "img_path_fit_13_001.png",
     "fallbackText": "줄넘기 열 개를 못 넘는 제자 장면 준비 중",
-    "width": 1448,
-    "height": 1086,
+    "width": 720,
+    "height": 540,
     "style": "pixel_art",
     "perspective": "first_person"
   },
@@ -4681,8 +4681,8 @@
     "description": "라커룸 벤치에서 등번호 유니폼을 접어 드는 1인칭",
     "fileName": "img_path_fit_14_001.png",
     "fallbackText": "은퇴 경기 제안 장면 준비 중",
-    "width": 1448,
-    "height": 1086,
+    "width": 720,
+    "height": 540,
     "style": "pixel_art",
     "perspective": "first_person"
   },
@@ -4693,8 +4693,8 @@
     "description": "운동장 구석에서 공을 차는 아이들을 교무실 창문으로 내다보는 1인칭",
     "fileName": "img_path_fit_15_001.png",
     "fallbackText": "학교 스포츠클럽 창단 장면 준비 중",
-    "width": 1448,
-    "height": 1086,
+    "width": 720,
+    "height": 540,
     "style": "pixel_art",
     "perspective": "first_person"
   },
@@ -4705,8 +4705,8 @@
     "description": "빗방울 맺힌 창가 의자에서 무릎을 주무르는 1인칭",
     "fileName": "img_path_fit_16_001.png",
     "fallbackText": "비 오는 날 무릎이 먼저 안다 장면 준비 중",
-    "width": 1448,
-    "height": 1086,
+    "width": 720,
+    "height": 540,
     "style": "pixel_art",
     "perspective": "first_person"
   },
@@ -4717,8 +4717,8 @@
     "description": "새벽 운동장에서 회원들의 시선이 쏠린 전술판을 든 1인칭",
     "fileName": "img_path_fit_17_001.png",
     "fallbackText": "조기축구회 감독 제안 장면 준비 중",
-    "width": 1280,
-    "height": 960,
+    "width": 720,
+    "height": 540,
     "style": "pixel_art",
     "perspective": "first_person"
   },
@@ -4729,8 +4729,8 @@
     "description": "운동장 출발선에서 바통을 건네받으려 손을 뻗은 1인칭",
     "fileName": "img_path_fit_18_001.png",
     "fallbackText": "체육대회 반 대표 장면 준비 중",
-    "width": 1448,
-    "height": 1086,
+    "width": 720,
+    "height": 540,
     "style": "pixel_art",
     "perspective": "first_person"
   },
@@ -4741,8 +4741,8 @@
     "description": "대형 강의실 뒷자리에서 손을 반쯤 든 채 멈춘 1인칭",
     "fileName": "img_path_int_11_001.png",
     "fallbackText": "원하지 않던 학과 장면 준비 중",
-    "width": 1448,
-    "height": 1086,
+    "width": 720,
+    "height": 540,
     "style": "pixel_art",
     "perspective": "first_person"
   },
@@ -4753,8 +4753,8 @@
     "description": "모니터 속 논문 저자 목록을 손가락으로 짚어 내려가는 1인칭",
     "fileName": "img_path_int_12_001.png",
     "fallbackText": "논문에서 빠진 내 이름 장면 준비 중",
-    "width": 1448,
-    "height": 1086,
+    "width": 720,
+    "height": 540,
     "style": "pixel_art",
     "perspective": "first_person"
   },
@@ -4765,8 +4765,8 @@
     "description": "독서실 책상에 쌓인 기출문제 더미와 불합격 화면을 보는 1인칭",
     "fileName": "img_path_int_13_001.png",
     "fallbackText": "변리사 시험 두 번째 낙방 장면 준비 중",
-    "width": 1280,
-    "height": 960,
+    "width": 720,
+    "height": 540,
     "style": "pixel_art",
     "perspective": "first_person"
   },
@@ -4777,8 +4777,8 @@
     "description": "반쯤 펼친 연구 노트 위에 약봉지가 놓인 책상 1인칭",
     "fileName": "img_path_int_14_001.png",
     "fallbackText": "번아웃 뒤 다시 연 연구 노트 장면 준비 중",
-    "width": 1448,
-    "height": 1086,
+    "width": 720,
+    "height": 540,
     "style": "pixel_art",
     "perspective": "first_person"
   },
@@ -4789,8 +4789,8 @@
     "description": "노트북 화면의 미완성 코드와 정리용 상자를 함께 보는 1인칭",
     "fileName": "img_path_int_15_001.png",
     "fallbackText": "취소된 프로젝트의 노트 장면 준비 중",
-    "width": 1448,
-    "height": 1086,
+    "width": 720,
+    "height": 540,
     "style": "pixel_art",
     "perspective": "first_person"
   },
@@ -4801,8 +4801,8 @@
     "description": "식탁 위 아이의 수학 문제집과 연필을 함께 내려다보는 1인칭",
     "fileName": "img_path_int_16_001.png",
     "fallbackText": "아이의 수학 숙제 장면 준비 중",
-    "width": 1448,
-    "height": 1086,
+    "width": 720,
+    "height": 540,
     "style": "pixel_art",
     "perspective": "first_person"
   },
@@ -4813,8 +4813,8 @@
     "description": "복지관 교실 화이트보드에 그린 휴대폰 화면 앞에 선 1인칭",
     "fileName": "img_path_int_17_001.png",
     "fallbackText": "복지관 스마트폰 교실 장면 준비 중",
-    "width": 1448,
-    "height": 1086,
+    "width": 720,
+    "height": 540,
     "style": "pixel_art",
     "perspective": "first_person"
   },
@@ -4825,8 +4825,8 @@
     "description": "퇴근길 지하철에서 휴대폰 메모장에 앱 화면을 그리는 1인칭",
     "fileName": "img_path_int_18_001.png",
     "fallbackText": "독학 개발자의 사이드 프로젝트 장면 준비 중",
-    "width": 1280,
-    "height": 960,
+    "width": 720,
+    "height": 540,
     "style": "pixel_art",
     "perspective": "first_person"
   },
@@ -4849,8 +4849,8 @@
     "description": "부동산 창문에 붙은 방 세 개짜리 매물 전단을 셋이 함께 보는 1인칭",
     "fileName": "img_path_soc_11_001.png",
     "fallbackText": "같이 살 집을 구하는 친구들 장면 준비 중",
-    "width": 1448,
-    "height": 1086,
+    "width": 720,
+    "height": 540,
     "style": "pixel_art",
     "perspective": "first_person"
   },
@@ -4861,8 +4861,8 @@
     "description": "단톡방 공지에 뜬 총무 인수인계 메시지를 보는 1인칭",
     "fileName": "img_path_soc_12_001.png",
     "fallbackText": "입사 동기 단톡방의 총무 장면 준비 중",
-    "width": 1280,
-    "height": 960,
+    "width": 720,
+    "height": 540,
     "style": "pixel_art",
     "perspective": "first_person"
   },
@@ -4873,8 +4873,8 @@
     "description": "0건이 찍힌 실적 화면과 오래된 고객 명함첩을 함께 보는 1인칭",
     "fileName": "img_path_soc_13_001.png",
     "fallbackText": "영업 1등의 슬럼프 장면 준비 중",
-    "width": 1448,
-    "height": 1086,
+    "width": 720,
+    "height": 540,
     "style": "pixel_art",
     "perspective": "first_person"
   },
@@ -4885,8 +4885,8 @@
     "description": "상담실 창가에 작은 화분을 내려놓는 두 손을 보는 1인칭",
     "fileName": "img_path_soc_14_001.png",
     "fallbackText": "상담실 창가의 화분 장면 준비 중",
-    "width": 1448,
-    "height": 1086,
+    "width": 720,
+    "height": 540,
     "style": "pixel_art",
     "perspective": "first_person"
   },
@@ -4897,8 +4897,8 @@
     "description": "아파트 놀이터 벤치에서 요일별 당번표를 펼친 1인칭",
     "fileName": "img_path_soc_15_001.png",
     "fallbackText": "육아 품앗이 단톡방 장면 준비 중",
-    "width": 1448,
-    "height": 1086,
+    "width": 720,
+    "height": 540,
     "style": "pixel_art",
     "perspective": "first_person"
   },
@@ -4909,8 +4909,8 @@
     "description": "아파트 복도 현관문 앞에 쌓인 신문 세 부를 내려다보는 1인칭",
     "fileName": "img_path_soc_16_001.png",
     "fallbackText": "현관에 쌓인 신문 장면 준비 중",
-    "width": 1448,
-    "height": 1086,
+    "width": 720,
+    "height": 540,
     "style": "pixel_art",
     "perspective": "first_person"
   },
@@ -4921,8 +4921,8 @@
     "description": "휴대폰 화면의 부고 문자와 5년 전에 멈춘 단톡방을 보는 1인칭",
     "fileName": "img_path_soc_17_001.png",
     "fallbackText": "오래된 친구의 부고 장면 준비 중",
-    "width": 1280,
-    "height": 960,
+    "width": 720,
+    "height": 540,
     "style": "pixel_art",
     "perspective": "first_person"
   },
@@ -4933,8 +4933,8 @@
     "description": "급식실 끝자리에 혼자 앉은 전학생 쪽으로 식판을 든 1인칭",
     "fileName": "img_path_soc_18_001.png",
     "fallbackText": "전학 온 친구의 첫 점심 장면 준비 중",
-    "width": 1448,
-    "height": 1086,
+    "width": 720,
+    "height": 540,
     "style": "pixel_art",
     "perspective": "first_person"
   },
@@ -4957,8 +4957,8 @@
     "description": "빈칸이 하나 남은 승진 심사 서류와 펜을 내려다보는 1인칭",
     "fileName": "img_path_wea_11_001.png",
     "fallbackText": "첫 승진 심사 장면 준비 중",
-    "width": 1280,
-    "height": 960,
+    "width": 720,
+    "height": 540,
     "style": "pixel_art",
     "perspective": "first_person"
   },
@@ -4969,8 +4969,8 @@
     "description": "냉장고에 붙은 빨간 숫자의 가계부를 바라보는 1인칭",
     "fileName": "img_path_wea_12_001.png",
     "fallbackText": "실직 석 달째 장면 준비 중",
-    "width": 1448,
-    "height": 1086,
+    "width": 720,
+    "height": 540,
     "style": "pixel_art",
     "perspective": "first_person"
   },
@@ -4981,8 +4981,8 @@
     "description": "은행 앱의 대출 한도 화면과 월세 인상 문자를 번갈아 보는 1인칭",
     "fileName": "img_path_wea_13_001.png",
     "fallbackText": "월세에서 전세로 장면 준비 중",
-    "width": 1448,
-    "height": 1086,
+    "width": 720,
+    "height": 540,
     "style": "pixel_art",
     "perspective": "first_person"
   },
@@ -4993,8 +4993,8 @@
     "description": "식탁 위에 펼친 학원 고지서 세 장과 계산기를 내려다보는 1인칭",
     "fileName": "img_path_wea_14_001.png",
     "fallbackText": "아이 학원비 계산서 장면 준비 중",
-    "width": 1448,
-    "height": 1086,
+    "width": 720,
+    "height": 540,
     "style": "pixel_art",
     "perspective": "first_person"
   },
@@ -5005,8 +5005,8 @@
     "description": "식당 테이블 너머 대표가 내민 새 명함 시안을 보는 1인칭",
     "fileName": "img_path_wea_15_001.png",
     "fallbackText": "임원 제안 장면 준비 중",
-    "width": 1448,
-    "height": 1086,
+    "width": 720,
+    "height": 540,
     "style": "pixel_art",
     "perspective": "first_person"
   },
@@ -5017,8 +5017,8 @@
     "description": "통장 정리기에서 나온 연금 입금 줄을 손가락으로 짚는 1인칭",
     "fileName": "img_path_wea_16_001.png",
     "fallbackText": "첫 연금 수령일 장면 준비 중",
-    "width": 1280,
-    "height": 960,
+    "width": 720,
+    "height": 540,
     "style": "pixel_art",
     "perspective": "first_person"
   },
@@ -5029,8 +5029,8 @@
     "description": "은행 창구 위에 펼쳐진 상환 계획서 세 장을 내려다보는 1인칭",
     "fileName": "img_path_wea_17_001.png",
     "fallbackText": "빚 정리 상담 장면 준비 중",
-    "width": 1448,
-    "height": 1086,
+    "width": 720,
+    "height": 540,
     "style": "pixel_art",
     "perspective": "first_person"
   },
@@ -5065,8 +5065,8 @@
     "description": "이삿짐 상자 사이에서 먼지 쌓인 기타 케이스를 여는 1인칭",
     "fileName": "img_path_hap_11_001.png",
     "fallbackText": "옷장 위의 기타 케이스 장면 준비 중",
-    "width": 1280,
-    "height": 960,
+    "width": 720,
+    "height": 540,
     "style": "pixel_art",
     "perspective": "first_person"
   },
@@ -5077,8 +5077,8 @@
     "description": "작은 수첩 첫 장에 삐뚤게 적힌 한 줄을 내려다보는 1인칭",
     "fileName": "img_path_hap_12_001.png",
     "fallbackText": "좋았던 일 하나 적기 장면 준비 중",
-    "width": 1448,
-    "height": 1086,
+    "width": 720,
+    "height": 540,
     "style": "pixel_art",
     "perspective": "first_person"
   },
@@ -5089,8 +5089,8 @@
     "description": "달력의 토요일 칸에 겹쳐 적힌 두 일정을 보는 1인칭",
     "fileName": "img_path_hap_13_001.png",
     "fallbackText": "합주 날과 부모님 방문 장면 준비 중",
-    "width": 1448,
-    "height": 1086,
+    "width": 720,
+    "height": 540,
     "style": "pixel_art",
     "perspective": "first_person"
   },
@@ -5101,8 +5101,8 @@
     "description": "강습 일정이 빼곡한 달력 옆에 세워 둔 악기를 보는 1인칭",
     "fileName": "img_path_hap_14_001.png",
     "fallbackText": "취미가 일이 된 뒤 장면 준비 중",
-    "width": 1448,
-    "height": 1086,
+    "width": 720,
+    "height": 540,
     "style": "pixel_art",
     "perspective": "first_person"
   },
@@ -5113,8 +5113,8 @@
     "description": "거실 바닥에 늘어놓은 상자 열두 개와 그림들을 내려다보는 1인칭",
     "fileName": "img_path_hap_15_001.png",
     "fallbackText": "주민센터 로비의 첫 개인전 장면 준비 중",
-    "width": 1448,
-    "height": 1086,
+    "width": 720,
+    "height": 540,
     "style": "pixel_art",
     "perspective": "first_person"
   },
@@ -5125,8 +5125,8 @@
     "description": "누렇게 바랜 수첩의 마지막 장과 빈칸을 내려다보는 1인칭",
     "fileName": "img_path_hap_16_001.png",
     "fallbackText": "30년 전 수첩의 빈칸 장면 준비 중",
-    "width": 1280,
-    "height": 960,
+    "width": 720,
+    "height": 540,
     "style": "pixel_art",
     "perspective": "first_person"
   },
@@ -5161,8 +5161,8 @@
     "description": "세탁기 앞에서 젖은 복권을 손바닥에 펼친 1인칭",
     "fileName": "img_path_luk_11_001.png",
     "fallbackText": "바지 주머니 속 복권 장면 준비 중",
-    "width": 1448,
-    "height": 1086,
+    "width": 720,
+    "height": 540,
     "style": "pixel_art",
     "perspective": "first_person"
   },
@@ -5173,8 +5173,8 @@
     "description": "휴대폰에 뜬 환급 안내 문자와 몇 년 전 문자를 나란히 보는 1인칭",
     "fileName": "img_path_luk_12_001.png",
     "fallbackText": "사기 문자의 두 번째 연락 장면 준비 중",
-    "width": 1280,
-    "height": 960,
+    "width": 720,
+    "height": 540,
     "style": "pixel_art",
     "perspective": "first_person"
   },
@@ -5185,8 +5185,8 @@
     "description": "노트북 화면의 메일과 지갑에서 꺼낸 오래된 명함을 함께 보는 1인칭",
     "fileName": "img_path_luk_13_001.png",
     "fallbackText": "공항에서 만난 사람의 메일 장면 준비 중",
-    "width": 1448,
-    "height": 1086,
+    "width": 720,
+    "height": 540,
     "style": "pixel_art",
     "perspective": "first_person"
   },
@@ -5197,8 +5197,8 @@
     "description": "식탁 위 가계부와 단톡방 알림이 뜬 휴대폰을 보는 1인칭",
     "fileName": "img_path_luk_14_001.png",
     "fallbackText": "투자 손실 다음 날 장면 준비 중",
-    "width": 1448,
-    "height": 1086,
+    "width": 720,
+    "height": 540,
     "style": "pixel_art",
     "perspective": "first_person"
   },
@@ -5209,8 +5209,8 @@
     "description": "문구점 뽑기 기계 앞에서 손주의 작은 손에 동전을 쥐여 주는 1인칭",
     "fileName": "img_path_luk_15_001.png",
     "fallbackText": "손주와 뽑기 기계 장면 준비 중",
-    "width": 1448,
-    "height": 1086,
+    "width": 720,
+    "height": 540,
     "style": "pixel_art",
     "perspective": "first_person"
   },
@@ -5221,8 +5221,8 @@
     "description": "마트 게시판의 당첨자 명단에서 내 이름을 찾은 1인칭",
     "fileName": "img_path_luk_16_001.png",
     "fallbackText": "경품 추첨 크루즈 장면 준비 중",
-    "width": 1448,
-    "height": 1086,
+    "width": 720,
+    "height": 540,
     "style": "pixel_art",
     "perspective": "first_person"
   },
@@ -5233,8 +5233,8 @@
     "description": "비 오는 날 분실물 보관함 속 낯익은 우산을 꺼내는 1인칭",
     "fileName": "img_path_luk_17_001.png",
     "fallbackText": "분실물 보관함의 우산 장면 준비 중",
-    "width": 1280,
-    "height": 960,
+    "width": 720,
+    "height": 540,
     "style": "pixel_art",
     "perspective": "first_person"
   },
@@ -5245,8 +5245,8 @@
     "description": "부동산 책상 위에 펼쳐진 계약서 세 장을 내려다보는 1인칭",
     "fileName": "img_cross_01_001.png",
     "fallbackText": "신혼집 계약서 장면 준비 중",
-    "width": 1448,
-    "height": 1086,
+    "width": 720,
+    "height": 540,
     "style": "pixel_art",
     "perspective": "first_person"
   },
@@ -5257,8 +5257,8 @@
     "description": "휴대폰 지도에 표시된 집 후보 세 곳을 확대해 보는 1인칭",
     "fileName": "img_cross_02_001.png",
     "fallbackText": "혼자 살 집 고르기 장면 준비 중",
-    "width": 1280,
-    "height": 960,
+    "width": 720,
+    "height": 540,
     "style": "pixel_art",
     "perspective": "first_person"
   },
@@ -5269,8 +5269,8 @@
     "description": "어두운 방에서 체온계 숫자와 발표 자료 알림을 함께 보는 1인칭",
     "fileName": "img_cross_03_001.png",
     "fallbackText": "새벽 3시의 아이 열 장면 준비 중",
-    "width": 1448,
-    "height": 1086,
+    "width": 720,
+    "height": 540,
     "style": "pixel_art",
     "perspective": "first_person"
   },
@@ -5281,8 +5281,8 @@
     "description": "조용한 거실 소파에 나란히 놓인 커피잔 두 개를 보는 1인칭",
     "fileName": "img_cross_04_001.png",
     "fallbackText": "아이 없는 부부의 일요일 장면 준비 중",
-    "width": 1448,
-    "height": 1086,
+    "width": 720,
+    "height": 540,
     "style": "pixel_art",
     "perspective": "first_person"
   },
@@ -5293,8 +5293,8 @@
     "description": "식탁 맞은편에서 조심스럽게 말을 꺼내는 다 큰 아이의 손을 보는 1인칭",
     "fileName": "img_cross_05_001.png",
     "fallbackText": "다 큰 아이의 독립 보증금 장면 준비 중",
-    "width": 1448,
-    "height": 1086,
+    "width": 720,
+    "height": 540,
     "style": "pixel_art",
     "perspective": "first_person"
   },
@@ -5305,8 +5305,8 @@
     "description": "모니터에 뜬 사업 종료 안내 메일과 조용한 사무실을 보는 1인칭",
     "fileName": "img_cross_06_001.png",
     "fallbackText": "사업 종료 안내 메일 장면 준비 중",
-    "width": 1448,
-    "height": 1086,
+    "width": 720,
+    "height": 540,
     "style": "pixel_art",
     "perspective": "first_person"
   },
@@ -5317,8 +5317,8 @@
     "description": "책상 위 감사패와 꽃다발, 계약 연장 서류를 내려다보는 1인칭",
     "fileName": "img_cross_07_001.png",
     "fallbackText": "정년 퇴임식 장면 준비 중",
-    "width": 1280,
-    "height": 960,
+    "width": 720,
+    "height": 540,
     "style": "pixel_art",
     "perspective": "first_person"
   },
@@ -5329,8 +5329,8 @@
     "description": "달력의 같은 날짜에 겹쳐 적힌 재검과 발표 일정을 보는 1인칭",
     "fileName": "img_cross_08_001.png",
     "fallbackText": "재검 날과 실적 발표 날 장면 준비 중",
-    "width": 1448,
-    "height": 1086,
+    "width": 720,
+    "height": 540,
     "style": "pixel_art",
     "perspective": "first_person"
   },
@@ -5341,8 +5341,8 @@
     "description": "냉장고에 붙은 운동회 안내문과 휴대폰의 특근 공지를 함께 보는 1인칭",
     "fileName": "img_cross_09_001.png",
     "fallbackText": "주말 특근과 아이 운동회 장면 준비 중",
-    "width": 1448,
-    "height": 1086,
+    "width": 720,
+    "height": 540,
     "style": "pixel_art",
     "perspective": "first_person"
   },
@@ -5353,8 +5353,8 @@
     "description": "명절 기차표 예매 화면과 친구 단톡방을 번갈아 보는 1인칭",
     "fileName": "img_cross_10_001.png",
     "fallbackText": "이혼 후 첫 명절 장면 준비 중",
-    "width": 1448,
-    "height": 1086,
+    "width": 720,
+    "height": 540,
     "style": "pixel_art",
     "perspective": "first_person"
   },
@@ -5365,8 +5365,8 @@
     "description": "전화를 끊고 지도 앱에서 부모님 집까지의 거리를 보는 1인칭",
     "fileName": "img_cross_11_001.png",
     "fallbackText": "계단에서 넘어진 엄마 장면 준비 중",
-    "width": 1448,
-    "height": 1086,
+    "width": 720,
+    "height": 540,
     "style": "pixel_art",
     "perspective": "first_person"
   },
@@ -5377,8 +5377,8 @@
     "description": "은행 앱의 마지막 회차 납부 버튼 위에 손가락을 올린 1인칭",
     "fileName": "img_cross_12_001.png",
     "fallbackText": "학자금 대출 마지막 회차 장면 준비 중",
-    "width": 1280,
-    "height": 960,
+    "width": 720,
+    "height": 540,
     "style": "pixel_art",
     "perspective": "first_person"
   },
@@ -5489,8 +5489,8 @@
     "description": "잘못 걸려 온 전화 사건 이미지",
     "fallbackText": "잘못 걸려 온 전화 장면 이미지",
     "fileName": "img_path_luk_10_001_followup_v2.png",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_pov_exam_paper_001_followup_v2",
@@ -5499,8 +5499,8 @@
     "description": "기말고사 1교시 사건 이미지",
     "fallbackText": "기말고사 1교시 장면 이미지",
     "fileName": "img_pov_exam_paper_001_followup_v2.png",
-    "width": 1448,
-    "height": 1086
+    "width": 720,
+    "height": 540
   },
   {
     "imageId": "img_pov_late_paycheck_001",
@@ -5509,8 +5509,8 @@
     "description": "휴대폰 은행 앱의 급여 입금 알림을 보는 1인칭",
     "fileName": "img_pov_late_paycheck_001.png",
     "fallbackText": "늦게 받은 첫 월급 장면 준비 중",
-    "width": 1448,
-    "height": 1086,
+    "width": 720,
+    "height": 540,
     "style": "pixel_art",
     "perspective": "first_person"
   }
