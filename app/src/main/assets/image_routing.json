@@ -1434,6 +1434,14 @@
       "usage": "event",
       "description": "기말고사 1교시 사건 이미지",
       "fallbackText": "기말고사 1교시 장면 이미지"
+    },
+    {
+      "imageId": "img_pov_late_paycheck_001",
+      "assetPath": "followup_20261031/img_pov_late_paycheck_001.png",
+      "fileName": "img_pov_late_paycheck_001.png",
+      "usage": "pov",
+      "description": "늦게 받은 첫 월급 사건 이미지",
+      "fallbackText": "늦게 받은 첫 월급 장면 이미지"
     }
   ],
   "periodPortraits": {

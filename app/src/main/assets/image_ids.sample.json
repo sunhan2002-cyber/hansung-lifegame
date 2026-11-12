@@ -4036,18 +4036,6 @@
     "perspective": "first_person"
   },
   {
-    "imageId": "img_pov_late_paycheck_001",
-    "usage": "pov",
-    "stage": "MIDDLE",
-    "description": "휴대폰 은행 앱의 급여 입금 알림을 보는 1인칭",
-    "fileName": "img_pov_late_paycheck_001.png",
-    "fallbackText": "늦게 받은 첫 월급 장면 준비 중",
-    "width": 300,
-    "height": 225,
-    "style": "pixel_art",
-    "perspective": "first_person"
-  },
-  {
     "imageId": "img_pov_welcome_party_001",
     "usage": "pov",
     "stage": "MIDDLE",
@@ -5185,5 +5173,17 @@
     "fileName": "img_pov_exam_paper_001_followup_v2.png",
     "width": 1448,
     "height": 1086
+  },
+  {
+    "imageId": "img_pov_late_paycheck_001",
+    "usage": "pov",
+    "stage": "MIDDLE",
+    "description": "휴대폰 은행 앱의 급여 입금 알림을 보는 1인칭",
+    "fileName": "img_pov_late_paycheck_001.png",
+    "fallbackText": "늦게 받은 첫 월급 장면 준비 중",
+    "width": 1448,
+    "height": 1086,
+    "style": "pixel_art",
+    "perspective": "first_person"
   }
 ]
