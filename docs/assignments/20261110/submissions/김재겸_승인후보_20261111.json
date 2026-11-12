@@ -1,0 +1,3330 @@
+[
+  {
+    "groupId": "grp_ya_viral_video_phone",
+    "imageId": "img_adult_audition_001",
+    "assetPath": "followup_20261031/img_adult_audition_001.png",
+    "sha256": "032615ad7b72c8c7375cec4470f3b96e89e21fcc0648fefe72fb6a3f390181c9",
+    "approvalStatus": "CANDIDATE",
+    "eventIds": [
+      "adult_003"
+    ],
+    "eventSourceHashes": {
+      "adult_003": "7180499cfc3f17aed81a92a85384c20ede9b333fa41b5524b025b95b7627d442"
+    },
+    "semanticReviewer": "신기훈 2026-11-09 PASS (docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09))",
+    "visualReviewer": "정원률 2026-11-09 PASS (docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09))",
+    "cropReviewer": "김재겸 SceneCropReviewTest 실제 라우팅 2026-11-11 (1080x2400 · 360x740 프레임, 일치도 1.000) + 2026-11-09 360x640dp 글꼴 130%",
+    "reviewEvidence": {
+      "actualProducer": "김재겸",
+      "semantic": {
+        "status": "PASS",
+        "reviewer": "신기훈",
+        "evidence": "자취방 침대 이불 위에서 두 손으로 든 휴대폰에 내 음이탈 영상 썸네일, 조회·하트 알림, 방송작가 연락(카메라 아이콘) 카드. 오디션·밴드 결과 없음.",
+        "note": "",
+        "source": "docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09)"
+      },
+      "visual": {
+        "status": "PASS",
+        "reviewer": "정원률",
+        "note": "공통 도트 화풍과 1인칭 구도가 자연스럽다.",
+        "source": "docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09)"
+      },
+      "crop": {
+        "status": "CROP_OK",
+        "reviewer": "김재겸",
+        "visibleX_1080x2400": "0.331..0.669 / 0.318..0.682",
+        "visibleX_360x640": "0.289..0.711",
+        "captureSha256": "78153f89409189629f7df8dc610f56a4ed2a902d733c58911ba505870fe5270e",
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_adult_audition_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "78153f89409189629f7df8dc610f56a4ed2a902d733c58911ba505870fe5270e"
+        }
+      }
+    },
+    "resolvedIssueEvidence": {
+      "adult_003": "자취방 침대 이불 위에서 두 손으로 든 휴대폰에 내 음이탈 영상 썸네일, 조회·하트 알림, 방송작가 연락(카메라 아이콘) 카드. 오디션·밴드 결과 없음."
+    }
+  },
+  {
+    "groupId": "grp_ya_drinks_ideal_pour",
+    "imageId": "img_adult_drinks_ideal_001",
+    "assetPath": "followup_20261031/img_adult_drinks_ideal_001.png",
+    "sha256": "8dbd91b7d0c4c4e6d121a108c95bf4a55cd6dd600a8bdc8d0e52c3b9c644bd56",
+    "approvalStatus": "CANDIDATE",
+    "eventIds": [
+      "adult_008"
+    ],
+    "eventSourceHashes": {
+      "adult_008": "e91c26fbc822960d7a4de427585566eeedbf386ed23222f032cfe3e4a5238341"
+    },
+    "semanticReviewer": "신기훈 2026-11-09 PASS (docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09))",
+    "visualReviewer": "정원률 2026-11-09 PASS (docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09))",
+    "cropReviewer": "김재겸 SceneCropReviewTest 실제 라우팅 2026-11-11 (1080x2400 · 360x740 프레임, 일치도 1.000) + 2026-11-09 360x640dp 글꼴 130%",
+    "reviewEvidence": {
+      "actualProducer": "김재겸",
+      "semantic": {
+        "status": "PASS",
+        "reviewer": "신기훈",
+        "evidence": "고깃집 금요일 밤, 이상형이 말없이 내 빈 잔에 따라 주고 옆에 라벨 없는 사이다병, 주변 친구들. 내가 따르거나 원샷하는 모습 없음.",
+        "note": "",
+        "source": "docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09)"
+      },
+      "visual": {
+        "status": "PASS",
+        "reviewer": "정원률",
+        "note": "잔과 병을 기울이는 동작이 중앙에서 읽힌다. 헤어와 옷으로 특정 성별을 단정하기 어렵지만 남성으로 읽힐 수 있다는 점은 참고.",
+        "source": "docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09)"
+      },
+      "crop": {
+        "status": "CROP_OK_NOTE",
+        "reviewer": "김재겸",
+        "visibleX_1080x2400": "0.331..0.669 / 0.318..0.682",
+        "visibleX_360x640": "0.289..0.711",
+        "captureSha256": "47709d79cfb0da3543a935c4f95debf227710c98bf0b807c0a4d229141973109",
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_adult_drinks_ideal_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "47709d79cfb0da3543a935c4f95debf227710c98bf0b807c0a4d229141973109"
+        }
+      }
+    },
+    "resolvedIssueEvidence": {
+      "adult_008": "고깃집 금요일 밤, 이상형이 말없이 내 빈 잔에 따라 주고 옆에 라벨 없는 사이다병, 주변 친구들. 내가 따르거나 원샷하는 모습 없음."
+    }
+  },
+  {
+    "groupId": "grp_ya_final_interview",
+    "imageId": "img_adult_interview_001",
+    "assetPath": "followup_20261031/img_adult_interview_001.png",
+    "sha256": "f3d56c44877695089f3c029c5bca25fcb7ce7babd78d8ef1ce5d9c1841eaceab",
+    "approvalStatus": "CANDIDATE",
+    "eventIds": [
+      "adult_013"
+    ],
+    "eventSourceHashes": {
+      "adult_013": "3e3dc71b3f727bb673d8189fd6daa2f771b87a7dddb0268c2d3456005ecc949b"
+    },
+    "semanticReviewer": "신기훈 2026-11-09 PASS (docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09))",
+    "visualReviewer": "정원률 2026-11-09 PASS (docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09))",
+    "cropReviewer": "김재겸 SceneCropReviewTest 실제 라우팅 2026-11-11 (1080x2400 · 360x740 프레임, 일치도 1.000) + 2026-11-09 360x640dp 글꼴 130%",
+    "reviewEvidence": {
+      "actualProducer": "김재겸",
+      "semantic": {
+        "status": "PASS",
+        "reviewer": "신기훈",
+        "evidence": "면접실 정면에 중년 면접관 3명, 책상 위 이력서·물컵, 가운데 면접관이 질문하는 순간. 답변·합격 결과 없음.",
+        "note": "",
+        "source": "docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09)"
+      },
+      "visual": {
+        "status": "PASS",
+        "reviewer": "정원률",
+        "note": "공통 도트 화풍과 1인칭 구도가 자연스럽다.",
+        "source": "docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09)"
+      },
+      "crop": {
+        "status": "CROP_OK_NOTE",
+        "reviewer": "김재겸",
+        "visibleX_1080x2400": "0.331..0.669 / 0.318..0.682",
+        "visibleX_360x640": "0.289..0.711",
+        "captureSha256": "505eb11169392f697d1aa2dea06bf57542c039feaeb7eb44e69a855bff73a665",
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_adult_interview_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "505eb11169392f697d1aa2dea06bf57542c039feaeb7eb44e69a855bff73a665"
+        }
+      }
+    },
+    "resolvedIssueEvidence": {
+      "adult_013": "면접실 정면에 중년 면접관 3명, 책상 위 이력서·물컵, 가운데 면접관이 질문하는 순간. 답변·합격 결과 없음."
+    }
+  },
+  {
+    "groupId": "grp_ya_team_dinner_escape",
+    "imageId": "img_adult_dinner_escape_001",
+    "assetPath": "followup_20261031/img_adult_dinner_escape_001.png",
+    "sha256": "3bc304d4ab52f04e08b02a92566227239e434ef581f8810e9d670385f45c2be7",
+    "approvalStatus": "CANDIDATE",
+    "eventIds": [
+      "adult_018"
+    ],
+    "eventSourceHashes": {
+      "adult_018": "119f02406ad1918b7d6db672b7b436276a154fbde0bc6ad4e5eb3d714d821d23"
+    },
+    "semanticReviewer": "신기훈 2026-11-09 PASS (docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09))",
+    "visualReviewer": "정원률 2026-11-09 PASS (docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09))",
+    "cropReviewer": "김재겸 SceneCropReviewTest 실제 라우팅 2026-11-11 (1080x2400 · 360x740 프레임, 일치도 1.000) + 2026-11-09 360x640dp 글꼴 130%",
+    "reviewEvidence": {
+      "actualProducer": "김재겸",
+      "semantic": {
+        "status": "PASS",
+        "reviewer": "신기훈",
+        "evidence": "회식 1차 고깃집, 동기가 화장실 가는 척 일어나 나가는 뒷모습, 내 손의 톡 화면(말풍선만), 불판·술잔, 떠드는 상사들. 탈출 결과 없음.",
+        "note": "",
+        "source": "docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09)"
+      },
+      "visual": {
+        "status": "PASS",
+        "reviewer": "정원률",
+        "note": "공통 도트 화풍과 1인칭 구도가 자연스럽다.",
+        "source": "docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09)"
+      },
+      "crop": {
+        "status": "CROP_OK",
+        "reviewer": "김재겸",
+        "visibleX_1080x2400": "0.331..0.669 / 0.318..0.682",
+        "visibleX_360x640": "0.289..0.711",
+        "captureSha256": "ece24fde73b260b7e872cf37c1f5ef6a39ccb0fd2d0d2a9d9de875fff5a08409",
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_adult_dinner_escape_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "ece24fde73b260b7e872cf37c1f5ef6a39ccb0fd2d0d2a9d9de875fff5a08409"
+        }
+      }
+    },
+    "resolvedIssueEvidence": {
+      "adult_018": "회식 1차 고깃집, 동기가 화장실 가는 척 일어나 나가는 뒷모습, 내 손의 톡 화면(말풍선만), 불판·술잔, 떠드는 상사들. 탈출 결과 없음."
+    }
+  },
+  {
+    "groupId": "grp_adult_street_stranger",
+    "imageId": "img_adult_asking_way_001",
+    "assetPath": "followup_20261031/img_adult_asking_way_001.png",
+    "sha256": "3180760eadf03062c25cb3356b5f8715343b9f477438a7f99f28602d8e1741c3",
+    "approvalStatus": "CANDIDATE",
+    "eventIds": [
+      "adult_023"
+    ],
+    "eventSourceHashes": {
+      "adult_023": "6f444bc9446a24fd3dadad0023fd1341966f314c9800e19a1b0ad2d6e9bf631c"
+    },
+    "semanticReviewer": "신기훈 2026-11-09 PASS (docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09))",
+    "visualReviewer": "정원률 2026-11-09 PASS (docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09))",
+    "cropReviewer": "김재겸 SceneCropReviewTest 실제 라우팅 2026-11-11 (1080x2400 · 360x740 프레임, 일치도 1.000) + 2026-11-09 360x640dp 글꼴 130%",
+    "reviewEvidence": {
+      "actualProducer": "김재겸",
+      "semantic": {
+        "status": "PASS",
+        "reviewer": "신기훈",
+        "evidence": "역 출구 아이콘 표지판 앞 번화가에서 눈이 반짝이는 행인이 손을 내밀며 다가옴. 알려 주기·지나치기 결과 없음.",
+        "note": "",
+        "source": "docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09)"
+      },
+      "visual": {
+        "status": "PASS",
+        "reviewer": "정원률",
+        "note": "공통 도트 화풍과 1인칭 구도가 자연스럽다.",
+        "source": "docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09)"
+      },
+      "crop": {
+        "status": "CROP_OK",
+        "reviewer": "김재겸",
+        "visibleX_1080x2400": "0.331..0.669 / 0.318..0.682",
+        "visibleX_360x640": "0.289..0.711",
+        "captureSha256": "e277063d9d1a3a868af5a328bde3c0ae79a0309db71c2c35562cc7689950a679",
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_adult_asking_way_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "e277063d9d1a3a868af5a328bde3c0ae79a0309db71c2c35562cc7689950a679"
+        }
+      }
+    },
+    "resolvedIssueEvidence": {
+      "adult_023": "역 출구 아이콘 표지판 앞 번화가에서 눈이 반짝이는 행인이 손을 내밀며 다가옴. 알려 주기·지나치기 결과 없음."
+    }
+  },
+  {
+    "groupId": "grp_ya_used_car_lot",
+    "imageId": "img_adult_first_car_001",
+    "assetPath": "followup_20261031/img_adult_first_car_001.png",
+    "sha256": "8193911908ce12934731cab5ebcfddd15c985aa57283c35ae9eb64cb04add8b0",
+    "approvalStatus": "CANDIDATE",
+    "eventIds": [
+      "adult_028"
+    ],
+    "eventSourceHashes": {
+      "adult_028": "08af947fa0bc8136b7ed280d310bb54809388500431e2818949a6a18a0c4a3d7"
+    },
+    "semanticReviewer": "신기훈 2026-11-09 PASS_WITH_NOTE (docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09))",
+    "visualReviewer": "정원률 2026-11-09 PASS (docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09))",
+    "cropReviewer": "김재겸 SceneCropReviewTest 실제 라우팅 2026-11-11 (1080x2400 · 360x740 프레임, 일치도 1.000) + 2026-11-09 360x640dp 글꼴 130%",
+    "reviewEvidence": {
+      "actualProducer": "김재겸",
+      "semantic": {
+        "status": "PASS_WITH_NOTE",
+        "reviewer": "신기훈",
+        "evidence": "중고차 매장 직원이 무난한 경차를 손으로 권하고, 뒤 쇼룸에 새 차, 앞유리 가격표는 빈 카드. 구매 결과 없음.",
+        "note": "메모: 배경에 서울 남산타워 실루엣이 있어 특정 도시가 드러난다(본문 위치 미지정). 화풍 검토자 판단.",
+        "source": "docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09)"
+      },
+      "visual": {
+        "status": "PASS",
+        "reviewer": "정원률",
+        "note": "공통 도트 화풍과 1인칭 구도가 자연스럽다.",
+        "source": "docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09)"
+      },
+      "crop": {
+        "status": "CROP_OK_NOTE",
+        "reviewer": "김재겸",
+        "visibleX_1080x2400": "0.331..0.669 / 0.318..0.682",
+        "visibleX_360x640": "0.289..0.711",
+        "captureSha256": "bc128ba7359ce4383fb850dbfdf01340950a090776584e722aca637f4b0de4be",
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_adult_first_car_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "bc128ba7359ce4383fb850dbfdf01340950a090776584e722aca637f4b0de4be"
+        }
+      }
+    },
+    "resolvedIssueEvidence": {
+      "adult_028": "중고차 매장 직원이 무난한 경차를 손으로 권하고, 뒤 쇼룸에 새 차, 앞유리 가격표는 빈 카드. 구매 결과 없음."
+    }
+  },
+  {
+    "groupId": "grp_adult_holiday_arm_wrestle",
+    "imageId": "img_adult_arm_wrestling_001",
+    "assetPath": "followup_20261031/img_adult_arm_wrestling_001.png",
+    "sha256": "ee13872d7058eb552257687becd6fbb04f072b95e8be4a215ae392221e03cd78",
+    "approvalStatus": "CANDIDATE",
+    "eventIds": [
+      "adult_033"
+    ],
+    "eventSourceHashes": {
+      "adult_033": "ce17765bf3a47239a80665a32e82d76baa196215345e337b45f5d5f63b9c167a"
+    },
+    "semanticReviewer": "신기훈 2026-11-09 PASS (docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09))",
+    "visualReviewer": "정원률 2026-11-09 PASS (docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09))",
+    "cropReviewer": "김재겸 SceneCropReviewTest 실제 라우팅 2026-11-11 (1080x2400 · 360x740 프레임, 일치도 1.000) + 2026-11-09 360x640dp 글꼴 130%",
+    "reviewEvidence": {
+      "actualProducer": "김재겸",
+      "semantic": {
+        "status": "PASS",
+        "reviewer": "신기훈",
+        "evidence": "명절 거실 상 앞에서 아빠가 손을 맞잡아 팔씨름을 청하고 친척들이 웃으며 봄, 송편·전. 승패 없음.",
+        "note": "",
+        "source": "docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09)"
+      },
+      "visual": {
+        "status": "PASS",
+        "reviewer": "정원률",
+        "note": "공통 도트 화풍과 1인칭 구도가 자연스럽다.",
+        "source": "docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09)"
+      },
+      "crop": {
+        "status": "CROP_OK",
+        "reviewer": "김재겸",
+        "visibleX_1080x2400": "0.331..0.669 / 0.318..0.682",
+        "visibleX_360x640": "0.289..0.711",
+        "captureSha256": "7d80781de1f995ad6341c8db7a06df5c610678de95f56fa964d2de1a28b84276",
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_adult_arm_wrestling_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "7d80781de1f995ad6341c8db7a06df5c610678de95f56fa964d2de1a28b84276"
+        }
+      }
+    },
+    "resolvedIssueEvidence": {
+      "adult_033": "명절 거실 상 앞에서 아빠가 손을 맞잡아 팔씨름을 청하고 친척들이 웃으며 봄, 송편·전. 승패 없음."
+    }
+  },
+  {
+    "groupId": "grp_adult_burnout_inbox",
+    "imageId": "img_adult_burnout_001",
+    "assetPath": "followup_20261031/img_adult_burnout_001.png",
+    "sha256": "65a5fb425d571a362b552245081f5d35f4953cd64bd09fc21d9e3b7b4c973ecf",
+    "approvalStatus": "CANDIDATE",
+    "eventIds": [
+      "adult_038"
+    ],
+    "eventSourceHashes": {
+      "adult_038": "0b2a3ec6b029c4f6dfe93341de2be63bbda197683cc8c1eb4c82f70783bf436c"
+    },
+    "semanticReviewer": "신기훈 2026-11-09 PASS_WITH_NOTE (docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09))",
+    "visualReviewer": "정원률 2026-11-09 PASS (docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09))",
+    "cropReviewer": "김재겸 SceneCropReviewTest 실제 라우팅 2026-11-11 (1080x2400 · 360x740 프레임, 일치도 1.000) + 2026-11-09 360x640dp 글꼴 130%",
+    "reviewEvidence": {
+      "actualProducer": "김재겸",
+      "semantic": {
+        "status": "PASS_WITH_NOTE",
+        "reviewer": "신기훈",
+        "evidence": "오전 사무실, 모니터 메일함(빨간 배지, 숫자 없음)과 팀장 메시지 창, 쌓인 서류, 식은 커피. 휴직·탈출 결과 없음.",
+        "note": "메모: 두 손이 키보드를 치고 있어 본문 \"몸이 안 움직인다\"보다 일하는 중으로 읽힌다. 손을 키보드 위에 멈춰 두는 쪽이 본문에 더 맞음(수정 필수 아님).",
+        "source": "docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09)"
+      },
+      "visual": {
+        "status": "PASS",
+        "reviewer": "정원률",
+        "note": "공통 도트 화풍과 1인칭 구도가 자연스럽다.",
+        "source": "docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09)"
+      },
+      "crop": {
+        "status": "CROP_OK_NOTE",
+        "reviewer": "김재겸",
+        "visibleX_1080x2400": "0.331..0.669 / 0.318..0.682",
+        "visibleX_360x640": "0.289..0.711",
+        "captureSha256": "8b311fd0a17e37a6a0d52bf9c0e7eba2408331cea73f2af085f6f09a3b5f25a4",
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_adult_burnout_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "8b311fd0a17e37a6a0d52bf9c0e7eba2408331cea73f2af085f6f09a3b5f25a4"
+        }
+      }
+    },
+    "resolvedIssueEvidence": {
+      "adult_038": "오전 사무실, 모니터 메일함(빨간 배지, 숫자 없음)과 팀장 메시지 창, 쌓인 서류, 식은 커피. 휴직·탈출 결과 없음."
+    }
+  },
+  {
+    "groupId": "grp_adult_mom_surgery_call",
+    "imageId": "img_adult_hospital_001",
+    "assetPath": "followup_20261031/img_adult_hospital_001.png",
+    "sha256": "35ad64e0089064bf9c12c2f4dc589f814a6d4176aa196714f8cadb2b12705654",
+    "approvalStatus": "CANDIDATE",
+    "eventIds": [
+      "adult_043"
+    ],
+    "eventSourceHashes": {
+      "adult_043": "dcd5764935c12c83310fb1d4f6ef88f1a75fbb23f2bdedfc2bb5bdc89d4bd60e"
+    },
+    "semanticReviewer": "신기훈 2026-11-09 PASS (docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09))",
+    "visualReviewer": "정원률 2026-11-09 PASS (docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09))",
+    "cropReviewer": "김재겸 SceneCropReviewTest 실제 라우팅 2026-11-11 (1080x2400 · 360x740 프레임, 일치도 1.000) + 2026-11-09 360x640dp 글꼴 130%",
+    "reviewEvidence": {
+      "actualProducer": "김재겸",
+      "semantic": {
+        "status": "PASS",
+        "reviewer": "신기훈",
+        "evidence": "가장 바쁜 주의 사무실, 엄마 발신 통화 화면 휴대폰, 빼곡한 달력, 업무 서류. 병실·간병 결과 없음.",
+        "note": "",
+        "source": "docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09)"
+      },
+      "visual": {
+        "status": "PASS",
+        "reviewer": "정원률",
+        "note": "공통 도트 화풍과 1인칭 구도가 자연스럽다.",
+        "source": "docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09)"
+      },
+      "crop": {
+        "status": "CROP_OK",
+        "reviewer": "김재겸",
+        "visibleX_1080x2400": "0.331..0.669 / 0.318..0.682",
+        "visibleX_360x640": "0.289..0.711",
+        "captureSha256": "f548af5592b375f182815c16f2e3f96a12247fe2b914b390d94b2cba9d6aa9d7",
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_adult_hospital_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "f548af5592b375f182815c16f2e3f96a12247fe2b914b390d94b2cba9d6aa9d7"
+        }
+      }
+    },
+    "resolvedIssueEvidence": {
+      "adult_043": "가장 바쁜 주의 사무실, 엄마 발신 통화 화면 휴대폰, 빼곡한 달력, 업무 서류. 병실·간병 결과 없음."
+    }
+  },
+  {
+    "groupId": "grp_adult_housewarming_plant",
+    "imageId": "img_adult_office_plant_001",
+    "assetPath": "followup_20261031/img_adult_office_plant_001.png",
+    "sha256": "5271697aa395ac01931b548f6a0580533deed55e0846675107df3be6f3aa2b0f",
+    "approvalStatus": "CANDIDATE",
+    "eventIds": [
+      "adult_048"
+    ],
+    "eventSourceHashes": {
+      "adult_048": "96ed67bea7ea34aafcc182517d195bb2614a71814070cc04e6d8e25853ab33f0"
+    },
+    "semanticReviewer": "신기훈 2026-11-09 PASS (docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09))",
+    "visualReviewer": "정원률 2026-11-09 PASS (docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09))",
+    "cropReviewer": "김재겸 SceneCropReviewTest 실제 라우팅 2026-11-11 (1080x2400 · 360x740 프레임, 일치도 1.000) + 2026-11-09 360x640dp 글꼴 130%",
+    "reviewEvidence": {
+      "actualProducer": "김재겸",
+      "semantic": {
+        "status": "PASS",
+        "reviewer": "신기훈",
+        "evidence": "이삿짐 상자가 쌓인 거실에서 친구가 리본 단 화분(산세베리아)을 건넴, 받으려는 내 손. 물 주기·방치 결과 없음.",
+        "note": "",
+        "source": "docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09)"
+      },
+      "visual": {
+        "status": "PASS",
+        "reviewer": "정원률",
+        "note": "화분과 건네는 손이 중심에서 구분된다. 함께 보이는 얼굴은 선물한 친구의 얼굴로 읽힌다.",
+        "source": "docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09)"
+      },
+      "crop": {
+        "status": "CROP_OK",
+        "reviewer": "김재겸",
+        "visibleX_1080x2400": "0.331..0.669 / 0.318..0.682",
+        "visibleX_360x640": "0.289..0.711",
+        "captureSha256": "cf1d9007a9c08813ace1deaf732324fbb2ea30a54a1fd312b9d5842445ccab91",
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_adult_office_plant_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "cf1d9007a9c08813ace1deaf732324fbb2ea30a54a1fd312b9d5842445ccab91"
+        }
+      }
+    },
+    "resolvedIssueEvidence": {
+      "adult_048": "이삿짐 상자가 쌓인 거실에서 친구가 리본 단 화분(산세베리아)을 건넴, 받으려는 내 손. 물 주기·방치 결과 없음."
+    }
+  },
+  {
+    "groupId": "grp_mid_menu_farsight",
+    "imageId": "img_adult_reading_glasses_001",
+    "assetPath": "followup_20261031/img_adult_reading_glasses_001.png",
+    "sha256": "d35a164e2fe03d0dce7973137819470a30751f840d3c8d1927781d797ef57e24",
+    "approvalStatus": "CANDIDATE",
+    "eventIds": [
+      "adult_053"
+    ],
+    "eventSourceHashes": {
+      "adult_053": "c0b5bd4304850e520b4ec235509e1287a4ab88d22ddfbfe2e064dcbbde785f11"
+    },
+    "semanticReviewer": "신기훈 2026-11-09 PASS (docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09))",
+    "visualReviewer": "정원률 2026-11-09 PASS (docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09))",
+    "cropReviewer": "김재겸 SceneCropReviewTest 실제 라우팅 2026-11-11 (1080x2400 · 360x740 프레임, 일치도 1.000) + 2026-11-09 360x640dp 글꼴 130%",
+    "reviewEvidence": {
+      "actualProducer": "김재겸",
+      "semantic": {
+        "status": "PASS",
+        "reviewer": "신기훈",
+        "evidence": "점심 식당에서 흐릿한 메뉴판(음식 그림, 글자 번짐)을 팔을 쭉 뻗어 멀리 듦, 물컵·수저통. 돋보기·추천 결과 없음.",
+        "note": "",
+        "source": "docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09)"
+      },
+      "visual": {
+        "status": "PASS",
+        "reviewer": "정원률",
+        "note": "공통 도트 화풍과 1인칭 구도가 자연스럽다.",
+        "source": "docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09)"
+      },
+      "crop": {
+        "status": "CROP_OK",
+        "reviewer": "김재겸",
+        "visibleX_1080x2400": "0.331..0.669 / 0.318..0.682",
+        "visibleX_360x640": "0.289..0.711",
+        "captureSha256": "bebe92cb72ee363ccdced9ef225191788ad09bcd1a59b69e42aa1016f01f97eb",
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_adult_reading_glasses_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "bebe92cb72ee363ccdced9ef225191788ad09bcd1a59b69e42aa1016f01f97eb"
+        }
+      }
+    },
+    "resolvedIssueEvidence": {
+      "adult_053": "점심 식당에서 흐릿한 메뉴판(음식 그림, 글자 번짐)을 팔을 쭉 뻗어 멀리 듦, 물컵·수저통. 돋보기·추천 결과 없음."
+    }
+  },
+  {
+    "groupId": "grp_mid_checkup_recheck_letter",
+    "imageId": "img_adult_health_recheck_001",
+    "assetPath": "followup_20261031/img_adult_health_recheck_001.png",
+    "sha256": "0c95258890a0890cd52a05829e3ea8a2adfc0eecd551f7d850401dd0c204853d",
+    "approvalStatus": "CANDIDATE",
+    "eventIds": [
+      "adult_058"
+    ],
+    "eventSourceHashes": {
+      "adult_058": "54f7e8c3bfb46848f81d0d88a0952781ddc423683e3255628bbe75cecca7cc5a"
+    },
+    "semanticReviewer": "신기훈 2026-11-09 PASS (docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09))",
+    "visualReviewer": "정원률 2026-11-09 PASS (docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09))",
+    "cropReviewer": "김재겸 SceneCropReviewTest 실제 라우팅 2026-11-11 (1080x2400 · 360x740 프레임, 일치도 1.000) + 2026-11-09 360x640dp 글꼴 130%",
+    "reviewEvidence": {
+      "actualProducer": "김재겸",
+      "semantic": {
+        "status": "PASS",
+        "reviewer": "신기훈",
+        "evidence": "저녁 식탁에서 두 손으로 든 검진 결과지의 빨간 동그라미 표시(글자 판독 불가), 봉투, 안경, 차. 병원·금주 결과 없음.",
+        "note": "",
+        "source": "docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09)"
+      },
+      "visual": {
+        "status": "PASS",
+        "reviewer": "정원률",
+        "note": "공통 도트 화풍과 1인칭 구도가 자연스럽다.",
+        "source": "docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09)"
+      },
+      "crop": {
+        "status": "CROP_OK",
+        "reviewer": "김재겸",
+        "visibleX_1080x2400": "0.331..0.669 / 0.318..0.682",
+        "visibleX_360x640": "0.289..0.711",
+        "captureSha256": "361ae9eafb2b0f0c51ca7c83203fada82775dd8a29f773c1891655d8fccee20e",
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_adult_health_recheck_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "361ae9eafb2b0f0c51ca7c83203fada82775dd8a29f773c1891655d8fccee20e"
+        }
+      }
+    },
+    "resolvedIssueEvidence": {
+      "adult_058": "저녁 식탁에서 두 손으로 든 검진 결과지의 빨간 동그라미 표시(글자 판독 불가), 봉투, 안경, 차. 병원·금주 결과 없음."
+    }
+  },
+  {
+    "groupId": "grp_old_empty_nest_room",
+    "imageId": "img_adult_empty_nest_001",
+    "assetPath": "followup_20261031/img_adult_empty_nest_001.png",
+    "sha256": "db5f3fe141ec17ed8a941e492db019e57c67c26cba9ec8b41db40f5600e3dae5",
+    "approvalStatus": "CANDIDATE",
+    "eventIds": [
+      "adult_063"
+    ],
+    "eventSourceHashes": {
+      "adult_063": "e7b91498d704ebc2d52b92544c2ce554c476886baa7c0bc1d7e1193707734cc1"
+    },
+    "semanticReviewer": "신기훈 2026-11-09 PASS (docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09))",
+    "visualReviewer": "정원률 2026-11-09 PASS (docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09))",
+    "cropReviewer": "김재겸 SceneCropReviewTest 실제 라우팅 2026-11-11 (1080x2400 · 360x740 프레임, 일치도 1.000) + 2026-11-09 360x640dp 글꼴 130%",
+    "reviewEvidence": {
+      "actualProducer": "김재겸",
+      "semantic": {
+        "status": "PASS",
+        "reviewer": "신기훈",
+        "evidence": "독립한 아이의 빈 방, 빈 침대, 벽 포스터 한 장, 빈 책장, 문틀을 잡은 노년의 손. 사람 없이 사물로 빈자리 표현.",
+        "note": "",
+        "source": "docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09)"
+      },
+      "visual": {
+        "status": "PASS",
+        "reviewer": "정원률",
+        "note": "공통 도트 화풍과 1인칭 구도가 자연스럽다.",
+        "source": "docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09)"
+      },
+      "crop": {
+        "status": "CROP_OK",
+        "reviewer": "김재겸",
+        "visibleX_1080x2400": "0.331..0.669 / 0.318..0.682",
+        "visibleX_360x640": "0.289..0.711",
+        "captureSha256": "1ae589b0daf5f9079262724a3548298e54fff7b731a3b2c56c512d3f8577570c",
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_adult_empty_nest_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "1ae589b0daf5f9079262724a3548298e54fff7b731a3b2c56c512d3f8577570c"
+        }
+      }
+    },
+    "resolvedIssueEvidence": {
+      "adult_063": "독립한 아이의 빈 방, 빈 침대, 벽 포스터 한 장, 빈 책장, 문틀을 잡은 노년의 손. 사람 없이 사물로 빈자리 표현."
+    }
+  },
+  {
+    "groupId": "grp_adult_promotion_eve_sleepless",
+    "imageId": "img_pov_promotion_review_001",
+    "assetPath": "followup_20261031/img_pov_promotion_review_001.png",
+    "sha256": "0a002fec7def270dcb256aa260a5a78adda2f4a39c948417ac8c2ffedb4ebfba",
+    "approvalStatus": "CANDIDATE",
+    "eventIds": [
+      "adult_069"
+    ],
+    "eventSourceHashes": {
+      "adult_069": "70990af796d69c87ddcf49f26acce9379e14bec8929327dc552d9c9661886f30"
+    },
+    "semanticReviewer": "신기훈 2026-11-09 PASS (docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09))",
+    "visualReviewer": "정원률 2026-11-09 PASS (docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09))",
+    "cropReviewer": "김재겸 SceneCropReviewTest 실제 라우팅 2026-11-11 (1080x2400 · 360x740 프레임, 일치도 1.000) + 2026-11-09 360x640dp 글꼴 130%",
+    "reviewEvidence": {
+      "actualProducer": "김재겸",
+      "semantic": {
+        "status": "PASS",
+        "reviewer": "신기훈",
+        "evidence": "밤 침실에서 이불 너머로 옷장에 걸어 둔 정장, 알람 시계, 달빛. 서류철·심사 결과 없음.",
+        "note": "",
+        "source": "docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09)"
+      },
+      "visual": {
+        "status": "PASS",
+        "reviewer": "정원률",
+        "note": "공통 도트 화풍과 1인칭 구도가 자연스럽다.",
+        "source": "docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09)"
+      },
+      "crop": {
+        "status": "CROP_OK",
+        "reviewer": "김재겸",
+        "visibleX_1080x2400": "0.331..0.669 / 0.318..0.682",
+        "visibleX_360x640": "0.289..0.711",
+        "captureSha256": "6cdf878084520ec42ac0cd987a9a4186100d297142fcc32234d4d4c9ed90effd",
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_pov_promotion_review_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "6cdf878084520ec42ac0cd987a9a4186100d297142fcc32234d4d4c9ed90effd"
+        }
+      }
+    },
+    "resolvedIssueEvidence": {
+      "adult_069": "밤 침실에서 이불 너머로 옷장에 걸어 둔 정장, 알람 시계, 달빛. 서류철·심사 결과 없음."
+    }
+  },
+  {
+    "groupId": "grp_ya_mt_campfire",
+    "imageId": "img_pov_campfire_001",
+    "assetPath": "followup_20261031/img_pov_campfire_001.png",
+    "sha256": "294430f0669a350a655776c24d7affa68bc922faca0c0201be28a9f92ae79a6a",
+    "approvalStatus": "CANDIDATE",
+    "eventIds": [
+      "adult_075"
+    ],
+    "eventSourceHashes": {
+      "adult_075": "2fba693e46fa47033f8f544521c60cec7d1168f1c090b7be0fae60e35436d560"
+    },
+    "semanticReviewer": "신기훈 2026-11-09 PASS (docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09))",
+    "visualReviewer": "정원률 2026-11-09 PASS (docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09))",
+    "cropReviewer": "김재겸 SceneCropReviewTest 실제 라우팅 2026-11-11 (1080x2400 · 360x740 프레임, 일치도 1.000) + 2026-11-09 360x640dp 글꼴 130%",
+    "reviewEvidence": {
+      "actualProducer": "김재겸",
+      "semantic": {
+        "status": "PASS",
+        "reviewer": "신기훈",
+        "evidence": "동아리 MT 밤 모닥불 옆자리에 기타를 멘 동아리원이 앉아 마시멜로 꼬치를 내밈, 텐트와 다른 동아리원. 선택 결과 없음.",
+        "note": "",
+        "source": "docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09)"
+      },
+      "visual": {
+        "status": "PASS",
+        "reviewer": "정원률",
+        "note": "공통 도트 화풍과 1인칭 구도가 자연스럽다.",
+        "source": "docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09)"
+      },
+      "crop": {
+        "status": "CROP_OK",
+        "reviewer": "김재겸",
+        "visibleX_1080x2400": "0.331..0.669 / 0.318..0.682",
+        "visibleX_360x640": "0.289..0.711",
+        "captureSha256": "1e8ba5fdf44a87e8a7e5f67fb4fb70e4af4f2980ed2eb7330249cce240ab3613",
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_pov_campfire_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "1e8ba5fdf44a87e8a7e5f67fb4fb70e4af4f2980ed2eb7330249cce240ab3613"
+        }
+      }
+    },
+    "resolvedIssueEvidence": {
+      "adult_075": "동아리 MT 밤 모닥불 옆자리에 기타를 멘 동아리원이 앉아 마시멜로 꼬치를 내밈, 텐트와 다른 동아리원. 선택 결과 없음."
+    }
+  },
+  {
+    "groupId": "grp_child_class_election",
+    "imageId": "img_child_election_001",
+    "assetPath": "followup_20261031/img_child_election_001.png",
+    "sha256": "4e4755cc86236e58909e0dd6f5910fa93364930b7988164309a8f1105b6c9f12",
+    "approvalStatus": "CANDIDATE",
+    "eventIds": [
+      "child_003"
+    ],
+    "eventSourceHashes": {
+      "child_003": "a4946e6d6a6b4e3aa3bbb06b550aa5006557230f9f869346cda0ce736a7a8960"
+    },
+    "semanticReviewer": "신기훈 2026-11-09 PASS (docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09))",
+    "visualReviewer": "정원률 2026-11-09 PASS (docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09))",
+    "cropReviewer": "김재겸 SceneCropReviewTest 실제 라우팅 2026-11-11 (1080x2400 · 360x740 프레임, 일치도 1.000) + 2026-11-09 360x640dp 글꼴 130%",
+    "reviewEvidence": {
+      "actualProducer": "김재겸",
+      "semantic": {
+        "status": "PASS",
+        "reviewer": "신기훈",
+        "evidence": "교실에서 친구가 신이 나 출마를 부추기며 가리키고, 칠판에 빈 후보 칸, 교탁 위 투표함. 출마·당선 결과 없음.",
+        "note": "",
+        "source": "docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09)"
+      },
+      "visual": {
+        "status": "PASS",
+        "reviewer": "정원률",
+        "note": "공통 도트 화풍과 1인칭 구도가 자연스럽다.",
+        "source": "docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09)"
+      },
+      "crop": {
+        "status": "CROP_OK_NOTE",
+        "reviewer": "김재겸",
+        "visibleX_1080x2400": "0.331..0.669 / 0.318..0.682",
+        "visibleX_360x640": "0.289..0.711",
+        "captureSha256": "5c3eedb6864ff44515f72b2941e28ef7598c0a02f3d9405c5cde364312450fe5",
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_child_election_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "5c3eedb6864ff44515f72b2941e28ef7598c0a02f3d9405c5cde364312450fe5"
+        }
+      }
+    },
+    "resolvedIssueEvidence": {
+      "child_003": "교실에서 친구가 신이 나 출마를 부추기며 가리키고, 칠판에 빈 후보 칸, 교탁 위 투표함. 출마·당선 결과 없음."
+    }
+  },
+  {
+    "groupId": "grp_child_arts_club_pick",
+    "imageId": "img_child_arts_pick_001",
+    "assetPath": "followup_20261031/img_child_arts_pick_001.png",
+    "sha256": "340c49cc0557a83e9dcc2115e56d24465a96ee7b9b2d3e0c9ec59a385e15ce7d",
+    "approvalStatus": "CANDIDATE",
+    "eventIds": [
+      "child_013"
+    ],
+    "eventSourceHashes": {
+      "child_013": "4deb842c97c1e73fc12b6afc3f7e8f12c50e6a497de95374b15abbc535a3b366"
+    },
+    "semanticReviewer": "신기훈 2026-11-09 PASS (docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09))",
+    "visualReviewer": "정원률 2026-11-09 PASS (docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09))",
+    "cropReviewer": "김재겸 SceneCropReviewTest 실제 라우팅 2026-11-11 (1080x2400 · 360x740 프레임, 일치도 1.000) + 2026-11-09 360x640dp 글꼴 130%",
+    "reviewEvidence": {
+      "actualProducer": "김재겸",
+      "semantic": {
+        "status": "PASS",
+        "reviewer": "신기훈",
+        "evidence": "학교 복도에서 고학년 선배가 팔을 벌려 고르라 하고, 뒤에 이젤·물감, 악보, 연극 가면 포스터 세 동아리 소품. 선택 결과 없음.",
+        "note": "",
+        "source": "docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09)"
+      },
+      "visual": {
+        "status": "PASS",
+        "reviewer": "정원률",
+        "note": "공통 도트 화풍과 1인칭 구도가 자연스럽다.",
+        "source": "docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09)"
+      },
+      "crop": {
+        "status": "CROP_OK",
+        "reviewer": "김재겸",
+        "visibleX_1080x2400": "0.331..0.669 / 0.318..0.682",
+        "visibleX_360x640": "0.289..0.711",
+        "captureSha256": "f00c216a31411610fcb06194051dc546d82f3c28780b7f4c1b818a9339d37b50",
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_child_arts_pick_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "f00c216a31411610fcb06194051dc546d82f3c28780b7f4c1b818a9339d37b50"
+        }
+      }
+    },
+    "resolvedIssueEvidence": {
+      "child_013": "학교 복도에서 고학년 선배가 팔을 벌려 고르라 하고, 뒤에 이젤·물감, 악보, 연극 가면 포스터 세 동아리 소품. 선택 결과 없음."
+    }
+  },
+  {
+    "groupId": "grp_child_cheer_scout",
+    "imageId": "img_child_cheer_leader_001",
+    "assetPath": "followup_20261031/img_child_cheer_leader_001.png",
+    "sha256": "4f2f3816c01ad04c9d44dbd67f92524f4837a1696b41f9ffc5c06c56346a68f1",
+    "approvalStatus": "CANDIDATE",
+    "eventIds": [
+      "child_018"
+    ],
+    "eventSourceHashes": {
+      "child_018": "0e0330982a3000e3ade6a4b793c07f9a349c8b36c934ccaef364aa2a5e81b724"
+    },
+    "semanticReviewer": "신기훈 2026-11-09 PASS (docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09))",
+    "visualReviewer": "정원률 2026-11-09 PASS (docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09))",
+    "cropReviewer": "김재겸 SceneCropReviewTest 실제 라우팅 2026-11-11 (1080x2400 · 360x740 프레임, 일치도 1.000) + 2026-11-09 360x640dp 글꼴 130%",
+    "reviewEvidence": {
+      "actualProducer": "김재겸",
+      "semantic": {
+        "status": "PASS",
+        "reviewer": "신기훈",
+        "evidence": "운동장에서 호루라기를 건 체육 선생님이 메가폰과 응원 수술을 내밈, 뛰는 아이들. 수락·응원 결과 없음.",
+        "note": "",
+        "source": "docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09)"
+      },
+      "visual": {
+        "status": "PASS",
+        "reviewer": "정원률",
+        "note": "공통 도트 화풍과 1인칭 구도가 자연스럽다.",
+        "source": "docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09)"
+      },
+      "crop": {
+        "status": "CROP_OK",
+        "reviewer": "김재겸",
+        "visibleX_1080x2400": "0.331..0.669 / 0.318..0.682",
+        "visibleX_360x640": "0.289..0.711",
+        "captureSha256": "f36fa31338a79db96e4c5de6cfc29920a7e4e228e597a5e3c34fddf92b3166e2",
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_child_cheer_leader_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "f36fa31338a79db96e4c5de6cfc29920a7e4e228e597a5e3c34fddf92b3166e2"
+        }
+      }
+    },
+    "resolvedIssueEvidence": {
+      "child_018": "운동장에서 호루라기를 건 체육 선생님이 메가폰과 응원 수술을 내밈, 뛰는 아이들. 수락·응원 결과 없음."
+    }
+  },
+  {
+    "groupId": "grp_child_lunch_spinach",
+    "imageId": "img_child_lunch_001",
+    "assetPath": "followup_20261031/img_child_lunch_001.png",
+    "sha256": "3948bb839738b6468252b8538f92f6a198d5a44acbf6e01df61fe3e400f4c664",
+    "approvalStatus": "CANDIDATE",
+    "eventIds": [
+      "child_023"
+    ],
+    "eventSourceHashes": {
+      "child_023": "f90bb67827a1d9bd1248dd3effd3eff1df32ec84081c8df5e491c24c9aca5b45"
+    },
+    "semanticReviewer": "신기훈 2026-11-09 PASS (docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09))",
+    "visualReviewer": "정원률 2026-11-09 PASS (docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09))",
+    "cropReviewer": "김재겸 SceneCropReviewTest 실제 라우팅 2026-11-11 (1080x2400 · 360x740 프레임, 일치도 1.000) + 2026-11-09 360x640dp 글꼴 130%",
+    "reviewEvidence": {
+      "actualProducer": "김재겸",
+      "semantic": {
+        "status": "PASS",
+        "reviewer": "신기훈",
+        "evidence": "교실 급식 시간, 식판의 시금치, 손으로 입을 가리고 속삭이는 짝꿍, 뒤에서 식판 검사하는 선생님. 먹기·넘기기 결과 없음.",
+        "note": "",
+        "source": "docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09)"
+      },
+      "visual": {
+        "status": "PASS",
+        "reviewer": "정원률",
+        "note": "공통 도트 화풍과 1인칭 구도가 자연스럽다.",
+        "source": "docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09)"
+      },
+      "crop": {
+        "status": "CROP_OK",
+        "reviewer": "김재겸",
+        "visibleX_1080x2400": "0.331..0.669 / 0.318..0.682",
+        "visibleX_360x640": "0.289..0.711",
+        "captureSha256": "d206acfb136f5dc21d03863a170db075941fbbf17edba23a15c832a3ec65e0f7",
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_child_lunch_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "d206acfb136f5dc21d03863a170db075941fbbf17edba23a15c832a3ec65e0f7"
+        }
+      }
+    },
+    "resolvedIssueEvidence": {
+      "child_023": "교실 급식 시간, 식판의 시금치, 손으로 입을 가리고 속삭이는 짝꿍, 뒤에서 식판 검사하는 선생님. 먹기·넘기기 결과 없음."
+    }
+  },
+  {
+    "groupId": "grp_child_class_nap_dream",
+    "imageId": "img_child_class_nap_001",
+    "assetPath": "followup_20261031/img_child_class_nap_001.png",
+    "sha256": "01e6b708365fe95658d74e80ca7e4bdbdc4900d6b1728147bbae264dc82bc64a",
+    "approvalStatus": "CANDIDATE",
+    "eventIds": [
+      "child_028"
+    ],
+    "eventSourceHashes": {
+      "child_028": "253935bc9c24b899cd9a32c141b38147450073d2e7fee3cb9390c3746b1ef180"
+    },
+    "semanticReviewer": "신기훈 2026-11-09 PASS (docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09))",
+    "visualReviewer": "정원률 2026-11-09 PASS (docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09))",
+    "cropReviewer": "김재겸 SceneCropReviewTest 실제 라우팅 2026-11-11 (1080x2400 · 360x740 프레임, 일치도 1.000) + 2026-11-09 360x640dp 글꼴 130%",
+    "reviewEvidence": {
+      "actualProducer": "김재겸",
+      "semantic": {
+        "status": "PASS",
+        "reviewer": "신기훈",
+        "evidence": "교실 책상에 엎드린 팔, 흐릿한 선생님 실루엣이 부르고, 꿈 말풍선 속 떡볶이, 웃는 반 친구들. 벌떡·외침 결과 없음.",
+        "note": "",
+        "source": "docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09)"
+      },
+      "visual": {
+        "status": "PASS",
+        "reviewer": "정원률",
+        "note": "공통 도트 화풍과 1인칭 구도가 자연스럽다.",
+        "source": "docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09)"
+      },
+      "crop": {
+        "status": "CROP_OK",
+        "reviewer": "김재겸",
+        "visibleX_1080x2400": "0.331..0.669 / 0.318..0.682",
+        "visibleX_360x640": "0.289..0.711",
+        "captureSha256": "0badc58a71e66e6100777fe2987025eb38ff3c729537cc9a5aa14aa8099d27b5",
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_child_class_nap_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "0badc58a71e66e6100777fe2987025eb38ff3c729537cc9a5aa14aa8099d27b5"
+        }
+      }
+    },
+    "resolvedIssueEvidence": {
+      "child_028": "교실 책상에 엎드린 팔, 흐릿한 선생님 실루엣이 부르고, 꿈 말풍선 속 떡볶이, 웃는 반 친구들. 벌떡·외침 결과 없음."
+    }
+  },
+  {
+    "groupId": "grp_child_baduk_final",
+    "imageId": "img_child_baduk_001",
+    "assetPath": "followup_20261031/img_child_baduk_001.png",
+    "sha256": "b3f088f44877a6dbdaacf53a2b66f16faae2d9ad478a9149d19955a10a0e6a9e",
+    "approvalStatus": "CANDIDATE",
+    "eventIds": [
+      "child_033"
+    ],
+    "eventSourceHashes": {
+      "child_033": "3e19cf65f7c6f933f089cbc93e77db016bd7f70abe9d28c3b8026c788b2299d6"
+    },
+    "semanticReviewer": "신기훈 2026-11-09 PASS_WITH_NOTE (docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09))",
+    "visualReviewer": "정원률 2026-11-09 PASS (docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09))",
+    "cropReviewer": "김재겸 SceneCropReviewTest 실제 라우팅 2026-11-11 (1080x2400 · 360x740 프레임, 일치도 1.000) + 2026-11-09 360x640dp 글꼴 130%",
+    "reviewEvidence": {
+      "actualProducer": "김재겸",
+      "semantic": {
+        "status": "PASS_WITH_NOTE",
+        "reviewer": "신기훈",
+        "evidence": "대회장 바둑판 결승 대국, 무표정한 상대가 돌을 놓고, 대국 시계, 뒤에 심판. 승패 없음.",
+        "note": "메모: 상대가 나보다 두 살 어려 보이는 단서와 내 돌이 잡히는 단서가 약하다. 본문이 전달하므로 수정 필수는 아님.",
+        "source": "docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09)"
+      },
+      "visual": {
+        "status": "PASS",
+        "reviewer": "정원률",
+        "note": "공통 도트 화풍과 1인칭 구도가 자연스럽다.",
+        "source": "docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09)"
+      },
+      "crop": {
+        "status": "CROP_OK_NOTE",
+        "reviewer": "김재겸",
+        "visibleX_1080x2400": "0.331..0.669 / 0.318..0.682",
+        "visibleX_360x640": "0.289..0.711",
+        "captureSha256": "575a980f4e240c664f53290c57252c4b8630a32287b5d273fdeee4e64449ef13",
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_child_baduk_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "575a980f4e240c664f53290c57252c4b8630a32287b5d273fdeee4e64449ef13"
+        }
+      }
+    },
+    "resolvedIssueEvidence": {
+      "child_033": "대회장 바둑판 결승 대국, 무표정한 상대가 돌을 놓고, 대국 시계, 뒤에 심판. 승패 없음."
+    }
+  },
+  {
+    "groupId": "grp_child_piano_contest_offer",
+    "imageId": "img_child_piano_contest_001",
+    "assetPath": "followup_20261031/img_child_piano_contest_001.png",
+    "sha256": "127900a548dd8dc1e21a1ca352ff0fb36b1e4b5e097246d70c322235e46e63d2",
+    "approvalStatus": "CANDIDATE",
+    "eventIds": [
+      "child_038"
+    ],
+    "eventSourceHashes": {
+      "child_038": "88f5ece63674c4b7c977931830325e5d36e3fa8678251c7e4a2a50aa683262c4"
+    },
+    "semanticReviewer": "신기훈 2026-11-09 PASS (docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09))",
+    "visualReviewer": "정원률 2026-11-09 PASS (docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09))",
+    "cropReviewer": "김재겸 SceneCropReviewTest 실제 라우팅 2026-11-11 (1080x2400 · 360x740 프레임, 일치도 1.000) + 2026-11-09 360x640dp 글꼴 130%",
+    "reviewEvidence": {
+      "actualProducer": "김재겸",
+      "semantic": {
+        "status": "PASS",
+        "reviewer": "신기훈",
+        "evidence": "피아노 학원 레슨실, 선생님이 업라이트 피아노 위에 네 쪽 악보를 펼쳐 보이며 권함, 메트로놈. 무대·출전 결과 없음.",
+        "note": "",
+        "source": "docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09)"
+      },
+      "visual": {
+        "status": "PASS",
+        "reviewer": "정원률",
+        "note": "악보의 기호는 오선과 음표로 읽힌다. 세로 화면에서 양끝 페이지가 일부 잘려도 악보와 연주 준비 구도는 남는다.",
+        "source": "docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09)"
+      },
+      "crop": {
+        "status": "CROP_OK_NOTE",
+        "reviewer": "김재겸",
+        "visibleX_1080x2400": "0.331..0.669 / 0.318..0.682",
+        "visibleX_360x640": "0.289..0.711",
+        "captureSha256": "11da5ff388ef3bc5cc247db6636cede2c2dbccf21f4cf62e4b10881a9d2f09f2",
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_child_piano_contest_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "11da5ff388ef3bc5cc247db6636cede2c2dbccf21f4cf62e4b10881a9d2f09f2"
+        }
+      }
+    },
+    "resolvedIssueEvidence": {
+      "child_038": "피아노 학원 레슨실, 선생님이 업라이트 피아노 위에 네 쪽 악보를 펼쳐 보이며 권함, 메트로놈. 무대·출전 결과 없음."
+    }
+  },
+  {
+    "groupId": "grp_child_school_gate_chicks",
+    "imageId": "img_child_chick_001",
+    "assetPath": "followup_20261031/img_child_chick_001.png",
+    "sha256": "9146436172d7ab15013231fbfb19a45cefe8442574773b09df0f84414cefbb7f",
+    "approvalStatus": "CANDIDATE",
+    "eventIds": [
+      "child_043"
+    ],
+    "eventSourceHashes": {
+      "child_043": "75a38463f1d73cdbd3dae6ab4549a655feca4d40fc7d47b0280e4f43c6bf192b"
+    },
+    "semanticReviewer": "신기훈 2026-11-09 PASS (docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09))",
+    "visualReviewer": "정원률 2026-11-09 PASS (docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09))",
+    "cropReviewer": "김재겸 SceneCropReviewTest 실제 라우팅 2026-11-11 (1080x2400 · 360x740 프레임, 일치도 1.000) + 2026-11-09 360x640dp 글꼴 130%",
+    "reviewEvidence": {
+      "actualProducer": "김재겸",
+      "semantic": {
+        "status": "PASS",
+        "reviewer": "신기훈",
+        "evidence": "하굣길 교문 앞 노점 상자 속 노란 병아리들, 내 손의 500원 동전, 상인과 구경하는 친구들. 구매 결과 없음.",
+        "note": "",
+        "source": "docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09)"
+      },
+      "visual": {
+        "status": "PASS",
+        "reviewer": "정원률",
+        "note": "공통 도트 화풍과 1인칭 구도가 자연스럽다.",
+        "source": "docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09)"
+      },
+      "crop": {
+        "status": "CROP_OK",
+        "reviewer": "김재겸",
+        "visibleX_1080x2400": "0.331..0.669 / 0.318..0.682",
+        "visibleX_360x640": "0.289..0.711",
+        "captureSha256": "c404fed3138e0a46ea1c788b217cef536c7718e129ddb05b5b809ec7156344e7",
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_child_chick_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "c404fed3138e0a46ea1c788b217cef536c7718e129ddb05b5b809ec7156344e7"
+        }
+      }
+    },
+    "resolvedIssueEvidence": {
+      "child_043": "하굣길 교문 앞 노점 상자 속 노란 병아리들, 내 손의 500원 동전, 상인과 구경하는 친구들. 구매 결과 없음."
+    }
+  },
+  {
+    "groupId": "grp_adult_realtor_three_contracts",
+    "imageId": "img_cross_01_001",
+    "assetPath": "followup_20261031/img_cross_01_001.png",
+    "sha256": "1ef454ccb0eba362aae7659c1b054629fe6c1ad21136af5d7c1927e369697d1f",
+    "approvalStatus": "CANDIDATE",
+    "eventIds": [
+      "cross_01"
+    ],
+    "eventSourceHashes": {
+      "cross_01": "9c9d3f3021d217857ee667be454c1cb9fb261b464ba7e2353ce9a68ac1cea46b"
+    },
+    "semanticReviewer": "신기훈 2026-11-09 PASS (docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09))",
+    "visualReviewer": "정원률 2026-11-09 PASS (docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09))",
+    "cropReviewer": "김재겸 SceneCropReviewTest 실제 라우팅 2026-11-11 (1080x2400 · 360x740 프레임, 일치도 1.000) + 2026-11-09 360x640dp 글꼴 130%",
+    "reviewEvidence": {
+      "actualProducer": "김재겸",
+      "semantic": {
+        "status": "PASS",
+        "reviewer": "신기훈",
+        "evidence": "부동산 책상에 사장님이 아파트+열쇠·건물+달력·주택 아이콘 계약서 세 장을 펼침, 도장, 내 손과 반지 낀 배우자 손. 선택 결과 없음.",
+        "note": "",
+        "source": "docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09)"
+      },
+      "visual": {
+        "status": "PASS",
+        "reviewer": "정원률",
+        "note": "양끝 계약서 가장자리와 도장은 세로에서 줄지만 집·달력·열쇠로 구분되는 문서 세 장의 배치는 읽힌다.",
+        "source": "docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09)"
+      },
+      "crop": {
+        "status": "CROP_OK_NOTE",
+        "reviewer": "김재겸",
+        "visibleX_1080x2400": "0.331..0.669 / 0.318..0.682",
+        "visibleX_360x640": "0.289..0.711",
+        "captureSha256": "cdf6668dae02fc8fe4950babbf06917327f471173ae89be7c2f5d6f480faac77",
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_cross_01_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "cdf6668dae02fc8fe4950babbf06917327f471173ae89be7c2f5d6f480faac77"
+        }
+      }
+    },
+    "resolvedIssueEvidence": {
+      "cross_01": "부동산 책상에 사장님이 아파트+열쇠·건물+달력·주택 아이콘 계약서 세 장을 펼침, 도장, 내 손과 반지 낀 배우자 손. 선택 결과 없음."
+    }
+  },
+  {
+    "groupId": "grp_mid_business_closure_mail",
+    "imageId": "img_cross_06_001",
+    "assetPath": "followup_20261031/img_cross_06_001.png",
+    "sha256": "06381995592f3e8e01361449fe568d930c9bc9fceb485c0c9d4a5491bd86fd73",
+    "approvalStatus": "CANDIDATE",
+    "eventIds": [
+      "cross_06"
+    ],
+    "eventSourceHashes": {
+      "cross_06": "8202fb64aaff13f8f2339e76c11a22350541699a7102b88176d4680fa700c18c"
+    },
+    "semanticReviewer": "신기훈 2026-11-09 PASS (docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09))",
+    "visualReviewer": "정원률 2026-11-09 PASS (docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09))",
+    "cropReviewer": "김재겸 SceneCropReviewTest 실제 라우팅 2026-11-11 (1080x2400 · 360x740 프레임, 일치도 1.000) + 2026-11-09 360x640dp 글꼴 130%",
+    "reviewEvidence": {
+      "actualProducer": "김재겸",
+      "semantic": {
+        "status": "PASS",
+        "reviewer": "신기훈",
+        "evidence": "점심시간 휴게실, 두 손으로 든 휴대폰 메일에 건물 아이콘(사업 종료), 조용히 휴대폰을 보는 동료들, 도시락·커피. 재취업·창업 결과 없음.",
+        "note": "",
+        "source": "docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09)"
+      },
+      "visual": {
+        "status": "PASS",
+        "reviewer": "정원률",
+        "note": "공통 도트 화풍과 1인칭 구도가 자연스럽다.",
+        "source": "docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09)"
+      },
+      "crop": {
+        "status": "CROP_OK",
+        "reviewer": "김재겸",
+        "visibleX_1080x2400": "0.331..0.669 / 0.318..0.682",
+        "visibleX_360x640": "0.289..0.711",
+        "captureSha256": "762aaaffdc8d3a4f65a730d5bc5841f0777006463d95094a60c11c36a73dd964",
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_cross_06_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "762aaaffdc8d3a4f65a730d5bc5841f0777006463d95094a60c11c36a73dd964"
+        }
+      }
+    },
+    "resolvedIssueEvidence": {
+      "cross_06": "점심시간 휴게실, 두 손으로 든 휴대폰 메일에 건물 아이콘(사업 종료), 조용히 휴대폰을 보는 동료들, 도시락·커피. 재취업·창업 결과 없음."
+    }
+  },
+  {
+    "groupId": "grp_mid_parent_fall_call",
+    "imageId": "img_cross_11_001",
+    "assetPath": "followup_20261031/img_cross_11_001.png",
+    "sha256": "bafa1404d7bb450d5475c65c39a261194bf66fbaaf90d67ea2ffdbdf21c799da",
+    "approvalStatus": "CANDIDATE",
+    "eventIds": [
+      "cross_11"
+    ],
+    "eventSourceHashes": {
+      "cross_11": "b9a2b4a2ccd8827e2a1a19ed4f8ebbdfbc84974aa477664dd5c0f7f273ce79fc"
+    },
+    "semanticReviewer": "신기훈 2026-11-09 PASS (docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09))",
+    "visualReviewer": "정원률 2026-11-09 PASS (docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09))",
+    "cropReviewer": "김재겸 SceneCropReviewTest 실제 라우팅 2026-11-11 (1080x2400 · 360x740 프레임, 일치도 1.000) + 2026-11-09 360x640dp 글꼴 130%",
+    "reviewEvidence": {
+      "actualProducer": "김재겸",
+      "semantic": {
+        "status": "PASS",
+        "reviewer": "신기훈",
+        "evidence": "저녁 거실에서 아버지 사진이 뜬 통화 화면, 장식장 위 부모님 사진 액자, 저녁 창밖. 이사·돌봄 결과 없음.",
+        "note": "",
+        "source": "docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09)"
+      },
+      "visual": {
+        "status": "PASS",
+        "reviewer": "정원률",
+        "note": "공통 도트 화풍과 1인칭 구도가 자연스럽다.",
+        "source": "docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09)"
+      },
+      "crop": {
+        "status": "CROP_OK",
+        "reviewer": "김재겸",
+        "visibleX_1080x2400": "0.331..0.669 / 0.318..0.682",
+        "visibleX_360x640": "0.289..0.711",
+        "captureSha256": "ca5b3a42e38f8a9ff743f6ebfc502f4db979349f359eea9a713f34370e2de813",
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_cross_11_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "ca5b3a42e38f8a9ff743f6ebfc502f4db979349f359eea9a713f34370e2de813"
+        }
+      }
+    },
+    "resolvedIssueEvidence": {
+      "cross_11": "저녁 거실에서 아버지 사진이 뜬 통화 화면, 장식장 위 부모님 사진 액자, 저녁 창밖. 이사·돌봄 결과 없음."
+    }
+  },
+  {
+    "groupId": "grp_infant_daycare_loud_cry",
+    "imageId": "img_infant_loud_cry_001",
+    "assetPath": "followup_20261031/img_infant_loud_cry_001.png",
+    "sha256": "2cae5e38dbf70c18faf4ff3b57c8b0778777a9c5abef630dc25e996a2fa31048",
+    "approvalStatus": "CANDIDATE",
+    "eventIds": [
+      "infant_004"
+    ],
+    "eventSourceHashes": {
+      "infant_004": "f09a9cc93a9121fabcd88086057a8c217e536177dc8347f103b3de5fd83909c6"
+    },
+    "semanticReviewer": "신기훈 2026-11-09 PASS_WITH_NOTE (docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09))",
+    "visualReviewer": "정원률 2026-11-09 PASS (docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09))",
+    "cropReviewer": "김재겸 SceneCropReviewTest 실제 라우팅 2026-11-11 (1080x2400 · 360x740 프레임, 일치도 1.000) + 2026-11-09 360x640dp 글꼴 130%",
+    "reviewEvidence": {
+      "actualProducer": "김재겸",
+      "semantic": {
+        "status": "PASS_WITH_NOTE",
+        "reviewer": "신기훈",
+        "evidence": "어린이집 매트 위 영아 시점, 옆 친구 둘이 따라 울기 직전, 난감해하며 손을 드는 선생님. 우는 내 모습은 1인칭이라 주먹만 보임.",
+        "note": "메모: 내가 크게 우는 단서가 그림에 없어 본문이 전달한다.",
+        "source": "docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09)"
+      },
+      "visual": {
+        "status": "PASS",
+        "reviewer": "정원률",
+        "note": "따뜻한 도트풍과 아이 눈높이 구도가 유지된다. 눈물의 정확한 타이밍은 화풍과 별도로 본다.",
+        "source": "docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09)"
+      },
+      "crop": {
+        "status": "CROP_OK",
+        "reviewer": "김재겸",
+        "visibleX_1080x2400": "0.331..0.669 / 0.318..0.682",
+        "visibleX_360x640": "0.289..0.711",
+        "captureSha256": "528eed94ad435a33fa2a53b84e04dec25f939d93df39629b5287b3bb7119a4cf",
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_infant_loud_cry_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "528eed94ad435a33fa2a53b84e04dec25f939d93df39629b5287b3bb7119a4cf"
+        }
+      }
+    },
+    "resolvedIssueEvidence": {
+      "infant_004": "어린이집 매트 위 영아 시점, 옆 친구 둘이 따라 울기 직전, 난감해하며 손을 드는 선생님. 우는 내 모습은 1인칭이라 주먹만 보임."
+    }
+  },
+  {
+    "groupId": "grp_infant_first_word_bet",
+    "imageId": "img_infant_first_word_001",
+    "assetPath": "followup_20261031/img_infant_first_word_001.png",
+    "sha256": "cf357b70ef809a9880ce3380a4acb00bba2f599834bdaf939b7c6f2525997c3a",
+    "approvalStatus": "CANDIDATE",
+    "eventIds": [
+      "infant_009"
+    ],
+    "eventSourceHashes": {
+      "infant_009": "6175493314e88fb262809d79f9430a015437a6f123ad33bdd089ad4e1f91991e"
+    },
+    "semanticReviewer": "신기훈 2026-11-09 PASS (docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09))",
+    "visualReviewer": "정원률 2026-11-09 PASS (docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09))",
+    "cropReviewer": "김재겸 SceneCropReviewTest 실제 라우팅 2026-11-11 (1080x2400 · 360x740 프레임, 일치도 1.000) + 2026-11-09 360x640dp 글꼴 130%",
+    "reviewEvidence": {
+      "actualProducer": "김재겸",
+      "semantic": {
+        "status": "PASS",
+        "reviewer": "신기훈",
+        "evidence": "아기 의자 앞에서 엄마·아빠가 서로 자기 호칭을 외치고, 의자 위 만 원 지폐(내기), 강아지. 첫 단어 결과 없음.",
+        "note": "",
+        "source": "docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09)"
+      },
+      "visual": {
+        "status": "PASS",
+        "reviewer": "정원률",
+        "note": "공통 도트 화풍과 1인칭 구도가 자연스럽다.",
+        "source": "docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09)"
+      },
+      "crop": {
+        "status": "CROP_OK",
+        "reviewer": "김재겸",
+        "visibleX_1080x2400": "0.331..0.669 / 0.318..0.682",
+        "visibleX_360x640": "0.289..0.711",
+        "captureSha256": "320aa0db3c302c548a6f5c83e051993a85e4223c9c1698b27eda5692f0f5d735",
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_infant_first_word_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "320aa0db3c302c548a6f5c83e051993a85e4223c9c1698b27eda5692f0f5d735"
+        }
+      }
+    },
+    "resolvedIssueEvidence": {
+      "infant_009": "아기 의자 앞에서 엄마·아빠가 서로 자기 호칭을 외치고, 의자 위 만 원 지폐(내기), 강아지. 첫 단어 결과 없음."
+    }
+  },
+  {
+    "groupId": "grp_infant_crayon_white_wall",
+    "imageId": "img_infant_crayon_001",
+    "assetPath": "followup_20261031/img_infant_crayon_001.png",
+    "sha256": "5d053cfe8fcedf2d2e1400a95ceda9c019f8a4dfb00d76fd30c0b4d4b57d9a53",
+    "approvalStatus": "CANDIDATE",
+    "eventIds": [
+      "infant_014"
+    ],
+    "eventSourceHashes": {
+      "infant_014": "9aae7dc7e033e9be263a3c619ac6eb05c926e236430392f6720be2d6ef142014"
+    },
+    "semanticReviewer": "신기훈 2026-11-09 PASS (docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09))",
+    "visualReviewer": "정원률 2026-11-09 PASS (docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09))",
+    "cropReviewer": "김재겸 SceneCropReviewTest 실제 라우팅 2026-11-11 (1080x2400 · 360x740 프레임, 일치도 1.000) + 2026-11-09 360x640dp 글꼴 130%",
+    "reviewEvidence": {
+      "actualProducer": "김재겸",
+      "semantic": {
+        "status": "PASS",
+        "reviewer": "신기훈",
+        "evidence": "낮 거실, 크게 비어 있는 하얀 벽, 크레파스를 쥔 아기 손, 스케치북, 부엌에서 설거지하는 엄마 뒷모습. 벽 낙서 결과 없음.",
+        "note": "",
+        "source": "docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09)"
+      },
+      "visual": {
+        "status": "PASS",
+        "reviewer": "정원률",
+        "note": "세로에서 엄마와 크레파스 상자는 빠지지만 빈 벽, 스케치북과 손에 든 붉은 크레파스의 핵심 대비는 남는다.",
+        "source": "docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09)"
+      },
+      "crop": {
+        "status": "CROP_OK_NOTE",
+        "reviewer": "김재겸",
+        "visibleX_1080x2400": "0.331..0.669 / 0.318..0.682",
+        "visibleX_360x640": "0.289..0.711",
+        "captureSha256": "4d8242ab9939bcd3b5cee39384e118abf186ed4249e84c9bae9c340a833364af",
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_infant_crayon_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "4d8242ab9939bcd3b5cee39384e118abf186ed4249e84c9bae9c340a833364af"
+        }
+      }
+    },
+    "resolvedIssueEvidence": {
+      "infant_014": "낮 거실, 크게 비어 있는 하얀 벽, 크레파스를 쥔 아기 손, 스케치북, 부엌에서 설거지하는 엄마 뒷모습. 벽 낙서 결과 없음."
+    }
+  },
+  {
+    "groupId": "grp_infant_daycare_first_day",
+    "imageId": "img_infant_daycare_001",
+    "assetPath": "followup_20261031/img_infant_daycare_001.png",
+    "sha256": "97bd22a4259157f719c77a6e7164b28f07d8206aacecac5c32cdf6b93ae63022",
+    "approvalStatus": "CANDIDATE",
+    "eventIds": [
+      "infant_019"
+    ],
+    "eventSourceHashes": {
+      "infant_019": "e508c1042c00fb86099f561b3af3d8340d3233954aec01d285aeb17b75ba77a4"
+    },
+    "semanticReviewer": "신기훈 2026-11-09 PASS (docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09))",
+    "visualReviewer": "정원률 2026-11-09 PASS (docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09))",
+    "cropReviewer": "김재겸 SceneCropReviewTest 실제 라우팅 2026-11-11 (1080x2400 · 360x740 프레임, 일치도 1.000) + 2026-11-09 360x640dp 글꼴 130%",
+    "reviewEvidence": {
+      "actualProducer": "김재겸",
+      "semantic": {
+        "status": "PASS",
+        "reviewer": "신기훈",
+        "evidence": "어린이집 교실 입구, 손을 흔들며 떠나는 엄마, 손을 내미는 선생님, 교실 안에서 우는 아이 셋, 신발장. 선택 결과 없음.",
+        "note": "",
+        "source": "docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09)"
+      },
+      "visual": {
+        "status": "PASS",
+        "reviewer": "정원률",
+        "note": "공통 도트 화풍과 1인칭 구도가 자연스럽다.",
+        "source": "docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09)"
+      },
+      "crop": {
+        "status": "CROP_OK_NOTE",
+        "reviewer": "김재겸",
+        "visibleX_1080x2400": "0.331..0.669 / 0.318..0.682",
+        "visibleX_360x640": "0.289..0.711",
+        "captureSha256": "075cdb5adb6ce31b19a09c6a93dab4bd5c52e3795aa79f466bba2ebfbd5d0d6c",
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_infant_daycare_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "075cdb5adb6ce31b19a09c6a93dab4bd5c52e3795aa79f466bba2ebfbd5d0d6c"
+        }
+      }
+    },
+    "resolvedIssueEvidence": {
+      "infant_019": "어린이집 교실 입구, 손을 흔들며 떠나는 엄마, 손을 내미는 선생님, 교실 안에서 우는 아이 셋, 신발장. 선택 결과 없음."
+    }
+  },
+  {
+    "groupId": "grp_infant_elevator_buttons",
+    "imageId": "img_infant_elevator_button_001",
+    "assetPath": "followup_20261031/img_infant_elevator_button_001.png",
+    "sha256": "67b83d1cbabc11564df4062b2999bb5c318ebc957add2b13e4488fe4757e3af5",
+    "approvalStatus": "CANDIDATE",
+    "eventIds": [
+      "infant_024"
+    ],
+    "eventSourceHashes": {
+      "infant_024": "ad57f1cf34589faa3ebf46690aea24ac04aba7f0e775da9116b39a9fdb6bdecf"
+    },
+    "semanticReviewer": "신기훈 2026-11-09 PASS (docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09))",
+    "visualReviewer": "정원률 2026-11-09 PASS (docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09))",
+    "cropReviewer": "김재겸 SceneCropReviewTest 실제 라우팅 2026-11-11 (1080x2400 · 360x740 프레임, 일치도 1.000) + 2026-11-09 360x640dp 글꼴 130%",
+    "reviewEvidence": {
+      "actualProducer": "김재겸",
+      "semantic": {
+        "status": "PASS",
+        "reviewer": "신기훈",
+        "evidence": "엘리베이터 안 영아 눈높이 버튼 패널(숫자 없음), 엄마 손을 잡은 아기 손, 장바구니를 든 옆집 할머니. 버튼 누르기 결과 없음.",
+        "note": "",
+        "source": "docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09)"
+      },
+      "visual": {
+        "status": "PASS",
+        "reviewer": "정원률",
+        "note": "공통 도트 화풍과 1인칭 구도가 자연스럽다.",
+        "source": "docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09)"
+      },
+      "crop": {
+        "status": "CROP_OK_NOTE",
+        "reviewer": "김재겸",
+        "visibleX_1080x2400": "0.331..0.669 / 0.318..0.682",
+        "visibleX_360x640": "0.289..0.711",
+        "captureSha256": "405cdd8ffc08dd95721195441f7cf916cae5f747d7c4f6b29ba1e331813aef2a",
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_infant_elevator_button_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "405cdd8ffc08dd95721195441f7cf916cae5f747d7c4f6b29ba1e331813aef2a"
+        }
+      }
+    },
+    "resolvedIssueEvidence": {
+      "infant_024": "엘리베이터 안 영아 눈높이 버튼 패널(숫자 없음), 엄마 손을 잡은 아기 손, 장바구니를 든 옆집 할머니. 버튼 누르기 결과 없음."
+    }
+  },
+  {
+    "groupId": "grp_infant_nap_curtain",
+    "imageId": "img_infant_nap_001",
+    "assetPath": "followup_20261031/img_infant_nap_001.png",
+    "sha256": "51f4f9ccbff03352b1cb17a58c0a0bdf67a19187704084cb809a2b606dc4579d",
+    "approvalStatus": "CANDIDATE",
+    "eventIds": [
+      "infant_029"
+    ],
+    "eventSourceHashes": {
+      "infant_029": "5c9eb6a96b27ec0e57d188ef8a2a81639354a9bf8630753040be7dab9cd3083e"
+    },
+    "semanticReviewer": "신기훈 2026-11-09 PASS (docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09))",
+    "visualReviewer": "정원률 2026-11-09 PASS (docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09))",
+    "cropReviewer": "김재겸 SceneCropReviewTest 실제 라우팅 2026-11-11 (1080x2400 · 360x740 프레임, 일치도 1.000) + 2026-11-09 360x640dp 글꼴 130%",
+    "reviewEvidence": {
+      "actualProducer": "김재겸",
+      "semantic": {
+        "status": "PASS",
+        "reviewer": "신기훈",
+        "evidence": "아기 방에서 엄마가 커튼을 치고, 벽시계 2시, 아기 침대, 이불. 잠든 결과 없음.",
+        "note": "",
+        "source": "docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09)"
+      },
+      "visual": {
+        "status": "PASS",
+        "reviewer": "정원률",
+        "note": "공통 도트 화풍과 1인칭 구도가 자연스럽다.",
+        "source": "docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09)"
+      },
+      "crop": {
+        "status": "CROP_OK_NOTE",
+        "reviewer": "김재겸",
+        "visibleX_1080x2400": "0.331..0.669 / 0.318..0.682",
+        "visibleX_360x640": "0.289..0.711",
+        "captureSha256": "a72e95276e55bbf5ea354c6ae2fe2efa5badd5ec9951d8ecbf82359a8bc8336e",
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_infant_nap_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "a72e95276e55bbf5ea354c6ae2fe2efa5badd5ec9951d8ecbf82359a8bc8336e"
+        }
+      }
+    },
+    "resolvedIssueEvidence": {
+      "infant_029": "아기 방에서 엄마가 커튼을 치고, 벽시계 2시, 아기 침대, 이불. 잠든 결과 없음."
+    }
+  },
+  {
+    "groupId": "grp_teen_final_knee_click",
+    "imageId": "img_path_fit_04_001",
+    "assetPath": "followup_20261031/img_path_fit_04_001.png",
+    "sha256": "ca0c97b0f1af8039c66a651127ceda003b86c86158a5c992ec218536bede9b14",
+    "approvalStatus": "CANDIDATE",
+    "eventIds": [
+      "path_fit_04"
+    ],
+    "eventSourceHashes": {
+      "path_fit_04": "2bc53eba6750a8d3c506ded93c1541ecfd29fd001a3f44bd487cc84fc7e0ea70"
+    },
+    "semanticReviewer": "신기훈 2026-11-09 PASS (docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09))",
+    "visualReviewer": "정원률 2026-11-09 PASS (docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09))",
+    "cropReviewer": "김재겸 SceneCropReviewTest 실제 라우팅 2026-11-11 (1080x2400 · 360x740 프레임, 일치도 1.000) + 2026-11-09 360x640dp 글꼴 130%",
+    "reviewEvidence": {
+      "actualProducer": "김재겸",
+      "semantic": {
+        "status": "PASS",
+        "reviewer": "신기훈",
+        "evidence": "전국체전 경기장 워밍업 구역, 벤치에 앉아 뻗은 무릎 위 \"딱\" 효과선, 구급 상자(테이프는 상자 안), 운동화, 몸 푸는 선수들. 결승·기권 결과 없음.",
+        "note": "",
+        "source": "docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09)"
+      },
+      "visual": {
+        "status": "PASS",
+        "reviewer": "정원률",
+        "note": "공통 도트 화풍과 1인칭 구도가 자연스럽다.",
+        "source": "docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09)"
+      },
+      "crop": {
+        "status": "CROP_OK",
+        "reviewer": "김재겸",
+        "visibleX_1080x2400": "0.331..0.669 / 0.318..0.682",
+        "visibleX_360x640": "0.289..0.711",
+        "captureSha256": "e1daffb2c36e143d35b020fb705fec2c981acc65778748d3bd2d3f8d01ab4a23",
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_path_fit_04_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "e1daffb2c36e143d35b020fb705fec2c981acc65778748d3bd2d3f8d01ab4a23"
+        }
+      }
+    },
+    "resolvedIssueEvidence": {
+      "path_fit_04": "전국체전 경기장 워밍업 구역, 벤치에 앉아 뻗은 무릎 위 \"딱\" 효과선, 구급 상자(테이프는 상자 안), 운동화, 몸 푸는 선수들. 결승·기권 결과 없음."
+    }
+  },
+  {
+    "groupId": "grp_teen_taekwondo_belt",
+    "imageId": "img_path_fit_11_001",
+    "assetPath": "followup_20261031/img_path_fit_11_001.png",
+    "sha256": "d32dd1fd8c620c17eca5cd046670563be21ab54d47ed9fa1e3ba91bce32001a4",
+    "approvalStatus": "CANDIDATE",
+    "eventIds": [
+      "path_fit_11"
+    ],
+    "eventSourceHashes": {
+      "path_fit_11": "687faad707de352e57cbb70b1b55733c9dfcbf9b378d6a22c7e201f3184bcf47"
+    },
+    "semanticReviewer": "신기훈 2026-11-09 PASS (docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09))",
+    "visualReviewer": "정원률 2026-11-09 PASS (docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09))",
+    "cropReviewer": "김재겸 SceneCropReviewTest 실제 라우팅 2026-11-11 (1080x2400 · 360x740 프레임, 일치도 1.000) + 2026-11-09 360x640dp 글꼴 130%",
+    "reviewEvidence": {
+      "actualProducer": "김재겸",
+      "semantic": {
+        "status": "PASS",
+        "reviewer": "신기훈",
+        "evidence": "태권도장 매트 위에서 관장님이 띠를 고쳐 매 주며 말함, 뒤에 겨루기 보호구. 대회 결과 없음.",
+        "note": "",
+        "source": "docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09)"
+      },
+      "visual": {
+        "status": "PASS",
+        "reviewer": "정원률",
+        "note": "공통 도트 화풍과 1인칭 구도가 자연스럽다.",
+        "source": "docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09)"
+      },
+      "crop": {
+        "status": "CROP_OK",
+        "reviewer": "김재겸",
+        "visibleX_1080x2400": "0.331..0.669 / 0.318..0.682",
+        "visibleX_360x640": "0.289..0.711",
+        "captureSha256": "88822daf17509d1e42c1fa7f31b130ea45fb7e78cc570101b84f5a2960f3cb25",
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_path_fit_11_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "88822daf17509d1e42c1fa7f31b130ea45fb7e78cc570101b84f5a2960f3cb25"
+        }
+      }
+    },
+    "resolvedIssueEvidence": {
+      "path_fit_11": "태권도장 매트 위에서 관장님이 띠를 고쳐 매 주며 말함, 뒤에 겨루기 보호구. 대회 결과 없음."
+    }
+  },
+  {
+    "groupId": "grp_old_knee_window_call",
+    "imageId": "img_path_fit_16_001",
+    "assetPath": "followup_20261031/img_path_fit_16_001.png",
+    "sha256": "0a73ce70eb7f353ac38bb1527183df50beab35c61434d9811e1f715475d08f3d",
+    "approvalStatus": "CANDIDATE",
+    "eventIds": [
+      "path_fit_16"
+    ],
+    "eventSourceHashes": {
+      "path_fit_16": "10b28b8f8c2eee11d9b84e3578d9045020a8905c72138baa4f9fee0a62db4a84"
+    },
+    "semanticReviewer": "신기훈 2026-11-09 PASS (docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09))",
+    "visualReviewer": "정원률 2026-11-09 PASS (docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09))",
+    "cropReviewer": "김재겸 SceneCropReviewTest 실제 라우팅 2026-11-11 (1080x2400 · 360x740 프레임, 일치도 1.000) + 2026-11-09 360x640dp 글꼴 130%",
+    "reviewEvidence": {
+      "actualProducer": "김재겸",
+      "semantic": {
+        "status": "PASS",
+        "reviewer": "신기훈",
+        "evidence": "맑은 창가에서 무릎 찜질팩을 짚은 노년 손, 옛 동료 통화 화면, 옛 팀 단체 사진과 메달. 수술·모임 결과 없음.",
+        "note": "",
+        "source": "docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09)"
+      },
+      "visual": {
+        "status": "PASS",
+        "reviewer": "정원률",
+        "note": "공통 도트 화풍과 1인칭 구도가 자연스럽다.",
+        "source": "docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09)"
+      },
+      "crop": {
+        "status": "CROP_OK",
+        "reviewer": "김재겸",
+        "visibleX_1080x2400": "0.331..0.669 / 0.318..0.682",
+        "visibleX_360x640": "0.289..0.711",
+        "captureSha256": "b4e88d05c45afab9b3a4b2e37c910626f91d3cd2f08b5f9829faf2a27e31016f",
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_path_fit_16_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "b4e88d05c45afab9b3a4b2e37c910626f91d3cd2f08b5f9829faf2a27e31016f"
+        }
+      }
+    },
+    "resolvedIssueEvidence": {
+      "path_fit_16": "맑은 창가에서 무릎 찜질팩을 짚은 노년 손, 옛 동료 통화 화면, 옛 팀 단체 사진과 메달. 수술·모임 결과 없음."
+    }
+  },
+  {
+    "groupId": "grp_ya_two_offers_studio",
+    "imageId": "img_path_hap_03_001",
+    "assetPath": "followup_20261031/img_path_hap_03_001.png",
+    "sha256": "a7af4eb457ed03b3d5f7988e64bed8157cbc76bbb77f838b483ff93f079aca50",
+    "approvalStatus": "CANDIDATE",
+    "eventIds": [
+      "path_hap_03"
+    ],
+    "eventSourceHashes": {
+      "path_hap_03": "efe4f5b44d19cdd8a53a759dddff0ba4cc7e75ba17c957169104166e7f7b0ecf"
+    },
+    "semanticReviewer": "신기훈 2026-11-09 PASS (docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09))",
+    "visualReviewer": "정원률 2026-11-09 PASS (docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09))",
+    "cropReviewer": "김재겸 SceneCropReviewTest 실제 라우팅 2026-11-11 (1080x2400 · 360x740 프레임, 일치도 1.000) + 2026-11-09 360x640dp 글꼴 130%",
+    "reviewEvidence": {
+      "actualProducer": "김재겸",
+      "semantic": {
+        "status": "PASS",
+        "reviewer": "신기훈",
+        "evidence": "자취방 책상에 밤 회사·석양 회사 그림의 합격 통지 두 장, 작업실 스케치와 열쇠, 친구 메시지 휴대폰. 선택 결과 없음.",
+        "note": "",
+        "source": "docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09)"
+      },
+      "visual": {
+        "status": "PASS",
+        "reviewer": "정원률",
+        "note": "공통 도트 화풍과 1인칭 구도가 자연스럽다.",
+        "source": "docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09)"
+      },
+      "crop": {
+        "status": "CROP_OK",
+        "reviewer": "김재겸",
+        "visibleX_1080x2400": "0.331..0.669 / 0.318..0.682",
+        "visibleX_360x640": "0.289..0.711",
+        "captureSha256": "c28d82ffc0c18bee96d9d8dc34d1b2e76afb6f69e6bcd6b3caacf6b261dec2bb",
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_path_hap_03_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "c28d82ffc0c18bee96d9d8dc34d1b2e76afb6f69e6bcd6b3caacf6b261dec2bb"
+        }
+      }
+    },
+    "resolvedIssueEvidence": {
+      "path_hap_03": "자취방 책상에 밤 회사·석양 회사 그림의 합격 통지 두 장, 작업실 스케치와 열쇠, 친구 메시지 휴대폰. 선택 결과 없음."
+    }
+  },
+  {
+    "groupId": "grp_old_welfare_board_guitar",
+    "imageId": "img_path_hap_08_001",
+    "assetPath": "followup_20261031/img_path_hap_08_001.png",
+    "sha256": "eac93c3eb7a2fc9fd7474a8565b247158b5bd52b613624b3606ce5810d02bdad",
+    "approvalStatus": "CANDIDATE",
+    "eventIds": [
+      "path_hap_08"
+    ],
+    "eventSourceHashes": {
+      "path_hap_08": "c257e9d35d73cdf8e09170219a111538a2407ce723001e62f81bdea2d596ed8d"
+    },
+    "semanticReviewer": "신기훈 2026-11-09 PASS (docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09))",
+    "visualReviewer": "정원률 2026-11-09 PASS (docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09))",
+    "cropReviewer": "김재겸 SceneCropReviewTest 실제 라우팅 2026-11-11 (1080x2400 · 360x740 프레임, 일치도 1.000) + 2026-11-09 360x640dp 글꼴 130%",
+    "reviewEvidence": {
+      "actualProducer": "김재겸",
+      "semantic": {
+        "status": "PASS",
+        "reviewer": "신기훈",
+        "evidence": "노인복지관 게시판의 기타 교실 공고(글자 없음), 색 점 신청자 명단, 짚는 노년 손, 어르신들. 수업 결과 없음.",
+        "note": "",
+        "source": "docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09)"
+      },
+      "visual": {
+        "status": "PASS",
+        "reviewer": "정원률",
+        "note": "기타 공고와 스티커를 글자 없이 구분할 수 있다. 스티커 개수와 본문 수치 일치는 의미 검수 의견을 따른다.",
+        "source": "docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09)"
+      },
+      "crop": {
+        "status": "CROP_OK",
+        "reviewer": "김재겸",
+        "visibleX_1080x2400": "0.331..0.669 / 0.318..0.682",
+        "visibleX_360x640": "0.289..0.711",
+        "captureSha256": "b702653e76f8523c5f6c7c5bc8227fd7524b3dc4b69fbfabf2d0daa165c1b297",
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_path_hap_08_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "b702653e76f8523c5f6c7c5bc8227fd7524b3dc4b69fbfabf2d0daa165c1b297"
+        }
+      }
+    },
+    "resolvedIssueEvidence": {
+      "path_hap_08": "노인복지관 게시판의 기타 교실 공고(글자 없음), 색 점 신청자 명단, 짚는 노년 손, 어르신들. 수업 결과 없음."
+    }
+  },
+  {
+    "groupId": "grp_old_art_boxes_home",
+    "imageId": "img_path_hap_15_001",
+    "assetPath": "followup_20261031/img_path_hap_15_001.png",
+    "sha256": "64af2fb395ce1b0f6850ce5c0896ed81c8ccbd4c4672de3c269b0ce16c949b0b",
+    "approvalStatus": "CANDIDATE",
+    "eventIds": [
+      "path_hap_15"
+    ],
+    "eventSourceHashes": {
+      "path_hap_15": "38c2fe8c45c2c66ce6e747a934b4e3b655d3dc80f5f556ee586a502c51b7055a"
+    },
+    "semanticReviewer": "신기훈 2026-11-09 PASS (docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09))",
+    "visualReviewer": "정원률 2026-11-09 PASS (docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09))",
+    "cropReviewer": "김재겸 SceneCropReviewTest 실제 라우팅 2026-11-11 (1080x2400 · 360x740 프레임, 일치도 1.000) + 2026-11-09 360x640dp 글꼴 130%",
+    "reviewEvidence": {
+      "actualProducer": "김재겸",
+      "semantic": {
+        "status": "PASS",
+        "reviewer": "신기훈",
+        "evidence": "거실에 그림·공예품이 담긴 상자 열두 개, 탁자 위 주민센터 그림 대관 안내문, 노년 손. 전시 결과 없음.",
+        "note": "",
+        "source": "docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09)"
+      },
+      "visual": {
+        "status": "PASS",
+        "reviewer": "정원률",
+        "note": "공통 도트 화풍과 1인칭 구도가 자연스럽다.",
+        "source": "docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09)"
+      },
+      "crop": {
+        "status": "CROP_OK",
+        "reviewer": "김재겸",
+        "visibleX_1080x2400": "0.331..0.669 / 0.318..0.682",
+        "visibleX_360x640": "0.289..0.711",
+        "captureSha256": "13e2ec04dae029e25eef353b4ee54a098f1bcbb99cb0a53a5351d6a2f9e9208c",
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_path_hap_15_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "13e2ec04dae029e25eef353b4ee54a098f1bcbb99cb0a53a5351d6a2f9e9208c"
+        }
+      }
+    },
+    "resolvedIssueEvidence": {
+      "path_hap_15": "거실에 그림·공예품이 담긴 상자 열두 개, 탁자 위 주민센터 그림 대관 안내문, 노년 손. 전시 결과 없음."
+    }
+  },
+  {
+    "groupId": "grp_adult_hiking_leader_offer",
+    "imageId": "img_path_hea_04_001",
+    "assetPath": "followup_20261031/img_path_hea_04_001.png",
+    "sha256": "0d44da57cc255e52d4ddeda522156f08ffa2b654e81c1278437d7fc464890cec",
+    "approvalStatus": "CANDIDATE",
+    "eventIds": [
+      "path_hea_04"
+    ],
+    "eventSourceHashes": {
+      "path_hea_04": "44ed3fc4a7a4a33b9e5b704dd9d707ff75b77f1927652d56290b01c62e0c4c4e"
+    },
+    "semanticReviewer": "신기훈 2026-11-09 PASS (docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09))",
+    "visualReviewer": "정원률 2026-11-09 PASS (docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09))",
+    "cropReviewer": "김재겸 SceneCropReviewTest 실제 라우팅 2026-11-11 (1080x2400 · 360x740 프레임, 일치도 1.000) + 2026-11-09 360x640dp 글꼴 130%",
+    "reviewEvidence": {
+      "actualProducer": "김재겸",
+      "semantic": {
+        "status": "PASS",
+        "reviewer": "신기훈",
+        "evidence": "가을 등산로 쉼터에서 이사 가는 대장이 대장 깃발을 내밀고 회원들이 박수, 휴대폰 단톡의 박수 이모티콘. 수락 결과 없음.",
+        "note": "",
+        "source": "docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09)"
+      },
+      "visual": {
+        "status": "PASS",
+        "reviewer": "정원률",
+        "note": "공통 도트 화풍과 1인칭 구도가 자연스럽다.",
+        "source": "docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09)"
+      },
+      "crop": {
+        "status": "CROP_OK",
+        "reviewer": "김재겸",
+        "visibleX_1080x2400": "0.331..0.669 / 0.318..0.682",
+        "visibleX_360x640": "0.289..0.711",
+        "captureSha256": "c147acc851aa05aef2275e0e71210542ad9095cccf1bb4e57eaa9d87ac65508f",
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_path_hea_04_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "c147acc851aa05aef2275e0e71210542ad9095cccf1bb4e57eaa9d87ac65508f"
+        }
+      }
+    },
+    "resolvedIssueEvidence": {
+      "path_hea_04": "가을 등산로 쉼터에서 이사 가는 대장이 대장 깃발을 내밀고 회원들이 박수, 휴대폰 단톡의 박수 이모티콘. 수락 결과 없음."
+    }
+  },
+  {
+    "groupId": "grp_adult_father_diabetes_dinner",
+    "imageId": "img_path_hea_11_001",
+    "assetPath": "followup_20261031/img_path_hea_11_001.png",
+    "sha256": "769b1132789267cc1aa9026a16614fba535e03b56a94c8ea79f215292a17de08",
+    "approvalStatus": "CANDIDATE",
+    "eventIds": [
+      "path_hea_11"
+    ],
+    "eventSourceHashes": {
+      "path_hea_11": "a1b09962c29fac67ef341ca9ed23c6dded22ddfac8af1bfe8dd0b2a1d72f02ac"
+    },
+    "semanticReviewer": "신기훈 2026-11-09 PASS (docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09))",
+    "visualReviewer": "정원률 2026-11-09 PASS (docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09))",
+    "cropReviewer": "김재겸 SceneCropReviewTest 실제 라우팅 2026-11-11 (1080x2400 · 360x740 프레임, 일치도 1.000) + 2026-11-09 360x640dp 글꼴 130%",
+    "reviewEvidence": {
+      "actualProducer": "김재겸",
+      "semantic": {
+        "status": "PASS",
+        "reviewer": "신기훈",
+        "evidence": "저녁 식탁, 아버지가 \"별거 아니래\" 손짓을 하고 앞에 수북한 잡채, 식탁 위 빨간 십자 진단서, 가족들. 식단·등산 결과 없음.",
+        "note": "",
+        "source": "docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09)"
+      },
+      "visual": {
+        "status": "PASS",
+        "reviewer": "정원률",
+        "note": "공통 도트 화풍과 1인칭 구도가 자연스럽다.",
+        "source": "docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09)"
+      },
+      "crop": {
+        "status": "CROP_OK",
+        "reviewer": "김재겸",
+        "visibleX_1080x2400": "0.331..0.669 / 0.318..0.682",
+        "visibleX_360x640": "0.289..0.711",
+        "captureSha256": "9d2946c5399e78bd744413b5e44f53cd3ff1a431108c5e9061105a9693364d0e",
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_path_hea_11_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "9d2946c5399e78bd744413b5e44f53cd3ff1a431108c5e9061105a9693364d0e"
+        }
+      }
+    },
+    "resolvedIssueEvidence": {
+      "path_hea_11": "저녁 식탁, 아버지가 \"별거 아니래\" 손짓을 하고 앞에 수북한 잡채, 식탁 위 빨간 십자 진단서, 가족들. 식단·등산 결과 없음."
+    }
+  },
+  {
+    "groupId": "grp_teen_home_ec_vegetables",
+    "imageId": "img_path_hea_16_001",
+    "assetPath": "followup_20261031/img_path_hea_16_001.png",
+    "sha256": "bb0443474c47d3a62ac170f6bbb556466e08f3cacd38b3fbbf28d31d57f81cba",
+    "approvalStatus": "CANDIDATE",
+    "eventIds": [
+      "path_hea_16"
+    ],
+    "eventSourceHashes": {
+      "path_hea_16": "497f90dd80a4d3b036c4f193c089192a9ae98052b058441bd3d326fc65493547"
+    },
+    "semanticReviewer": "신기훈 2026-11-09 PASS (docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09))",
+    "visualReviewer": "정원률 2026-11-09 PASS (docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09))",
+    "cropReviewer": "김재겸 SceneCropReviewTest 실제 라우팅 2026-11-11 (1080x2400 · 360x740 프레임, 일치도 1.000) + 2026-11-09 360x640dp 글꼴 130%",
+    "reviewEvidence": {
+      "actualProducer": "김재겸",
+      "semantic": {
+        "status": "PASS",
+        "reviewer": "신기훈",
+        "evidence": "가정실 조리대 도마 위 브로콜리·당근·시금치, 앞치마를 두른 조원 둘, 뒤 가정 선생님. 요리 결과 없음.",
+        "note": "",
+        "source": "docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09)"
+      },
+      "visual": {
+        "status": "PASS",
+        "reviewer": "정원률",
+        "note": "공통 도트 화풍과 1인칭 구도가 자연스럽다.",
+        "source": "docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09)"
+      },
+      "crop": {
+        "status": "CROP_OK",
+        "reviewer": "김재겸",
+        "visibleX_1080x2400": "0.331..0.669 / 0.318..0.682",
+        "visibleX_360x640": "0.289..0.711",
+        "captureSha256": "1e3667807e65a0ad999f07658961b2918041557f98296832e7868cfd43cb20e5",
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_path_hea_16_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "1e3667807e65a0ad999f07658961b2918041557f98296832e7868cfd43cb20e5"
+        }
+      }
+    },
+    "resolvedIssueEvidence": {
+      "path_hea_16": "가정실 조리대 도마 위 브로콜리·당근·시금치, 앞치마를 두른 조원 둘, 뒤 가정 선생님. 요리 결과 없음."
+    }
+  },
+  {
+    "groupId": "grp_ya_gap_year_desk",
+    "imageId": "img_path_int_05_001",
+    "assetPath": "followup_20261031/img_path_int_05_001.png",
+    "sha256": "a8d84237f74e78b362fbfbc75760fbd8ff2da0ae5599c45e6399a2a08d5c5ceb",
+    "approvalStatus": "CANDIDATE",
+    "eventIds": [
+      "path_int_05"
+    ],
+    "eventSourceHashes": {
+      "path_int_05": "d531fe19f764bf13fe2ab35dfa93983876e019e1b38214f268c8f3ff9ea25441"
+    },
+    "semanticReviewer": "신기훈 2026-11-09 PASS (docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09))",
+    "visualReviewer": "정원률 2026-11-09 PASS (docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09))",
+    "cropReviewer": "김재겸 SceneCropReviewTest 실제 라우팅 2026-11-11 (1080x2400 · 360x740 프레임, 일치도 1.000) + 2026-11-09 360x640dp 글꼴 130%",
+    "reviewEvidence": {
+      "actualProducer": "김재겸",
+      "semantic": {
+        "status": "PASS",
+        "reviewer": "신기훈",
+        "evidence": "밤 독서실 칸막이 책상에 연필 아이콘 문제집과 모니터 아이콘 코딩 책이 나란히, 엄마 메시지 휴대폰. 선택 결과 없음.",
+        "note": "",
+        "source": "docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09)"
+      },
+      "visual": {
+        "status": "PASS",
+        "reviewer": "정원률",
+        "note": "공통 도트 화풍과 1인칭 구도가 자연스럽다.",
+        "source": "docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09)"
+      },
+      "crop": {
+        "status": "CROP_OK",
+        "reviewer": "김재겸",
+        "visibleX_1080x2400": "0.331..0.669 / 0.318..0.682",
+        "visibleX_360x640": "0.289..0.711",
+        "captureSha256": "b95081831ee579c03fd81705ad52b15f733fbb1b32c864f9897733ff70c0f1e2",
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_path_int_05_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "b95081831ee579c03fd81705ad52b15f733fbb1b32c864f9897733ff70c0f1e2"
+        }
+      }
+    },
+    "resolvedIssueEvidence": {
+      "path_int_05": "밤 독서실 칸막이 책상에 연필 아이콘 문제집과 모니터 아이콘 코딩 책이 나란히, 엄마 메시지 휴대폰. 선택 결과 없음."
+    }
+  },
+  {
+    "groupId": "grp_ya_lab_paper_authors",
+    "imageId": "img_path_int_12_001",
+    "assetPath": "followup_20261031/img_path_int_12_001.png",
+    "sha256": "ba02a9e32db0d842911c56fd34de5b355e8573753ab6a338f2a1f74587cbfcf3",
+    "approvalStatus": "CANDIDATE",
+    "eventIds": [
+      "path_int_12"
+    ],
+    "eventSourceHashes": {
+      "path_int_12": "ef2e4e810267fbc931b8e7e9013dfe5b249a7e6545adf9e978af403f536ed66e"
+    },
+    "semanticReviewer": "신기훈 2026-11-09 PASS (docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09))",
+    "visualReviewer": "정원률 2026-11-09 PASS (docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09))",
+    "cropReviewer": "김재겸 SceneCropReviewTest 실제 라우팅 2026-11-11 (1080x2400 · 360x740 프레임, 일치도 1.000) + 2026-11-09 360x640dp 글꼴 130%",
+    "reviewEvidence": {
+      "actualProducer": "김재겸",
+      "semantic": {
+        "status": "PASS",
+        "reviewer": "신기훈",
+        "evidence": "저녁 연구실, 두 손에 든 논문 인쇄본 저자 칸(사람 아이콘 사이 빈칸), 어깨를 으쓱하는 선배, 실험 노트·장비. 항의 결과 없음.",
+        "note": "",
+        "source": "docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09)"
+      },
+      "visual": {
+        "status": "PASS",
+        "reviewer": "정원률",
+        "note": "공통 도트 화풍과 1인칭 구도가 자연스럽다.",
+        "source": "docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09)"
+      },
+      "crop": {
+        "status": "CROP_OK",
+        "reviewer": "김재겸",
+        "visibleX_1080x2400": "0.331..0.669 / 0.318..0.682",
+        "visibleX_360x640": "0.289..0.711",
+        "captureSha256": "8614c62a632052d93a51b2d801106787a96294d0aead0c37a39a6b7b6cc0bb3f",
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_path_int_12_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "8614c62a632052d93a51b2d801106787a96294d0aead0c37a39a6b7b6cc0bb3f"
+        }
+      }
+    },
+    "resolvedIssueEvidence": {
+      "path_int_12": "저녁 연구실, 두 손에 든 논문 인쇄본 저자 칸(사람 아이콘 사이 빈칸), 어깨를 으쓱하는 선배, 실험 노트·장비. 항의 결과 없음."
+    }
+  },
+  {
+    "groupId": "grp_old_welfare_board_phone",
+    "imageId": "img_path_int_17_001",
+    "assetPath": "followup_20261031/img_path_int_17_001.png",
+    "sha256": "605605e6b299ac5d2cc4a82942566cff0ccd6a7b9de733064d46792badbf06c1",
+    "approvalStatus": "CANDIDATE",
+    "eventIds": [
+      "path_int_17"
+    ],
+    "eventSourceHashes": {
+      "path_int_17": "3d668a77b39d1afeb6ad0e30e499edd9e378050f3c0d00bb7f32ffabfa74fdcc"
+    },
+    "semanticReviewer": "신기훈 2026-11-09 PASS (docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09))",
+    "visualReviewer": "정원률 2026-11-09 PASS (docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09))",
+    "cropReviewer": "김재겸 SceneCropReviewTest 실제 라우팅 2026-11-11 (1080x2400 · 360x740 프레임, 일치도 1.000) + 2026-11-09 360x640dp 글꼴 130%",
+    "reviewEvidence": {
+      "actualProducer": "김재겸",
+      "semantic": {
+        "status": "PASS",
+        "reviewer": "신기훈",
+        "evidence": "복지관 게시판의 스마트폰 교실 포스터(휴대폰·강사 어르신 그림), 노년 손의 스마트폰, 지나가는 어르신들. 강사 결과 없음.",
+        "note": "",
+        "source": "docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09)"
+      },
+      "visual": {
+        "status": "PASS",
+        "reviewer": "정원률",
+        "note": "공통 도트 화풍과 1인칭 구도가 자연스럽다.",
+        "source": "docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09)"
+      },
+      "crop": {
+        "status": "CROP_OK",
+        "reviewer": "김재겸",
+        "visibleX_1080x2400": "0.331..0.669 / 0.318..0.682",
+        "visibleX_360x640": "0.289..0.711",
+        "captureSha256": "f3032c61cd366e61f8e2dc83ca63ff0ef9f9879a99bb921c5eaa6ea7fb5ac706",
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_path_int_17_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "f3032c61cd366e61f8e2dc83ca63ff0ef9f9879a99bb921c5eaa6ea7fb5ac706"
+        }
+      }
+    },
+    "resolvedIssueEvidence": {
+      "path_int_17": "복지관 게시판의 스마트폰 교실 포스터(휴대폰·강사 어르신 그림), 노년 손의 스마트폰, 지나가는 어르신들. 강사 결과 없음."
+    }
+  },
+  {
+    "groupId": "grp_ya_interview_elevator",
+    "imageId": "img_path_luk_04_001",
+    "assetPath": "followup_20261031/img_path_luk_04_001.png",
+    "sha256": "430dba39ab864f4299b0540f16e7b862163a8cd247e4c467f5135dfb0d93ed3c",
+    "approvalStatus": "CANDIDATE",
+    "eventIds": [
+      "path_luk_04"
+    ],
+    "eventSourceHashes": {
+      "path_luk_04": "bc791eb51a2c6317ed3ee52623b3a73fc345de901aaa7491b6f94fe9ffb5352f"
+    },
+    "semanticReviewer": "신기훈 2026-11-09 PASS (docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09))",
+    "visualReviewer": "정원률 2026-11-09 PASS (docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09))",
+    "cropReviewer": "김재겸 SceneCropReviewTest 실제 라우팅 2026-11-11 (1080x2400 · 360x740 프레임, 일치도 1.000) + 2026-11-09 360x640dp 글꼴 130%",
+    "reviewEvidence": {
+      "actualProducer": "김재겸",
+      "semantic": {
+        "status": "PASS",
+        "reviewer": "신기훈",
+        "evidence": "고층 엘리베이터 안, 내 손의 이력서 파일을 흘끗 보며 말을 거는 중년 직장인, 위 화살표 층 표시(숫자 없음). 면접 결과 없음.",
+        "note": "",
+        "source": "docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09)"
+      },
+      "visual": {
+        "status": "PASS",
+        "reviewer": "정원률",
+        "note": "공통 도트 화풍과 1인칭 구도가 자연스럽다.",
+        "source": "docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09)"
+      },
+      "crop": {
+        "status": "CROP_OK",
+        "reviewer": "김재겸",
+        "visibleX_1080x2400": "0.331..0.669 / 0.318..0.682",
+        "visibleX_360x640": "0.289..0.711",
+        "captureSha256": "79cf95c01e1ed060d492acb60d002baad6f02e2bff661306e2ac1dd4f9c38625",
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_path_luk_04_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "79cf95c01e1ed060d492acb60d002baad6f02e2bff661306e2ac1dd4f9c38625"
+        }
+      }
+    },
+    "resolvedIssueEvidence": {
+      "path_luk_04": "고층 엘리베이터 안, 내 손의 이력서 파일을 흘끗 보며 말을 거는 중년 직장인, 위 화살표 층 표시(숫자 없음). 면접 결과 없음."
+    }
+  },
+  {
+    "groupId": "grp_adult_wet_lottery",
+    "imageId": "img_path_luk_11_001",
+    "assetPath": "followup_20261031/img_path_luk_11_001.png",
+    "sha256": "bf603ab3795b9b58c5f8d09b7e50d6ec9e55f425661d41ea9d62cfbc207928ed",
+    "approvalStatus": "CANDIDATE",
+    "eventIds": [
+      "path_luk_11"
+    ],
+    "eventSourceHashes": {
+      "path_luk_11": "248838d5e56cd9a07cf4f12a341477b97b067aa0eeaae5bdb9c336a8113a8b8d"
+    },
+    "semanticReviewer": "신기훈 2026-11-09 PASS (docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09))",
+    "visualReviewer": "정원률 2026-11-09 PASS (docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09))",
+    "cropReviewer": "김재겸 SceneCropReviewTest 실제 라우팅 2026-11-11 (1080x2400 · 360x740 프레임, 일치도 1.000) + 2026-11-09 360x640dp 글꼴 130%",
+    "reviewEvidence": {
+      "actualProducer": "김재겸",
+      "semantic": {
+        "status": "PASS",
+        "reviewer": "신기훈",
+        "evidence": "세탁기 앞에서 젖은 바지 주머니에서 꺼낸, 번호가 번진 복권(숫자 없음). 당첨 여부 없음.",
+        "note": "",
+        "source": "docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09)"
+      },
+      "visual": {
+        "status": "PASS",
+        "reviewer": "정원률",
+        "note": "공통 도트 화풍과 1인칭 구도가 자연스럽다.",
+        "source": "docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09)"
+      },
+      "crop": {
+        "status": "CROP_OK",
+        "reviewer": "김재겸",
+        "visibleX_1080x2400": "0.331..0.669 / 0.318..0.682",
+        "visibleX_360x640": "0.289..0.711",
+        "captureSha256": "5fc3adaf68af9ae05d70f9981bffdfa914afa6ff32f9d6318e3492b12ffe9539",
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_path_luk_11_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "5fc3adaf68af9ae05d70f9981bffdfa914afa6ff32f9d6318e3492b12ffe9539"
+        }
+      }
+    },
+    "resolvedIssueEvidence": {
+      "path_luk_11": "세탁기 앞에서 젖은 바지 주머니에서 꺼낸, 번호가 번진 복권(숫자 없음). 당첨 여부 없음."
+    }
+  },
+  {
+    "groupId": "grp_old_cruise_prize_call",
+    "imageId": "img_path_luk_16_001",
+    "assetPath": "followup_20261031/img_path_luk_16_001.png",
+    "sha256": "2c0575ee2f1505034ba1e6eca9c090216a571d3809116d7771712d8a6cb39e04",
+    "approvalStatus": "CANDIDATE",
+    "eventIds": [
+      "path_luk_16"
+    ],
+    "eventSourceHashes": {
+      "path_luk_16": "585efc1666e4df5b5f76ca71c0b5ce08e4cb6479a33e5e07f228cae68154a2a5"
+    },
+    "semanticReviewer": "신기훈 2026-11-09 PASS (docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09))",
+    "visualReviewer": "정원률 2026-11-09 PASS (docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09))",
+    "cropReviewer": "김재겸 SceneCropReviewTest 실제 라우팅 2026-11-11 (1080x2400 · 360x740 프레임, 일치도 1.000) + 2026-11-09 360x640dp 글꼴 130%",
+    "reviewEvidence": {
+      "actualProducer": "김재겸",
+      "semantic": {
+        "status": "PASS",
+        "reviewer": "신기훈",
+        "evidence": "거실에서 노년 손에 든 휴대폰의 선물 상자·마트 카트 통화 화면, 탁자 위 크루즈 전단과 응모권. 탑승·양보 결과 없음.",
+        "note": "",
+        "source": "docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09)"
+      },
+      "visual": {
+        "status": "PASS",
+        "reviewer": "정원률",
+        "note": "공통 도트 화풍과 1인칭 구도가 자연스럽다.",
+        "source": "docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09)"
+      },
+      "crop": {
+        "status": "CROP_OK",
+        "reviewer": "김재겸",
+        "visibleX_1080x2400": "0.331..0.669 / 0.318..0.682",
+        "visibleX_360x640": "0.289..0.711",
+        "captureSha256": "debc8d83b6da162d4b656faa0cf0d5f1a0580498a68c110e0ed4ab7087a02d92",
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_path_luk_16_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "debc8d83b6da162d4b656faa0cf0d5f1a0580498a68c110e0ed4ab7087a02d92"
+        }
+      }
+    },
+    "resolvedIssueEvidence": {
+      "path_luk_16": "거실에서 노년 손에 든 휴대폰의 선물 상자·마트 카트 통화 화면, 탁자 위 크루즈 전단과 응모권. 탑승·양보 결과 없음."
+    }
+  },
+  {
+    "groupId": "grp_ya_three_people_offers",
+    "imageId": "img_path_soc_04_001",
+    "assetPath": "followup_20261031/img_path_soc_04_001.png",
+    "sha256": "97e00f2695d66f76a2449104799105522a7850ebb05d9be4325e48e8eed1fa7d",
+    "approvalStatus": "CANDIDATE",
+    "eventIds": [
+      "path_soc_04"
+    ],
+    "eventSourceHashes": {
+      "path_soc_04": "c553758e4736372ee437a3a662fd30da0305b0063aae0af8356ec3460c774f87"
+    },
+    "semanticReviewer": "신기훈 2026-11-09 PASS (docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09))",
+    "visualReviewer": "정원률 2026-11-09 PASS (docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09))",
+    "cropReviewer": "김재겸 SceneCropReviewTest 실제 라우팅 2026-11-11 (1080x2400 · 360x740 프레임, 일치도 1.000) + 2026-11-09 360x640dp 글꼴 130%",
+    "reviewEvidence": {
+      "actualProducer": "김재겸",
+      "semantic": {
+        "status": "PASS",
+        "reviewer": "신기훈",
+        "evidence": "저녁 자취방, 휴대폰에 선배·앞치마 사장님·머리띠 친구 세 사람의 메시지, 벽의 동아리 단체 사진. 선택 결과 없음.",
+        "note": "",
+        "source": "docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09)"
+      },
+      "visual": {
+        "status": "PASS",
+        "reviewer": "정원률",
+        "note": "공통 도트 화풍과 1인칭 구도가 자연스럽다.",
+        "source": "docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09)"
+      },
+      "crop": {
+        "status": "CROP_OK",
+        "reviewer": "김재겸",
+        "visibleX_1080x2400": "0.331..0.669 / 0.318..0.682",
+        "visibleX_360x640": "0.289..0.711",
+        "captureSha256": "10ba2192d1de23924a120d25937032e1888654c98101cc282c1ef3f058e7f075",
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_path_soc_04_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "10ba2192d1de23924a120d25937032e1888654c98101cc282c1ef3f058e7f075"
+        }
+      }
+    },
+    "resolvedIssueEvidence": {
+      "path_soc_04": "저녁 자취방, 휴대폰에 선배·앞치마 사장님·머리띠 친구 세 사람의 메시지, 벽의 동아리 단체 사진. 선택 결과 없음."
+    }
+  },
+  {
+    "groupId": "grp_ya_friends_shared_house",
+    "imageId": "img_path_soc_11_001",
+    "assetPath": "followup_20261031/img_path_soc_11_001.png",
+    "sha256": "74d4186dbfdce4f8a225b95d007c6f26db01817f955b3b80b6488381b40a9a1a",
+    "approvalStatus": "CANDIDATE",
+    "eventIds": [
+      "path_soc_11"
+    ],
+    "eventSourceHashes": {
+      "path_soc_11": "bad9086aada8a3f78751ad37e547118af2a5316e3f9c42c8788944e467315214"
+    },
+    "semanticReviewer": "신기훈 2026-11-09 PASS (docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09))",
+    "visualReviewer": "정원률 2026-11-09 PASS (docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09))",
+    "cropReviewer": "김재겸 SceneCropReviewTest 실제 라우팅 2026-11-11 (1080x2400 · 360x740 프레임, 일치도 1.000) + 2026-11-09 360x640dp 글꼴 130%",
+    "reviewEvidence": {
+      "actualProducer": "김재겸",
+      "semantic": {
+        "status": "PASS",
+        "reviewer": "신기훈",
+        "evidence": "밤 친구 자취방, 동기 둘이 방 세 개 평면도를 가리킴, 탁자 위 청첩장·축의금 봉투와 통장. 동거·소개팅 결과 없음.",
+        "note": "",
+        "source": "docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09)"
+      },
+      "visual": {
+        "status": "PASS",
+        "reviewer": "정원률",
+        "note": "통장 상단은 흐린 사각형으로만 보이고 글자로 판독되지 않는다. 평면도와 통장이 구분된다.",
+        "source": "docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09)"
+      },
+      "crop": {
+        "status": "CROP_OK",
+        "reviewer": "김재겸",
+        "visibleX_1080x2400": "0.331..0.669 / 0.318..0.682",
+        "visibleX_360x640": "0.289..0.711",
+        "captureSha256": "51dd6c0c2ae9fa7ca9b0826a9911a4b96a8b0d4dff28e9596c27ef19d39d7947",
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_path_soc_11_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "51dd6c0c2ae9fa7ca9b0826a9911a4b96a8b0d4dff28e9596c27ef19d39d7947"
+        }
+      }
+    },
+    "resolvedIssueEvidence": {
+      "path_soc_11": "밤 친구 자취방, 동기 둘이 방 세 개 평면도를 가리킴, 탁자 위 청첩장·축의금 봉투와 통장. 동거·소개팅 결과 없음."
+    }
+  },
+  {
+    "groupId": "grp_ya_three_contracts_desk",
+    "imageId": "img_path_wea_03_001",
+    "assetPath": "followup_20261031/img_path_wea_03_001.png",
+    "sha256": "a0de7b1fbeb84a8f81eac0154a3de2067c3d6115381dea2b9d5ba41adb644b43",
+    "approvalStatus": "CANDIDATE",
+    "eventIds": [
+      "path_wea_03"
+    ],
+    "eventSourceHashes": {
+      "path_wea_03": "3c699304f9d3aea6acb171c756604289a4446476c00e32a6933fa8684a542634"
+    },
+    "semanticReviewer": "신기훈 2026-11-09 PASS_WITH_NOTE (docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09))",
+    "visualReviewer": "정원률 2026-11-09 PASS (docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09))",
+    "cropReviewer": "김재겸 SceneCropReviewTest 실제 라우팅 2026-11-11 (1080x2400 · 360x740 프레임, 일치도 1.000) + 2026-11-09 360x640dp 글꼴 130%",
+    "reviewEvidence": {
+      "actualProducer": "김재겸",
+      "semantic": {
+        "status": "PASS_WITH_NOTE",
+        "reviewer": "신기훈",
+        "evidence": "밤 자취방 책상에 빌딩·성장 그래프·가게+열쇠 그림의 계약서 세 장, 펜을 든 손. 서명된 계약서 없음.",
+        "note": "메모: 펜을 든 손이 계약서 위로 들려 있어 서명 직전으로 읽힐 여지가 있다. 특정 계약서 위는 아니라 수정 필수는 아님.",
+        "source": "docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09)"
+      },
+      "visual": {
+        "status": "PASS",
+        "reviewer": "정원률",
+        "note": "빌딩·차트·가게 아이콘으로 세 문서를 구분할 수 있다. 오른쪽 열쇠 끝은 세로에서 잘릴 수 있다.",
+        "source": "docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09)"
+      },
+      "crop": {
+        "status": "CROP_OK_NOTE",
+        "reviewer": "김재겸",
+        "visibleX_1080x2400": "0.331..0.669 / 0.318..0.682",
+        "visibleX_360x640": "0.289..0.711",
+        "captureSha256": "09cf5e6c5b687089ecf6079b30376a606596602fbdc1caa29548d4cd04be7644",
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_path_wea_03_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "09cf5e6c5b687089ecf6079b30376a606596602fbdc1caa29548d4cd04be7644"
+        }
+      }
+    },
+    "resolvedIssueEvidence": {
+      "path_wea_03": "밤 자취방 책상에 빌딩·성장 그래프·가게+열쇠 그림의 계약서 세 장, 펜을 든 손. 서명된 계약서 없음."
+    }
+  },
+  {
+    "groupId": "grp_mid_acquisition_call",
+    "imageId": "img_path_wea_08_001",
+    "assetPath": "followup_20261031/img_path_wea_08_001.png",
+    "sha256": "87e874120c8d0c14e0a433882443ebd15ea9fd6ed0ed0716773d9b1edc46be31",
+    "approvalStatus": "CANDIDATE",
+    "eventIds": [
+      "path_wea_08"
+    ],
+    "eventSourceHashes": {
+      "path_wea_08": "98e4a5150af9516bd3b65b1c46f8d57eb814197d0e12a586ec69088a93404040"
+    },
+    "semanticReviewer": "신기훈 2026-11-09 PASS (docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09))",
+    "visualReviewer": "정원률 2026-11-09 PASS (docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09))",
+    "cropReviewer": "김재겸 SceneCropReviewTest 실제 라우팅 2026-11-11 (1080x2400 · 360x740 프레임, 일치도 1.000) + 2026-11-09 360x640dp 글꼴 130%",
+    "reviewEvidence": {
+      "actualProducer": "김재겸",
+      "semantic": {
+        "status": "PASS",
+        "reviewer": "신기훈",
+        "evidence": "대표실 책상에서 모르는 번호(빈 프로필) 통화 화면, 유리벽 너머 일하는 직원들, 직원 단체 사진. 매각 결과 없음.",
+        "note": "",
+        "source": "docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09)"
+      },
+      "visual": {
+        "status": "PASS",
+        "reviewer": "정원률",
+        "note": "공통 도트 화풍과 1인칭 구도가 자연스럽다.",
+        "source": "docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09)"
+      },
+      "crop": {
+        "status": "CROP_OK",
+        "reviewer": "김재겸",
+        "visibleX_1080x2400": "0.331..0.669 / 0.318..0.682",
+        "visibleX_360x640": "0.289..0.711",
+        "captureSha256": "e60ec8204762761f1170d14ea53959539577ead652923082392d7b2d754829ff",
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_path_wea_08_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "e60ec8204762761f1170d14ea53959539577ead652923082392d7b2d754829ff"
+        }
+      }
+    },
+    "resolvedIssueEvidence": {
+      "path_wea_08": "대표실 책상에서 모르는 번호(빈 프로필) 통화 화면, 유리벽 너머 일하는 직원들, 직원 단체 사진. 매각 결과 없음."
+    }
+  },
+  {
+    "groupId": "grp_mid_exec_offer_dinner",
+    "imageId": "img_path_wea_15_001",
+    "assetPath": "followup_20261031/img_path_wea_15_001.png",
+    "sha256": "a9de12a225296ef213c19e7aaf46585a6c297bc7e3264c375e41305e3c8d9ca0",
+    "approvalStatus": "CANDIDATE",
+    "eventIds": [
+      "path_wea_15"
+    ],
+    "eventSourceHashes": {
+      "path_wea_15": "eee182599ec8a2d11de57cc0e74af0206b73c5801d61ee4287b07b681042c28f"
+    },
+    "semanticReviewer": "신기훈 2026-11-09 PASS (docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09))",
+    "visualReviewer": "정원률 2026-11-09 PASS (docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09))",
+    "cropReviewer": "김재겸 SceneCropReviewTest 실제 라우팅 2026-11-11 (1080x2400 · 360x740 프레임, 일치도 1.000) + 2026-11-09 360x640dp 글꼴 130%",
+    "reviewEvidence": {
+      "actualProducer": "김재겸",
+      "semantic": {
+        "status": "PASS",
+        "reviewer": "신기훈",
+        "evidence": "고급 식당 저녁 1:1 자리, 마주 앉은 대표가 손을 내밀며 제안, 와인잔·스테이크. 수락 결과 없음.",
+        "note": "",
+        "source": "docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09)"
+      },
+      "visual": {
+        "status": "PASS",
+        "reviewer": "정원률",
+        "note": "공통 도트 화풍과 1인칭 구도가 자연스럽다.",
+        "source": "docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09)"
+      },
+      "crop": {
+        "status": "CROP_OK",
+        "reviewer": "김재겸",
+        "visibleX_1080x2400": "0.331..0.669 / 0.318..0.682",
+        "visibleX_360x640": "0.289..0.711",
+        "captureSha256": "38d7b50caca63eb1ca6fc381a0fa734a2d01942cf42de37e16fbfab2a3406ac0",
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_path_wea_15_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "38d7b50caca63eb1ca6fc381a0fa734a2d01942cf42de37e16fbfab2a3406ac0"
+        }
+      }
+    },
+    "resolvedIssueEvidence": {
+      "path_wea_15": "고급 식당 저녁 1:1 자리, 마주 앉은 대표가 손을 내밀며 제안, 와인잔·스테이크. 수락 결과 없음."
+    }
+  },
+  {
+    "groupId": "grp_child_picnic_hornet",
+    "imageId": "img_special_hornet_001",
+    "assetPath": "followup_20261031/img_special_hornet_001.png",
+    "sha256": "8b7caf6fe98a443b4375ac009a7aba0545be9c464f7563243cd4046c6223d86a",
+    "approvalStatus": "CANDIDATE",
+    "eventIds": [
+      "special_003"
+    ],
+    "eventSourceHashes": {
+      "special_003": "11de2cae662941b232ba9810595859c2ad1cbb96cd33ef6a97f01d385b8abd17"
+    },
+    "semanticReviewer": "신기훈 2026-11-09 PASS (docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09))",
+    "visualReviewer": "정원률 2026-11-09 PASS (docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09))",
+    "cropReviewer": "김재겸 SceneCropReviewTest 실제 라우팅 2026-11-11 (1080x2400 · 360x740 프레임, 일치도 1.000) + 2026-11-09 360x640dp 글꼴 130%",
+    "reviewEvidence": {
+      "actualProducer": "김재겸",
+      "semantic": {
+        "status": "PASS",
+        "reviewer": "신기훈",
+        "evidence": "가을 소풍 숲, 떨어지는 낙엽 옆 뿌듯한 표정으로 날아가는 장수말벌, 김밥 도시락·돗자리, 놀란 친구들, 멀리 선생님. 쏘인 뒤 반응 선택 없음.",
+        "note": "",
+        "source": "docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09)"
+      },
+      "visual": {
+        "status": "PASS",
+        "reviewer": "정원률",
+        "note": "공통 도트 화풍과 1인칭 구도가 자연스럽다.",
+        "source": "docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09)"
+      },
+      "crop": {
+        "status": "CROP_OK_NOTE",
+        "reviewer": "김재겸",
+        "visibleX_1080x2400": "0.331..0.669 / 0.318..0.682",
+        "visibleX_360x640": "0.289..0.711",
+        "captureSha256": "c558746bfe85e7017a2a9222c70e0f5f9cd0296ea2747711519e91b0888acc0f",
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_special_hornet_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "c558746bfe85e7017a2a9222c70e0f5f9cd0296ea2747711519e91b0888acc0f"
+        }
+      }
+    },
+    "resolvedIssueEvidence": {
+      "special_003": "가을 소풍 숲, 떨어지는 낙엽 옆 뿌듯한 표정으로 날아가는 장수말벌, 김밥 도시락·돗자리, 놀란 친구들, 멀리 선생님. 쏘인 뒤 반응 선택 없음."
+    }
+  },
+  {
+    "groupId": "grp_adult_packed_elevator_boss",
+    "imageId": "img_special_elevator_001",
+    "assetPath": "followup_20261031/img_special_elevator_001.png",
+    "sha256": "988aa3ab5f9c3aa64d5e75e3161f2389f90c1a1f8de66226724665a2d771559e",
+    "approvalStatus": "CANDIDATE",
+    "eventIds": [
+      "special_008"
+    ],
+    "eventSourceHashes": {
+      "special_008": "cc759f67d3e2a3d0492e908d3744dba0465b4124ee539c846a1b1fe8f6a0f358"
+    },
+    "semanticReviewer": "신기훈 2026-11-09 PASS_WITH_NOTE (docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09))",
+    "visualReviewer": "정원률 2026-11-09 PASS (docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09))",
+    "cropReviewer": "김재겸 SceneCropReviewTest 실제 라우팅 2026-11-11 (1080x2400 · 360x740 프레임, 일치도 1.000) + 2026-11-09 360x640dp 글꼴 130%",
+    "reviewEvidence": {
+      "actualProducer": "김재겸",
+      "semantic": {
+        "status": "PASS_WITH_NOTE",
+        "reviewer": "신기훈",
+        "evidence": "출근길 만원 엘리베이터, 바로 옆 사장님(흰머리 정장), 배를 감싼 내 손, 위 화살표 층 표시. 참기·내리기 결과 없음.",
+        "note": "메모: 14층이라는 남은 거리 단서는 본문이 전달.",
+        "source": "docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09)"
+      },
+      "visual": {
+        "status": "PASS",
+        "reviewer": "정원률",
+        "note": "공통 도트 화풍과 1인칭 구도가 자연스럽다.",
+        "source": "docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09)"
+      },
+      "crop": {
+        "status": "CROP_OK",
+        "reviewer": "김재겸",
+        "visibleX_1080x2400": "0.331..0.669 / 0.318..0.682",
+        "visibleX_360x640": "0.289..0.711",
+        "captureSha256": "c8dd0c4b36715486969071a0cc63d754b5ee81c9e2cddf354102040d3a28a175",
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_special_elevator_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "c8dd0c4b36715486969071a0cc63d754b5ee81c9e2cddf354102040d3a28a175"
+        }
+      }
+    },
+    "resolvedIssueEvidence": {
+      "special_008": "출근길 만원 엘리베이터, 바로 옆 사장님(흰머리 정장), 배를 감싼 내 손, 위 화살표 층 표시. 참기·내리기 결과 없음."
+    }
+  },
+  {
+    "groupId": "grp_infant_soap_bubble_hiccup",
+    "imageId": "img_special_bubble_001",
+    "assetPath": "followup_20261031/img_special_bubble_001.png",
+    "sha256": "dd6b0234e1a317f812b21b7578abb5b89d6b99f185b17ff8d932af7e2ab2a4ab",
+    "approvalStatus": "CANDIDATE",
+    "eventIds": [
+      "special_013"
+    ],
+    "eventSourceHashes": {
+      "special_013": "bc01b983f715f7f0edb409300117edc8feef45b75d3d511e9094833ec7a86065"
+    },
+    "semanticReviewer": "신기훈 2026-11-09 PASS (docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09))",
+    "visualReviewer": "정원률 2026-11-09 PASS (docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09))",
+    "cropReviewer": "김재겸 SceneCropReviewTest 실제 라우팅 2026-11-11 (1080x2400 · 360x740 프레임, 일치도 1.000) + 2026-11-09 360x640dp 글꼴 130%",
+    "reviewEvidence": {
+      "actualProducer": "김재겸",
+      "semantic": {
+        "status": "PASS",
+        "reviewer": "신기훈",
+        "evidence": "마당 영아 시점, 비눗물 통과 막대를 쥔 아기 손, 입 쪽에서 위로 이어지는 비눗방울, 멀리 빨래 너는 엄마. 엄마 부르기 결과 없음.",
+        "note": "",
+        "source": "docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09)"
+      },
+      "visual": {
+        "status": "PASS",
+        "reviewer": "정원률",
+        "note": "공통 도트 화풍과 1인칭 구도가 자연스럽다.",
+        "source": "docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09)"
+      },
+      "crop": {
+        "status": "CROP_OK",
+        "reviewer": "김재겸",
+        "visibleX_1080x2400": "0.331..0.669 / 0.318..0.682",
+        "visibleX_360x640": "0.289..0.711",
+        "captureSha256": "baec91929c121a6599658b8cb9a4210c378cabf05644cb3c3ddba0eaa6164556",
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_special_bubble_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "baec91929c121a6599658b8cb9a4210c378cabf05644cb3c3ddba0eaa6164556"
+        }
+      }
+    },
+    "resolvedIssueEvidence": {
+      "special_013": "마당 영아 시점, 비눗물 통과 막대를 쥔 아기 손, 입 쪽에서 위로 이어지는 비눗방울, 멀리 빨래 너는 엄마. 엄마 부르기 결과 없음."
+    }
+  },
+  {
+    "groupId": "grp_adult_revolving_door",
+    "imageId": "img_special_revolving_door_001",
+    "assetPath": "followup_20261031/img_special_revolving_door_001.png",
+    "sha256": "2090848e90dd24d366c093c3129da4b9a47c68ad12eb6396e846cb6e9d92bfc5",
+    "approvalStatus": "CANDIDATE",
+    "eventIds": [
+      "special_018"
+    ],
+    "eventSourceHashes": {
+      "special_018": "f75b6399fb9a3dedc9d8d28e255ac2e7405d53c7c9a26c1f336aa76f92ef10b4"
+    },
+    "semanticReviewer": "신기훈 2026-11-09 PASS_WITH_NOTE (docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09))",
+    "visualReviewer": "정원률 2026-11-09 PASS (docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09))",
+    "cropReviewer": "김재겸 SceneCropReviewTest 실제 라우팅 2026-11-11 (1080x2400 · 360x740 프레임, 일치도 1.000) + 2026-11-09 360x640dp 글꼴 130%",
+    "reviewEvidence": {
+      "actualProducer": "김재겸",
+      "semantic": {
+        "status": "PASS_WITH_NOTE",
+        "reviewer": "신기훈",
+        "evidence": "회사 로비 회전문 칸 안, 유리 너머 로비와 출근 직전을 가리키는 시계, 사원증, 문 밖을 지나가는 직장인들. 탈출 결과 없음.",
+        "note": "메모: 다섯 바퀴째라는 반복 단서는 본문이 전달.",
+        "source": "docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09)"
+      },
+      "visual": {
+        "status": "PASS",
+        "reviewer": "정원률",
+        "note": "공통 도트 화풍과 1인칭 구도가 자연스럽다.",
+        "source": "docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09)"
+      },
+      "crop": {
+        "status": "CROP_OK",
+        "reviewer": "김재겸",
+        "visibleX_1080x2400": "0.331..0.669 / 0.318..0.682",
+        "visibleX_360x640": "0.289..0.711",
+        "captureSha256": "c94b2252b430754434332d87a6d48f96511e311a7c2018104f6762a0171ee599",
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_special_revolving_door_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "c94b2252b430754434332d87a6d48f96511e311a7c2018104f6762a0171ee599"
+        }
+      }
+    },
+    "resolvedIssueEvidence": {
+      "special_018": "회사 로비 회전문 칸 안, 유리 너머 로비와 출근 직전을 가리키는 시계, 사원증, 문 밖을 지나가는 직장인들. 탈출 결과 없음."
+    }
+  },
+  {
+    "groupId": "grp_teen_lunch_line_cut",
+    "imageId": "img_teen_lunch_line_001",
+    "assetPath": "followup_20261031/img_teen_lunch_line_001.png",
+    "sha256": "f0438e671f68f6dc8b50cfda9e3383a0cd31b8c72fd7500c17b96a939c7ae5fb",
+    "approvalStatus": "CANDIDATE",
+    "eventIds": [
+      "teen_004"
+    ],
+    "eventSourceHashes": {
+      "teen_004": "4b67a4617b07ae292571d1531b60e9651bd4ca27bf77d4524c2a17c285692bdc"
+    },
+    "semanticReviewer": "신기훈 2026-11-09 PASS (docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09))",
+    "visualReviewer": "정원률 2026-11-09 PASS (docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09))",
+    "cropReviewer": "김재겸 SceneCropReviewTest 실제 라우팅 2026-11-11 (1080x2400 · 360x740 프레임, 일치도 1.000) + 2026-11-09 360x640dp 글꼴 130%",
+    "reviewEvidence": {
+      "actualProducer": "김재겸",
+      "semantic": {
+        "status": "PASS",
+        "reviewer": "신기훈",
+        "evidence": "급식실 줄에서 앞 아이가 돌아보며 \"원래 여기였어\" 손짓, 내 식판, 배식대. 대응 결과 없음.",
+        "note": "",
+        "source": "docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09)"
+      },
+      "visual": {
+        "status": "PASS",
+        "reviewer": "정원률",
+        "note": "공통 도트 화풍과 1인칭 구도가 자연스럽다.",
+        "source": "docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09)"
+      },
+      "crop": {
+        "status": "CROP_OK",
+        "reviewer": "김재겸",
+        "visibleX_1080x2400": "0.331..0.669 / 0.318..0.682",
+        "visibleX_360x640": "0.289..0.711",
+        "captureSha256": "6de32b3b2027148beb3ebcd08a20251acbeeb63fefd9bf9d64b0cbcc87978fac",
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_teen_lunch_line_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "6de32b3b2027148beb3ebcd08a20251acbeeb63fefd9bf9d64b0cbcc87978fac"
+        }
+      }
+    },
+    "resolvedIssueEvidence": {
+      "teen_004": "급식실 줄에서 앞 아이가 돌아보며 \"원래 여기였어\" 손짓, 내 식판, 배식대. 대응 결과 없음."
+    }
+  },
+  {
+    "groupId": "grp_teen_endurance_run",
+    "imageId": "img_teen_running_001",
+    "assetPath": "followup_20261031/img_teen_running_001.png",
+    "sha256": "de2741a0b0bd6b58dd577e3b4dfd7a361876dced00678307d0b52dd8ed7b86bd",
+    "approvalStatus": "CANDIDATE",
+    "eventIds": [
+      "teen_009"
+    ],
+    "eventSourceHashes": {
+      "teen_009": "beab2b40c0744aadd23be8faa84fc8adb9822f66d99f902f7587a294043de5dd"
+    },
+    "semanticReviewer": "신기훈 2026-11-09 PASS (docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09))",
+    "visualReviewer": "정원률 2026-11-09 PASS (docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09))",
+    "cropReviewer": "김재겸 SceneCropReviewTest 실제 라우팅 2026-11-11 (1080x2400 · 360x740 프레임, 일치도 1.000) + 2026-11-09 360x640dp 글꼴 130%",
+    "reviewEvidence": {
+      "actualProducer": "김재겸",
+      "semantic": {
+        "status": "PASS",
+        "reviewer": "신기훈",
+        "evidence": "운동장 트랙 오래달리기, 앞서 달리는 학생들, 스톱워치를 든 체육 선생님, 땀 흘리며 옆구리를 움켜쥔 내 손. 완주·쓰러짐 결과 없음.",
+        "note": "",
+        "source": "docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09)"
+      },
+      "visual": {
+        "status": "PASS",
+        "reviewer": "정원률",
+        "note": "공통 도트 화풍과 1인칭 구도가 자연스럽다.",
+        "source": "docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09)"
+      },
+      "crop": {
+        "status": "CROP_OK",
+        "reviewer": "김재겸",
+        "visibleX_1080x2400": "0.331..0.669 / 0.318..0.682",
+        "visibleX_360x640": "0.289..0.711",
+        "captureSha256": "dd4d57098f3326a13e8136b5cab1f8a52e977ded98e1c582cc5d38698318e718",
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_teen_running_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "dd4d57098f3326a13e8136b5cab1f8a52e977ded98e1c582cc5d38698318e718"
+        }
+      }
+    },
+    "resolvedIssueEvidence": {
+      "teen_009": "운동장 트랙 오래달리기, 앞서 달리는 학생들, 스톱워치를 든 체육 선생님, 땀 흘리며 옆구리를 움켜쥔 내 손. 완주·쓰러짐 결과 없음."
+    }
+  },
+  {
+    "groupId": "grp_teen_debate_invite",
+    "imageId": "img_teen_debate_001",
+    "assetPath": "followup_20261031/img_teen_debate_001.png",
+    "sha256": "b2296d69c03669b88c708924cf1d9194fabd75853f36d96c4016cd37d8c2cb8a",
+    "approvalStatus": "CANDIDATE",
+    "eventIds": [
+      "teen_014"
+    ],
+    "eventSourceHashes": {
+      "teen_014": "510def504ec70a1db784ceee5aac1c60b59a6dc97dfac402f8e05d6275932bfa"
+    },
+    "semanticReviewer": "신기훈 2026-11-09 PASS (docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09))",
+    "visualReviewer": "정원률 2026-11-09 PASS (docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09))",
+    "cropReviewer": "김재겸 SceneCropReviewTest 실제 라우팅 2026-11-11 (1080x2400 · 360x740 프레임, 일치도 1.000) + 2026-11-09 360x640dp 글꼴 130%",
+    "reviewEvidence": {
+      "actualProducer": "김재겸",
+      "semantic": {
+        "status": "PASS",
+        "reviewer": "신기훈",
+        "evidence": "국어 교실 교탁에서 선생님이 토론 대진표를 내밀고, 칠판에 전교 회장 포스터, 책 더미. 출전 결과 없음.",
+        "note": "",
+        "source": "docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09)"
+      },
+      "visual": {
+        "status": "PASS",
+        "reviewer": "정원률",
+        "note": "공통 도트 화풍과 1인칭 구도가 자연스럽다.",
+        "source": "docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09)"
+      },
+      "crop": {
+        "status": "CROP_OK_NOTE",
+        "reviewer": "김재겸",
+        "visibleX_1080x2400": "0.331..0.669 / 0.318..0.682",
+        "visibleX_360x640": "0.289..0.711",
+        "captureSha256": "30ccb60ca1322615e1efa6da1e3f492f5a7f7450f17b45769f1af72f2ce09bac",
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_teen_debate_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "30ccb60ca1322615e1efa6da1e3f492f5a7f7450f17b45769f1af72f2ce09bac"
+        }
+      }
+    },
+    "resolvedIssueEvidence": {
+      "teen_014": "국어 교실 교탁에서 선생님이 토론 대진표를 내밀고, 칠판에 전교 회장 포스터, 책 더미. 출전 결과 없음."
+    }
+  },
+  {
+    "groupId": "grp_teen_hs_application",
+    "imageId": "img_teen_high_school_001",
+    "assetPath": "followup_20261031/img_teen_high_school_001.png",
+    "sha256": "e2ccf5cf612a03148f59dccd2d1d3b4a962f1ed90bd47625231fdf0959697df8",
+    "approvalStatus": "CANDIDATE",
+    "eventIds": [
+      "teen_019"
+    ],
+    "eventSourceHashes": {
+      "teen_019": "bf2a46ee484cb3074367f9de52f23341f4375c353dd73d512d763d35ef92e41a"
+    },
+    "semanticReviewer": "신기훈 2026-11-09 PASS (docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09))",
+    "visualReviewer": "정원률 2026-11-09 PASS (docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09))",
+    "cropReviewer": "김재겸 SceneCropReviewTest 실제 라우팅 2026-11-11 (1080x2400 · 360x740 프레임, 일치도 1.000) + 2026-11-09 360x640dp 글꼴 130%",
+    "reviewEvidence": {
+      "actualProducer": "김재겸",
+      "semantic": {
+        "status": "PASS",
+        "reviewer": "신기훈",
+        "evidence": "진학 상담 자리에서 팔짱 낀 담임과 엄마가 압박하고, 내 손에 체크 칸만 있는 원서와 펜, 진학 안내 책자 두 권. 고른 학교 없음.",
+        "note": "",
+        "source": "docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09)"
+      },
+      "visual": {
+        "status": "PASS",
+        "reviewer": "정원률",
+        "note": "공통 도트 화풍과 1인칭 구도가 자연스럽다.",
+        "source": "docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09)"
+      },
+      "crop": {
+        "status": "CROP_OK",
+        "reviewer": "김재겸",
+        "visibleX_1080x2400": "0.331..0.669 / 0.318..0.682",
+        "visibleX_360x640": "0.289..0.711",
+        "captureSha256": "bc1c64a33b1581b8ca691be5901f860c3b3807e247513ba26aac7a762b906a52",
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_teen_high_school_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "bc1c64a33b1581b8ca691be5901f860c3b3807e247513ba26aac7a762b906a52"
+        }
+      }
+    },
+    "resolvedIssueEvidence": {
+      "teen_019": "진학 상담 자리에서 팔짱 낀 담임과 엄마가 압박하고, 내 손에 체크 칸만 있는 원서와 펜, 진학 안내 책자 두 권. 고른 학교 없음."
+    }
+  },
+  {
+    "groupId": "grp_teen_board_wrong_sign",
+    "imageId": "img_teen_wrong_answer_001",
+    "assetPath": "followup_20261031/img_teen_wrong_answer_001.png",
+    "sha256": "5d31de411e494ce85686f8f5bc2910c30cecd9a1206aee5ae6d01542d6919622",
+    "approvalStatus": "CANDIDATE",
+    "eventIds": [
+      "teen_024"
+    ],
+    "eventSourceHashes": {
+      "teen_024": "41d7427aead12973faa3748f964d875c055725af94ac9738aba5d1074d17516a"
+    },
+    "semanticReviewer": "신기훈 2026-11-09 PASS (docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09))",
+    "visualReviewer": "정원률 2026-11-09 PASS (docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09))",
+    "cropReviewer": "김재겸 SceneCropReviewTest 실제 라우팅 2026-11-11 (1080x2400 · 360x740 프레임, 일치도 1.000) + 2026-11-09 360x640dp 글꼴 130%",
+    "reviewEvidence": {
+      "actualProducer": "김재겸",
+      "semantic": {
+        "status": "PASS",
+        "reviewer": "신기훈",
+        "evidence": "수학 교실 칠판에 기호 풀이 세 줄(세 번째 줄 부호만 다름), 판서하는 선생님, 앞 학생들, 내 공책에 같은 풀이. 지적 결과 없음.",
+        "note": "",
+        "source": "docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09)"
+      },
+      "visual": {
+        "status": "PASS",
+        "reviewer": "정원률",
+        "note": "칠판과 공책의 셋째 줄에서 +에서 −로 바뀐 부호가 보인다. 교과 내용은 추상 기호로 유지된다.",
+        "source": "docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09)"
+      },
+      "crop": {
+        "status": "CROP_OK",
+        "reviewer": "김재겸",
+        "visibleX_1080x2400": "0.331..0.669 / 0.318..0.682",
+        "visibleX_360x640": "0.289..0.711",
+        "captureSha256": "01d66a9f657e8097fec4415908075c0ca116fed320223f5dd7314139c676497c",
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_teen_wrong_answer_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "01d66a9f657e8097fec4415908075c0ca116fed320223f5dd7314139c676497c"
+        }
+      }
+    },
+    "resolvedIssueEvidence": {
+      "teen_024": "수학 교실 칠판에 기호 풀이 세 줄(세 번째 줄 부호만 다름), 판서하는 선생님, 앞 학생들, 내 공책에 같은 풀이. 지적 결과 없음."
+    }
+  },
+  {
+    "groupId": "grp_teen_store_bread_rush",
+    "imageId": "img_teen_school_store_001",
+    "assetPath": "followup_20261031/img_teen_school_store_001.png",
+    "sha256": "6655f8ce3a429dee1b75803f9888a6c2d770757ed83eb714d912147b67efe565",
+    "approvalStatus": "CANDIDATE",
+    "eventIds": [
+      "teen_029"
+    ],
+    "eventSourceHashes": {
+      "teen_029": "633a55c6ccba0d4435836fb989d6a0e481f129ffb5a8392fef0705ab68475b30"
+    },
+    "semanticReviewer": "신기훈 2026-11-09 PASS (docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09))",
+    "visualReviewer": "정원률 2026-11-09 PASS (docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09))",
+    "cropReviewer": "김재겸 SceneCropReviewTest 실제 라우팅 2026-11-11 (1080x2400 · 360x740 프레임, 일치도 1.000) + 2026-11-09 360x640dp 글꼴 130%",
+    "reviewEvidence": {
+      "actualProducer": "김재겸",
+      "semantic": {
+        "status": "PASS",
+        "reviewer": "신기훈",
+        "evidence": "4교시 종이 울리는 순간 교실 문을 잡은 내 손, 복도로 먼저 뛰어나가는 아이들. 매점 도착·크림빵 결과 없음.",
+        "note": "",
+        "source": "docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09)"
+      },
+      "visual": {
+        "status": "PASS",
+        "reviewer": "정원률",
+        "note": "공통 도트 화풍과 1인칭 구도가 자연스럽다.",
+        "source": "docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09)"
+      },
+      "crop": {
+        "status": "CROP_OK",
+        "reviewer": "김재겸",
+        "visibleX_1080x2400": "0.331..0.669 / 0.318..0.682",
+        "visibleX_360x640": "0.289..0.711",
+        "captureSha256": "08e5e2f84ceda8293051c2a33de125686ddc44ee82893a83674ac33e24204096",
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_teen_school_store_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "08e5e2f84ceda8293051c2a33de125686ddc44ee82893a83674ac33e24204096"
+        }
+      }
+    },
+    "resolvedIssueEvidence": {
+      "teen_029": "4교시 종이 울리는 순간 교실 문을 잡은 내 손, 복도로 먼저 뛰어나가는 아이들. 매점 도착·크림빵 결과 없음."
+    }
+  },
+  {
+    "groupId": "grp_teen_self_dye_store",
+    "imageId": "img_teen_hair_dye_001",
+    "assetPath": "followup_20261031/img_teen_hair_dye_001.png",
+    "sha256": "da074a59a9769df3d83be351d4fc29aff5309fd67b6fc0824546a32022b04df3",
+    "approvalStatus": "CANDIDATE",
+    "eventIds": [
+      "teen_034"
+    ],
+    "eventSourceHashes": {
+      "teen_034": "47131c720b0b6f7415236c3a5b296dc60469b84f38169eae519946f7f769bddc"
+    },
+    "semanticReviewer": "신기훈 2026-11-09 PASS (docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09))",
+    "visualReviewer": "정원률 2026-11-09 PASS (docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09))",
+    "cropReviewer": "김재겸 SceneCropReviewTest 실제 라우팅 2026-11-11 (1080x2400 · 360x740 프레임, 일치도 1.000) + 2026-11-09 360x640dp 글꼴 130%",
+    "reviewEvidence": {
+      "actualProducer": "김재겸",
+      "semantic": {
+        "status": "PASS",
+        "reviewer": "신기훈",
+        "evidence": "편의점 염색약 진열대(색별 상자), 휴대폰 속 밝은 갈색 머리 친구들 사진. 염색 결과 없음.",
+        "note": "",
+        "source": "docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09)"
+      },
+      "visual": {
+        "status": "PASS",
+        "reviewer": "정원률",
+        "note": "공통 도트 화풍과 1인칭 구도가 자연스럽다.",
+        "source": "docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09)"
+      },
+      "crop": {
+        "status": "CROP_OK",
+        "reviewer": "김재겸",
+        "visibleX_1080x2400": "0.331..0.669 / 0.318..0.682",
+        "visibleX_360x640": "0.289..0.711",
+        "captureSha256": "7b3c54c68cc839690ecdb2b57bd63d7e9db59af5214a9aad32d4269a28c2d09f",
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_teen_hair_dye_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "7b3c54c68cc839690ecdb2b57bd63d7e9db59af5214a9aad32d4269a28c2d09f"
+        }
+      }
+    },
+    "resolvedIssueEvidence": {
+      "teen_034": "편의점 염색약 진열대(색별 상자), 휴대폰 속 밝은 갈색 머리 친구들 사진. 염색 결과 없음."
+    }
+  },
+  {
+    "groupId": "grp_teen_graduation_flour",
+    "imageId": "img_teen_graduation_001",
+    "assetPath": "followup_20261031/img_teen_graduation_001.png",
+    "sha256": "15ff486af504a1e82fa8beffc225960d3f4097e6f92c32e9586037405d255820",
+    "approvalStatus": "CANDIDATE",
+    "eventIds": [
+      "teen_039"
+    ],
+    "eventSourceHashes": {
+      "teen_039": "70536b49b4706ee3a2a4112cbeb18d26d0136b2cc009e227a6a0f2a7d59c6a18"
+    },
+    "semanticReviewer": "신기훈 2026-11-09 PASS (docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09))",
+    "visualReviewer": "정원률 2026-11-09 PASS (docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09))",
+    "cropReviewer": "김재겸 SceneCropReviewTest 실제 라우팅 2026-11-11 (1080x2400 · 360x740 프레임, 일치도 1.000) + 2026-11-09 360x640dp 글꼴 130%",
+    "reviewEvidence": {
+      "actualProducer": "김재겸",
+      "semantic": {
+        "status": "PASS",
+        "reviewer": "신기훈",
+        "evidence": "겨울 교문 앞 졸업식, 밀가루 봉지를 든 친구들, 내 손의 꽃다발·졸업장 통, 엄마의 고기·시계 아이콘 메시지. 선택 결과 없음.",
+        "note": "",
+        "source": "docs/assignments/20261110/submissions/신기훈_의미검수_336.csv (#68 feat/week12-kihoon-acceptance, 2026-11-09)"
+      },
+      "visual": {
+        "status": "PASS",
+        "reviewer": "정원률",
+        "note": "공통 도트 화풍과 1인칭 구도가 자연스럽다.",
+        "source": "docs/assignments/20261106/submissions/정원률_김재겸_화풍검수_20261109.csv (#66 codex/week11-wonryul-followup · #69, 2026-11-09)"
+      },
+      "crop": {
+        "status": "CROP_OK",
+        "reviewer": "김재겸",
+        "visibleX_1080x2400": "0.331..0.669 / 0.318..0.682",
+        "visibleX_360x640": "0.289..0.711",
+        "captureSha256": "50ffabc1ff41851d14d1890741b8e67513003b217d102f15130b23fe8bdd12d7",
+        "routedCheck": {
+          "checkedAt": "2026-11-11",
+          "route": "image_routing.json (이 브랜치)",
+          "base": "김선한 #65 315cede + 김우영 #70 b8f1b6e + 이 브랜치 (로컬 검증, 푸시하지 않음)",
+          "screen": "DecisionScreen 장면 보기, API 36 에뮬레이터 1080x2400 420dpi(= 360x800 비율) / 같은 기기 360x740dp 프레임",
+          "imageShown": "img_teen_graduation_001",
+          "visibleX": "0.331..0.669 / 0.318..0.682",
+          "sceneMatch": "1.000 / 1.000",
+          "captureSha256": "50ffabc1ff41851d14d1890741b8e67513003b217d102f15130b23fe8bdd12d7"
+        }
+      }
+    },
+    "resolvedIssueEvidence": {
+      "teen_039": "겨울 교문 앞 졸업식, 밀가루 봉지를 든 친구들, 내 손의 꽃다발·졸업장 통, 엄마의 고기·시계 아이콘 메시지. 선택 결과 없음."
+    }
+  }
+]

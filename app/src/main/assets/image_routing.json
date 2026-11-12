@@ -490,6 +490,454 @@
       "usage": "event",
       "fileName": "img_adult_first_salary_001.png",
       "fallbackText": "이미지 준비 전에는 '첫 월급' 상황 이미지 영역으로 대체 표시"
+    },
+    {
+      "imageId": "img_adult_audition_001",
+      "assetPath": "followup_20261031/img_adult_audition_001.png",
+      "usage": "event",
+      "fileName": "img_adult_audition_001.png",
+      "fallbackText": "이미지 준비 전에는 '음이탈 레전드' 상황 이미지 영역으로 대체 표시"
+    },
+    {
+      "imageId": "img_adult_drinks_ideal_001",
+      "assetPath": "followup_20261031/img_adult_drinks_ideal_001.png",
+      "usage": "event",
+      "fileName": "img_adult_drinks_ideal_001.png",
+      "fallbackText": "이미지 준비 전에는 '이상형 옆자리' 상황 이미지 영역으로 대체 표시"
+    },
+    {
+      "imageId": "img_adult_interview_001",
+      "assetPath": "followup_20261031/img_adult_interview_001.png",
+      "usage": "event",
+      "fileName": "img_adult_interview_001.png",
+      "fallbackText": "이미지 준비 전에는 '최종 면접' 상황 이미지 영역으로 대체 표시"
+    },
+    {
+      "imageId": "img_adult_dinner_escape_001",
+      "assetPath": "followup_20261031/img_adult_dinner_escape_001.png",
+      "usage": "event",
+      "fileName": "img_adult_dinner_escape_001.png",
+      "fallbackText": "이미지 준비 전에는 '동기와 탈출 작전' 상황 이미지 영역으로 대체 표시"
+    },
+    {
+      "imageId": "img_adult_asking_way_001",
+      "assetPath": "followup_20261031/img_adult_asking_way_001.png",
+      "usage": "event",
+      "fileName": "img_adult_asking_way_001.png",
+      "fallbackText": "이미지 준비 전에는 '길을 묻는 사람' 상황 이미지 영역으로 대체 표시"
+    },
+    {
+      "imageId": "img_adult_first_car_001",
+      "assetPath": "followup_20261031/img_adult_first_car_001.png",
+      "usage": "event",
+      "fileName": "img_adult_first_car_001.png",
+      "fallbackText": "이미지 준비 전에는 '첫 차' 상황 이미지 영역으로 대체 표시"
+    },
+    {
+      "imageId": "img_adult_arm_wrestling_001",
+      "assetPath": "followup_20261031/img_adult_arm_wrestling_001.png",
+      "usage": "event",
+      "fileName": "img_adult_arm_wrestling_001.png",
+      "fallbackText": "이미지 준비 전에는 '아빠와 팔씨름' 상황 이미지 영역으로 대체 표시"
+    },
+    {
+      "imageId": "img_adult_burnout_001",
+      "assetPath": "followup_20261031/img_adult_burnout_001.png",
+      "usage": "event",
+      "fileName": "img_adult_burnout_001.png",
+      "fallbackText": "이미지 준비 전에는 '번아웃' 상황 이미지 영역으로 대체 표시"
+    },
+    {
+      "imageId": "img_adult_hospital_001",
+      "assetPath": "followup_20261031/img_adult_hospital_001.png",
+      "usage": "event",
+      "fileName": "img_adult_hospital_001.png",
+      "fallbackText": "이미지 준비 전에는 '엄마의 수술' 상황 이미지 영역으로 대체 표시"
+    },
+    {
+      "imageId": "img_adult_office_plant_001",
+      "assetPath": "followup_20261031/img_adult_office_plant_001.png",
+      "usage": "event",
+      "fileName": "img_adult_office_plant_001.png",
+      "fallbackText": "이미지 준비 전에는 '절대 안 죽는 화분' 상황 이미지 영역으로 대체 표시"
+    },
+    {
+      "imageId": "img_adult_reading_glasses_001",
+      "assetPath": "followup_20261031/img_adult_reading_glasses_001.png",
+      "usage": "event",
+      "fileName": "img_adult_reading_glasses_001.png",
+      "fallbackText": "이미지 준비 전에는 '팔이 짧아졌다' 상황 이미지 영역으로 대체 표시"
+    },
+    {
+      "imageId": "img_adult_health_recheck_001",
+      "assetPath": "followup_20261031/img_adult_health_recheck_001.png",
+      "usage": "event",
+      "fileName": "img_adult_health_recheck_001.png",
+      "fallbackText": "이미지 준비 전에는 '재검 통지서' 상황 이미지 영역으로 대체 표시"
+    },
+    {
+      "imageId": "img_adult_empty_nest_001",
+      "assetPath": "followup_20261031/img_adult_empty_nest_001.png",
+      "usage": "event",
+      "fileName": "img_adult_empty_nest_001.png",
+      "fallbackText": "이미지 준비 전에는 '빈 방' 상황 이미지 영역으로 대체 표시"
+    },
+    {
+      "imageId": "img_pov_promotion_review_001",
+      "assetPath": "followup_20261031/img_pov_promotion_review_001.png",
+      "usage": "pov",
+      "fileName": "img_pov_promotion_review_001.png",
+      "fallbackText": "이미지 준비 전에는 '승진 심사 전날' 상황 이미지 영역으로 대체 표시"
+    },
+    {
+      "imageId": "img_pov_campfire_001",
+      "assetPath": "followup_20261031/img_pov_campfire_001.png",
+      "usage": "pov",
+      "fileName": "img_pov_campfire_001.png",
+      "fallbackText": "이미지 준비 전에는 '모닥불 옆자리' 상황 이미지 영역으로 대체 표시"
+    },
+    {
+      "imageId": "img_child_election_001",
+      "assetPath": "followup_20261031/img_child_election_001.png",
+      "usage": "event",
+      "fileName": "img_child_election_001.png",
+      "fallbackText": "이미지 준비 전에는 '반장 선거' 상황 이미지 영역으로 대체 표시"
+    },
+    {
+      "imageId": "img_child_arts_pick_001",
+      "assetPath": "followup_20261031/img_child_arts_pick_001.png",
+      "usage": "event",
+      "fileName": "img_child_arts_pick_001.png",
+      "fallbackText": "이미지 준비 전에는 '예술부 반 고르기' 상황 이미지 영역으로 대체 표시"
+    },
+    {
+      "imageId": "img_child_cheer_leader_001",
+      "assetPath": "followup_20261031/img_child_cheer_leader_001.png",
+      "usage": "event",
+      "fileName": "img_child_cheer_leader_001.png",
+      "fallbackText": "이미지 준비 전에는 '응원단장 스카우트' 상황 이미지 영역으로 대체 표시"
+    },
+    {
+      "imageId": "img_child_lunch_001",
+      "assetPath": "followup_20261031/img_child_lunch_001.png",
+      "usage": "event",
+      "fileName": "img_child_lunch_001.png",
+      "fallbackText": "이미지 준비 전에는 '급식의 시금치' 상황 이미지 영역으로 대체 표시"
+    },
+    {
+      "imageId": "img_child_class_nap_001",
+      "assetPath": "followup_20261031/img_child_class_nap_001.png",
+      "usage": "event",
+      "fileName": "img_child_class_nap_001.png",
+      "fallbackText": "이미지 준비 전에는 '누가 날 부른다' 상황 이미지 영역으로 대체 표시"
+    },
+    {
+      "imageId": "img_child_baduk_001",
+      "assetPath": "followup_20261031/img_child_baduk_001.png",
+      "usage": "event",
+      "fileName": "img_child_baduk_001.png",
+      "fallbackText": "이미지 준비 전에는 '어린이 바둑 대회' 상황 이미지 영역으로 대체 표시"
+    },
+    {
+      "imageId": "img_child_piano_contest_001",
+      "assetPath": "followup_20261031/img_child_piano_contest_001.png",
+      "usage": "event",
+      "fileName": "img_child_piano_contest_001.png",
+      "fallbackText": "이미지 준비 전에는 '피아노 콩쿠르' 상황 이미지 영역으로 대체 표시"
+    },
+    {
+      "imageId": "img_child_chick_001",
+      "assetPath": "followup_20261031/img_child_chick_001.png",
+      "usage": "event",
+      "fileName": "img_child_chick_001.png",
+      "fallbackText": "이미지 준비 전에는 '학교 앞 병아리' 상황 이미지 영역으로 대체 표시"
+    },
+    {
+      "imageId": "img_cross_01_001",
+      "assetPath": "followup_20261031/img_cross_01_001.png",
+      "usage": "pov",
+      "fileName": "img_cross_01_001.png",
+      "fallbackText": "이미지 준비 전에는 '신혼집 계약서' 상황 이미지 영역으로 대체 표시"
+    },
+    {
+      "imageId": "img_cross_06_001",
+      "assetPath": "followup_20261031/img_cross_06_001.png",
+      "usage": "pov",
+      "fileName": "img_cross_06_001.png",
+      "fallbackText": "이미지 준비 전에는 '사업 종료 안내 메일' 상황 이미지 영역으로 대체 표시"
+    },
+    {
+      "imageId": "img_cross_11_001",
+      "assetPath": "followup_20261031/img_cross_11_001.png",
+      "usage": "pov",
+      "fileName": "img_cross_11_001.png",
+      "fallbackText": "이미지 준비 전에는 '계단에서 넘어진 엄마' 상황 이미지 영역으로 대체 표시"
+    },
+    {
+      "imageId": "img_infant_loud_cry_001",
+      "assetPath": "followup_20261031/img_infant_loud_cry_001.png",
+      "usage": "event",
+      "fileName": "img_infant_loud_cry_001.png",
+      "fallbackText": "이미지 준비 전에는 '어린이집 최고 목청' 상황 이미지 영역으로 대체 표시"
+    },
+    {
+      "imageId": "img_infant_first_word_001",
+      "assetPath": "followup_20261031/img_infant_first_word_001.png",
+      "usage": "event",
+      "fileName": "img_infant_first_word_001.png",
+      "fallbackText": "이미지 준비 전에는 '첫 단어 내기' 상황 이미지 영역으로 대체 표시"
+    },
+    {
+      "imageId": "img_infant_crayon_001",
+      "assetPath": "followup_20261031/img_infant_crayon_001.png",
+      "usage": "event",
+      "fileName": "img_infant_crayon_001.png",
+      "fallbackText": "이미지 준비 전에는 '크레파스와 하얀 벽' 상황 이미지 영역으로 대체 표시"
+    },
+    {
+      "imageId": "img_infant_daycare_001",
+      "assetPath": "followup_20261031/img_infant_daycare_001.png",
+      "usage": "event",
+      "fileName": "img_infant_daycare_001.png",
+      "fallbackText": "이미지 준비 전에는 '어린이집 첫날' 상황 이미지 영역으로 대체 표시"
+    },
+    {
+      "imageId": "img_infant_elevator_button_001",
+      "assetPath": "followup_20261031/img_infant_elevator_button_001.png",
+      "usage": "event",
+      "fileName": "img_infant_elevator_button_001.png",
+      "fallbackText": "이미지 준비 전에는 '엘리베이터 버튼' 상황 이미지 영역으로 대체 표시"
+    },
+    {
+      "imageId": "img_infant_nap_001",
+      "assetPath": "followup_20261031/img_infant_nap_001.png",
+      "usage": "event",
+      "fileName": "img_infant_nap_001.png",
+      "fallbackText": "이미지 준비 전에는 '낮잠 시간' 상황 이미지 영역으로 대체 표시"
+    },
+    {
+      "imageId": "img_path_fit_04_001",
+      "assetPath": "followup_20261031/img_path_fit_04_001.png",
+      "usage": "pov",
+      "fileName": "img_path_fit_04_001.png",
+      "fallbackText": "이미지 준비 전에는 '전국체전 결승, 무릎의 소리' 상황 이미지 영역으로 대체 표시"
+    },
+    {
+      "imageId": "img_path_fit_11_001",
+      "assetPath": "followup_20261031/img_path_fit_11_001.png",
+      "usage": "pov",
+      "fileName": "img_path_fit_11_001.png",
+      "fallbackText": "이미지 준비 전에는 '도장 관장님의 대회 추천' 상황 이미지 영역으로 대체 표시"
+    },
+    {
+      "imageId": "img_path_fit_16_001",
+      "assetPath": "followup_20261031/img_path_fit_16_001.png",
+      "usage": "pov",
+      "fileName": "img_path_fit_16_001.png",
+      "fallbackText": "이미지 준비 전에는 '비 오는 날 무릎이 먼저 안다' 상황 이미지 영역으로 대체 표시"
+    },
+    {
+      "imageId": "img_path_hap_03_001",
+      "assetPath": "followup_20261031/img_path_hap_03_001.png",
+      "usage": "pov",
+      "fileName": "img_path_hap_03_001.png",
+      "fallbackText": "이미지 준비 전에는 '연봉이냐 저녁이냐' 상황 이미지 영역으로 대체 표시"
+    },
+    {
+      "imageId": "img_path_hap_08_001",
+      "assetPath": "followup_20261031/img_path_hap_08_001.png",
+      "usage": "pov",
+      "fileName": "img_path_hap_08_001.png",
+      "fallbackText": "이미지 준비 전에는 '문화센터 할머니 할아버지 선생님' 상황 이미지 영역으로 대체 표시"
+    },
+    {
+      "imageId": "img_path_hap_15_001",
+      "assetPath": "followup_20261031/img_path_hap_15_001.png",
+      "usage": "pov",
+      "fileName": "img_path_hap_15_001.png",
+      "fallbackText": "이미지 준비 전에는 '주민센터 로비의 첫 개인전' 상황 이미지 영역으로 대체 표시"
+    },
+    {
+      "imageId": "img_path_hea_04_001",
+      "assetPath": "followup_20261031/img_path_hea_04_001.png",
+      "usage": "pov",
+      "fileName": "img_path_hea_04_001.png",
+      "fallbackText": "이미지 준비 전에는 '주말 등산 모임 대장' 상황 이미지 영역으로 대체 표시"
+    },
+    {
+      "imageId": "img_path_hea_11_001",
+      "assetPath": "followup_20261031/img_path_hea_11_001.png",
+      "usage": "pov",
+      "fileName": "img_path_hea_11_001.png",
+      "fallbackText": "이미지 준비 전에는 '아버지의 당뇨 진단' 상황 이미지 영역으로 대체 표시"
+    },
+    {
+      "imageId": "img_path_hea_16_001",
+      "assetPath": "followup_20261031/img_path_hea_16_001.png",
+      "usage": "pov",
+      "fileName": "img_path_hea_16_001.png",
+      "fallbackText": "이미지 준비 전에는 '가정 시간 요리 실습' 상황 이미지 영역으로 대체 표시"
+    },
+    {
+      "imageId": "img_path_int_05_001",
+      "assetPath": "followup_20261031/img_path_int_05_001.png",
+      "usage": "pov",
+      "fileName": "img_path_int_05_001.png",
+      "fallbackText": "이미지 준비 전에는 '쉬어 가는 1년, 다시 수능' 상황 이미지 영역으로 대체 표시"
+    },
+    {
+      "imageId": "img_path_int_12_001",
+      "assetPath": "followup_20261031/img_path_int_12_001.png",
+      "usage": "pov",
+      "fileName": "img_path_int_12_001.png",
+      "fallbackText": "이미지 준비 전에는 '논문에서 빠진 내 이름' 상황 이미지 영역으로 대체 표시"
+    },
+    {
+      "imageId": "img_path_int_17_001",
+      "assetPath": "followup_20261031/img_path_int_17_001.png",
+      "usage": "pov",
+      "fileName": "img_path_int_17_001.png",
+      "fallbackText": "이미지 준비 전에는 '복지관 스마트폰 교실' 상황 이미지 영역으로 대체 표시"
+    },
+    {
+      "imageId": "img_path_luk_04_001",
+      "assetPath": "followup_20261031/img_path_luk_04_001.png",
+      "usage": "pov",
+      "fileName": "img_path_luk_04_001.png",
+      "fallbackText": "이미지 준비 전에는 '엘리베이터 안의 30초' 상황 이미지 영역으로 대체 표시"
+    },
+    {
+      "imageId": "img_path_luk_11_001",
+      "assetPath": "followup_20261031/img_path_luk_11_001.png",
+      "usage": "pov",
+      "fileName": "img_path_luk_11_001.png",
+      "fallbackText": "이미지 준비 전에는 '바지 주머니 속 복권' 상황 이미지 영역으로 대체 표시"
+    },
+    {
+      "imageId": "img_path_luk_16_001",
+      "assetPath": "followup_20261031/img_path_luk_16_001.png",
+      "usage": "pov",
+      "fileName": "img_path_luk_16_001.png",
+      "fallbackText": "이미지 준비 전에는 '경품 추첨 크루즈' 상황 이미지 영역으로 대체 표시"
+    },
+    {
+      "imageId": "img_path_soc_04_001",
+      "assetPath": "followup_20261031/img_path_soc_04_001.png",
+      "usage": "pov",
+      "fileName": "img_path_soc_04_001.png",
+      "fallbackText": "이미지 준비 전에는 '사람으로 들어온 일자리' 상황 이미지 영역으로 대체 표시"
+    },
+    {
+      "imageId": "img_path_soc_11_001",
+      "assetPath": "followup_20261031/img_path_soc_11_001.png",
+      "usage": "pov",
+      "fileName": "img_path_soc_11_001.png",
+      "fallbackText": "이미지 준비 전에는 '같이 살 집을 구하는 친구들' 상황 이미지 영역으로 대체 표시"
+    },
+    {
+      "imageId": "img_path_wea_03_001",
+      "assetPath": "followup_20261031/img_path_wea_03_001.png",
+      "usage": "pov",
+      "fileName": "img_path_wea_03_001.png",
+      "fallbackText": "이미지 준비 전에는 '세 장의 계약서' 상황 이미지 영역으로 대체 표시"
+    },
+    {
+      "imageId": "img_path_wea_08_001",
+      "assetPath": "followup_20261031/img_path_wea_08_001.png",
+      "usage": "pov",
+      "fileName": "img_path_wea_08_001.png",
+      "fallbackText": "이미지 준비 전에는 '회사를 사겠다는 전화' 상황 이미지 영역으로 대체 표시"
+    },
+    {
+      "imageId": "img_path_wea_15_001",
+      "assetPath": "followup_20261031/img_path_wea_15_001.png",
+      "usage": "pov",
+      "fileName": "img_path_wea_15_001.png",
+      "fallbackText": "이미지 준비 전에는 '임원 제안' 상황 이미지 영역으로 대체 표시"
+    },
+    {
+      "imageId": "img_special_hornet_001",
+      "assetPath": "followup_20261031/img_special_hornet_001.png",
+      "usage": "event",
+      "fileName": "img_special_hornet_001.png",
+      "fallbackText": "이미지 준비 전에는 '낙엽 속의 장수말벌' 상황 이미지 영역으로 대체 표시"
+    },
+    {
+      "imageId": "img_special_elevator_001",
+      "assetPath": "followup_20261031/img_special_elevator_001.png",
+      "usage": "event",
+      "fileName": "img_special_elevator_001.png",
+      "fallbackText": "이미지 준비 전에는 '엘리베이터 속 사장님' 상황 이미지 영역으로 대체 표시"
+    },
+    {
+      "imageId": "img_special_bubble_001",
+      "assetPath": "followup_20261031/img_special_bubble_001.png",
+      "usage": "event",
+      "fileName": "img_special_bubble_001.png",
+      "fallbackText": "이미지 준비 전에는 '비눗방울 대참사' 상황 이미지 영역으로 대체 표시"
+    },
+    {
+      "imageId": "img_special_revolving_door_001",
+      "assetPath": "followup_20261031/img_special_revolving_door_001.png",
+      "usage": "event",
+      "fileName": "img_special_revolving_door_001.png",
+      "fallbackText": "이미지 준비 전에는 '회전문 무한 루프' 상황 이미지 영역으로 대체 표시"
+    },
+    {
+      "imageId": "img_teen_lunch_line_001",
+      "assetPath": "followup_20261031/img_teen_lunch_line_001.png",
+      "usage": "event",
+      "fileName": "img_teen_lunch_line_001.png",
+      "fallbackText": "이미지 준비 전에는 '급식 새치기' 상황 이미지 영역으로 대체 표시"
+    },
+    {
+      "imageId": "img_teen_running_001",
+      "assetPath": "followup_20261031/img_teen_running_001.png",
+      "usage": "event",
+      "fileName": "img_teen_running_001.png",
+      "fallbackText": "이미지 준비 전에는 '오래달리기 측정' 상황 이미지 영역으로 대체 표시"
+    },
+    {
+      "imageId": "img_teen_debate_001",
+      "assetPath": "followup_20261031/img_teen_debate_001.png",
+      "usage": "event",
+      "fileName": "img_teen_debate_001.png",
+      "fallbackText": "이미지 준비 전에는 '교내 토론대회' 상황 이미지 영역으로 대체 표시"
+    },
+    {
+      "imageId": "img_teen_high_school_001",
+      "assetPath": "followup_20261031/img_teen_high_school_001.png",
+      "usage": "event",
+      "fileName": "img_teen_high_school_001.png",
+      "fallbackText": "이미지 준비 전에는 '고등학교 원서' 상황 이미지 영역으로 대체 표시"
+    },
+    {
+      "imageId": "img_teen_wrong_answer_001",
+      "assetPath": "followup_20261031/img_teen_wrong_answer_001.png",
+      "usage": "event",
+      "fileName": "img_teen_wrong_answer_001.png",
+      "fallbackText": "이미지 준비 전에는 '선생님의 오답' 상황 이미지 영역으로 대체 표시"
+    },
+    {
+      "imageId": "img_teen_school_store_001",
+      "assetPath": "followup_20261031/img_teen_school_store_001.png",
+      "usage": "event",
+      "fileName": "img_teen_school_store_001.png",
+      "fallbackText": "이미지 준비 전에는 '4교시 매점 달리기' 상황 이미지 영역으로 대체 표시"
+    },
+    {
+      "imageId": "img_teen_hair_dye_001",
+      "assetPath": "followup_20261031/img_teen_hair_dye_001.png",
+      "usage": "event",
+      "fileName": "img_teen_hair_dye_001.png",
+      "fallbackText": "이미지 준비 전에는 '셀프 염색' 상황 이미지 영역으로 대체 표시"
+    },
+    {
+      "imageId": "img_teen_graduation_001",
+      "assetPath": "followup_20261031/img_teen_graduation_001.png",
+      "usage": "event",
+      "fileName": "img_teen_graduation_001.png",
+      "fallbackText": "이미지 준비 전에는 '졸업식 날' 상황 이미지 영역으로 대체 표시"
     }
   ],
   "periodPortraits": {
