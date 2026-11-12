@@ -16,12 +16,13 @@
       "assetPath": "followup_20261031/img_adult_friends_drinks_001.png",
       "width": 300,
       "height": 225,
-      "sha256": "7c242b11d4a02a565c6bf0a0b359806a1afa5f3a24c56bce76c28bdea0f78d9e",
+      "sha256": "70ec415cfc918a7b4c61d6f8667f7c3c554300b491991e8d043366bcf670f426",
       "promptSummary": "금요일 밤 고깃집 입구의 1인칭 시점에서 이상형 옆·친구 사이·불판 앞의 서로 다른 빈자리 세 곳을 선택 전에 함께 보여 주는 장면",
-      "generationPrompt": "동일 고깃집 화풍을 유지하고 세 빈 의자를 중앙 x=34~66% 안에 각각 분리 배치한다. 앞쪽 중앙 의자 1개, 테이블 건너편 x=40%와 x=55% 의자 2개, 오른쪽 의자 옆 이상형 인물과 친구들을 유지한다. 착석·연애·건배·음주·조리 결과는 보여 주지 않는다.",
-      "completedEdit": "초기 후보는 중앙 크롭에서 빈자리 한 곳이 사라져 반려했다. 두 번째 후보는 세 빈자리는 남았으나 이상형 단서가 약해 재편집했다. 최종 후보는 세 의자 전체와 오른쪽 이상형 일부가 중앙 계산 크롭에 남는다.",
+      "generationPrompt": "기존 고깃집 화풍·인물·불판·음식을 유지한다. 중앙 x=34~66% 안에 양쪽 친구의 얼굴과 상체가 들어오도록 두 사람이 빈 의자 뒤로 기대게 하고, 건너편 빈 의자 2개와 앞쪽 빈 의자 1개만 정확히 남긴다. 착석·연애·건배·음주·조리 결과와 글자는 보여 주지 않는다.",
+      "completedEdit": "PR #69에서 기존 후보는 세 빈자리는 보이지만 양옆 인물이 중앙 크롭에서 사라져 세로 구도 수정 요청을 받았다. 양쪽 인물을 건너편 두 의자 뒤로 당기고, 생성 중 늘어난 네 번째 의자를 제거해 빈자리 총 3개를 유지했다. 계산 크롭에서 두 인물 얼굴·상체와 빈 의자 3개가 함께 남는다.",
       "semanticReview": "SELF_REVIEW_PASS_PENDING_TEAM_REVIEW",
-      "centerCropReview": "CALCULATED_CENTER_CROP_PASS_AFTER_RECOMPOSITION",
+      "centerCropReview": "CALCULATED_CENTER_CROP_PASS_AFTER_PR69_REVIEW_FIX",
+      "centerCropEvidence": "docs/assignments/20261031/submissions/batches/20261106-wooyoung-01/adult_007_center_crop_v4.png",
       "runtimeCropReview": "BLOCKED_BY_WHPX_DISABLED",
       "teamAcceptance": "PENDING"
     },
@@ -89,7 +90,15 @@
       "reason": "세 빈자리 단서가 중앙 x=34~66% 계산 크롭에 함께 남지 않아 제출 제외",
       "status": "REQUIRES_RECOMPOSITION",
       "recordType": "PRESERVED_PREVIOUS_DRAFT_REVIEW",
-      "replacementCandidateSha256": "7c242b11d4a02a565c6bf0a0b359806a1afa5f3a24c56bce76c28bdea0f78d9e"
+        "replacementCandidateSha256": "7c242b11d4a02a565c6bf0a0b359806a1afa5f3a24c56bce76c28bdea0f78d9e"
+      },
+      {
+        "eventId": "adult_007",
+        "sha256": "7c242b11d4a02a565c6bf0a0b359806a1afa5f3a24c56bce76c28bdea0f78d9e",
+        "reason": "PR #69 계산 크롭에서 양옆 인물이 거의 사라져 누구 옆자리인지 불명확함",
+        "status": "SUPERSEDED_AFTER_PR69_COMPOSITION_REVIEW",
+        "recordType": "PRESERVED_TEAM_REVIEWED_CANDIDATE",
+        "replacementCandidateSha256": "70ec415cfc918a7b4c61d6f8667f7c3c554300b491991e8d043366bcf670f426"
     }
   ],
   "validation": {

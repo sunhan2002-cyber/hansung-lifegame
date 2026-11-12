@@ -13,7 +13,8 @@
 ## adult_007 재구도 후보
 
 - 파일: `app/src/main/assets/images/followup_20261031/img_adult_friends_drinks_001.png`
-- SHA-256: `7c242b11d4a02a565c6bf0a0b359806a1afa5f3a24c56bce76c28bdea0f78d9e`
+- SHA-256: `70ec415cfc918a7b4c61d6f8667f7c3c554300b491991e8d043366bcf670f426`
 - 규격: 300×225 PNG, 4:3
-- 계산 크롭: x=102..197(원본 300px의 중앙 34~66%)에서 앞쪽 빈 의자 1개와 건너편 빈 의자 2개가 모두 분리되어 남는다.
+- PR #69 보완: 이전 후보는 빈자리만 남고 양옆 인물이 거의 사라져 반려됐다. 양쪽 인물을 건너편 의자 뒤로 당겨 x=102..197(원본 300px의 중앙 34~66%)에서 두 인물의 얼굴·상체, 앞쪽 빈 의자 1개와 건너편 빈 의자 2개가 함께 남는다.
+- 계산 크롭 근거: `adult_007_center_crop_v4.png` (실기기 캡처가 아닌 계산 예상 크롭).
 - 상태: `SELF_REVIEW_PASS_PENDING_TEAM_REVIEW`; 실제 앱 크롭과 팀 의미 검수는 미완료다.
