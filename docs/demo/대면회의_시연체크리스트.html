@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>인생게임 대면회의 시연 체크리스트</title>
+  <style>
+    :root { --ink:#1d1d1f; --muted:#6b6b70; --line:#dedee3; --accent:#1769e0; --ok:#16834b; --paper:#fafafc; }
+    * { box-sizing:border-box; }
+    body { margin:0; color:var(--ink); background:var(--paper); font-family:system-ui,-apple-system,"Noto Sans KR",sans-serif; line-height:1.55; }
+    main { max-width:980px; margin:0 auto; padding:32px 20px 60px; }
+    header { background:#fff; border:1px solid var(--line); border-radius:18px; padding:24px; box-shadow:0 4px 18px #0000000b; }
+    h1 { margin:0 0 6px; font-size:clamp(24px,4vw,36px); }
+    h2 { margin:0 0 14px; font-size:21px; }
+    .meta { color:var(--muted); margin:0; }
+    .toolbar { display:flex; flex-wrap:wrap; gap:10px; align-items:center; margin-top:18px; }
+    button { border:1px solid var(--line); background:#fff; border-radius:10px; padding:9px 13px; cursor:pointer; font:inherit; }
+    button.primary { color:#fff; background:var(--accent); border-color:var(--accent); }
+    .progress { flex:1 1 260px; min-width:220px; }
+    .progress-row { display:flex; justify-content:space-between; font-size:14px; color:var(--muted); margin-bottom:5px; }
+    progress { width:100%; height:12px; accent-color:var(--ok); }
+    section { background:#fff; border:1px solid var(--line); border-radius:16px; padding:20px; margin-top:18px; }
+    ol, ul { margin:0; padding-left:24px; }
+    li { margin:9px 0; }
+    label.item { display:flex; gap:10px; align-items:flex-start; cursor:pointer; }
+    input[type=checkbox] { width:19px; height:19px; margin-top:3px; accent-color:var(--ok); flex:0 0 auto; }
+    .note { color:var(--muted); font-size:14px; }
+    .must { color:#b42318; font-weight:700; font-size:12px; margin-left:5px; }
+    .stop { background:#fff6f5; border-color:#f1c4bf; }
+    .stop li { color:#8f2118; }
+    .signoff { display:grid; grid-template-columns:repeat(auto-fit,minmax(210px,1fr)); gap:12px; }
+    .signoff input { width:100%; border:1px solid var(--line); border-radius:8px; padding:9px; font:inherit; }
+    footer { color:var(--muted); font-size:13px; margin-top:22px; text-align:center; }
+    @media print { body{background:#fff} main{max-width:none;padding:0} header,section{box-shadow:none;break-inside:avoid} .toolbar button{display:none} }
+  </style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>인생게임 대면회의 시연 체크리스트</h1>
+    <p class="meta">회의 날짜: ____________　시연자: ____________　브랜치/커밋: ____________________</p>
+    <div class="toolbar">
+      <div class="progress">
+        <div class="progress-row"><span>진행률</span><strong id="count">0 / 0</strong></div>
+        <progress id="bar" value="0" max="1"></progress>
+      </div>
+      <button class="primary" onclick="window.print()">인쇄 / PDF</button>
+      <button onclick="resetChecks()">체크 초기화</button>
+    </div>
+  </header>
+
+  <section>
+    <h2>1. 시작 전 준비</h2>
+    <ul>
+      <li><label class="item"><input type="checkbox"><span>최신 APK가 설치되어 있고 앱이 정상 실행된다.<span class="must">필수</span></span></label></li>
+      <li><label class="item"><input type="checkbox"><span>에뮬레이터 화면 방향·해상도·시스템 상태바가 시연 환경과 맞다.</span></label></li>
+      <li><label class="item"><input type="checkbox"><span>네트워크 없이도 콘텐츠·이미지·저장 복원이 동작한다.</span></label></li>
+      <li><label class="item"><input type="checkbox"><span>시연용 이름과 초기 설정을 준비했다.</span></label></li>
+      <li><label class="item"><input type="checkbox"><span>화면 녹화 또는 스크린샷 도구를 준비했다.</span></label></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>2. 기본 진행 흐름</h2>
+    <ol>
+      <li><label class="item"><input type="checkbox"><span>새 인생 시작 화면에서 이름·성별을 입력한다.</span></label></li>
+      <li><label class="item"><input type="checkbox"><span>주사위로 초기 스탯이 정해지고 결과가 화면에 표시된다.</span></label></li>
+      <li><label class="item"><input type="checkbox"><span>돌잡이 컷신이 재생되고, 건너뛰기/완료 후 다음 화면으로 이동한다.</span></label></li>
+      <li><label class="item"><input type="checkbox"><span>건강·운동능력·지력·사회성·경제력·행복·운 스탯이 표시된다.</span></label></li>
+      <li><label class="item"><input type="checkbox"><span>건강 게이지가 100~60 초록, 60~30 노랑, 30~10 주황, 10~0 빨강으로 변한다.</span></label></li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>3. 사건·이미지·선택지</h2>
+    <ol>
+      <li><label class="item"><input type="checkbox"><span>사건이 시작되면 해당 사건 이미지가 먼저 선노출된다.<span class="must">필수</span></span></label></li>
+      <li><label class="item"><input type="checkbox"><span>사건 이미지가 화면 전체 배경으로 표시되고, 잘림·빈 화면·무관한 이미지가 없다.<span class="must">필수</span></span></label></li>
+      <li><label class="item"><input type="checkbox"><span>사건 제목·본문·돌발사건/인생의 전환점 효과가 배경 위에서 읽힌다.</span></label></li>
+      <li><label class="item"><input type="checkbox"><span>선택지 3개가 A/B/C 박스와 함께 겹침 없이 표시된다.</span></label></li>
+      <li><label class="item"><input type="checkbox"><span>선택지 설명은 읽을 수 있고, 건강 회복 문구만 과도하게 강조되지 않는다.</span></label></li>
+      <li><label class="item"><input type="checkbox"><span>타이핑 중 터치하면 본문 전체가 즉시 나타나고 이후 버튼이 활성화된다.</span></label></li>
+      <li><label class="item"><input type="checkbox"><span>장면 보기 진입 시 UI가 숨고 전체 장면만 보이며, 한 번 터치하면 복귀한다.</span></label></li>
+      <li><label class="item"><input type="checkbox"><span>선택 후 스탯 변화 애니메이션이 표시되고 실제 스탯에도 반영된다.</span></label></li>
+    </ol>
+    <p class="note">문제 발생 시 사건 ID, 선택지 키(A/B/C), 표시된 이미지 파일명을 함께 기록한다.</p>
+  </section>
+
+  <section>
+    <h2>4. 시나리오 개연성 확인</h2>
+    <ol>
+      <li><label class="item"><input type="checkbox"><span>한 시기 안에서 자동 이야기와 선택 결과 기록이 시간 순서로 쌓인다.</span></label></li>
+      <li><label class="item"><input type="checkbox"><span>최근 이야기가 위에 보이고, 오래된 기록을 위해 불필요한 긴 스크롤을 하지 않아도 된다.</span></label></li>
+      <li><label class="item"><input type="checkbox"><span>지력·사회성·건강 등 특정 스탯 중심 선택이 이후 사건·결과에 드러난다.</span></label></li>
+      <li><label class="item"><input type="checkbox"><span>교육·직업·가족·주거·업적 등 선택 결과가 인생 요약에 반영된다.</span></label></li>
+      <li><label class="item"><input type="checkbox"><span>건강 저하 시 노년기 고정 사망이 아니라 실제 사망 시기와 원인이 표시된다.</span></label></li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>5. 저장·복원·결말</h2>
+    <ul>
+      <li><label class="item"><input type="checkbox"><span>사건 진행 중 앱을 종료하고 재실행해도 현재 사건과 이미지가 복원된다.</span></label></li>
+      <li><label class="item"><input type="checkbox"><span>선택 결과·스탯·플래그·기록이 중복 저장되지 않는다.</span></label></li>
+      <li><label class="item"><input type="checkbox"><span>결과 애니메이션이 중복 재생되지 않고 실제 보상은 한 번만 적용된다.</span></label></li>
+      <li><label class="item"><input type="checkbox"><span>결말 화면에 사망/완주 시기, 핵심 요약, 업적, 교육·직업·가족 결과가 표시된다.</span></label></li>
+      <li><label class="item"><input type="checkbox"><span>처음으로/새 인생 시작으로 정상 복귀한다.</span></label></li>
+    </ul>
+  </section>
+
+  <section class="stop">
+    <h2>6. 즉시 중단하고 기록할 문제</h2>
+    <ul>
+      <li>사건 이미지 대신 빈 화면·자리표시자·무관한 사건 이미지가 나온다.</li>
+      <li>선택지 클릭 후 화면이 멈추거나 결과가 두 번 적용된다.</li>
+      <li>타이핑 중 터치가 먹지 않거나 장면 보기 버튼이 활성화되지 않는다.</li>
+      <li>저장 후 재실행했을 때 사건·스탯·기록이 이전 상태와 다르다.</li>
+      <li>앱이 종료되거나 ANR/로그캣 예외가 발생한다.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>7. 회의 결과</h2>
+    <div class="signoff">
+      <label>시연 판정<input placeholder="통과 / 수정 필요"></label>
+      <label>발견 이슈 수<input placeholder="예: 0건"></label>
+      <label>담당자<input placeholder="이름"></label>
+      <label>수정 기한<input placeholder="YYYY-MM-DD"></label>
+    </div>
+    <p class="note">최종 승인 전에는 “이미지 라우팅 완료”와 “이미지 승인/의미 검수 완료”를 같은 의미로 취급하지 않는다.</p>
+  </section>
+
+  <footer>인생게임 시연 체크리스트 · 체크 상태는 이 브라우저에 자동 저장됩니다.</footer>
+</main>
+<script>
+  const key = 'lifegame-demo-checklist-v1';
+  const boxes = [...document.querySelectorAll('input[type=checkbox]')];
+  function update() {
+    const done = boxes.filter(x => x.checked).length;
+    document.getElementById('count').textContent = `${done} / ${boxes.length}`;
+    document.getElementById('bar').value = boxes.length ? done / boxes.length : 0;
+    localStorage.setItem(key, JSON.stringify(boxes.map(x => x.checked)));
+  }
+  function resetChecks() { boxes.forEach(x => x.checked = false); update(); }
+  try { const saved = JSON.parse(localStorage.getItem(key) || '[]'); boxes.forEach((x,i) => x.checked = !!saved[i]); } catch (_) {}
+  boxes.forEach(x => x.addEventListener('change', update));
+  update();
+</script>
+</body>
+</html>
