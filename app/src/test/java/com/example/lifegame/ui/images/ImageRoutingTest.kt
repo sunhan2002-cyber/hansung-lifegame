@@ -81,7 +81,12 @@ class ImageRoutingTest {
                 .any { File(assetDir(), "images/${it.path}").isFile }
         for ((preferred, focus, tag) in cases) {
             val id = preferred.takeUnless(::hasDedicatedArt)
-                ?: events.keys.sorted().first { tag in routing.eventStatTags[it].orEmpty() && !hasDedicatedArt(it) }
+                ?: events.keys.sorted().firstOrNull { tag in routing.eventStatTags[it].orEmpty() && !hasDedicatedArt(it) }
+            // 시연용 전수 라우팅에서는 모든 사건에 전용 PNG가 있으므로 generic fallback 대상이 없다.
+            if (id == null) {
+                assertTrue(hasDedicatedArt(preferred))
+                continue
+            }
             val event = events.getValue(id)
             val period = event.periods.first()
             val pending = PendingDecision(id, event.kind, event.title, event.text, emptyList(), event.povImageId)
