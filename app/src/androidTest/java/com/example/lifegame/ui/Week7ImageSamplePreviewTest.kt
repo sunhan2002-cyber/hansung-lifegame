@@ -4,12 +4,14 @@ import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.assertTextEquals
+import androidx.compose.ui.test.hasTestTag
 import androidx.compose.ui.test.junit4.createAndroidComposeRule
 import androidx.compose.ui.test.onAllNodesWithText
 import androidx.compose.ui.test.onNodeWithTag
 import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.performClick
 import androidx.compose.ui.test.performScrollTo
+import androidx.compose.ui.test.performScrollToNode
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.platform.app.InstrumentationRegistry
 import com.example.lifegame.MainActivity
@@ -24,6 +26,51 @@ import org.junit.runner.RunWith
 @RunWith(AndroidJUnit4::class)
 class Week7ImageSamplePreviewTest {
     @get:Rule val composeRule = createAndroidComposeRule<MainActivity>()
+
+    /** Visual evidence for the approved PNG; this does not exercise the pending new-game cutscene. */
+    @Test
+    fun approvedDoljabiCanBeInspectedFullScreen() {
+        val context = InstrumentationRegistry.getInstrumentation().targetContext
+        val index = Week7ImageSamples.indexOfFirst {
+            it.imageFile == "cutscenes/week11/img_doljabi_grasp_001.png"
+        }
+        assertTrue("Approved doljabi image must be available in the preview", index >= 0)
+        val label = InstrumentationRegistry.getArguments().getString("reviewSize") ?: "phone"
+        val directory = requireNotNull(context.getExternalFilesDir("doljabi-20261113"))
+        assertTrue(directory.isDirectory || directory.mkdirs())
+
+        fun reveal(tag: String) {
+            composeRule.onNodeWithTag("image_sample_content").performScrollToNode(hasTestTag(tag))
+        }
+        composeRule.onNodeWithText("디자인 미리보기").performScrollTo().assertIsDisplayed().performClick()
+        reveal("image_sample_menu")
+        composeRule.onNodeWithTag("image_sample_menu").performClick()
+        composeRule.onNodeWithTag("image_sample_select_$index").performScrollTo().performClick()
+        reveal("image_sample_title")
+        composeRule.onNodeWithTag("image_sample_title")
+            .assertTextEquals("첫 생일의 돌잡이")
+        reveal("image_sample_film")
+        composeRule.onNodeWithTag("image_sample_film").assertIsDisplayed()
+        // Asset decoding runs on IO, outside Compose's idle tracking. Captures are reviewed visually.
+        Thread.sleep(750)
+        File(directory, "doljabi-$label-preview.png").outputStream().use {
+            assertTrue(captureScreen().compress(Bitmap.CompressFormat.PNG, 100, it))
+        }
+
+        reveal("image_sample_fullscreen")
+        composeRule.onNodeWithTag("image_sample_fullscreen").performClick()
+        composeRule.onNodeWithTag("image_sample_fullscreen_image").assertIsDisplayed()
+        Thread.sleep(750)
+        File(directory, "doljabi-$label-fullscreen.png").outputStream().use {
+            assertTrue(captureScreen().compress(Bitmap.CompressFormat.PNG, 100, it))
+        }
+        composeRule.onNodeWithTag("image_sample_fullscreen_image").performClick()
+        reveal("image_sample_title")
+        composeRule.onNodeWithTag("image_sample_title")
+            .assertTextEquals("첫 생일의 돌잡이")
+        composeRule.onNodeWithTag("preview_exit").performClick()
+        composeRule.onNodeWithTag("home_screen").assertIsDisplayed()
+    }
 
     @Test
     fun allSamplesLoadAndCanBeBrowsedWithoutStartingGame() {
