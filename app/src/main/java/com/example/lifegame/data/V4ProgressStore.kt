@@ -21,6 +21,8 @@ data class V4SavedRun(
     val phase: TurnPhase? = null,
     val presentation: PresentationState = PresentationState(),
     val narrativeRecords: List<RunNarrativeRecord> = emptyList(),
+    /** 시작 주사위의 원본 두 눈. null이면 v1~v4 저장으로 간주한다. */
+    val startingRollRaw: String? = null,
 )
 
 sealed interface V4LoadResult {

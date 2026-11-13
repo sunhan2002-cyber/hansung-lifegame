@@ -404,6 +404,34 @@ data class LifeMoment(
     val momentImageId: String? = null,
 )
 
+enum class AutomaticEventTrigger {
+    ELAPSED_TIME,
+    PROGRESS_STAGE,
+}
+
+/** 선택·돌발·마일스톤보다 낮은 우선순위로 표시되는 짧은 자동 사건. */
+data class AutomaticEvent(
+    val eventId: String,
+    val periods: Set<LifePeriod>,
+    val text: String,
+    val trigger: AutomaticEventTrigger = AutomaticEventTrigger.PROGRESS_STAGE,
+    val statDelta: StatDelta = StatDelta(),
+    val addFlags: Set<String> = emptySet(),
+    val removeFlags: Set<String> = emptySet(),
+    val momentImageId: String? = null,
+    val repeatable: Boolean = false,
+)
+
+data class AutomaticEventRecord(
+    val eventId: String,
+    val triggerToken: String,
+    val period: LifePeriod,
+    val yearInPeriod: Int,
+    val text: String,
+    val appliedDelta: StatDelta = StatDelta(),
+    val momentImageId: String? = null,
+)
+
 data class PeriodRunState(
     val runId: String,
     val runSeed: Long,
@@ -417,6 +445,9 @@ data class PeriodRunState(
     val recentChoiceIds: List<String> = emptyList(),
     val pendingDecisionId: String? = null,
     val moments: List<LifeMoment> = emptyList(),
+    /** 자동 사건의 중복 방지 키와 실제 표시 이력. 저장·복원 후에도 유지한다. */
+    val handledAutomaticEventKeys: Set<String> = emptySet(),
+    val automaticEventRecords: List<AutomaticEventRecord> = emptyList(),
     val isEnding: Boolean = false,
     val isDead: Boolean = false,
     /** 종료가 발생한 생애 시기. 종료 후 다음 시기로 이동해도 이 값은 유지한다. */
@@ -471,6 +502,9 @@ data class SavedOutcome(
     val openedEvents: List<String> = emptyList(),
     /** 결과 화면과 앱 재실행 뒤에도 같은 사건 그림을 복원하기 위한 불변 스냅샷. */
     val eventImageId: String? = null,
+    /** 결과 화면이 달력 이동 뒤에도 선택 당시 시기·해를 표시하도록 저장한 스냅샷. */
+    val period: LifePeriod? = null,
+    val yearInPeriod: Int? = null,
 )
 
 enum class BodyType {
@@ -519,6 +553,7 @@ data class TurnStep(
     val momentImageId: String? = null,
     val canAutoAdvance: Boolean = false,
     val needsFocusSelection: Boolean = false,
+    val automaticEvent: AutomaticEventRecord? = null,
 )
 
 data class OutcomeResolution(

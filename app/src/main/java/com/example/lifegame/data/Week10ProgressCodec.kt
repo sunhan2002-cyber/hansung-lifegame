@@ -1,6 +1,7 @@
 package com.example.lifegame.data
 
 import com.example.lifegame.domain.model.AvatarConfig
+import com.example.lifegame.domain.model.AutomaticEventRecord
 import com.example.lifegame.domain.model.AwardedTitle
 import com.example.lifegame.domain.model.CompletedLifeRecord
 import com.example.lifegame.domain.model.LifeFacts
@@ -18,6 +19,7 @@ import com.example.lifegame.domain.model.RunNarrativeRecord
 import com.example.lifegame.domain.model.SavedOutcome
 import com.example.lifegame.domain.model.StatKey
 import com.example.lifegame.domain.model.Stats
+import com.example.lifegame.domain.model.StatDelta
 import com.example.lifegame.domain.model.TurnPhase
 import org.json.JSONArray
 import org.json.JSONObject
@@ -37,6 +39,7 @@ internal object Week10ProgressCodec {
         put("phase", run.phase?.name)
         put("presentation", run.presentation.toJson())
         put("narrativeRecords", run.narrativeRecords.toJsonArray { it.toJson() })
+        put("startingRollRaw", run.startingRollRaw)
     }.toString()
 
     fun decode(raw: String): V4SavedRun? = runCatching {
@@ -53,6 +56,7 @@ internal object Week10ProgressCodec {
             phase = root.nullableString("phase")?.let { TurnPhase.valueOf(it) },
             presentation = root.optJSONObject("presentation")?.toPresentationState() ?: PresentationState(),
             narrativeRecords = root.optJSONArray("narrativeRecords").objects { it.toRunNarrativeRecord() },
+            startingRollRaw = root.nullableString("startingRollRaw"),
         )
     }.getOrNull()
 
@@ -90,6 +94,8 @@ internal object Week10ProgressCodec {
         put("dominantFocusStat", dominantFocusStat?.name)
         put("recentChoiceIds", JSONArray(recentChoiceIds)); put("pending", pendingDecisionId)
         put("moments", moments.toJsonArray { it.toJson() })
+        put("handledAutomaticEventKeys", JSONArray(handledAutomaticEventKeys.toList()))
+        put("automaticEventRecords", automaticEventRecords.toJsonArray { it.toJson() })
         put("ending", isEnding); put("dead", isDead); put("endingPeriod", endingPeriod?.name)
     }
 
@@ -107,6 +113,8 @@ internal object Week10ProgressCodec {
         recentChoiceIds = optJSONArray("recentChoiceIds").strings(),
         pendingDecisionId = nullableString("pending"),
         moments = optJSONArray("moments").objects { it.toLifeMoment() },
+        handledAutomaticEventKeys = optJSONArray("handledAutomaticEventKeys").strings().toSet(),
+        automaticEventRecords = optJSONArray("automaticEventRecords").objects { it.toAutomaticEventRecord() },
         isEnding = optBoolean("ending", false),
         isDead = optBoolean("dead", false),
         endingPeriod = nullableString("endingPeriod")?.let { LifePeriod.valueOf(it) },
@@ -125,6 +133,17 @@ internal object Week10ProgressCodec {
         wealth = optInt("wealth", Stats.DEFAULT_STAT),
         happiness = optInt("happiness", Stats.DEFAULT_STAT),
         luck = optInt("luck", Stats.DEFAULT_STAT),
+    )
+
+    private fun StatDelta.toJson() = JSONObject().apply {
+        put("health", health); put("fitness", fitness); put("intelligence", intelligence)
+        put("social", social); put("wealth", wealth); put("happiness", happiness); put("luck", luck)
+    }
+
+    private fun JSONObject.toStatDelta() = StatDelta(
+        health = optInt("health"), fitness = optInt("fitness"), intelligence = optInt("intelligence"),
+        social = optInt("social"), wealth = optInt("wealth"), happiness = optInt("happiness"),
+        luck = optInt("luck"),
     )
 
     private fun LifeFacts.toJson() = JSONObject().apply {
@@ -156,6 +175,20 @@ internal object Week10ProgressCodec {
         text = getString("text"), momentImageId = nullableString("image"),
     )
 
+    private fun AutomaticEventRecord.toJson() = JSONObject().apply {
+        put("eventId", eventId); put("triggerToken", triggerToken); put("period", period.name)
+        put("year", yearInPeriod); put("text", text); put("appliedDelta", appliedDelta.toJson())
+        put("momentImageId", momentImageId)
+    }
+
+    private fun JSONObject.toAutomaticEventRecord() = AutomaticEventRecord(
+        eventId = getString("eventId"), triggerToken = getString("triggerToken"),
+        period = LifePeriod.valueOf(getString("period")), yearInPeriod = getInt("year"),
+        text = getString("text"), appliedDelta = optJSONObject("appliedDelta")?.toStatDelta()
+            ?: com.example.lifegame.domain.model.StatDelta(),
+        momentImageId = nullableString("momentImageId"),
+    )
+
     private fun RunChoiceRecord.toJson() = JSONObject().apply {
         put("eventId", eventId); put("choiceId", choiceId); put("outcomeId", outcomeId)
         put("period", period.name); put("year", yearInPeriod); put("eventTitle", eventTitle)
@@ -180,6 +213,7 @@ internal object Week10ProgressCodec {
         put("beforeFacts", beforeFacts.toJson()); put("afterFacts", afterFacts.toJson()); put("endsLife", endsLife)
         put("openedEvents", JSONArray(openedEvents))
         put("eventImageId", eventImageId)
+        put("period", period?.name); put("year", yearInPeriod)
     }
 
     private fun JSONObject.toSavedOutcome() = SavedOutcome(
@@ -190,6 +224,8 @@ internal object Week10ProgressCodec {
         endsLife = optBoolean("endsLife", false),
         openedEvents = optJSONArray("openedEvents").strings(),
         eventImageId = nullableString("eventImageId"),
+        period = nullableString("period")?.let { LifePeriod.valueOf(it) },
+        yearInPeriod = if (has("year") && !isNull("year")) getInt("year") else null,
     )
 
     private fun PresentationState.toJson() = JSONObject().apply {

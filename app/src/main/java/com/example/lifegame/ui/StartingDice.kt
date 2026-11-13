@@ -8,7 +8,9 @@ import kotlin.random.Random
  * 능력치마다 주사위 두 개를 굴려 (합 - 7) × 2, 즉 -10 ~ +10을 기본값 50에 더한다. 건강은 굴리지 않는다.
  */
 data class StatRoll(val label: String, val first: Int, val second: Int) {
+    val sum: Int get() = first + second
     val delta: Int get() = (first + second - 7) * 2
+    val finalValue: Int get() = 50 + delta
 }
 
 data class StartingRoll(val rolls: List<StatRoll>) {

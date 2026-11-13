@@ -4,6 +4,8 @@ import com.example.lifegame.domain.model.Choice
 import com.example.lifegame.domain.model.ChoiceHistory
 import com.example.lifegame.domain.model.ChoiceResult
 import com.example.lifegame.domain.model.AwardedTitle
+import com.example.lifegame.domain.model.AutomaticEvent
+import com.example.lifegame.domain.model.AutomaticEventRecord
 import com.example.lifegame.domain.model.ChanceWeights
 import com.example.lifegame.domain.model.DecisionEvent
 import com.example.lifegame.domain.model.DecisionKind
@@ -330,7 +332,7 @@ class GameEngine(
                 )]
             }
             ?: "${state.period.name} ${state.yearInPeriod}년차, ${focus.label}에 집중했다."
-        val focusStats = state.stats.apply(focus.statEffects, minHealth = healthFloor(state.period))
+        val focusStats = state.stats.apply(focus.statEffects)
         val stateAfterFocus = state.copy(
             stats = focusStats,
             lifeFacts = state.lifeFacts.copy(wealthBand = wealthBand(focusStats.wealth)),
@@ -341,6 +343,7 @@ class GameEngine(
                 momentImageId = focus.momentImageId,
             ),
         )
+        if (stateAfterFocus.stats.health <= 0) healthDeathStep(stateAfterFocus)?.let { return it }
         val decision = pickPeriodDecision(
             state = stateAfterFocus,
             decisions = decisions,
@@ -360,7 +363,7 @@ class GameEngine(
         val stateAfterYear = stateAfterFocus.copy(
             stats = stateAfterFocus.stats.apply(
                 StatDelta(health = annualHealthDelta(state.period)),
-                minHealth = healthFloor(state.period),
+                minHealth = MIN_STAT,
             ),
         )
         healthDeathStep(stateAfterYear)?.let { return it }
@@ -402,13 +405,17 @@ class GameEngine(
 
         val outcome = pickOutcome(state, event, choice.choiceId, choice.outcomes)
         val combinedDelta = resolveOutcomeStatDelta(state.period, outcome)
-        val afterStats = state.stats.apply(combinedDelta, minHealth = healthFloor(state.period))
+        val afterStats = state.stats.apply(combinedDelta)
         val healthDepleted = afterStats.health <= 0
         // Reacquired facts must replay after older facts when restoring a saved run.
-        val nextFlags = (state.flags - outcome.removeFlags - outcome.addFlags) + outcome.addFlags + completedEventFlag(event.eventId)
+        val employmentFlags = lifeFactRules.filter { it.fact == "employmentStatus" }.map { it.flag }.toSet()
+        val selectedEmploymentFlag = outcome.addFlags.lastOrNull { it in employmentFlags }
+        val normalizedAdds = (outcome.addFlags - employmentFlags) + listOfNotNull(selectedEmploymentFlag)
+        val nextFlags = (state.flags - outcome.removeFlags - employmentFlags - normalizedAdds) +
+            normalizedAdds + completedEventFlag(event.eventId)
         val nextFacts = state.lifeFacts
-            .removeRules(outcome.removeFlags, lifeFactRules)
-            .applyRules(outcome.addFlags + completedEventFlag(event.eventId), lifeFactRules)
+            .removeRules(outcome.removeFlags + employmentFlags, lifeFactRules)
+            .applyRules(normalizedAdds + completedEventFlag(event.eventId), lifeFactRules)
             .copy(wealthBand = wealthBand(afterStats.wealth))
         val resolved = state.copy(
             stats = afterStats,
@@ -467,6 +474,61 @@ class GameEngine(
         health = outcome.statDelta.health + outcome.lifeDelta + annualHealthDelta(period),
     )
 
+    /**
+     * 선택·돌발·마일스톤 처리가 모두 끝난 자동 진행 단계에서만 짧은 자동 사건을 적용한다.
+     * triggerToken과 eventId 조합을 저장하므로 화면 재구성·복원으로 같은 사건이 중복 적용되지 않는다.
+     */
+    fun applyAutomaticEvent(
+        state: PeriodRunState,
+        events: List<AutomaticEvent>,
+        triggerToken: String,
+        lifeFactRules: List<LifeFactRule> = emptyList(),
+    ): TurnStep? {
+        if (state.isEnding || state.pendingDecisionId != null) return null
+        val candidates = events.filter { event ->
+            state.period in event.periods &&
+                "${event.eventId}:$triggerToken" !in state.handledAutomaticEventKeys &&
+                (event.repeatable || state.automaticEventRecords.none { it.eventId == event.eventId })
+        }
+        val event = candidates.minByOrNull { it.eventId } ?: return null
+        val key = "${event.eventId}:$triggerToken"
+        val afterStats = state.stats.apply(event.statDelta)
+        val employmentFlags = lifeFactRules.filter { it.fact == "employmentStatus" }.map { it.flag }.toSet()
+        val selectedEmploymentFlag = event.addFlags.lastOrNull { it in employmentFlags }
+        val normalizedAdds = (event.addFlags - employmentFlags) + listOfNotNull(selectedEmploymentFlag)
+        val nextFlags = (state.flags - event.removeFlags - employmentFlags - normalizedAdds) + normalizedAdds
+        val nextFacts = state.lifeFacts
+            .removeRules(event.removeFlags + employmentFlags, lifeFactRules)
+            .applyRules(normalizedAdds, lifeFactRules)
+            .copy(wealthBand = wealthBand(afterStats.wealth))
+        val record = AutomaticEventRecord(
+            eventId = event.eventId,
+            triggerToken = triggerToken,
+            period = state.period,
+            yearInPeriod = state.yearInPeriod,
+            text = event.text,
+            appliedDelta = event.statDelta,
+            momentImageId = event.momentImageId,
+        )
+        val updated = state.copy(
+            stats = afterStats,
+            flags = nextFlags,
+            lifeFacts = nextFacts,
+            handledAutomaticEventKeys = state.handledAutomaticEventKeys + key,
+            automaticEventRecords = state.automaticEventRecords + record,
+            moments = state.moments + LifeMoment(state.period, state.yearInPeriod, event.text, event.momentImageId),
+        )
+        healthDeathStep(updated)?.let { return it.copy(automaticEvent = record) }
+        return TurnStep(
+            state = updated,
+            phase = TurnPhase.AUTO_PROGRESS,
+            recordText = event.text,
+            momentImageId = event.momentImageId,
+            canAutoAdvance = true,
+            automaticEvent = record,
+        )
+    }
+
     private fun pickPeriodDecision(
         state: PeriodRunState,
         decisions: List<DecisionEvent>,
@@ -512,18 +574,17 @@ class GameEngine(
             "노년기 ${state.yearInPeriod}번째 해, 지나온 선택을 돌아보았다."
         }
         val afterRecord = state.copy(
-            stats = state.stats.apply(
-                StatDelta(health = annualHealthDelta(state.period)),
-                minHealth = healthFloor(state.period),
-            ),
             moments = state.moments + LifeMoment(state.period, state.yearInPeriod, record),
         )
-        healthDeathStep(afterRecord)?.let { return it }
         val decision = pickPeriodDecision(afterRecord, decisions, bigIncidentChancePercent, incidentChancePercent)
         if (decision != null) {
             return decisionStep(afterRecord.copy(pendingDecisionId = decision.eventId), decision)
         }
-        val next = movePeriodCalendar(afterRecord, periods)
+        val afterYear = afterRecord.copy(
+            stats = afterRecord.stats.apply(StatDelta(health = annualHealthDelta(state.period))),
+        )
+        healthDeathStep(afterYear)?.let { return it }
+        val next = movePeriodCalendar(afterYear, periods)
         val chapter = next.period != LifePeriod.INFANT && next.period != LifePeriod.OLD_AGE && next.selectedFocusId == null
         return TurnStep(
             state = next,
@@ -794,6 +855,18 @@ class GameEngine(
 
     /** 건강이 낮을 때만 발생하는 연간 돌발 사망. 보통 건강 수치에서는 확률을 0으로 둔다. */
     private fun healthDeathStep(state: PeriodRunState): TurnStep? {
+        if (state.stats.health <= 0) {
+            val text = "건강이 바닥나 생을 마쳤다."
+            val ended = state.copy(
+                isEnding = true,
+                isDead = true,
+                endingPeriod = state.period,
+                lifeFacts = state.lifeFacts.copy(deathPeriod = state.period, deathCause = "건강 악화"),
+                pendingDecisionId = null,
+                moments = state.moments + LifeMoment(state.period, state.yearInPeriod, text),
+            )
+            return TurnStep(ended, TurnPhase.ENDING, text, TransitionCue.DISTORT)
+        }
         if (state.period !in setOf(LifePeriod.YOUNG_ADULT, LifePeriod.MIDDLE, LifePeriod.OLD_AGE)) return null
         val chance = when {
             state.stats.health <= 15 -> 8
@@ -958,11 +1031,6 @@ class GameEngine(
         happiness = addAndClamp(happiness, delta.happiness),
         luck = addAndClamp(luck, delta.luck),
     )
-
-    private fun healthFloor(period: LifePeriod): Int = when (period) {
-        LifePeriod.INFANT, LifePeriod.CHILD -> 1
-        else -> MIN_STAT
-    }
 
     private fun annualHealthDelta(period: LifePeriod): Int = when (period) {
         LifePeriod.INFANT, LifePeriod.CHILD, LifePeriod.TEEN -> 0
