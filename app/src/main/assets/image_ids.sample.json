@@ -5513,5 +5513,205 @@
     "height": 540,
     "style": "pixel_art",
     "perspective": "first_person"
+  },
+  {
+    "imageId": "img_love_date_01_001",
+    "usage": "pov",
+    "stage": "YOUNG_ADULT",
+    "description": "카페 테이블 위 두 사람의 휴대폰과 여행 책자를 보는 1인칭",
+    "fileName": "img_love_date_01_001.png",
+    "fallbackText": "세 번째 데이트 장면 준비 중",
+    "style": "pixel_art",
+    "perspective": "first_person"
+  },
+  {
+    "imageId": "img_love_date_02_001",
+    "usage": "pov",
+    "stage": "YOUNG_ADULT",
+    "description": "저녁 식당 창가 자리에서 마주 앉은 새 연인을 보는 1인칭",
+    "fileName": "img_love_date_02_001.png",
+    "fallbackText": "다시 시작한 연애 장면 준비 중",
+    "style": "pixel_art",
+    "perspective": "first_person"
+  },
+  {
+    "imageId": "img_love_conflict_01_001",
+    "usage": "pov",
+    "stage": "YOUNG_ADULT",
+    "description": "읽음 표시만 뜬 메시지 창을 내려다보는 1인칭",
+    "fileName": "img_love_conflict_01_001.png",
+    "fallbackText": "말다툼 다음 날 장면 준비 중",
+    "style": "pixel_art",
+    "perspective": "first_person"
+  },
+  {
+    "imageId": "img_love_conflict_first_love_001",
+    "usage": "pov",
+    "stage": "YOUNG_ADULT",
+    "description": "오래된 단체 사진을 사이에 두고 마주 앉은 연인을 보는 1인칭",
+    "fileName": "img_love_conflict_first_love_001.png",
+    "fallbackText": "오래 알아서 더 서운한 날 장면 준비 중",
+    "style": "pixel_art",
+    "perspective": "first_person"
+  },
+  {
+    "imageId": "img_love_conflict_ideal_001",
+    "usage": "pov",
+    "stage": "YOUNG_ADULT",
+    "description": "약속 장소 시계탑 아래에서 휴대폰 시계를 보는 1인칭",
+    "fileName": "img_love_conflict_ideal_001.png",
+    "fallbackText": "이상형의 단점 장면 준비 중",
+    "style": "pixel_art",
+    "perspective": "first_person"
+  },
+  {
+    "imageId": "img_love_conflict_music_001",
+    "usage": "pov",
+    "stage": "YOUNG_ADULT",
+    "description": "연습실 보면대와 기타 케이스 너머의 연인을 보는 1인칭",
+    "fileName": "img_love_conflict_music_001.png",
+    "fallbackText": "연주가 끝난 뒤 장면 준비 중",
+    "style": "pixel_art",
+    "perspective": "first_person"
+  },
+  {
+    "imageId": "img_love_conflict_book_001",
+    "usage": "pov",
+    "stage": "YOUNG_ADULT",
+    "description": "밑줄 그은 책과 영화 티켓이 놓인 탁자를 보는 1인칭",
+    "fileName": "img_love_conflict_book_001.png",
+    "fallbackText": "같은 문장, 다른 생각 장면 준비 중",
+    "style": "pixel_art",
+    "perspective": "first_person"
+  },
+  {
+    "imageId": "img_love_reunion_01_001",
+    "usage": "pov",
+    "stage": "YOUNG_ADULT",
+    "description": "밤에 도착한 짧은 안부 메시지를 보는 1인칭",
+    "fileName": "img_love_reunion_01_001.png",
+    "fallbackText": "헤어진 사람의 안부 장면 준비 중",
+    "style": "pixel_art",
+    "perspective": "first_person"
+  },
+  {
+    "imageId": "img_love_reunion_first_love_001",
+    "usage": "pov",
+    "stage": "YOUNG_ADULT",
+    "description": "동창회 식당 긴 테이블의 빈 옆자리를 보는 1인칭",
+    "fileName": "img_love_reunion_first_love_001.png",
+    "fallbackText": "동창회의 빈자리 장면 준비 중",
+    "style": "pixel_art",
+    "perspective": "first_person"
+  },
+  {
+    "imageId": "img_love_reunion_ideal_001",
+    "usage": "pov",
+    "stage": "YOUNG_ADULT",
+    "description": "처음 마주쳤던 횡단보도 건너편의 사람을 보는 1인칭",
+    "fileName": "img_love_reunion_ideal_001.png",
+    "fallbackText": "다시 마주친 그 길 장면 준비 중",
+    "style": "pixel_art",
+    "perspective": "first_person"
+  },
+  {
+    "imageId": "img_love_reunion_music_001",
+    "usage": "pov",
+    "stage": "YOUNG_ADULT",
+    "description": "작은 공연장 무대와 마이크 앞 연주자를 객석에서 보는 1인칭",
+    "fileName": "img_love_reunion_music_001.png",
+    "fallbackText": "연말 공연 포스터 장면 준비 중",
+    "style": "pixel_art",
+    "perspective": "first_person"
+  },
+  {
+    "imageId": "img_love_reunion_book_001",
+    "usage": "pov",
+    "stage": "YOUNG_ADULT",
+    "description": "책장 앞에서 메모가 끼워진 책을 펼친 1인칭",
+    "fileName": "img_love_reunion_book_001.png",
+    "fallbackText": "돌려주지 못한 책 장면 준비 중",
+    "style": "pixel_art",
+    "perspective": "first_person"
+  },
+  {
+    "imageId": "img_love_letter_01_001",
+    "usage": "pov",
+    "stage": "YOUNG_ADULT",
+    "description": "책상 위 편지 묶음 옆에서 울리는 휴대폰을 보는 1인칭",
+    "fileName": "img_love_letter_01_001.png",
+    "fallbackText": "편지 친구의 전화 장면 준비 중",
+    "style": "pixel_art",
+    "perspective": "first_person"
+  },
+  {
+    "imageId": "img_love_marriage_talk_01_001",
+    "usage": "pov",
+    "stage": "YOUNG_ADULT",
+    "description": "결혼식장에서 돌아오는 밤길 버스 옆자리의 연인을 보는 1인칭",
+    "fileName": "img_love_marriage_talk_01_001.png",
+    "fallbackText": "결혼이라는 단어 장면 준비 중",
+    "style": "pixel_art",
+    "perspective": "first_person"
+  },
+  {
+    "imageId": "img_love_family_meet_01_001",
+    "usage": "pov",
+    "stage": "YOUNG_ADULT",
+    "description": "한정식 상 앞에 마주 앉은 양가 부모님을 보는 1인칭",
+    "fileName": "img_love_family_meet_01_001.png",
+    "fallbackText": "양가 인사 장면 준비 중",
+    "style": "pixel_art",
+    "perspective": "first_person"
+  },
+  {
+    "imageId": "img_love_wedding_01_001",
+    "usage": "pov",
+    "stage": "YOUNG_ADULT",
+    "description": "결혼식장 대기실 거울과 꽃장식을 보는 1인칭",
+    "fileName": "img_love_wedding_01_001.png",
+    "fallbackText": "결혼식 10분 전 장면 준비 중",
+    "style": "pixel_art",
+    "perspective": "first_person"
+  },
+  {
+    "imageId": "img_love_wedding_music_001",
+    "usage": "pov",
+    "stage": "YOUNG_ADULT",
+    "description": "결혼식장 무대에서 악기를 든 친구들을 보는 1인칭",
+    "fileName": "img_love_wedding_music_001.png",
+    "fallbackText": "연주로 채운 축가 장면 준비 중",
+    "style": "pixel_art",
+    "perspective": "first_person"
+  },
+  {
+    "imageId": "img_love_holiday_01_001",
+    "usage": "pov",
+    "stage": "YOUNG_ADULT",
+    "description": "명절 부엌의 전 부치는 프라이팬과 친척들을 보는 1인칭",
+    "fileName": "img_love_holiday_01_001.png",
+    "fallbackText": "결혼 후 첫 명절 장면 준비 중",
+    "style": "pixel_art",
+    "perspective": "first_person"
+  },
+  {
+    "imageId": "img_love_child_plan_01_001",
+    "usage": "pov",
+    "stage": "YOUNG_ADULT",
+    "description": "돌잔치에서 돌아오는 차 안 조수석의 배우자를 보는 1인칭",
+    "fileName": "img_love_child_plan_01_001.png",
+    "fallbackText": "아이 이야기 장면 준비 중",
+    "style": "pixel_art",
+    "perspective": "first_person"
+  },
+  {
+    "imageId": "img_love_first_child_01_001",
+    "usage": "pov",
+    "stage": "YOUNG_ADULT",
+    "description": "새벽 어두운 방에서 내 손가락을 쥔 아기 손을 보는 1인칭",
+    "fileName": "img_love_first_child_01_001.png",
+    "fallbackText": "새벽 4시의 첫 아이 장면 준비 중",
+    "style": "pixel_art",
+    "perspective": "first_person"
   }
 ]

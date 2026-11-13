@@ -1,0 +1,27 @@
+﻿id,category,check,target,before_main,after_branch,evidence,verdict
+C1,필수,연애 없이 결혼·출산으로 건너뛰는 경로 없음,전체 사건·자동 사건,"연애 없이 바로 결혼 23.3%, 결혼식 사건 없는 결혼 48.3%","연애 없이 바로 결혼 0.0%, 결혼식 없는 결혼 0.0%, 계획 없는 자녀 0.0%","10,000회 실제 인생 시뮬레이션(gradle :app:week10Simulation, 같은 시드); py scripts/audit_week13_plausibility.py(married/engaged/has_child 선행 조건 검사)",통과
+C2,필수,상견례(결혼 전)와 결혼 후 가족 모임 구분,"path_soc_05, love_family_meet_01, love_holiday_01, path_hap_13",path_soc_05가 married 필요(결혼 후 상견례),"상견례는 engaged 필요·married 차단, 결혼 후 첫 명절은 married 필요. 상견례 없는 결혼 0.0%",py scripts/audit_week13_plausibility.py,통과
+C3,필수,직업 상태와 사건 문구 모순 없음,직장 단어 사건 21건 + 문구 18곳 + 초점 6줄 + 칭호 3 + 결말 1,"재직+무직 동시 5.6%, 재직+자영업 동시 12.4%, 해고 뒤 재직 유지 0.5%","재직+무직 0.0%, 재직+자영업 0.0%, 해고 뒤 재직 0.0%; 직장 단어는 job_employed 사건 또는 사유가 적힌 예외 19건만","10,000회 실제 인생 시뮬레이션(gradle :app:week10Simulation, 같은 시드); py scripts/audit_week13_plausibility.py",통과
+C4,필수,자동 사건이 선택·돌발 사건을 선점하지 않음,auto_events.sample.json 49건,자동 사건 없음,"rules.neverPreempt: AUTO_PROGRESS·대기 선택 없음일 때만, 한 단계 1건. #74 applyAutomaticEvent도 같은 조건",김우영 PR #74 코드 확인(데이터 기준),데이터 통과 · 엔진 연결 후 김선한 실기기 확인 필요
+C5,필수,시기별 자동 사건 5개 이상,auto_events.sample.json,0,"영아 8·유년 7·청소년 7·청년 10·중년 9·노년 8, 조건 없는 후보 시기마다 5",py scripts/audit_week13_plausibility.py,통과
+C6,필수,선택지 라벨 끝 마침표 제거,"events.sample.json 선택지 1,069개",마침표 976개(따옴표 안 마침표 포함),0개. 본문·결과 문장 마침표는 유지,py scripts/audit_week13_plausibility.py,통과
+I01,러브라인,소개팅·부케가 바로 결혼,adult_073 A·C,married 바로 추가(시뮬 결혼 경로의 20.6%),"dating + partner_blind_date, 결과 문장을 연락처 교환으로",py scripts/audit_week13_plausibility.py,수정
+I02,러브라인,합주 모임 만남이 바로 결혼,path_hap_05 A,married + achv_band_wedding 바로 추가,dating + partner_music. 결혼식 축가 업적은 love_wedding_music으로 이동,py scripts/audit_week13_plausibility.py,수정
+I03,러브라인,결혼 이야기가 결혼식까지 끝냄,adult_032,연애 중이기만 하면 청년 4년 차에 바로 married,"dating+rel_steady+job_employed 필요, A·C는 engaged. 고정 4년 차를 풀고 관계가 깊어진 다음 해에. 재직하지 않으면 love_marriage_talk_01",py scripts/audit_week13_plausibility.py,수정
+I04,러브라인,결혼 후에 상견례,path_soc_05,requiredFlags married,"engaged 필요, married·families_met 차단, 결과에 families_met",py scripts/audit_week13_plausibility.py,수정
+I05,러브라인,연인이 있는데 새 연애 시작,"adult_005~008, 073~078, path_soc_03, path_soc_11, path_hap_05",일부가 dating/engaged를 막지 않음(술자리·버스·합주),모든 만남 사건이 dating·married·engaged 차단,py scripts/audit_week13_plausibility.py,수정
+I06,러브라인,입영 편지가 기존 연인과 무관하게 연애 확정,adult_071 편지 결과 3개,결과에 dating,"letter_friend로 바꾸고, 전역 뒤 연인이 없을 때만 love_letter_01에서 만남",py scripts/audit_week13_plausibility.py,수정
+I07,러브라인,갈등·결별·재회 분기 부재,후보 4명(첫사랑·이상형·음악·책) + 공통,없음,"갈등 5·재회 5 사건, 결별 경험 6.2%, 재회 0.9%","10,000회 실제 인생 시뮬레이션(gradle :app:week10Simulation, 같은 시드)",추가
+I08,러브라인,출산이 무직자에게 육아휴직 문구로 표시,adult_039,"married만 필요, 본문 인사팀·육아휴직",자녀 계획·출산(love_child_plan_01) 뒤 married+has_child+job_employed일 때 첫 아이 장면. 재직하지 않으면 love_first_child_01,py scripts/audit_week13_plausibility.py,수정
+I09,러브라인,자녀 사건이 adult_039 완료 플래그에만 의존,"adult_055, adult_063, path_int_16, path_soc_15, path_wea_14, path_luk_15, cross_03, cross_05, cross_09",v4:event:adult_039 필요,lifeFacts.minChildrenCount 1(구버전 저장의 adult_039도 자녀 1명으로 계산),py scripts/audit_week13_plausibility.py,수정
+I10,러브라인,자녀 계획 중인데 아이 없는 부부 사건,cross_04,adult_039만 차단,has_child·child_plan도 차단,py scripts/audit_week13_plausibility.py,수정
+I11,직업,해고·자영업 전환 뒤 job_employed가 남음,79개 결과,재직+자영업 12.4%,고용 상태 추가 결과마다 상충 상태 removeFlags,"10,000회 실제 인생 시뮬레이션(gradle :app:week10Simulation, 같은 시드)",수정
+I12,직업,재취업 결과의 생활 사실이 무직으로 끝남,adult_070 A·C 재취업 결과,addFlags 순서 comeback→laid_off라 마지막이 UNEMPLOYED,laid_off→comeback 순서,py scripts/audit_week13_plausibility.py,수정
+I13,직업,조기 취업·회식 사건이 해고 뒤에도 나옴,"adult_014~021, adult_050",early_job만 필요,job_employed도 필요,py scripts/audit_week13_plausibility.py,수정
+I14,직업,직장 전제 사건이 무직에게 나옴,"adult_024, path_hea_12·13, path_int_15·18, path_soc_13, path_wea_14·15, path_luk_06·08·13, path_hap_04",직업 조건 없음,job_employed 필요,py scripts/audit_week13_plausibility.py,수정
+I15,직업,일반 사건 속 직장 문구,"adult_023·025·041·048·058·062·064·066·068, special_010, path_hap_11·14, path_hea_05, path_wea_05, path_fit_17, cross_02·11·12",동료·출근길·회식·월급 등,"친구·아침·모임·이체일 등 직업과 무관한 문구(adult_066 제목, cross_02 본문은 분류표 두 곳 동기화)",py scripts/audit_week13_plausibility.py,수정
+I16,직업,초점 연도 기록·칭호·결말 문구,"초점 6줄, title_first_steps·stat_wealth·stat_health, ending_path_hea_recovered",사무실·출근·퇴근·육아휴직·월급·야근,직업과 무관한 표현,py scripts/audit_week13_plausibility.py,수정
+I17,분량,결혼·자녀 경험 비율,전체 인생,"결혼 48.3%, 자녀 21.7%(대부분 바로 결혼 경로)","결혼 38.0%, 자녀 16.5%, 데이트 56.9%; 이혼 결말 미등장","10,000회 실제 인생 시뮬레이션(gradle :app:week10Simulation, 같은 시드)",개연성 우선으로 감소. 시기당 1사건 구조라 단계가 늘면 비율이 준다. 팀장 판단 필요
+I18,인수,승인 사건 지문 변경,승인 16건,지문 일치,"10건 라벨 마침표만, 6건 조건·결과 변경. manifest는 수정하지 않음","py scripts/validate_followup_image_coverage.py(errors 0, pending 372)",김선한 재확인 필요
+I19,인수,전환점 선택 의미 검토 지문,docs/week10/qa/semantic_review.json,143건 일치,"라벨 마침표만 바뀐 141건 지문 갱신, 새 전환점 선택 25건 UNREVIEWED_OR_CHANGED",py scripts/validate_week10.py,교차 검토 필요
+I20,시뮬,불변 조건 위반,"10,000 인생",0,0,"10,000회 실제 인생 시뮬레이션(gradle :app:week10Simulation, 같은 시드)",통과
