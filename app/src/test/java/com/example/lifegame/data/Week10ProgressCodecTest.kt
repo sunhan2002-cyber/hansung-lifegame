@@ -190,4 +190,38 @@ class Week10ProgressCodecTest {
         assertEquals(72, restored.state.stats.health)
         assertFalse(restored.state.isDead)
     }
+
+    @Test fun automaticEventDiceAndResultCalendarSurviveSaveWhileOldSavesDefaultSafely() {
+        val automatic = AutomaticEventRecord(
+            "minor_walk", "run:progress:1", LifePeriod.MIDDLE, 2, "산책했다.",
+            StatDelta(happiness = 2), "img_walk",
+        )
+        val currentState = state.copy(
+            handledAutomaticEventKeys = setOf("minor_walk:run:progress:1"),
+            automaticEventRecords = listOf(automatic),
+        )
+        val currentOutcome = outcome.copy(period = LifePeriod.MIDDLE, yearInPeriod = 2)
+        val run = V4SavedRun(
+            "우영", currentState, pendingOutcome = currentOutcome,
+            startingRollRaw = "1,3,2,4,3,5,4,6,5,1,6,2",
+        )
+
+        val restored = requireNotNull(Week10ProgressCodec.decode(Week10ProgressCodec.encode(run)))
+        assertEquals(listOf(automatic), restored.state.automaticEventRecords)
+        assertEquals(currentState.handledAutomaticEventKeys, restored.state.handledAutomaticEventKeys)
+        assertEquals(LifePeriod.MIDDLE, restored.pendingOutcome?.period)
+        assertEquals(2, restored.pendingOutcome?.yearInPeriod)
+        assertEquals(run.startingRollRaw, restored.startingRollRaw)
+
+        val legacy = org.json.JSONObject(Week10ProgressCodec.encode(run))
+        legacy.remove("startingRollRaw")
+        legacy.getJSONObject("state").remove("handledAutomaticEventKeys")
+        legacy.getJSONObject("state").remove("automaticEventRecords")
+        legacy.getJSONObject("pendingOutcome").remove("period")
+        legacy.getJSONObject("pendingOutcome").remove("year")
+        val old = requireNotNull(Week10ProgressCodec.decode(legacy.toString()))
+        assertNull(old.startingRollRaw)
+        assertTrue(old.state.automaticEventRecords.isEmpty())
+        assertNull(old.pendingOutcome?.period)
+    }
 }

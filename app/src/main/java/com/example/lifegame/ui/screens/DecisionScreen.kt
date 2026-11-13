@@ -234,11 +234,14 @@ fun DecisionScreen(
         }
     }
     val textComplete = introDone && typedChars >= textLength
-    val endPreview: (byTap: Boolean) -> Unit = { byTap ->
+    // 선노출이 끝나는 순간의 터치는 선택지로 넘기지 않는다. 눌러서 끝냈든 시간이 다 돼 저절로 끝났든 같다.
+    // 저절로 끝날 때 보호가 없으면 "누르면 선택지로"를 누르려던 손가락이 막 나타난 선택지 카드에 떨어져,
+    // 보지도 못한 선택지가 골라진다(2026-11-12 에뮬레이터 실제 플레이에서 확인).
+    val endPreview: () -> Unit = {
         if (previewing) {
             previewing = false
             previewDone = true
-            if (byTap) swallowTaps = true
+            swallowTaps = true
         }
     }
 
@@ -312,7 +315,7 @@ fun DecisionScreen(
     LaunchedEffect(introKey, previewing) {
         if (!previewing) return@LaunchedEffect
         delay(PREVIEW_HOLD_MILLIS)
-        endPreview(false)
+        endPreview()
     }
 
     LaunchedEffect(swallowTaps) {
@@ -339,7 +342,7 @@ fun DecisionScreen(
 
     BackHandler(enabled = popupOpen) { popupClosed.trySend(Unit) }
     BackHandler(enabled = sceneOnly && !popupOpen) { sceneOnly = false }
-    BackHandler(enabled = previewing && !popupOpen) { endPreview(false) }
+    BackHandler(enabled = previewing && !popupOpen) { endPreview() }
     val sceneClear = sceneOnly || previewing
     // 그림 선노출에 들어갈 때만 블러가 서서히 풀린다. 장면 보기 · 복귀는 이전처럼 바로 바뀐다.
     val blur by animateDpAsState(
@@ -372,7 +375,7 @@ fun DecisionScreen(
             fitWholeImage = false,
         )
         if (previewing) {
-            ScenePreview(title = decision.title, onDone = { endPreview(true) })
+            ScenePreview(title = decision.title, onDone = endPreview)
         } else if (sceneOnly) {
             // 장면 보기: 그림만 남기고 모든 UI를 숨긴다. 한 번 누르면 그대로 돌아온다.
             Box(

@@ -309,6 +309,7 @@ fun CharacterSelectScreen(
                         gender = chosen,
                         starterId = tendency?.starterId,
                         rolledDelta = rolled.delta,
+                        startingRollRaw = rolled.encode(),
                         avatar = AvatarConfig(
                             skinToneId = skinId,
                             hairId = hairId,
@@ -450,8 +451,7 @@ private fun DiceRow(stat: StatRoll, settled: Boolean) {
         Text(
             text = when {
                 !settled -> ""
-                delta > 0 -> "+$delta"
-                else -> "$delta"
+                else -> "${stat.first}+${stat.second}=${stat.sum} → ${stat.finalValue}"
             },
             color = when {
                 delta > 0 -> LifeGameStatUp
@@ -461,7 +461,7 @@ private fun DiceRow(stat: StatRoll, settled: Boolean) {
             fontSize = 14.sp,
             fontWeight = FontWeight.Bold,
             textAlign = TextAlign.End,
-            modifier = Modifier.width(40.dp),
+            modifier = Modifier.width(112.dp),
         )
     }
 }

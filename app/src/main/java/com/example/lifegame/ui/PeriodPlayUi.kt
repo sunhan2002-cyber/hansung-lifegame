@@ -136,6 +136,8 @@ data class NewLifeProfile(
     val starterId: String?,
     /** 주사위로 정한 시작 능력치 보정. null이면 성향의 기본 보정을 쓴다. */
     val rolledDelta: StatDelta? = null,
+    /** 두 주사위 원본값. 합계·최종 능력치를 저장/복원하고 검증하는 기준값이다. */
+    val startingRollRaw: String? = null,
     /** 사진 없이 고른 외형과(선택) 사진 참조. 저장 모델에 그대로 들어간다. */
     val avatar: AvatarConfig = AvatarConfig(),
 )
