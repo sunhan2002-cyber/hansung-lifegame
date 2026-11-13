@@ -1,0 +1,1001 @@
+{
+  "schemaVersion": 1,
+  "owner": "신기훈",
+  "createdAt": "2026-11-13",
+  "status": "CONTENT_ONLY — 조회 API는 김우영, 표시는 김재겸 담당. 앱은 아직 이 파일을 읽지 않는다.",
+  "rules": {
+    "recall": "회상 문구는 현재 인생의 실제 선택 기록에 sourceEventId:sourceChoiceIds 중 하나가 있고 requiredFlags를 모두 가졌으며 blockedFlags가 없을 때만 표시한다. 기록이 없으면 문구를 만들지 않는다.",
+    "recallLimit": "한 사건에는 회상 1줄, 결말에는 최대 3줄. 같은 slotId는 한 인생에서 사건 1회 + 결말 1회까지만 표시한다.",
+    "turningPoints": "결말 화면에는 분야별 후보 중 실제 선택 기록이 있는 카드만, priority 높은 순으로 전체 2~3장을 고른다. {choiceLabel}에는 그때 고른 선택지 라벨을 그대로 넣는다.",
+    "titleGoals": "칭호 목록의 \"다음 판에서 노리기\"에 goal을, 잠긴 칭호의 설명 대신 hint를 보여 준다. 정확한 플래그·확률은 노출하지 않는다.",
+    "npc": "재등장은 relationFlags가 실제로 있는 인생에서만. 다른 인생 기록과 섞지 않고, 지난 인생 비교 문구를 만들지 않는다.",
+    "noComparison": "지난 두 인생 비교 기능·문구는 만들지 않는다."
+  },
+  "recallSlots": [
+    {
+      "slotId": "recall_dol_music",
+      "sourceEventId": "infant_007",
+      "sourceChoiceIds": [
+        "A"
+      ],
+      "requiredFlags": [
+        "music_toy"
+      ],
+      "blockedFlags": [],
+      "line": "돌잡이 때 피아노 장난감을 꼭 쥐던 그 손이었다.",
+      "showIn": [
+        "path_hap_11",
+        "path_hap_06",
+        "auto_infant_dol_photo_music",
+        "ENDING"
+      ],
+      "note": "돌잡이 회상"
+    },
+    {
+      "slotId": "recall_dol_gavel",
+      "sourceEventId": "infant_007",
+      "sourceChoiceIds": [
+        "B"
+      ],
+      "requiredFlags": [
+        "judge_gavel"
+      ],
+      "blockedFlags": [],
+      "line": "돌잡이 판사봉으로 아빠 이마를 두드리던 아기가 단상에 섰다.",
+      "showIn": [
+        "teen_014",
+        "child_003",
+        "auto_infant_dol_photo_gavel",
+        "ENDING"
+      ],
+      "note": "돌잡이 회상"
+    },
+    {
+      "slotId": "recall_dol_cash",
+      "sourceEventId": "infant_007",
+      "sourceChoiceIds": [
+        "C"
+      ],
+      "requiredFlags": [
+        "cash_grabber"
+      ],
+      "blockedFlags": [],
+      "line": "돌잡이 때 5만 원권을 끝까지 놓지 않던 손이다.",
+      "showIn": [
+        "child_008",
+        "path_wea_01",
+        "auto_infant_dol_photo_cash",
+        "ENDING"
+      ],
+      "note": "돌잡이 회상. path_luk_09는 본문에 이미 회상이 있어 중복 표시하지 않는다"
+    },
+    {
+      "slotId": "recall_festival",
+      "sourceEventId": "teen_021",
+      "sourceChoiceIds": [
+        "A",
+        "C"
+      ],
+      "requiredFlags": [
+        "first_love"
+      ],
+      "blockedFlags": [],
+      "line": "축제 날 단체 사진에서 옆자리에 섰던 그 애였다.",
+      "showIn": [
+        "auto_teen_festival_photo",
+        "auto_old_first_love",
+        "ENDING"
+      ],
+      "note": "축제 인연 회상. adult_077은 본문이 이미 축제를 되짚으므로 표시하지 않는다"
+    },
+    {
+      "slotId": "recall_bus",
+      "sourceEventId": "path_soc_03",
+      "sourceChoiceIds": [
+        "A"
+      ],
+      "requiredFlags": [
+        "dating__path_soc_03"
+      ],
+      "blockedFlags": [],
+      "line": "세 정거장을 같이 걸어서 돌아갔던 그 사람이다.",
+      "showIn": [
+        "love_date_01",
+        "love_conflict_first_love",
+        "ENDING"
+      ],
+      "note": "버스 인연. 결별 뒤에는 dating__path_soc_03이 지워져 표시되지 않는다"
+    },
+    {
+      "slotId": "recall_transfer_child",
+      "sourceEventId": "child_025",
+      "sourceChoiceIds": [
+        "A",
+        "C"
+      ],
+      "requiredFlags": [
+        "kind_heart"
+      ],
+      "blockedFlags": [],
+      "line": "급식실 구석에서 혼자 밥을 먹던 그 전학생이었다.",
+      "showIn": [
+        "auto_child_transfer_friend",
+        "auto_ya_transfer_friend_wedding",
+        "ENDING"
+      ],
+      "note": "path_soc_18 본문이 이미 같은 기억을 말하므로 거기에는 표시하지 않는다"
+    },
+    {
+      "slotId": "recall_letter",
+      "sourceEventId": "adult_071",
+      "sourceChoiceIds": [
+        "A",
+        "B",
+        "C"
+      ],
+      "requiredFlags": [
+        "partner_letter"
+      ],
+      "blockedFlags": [],
+      "line": "훈련소로 매주 편지를 보내 주던 그 사람이다.",
+      "showIn": [
+        "love_date_01",
+        "love_wedding_01",
+        "ENDING"
+      ],
+      "note": "입영 편지 친구가 연인이 된 경우만"
+    },
+    {
+      "slotId": "recall_proposal_employed",
+      "sourceEventId": "adult_032",
+      "sourceChoiceIds": [
+        "A",
+        "C"
+      ],
+      "requiredFlags": [
+        "married"
+      ],
+      "blockedFlags": [
+        "divorced"
+      ],
+      "line": "'우리… 결혼할까?'에 답했던 그 주, 메일함에는 파견 제안도 있었다.",
+      "showIn": [
+        "love_wedding_01",
+        "love_wedding_music",
+        "ENDING"
+      ],
+      "note": ""
+    },
+    {
+      "slotId": "recall_proposal",
+      "sourceEventId": "love_marriage_talk_01",
+      "sourceChoiceIds": [
+        "A",
+        "C"
+      ],
+      "requiredFlags": [
+        "married"
+      ],
+      "blockedFlags": [
+        "divorced"
+      ],
+      "line": "친구 결혼식에서 돌아오던 그 밤, 처음 결혼 이야기를 꺼냈다.",
+      "showIn": [
+        "love_wedding_01",
+        "love_wedding_music",
+        "ENDING"
+      ],
+      "note": ""
+    },
+    {
+      "slotId": "recall_wedding_dance",
+      "sourceEventId": "love_wedding_01",
+      "sourceChoiceIds": [
+        "C"
+      ],
+      "requiredFlags": [
+        "married"
+      ],
+      "blockedFlags": [],
+      "line": "입장하며 30초 춤을 추던 그 결혼식 영상이 아직 단톡방 공지에 있다.",
+      "showIn": [
+        "love_holiday_01",
+        "auto_mid_anniversary",
+        "ENDING"
+      ],
+      "note": ""
+    },
+    {
+      "slotId": "recall_first_child",
+      "sourceEventId": "love_first_child_01",
+      "sourceChoiceIds": [
+        "A"
+      ],
+      "requiredFlags": [],
+      "blockedFlags": [],
+      "line": "새벽 4시, 아기가 내 손가락을 쥐고 잠들던 그 밤이 생각난다.",
+      "showIn": [
+        "adult_055",
+        "adult_063",
+        "cross_05",
+        "ENDING"
+      ],
+      "note": "자녀 사실(minChildrenCount 1) 사건에서만"
+    },
+    {
+      "slotId": "recall_first_child_leave",
+      "sourceEventId": "adult_039",
+      "sourceChoiceIds": [
+        "A"
+      ],
+      "requiredFlags": [],
+      "blockedFlags": [],
+      "line": "육아휴직을 내고 아이의 첫 걸음마를 지켜봤던 그해가 생각난다.",
+      "showIn": [
+        "adult_055",
+        "adult_063",
+        "cross_05",
+        "ENDING"
+      ],
+      "note": ""
+    },
+    {
+      "slotId": "recall_layoff",
+      "sourceEventId": "adult_070",
+      "sourceChoiceIds": [
+        "A",
+        "B",
+        "C"
+      ],
+      "requiredFlags": [
+        "laid_off"
+      ],
+      "blockedFlags": [],
+      "line": "사원증을 찍어도 출입문이 열리지 않던 그 월요일이 떠오른다.",
+      "showIn": [
+        "path_wea_12",
+        "adult_072",
+        "ENDING"
+      ],
+      "note": ""
+    },
+    {
+      "slotId": "recall_jiho",
+      "sourceEventId": "child_026",
+      "sourceChoiceIds": [
+        "C"
+      ],
+      "requiredFlags": [
+        "time_capsule"
+      ],
+      "blockedFlags": [],
+      "line": "놀이터에 타임캡슐을 묻던 날, 지호는 빨간 삽을 들고 있었다.",
+      "showIn": [
+        "adult_036",
+        "ENDING"
+      ],
+      "note": "adult_062는 본문이 이미 회상이므로 표시하지 않는다"
+    }
+  ],
+  "turningPointCards": {
+    "EDUCATION": [
+      {
+        "cardId": "tp_edu_high_school",
+        "eventId": "teen_019",
+        "priority": 30,
+        "requiredFlags": [
+          "v4:event:teen_019"
+        ],
+        "title": "고등학교 원서",
+        "line": "열여섯 살, 원서 칸에 '{choiceLabel}'를 적었다."
+      },
+      {
+        "cardId": "tp_edu_after_school",
+        "eventId": "adult_001",
+        "priority": 40,
+        "requiredFlags": [
+          "v4:event:adult_001"
+        ],
+        "title": "대학이냐 취업이냐",
+        "line": "1분 차이로 온 문자 두 통 앞에서 '{choiceLabel}'를 골랐다."
+      },
+      {
+        "cardId": "tp_edu_graduation",
+        "eventId": "path_int_07",
+        "priority": 50,
+        "requiredFlags": [
+          "v4:event:path_int_07"
+        ],
+        "title": "졸업 앞의 세 갈래",
+        "line": "졸업 학기, '{choiceLabel}'. 그 선택이 다음 10년을 정했다."
+      }
+    ],
+    "CAREER": [
+      {
+        "cardId": "tp_career_layoff",
+        "eventId": "adult_070",
+        "priority": 60,
+        "requiredFlags": [
+          "v4:event:adult_070"
+        ],
+        "title": "구조조정 통보",
+        "line": "출입문이 열리지 않던 날, '{choiceLabel}'."
+      },
+      {
+        "cardId": "tp_career_contracts",
+        "eventId": "path_wea_03",
+        "priority": 50,
+        "requiredFlags": [
+          "v4:event:path_wea_03"
+        ],
+        "title": "세 장의 계약서",
+        "line": "계약서 세 장 중 하나, '{choiceLabel}'."
+      },
+      {
+        "cardId": "tp_career_balance",
+        "eventId": "path_hap_03",
+        "priority": 50,
+        "requiredFlags": [
+          "v4:event:path_hap_03"
+        ],
+        "title": "연봉이냐 저녁이냐",
+        "line": "연봉과 저녁 사이에서 '{choiceLabel}'."
+      },
+      {
+        "cardId": "tp_career_first_card",
+        "eventId": "adult_072",
+        "priority": 45,
+        "requiredFlags": [
+          "v4:event:adult_072"
+        ],
+        "title": "서른의 첫 명함",
+        "line": "서른이 넘어 '{choiceLabel}'. 늦었지만 내 이름이 적힌 시작이었다."
+      },
+      {
+        "cardId": "tp_career_people",
+        "eventId": "path_soc_04",
+        "priority": 45,
+        "requiredFlags": [
+          "v4:event:path_soc_04"
+        ],
+        "title": "사람으로 들어온 일자리",
+        "line": "세 사람이 내민 일자리 중 '{choiceLabel}'."
+      }
+    ],
+    "FAMILY": [
+      {
+        "cardId": "tp_family_proposal_work",
+        "eventId": "adult_032",
+        "priority": 50,
+        "requiredFlags": [
+          "v4:event:adult_032"
+        ],
+        "title": "결혼 이야기",
+        "line": "청혼과 파견 메일이 같은 주에 왔다. 나는 '{choiceLabel}'."
+      },
+      {
+        "cardId": "tp_family_proposal",
+        "eventId": "love_marriage_talk_01",
+        "priority": 50,
+        "requiredFlags": [
+          "v4:event:love_marriage_talk_01"
+        ],
+        "title": "결혼이라는 단어",
+        "line": "'우리도 결혼 생각해 볼까?'라는 말에 '{choiceLabel}'."
+      },
+      {
+        "cardId": "tp_family_wedding",
+        "eventId": "love_wedding_01",
+        "priority": 55,
+        "requiredFlags": [
+          "married"
+        ],
+        "title": "결혼식",
+        "line": "결혼식 10분 전, '{choiceLabel}'."
+      },
+      {
+        "cardId": "tp_family_wedding_music",
+        "eventId": "love_wedding_music",
+        "priority": 55,
+        "requiredFlags": [
+          "married"
+        ],
+        "title": "연주로 채운 축가",
+        "line": "축가 순서에 '{choiceLabel}'."
+      },
+      {
+        "cardId": "tp_family_child_plan",
+        "eventId": "love_child_plan_01",
+        "priority": 45,
+        "requiredFlags": [
+          "v4:event:love_child_plan_01"
+        ],
+        "title": "아이 이야기",
+        "line": "조카 돌잔치에서 돌아오는 길, '{choiceLabel}'."
+      },
+      {
+        "cardId": "tp_family_first_child",
+        "eventId": "love_first_child_01",
+        "priority": 60,
+        "requiredFlags": [
+          "has_child"
+        ],
+        "title": "첫 아이",
+        "line": "새벽 4시, '{choiceLabel}'."
+      },
+      {
+        "cardId": "tp_family_first_child_work",
+        "eventId": "adult_039",
+        "priority": 60,
+        "requiredFlags": [
+          "v4:event:adult_039"
+        ],
+        "title": "첫 아이",
+        "line": "인사팀의 질문에 '{choiceLabel}'."
+      },
+      {
+        "cardId": "tp_family_breakup",
+        "eventId": "love_conflict_01",
+        "priority": 35,
+        "requiredFlags": [
+          "breakup_once"
+        ],
+        "title": "말다툼 다음 날",
+        "line": "말다툼 다음 날, '{choiceLabel}'. 그 뒤로 우리는 각자의 길을 걸었다."
+      },
+      {
+        "cardId": "tp_family_silence",
+        "eventId": "path_soc_07",
+        "priority": 50,
+        "requiredFlags": [
+          "v4:event:path_soc_07"
+        ],
+        "title": "식탁 위의 침묵",
+        "line": "식탁 위의 침묵 앞에서 '{choiceLabel}'."
+      }
+    ]
+  },
+  "titleGoals": [
+    {
+      "titleId": "title_seven_sided",
+      "goal": "일곱 능력치를 고르게 65 이상",
+      "hint": "어느 하나 포기하지 않고, 잠과 몸부터 챙긴 사람만 닿는 모양이 있다."
+    },
+    {
+      "titleId": "title_forever_leader",
+      "goal": "어릴 때 반장, 커서도 대표",
+      "hint": "교실 앞에 한 번, 대학 동아리 앞에 한 번. 두 번 다 손을 들어 보자."
+    },
+    {
+      "titleId": "title_paid_off_home",
+      "goal": "집을 사고 대출까지 다 갚기",
+      "hint": "30년짜리 서명은 시작일 뿐이다. 노년의 통장 정리 날까지 버텨 보자."
+    },
+    {
+      "titleId": "title_kongi_friend",
+      "goal": "어린 시절 강아지와 마지막 산책까지",
+      "hint": "각서를 쓰고 데려온 강아지가 열여섯 살이 되는 날, 바빠도 달려가 보자."
+    },
+    {
+      "titleId": "title_survivor",
+      "goal": "어린 시절 위기 두 번을 넘기기",
+      "hint": "시식 코너, 장수말벌, 끝나지 않는 미역. 위험한 순간에 제대로 울어야 산다."
+    },
+    {
+      "titleId": "title_burnout_back",
+      "goal": "다 타 버린 뒤 다시 웃기",
+      "hint": "모든 게 재미없는 일요일이 오면 버티지 말고 쉬어 보자."
+    },
+    {
+      "titleId": "title_auto_door",
+      "goal": "열리지 않는 자동문과 끝장 승부",
+      "hint": "아침 등굣길, 문이 나를 거부해도 물러서지 말자."
+    },
+    {
+      "titleId": "title_janggi",
+      "goal": "공원 벤치 장기 고수의 제자 되기",
+      "hint": "훈수가 쏟아지는 벤치에 앉아 인생 상담을 청해 보자."
+    },
+    {
+      "titleId": "title_subject_a",
+      "goal": "너무 평범하게 건강해서 연구 대상 되기",
+      "hint": "연구실에서 연락이 오면 거절하지 말자."
+    },
+    {
+      "titleId": "title_founder",
+      "goal": "맨땅에서 창업하기",
+      "hint": "거실 사무실, 친구의 제안, 내 가게 계약서. 셋 중 하나에 내 이름을 걸어 보자."
+    },
+    {
+      "titleId": "title_patent",
+      "goal": "떠오른 생각을 특허 등록증으로",
+      "hint": "길에서 떠오른 아이디어를 메모로만 두지 말자."
+    },
+    {
+      "titleId": "title_fifty_years",
+      "goal": "놀이터 친구와 50년 지기 되기",
+      "hint": "이사 가는 친구와 타임캡슐을 묻고, 20년 뒤 연락이 오면 꼭 나가 보자."
+    },
+    {
+      "titleId": "title_chicken",
+      "goal": "퇴직 후 치킨집 사장님",
+      "hint": "이른 퇴직 뒤 튀김기 앞에 서 보자. 가게 문을 닫지 않는 게 관건이다."
+    },
+    {
+      "titleId": "title_cafe",
+      "goal": "단골 여덟 명의 카페 사장",
+      "hint": "퇴직 후 고민할 때 치킨 대신 커피를 골라 보자."
+    },
+    {
+      "titleId": "title_first_steps",
+      "goal": "아이의 첫 걸음마 지켜보기",
+      "hint": "결혼하고 아이를 계획한 뒤, 첫 아이의 밤과 낮을 곁에서 지켜 보자."
+    },
+    {
+      "titleId": "title_audition",
+      "goal": "오디션 무대의 음이탈",
+      "hint": "오디션 제안이 오면 망설이지 말고 무대에 서 보자."
+    },
+    {
+      "titleId": "title_doorplate",
+      "goal": "처음으로 문패 달기",
+      "hint": "30년 만기 대출 서류 앞에서 집을 사겠다고 해 보자."
+    },
+    {
+      "titleId": "title_medal_door",
+      "goal": "마흔 넘어 첫 10km 완주",
+      "hint": "생애 첫 마라톤 신청서를 받으면 연습까지 해 보자."
+    },
+    {
+      "titleId": "title_hackathon",
+      "goal": "청소년 해커톤 대상",
+      "hint": "해커톤에서 밤을 새워 완성해 보자. 사진 속 눈은 장담 못 한다."
+    },
+    {
+      "titleId": "title_debate",
+      "goal": "토론대회에서 전교 회장 이기기",
+      "hint": "책을 많이 읽은 아이에게 토론 대표 자리가 온다."
+    },
+    {
+      "titleId": "title_cat_birthday",
+      "goal": "휴가 사유란의 전설",
+      "hint": "회사에 다니며 휴가 사유란을 정직하게, 아주 정직하게 써 보자."
+    },
+    {
+      "titleId": "title_bucket_list",
+      "goal": "쉰 번째 생일의 목록 해치우기",
+      "hint": "쉰 번째 생일에 하고 싶은 것 50개를 적어 보자."
+    },
+    {
+      "titleId": "title_cash_baby",
+      "goal": "돌잡이에서 5만 원 잡기",
+      "hint": "돌상 위 세 물건 중 제일 현실적인 것을 잡아 보자."
+    },
+    {
+      "titleId": "title_relay",
+      "goal": "계주 마지막 주자로 1등",
+      "hint": "운동회나 체육대회에서 마지막 주자를 맡아 전력으로 달려 보자."
+    },
+    {
+      "titleId": "title_scholarship",
+      "goal": "학점으로 장학금 받기",
+      "hint": "대학에 가서 동아리보다 학점을 골라 보자."
+    },
+    {
+      "titleId": "title_free_morning",
+      "goal": "희망퇴직 다음 날 아침의 자유",
+      "hint": "회사에 오래 다니다 희망퇴직 공고가 붙으면 신청해 보자."
+    },
+    {
+      "titleId": "title_alarm_seven",
+      "goal": "면접에서 솔직하게 답하기",
+      "hint": "최종 면접에서 아침잠 이야기를 숨기지 말자."
+    },
+    {
+      "titleId": "title_gacha",
+      "goal": "첫 용돈을 전부 뽑기에",
+      "hint": "첫 용돈을 받으면 저금통 대신 뽑기 기계 앞에 서 보자."
+    },
+    {
+      "titleId": "title_crypto",
+      "goal": "친구의 코인 이야기에 귀 기울이기",
+      "hint": "'이번엔 진짜'라는 친구 말에 여윳돈을 조금만 넣어 보자."
+    },
+    {
+      "titleId": "title_judge_baby",
+      "goal": "돌잡이에서 판사봉 잡기",
+      "hint": "돌상 위 판사봉을 잡고 아빠 이마를 노려 보자."
+    },
+    {
+      "titleId": "title_interphone",
+      "goal": "돌잡이에서 피아노 장난감 잡기",
+      "hint": "돌상 위 피아노 장난감을 잡으면 아랫집 인터폰이 바빠진다."
+    },
+    {
+      "titleId": "title_chick",
+      "goal": "학교 앞 병아리를 닭까지 키우기",
+      "hint": "학교 앞 500원 병아리를 한 마리 데려와 보자."
+    },
+    {
+      "titleId": "title_fan_life",
+      "goal": "중년에 시작한 덕질",
+      "hint": "중년에 덕질을 시작할 기회가 오면 팬클럽에 가입해 보자."
+    },
+    {
+      "titleId": "title_wall_artist",
+      "goal": "거실 벽 대작",
+      "hint": "크레파스를 쥐면 하얀 벽을 그냥 지나치지 말자."
+    },
+    {
+      "titleId": "title_loud_legend",
+      "goal": "어린이집 최고 목청",
+      "hint": "어린이집 첫날, 더 크게 울어 보자."
+    },
+    {
+      "titleId": "title_first_love",
+      "goal": "학창 시절 첫사랑",
+      "hint": "축제 때 뭐 하냐는 질문이나 같은 버스의 그 사람 앞에서 용기를 내 보자."
+    },
+    {
+      "titleId": "title_gap_year",
+      "goal": "스무 살의 1년 쉬기",
+      "hint": "대학과 취업 문자 앞에서 셋째 길을 골라 보자."
+    },
+    {
+      "titleId": "title_plant_parent",
+      "goal": "안 죽는 화분에 이름 붙이기",
+      "hint": "이사 선물 화분에 이름을 붙이고 말을 걸어 보자."
+    },
+    {
+      "titleId": "title_blinker",
+      "goal": "운전면허 따기",
+      "hint": "도로 주행 시험 날, 와이퍼를 켜더라도 끝까지 가 보자."
+    },
+    {
+      "titleId": "title_stat_intelligence",
+      "goal": "지력 85 이상",
+      "hint": "공부와 배움에 시간을 쓰는 초점을 꾸준히 골라 보자."
+    },
+    {
+      "titleId": "title_stat_fitness",
+      "goal": "운동능력 85 이상",
+      "hint": "몸을 쓰는 초점과 사건을 놓치지 말자."
+    },
+    {
+      "titleId": "title_stat_social",
+      "goal": "사회성 95 이상",
+      "hint": "모임과 사람을 잇는 선택을 끝까지 이어 가 보자."
+    },
+    {
+      "titleId": "title_stat_wealth",
+      "goal": "경제력 85 이상",
+      "hint": "적금 통장 하나를 평생 놓지 않는 인생을 살아 보자."
+    },
+    {
+      "titleId": "title_stat_happiness",
+      "goal": "행복 100과 지금에 감사하기",
+      "hint": "마흔 번째 생일이나 통장과 웃음 사이에서 지금을 골라 보자."
+    },
+    {
+      "titleId": "title_stat_luck",
+      "goal": "운 85 이상",
+      "hint": "찍은 답도, 뽑기도 내 편이 되도록 운이 붙는 선택을 따라가 보자."
+    },
+    {
+      "titleId": "title_stat_health",
+      "goal": "건강 나이 측정에서 젊은 몸",
+      "hint": "중년의 건강 나이 측정에서 결과지를 자랑할 수 있게 몸을 챙기자."
+    },
+    {
+      "titleId": "title_default",
+      "goal": "특별한 칭호 없이 끝까지",
+      "hint": "아무 칭호가 없어도 하루하루가 내 것이었다. 다음엔 한 가지를 끝까지 해 보자."
+    }
+  ],
+  "npcReappearances": [
+    {
+      "npcId": "npc_transfer_child",
+      "label": "급식실 전학생",
+      "origin": {
+        "eventId": "child_025",
+        "choiceIds": [
+          "A",
+          "C"
+        ],
+        "relationFlags": [
+          "kind_heart"
+        ]
+      },
+      "appearances": [
+        {
+          "type": "EVENT",
+          "id": "path_soc_18",
+          "requiredFlags": [
+            "kind_heart"
+          ],
+          "how": "본문에서 \"그 친구와는 지금도 연락한다\"로 언급"
+        },
+        {
+          "type": "AUTO",
+          "id": "auto_child_transfer_friend",
+          "requiredFlags": [
+            "kind_heart",
+            "v4:event:child_025"
+          ]
+        },
+        {
+          "type": "AUTO",
+          "id": "auto_ya_transfer_friend_wedding",
+          "requiredFlags": [
+            "kind_heart",
+            "v4:event:child_025"
+          ]
+        }
+      ],
+      "neverShowIf": "child_025에서 B(친구들이랑 먹는다)를 골랐거나 child_025가 나오지 않은 인생"
+    },
+    {
+      "npcId": "npc_transfer_teen",
+      "label": "중학교 전학생",
+      "origin": {
+        "eventId": "path_soc_18",
+        "choiceIds": [
+          "A",
+          "B"
+        ],
+        "relationFlags": [
+          "transfer_friend_teen"
+        ]
+      },
+      "appearances": [
+        {
+          "type": "AUTO",
+          "id": "auto_teen_transfer_friend",
+          "requiredFlags": [
+            "transfer_friend_teen"
+          ]
+        }
+      ],
+      "neverShowIf": "path_soc_18에서 C를 고른 인생(플래그 없음). 이번 주 이전 저장은 플래그가 없어 재등장하지 않는다"
+    },
+    {
+      "npcId": "npc_jiho",
+      "label": "지호(놀이터 친구)",
+      "origin": {
+        "eventId": "child_026",
+        "choiceIds": [
+          "C"
+        ],
+        "relationFlags": [
+          "time_capsule"
+        ]
+      },
+      "appearances": [
+        {
+          "type": "EVENT",
+          "id": "adult_036",
+          "requiredFlags": [
+            "time_capsule"
+          ]
+        },
+        {
+          "type": "EVENT",
+          "id": "adult_062",
+          "requiredFlags": [
+            "jiho_reunion"
+          ]
+        }
+      ],
+      "neverShowIf": "타임캡슐을 묻지 않았거나 20년 뒤 만남을 미룬 인생"
+    },
+    {
+      "npcId": "npc_first_love",
+      "label": "첫사랑(축제·버스 인연)",
+      "origin": {
+        "eventId": "teen_021|path_soc_03",
+        "relationFlags": [
+          "first_love"
+        ]
+      },
+      "appearances": [
+        {
+          "type": "AUTO",
+          "id": "auto_teen_festival_photo",
+          "requiredFlags": [
+            "first_love",
+            "v4:event:teen_021"
+          ]
+        },
+        {
+          "type": "EVENT",
+          "id": "adult_077",
+          "requiredFlags": [
+            "first_love"
+          ],
+          "blockedFlags": [
+            "dating",
+            "married",
+            "engaged"
+          ]
+        },
+        {
+          "type": "EVENT",
+          "id": "love_conflict_first_love",
+          "requiredFlags": [
+            "partner_first_love",
+            "rel_conflict"
+          ]
+        },
+        {
+          "type": "EVENT",
+          "id": "love_reunion_first_love",
+          "requiredFlags": [
+            "ex_first_love"
+          ]
+        },
+        {
+          "type": "AUTO",
+          "id": "auto_old_first_love",
+          "requiredFlags": [
+            "first_love"
+          ],
+          "blockedFlags": [
+            "partner_first_love"
+          ]
+        }
+      ],
+      "neverShowIf": "첫사랑 플래그가 없는 인생. 결혼 상대가 첫사랑이면 노년 회상 대신 배우자 사건만"
+    },
+    {
+      "npcId": "npc_partner_ideal",
+      "label": "길에서 마주친 이상형",
+      "origin": {
+        "eventId": "adult_005|adult_006|adult_008",
+        "relationFlags": [
+          "partner_ideal"
+        ]
+      },
+      "appearances": [
+        {
+          "type": "EVENT",
+          "id": "love_conflict_ideal",
+          "requiredFlags": [
+            "partner_ideal",
+            "rel_conflict"
+          ]
+        },
+        {
+          "type": "EVENT",
+          "id": "love_reunion_ideal",
+          "requiredFlags": [
+            "ex_ideal"
+          ]
+        }
+      ],
+      "neverShowIf": "이상형과 연락처를 주고받지 못한 인생"
+    },
+    {
+      "npcId": "npc_partner_music",
+      "label": "같이 연주하던 사람",
+      "origin": {
+        "eventId": "path_hap_05|adult_075",
+        "relationFlags": [
+          "partner_music"
+        ]
+      },
+      "appearances": [
+        {
+          "type": "EVENT",
+          "id": "love_conflict_music",
+          "requiredFlags": [
+            "partner_music",
+            "rel_conflict"
+          ]
+        },
+        {
+          "type": "EVENT",
+          "id": "love_reunion_music",
+          "requiredFlags": [
+            "ex_music"
+          ]
+        },
+        {
+          "type": "EVENT",
+          "id": "love_wedding_music",
+          "requiredFlags": [
+            "partner_music",
+            "engaged",
+            "families_met"
+          ]
+        }
+      ],
+      "neverShowIf": "합주 모임·MT에서 연인이 되지 않은 인생"
+    },
+    {
+      "npcId": "npc_partner_book",
+      "label": "같은 문장에 밑줄 그은 사람",
+      "origin": {
+        "eventId": "adult_074|path_soc_11",
+        "relationFlags": [
+          "partner_book"
+        ]
+      },
+      "appearances": [
+        {
+          "type": "EVENT",
+          "id": "love_conflict_book",
+          "requiredFlags": [
+            "partner_book",
+            "rel_conflict"
+          ]
+        },
+        {
+          "type": "EVENT",
+          "id": "love_reunion_book",
+          "requiredFlags": [
+            "ex_book"
+          ]
+        }
+      ],
+      "neverShowIf": "독서 모임·같은 책 소개팅에서 연인이 되지 않은 인생"
+    },
+    {
+      "npcId": "npc_partner_letter",
+      "label": "훈련소 편지 친구",
+      "origin": {
+        "eventId": "adult_071",
+        "relationFlags": [
+          "letter_friend"
+        ]
+      },
+      "appearances": [
+        {
+          "type": "EVENT",
+          "id": "love_letter_01",
+          "requiredFlags": [
+            "letter_friend",
+            "military_done"
+          ],
+          "blockedFlags": [
+            "dating",
+            "engaged",
+            "married"
+          ]
+        }
+      ],
+      "neverShowIf": "편지 결과가 나오지 않은 인생, 또는 이미 연인·약혼자·배우자가 있는 인생"
+    },
+    {
+      "npcId": "npc_partner_other",
+      "label": "그 밖의 연인(앱·마감·헬스장·소개팅·다시 만난 인연)",
+      "origin": {
+        "eventId": "adult_074|adult_076|adult_078|adult_073|auto_ya_love_start",
+        "relationFlags": [
+          "partner_app",
+          "partner_closing",
+          "partner_gym",
+          "partner_blind_date",
+          "partner_second_chance"
+        ]
+      },
+      "appearances": [
+        {
+          "type": "EVENT",
+          "id": "love_conflict_01",
+          "requiredFlags": [
+            "dating",
+            "rel_conflict"
+          ]
+        },
+        {
+          "type": "EVENT",
+          "id": "love_reunion_01",
+          "requiredFlags": [
+            "ex_partner"
+          ]
+        }
+      ],
+      "neverShowIf": "연애가 시작되지 않은 인생"
+    }
+  ]
+}
