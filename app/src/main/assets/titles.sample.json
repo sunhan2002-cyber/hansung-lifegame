@@ -212,7 +212,7 @@
   {
     "titleId": "title_first_steps",
     "text": "첫 걸음마를 본 부모",
-    "description": "육아휴직을 내고 아이의 첫 세 걸음과 첫 엉덩방아를 봤다.",
+    "description": "아이 곁을 지키며 첫 세 걸음과 첫 엉덩방아를 봤다.",
     "priority": 60,
     "conditions": {
       "minStats": {},
@@ -606,7 +606,7 @@
   {
     "titleId": "title_stat_wealth",
     "text": "통장이 든든한 사람",
-    "description": "월급날을 기다리지 않아도 되는 삶을 만들었다.",
+    "description": "통장 잔고를 확인하지 않아도 되는 삶을 만들었다.",
     "priority": 46,
     "conditions": {
       "minStats": {
@@ -650,7 +650,7 @@
   {
     "titleId": "title_stat_health",
     "text": "감기도 비켜 간 사람",
-    "description": "독감이 돌 때마다 혼자 멀쩡했다. 그래서 늘 대신 출근했다.",
+    "description": "독감이 돌 때마다 혼자 멀쩡했다. 그래서 늘 대신 당번을 섰다.",
     "priority": 46,
     "conditions": {
       "minStats": {},
