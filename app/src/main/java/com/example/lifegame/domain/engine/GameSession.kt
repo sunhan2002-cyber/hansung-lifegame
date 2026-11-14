@@ -2,6 +2,7 @@ package com.example.lifegame.domain.engine
 
 import com.example.lifegame.domain.model.Choice
 import com.example.lifegame.domain.model.ChoiceResult
+import com.example.lifegame.domain.model.AutomaticEvent
 import com.example.lifegame.domain.model.Ending
 import com.example.lifegame.domain.model.DecisionEvent
 import com.example.lifegame.domain.model.Focus
@@ -176,6 +177,7 @@ class PeriodGameSession(
     private val decisions: List<DecisionEvent>,
     private val endings: List<Ending> = emptyList(),
     private val lifeFactRules: List<LifeFactRule> = emptyList(),
+    private val automaticEvents: List<AutomaticEvent> = emptyList(),
     private val engine: GameEngine = GameEngine(),
     private val runIdFactory: () -> String = { "run-${System.currentTimeMillis()}" },
     private val runSeedFactory: () -> Long = { System.currentTimeMillis() },
@@ -197,13 +199,13 @@ class PeriodGameSession(
             runSeed = runSeedFactory(),
             periods = periods,
         )
-        val step = engine.advancePeriodYear(initial, periods, focuses, decisions)
+        val step = advanceWithAutomaticEvent(initial)
         return record(step)
     }
 
     fun restore(savedState: PeriodRunState): TurnStep {
         val migrated = engine.synchronizeLifeFacts(savedState, lifeFactRules)
-        val step = engine.advancePeriodYear(migrated, periods, focuses, decisions)
+        val step = advanceWithAutomaticEvent(migrated)
         return record(step)
     }
 
@@ -227,13 +229,13 @@ class PeriodGameSession(
         }
         val selected = engine.selectFocus(current, focus)
         state = selected
-        return engine.advancePeriodYear(selected, periods, focuses, decisions)
+        return advanceWithAutomaticEvent(selected)
             .let(::record)
     }
 
     fun advance(): TurnStep {
         val current = requireNotNull(state) { "Session has not started" }
-        val step = engine.advancePeriodYear(current, periods, focuses, decisions)
+        val step = advanceWithAutomaticEvent(current)
         return record(step)
     }
 
@@ -252,6 +254,23 @@ class PeriodGameSession(
         )
         record(resolution.step)
         return resolution
+    }
+
+    private fun advanceWithAutomaticEvent(current: PeriodRunState): TurnStep {
+        val primary = engine.advancePeriodYear(current, periods, focuses, decisions)
+        if (primary.phase != TurnPhase.AUTO_PROGRESS || primary.state.isEnding || automaticEvents.isEmpty()) {
+            return primary
+        }
+        val triggerToken = buildString {
+            append(primary.state.runId)
+            append(":progress:")
+            append(primary.state.moments.size)
+            append(':')
+            append(primary.state.period.name)
+            append(':')
+            append(primary.state.yearInPeriod)
+        }
+        return engine.applyAutomaticEvent(primary.state, automaticEvents, triggerToken, lifeFactRules) ?: primary
     }
 
     private fun record(step: TurnStep): TurnStep {

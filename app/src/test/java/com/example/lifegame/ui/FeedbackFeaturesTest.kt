@@ -78,6 +78,14 @@ class FeedbackFeaturesTest {
     }
 
     @Test
+    fun diceSumAndFinalStatUseTheSameRawEyesShownToPlayer() {
+        val roll = StatRoll("지력", 1, 3)
+        assertEquals(4, roll.sum)
+        assertEquals(-6, roll.delta)
+        assertEquals(44, roll.finalValue)
+    }
+
+    @Test
     fun tendencyFollowsTheStrongestRolledStats() {
         val starters = listOf(
             StarterUi("starter_loud", "활발한 편", "", null, StatDelta(fitness = 5, social = 3, intelligence = -3), setOf("starter_loud")),

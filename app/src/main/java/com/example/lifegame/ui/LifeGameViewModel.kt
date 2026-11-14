@@ -161,6 +161,7 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
     private var playContent: PlayContent? = null
     private var playStep: TurnStep? = null
     private var playerNameForPlay: String = DEFAULT_PLAYER_NAME
+    private var startingRollRawForRun: String? = null
     private var characterImageIdForPlay: String? = null
     /** 고른 선택지 기록. 결말 화면의 "주요 선택"에 쓴다. */
     private val choiceLog = mutableListOf<ChoiceRecordUi>()
@@ -322,6 +323,7 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
     fun startNewLife(profile: NewLifeProfile) {
         val name = normalizePlayerName(profile.name)
         val nameCall = nameCallOf(name)
+        startingRollRawForRun = profile.startingRollRaw
         val content = repository.loadV4Content()
         if (content.periods.isEmpty() || content.focuses.isEmpty()) {
             clearPlay()
@@ -415,6 +417,7 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
         runChoiceHistory.clear()
         runChoiceHistory += saved.choices
         narrativeRecords = saved.narrativeRecords
+        startingRollRawForRun = saved.startingRollRaw
         presentationForRun = saved.presentation
         choiceLog += saved.choices.map { record ->
             val periodName = content.periods.firstOrNull { it.period == record.period }?.displayName
@@ -469,7 +472,7 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
                     event,
                     playContent!!,
                     saved.state.selectedFocusId,
-                    saved.state.period,
+                    snapshot.period ?: saved.state.period,
                     savedEventImageId = snapshot.eventImageId,
                 )
             }
@@ -479,7 +482,8 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
             outcome = null
             pendingOutcomeSnapshot = null
         }
-        decisionYear = saved.choices.lastOrNull()?.yearInPeriod.takeIf { outcome != null }
+        decisionYear = saved.pendingOutcome?.yearInPeriod
+            ?: saved.choices.lastOrNull()?.yearInPeriod.takeIf { outcome != null }
         died = saved.state.isDead; playError = null
         applyStep(playSession!!.restoreSaved(saved.state))
     }
@@ -579,6 +583,8 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
             endsLife = afterState.isDead,
             openedEvents = openedEvents,
             eventImageId = decision.imageId.takeIf(String::isNotBlank),
+            period = beforeState.period,
+            yearInPeriod = beforeState.yearInPeriod,
         )
         outcome = OutcomeUi(
             choiceLabel = label,
@@ -918,6 +924,7 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
                 phase = step.phase,
                 presentation = presentationForRun,
                 narrativeRecords = narrativeRecords,
+                startingRollRaw = startingRollRawForRun,
             ),
         )
     }
