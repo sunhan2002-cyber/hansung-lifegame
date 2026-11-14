@@ -76,6 +76,14 @@ import kotlinx.coroutines.delay
 /** 종료 흐름 단계: 주마등 → 미래 모습 → 인생기록증 */
 enum class EndingStep { RECAP, FUTURE, CERTIFICATE }
 
+/**
+ * 뒤로가기로 갈 단계. 바로 앞 단계로 가되, 화면을 연 단계보다 앞으로는 가지 않는다.
+ * 지난 인생 기록은 인생기록증에서 열리므로, 거기서 "주마등 다시 보기"로 들어간 주마등 · 미래 모습의 뒤로가기는 인생기록증으로 돌아간다.
+ * 주마등은 첫 단계라 앞 단계가 없다. 예전에는 `entries[-1]`을 읽어 앱이 꺼졌다(2026-11-12 에뮬레이터에서 재현).
+ */
+internal fun previousEndingStep(step: EndingStep, initialStep: EndingStep): EndingStep =
+    EndingStep.entries.getOrNull(step.ordinal - 1)?.takeIf { it.ordinal >= initialStep.ordinal } ?: initialStep
+
 /** 주마등 한 장면이 머무는 시간 */
 private const val RECAP_MILLIS = 2_800L
 
@@ -99,7 +107,7 @@ fun EndingFlowScreen(
 
     BackHandler(enabled = step != initialStep) {
         if (step == EndingStep.FUTURE && look?.status == GenerationStatus.LOADING) onCancelFuture()
-        step = EndingStep.entries[step.ordinal - 1].takeIf { it.ordinal >= initialStep.ordinal } ?: initialStep
+        step = previousEndingStep(step, initialStep)
     }
 
     when (step) {

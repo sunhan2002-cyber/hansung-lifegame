@@ -198,6 +198,8 @@ class FollowupTypingTest {
         composeRule.onNodeWithTag("scene_blurred").assertExists()
         assertEquals(decision.text, shownBody())
         saveScreenshot("iter_choices_after_scene.png")
+        // 저절로 끝난 직후의 짧은 보호 시간이 지나야 버튼이 눌린다.
+        advance(TAP_GUARD_MILLIS + 50)
 
         // 장면 보기는 그대로: 블러를 풀고 UI를 숨기며, 한 번 터치로 돌아와도 다시 타이핑하거나 그림을 다시 띄우지 않는다.
         tapCenterOf("scene_view_button")
@@ -229,6 +231,35 @@ class FollowupTypingTest {
         tapCenterOf("decision_choice_B")
         assertEquals(0, chooseCount)
         assertEquals(0, continueCount)
+        advance(TAP_GUARD_MILLIS + 50)
+        tapCenterOf("decision_choice_B")
+        assertEquals(1, chooseCount)
+    }
+
+    /**
+     * 선노출이 시간이 다 돼 저절로 끝나는 순간 "누르면 선택지로"를 누르면, 그 터치가 막 나타난 선택지 카드에 떨어져
+     * 보지도 못한 선택지가 골라졌다(2026-11-12 에뮬레이터 실제 플레이). 눌러서 끝낼 때와 같이 짧게 삼킨다.
+     */
+    @Test
+    fun aTapJustAfterThePreviewTimesOutDoesNotChoose() {
+        val decision = longMilestone
+        setScreen { DecisionScreen(playState(decision), onChoose = { chooseCount++ }, onContinue = { continueCount++ }) }
+        advance(TYPE_MILLIS * 5)
+        tapCenterOf("decision_title")
+        assertEquals(decision.text, shownBody())
+        advance(PREVIEW_DELAY_MILLIS + 16)
+        composeRule.onNodeWithTag("scene_preview").assertIsDisplayed()
+
+        // 누르지 않고 기다려 저절로 끝나게 한 뒤, 곧바로 그 자리의 선택지를 누른다.
+        advance(PREVIEW_HOLD_MILLIS + 16)
+        composeRule.onAllNodesWithTag("scene_preview").assertCountEquals(0)
+        advance(40)
+        tapCenterOf("decision_choice_A")
+        tapCenterOf("decision_choice_B")
+        assertEquals("선노출이 끝나는 순간의 터치는 선택이 아니다", 0, chooseCount)
+        assertEquals(0, continueCount)
+
+        // 보호 시간이 지나면 평소처럼 고를 수 있다.
         advance(TAP_GUARD_MILLIS + 50)
         tapCenterOf("decision_choice_B")
         assertEquals(1, chooseCount)
