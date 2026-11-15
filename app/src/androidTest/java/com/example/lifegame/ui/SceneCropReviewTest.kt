@@ -143,15 +143,21 @@ class SceneCropReviewTest {
                 composeRule.onNodeWithText("사건 보기").performClick()
                 advance(400)
             }
-            // 본문 출력 중이면 한 번 터치로 완성한다. 이미 완성돼 사건 그림 선노출(2026-11-06)이 떠 있으면 본문은 숨어 있다.
-            if (composeRule.onAllNodesWithTag("decision_body", useUnmergedTree = true).fetchSemanticsNodes().isNotEmpty()) {
-                composeRule.onNodeWithTag("decision_body", useUnmergedTree = true).performTouchInput { click(center) }
-                advance(TAP_GUARD_MILLIS + 50)
-                advance(com.example.lifegame.ui.screens.PREVIEW_DELAY_MILLIS + 16)
+            // 2026-11-13 순서: 그림 선노출 → 본문 → 선택지. 그림을 읽는 동안(다른 스레드) 기다렸다가
+            // 선노출은 아래 제목이 겹치므로 한 번 터치로 넘기고, 본문은 한 번 터치로 완성한 뒤 장면 보기로 크롭을 잰다.
+            val end = System.currentTimeMillis() + 5_000
+            fun present(tag: String) = composeRule.onAllNodesWithTag(tag, useUnmergedTree = true).fetchSemanticsNodes().isNotEmpty()
+            while (!present("scene_preview") && !present("decision_body")) {
+                check(System.currentTimeMillis() < end) { "${event.eventId}: 선노출도 본문도 나타나지 않았다" }
+                Thread.sleep(10)
+                composeRule.mainClock.advanceTimeByFrame()
             }
-            // 선노출은 아래 제목이 겹치므로 한 번 터치로 넘긴 뒤 장면 보기로 크롭을 잰다.
-            if (composeRule.onAllNodesWithTag("scene_preview").fetchSemanticsNodes().isNotEmpty()) {
+            if (present("scene_preview")) {
                 composeRule.onNodeWithTag("scene_preview").performTouchInput { click(center) }
+                advance(TAP_GUARD_MILLIS + 50)
+            }
+            if (present("decision_body")) {
+                composeRule.onNodeWithTag("decision_body", useUnmergedTree = true).performTouchInput { click(center) }
                 advance(TAP_GUARD_MILLIS + 50)
             }
             composeRule.onNodeWithTag("scene_view_button", useUnmergedTree = true).performTouchInput { click(center) }

@@ -336,9 +336,9 @@ class Week10EndingFlowTest {
         composeRule.onNodeWithTag("photo_pick").performScrollTo().performClick()
         assertEquals(PhotoFlowStatus.CONSENT_REQUIRED, photoStates.last().first)
         composeRule.onNodeWithTag("photo_consent_no").performClick()
-        composeRule.onNodeWithTag("photo_message").assertTextContains("동의하지 않아 기본 모습으로 진행합니다.")
+        composeRule.onNodeWithTag("photo_message").assertTextContains("사진 없이 위에서 고른 모습으로 진행합니다.") // 정원률 11-14 검수: 고른 모습이 유지된다는 뜻으로
         assertEquals(PhotoFlowStatus.FALLBACK, photoStates.last().first)
-        assertTrue(photoStates.last().second.orEmpty().contains("동의하지 않아"))
+        assertTrue(photoStates.last().second.orEmpty().contains("사진 없이 위에서 고른 모습"))
         saveScreenshot("w10_profile_consent_declined.png")
 
         composeRule.onNodeWithText("남").performScrollTo().performClick()

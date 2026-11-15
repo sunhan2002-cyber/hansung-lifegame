@@ -42,7 +42,6 @@ import com.example.lifegame.domain.model.Stats
 import com.example.lifegame.ui.screens.ChapterFocusScreen
 import com.example.lifegame.ui.screens.CharacterSelectScreen
 import com.example.lifegame.ui.screens.DecisionScreen
-import com.example.lifegame.ui.screens.PREVIEW_DELAY_MILLIS
 import com.example.lifegame.ui.screens.TAP_GUARD_MILLIS
 import com.example.lifegame.ui.theme.LifeGameTheme
 import java.io.File
@@ -317,19 +316,32 @@ class SmallScreenLayoutAuditTest {
     }
 
     /** 본문 출력 → 그림 선노출 → 선택지까지 넘긴다. 큰 사건이면 팝업부터 닫는다. */
+    /** 2026-11-13 순서: (팝업 →) 그림 선노출 → 본문 → 선택지. 그림은 다른 스레드에서 읽으므로 둘 중 하나가 나올 때까지 기다린다. */
     private fun reachChoices() {
         advance(2_000)
         if (compose.onAllNodesWithTag("incident_popup").fetchSemanticsNodes().isNotEmpty()) {
             compose.onNodeWithText("사건 보기").performClick()
             advance(400)
         }
-        if (compose.onAllNodesWithTag("decision_body", useUnmergedTree = true).fetchSemanticsNodes().isNotEmpty()) {
-            compose.onNodeWithTag("decision_body", useUnmergedTree = true).performTouchInput { click(center) }
-            advance(TAP_GUARD_MILLIS + 50)
-            advance(PREVIEW_DELAY_MILLIS + 16)
+        val end = System.currentTimeMillis() + 8_000
+        fun present(tag: String) = compose.onAllNodesWithTag(tag, useUnmergedTree = true).fetchSemanticsNodes().isNotEmpty()
+        while (!present("scene_preview") && !present("decision_body")) {
+            check(System.currentTimeMillis() < end) { "선노출도 본문도 나타나지 않았다" }
+            // 돌발 팝업이 2초보다 늦게 뜨는 사건도 있다(큰 글씨 · 긴 제목). 뜨면 닫는다.
+            if (present("incident_popup")) {
+                compose.onNodeWithText("사건 보기").performClick()
+                advance(400)
+                continue
+            }
+            Thread.sleep(10)
+            compose.mainClock.advanceTimeByFrame()
         }
-        if (compose.onAllNodesWithTag("scene_preview").fetchSemanticsNodes().isNotEmpty()) {
+        if (present("scene_preview")) {
             compose.onNodeWithTag("scene_preview").performTouchInput { click(center) }
+            advance(TAP_GUARD_MILLIS + 50)
+        }
+        if (present("decision_body") && !present("decision_choice_A")) {
+            compose.onNodeWithTag("decision_body", useUnmergedTree = true).performTouchInput { click(center) }
             advance(TAP_GUARD_MILLIS + 50)
         }
     }
