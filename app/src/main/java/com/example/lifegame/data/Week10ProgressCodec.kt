@@ -214,6 +214,8 @@ internal object Week10ProgressCodec {
         put("openedEvents", JSONArray(openedEvents))
         put("eventImageId", eventImageId)
         put("period", period?.name); put("year", yearInPeriod)
+        // 선택 전 플래그(이어하기에서 사실 변화를 다시 계산). 옛 저장에는 없고, 없으면 읽을 때 null.
+        beforeFlags?.let { put("beforeFlags", JSONArray(it.sorted())) }
     }
 
     private fun JSONObject.toSavedOutcome() = SavedOutcome(
@@ -226,6 +228,7 @@ internal object Week10ProgressCodec {
         eventImageId = nullableString("eventImageId"),
         period = nullableString("period")?.let { LifePeriod.valueOf(it) },
         yearInPeriod = if (has("year") && !isNull("year")) getInt("year") else null,
+        beforeFlags = optJSONArray("beforeFlags")?.strings()?.toSet(),
     )
 
     private fun PresentationState.toJson() = JSONObject().apply {
@@ -265,12 +268,16 @@ internal object Week10ProgressCodec {
 
     private fun AvatarConfig.toJson() = JSONObject().apply {
         put("skinToneId", skinToneId); put("hairId", hairId); put("eyesId", eyesId)
+        put("hairColorId", hairColorId); put("outfitColorId", outfitColorId)
         put("portraitRef", portraitRef); put("faceSheetRef", faceSheetRef); put("photoConsent", photoConsent)
     }
 
     private fun JSONObject.toAvatar() = AvatarConfig(
         skinToneId = optString("skinToneId", "skin_default"), hairId = optString("hairId", "hair_default"),
-        eyesId = optString("eyesId", "eyes_default"), portraitRef = nullableString("portraitRef"),
+        eyesId = optString("eyesId", "eyes_default"),
+        hairColorId = optString("hairColorId", "hair_color_natural"),
+        outfitColorId = optString("outfitColorId", "outfit_original"),
+        portraitRef = nullableString("portraitRef"),
         faceSheetRef = nullableString("faceSheetRef"), photoConsent = optBoolean("photoConsent", false),
     )
 

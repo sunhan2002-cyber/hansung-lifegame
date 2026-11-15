@@ -454,6 +454,7 @@ private fun CertificateView(
                 }
             }
             EndingBody(record.summary)
+            LifeExtensionSections(record)
         }
         Column(
             Modifier.padding(start = 16.dp, end = 16.dp, top = 8.dp, bottom = 16.dp),
@@ -463,4 +464,83 @@ private fun CertificateView(
             InkButton(text = doneLabel, onClick = onDone, modifier = Modifier.testTag("certificate_done"))
         }
     }
+}
+
+/**
+ * 인생기록증의 승인된 확장 기능(2026-11-13): "내 인생의 계기" 카드(2~3장), "그때 그 선택" 회상(최대 3줄), 다시 만난 사람.
+ * 모두 이번 인생의 실제 선택 기록에서만 나온다. 기록이 없으면 그 칸 자체를 그리지 않는다.
+ */
+@Composable
+private fun LifeExtensionSections(record: LifeRecordUi) {
+    if (record.turningPoints.isNotEmpty()) {
+        Column(Modifier.fillMaxWidth().testTag("certificate_turning_points"), verticalArrangement = Arrangement.spacedBy(8.dp)) {
+            CertificateSectionTitle("내 인생의 계기")
+            record.turningPoints.forEach { card ->
+                val shape = RoundedCornerShape(10.dp)
+                Column(
+                    Modifier
+                        .fillMaxWidth()
+                        .clip(shape)
+                        .background(LifeGameCard)
+                        .border(1.dp, LifeGameRule, shape)
+                        .padding(12.dp)
+                        // 카드 한 장을 화면 낭독에서 한 덩어리로 읽는다.
+                        .semantics(mergeDescendants = true) {}
+                        .testTag("turning_point_${card.cardId}"),
+                    verticalArrangement = Arrangement.spacedBy(4.dp),
+                ) {
+                    Text(
+                        text = "${card.fieldLabel} · ${card.periodName} ${card.yearInPeriod}번째 해 · ${card.title}",
+                        color = LifeGameInkTertiary,
+                        fontSize = 13.sp,
+                        lineHeight = 18.sp,
+                    )
+                    Text(card.text, color = LifeGameInk, fontSize = 15.sp, lineHeight = 22.sp)
+                    Text("고른 선택: ${card.choiceLabel}", color = LifeGameInkSecondary, fontSize = 13.sp, lineHeight = 18.sp)
+                }
+            }
+        }
+    }
+    if (record.recalls.isNotEmpty()) {
+        Column(Modifier.fillMaxWidth().testTag("certificate_recalls"), verticalArrangement = Arrangement.spacedBy(6.dp)) {
+            CertificateSectionTitle("그때 그 선택")
+            record.recalls.forEach { recall ->
+                Text(
+                    text = recall.text,
+                    color = LifeGameInk,
+                    fontFamily = LifeGameSerif,
+                    fontStyle = androidx.compose.ui.text.font.FontStyle.Italic,
+                    fontSize = 15.sp,
+                    lineHeight = 22.sp,
+                    modifier = Modifier.testTag("certificate_recall_${recall.slotId}"),
+                )
+            }
+        }
+    }
+    if (record.npcsMetAgain.isNotEmpty()) {
+        Column(Modifier.fillMaxWidth().testTag("certificate_npcs"), verticalArrangement = Arrangement.spacedBy(6.dp)) {
+            CertificateSectionTitle("다시 만난 사람")
+            record.npcsMetAgain.forEach { npc ->
+                Text(
+                    text = "${npc.label}: ${npc.originPeriodName} 「${npc.originTitle}」에서 만나 " +
+                        npc.metAgainTitles.joinToString(" · ") { "「$it」" } + "에서 다시 만났다",
+                    color = LifeGameInkSecondary,
+                    fontSize = 14.sp,
+                    lineHeight = 20.sp,
+                    modifier = Modifier.testTag("certificate_npc_${npc.npcId}"),
+                )
+            }
+        }
+    }
+}
+
+@Composable
+private fun CertificateSectionTitle(text: String) {
+    Text(
+        text = text,
+        color = LifeGameInkSecondary,
+        fontSize = 14.sp,
+        fontWeight = FontWeight.Bold,
+        modifier = Modifier.semantics { heading() },
+    )
 }

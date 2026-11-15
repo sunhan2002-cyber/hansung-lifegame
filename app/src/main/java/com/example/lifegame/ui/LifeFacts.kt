@@ -134,6 +134,22 @@ fun buildLifeFacts(state: PeriodRunState, catalog: LifeFactCatalog): LifeFactsUi
 /** 선택 직후 "새로 생긴 사실" 한 줄. */
 data class FactChangeUi(val category: String, val text: String)
 
+/**
+ * 결과 화면에서 앱이 꺼졌다 다시 열린 경우의 "새로 생긴 사실". 엔진 상태는 이미 선택 뒤라서, 저장된 선택 전 플래그로
+ * 선택 전 사실을 다시 만든다. 선택 뒤 플래그로 계산하면 특성화고 같은 새 사실이 "원래 있던 것"이 되어 사라졌다.
+ */
+fun restoredFactChanges(
+    state: PeriodRunState,
+    snapshot: com.example.lifegame.domain.model.SavedOutcome,
+    catalog: LifeFactCatalog,
+): List<FactChangeUi> = factChanges(
+    buildLifeFacts(
+        state.copy(stats = snapshot.beforeStats, lifeFacts = snapshot.beforeFacts, flags = snapshot.beforeFlags ?: state.flags),
+        catalog,
+    ),
+    buildLifeFacts(state.copy(stats = snapshot.afterStats, lifeFacts = snapshot.afterFacts), catalog),
+)
+
 fun factChanges(before: LifeFactsUi, after: LifeFactsUi): List<FactChangeUi> = buildList {
     fun changed(category: String, old: String?, new: String?) {
         if (new != null && new != old) add(FactChangeUi(category, new))

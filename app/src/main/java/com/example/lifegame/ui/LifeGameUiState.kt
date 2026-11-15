@@ -127,8 +127,9 @@ fun buildLifeRecords(
             stage = event.stage,
             title = event.title,
             imageId = event.imageId,
-            choiceLabel = event.choices.firstOrNull { it.choiceId == record.choiceId }
-                ?.label.orEmpty(),
+            choiceLabel = displayChoiceLabel(
+                event.choices.firstOrNull { it.choiceId == record.choiceId }?.label.orEmpty(),
+            ),
             changes = record.afterStats.toDisplayMap()
                 .mapValues { (name, value) -> value - (before[name] ?: value) }
                 .filterValues { it != 0 },

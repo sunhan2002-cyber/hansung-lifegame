@@ -102,6 +102,10 @@ data class DecisionUi(
     val imageFile: String?,
     val choices: List<DecisionChoiceUi>,
     val images: List<ImageCandidate> = emptyList(),
+    /** "그때 그 선택" 회상 한 줄. 이번 인생의 실제 선택 기록이 있을 때만 있다. */
+    val recall: RecallLine? = null,
+    /** 이 사건에 다시 나오는, 관계가 이어진 사람. 관계 플래그와 처음 만난 기록이 있을 때만 있다. */
+    val returningNpc: NpcReturnUi? = null,
 ) {
     /** 갈림길이 아닌 결정은 모두 돌발이다. 모든 돌발은 왜곡 전환을 쓴다 (R-23). */
     val isIncident: Boolean get() = kind != DecisionKind.MILESTONE
@@ -138,6 +142,8 @@ data class NewLifeProfile(
     val rolledDelta: StatDelta? = null,
     /** 두 주사위 원본값. 합계·최종 능력치를 저장/복원하고 검증하는 기준값이다. */
     val startingRollRaw: String? = null,
+    /** 실행 시드. 같은 출발선 도전 코드에서 정한 값이면 그대로 쓰고, null이면 엔진이 새로 정한다. */
+    val runSeed: Long? = null,
     /** 사진 없이 고른 외형과(선택) 사진 참조. 저장 모델에 그대로 들어간다. */
     val avatar: AvatarConfig = AvatarConfig(),
 )
@@ -203,6 +209,8 @@ data class PeriodPlayUiState(
     val avatar: AvatarLook = AvatarLook(),
     /** 화면 연출 전용 상태. 엔진 진행·보상·사망 판정에는 전달하지 않는다. */
     val presentation: PresentationState = PresentationState(),
+    /** 기록 화면용: 이번 인생에서 실제로 다시 만난, 관계가 이어진 사람들 */
+    val npcsMetAgain: List<NpcReturnUi> = emptyList(),
 ) {
     val place: String get() = "$periodName · ${yearInPeriod}번째 해"
 }
@@ -220,6 +228,8 @@ data class PlayContent(
     /** 해마다 흘러가는 일상 이야기 (yearly_stories.sample.json) */
     val yearlyStories: YearlyStoryBook = YearlyStoryBook.EMPTY,
     val imageRouting: ImageRouting = ImageRouting(),
+    /** 회상 · NPC 재등장 등 승인된 확장 기능 콘텐츠 (scenario_extensions.sample.json) */
+    val extensions: ScenarioExtensions = ScenarioExtensions.EMPTY,
 ) {
     /** 선택 결과 문장 모음(이름 치환이 끝난 문장). 기록 줄이 선택 결과인지 가려낼 때 쓴다. */
     val outcomeTexts: Set<String> by lazy {
@@ -352,7 +362,7 @@ fun buildDecisionUi(
             DecisionChoiceUi(
                 choiceId = preview.choiceId,
                 key = ('A' + index).toString(),
-                label = preview.label,
+                label = displayChoiceLabel(preview.label),
                 hint = options[preview.choiceId]?.hint(stats).orEmpty(),
                 statConditionText = preview.statConditionText,
                 healthEffectText = option?.healthEffectText(),
@@ -432,10 +442,17 @@ fun buildPeriodPlayState(
     avatar: AvatarConfig = AvatarConfig(),
     endingId: String? = null,
     presentation: PresentationState = PresentationState(),
+    /** 결과를 보는 동안 표시할 선택 당시 시기([com.example.lifegame.domain.model.SavedOutcome.period]). */
+    outcomePeriod: LifePeriod? = null,
+    /** 이번 인생의 실제 선택 기록. 회상 · 재등장 인물 판정에만 쓴다. */
+    runChoices: List<com.example.lifegame.domain.model.RunChoiceRecord> = emptyList(),
 ): PeriodPlayUiState {
     val state = step.state
     val periods = content.periods.sortedBy { it.order }
-    val periodIndex = periods.indexOfFirst { it.period == state.period }.coerceAtLeast(0)
+    // 결과를 보는 동안은 선택 당시 시기를 쓴다. 시기 마지막 사건의 결과면 엔진 달력은 이미 다음 시기로 넘어가 있어,
+    // "첫 용돈"(유년기) 결과에 "청소년 5번째 해"가 붙었다(2026-11-12 검토 12번).
+    val viewPeriod = outcomePeriod.takeIf { outcome != null } ?: state.period
+    val periodIndex = periods.indexOfFirst { it.period == viewPeriod }.coerceAtLeast(0)
     val period = periods.getOrNull(periodIndex)
     val lastMoment = state.moments.lastOrNull()
     val endingPeriod = state.endingPeriod ?: if (state.isDead) lastMoment?.period else null
@@ -457,7 +474,7 @@ fun buildPeriodPlayState(
     val focus = content.focuses.firstOrNull { it.focusId == state.selectedFocusId }
     val facts = buildLifeFacts(state, content.factCatalog)
     val sceneImageId = step.sceneImageId ?: focus?.sceneImageId.orEmpty()
-    val imagePeriod = endingPeriod ?: state.period
+    val imagePeriod = endingPeriod ?: viewPeriod
     val years = period?.years ?: 1
     return PeriodPlayUiState(
         runKey = state.runId,
@@ -465,8 +482,8 @@ fun buildPeriodPlayState(
         characterImageId = characterImageId,
         characterImageFile = characterImageId?.let { content.imageFiles[it] },
         phase = phase,
-        periodName = (periods.firstOrNull { it.period == (endingPeriod ?: state.period) }?.displayName
-            ?: (endingPeriod ?: state.period).name),
+        periodName = (periods.firstOrNull { it.period == (endingPeriod ?: viewPeriod) }?.displayName
+            ?: (endingPeriod ?: viewPeriod).name),
         chapterLabel = period?.chapterLabel().orEmpty(),
         periodYears = years,
         periodIntro = period?.startLabel.orEmpty(),
@@ -502,6 +519,9 @@ fun buildPeriodPlayState(
                 imageRouting = content.imageRouting,
                 focusId = state.selectedFocusId,
                 period = state.period,
+            ).copy(
+                recall = content.extensions.recallForEvent(pending.eventId, runChoices, state.flags),
+                returningNpc = content.extensions.npcForEvent(pending.eventId, runChoices, state.flags, periods),
             )
         },
         outcome = outcome,
@@ -530,6 +550,7 @@ fun buildPeriodPlayState(
         sceneImages = content.imageRouting.candidates(sceneImageId, state.selectedFocusId, state.period, content.imageFiles),
         avatar = avatarLookOf(avatar, imagePeriod, state.stats),
         presentation = presentation,
+        npcsMetAgain = content.extensions.npcsMetAgain(runChoices, state.flags, periods),
     )
 }
 

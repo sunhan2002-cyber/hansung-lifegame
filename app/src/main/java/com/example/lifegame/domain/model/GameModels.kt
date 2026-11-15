@@ -505,6 +505,11 @@ data class SavedOutcome(
     /** 결과 화면이 달력 이동 뒤에도 선택 당시 시기·해를 표시하도록 저장한 스냅샷. */
     val period: LifePeriod? = null,
     val yearInPeriod: Int? = null,
+    /**
+     * 선택 직전 플래그. 이어하기에서 "새로 생긴 사실"을 선택 전 · 후로 다시 계산할 때 쓴다.
+     * 없으면(옛 저장) 지금 플래그로 계산하므로, 플래그로만 정해지는 사실 변화는 보이지 않을 수 있다.
+     */
+    val beforeFlags: Set<String>? = null,
 )
 
 enum class BodyType {
@@ -520,6 +525,10 @@ data class AvatarConfig(
     val portraitRef: String? = null,
     val faceSheetRef: String? = null,
     val photoConsent: Boolean = false,
+    /** 머리 염색(2026-11-13 커스터마이징). 기본값은 머리 모양 그림의 원래 색. 옛 저장은 기본값으로 읽는다. */
+    val hairColorId: String = "hair_color_natural",
+    /** 옷 색(같은 날 추가). 기본값은 시기별 옷 그림의 원래 색. */
+    val outfitColorId: String = "outfit_original",
 )
 
 /** 앱 재실행 뒤에도 다시 열 수 있는 불변 완료 인생 기록. */

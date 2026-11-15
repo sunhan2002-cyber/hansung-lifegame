@@ -120,6 +120,7 @@ import com.example.lifegame.ui.components.PerforationBand
 import com.example.lifegame.ui.components.PeriodTrack
 import com.example.lifegame.ui.components.PlayTopBar
 import com.example.lifegame.ui.components.SceneImage
+import com.example.lifegame.ui.components.SceneImageStatus
 import com.example.lifegame.ui.components.SceneViewButton
 import com.example.lifegame.ui.components.distortEnvelope
 import com.example.lifegame.ui.components.markLabel
@@ -147,10 +148,10 @@ internal const val TYPE_MILLIS = 18L
 /** 완성 터치 뒤 연타를 무시하는 시간 */
 internal const val TAP_GUARD_MILLIS = 300L
 
-/** 본문이 다 나온 뒤 사건 그림을 먼저 보여 주기까지의 짧은 틈 (2026-11-06 요구 8) */
-internal const val PREVIEW_DELAY_MILLIS = 600L
+/** 사건 그림을 읽는 동안 선노출을 기다리는 최대 시간. 넘으면 선노출 없이 본문으로 간다(본 그림으로 저장하지 않음). */
+internal const val IMAGE_WAIT_MILLIS = 1_500L
 
-/** 사건 그림 선노출 시간. 그 전에 한 번 누르면 바로 선택지로 넘어간다. */
+/** 사건 그림 선노출 시간. 그 전에 한 번 누르면 바로 본문으로 넘어간다. */
 internal const val PREVIEW_HOLD_MILLIS = 2_500L
 
 /** 선택 결과 변화 문구가 떠 있는 시간 (2026-11-06 요구 9) */
@@ -185,8 +186,11 @@ private fun Modifier.completeTextOnTap(enabled: Boolean, onTap: () -> Unit): Mod
  * 아래: 선택지(어두운 유리 카드)와 -O-O-O- 시기선. 배경 그림만 흐리게 하고 글자는 선명하게 둔다.
  * 장면 보기는 배경 블러를 풀고 모든 UI를 숨긴 뒤, 한 번 누르면 그대로 돌아온다.
  *
- * 순서 (2026-11-06 요구 8): 제목 · 본문 타이핑 → 사건 그림 선노출(블러 없이, 짧게 또는 한 번 터치까지) → 선택지.
- * 타이핑 중 터치는 본문 완성만 하고, 그림 선노출을 끝내는 터치도 바로 아래 선택지로 이어지지 않는다.
+ * 순서 (2026-11-13 통합지시서 · 김재겸 과제 2): (돌발 팝업 "사건 보기" →) 사건 그림 선노출(블러 없이, 정해진 시간 또는 한 번 터치까지)
+ * → 제목 · 본문 타이핑 → 선택지. 전환점 사건도 같은 순서를 쓴다(팝업만 없음).
+ * 그림을 읽지 못하면 선노출을 건너뛰고 "본 그림"으로 저장하지 않는다.
+ * 선노출이 터치 · 시간 초과 · 뒤로가기로 끝날 때, 그리고 본문이 끝나 선택지가 나타날 때 짧게 터치를 삼켜
+ * 다음 단계로 넘기려던 손가락이 선택을 확정하지 않게 한다.
  */
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
@@ -197,6 +201,8 @@ fun DecisionScreen(
     onEventImageShown: (eventId: String) -> Unit = {},
     onResultAnimationConsumed: (displayId: String) -> Unit = {},
     modifier: Modifier = Modifier,
+    /** 같은 장면을 방금 다른 화면(돌잡이 컷신)에서 보여 줬으면 선노출을 건너뛰고 본문부터 시작한다. */
+    skipImagePreview: Boolean = false,
 ) {
     val decision = state.decision ?: return
     val outcome = state.outcome
@@ -208,8 +214,11 @@ fun DecisionScreen(
     var introDone by rememberSaveable(introKey) { mutableStateOf(outcome != null || previewShownBefore) }
     var sceneOnly by rememberSaveable(introKey) { mutableStateOf(false) }
     // 그림 선노출은 사건마다 한 번. 복원돼도 다시 보여 주지 않는다.
-    var previewDone by rememberSaveable(introKey) { mutableStateOf(outcome != null || previewShownBefore) }
+    var previewDone by rememberSaveable(introKey) { mutableStateOf(outcome != null || previewShownBefore || skipImagePreview) }
     var previewing by rememberSaveable(introKey) { mutableStateOf(false) }
+    // 그림을 실제로 선명하게 보여 줬는지. 읽지 못해 건너뛴 경우에는 "선노출 완료"로 저장하지 않는다.
+    var imageShown by rememberSaveable(introKey) { mutableStateOf(false) }
+    var imageStatus by remember(introKey) { mutableStateOf(SceneImageStatus.LOADING) }
     var showChoiceDetails by rememberSaveable { mutableStateOf(false) }
     var chosenId by remember(introKey) { mutableStateOf<String?>(null) }
     var typedChars by rememberSaveable(introKey) {
@@ -226,14 +235,16 @@ fun DecisionScreen(
     val textLength = decision.text.length
     // 완성 터치 직후 아주 짧게 이어지는 연타도 삼켜, 본문을 보려던 손가락이 선택을 확정하지 않게 한다.
     var swallowTaps by remember(introKey) { mutableStateOf(false) }
-    val typing = introDone && outcome == null && !sceneOnly && typedChars < textLength
+    val typing = introDone && previewDone && outcome == null && !sceneOnly && typedChars < textLength
     val completeText: () -> Unit = {
         if (typedChars < textLength) {
             typedChars = textLength
             swallowTaps = true
         }
     }
-    val textComplete = introDone && typedChars >= textLength
+    val textComplete = introDone && previewDone && typedChars >= textLength
+    // 선택지는 그림 → 본문이 끝난 뒤에 나온다. 결과 화면은 그대로.
+    val choicesVisible = outcome != null || textComplete
     // 선노출이 끝나는 순간의 터치는 선택지로 넘기지 않는다. 눌러서 끝냈든 시간이 다 돼 저절로 끝났든 같다.
     // 저절로 끝날 때 보호가 없으면 "누르면 선택지로"를 누르려던 손가락이 막 나타난 선택지 카드에 떨어져,
     // 보지도 못한 선택지가 골라진다(2026-11-12 에뮬레이터 실제 플레이에서 확인).
@@ -247,9 +258,9 @@ fun DecisionScreen(
 
     // 화면 연출 상태만 소비한다. 엔진 진행, 보상, 기록, 사망 판정은 다시 호출하지 않는다.
     // 그림 선노출을 실제로 보여 주고 넘어간 뒤에만 "표시함"으로 저장한다. 결정 화면이 뜨자마자 저장하면
-    // 타이핑 중에 앱이 꺼진 경우도 표시한 것으로 남아, 다시 열었을 때 그림을 못 보고 지나간다.
-    LaunchedEffect(introKey, previewDone) {
-        if (previewDone && outcome == null) onEventImageShown(decision.eventId)
+    // 선노출 중에 앱이 꺼진 경우도 표시한 것으로 남고, 그림을 읽지 못한 경우에도 본 것으로 남는다.
+    LaunchedEffect(introKey, previewDone, imageShown) {
+        if (previewDone && imageShown && outcome == null) onEventImageShown(decision.eventId)
     }
 
     LaunchedEffect(outcome, resultDisplayId, state.presentation.resultAnimation, reduceMotion) {
@@ -292,8 +303,26 @@ fun DecisionScreen(
         introDone = true
     }
 
-    LaunchedEffect(introKey, introDone) {
-        if (!introDone || outcome != null) return@LaunchedEffect
+    // 사건 그림 선노출: 팝업이 닫히거나(돌발) 화면에 들어오면(전환점) 그림이 준비되는 대로 바로 보여 준다.
+    // 읽지 못했거나(파일 없음 포함) 너무 오래 걸리면 선노출 없이 본문으로 넘어간다.
+    LaunchedEffect(introKey, introDone, previewDone, imageStatus) {
+        if (!introDone || previewDone || previewing || outcome != null) return@LaunchedEffect
+        when (imageStatus) {
+            SceneImageStatus.READY -> {
+                imageShown = true
+                previewing = true
+            }
+            SceneImageStatus.FAILED -> previewDone = true
+            SceneImageStatus.LOADING -> {
+                delay(IMAGE_WAIT_MILLIS)
+                previewDone = true
+            }
+        }
+    }
+
+    // 본문 타이핑은 그림 선노출이 끝난 뒤에 시작한다.
+    LaunchedEffect(introKey, introDone, previewDone) {
+        if (!introDone || !previewDone || outcome != null) return@LaunchedEffect
         if (reduceMotion) {
             typedChars = textLength
             return@LaunchedEffect
@@ -304,12 +333,6 @@ fun DecisionScreen(
             typedChars = (typedChars + Character.charCount(decision.text.codePointAt(typedChars))).coerceAtMost(textLength)
             delay(TYPE_MILLIS)
         }
-    }
-
-    LaunchedEffect(introKey, textComplete, previewDone) {
-        if (!textComplete || previewDone || previewing || outcome != null) return@LaunchedEffect
-        delay(PREVIEW_DELAY_MILLIS)
-        previewing = true
     }
 
     LaunchedEffect(introKey, previewing) {
@@ -327,15 +350,17 @@ fun DecisionScreen(
 
     // 본문 스크롤은 사건마다 새로 시작하고, 장면 보기에서 돌아와도 위치를 지킨다.
     val contentScroll = rememberSaveable(introKey, saver = ScrollState.Saver) { ScrollState(0) }
-    // 선노출 뒤 선택지가 처음 나타나면 첫 카드가 다 보일 만큼만 한 번 스크롤한다(이미 보이면 움직이지 않는다).
+    // 선택지가 처음 나타나면 첫 카드가 다 보일 만큼만 한 번 스크롤한다(이미 보이면 움직이지 않는다).
     // 작은 화면 · 큰 글씨에서 선택지가 첫 화면 아래에 있어 카드 A 윗부분만 보이던 문제(2026-11-09).
     // 선택지 묶음 전체를 맞추면 긴 본문에서 "장면 보기" 버튼이 위로 밀려나므로 첫 카드까지만 맞춘다.
     // 복원 때는 다시 스크롤하지 않는다(스크롤 위치도 복원된다).
     val choicesInView = remember(introKey) { BringIntoViewRequester() }
-    var choicesRevealed by rememberSaveable(introKey) { mutableStateOf(previewDone) }
-    LaunchedEffect(introKey, previewDone, outcome == null) {
-        if (!previewDone || outcome != null || choicesRevealed) return@LaunchedEffect
+    var choicesRevealed by rememberSaveable(introKey) { mutableStateOf(choicesVisible) }
+    LaunchedEffect(introKey, choicesVisible, outcome == null) {
+        if (!choicesVisible || outcome != null || choicesRevealed) return@LaunchedEffect
         choicesRevealed = true
+        // 본문이 저절로 끝나는 순간 막 나타난 선택지 카드에 터치가 떨어지지 않게 짧게 삼킨다.
+        swallowTaps = true
         withFrameNanos { } // 선택지가 한 번 배치된 뒤에 잰다.
         choicesInView.bringIntoView()
     }
@@ -373,6 +398,7 @@ fun DecisionScreen(
                 .testTag(if (sceneClear) "scene_clear" else "scene_blurred"),
             // 장면 보기에서도 화면 전체를 채운다(위아래 여백 없음). 블러만 풀린다.
             fitWholeImage = false,
+            onStatus = { imageStatus = it },
         )
         if (previewing) {
             ScenePreview(title = decision.title, onDone = endPreview)
@@ -416,19 +442,21 @@ fun DecisionScreen(
                         .testTag("decision_content"),
                 ) {
                     if (outcome == null) {
-                        NarrativeReveal(
-                            decision = decision,
-                            typedText = decision.text.take(typedChars),
-                            ready = textComplete && previewDone,
-                            animateMark = !reduceMotion,
-                            onReveal = { sceneOnly = true },
-                            onCompleteText = completeText.takeIf { typing },
-                        )
+                        // 제목 · 본문은 그림 선노출이 끝난 뒤에 나온다.
+                        if (previewDone) {
+                            NarrativeReveal(
+                                decision = decision,
+                                typedText = decision.text.take(typedChars),
+                                ready = textComplete,
+                                animateMark = !reduceMotion,
+                                onReveal = { sceneOnly = true },
+                                onCompleteText = completeText.takeIf { typing },
+                            )
+                        }
                     } else {
                         DecisionText(decision = decision, onReveal = { sceneOnly = true })
                     }
-                    // 선택지는 사건 그림을 먼저 본 뒤에 나온다. 결과 화면은 그대로.
-                    if (outcome != null || previewDone) {
+                    if (choicesVisible) {
                         DecisionSheet(
                             firstChoiceModifier = Modifier.bringIntoViewRequester(choicesInView),
                             decision = decision,
@@ -482,6 +510,7 @@ fun DecisionScreen(
             place = state.place,
             focus = state.focus,
             showFocus = true,
+            npcsMetAgain = state.npcsMetAgain,
         )
     }
 }
@@ -543,13 +572,48 @@ private fun NarrativeReveal(
                     },
             )
         }
-        if (ready) SceneViewButton(onClick = onReveal, enabled = true)
+        if (ready) {
+            ExtensionNotes(decision)
+            SceneViewButton(onClick = onReveal, enabled = true)
+        }
+    }
+}
+
+/**
+ * 승인된 확장 기능: "그때 그 선택" 회상 한 줄과 다시 만난 사람. 이번 인생의 실제 기록이 있을 때만 값이 있고,
+ * 없으면 아무것도 그리지 않는다(문구를 지어내지 않는다).
+ */
+@Composable
+private fun ExtensionNotes(decision: DecisionUi) {
+    decision.recall?.let { recall ->
+        Text(
+            text = "그때 그 선택 · ${recall.text}",
+            color = LifeGamePaper.copy(alpha = 0.9f),
+            fontFamily = LifeGameSerif,
+            fontStyle = androidx.compose.ui.text.font.FontStyle.Italic,
+            fontSize = 15.sp,
+            lineHeight = 22.sp,
+            textAlign = TextAlign.Center,
+            style = TextStyle(shadow = OnSceneShadow),
+            modifier = Modifier.testTag("decision_recall"),
+        )
+    }
+    decision.returningNpc?.let { npc ->
+        Text(
+            text = "다시 만난 사람 · ${npc.label} (${npc.originPeriodName} 「${npc.originTitle}」)",
+            color = LifeGamePaper.copy(alpha = 0.9f),
+            fontSize = 14.sp,
+            lineHeight = 20.sp,
+            textAlign = TextAlign.Center,
+            style = TextStyle(shadow = OnSceneShadow),
+            modifier = Modifier.testTag("decision_npc"),
+        )
     }
 }
 
 /**
  * 사건 그림 선노출. 블러를 풀고 UI를 숨긴 채 아래에 제목과 안내만 둔다.
- * 시간이 지나거나 한 번 누르면 선택지로 넘어간다.
+ * 시간이 지나거나 한 번 누르면 본문으로 넘어간다.
  */
 @Composable
 private fun ScenePreview(title: String, onDone: () -> Unit) {
@@ -557,7 +621,7 @@ private fun ScenePreview(title: String, onDone: () -> Unit) {
         Modifier
             .fillMaxSize()
             .testTag("scene_preview")
-            .semantics { contentDescription = "$title 장면. 누르면 선택지로 넘어갑니다" }
+            .semantics { contentDescription = "$title 장면. 누르면 본문으로 넘어갑니다" }
             .pointerInput(Unit) { detectTapGestures { onDone() } },
         contentAlignment = Alignment.BottomCenter,
     ) {
@@ -580,7 +644,7 @@ private fun ScenePreview(title: String, onDone: () -> Unit) {
                 style = TextStyle(shadow = OnSceneShadow),
             )
             Text(
-                text = "누르면 선택지로",
+                text = "누르면 본문으로",
                 color = LifeGamePaper.copy(alpha = 0.85f),
                 fontSize = 14.sp,
                 style = TextStyle(shadow = OnSceneShadow),
@@ -621,6 +685,7 @@ private fun DecisionText(decision: DecisionUi, onReveal: () -> Unit) {
             style = TextStyle(shadow = OnSceneShadow),
             modifier = Modifier.testTag("decision_body"),
         )
+        ExtensionNotes(decision)
         SceneViewButton(onClick = onReveal)
     }
 }

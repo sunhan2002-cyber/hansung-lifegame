@@ -21,6 +21,7 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberUpdatedState
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clipToBounds
 import androidx.compose.ui.geometry.CornerRadius
@@ -149,12 +150,16 @@ fun SceneImage(
     shot: FilmShot,
     modifier: Modifier = Modifier,
     fitWholeImage: Boolean = false,
+    /** 그림을 읽는 중 · 읽음 · 실패를 알린다. 실패(파일 없음 포함)면 사건 화면이 선노출을 건너뛴다. */
+    onStatus: ((SceneImageStatus) -> Unit)? = null,
 ) {
     val density = LocalDensity.current
+    val currentOnStatus by rememberUpdatedState(onStatus)
     BoxWithConstraints(modifier.clipToBounds()) {
         val width = with(density) { maxWidth.roundToPx() }.coerceAtLeast(1)
         val height = with(density) { maxHeight.roundToPx() }.coerceAtLeast(1)
         val picture = rememberPicture(shot, width, height, cropToFill = !fitWholeImage)
+        LaunchedEffect(picture.status) { currentOnStatus?.invoke(picture.status) }
         Canvas(Modifier.fillMaxSize()) {
             drawImage(
                 image = picture.bitmap,
@@ -191,7 +196,10 @@ fun PerforationBand(
     }
 }
 
-private data class FilmPicture(val bitmap: ImageBitmap, val isPlaceholder: Boolean)
+/** 사건 그림을 실제로 읽었는지. 실패와 읽는 중을 구분해야 선노출을 건너뛰고 "본 그림"으로 저장하지 않을 수 있다. */
+enum class SceneImageStatus { LOADING, READY, FAILED }
+
+private data class FilmPicture(val bitmap: ImageBitmap, val isPlaceholder: Boolean, val status: SceneImageStatus)
 
 /** Missing files never select an unrelated sample. */
 @Composable
@@ -202,10 +210,17 @@ private fun rememberPicture(shot: FilmShot, width: Int, height: Int, cropToFill:
     }
     val placeholder = remember(shot.isSpecial, width, height) { placeholderPicture(shot, width, height) }
     var loaded by remember(candidates, width, height, cropToFill) { mutableStateOf<ImageBitmap?>(null) }
+    var settled by remember(candidates, width, height, cropToFill) { mutableStateOf(false) }
     LaunchedEffect(candidates, width, height, cropToFill) {
         loaded = withContext(Dispatchers.IO) { loadAssetPicture(context, candidates, width, height, cropToFill) }
+        settled = true
     }
-    return FilmPicture(loaded ?: placeholder, isPlaceholder = loaded == null)
+    val status = when {
+        loaded != null -> SceneImageStatus.READY
+        settled -> SceneImageStatus.FAILED
+        else -> SceneImageStatus.LOADING
+    }
+    return FilmPicture(loaded ?: placeholder, isPlaceholder = loaded == null, status = status)
 }
 
 /** 그림이 준비되기 전 자리: 단색 바탕과 아래쪽 바닥 면. 이미지 ID는 플레이 화면에 노출하지 않는다. */

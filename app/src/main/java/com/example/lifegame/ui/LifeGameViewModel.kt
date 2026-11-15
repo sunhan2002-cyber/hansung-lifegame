@@ -246,6 +246,7 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
             imageFiles = repository.loadImageAssets()
                 .filter { it.fileName.isNotBlank() }
                 .associate { it.imageId to it.fileName },
+            extensions = scenarioExtensions,
         )
     }
 
@@ -285,7 +286,15 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
         factCatalog = factCatalog,
         lookup = FlagLookup.from(decisions, factCatalog),
         yearlyStories = yearlyStories,
+        extensions = scenarioExtensions,
     )
+
+    /** 회상 · 계기 카드 · 칭호 목표 · NPC 재등장(신기훈 #76). 없거나 깨지면 확장 표시만 빠진다. */
+    private val scenarioExtensions: ScenarioExtensions by lazy {
+        runCatching {
+            getApplication<Application>().assets.open(SCENARIO_EXTENSIONS_FILE).bufferedReader().use { it.readText() }
+        }.map(ScenarioExtensions::parse).getOrElse { ScenarioExtensions.EMPTY }
+    }
 
     /** 홈 화면에 보여 줄 진행 중인 인생. 끝났거나 없으면 null. */
     val lifeCard: LifeCardUi?
@@ -357,6 +366,8 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
                 first.copy(
                     stats = (profile.rolledDelta ?: starter?.statDelta)?.let { first.stats.plusClamped(it) } ?: first.stats,
                     flags = first.flags + startFlags,
+                    // 같은 출발선 도전 코드로 시작하면 코드의 시드를 쓴다(결과 추첨이 같은 시드에서 출발).
+                    runSeed = profile.runSeed ?: first.runSeed,
                 ),
             )
         }.getOrElse {
@@ -422,7 +433,7 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
         choiceLog += saved.choices.map { record ->
             val periodName = content.periods.firstOrNull { it.period == record.period }?.displayName
                 ?: record.period.name
-            ChoiceRecordUi(periodName, record.yearInPeriod, record.eventTitle, record.choiceLabel)
+            ChoiceRecordUi(periodName, record.yearInPeriod, record.eventTitle, displayChoiceLabel(record.choiceLabel))
         }
         pendingOutcomeSnapshot = saved.pendingOutcome
         avatarForPlay = withReadablePhoto(saved.avatar)
@@ -454,15 +465,12 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
         shownDecision = null
         outcome = saved.pendingOutcome?.let { snapshot ->
             OutcomeUi(
-                choiceLabel = snapshot.choiceLabel,
+                choiceLabel = displayChoiceLabel(snapshot.choiceLabel),
                 text = snapshot.resultText,
                 changes = statChanges(snapshot.beforeStats, snapshot.afterStats),
                 endsLife = snapshot.endsLife,
                 openedEvents = snapshot.openedEvents,
-                factChanges = factChanges(
-                    buildLifeFacts(saved.state.copy(stats = snapshot.beforeStats, lifeFacts = snapshot.beforeFacts), factCatalog),
-                    buildLifeFacts(saved.state.copy(stats = snapshot.afterStats, lifeFacts = snapshot.afterFacts), factCatalog),
-                ),
+                factChanges = restoredFactChanges(saved.state, snapshot, factCatalog),
             )
         }
         // 결과 화면에서 꺼졌다면 그 사건 머리도 되살린다. 없으면 결정 화면이 비어 보인다.
@@ -585,6 +593,7 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
             eventImageId = decision.imageId.takeIf(String::isNotBlank),
             period = beforeState.period,
             yearInPeriod = beforeState.yearInPeriod,
+            beforeFlags = beforeState.flags,
         )
         outcome = OutcomeUi(
             choiceLabel = label,
@@ -623,7 +632,13 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
         publishPlay()
     }
 
+    /**
+     * 컷신 연출 상태만 저장한다. 끝난(완료 · 건너뜀) 컷신은 다시 바꾸지 않아, 자동 끝과 탭이 겹치거나 화면이 다시 그려져도
+     * 한 번만 기록된다. 새 인생은 [PresentationState] 기본값(시작 전)에서 다시 시작한다.
+     */
     fun setCutsceneStatus(status: CutsceneStatus) {
+        val current = presentationForRun.cutscene
+        if (current == status || current == CutsceneStatus.COMPLETED || current == CutsceneStatus.SKIPPED) return
         presentationForRun = presentationForRun.copy(cutscene = status)
         publishPlay()
     }
@@ -667,7 +682,27 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
         completedLives.firstOrNull { it.runId == runId }?.let { buildLifeRecordUi(it, recordContent) }
 
     fun titleCollection(): TitleCollectionUi =
-        buildTitleCollection(runCatching { repository.loadTitles() }.getOrElse { emptyList() }, completedLives)
+        buildTitleCollection(
+            runCatching { repository.loadTitles() }.getOrElse { emptyList() },
+            completedLives,
+            scenarioExtensions.titleGoals,
+        )
+
+    /** 화면 설정만 담는 저장소. 게임 진행 저장(진행 · 완료 기록)과 섞지 않는다. */
+    private val uiPrefs = application.getSharedPreferences(UI_PREFS_NAME, android.content.Context.MODE_PRIVATE)
+
+    /** 칭호 목록에서 "다음 판에서 노리기"로 고른 칭호. 이 기기에서만 기억한다. */
+    var titleTargetId by mutableStateOf(runCatching { uiPrefs.getString(TITLE_TARGET_KEY, null) }.getOrNull())
+        private set
+
+    fun setTitleTarget(titleId: String?) {
+        titleTargetId = titleId
+        uiPrefs.edit().apply { if (titleId == null) remove(TITLE_TARGET_KEY) else putString(TITLE_TARGET_KEY, titleId) }.apply()
+    }
+
+    /** 새 인생 화면에 보여 줄, 아직 받지 못한 목표 칭호 */
+    fun titleTarget(): TitleEntryUi? =
+        titleTargetId?.let { id -> titleCollection().entries.firstOrNull { it.titleId == id && !it.earned } }
 
     /** 미래 모습을 요청한다. 같은 인생에서 이미 받았으면 다시 부르지 않는다(재진입 · 회전에도 한 번). */
     fun requestFutureLook(runId: String) {
@@ -912,6 +947,8 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
             avatar = avatarForPlay,
             endingId = ending?.endingId,
             presentation = presentationForRun,
+            outcomePeriod = pendingOutcomeSnapshot?.period?.takeIf { outcome != null },
+            runChoices = runChoiceHistory.toList(),
         )
         v4ProgressStore.save(
             V4SavedRun(
@@ -1013,6 +1050,9 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
     private companion object {
         const val CHARACTERS_FILE = "characters.sample.json"
         const val LIFE_FACTS_FILE = "life_facts.sample.json"
+        const val SCENARIO_EXTENSIONS_FILE = "scenario_extensions.sample.json"
+        const val UI_PREFS_NAME = "lifegame_ui_prefs"
+        const val TITLE_TARGET_KEY = "title_target"
         const val YEARLY_STORIES_FILE = "yearly_stories.sample.json"
         /** 실제 이미지 생성은 30초~1분 넘게 걸릴 수 있다. 이보다 길면 끊고 기본 모습을 권한다. */
         const val REAL_FACE_TIMEOUT_MS = 150_000L
