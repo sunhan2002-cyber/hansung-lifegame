@@ -89,6 +89,15 @@ def audit(bundle: dict) -> dict:
             if label_has_period(c["label"]):
                 err(f"{e['eventId']}:{c['choiceId']}", f"choice label ends with a period: {c['label']}")
 
+    # 1-2. turning-point choices state a condition or an always-available reason
+    for e in events:
+        if e.get("kind") not in {"MILESTONE", "BIG_INCIDENT"}:
+            continue
+        for c in e["choices"]:
+            explicit = any(c.get(k) for k in ("requiredStats", "stats", "requiredFlags", "blockedFlags", "lifeFacts"))
+            if not explicit and not (c.get("alwaysAvailable") is True and c.get("alwaysAvailableReason")):
+                err(f"{e['eventId']}:{c['choiceId']}", "turning-point choice needs a condition or alwaysAvailable with a reason")
+
     # 2. love line ---------------------------------------------------------
     for e in events:
         req = set(e["conditions"].get("requiredFlags", []))
