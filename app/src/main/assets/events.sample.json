@@ -17694,7 +17694,11 @@
             ],
             "lifeDelta": 10
           }
-        ]
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "첫 아이 전환점 — 육아휴직과 계속 근무는 능력치로 잠그지 않고 결과와 후속 사실로 반영",
+        "conditionReview": "open_turning_point",
+        "conditionBasis": "week13_love_line"
       },
       {
         "choiceId": "B",
@@ -17720,7 +17724,11 @@
             "addFlags": [],
             "lifeDelta": 10
           }
-        ]
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "첫 아이 전환점 — 육아휴직과 계속 근무는 능력치로 잠그지 않고 결과와 후속 사실로 반영",
+        "conditionReview": "open_turning_point",
+        "conditionBasis": "week13_love_line"
       }
     ],
     "priority": 0,
@@ -48536,7 +48544,11 @@
               "rel_conflict"
             ]
           }
-        ]
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "관계 단계 전환점 — 연애·결혼·자녀는 능력치 자격이 아니라 의사 결정이라 잠그지 않고, 차이는 결과 분기와 후속 사실로 반영",
+        "conditionReview": "open_turning_point",
+        "conditionBasis": "week13_love_line"
       },
       {
         "choiceId": "B",
@@ -48578,7 +48590,11 @@
               "rel_steady"
             ]
           }
-        ]
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "관계 단계 전환점 — 연애·결혼·자녀는 능력치 자격이 아니라 의사 결정이라 잠그지 않고, 차이는 결과 분기와 후속 사실로 반영",
+        "conditionReview": "open_turning_point",
+        "conditionBasis": "week13_love_line"
       },
       {
         "choiceId": "C",
@@ -48621,7 +48637,11 @@
               "rel_conflict"
             ]
           }
-        ]
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "관계 단계 전환점 — 연애·결혼·자녀는 능력치 자격이 아니라 의사 결정이라 잠그지 않고, 차이는 결과 분기와 후속 사실로 반영",
+        "conditionReview": "open_turning_point",
+        "conditionBasis": "week13_love_line"
       }
     ],
     "priority": 0,
@@ -48726,7 +48746,11 @@
               "dating__love_letter_01"
             ]
           }
-        ]
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week13_love_line"
       },
       {
         "choiceId": "B",
@@ -48791,7 +48815,11 @@
               "dating__love_letter_01"
             ]
           }
-        ]
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week13_love_line"
       },
       {
         "choiceId": "C",
@@ -48856,7 +48884,11 @@
               "dating__love_letter_01"
             ]
           }
-        ]
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week13_love_line"
       }
     ],
     "priority": 0,
@@ -48967,7 +48999,11 @@
               "dating__love_letter_01"
             ]
           }
-        ]
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week13_love_line"
       },
       {
         "choiceId": "B",
@@ -49040,7 +49076,11 @@
               "rel_conflict"
             ]
           }
-        ]
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week13_love_line"
       },
       {
         "choiceId": "C",
@@ -49109,7 +49149,11 @@
               "dating__love_letter_01"
             ]
           }
-        ]
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week13_love_line"
       }
     ],
     "priority": 0,
@@ -49218,7 +49262,11 @@
               "dating__love_letter_01"
             ]
           }
-        ]
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week13_love_line"
       },
       {
         "choiceId": "B",
@@ -49289,7 +49337,11 @@
               "dating__love_letter_01"
             ]
           }
-        ]
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week13_love_line"
       },
       {
         "choiceId": "C",
@@ -49358,7 +49410,11 @@
               "dating__love_letter_01"
             ]
           }
-        ]
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week13_love_line"
       }
     ],
     "priority": 0,
@@ -49466,7 +49522,11 @@
               "dating__love_letter_01"
             ]
           }
-        ]
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week13_love_line"
       },
       {
         "choiceId": "B",
@@ -49537,7 +49597,11 @@
               "dating__love_letter_01"
             ]
           }
-        ]
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week13_love_line"
       },
       {
         "choiceId": "C",
@@ -49608,7 +49672,11 @@
               "dating__love_letter_01"
             ]
           }
-        ]
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week13_love_line"
       }
     ],
     "priority": 0,
@@ -49714,7 +49782,11 @@
               "dating__love_letter_01"
             ]
           }
-        ]
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week13_love_line"
       },
       {
         "choiceId": "B",
@@ -49785,7 +49857,11 @@
               "dating__love_letter_01"
             ]
           }
-        ]
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week13_love_line"
       },
       {
         "choiceId": "C",
@@ -49854,7 +49930,11 @@
               "dating__love_letter_01"
             ]
           }
-        ]
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week13_love_line"
       }
     ],
     "priority": 0,
@@ -49963,7 +50043,11 @@
               "dating__love_letter_01"
             ]
           }
-        ]
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week13_love_line"
       },
       {
         "choiceId": "B",
@@ -50032,7 +50116,11 @@
               "dating__love_letter_01"
             ]
           }
-        ]
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week13_love_line"
       },
       {
         "choiceId": "C",
@@ -50101,7 +50189,11 @@
               "dating__love_letter_01"
             ]
           }
-        ]
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week13_love_line"
       }
     ],
     "priority": 0,
@@ -50189,7 +50281,11 @@
               "ex_partner"
             ]
           }
-        ]
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week13_love_line"
       },
       {
         "choiceId": "B",
@@ -50219,7 +50315,11 @@
               "ex_partner"
             ]
           }
-        ]
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week13_love_line"
       },
       {
         "choiceId": "C",
@@ -50268,7 +50368,11 @@
               "ex_partner"
             ]
           }
-        ]
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week13_love_line"
       }
     ],
     "priority": 0,
@@ -50359,7 +50463,11 @@
               "ex_first_love"
             ]
           }
-        ]
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week13_love_line"
       },
       {
         "choiceId": "B",
@@ -50389,7 +50497,11 @@
               "ex_first_love"
             ]
           }
-        ]
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week13_love_line"
       },
       {
         "choiceId": "C",
@@ -50444,7 +50556,11 @@
               "ex_first_love"
             ]
           }
-        ]
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week13_love_line"
       }
     ],
     "priority": 0,
@@ -50533,7 +50649,11 @@
               "ex_ideal"
             ]
           }
-        ]
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week13_love_line"
       },
       {
         "choiceId": "B",
@@ -50563,7 +50683,11 @@
               "ex_ideal"
             ]
           }
-        ]
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week13_love_line"
       },
       {
         "choiceId": "C",
@@ -50618,7 +50742,11 @@
               "ex_ideal"
             ]
           }
-        ]
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week13_love_line"
       }
     ],
     "priority": 0,
@@ -50709,7 +50837,11 @@
               "ex_music"
             ]
           }
-        ]
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week13_love_line"
       },
       {
         "choiceId": "B",
@@ -50739,7 +50871,11 @@
               "ex_music"
             ]
           }
-        ]
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week13_love_line"
       },
       {
         "choiceId": "C",
@@ -50792,7 +50928,11 @@
               "ex_music"
             ]
           }
-        ]
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week13_love_line"
       }
     ],
     "priority": 0,
@@ -50883,7 +51023,11 @@
               "ex_book"
             ]
           }
-        ]
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week13_love_line"
       },
       {
         "choiceId": "B",
@@ -50913,7 +51057,11 @@
               "ex_book"
             ]
           }
-        ]
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week13_love_line"
       },
       {
         "choiceId": "C",
@@ -50968,7 +51116,11 @@
               "ex_book"
             ]
           }
-        ]
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week13_love_line"
       }
     ],
     "priority": 0,
@@ -51049,7 +51201,11 @@
             },
             "addFlags": []
           }
-        ]
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week13_love_line"
       },
       {
         "choiceId": "B",
@@ -51080,7 +51236,11 @@
               "partner_letter"
             ]
           }
-        ]
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week13_love_line"
       },
       {
         "choiceId": "C",
@@ -51125,7 +51285,11 @@
             },
             "addFlags": []
           }
-        ]
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week13_love_line"
       }
     ],
     "priority": 0,
@@ -51190,7 +51354,11 @@
               "engaged"
             ]
           }
-        ]
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "관계 단계 전환점 — 연애·결혼·자녀는 능력치 자격이 아니라 의사 결정이라 잠그지 않고, 차이는 결과 분기와 후속 사실로 반영",
+        "conditionReview": "open_turning_point",
+        "conditionBasis": "week13_love_line"
       },
       {
         "choiceId": "B",
@@ -51217,7 +51385,11 @@
               "long_term_dating"
             ]
           }
-        ]
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "관계 단계 전환점 — 연애·결혼·자녀는 능력치 자격이 아니라 의사 결정이라 잠그지 않고, 차이는 결과 분기와 후속 사실로 반영",
+        "conditionReview": "open_turning_point",
+        "conditionBasis": "week13_love_line"
       },
       {
         "choiceId": "C",
@@ -51261,7 +51433,11 @@
               "long_term_dating"
             ]
           }
-        ]
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "관계 단계 전환점 — 연애·결혼·자녀는 능력치 자격이 아니라 의사 결정이라 잠그지 않고, 차이는 결과 분기와 후속 사실로 반영",
+        "conditionReview": "open_turning_point",
+        "conditionBasis": "week13_love_line"
       }
     ],
     "priority": 0,
@@ -51341,7 +51517,11 @@
               "families_met"
             ]
           }
-        ]
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "관계 단계 전환점 — 연애·결혼·자녀는 능력치 자격이 아니라 의사 결정이라 잠그지 않고, 차이는 결과 분기와 후속 사실로 반영",
+        "conditionReview": "open_turning_point",
+        "conditionBasis": "week13_love_line"
       },
       {
         "choiceId": "B",
@@ -51370,7 +51550,11 @@
               "families_met"
             ]
           }
-        ]
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "관계 단계 전환점 — 연애·결혼·자녀는 능력치 자격이 아니라 의사 결정이라 잠그지 않고, 차이는 결과 분기와 후속 사실로 반영",
+        "conditionReview": "open_turning_point",
+        "conditionBasis": "week13_love_line"
       },
       {
         "choiceId": "C",
@@ -51413,7 +51597,11 @@
               "family_memory"
             ]
           }
-        ]
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "관계 단계 전환점 — 연애·결혼·자녀는 능력치 자격이 아니라 의사 결정이라 잠그지 않고, 차이는 결과 분기와 후속 사실로 반영",
+        "conditionReview": "open_turning_point",
+        "conditionBasis": "week13_love_line"
       }
     ],
     "priority": 0,
@@ -51484,7 +51672,11 @@
               "engaged"
             ]
           }
-        ]
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "관계 단계 전환점 — 연애·결혼·자녀는 능력치 자격이 아니라 의사 결정이라 잠그지 않고, 차이는 결과 분기와 후속 사실로 반영",
+        "conditionReview": "open_turning_point",
+        "conditionBasis": "week13_love_line"
       },
       {
         "choiceId": "B",
@@ -51518,7 +51710,11 @@
               "engaged"
             ]
           }
-        ]
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "관계 단계 전환점 — 연애·결혼·자녀는 능력치 자격이 아니라 의사 결정이라 잠그지 않고, 차이는 결과 분기와 후속 사실로 반영",
+        "conditionReview": "open_turning_point",
+        "conditionBasis": "week13_love_line"
       },
       {
         "choiceId": "C",
@@ -51570,7 +51766,11 @@
               "engaged"
             ]
           }
-        ]
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "관계 단계 전환점 — 연애·결혼·자녀는 능력치 자격이 아니라 의사 결정이라 잠그지 않고, 차이는 결과 분기와 후속 사실로 반영",
+        "conditionReview": "open_turning_point",
+        "conditionBasis": "week13_love_line"
       }
     ],
     "priority": 0,
@@ -51645,7 +51845,11 @@
               "engaged"
             ]
           }
-        ]
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "관계 단계 전환점 — 연애·결혼·자녀는 능력치 자격이 아니라 의사 결정이라 잠그지 않고, 차이는 결과 분기와 후속 사실로 반영",
+        "conditionReview": "open_turning_point",
+        "conditionBasis": "week13_love_line"
       },
       {
         "choiceId": "B",
@@ -51679,7 +51883,11 @@
               "engaged"
             ]
           }
-        ]
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "관계 단계 전환점 — 연애·결혼·자녀는 능력치 자격이 아니라 의사 결정이라 잠그지 않고, 차이는 결과 분기와 후속 사실로 반영",
+        "conditionReview": "open_turning_point",
+        "conditionBasis": "week13_love_line"
       },
       {
         "choiceId": "C",
@@ -51734,7 +51942,11 @@
               "engaged"
             ]
           }
-        ]
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "관계 단계 전환점 — 연애·결혼·자녀는 능력치 자격이 아니라 의사 결정이라 잠그지 않고, 차이는 결과 분기와 후속 사실로 반영",
+        "conditionReview": "open_turning_point",
+        "conditionBasis": "week13_love_line"
       }
     ],
     "priority": 0,
@@ -51811,7 +52023,11 @@
               "family_memory"
             ]
           }
-        ]
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week13_love_line"
       },
       {
         "choiceId": "B",
@@ -51840,7 +52056,11 @@
               "family_bond"
             ]
           }
-        ]
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week13_love_line"
       },
       {
         "choiceId": "C",
@@ -51884,7 +52104,11 @@
               "family_memory"
             ]
           }
-        ]
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week13_love_line"
       }
     ],
     "priority": 0,
@@ -51952,7 +52176,11 @@
               "has_child"
             ]
           }
-        ]
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "관계 단계 전환점 — 연애·결혼·자녀는 능력치 자격이 아니라 의사 결정이라 잠그지 않고, 차이는 결과 분기와 후속 사실로 반영",
+        "conditionReview": "open_turning_point",
+        "conditionBasis": "week13_love_line"
       },
       {
         "choiceId": "B",
@@ -51979,7 +52207,11 @@
               "no_child_plan"
             ]
           }
-        ]
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "관계 단계 전환점 — 연애·결혼·자녀는 능력치 자격이 아니라 의사 결정이라 잠그지 않고, 차이는 결과 분기와 후속 사실로 반영",
+        "conditionReview": "open_turning_point",
+        "conditionBasis": "week13_love_line"
       },
       {
         "choiceId": "C",
@@ -52024,7 +52256,11 @@
               "no_child_plan"
             ]
           }
-        ]
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "관계 단계 전환점 — 연애·결혼·자녀는 능력치 자격이 아니라 의사 결정이라 잠그지 않고, 차이는 결과 분기와 후속 사실로 반영",
+        "conditionReview": "open_turning_point",
+        "conditionBasis": "week13_love_line"
       }
     ],
     "priority": 0,
@@ -52091,7 +52327,11 @@
               "devoted_parent"
             ]
           }
-        ]
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "관계 단계 전환점 — 연애·결혼·자녀는 능력치 자격이 아니라 의사 결정이라 잠그지 않고, 차이는 결과 분기와 후속 사실로 반영",
+        "conditionReview": "open_turning_point",
+        "conditionBasis": "week13_love_line"
       },
       {
         "choiceId": "B",
@@ -52122,7 +52362,11 @@
               "family_bond"
             ]
           }
-        ]
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "관계 단계 전환점 — 연애·결혼·자녀는 능력치 자격이 아니라 의사 결정이라 잠그지 않고, 차이는 결과 분기와 후속 사실로 반영",
+        "conditionReview": "open_turning_point",
+        "conditionBasis": "week13_love_line"
       },
       {
         "choiceId": "C",
@@ -52151,7 +52395,11 @@
               "family_memory"
             ]
           }
-        ]
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "관계 단계 전환점 — 연애·결혼·자녀는 능력치 자격이 아니라 의사 결정이라 잠그지 않고, 차이는 결과 분기와 후속 사실로 반영",
+        "conditionReview": "open_turning_point",
+        "conditionBasis": "week13_love_line"
       }
     ],
     "priority": 0,

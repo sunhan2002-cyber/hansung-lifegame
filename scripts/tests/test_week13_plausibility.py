@@ -30,6 +30,12 @@ class Week13PlausibilityTest(unittest.TestCase):
         self.event(bundle, "infant_007")["choices"][0]["label"] += "."
         self.assertTrue(any("label ends with a period" in m for m in self.messages(bundle)))
 
+    def test_turning_point_choice_needs_reason(self):
+        bundle = self.fresh()
+        choice = self.event(bundle, "love_wedding_01")["choices"][0]
+        choice.pop("alwaysAvailable")
+        self.assertTrue(any("needs a condition or alwaysAvailable" in m for m in self.messages(bundle)))
+
     def test_marriage_without_wedding_steps_is_reported(self):
         bundle = self.fresh()
         outcome = self.event(bundle, "adult_073")["choices"][0]["outcomes"][0]
