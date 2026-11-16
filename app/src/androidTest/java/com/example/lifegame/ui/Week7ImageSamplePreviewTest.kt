@@ -17,6 +17,7 @@ import androidx.test.platform.app.InstrumentationRegistry
 import com.example.lifegame.MainActivity
 import com.example.lifegame.ui.preview.Week7ImageSamples
 import java.io.File
+import org.json.JSONArray
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertTrue
 import org.junit.Rule
@@ -75,13 +76,25 @@ class Week7ImageSamplePreviewTest {
     @Test
     fun allSamplesLoadAndCanBeBrowsedWithoutStartingGame() {
         val context = InstrumentationRegistry.getInstrumentation().targetContext
-        // 실물 후보가 debug APK에 원본 크기로 포함되었는지 확인한다.
-        Week7ImageSamples.forEach { sample ->
+        // 실물 후보가 debug APK에 "있어야 할 정확한 크기"로 들어 있는지 확인한다(2026-11-16 기존 실패 수정).
+        // main e16faf5가 승인되지 않은 그림을 720×540으로 시연용 재압축했고 083d7ed가 승인 그림만 원본으로 되돌렸다.
+        // 그래서 기대 크기는 그림 등록 파일(image_ids.sample.json)의 크기이고, 등록되지 않은 디자인 원본 · 돌잡이 컷신은
+        // 원본 1448×1086이다. 크기를 느슨하게 보지 않고 그림마다 정확히 비교한다(승인 SHA는 JVM ApprovedImageIntegrityTest).
+        val registry = JSONArray(context.assets.open("image_ids.sample.json").bufferedReader().use { it.readText() }).let { array ->
+            List(array.length()) { array.getJSONObject(it) }
+                .filter { it.has("width") && it.has("height") }
+                .associate { it.getString("fileName") to (it.getInt("width") to it.getInt("height")) }
+        }
+        val checked = Week7ImageSamples.map { sample ->
             val options = BitmapFactory.Options().apply { inJustDecodeBounds = true }
             context.assets.open("images/${sample.imageFile}").use { BitmapFactory.decodeStream(it, null, options) }
-            assertEquals(1448, options.outWidth)
-            assertEquals(1086, options.outHeight)
+            val expected = registry[sample.imageFile.substringAfterLast('/')] ?: (1448 to 1086)
+            assertEquals("${sample.imageFile} width", expected.first, options.outWidth)
+            assertEquals("${sample.imageFile} height", expected.second, options.outHeight)
+            expected
         }
+        assertEquals(80, checked.size)
+        assertEquals(mapOf((1448 to 1086) to 15, (720 to 540) to 65), checked.groupingBy { it }.eachCount())
         composeRule.onNodeWithText("디자인 미리보기").performClick()
         val directory = requireNotNull(context.getExternalFilesDir("week7-uiux"))
         assertTrue(directory.isDirectory || directory.mkdirs())
