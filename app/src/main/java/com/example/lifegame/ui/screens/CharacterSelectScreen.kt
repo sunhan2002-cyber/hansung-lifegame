@@ -299,7 +299,8 @@ fun CharacterSelectScreen(
                             rollRaw = result.start.rollRaw
                             runSeed = result.start.seed
                             rerollsLeft = 0 // 친구와 같은 출발선이라 다시 굴리지 않는다
-                            rollNonce += 1
+                            // 도전 코드는 이미 확정된 주사위 값을 공유하므로 셔플 애니메이션을 재생하지 않는다.
+                            // 즉시 합계·보정 전후 값이 노출되어 같은 출발선이 실제로 적용됐는지 확인할 수 있다.
                             codeError = false
                             codeMessage = "도전 코드의 출발선(성별 · 타고난 능력치 · 시드)으로 맞췄다. 이제 선택만 다르다."
                         }
