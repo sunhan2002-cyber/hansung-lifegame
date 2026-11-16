@@ -65,6 +65,7 @@ import com.example.lifegame.ui.LogLineUi
 import com.example.lifegame.ui.PLAY_SPEEDS
 import com.example.lifegame.ui.PeriodPlayUiState
 import com.example.lifegame.ui.YEAR_MILLIS_AT_1X
+import com.example.lifegame.ui.automaticEventHoldMillis
 import com.example.lifegame.ui.components.LifeFactsSheet
 import com.example.lifegame.ui.components.NOISE_ADVANCE_MILLIS
 import com.example.lifegame.ui.components.normalAdvance
@@ -100,11 +101,12 @@ fun AutoProgressScreen(
 
     val yearProgress = remember { Animatable(0f) }
 
-    // 자동 진행 타이머. 해가 바뀌거나 배속 · 일시정지가 바뀌면 다시 센다.
+    // 자동 진행 타이머. 해가 바뀌거나 배속 · 일시정지가 바뀌면 다시 센다. 자동 사건 카드는 읽을 시간만큼 더 둔다.
+    val stepMillis = state.automaticEvent?.let(::automaticEventHoldMillis) ?: YEAR_MILLIS_AT_1X
     LaunchedEffect(state.yearKey, state.autoPlaying, state.speed) {
         yearProgress.snapTo(0f)
         if (!state.autoPlaying) return@LaunchedEffect
-        yearProgress.animateTo(1f, tween((YEAR_MILLIS_AT_1X / state.speed).toInt(), easing = LinearEasing))
+        yearProgress.animateTo(1f, tween((stepMillis / state.speed).toInt(), easing = LinearEasing))
         advance()
     }
 
@@ -141,10 +143,17 @@ fun AutoProgressScreen(
                         .verticalScroll(rememberScrollState())
                         .testTag("auto_progress_content"),
                 ) {
+                    // 방금 지나간 자동 사건은 카드로 맨 위에 먼저 보여 주고(작은 화면 · 큰 글자에서도 스크롤 없이 시작이 보이게),
+                    // 같은 문장은 아래 기록에서 한 번 뺀다.
+                    val autoEvent = state.automaticEvent
+                    autoEvent?.let { AutomaticEventCard(it) }
                     CharacterStage(state, height = stageHeight, onOpenDetails = { detailsOpen = true })
                     YearTimer(progress = { yearProgress.value }, playing = state.autoPlaying)
                     // 최신 기록이 맨 위. 방금 고른 선택 결과를 스크롤 없이 바로 본다 (2026-11-05 피드백 4번).
-                    YearLog(lines = state.log.takeLast(YEAR_LOG_LINES).asReversed())
+                    val recent = state.log.asReversed()
+                        .let { lines -> if (autoEvent != null && lines.firstOrNull()?.text == autoEvent.text) lines.drop(1) else lines }
+                        .take(if (autoEvent != null) YEAR_LOG_LINES - 2 else YEAR_LOG_LINES)
+                    YearLog(lines = recent)
                 }
             }
             PeriodTrack(marks = state.periodMarks, yearLabel = "${state.yearInPeriod}번째 해")
@@ -292,12 +301,93 @@ private fun YearLog(lines: List<LogLineUi>) {
     }
 }
 
+/**
+ * 방금 지나간 자동 사건 카드(2026-11-16 프론트 마무리 과제 2). 선택 사건이 아니므로 고를 것은 없고, 자동 진행 타이머도 그대로 흐른다.
+ * 능력치가 바뀌면 그 변화를 결과처럼 보여 주고, 바뀌지 않으면 "기록에만 남김"으로 표시한다.
+ * 관계가 이어진 사람이 다시 나오는 자동 사건이면 그 사람을, 실제 선택에 이어지는 회상이 있으면 그 한 줄을 붙인다.
+ */
+@Composable
+private fun AutomaticEventCard(event: com.example.lifegame.ui.AutomaticEventUi) {
+    val shape = RoundedCornerShape(12.dp)
+    Column(
+        Modifier
+            .fillMaxWidth()
+            .padding(start = 16.dp, end = 16.dp, top = 10.dp)
+            .clip(shape)
+            .background(LifeGameCard)
+            .border(1.dp, LifeGameRule, shape)
+            .padding(horizontal = 14.dp, vertical = 12.dp)
+            .semantics(mergeDescendants = true) {}
+            .testTag("auto_event_card"),
+        verticalArrangement = Arrangement.spacedBy(6.dp),
+    ) {
+        Row(horizontalArrangement = Arrangement.spacedBy(8.dp), verticalAlignment = Alignment.CenterVertically) {
+            LogKindTag(LogKind.AUTO, 1f)
+            if (event.topic.isNotBlank()) {
+                Text(
+                    text = event.topic,
+                    color = LifeGameInk,
+                    fontSize = 14.sp,
+                    fontWeight = FontWeight.Bold,
+                    modifier = Modifier.testTag("auto_event_topic"),
+                )
+            }
+        }
+        Text(
+            text = event.text,
+            color = LifeGameInk,
+            fontFamily = LifeGameSerif,
+            fontSize = 16.sp,
+            // 360×640dp · 글자 200%에서 보통 길이(약 40자) 문장이 스크롤 없이 다 보이게 줄 간격을 조금 좁힌다.
+            lineHeight = 23.sp,
+            modifier = Modifier.testTag("auto_event_text"),
+        )
+        if (event.recordOnly) {
+            Text(
+                text = "능력치 변화 없이 기록에만 남겼어요",
+                color = LifeGameInkTertiary,
+                fontSize = 13.sp,
+                modifier = Modifier.testTag("auto_event_record_only"),
+            )
+        } else {
+            Text(
+                text = event.changes.joinToString("   ") { "${it.name} ${if (it.delta > 0) "+" else "−"}${kotlin.math.abs(it.delta)}" },
+                color = LifeGameInkSecondary,
+                fontSize = 14.sp,
+                fontWeight = FontWeight.Medium,
+                modifier = Modifier.testTag("auto_event_changes"),
+            )
+        }
+        event.recall?.let { recall ->
+            Text(
+                text = "그때 그 선택 · ${recall.text}",
+                color = LifeGameInkSecondary,
+                fontFamily = LifeGameSerif,
+                fontStyle = androidx.compose.ui.text.font.FontStyle.Italic,
+                fontSize = 14.sp,
+                lineHeight = 21.sp,
+                modifier = Modifier.testTag("auto_event_recall"),
+            )
+        }
+        event.returningNpc?.let { npc ->
+            Text(
+                text = "다시 만난 사람 · ${npc.label} (${npc.originPeriodName} 「${npc.originTitle}」)",
+                color = LifeGameInkSecondary,
+                fontSize = 13.5.sp,
+                lineHeight = 19.sp,
+                modifier = Modifier.testTag("auto_event_npc"),
+            )
+        }
+    }
+}
+
 /** 선택 결과와 자동 이야기를 글자로 구분한다. 일반 기록(초점 등)은 표시하지 않는다. */
 @Composable
 private fun LogKindTag(kind: LogKind, fade: Float) {
     val text = when (kind) {
         LogKind.CHOICE -> "내 선택"
         LogKind.STORY -> "그해 이야기"
+        LogKind.AUTO -> "자동"
         LogKind.RECORD -> return
     }
     val shape = RoundedCornerShape(6.dp)

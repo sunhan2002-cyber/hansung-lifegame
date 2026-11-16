@@ -53,8 +53,14 @@ fun buildLogLines(
     runSeed: Long = 0L,
     /** 선택 결과 문장. 여기에 든 기록은 [LogKind.CHOICE]로 표시한다. */
     outcomeTexts: Set<String> = emptySet(),
+    /** 자동 사건 문장. 여기에 든 기록은 [LogKind.AUTO]("자동")로 표시해 선택 기록과 섞이지 않게 한다. */
+    autoTexts: Set<String> = emptySet(),
 ): List<LogLineUi> {
-    fun kindOf(text: String) = if (text in outcomeTexts) LogKind.CHOICE else LogKind.RECORD
+    fun kindOf(text: String) = when (text) {
+        in autoTexts -> LogKind.AUTO
+        in outcomeTexts -> LogKind.CHOICE
+        else -> LogKind.RECORD
+    }
     val names = periods.associate { it.period to it.displayName }
     fun label(period: LifePeriod, year: Int) = "${names[period] ?: period.name} · ${year}번째 해"
     if (stories.isEmpty) {

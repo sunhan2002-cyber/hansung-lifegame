@@ -518,7 +518,9 @@ class GameEngine(
             automaticEventRecords = state.automaticEventRecords + record,
             moments = state.moments + LifeMoment(state.period, state.yearInPeriod, event.text, event.momentImageId),
         )
-        healthDeathStep(updated)?.let { return it.copy(automaticEvent = record) }
+        // 자동 사건은 낮은 건강의 사망 확률을 굴리지 않는다(auto_events 규칙 statEffect: "사망 판정은 하지 않는다").
+        // 기록만 남기는 사건에서도 확률 사망이 나와 선택 · 연간 감소보다 사망이 잦아졌다. 건강 0 즉시 사망만 지킨다.
+        if (updated.stats.health <= 0) healthDeathStep(updated)?.let { return it.copy(automaticEvent = record) }
         return TurnStep(
             state = updated,
             phase = TurnPhase.AUTO_PROGRESS,

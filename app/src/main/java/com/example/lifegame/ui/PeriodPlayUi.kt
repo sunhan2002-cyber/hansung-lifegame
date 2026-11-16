@@ -29,6 +29,15 @@ enum class PlayPhase { CHAPTER, AUTO, DECISION, ENDED }
 
 /** 자동 진행 1배속에서 한 해가 걸리는 시간 (R-21). */
 const val YEAR_MILLIS_AT_1X = 3_000L
+
+/**
+ * 자동 사건 카드를 읽을 시간(1배속). 한 해 3초로는 29~65자 문장과 회상 한 줄을 다 읽기 전에 넘어가서,
+ * 글자 수에 맞춰 4~8초로 둔다(한국어 1초 약 12자 + 여유 2초). 배속을 올리면 그만큼 줄고, 언제든 멈춤으로 붙잡을 수 있다.
+ */
+fun automaticEventHoldMillis(event: AutomaticEventUi): Long {
+    val chars = event.text.length + (event.recall?.text?.length ?: 0) + (event.returningNpc?.label?.length ?: 0)
+    return (2_000L + chars * 80L).coerceIn(4_000L, 8_000L)
+}
 val PLAY_SPEEDS = listOf(1, 2, 4)
 
 /** 남자는 청년기에 입영 통지서(adult_071)가 나오도록 시작 플래그를 받는다. */
@@ -67,7 +76,7 @@ data class FocusOptionUi(
 )
 
 /** 기록 한 줄의 출처. 화면에서 선택 결과와 자동 이야기를 구분해 보여 준다 (2026-11-06 요구 4). */
-enum class LogKind { CHOICE, STORY, RECORD }
+enum class LogKind { CHOICE, STORY, RECORD, AUTO }
 
 data class LogLineUi(val key: String, val label: String, val text: String, val kind: LogKind = LogKind.RECORD)
 
@@ -109,6 +118,23 @@ data class DecisionUi(
 ) {
     /** 갈림길이 아닌 결정은 모두 돌발이다. 모든 돌발은 왜곡 전환을 쓴다 (R-23). */
     val isIncident: Boolean get() = kind != DecisionKind.MILESTONE
+}
+
+/**
+ * 자동 사건 한 건(김우영 [com.example.lifegame.domain.model.AutomaticEventRecord] + 신기훈 콘텐츠의 주제).
+ * 능력치가 바뀐 사건만 [changes]가 있고, 기록만 남기는 사건은 비어 있다.
+ */
+data class AutomaticEventUi(
+    val eventId: String,
+    val topic: String,
+    val text: String,
+    val changes: List<StatChangeUi>,
+    /** "그때 그 선택" 회상. 근거 선택이 이 인생에 실제로 있을 때만 */
+    val recall: RecallLine? = null,
+    /** 관계가 이어진 사람이 다시 나오는 자동 사건이면 그 사람 */
+    val returningNpc: NpcReturnUi? = null,
+) {
+    val recordOnly: Boolean get() = changes.isEmpty()
 }
 
 data class OutcomeUi(
@@ -211,6 +237,8 @@ data class PeriodPlayUiState(
     val presentation: PresentationState = PresentationState(),
     /** 기록 화면용: 이번 인생에서 실제로 다시 만난, 관계가 이어진 사람들 */
     val npcsMetAgain: List<NpcReturnUi> = emptyList(),
+    /** 방금 지나간 자동 사건. 자동 진행 화면에서 카드로 보여 준다. 결정 · 결과 · 결말 중에는 없다. */
+    val automaticEvent: AutomaticEventUi? = null,
 ) {
     val place: String get() = "$periodName · ${yearInPeriod}번째 해"
 }
@@ -230,6 +258,8 @@ data class PlayContent(
     val imageRouting: ImageRouting = ImageRouting(),
     /** 회상 · NPC 재등장 등 승인된 확장 기능 콘텐츠 (scenario_extensions.sample.json) */
     val extensions: ScenarioExtensions = ScenarioExtensions.EMPTY,
+    /** 자동 사건 규칙(auto_events.sample.json). 카드 주제와 기록 구분에 쓴다. */
+    val automaticEvents: Map<String, com.example.lifegame.domain.engine.AutomaticEventRule> = emptyMap(),
 ) {
     /** 선택 결과 문장 모음(이름 치환이 끝난 문장). 기록 줄이 선택 결과인지 가려낼 때 쓴다. */
     val outcomeTexts: Set<String> by lazy {
@@ -476,6 +506,7 @@ fun buildPeriodPlayState(
     val sceneImageId = step.sceneImageId ?: focus?.sceneImageId.orEmpty()
     val imagePeriod = endingPeriod ?: viewPeriod
     val years = period?.years ?: 1
+    val autoAppearances = state.automaticEventRecords.map { it.toAppearance(content.automaticEvents) }
     return PeriodPlayUiState(
         runKey = state.runId,
         playerName = playerName,
@@ -506,7 +537,14 @@ fun buildPeriodPlayState(
         focusOptions = content.focuses.filter { it.period == state.period }.map { it.toOptionUi() },
         sceneImageId = sceneImageId,
         sceneFile = content.imageFiles[sceneImageId],
-        log = buildLogLines(state.moments, periods, content.yearlyStories, state.runSeed, content.outcomeTexts),
+        log = buildLogLines(
+            state.moments,
+            periods,
+            content.yearlyStories,
+            state.runSeed,
+            content.outcomeTexts,
+            autoTexts = state.automaticEventRecords.map { it.text }.toSet(),
+        ),
         yearKey = "${state.runId}:${state.period}:$shownYear:${state.moments.size}",
         decision = decision ?: step.pendingDecision?.let { pending ->
             buildDecisionUi(
@@ -520,8 +558,19 @@ fun buildPeriodPlayState(
                 focusId = state.selectedFocusId,
                 period = state.period,
             ).copy(
-                recall = content.extensions.recallForEvent(pending.eventId, runChoices, state.flags),
-                returningNpc = content.extensions.npcForEvent(pending.eventId, runChoices, state.flags, periods),
+                recall = content.extensions.recallForEvent(
+                    pending.eventId,
+                    runChoices,
+                    state.flags,
+                    priorAutoEventIds = state.automaticEventRecords.map { it.eventId }.toSet(),
+                ),
+                returningNpc = content.extensions.npcForEvent(
+                    pending.eventId,
+                    runChoices,
+                    state.flags,
+                    periods,
+                    priorAutoAppearances = autoAppearances,
+                ),
             )
         },
         outcome = outcome,
@@ -550,7 +599,36 @@ fun buildPeriodPlayState(
         sceneImages = content.imageRouting.candidates(sceneImageId, state.selectedFocusId, state.period, content.imageFiles),
         avatar = avatarLookOf(avatar, imagePeriod, state.stats),
         presentation = presentation,
-        npcsMetAgain = content.extensions.npcsMetAgain(runChoices, state.flags, periods),
+        npcsMetAgain = content.extensions.npcsMetAgain(
+            runChoices,
+            state.flags,
+            periods,
+            autoAppearances = autoAppearances,
+        ),
+        automaticEvent = step.automaticEvent
+            ?.takeIf { phase == PlayPhase.AUTO && outcome == null }
+            ?.let { record ->
+                AutomaticEventUi(
+                    eventId = record.eventId,
+                    topic = content.automaticEvents[record.eventId]?.topic.orEmpty(),
+                    text = record.text,
+                    changes = record.appliedDelta.toChanges(),
+                    recall = content.extensions.recallForEvent(
+                        record.eventId,
+                        runChoices,
+                        state.flags,
+                        priorAutoEventIds = state.automaticEventRecords.map { it.eventId }.toSet() - record.eventId,
+                    ),
+                    returningNpc = content.extensions.npcForEvent(
+                        record.eventId,
+                        runChoices,
+                        state.flags,
+                        periods,
+                        appearanceType = ScenarioExtensions.APPEARANCE_AUTO,
+                        priorAutoAppearances = autoAppearances.filterNot { it.eventId == record.eventId },
+                    ),
+                )
+            },
     )
 }
 
@@ -585,3 +663,8 @@ private fun JSONObject?.toStatDelta(): StatDelta {
         luck = value("운", "luck"),
     )
 }
+
+/** 자동 사건 기록 → 재등장 판정용 한 건. 기록 화면 이름은 콘텐츠 주제, 없으면 문장. */
+fun com.example.lifegame.domain.model.AutomaticEventRecord.toAppearance(
+    rules: Map<String, com.example.lifegame.domain.engine.AutomaticEventRule>,
+): AutoAppearance = AutoAppearance(eventId, rules[eventId]?.topic?.ifBlank { null } ?: text, period)

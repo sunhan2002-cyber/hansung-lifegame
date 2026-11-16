@@ -181,6 +181,11 @@ class PeriodGameSession(
     private val engine: GameEngine = GameEngine(),
     private val runIdFactory: () -> String = { "run-${System.currentTimeMillis()}" },
     private val runSeedFactory: () -> Long = { System.currentTimeMillis() },
+    /**
+     * 콘텐츠 자동 사건(auto_events.sample.json)을 고르는 규칙. 있으면 한 해의 결정을 끝내고 다음 해로 넘어가기 전에
+     * 한 단계를 자동 사건에 쓴다. 결정 · 결말 · 초점 선택 중에는 고르지 않는다(2026-11-16 프론트 마무리 과제 2).
+     */
+    private val automaticEventPicker: AutomaticEventPicker? = null,
 ) {
     var state: PeriodRunState? = null
         private set
@@ -257,6 +262,7 @@ class PeriodGameSession(
     }
 
     private fun advanceWithAutomaticEvent(current: PeriodRunState): TurnStep {
+        automaticEventBeforeYear(current)?.let { return it }
         val primary = engine.advancePeriodYear(current, periods, focuses, decisions)
         if (primary.phase != TurnPhase.AUTO_PROGRESS || primary.state.isEnding || automaticEvents.isEmpty()) {
             return primary
@@ -271,6 +277,17 @@ class PeriodGameSession(
             append(primary.state.yearInPeriod)
         }
         return engine.applyAutomaticEvent(primary.state, automaticEvents, triggerToken, lifeFactRules) ?: primary
+    }
+
+    /**
+     * 다음 해를 처리하기 전 한 번, 이 진행 단계에 맞는 자동 사건이 있으면 그것만 적용한다.
+     * 해 · 시기는 넘기지 않으므로 다음 [advance]에서 그해 결정이 그대로 나온다(자동 사건이 결정을 대신하지 않는다).
+     */
+    private fun automaticEventBeforeYear(current: PeriodRunState): TurnStep? {
+        val picker = automaticEventPicker ?: return null
+        if (current.isEnding || current.pendingDecisionId != null || engine.requiresFocusSelection(current)) return null
+        val event = picker.pick(current) ?: return null
+        return engine.applyAutomaticEvent(current, listOf(event), AutomaticEventPicker.stageToken(current), lifeFactRules)
     }
 
     private fun record(step: TurnStep): TurnStep {
