@@ -251,8 +251,9 @@ class Week6UiTest {
         scrollToText("game_content", "지난 기록 1개 · 아래로 당겨서 보기")
         composeRule.onNodeWithText("지난 기록 1개 · 아래로 당겨서 보기").performClick()
         composeRule.onNodeWithText("기록 보는 중").assertIsDisplayed()
-        scrollToText("history_content", "→ ${past.label}")
-        assertTextFits("→ ${past.label}", multiline = true)
+        // 기록에는 라벨 끝 마침표를 떼고 보인다(2026-11-13 과제 7).
+        scrollToText("history_content", "→ ${displayChoiceLabel(past.label)}")
+        assertTextFits("→ ${displayChoiceLabel(past.label)}", multiline = true)
         scrollToText("history_content", "지금으로 ↑")
         composeRule.onNodeWithText("지금으로 ↑").performClick()
         composeRule.onNodeWithTag("game_content").assertIsDisplayed()

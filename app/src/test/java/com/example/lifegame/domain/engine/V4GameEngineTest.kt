@@ -271,7 +271,8 @@ class V4GameEngineTest {
         }
 
         assertEquals(24, completedTurns)
-        assertEquals(24, state.moments.size)
+        // 진행 24회와 별도로 실제 사망 원인을 마지막 기록에 보존한다.
+        assertEquals(25, state.moments.size)
         assertEquals(LifePeriod.MIDDLE, state.period)
     }
 

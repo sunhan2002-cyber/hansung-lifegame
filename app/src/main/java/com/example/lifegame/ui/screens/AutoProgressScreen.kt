@@ -169,6 +169,7 @@ fun AutoProgressScreen(
             place = state.place,
             focus = state.focus,
             showFocus = true,
+            npcsMetAgain = state.npcsMetAgain,
         )
     }
 }

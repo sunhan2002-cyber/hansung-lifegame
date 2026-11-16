@@ -34,6 +34,10 @@ import com.example.lifegame.ui.screens.AutoProgressScreen
 import com.example.lifegame.ui.screens.ChapterFocusScreen
 import com.example.lifegame.ui.screens.CharacterSelectScreen
 import com.example.lifegame.ui.screens.DecisionScreen
+import com.example.lifegame.ui.screens.DoljabiCutsceneScreen
+import com.example.lifegame.ui.screens.doljabiPreviewAlreadyShown
+import com.example.lifegame.ui.screens.shouldPlayDoljabiCutscene
+import com.example.lifegame.domain.model.CutsceneStatus
 import com.example.lifegame.ui.screens.DesignPreviewScreen
 import com.example.lifegame.ui.screens.EndingFlowScreen
 import com.example.lifegame.ui.screens.EndingStep
@@ -104,16 +108,23 @@ fun LifeGameApp(
                 }
                 composable(Routes.TITLES) {
                     val collection = remember(gameViewModel.completedLives) { gameViewModel.titleCollection() }
-                    TitleCollectionScreen(collection = collection, onBack = { navController.popBackStack() })
+                    TitleCollectionScreen(
+                        collection = collection,
+                        onBack = { navController.popBackStack() },
+                        targetTitleId = gameViewModel.titleTargetId,
+                        onSetTarget = gameViewModel::setTitleTarget,
+                    )
                 }
                 composable(Routes.DESIGN_PREVIEW) {
                     DesignPreviewScreen(onBack = { navController.popBackStack() })
                 }
                 composable(Routes.PROFILE) {
+                    val titleTarget = remember(gameViewModel.titleTargetId, gameViewModel.completedLives) { gameViewModel.titleTarget() }
                     CharacterSelectScreen(
                         starters = gameViewModel.starters,
                         faceSheet = gameViewModel.faceSheet,
                         aiFace = gameViewModel.usesRealFaceGeneration,
+                        titleTarget = titleTarget,
                         onRequestFaceSheet = gameViewModel::requestFaceSheet,
                         onCancelFaceSheet = gameViewModel::cancelFaceSheet,
                         onClearFaceSheet = gameViewModel::clearFaceSheet,
@@ -195,6 +206,13 @@ private fun PlayPhaseScreen(
         PlayPhase.DECISION -> if (play.decision == null) {
             // 사건 머리를 되살리지 못한 결과 화면은 빈 화면 대신 다음 진행으로 넘긴다.
             LaunchedEffect(play.yearKey) { gameViewModel.continueAfterOutcome() }
+        } else if (shouldPlayDoljabiCutscene(play.decision.eventId, play.outcome != null, play.presentation.cutscene)) {
+            // 새 인생의 첫 결정(돌잡이) 앞에서 컷신을 한 번 보여 준다. 재생 중에 앱이 꺼졌으면 다시 처음부터.
+            DoljabiCutsceneScreen(
+                playerName = play.playerName,
+                onStart = { gameViewModel.setCutsceneStatus(CutsceneStatus.PLAYING) },
+                onFinish = gameViewModel::setCutsceneStatus,
+            )
         } else {
             DecisionScreen(
                 state = play,
@@ -202,6 +220,7 @@ private fun PlayPhaseScreen(
                 onContinue = gameViewModel::continueAfterOutcome,
                 onEventImageShown = gameViewModel::markEventImageShown,
                 onResultAnimationConsumed = gameViewModel::markResultAnimationConsumed,
+                skipImagePreview = doljabiPreviewAlreadyShown(play.decision.eventId, play.presentation.cutscene),
             )
         }
         PlayPhase.ENDED -> {

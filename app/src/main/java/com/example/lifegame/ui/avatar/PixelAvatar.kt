@@ -56,10 +56,23 @@ data class AvatarLook(
     val usesPhotoFace: Boolean = false,
     /** AI가 만든 얼굴 시트 파일 경로. 있으면 이 시기 칸의 머리를 기본 머리 대신 쓴다. */
     val photoFaceSheet: String? = null,
+    /** 머리 염색. 노년기 흰머리는 나이 표현이라 염색하지 않는다. */
+    val hairColorId: String = AvatarOptions.hairColors.first().id,
+    /** 옷 색. 몸 레이어에서 가장 넓은 색 계열(보통 윗옷)만 바꾼다. */
+    val outfitColorId: String = AvatarOptions.outfitColors.first().id,
 ) {
+    /** 이 시기에 실제로 칠할 머리 색. 원래 색이거나 노년기면 null. */
+    val hairDye: AvatarColorOption?
+        get() = AvatarOptions.hairColor(hairColorId).takeIf { it.color != null && period != LifePeriod.OLD_AGE }
+
+    val outfitColor: AvatarColorOption?
+        get() = AvatarOptions.outfitColor(outfitColorId).takeIf { it.color != null }
+
     val description: String
         get() = "${period.koreanName()} ${bodyType.koreanName()} 체형, " +
-            "${AvatarOptions.skin(skinToneId).label} 피부, ${AvatarOptions.hair(hairId).label}, ${AvatarOptions.eye(eyesId).label}"
+            "${AvatarOptions.skin(skinToneId).label} 피부, ${AvatarOptions.hair(hairId).label}, ${AvatarOptions.eye(eyesId).label}" +
+            (hairDye?.let { ", ${it.label} 염색" } ?: "") +
+            (outfitColor?.let { ", ${it.label} 옷" } ?: "")
 }
 
 fun avatarLookOf(config: AvatarConfig, period: LifePeriod, stats: Stats): AvatarLook = AvatarLook(
@@ -70,6 +83,8 @@ fun avatarLookOf(config: AvatarConfig, period: LifePeriod, stats: Stats): Avatar
     bodyType = bodyTypeFor(stats),
     usesPhotoFace = config.photoConsent && !config.faceSheetRef.isNullOrBlank(),
     photoFaceSheet = if (config.photoConsent) PhotoFaceSheet.pathOf(config.faceSheetRef) else null,
+    hairColorId = AvatarOptions.hairColor(config.hairColorId).id,
+    outfitColorId = AvatarOptions.outfitColor(config.outfitColorId).id,
 )
 
 fun LifePeriod.koreanName(): String = when (this) {
@@ -88,6 +103,18 @@ fun BodyType.koreanName(): String = when (this) {
 }
 
 data class AvatarOption(val id: String, val label: String)
+
+/**
+ * 색 선택지. [color]가 null이면 그림의 원래 색. 옷 색은 [hue](0~1) · [saturation]으로 바꾸고,
+ * 머리 염색과 도트 생성기(그림이 없을 때)는 [color]를 쓴다.
+ */
+data class AvatarColorOption(
+    val id: String,
+    val label: String,
+    val color: Int?,
+    val hue: Float = 0f,
+    val saturation: Float = 0f,
+)
 
 /**
  * 사진 없이 고르는 기본 외형. id는 저장 모델(AvatarConfig)의 기본값과 같다.
@@ -111,9 +138,30 @@ object AvatarOptions {
         AvatarOption("eyes_narrow", "가는 눈"),
     )
 
+    /** 머리 염색(2026-11-13). 첫 항목이 기본값이다. */
+    val hairColors = listOf(
+        AvatarColorOption("hair_color_natural", "원래 색", null),
+        AvatarColorOption("hair_color_brown", "밤색", 0xFF7A4A2A.toInt()),
+        AvatarColorOption("hair_color_blond", "금발", 0xFFD9B45A.toInt()),
+        AvatarColorOption("hair_color_red", "적갈색", 0xFF9C3B22.toInt()),
+        AvatarColorOption("hair_color_ash", "잿빛", 0xFF8C9096.toInt()),
+    )
+
+    /** 옷 색(2026-11-13). 첫 항목이 기본값이다. */
+    val outfitColors = listOf(
+        AvatarColorOption("outfit_original", "원래 색", null),
+        AvatarColorOption("outfit_green", "초록", 0xFF3E9B57.toInt(), hue = 0.36f, saturation = 0.55f),
+        AvatarColorOption("outfit_blue", "파랑", 0xFF3F6FC4.toInt(), hue = 0.6f, saturation = 0.55f),
+        AvatarColorOption("outfit_red", "빨강", 0xFFC7413A.toInt(), hue = 0.98f, saturation = 0.6f),
+        AvatarColorOption("outfit_mustard", "겨자", 0xFFC9A22E.toInt(), hue = 0.13f, saturation = 0.62f),
+        AvatarColorOption("outfit_purple", "보라", 0xFF7D57B5.toInt(), hue = 0.74f, saturation = 0.45f),
+    )
+
     fun skin(id: String) = skins.firstOrNull { it.id == id } ?: skins.first()
     fun hair(id: String) = hairs.firstOrNull { it.id == id } ?: hairs.first()
     fun eye(id: String) = eyes.firstOrNull { it.id == id } ?: eyes.first()
+    fun hairColor(id: String) = hairColors.firstOrNull { it.id == id } ?: hairColors.first()
+    fun outfitColor(id: String) = outfitColors.firstOrNull { it.id == id } ?: outfitColors.first()
 }
 
 /**
@@ -147,6 +195,28 @@ object AvatarLayerAssets {
             ),
         )
     }
+
+    private val recolorCache = android.util.LruCache<String, android.graphics.Bitmap>(24)
+
+    /** 머리 염색 · 옷 색을 레이어에 입힌다. 원래 색이면 그대로 돌려준다. 결과는 크기 · 색별로 기억한다. */
+    fun recolored(loaded: LoadedPixelAsset, look: AvatarLook): LoadedPixelAsset {
+        val bitmap = loaded.bitmap
+        val key = "${loaded.candidate.path}|${bitmap.width}x${bitmap.height}"
+        return when (loaded.candidate.imageId) {
+            "avatar_hair" -> look.hairDye?.let { dye ->
+                val cacheKey = "$key|${dye.id}"
+                val out = recolorCache.get(cacheKey) ?: AvatarRecolor.dyeHair(bitmap, dye.color!!).also { recolorCache.put(cacheKey, it) }
+                loaded.copy(bitmap = out)
+            } ?: loaded
+            "avatar_body" -> look.outfitColor?.let { color ->
+                val cacheKey = "$key|${color.id}"
+                val out = recolorCache.get(cacheKey)
+                    ?: AvatarRecolor.recolorOutfit(bitmap, color.hue, color.saturation).also { recolorCache.put(cacheKey, it) }
+                loaded.copy(bitmap = out)
+            } ?: loaded
+            else -> loaded
+        }
+    }
 }
 
 /**
@@ -176,6 +246,7 @@ fun PlayerAvatar(look: AvatarLook, modifier: Modifier = Modifier) {
         LaunchedEffect(look, width, height) {
             val next = withContext(Dispatchers.IO) {
                 AvatarLayerAssets.layers(look).map { PixelAssetLoader.load(context, listOf(it), width, height) }
+                    .map { loaded -> loaded?.let { AvatarLayerAssets.recolored(it, look) } }
             }
             // Keep one coherent appearance while loading; publish head/body/skin together.
             displayed = if (next.all { it != null }) look to next.filterNotNull() else null
@@ -298,9 +369,11 @@ class AvatarSprite private constructor(val height: Int, val pixels: Map<Pair<Int
 
         fun build(look: AvatarLook): AvatarSprite {
             val p = proportionOf(look.period)
-            val outfit = outfitOf(look.period)
+            val outfit = outfitOf(look.period).let { base ->
+                look.outfitColor?.color?.let { base.copy(top = Color(it)) } ?: base
+            }
             val skin = skinColor(look.skinToneId)
-            val hair = hairColor(look.hairId, look.period)
+            val hair = look.hairDye?.color?.let { Color(it) } ?: hairColor(look.hairId, look.period)
             val px = linkedMapOf<Pair<Int, Int>, Color>()
             fun put(x: Int, y: Int, c: Color) {
                 if (x in 0 until WIDTH && y >= 0) px[x to y] = c

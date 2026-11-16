@@ -240,6 +240,12 @@
     "label": "연애 중"
   },
   {
+    "flag": "engaged",
+    "fact": "maritalStatus",
+    "value": "ENGAGED",
+    "label": "결혼 약속"
+  },
+  {
     "flag": "married",
     "fact": "maritalStatus",
     "value": "MARRIED",
@@ -259,6 +265,12 @@
   },
   {
     "flag": "v4:event:adult_039",
+    "fact": "childrenAtLeast",
+    "value": 1,
+    "label": "첫 아이"
+  },
+  {
+    "flag": "has_child",
     "fact": "childrenAtLeast",
     "value": 1,
     "label": "첫 아이"
@@ -786,12 +798,6 @@
     "label": "자영업"
   },
   {
-    "flag": "married__adult_073",
-    "fact": "maritalStatus",
-    "value": "MARRIED",
-    "label": "결혼"
-  },
-  {
     "flag": "single_life__adult_073",
     "fact": "maritalStatus",
     "value": "SINGLE",
@@ -799,6 +805,12 @@
   },
   {
     "flag": "dating__adult_074",
+    "fact": "maritalStatus",
+    "value": "DATING",
+    "label": "연애 중"
+  },
+  {
+    "flag": "dating__adult_073",
     "fact": "maritalStatus",
     "value": "DATING",
     "label": "연애 중"
@@ -1170,12 +1182,6 @@
     "label": "자영업"
   },
   {
-    "flag": "married__path_hap_05",
-    "fact": "maritalStatus",
-    "value": "MARRIED",
-    "label": "결혼"
-  },
-  {
     "flag": "single_life__path_hap_05",
     "fact": "maritalStatus",
     "value": "SINGLE",
@@ -1345,6 +1351,18 @@
   },
   {
     "flag": "dating__path_soc_11",
+    "fact": "maritalStatus",
+    "value": "DATING",
+    "label": "연애 중"
+  },
+  {
+    "flag": "dating__path_hap_05",
+    "fact": "maritalStatus",
+    "value": "DATING",
+    "label": "연애 중"
+  },
+  {
+    "flag": "dating__love_letter_01",
     "fact": "maritalStatus",
     "value": "DATING",
     "label": "연애 중"

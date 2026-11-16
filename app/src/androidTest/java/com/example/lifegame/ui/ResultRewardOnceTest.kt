@@ -28,7 +28,6 @@ import com.example.lifegame.data.V4ProgressStore
 import com.example.lifegame.data.V4SavedRun
 import com.example.lifegame.ui.screens.CHANGE_HOLD_MILLIS
 import com.example.lifegame.ui.screens.DecisionScreen
-import com.example.lifegame.ui.screens.PREVIEW_DELAY_MILLIS
 import com.example.lifegame.ui.screens.TAP_GUARD_MILLIS
 import com.example.lifegame.ui.screens.TYPE_MILLIS
 import com.example.lifegame.ui.theme.LifeGameTheme
@@ -114,10 +113,27 @@ class ResultRewardOnceTest {
 
     private fun firstAvailableKey() = requireNotNull(state().decision).choices.first { it.available }.key
 
-    /** 타이핑 중 첫 터치는 전문만, 그다음 그림 선노출, 한 번 터치 뒤 선택지. 그 사이 보상은 없다. */
+    /** 그림 읽기처럼 다른 스레드 일을 기다린다. 실제 시간을 조금씩 흘리며 한 프레임씩 넘긴다. */
+    private fun awaitTag(tag: String, timeoutMs: Long = 5_000) {
+        val end = System.currentTimeMillis() + timeoutMs
+        while (compose.onAllNodesWithTag(tag).fetchSemanticsNodes().isEmpty()) {
+            check(System.currentTimeMillis() < end) { "$tag 화면이 나타나지 않았다" }
+            Thread.sleep(10)
+            compose.mainClock.advanceTimeByFrame()
+        }
+    }
+
+    /**
+     * 2026-11-13 순서: 그림 선노출 → (한 번 터치) → 본문 타이핑(첫 터치는 전문만) → 선택지. 그 사이 보상은 없다.
+     */
     private fun revealChoices(reducedMotion: Boolean = false) {
         val before = state().stats
         val recorded = saved().choices.size
+        awaitTag("scene_preview")
+        compose.onAllNodesWithTag("decision_choice_A").assertCountEquals(0)
+        compose.onAllNodesWithTag("decision_body").assertCountEquals(0)
+        tap("scene_preview")
+        advance(TAP_GUARD_MILLIS + 50)
         if (!reducedMotion) {
             advance(TYPE_MILLIS * 3)
             tap("decision_body")
@@ -127,12 +143,6 @@ class ResultRewardOnceTest {
         assertEquals("첫 터치는 보상을 부르지 않는다", before, state().stats)
         assertNull(state().outcome)
         assertEquals(recorded, saved().choices.size)
-        compose.onAllNodesWithTag("decision_choice_A").assertCountEquals(0)
-        compose.onAllNodesWithTag("scene_view_button").assertCountEquals(0)
-        advance(PREVIEW_DELAY_MILLIS + 16)
-        compose.onNodeWithTag("scene_preview").assertIsDisplayed()
-        compose.onAllNodesWithTag("decision_choice_A").assertCountEquals(0)
-        tap("scene_preview")
         advance(TAP_GUARD_MILLIS + 50)
         compose.onNodeWithTag("decision_choice_A").assertExists()
         assertEquals(before, state().stats)
@@ -238,7 +248,17 @@ class ResultRewardOnceTest {
         }
         compose.mainClock.advanceTimeByFrame()
         advance(TAP_GUARD_MILLIS + 50)
-        revealChoices()
+        // 실제 플레이 화면에서는 첫 사건(돌잡이) 앞에 컷신이 먼저 나온다(2026-11-13). 건너뛰면 같은 그림을
+        // 선노출로 다시 보여 주지 않고 본문부터 나온다.
+        if (compose.onAllNodesWithTag("doljabi_cutscene").fetchSemanticsNodes().isNotEmpty()) {
+            tap("doljabi_cutscene_skip")
+            advance(16)
+            awaitTag("decision_body")
+            tap("decision_body")
+            advance(TAP_GUARD_MILLIS + 50)
+        } else {
+            revealChoices()
+        }
         tap("decision_choice_${firstAvailableKey()}")
         advance(CHANGE_HOLD_MILLIS + 800)
         val speed = state().speed
@@ -308,14 +328,14 @@ class ResultRewardOnceTest {
             compose.mainClock.advanceTimeByFrame()
         }
 
-        advance(TYPE_MILLIS * 3)
-        assertEquals("타이핑 중에는 아직 그림을 보지 않았다", EventImageExposureStatus.PENDING, saved().presentation.eventImageExposure)
+        awaitTag("scene_preview")
+        assertEquals("선노출이 끝나기 전에는 아직 그림을 본 것으로 저장하지 않는다", EventImageExposureStatus.PENDING, saved().presentation.eventImageExposure)
         revealChoices()
         assertEquals(EventImageExposureStatus.SHOWN, saved().presentation.eventImageExposure)
 
         // 선노출을 본 뒤 재시작: 팝업 · 타이핑 · 선노출 없이 바로 선택지.
         restartApp()
-        advance(PREVIEW_DELAY_MILLIS + 50)
+        advance(TAP_GUARD_MILLIS + 50)
         compose.onAllNodesWithTag("scene_preview").assertCountEquals(0)
         compose.onAllNodesWithTag("incident_popup").assertCountEquals(0)
         compose.onNodeWithTag("decision_choice_A").assertExists()

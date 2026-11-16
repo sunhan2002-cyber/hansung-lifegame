@@ -1,6 +1,8 @@
 package com.example.lifegame.ui
 
 import android.graphics.Bitmap
+import androidx.activity.OnBackPressedDispatcher
+import androidx.activity.compose.LocalOnBackPressedDispatcherOwner
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.requiredSize
 import androidx.compose.runtime.Composable
@@ -225,6 +227,38 @@ class Week10EndingFlowTest {
         assertEquals(1, back)
     }
 
+    /** 지난 인생 → 주마등 다시 보기 → 시스템 뒤로가기에서 앱이 꺼지던 문제(2026-11-12 에뮬레이터 재현). 인생기록증으로 돌아온다. */
+    @Test
+    fun reopenedRecordReplayGoesBackToTheCertificate() {
+        val record = buildLifeRecordUi(playedRecord(seed = 7L), recordContent)
+        var backDispatcher: OnBackPressedDispatcher? = null
+        var listed = 0
+        setScreen {
+            backDispatcher = LocalOnBackPressedDispatcherOwner.current?.onBackPressedDispatcher
+            EndingFlowScreen(
+                record = record,
+                futureLook = null,
+                onRequestFuture = {},
+                onCancelFuture = {},
+                onDone = { listed += 1 },
+                doneLabel = "목록으로",
+                initialStep = EndingStep.CERTIFICATE,
+            )
+        }
+        composeRule.mainClock.autoAdvance = false
+        composeRule.onNodeWithTag("certificate_replay").performClick()
+        composeRule.mainClock.advanceTimeByFrame()
+        composeRule.onNodeWithTag("recap_screen").assertIsDisplayed()
+
+        // 시스템 뒤로가기와 같은 경로(OnBackPressedDispatcher → BackHandler)
+        composeRule.runOnUiThread { checkNotNull(backDispatcher).onBackPressed() }
+        composeRule.mainClock.advanceTimeByFrame()
+        composeRule.onNodeWithTag("certificate").assertIsDisplayed()
+        composeRule.onAllNodesWithTag("recap_screen").assertCountEquals(0)
+        assertEquals("뒤로가기가 목록으로 나가면 안 된다", 0, listed)
+        composeRule.mainClock.autoAdvance = true
+    }
+
     @Test
     fun titleCollectionCountsPersistedTitles() {
         val titles = listOf(
@@ -302,9 +336,9 @@ class Week10EndingFlowTest {
         composeRule.onNodeWithTag("photo_pick").performScrollTo().performClick()
         assertEquals(PhotoFlowStatus.CONSENT_REQUIRED, photoStates.last().first)
         composeRule.onNodeWithTag("photo_consent_no").performClick()
-        composeRule.onNodeWithTag("photo_message").assertTextContains("동의하지 않아 기본 모습으로 진행합니다.")
+        composeRule.onNodeWithTag("photo_message").assertTextContains("사진 없이 위에서 고른 모습으로 진행합니다.") // 정원률 11-14 검수: 고른 모습이 유지된다는 뜻으로
         assertEquals(PhotoFlowStatus.FALLBACK, photoStates.last().first)
-        assertTrue(photoStates.last().second.orEmpty().contains("동의하지 않아"))
+        assertTrue(photoStates.last().second.orEmpty().contains("사진 없이 위에서 고른 모습"))
         saveScreenshot("w10_profile_consent_declined.png")
 
         composeRule.onNodeWithText("남").performScrollTo().performClick()

@@ -55,6 +55,12 @@ data class LifeRecordUi(
     val backdrop: List<ImageCandidate>,
     val pathTitle: String,
     val usesPhotoFace: Boolean,
+    /** "그때 그 선택" 회상(최대 3줄). 실제 선택 기록이 없으면 비어 있다. */
+    val recalls: List<RecallLine> = emptyList(),
+    /** "내 인생의 계기" 카드(2~3장). 실제 선택 기록이 없으면 비어 있다. */
+    val turningPoints: List<TurningPointUi> = emptyList(),
+    /** 이번 인생에서 다시 만난, 관계가 이어진 사람 */
+    val npcsMetAgain: List<NpcReturnUi> = emptyList(),
 )
 
 /** 기록 화면을 만들 때 필요한 콘텐츠 묶음 */
@@ -65,6 +71,8 @@ data class RecordContent(
     val imageFiles: Map<String, String> = emptyMap(),
     /** 주마등에서 주요 사건(전환점 · 큰 돌발)을 고르고 그때 보여 준 그림을 찾는 데 쓴다 */
     val decisions: Map<String, DecisionEvent> = emptyMap(),
+    /** 결말 회상 · 계기 카드 · 다시 만난 사람 (scenario_extensions.sample.json) */
+    val extensions: ScenarioExtensions = ScenarioExtensions.EMPTY,
 )
 
 private val PATH_STAT_KEYS = mapOf(
@@ -81,7 +89,7 @@ fun RunChoiceRecord.toChoiceRecordUi(periods: List<PeriodDefinition>): ChoiceRec
     periodName = periods.firstOrNull { it.period == period }?.displayName ?: period.name,
     yearInPeriod = yearInPeriod,
     title = eventTitle,
-    choiceLabel = choiceLabel,
+    choiceLabel = displayChoiceLabel(choiceLabel),
 )
 
 /**
@@ -123,7 +131,7 @@ fun recapMomentsUi(
             periodName = content.periods.firstOrNull { it.period == choice.period }?.displayName ?: choice.period.name,
             yearInPeriod = choice.yearInPeriod,
             title = choice.eventTitle,
-            choiceLabel = choice.choiceLabel,
+            choiceLabel = displayChoiceLabel(choice.choiceLabel),
             resultText = choice.resultText,
             images = images,
             avatar = lookAt(choice.period)?.let { look ->
@@ -182,6 +190,9 @@ fun buildLifeRecordUi(record: CompletedLifeRecord, content: RecordContent): Life
         backdrop = listOfNotNull(backdrop),
         pathTitle = path.title,
         usesPhotoFace = record.avatar.photoConsent && !record.avatar.faceSheetRef.isNullOrBlank(),
+        recalls = content.extensions.recallsForEnding(record.choices, state.flags),
+        turningPoints = content.extensions.turningPointsFor(record.choices, state.flags, periods),
+        npcsMetAgain = content.extensions.npcsMetAgain(record.choices, state.flags, periods),
     )
 }
 
@@ -209,6 +220,10 @@ data class TitleEntryUi(
     val earned: Boolean,
     /** 이 칭호를 받은 인생의 이름들 (최근 순) */
     val earnedBy: List<String>,
+    /** "다음 판에서 노리기"에 보여 줄 목표(신기훈 #76). 정확한 플래그 · 확률은 쓰지 않는다. */
+    val goal: String? = null,
+    /** 아직 받지 못한 칭호의 이야기식 힌트 */
+    val hint: String? = null,
 )
 
 data class TitleCollectionUi(
@@ -222,7 +237,11 @@ data class TitleCollectionUi(
  * 칭호 수집. 콘텐츠의 칭호 전체에, 완료 기록에 저장된 칭호 스냅샷을 겹친다.
  * 콘텐츠가 바뀌어 사라진 칭호도 받은 기록이 있으면 당시 문구 그대로 남는다.
  */
-fun buildTitleCollection(titles: List<LifeTitle>, lives: List<CompletedLifeRecord>): TitleCollectionUi {
+fun buildTitleCollection(
+    titles: List<LifeTitle>,
+    lives: List<CompletedLifeRecord>,
+    goals: Map<String, TitleGoal> = emptyMap(),
+): TitleCollectionUi {
     val earnedBy = lives.mapNotNull { life -> life.awardedTitle?.let { it to life.playerName } }
         .groupBy({ it.first.titleId }, { it.second })
     val snapshots = lives.mapNotNull { it.awardedTitle }.associateBy { it.titleId }
@@ -234,6 +253,8 @@ fun buildTitleCollection(titles: List<LifeTitle>, lives: List<CompletedLifeRecor
             description = snapshot?.description ?: title.description,
             earned = title.titleId in earnedBy,
             earnedBy = earnedBy[title.titleId].orEmpty(),
+            goal = goals[title.titleId]?.goal?.takeIf(String::isNotBlank),
+            hint = goals[title.titleId]?.hint?.takeIf(String::isNotBlank),
         )
     }
     val retired = snapshots.values.filter { snapshot -> titles.none { it.titleId == snapshot.titleId } }.map {

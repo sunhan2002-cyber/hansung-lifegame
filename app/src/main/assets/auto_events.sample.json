@@ -1,0 +1,1649 @@
+{
+  "schemaVersion": 1,
+  "owner": "신기훈",
+  "createdAt": "2026-11-13",
+  "status": "CONTENT_ONLY — 엔진 연결은 김우영 PR(feat/week11-wooyoung-auto-events)의 AutomaticEvent 파서·조건 검사가 담당. 이 파일만으로 앱에 표시되지 않는다.",
+  "rules": {
+    "notYearly": "매년 카운터를 쓰지 않는다. trigger=ELAPSED_TIME은 같은 시기 안에서 선택·돌발 사건 없이 지나간 자동 진행 횟수(afterAutoSteps), trigger=PROGRESS_STAGE는 시기 진입(PERIOD_START)·중반(PERIOD_MID, minYearInPeriod 이상)·마지막 해(PERIOD_END)·특정 사건 완료 직후(AFTER_EVENT) 같은 진행 단계 변화 기준이다.",
+    "neverPreempt": "자동 사건은 TurnPhase.AUTO_PROGRESS이고 pendingDecision이 없을 때만 고른다. 같은 진행 단계에서 MILESTONE·BIG_INCIDENT·INCIDENT 선택 사건이 뽑히면 자동 사건은 건너뛴다.",
+    "perStep": "한 자동 진행 단계에 최대 1건.",
+    "perPeriod": "한 시기에 최대 2건(영아·노년은 3건). 남은 후보는 다음 시기로 넘기지 않는다.",
+    "conditions": "conditions.requiredFlags·blockedFlags·stats·lifeFacts를 사건과 같은 규칙으로 검사한다. 조건 없는 후보는 시기마다 5개 이상이다.",
+    "selection": "조건을 통과한 후보 중 runSeed·period·자동 진행 횟수로 결정적 추첨한다(eventId 사전순 고정 선택 금지).",
+    "dedupe": "완료한 eventId와 dedupe.key를 저장한다. repeatable=false는 한 인생에서 1회, 같은 dedupe.key 묶음은 하나만.",
+    "statEffect": "STAT만 statDelta를 적용한다. RECORD_ONLY는 기록·인생 요약에만 남긴다. 사망 판정은 하지 않는다(건강 0 규칙은 선택 사건·연간 감소에서 처리).",
+    "record": "기록 화면과 인생 요약에는 [자동] 같은 구분 표시와 함께 남기고, 선택 기록(eventId:choiceId)과 섞지 않는다.",
+    "flags": "자동 사건이 추가하는 플래그는 dating·partner_second_chance 두 개뿐이다. 칭호·결말 조건 플래그는 추가하지 않는다."
+  },
+  "events": [
+    {
+      "eventId": "auto_infant_cold",
+      "periods": [
+        "INFANT"
+      ],
+      "topic": "감기",
+      "text": "콧물이 사흘 동안 멈추지 않았다. 엄마는 사흘 동안 잠을 못 잤다.",
+      "trigger": "ELAPSED_TIME",
+      "triggerRule": {
+        "afterAutoSteps": 1
+      },
+      "conditions": {
+        "stats": {},
+        "requiredFlags": [],
+        "blockedFlags": []
+      },
+      "statEffect": "STAT",
+      "statDelta": {
+        "건강": -2
+      },
+      "statReason": "감기는 건강에 직접 영향",
+      "addFlags": [],
+      "removeFlags": [],
+      "momentImageId": null,
+      "imageNeed": "NONE",
+      "repeatable": false,
+      "dedupe": {
+        "scope": "RUN",
+        "key": "auto_infant_cold",
+        "rule": "한 인생에서 1회"
+      }
+    },
+    {
+      "eventId": "auto_infant_nap",
+      "periods": [
+        "INFANT"
+      ],
+      "topic": "낮잠",
+      "text": "낮잠을 세 시간 잤다. 깨어 보니 온 가족이 내 옆에서 같이 자고 있었다.",
+      "trigger": "ELAPSED_TIME",
+      "triggerRule": {
+        "afterAutoSteps": 2
+      },
+      "conditions": {
+        "stats": {},
+        "requiredFlags": [],
+        "blockedFlags": []
+      },
+      "statEffect": "STAT",
+      "statDelta": {
+        "건강": 1
+      },
+      "statReason": "충분한 수면",
+      "addFlags": [],
+      "removeFlags": [],
+      "momentImageId": null,
+      "imageNeed": "NONE",
+      "repeatable": false,
+      "dedupe": {
+        "scope": "RUN",
+        "key": "auto_infant_nap",
+        "rule": "한 인생에서 1회"
+      }
+    },
+    {
+      "eventId": "auto_infant_first_word",
+      "periods": [
+        "INFANT"
+      ],
+      "topic": "첫 단어",
+      "text": "첫 단어는 '엄마'도 '아빠'도 아닌 '까까'였다. 할머니만 크게 웃었다.",
+      "trigger": "PROGRESS_STAGE",
+      "triggerRule": {
+        "stage": "PERIOD_MID",
+        "minYearInPeriod": 2
+      },
+      "conditions": {
+        "stats": {},
+        "requiredFlags": [],
+        "blockedFlags": []
+      },
+      "statEffect": "RECORD_ONLY",
+      "statDelta": {},
+      "statReason": "기록만 남김: 능력치가 바뀔 만한 일이 아님",
+      "addFlags": [],
+      "removeFlags": [],
+      "momentImageId": null,
+      "imageNeed": "NONE",
+      "repeatable": false,
+      "dedupe": {
+        "scope": "RUN",
+        "key": "auto_infant_first_word",
+        "rule": "한 인생에서 1회"
+      }
+    },
+    {
+      "eventId": "auto_infant_first_steps",
+      "periods": [
+        "INFANT"
+      ],
+      "topic": "첫걸음",
+      "text": "소파를 잡고 일어섰다. 세 걸음 걷고 엉덩방아를 찧었다. 박수는 열 번 나왔다.",
+      "trigger": "PROGRESS_STAGE",
+      "triggerRule": {
+        "stage": "PERIOD_MID",
+        "minYearInPeriod": 2
+      },
+      "conditions": {
+        "stats": {},
+        "requiredFlags": [],
+        "blockedFlags": []
+      },
+      "statEffect": "STAT",
+      "statDelta": {
+        "운동능력": 1
+      },
+      "statReason": "첫걸음은 운동 발달",
+      "addFlags": [],
+      "removeFlags": [],
+      "momentImageId": null,
+      "imageNeed": "NONE",
+      "repeatable": false,
+      "dedupe": {
+        "scope": "RUN",
+        "key": "auto_infant_first_steps",
+        "rule": "한 인생에서 1회"
+      }
+    },
+    {
+      "eventId": "auto_infant_grandma",
+      "periods": [
+        "INFANT"
+      ],
+      "topic": "할머니 댁",
+      "text": "할머니 댁에 처음 갔다. 동네 어르신 열 명에게 차례로 안겼다. 울지 않은 건 두 번뿐이었다.",
+      "trigger": "ELAPSED_TIME",
+      "triggerRule": {
+        "afterAutoSteps": 3
+      },
+      "conditions": {
+        "stats": {},
+        "requiredFlags": [],
+        "blockedFlags": []
+      },
+      "statEffect": "STAT",
+      "statDelta": {
+        "사회성": 1
+      },
+      "statReason": "낯선 사람과의 첫 교류",
+      "addFlags": [],
+      "removeFlags": [],
+      "momentImageId": null,
+      "imageNeed": "NONE",
+      "repeatable": false,
+      "dedupe": {
+        "scope": "RUN",
+        "key": "auto_infant_grandma",
+        "rule": "한 인생에서 1회"
+      }
+    },
+    {
+      "eventId": "auto_infant_dol_photo_music",
+      "periods": [
+        "INFANT"
+      ],
+      "topic": "돌잡이 회상",
+      "text": "돌잡이 사진이 액자에 걸렸다. 사진 속 나는 피아노 장난감을 두 손으로 꼭 쥐고 있다.",
+      "trigger": "PROGRESS_STAGE",
+      "triggerRule": {
+        "stage": "AFTER_EVENT",
+        "afterEventId": "infant_007"
+      },
+      "conditions": {
+        "stats": {},
+        "requiredFlags": [
+          "music_toy"
+        ],
+        "blockedFlags": []
+      },
+      "statEffect": "RECORD_ONLY",
+      "statDelta": {},
+      "statReason": "기록만 남김: 능력치가 바뀔 만한 일이 아님",
+      "addFlags": [],
+      "removeFlags": [],
+      "momentImageId": null,
+      "imageNeed": "OPTIONAL_REUSE:img_infant_toys_001",
+      "repeatable": false,
+      "dedupe": {
+        "scope": "RUN",
+        "key": "auto_infant_dol_photo",
+        "rule": "한 인생에서 1회. 같은 key 묶음은 그중 하나만 표시"
+      }
+    },
+    {
+      "eventId": "auto_infant_dol_photo_gavel",
+      "periods": [
+        "INFANT"
+      ],
+      "topic": "돌잡이 회상",
+      "text": "돌잡이 사진이 액자에 걸렸다. 사진 속 나는 판사봉을 들고 아빠 이마를 겨누고 있다.",
+      "trigger": "PROGRESS_STAGE",
+      "triggerRule": {
+        "stage": "AFTER_EVENT",
+        "afterEventId": "infant_007"
+      },
+      "conditions": {
+        "stats": {},
+        "requiredFlags": [
+          "judge_gavel"
+        ],
+        "blockedFlags": []
+      },
+      "statEffect": "RECORD_ONLY",
+      "statDelta": {},
+      "statReason": "기록만 남김: 능력치가 바뀔 만한 일이 아님",
+      "addFlags": [],
+      "removeFlags": [],
+      "momentImageId": null,
+      "imageNeed": "OPTIONAL_REUSE:img_infant_toys_001",
+      "repeatable": false,
+      "dedupe": {
+        "scope": "RUN",
+        "key": "auto_infant_dol_photo",
+        "rule": "한 인생에서 1회. 같은 key 묶음은 그중 하나만 표시"
+      }
+    },
+    {
+      "eventId": "auto_infant_dol_photo_cash",
+      "periods": [
+        "INFANT"
+      ],
+      "topic": "돌잡이 회상",
+      "text": "돌잡이 사진이 액자에 걸렸다. 사진 속 나는 5만 원권을 놓지 않으려고 온몸으로 버티고 있다.",
+      "trigger": "PROGRESS_STAGE",
+      "triggerRule": {
+        "stage": "AFTER_EVENT",
+        "afterEventId": "infant_007"
+      },
+      "conditions": {
+        "stats": {},
+        "requiredFlags": [
+          "cash_grabber"
+        ],
+        "blockedFlags": []
+      },
+      "statEffect": "RECORD_ONLY",
+      "statDelta": {},
+      "statReason": "기록만 남김: 능력치가 바뀔 만한 일이 아님",
+      "addFlags": [],
+      "removeFlags": [],
+      "momentImageId": null,
+      "imageNeed": "OPTIONAL_REUSE:img_infant_toys_001",
+      "repeatable": false,
+      "dedupe": {
+        "scope": "RUN",
+        "key": "auto_infant_dol_photo",
+        "rule": "한 인생에서 1회. 같은 key 묶음은 그중 하나만 표시"
+      }
+    },
+    {
+      "eventId": "auto_child_friend_fight",
+      "periods": [
+        "CHILD"
+      ],
+      "topic": "친구 다툼",
+      "text": "짝꿍과 지우개 때문에 싸웠다. 다음 날 짝꿍이 반으로 자른 지우개를 내밀었다.",
+      "trigger": "ELAPSED_TIME",
+      "triggerRule": {
+        "afterAutoSteps": 1
+      },
+      "conditions": {
+        "stats": {},
+        "requiredFlags": [],
+        "blockedFlags": []
+      },
+      "statEffect": "STAT",
+      "statDelta": {
+        "사회성": 1
+      },
+      "statReason": "다툼과 화해로 관계를 배움",
+      "addFlags": [],
+      "removeFlags": [],
+      "momentImageId": null,
+      "imageNeed": "NONE",
+      "repeatable": false,
+      "dedupe": {
+        "scope": "RUN",
+        "key": "auto_child_friend_fight",
+        "rule": "한 인생에서 1회"
+      }
+    },
+    {
+      "eventId": "auto_child_errand",
+      "periods": [
+        "CHILD"
+      ],
+      "topic": "심부름",
+      "text": "두부 한 모 심부름. 거스름돈으로 사탕을 샀다가 영수증 때문에 들켰다.",
+      "trigger": "ELAPSED_TIME",
+      "triggerRule": {
+        "afterAutoSteps": 2
+      },
+      "conditions": {
+        "stats": {},
+        "requiredFlags": [],
+        "blockedFlags": []
+      },
+      "statEffect": "RECORD_ONLY",
+      "statDelta": {},
+      "statReason": "기록만 남김: 능력치가 바뀔 만한 일이 아님",
+      "addFlags": [],
+      "removeFlags": [],
+      "momentImageId": null,
+      "imageNeed": "NONE",
+      "repeatable": false,
+      "dedupe": {
+        "scope": "RUN",
+        "key": "auto_child_errand",
+        "rule": "한 인생에서 1회"
+      }
+    },
+    {
+      "eventId": "auto_child_allowance",
+      "periods": [
+        "CHILD"
+      ],
+      "topic": "용돈",
+      "text": "처음으로 일주일 용돈 3천 원을 받았다. 계획표를 세웠는데 하루 만에 다 썼다.",
+      "trigger": "PROGRESS_STAGE",
+      "triggerRule": {
+        "stage": "PERIOD_START"
+      },
+      "conditions": {
+        "stats": {},
+        "requiredFlags": [],
+        "blockedFlags": [
+          "v4:event:child_008"
+        ]
+      },
+      "statEffect": "STAT",
+      "statDelta": {
+        "경제력": 1
+      },
+      "statReason": "처음 돈을 직접 관리",
+      "addFlags": [],
+      "removeFlags": [],
+      "momentImageId": null,
+      "imageNeed": "NONE",
+      "repeatable": false,
+      "dedupe": {
+        "scope": "RUN",
+        "key": "auto_child_allowance",
+        "rule": "한 인생에서 1회"
+      }
+    },
+    {
+      "eventId": "auto_child_sports_day",
+      "periods": [
+        "CHILD"
+      ],
+      "topic": "운동회",
+      "text": "운동회 날 청군이 이겼다. 목이 쉬어서 사흘 동안 속삭이며 말했다.",
+      "trigger": "PROGRESS_STAGE",
+      "triggerRule": {
+        "stage": "PERIOD_MID",
+        "minYearInPeriod": 2
+      },
+      "conditions": {
+        "stats": {},
+        "requiredFlags": [],
+        "blockedFlags": []
+      },
+      "statEffect": "STAT",
+      "statDelta": {
+        "운동능력": 1
+      },
+      "statReason": "운동회 참여",
+      "addFlags": [],
+      "removeFlags": [],
+      "momentImageId": null,
+      "imageNeed": "NONE",
+      "repeatable": false,
+      "dedupe": {
+        "scope": "RUN",
+        "key": "auto_child_sports_day",
+        "rule": "한 인생에서 1회"
+      }
+    },
+    {
+      "eventId": "auto_child_reading_log",
+      "periods": [
+        "CHILD"
+      ],
+      "topic": "방학 숙제",
+      "text": "방학 숙제 독서록 열 권. 아홉 권은 제목과 표지만 보고 썼다.",
+      "trigger": "PROGRESS_STAGE",
+      "triggerRule": {
+        "stage": "PERIOD_END"
+      },
+      "conditions": {
+        "stats": {},
+        "requiredFlags": [],
+        "blockedFlags": []
+      },
+      "statEffect": "RECORD_ONLY",
+      "statDelta": {},
+      "statReason": "기록만 남김: 능력치가 바뀔 만한 일이 아님",
+      "addFlags": [],
+      "removeFlags": [],
+      "momentImageId": null,
+      "imageNeed": "NONE",
+      "repeatable": false,
+      "dedupe": {
+        "scope": "RUN",
+        "key": "auto_child_reading_log",
+        "rule": "한 인생에서 1회"
+      }
+    },
+    {
+      "eventId": "auto_child_lost_tooth",
+      "periods": [
+        "CHILD"
+      ],
+      "topic": "이 빠진 날",
+      "text": "앞니가 빠졌다. 베개 밑에 넣어 두고 잤더니 아침에 500원이 있었다. 엄마 지갑에서 똑같은 동전 소리가 났다.",
+      "trigger": "PROGRESS_STAGE",
+      "triggerRule": {
+        "stage": "PERIOD_MID",
+        "minYearInPeriod": 3
+      },
+      "conditions": {
+        "stats": {},
+        "requiredFlags": [],
+        "blockedFlags": []
+      },
+      "statEffect": "RECORD_ONLY",
+      "statDelta": {},
+      "statReason": "기록만 남김: 능력치가 바뀔 만한 일이 아님",
+      "addFlags": [],
+      "removeFlags": [],
+      "momentImageId": null,
+      "imageNeed": "NONE",
+      "repeatable": false,
+      "dedupe": {
+        "scope": "RUN",
+        "key": "auto_child_lost_tooth",
+        "rule": "한 인생에서 1회"
+      }
+    },
+    {
+      "eventId": "auto_child_transfer_friend",
+      "periods": [
+        "CHILD"
+      ],
+      "topic": "전학생 재등장",
+      "text": "급식실에서 옆에 앉았던 전학생이 생일 파티 초대장을 줬다. 반에서 초대받은 사람은 나 하나였다.",
+      "trigger": "PROGRESS_STAGE",
+      "triggerRule": {
+        "stage": "AFTER_EVENT",
+        "afterEventId": "child_025"
+      },
+      "conditions": {
+        "stats": {},
+        "requiredFlags": [
+          "kind_heart",
+          "v4:event:child_025"
+        ],
+        "blockedFlags": []
+      },
+      "statEffect": "STAT",
+      "statDelta": {
+        "사회성": 1
+      },
+      "statReason": "관계가 생긴 친구와의 후속 교류",
+      "addFlags": [],
+      "removeFlags": [],
+      "momentImageId": null,
+      "imageNeed": "OPTIONAL_REUSE:img_child_new_student_001",
+      "repeatable": false,
+      "dedupe": {
+        "scope": "RUN",
+        "key": "auto_child_transfer_friend",
+        "rule": "한 인생에서 1회"
+      }
+    },
+    {
+      "eventId": "auto_teen_exam",
+      "periods": [
+        "TEEN"
+      ],
+      "topic": "시험",
+      "text": "중간고사 수학 마지막 문제를 찍었다. 맞았다. 그날 운을 다 쓴 것 같았다.",
+      "trigger": "ELAPSED_TIME",
+      "triggerRule": {
+        "afterAutoSteps": 1
+      },
+      "conditions": {
+        "stats": {},
+        "requiredFlags": [],
+        "blockedFlags": []
+      },
+      "statEffect": "STAT",
+      "statDelta": {
+        "지력": 1
+      },
+      "statReason": "시험 준비",
+      "addFlags": [],
+      "removeFlags": [],
+      "momentImageId": null,
+      "imageNeed": "NONE",
+      "repeatable": false,
+      "dedupe": {
+        "scope": "RUN",
+        "key": "auto_teen_exam",
+        "rule": "한 인생에서 1회"
+      }
+    },
+    {
+      "eventId": "auto_teen_club",
+      "periods": [
+        "TEEN"
+      ],
+      "topic": "동아리",
+      "text": "동아리 선배가 축제 포스터 글씨를 맡겼다. 삐뚤빼뚤해서 오히려 제일 눈에 띄었다.",
+      "trigger": "PROGRESS_STAGE",
+      "triggerRule": {
+        "stage": "PERIOD_MID",
+        "minYearInPeriod": 2
+      },
+      "conditions": {
+        "stats": {},
+        "requiredFlags": [],
+        "blockedFlags": []
+      },
+      "statEffect": "STAT",
+      "statDelta": {
+        "사회성": 1
+      },
+      "statReason": "동아리 활동",
+      "addFlags": [],
+      "removeFlags": [],
+      "momentImageId": null,
+      "imageNeed": "NONE",
+      "repeatable": false,
+      "dedupe": {
+        "scope": "RUN",
+        "key": "auto_teen_club",
+        "rule": "한 인생에서 1회"
+      }
+    },
+    {
+      "eventId": "auto_teen_friend_chat",
+      "periods": [
+        "TEEN"
+      ],
+      "topic": "친구 관계",
+      "text": "단톡방에서 답장이 늦었다는 이유로 하루 동안 '읽씹 대장'으로 불렸다.",
+      "trigger": "ELAPSED_TIME",
+      "triggerRule": {
+        "afterAutoSteps": 2
+      },
+      "conditions": {
+        "stats": {},
+        "requiredFlags": [],
+        "blockedFlags": []
+      },
+      "statEffect": "RECORD_ONLY",
+      "statDelta": {},
+      "statReason": "기록만 남김: 능력치가 바뀔 만한 일이 아님",
+      "addFlags": [],
+      "removeFlags": [],
+      "momentImageId": null,
+      "imageNeed": "NONE",
+      "repeatable": false,
+      "dedupe": {
+        "scope": "RUN",
+        "key": "auto_teen_friend_chat",
+        "rule": "한 인생에서 1회"
+      }
+    },
+    {
+      "eventId": "auto_teen_growth",
+      "periods": [
+        "TEEN"
+      ],
+      "topic": "성장",
+      "text": "1년 사이 키가 9센티 컸다. 교복 바지가 발목 위로 올라왔다.",
+      "trigger": "PROGRESS_STAGE",
+      "triggerRule": {
+        "stage": "PERIOD_MID",
+        "minYearInPeriod": 3
+      },
+      "conditions": {
+        "stats": {},
+        "requiredFlags": [],
+        "blockedFlags": []
+      },
+      "statEffect": "STAT",
+      "statDelta": {
+        "건강": 1
+      },
+      "statReason": "성장기 신체 변화",
+      "addFlags": [],
+      "removeFlags": [],
+      "momentImageId": null,
+      "imageNeed": "NONE",
+      "repeatable": false,
+      "dedupe": {
+        "scope": "RUN",
+        "key": "auto_teen_growth",
+        "rule": "한 인생에서 1회"
+      }
+    },
+    {
+      "eventId": "auto_teen_late_night",
+      "periods": [
+        "TEEN"
+      ],
+      "topic": "밤샘",
+      "text": "시험 전날 밤 라면을 끓였다. 공부는 라면이 불기 전까지만 했다.",
+      "trigger": "ELAPSED_TIME",
+      "triggerRule": {
+        "afterAutoSteps": 3
+      },
+      "conditions": {
+        "stats": {},
+        "requiredFlags": [],
+        "blockedFlags": []
+      },
+      "statEffect": "STAT",
+      "statDelta": {
+        "건강": -1
+      },
+      "statReason": "밤샘과 야식",
+      "addFlags": [],
+      "removeFlags": [],
+      "momentImageId": null,
+      "imageNeed": "NONE",
+      "repeatable": false,
+      "dedupe": {
+        "scope": "RUN",
+        "key": "auto_teen_late_night",
+        "rule": "한 인생에서 1회"
+      }
+    },
+    {
+      "eventId": "auto_teen_transfer_friend",
+      "periods": [
+        "TEEN"
+      ],
+      "topic": "중학교 전학생 재등장",
+      "text": "점심을 같이 먹던 그 전학생이 이제 우리 무리에서 제일 시끄럽다. 오늘은 내 몫까지 매점 줄을 섰다.",
+      "trigger": "PROGRESS_STAGE",
+      "triggerRule": {
+        "stage": "AFTER_EVENT",
+        "afterEventId": "path_soc_18"
+      },
+      "conditions": {
+        "stats": {},
+        "requiredFlags": [
+          "transfer_friend_teen"
+        ],
+        "blockedFlags": []
+      },
+      "statEffect": "RECORD_ONLY",
+      "statDelta": {},
+      "statReason": "기록만 남김: 능력치가 바뀔 만한 일이 아님",
+      "addFlags": [],
+      "removeFlags": [],
+      "momentImageId": null,
+      "imageNeed": "NONE",
+      "repeatable": false,
+      "dedupe": {
+        "scope": "RUN",
+        "key": "auto_teen_transfer_friend",
+        "rule": "한 인생에서 1회"
+      }
+    },
+    {
+      "eventId": "auto_teen_festival_photo",
+      "periods": [
+        "TEEN"
+      ],
+      "topic": "축제 인연 회상",
+      "text": "축제 날 단체 사진이 반 단톡방에 올라왔다. 옆자리에 선 그 애가 먼저 사진에 하트를 눌렀다.",
+      "trigger": "PROGRESS_STAGE",
+      "triggerRule": {
+        "stage": "AFTER_EVENT",
+        "afterEventId": "teen_021"
+      },
+      "conditions": {
+        "stats": {},
+        "requiredFlags": [
+          "first_love",
+          "v4:event:teen_021"
+        ],
+        "blockedFlags": []
+      },
+      "statEffect": "RECORD_ONLY",
+      "statDelta": {},
+      "statReason": "기록만 남김: 능력치가 바뀔 만한 일이 아님",
+      "addFlags": [],
+      "removeFlags": [],
+      "momentImageId": null,
+      "imageNeed": "NONE",
+      "repeatable": false,
+      "dedupe": {
+        "scope": "RUN",
+        "key": "auto_teen_festival_photo",
+        "rule": "한 인생에서 1회"
+      }
+    },
+    {
+      "eventId": "auto_ya_friend_fight",
+      "periods": [
+        "YOUNG_ADULT"
+      ],
+      "topic": "친구와 싸움",
+      "text": "축의금 액수 때문에 오래된 친구와 처음으로 크게 싸웠다. 일주일 뒤 친구가 먼저 '밥 먹자'고 했다.",
+      "trigger": "ELAPSED_TIME",
+      "triggerRule": {
+        "afterAutoSteps": 2
+      },
+      "conditions": {
+        "stats": {},
+        "requiredFlags": [],
+        "blockedFlags": []
+      },
+      "statEffect": "STAT",
+      "statDelta": {
+        "행복": -1
+      },
+      "statReason": "가까운 친구와의 다툼",
+      "addFlags": [],
+      "removeFlags": [],
+      "momentImageId": null,
+      "imageNeed": "NONE",
+      "repeatable": false,
+      "dedupe": {
+        "scope": "RUN",
+        "key": "auto_ya_friend_fight",
+        "rule": "한 인생에서 1회"
+      }
+    },
+    {
+      "eventId": "auto_ya_parent_support",
+      "periods": [
+        "YOUNG_ADULT"
+      ],
+      "topic": "부모님 지원",
+      "text": "엄마가 반찬 통 다섯 개와 봉투 하나를 보냈다. 봉투에는 '밥은 사 먹지 마라'고 적혀 있었다.",
+      "trigger": "PROGRESS_STAGE",
+      "triggerRule": {
+        "stage": "PERIOD_START"
+      },
+      "conditions": {
+        "stats": {},
+        "requiredFlags": [],
+        "blockedFlags": []
+      },
+      "statEffect": "STAT",
+      "statDelta": {
+        "경제력": 2
+      },
+      "statReason": "부모님의 금전 지원",
+      "addFlags": [],
+      "removeFlags": [],
+      "momentImageId": null,
+      "imageNeed": "NONE",
+      "repeatable": false,
+      "dedupe": {
+        "scope": "RUN",
+        "key": "auto_ya_parent_support",
+        "rule": "한 인생에서 1회"
+      }
+    },
+    {
+      "eventId": "auto_ya_license_written",
+      "periods": [
+        "YOUNG_ADULT"
+      ],
+      "topic": "면허 필기",
+      "text": "운전면허 필기시험을 보러 갔다. 대기실에서 문제집을 펼친 사람은 나뿐이었다.",
+      "trigger": "ELAPSED_TIME",
+      "triggerRule": {
+        "afterAutoSteps": 3
+      },
+      "conditions": {
+        "stats": {},
+        "requiredFlags": [],
+        "blockedFlags": []
+      },
+      "statEffect": "RECORD_ONLY",
+      "statDelta": {},
+      "statReason": "기록만 남김: 능력치가 바뀔 만한 일이 아님",
+      "addFlags": [],
+      "removeFlags": [],
+      "momentImageId": null,
+      "imageNeed": "NONE",
+      "repeatable": false,
+      "dedupe": {
+        "scope": "RUN",
+        "key": "auto_ya_license_written",
+        "rule": "한 인생에서 1회"
+      }
+    },
+    {
+      "eventId": "auto_ya_teacher",
+      "periods": [
+        "YOUNG_ADULT"
+      ],
+      "topic": "은사",
+      "text": "친구 결혼식장에서 고등학교 담임 선생님을 만났다. 선생님은 내 이름 대신 출석 번호를 먼저 기억했다.",
+      "trigger": "PROGRESS_STAGE",
+      "triggerRule": {
+        "stage": "PERIOD_MID",
+        "minYearInPeriod": 3
+      },
+      "conditions": {
+        "stats": {},
+        "requiredFlags": [],
+        "blockedFlags": []
+      },
+      "statEffect": "RECORD_ONLY",
+      "statDelta": {},
+      "statReason": "기록만 남김: 능력치가 바뀔 만한 일이 아님",
+      "addFlags": [],
+      "removeFlags": [],
+      "momentImageId": null,
+      "imageNeed": "NONE",
+      "repeatable": false,
+      "dedupe": {
+        "scope": "RUN",
+        "key": "auto_ya_teacher",
+        "rule": "한 인생에서 1회"
+      }
+    },
+    {
+      "eventId": "auto_ya_cold",
+      "periods": [
+        "YOUNG_ADULT"
+      ],
+      "topic": "감기",
+      "text": "환절기 감기에 걸렸다. 동네 약국 약사님이 내 이름을 외웠다.",
+      "trigger": "ELAPSED_TIME",
+      "triggerRule": {
+        "afterAutoSteps": 4
+      },
+      "conditions": {
+        "stats": {},
+        "requiredFlags": [],
+        "blockedFlags": []
+      },
+      "statEffect": "STAT",
+      "statDelta": {
+        "건강": -1
+      },
+      "statReason": "감기",
+      "addFlags": [],
+      "removeFlags": [],
+      "momentImageId": null,
+      "imageNeed": "NONE",
+      "repeatable": false,
+      "dedupe": {
+        "scope": "RUN",
+        "key": "auto_ya_cold",
+        "rule": "한 인생에서 1회"
+      }
+    },
+    {
+      "eventId": "auto_ya_love_start",
+      "periods": [
+        "YOUNG_ADULT"
+      ],
+      "topic": "연애 시작",
+      "text": "예전에 대답을 망설였던 그 사람과 동네 카페에서 마주쳤다. 이번엔 내가 먼저 인사했다. 그 주말에 첫 데이트를 했다.",
+      "trigger": "PROGRESS_STAGE",
+      "triggerRule": {
+        "stage": "PERIOD_MID",
+        "minYearInPeriod": 2
+      },
+      "conditions": {
+        "stats": {},
+        "requiredFlags": [
+          "missed_chance"
+        ],
+        "blockedFlags": [
+          "dating",
+          "engaged",
+          "married",
+          "single_life",
+          "divorced"
+        ]
+      },
+      "statEffect": "STAT",
+      "statDelta": {
+        "행복": 2
+      },
+      "statReason": "연애 시작",
+      "addFlags": [
+        "dating",
+        "partner_second_chance"
+      ],
+      "removeFlags": [],
+      "momentImageId": null,
+      "imageNeed": "NEW_MOMENT: 동네 카페 입구에서 다시 마주친 사람(1인칭)",
+      "repeatable": false,
+      "dedupe": {
+        "scope": "RUN",
+        "key": "auto_ya_love_start",
+        "rule": "한 인생에서 1회"
+      }
+    },
+    {
+      "eventId": "auto_ya_payday",
+      "periods": [
+        "YOUNG_ADULT"
+      ],
+      "topic": "월급(재직자만)",
+      "text": "월급날. 통장에 들어온 숫자를 캡처했다. 카드값이 3초 뒤에 가져갔다.",
+      "trigger": "PROGRESS_STAGE",
+      "triggerRule": {
+        "stage": "PERIOD_MID",
+        "minYearInPeriod": 2
+      },
+      "conditions": {
+        "stats": {},
+        "requiredFlags": [
+          "job_employed"
+        ],
+        "blockedFlags": [
+          "job_unemployed",
+          "job_self_employed",
+          "job_retired",
+          "early_retire"
+        ]
+      },
+      "statEffect": "STAT",
+      "statDelta": {
+        "경제력": 1
+      },
+      "statReason": "급여",
+      "addFlags": [],
+      "removeFlags": [],
+      "momentImageId": null,
+      "imageNeed": "NONE",
+      "repeatable": false,
+      "dedupe": {
+        "scope": "RUN",
+        "key": "auto_ya_payday",
+        "rule": "한 인생에서 1회"
+      }
+    },
+    {
+      "eventId": "auto_ya_job_hunt",
+      "periods": [
+        "YOUNG_ADULT"
+      ],
+      "topic": "구직(무직자만)",
+      "text": "이력서를 열두 곳에 냈다. 답장은 두 곳, 둘 다 '다음 기회에'였다.",
+      "trigger": "PROGRESS_STAGE",
+      "triggerRule": {
+        "stage": "PERIOD_MID",
+        "minYearInPeriod": 4
+      },
+      "conditions": {
+        "stats": {},
+        "requiredFlags": [],
+        "blockedFlags": [
+          "job_employed",
+          "job_self_employed",
+          "job_retired",
+          "early_retire"
+        ]
+      },
+      "statEffect": "STAT",
+      "statDelta": {
+        "행복": -1
+      },
+      "statReason": "구직 실패",
+      "addFlags": [],
+      "removeFlags": [],
+      "momentImageId": null,
+      "imageNeed": "NONE",
+      "repeatable": false,
+      "dedupe": {
+        "scope": "RUN",
+        "key": "auto_ya_job_hunt",
+        "rule": "한 인생에서 1회"
+      }
+    },
+    {
+      "eventId": "auto_ya_hundred_days",
+      "periods": [
+        "YOUNG_ADULT"
+      ],
+      "topic": "연애 기념일(연인 있을 때만)",
+      "text": "사귄 지 100일. 둘 다 몰래 날짜를 세고 있었다는 게 동시에 들켰다.",
+      "trigger": "PROGRESS_STAGE",
+      "triggerRule": {
+        "stage": "AFTER_EVENT",
+        "afterEventId": "love_date_01"
+      },
+      "conditions": {
+        "stats": {},
+        "requiredFlags": [
+          "dating"
+        ],
+        "blockedFlags": [
+          "engaged",
+          "married",
+          "rel_conflict"
+        ]
+      },
+      "statEffect": "STAT",
+      "statDelta": {
+        "행복": 1
+      },
+      "statReason": "연애 기념일",
+      "addFlags": [],
+      "removeFlags": [],
+      "momentImageId": null,
+      "imageNeed": "NONE",
+      "repeatable": false,
+      "dedupe": {
+        "scope": "RUN",
+        "key": "auto_ya_hundred_days",
+        "rule": "한 인생에서 1회"
+      }
+    },
+    {
+      "eventId": "auto_ya_transfer_friend_wedding",
+      "periods": [
+        "YOUNG_ADULT"
+      ],
+      "topic": "전학생 재등장",
+      "text": "초등학교 급식실에서 옆에 앉았던 그 전학생에게서 청첩장이 왔다. 축사를 부탁한다고 했다.",
+      "trigger": "PROGRESS_STAGE",
+      "triggerRule": {
+        "stage": "PERIOD_MID",
+        "minYearInPeriod": 3
+      },
+      "conditions": {
+        "stats": {},
+        "requiredFlags": [
+          "kind_heart",
+          "v4:event:child_025"
+        ],
+        "blockedFlags": []
+      },
+      "statEffect": "RECORD_ONLY",
+      "statDelta": {},
+      "statReason": "기록만 남김: 능력치가 바뀔 만한 일이 아님",
+      "addFlags": [],
+      "removeFlags": [],
+      "momentImageId": null,
+      "imageNeed": "NONE",
+      "repeatable": false,
+      "dedupe": {
+        "scope": "RUN",
+        "key": "auto_ya_transfer_friend_wedding",
+        "rule": "한 인생에서 1회"
+      }
+    },
+    {
+      "eventId": "auto_mid_coworker",
+      "periods": [
+        "MIDDLE"
+      ],
+      "topic": "직장 관계(재직자만)",
+      "text": "옆 팀 동기가 회의에서 내 편을 들어 줬다. 퇴근길에 커피를 한 잔 샀다.",
+      "trigger": "PROGRESS_STAGE",
+      "triggerRule": {
+        "stage": "PERIOD_START"
+      },
+      "conditions": {
+        "stats": {},
+        "requiredFlags": [
+          "job_employed"
+        ],
+        "blockedFlags": [
+          "job_unemployed",
+          "job_self_employed",
+          "job_retired",
+          "early_retire"
+        ]
+      },
+      "statEffect": "STAT",
+      "statDelta": {
+        "사회성": 1
+      },
+      "statReason": "직장 내 관계",
+      "addFlags": [],
+      "removeFlags": [],
+      "momentImageId": null,
+      "imageNeed": "NONE",
+      "repeatable": false,
+      "dedupe": {
+        "scope": "RUN",
+        "key": "auto_mid_coworker",
+        "rule": "한 인생에서 1회"
+      }
+    },
+    {
+      "eventId": "auto_mid_child_school",
+      "periods": [
+        "MIDDLE"
+      ],
+      "topic": "자녀 학교(자녀 있을 때만)",
+      "text": "아이 학교 공개수업. 발표하던 아이가 나를 보고 손을 흔들었다. 선생님도 웃었다.",
+      "trigger": "PROGRESS_STAGE",
+      "triggerRule": {
+        "stage": "PERIOD_MID",
+        "minYearInPeriod": 2
+      },
+      "conditions": {
+        "stats": {},
+        "requiredFlags": [],
+        "blockedFlags": [
+          "divorced"
+        ],
+        "lifeFacts": {
+          "minChildrenCount": 1
+        }
+      },
+      "statEffect": "STAT",
+      "statDelta": {
+        "행복": 1
+      },
+      "statReason": "자녀와의 기억",
+      "addFlags": [],
+      "removeFlags": [],
+      "momentImageId": null,
+      "imageNeed": "NONE",
+      "repeatable": false,
+      "dedupe": {
+        "scope": "RUN",
+        "key": "auto_mid_child_school",
+        "rule": "한 인생에서 1회"
+      }
+    },
+    {
+      "eventId": "auto_mid_checkup",
+      "periods": [
+        "MIDDLE"
+      ],
+      "topic": "건강 검진",
+      "text": "건강검진 결과표에 '경계'라는 단어가 처음 생겼다. 그날 저녁은 샐러드였다.",
+      "trigger": "ELAPSED_TIME",
+      "triggerRule": {
+        "afterAutoSteps": 1
+      },
+      "conditions": {
+        "stats": {},
+        "requiredFlags": [],
+        "blockedFlags": []
+      },
+      "statEffect": "STAT",
+      "statDelta": {
+        "건강": -1
+      },
+      "statReason": "노화 신호",
+      "addFlags": [],
+      "removeFlags": [],
+      "momentImageId": null,
+      "imageNeed": "NONE",
+      "repeatable": false,
+      "dedupe": {
+        "scope": "RUN",
+        "key": "auto_mid_checkup",
+        "rule": "한 인생에서 1회"
+      }
+    },
+    {
+      "eventId": "auto_mid_parents",
+      "periods": [
+        "MIDDLE"
+      ],
+      "topic": "부모님",
+      "text": "부모님 집 형광등을 갈아 드렸다. 아빠가 사다리를 잡아 주며 '조심해라'를 열 번 했다.",
+      "trigger": "ELAPSED_TIME",
+      "triggerRule": {
+        "afterAutoSteps": 2
+      },
+      "conditions": {
+        "stats": {},
+        "requiredFlags": [],
+        "blockedFlags": []
+      },
+      "statEffect": "RECORD_ONLY",
+      "statDelta": {},
+      "statReason": "기록만 남김: 능력치가 바뀔 만한 일이 아님",
+      "addFlags": [],
+      "removeFlags": [],
+      "momentImageId": null,
+      "imageNeed": "NONE",
+      "repeatable": false,
+      "dedupe": {
+        "scope": "RUN",
+        "key": "auto_mid_parents",
+        "rule": "한 인생에서 1회"
+      }
+    },
+    {
+      "eventId": "auto_mid_reunion",
+      "periods": [
+        "MIDDLE"
+      ],
+      "topic": "동창회",
+      "text": "20년 만의 동창회. 이름보다 별명이 먼저 기억났다.",
+      "trigger": "PROGRESS_STAGE",
+      "triggerRule": {
+        "stage": "PERIOD_MID",
+        "minYearInPeriod": 3
+      },
+      "conditions": {
+        "stats": {},
+        "requiredFlags": [],
+        "blockedFlags": []
+      },
+      "statEffect": "RECORD_ONLY",
+      "statDelta": {},
+      "statReason": "기록만 남김: 능력치가 바뀔 만한 일이 아님",
+      "addFlags": [],
+      "removeFlags": [],
+      "momentImageId": null,
+      "imageNeed": "NONE",
+      "repeatable": false,
+      "dedupe": {
+        "scope": "RUN",
+        "key": "auto_mid_reunion",
+        "rule": "한 인생에서 1회"
+      }
+    },
+    {
+      "eventId": "auto_mid_back",
+      "periods": [
+        "MIDDLE"
+      ],
+      "topic": "허리",
+      "text": "양말을 신다가 허리를 삐끗했다. 파스 냄새가 사흘 갔다.",
+      "trigger": "ELAPSED_TIME",
+      "triggerRule": {
+        "afterAutoSteps": 3
+      },
+      "conditions": {
+        "stats": {},
+        "requiredFlags": [],
+        "blockedFlags": []
+      },
+      "statEffect": "STAT",
+      "statDelta": {
+        "건강": -1
+      },
+      "statReason": "허리 부상",
+      "addFlags": [],
+      "removeFlags": [],
+      "momentImageId": null,
+      "imageNeed": "NONE",
+      "repeatable": false,
+      "dedupe": {
+        "scope": "RUN",
+        "key": "auto_mid_back",
+        "rule": "한 인생에서 1회"
+      }
+    },
+    {
+      "eventId": "auto_mid_regular",
+      "periods": [
+        "MIDDLE"
+      ],
+      "topic": "동네 단골",
+      "text": "단골 국밥집 사장님이 내가 말하기도 전에 주문을 받았다. '늘 먹던 거죠?'",
+      "trigger": "PROGRESS_STAGE",
+      "triggerRule": {
+        "stage": "PERIOD_END"
+      },
+      "conditions": {
+        "stats": {},
+        "requiredFlags": [],
+        "blockedFlags": []
+      },
+      "statEffect": "RECORD_ONLY",
+      "statDelta": {},
+      "statReason": "기록만 남김: 능력치가 바뀔 만한 일이 아님",
+      "addFlags": [],
+      "removeFlags": [],
+      "momentImageId": null,
+      "imageNeed": "NONE",
+      "repeatable": false,
+      "dedupe": {
+        "scope": "RUN",
+        "key": "auto_mid_regular",
+        "rule": "한 인생에서 1회"
+      }
+    },
+    {
+      "eventId": "auto_mid_anniversary",
+      "periods": [
+        "MIDDLE"
+      ],
+      "topic": "결혼기념일(배우자 있을 때만)",
+      "text": "결혼기념일을 둘 다 잊었다가 같은 날 밤에 동시에 떠올렸다. 편의점 케이크로 축하했다.",
+      "trigger": "PROGRESS_STAGE",
+      "triggerRule": {
+        "stage": "PERIOD_MID",
+        "minYearInPeriod": 2
+      },
+      "conditions": {
+        "stats": {},
+        "requiredFlags": [
+          "married"
+        ],
+        "blockedFlags": [
+          "divorced"
+        ]
+      },
+      "statEffect": "STAT",
+      "statDelta": {
+        "행복": 1
+      },
+      "statReason": "배우자와의 기념일",
+      "addFlags": [],
+      "removeFlags": [],
+      "momentImageId": null,
+      "imageNeed": "NONE",
+      "repeatable": false,
+      "dedupe": {
+        "scope": "RUN",
+        "key": "auto_mid_anniversary",
+        "rule": "한 인생에서 1회"
+      }
+    },
+    {
+      "eventId": "auto_mid_library_class",
+      "periods": [
+        "MIDDLE"
+      ],
+      "topic": "새 배움(재직하지 않을 때)",
+      "text": "동네 도서관 강좌 모집 공고를 오려 두었다. 이번 달엔 진짜 신청할 생각이다.",
+      "trigger": "PROGRESS_STAGE",
+      "triggerRule": {
+        "stage": "PERIOD_MID",
+        "minYearInPeriod": 2
+      },
+      "conditions": {
+        "stats": {},
+        "requiredFlags": [],
+        "blockedFlags": [
+          "job_employed"
+        ]
+      },
+      "statEffect": "RECORD_ONLY",
+      "statDelta": {},
+      "statReason": "기록만 남김: 능력치가 바뀔 만한 일이 아님",
+      "addFlags": [],
+      "removeFlags": [],
+      "momentImageId": null,
+      "imageNeed": "NONE",
+      "repeatable": false,
+      "dedupe": {
+        "scope": "RUN",
+        "key": "auto_mid_library_class",
+        "rule": "한 인생에서 1회"
+      }
+    },
+    {
+      "eventId": "auto_old_pension",
+      "periods": [
+        "OLD_AGE"
+      ],
+      "topic": "연금",
+      "text": "첫 연금이 들어왔다. 통장 앱 글씨 크기를 한 단계 키웠다.",
+      "trigger": "PROGRESS_STAGE",
+      "triggerRule": {
+        "stage": "PERIOD_START"
+      },
+      "conditions": {
+        "stats": {},
+        "requiredFlags": [],
+        "blockedFlags": []
+      },
+      "statEffect": "STAT",
+      "statDelta": {
+        "경제력": 1
+      },
+      "statReason": "연금 수령",
+      "addFlags": [],
+      "removeFlags": [],
+      "momentImageId": null,
+      "imageNeed": "NONE",
+      "repeatable": false,
+      "dedupe": {
+        "scope": "RUN",
+        "key": "auto_old_pension",
+        "rule": "한 인생에서 1회"
+      }
+    },
+    {
+      "eventId": "auto_old_hobby",
+      "periods": [
+        "OLD_AGE"
+      ],
+      "topic": "취미",
+      "text": "문화센터 수채화 반에 등록했다. 첫 작품은 사과였는데 다들 토마토라고 했다.",
+      "trigger": "ELAPSED_TIME",
+      "triggerRule": {
+        "afterAutoSteps": 1
+      },
+      "conditions": {
+        "stats": {},
+        "requiredFlags": [],
+        "blockedFlags": []
+      },
+      "statEffect": "STAT",
+      "statDelta": {
+        "행복": 1
+      },
+      "statReason": "새 취미",
+      "addFlags": [],
+      "removeFlags": [],
+      "momentImageId": null,
+      "imageNeed": "NONE",
+      "repeatable": false,
+      "dedupe": {
+        "scope": "RUN",
+        "key": "auto_old_hobby",
+        "rule": "한 인생에서 1회"
+      }
+    },
+    {
+      "eventId": "auto_old_friend_call",
+      "periods": [
+        "OLD_AGE"
+      ],
+      "topic": "친구 연락",
+      "text": "오랜 친구가 전화로 안부를 물었다. 통화는 40분, 그중 30분이 병원 이야기였다.",
+      "trigger": "ELAPSED_TIME",
+      "triggerRule": {
+        "afterAutoSteps": 2
+      },
+      "conditions": {
+        "stats": {},
+        "requiredFlags": [],
+        "blockedFlags": []
+      },
+      "statEffect": "RECORD_ONLY",
+      "statDelta": {},
+      "statReason": "기록만 남김: 능력치가 바뀔 만한 일이 아님",
+      "addFlags": [],
+      "removeFlags": [],
+      "momentImageId": null,
+      "imageNeed": "NONE",
+      "repeatable": false,
+      "dedupe": {
+        "scope": "RUN",
+        "key": "auto_old_friend_call",
+        "rule": "한 인생에서 1회"
+      }
+    },
+    {
+      "eventId": "auto_old_walk",
+      "periods": [
+        "OLD_AGE"
+      ],
+      "topic": "산책",
+      "text": "아침 산책 코스에 벤치가 하나 늘었다. 쉬는 시간도 하나 늘었다.",
+      "trigger": "PROGRESS_STAGE",
+      "triggerRule": {
+        "stage": "PERIOD_MID",
+        "minYearInPeriod": 2
+      },
+      "conditions": {
+        "stats": {},
+        "requiredFlags": [],
+        "blockedFlags": []
+      },
+      "statEffect": "STAT",
+      "statDelta": {
+        "건강": 1
+      },
+      "statReason": "꾸준한 산책",
+      "addFlags": [],
+      "removeFlags": [],
+      "momentImageId": null,
+      "imageNeed": "NONE",
+      "repeatable": false,
+      "dedupe": {
+        "scope": "RUN",
+        "key": "auto_old_walk",
+        "rule": "한 인생에서 1회"
+      }
+    },
+    {
+      "eventId": "auto_old_album",
+      "periods": [
+        "OLD_AGE"
+      ],
+      "topic": "사진첩",
+      "text": "오래된 사진첩을 정리했다. 사진마다 이야기가 길어서 한 장도 버리지 못했다.",
+      "trigger": "PROGRESS_STAGE",
+      "triggerRule": {
+        "stage": "PERIOD_END"
+      },
+      "conditions": {
+        "stats": {},
+        "requiredFlags": [],
+        "blockedFlags": []
+      },
+      "statEffect": "RECORD_ONLY",
+      "statDelta": {},
+      "statReason": "기록만 남김: 능력치가 바뀔 만한 일이 아님",
+      "addFlags": [],
+      "removeFlags": [],
+      "momentImageId": null,
+      "imageNeed": "NONE",
+      "repeatable": false,
+      "dedupe": {
+        "scope": "RUN",
+        "key": "auto_old_album",
+        "rule": "한 인생에서 1회"
+      }
+    },
+    {
+      "eventId": "auto_old_grandchild",
+      "periods": [
+        "OLD_AGE"
+      ],
+      "topic": "손주(자녀 있을 때만)",
+      "text": "아이가 손주 사진을 보냈다. 휴대폰 배경 화면이 일주일에 세 번 바뀌었다.",
+      "trigger": "PROGRESS_STAGE",
+      "triggerRule": {
+        "stage": "PERIOD_MID",
+        "minYearInPeriod": 2
+      },
+      "conditions": {
+        "stats": {},
+        "requiredFlags": [],
+        "blockedFlags": [],
+        "lifeFacts": {
+          "minChildrenCount": 1
+        }
+      },
+      "statEffect": "STAT",
+      "statDelta": {
+        "행복": 1
+      },
+      "statReason": "가족 소식",
+      "addFlags": [],
+      "removeFlags": [],
+      "momentImageId": null,
+      "imageNeed": "NONE",
+      "repeatable": false,
+      "dedupe": {
+        "scope": "RUN",
+        "key": "auto_old_grandchild",
+        "rule": "한 인생에서 1회"
+      }
+    },
+    {
+      "eventId": "auto_old_first_love",
+      "periods": [
+        "OLD_AGE"
+      ],
+      "topic": "첫사랑 회상(첫사랑과 결혼하지 않은 경우)",
+      "text": "동창 단톡방에 학창 시절 축제 사진이 올라왔다. 그 사람도 '좋아요'를 눌렀다. 그걸로 충분했다.",
+      "trigger": "PROGRESS_STAGE",
+      "triggerRule": {
+        "stage": "PERIOD_MID",
+        "minYearInPeriod": 2
+      },
+      "conditions": {
+        "stats": {},
+        "requiredFlags": [
+          "first_love"
+        ],
+        "blockedFlags": [
+          "partner_first_love"
+        ]
+      },
+      "statEffect": "RECORD_ONLY",
+      "statDelta": {},
+      "statReason": "기록만 남김: 능력치가 바뀔 만한 일이 아님",
+      "addFlags": [],
+      "removeFlags": [],
+      "momentImageId": null,
+      "imageNeed": "NONE",
+      "repeatable": false,
+      "dedupe": {
+        "scope": "RUN",
+        "key": "auto_old_first_love",
+        "rule": "한 인생에서 1회"
+      }
+    },
+    {
+      "eventId": "auto_old_spouse",
+      "periods": [
+        "OLD_AGE"
+      ],
+      "topic": "배우자(배우자 있을 때만)",
+      "text": "배우자와 같은 드라마를 보다가 같은 장면에서 동시에 졸았다.",
+      "trigger": "PROGRESS_STAGE",
+      "triggerRule": {
+        "stage": "PERIOD_MID",
+        "minYearInPeriod": 1
+      },
+      "conditions": {
+        "stats": {},
+        "requiredFlags": [
+          "married"
+        ],
+        "blockedFlags": [
+          "divorced"
+        ]
+      },
+      "statEffect": "RECORD_ONLY",
+      "statDelta": {},
+      "statReason": "기록만 남김: 능력치가 바뀔 만한 일이 아님",
+      "addFlags": [],
+      "removeFlags": [],
+      "momentImageId": null,
+      "imageNeed": "NONE",
+      "repeatable": false,
+      "dedupe": {
+        "scope": "RUN",
+        "key": "auto_old_spouse",
+        "rule": "한 인생에서 1회"
+      }
+    }
+  ]
+}

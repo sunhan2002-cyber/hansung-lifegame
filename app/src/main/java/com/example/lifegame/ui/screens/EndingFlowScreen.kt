@@ -76,6 +76,14 @@ import kotlinx.coroutines.delay
 /** 종료 흐름 단계: 주마등 → 미래 모습 → 인생기록증 */
 enum class EndingStep { RECAP, FUTURE, CERTIFICATE }
 
+/**
+ * 뒤로가기로 갈 단계. 바로 앞 단계로 가되, 화면을 연 단계보다 앞으로는 가지 않는다.
+ * 지난 인생 기록은 인생기록증에서 열리므로, 거기서 "주마등 다시 보기"로 들어간 주마등 · 미래 모습의 뒤로가기는 인생기록증으로 돌아간다.
+ * 주마등은 첫 단계라 앞 단계가 없다. 예전에는 `entries[-1]`을 읽어 앱이 꺼졌다(2026-11-12 에뮬레이터에서 재현).
+ */
+internal fun previousEndingStep(step: EndingStep, initialStep: EndingStep): EndingStep =
+    EndingStep.entries.getOrNull(step.ordinal - 1)?.takeIf { it.ordinal >= initialStep.ordinal } ?: initialStep
+
 /** 주마등 한 장면이 머무는 시간 */
 private const val RECAP_MILLIS = 2_800L
 
@@ -99,7 +107,7 @@ fun EndingFlowScreen(
 
     BackHandler(enabled = step != initialStep) {
         if (step == EndingStep.FUTURE && look?.status == GenerationStatus.LOADING) onCancelFuture()
-        step = EndingStep.entries[step.ordinal - 1].takeIf { it.ordinal >= initialStep.ordinal } ?: initialStep
+        step = previousEndingStep(step, initialStep)
     }
 
     when (step) {
@@ -446,6 +454,7 @@ private fun CertificateView(
                 }
             }
             EndingBody(record.summary)
+            LifeExtensionSections(record)
         }
         Column(
             Modifier.padding(start = 16.dp, end = 16.dp, top = 8.dp, bottom = 16.dp),
@@ -455,4 +464,83 @@ private fun CertificateView(
             InkButton(text = doneLabel, onClick = onDone, modifier = Modifier.testTag("certificate_done"))
         }
     }
+}
+
+/**
+ * 인생기록증의 승인된 확장 기능(2026-11-13): "내 인생의 계기" 카드(2~3장), "그때 그 선택" 회상(최대 3줄), 다시 만난 사람.
+ * 모두 이번 인생의 실제 선택 기록에서만 나온다. 기록이 없으면 그 칸 자체를 그리지 않는다.
+ */
+@Composable
+private fun LifeExtensionSections(record: LifeRecordUi) {
+    if (record.turningPoints.isNotEmpty()) {
+        Column(Modifier.fillMaxWidth().testTag("certificate_turning_points"), verticalArrangement = Arrangement.spacedBy(8.dp)) {
+            CertificateSectionTitle("내 인생의 계기")
+            record.turningPoints.forEach { card ->
+                val shape = RoundedCornerShape(10.dp)
+                Column(
+                    Modifier
+                        .fillMaxWidth()
+                        .clip(shape)
+                        .background(LifeGameCard)
+                        .border(1.dp, LifeGameRule, shape)
+                        .padding(12.dp)
+                        // 카드 한 장을 화면 낭독에서 한 덩어리로 읽는다.
+                        .semantics(mergeDescendants = true) {}
+                        .testTag("turning_point_${card.cardId}"),
+                    verticalArrangement = Arrangement.spacedBy(4.dp),
+                ) {
+                    Text(
+                        text = "${card.fieldLabel} · ${card.periodName} ${card.yearInPeriod}번째 해 · ${card.title}",
+                        color = LifeGameInkTertiary,
+                        fontSize = 13.sp,
+                        lineHeight = 18.sp,
+                    )
+                    Text(card.text, color = LifeGameInk, fontSize = 15.sp, lineHeight = 22.sp)
+                    Text("고른 선택: ${card.choiceLabel}", color = LifeGameInkSecondary, fontSize = 13.sp, lineHeight = 18.sp)
+                }
+            }
+        }
+    }
+    if (record.recalls.isNotEmpty()) {
+        Column(Modifier.fillMaxWidth().testTag("certificate_recalls"), verticalArrangement = Arrangement.spacedBy(6.dp)) {
+            CertificateSectionTitle("그때 그 선택")
+            record.recalls.forEach { recall ->
+                Text(
+                    text = recall.text,
+                    color = LifeGameInk,
+                    fontFamily = LifeGameSerif,
+                    fontStyle = androidx.compose.ui.text.font.FontStyle.Italic,
+                    fontSize = 15.sp,
+                    lineHeight = 22.sp,
+                    modifier = Modifier.testTag("certificate_recall_${recall.slotId}"),
+                )
+            }
+        }
+    }
+    if (record.npcsMetAgain.isNotEmpty()) {
+        Column(Modifier.fillMaxWidth().testTag("certificate_npcs"), verticalArrangement = Arrangement.spacedBy(6.dp)) {
+            CertificateSectionTitle("다시 만난 사람")
+            record.npcsMetAgain.forEach { npc ->
+                Text(
+                    text = "${npc.label}: ${npc.originPeriodName} 「${npc.originTitle}」에서 만나 " +
+                        npc.metAgainTitles.joinToString(" · ") { "「$it」" } + "에서 다시 만났다",
+                    color = LifeGameInkSecondary,
+                    fontSize = 14.sp,
+                    lineHeight = 20.sp,
+                    modifier = Modifier.testTag("certificate_npc_${npc.npcId}"),
+                )
+            }
+        }
+    }
+}
+
+@Composable
+private fun CertificateSectionTitle(text: String) {
+    Text(
+        text = text,
+        color = LifeGameInkSecondary,
+        fontSize = 14.sp,
+        fontWeight = FontWeight.Bold,
+        modifier = Modifier.semantics { heading() },
+    )
 }

@@ -110,6 +110,8 @@ fun LifeFactsSheet(
     place: String? = null,
     focus: FocusOptionUi? = null,
     showFocus: Boolean = false,
+    /** 이번 인생에서 다시 만난, 관계가 이어진 사람(승인된 확장 기능). 없으면 칸을 그리지 않는다. */
+    npcsMetAgain: List<com.example.lifegame.ui.NpcReturnUi> = emptyList(),
 ) {
     ModalBottomSheet(
         onDismissRequest = onDismiss,
@@ -146,6 +148,20 @@ fun LifeFactsSheet(
             FactLines(facts.familyLifeLines())
             SectionLabel("업적", trailing = facts.achievements.size.takeIf { it > 0 }?.let { "${it}개" })
             Achievements(facts.achievements)
+            if (npcsMetAgain.isNotEmpty()) {
+                SectionLabel("다시 만난 사람")
+                Column(Modifier.fillMaxWidth().testTag("details_npcs"), verticalArrangement = Arrangement.spacedBy(4.dp)) {
+                    npcsMetAgain.forEach { npc ->
+                        Text(
+                            "${npc.label}: ${npc.originPeriodName} 「${npc.originTitle}」에서 만나 " +
+                                npc.metAgainTitles.joinToString(" · ") { "「$it」" } + "에서 다시 만났다",
+                            color = LifeGameInk,
+                            fontSize = 14.sp,
+                            lineHeight = 20.sp,
+                        )
+                    }
+                }
+            }
             SectionLabel("능력치")
             StatGrid(stats)
             Text(

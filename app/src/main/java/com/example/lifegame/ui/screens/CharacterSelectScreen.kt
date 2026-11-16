@@ -59,7 +59,13 @@ import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.platform.LocalFocusManager
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.semantics.Role
+import androidx.compose.ui.semantics.clearAndSetSemantics
 import androidx.compose.ui.semantics.heading
+import androidx.compose.ui.semantics.testTag
+import androidx.compose.ui.semantics.liveRegion
+import com.example.lifegame.ui.ChallengeCode
+import com.example.lifegame.ui.ChallengeCodeResult
+import com.example.lifegame.ui.ChallengeStart
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.ImeAction
@@ -116,15 +122,24 @@ fun CharacterSelectScreen(
     onClearFaceSheet: () -> Unit = {},
     onPhotoFlowChanged: (PhotoFlowStatus, String?) -> Unit = { _, _ -> },
     aiFace: Boolean = false,
+    /** 칭호 목록에서 "다음 판에서 노리기"로 고른, 아직 받지 못한 칭호 */
+    titleTarget: com.example.lifegame.ui.TitleEntryUi? = null,
 ) {
     var nameInput by rememberSaveable { mutableStateOf("") }
     var gender by rememberSaveable { mutableStateOf<Gender?>(null) }
     var rollRaw by rememberSaveable { mutableStateOf<String?>(null) }
     var rerollsLeft by rememberSaveable { mutableStateOf(StartingDice.REROLLS) }
+    // 이 출발선의 실행 시드. 도전 코드에 담기고, 코드로 시작하면 코드의 시드로 바뀐다.
+    var runSeed by rememberSaveable { mutableStateOf(kotlin.random.Random.nextLong() and Long.MAX_VALUE) }
+    var codeInput by rememberSaveable { mutableStateOf("") }
+    var codeMessage by rememberSaveable { mutableStateOf<String?>(null) }
+    var codeError by rememberSaveable { mutableStateOf(false) }
     var rollNonce by remember { mutableStateOf(0) }
     var skinId by rememberSaveable { mutableStateOf(AvatarOptions.skins.first().id) }
     var hairId by rememberSaveable { mutableStateOf(AvatarOptions.hairs.first().id) }
     var eyesId by rememberSaveable { mutableStateOf(AvatarOptions.eyes.first().id) }
+    var hairColorId by rememberSaveable { mutableStateOf(AvatarOptions.hairColors.first().id) }
+    var outfitColorId by rememberSaveable { mutableStateOf(AvatarOptions.outfitColors.first().id) }
     var photoRef by rememberSaveable { mutableStateOf<String?>(null) }
     var photoMessage by rememberSaveable { mutableStateOf<String?>(null) }
     var consentOpen by rememberSaveable { mutableStateOf(false) }
@@ -195,6 +210,22 @@ fun CharacterSelectScreen(
                 modifier = Modifier.semantics { heading() },
             )
             Text("이름과 성별을 정하고, 타고난 능력치는 주사위로 정한다.", color = LifeGameInkSecondary, fontSize = 14.sp)
+            titleTarget?.let { target ->
+                val shape = RoundedCornerShape(10.dp)
+                Column(
+                    Modifier
+                        .fillMaxWidth()
+                        .clip(shape)
+                        .background(LifeGameCard)
+                        .border(1.dp, LifeGameRule, shape)
+                        .padding(12.dp)
+                        .testTag("profile_title_target"),
+                    verticalArrangement = Arrangement.spacedBy(2.dp),
+                ) {
+                    Text("이번 판에서 노리는 칭호 · ${target.text}", color = LifeGameInk, fontSize = 15.sp, fontWeight = FontWeight.Bold)
+                    target.goal?.let { Text("목표 · $it", color = LifeGameInkSecondary, fontSize = 14.sp, lineHeight = 20.sp) }
+                }
+            }
 
             Spacer(Modifier.height(4.dp))
             SectionLabel("이름")
@@ -250,16 +281,61 @@ fun CharacterSelectScreen(
                 },
             )
 
+            SectionLabel("같은 출발선 도전 코드", trailing = "선택")
+            ChallengeCodeSection(
+                code = if (gender != null && rollRaw != null) {
+                    ChallengeCode.encode(ChallengeStart(gender!!, rollRaw!!, runSeed))
+                } else {
+                    null
+                },
+                input = codeInput,
+                onInputChange = { codeInput = it.take(48) },
+                message = codeMessage,
+                isError = codeError,
+                onApply = {
+                    when (val result = ChallengeCode.decode(codeInput)) {
+                        is ChallengeCodeResult.Valid -> {
+                            gender = result.start.gender
+                            rollRaw = result.start.rollRaw
+                            runSeed = result.start.seed
+                            rerollsLeft = 0 // 친구와 같은 출발선이라 다시 굴리지 않는다
+                            rollNonce += 1
+                            codeError = false
+                            codeMessage = "도전 코드의 출발선(성별 · 타고난 능력치 · 시드)으로 맞췄다. 이제 선택만 다르다."
+                        }
+                        is ChallengeCodeResult.Invalid -> {
+                            codeError = true
+                            codeMessage = result.message
+                        }
+                    }
+                    focusManager.clearFocus()
+                },
+            )
+
             SectionLabel("모습", trailing = "사진 없이도 정할 수 있다")
             AppearancePreview(
                 skinId = skinId,
                 hairId = hairId,
                 eyesId = eyesId,
+                hairColorId = hairColorId,
+                outfitColorId = outfitColorId,
                 photoFaceSheet = PhotoFaceSheet.pathOf(sheet?.takeIf { it.status == GenerationStatus.READY }?.value),
             )
             OptionChips("피부", AvatarOptions.skins, skinId) { skinId = it }
             OptionChips("머리", AvatarOptions.hairs, hairId) { hairId = it }
+            OptionChips(
+                "머리 색",
+                AvatarOptions.hairColors.map { AvatarOption(it.id, it.label) },
+                hairColorId,
+                note = "노년기에는 흰머리로 바뀐다",
+            ) { hairColorId = it }
             OptionChips("눈", AvatarOptions.eyes, eyesId) { eyesId = it }
+            OptionChips(
+                "옷 색",
+                AvatarOptions.outfitColors.map { AvatarOption(it.id, it.label) },
+                outfitColorId,
+                note = "시기마다 옷 모양은 달라지고, 윗옷 색이 바뀐다",
+            ) { outfitColorId = it }
 
             SectionLabel("사진으로 얼굴 만들기", trailing = "선택")
             PhotoSection(
@@ -284,7 +360,7 @@ fun CharacterSelectScreen(
                     }
                     photoRef = null
                     onClearFaceSheet()
-                    photoMessage = "사진 참조를 지웠습니다. 기본 모습으로 진행합니다."
+                    photoMessage = "사진 참조를 지웠습니다. 사진 없이 위에서 고른 모습으로 진행합니다."
                     onPhotoFlowChanged(PhotoFlowStatus.NOT_REQUESTED, null)
                 },
             )
@@ -309,10 +385,14 @@ fun CharacterSelectScreen(
                         gender = chosen,
                         starterId = tendency?.starterId,
                         rolledDelta = rolled.delta,
+                        startingRollRaw = rolled.encode(),
+                        runSeed = runSeed,
                         avatar = AvatarConfig(
                             skinToneId = skinId,
                             hairId = hairId,
                             eyesId = eyesId,
+                            hairColorId = hairColorId,
+                            outfitColorId = outfitColorId,
                             portraitRef = photoRef,
                             faceSheetRef = readySheet,
                             photoConsent = photoRef != null,
@@ -352,7 +432,7 @@ fun CharacterSelectScreen(
             dismissButton = {
                 TextButton(onClick = {
                     consentOpen = false
-                    photoMessage = "동의하지 않아 기본 모습으로 진행합니다."
+                    photoMessage = "사진 없이 위에서 고른 모습으로 진행합니다."
                     onPhotoFlowChanged(PhotoFlowStatus.FALLBACK, photoMessage)
                 }, modifier = Modifier.testTag("photo_consent_no")) { Text("동의하지 않음", color = LifeGameInkSecondary) }
             },
@@ -403,6 +483,14 @@ private fun DicePanel(
                 lineHeight = 20.sp,
             )
         } else {
+            // 계산 규칙은 한 번만 안내한다(정원률 2026-11-14 검수 의견 · 통합지시서 "보정 전 · 후 값을 함께 표시").
+            Text(
+                text = "두 눈을 더하고 7을 뺀 값의 2배를 기본 50에 더한다.",
+                color = LifeGameInkSecondary,
+                fontSize = 13.sp,
+                lineHeight = 18.sp,
+                modifier = Modifier.testTag("dice_rule"),
+            )
             shown.rolls.forEach { stat -> DiceRow(stat, settled) }
             if (settled && tendency != null) {
                 Spacer(Modifier.height(2.dp))
@@ -436,33 +524,49 @@ private fun DicePanel(
 private const val DICE_SHUFFLE_FRAMES = 7
 private const val DICE_SHUFFLE_FRAME_MS = 70L
 
+/**
+ * 능력치 한 줄: 이름 · 주사위 두 개 · 계산식 두 줄(`1 + 3 = 4` / `50 − 6 = 44`).
+ * 화면 낭독은 "운동능력: 눈 1 + 눈 3 = 합계 4, 기본 50 보정 −6, 최종 44"로 한 번에 읽는다.
+ * 계산식 칸은 고정 폭이 없어 큰 글씨에서는 이름이 두 줄로 접히고 숫자는 잘리지 않는다.
+ */
 @Composable
 private fun DiceRow(stat: StatRoll, settled: Boolean) {
+    val delta = stat.delta
+    val signed = if (delta < 0) "−${-delta}" else "+$delta"
+    val spoken = "${stat.label}: 눈 ${stat.first} + 눈 ${stat.second} = 합계 ${stat.sum}, 기본 50 보정 $signed, 최종 ${stat.finalValue}"
     Row(
-        Modifier.fillMaxWidth().testTag("dice_row_${stat.label}"),
+        Modifier
+            .fillMaxWidth()
+            .clearAndSetSemantics {
+                contentDescription = if (settled) spoken else "${stat.label}: 주사위 굴리는 중"
+                testTag = "dice_row_${stat.label}"
+            },
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.spacedBy(8.dp),
     ) {
         Text(stat.label, color = LifeGameInk, fontSize = 14.sp, modifier = Modifier.weight(1f))
         Die(stat.first)
         Die(stat.second)
-        val delta = stat.delta
-        Text(
-            text = when {
-                !settled -> ""
-                delta > 0 -> "+$delta"
-                else -> "$delta"
-            },
-            color = when {
-                delta > 0 -> LifeGameStatUp
-                delta < 0 -> LifeGameStatDown
-                else -> LifeGameInkTertiary
-            },
-            fontSize = 14.sp,
-            fontWeight = FontWeight.Bold,
-            textAlign = TextAlign.End,
-            modifier = Modifier.width(40.dp),
-        )
+        Column(horizontalAlignment = Alignment.End) {
+            Text(
+                text = if (settled) "${stat.first} + ${stat.second} = ${stat.sum}" else "",
+                color = LifeGameInk,
+                fontSize = 14.sp,
+                fontWeight = FontWeight.Bold,
+                textAlign = TextAlign.End,
+            )
+            Text(
+                text = if (settled) "50 ${signed.first()} ${kotlin.math.abs(delta)} = ${stat.finalValue}" else "",
+                color = when {
+                    delta > 0 -> LifeGameStatUp
+                    delta < 0 -> LifeGameStatDown
+                    else -> LifeGameInkTertiary
+                },
+                fontSize = 13.sp,
+                fontWeight = FontWeight.Medium,
+                textAlign = TextAlign.End,
+            )
+        }
     }
 }
 
@@ -495,7 +599,14 @@ private fun Die(value: Int) {
 }
 
 @Composable
-private fun AppearancePreview(skinId: String, hairId: String, eyesId: String, photoFaceSheet: String? = null) {
+private fun AppearancePreview(
+    skinId: String,
+    hairId: String,
+    eyesId: String,
+    hairColorId: String = AvatarOptions.hairColors.first().id,
+    outfitColorId: String = AvatarOptions.outfitColors.first().id,
+    photoFaceSheet: String? = null,
+) {
     val shape = RoundedCornerShape(10.dp)
     Row(
         Modifier
@@ -521,11 +632,99 @@ private fun AppearancePreview(skinId: String, hairId: String, eyesId: String, ph
                         skinId, hairId, eyesId, period, BodyType.STANDARD,
                         usesPhotoFace = photoFaceSheet != null,
                         photoFaceSheet = photoFaceSheet,
+                        hairColorId = hairColorId,
+                        outfitColorId = outfitColorId,
                     ),
                     modifier = Modifier.size(width = 60.dp, height = 96.dp),
                 )
                 Text(label, color = LifeGameInkTertiary, fontSize = 13.sp)
             }
+        }
+    }
+}
+
+/**
+ * 같은 출발선 도전 코드(승인된 확장 기능 4): 지금 고른 성별 · 주사위 · 시드로 만든 코드를 보여 주고 복사하게 하며,
+ * 친구가 준 코드를 넣으면 그 출발선으로 맞춘다. 인생 기록은 담지 않고 비교 화면도 없다.
+ */
+@Composable
+private fun ChallengeCodeSection(
+    code: String?,
+    input: String,
+    onInputChange: (String) -> Unit,
+    message: String?,
+    isError: Boolean,
+    onApply: () -> Unit,
+) {
+    val clipboard = androidx.compose.ui.platform.LocalClipboardManager.current
+    var copied by remember(code) { mutableStateOf(false) }
+    val shape = RoundedCornerShape(10.dp)
+    Column(
+        Modifier
+            .fillMaxWidth()
+            .clip(shape)
+            .background(LifeGameCard)
+            .border(1.dp, LifeGameRule, shape)
+            .padding(horizontal = 14.dp, vertical = 12.dp)
+            .testTag("challenge_section"),
+        verticalArrangement = Arrangement.spacedBy(8.dp),
+    ) {
+        Text(
+            "같은 성별 · 같은 주사위 · 같은 시드에서 친구와 다른 선택을 해 보는 코드다.",
+            color = LifeGameInkSecondary,
+            fontSize = 13.sp,
+            lineHeight = 18.sp,
+        )
+        if (code == null) {
+            Text("성별을 고르고 주사위를 굴리면 내 출발선 코드가 생긴다.", color = LifeGameInkTertiary, fontSize = 13.sp, lineHeight = 18.sp)
+        } else {
+            androidx.compose.foundation.text.selection.SelectionContainer {
+                Text(
+                    text = code,
+                    color = LifeGameInk,
+                    fontSize = 16.sp,
+                    fontWeight = FontWeight.Bold,
+                    modifier = Modifier.testTag("challenge_code"),
+                )
+            }
+            LineButton(
+                text = if (copied) "복사했다" else "코드 복사",
+                onClick = {
+                    clipboard.setText(androidx.compose.ui.text.AnnotatedString(code))
+                    copied = true
+                },
+                modifier = Modifier.testTag("challenge_copy"),
+            )
+        }
+        OutlinedTextField(
+            value = input,
+            onValueChange = onInputChange,
+            modifier = Modifier.fillMaxWidth().testTag("challenge_input"),
+            label = { Text("친구의 도전 코드") },
+            placeholder = { Text("LG1-…") },
+            singleLine = true,
+            isError = isError,
+            colors = OutlinedTextFieldDefaults.colors(
+                focusedContainerColor = LifeGamePaper,
+                unfocusedContainerColor = LifeGamePaper,
+                focusedBorderColor = LifeGameInk,
+                unfocusedBorderColor = LifeGameRule,
+                cursorColor = LifeGameInk,
+            ),
+            keyboardOptions = KeyboardOptions(imeAction = ImeAction.Done),
+            keyboardActions = KeyboardActions(onDone = { onApply() }),
+        )
+        LineButton(text = "이 코드로 출발선 맞추기", onClick = onApply, modifier = Modifier.testTag("challenge_apply"))
+        message?.let {
+            Text(
+                text = it,
+                color = if (isError) LifeGameStatDown else LifeGameInkSecondary,
+                fontSize = 13.sp,
+                lineHeight = 18.sp,
+                modifier = Modifier
+                    .semantics { liveRegion = androidx.compose.ui.semantics.LiveRegionMode.Polite }
+                    .testTag(if (isError) "challenge_error" else "challenge_message"),
+            )
         }
     }
 }
@@ -536,10 +735,12 @@ private fun OptionChips(
     label: String,
     options: List<AvatarOption>,
     selectedId: String,
+    note: String? = null,
     onSelect: (String) -> Unit,
 ) {
     Column(verticalArrangement = Arrangement.spacedBy(6.dp)) {
         Text(label, color = LifeGameInkSecondary, fontSize = 14.sp)
+        note?.let { Text(it, color = LifeGameInkTertiary, fontSize = 13.sp, lineHeight = 18.sp) }
         FlowRow(horizontalArrangement = Arrangement.spacedBy(8.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
             options.forEach { option ->
                 val selected = option.id == selectedId

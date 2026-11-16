@@ -109,7 +109,7 @@ class Week7FlowSmokeTest {
             composeRule.onNodeWithText("사건 보기").performScrollTo().performClick()
             composeRule.waitForIdle()
         }
-        // 본문 → 사건 그림 선노출 → 선택지 (2026-11-06). 선노출이 뜨면 한 번 눌러 넘긴다.
+        // 그림 선노출 → 본문 → 선택지 (2026-11-13). 첫 사건 앞 돌잡이 컷신은 2초 뒤 저절로 끝난다. 선노출이 뜨면 한 번 눌러 넘긴다.
         var sawPreview = false
         composeRule.waitUntil(timeoutMillis = 20_000) {
             if (composeRule.onAllNodesWithTag("scene_preview").fetchSemanticsNodes().isNotEmpty()) {
@@ -127,6 +127,8 @@ class Week7FlowSmokeTest {
             composeRule.onAllNodes(hasText("{name", substring = true)).assertCountEquals(0)
         }
         if (screenshot) {
+            // 선택지가 막 나타난 직후 300ms는 터치를 삼킨다(본문 끝 순간 보호). 지난 뒤 누른다.
+            composeRule.mainClock.advanceTimeBy(com.example.lifegame.ui.screens.TAP_GUARD_MILLIS + 50)
             composeRule.onNodeWithText("장면 보기").performScrollTo().performClick()
             composeRule.onNodeWithTag("decision_content").assertDoesNotExist()
             saveScreenshot("05_scene_only.png")

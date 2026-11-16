@@ -55,13 +55,15 @@ object PhotoFaceSheet {
 
     /** 몸 → 피부(턱 아래만) → AI 머리 순서로 그린 캔버스. 읽지 못하면 null(호출 쪽이 기본 레이어로 그린다). */
     fun compose(context: Context, look: AvatarLook, sheetPath: String): Bitmap? {
-        val key = "$sheetPath|${look.period}|${look.bodyType}|${look.skinToneId}"
+        val key = "$sheetPath|${look.period}|${look.bodyType}|${look.skinToneId}|${look.outfitColorId}"
         composed.get(key)?.let { return it }
         val sheet = sheets.get(sheetPath) ?: BitmapFactory.decodeFile(sheetPath)?.also { sheets.put(sheetPath, it) } ?: return null
         val head = headTile(sheet, cellOf(look.period)) ?: return null
         val box = heads.getValue(look.period)
         val period = look.period.name.lowercase()
-        val body = asset(context, "images/avatar_v4/body/body_${period}_${look.bodyType.name.lowercase()}.png") ?: return null
+        val body = asset(context, "images/avatar_v4/body/body_${period}_${look.bodyType.name.lowercase()}.png")
+            ?.let { original -> look.outfitColor?.let { AvatarRecolor.recolorOutfit(original, it.hue, it.saturation) } ?: original }
+            ?: return null
         val skin = asset(context, "images/avatar_v4/face/skin_${period}_${look.skinToneId}_${look.bodyType.name.lowercase()}.png") ?: return null
 
         val out = Bitmap.createBitmap(CANVAS_WIDTH, CANVAS_HEIGHT, Bitmap.Config.ARGB_8888)

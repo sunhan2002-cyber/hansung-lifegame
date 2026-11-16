@@ -83,4 +83,5 @@ val Week7ImageSamples = listOf(
     ImageSamplePreview("스터디 카페", "제작 9차 · 검토 대기 · 1인칭", "followup_20261031/img_teen_study_cafe_001.png"),
     ImageSamplePreview("학생회장 선거 공약", "제작 9차 · 검토 대기 · 1인칭", "followup_20261031/img_teen_student_council_001.png"),
     ImageSamplePreview("아무 일 없는 주말", "제작 9차 · 검토 대기 · 1인칭", "followup_20261031/img_teen_free_weekend_001.png"),
+    ImageSamplePreview("첫 생일의 돌잡이", "아기 눈높이 · 판사봉을 잡는 순간", "cutscenes/week11/img_doljabi_grasp_001.png"),
 )
