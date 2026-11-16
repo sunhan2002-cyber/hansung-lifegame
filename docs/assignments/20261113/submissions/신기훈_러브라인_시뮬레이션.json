@@ -1,0 +1,106 @@
+{
+  "runs": 10000,
+  "violations": {},
+  "violationExamples": {},
+  "loveLineRates": {
+    "dating": "57.4%",
+    "rel_steady": "47.8%",
+    "engaged": "33.4%",
+    "families_met": "32.7%",
+    "married": "32.0%",
+    "rel_conflict": "21.4%",
+    "child_plan": "11.3%",
+    "has_child": "11.3%",
+    "long_term_dating": "11.3%",
+    "breakup_once": "6.3%",
+    "no_child_plan": "3.5%",
+    "reunited": "1.1%",
+    "divorced": "0.1%"
+  },
+  "partnerAtMarriage": {
+    "partner_blind_date": 979,
+    "partner_closing": 568,
+    "partner_gym": 420,
+    "partner_app": 395,
+    "partner_first_love": 325,
+    "partner_music": 274,
+    "partner_book": 195,
+    "none(구버전·재회 공통)": 24,
+    "partner_ideal": 16
+  },
+  "breakupByPartner": {
+    "partner_blind_date": 212,
+    "partner_closing": 123,
+    "partner_gym": 89,
+    "partner_app": 77,
+    "partner_first_love": 44,
+    "partner_book": 42,
+    "partner_music": 40,
+    "partner_ideal": 6
+  },
+  "marriagePeriod": {
+    "MIDDLE": 2417,
+    "OLD_AGE": 773,
+    "YOUNG_ADULT": 6
+  },
+  "recallShownAtEvents": {
+    "recall_dol_cash": 554,
+    "recall_dol_music": 452,
+    "recall_bus": 426,
+    "recall_dol_gavel": 207,
+    "recall_first_child": 132,
+    "recall_festival": 40,
+    "recall_wedding_dance": 2,
+    "recall_layoff": 1
+  },
+  "npcShownAtEvents": {
+    "npc_blind_date": 2592,
+    "npc_closing": 1406,
+    "npc_gym": 1073,
+    "npc_app": 874,
+    "npc_bus": 575,
+    "npc_music_campfire": 574,
+    "npc_book_club": 429,
+    "npc_music_band": 301,
+    "npc_transfer_child": 261,
+    "npc_book_blind": 72,
+    "npc_festival": 64,
+    "npc_ideal_street": 51,
+    "npc_ideal_bar": 1
+  },
+  "npcOriginMismatch": {},
+  "endingRecalls": {
+    "recall_dol_music": 4839,
+    "recall_proposal": 3138,
+    "recall_dol_cash": 2826,
+    "recall_dol_gavel": 2335,
+    "recall_transfer_child": 838,
+    "recall_bus": 384,
+    "recall_wedding_dance": 287,
+    "recall_festival": 210,
+    "recall_first_child": 116,
+    "recall_jiho": 18
+  },
+  "turningPointCardsPerRun": {
+    "0": 225,
+    "1": 687,
+    "2": 5030,
+    "3": 4058
+  },
+  "turningPointCards": {
+    "tp_edu_after_school": 7980,
+    "tp_career_first_card": 6014,
+    "tp_family_wedding": 2552,
+    "tp_edu_graduation": 1745,
+    "tp_career_contracts": 1335,
+    "tp_family_proposal": 1278,
+    "tp_career_balance": 998,
+    "tp_family_first_child": 377,
+    "tp_family_breakup": 294,
+    "tp_family_wedding_music": 263,
+    "tp_edu_high_school": 50,
+    "tp_career_people": 19,
+    "tp_career_layoff": 16
+  },
+  "invariantFailureRuns": 207
+}

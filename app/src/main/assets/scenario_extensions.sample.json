@@ -2,13 +2,14 @@
   "schemaVersion": 1,
   "owner": "신기훈",
   "createdAt": "2026-11-13",
-  "status": "CONTENT_ONLY — 조회 API는 김우영, 표시는 김재겸 담당. 앱은 아직 이 파일을 읽지 않는다.",
+  "status": "앱이 읽음(ui/ScenarioExtensions.kt, 김재겸 #77). 판정은 이번 인생의 실제 선택 기록과 현재 플래그만 쓴다.",
+  "updatedAt": "2026-11-16",
   "rules": {
     "recall": "회상 문구는 현재 인생의 실제 선택 기록에 sourceEventId:sourceChoiceIds 중 하나가 있고 requiredFlags를 모두 가졌으며 blockedFlags가 없을 때만 표시한다. 기록이 없으면 문구를 만들지 않는다.",
     "recallLimit": "한 사건에는 회상 1줄, 결말에는 최대 3줄. 같은 slotId는 한 인생에서 사건 1회 + 결말 1회까지만 표시한다.",
     "turningPoints": "결말 화면에는 분야별 후보 중 실제 선택 기록이 있는 카드만, priority 높은 순으로 전체 2~3장을 고른다. {choiceLabel}에는 그때 고른 선택지 라벨을 그대로 넣는다.",
     "titleGoals": "칭호 목록의 \"다음 판에서 노리기\"에 goal을, 잠긴 칭호의 설명 대신 hint를 보여 준다. 정확한 플래그·확률은 노출하지 않는다.",
-    "npc": "재등장은 relationFlags가 실제로 있는 인생에서만. 다른 인생 기록과 섞지 않고, 지난 인생 비교 문구를 만들지 않는다.",
+    "npc": "재등장은 origin.relationFlags가 모두 있고 처음 만난 실제 선택 기록(origin.eventId 중 하나 + choiceIds)이 있을 때만. relationFlags는 결별 뒤에도 지워지지 않는 플래그만 쓴다. 다른 인생 기록과 섞지 않고 지난 인생 비교 문구를 만들지 않는다.",
     "noComparison": "지난 두 인생 비교 기능·문구는 만들지 않는다."
   },
   "recallSlots": [
@@ -26,7 +27,6 @@
       "showIn": [
         "path_hap_11",
         "path_hap_06",
-        "auto_infant_dol_photo_music",
         "ENDING"
       ],
       "note": "돌잡이 회상"
@@ -45,7 +45,6 @@
       "showIn": [
         "teen_014",
         "child_003",
-        "auto_infant_dol_photo_gavel",
         "ENDING"
       ],
       "note": "돌잡이 회상"
@@ -64,7 +63,6 @@
       "showIn": [
         "child_008",
         "path_wea_01",
-        "auto_infant_dol_photo_cash",
         "ENDING"
       ],
       "note": "돌잡이 회상. path_luk_09는 본문에 이미 회상이 있어 중복 표시하지 않는다"
@@ -82,11 +80,10 @@
       "blockedFlags": [],
       "line": "축제 날 단체 사진에서 옆자리에 섰던 그 애였다.",
       "showIn": [
-        "auto_teen_festival_photo",
-        "auto_old_first_love",
+        "adult_077",
         "ENDING"
       ],
-      "note": "축제 인연 회상. adult_077은 본문이 이미 축제를 되짚으므로 표시하지 않는다"
+      "note": "축제 인연 회상. adult_077은 축제 때 그 사람의 연락이라 회상 한 줄이 같은 사람을 가리킨다"
     },
     {
       "slotId": "recall_bus",
@@ -119,11 +116,9 @@
       "blockedFlags": [],
       "line": "급식실 구석에서 혼자 밥을 먹던 그 전학생이었다.",
       "showIn": [
-        "auto_child_transfer_friend",
-        "auto_ya_transfer_friend_wedding",
         "ENDING"
       ],
-      "note": "path_soc_18 본문이 이미 같은 기억을 말하므로 거기에는 표시하지 않는다"
+      "note": "path_soc_18 본문이 이미 같은 기억을 말하므로 결말에만 표시한다"
     },
     {
       "slotId": "recall_letter",
@@ -200,7 +195,6 @@
       "line": "입장하며 30초 춤을 추던 그 결혼식 영상이 아직 단톡방 공지에 있다.",
       "showIn": [
         "love_holiday_01",
-        "auto_mid_anniversary",
         "ENDING"
       ],
       "note": ""
@@ -438,7 +432,7 @@
         "eventId": "love_conflict_01",
         "priority": 35,
         "requiredFlags": [
-          "breakup_once"
+          "ex_partner"
         ],
         "title": "말다툼 다음 날",
         "line": "말다툼 다음 날, '{choiceLabel}'. 그 뒤로 우리는 각자의 길을 걸었다."
@@ -713,26 +707,26 @@
           "requiredFlags": [
             "kind_heart"
           ],
-          "how": "본문에서 \"그 친구와는 지금도 연락한다\"로 언급"
+          "blockedFlags": []
         },
         {
           "type": "AUTO",
           "id": "auto_child_transfer_friend",
           "requiredFlags": [
-            "kind_heart",
-            "v4:event:child_025"
-          ]
+            "kind_heart"
+          ],
+          "blockedFlags": []
         },
         {
           "type": "AUTO",
           "id": "auto_ya_transfer_friend_wedding",
           "requiredFlags": [
-            "kind_heart",
-            "v4:event:child_025"
-          ]
+            "kind_heart"
+          ],
+          "blockedFlags": []
         }
       ],
-      "neverShowIf": "child_025에서 B(친구들이랑 먹는다)를 골랐거나 child_025가 나오지 않은 인생"
+      "neverShowIf": "child_025에서 B를 골랐거나 child_025가 나오지 않은 인생"
     },
     {
       "npcId": "npc_transfer_teen",
@@ -753,10 +747,11 @@
           "id": "auto_teen_transfer_friend",
           "requiredFlags": [
             "transfer_friend_teen"
-          ]
+          ],
+          "blockedFlags": []
         }
       ],
-      "neverShowIf": "path_soc_18에서 C를 고른 인생(플래그 없음). 이번 주 이전 저장은 플래그가 없어 재등장하지 않는다"
+      "neverShowIf": "path_soc_18에서 C를 고른 인생. 11/13 이전 저장은 플래그가 없어 재등장하지 않는다"
     },
     {
       "npcId": "npc_jiho",
@@ -776,36 +771,34 @@
           "id": "adult_036",
           "requiredFlags": [
             "time_capsule"
-          ]
+          ],
+          "blockedFlags": []
         },
         {
           "type": "EVENT",
           "id": "adult_062",
           "requiredFlags": [
             "jiho_reunion"
-          ]
+          ],
+          "blockedFlags": []
         }
       ],
-      "neverShowIf": "타임캡슐을 묻지 않았거나 20년 뒤 만남을 미룬 인생"
+      "neverShowIf": "타임캡슐을 묻지 않은 인생"
     },
     {
-      "npcId": "npc_first_love",
-      "label": "첫사랑(축제·버스 인연)",
+      "npcId": "npc_festival",
+      "label": "축제 날 옆자리였던 그 애",
       "origin": {
-        "eventId": "teen_021|path_soc_03",
+        "eventId": "teen_021",
+        "choiceIds": [
+          "A",
+          "C"
+        ],
         "relationFlags": [
-          "first_love"
+          "met_festival"
         ]
       },
       "appearances": [
-        {
-          "type": "AUTO",
-          "id": "auto_teen_festival_photo",
-          "requiredFlags": [
-            "first_love",
-            "v4:event:teen_021"
-          ]
-        },
         {
           "type": "EVENT",
           "id": "adult_077",
@@ -814,24 +807,43 @@
           ],
           "blockedFlags": [
             "dating",
-            "married",
-            "engaged"
+            "engaged",
+            "married"
           ]
+        },
+        {
+          "type": "EVENT",
+          "id": "love_date_01",
+          "requiredFlags": [
+            "dating__adult_077"
+          ],
+          "blockedFlags": []
         },
         {
           "type": "EVENT",
           "id": "love_conflict_first_love",
           "requiredFlags": [
-            "partner_first_love",
+            "dating__adult_077",
             "rel_conflict"
-          ]
+          ],
+          "blockedFlags": []
         },
         {
           "type": "EVENT",
           "id": "love_reunion_first_love",
           "requiredFlags": [
-            "ex_first_love"
-          ]
+            "ex_first_love",
+            "v4:event:adult_077"
+          ],
+          "blockedFlags": []
+        },
+        {
+          "type": "AUTO",
+          "id": "auto_teen_festival_photo",
+          "requiredFlags": [
+            "first_love"
+          ],
+          "blockedFlags": []
         },
         {
           "type": "AUTO",
@@ -844,106 +856,328 @@
           ]
         }
       ],
-      "neverShowIf": "첫사랑 플래그가 없는 인생. 결혼 상대가 첫사랑이면 노년 회상 대신 배우자 사건만"
+      "neverShowIf": "축제 사건에서 마음을 표현하지 않은 인생"
     },
     {
-      "npcId": "npc_partner_ideal",
-      "label": "길에서 마주친 이상형",
+      "npcId": "npc_bus",
+      "label": "집에 가는 버스가 같던 사람",
       "origin": {
-        "eventId": "adult_005|adult_006|adult_008",
+        "eventId": "path_soc_03",
+        "choiceIds": [
+          "A"
+        ],
         "relationFlags": [
-          "partner_ideal"
+          "met_bus"
         ]
       },
       "appearances": [
+        {
+          "type": "EVENT",
+          "id": "love_date_01",
+          "requiredFlags": [
+            "dating__path_soc_03"
+          ],
+          "blockedFlags": []
+        },
+        {
+          "type": "EVENT",
+          "id": "love_conflict_first_love",
+          "requiredFlags": [
+            "dating__path_soc_03",
+            "rel_conflict"
+          ],
+          "blockedFlags": []
+        },
+        {
+          "type": "EVENT",
+          "id": "love_reunion_first_love",
+          "requiredFlags": [
+            "ex_first_love"
+          ],
+          "blockedFlags": [
+            "v4:event:adult_077"
+          ]
+        }
+      ],
+      "neverShowIf": "버스에서 같이 걷자고 하지 않았거나 친구로 남은 인생"
+    },
+    {
+      "npcId": "npc_ideal_street",
+      "label": "길에서 마주친 이상형",
+      "origin": {
+        "eventId": "adult_005|adult_006",
+        "choiceIds": [
+          "A",
+          "C"
+        ],
+        "relationFlags": [
+          "met_ideal_street"
+        ]
+      },
+      "appearances": [
+        {
+          "type": "EVENT",
+          "id": "love_date_01",
+          "requiredFlags": [
+            "partner_ideal"
+          ],
+          "blockedFlags": []
+        },
         {
           "type": "EVENT",
           "id": "love_conflict_ideal",
           "requiredFlags": [
             "partner_ideal",
             "rel_conflict"
-          ]
+          ],
+          "blockedFlags": []
         },
         {
           "type": "EVENT",
           "id": "love_reunion_ideal",
           "requiredFlags": [
             "ex_ideal"
-          ]
+          ],
+          "blockedFlags": []
         }
       ],
       "neverShowIf": "이상형과 연락처를 주고받지 못한 인생"
     },
     {
-      "npcId": "npc_partner_music",
-      "label": "같이 연주하던 사람",
+      "npcId": "npc_ideal_bar",
+      "label": "술자리 옆자리의 이상형",
       "origin": {
-        "eventId": "path_hap_05|adult_075",
+        "eventId": "adult_008",
+        "choiceIds": [
+          "A",
+          "B"
+        ],
         "relationFlags": [
-          "partner_music"
+          "met_ideal_bar"
         ]
       },
       "appearances": [
         {
           "type": "EVENT",
+          "id": "love_date_01",
+          "requiredFlags": [
+            "partner_ideal"
+          ],
+          "blockedFlags": []
+        },
+        {
+          "type": "EVENT",
+          "id": "love_conflict_ideal",
+          "requiredFlags": [
+            "partner_ideal",
+            "rel_conflict"
+          ],
+          "blockedFlags": []
+        },
+        {
+          "type": "EVENT",
+          "id": "love_reunion_ideal",
+          "requiredFlags": [
+            "ex_ideal"
+          ],
+          "blockedFlags": []
+        }
+      ],
+      "neverShowIf": "술자리에서 이상형 옆에 앉지 않았거나 연락처를 받지 못한 인생"
+    },
+    {
+      "npcId": "npc_music_band",
+      "label": "합주 모임에서 만난 사람",
+      "origin": {
+        "eventId": "path_hap_05",
+        "choiceIds": [
+          "A"
+        ],
+        "relationFlags": [
+          "met_music_band"
+        ]
+      },
+      "appearances": [
+        {
+          "type": "EVENT",
+          "id": "love_date_01",
+          "requiredFlags": [
+            "dating__path_hap_05"
+          ],
+          "blockedFlags": []
+        },
+        {
+          "type": "EVENT",
           "id": "love_conflict_music",
           "requiredFlags": [
-            "partner_music",
+            "dating__path_hap_05",
             "rel_conflict"
-          ]
+          ],
+          "blockedFlags": []
         },
         {
           "type": "EVENT",
           "id": "love_reunion_music",
           "requiredFlags": [
             "ex_music"
-          ]
+          ],
+          "blockedFlags": []
         },
         {
           "type": "EVENT",
           "id": "love_wedding_music",
           "requiredFlags": [
-            "partner_music",
-            "engaged",
-            "families_met"
-          ]
+            "partner_music"
+          ],
+          "blockedFlags": []
         }
       ],
-      "neverShowIf": "합주 모임·MT에서 연인이 되지 않은 인생"
+      "neverShowIf": "합주 모임에서 연인이 되지 않은 인생"
     },
     {
-      "npcId": "npc_partner_book",
-      "label": "같은 문장에 밑줄 그은 사람",
+      "npcId": "npc_music_campfire",
+      "label": "MT 모닥불 옆 기타 치던 사람",
       "origin": {
-        "eventId": "adult_074|path_soc_11",
+        "eventId": "adult_075",
+        "choiceIds": [
+          "A",
+          "B"
+        ],
         "relationFlags": [
-          "partner_book"
+          "met_music_campfire"
         ]
       },
       "appearances": [
         {
           "type": "EVENT",
+          "id": "love_date_01",
+          "requiredFlags": [
+            "dating__adult_075"
+          ],
+          "blockedFlags": []
+        },
+        {
+          "type": "EVENT",
+          "id": "love_conflict_music",
+          "requiredFlags": [
+            "dating__adult_075",
+            "rel_conflict"
+          ],
+          "blockedFlags": []
+        },
+        {
+          "type": "EVENT",
+          "id": "love_reunion_music",
+          "requiredFlags": [
+            "ex_music"
+          ],
+          "blockedFlags": []
+        },
+        {
+          "type": "EVENT",
+          "id": "love_wedding_music",
+          "requiredFlags": [
+            "partner_music"
+          ],
+          "blockedFlags": []
+        }
+      ],
+      "neverShowIf": "MT에서 연인이 되지 않은 인생"
+    },
+    {
+      "npcId": "npc_book_club",
+      "label": "독서 모임에서 같은 문장에 밑줄 그은 사람",
+      "origin": {
+        "eventId": "adult_074",
+        "choiceIds": [
+          "C"
+        ],
+        "relationFlags": [
+          "met_book_club"
+        ]
+      },
+      "appearances": [
+        {
+          "type": "EVENT",
+          "id": "love_date_01",
+          "requiredFlags": [
+            "partner_book",
+            "dating__adult_074"
+          ],
+          "blockedFlags": []
+        },
+        {
+          "type": "EVENT",
           "id": "love_conflict_book",
           "requiredFlags": [
             "partner_book",
+            "dating__adult_074",
             "rel_conflict"
-          ]
+          ],
+          "blockedFlags": []
         },
         {
           "type": "EVENT",
           "id": "love_reunion_book",
           "requiredFlags": [
             "ex_book"
-          ]
+          ],
+          "blockedFlags": []
         }
       ],
-      "neverShowIf": "독서 모임·같은 책 소개팅에서 연인이 되지 않은 인생"
+      "neverShowIf": "독서 모임에서 연인이 되지 않은 인생"
     },
     {
-      "npcId": "npc_partner_letter",
+      "npcId": "npc_book_blind",
+      "label": "같은 책을 들고 온 소개팅 상대",
+      "origin": {
+        "eventId": "path_soc_11",
+        "choiceIds": [
+          "C"
+        ],
+        "relationFlags": [
+          "met_book_blind"
+        ]
+      },
+      "appearances": [
+        {
+          "type": "EVENT",
+          "id": "love_date_01",
+          "requiredFlags": [
+            "dating__path_soc_11"
+          ],
+          "blockedFlags": []
+        },
+        {
+          "type": "EVENT",
+          "id": "love_conflict_book",
+          "requiredFlags": [
+            "dating__path_soc_11",
+            "rel_conflict"
+          ],
+          "blockedFlags": []
+        },
+        {
+          "type": "EVENT",
+          "id": "love_reunion_book",
+          "requiredFlags": [
+            "ex_book"
+          ],
+          "blockedFlags": []
+        }
+      ],
+      "neverShowIf": "소개팅이 연애로 이어지지 않은 인생"
+    },
+    {
+      "npcId": "npc_letter",
       "label": "훈련소 편지 친구",
       "origin": {
         "eventId": "adult_071",
+        "choiceIds": [
+          "A",
+          "B",
+          "C"
+        ],
         "relationFlags": [
           "letter_friend"
         ]
@@ -953,49 +1187,208 @@
           "type": "EVENT",
           "id": "love_letter_01",
           "requiredFlags": [
-            "letter_friend",
-            "military_done"
+            "letter_friend"
           ],
           "blockedFlags": [
             "dating",
             "engaged",
             "married"
           ]
-        }
-      ],
-      "neverShowIf": "편지 결과가 나오지 않은 인생, 또는 이미 연인·약혼자·배우자가 있는 인생"
-    },
-    {
-      "npcId": "npc_partner_other",
-      "label": "그 밖의 연인(앱·마감·헬스장·소개팅·다시 만난 인연)",
-      "origin": {
-        "eventId": "adult_074|adult_076|adult_078|adult_073|auto_ya_love_start",
-        "relationFlags": [
-          "partner_app",
-          "partner_closing",
-          "partner_gym",
-          "partner_blind_date",
-          "partner_second_chance"
-        ]
-      },
-      "appearances": [
+        },
+        {
+          "type": "EVENT",
+          "id": "love_date_01",
+          "requiredFlags": [
+            "partner_letter"
+          ],
+          "blockedFlags": []
+        },
         {
           "type": "EVENT",
           "id": "love_conflict_01",
           "requiredFlags": [
-            "dating",
+            "partner_letter",
             "rel_conflict"
-          ]
+          ],
+          "blockedFlags": []
         },
         {
           "type": "EVENT",
           "id": "love_reunion_01",
           "requiredFlags": [
             "ex_partner"
-          ]
+          ],
+          "blockedFlags": []
         }
       ],
-      "neverShowIf": "연애가 시작되지 않은 인생"
+      "neverShowIf": "편지 결과가 나오지 않은 인생"
+    },
+    {
+      "npcId": "npc_app",
+      "label": "소개팅 앱 첫 매칭 상대",
+      "origin": {
+        "eventId": "adult_074",
+        "choiceIds": [
+          "A"
+        ],
+        "relationFlags": [
+          "met_app"
+        ]
+      },
+      "appearances": [
+        {
+          "type": "EVENT",
+          "id": "love_date_01",
+          "requiredFlags": [
+            "partner_app"
+          ],
+          "blockedFlags": []
+        },
+        {
+          "type": "EVENT",
+          "id": "love_conflict_01",
+          "requiredFlags": [
+            "partner_app",
+            "rel_conflict"
+          ],
+          "blockedFlags": []
+        },
+        {
+          "type": "EVENT",
+          "id": "love_reunion_01",
+          "requiredFlags": [
+            "ex_partner"
+          ],
+          "blockedFlags": []
+        }
+      ],
+      "neverShowIf": "앱 매칭이 연애로 이어지지 않은 인생"
+    },
+    {
+      "npcId": "npc_closing",
+      "label": "마감을 같이 하던 사람",
+      "origin": {
+        "eventId": "adult_076",
+        "choiceIds": [
+          "A",
+          "C"
+        ],
+        "relationFlags": [
+          "met_closing"
+        ]
+      },
+      "appearances": [
+        {
+          "type": "EVENT",
+          "id": "love_date_01",
+          "requiredFlags": [
+            "partner_closing"
+          ],
+          "blockedFlags": []
+        },
+        {
+          "type": "EVENT",
+          "id": "love_conflict_01",
+          "requiredFlags": [
+            "partner_closing",
+            "rel_conflict"
+          ],
+          "blockedFlags": []
+        },
+        {
+          "type": "EVENT",
+          "id": "love_reunion_01",
+          "requiredFlags": [
+            "ex_partner"
+          ],
+          "blockedFlags": []
+        }
+      ],
+      "neverShowIf": "마감 뒤 연애가 시작되지 않은 인생"
+    },
+    {
+      "npcId": "npc_gym",
+      "label": "런닝머신 옆자리 사람",
+      "origin": {
+        "eventId": "adult_078",
+        "choiceIds": [
+          "A",
+          "B"
+        ],
+        "relationFlags": [
+          "met_gym"
+        ]
+      },
+      "appearances": [
+        {
+          "type": "EVENT",
+          "id": "love_date_01",
+          "requiredFlags": [
+            "partner_gym"
+          ],
+          "blockedFlags": []
+        },
+        {
+          "type": "EVENT",
+          "id": "love_conflict_01",
+          "requiredFlags": [
+            "partner_gym",
+            "rel_conflict"
+          ],
+          "blockedFlags": []
+        },
+        {
+          "type": "EVENT",
+          "id": "love_reunion_01",
+          "requiredFlags": [
+            "ex_partner"
+          ],
+          "blockedFlags": []
+        }
+      ],
+      "neverShowIf": "헬스장에서 연애가 시작되지 않은 인생"
+    },
+    {
+      "npcId": "npc_blind_date",
+      "label": "소개팅·부케로 만난 사람",
+      "origin": {
+        "eventId": "adult_073",
+        "choiceIds": [
+          "A",
+          "C"
+        ],
+        "relationFlags": [
+          "met_blind_date"
+        ]
+      },
+      "appearances": [
+        {
+          "type": "EVENT",
+          "id": "love_date_01",
+          "requiredFlags": [
+            "partner_blind_date"
+          ],
+          "blockedFlags": []
+        },
+        {
+          "type": "EVENT",
+          "id": "love_conflict_01",
+          "requiredFlags": [
+            "partner_blind_date",
+            "rel_conflict"
+          ],
+          "blockedFlags": []
+        },
+        {
+          "type": "EVENT",
+          "id": "love_reunion_01",
+          "requiredFlags": [
+            "ex_partner"
+          ],
+          "blockedFlags": []
+        }
+      ],
+      "neverShowIf": "하객 세 번째 해에 연애가 시작되지 않은 인생"
     }
   ]
 }

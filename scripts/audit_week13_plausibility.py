@@ -9,9 +9,11 @@ Checks, without touching any file:
 - workplace words (회사·출근·육아휴직·퇴임식 …) only appear in events gated by job_employed,
   except an explicit allowlist where the text is a job offer, job entry, or a third party's job
 - employment outcomes remove the conflicting employment states
-- auto events: >=5 per period (>=5 without conditions), elapsed-time/progress triggers only,
-  dedupe present, stat effect only when statDelta is non-empty
-- scenario extensions only reference existing events, choices, titles and auto events
+- auto events (schemaVersion 2, read by data/AutomaticEventContent.kt): >=5 per period (>=5 without
+  conditions), stage/record-count triggers only, dedupeKey and imageUse present, stat effect only when
+  statDelta is non-empty, momentImageId null or a catalogued image
+- scenario extensions only reference existing events, choices, titles and auto events; recall targets are
+  decision events or ENDING; NPC relation flags are produced by events and never removed
 
 Exit code 1 when any error is found. Report: --report path (JSON).
 """
@@ -54,6 +56,7 @@ WORK_ALLOWLIST = {
 EMPLOYMENT = {"job_employed", "job_self_employed", "job_unemployed", "job_retired", "early_retire", "laid_off", "comeback"}
 TRIGGERS = {"ELAPSED_TIME", "PROGRESS_STAGE"}
 STAGES = {"PERIOD_START", "PERIOD_MID", "PERIOD_END", "AFTER_EVENT"}
+IMAGE_USES = {"NONE", "REUSE_CANDIDATE", "NEW_CANDIDATE"}
 AUTO_ADD_ALLOWED = {"dating", "partner_second_chance"}
 
 
@@ -173,7 +176,7 @@ def audit(bundle: dict) -> dict:
             err(where, "auto eventId must be unique, auto_ prefixed and not collide with events")
         auto_ids.add(aid)
         for key in ("periods", "text", "trigger", "triggerRule", "conditions", "statEffect", "statDelta", "addFlags",
-                    "removeFlags", "repeatable", "dedupe"):
+                    "removeFlags", "repeatable", "dedupeKey", "imageUse", "momentImageId"):
             if key not in a:
                 err(where, f"missing field {key}")
         if a.get("trigger") not in TRIGGERS:
@@ -181,8 +184,12 @@ def audit(bundle: dict) -> dict:
         rule = a.get("triggerRule", {})
         if a.get("trigger") == "PROGRESS_STAGE" and rule.get("stage") not in STAGES:
             err(where, "PROGRESS_STAGE needs triggerRule.stage")
-        if a.get("trigger") == "ELAPSED_TIME" and not isinstance(rule.get("afterAutoSteps"), int):
-            err(where, "ELAPSED_TIME needs integer triggerRule.afterAutoSteps")
+        if a.get("trigger") == "ELAPSED_TIME" and not isinstance(rule.get("minMomentsInPeriod"), int):
+            err(where, "ELAPSED_TIME needs integer triggerRule.minMomentsInPeriod")
+        if a.get("imageUse") not in IMAGE_USES:
+            err(where, f"imageUse must be one of {sorted(IMAGE_USES)}")
+        if a.get("momentImageId") is not None and a.get("momentImageId") not in bundle.get("image_ids", set()):
+            err(where, "momentImageId must be null or a catalogued image")
         if rule.get("stage") == "AFTER_EVENT" and rule.get("afterEventId") not in by_id:
             err(where, f"afterEventId does not exist: {rule.get('afterEventId')}")
         if re.search(r"매년|해마다|EVERY_YEAR|YEARLY", json.dumps(rule, ensure_ascii=False)):
@@ -194,8 +201,8 @@ def audit(bundle: dict) -> dict:
             err(where, f"unknown stat {sorted(set(delta) - STATS)}")
         if set(a.get("addFlags", [])) - AUTO_ADD_ALLOWED:
             err(where, f"auto events may only add {sorted(AUTO_ADD_ALLOWED)}")
-        if a.get("repeatable") is not False or not a.get("dedupe", {}).get("key"):
-            err(where, "auto events must be non-repeatable with a dedupe key")
+        if a.get("repeatable") is not False or not a.get("dedupeKey"):
+            err(where, "auto events must be non-repeatable with a dedupeKey")
         cond = a.get("conditions", {})
         for flag in cond.get("requiredFlags", []) + cond.get("blockedFlags", []):
             if flag not in produced and flag not in auto_produced:
@@ -224,6 +231,7 @@ def audit(bundle: dict) -> dict:
         err("scenario_extensions.sample.json", "missing")
     else:
         targets = set(by_id) | auto_ids | {"ENDING"}
+        removed = {f for e in events for c in e["choices"] for o in c["outcomes"] for f in o.get("removeFlags", [])}
         for s in ext.get("recallSlots", []):
             src = by_id.get(s["sourceEventId"])
             if src is None:
@@ -233,8 +241,8 @@ def audit(bundle: dict) -> dict:
             if set(s["sourceChoiceIds"]) - known:
                 err(s["slotId"], "unknown sourceChoiceIds")
             for t in s["showIn"]:
-                if t not in targets:
-                    err(s["slotId"], f"unknown showIn target {t}")
+                if t not in by_id and t != "ENDING":
+                    err(s["slotId"], f"recall showIn must be a decision event or ENDING: {t}")
             for flag in s.get("requiredFlags", []) + s.get("blockedFlags", []):
                 if flag not in produced and flag not in auto_produced:
                     err(s["slotId"], f"unsourced flag {flag}")
@@ -248,10 +256,31 @@ def audit(bundle: dict) -> dict:
         goal_ids = {g["titleId"] for g in ext.get("titleGoals", [])}
         if goal_ids != {t["titleId"] for t in titles}:
             err("titleGoals", "must cover every title exactly")
+        for card in [c for cs in cards.values() for c in cs]:
+            for flag in card.get("requiredFlags", []):
+                if flag not in produced:
+                    err(card["cardId"], f"unsourced flag {flag}")
         for npc in ext.get("npcReappearances", []):
+            origin = npc.get("origin", {})
+            origin_events = [x for x in origin.get("eventId", "").split("|") if x]
+            if not origin_events or any(x not in by_id for x in origin_events):
+                err(npc["npcId"], "origin.eventId must list existing decision events")
+            else:
+                known = {c["choiceId"] for x in origin_events for c in by_id[x]["choices"]}
+                if not origin.get("choiceIds") or set(origin["choiceIds"]) - known:
+                    err(npc["npcId"], "origin.choiceIds must exist in the origin events")
+            for flag in origin.get("relationFlags", []):
+                if flag not in produced:
+                    err(npc["npcId"], f"relation flag is never produced: {flag}")
+                if flag in removed:
+                    err(npc["npcId"], f"relation flag is removed by some outcome (not persistent): {flag}")
             for ap in npc["appearances"]:
-                if ap["id"] not in targets:
-                    err(npc["npcId"], f"unknown appearance {ap['id']}")
+                pool = by_id if ap.get("type") == "EVENT" else auto_ids
+                if ap["id"] not in pool:
+                    err(npc["npcId"], f"unknown {ap.get('type')} appearance {ap['id']}")
+                for flag in ap.get("requiredFlags", []) + ap.get("blockedFlags", []):
+                    if flag not in produced and flag not in auto_produced:
+                        err(npc["npcId"], f"unsourced appearance flag {flag}")
         if re.search(r"지난 인생|이전 인생|비교", json.dumps(ext.get("recallSlots", []), ensure_ascii=False)):
             err("recallSlots", "recall lines must not compare past lives")
 
@@ -268,7 +297,9 @@ def audit(bundle: dict) -> dict:
 
 
 def load_bundle() -> dict:
-    return {"events": load("events.sample.json"), "auto": load("auto_events.sample.json"),
+    images = load("image_ids.sample.json") or []
+    return {"image_ids": {i["imageId"] for i in images},
+            "events": load("events.sample.json"), "auto": load("auto_events.sample.json"),
             "ext": load("scenario_extensions.sample.json"), "titles": load("titles.sample.json"),
             "focuses": load("focuses.sample.json")}
 

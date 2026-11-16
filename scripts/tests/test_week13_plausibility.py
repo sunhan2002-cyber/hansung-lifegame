@@ -81,6 +81,32 @@ class Week13PlausibilityTest(unittest.TestCase):
         grandchild["conditions"].pop("lifeFacts")
         self.assertTrue(any("child text without" in m for m in self.messages(bundle)))
 
+    def test_npc_relation_flag_must_survive_breakup(self):
+        bundle = self.fresh()
+        npc = next(n for n in bundle["ext"]["npcReappearances"] if n["npcId"] == "npc_music_band")
+        npc["origin"]["relationFlags"] = ["partner_music"]
+        self.assertTrue(any("not persistent" in m for m in self.messages(bundle)))
+
+    def test_npc_origin_choice_must_exist(self):
+        bundle = self.fresh()
+        npc = next(n for n in bundle["ext"]["npcReappearances"] if n["npcId"] == "npc_jiho")
+        npc["origin"]["choiceIds"] = ["Z"]
+        self.assertTrue(any("origin.choiceIds" in m for m in self.messages(bundle)))
+
+    def test_recall_targets_are_decision_events(self):
+        bundle = self.fresh()
+        bundle["ext"]["recallSlots"][0]["showIn"].append("auto_mid_anniversary")
+        self.assertTrue(any("decision event or ENDING" in m for m in self.messages(bundle)))
+
+    def test_auto_event_needs_dedupe_key_and_image_use(self):
+        bundle = self.fresh()
+        event = bundle["auto"]["events"][0]
+        event.pop("dedupeKey")
+        event["imageUse"] = "MAYBE"
+        messages = self.messages(bundle)
+        self.assertTrue(any("dedupeKey" in m for m in messages))
+        self.assertTrue(any("imageUse" in m for m in messages))
+
     def test_recall_must_point_to_real_choice(self):
         bundle = self.fresh()
         bundle["ext"]["recallSlots"][0]["sourceChoiceIds"] = ["Z"]
