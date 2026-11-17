@@ -44,12 +44,17 @@ class ContentRepository(
         V4ContentParser.parseTitles(readAsset(TITLES_FILE))
     }.getOrElse { emptyList() }
 
+    fun loadAutomaticEvents() = runCatching {
+        V4ContentParser.parseAutomaticEvents(readAsset(AUTO_EVENTS_FILE))
+    }.getOrElse { emptyList() }
+
     fun loadV4Content(): V4Content = V4Content(
         periods = loadPeriodDefinitions(),
         focuses = loadFocuses(),
         decisions = loadDecisionEvents(),
         lifeFactRules = loadLifeFactRules(),
         titles = loadTitles(),
+        automaticEvents = loadAutomaticEvents(),
     )
 
     fun loadEvents(): List<GameEvent> = runCatching {
@@ -191,5 +196,6 @@ class ContentRepository(
         const val IMAGE_IDS_FILE = "image_ids.sample.json"
         const val LIFE_FACTS_FILE = "life_facts.sample.json"
         const val TITLES_FILE = "titles.sample.json"
+        const val AUTO_EVENTS_FILE = "auto_events.sample.json"
     }
 }

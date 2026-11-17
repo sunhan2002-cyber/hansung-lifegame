@@ -409,6 +409,25 @@ enum class AutomaticEventTrigger {
     PROGRESS_STAGE,
 }
 
+enum class AutomaticEventStage {
+    PERIOD_START,
+    PERIOD_MID,
+    PERIOD_END,
+    AFTER_EVENT,
+}
+
+enum class AutomaticEventEffect {
+    STAT,
+    RECORD_ONLY,
+}
+
+data class AutomaticEventTriggerRule(
+    val afterAutoSteps: Int? = null,
+    val stage: AutomaticEventStage? = null,
+    val minYearInPeriod: Int? = null,
+    val afterEventId: String? = null,
+)
+
 /** 선택·돌발·마일스톤보다 낮은 우선순위로 표시되는 짧은 자동 사건. */
 data class AutomaticEvent(
     val eventId: String,
@@ -420,6 +439,11 @@ data class AutomaticEvent(
     val removeFlags: Set<String> = emptySet(),
     val momentImageId: String? = null,
     val repeatable: Boolean = false,
+    val triggerRule: AutomaticEventTriggerRule = AutomaticEventTriggerRule(),
+    val conditions: EventConditions = EventConditions(),
+    val lifeFactConditions: LifeFactConditions = LifeFactConditions(),
+    val effect: AutomaticEventEffect = AutomaticEventEffect.STAT,
+    val dedupeKey: String = eventId,
 )
 
 data class AutomaticEventRecord(
@@ -430,6 +454,7 @@ data class AutomaticEventRecord(
     val text: String,
     val appliedDelta: StatDelta = StatDelta(),
     val momentImageId: String? = null,
+    val dedupeKey: String = eventId,
 )
 
 data class PeriodRunState(
@@ -469,6 +494,30 @@ data class AwardedTitle(
     val titleId: String,
     val text: String,
     val description: String,
+)
+
+data class TitleGoalState(
+    val titleId: String,
+    val goal: String,
+    val hint: String,
+    val completed: Boolean = false,
+)
+
+data class ChallengeCodeState(
+    val input: String = "",
+    val genderFlag: String? = null,
+    val startingRollRaw: String? = null,
+    val seed: Long? = null,
+    val valid: Boolean = false,
+)
+
+/** 한 인생 안의 확장 기능 근거만 저장한다. 다른 완료 인생과 합치지 않는다. */
+data class RunExtensionState(
+    val recallSourceEventIds: Set<String> = emptySet(),
+    val catalystEventIds: List<String> = emptyList(),
+    val titleGoal: TitleGoalState? = null,
+    val challengeCode: ChallengeCodeState = ChallengeCodeState(),
+    val relationshipFlags: Set<String> = emptySet(),
 )
 
 data class RunChoiceRecord(

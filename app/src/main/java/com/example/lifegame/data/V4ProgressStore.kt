@@ -8,6 +8,7 @@ import com.example.lifegame.domain.model.PeriodRunState
 import com.example.lifegame.domain.model.PresentationState
 import com.example.lifegame.domain.model.RunChoiceRecord
 import com.example.lifegame.domain.model.RunNarrativeRecord
+import com.example.lifegame.domain.model.RunExtensionState
 import com.example.lifegame.domain.model.SavedOutcome
 import com.example.lifegame.domain.model.TurnPhase
 
@@ -23,6 +24,7 @@ data class V4SavedRun(
     val narrativeRecords: List<RunNarrativeRecord> = emptyList(),
     /** 시작 주사위의 원본 두 눈. null이면 v1~v4 저장으로 간주한다. */
     val startingRollRaw: String? = null,
+    val extensionState: RunExtensionState = RunExtensionState(),
 )
 
 sealed interface V4LoadResult {

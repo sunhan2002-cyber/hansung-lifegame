@@ -15,6 +15,7 @@ import com.example.lifegame.data.V4LoadResult
 import com.example.lifegame.domain.engine.GameEngine
 import com.example.lifegame.domain.engine.GameSession
 import com.example.lifegame.domain.engine.PeriodGameSession
+import com.example.lifegame.domain.engine.RunExtensionApi
 import com.example.lifegame.domain.model.AvatarConfig
 import com.example.lifegame.domain.model.AwardedTitle
 import com.example.lifegame.domain.model.Choice
@@ -25,6 +26,9 @@ import com.example.lifegame.domain.model.GameScreenState
 import com.example.lifegame.domain.model.RunChoiceRecord
 import com.example.lifegame.domain.model.RunNarrativeKind
 import com.example.lifegame.domain.model.RunNarrativeRecord
+import com.example.lifegame.domain.model.RunExtensionState
+import com.example.lifegame.domain.model.ChallengeCodeState
+import com.example.lifegame.domain.model.TitleGoalState
 import com.example.lifegame.domain.model.SavedOutcome
 import com.example.lifegame.domain.model.PresentationState
 import com.example.lifegame.domain.model.PhotoFlowStatus
@@ -162,6 +166,7 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
     private var playStep: TurnStep? = null
     private var playerNameForPlay: String = DEFAULT_PLAYER_NAME
     private var startingRollRawForRun: String? = null
+    private var extensionStateForRun = RunExtensionState()
     private var characterImageIdForPlay: String? = null
     /** 고른 선택지 기록. 결말 화면의 "주요 선택"에 쓴다. */
     private val choiceLog = mutableListOf<ChoiceRecordUi>()
@@ -333,6 +338,17 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
         val name = normalizePlayerName(profile.name)
         val nameCall = nameCallOf(name)
         startingRollRawForRun = profile.startingRollRaw
+        extensionStateForRun = RunExtensionState(
+            challengeCode = ChallengeCodeState(
+                input = if (profile.startingRollRaw != null && profile.runSeed != null) {
+                    ChallengeCode.encode(ChallengeStart(profile.gender, profile.startingRollRaw, profile.runSeed))
+                } else "",
+                genderFlag = profile.gender.flag,
+                startingRollRaw = profile.startingRollRaw,
+                seed = profile.runSeed,
+                valid = profile.startingRollRaw != null && profile.runSeed != null,
+            ),
+        )
         val content = repository.loadV4Content()
         if (content.periods.isEmpty() || content.focuses.isEmpty()) {
             clearPlay()
@@ -348,6 +364,7 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
             decisions = decisions,
             endings = repository.loadEndings().map { it.withPlayerName(name, nameCall) },
             lifeFactRules = content.lifeFactRules,
+            automaticEvents = content.automaticEvents,
             engine = com.example.lifegame.domain.engine.GameEngine(
                 skipInfantFocus = true,
                 guaranteeYearlyIncident = true,
@@ -374,6 +391,17 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
             clearPlay()
             playError = "새 인생을 시작하지 못했습니다."
             return
+        }
+        profile.startingRollRaw?.let { raw ->
+            extensionStateForRun = extensionStateForRun.copy(
+                challengeCode = ChallengeCodeState(
+                    input = ChallengeCode.encode(ChallengeStart(profile.gender, raw, step.state.runSeed)),
+                    genderFlag = profile.gender.flag,
+                    startingRollRaw = raw,
+                    seed = step.state.runSeed,
+                    valid = true,
+                ),
+            )
         }
 
         playSession = newSession
@@ -429,6 +457,7 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
         runChoiceHistory += saved.choices
         narrativeRecords = saved.narrativeRecords
         startingRollRawForRun = saved.startingRollRaw
+        extensionStateForRun = saved.extensionState
         presentationForRun = saved.presentation
         choiceLog += saved.choices.map { record ->
             val periodName = content.periods.firstOrNull { it.period == record.period }?.displayName
@@ -448,6 +477,7 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
             decisions,
             endings = repository.loadEndings().map { it.withPlayerName(name, nameCall) },
             lifeFactRules = content.lifeFactRules,
+            automaticEvents = content.automaticEvents,
             engine = com.example.lifegame.domain.engine.GameEngine(
                 skipInfantFocus = true,
                 guaranteeYearlyIncident = true,
@@ -921,6 +951,7 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
         if (step.phase == TurnPhase.ENDING && awardedTitleForRun == null) {
             awardedTitleForRun = resolveTitleFor(step.state)
         }
+        refreshExtensionState(step.state)
         if (step.phase == TurnPhase.ENDING) {
             // 결말에 닿는 순간 완료 기록을 저장한다. 주마등 도중 앱이 꺼져도 기록은 남고, 다시 저장해도 runId로 덮어쓴다.
             val record = if (savedCompletedRunId == step.state.runId) {
@@ -962,7 +993,25 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
                 presentation = presentationForRun,
                 narrativeRecords = narrativeRecords,
                 startingRollRaw = startingRollRawForRun,
+                extensionState = extensionStateForRun,
             ),
+        )
+    }
+
+    private fun refreshExtensionState(state: PeriodRunState) {
+        val goal = awardedTitleForRun?.let { awarded ->
+            scenarioExtensions.titleGoals[awarded.titleId]?.let {
+                TitleGoalState(it.titleId, it.goal, it.hint, completed = false)
+            }
+        } ?: extensionStateForRun.titleGoal
+        extensionStateForRun = RunExtensionApi.snapshot(
+            choices = runChoiceHistory,
+            recallCandidateEventIds = scenarioExtensions.recallSlots.map { it.sourceEventId },
+            catalystCandidateEventIds = scenarioExtensions.turningPoints.values.flatten().map { it.eventId },
+            relationshipFlagCatalog = scenarioExtensions.npcs.flatMap { it.relationFlags }.toSet(),
+            currentFlags = state.flags,
+            titleGoal = goal,
+            challengeCode = extensionStateForRun.challengeCode,
         )
     }
 
@@ -998,6 +1047,8 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
         choiceLog.clear()
         runChoiceHistory.clear()
         narrativeRecords = emptyList()
+        startingRollRawForRun = null
+        extensionStateForRun = RunExtensionState()
         presentationForRun = PresentationState()
         profilePhotoPresentation = PresentationState()
         choiceApplicationGuard.clear()

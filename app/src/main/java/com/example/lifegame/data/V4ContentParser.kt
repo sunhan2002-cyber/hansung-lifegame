@@ -1,6 +1,12 @@
 package com.example.lifegame.data
 
 import com.example.lifegame.domain.model.ChanceWeights
+import com.example.lifegame.domain.model.AutomaticEvent
+import com.example.lifegame.domain.model.AutomaticEventEffect
+import com.example.lifegame.domain.model.AutomaticEventStage
+import com.example.lifegame.domain.model.AutomaticEventTrigger
+import com.example.lifegame.domain.model.AutomaticEventTriggerRule
+import com.example.lifegame.domain.model.EventConditions
 import com.example.lifegame.domain.model.DecisionEvent
 import com.example.lifegame.domain.model.DecisionKind
 import com.example.lifegame.domain.model.DecisionOption
@@ -26,10 +32,48 @@ data class V4Content(
     val decisions: List<DecisionEvent>,
     val lifeFactRules: List<LifeFactRule> = emptyList(),
     val titles: List<LifeTitle> = emptyList(),
+    val automaticEvents: List<AutomaticEvent> = emptyList(),
 )
 
 /** PR #26의 v4 JSON을 Android Context 없이도 검증할 수 있는 순수 파서다. */
 object V4ContentParser {
+    fun parseAutomaticEvents(json: String): List<AutomaticEvent> {
+        val root = JSONObject(json)
+        val parsed = root.getJSONArray("events").mapObjects { item ->
+            val conditions = item.optJSONObject("conditions")
+            val triggerRule = item.optJSONObject("triggerRule")
+            val effect = AutomaticEventEffect.valueOf(item.optString("statEffect", "RECORD_ONLY").uppercase())
+            AutomaticEvent(
+                eventId = item.getString("eventId"),
+                periods = item.getJSONArray("periods").mapStrings { it.toLifePeriod() }.toSet(),
+                text = item.getString("text"),
+                trigger = AutomaticEventTrigger.valueOf(item.getString("trigger").uppercase()),
+                triggerRule = AutomaticEventTriggerRule(
+                    afterAutoSteps = triggerRule?.optPositiveInt("afterAutoSteps"),
+                    stage = triggerRule?.optNullableString("stage")?.let { AutomaticEventStage.valueOf(it.uppercase()) },
+                    minYearInPeriod = triggerRule?.optPositiveInt("minYearInPeriod"),
+                    afterEventId = triggerRule?.optNullableString("afterEventId"),
+                ),
+                conditions = EventConditions(
+                    stats = statConditions(conditions?.optJSONObject("stats"), null),
+                    requiredFlags = conditions?.optJSONArray("requiredFlags").toStringSet(),
+                    blockedFlags = conditions?.optJSONArray("blockedFlags").toStringSet(),
+                ),
+                lifeFactConditions = conditions?.optJSONObject("lifeFacts").toLifeFactConditions(),
+                effect = effect,
+                statDelta = if (effect == AutomaticEventEffect.STAT) item.optJSONObject("statDelta").toStatDelta() else StatDelta(),
+                addFlags = item.optJSONArray("addFlags").toStringSet(),
+                removeFlags = item.optJSONArray("removeFlags").toStringSet(),
+                momentImageId = item.optNullableString("momentImageId"),
+                repeatable = item.optBoolean("repeatable", false),
+                dedupeKey = item.optJSONObject("dedupe")?.optString("key")?.takeIf { it.isNotBlank() }
+                    ?: item.getString("eventId"),
+            )
+        }
+        require(parsed.map { it.eventId }.distinct().size == parsed.size) { "duplicate automatic eventId" }
+        return parsed
+    }
+
     fun parseTitles(json: String): List<LifeTitle> = JSONArray(json).mapObjects { item ->
         val conditions = item.optJSONObject("conditions")
         LifeTitle(

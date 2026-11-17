@@ -2,6 +2,7 @@ package com.example.lifegame.ui
 
 import com.example.lifegame.domain.model.PeriodDefinition
 import com.example.lifegame.domain.model.RunChoiceRecord
+import com.example.lifegame.domain.engine.RunExtensionApi
 import org.json.JSONArray
 import org.json.JSONObject
 
@@ -151,7 +152,7 @@ private fun ScenarioExtensions.flagsOk(flags: Set<String>, required: Set<String>
     flags.containsAll(required) && blocked.none { it in flags }
 
 private fun RecallSlot.sourceIn(choices: List<RunChoiceRecord>): Boolean =
-    choices.any { it.eventId == sourceEventId && (sourceChoiceIds.isEmpty() || it.choiceId in sourceChoiceIds) }
+    RunExtensionApi.recallEvidence(sourceEventId, sourceChoiceIds, choices) != null
 
 /**
  * 지금 사건에 붙일 회상 한 줄. 근거 선택이 이 인생에 실제로 있고, 같은 회상을 앞선 사건에서 이미 보여 주지 않았을 때만.
@@ -207,9 +208,7 @@ fun ScenarioExtensions.turningPointsFor(
 }
 
 private fun NpcReappearance.originRecord(choices: List<RunChoiceRecord>): RunChoiceRecord? =
-    choices.firstOrNull { record ->
-        record.eventId in originEventIds && (originChoiceIds.isEmpty() || record.choiceId in originChoiceIds)
-    }
+    originEventIds.firstNotNullOfOrNull { RunExtensionApi.recallEvidence(it, originChoiceIds, choices) }
 
 /** 지금 사건에 다시 나오는 사람. 관계 플래그와 처음 만난 실제 기록이 모두 있을 때만. */
 fun ScenarioExtensions.npcForEvent(
@@ -218,7 +217,9 @@ fun ScenarioExtensions.npcForEvent(
     flags: Set<String>,
     periods: List<PeriodDefinition>,
 ): NpcReturnUi? = npcs.firstNotNullOfOrNull { npc ->
-    if (!flags.containsAll(npc.relationFlags)) return@firstNotNullOfOrNull null
+    if (!RunExtensionApi.canNpcReturn(npc.originEventIds, npc.originChoiceIds, npc.relationFlags, priorChoices, flags)) {
+        return@firstNotNullOfOrNull null
+    }
     val appearance = npc.appearances.firstOrNull { it.type == "EVENT" && it.id == eventId } ?: return@firstNotNullOfOrNull null
     if (!flagsOk(flags, appearance.requiredFlags, appearance.blockedFlags)) return@firstNotNullOfOrNull null
     val origin = npc.originRecord(priorChoices) ?: return@firstNotNullOfOrNull null
@@ -236,7 +237,9 @@ fun ScenarioExtensions.npcsMetAgain(
     flags: Set<String>,
     periods: List<PeriodDefinition>,
 ): List<NpcReturnUi> = npcs.mapNotNull { npc ->
-    if (!flags.containsAll(npc.relationFlags)) return@mapNotNull null
+    if (!RunExtensionApi.canNpcReturn(npc.originEventIds, npc.originChoiceIds, npc.relationFlags, choices, flags)) {
+        return@mapNotNull null
+    }
     val origin = npc.originRecord(choices) ?: return@mapNotNull null
     val eventIds = npc.appearances.filter { it.type == "EVENT" }.map { it.id }.toSet()
     val again = choices.filter { it.eventId in eventIds && it.eventId !in npc.originEventIds }

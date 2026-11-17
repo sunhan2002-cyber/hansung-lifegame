@@ -16,6 +16,9 @@ import com.example.lifegame.domain.model.ResultAnimationStatus
 import com.example.lifegame.domain.model.RunChoiceRecord
 import com.example.lifegame.domain.model.RunNarrativeKind
 import com.example.lifegame.domain.model.RunNarrativeRecord
+import com.example.lifegame.domain.model.RunExtensionState
+import com.example.lifegame.domain.model.TitleGoalState
+import com.example.lifegame.domain.model.ChallengeCodeState
 import com.example.lifegame.domain.model.SavedOutcome
 import com.example.lifegame.domain.model.StatKey
 import com.example.lifegame.domain.model.Stats
@@ -40,6 +43,7 @@ internal object Week10ProgressCodec {
         put("presentation", run.presentation.toJson())
         put("narrativeRecords", run.narrativeRecords.toJsonArray { it.toJson() })
         put("startingRollRaw", run.startingRollRaw)
+        put("extensionState", run.extensionState.toJson())
     }.toString()
 
     fun decode(raw: String): V4SavedRun? = runCatching {
@@ -57,6 +61,7 @@ internal object Week10ProgressCodec {
             presentation = root.optJSONObject("presentation")?.toPresentationState() ?: PresentationState(),
             narrativeRecords = root.optJSONArray("narrativeRecords").objects { it.toRunNarrativeRecord() },
             startingRollRaw = root.nullableString("startingRollRaw"),
+            extensionState = root.optJSONObject("extensionState")?.toRunExtensionState() ?: RunExtensionState(),
         )
     }.getOrNull()
 
@@ -179,6 +184,7 @@ internal object Week10ProgressCodec {
         put("eventId", eventId); put("triggerToken", triggerToken); put("period", period.name)
         put("year", yearInPeriod); put("text", text); put("appliedDelta", appliedDelta.toJson())
         put("momentImageId", momentImageId)
+        put("dedupeKey", dedupeKey)
     }
 
     private fun JSONObject.toAutomaticEventRecord() = AutomaticEventRecord(
@@ -187,6 +193,38 @@ internal object Week10ProgressCodec {
         text = getString("text"), appliedDelta = optJSONObject("appliedDelta")?.toStatDelta()
             ?: com.example.lifegame.domain.model.StatDelta(),
         momentImageId = nullableString("momentImageId"),
+        dedupeKey = nullableString("dedupeKey") ?: getString("eventId"),
+    )
+
+    private fun RunExtensionState.toJson() = JSONObject().apply {
+        put("recallSourceEventIds", JSONArray(recallSourceEventIds.toList()))
+        put("catalystEventIds", JSONArray(catalystEventIds))
+        put("relationshipFlags", JSONArray(relationshipFlags.toList()))
+        put("titleGoal", titleGoal?.let { JSONObject().apply {
+            put("titleId", it.titleId); put("goal", it.goal); put("hint", it.hint); put("completed", it.completed)
+        } })
+        put("challengeCode", JSONObject().apply {
+            put("input", challengeCode.input); put("genderFlag", challengeCode.genderFlag)
+            put("startingRollRaw", challengeCode.startingRollRaw); put("seed", challengeCode.seed)
+            put("valid", challengeCode.valid)
+        })
+    }
+
+    private fun JSONObject.toRunExtensionState() = RunExtensionState(
+        recallSourceEventIds = optJSONArray("recallSourceEventIds").strings().toSet(),
+        catalystEventIds = optJSONArray("catalystEventIds").strings(),
+        relationshipFlags = optJSONArray("relationshipFlags").strings().toSet(),
+        titleGoal = optJSONObject("titleGoal")?.let {
+            TitleGoalState(it.getString("titleId"), it.optString("goal"), it.optString("hint"), it.optBoolean("completed"))
+        },
+        challengeCode = optJSONObject("challengeCode")?.let {
+            ChallengeCodeState(
+                input = it.optString("input"), genderFlag = it.nullableString("genderFlag"),
+                startingRollRaw = it.nullableString("startingRollRaw"),
+                seed = if (it.has("seed") && !it.isNull("seed")) it.getLong("seed") else null,
+                valid = it.optBoolean("valid"),
+            )
+        } ?: ChallengeCodeState(),
     )
 
     private fun RunChoiceRecord.toJson() = JSONObject().apply {
