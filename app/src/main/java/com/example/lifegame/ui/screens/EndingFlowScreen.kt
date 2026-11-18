@@ -532,6 +532,23 @@ private fun LifeExtensionSections(record: LifeRecordUi) {
             }
         }
     }
+    if (record.automaticEvents.isNotEmpty()) {
+        // 자동 사건은 선택 기록(내 인생의 계기 · 그때 그 선택)과 섞지 않고 따로, "자동" 표시와 함께 남긴다.
+        Column(Modifier.fillMaxWidth().testTag("certificate_auto_events"), verticalArrangement = Arrangement.spacedBy(6.dp)) {
+            CertificateSectionTitle("저절로 지나간 일")
+            record.automaticEvents.forEach { line ->
+                val changes = line.changes.joinToString(" ") { "${it.name} ${if (it.delta > 0) "+" else ""}${it.delta}" }
+                Text(
+                    text = "[자동] ${line.label}${if (line.topic.isBlank()) "" else " · ${line.topic}"}: ${line.text}" +
+                        if (changes.isBlank()) " (기록만)" else " ($changes)",
+                    color = LifeGameInkSecondary,
+                    fontSize = 14.sp,
+                    lineHeight = 20.sp,
+                    modifier = Modifier.testTag("certificate_auto_${line.key.substringAfter(":auto:")}"),
+                )
+            }
+        }
+    }
 }
 
 @Composable

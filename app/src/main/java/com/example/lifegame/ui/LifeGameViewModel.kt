@@ -252,6 +252,7 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
                 .filter { it.fileName.isNotBlank() }
                 .associate { it.imageId to it.fileName },
             extensions = scenarioExtensions,
+            automaticEvents = automaticEventRules.associateBy { it.event.eventId },
         )
     }
 
@@ -292,6 +293,7 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
         lookup = FlagLookup.from(decisions, factCatalog),
         yearlyStories = yearlyStories,
         extensions = scenarioExtensions,
+        automaticEvents = automaticEventRules.associateBy { it.event.eventId },
     )
 
     /** 회상 · 계기 카드 · 칭호 목표 · NPC 재등장(신기훈 #76). 없거나 깨지면 확장 표시만 빠진다. */
@@ -369,6 +371,7 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
                 skipInfantFocus = true,
                 guaranteeYearlyIncident = true,
             ),
+            automaticEventPicker = automaticEventPickerFor(content.periods),
         )
         val starter = starters.firstOrNull { it.starterId == profile.starterId }
         val step = runCatching {
@@ -482,6 +485,7 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
                 skipInfantFocus = true,
                 guaranteeYearlyIncident = true,
             ),
+            automaticEventPicker = automaticEventPickerFor(content.periods),
         )
         playerNameForPlay = name
         characterImageIdForPlay = saved.state.flags.firstNotNullOfOrNull { flag ->
@@ -523,8 +527,31 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
         decisionYear = saved.pendingOutcome?.yearInPeriod
             ?: saved.choices.lastOrNull()?.yearInPeriod.takeIf { outcome != null }
         died = saved.state.isDead; playError = null
-        applyStep(playSession!!.restoreSaved(saved.state))
+        applyStep(withRestoredAutomaticEvent(playSession!!.restoreSaved(saved.state)))
     }
+
+    /**
+     * 자동 사건 카드를 보던 중 앱이 꺼졌다면 같은 카드를 다시 보여 준다. 엔진은 다시 적용하지 않는다
+     * (같은 진행 단계 키가 이미 저장돼 있어 [com.example.lifegame.domain.engine.AutomaticEventPicker]가 다시 고르지 않는다).
+     */
+    private fun withRestoredAutomaticEvent(step: TurnStep): TurnStep {
+        if (step.phase != TurnPhase.AUTO_PROGRESS || step.automaticEvent != null || outcome != null) return step
+        val last = step.state.automaticEventRecords.lastOrNull() ?: return step
+        val shownLast = last.triggerToken == com.example.lifegame.domain.engine.AutomaticEventPicker.stageToken(step.state) &&
+            step.state.moments.lastOrNull()?.text == last.text
+        return if (shownLast) step.copy(automaticEvent = last, recordText = last.text) else step
+    }
+
+    /** 콘텐츠 자동 사건 규칙(신기훈 auto_events.sample.json). 없거나 깨지면 자동 사건 없이 진행한다. */
+    private val automaticEventRules: List<com.example.lifegame.domain.engine.AutomaticEventRule> by lazy {
+        runCatching {
+            getApplication<Application>().assets.open(AUTO_EVENTS_FILE).bufferedReader().use { it.readText() }
+        }.map(com.example.lifegame.data.AutomaticEventParser::parse).getOrElse { emptyList() }
+    }
+
+    private fun automaticEventPickerFor(periods: List<com.example.lifegame.domain.model.PeriodDefinition>) =
+        automaticEventRules.takeIf { it.isNotEmpty() }
+            ?.let { com.example.lifegame.domain.engine.AutomaticEventPicker(it, periods) }
 
     fun selectFocus(focusId: String) {
         val current = playSession ?: return
@@ -926,7 +953,8 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
         playStep = step
         died = died || step.state.isDead
         decisionYear = if (step.phase == TurnPhase.DECISION) step.state.yearInPeriod else null
-        if (step.phase == TurnPhase.AUTO_PROGRESS && !step.recordText.isNullOrBlank()) {
+        // 자동 사건은 엔진의 automaticEventRecords에 따로 저장된다. 연도 이야기로 한 번 더 남기지 않는다(선택 · 이야기와 섞지 않음).
+        if (step.phase == TurnPhase.AUTO_PROGRESS && step.automaticEvent == null && !step.recordText.isNullOrBlank()) {
             val recordId = "${step.state.runId}:year:${step.state.period}:${step.state.yearInPeriod}:${step.state.moments.size}"
             narrativeRecords = narrativeRecords.appendOnce(
                 RunNarrativeRecord(
@@ -1102,6 +1130,7 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
         const val CHARACTERS_FILE = "characters.sample.json"
         const val LIFE_FACTS_FILE = "life_facts.sample.json"
         const val SCENARIO_EXTENSIONS_FILE = "scenario_extensions.sample.json"
+        const val AUTO_EVENTS_FILE = "auto_events.sample.json"
         const val UI_PREFS_NAME = "lifegame_ui_prefs"
         const val TITLE_TARGET_KEY = "title_target"
         const val YEARLY_STORIES_FILE = "yearly_stories.sample.json"

@@ -61,7 +61,33 @@ data class LifeRecordUi(
     val turningPoints: List<TurningPointUi> = emptyList(),
     /** 이번 인생에서 다시 만난, 관계가 이어진 사람 */
     val npcsMetAgain: List<NpcReturnUi> = emptyList(),
+    /** 저절로 지나간 일(자동 사건). 선택 기록과 섞지 않고 따로 "자동"으로 보여 준다. */
+    val automaticEvents: List<AutoRecordLineUi> = emptyList(),
 )
+
+/** 기록 화면의 자동 사건 한 줄. 능력치가 바뀌지 않은 사건은 [changes]가 비어 있다(기록만). */
+data class AutoRecordLineUi(
+    val key: String,
+    val label: String,
+    val topic: String,
+    val text: String,
+    val changes: List<StatChangeUi>,
+)
+
+/** 엔진 자동 사건 기록 → 기록 화면 줄(일어난 순서 그대로). */
+fun autoRecordLines(
+    records: List<com.example.lifegame.domain.model.AutomaticEventRecord>,
+    periods: List<PeriodDefinition>,
+    rules: Map<String, com.example.lifegame.domain.engine.AutomaticEventRule>,
+): List<AutoRecordLineUi> = records.map { record ->
+    AutoRecordLineUi(
+        key = record.triggerToken,
+        label = "${periods.firstOrNull { it.period == record.period }?.displayName ?: record.period.name} · ${record.yearInPeriod}번째 해",
+        topic = rules[record.eventId]?.topic.orEmpty(),
+        text = record.text,
+        changes = record.appliedDelta.toChanges(),
+    )
+}
 
 /** 기록 화면을 만들 때 필요한 콘텐츠 묶음 */
 data class RecordContent(
@@ -73,6 +99,8 @@ data class RecordContent(
     val decisions: Map<String, DecisionEvent> = emptyMap(),
     /** 결말 회상 · 계기 카드 · 다시 만난 사람 (scenario_extensions.sample.json) */
     val extensions: ScenarioExtensions = ScenarioExtensions.EMPTY,
+    /** 자동 사건 규칙(auto_events.sample.json). 자동 사건 주제와 재등장 판정에 쓴다. */
+    val automaticEvents: Map<String, com.example.lifegame.domain.engine.AutomaticEventRule> = emptyMap(),
 )
 
 private val PATH_STAT_KEYS = mapOf(
@@ -192,7 +220,13 @@ fun buildLifeRecordUi(record: CompletedLifeRecord, content: RecordContent): Life
         usesPhotoFace = record.avatar.photoConsent && !record.avatar.faceSheetRef.isNullOrBlank(),
         recalls = content.extensions.recallsForEnding(record.choices, state.flags),
         turningPoints = content.extensions.turningPointsFor(record.choices, state.flags, periods),
-        npcsMetAgain = content.extensions.npcsMetAgain(record.choices, state.flags, periods),
+        npcsMetAgain = content.extensions.npcsMetAgain(
+            record.choices,
+            state.flags,
+            periods,
+            autoAppearances = state.automaticEventRecords.map { it.toAppearance(content.automaticEvents) },
+        ),
+        automaticEvents = autoRecordLines(state.automaticEventRecords, periods, content.automaticEvents),
     )
 }
 

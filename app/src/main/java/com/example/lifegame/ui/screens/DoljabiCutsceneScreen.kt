@@ -67,6 +67,10 @@ private val DoljabiImage = ImageCandidate(
     usage = "scene",
 )
 
+/** 컷신 그림 낭독 문구. 그림에 보이는 그대로(정원률 manifest의 accessibilityDescription)다. */
+const val DOLJABI_IMAGE_DESCRIPTION =
+    "첫 생일 돌상에 피아노 장난감과 지폐 한 장이 놓여 있고, 아기의 손이 판사봉을 잡는다. 뒤에서 가족들이 지켜본다."
+
 /** 기다리는 결정이 돌잡이이고 컷신이 아직 끝나지 않았으면(재생 중 앱 종료 포함) 컷신을 보여 준다. */
 fun shouldPlayDoljabiCutscene(eventId: String?, hasOutcome: Boolean, status: CutsceneStatus): Boolean =
     eventId == DOLJABI_EVENT_ID && !hasOutcome &&
@@ -149,8 +153,9 @@ fun DoljabiCutsceneScreen(
                     .fillMaxWidth()
                     .aspectRatio(4f / 3f)
                     .semantics {
-                        contentDescription = "돌상 앞에 피아노 장난감, 판사봉, 5만 원권이 놓여 있고 아기 손이 그중 하나로 뻗는다. " +
-                            "가족들이 숨죽여 지켜본다."
+                        // 그림과 같은 정보를 읽는다(정원률 manifest accessibilityDescription). 예전 문구("그중 하나로 뻗는다")는
+                        // 승인 전 그림(intro) 기준이라, 판사봉을 잡은 지금 그림과 달라 화면 낭독 사용자만 다른 장면을 들었다.
+                        contentDescription = DOLJABI_IMAGE_DESCRIPTION
                     }
                     .testTag("doljabi_cutscene_image"),
                 fitWholeImage = true,
