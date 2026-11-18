@@ -483,14 +483,35 @@ class GameEngine(
         events: List<AutomaticEvent>,
         triggerToken: String,
         lifeFactRules: List<LifeFactRule> = emptyList(),
+        progressStep: Int = state.moments.count { it.period == state.period },
+        stage: com.example.lifegame.domain.model.AutomaticEventStage? = null,
+        afterEventId: String? = state.recentChoiceIds.lastOrNull()?.substringBefore(':'),
     ): TurnStep? {
         if (state.isEnding || state.pendingDecisionId != null) return null
+        val periodLimit = if (state.period == LifePeriod.INFANT || state.period == LifePeriod.OLD_AGE) 3 else 2
+        if (state.automaticEventRecords.count { it.period == state.period } >= periodLimit) return null
         val candidates = events.filter { event ->
             state.period in event.periods &&
                 "${event.eventId}:$triggerToken" !in state.handledAutomaticEventKeys &&
-                (event.repeatable || state.automaticEventRecords.none { it.eventId == event.eventId })
-        }
-        val event = candidates.minByOrNull { it.eventId } ?: return null
+                (event.repeatable || state.automaticEventRecords.none { it.eventId == event.eventId }) &&
+                state.automaticEventRecords.none { it.dedupeKey == event.dedupeKey } &&
+                event.conditions.stats.matches(state.stats) &&
+                state.flags.containsAll(event.conditions.requiredFlags) &&
+                state.flags.none(event.conditions.blockedFlags::contains) &&
+                event.lifeFactConditions.matches(state.lifeFacts) &&
+                when (event.trigger) {
+                    com.example.lifegame.domain.model.AutomaticEventTrigger.ELAPSED_TIME ->
+                        progressStep >= (event.triggerRule.afterAutoSteps ?: 1)
+                    com.example.lifegame.domain.model.AutomaticEventTrigger.PROGRESS_STAGE ->
+                        event.triggerRule.stage == stage &&
+                            state.yearInPeriod >= (event.triggerRule.minYearInPeriod ?: 1) &&
+                            (event.triggerRule.afterEventId == null || event.triggerRule.afterEventId == afterEventId)
+                }
+        }.sortedBy { it.eventId }
+        if (candidates.isEmpty()) return null
+        val event = candidates.getOrNull(
+            deterministicIndex("${state.runSeed}:${state.period}:$triggerToken:$progressStep:auto-event", candidates.size),
+        ) ?: return null
         val key = "${event.eventId}:$triggerToken"
         val afterStats = state.stats.apply(event.statDelta)
         val employmentFlags = lifeFactRules.filter { it.fact == "employmentStatus" }.map { it.flag }.toSet()
@@ -509,6 +530,7 @@ class GameEngine(
             text = event.text,
             appliedDelta = event.statDelta,
             momentImageId = event.momentImageId,
+            dedupeKey = event.dedupeKey,
         )
         val updated = state.copy(
             stats = afterStats,

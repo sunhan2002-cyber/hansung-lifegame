@@ -3,6 +3,7 @@ package com.example.lifegame.domain.engine
 import com.example.lifegame.domain.model.Choice
 import com.example.lifegame.domain.model.ChoiceResult
 import com.example.lifegame.domain.model.AutomaticEvent
+import com.example.lifegame.domain.model.AutomaticEventStage
 import com.example.lifegame.domain.model.Ending
 import com.example.lifegame.domain.model.DecisionEvent
 import com.example.lifegame.domain.model.Focus
@@ -261,16 +262,41 @@ class PeriodGameSession(
         if (primary.phase != TurnPhase.AUTO_PROGRESS || primary.state.isEnding || automaticEvents.isEmpty()) {
             return primary
         }
+        val currentPeriod = periods.firstOrNull { it.period == primary.state.period }
+        val progressStep = primary.state.moments.count { it.period == primary.state.period } -
+            primary.state.automaticEventRecords.count { it.period == primary.state.period }
+        val afterEventId = primary.state.recentChoiceIds.lastOrNull()?.substringBefore(':')
+        val hasAfterEventCandidate = automaticEvents.any {
+            it.periods.contains(primary.state.period) &&
+                it.triggerRule.stage == AutomaticEventStage.AFTER_EVENT &&
+                it.triggerRule.afterEventId == afterEventId
+        }
+        val stage = when {
+            hasAfterEventCandidate -> AutomaticEventStage.AFTER_EVENT
+            current.period != primary.state.period || current.yearInPeriod == 1 -> AutomaticEventStage.PERIOD_START
+            currentPeriod != null && current.yearInPeriod >= currentPeriod.years -> AutomaticEventStage.PERIOD_END
+            currentPeriod != null && primary.state.yearInPeriod >= (currentPeriod.years + 1) / 2 -> AutomaticEventStage.PERIOD_MID
+            else -> null
+        }
         val triggerToken = buildString {
             append(primary.state.runId)
             append(":progress:")
-            append(primary.state.moments.size)
+            append(progressStep)
             append(':')
             append(primary.state.period.name)
             append(':')
-            append(primary.state.yearInPeriod)
+            append(stage?.name ?: "STEP")
+            afterEventId?.let { append(':').append(it) }
         }
-        return engine.applyAutomaticEvent(primary.state, automaticEvents, triggerToken, lifeFactRules) ?: primary
+        return engine.applyAutomaticEvent(
+            primary.state,
+            automaticEvents,
+            triggerToken,
+            lifeFactRules,
+            progressStep,
+            stage,
+            afterEventId,
+        ) ?: primary
     }
 
     private fun record(step: TurnStep): TurnStep {

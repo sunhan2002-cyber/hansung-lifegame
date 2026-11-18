@@ -224,4 +224,25 @@ class Week10ProgressCodecTest {
         assertTrue(old.state.automaticEventRecords.isEmpty())
         assertNull(old.pendingOutcome?.period)
     }
+
+    @Test fun approvedExtensionEvidenceSurvivesSaveAndV1ToV4DefaultSafely() {
+        val extension = RunExtensionState(
+            recallSourceEventIds = setOf("school"),
+            catalystEventIds = listOf("school", "career"),
+            titleGoal = TitleGoalState("title_next", "다음 목표", "작은 힌트"),
+            challengeCode = ChallengeCodeState("LG1-code", "gender_female", "1,2,3,4,5,6,1,2,3,4,5,6", 77L, true),
+            relationshipFlags = setOf("lifelong_friend"),
+        )
+        val run = V4SavedRun("우영", state, extensionState = extension)
+        assertEquals(extension, Week10ProgressCodec.decode(Week10ProgressCodec.encode(run))?.extensionState)
+
+        for (version in 1..4) {
+            val old = org.json.JSONObject(Week10ProgressCodec.encode(run))
+            old.put("saveFormatVersion", version)
+            old.remove("extensionState")
+            val restored = requireNotNull(Week10ProgressCodec.decode(old.toString()))
+            assertEquals(RunExtensionState(), restored.extensionState)
+            assertEquals(state.flags, restored.state.flags)
+        }
+    }
 }
