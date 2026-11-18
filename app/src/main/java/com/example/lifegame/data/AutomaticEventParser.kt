@@ -60,7 +60,9 @@ object AutomaticEventParser {
             blockedFlags = conditions.optJSONArray("blockedFlags").strings().toSet(),
             statConditions = stats.toStatConditions(),
             lifeFactConditions = conditions.optJSONObject("lifeFacts").toLifeFactConditions(),
-            dedupeKey = optJSONObject("dedupe")?.optString("key")?.takeIf { it.isNotBlank() } ?: eventId,
+            dedupeKey = optString("dedupeKey").takeIf { it.isNotBlank() }
+                ?: optJSONObject("dedupe")?.optString("key")?.takeIf { it.isNotBlank() }
+                ?: eventId,
             recordOnly = recordOnly,
         ).also {
             if (stage == AutomaticEventStage.AFTER_EVENT) require(it.afterEventId != null) { "AFTER_EVENT needs afterEventId" }

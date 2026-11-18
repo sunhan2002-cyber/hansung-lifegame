@@ -2,6 +2,7 @@ package com.example.lifegame.domain.engine
 
 import com.example.lifegame.data.V4ContentParser
 import com.example.lifegame.domain.model.*
+import com.example.lifegame.domain.model.AutomaticEventStage as ModelAutomaticEventStage
 import java.io.File
 import org.junit.Assert.*
 import org.junit.Test
@@ -15,7 +16,7 @@ class Week13WooyoungCompletionTest {
         val events = autoEvents()
         assertEquals(49, events.size)
         assertTrue(events.any { it.trigger == AutomaticEventTrigger.ELAPSED_TIME })
-        assertTrue(events.any { it.triggerRule.stage == AutomaticEventStage.AFTER_EVENT })
+        assertTrue(events.any { it.triggerRule.stage == ModelAutomaticEventStage.AFTER_EVENT })
         val recordOnly = events.first { it.effect == AutomaticEventEffect.RECORD_ONLY }
         assertEquals(StatDelta(), recordOnly.statDelta)
         assertTrue(recordOnly.dedupeKey.isNotBlank())
@@ -27,7 +28,7 @@ class Week13WooyoungCompletionTest {
         val event = AutomaticEvent(
             "auto_start", setOf(LifePeriod.CHILD), "시기가 시작됐다.",
             trigger = AutomaticEventTrigger.PROGRESS_STAGE,
-            triggerRule = AutomaticEventTriggerRule(stage = AutomaticEventStage.PERIOD_START),
+            triggerRule = AutomaticEventTriggerRule(stage = ModelAutomaticEventStage.PERIOD_START),
             effect = AutomaticEventEffect.RECORD_ONLY,
         )
         val session = PeriodGameSession(
@@ -54,7 +55,7 @@ class Week13WooyoungCompletionTest {
         val automatic = AutomaticEvent(
             "auto_start", setOf(LifePeriod.CHILD), "자동",
             trigger = AutomaticEventTrigger.PROGRESS_STAGE,
-            triggerRule = AutomaticEventTriggerRule(stage = AutomaticEventStage.PERIOD_START),
+            triggerRule = AutomaticEventTriggerRule(stage = ModelAutomaticEventStage.PERIOD_START),
         )
         val session = PeriodGameSession(
             listOf(period), listOf(focus), listOf(decision), automaticEvents = listOf(automatic),
@@ -67,8 +68,8 @@ class Week13WooyoungCompletionTest {
 
         val engine = GameEngine()
         val base = PeriodRunState("dedupe", 9L, LifePeriod.CHILD)
-        val first = requireNotNull(engine.applyAutomaticEvent(base, listOf(automatic), "same", stage = AutomaticEventStage.PERIOD_START))
-        assertNull(engine.applyAutomaticEvent(first.state, listOf(automatic), "same", stage = AutomaticEventStage.PERIOD_START))
+        val first = requireNotNull(engine.applyAutomaticEvent(base, listOf(automatic), "same", stage = ModelAutomaticEventStage.PERIOD_START))
+        assertNull(engine.applyAutomaticEvent(first.state, listOf(automatic), "same", stage = ModelAutomaticEventStage.PERIOD_START))
     }
 
     @Test fun recallAndNpcRequireActualChoiceAndRelationshipFlag() {

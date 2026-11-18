@@ -255,11 +255,8 @@ fun ScenarioExtensions.npcForEvent(
     /** 이미 지나간 자동 사건. 자동 사건에서 시작한 관계의 처음 만난 기록으로 쓴다. */
     priorAutoAppearances: List<AutoAppearance> = emptyList(),
 ): NpcReturnUi? = npcs.firstNotNullOfOrNull { npc ->
-    if (!RunExtensionApi.canNpcReturn(npc.originEventIds, npc.originChoiceIds, npc.relationFlags, priorChoices, flags)) {
-        return@firstNotNullOfOrNull null
-    }
-    val appearance = npc.appearances.firstOrNull { it.type == "EVENT" && it.id == eventId } ?: return@firstNotNullOfOrNull null
-    if (appearance.type != appearanceType) return@firstNotNullOfOrNull null
+    if (!npc.related(flags)) return@firstNotNullOfOrNull null
+    val appearance = npc.appearances.firstOrNull { it.type == appearanceType && it.id == eventId } ?: return@firstNotNullOfOrNull null
     if (!flagsOk(flags, appearance.requiredFlags, appearance.blockedFlags)) return@firstNotNullOfOrNull null
     val origin = npc.origin(priorChoices, priorAutoAppearances) ?: return@firstNotNullOfOrNull null
     NpcReturnUi(
@@ -280,9 +277,7 @@ fun ScenarioExtensions.npcsMetAgain(
     periods: List<PeriodDefinition>,
     autoAppearances: List<AutoAppearance> = emptyList(),
 ): List<NpcReturnUi> = npcs.mapNotNull { npc ->
-    if (!RunExtensionApi.canNpcReturn(npc.originEventIds, npc.originChoiceIds, npc.relationFlags, choices, flags)) {
-        return@mapNotNull null
-    }
+    if (!npc.related(flags)) return@mapNotNull null
     val origin = npc.origin(choices, autoAppearances) ?: return@mapNotNull null
     val eventIds = npc.appearances.filter { it.type == ScenarioExtensions.APPEARANCE_EVENT }.map { it.id }.toSet()
     val autoIds = npc.appearances.filter { it.type == ScenarioExtensions.APPEARANCE_AUTO }.map { it.id }.toSet()
