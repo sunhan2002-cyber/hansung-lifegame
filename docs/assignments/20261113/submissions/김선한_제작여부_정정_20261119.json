@@ -1,0 +1,33 @@
+{
+  "events": 372,
+  "pngPresent": 352,
+  "pngMissing": 20,
+  "reviewCounts": {
+    "PASS": 221,
+    "REVISION_REQUIRED": 131,
+    "MISSING_PNG": 20
+  },
+  "correction": "이전 delivered 메타데이터의 부재를 미제작으로 해석한 290개 보고는 철회. 현재 파일 352건 존재, 20건 미존재. 검수 미통과와 미제작은 별개.",
+  "missing": [
+    "love_date_01",
+    "love_date_02",
+    "love_conflict_01",
+    "love_conflict_first_love",
+    "love_conflict_ideal",
+    "love_conflict_music",
+    "love_conflict_book",
+    "love_reunion_01",
+    "love_reunion_first_love",
+    "love_reunion_ideal",
+    "love_reunion_music",
+    "love_reunion_book",
+    "love_letter_01",
+    "love_marriage_talk_01",
+    "love_family_meet_01",
+    "love_wedding_01",
+    "love_wedding_music",
+    "love_holiday_01",
+    "love_child_plan_01",
+    "love_first_child_01"
+  ]
+}
