@@ -27,7 +27,6 @@
       "showIn": [
         "path_hap_11",
         "path_hap_06",
-        "auto_infant_dol_photo_music",
         "ENDING"
       ],
       "note": "돌잡이 회상"
@@ -1390,29 +1389,6 @@
         }
       ],
       "neverShowIf": "하객 세 번째 해에 연애가 시작되지 않은 인생"
-    },
-    {
-      "npcId": "npc_partner_other",
-      "label": "다시 연락 온 사람",
-      "origin": {
-        "eventId": "auto_ya_love_start",
-        "choiceIds": [],
-        "relationFlags": [
-          "partner_second_chance"
-        ]
-      },
-      "appearances": [
-        {
-          "type": "EVENT",
-          "id": "love_conflict_01",
-          "requiredFlags": [
-            "partner_second_chance",
-            "rel_conflict"
-          ],
-          "blockedFlags": []
-        }
-      ],
-      "neverShowIf": "자동 사건에서 다시 연락 온 사람과 관계가 시작되지 않은 인생"
     }
   ]
 }
