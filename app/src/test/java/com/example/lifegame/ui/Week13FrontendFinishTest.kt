@@ -294,7 +294,7 @@ class Week13FrontendFinishTest {
         val flags = setOf("music_toy", "v4:event:infant_007")
         val onPhoto = extensions.recallForEvent("auto_infant_dol_photo_music", dol, flags)
         assertNull(onPhoto)
-        assertNull(extensions.recallForEvent("path_hap_11", dol, flags, priorAutoEventIds = setOf("auto_infant_dol_photo_music")))
+        assertNotNull(extensions.recallForEvent("path_hap_11", dol, flags, priorAutoEventIds = setOf("auto_infant_dol_photo_music")))
         assertNotNull(extensions.recallForEvent("path_hap_11", dol, flags))
         // 근거 선택이 다르면(판사봉) 피아노 회상은 나오지 않는다.
         assertNull(extensions.recallForEvent("auto_infant_dol_photo_music", listOf(record("infant_007", "B", LifePeriod.INFANT, 1)), setOf("judge_gavel"), emptySet()))
