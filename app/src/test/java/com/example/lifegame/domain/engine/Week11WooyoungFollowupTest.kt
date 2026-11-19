@@ -76,6 +76,27 @@ class Week11WooyoungFollowupTest {
         assertEquals("RETIRED", after.lifeFacts.employmentStatus)
     }
 
+    @Test fun unrelatedDecisionKeepsExistingEmployment() {
+        val rules = listOf(LifeFactRule("employed", "employmentStatus", "EMPLOYED"))
+        val event = decision("walk", LifePeriod.YOUNG_ADULT)
+        val state = PeriodRunState("run", 7L, LifePeriod.YOUNG_ADULT,
+            flags = setOf("employed"), lifeFacts = LifeFacts(employmentStatus = "EMPLOYED"), pendingDecisionId = event.eventId)
+        val after = engine.resolvePeriodDecision(state, event, "A",
+            listOf(PeriodDefinition(LifePeriod.YOUNG_ADULT, 0, 3)), rules).step.state
+        assertTrue("employed" in after.flags)
+        assertEquals("EMPLOYED", after.lifeFacts.employmentStatus)
+    }
+
+    @Test fun unrelatedAutomaticEventKeepsExistingEmployment() {
+        val rules = listOf(LifeFactRule("employed", "employmentStatus", "EMPLOYED"))
+        val state = PeriodRunState("run", 8L, LifePeriod.YOUNG_ADULT,
+            flags = setOf("employed"), lifeFacts = LifeFacts(employmentStatus = "EMPLOYED"))
+        val event = AutomaticEvent("walk", setOf(LifePeriod.YOUNG_ADULT), "산책했다", statDelta = StatDelta(happiness = 1))
+        val after = requireNotNull(engine.applyAutomaticEvent(state, listOf(event), "walk-once", rules)).state
+        assertTrue("employed" in after.flags)
+        assertEquals("EMPLOYED", after.lifeFacts.employmentStatus)
+    }
+
     private fun decision(id: String, period: LifePeriod, addFlags: Set<String> = emptySet()) = DecisionEvent(
         eventId = id,
         periods = setOf(period),

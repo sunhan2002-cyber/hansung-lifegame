@@ -271,7 +271,7 @@ class Week13FrontendFinishFlowTest {
             vm = LifeGameViewModel(app)
             vm.startNewLife(NewLifeProfile("재겸", Gender.FEMALE, null, runSeed = 20261116L))
         }
-        // 돌잡이에서 피아노(A)를 고른다 → 결과 → 다음 단계가 돌잡이 사진 자동 사건(기록만, 회상 한 줄).
+        // 피아노 선택 → 결과 → 기록 전용 돌잡이 사진. 확장 회상은 콘텐츠 showIn에 등록된 후속 선택 사건에서만 나온다.
         compose.runOnUiThread { vm.chooseDecision("A") }
         assertNotNull(vm.play?.outcome)
         assertNull("결과를 보는 동안 자동 사건은 없다", vm.play?.automaticEvent)
@@ -282,7 +282,7 @@ class Week13FrontendFinishFlowTest {
         val event = requireNotNull(play.automaticEvent)
         assertEquals("auto_infant_dol_photo_music", event.eventId)
         assertTrue(event.recordOnly)
-        assertEquals("recall_dol_music", event.recall?.slotId)
+        assertNull("자동 사진은 확장 회상 showIn 대상이 아니다", event.recall)
         assertEquals(PlayPhase.AUTO, play.phase)
 
         compose.mainClock.autoAdvance = false
@@ -294,7 +294,7 @@ class Week13FrontendFinishFlowTest {
             .assertInsideWidth("자동 사건 문장").assertStartsOnScreen("자동 사건 문장")
         compose.onNodeWithTag("auto_event_record_only", useUnmergedTree = true).assertExists()
         compose.onAllNodesWithTag("auto_event_changes", useUnmergedTree = true).assertCountEquals(0)
-        compose.onNodeWithTag("auto_event_recall", useUnmergedTree = true).assertTextContains("피아노", substring = true)
+        compose.onAllNodesWithTag("auto_event_recall", useUnmergedTree = true).assertCountEquals(0)
         save("finish_auto_record_only_360x640_200.png")
 
         // 자동 사건 카드는 한 해(3초)보다 길게, 읽을 시간만큼 머문다. 그 뒤 그해 결정(돌발)이 그대로 나온다.

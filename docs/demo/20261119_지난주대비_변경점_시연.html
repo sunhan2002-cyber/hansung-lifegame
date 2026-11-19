@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>인생게임 · 11월 19일 변경점과 시연</title>
+<style>
+body{word-break:keep-all;overflow-wrap:anywhere}
+:root{--ink:#172333;--muted:#56667a;--line:#dae2ec;--blue:#205dcc;--green:#187548;--paper:#f3f6fa}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.7 system-ui,-apple-system,"Malgun Gothic",sans-serif}main{max-width:1120px;margin:auto;padding:36px 24px 70px}header,section{background:#fff;border:1px solid var(--line);border-radius:16px;padding:26px;margin-bottom:20px}header{border-top:6px solid var(--blue)}h1{font-size:clamp(26px,4vw,38px);line-height:1.3;margin:10px 0 16px}h2{font-size:23px;margin:0 0 16px}h3{font-size:18px;margin:0 0 6px}p{margin:8px 0}.eyebrow{font-weight:700;color:var(--blue);letter-spacing:.08em;font-size:13px}.muted,small{color:var(--muted)}.chips,.tools{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:16px}.chip{padding:4px 12px;border-radius:20px;background:#edf3ff;color:#214f9f;font-size:14px}.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:22px}.metric{background:#f3f7ff;padding:16px;border-radius:12px}.metric strong{display:block;font-size:30px;line-height:1.4}.metric span{font-size:14px;color:var(--muted)}.tablewrap{overflow:auto}table{border-collapse:collapse;width:100%;font-size:15px}th,td{text-align:left;vertical-align:top;border-bottom:1px solid var(--line);padding:14px 12px}th{background:#f2f5fa}td:first-child{font-weight:700;min-width:140px}code{background:#edf1f7;border-radius:4px;padding:2px 5px;font-size:.87em;overflow-wrap:anywhere}a{color:#205dcc;text-underline-offset:3px}.callout{padding:16px 20px;background:#fff7e8;border-left:4px solid #ba7a17;border-radius:6px;margin:16px 0}.flow{display:flex;gap:8px;align-items:center;flex-wrap:wrap;padding:16px 0}.step{background:#eef4ff;padding:9px 13px;border-radius:8px;font-weight:650}.arrow{color:#6b7c93}.check{display:flex;gap:13px;padding:16px 0;border-bottom:1px solid var(--line)}.check:last-child{border:0}.check input{width:21px;height:21px;margin-top:5px;flex-shrink:0;accent-color:var(--green)}.check label{cursor:pointer;flex:1}.check label strong{display:block}.time{font-size:13px;color:var(--blue);font-weight:700}.tools button{font:inherit;background:#fff;border:1px solid var(--line);border-radius:8px;padding:8px 14px;cursor:pointer}.tools button.primary{background:var(--blue);color:#fff;border-color:var(--blue)}progress{accent-color:var(--green);height:14px;width:180px}.progress-row{display:flex;align-items:center;gap:10px;margin-right:auto}textarea{font:inherit;width:100%;min-height:140px;padding:12px;border:1px solid var(--line);border-radius:8px;resize:vertical}.owners{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.owners article{background:#f5f7fb;padding:16px;border-radius:10px}.ok{color:var(--green);font-weight:700}.warn{color:#925c11;font-weight:700}footer{font-size:13px;color:var(--muted);text-align:center}.sources{font-size:14px}li{margin:8px 0}
+@media(max-width:700px){main{padding:16px 12px 40px}header,section{padding:19px}.grid{grid-template-columns:repeat(2,1fr)}.owners{grid-template-columns:1fr}th,td{padding:12px 8px}table{min-width:650px}.progress-row{width:100%}}
+@media print{body{background:white;font-size:12px}main{padding:0;max-width:none}header,section{border-radius:0;margin-bottom:14px;padding:16px;box-shadow:none}h1{font-size:26px}h2{font-size:20px}.tools button{display:none}.tablewrap{overflow:visible}table{min-width:0;font-size:11px}tr,.check,.owners article{break-inside:avoid}.grid{grid-template-columns:repeat(4,1fr)}textarea{min-height:90px}a{color:inherit}}
+</style>
+</head>
+<body><main>
+<header>
+<div class="eyebrow">HANSUNG LIFE GAME / WEEKLY DEMO</div>
+<h1>지난주와 무엇이 달라졌나</h1>
+<p>2026년 11월 19일 대면회의 · 개발 변경점과 시연 체크리스트</p>
+<p class="muted">비교 기준: 지난주 11월 12일 마지막 원격 main <code>41e0904</code> → 오늘 통합본. 이번 주 월요일 main <code>b025171</code> 이후의 추가 변경도 아래에서 구분합니다.</p>
+<div class="chips"><span class="chip">자동 소사건과 본편 연결</span><span class="chip">선택 기록을 활용한 회상·계기</span><span class="chip">시작·사건 화면 흐름 개선</span></div>
+<div class="grid"><div class="metric"><strong>352 → 372</strong><span>선택 사건 수 · 러브라인 20건 추가</span></div><div class="metric"><strong>49</strong><span>자동 소사건 후보 · 실제 진행 연결</span></div><div class="metric"><strong>221</strong><span>현재 PNG 직접 검수 통과 사건</span></div><div class="metric"><strong>151</strong><span>이미지 수정·제작이 남은 사건</span></div></div>
+<div class="tools"><div class="progress-row"><span id="count" aria-live="polite">0 / 10</span><progress id="progress" value="0" max="10" aria-label="시연 체크 진행률"></progress></div><button class="primary" id="print" type="button">인쇄 / PDF</button><button id="reset" type="button">체크 초기화</button></div>
+</header>
+
+<section><h2>1. 지난주 대비 달라진 플레이</h2><div class="tablewrap"><table>
+<thead><tr><th>항목</th><th>지난주 main · 11월 12일</th><th>오늘 통합본</th><th>시연에서 볼 부분</th></tr></thead><tbody>
+<tr><td>자동 소사건</td><td>현재의 자동 소사건 JSON·화면 연결이 없음</td><td>감기·용돈·다툼 등 시기별 49개 후보를 조건에 따라 선택. 스탯 변화가 있는 사건과 기록만 남는 사건을 구분</td><td>자동 진행 화면 위쪽의 ‘자동’ 카드, 변화 수치 또는 기록 전용 안내</td></tr>
+<tr><td>이야기 연결</td><td>선택 결과와 후속 기억을 연결하는 확장 콘텐츠가 없음</td><td>실제 선택을 근거로 ‘그때 그 선택’ 회상과 인생의 계기 카드를 조회. 기존 기록·관계 조건에 맞는 인물 재등장</td><td>돌잡이 선택 뒤의 자동 이야기, 결말의 계기·회상 영역</td></tr>
+<tr><td>러브라인</td><td>기존 사건 목록 352건</td><td>데이트·갈등·재회·양가 인사·결혼식·아이 계획 등 20건 추가. 선행 관계·결혼·가족 조건을 검증</td><td>조건을 충족한 인생에서 후속 사건이 자연스럽게 이어지는지 확인</td></tr>
+<tr><td>새 인생 시작</td><td>현재 돌잡이 컷신 화면과 연결 흐름이 없음</td><td>프로필 → 시작 → 돌잡이 컷신 → 첫 선택 사건. 완료·건너뛰기 상태를 저장</td><td>컷신 자동 종료, 건너뛰기, 이어하기에서 중복 재생 여부</td></tr>
+<tr><td>주사위·도전 코드</td><td>현재의 출발선 코드와 합계 기반 표시 흐름이 없음</td><td>두 눈·합계·보정·최종 스탯 표시. 성별·시드·주사위를 담은 도전 코드 생성·복사·적용</td><td>코드를 적용한 직후 숫자가 다시 섞이지 않고 바로 일치하는지</td></tr>
+<tr><td>캐릭터 설정</td><td>기존 외형 선택 구성</td><td>머리·의상 색상 및 얼굴/사진 관련 화면·안내 확장. 선택값 저장·복원</td><td>색상 변경 → 미리보기 → 게임 시작 → 이어하기</td></tr>
+<tr><td>사건 화면 순서</td><td>기존 선노출·뒤로가기 오류 수정까지 반영된 상태</td><td>새 사건 화면 흐름 통합. 돌발 안내 → 사건 보기 → 이미지 선노출 → 본문·선택지, 타이핑 중 터치로 전문 표시</td><td>이미지를 넘기는 터치가 아래 선택지까지 누르지 않는지</td></tr>
+<tr><td>건강·사망</td><td>일부 시기의 건강 하한과 노년기 감소 중복 문제가 남음</td><td>건강 0 즉시 사망 규칙 통일. 노년기 감소 중복 제거. 실제 사망 시기 보존</td><td>건강이 0이 된 시점의 결말·사망 시기</td></tr>
+<tr><td>결과·저장</td><td>결과 시점과 복원 상태 불일치 가능성</td><td>선택 당시 시기·진행 위치, 결과의 새 사실·확장 상태를 저장. 자동 사건 보상·기록 중복 차단</td><td>결과 화면에서 앱 재실행 → 이어하기 → 같은 결과·스탯 확인</td></tr>
+<tr><td>직업 상태</td><td>재직·실직·은퇴 상태 정합성 보완 필요</td><td>새 직업 상태가 생기면 이전 상태를 정리. 직업과 무관한 선택·자동 사건은 기존 재직 상태를 유지하도록 추가 수정</td><td>취업 뒤 일상 선택을 해도 직업이 유지되는지</td></tr>
+<tr><td>칭호 목표</td><td>현재의 목표·힌트 확장 없음</td><td>칭호 수집 화면에서 힌트 확인과 ‘다음 판에서 노리기’ 저장</td><td>목표 지정 후 새 인생 화면에서 확인</td></tr>
+</tbody></table></div></section>
+
+<section><h2>2. 이번 주 월요일 이후 추가 통합한 내용</h2><p class="muted">11월 16일 main에는 위 기능 일부가 이미 들어 있었습니다. 오늘 새로 합친 핵심은 아래 내용입니다.</p>
+<div class="tablewrap"><table><thead><tr><th>구분</th><th>오늘 추가 반영</th></tr></thead><tbody>
+<tr><td>자동 사건 실제 동작</td><td>콘텐츠 파서·엔진·저장과 프론트 자동 카드 연결을 통합. 중복 키·진행 조건·기록 전용 효과를 처리</td></tr>
+<tr><td>기록 기반 확장</td><td>실제 기록만 회상·계기·NPC 조회에 사용하도록 두 구현의 계약을 맞춤. NPC 재등장 정의 9 → 16개</td></tr>
+<tr><td>콘텐츠 조건 감사</td><td>전환점 선택 조건의 누락 검토 사유를 보완. 선택 조건 감사에서 미확정·잘못된 조건·모든 대안 잠김 각각 0건</td></tr>
+<tr><td>검수 원본 복원</td><td>재압축으로 검수 해시와 달라진 PNG 67장을 검수 당시 원본으로 복원하고 18개 크기 메타데이터를 갱신</td></tr>
+<tr><td>이미지 직접 전수 검수</td><td>현재 PNG와 본문·중앙 크롭을 대조해 221사건 승인. 수정 필요 131건과 PNG 없는 20건을 사건별 사유로 기록</td></tr>
+<tr><td>재직 상태 보존</td><td>직업과 무관한 사건을 처리할 때 고용 플래그가 지워지는 결함 수정 및 회귀 테스트 추가</td></tr>
+<tr><td>팀원 검토 결과</td><td>정원률의 화면·화풍·결과·도전 코드·NPC 검토 문서까지 통합 후보에 반영</td></tr>
+</tbody></table></div></section>
+
+<section><h2>3. 오늘 시연 순서 · 약 10~15분</h2>
+<div class="flow" aria-label="기본 시연 순서"><span class="step">프로필·주사위</span><span class="arrow">→</span><span class="step">돌잡이 컷신</span><span class="arrow">→</span><span class="step">이미지·선택</span><span class="arrow">→</span><span class="step">자동 소사건</span><span class="arrow">→</span><span class="step">저장·결말</span></div>
+<div class="check"><input id="c1" type="checkbox"><label for="c1"><strong><span class="time">01 · 시작 1분</span> 프로필·외형·주사위</strong>이름과 성별을 설정하고 외형 색상 변경을 확인합니다. 주사위의 두 눈·합계·최종 능력치가 이해되는지 확인합니다.</label></div>
+<div class="check"><input id="c2" type="checkbox"><label for="c2"><strong><span class="time">02 · 1분</span> 도전 코드</strong>현재 출발선 코드를 복사하고 적용합니다. 고정된 주사위가 즉시 보이는지, 잘못된 코드 안내가 나오는지 확인합니다.</label></div>
+<div class="check"><input id="c3" type="checkbox"><label for="c3"><strong><span class="time">03 · 1분</span> 새 인생과 돌잡이 컷신</strong>게임 시작 시 컷신이 나오고 종료·건너뛰기 뒤 첫 사건으로 이어지는지 확인합니다. 컷신 그림이 판사봉 선택을 미리 암시하는지도 피드백받습니다.</label></div>
+<div class="check"><input id="c4" type="checkbox"><label for="c4"><strong><span class="time">04 · 1분</span> 이미지 → 본문 → 선택지</strong>일반 사건과 돌발 사건에서 이미지 선노출을 확인합니다. 타이핑 중 터치해 전문 표시 후 장면 보기·복귀를 확인합니다.</label></div>
+<div class="check"><input id="c5" type="checkbox"><label for="c5"><strong><span class="time">05 · 1분</span> 선택 결과와 애니메이션</strong>선택을 한 번 누르고 스탯 변화·결과·새 사실을 확인합니다. 결과를 다시 열어도 보상이 중복되지 않는지 봅니다.</label></div>
+<div class="check"><input id="c6" type="checkbox"><label for="c6"><strong><span class="time">06 · 2분</span> 자동 소사건</strong>자동 진행을 1배속으로 보며 ‘자동’ 카드를 확인합니다. 기록만 남는 사건과 스탯이 변하는 사건을 비교합니다. 후보 49개가 한 판에 전부 나오지는 않습니다.</label></div>
+<div class="check"><input id="c7" type="checkbox"><label for="c7"><strong><span class="time">07 · 1분</span> 저장 후 이어하기</strong>결과 또는 자동 사건을 보던 중 앱을 재실행합니다. 같은 내용·스탯·외형을 복원하고 이전 기록이 두 번 쌓이지 않는지 확인합니다.</label></div>
+<div class="check"><input id="c8" type="checkbox"><label for="c8"><strong><span class="time">08 · 준비된 인생 2분</span> 관계·직업·가족의 연결</strong>취업·관계가 있는 저장에서 실제 이력을 확인합니다. 재직 상태가 일상 사건 후 유지되는지, 조건을 충족한 연애·결혼 후속 사건이 나오는지 봅니다.</label></div>
+<div class="check"><input id="c9" type="checkbox"><label for="c9"><strong><span class="time">09 · 준비된 결말 2분</span> 사망 시기·인생 요약·계기</strong>결말에서 실제 사망 시기, 교육·직업·가족 사실, 실제 기록이 있는 계기 카드와 회상을 확인합니다. 기록이 없는 인생에서 카드가 지어내져 나오지 않는지 봅니다.</label></div>
+<div class="check"><input id="c10" type="checkbox"><label for="c10"><strong><span class="time">10 · 1분</span> 다음 판 목표</strong>칭호 힌트와 목표 저장을 확인하고 다음 인생 화면으로 돌아옵니다. 아래 메모에 사건 ID·상황·기대 동작을 적습니다.</label></div>
+<p class="muted">후반부는 기존에 확보한 저장·결말이 있을 때 사용합니다. 없으면 새 인생에서 진행한 범위만 시연하고 후반 결과는 확인 대기로 남깁니다.</p></section>
+
+<section><h2>4. 이미지 현황 · 제작과 승인을 구분</h2><div class="tablewrap"><table><thead><tr><th>현재 372개 사건 기준</th><th>수량</th><th>의미</th></tr></thead><tbody>
+<tr><td>지정 PNG 파일 존재</td><td>352건</td><td>실제 파일이 존재하며 현재 로더 경로에 연결됨</td></tr>
+<tr><td>그중 직접 검수 통과</td><td class="ok">221건</td><td>본문·PNG·중앙 크롭을 직접 확인하고 현재 파일/사건 SHA로 승인 반영</td></tr>
+<tr><td>그중 수정 필요</td><td class="warn">131건</td><td>파일은 있지만 장면 불일치·선택 유도·핵심 사물 크롭 등의 사유가 있음</td></tr>
+<tr><td>지정 PNG 미존재</td><td class="warn">20건</td><td>이번에 추가된 러브라인 사건. 일반 대체 이미지로 보일 수 있음</td></tr>
+</tbody></table></div>
+<div class="callout"><strong>회의에서 확인할 미완료 사항</strong><p>모든 사건 이미지가 최종 승인된 상태는 아닙니다. 대표 사례로 어금니 사건의 돌잡이 그림, 돌잡이 선택 사건의 치발기 그림, 수술 상담의 육상 출발선 그림이 확인됐습니다. 돌잡이 컷신은 선택 전에 판사봉을 잡은 모습을 보여 줍니다. 실제 사진 생성은 외부 서비스 설정·네트워크에 영향을 받으므로 오늘 시연 환경의 성공 여부를 따로 확인해야 합니다.</p></div>
+<p>기존의 ‘290개 미제작’ 보고는 잘못된 집계였습니다. 현재 지정 PNG가 없는 사건은 <strong>20건</strong>이며, <strong>131건은 제작된 그림의 수정 과제</strong>입니다.</p>
+</section>
+
+<section><h2>5. 팀원 결과물의 통합 위치</h2><div class="owners">
+<article><h3>김선한 · DB / QA / 통합</h3><p>브랜치 충돌·계약 조정, 파서 연결 보완, 검수 PNG 복원, 직접 이미지 검수·승인·수량 정정, 재직 상태 보존, 시연 검증과 이번 비교 자료</p></article>
+<article><h3>김우영 · 게임 로직</h3><p>자동 사건의 조건·진행·중복 제어·저장, 건강·사망·고용 상태 처리, 기록 기반 회상·계기·관계 조회 API</p></article>
+<article><h3>김재겸 · 프론트엔드</h3><p>자동 카드·결과·기록 화면, 컷신과 사건 선노출, 캐릭터 설정, 도전 코드·칭호 목표·계기·회상 UI, 화면 회귀 테스트</p></article>
+<article><h3>신기훈 · 시나리오</h3><p>자동 소사건 49건, 러브라인 20건, 직업·가족·선택 조건, 회상·계기·인물 재등장 확장 데이터, 개연성 감사</p></article>
+<article><h3>정원률 · UI / 이미지</h3><p>돌잡이 컷신 이미지와 화풍 검토, 캐릭터 색상·사진 안내·결말·도전 코드·NPC·결과 카드의 두 화면 크기 검토 결과</p></article>
+</div></section>
+
+<section><h2>6. 검증 범위와 근거</h2><ul>
+<li>현재 콘텐츠 372사건·1,069개 선택지·1,372개 결과 분기·66결말, 자동 소사건 49건</li>
+<li>통합본 Debug 단위 테스트 256개 + Release 단위 테스트 256개 통과. Debug·Release APK 빌드 성공</li>
+<li>콘텐츠·이미지 구조·선택 조건·개연성 검사 통과. Python 회귀 테스트 42개 통과</li>
+<li>대표 12사건을 일반 화면과 작은 화면에서 실행한 이미지 경로·장면 보기 검사 2개 테스트 통과</li>
+<li>직접 이미지 검수 352장과 에뮬레이터 대표 경로 검증은 범위가 다릅니다. 전체 Android 연결 테스트의 완전 통과는 별도 확인 대상입니다.</li>
+<li>최종 개발 인수 기준에는 이미지 대기 151건 외에도 이전 선택 조건 의미 검수 기록의 변경·미검토 25항목이 남아 있습니다. 오늘은 시연용 통합본입니다.</li>
+<li>Debug APK는 에뮬레이터 설치용입니다. unsigned Release APK는 직접 설치할 수 없으며 별도 서명이 필요합니다.</li>
+</ul><div class="sources"><p><a href="https://github.com/sunhan2002-cyber/hansung-lifegame/compare/41e0904...main">지난주 main → 통합 main 커밋 비교</a> · <a href="https://github.com/sunhan2002-cyber/hansung-lifegame/blob/main/docs/assignments/20261113/submissions/김선한_직접그림검수_20261119.md">사건별 이미지 검수표</a> · <a href="https://github.com/sunhan2002-cyber/hansung-lifegame/blob/main/docs/assignments/20261113/submissions/김선한_직접그림검수_실행검증_20261119.md">이미지 실행 검증</a></p></div></section>
+
+<section><h2>7. 회의 피드백</h2><label for="notes">사건 ID / 재현 순서 / 보인 문제 / 기대 동작</label><textarea id="notes" placeholder="예: infant_007 / 컷신 뒤 피아노 선택 / 앞 그림과 결과 물건이 다름 / 선택 전에는 중립 돌상 표시"></textarea><p class="muted">체크와 메모는 이 브라우저에 저장됩니다.</p></section>
+<footer>인생게임 · 2026.11.19 · 기준 코드와 실제 검수 결과를 바탕으로 작성</footer>
+</main>
+<script>
+(()=>{'use strict';const key='lifegame-demo-20261119';const checks=[...document.querySelectorAll('.check input')];const notes=document.getElementById('notes');const bar=document.getElementById('progress');const count=document.getElementById('count');let saved={};try{saved=JSON.parse(localStorage.getItem(key)||'{}')}catch{}checks.forEach(c=>{c.checked=!!saved[c.id]});notes.value=typeof saved.notes==='string'?saved.notes:'';function update(){const n=checks.filter(c=>c.checked).length;bar.max=checks.length;bar.value=n;count.textContent=n+' / '+checks.length;const state={notes:notes.value};checks.forEach(c=>state[c.id]=c.checked);try{localStorage.setItem(key,JSON.stringify(state))}catch{}}checks.forEach(c=>c.addEventListener('change',update));notes.addEventListener('input',update);document.getElementById('print').addEventListener('click',()=>window.print());document.getElementById('reset').addEventListener('click',()=>{checks.forEach(c=>c.checked=false);update()});update()})();
+</script></body></html>

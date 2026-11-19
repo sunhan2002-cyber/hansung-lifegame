@@ -410,11 +410,12 @@ class GameEngine(
         // Reacquired facts must replay after older facts when restoring a saved run.
         val employmentFlags = lifeFactRules.filter { it.fact == "employmentStatus" }.map { it.flag }.toSet()
         val selectedEmploymentFlag = outcome.addFlags.lastOrNull { it in employmentFlags }
+        val replacedEmploymentFlags = if (selectedEmploymentFlag != null) employmentFlags else emptySet()
         val normalizedAdds = (outcome.addFlags - employmentFlags) + listOfNotNull(selectedEmploymentFlag)
-        val nextFlags = (state.flags - outcome.removeFlags - employmentFlags - normalizedAdds) +
+        val nextFlags = (state.flags - outcome.removeFlags - replacedEmploymentFlags - normalizedAdds) +
             normalizedAdds + completedEventFlag(event.eventId)
         val nextFacts = state.lifeFacts
-            .removeRules(outcome.removeFlags + employmentFlags, lifeFactRules)
+            .removeRules(outcome.removeFlags + replacedEmploymentFlags, lifeFactRules)
             .applyRules(normalizedAdds + completedEventFlag(event.eventId), lifeFactRules)
             .copy(wealthBand = wealthBand(afterStats.wealth))
         val resolved = state.copy(
@@ -516,10 +517,11 @@ class GameEngine(
         val afterStats = state.stats.apply(event.statDelta)
         val employmentFlags = lifeFactRules.filter { it.fact == "employmentStatus" }.map { it.flag }.toSet()
         val selectedEmploymentFlag = event.addFlags.lastOrNull { it in employmentFlags }
+        val replacedEmploymentFlags = if (selectedEmploymentFlag != null) employmentFlags else emptySet()
         val normalizedAdds = (event.addFlags - employmentFlags) + listOfNotNull(selectedEmploymentFlag)
-        val nextFlags = (state.flags - event.removeFlags - employmentFlags - normalizedAdds) + normalizedAdds
+        val nextFlags = (state.flags - event.removeFlags - replacedEmploymentFlags - normalizedAdds) + normalizedAdds
         val nextFacts = state.lifeFacts
-            .removeRules(event.removeFlags + employmentFlags, lifeFactRules)
+            .removeRules(event.removeFlags + replacedEmploymentFlags, lifeFactRules)
             .applyRules(normalizedAdds, lifeFactRules)
             .copy(wealthBand = wealthBand(afterStats.wealth))
         val record = AutomaticEventRecord(
