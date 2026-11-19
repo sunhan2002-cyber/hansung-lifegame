@@ -22,6 +22,19 @@ FACTS = {"educationLevel", "fieldOfStudy", "careerTrack", "careerLevel", "employ
 RULE_FACTS = {"educationLevel", "fieldOfStudy", "careerTrack", "careerLevel", "employmentStatus",
               "maritalStatus", "childrenAtLeast", "housingType", "achievement", "healthStatus", "wealthNote"}
 TOKENS = {"name", "nameCall"}
+SEMANTIC_REVIEW_SCOPES = {
+    1: "CHOICE_AVAILABILITY_V1",
+    2: "CHOICE_AVAILABILITY_AND_OUTCOME_CAUSALITY_V2",
+}
+
+
+def full_semantic_hash(event, choice):
+    """V2 binds the reviewed outcomes and event eligibility, independently of art approval."""
+    context = {key: value for key, value in event.items()
+               if key not in {"choices", "imageId", "povImageId", "momentImageId", "view"}}
+    reviewed = {"reviewVersion": 2, "eventContext": context, "choice": choice}
+    return hashlib.sha256(json.dumps(reviewed, ensure_ascii=False, sort_keys=True,
+                                     separators=(",", ":")).encode("utf-8")).hexdigest()
 
 
 def unique_object(pairs):
@@ -165,6 +178,7 @@ def audit(bundle, parser_source="", source_tree=""):
             choices_review.append({"eventId": eid, "choiceId": choice["choiceId"], "kind": event.get("kind"),
                 "label": choice["label"], "requirements": {k: choice[k] for k in ("requiredStats", "requiredFlags", "blockedFlags") if choice.get(k)},
                 "sourceHash": hashlib.sha256(json.dumps(review_input, ensure_ascii=False, sort_keys=True).encode()).hexdigest(),
+                "fullSourceHash": full_semantic_hash(event, choice),
                 "structurallyOpen": is_open, "hardScope": hard,
                 "authoredBasis": choice.get("conditionBasis") or choice.get("alwaysAvailableReason"),
                 "semanticReview": "EXISTING_AUTHOR_RATIONALE_NOT_NEW_MANUAL_CERTIFICATION" if choice.get("conditionBasis") or choice.get("alwaysAvailableReason") else "REVIEW_REASON_NEEDED"})
@@ -234,22 +248,45 @@ def audit(bundle, parser_source="", source_tree=""):
 def apply_semantic_review(result, document):
     """Never carry an old decision over to an edited choice or an unseen new event."""
     known = {r["id"]: r for r in document.get("entries", [])}
-    counts = Counter()
+    counts, pending_reasons, accepted_scopes = Counter(), Counter(), Counter()
     for row in result["choiceReview"]:
         if not row["hardScope"]:
             continue
         key = row["eventId"] + ":" + row["choiceId"]
         review = known.get(key)
-        if review is None or review.get("sourceHash") != row["sourceHash"]:
+        version = review.get("reviewVersion", 1) if review else None
+        row["semanticReviewScope"] = SEMANTIC_REVIEW_SCOPES.get(version, "UNREVIEWED")
+        if review is None:
             verdict = "UNREVIEWED_OR_CHANGED"
+            row["semanticPendingReason"] = "MISSING_REVIEW"
+        elif type(version) is not int or version not in SEMANTIC_REVIEW_SCOPES:
+            verdict = "UNREVIEWED_OR_CHANGED"
+            row["semanticPendingReason"] = "UNSUPPORTED_REVIEW_VERSION"
+        elif review.get("sourceHash") != row["sourceHash"]:
+            verdict = "UNREVIEWED_OR_CHANGED"
+            row["semanticPendingReason"] = "SOURCE_CHANGED"
+            row["previousSemanticVerdict"] = review.get("verdict")
+            row["previousSourceHash"] = review.get("sourceHash")
+        elif version == 2 and review.get("fullSourceHash") != row["fullSourceHash"]:
+            verdict = "UNREVIEWED_OR_CHANGED"
+            row["semanticPendingReason"] = "SOURCE_CHANGED"
+            row["semanticChangedScope"] = "EVENT_CONDITIONS_OR_CHOICE_OUTCOMES"
+            row["previousSemanticVerdict"] = review.get("verdict")
+            row["previousFullSourceHash"] = review.get("fullSourceHash")
         else:
             verdict = review["verdict"]
             row["semanticReason"] = review["reason"]
         row["semanticReview"] = verdict
         counts[verdict] += 1
+        if verdict in {"KEEP_OPEN", "KEEP_CONDITION"}:
+            accepted_scopes[row["semanticReviewScope"]] += 1
         if verdict not in {"KEEP_OPEN", "KEEP_CONDITION"}:
-            result["acceptanceFailures"].append({"code": "CHOICE_MEANING_REVIEW_OPEN", "location": key, "verdict": verdict, "owner": "신기훈·김우영"})
+            reason = row.setdefault("semanticPendingReason", "REVIEW_ACTION_REQUIRED")
+            pending_reasons[reason] += 1
+            result["acceptanceFailures"].append({"code": "CHOICE_MEANING_REVIEW_OPEN", "location": key, "verdict": verdict, "reason": reason, "owner": "신기훈·김우영"})
     result["semanticReviewCounts"] = dict(counts)
+    result["semanticPendingReasonCounts"] = dict(pending_reasons)
+    result["acceptedSemanticReviewScopeCounts"] = dict(accepted_scopes)
     return result
 
 
@@ -278,15 +315,19 @@ def main():
              "## 수량", "", "```json", json.dumps(result.get("metrics", {}), ensure_ascii=False, indent=2), "```", "",
              "## 돌발·전환점 의미 검토", "", "```json", json.dumps(result.get("semanticReviewCounts", {}), ensure_ascii=False, indent=2), "```", "",
              "KEEP는 현재 설계 유지 의견, CLARIFY/CHANGE는 담당자의 재설계·설명 보완이 필요하다는 의견이다. 임계값의 실제 균형을 보증하지 않는다. 문구/맥락/조건이 바뀌면 sourceHash가 달라져 미검토로 돌아간다.", "",
-             "| 사건:선택 | 행동 | 조건 | 검토 | 근거 |", "| --- | --- | --- | --- | --- |"]
+             "대기 사유: MISSING_REVIEW는 해당 선택의 검토 기록 없음, SOURCE_CHANGED는 기존 검토 이후 입력 변경, REVIEW_ACTION_REQUIRED는 기존 보완 판정 미해결이다. 지문 변경만으로 단순 문장부호 수정이라고 추정하거나 이전 승인을 승계하지 않는다.", "",
+             "```json", json.dumps(result.get("semanticPendingReasonCounts", {}), ensure_ascii=False, indent=2), "```", "",
+             "검토 범위: V1은 기존 선택 개방성 검토다. V2는 사건 발생 조건과 해당 선택의 모든 결과·플래그·보상까지 검토하며 별도 fullSourceHash가 바뀌면 다시 대기한다. V1을 전체 결과 검토 완료로 간주하지 않는다. 그림의 적합성은 별도 이미지 승인으로 판단한다.", "",
+             "```json", json.dumps(result.get("acceptedSemanticReviewScopeCounts", {}), ensure_ascii=False, indent=2), "```", "",
+             "| 사건:선택 | 행동 | 조건 | 검토 | 검토 범위 | 대기 사유 | 근거 |", "| --- | --- | --- | --- | --- | --- | --- |"]
     for row in result.get("choiceReview", []):
         if row["hardScope"]:
-            fields = [row["eventId"] + ":" + row["choiceId"], row["label"], json.dumps(row["requirements"], ensure_ascii=False), row["semanticReview"], row.get("semanticReason", "새 의미 검토 필요")]
+            fields = [row["eventId"] + ":" + row["choiceId"], row["label"], json.dumps(row["requirements"], ensure_ascii=False), row["semanticReview"], row["semanticReviewScope"], row.get("semanticPendingReason", ""), row.get("semanticReason", "새 의미 검토 필요")]
             lines.append("| " + " | ".join(str(v).replace("|", "\\|").replace("\n", " ") for v in fields) + " |")
     lines += ["", "## 실행 연결 누락", "", "```json", json.dumps(result.get("runtimeGaps", []), ensure_ascii=False, indent=2), "```", "",
-              "칭호 실행·선택지 목표·공유 계약 등 전체 미해결 목록과 796개 전수 행은 동명의 JSON 보고서를 참고한다."]
+              "칭호 실행·선택지 목표·공유 계약 등 전체 미해결 목록과 전수 선택 행은 동명의 JSON 보고서를 참고한다."]
     args.report.with_suffix(".md").write_text("\n".join(lines) + "\n", encoding="utf-8")
-    print(json.dumps({k: v for k, v in result.items() if k in {"metrics", "errors", "runtimeGaps", "semanticReviewCounts"}}, ensure_ascii=True, indent=2))
+    print(json.dumps({k: v for k, v in result.items() if k in {"metrics", "errors", "runtimeGaps", "semanticReviewCounts", "semanticPendingReasonCounts", "acceptedSemanticReviewScopeCounts"}}, ensure_ascii=True, indent=2))
     print(f"final_acceptance_open_items={len(result['acceptanceFailures'])}; full details: {args.report}")
     return int(bool(result["errors"] or (args.acceptance and result["acceptanceFailures"])))
 

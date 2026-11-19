@@ -7,7 +7,7 @@ v4 redesign data that will be connected by the frontend/backend PRs:
 - periods.sample.json / focuses.sample.json
 
 The script is dependency-free. If a referenced PNG file exists, it reads the PNG
-header directly and validates positive 4:3 dimensions; missing legacy files are allowed
+header directly and validates legacy 4:3 or explicitly declared portrait event dimensions; missing legacy files are allowed
 while placeholders are in use. Routed images are required; --images-only isolates image checks.
 """
 from __future__ import annotations
@@ -16,7 +16,7 @@ import json
 import re
 import struct
 import sys
-from validate_images import audit_routing, routed_path, valid_dimensions
+from validate_images import audit_routing, image_dimension_errors, routed_path, PORTRAIT_SOURCE_FORMAT
 from collections import Counter
 from pathlib import Path
 from typing import Any
@@ -217,20 +217,16 @@ def validate_images(images: Any, report: ValidationReport) -> set[str]:
         elif file_name != f"{image_id}.png":
             report.error(f"{image_id}.fileName must match imageId: expected {image_id}.png")
 
-        width = image.get("width")
-        height = image.get("height")
-        if (width is not None or height is not None) and not valid_dimensions(width, height):
-            report.error(f"{image_id} metadata dimensions must be positive integers with 4:3 ratio")
-
         existing_file = find_image_file(file_name) if isinstance(file_name, str) else None
+        size = None
         if existing_file:
             size = read_png_size(existing_file)
             if size is None:
                 report.error(f"{image_id} file is not a valid PNG: {existing_file}")
-            elif not valid_dimensions(*size):
-                report.error(f"{image_id} image dimensions must be positive 4:3; current={size[0]}x{size[1]}")
-            elif width is not None and size != (width, height):
-                report.error(f"{image_id} metadata does not match actual PNG dimensions: {size}")
+        elif image.get("sourceFormat") == PORTRAIT_SOURCE_FORMAT:
+            report.error(f"{image_id} explicit portrait source must exist; legacy placeholder exception does not apply")
+        for error in image_dimension_errors(image, size):
+            report.error(f"{image_id}: {error}")
 
         desc = f"{image.get('description', '')} {image.get('fallbackText', '')}"
         if any(word in desc.lower() for word in ["watermark", "logo text", "caption text"]):
