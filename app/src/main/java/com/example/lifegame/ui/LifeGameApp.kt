@@ -1,5 +1,6 @@
 package com.example.lifegame.ui
 
+import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -10,13 +11,22 @@ import androidx.compose.foundation.layout.safeDrawingPadding
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
+import androidx.compose.material3.AlertDialog
+import androidx.compose.material3.TextButton
+import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.semantics.LiveRegionMode
+import androidx.compose.ui.semantics.liveRegion
+import androidx.compose.ui.semantics.semantics
+import com.example.lifegame.data.SaveState
 import androidx.compose.ui.input.pointer.PointerEventPass
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.platform.testTag
@@ -69,12 +79,19 @@ fun LifeGameApp(
 ) {
     LifeGameTheme {
         Surface(modifier = Modifier.fillMaxSize(), color = LifeGamePaper) {
+            val saveState by gameViewModel.saveState.collectAsState()
+            Box(Modifier.fillMaxSize()) {
             NavHost(navController = navController, startDestination = Routes.HOME) {
                 composable(Routes.HOME) {
+                    val latestRecord = remember(gameViewModel.completedLives) {
+                        gameViewModel.completedLives.firstOrNull()?.let { gameViewModel.recordFor(it.runId) }
+                    }
                     HomeScreen(
                         lifeCard = gameViewModel.lifeCard,
                         finishedLives = gameViewModel.finishedLives,
-                        message = gameViewModel.playError,
+                        message = gameViewModel.playError ?: gameViewModel.contentWarning,
+                        latestRecord = latestRecord,
+                        hasRecoverableSave = gameViewModel.hasStoredRun,
                         onContinue = {
                             gameViewModel.continueLife()
                             navController.navigateOnce(Routes.PLAY)
@@ -148,6 +165,27 @@ fun LifeGameApp(
                     )
                 }
             }
+            // Disk durability is separate from an immediate in-memory save. Fast writes need no flash.
+            var showPending by remember { mutableStateOf(false) }
+            val pending = saveState is SaveState.Pending
+            LaunchedEffect(pending) {
+                showPending = false
+                if (pending) { delay(350); showPending = true }
+            }
+            if (showPending) Text(
+                "저장 중…", style = MaterialTheme.typography.labelMedium,
+                modifier = Modifier.align(Alignment.TopEnd).safeDrawingPadding().padding(8.dp)
+                    .background(LifeGamePaper).padding(horizontal = 10.dp, vertical = 6.dp)
+                    .testTag("save_pending").semantics { liveRegion = LiveRegionMode.Polite },
+            )
+            if (saveState is SaveState.Failed) AlertDialog(
+                onDismissRequest = {},
+                modifier = Modifier.testTag("save_failure"),
+                title = { Text("진행 내용을 저장하지 못했어요") },
+                text = { Text(gameViewModel.saveWarning ?: "현재 화면의 진행은 유지하고 있어요. 저장 공간을 확인한 뒤 다시 시도해 주세요.") },
+                confirmButton = { TextButton(onClick = { gameViewModel.retrySave() }) { Text("저장 다시 시도") } },
+            )
+            }
         }
     }
 }
@@ -158,6 +196,26 @@ internal fun PlayHost(
     onGoHome: () -> Unit,
 ) {
     val play = gameViewModel.play
+    val saveState by gameViewModel.saveState.collectAsState()
+    var finishing by rememberSaveable { mutableStateOf(false) }
+    BackHandler(enabled = finishing) { /* Keep the final checkpoint visible until disk completion. */ }
+    val finishAndGoHome: () -> Unit = {
+        if (!finishing) {
+            gameViewModel.finishLife()
+            if (gameViewModel.play == null) finishing = true
+        }
+    }
+    LaunchedEffect(finishing, saveState) {
+        if (finishing && saveState is SaveState.Durable) onGoHome()
+        if (finishing && saveState is SaveState.Idle) {
+            // A new process has no in-flight writes. Atomic slot removal proves completion;
+            // otherwise recover the saved ending and let the player finish it again safely.
+            if (!gameViewModel.hasStoredRun) onGoHome() else {
+                finishing = false
+                gameViewModel.continueLife()
+            }
+        }
+    }
     // 화면이 바뀐 직후 잠깐(연타 보호 시간) 터치를 받지 않는다. "계속하기"를 빠르게 여러 번 누르면 첫 터치로 화면이 바뀌고
     // 남은 터치가 새 화면의 같은 자리 버튼(배속 · 초점 고르기 등)을 눌렀다(2026-11-09 작은 화면 실기 확인).
     // 보호는 화면이 바뀐 그 프레임부터 켠다(효과에서 켜면 한두 프레임 늦어 그 사이 터치가 새 화면에 닿는다).
@@ -169,7 +227,11 @@ internal fun PlayHost(
         settledPhase = phase
     }
     Box(Modifier.fillMaxSize()) {
-        PlayPhaseScreen(play, gameViewModel, onGoHome)
+        if (finishing) {
+            Box(Modifier.fillMaxSize().background(LifeGamePaper), contentAlignment = Alignment.Center) {
+                Text("인생 기록을 저장하고 있어요…", modifier = Modifier.testTag("ending_save_pending"))
+            }
+        } else PlayPhaseScreen(play, gameViewModel, onGoHome, finishAndGoHome)
         if (guardingTaps) {
             Box(
                 Modifier
@@ -190,6 +252,7 @@ private fun PlayPhaseScreen(
     play: PeriodPlayUiState?,
     gameViewModel: LifeGameViewModel,
     onGoHome: () -> Unit,
+    onFinish: () -> Unit,
 ) {
     when (play?.phase) {
         PlayPhase.CHAPTER -> ChapterFocusScreen(
@@ -231,18 +294,12 @@ private fun PlayPhaseScreen(
                     futureLook = gameViewModel.futureLook,
                     onRequestFuture = { gameViewModel.requestFutureLook(record.runId) },
                     onCancelFuture = gameViewModel::cancelFutureLook,
-                    onDone = {
-                        gameViewModel.finishLife()
-                        onGoHome()
-                    },
+                    onDone = onFinish,
                 )
             } else {
                 RunEndScreen(
                     state = play,
-                    onDone = {
-                        gameViewModel.finishLife()
-                        onGoHome()
-                    },
+                    onDone = onFinish,
                 )
             }
         }

@@ -1,5 +1,7 @@
 package com.example.lifegame.ui
 
+import com.example.lifegame.ui.avatar.koreanName
+
 import com.example.lifegame.domain.engine.recapMomentsFrom
 import com.example.lifegame.domain.model.CompletedLifeRecord
 import com.example.lifegame.domain.model.DecisionEvent
@@ -82,7 +84,7 @@ fun autoRecordLines(
 ): List<AutoRecordLineUi> = records.map { record ->
     AutoRecordLineUi(
         key = record.triggerToken,
-        label = "${periods.firstOrNull { it.period == record.period }?.displayName ?: record.period.name} · ${record.yearInPeriod}번째 해",
+        label = "${periods.firstOrNull { it.period == record.period }?.displayName ?: record.period.koreanName()} · ${record.yearInPeriod}번째 해",
         topic = rules[record.eventId]?.topic.orEmpty(),
         text = record.text,
         changes = record.appliedDelta.toChanges(),
@@ -114,7 +116,7 @@ private val PATH_STAT_KEYS = mapOf(
 )
 
 fun RunChoiceRecord.toChoiceRecordUi(periods: List<PeriodDefinition>): ChoiceRecordUi = ChoiceRecordUi(
-    periodName = periods.firstOrNull { it.period == period }?.displayName ?: period.name,
+    periodName = periods.firstOrNull { it.period == period }?.displayName ?: period.koreanName(),
     yearInPeriod = yearInPeriod,
     title = eventTitle,
     choiceLabel = displayChoiceLabel(choiceLabel),
@@ -156,7 +158,7 @@ fun recapMomentsUi(
             .filter { it.usage != "character" }
         RecapMomentUi(
             key = "${index}:${choice.eventId}:${choice.outcomeId}",
-            periodName = content.periods.firstOrNull { it.period == choice.period }?.displayName ?: choice.period.name,
+            periodName = content.periods.firstOrNull { it.period == choice.period }?.displayName ?: choice.period.koreanName(),
             yearInPeriod = choice.yearInPeriod,
             title = choice.eventTitle,
             choiceLabel = displayChoiceLabel(choice.choiceLabel),
@@ -211,7 +213,7 @@ fun buildLifeRecordUi(record: CompletedLifeRecord, content: RecordContent): Life
         title = record.awardedTitle?.let { TitleUi(it.titleId, it.text, it.description) },
         summary = summary,
         avatar = avatarLookOf(record.avatar, finalPeriod, state.stats),
-        finalPeriodName = periods.firstOrNull { it.period == finalPeriod }?.displayName ?: finalPeriod.name,
+        finalPeriodName = periods.firstOrNull { it.period == finalPeriod }?.displayName ?: finalPeriod.koreanName(),
         recap = recapMomentsUi(record.choices, content.copy(periods = periods)) { period ->
             avatarLookOf(record.avatar, period, state.stats)
         },
@@ -233,7 +235,7 @@ fun buildLifeRecordUi(record: CompletedLifeRecord, content: RecordContent): Life
 /** 홈 화면 "지난 인생" 한 줄 */
 fun CompletedLifeRecord.toFinishedLifeUi(periods: List<PeriodDefinition>): FinishedLifeUi {
     val finalPeriod = finalState.endingPeriod ?: finalState.period
-    val periodName = periods.firstOrNull { it.period == finalPeriod }?.displayName ?: finalPeriod.name
+    val periodName = periods.firstOrNull { it.period == finalPeriod }?.displayName ?: finalPeriod.koreanName()
     return FinishedLifeUi(
         key = runId,
         playerName = playerName,

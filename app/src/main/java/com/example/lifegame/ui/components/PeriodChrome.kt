@@ -4,6 +4,8 @@ import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.LocalIndication
+import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.ExperimentalLayoutApi
 import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.foundation.layout.Arrangement
@@ -23,6 +25,7 @@ import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -279,21 +282,27 @@ fun InkButton(
     modifier: Modifier = Modifier,
     enabled: Boolean = true,
     compact: Boolean = false,
+    containerColor: Color = LifeGameInk,
+    contentColor: Color = LifeGameCard,
 ) {
     val shape = RoundedCornerShape(10.dp)
+    val interactions = remember { MutableInteractionSource() }
+    val click = rememberExperienceClick(onClick)
     Box(
         modifier = modifier
             .fillMaxWidth()
             .heightIn(min = if (compact) 44.dp else 56.dp)
+            .experiencePress(interactions, enabled)
             .clip(shape)
-            .background(if (enabled) LifeGameInk else LifeGameRule)
-            .clickable(enabled = enabled, role = Role.Button, onClick = onClick)
+            .background(if (enabled) containerColor else LifeGameRule)
+            .clickable(interactionSource = interactions, indication = LocalIndication.current,
+                enabled = enabled, role = Role.Button, onClick = click)
             .padding(horizontal = 16.dp, vertical = if (compact) 10.dp else 15.dp),
         contentAlignment = Alignment.Center,
     ) {
         Text(
             text = text,
-            color = if (enabled) LifeGameCard else LifeGameInkTertiary,
+            color = if (enabled) contentColor else LifeGameInkTertiary,
             fontSize = if (compact) 14.sp else 15.5.sp,
             fontWeight = FontWeight.Bold,
             textAlign = TextAlign.Center,
@@ -308,22 +317,29 @@ fun LineButton(
     onClick: () -> Unit,
     modifier: Modifier = Modifier,
     enabled: Boolean = true,
+    containerColor: Color = LifeGameCard,
+    contentColor: Color = LifeGameInk,
+    borderColor: Color = LifeGameInk,
 ) {
     val shape = RoundedCornerShape(10.dp)
+    val interactions = remember { MutableInteractionSource() }
+    val click = rememberExperienceClick(onClick)
     Box(
         modifier = modifier
             .fillMaxWidth()
             .heightIn(min = 52.dp)
+            .experiencePress(interactions, enabled)
             .clip(shape)
-            .background(LifeGameCard)
-            .border(1.dp, if (enabled) LifeGameInk else LifeGameRule, shape)
-            .clickable(enabled = enabled, role = Role.Button, onClick = onClick)
+            .background(if (enabled) containerColor else LifeGameCard)
+            .border(1.dp, if (enabled) borderColor else LifeGameRule, shape)
+            .clickable(interactionSource = interactions, indication = LocalIndication.current,
+                enabled = enabled, role = Role.Button, onClick = click)
             .padding(horizontal = 16.dp, vertical = 14.dp),
         contentAlignment = Alignment.Center,
     ) {
         Text(
             text = text,
-            color = if (enabled) LifeGameInk else LifeGameInkTertiary,
+            color = if (enabled) contentColor else LifeGameInkTertiary,
             fontSize = 15.sp,
             fontWeight = FontWeight.Medium,
             textAlign = TextAlign.Center,

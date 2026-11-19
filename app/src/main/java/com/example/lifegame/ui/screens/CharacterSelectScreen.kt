@@ -80,14 +80,18 @@ import com.example.lifegame.ui.StartingDice
 import com.example.lifegame.ui.StartingRoll
 import com.example.lifegame.ui.StatRoll
 import com.example.lifegame.ui.components.rememberReduceMotion
+import com.example.lifegame.ui.components.dice.Dice3DStage
 import com.example.lifegame.ui.theme.LifeGameStatDown
+import com.example.lifegame.ui.theme.LifeGameStatDownSoft
 import com.example.lifegame.ui.theme.LifeGameStatUp
+import com.example.lifegame.ui.theme.LifeGameStatUpSoft
+import com.example.lifegame.ui.theme.LifeGameMuted
+import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.layout.width
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.remember
-import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.semantics.contentDescription
-import androidx.compose.ui.text.style.TextAlign
 import kotlinx.coroutines.delay
 import com.example.lifegame.ui.components.EffectText
 import com.example.lifegame.ui.components.InkButton
@@ -109,7 +113,7 @@ import com.example.lifegame.domain.model.PhotoFlowStatus
  * 능력치는 고르지 않고 주사위로 정한다 (2026-11-05 피드백 1번). 굴린 값과 가장 닮은 성향(characters.sample.json)의 플래그가 함께 들어간다.
  * 사진은 선택 기능이다. 동의 · 취소 · 읽기 실패 · 생성 실패 어느 경우에도 기본 모습으로 바로 시작할 수 있다.
  * 사진은 기기 안 참조(URI)만 저장하고 복사 · 기록하지 않는다.
- * [aiFace]면 동의한 사진을 OpenAI로 보내 시기별 얼굴 시트를 받는다(키가 있는 빌드만). 아니면 Fake 응답이다.
+ * [aiFace]는 온라인 생성 연결 상태다. 현재 배포는 연결 전이며 사진을 전송하지 않고 기본 외형을 쓴다.
  */
 @Composable
 fun CharacterSelectScreen(
@@ -300,7 +304,6 @@ fun CharacterSelectScreen(
                             runSeed = result.start.seed
                             rerollsLeft = 0 // 친구와 같은 출발선이라 다시 굴리지 않는다
                             // 도전 코드는 이미 확정된 주사위 값을 공유하므로 셔플 애니메이션을 재생하지 않는다.
-                            // 즉시 합계·보정 전후 값이 노출되어 같은 출발선이 실제로 적용됐는지 확인할 수 있다.
                             codeError = false
                             codeMessage = "도전 코드의 출발선(성별 · 타고난 능력치 · 시드)으로 맞췄다. 이제 선택만 다르다."
                         }
@@ -417,8 +420,8 @@ fun CharacterSelectScreen(
                             "보내는 것은 긴 변 1024px로 줄인 사본 한 장이고, 앱에는 만들어진 얼굴 그림만 저장합니다. " +
                             "보낸 사진은 OpenAI의 데이터 처리 정책에 따라 처리됩니다. '사진 지우기'로 언제든 지울 수 있습니다."
                     } else {
-                        "고른 사진은 기기 밖으로 보내지 않고 참조만 저장합니다. 얼굴 시트 생성 요청에만 쓰며, 이 빌드에는 생성 서버 키가 없어 예시 응답을 받습니다. " +
-                            "'사진 지우기'로 언제든 참조를 지울 수 있습니다."
+                        "온라인 얼굴 생성은 아직 연결되지 않았습니다. 고른 사진은 기기 밖으로 보내지 않고 참조만 저장하며, 캐릭터는 고른 기본 외형으로 표시됩니다. " +
+                            "사진과 사진 참조가 포함된 인생 기록은 자동 백업하지 않습니다. '사진 지우기'로 시작 전 사진 참조를 지울 수 있습니다."
                     },
                     color = LifeGameInkSecondary,
                 )
@@ -442,7 +445,9 @@ fun CharacterSelectScreen(
 }
 
 /**
- * 능력치마다 주사위 두 개. 굴리는 동안 눈이 몇 번 바뀌다 멈춘다(모션 줄이기 설정이면 바로 멈춘다).
+ * 타고난 능력치 정하기. 주사위는 굴리는 연출(3D)로만 보여 주고, 능력치 줄에는 주사위 그림 · 계산식 없이
+ * 최종값과 기본 50에서의 증감만 보여 준다(2026-11-20 사용자 결정: 계산식이 직관적이지 않음).
+ * 값은 지금 규칙 그대로(능력치마다 주사위 두 개, (합 - 7) × 2, 40~60) 정해져 저장 · 도전 코드 · 밸런스가 같다.
  * 굴린 값과 가장 닮은 성향을 아래에 한 줄로 보여 준다.
  */
 @Composable
@@ -454,17 +459,15 @@ private fun DicePanel(
     onRoll: () -> Unit,
 ) {
     val reduceMotion = rememberReduceMotion()
-    var shuffling by remember { mutableStateOf<StartingRoll?>(null) }
-    LaunchedEffect(rollNonce) {
-        if (rollNonce == 0 || reduceMotion) return@LaunchedEffect
-        repeat(DICE_SHUFFLE_FRAMES) {
-            shuffling = StartingDice.roll()
-            delay(DICE_SHUFFLE_FRAME_MS)
-        }
-        shuffling = null
+    var rolling by remember { mutableStateOf(false) }
+    LaunchedEffect(rollNonce, reduceMotion) {
+        if (rollNonce > 0 && !reduceMotion) delay(490L)
+        rolling = false
     }
-    val shown = shuffling ?: roll
-    val settled = shuffling == null
+    val rollOnce = {
+        // Synchronous lock covers two taps before the parent has recomposed.
+        if (!rolling) { rolling = true; onRoll() }
+    }
     val shape = RoundedCornerShape(10.dp)
     Column(
         Modifier
@@ -476,24 +479,27 @@ private fun DicePanel(
             .testTag("dice_panel"),
         verticalArrangement = Arrangement.spacedBy(8.dp),
     ) {
-        if (shown == null) {
+        if (roll == null) {
             Text(
-                text = "운동능력 · 지력 · 사회성 · 경제력 · 행복 · 운을 주사위 두 개씩으로 정한다. 다시 굴리기는 ${StartingDice.REROLLS}번까지.",
+                text = "주사위를 굴려 운동능력 · 지력 · 사회성 · 경제력 · 행복 · 운을 정한다. 다시 굴리기는 ${StartingDice.REROLLS}번까지.",
                 color = LifeGameInkSecondary,
                 fontSize = 14.sp,
                 lineHeight = 20.sp,
             )
         } else {
-            // 계산 규칙은 한 번만 안내한다(정원률 2026-11-14 검수 의견 · 통합지시서 "보정 전 · 후 값을 함께 표시").
+            // 굴리는 연출. 주사위 눈을 특정 능력치의 계산으로 읽게 하지 않도록 이름표를 붙이지 않는다.
+            roll.rolls.firstOrNull()?.let { stat ->
+                Dice3DStage(first = stat.first, second = stat.second, rollNonce = rollNonce, label = stat.label)
+            }
             Text(
-                text = "두 눈을 더하고 7을 뺀 값의 2배를 기본 50에 더한다.",
+                text = "타고난 능력치는 40~60 사이에서 정해져요. 50이 보통이에요.",
                 color = LifeGameInkSecondary,
                 fontSize = 13.sp,
                 lineHeight = 18.sp,
                 modifier = Modifier.testTag("dice_rule"),
             )
-            shown.rolls.forEach { stat -> DiceRow(stat, settled) }
-            if (settled && tendency != null) {
+            roll.rolls.forEach { stat -> DiceRow(stat) }
+            if (tendency != null) {
                 Spacer(Modifier.height(2.dp))
                 Text(
                     text = "성향: ${tendency.name}",
@@ -506,10 +512,11 @@ private fun DicePanel(
             }
         }
         when {
-            roll == null -> InkButton(text = "주사위 굴리기", onClick = onRoll, modifier = Modifier.testTag("dice_roll"))
+            roll == null -> InkButton(text = "주사위 굴리기", onClick = rollOnce, enabled = !rolling, modifier = Modifier.testTag("dice_roll"))
             rerollsLeft > 0 -> LineButton(
                 text = "다시 굴리기 (${rerollsLeft}번 남음)",
-                onClick = { if (settled) onRoll() },
+                onClick = rollOnce,
+                enabled = !rolling,
                 modifier = Modifier.testTag("dice_reroll"),
             )
             else -> Text(
@@ -522,81 +529,64 @@ private fun DicePanel(
     }
 }
 
-private const val DICE_SHUFFLE_FRAMES = 7
-private const val DICE_SHUFFLE_FRAME_MS = 70L
-
-/**
- * 능력치 한 줄: 이름 · 주사위 두 개 · 계산식 두 줄(`1 + 3 = 4` / `50 − 6 = 44`).
- * 화면 낭독은 "운동능력: 눈 1 + 눈 3 = 합계 4, 기본 50 보정 −6, 최종 44"로 한 번에 읽는다.
- * 계산식 칸은 고정 폭이 없어 큰 글씨에서는 이름이 두 줄로 접히고 숫자는 잘리지 않는다.
- */
+/** 능력치 한 줄: 이름 · 최종값 · 기본 50에서의 증감(오르면 파랑, 내리면 빨강, 그대로면 회색). */
 @Composable
-private fun DiceRow(stat: StatRoll, settled: Boolean) {
-    val delta = stat.delta
-    val signed = if (delta < 0) "−${-delta}" else "+$delta"
-    val spoken = "${stat.label}: 눈 ${stat.first} + 눈 ${stat.second} = 합계 ${stat.sum}, 기본 50 보정 $signed, 최종 ${stat.finalValue}"
+private fun DiceRow(stat: StatRoll) {
+    val change = when {
+        stat.delta > 0 -> "+${stat.delta}"
+        stat.delta < 0 -> "−${-stat.delta}"
+        else -> "±0"
+    }
+    val changeColor = when {
+        stat.delta > 0 -> LifeGameStatUp
+        stat.delta < 0 -> LifeGameStatDown
+        else -> LifeGameInkTertiary
+    }
+    val changeBackground = when {
+        stat.delta > 0 -> LifeGameStatUpSoft
+        stat.delta < 0 -> LifeGameStatDownSoft
+        else -> LifeGameMuted
+    }
     Row(
         Modifier
             .fillMaxWidth()
+            .heightIn(min = 32.dp)
             .clearAndSetSemantics {
-                contentDescription = if (settled) spoken else "${stat.label}: 주사위 굴리는 중"
+                contentDescription = startingStatSpeech(stat)
                 testTag = "dice_row_${stat.label}"
             },
         verticalAlignment = Alignment.CenterVertically,
-        horizontalArrangement = Arrangement.spacedBy(8.dp),
+        horizontalArrangement = Arrangement.spacedBy(10.dp),
     ) {
-        Text(stat.label, color = LifeGameInk, fontSize = 14.sp, modifier = Modifier.weight(1f))
-        Die(stat.first)
-        Die(stat.second)
-        Column(horizontalAlignment = Alignment.End) {
-            Text(
-                text = if (settled) "${stat.first} + ${stat.second} = ${stat.sum}" else "",
-                color = LifeGameInk,
-                fontSize = 14.sp,
-                fontWeight = FontWeight.Bold,
-                textAlign = TextAlign.End,
-            )
-            Text(
-                text = if (settled) "50 ${signed.first()} ${kotlin.math.abs(delta)} = ${stat.finalValue}" else "",
-                color = when {
-                    delta > 0 -> LifeGameStatUp
-                    delta < 0 -> LifeGameStatDown
-                    else -> LifeGameInkTertiary
-                },
-                fontSize = 13.sp,
-                fontWeight = FontWeight.Medium,
-                textAlign = TextAlign.End,
-            )
-        }
+        Text(stat.label, color = LifeGameInk, fontSize = 15.sp, modifier = Modifier.weight(1f))
+        Text(
+            text = "${stat.finalValue}",
+            color = LifeGameInk,
+            fontSize = 18.sp,
+            fontWeight = FontWeight.Bold,
+            modifier = Modifier.testTag("dice_value_${stat.label}"),
+        )
+        Text(
+            text = change,
+            color = changeColor,
+            fontSize = 13.sp,
+            fontWeight = FontWeight.Bold,
+            textAlign = TextAlign.Center,
+            modifier = Modifier
+                .widthIn(min = 44.dp)
+                .clip(RoundedCornerShape(6.dp))
+                .background(changeBackground)
+                .padding(horizontal = 6.dp, vertical = 2.dp)
+                .testTag("dice_change_${stat.label}"),
+        )
     }
 }
 
-/** 주사위 한 개. 눈은 원으로 그린다. */
-@Composable
-private fun Die(value: Int) {
-    val shape = RoundedCornerShape(6.dp)
-    Canvas(
-        Modifier
-            .size(26.dp)
-            .clip(shape)
-            .background(LifeGamePaper)
-            .border(1.dp, LifeGameInk, shape)
-            .semantics { contentDescription = "주사위 $value" },
-    ) {
-        val r = size.minDimension * 0.09f
-        val a = size.width * 0.27f
-        val c = size.width * 0.5f
-        val b = size.width * 0.73f
-        val pips = when (value) {
-            1 -> listOf(c to c)
-            2 -> listOf(a to a, b to b)
-            3 -> listOf(a to a, c to c, b to b)
-            4 -> listOf(a to a, b to a, a to b, b to b)
-            5 -> listOf(a to a, b to a, c to c, a to b, b to b)
-            else -> listOf(a to a, b to a, a to c, b to c, a to b, b to b)
-        }
-        pips.forEach { (x, y) -> drawCircle(LifeGameInk, radius = r, center = Offset(x, y)) }
-    }
+/** 화면 낭독: "지력 46, 보통보다 4 낮음". 주사위 눈 · 계산식은 읽지 않는다. */
+internal fun startingStatSpeech(stat: StatRoll): String = "${stat.label} ${stat.finalValue}, " + when {
+    stat.delta > 0 -> "보통보다 ${stat.delta} 높음"
+    stat.delta < 0 -> "보통보다 ${-stat.delta} 낮음"
+    else -> "보통"
 }
 
 @Composable
@@ -780,7 +770,7 @@ private fun PhotoSection(
             text = if (aiFace) {
                 "얼굴이 잘 보이는 정면 사진을 고르면 AI가 그 얼굴로 영아기부터 노년기까지의 도트 얼굴을 만든다. 30초~1분쯤 걸린다. 사진이 없어도 위에서 고른 모습으로 똑같이 시작한다."
             } else {
-                "사진을 고르면 그 얼굴로 캐릭터 얼굴 시트를 만들도록 요청한다. 사진이 없어도 위에서 고른 모습으로 똑같이 시작한다."
+                "온라인 얼굴 생성은 아직 연결되지 않았다. 고른 사진은 전송하지 않으며, 위에서 고른 기본 외형으로 시작한다."
             },
             color = LifeGameInkSecondary,
             fontSize = 14.sp,
@@ -794,7 +784,7 @@ private fun PhotoSection(
                 GenerationStatus.LOADING -> Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(10.dp)) {
                     CircularProgressIndicator(color = LifeGameInk, strokeWidth = 2.dp, modifier = Modifier.size(20.dp))
                     Text(
-                        if (aiFace) "AI가 얼굴을 그리는 중 (30초~1분)" else "얼굴 시트를 만드는 중",
+                        if (aiFace) "AI가 얼굴을 그리는 중 (30초~1분)" else "기본 모습 준비 중",
                         color = LifeGameInkSecondary,
                         fontSize = 14.sp,
                         modifier = Modifier.weight(1f).testTag("face_loading"),

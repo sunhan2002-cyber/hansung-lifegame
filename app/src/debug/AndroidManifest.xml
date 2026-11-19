@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Explicitly constructed development clients only. Release has no network permission. -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <application>
+        <!-- Read-only, whitelisted development scenes for repeatable frame measurements. -->
+        <activity android:name=".debug.ExperiencePreviewActivity" android:exported="true" android:label="개발 장면 측정" />
+    </application>
+</manifest>

@@ -224,7 +224,7 @@ object AvatarLayerAssets {
  * 레이어 PNG가 모두 있으면 그것을 겹치고, 하나라도 없으면 도트 생성기로 그린다.
  */
 @Composable
-fun PlayerAvatar(look: AvatarLook, modifier: Modifier = Modifier) {
+fun PlayerAvatar(look: AvatarLook, modifier: Modifier = Modifier, ambientPhase: androidx.compose.runtime.State<Float>? = null) {
     val density = LocalDensity.current
     val context = LocalContext.current
     BoxWithConstraints(
@@ -265,7 +265,9 @@ fun PlayerAvatar(look: AvatarLook, modifier: Modifier = Modifier) {
             Box(Modifier.fillMaxSize().testTag("player_avatar_layers")
                 .semantics { this[AvatarAssetLookKey] = ready.first.description }) {
                 ready.second.forEach { loaded ->
-                    Image(
+                    if (loaded.candidate.imageId == "avatar_eyes" && ambientPhase != null) {
+                        BlinkingEyeLayer(loaded, ready.first, ambientPhase, Modifier.fillMaxSize())
+                    } else Image(
                         painter = BitmapPainter(loaded.bitmap.asImageBitmap(), filterQuality = FilterQuality.None),
                         contentDescription = null,
                         modifier = Modifier.fillMaxSize(),

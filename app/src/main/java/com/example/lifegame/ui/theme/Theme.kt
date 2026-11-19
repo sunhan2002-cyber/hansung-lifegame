@@ -7,6 +7,7 @@ import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.unit.Density
+import com.example.lifegame.ui.components.ProvideExperiencePreferences
 
 private val LifeGameColorScheme = lightColorScheme(
     // 주 버튼은 필름과 같은 먹색
@@ -63,10 +64,12 @@ fun LifeGameTheme(
     CompositionLocalProvider(
         LocalDensity provides Density(density.density, appFontScale(density.fontScale)),
     ) {
-        MaterialTheme(
-            colorScheme = LifeGameColorScheme,
-            typography = LifeGameTypography,
-            content = content
-        )
+        ProvideExperiencePreferences {
+            MaterialTheme(
+                colorScheme = LifeGameColorScheme,
+                typography = LifeGameTypography,
+                content = content
+            )
+        }
     }
 }

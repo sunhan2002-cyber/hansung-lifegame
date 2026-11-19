@@ -1,9 +1,6 @@
 package com.example.lifegame.ui.components
 
-import android.provider.Settings
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.remember
-import androidx.compose.ui.platform.LocalContext
 import kotlin.math.pow
 
 // 시안 7 전환 타이밍을 v4 화면(자동 진행 · 결정)에서도 같이 쓰려고 모아 둔 것.
@@ -44,11 +41,9 @@ internal fun distortEnvelope(p: Float): Float = when {
     else -> 1f - easeInOut((p - 0.42f) / 0.58f)
 }
 
-/** 시스템 애니메이션이 꺼져 있으면 지지직 · 왜곡을 건너뛴다. */
+/** 앱 움직임 설정과 실시간 시스템 애니메이션 설정을 함께 따른다. */
 @Composable
 internal fun rememberReduceMotion(): Boolean {
-    val context = LocalContext.current
-    return remember {
-        Settings.Global.getFloat(context.contentResolver, Settings.Global.ANIMATOR_DURATION_SCALE, 1f) == 0f
-    }
+    val systemScale = LocalSystemAnimatorScale.current ?: rememberSystemAnimatorScale()
+    return LocalExperiencePreferences.current.reduceMotion(systemScale)
 }
