@@ -279,13 +279,11 @@ class Week13FrontendFinishTest {
     }
 
     @Test
-    fun `a partner met through an automatic event is the origin of a later reappearance`() {
+    fun `an automatic-only partner is not treated as a recorded origin`() {
         val loveStart = AutoAppearance("auto_ya_love_start", "다시 연락 온 사람", LifePeriod.YOUNG_ADULT)
         val flags = setOf("partner_second_chance", "dating", "rel_conflict")
         val npc = extensions.npcForEvent("love_conflict_01", emptyList(), flags, periods, priorAutoAppearances = listOf(loveStart))
-        assertEquals("npc_partner_other", npc?.npcId)
-        assertEquals("다시 연락 온 사람", npc?.originTitle)
-        assertEquals("청년기", npc?.originPeriodName)
+        assertNull(npc)
         // 관계 플래그가 하나도 없으면 다시 나오지 않는다.
         assertNull(extensions.npcForEvent("love_conflict_01", emptyList(), setOf("dating", "rel_conflict"), periods, priorAutoAppearances = listOf(loveStart)))
     }
@@ -295,7 +293,7 @@ class Week13FrontendFinishTest {
         val dol = listOf(record("infant_007", "A", LifePeriod.INFANT, 1, "돌잡이"))
         val flags = setOf("music_toy", "v4:event:infant_007")
         val onPhoto = extensions.recallForEvent("auto_infant_dol_photo_music", dol, flags)
-        assertEquals("recall_dol_music", onPhoto?.slotId)
+        assertNull(onPhoto)
         assertNull(extensions.recallForEvent("path_hap_11", dol, flags, priorAutoEventIds = setOf("auto_infant_dol_photo_music")))
         assertNotNull(extensions.recallForEvent("path_hap_11", dol, flags))
         // 근거 선택이 다르면(판사봉) 피아노 회상은 나오지 않는다.
