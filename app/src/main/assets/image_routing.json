@@ -1473,7 +1473,7 @@
     },
     {
       "imageId": "img_infant_toys_001",
-      "assetPath": "followup_20261031/img_infant_toys_001.png",
+      "assetPath": "cutscenes/week11/events/img_infant_toys_001.png",
       "fileName": "img_infant_toys_001.png",
       "usage": "event",
       "fallbackText": "이미지 준비 전에는 '돌잡이' 상황 이미지 영역으로 대체 표시"

@@ -119,6 +119,23 @@ class ImageRoutingTest {
         assertTrue(File(assetDir(), "images/${pilot.path}").isFile)
     }
 
+    @Test fun `doljabi decision and restored decision use the newly authored doljabi art`() {
+        val routing = ImageRouting.parse(manifest())
+        val event = V4ContentParser.parseDecisionEvents(File(assetDir(), "events.sample.json").readText())
+            .first { it.eventId == "infant_007" }
+        val ui = buildDecisionUi(PendingDecision(event.eventId, event.kind, event.title, event.text, emptyList(), event.povImageId),
+            event, Stats(), emptyMap(), imageRouting = routing, period = LifePeriod.INFANT)
+        val expected = "cutscenes/week11/events/img_infant_toys_001.png"
+        assertEquals(expected, ui.images.first().path)
+        assertTrue(File(assetDir(), "images/$expected").isFile)
+        assertArrayEquals(File(assetDir(), "images/cutscenes/week11/img_doljabi_grasp_001.png").readBytes(),
+            File(assetDir(), "images/$expected").readBytes())
+        val restored = com.example.lifegame.ui.restoredDecisionUi(event,
+            PlayContent(emptyList(), emptyList(), mapOf(event.eventId to event), emptyMap(), imageRouting = routing),
+            focusId = null, period = LifePeriod.INFANT)
+        assertEquals(expected, restored.images.first().path)
+    }
+
     @Test fun `unrelated focus does not replace a health event with study art`() {
         val routing = ImageRouting.parse(manifest())
         assertEquals("img_stat_health_001", routing.eventCandidates("adult_058", null,

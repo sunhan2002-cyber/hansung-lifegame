@@ -30,7 +30,15 @@ class ApprovedImageIntegrityTest {
     }
     private val registry = registryItems.mapValues { (_, item) -> item.getInt("width") to item.getInt("height") }
     private val filesByName: Map<String, File> by lazy {
-        images.walkTopDown().filter { it.isFile && it.extension == "png" }.associateBy { it.name }
+        val byName = images.walkTopDown().filter { it.isFile && it.extension == "png" }.associateBy { it.name }.toMutableMap()
+        // Archived art may share a filename with its replacement. Validate the file actually routed in the app.
+        val routed = JSONObject(File("src/main/assets/image_routing.json").readText()).getJSONArray("assets")
+        repeat(routed.length()) { index ->
+            val entry = routed.getJSONObject(index)
+            val file = File(images, entry.getString("assetPath"))
+            if (file.isFile) byName[file.name] = file
+        }
+        byName
     }
 
     private fun size(file: File): Pair<Int, Int> {

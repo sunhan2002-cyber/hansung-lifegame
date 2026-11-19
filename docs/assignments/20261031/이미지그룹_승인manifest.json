@@ -9222,31 +9222,6 @@
     }
   },
   {
-    "groupId": "ai_portrait_native_infant_007",
-    "imageId": "img_infant_toys_001",
-    "assetPath": "followup_20261031/img_infant_toys_001.png",
-    "sha256": "be47f735bafcc153ea6e02ecc20e66e7b62f4ccb101e559c87a82d0d907be86c",
-    "approvedPresentation": {
-      "assetPath": "presentation/portraits/img_infant_toys_001_portrait_v1.png",
-      "sha256": "7908541fe39354738515bb54efa2c0519377d16a634240e955290661c007304e"
-    },
-    "approvalStatus": "APPROVED",
-    "eventIds": [
-      "infant_007"
-    ],
-    "eventSourceHashes": {
-      "infant_007": "a72e45159d2b7581c27b3405cba07987ad6310c5ed0a05aa15fa12d2eea7a77a"
-    },
-    "semanticReviewer": "Codex AI (/root/security_p0)",
-    "visualReviewer": "Codex AI",
-    "cropReviewer": "Codex AI",
-    "reviewerType": "AI",
-    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/infant_007.json",
-    "resolvedIssueEvidence": {
-      "infant_007": "피아노·판사봉·지폐 세 물건과 아직 잡지 않은 아기 손이 함께 보인다."
-    }
-  },
-  {
     "groupId": "ai_portrait_native_infant_008",
     "imageId": "img_infant_vaccine_001",
     "assetPath": "followup_20261031/img_infant_vaccine_001.png",
