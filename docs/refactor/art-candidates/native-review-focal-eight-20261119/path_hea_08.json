@@ -1,0 +1,246 @@
+{
+  "schemaVersion": 1,
+  "eventId": "path_hea_08",
+  "status": "PASS",
+  "reviewer": "Codex AI / plan_audit",
+  "reviewerType": "AI",
+  "reviewDate": "2026-11-19",
+  "sourceEventHash": "8bef419c16cab302178d4e04dfc26f9e4dff3bc84bb2173b8912e5cbbb6460f0",
+  "sourceEventSnapshot": {
+    "eventId": "path_hea_08",
+    "stage": "ADULT",
+    "type": "NORMAL",
+    "isFallback": false,
+    "isMilestone": false,
+    "title": "병원 대기실의 단골",
+    "text": "정기 검진 대기실. 매달 보는 얼굴들이 있다. 옆자리 어르신: \"자네는 오늘 무슨 검사여?\" 번호표는 47번이다.",
+    "imageId": "img_path_hea_08_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [
+        "hea_path"
+      ],
+      "blockedFlags": []
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "검사 끝나고 대기실 사람들과 국밥을 먹으러 간다",
+        "statDelta": {
+          "사회성": 3,
+          "행복": 2,
+          "건강": -1
+        },
+        "resultText": "국밥집에서 서로 약 이름을 맞히는 퀴즈를 했다. 내가 이겼다. 상품은 깍두기 추가였다.",
+        "addFlags": [
+          "achv_clinic_friends"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "a_soup",
+            "text": "국밥집에서 서로 약 이름을 맞히는 퀴즈를 했다. 내가 이겼다. 상품은 깍두기 추가였다.",
+            "chance": 75,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "사회성": 3,
+              "행복": 2,
+              "건강": -1
+            },
+            "addFlags": [
+              "achv_clinic_friends"
+            ],
+            "chanceWeights": {
+              "건강": 1
+            }
+          },
+          {
+            "outcomeId": "a_quiet",
+            "text": "그날 의사가 오래 말을 골랐다. 국밥은 다음 달로 미뤘다. 집에 와서 오래된 사진첩을 꺼냈다.",
+            "chance": 20,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": -2,
+              "건강": -4
+            },
+            "addFlags": [
+              "health_chronic"
+            ],
+            "chanceWeights": {
+              "건강": -2
+            },
+            "deathCause": "깊어진 병세"
+          },
+          {
+            "outcomeId": "a_last",
+            "text": "검사를 마치고 대기실 의자에서 잠깐 눈을 감았다. 따뜻한 오후였다. 그대로 깨지 않았다.",
+            "chance": 5,
+            "primary": false,
+            "hidden": true,
+            "death": true,
+            "statDelta": {
+              "건강": -10
+            },
+            "addFlags": [
+              "fatal_risk"
+            ],
+            "chanceWeights": {
+              "건강": -2
+            },
+            "deathCause": "잠결의 심장마비"
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "전환점에서 누구나 고를 수 있는 기본 선택지 (전체 잠금 방지)",
+        "conditionReview": "fallback_choice",
+        "conditionBasis": "week8_life_path"
+      },
+      {
+        "choiceId": "B",
+        "label": "오늘도 걸어서 집에 간다",
+        "statDelta": {
+          "건강": 2,
+          "행복": 2,
+          "사회성": -1
+        },
+        "resultText": "병원에서 집까지 40분. 오늘도 걸었다. 의사가 창문 밖으로 나를 보고 웃었다.",
+        "addFlags": [
+          "achv_walk_home"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "b_walk",
+            "text": "병원에서 집까지 40분. 오늘도 걸었다. 의사가 창문 밖으로 나를 보고 웃었다.",
+            "chance": 100,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "건강": 2,
+              "행복": 2,
+              "사회성": -1
+            },
+            "addFlags": [
+              "achv_walk_home"
+            ]
+          }
+        ],
+        "blockedFlags": [
+          "health_limited"
+        ],
+        "conditionReview": "confirmed",
+        "conditionBasis": "week8_life_path"
+      }
+    ],
+    "priority": 0,
+    "kind": "INCIDENT",
+    "periods": [
+      "OLD_AGE"
+    ],
+    "weight": 20,
+    "view": "FIRST_PERSON",
+    "lifePath": "HEALTH",
+    "pathRole": "수명 결과",
+    "followUps": []
+  },
+  "sourceReadScope": "Current complete event, conditions, every choice/outcome and flags/stat deltas/periods/follow-ups directly read before judgement.",
+  "sourceImage": {
+    "path": "app/src/main/assets/images/followup_20261031/img_path_hea_08_001.png",
+    "sha256": "4b1975f6a9858c0acf0439f0b46458e5836e40b5438f78fb0cd8ed74cd75f334",
+    "width": 720,
+    "height": 540
+  },
+  "originalArtworkUnchangedSinceHistoricalReview": true,
+  "historicalReview": {
+    "eventId": "path_hea_08",
+    "title": "병원 대기실의 단골",
+    "imageId": "img_path_hea_08_001",
+    "assetPath": "followup_20261031/img_path_hea_08_001.png",
+    "sha256": "4b1975f6a9858c0acf0439f0b46458e5836e40b5438f78fb0cd8ed74cd75f334",
+    "eventSourceHash": "8bef419c16cab302178d4e04dfc26f9e4dff3bc84bb2173b8912e5cbbb6460f0",
+    "status": "REVISION_REQUIRED",
+    "reviewer": "김선한 담당 Codex 직접 대행 검수",
+    "reason": "중앙 크롭에서 대기실의 단골 어르신이 사라짐",
+    "expectedAction": "번호표를 들고 정기 검진을 기다린다",
+    "requiredObjects": "번호표 47번과 대기 의자",
+    "sheet": "output/art-review-20261119/sheet-18.jpg",
+    "cell": 8,
+    "cropMethod": "ImageOps.fit centre-fill 360:800; simulated crop inspected directly, not an emulator capture",
+    "visualMethod": "원본 도트풍·색감·장면 파손·명백한 신체/사물 오류 직접 확인"
+  },
+  "presentationMetadata": [
+    {
+      "assetPath": "followup_20261031/img_path_hea_08_001.png",
+      "sourceSha256": "4b1975f6a9858c0acf0439f0b46458e5836e40b5438f78fb0cd8ed74cd75f334",
+      "focalX": 0.445,
+      "focalY": 0.5,
+      "note": "Original PNG retained. Individual core-visibility improvement for path_hea_08; simulated 360x800 and 360x740 crops reviewed. Native review pending; no legacy artwork approval. See docs/refactor/art-candidates/crop-review-20261119.json."
+    }
+  ],
+  "captures": [
+    {
+      "path": "build/refactor/after/secondary-art-focals-native/path_hea_08_phone_scene.png",
+      "sha256": "77a3f4320698cc1069cf452032c67f4cf885bf18dbd71e62d342bedb653f1eb1",
+      "width": 1080,
+      "height": 2400,
+      "screen": "phone",
+      "mode": "scene",
+      "cropReport": {
+        "eventId": "path_hea_08",
+        "imageId": "img_path_hea_08_001",
+        "assetPath": "followup_20261031/img_path_hea_08_001.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.276..0.614",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/secondary-art-focals-native/path_hea_08_phone_play.png",
+      "sha256": "13298b7fbf0c876c50d1b798491726ecf9daf28ed79464da862ef42724fda61d",
+      "width": 1080,
+      "height": 2400,
+      "screen": "phone",
+      "mode": "play",
+      "cropReport": null
+    },
+    {
+      "path": "build/refactor/after/secondary-art-focals-native/path_hea_08_360x740_scene.png",
+      "sha256": "1ba990acba7d4b27f65a8b0e50fd7a273ccf7cf7d4cc3e1c2f4b961afc1e7660",
+      "width": 945,
+      "height": 1943,
+      "screen": "360x740",
+      "mode": "scene",
+      "cropReport": {
+        "eventId": "path_hea_08",
+        "imageId": "img_path_hea_08_001",
+        "assetPath": "followup_20261031/img_path_hea_08_001.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.263..0.627",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/secondary-art-focals-native/path_hea_08_360x740_play.png",
+      "sha256": "2e120e53853fe4c24a0d94e5fecd40e418c6a5b139d7bfe5132853da37d6d9d2",
+      "width": 945,
+      "height": 1943,
+      "screen": "360x740",
+      "mode": "play",
+      "cropReport": null
+    }
+  ],
+  "semanticObservation": "노년 정기검진 대기실에서 번호표 형태의 종이를 잡고 친숙한 노인들을 보는 선택 전 상태다. 인쇄 내용은 읽을 수 없어 47이라는 숫자 자체를 검증했다고 주장하지 않는다. 국밥·만성질환 진단·사망·집으로 걷기 결과가 없다.",
+  "cropObservation": "focalX 0.445에서 노인 두 명의 전체 얼굴과 대화 표정, 번호표와 플레이어 손, 대기의자가 두 화면에 함께 남는다. 원본의 세 번째 인물은 대부분 화면 밖이지만 원문에 특정 인원 조건은 없다.",
+  "uiObservation": "두 화면에서 제목·본문·선택지 A/B가 읽힌다. 긴 A는 두 줄로 카드 내부에 남는다.",
+  "reviewMethod": "Codex AI directly inspected the full unchanged source PNG and all four unmodified native scene/play captures. Prior review is retained as historical evidence; this record is a new AI judgement, not human approval.",
+  "nativeMethod": "Production DecisionScreen, current parsed event/routing/PixelAssetLoader, fixture state in Android Compose instrumentation. Scene grid match >=0.95. Not complete game progression.",
+  "nativeRunLog": "build/refactor/secondary-art-focals-completion.log",
+  "limitations": [
+    "Emulator captures, not physical-device review.",
+    "Only reviewed phone and 360x740 dimensions; not every font scale/aspect ratio.",
+    "Art review does not independently certify scrolling, TalkBack or complete game-flow transitions."
+  ]
+}

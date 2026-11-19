@@ -1,0 +1,287 @@
+{
+  "schemaVersion": 1,
+  "eventId": "love_reunion_book",
+  "status": "PASS",
+  "reviewer": "Codex AI / plan_audit",
+  "reviewerType": "AI",
+  "reviewDate": "2026-11-19",
+  "approvalScope": "Current complete event and exact PNG; phone and 360x740 native Compose scene/play visual review",
+  "sourceEventHash": "0191408f5f04a88337d21c01d8117c754a45b2ecc4407a5c0274d5b322ff4ea1",
+  "sourceEventSnapshot": {
+    "eventId": "love_reunion_book",
+    "stage": "ADULT",
+    "type": "NORMAL",
+    "isFallback": false,
+    "isMilestone": false,
+    "title": "돌려주지 못한 책",
+    "text": "책장을 정리하다 헤어진 그 사람의 책을 찾았다. 마지막 장에 메모가 있다. '다 읽으면 감상 말해 줘.'",
+    "imageId": "img_love_reunion_book_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [
+        "breakup_once",
+        "ex_book"
+      ],
+      "blockedFlags": [
+        "dating",
+        "engaged",
+        "married"
+      ]
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "책을 돌려주러 간다",
+        "statDelta": {
+          "행복": 3,
+          "지력": 1
+        },
+        "resultText": "감상을 말하는 데 세 시간이 걸렸다. 그 사람이 다음 책을 내밀었다.",
+        "addFlags": [
+          "dating",
+          "rel_steady",
+          "partner_book",
+          "reunited"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "a_again",
+            "text": "감상을 말하는 데 세 시간이 걸렸다. 그 사람이 다음 책을 내밀었다.",
+            "chance": 55,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 3,
+              "지력": 1
+            },
+            "addFlags": [
+              "dating",
+              "rel_steady",
+              "partner_book",
+              "reunited"
+            ],
+            "removeFlags": [
+              "ex_book"
+            ]
+          },
+          {
+            "outcomeId": "a_return",
+            "text": "책을 건네고 감상을 짧게 말했다. 그 사람이 웃었다. '고마워. 이제 다 읽었네.'",
+            "chance": 45,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "지력": 1
+            },
+            "addFlags": [
+              "closure"
+            ],
+            "removeFlags": [
+              "ex_book"
+            ]
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week13_love_line"
+      },
+      {
+        "choiceId": "B",
+        "label": "택배로 보낸다",
+        "statDelta": {
+          "지력": 1
+        },
+        "resultText": "택배 상자에 감상 한 줄을 넣었다. '좋았어. 고마웠어.'",
+        "addFlags": [
+          "closure"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "b_mail",
+            "text": "택배 상자에 감상 한 줄을 넣었다. '좋았어. 고마웠어.'",
+            "chance": 100,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "지력": 1
+            },
+            "addFlags": [
+              "closure"
+            ],
+            "removeFlags": [
+              "ex_book"
+            ]
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week13_love_line"
+      },
+      {
+        "choiceId": "C",
+        "label": "감상문을 독후감 대회에 낸다",
+        "statDelta": {
+          "행복": 3,
+          "지력": 1
+        },
+        "resultText": "장려상을 받았다. 시상식 객석에 그 사람이 앉아 있었다. 끝나고 같이 커피를 마셨다.",
+        "addFlags": [
+          "dating",
+          "rel_steady",
+          "partner_book",
+          "reunited"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "c_prize",
+            "text": "장려상을 받았다. 시상식 객석에 그 사람이 앉아 있었다. 끝나고 같이 커피를 마셨다.",
+            "chance": 50,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 3,
+              "지력": 1
+            },
+            "addFlags": [
+              "dating",
+              "rel_steady",
+              "partner_book",
+              "reunited"
+            ],
+            "removeFlags": [
+              "ex_book"
+            ]
+          },
+          {
+            "outcomeId": "c_none",
+            "text": "낙선했다. 책은 그날 택배로 보냈다.",
+            "chance": 50,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": -1
+            },
+            "addFlags": [
+              "closure"
+            ],
+            "removeFlags": [
+              "ex_book"
+            ]
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week13_love_line"
+      }
+    ],
+    "priority": 0,
+    "kind": "INCIDENT",
+    "periods": [
+      "YOUNG_ADULT",
+      "MIDDLE"
+    ],
+    "weight": 30,
+    "view": "FIRST_PERSON",
+    "pathRole": "러브라인 재회(책 후보)",
+    "followUps": [
+      "love_marriage_talk_01"
+    ]
+  },
+  "sourceReadScope": "Title, full text, conditions, every choice and outcome including flags/stat deltas, periods and follow-ups directly read.",
+  "sourceImage": {
+    "path": "app/src/main/assets/images/img_love_reunion_book_001.png",
+    "sha256": "a321300ce17969108220d7ca04e85def579db827923e22c1b8e2de63de6d1618",
+    "width": 941,
+    "height": 1672
+  },
+  "generationManifest": "docs/refactor/art-candidates/generated-love-secondary-20261119.json",
+  "selectedGenerationOutput": "C:\\Users\\jk030\\.codex\\generated_images\\01a1f1e9-d1e7-7610-888a-7aff56bbb301\\exec-4d733ae0-65a2-47c6-94e2-07218c5d4b17.png",
+  "exactGenerationPromptSha256": "280bafb937d16aa93672c820b00db129c1cc4eb7fd75a3c8f64ece9b8db04d08",
+  "sourceGenerationReview": {
+    "reviewer": "Codex AI (/root/plan_audit)",
+    "reviewerType": "AI",
+    "method": "Direct visual inspection of the complete built-in generated image displayed by the tool; source-only, not an emulator capture.",
+    "status": "SELECTED_SOURCE_NATIVE_PENDING",
+    "observations": [
+      "Two coherent hands hold an old book at a bookshelf; an aged note is visible among the final pages.",
+      "Page and note marks are unreadable decorative texture; there is no player portrait, named former partner or legible message.",
+      "No parcel, handover, competition certificate, new reply or cafe reunion appears; the note remains central."
+    ],
+    "concerns": [
+      "Native crop and UI-overlay inspection remains required."
+    ]
+  },
+  "presentationMetadata": [],
+  "captures": [
+    {
+      "path": "build/refactor/after/secondary-art-focals-native/love_reunion_book_phone_scene.png",
+      "sha256": "a67fdc5cbb2c7f5ccb33e6fa72c8d5a149ce5894e5ee3ae7f988ec9a5d976f8e",
+      "width": 1080,
+      "height": 2400,
+      "screen": "phone",
+      "mode": "scene",
+      "cropReport": {
+        "eventId": "love_reunion_book",
+        "imageId": "img_love_reunion_book_001",
+        "assetPath": "img_love_reunion_book_001.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/secondary-art-focals-native/love_reunion_book_phone_play.png",
+      "sha256": "402e8b9b597ce6e113d156f647c7cd202daf4746febe2ada12e36003fb7bde7f",
+      "width": 1080,
+      "height": 2400,
+      "screen": "phone",
+      "mode": "play",
+      "cropReport": null
+    },
+    {
+      "path": "build/refactor/after/secondary-art-focals-native/love_reunion_book_360x740_scene.png",
+      "sha256": "303a25d096b8652161dc6501208269eec0aa779f285aed7cb14946c2f78e3c7a",
+      "width": 945,
+      "height": 1943,
+      "screen": "360x740",
+      "mode": "scene",
+      "cropReport": {
+        "eventId": "love_reunion_book",
+        "imageId": "img_love_reunion_book_001",
+        "assetPath": "img_love_reunion_book_001.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/secondary-art-focals-native/love_reunion_book_360x740_play.png",
+      "sha256": "68d98515c8925be7165ffcf7aac4a850b501a99fa457c419933d69d2b020986b",
+      "width": 945,
+      "height": 1943,
+      "screen": "360x740",
+      "mode": "play",
+      "cropReport": null
+    }
+  ],
+  "semanticObservation": "5개 결과를 읽었다. 책장 앞 두 손이 오래된 책과 기존 접힌 메모를 들고 있다. 페이지 표시는 추상적이며 읽을 수 있는 문장·새 답장·택배 발송·독후감 수상·상대의 실제 등장 결과가 없다.",
+  "cropObservation": "phone의 책 왼쪽 외곽 일부는 잘리나 책과 메모 중심은 명확하다. small에서도 핵심 책과 메모가 함께 남는다.",
+  "uiObservation": "두 화면에서 제목·본문·A/B/C 전체 문구와 카드가 읽힌다.",
+  "reviewMethod": "The same Codex AI agent generated and directly inspected the full selected source during production, verified exact current runtime SHA equality, then directly inspected all four unmodified native captures. This is not an independent human approval.",
+  "nativeMethod": "SceneCropReviewTest renders production DecisionScreen with current parsed event and actual routing/PixelAssetLoader in Compose instrumentation. Scene captures match designated crop >=0.95; fixture play state does not constitute a complete game progression.",
+  "testSource": "app/src/androidTest/java/com/example/lifegame/ui/SceneCropReviewTest.kt",
+  "nativeRunLog": "build/refactor/secondary-art-focals-completion.log",
+  "limitations": [
+    "Android emulator/Compose capture, not physical-device testing.",
+    "Only reviewed phone and 360x740 dimensions; not all font scales/aspect ratios.",
+    "Art approval does not independently certify choice scrolling, TalkBack or complete game state transitions."
+  ]
+}

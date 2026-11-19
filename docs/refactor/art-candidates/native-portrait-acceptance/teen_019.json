@@ -1,0 +1,71 @@
+{
+  "eventId": "teen_019",
+  "reviewerType": "AI",
+  "scope": "Portrait phone and small-phone presentation",
+  "sourceEventHash": "1cc636640476afa04f9d8a58bae88a0bd3cbe854563049233bb7cfd59744c7e1",
+  "sourceReview": "docs/refactor/art-candidates/portrait-integration/teen_019.json",
+  "sourceSha256": "e2ccf5cf612a03148f59dccd2d1d3b4a962f1ed90bd47625231fdf0959697df8",
+  "displayedVariant": {
+    "assetPath": "presentation/portraits/img_teen_high_school_001_portrait_v1.png",
+    "sha256": "cdd4a9f396246f377a8da794b3cc6a1974487bec5a22ec41486714402d02e4b7",
+    "width": 981,
+    "height": 1602,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root/effects_tech)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/teen_019.json"
+  },
+  "nativeCaptures": [
+    {
+      "path": "build/refactor/resumed/native18/teen_019_phone_scene.png",
+      "sha256": "f712c71ce9ac9239cb766d1e9dbbd1b8e382a5e108780be9bb91d280397f5f00",
+      "crop": {
+        "eventId": "teen_019",
+        "imageId": "img_teen_high_school_001",
+        "assetPath": "presentation/portraits/img_teen_high_school_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.133..0.867",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/native18/teen_019_phone_play.png",
+      "sha256": "d525e9ea1e22816c7118156fe7c450b862c6e7f5634850b65d9b5fd0091adaf1",
+      "crop": {
+        "eventId": "teen_019",
+        "imageId": "img_teen_high_school_001",
+        "assetPath": "presentation/portraits/img_teen_high_school_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.133..0.867",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/native18/teen_019_360x740_scene.png",
+      "sha256": "625b1dcc94f8c5a0238fc58831c36c645cbbe42835f2ae19552dc1d6e142c06d",
+      "crop": {
+        "eventId": "teen_019",
+        "imageId": "img_teen_high_school_001",
+        "assetPath": "presentation/portraits/img_teen_high_school_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.103..0.897",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/native18/teen_019_360x740_play.png",
+      "sha256": "e4e6ee7ef70b3963a35121dccc96eb2fb9ce8b3b5f506d767a377a42d1d5a050",
+      "crop": {
+        "eventId": "teen_019",
+        "imageId": "img_teen_high_school_001",
+        "assetPath": "presentation/portraits/img_teen_high_school_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.103..0.897",
+        "match": "1.000"
+      }
+    }
+  ],
+  "observation": "부모 두 명과 입학 자료, 비어 있는 원서가 중앙에 있다.",
+  "decision": "PASS",
+  "method": "Individual visual inspection of both scene and gameplay frames together with producer semantic/source review and device capture match."
+}

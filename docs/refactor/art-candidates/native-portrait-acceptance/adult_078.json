@@ -1,0 +1,71 @@
+{
+  "eventId": "adult_078",
+  "reviewerType": "AI",
+  "scope": "Portrait phone and small-phone presentation",
+  "sourceEventHash": "fce347016cad78bb142f464c3d88b09f23e6cf74b643dffab6d59cfe0bcd891b",
+  "sourceReview": "docs/refactor/art-candidates/portrait-integration/adult_078.json",
+  "sourceSha256": "f4ddccba50c6171344fed71f0eac867f388a645259b395447276fa64c2de19cc",
+  "displayedVariant": {
+    "assetPath": "presentation/portraits/img_pov_treadmill_001_portrait_v1.png",
+    "sha256": "ebc95588788737bd27cb689c8c036e16bd1c8ce0cd232324e0b994cef8446f0c",
+    "width": 841,
+    "height": 1870,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/adult_078.json"
+  },
+  "nativeCaptures": [
+    {
+      "path": "build/refactor/resumed/final32/adult_078_phone_scene.png",
+      "sha256": "7f6ae0a36e566c730a093a207a13ee7b872b203f6d5cf67aad1568bdfb32fe2f",
+      "crop": {
+        "eventId": "adult_078",
+        "imageId": "img_pov_treadmill_001",
+        "assetPath": "presentation/portraits/img_pov_treadmill_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.000..1.000",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/final32/adult_078_phone_play.png",
+      "sha256": "93072733f284312a0f9227af1e579798acc52175b621124565ddb71f39bcd3e6",
+      "crop": {
+        "eventId": "adult_078",
+        "imageId": "img_pov_treadmill_001",
+        "assetPath": "presentation/portraits/img_pov_treadmill_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.000..1.000",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/final32/adult_078_360x740_scene.png",
+      "sha256": "3aeeeb3ae95c13e0c2b406081cb972dbc213496ffb82fad556517108eeb3542e",
+      "crop": {
+        "eventId": "adult_078",
+        "imageId": "img_pov_treadmill_001",
+        "assetPath": "presentation/portraits/img_pov_treadmill_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.000..1.000",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/final32/adult_078_360x740_play.png",
+      "sha256": "861178da08eee31201537a81163c0fe1952f5323f9a76c370b1ec0e02cb6c440",
+      "crop": {
+        "eventId": "adult_078",
+        "imageId": "img_pov_treadmill_001",
+        "assetPath": "presentation/portraits/img_pov_treadmill_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.000..1.000",
+        "match": "1.000"
+      }
+    }
+  ],
+  "observation": "Adjacent runner's single belt, viewer's own handrail and fallen earbud in gap.",
+  "decision": "PASS",
+  "method": "Individual visual inspection of both scene and gameplay frames together with producer semantic/source review and device capture match."
+}

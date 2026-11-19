@@ -1,0 +1,71 @@
+{
+  "eventId": "path_luk_15",
+  "reviewerType": "AI",
+  "scope": "Portrait phone and small-phone presentation",
+  "sourceEventHash": "b21baf8250328bb823797aab7ea1ee72655412a9ddf46d0e07d6bfa1a7b77af1",
+  "sourceReview": "docs/refactor/art-candidates/portrait-integration/path_luk_15.json",
+  "sourceSha256": "d36a5a47cb826b396d66b8277d7e975ed81fac08cb28d2f148b8dede8f64407d",
+  "displayedVariant": {
+    "assetPath": "presentation/portraits/img_path_luk_15_001_portrait_v1.png",
+    "sha256": "2e4d22f91cbf6f756a10c27f955e2f35290ae243b98d47e01b6cecca81657795",
+    "width": 941,
+    "height": 1672,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/path_luk_15.json"
+  },
+  "nativeCaptures": [
+    {
+      "path": "build/refactor/resumed/final32/path_luk_15_phone_scene.png",
+      "sha256": "36f9203debebd0a9d434cfade2f39c1e2a2c32240e403e209da4b37a6963b6e4",
+      "crop": {
+        "eventId": "path_luk_15",
+        "imageId": "img_path_luk_15_001",
+        "assetPath": "presentation/portraits/img_path_luk_15_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/final32/path_luk_15_phone_play.png",
+      "sha256": "24ee363173e13f0913ddd4f27e6379c41f246587a5a789425da1799b530f6b2b",
+      "crop": {
+        "eventId": "path_luk_15",
+        "imageId": "img_path_luk_15_001",
+        "assetPath": "presentation/portraits/img_path_luk_15_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/final32/path_luk_15_360x740_scene.png",
+      "sha256": "67e80783988e5a25e88ff6eec44e2c9108f66768b4005a997b75e30afc195717",
+      "crop": {
+        "eventId": "path_luk_15",
+        "imageId": "img_path_luk_15_001",
+        "assetPath": "presentation/portraits/img_path_luk_15_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/final32/path_luk_15_360x740_play.png",
+      "sha256": "970dd2fccf8e1b6d54c3c9a0f8981d91cf6d9f472ff8ef1e51759a826f6f2f49",
+      "crop": {
+        "eventId": "path_luk_15",
+        "imageId": "img_path_luk_15_001",
+        "assetPath": "presentation/portraits/img_path_luk_15_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    }
+  ],
+  "observation": "Grandchild handling coin by stationary capsule machine, viewer's hands empty.",
+  "decision": "PASS",
+  "method": "Individual visual inspection of both scene and gameplay frames together with producer semantic/source review and device capture match."
+}

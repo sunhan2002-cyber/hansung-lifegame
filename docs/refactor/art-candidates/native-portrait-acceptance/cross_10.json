@@ -1,0 +1,71 @@
+{
+  "eventId": "cross_10",
+  "reviewerType": "AI",
+  "scope": "Portrait phone and small-phone presentation",
+  "sourceEventHash": "6bc6e7c1823ef48114add004dab28ecbfed2ef50b3249610000094278d7d435b",
+  "sourceReview": "docs/refactor/art-candidates/portrait-integration/cross_10.json",
+  "sourceSha256": "3855a9675dec30e42cc809a9c4a392a09d3b386d20a8526c3306c56fc4917a17",
+  "displayedVariant": {
+    "assetPath": "presentation/portraits/img_cross_10_001_portrait_v1.png",
+    "sha256": "7e77cbccf9d7ccb9186f1c628d34e4521b960e50c5dd2531d36dbcc3ab2ff306",
+    "width": 941,
+    "height": 1672,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root/security_p0)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/cross_10.json"
+  },
+  "nativeCaptures": [
+    {
+      "path": "build/refactor/resumed/native18/cross_10_phone_scene.png",
+      "sha256": "9497e7a75ab7b20346b2b4848fe5c23c31694000ee20e5e8d35455813fc4dcdb",
+      "crop": {
+        "eventId": "cross_10",
+        "imageId": "img_cross_10_001",
+        "assetPath": "presentation/portraits/img_cross_10_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/native18/cross_10_phone_play.png",
+      "sha256": "6ea5f6dbc10118763bdb5ee71e84eb1a40e35e14393fbc74b39fda4b73b9f2c9",
+      "crop": {
+        "eventId": "cross_10",
+        "imageId": "img_cross_10_001",
+        "assetPath": "presentation/portraits/img_cross_10_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/native18/cross_10_360x740_scene.png",
+      "sha256": "0087d835aac2b61b2928d1722e7e5025d34bce53a43b00c8cc991d1e45fa3d44",
+      "crop": {
+        "eventId": "cross_10",
+        "imageId": "img_cross_10_001",
+        "assetPath": "presentation/portraits/img_cross_10_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/native18/cross_10_360x740_play.png",
+      "sha256": "fd270840f03f14fde9551aec487cbc0ace417d397c522d5c10a0c24c4f575fc1",
+      "crop": {
+        "eventId": "cross_10",
+        "imageId": "img_cross_10_001",
+        "assetPath": "presentation/portraits/img_cross_10_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    }
+  ],
+  "observation": "명절의 빈 식탁과 두 연락을 보여주는 전화가 남는다.",
+  "decision": "PASS",
+  "method": "Individual visual inspection of both scene and gameplay frames together with producer semantic/source review and device capture match."
+}

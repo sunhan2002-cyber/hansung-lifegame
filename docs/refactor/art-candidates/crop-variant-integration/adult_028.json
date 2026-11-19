@@ -1,0 +1,28 @@
+{
+  "eventId": "adult_028",
+  "sourceAssetPath": "followup_20261031/img_adult_first_car_001.png",
+  "sourceSha256": "8193911908ce12934731cab5ebcfddd15c985aa57283c35ae9eb64cb04add8b0",
+  "variant": {
+    "assetPath": "presentation/portraits/img_adult_first_car_001_portrait_v1.png",
+    "sha256": "31029c4d981cfb36dfa6aa594bc89454d89d851591956bd0d6b6c767b14be98d",
+    "width": 941,
+    "height": 1672,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI",
+    "reviewEvidence": "docs/refactor/art-candidates/crop-variant-integration/adult_028.json"
+  },
+  "reviewerType": "AI",
+  "reviewer": "Codex AI",
+  "reviewStatus": "AI_REVIEWED_PRESENTATION",
+  "eventSourceHash": "dde8995d1f06ec3e1ea92251ddbe4d6f6be36d0cac5ef676a0384a2c1ea69b5e",
+  "semanticReview": "Producer reviewed current conditions and every choice/outcome. Root independently inspected the selected full-resolution output. Selection remains pre-choice; no outcome is forced. See production ledger full snapshot.",
+  "visualReview": "재생성에서 실제로 차량을 작게 중앙 재배치했다. 차량 전체와 영업사원 얼굴/몸이 중앙 영역 및9:20 crop에 남는다. 원본 차량·판매점·선택 전 제안 유지, 구매/키 전달 결과 없음. 구조상 명백한 결함 없음; native pending.",
+  "cropReview": "Portrait recomposition selected after source review; native phone and small phone verification pending. This is not final artwork acceptance.",
+  "actualProducer": "OpenAI built-in image_gen",
+  "generationMethod": "Built-in imagegen edit; exact prompts and rejected attempts preserved in crop-variant-production-20261119.json",
+  "nativePending": true,
+  "runtimeConnected": true,
+  "approvalChanged": false,
+  "selectedStagingSha256": "31029c4d981cfb36dfa6aa594bc89454d89d851591956bd0d6b6c767b14be98d"
+}

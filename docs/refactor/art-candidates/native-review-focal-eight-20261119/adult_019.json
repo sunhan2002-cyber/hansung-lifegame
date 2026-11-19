@@ -1,0 +1,215 @@
+{
+  "schemaVersion": 1,
+  "eventId": "adult_019",
+  "status": "PASS",
+  "reviewer": "Codex AI / plan_audit",
+  "reviewerType": "AI",
+  "reviewDate": "2026-11-19",
+  "sourceEventHash": "d996af5227b1387e4d331efc81a04ca82759faa7379b527a036b04ef1a6393d6",
+  "sourceEventSnapshot": {
+    "eventId": "adult_019",
+    "stage": "ADULT",
+    "type": "NORMAL",
+    "isFallback": false,
+    "isMilestone": false,
+    "title": "문 앞 자리의 기회",
+    "text": "고기를 굽는데 옆 테이블에 앉은 다른 팀 부장님이 불판을 들여다본다. \"자네, 고기 좀 굽네?\"",
+    "imageId": "img_adult_dinner_door_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [
+        "seat_door",
+        "job_employed"
+      ],
+      "blockedFlags": []
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "\"삼겹살은 한 번만 뒤집는 게 기본입니다\"",
+        "statDelta": {
+          "경제력": 2,
+          "사회성": 1,
+          "행복": -1
+        },
+        "resultText": "부장님이 명함을 줬다. 다음 달, 그 팀에서 같이 일하자는 제안이 왔다.",
+        "addFlags": [
+          "scouted"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "a_primary",
+            "text": "부장님이 명함을 줬다. 다음 달, 그 팀에서 같이 일하자는 제안이 왔다.",
+            "chance": 100,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "경제력": 2,
+              "사회성": 1,
+              "행복": -1
+            },
+            "addFlags": [
+              "scouted"
+            ],
+            "lifeDelta": 10
+          }
+        ]
+      },
+      {
+        "choiceId": "B",
+        "label": "\"감사합니다.\" 하고 계속 굽는다",
+        "statDelta": {
+          "사회성": 2,
+          "건강": -2
+        },
+        "resultText": "어느새 두 테이블 고기를 다 굽고 있었다. 팔은 아팠고, 두 팀 모두 내 이름을 외웠다.",
+        "addFlags": [],
+        "outcomes": [
+          {
+            "outcomeId": "b_primary",
+            "text": "어느새 두 테이블 고기를 다 굽고 있었다. 팔은 아팠고, 두 팀 모두 내 이름을 외웠다.",
+            "chance": 100,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "사회성": 2,
+              "건강": -2
+            },
+            "addFlags": []
+          }
+        ]
+      },
+      {
+        "choiceId": "C",
+        "label": "집게를 넘기고 조용히 집에 간다",
+        "statDelta": {
+          "건강": 2,
+          "행복": 1,
+          "사회성": -2
+        },
+        "resultText": "문 앞 자리라 아무도 눈치채지 못했다. 밤 9시에 씻고 누웠다. 인생 최고의 회식이었다.",
+        "addFlags": [],
+        "outcomes": [
+          {
+            "outcomeId": "c_primary",
+            "text": "문 앞 자리라 아무도 눈치채지 못했다. 밤 9시에 씻고 누웠다. 인생 최고의 회식이었다.",
+            "chance": 100,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "건강": 2,
+              "행복": 1,
+              "사회성": -2
+            },
+            "addFlags": []
+          }
+        ]
+      }
+    ],
+    "priority": 0,
+    "kind": "INCIDENT",
+    "periods": [
+      "YOUNG_ADULT"
+    ]
+  },
+  "sourceReadScope": "Current complete event, conditions, every choice/outcome and flags/stat deltas/periods/follow-ups directly read before judgement.",
+  "sourceImage": {
+    "path": "app/src/main/assets/images/followup_20261031/img_adult_dinner_door_001.png",
+    "sha256": "0d174b0af21f409c0093d64f45279d1485749d093f893ff2e8679adf40880ecf",
+    "width": 720,
+    "height": 540
+  },
+  "originalArtworkUnchangedSinceHistoricalReview": true,
+  "historicalReview": {
+    "eventId": "adult_019",
+    "title": "문 앞 자리의 기회",
+    "imageId": "img_adult_dinner_door_001",
+    "assetPath": "followup_20261031/img_adult_dinner_door_001.png",
+    "sha256": "0d174b0af21f409c0093d64f45279d1485749d093f893ff2e8679adf40880ecf",
+    "eventSourceHash": "d996af5227b1387e4d331efc81a04ca82759faa7379b527a036b04ef1a6393d6",
+    "status": "REVISION_REQUIRED",
+    "reviewer": "김선한 담당 Codex 직접 대행 검수",
+    "reason": "중앙 크롭에서 고기를 든 주인공 손과 부탁하는 부장의 얼굴이 잘림",
+    "expectedAction": "고기를 굽는 내 불판을 옆 테이블 부장님이 들여다봄",
+    "requiredObjects": "불판, 삼겹살, 내 손의 집게, 내려다보는 부장님",
+    "sheet": "output/art-review-20261119/sheet-09.jpg",
+    "cell": 9,
+    "cropMethod": "ImageOps.fit centre-fill 360:800; simulated crop inspected directly, not an emulator capture",
+    "visualMethod": "원본 도트풍·색감·장면 파손·명백한 신체/사물 오류 직접 확인"
+  },
+  "presentationMetadata": [
+    {
+      "assetPath": "followup_20261031/img_adult_dinner_door_001.png",
+      "sourceSha256": "0d174b0af21f409c0093d64f45279d1485749d093f893ff2e8679adf40880ecf",
+      "focalX": 0.655,
+      "focalY": 0.5,
+      "note": "Original PNG retained. Individual core-visibility improvement for adult_019; simulated 360x800 and 360x740 crops reviewed. Native review pending; no legacy artwork approval. See docs/refactor/art-candidates/crop-review-20261119.json."
+    }
+  ],
+  "captures": [
+    {
+      "path": "build/refactor/after/secondary-art-focals-native/adult_019_phone_scene.png",
+      "sha256": "2c1692ad655859dc907c8ea76a68cfd8fe78a712027f9d9afecedeb7fe4612bd",
+      "width": 1080,
+      "height": 2400,
+      "screen": "phone",
+      "mode": "scene",
+      "cropReport": {
+        "eventId": "adult_019",
+        "imageId": "img_adult_dinner_door_001",
+        "assetPath": "followup_20261031/img_adult_dinner_door_001.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.486..0.824",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/secondary-art-focals-native/adult_019_phone_play.png",
+      "sha256": "b79a7ddba8ff4595526c791558d55893c077e23eb27dca10c11a01a474df8d7a",
+      "width": 1080,
+      "height": 2400,
+      "screen": "phone",
+      "mode": "play",
+      "cropReport": null
+    },
+    {
+      "path": "build/refactor/after/secondary-art-focals-native/adult_019_360x740_scene.png",
+      "sha256": "ad30777063b0c5bed27275689aa35afb7b8ab10b29f55cc7274622dccecd812d",
+      "width": 945,
+      "height": 1943,
+      "screen": "360x740",
+      "mode": "scene",
+      "cropReport": {
+        "eventId": "adult_019",
+        "imageId": "img_adult_dinner_door_001",
+        "assetPath": "followup_20261031/img_adult_dinner_door_001.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.473..0.837",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/secondary-art-focals-native/adult_019_360x740_play.png",
+      "sha256": "1552ff3831b58ae6af79be014d955b60e18478f573f539c935ddbceb3a4c1ed1",
+      "width": 945,
+      "height": 1943,
+      "screen": "360x740",
+      "mode": "play",
+      "cropReport": null
+    }
+  ],
+  "semanticObservation": "문 앞에서 고기를 굽고 부장이 불판을 보는 현재 상태다. 집게를 든 플레이어 손이 그대로이며 명함·스카우트·두 테이블 봉사·집게 양도·귀가 결과가 없다.",
+  "cropObservation": "focalX 0.655의 실제 두 화면에서 부장 머리와 양눈·얼굴, 불판과 고기, 집게 및 잡은 손이 함께 남아 기존 얼굴/손 크롭 우려를 해소했다. 문 자체는 화면 밖이지만 핵심 행동/소품은 유지된다.",
+  "uiObservation": "두 화면 모두 제목·본문·A/B/C 문구가 읽힌다. small 긴 A는 두 줄로 카드 안에 남는다.",
+  "reviewMethod": "Codex AI directly inspected the full unchanged source PNG and all four unmodified native scene/play captures. Prior review is retained as historical evidence; this record is a new AI judgement, not human approval.",
+  "nativeMethod": "Production DecisionScreen, current parsed event/routing/PixelAssetLoader, fixture state in Android Compose instrumentation. Scene grid match >=0.95. Not complete game progression.",
+  "nativeRunLog": "build/refactor/secondary-art-focals-completion.log",
+  "limitations": [
+    "Emulator captures, not physical-device review.",
+    "Only reviewed phone and 360x740 dimensions; not every font scale/aspect ratio.",
+    "Art review does not independently certify scrolling, TalkBack or complete game-flow transitions."
+  ]
+}

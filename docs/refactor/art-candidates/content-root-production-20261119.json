@@ -1,0 +1,1884 @@
+{
+  "schemaVersion": 1,
+  "owner": "/root",
+  "tool": "builtin imagegen edit",
+  "items": [
+    {
+      "eventId": "path_soc_03",
+      "sourceEventHash": "cc2d9da1909b2283b3b720e0678888d48a1b7baa393f961015333e40d224eff0",
+      "sourceImagePath": "app/src/main/assets/images/followup_20261031/img_path_soc_03_001.png",
+      "sourceImageSha256": "9cc885b7df64858d8dd3b7e47b8ab1ef1b173abe2a1affeeef6b9d134cb0aebd",
+      "sourceEvent": {
+        "eventId": "path_soc_03",
+        "stage": "TEEN",
+        "type": "NORMAL",
+        "isFallback": false,
+        "isMilestone": false,
+        "title": "집에 가는 길이 같은 사람",
+        "text": "동아리 끝나고 매번 같은 버스를 타는 사람이 있다. 오늘은 둘만 남았다. \"{name}, 너 이번 정류장 아니지?\" 맞다. 세 정거장 지났다.",
+        "imageId": "img_path_soc_03_001",
+        "conditions": {
+          "stats": {},
+          "requiredFlags": [
+            "soc_path"
+          ],
+          "blockedFlags": [
+            "dating",
+            "married",
+            "engaged"
+          ]
+        },
+        "choices": [
+          {
+            "choiceId": "A",
+            "label": "\"같이 내려서 걸을래?\"라고 묻는다",
+            "statDelta": {
+              "사회성": 2,
+              "행복": 3,
+              "지력": -1
+            },
+            "resultText": "세 정거장을 걸어서 돌아갔다. 그날부터 버스 대신 걷는 날이 많아졌다.",
+            "addFlags": [
+              "dating",
+              "first_love",
+              "dating__path_soc_03",
+              "partner_first_love",
+              "met_bus"
+            ],
+            "outcomes": [
+              {
+                "outcomeId": "a_date",
+                "text": "세 정거장을 걸어서 돌아갔다. 그날부터 버스 대신 걷는 날이 많아졌다.",
+                "chance": 65,
+                "primary": true,
+                "hidden": false,
+                "death": false,
+                "statDelta": {
+                  "사회성": 2,
+                  "행복": 3,
+                  "지력": -1
+                },
+                "addFlags": [
+                  "dating",
+                  "first_love",
+                  "dating__path_soc_03",
+                  "partner_first_love",
+                  "met_bus"
+                ],
+                "chanceWeights": {
+                  "사회성": 2,
+                  "운": 1
+                }
+              },
+              {
+                "outcomeId": "a_friend",
+                "text": "\"좋아! 친구로서!\" 그 말을 듣고 웃었다. 진짜 좋은 친구가 생겼다.",
+                "chance": 35,
+                "primary": false,
+                "hidden": false,
+                "death": false,
+                "statDelta": {
+                  "사회성": 2,
+                  "행복": -1
+                },
+                "addFlags": [
+                  "best_friend"
+                ]
+              }
+            ],
+            "alwaysAvailable": true,
+            "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+            "conditionReview": "soft_incident",
+            "conditionBasis": "week8_life_path"
+          },
+          {
+            "choiceId": "B",
+            "label": "모르는 척 다음 정류장에서 내린다",
+            "statDelta": {
+              "건강": 1,
+              "행복": -2
+            },
+            "resultText": "집까지 40분을 걸었다. 다음 날 그 사람이 다른 버스를 탔다는 걸 알았다.",
+            "addFlags": [
+              "missed_chance"
+            ],
+            "outcomes": [
+              {
+                "outcomeId": "b_miss",
+                "text": "집까지 40분을 걸었다. 다음 날 그 사람이 다른 버스를 탔다는 걸 알았다.",
+                "chance": 100,
+                "primary": true,
+                "hidden": false,
+                "death": false,
+                "statDelta": {
+                  "건강": 1,
+                  "행복": -2
+                },
+                "addFlags": [
+                  "missed_chance"
+                ]
+              }
+            ],
+            "alwaysAvailable": true,
+            "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+            "conditionReview": "soft_incident",
+            "conditionBasis": "week8_life_path"
+          }
+        ],
+        "priority": 0,
+        "kind": "INCIDENT",
+        "periods": [
+          "TEEN",
+          "YOUNG_ADULT"
+        ],
+        "weight": 20,
+        "view": "FIRST_PERSON",
+        "lifePath": "SOCIAL",
+        "pathRole": "연애",
+        "followUps": [
+          "path_soc_04",
+          "path_soc_05"
+        ]
+      },
+      "sourceReview": {
+        "reviewer": "Codex AI (/root/security_p0)",
+        "reviewerType": "AI",
+        "sourceTextAndAllOutcomesReviewed": true,
+        "sourceImageViewed": true,
+        "observedImage": "The source shows a boy and girl already walking outside at sunset, from third person. This is an optional later outcome, not the bus setup.",
+        "editBrief": "Use first-person seated inside a nearly empty bus with just the one clubmate looking toward the player. Keep empty seats, evening window and non-text stop indicator central; no player face/back, no fixed player gender.",
+        "preChoiceConstraints": "No getting off, walking together, dating established, friend-zone conversation or different bus next day.",
+        "generationDecision": "REPAIR_REQUIRED",
+        "reviewMethod": "Every current choice/outcome and conditions read; original PNG viewed individually with view_image."
+      },
+      "exactPrompt": "Use case: illustration-story / precise scene correction. Edit the supplied image for a Korean life-simulation game; preserve its warm clean pixel-art style, limited palette and the friendly female clubmate's design. Replace the walking-outdoors third-person composition with the correct BEFORE-CHOICE scene INSIDE a nearly empty city bus at sunset. Camera is the player's own seated first-person eyes, not an external view. Only ONE other passenger, the teenage/young-adult clubmate in modest school-club clothes, sits diagonally across the aisle near the centre and turns toward the viewer, gently asking about a missed stop. The player's face/body/back must not be visible; at most neutral hands resting on a bag at the bottom frame. Show empty bus seats, an evening-lit window and a small non-readable bus-stop display shape. No other passengers, no paired couple standing outside, no romantic touching, no getting off, walking together or established dating. No readable letters/numerals/dialogue balloons/clock. New composition must be vertical 9:16, full-bleed, all important face and bus clues inside the central 70% of width so a 9:20 screen crop keeps them. The player's optional hands must naturally continue beyond the lower frame, never floating cut-off sleeves. No UI, borders, watermarks, photorealism, 3D or added grain. This is a still moment before the player chooses how to respond.",
+      "attempts": [
+        {
+          "sourceGeneratedPath": "C:\\Users\\jk030\\.codex\\generated_images\\01a1f1bc-6c39-7a10-a591-0d1f4e5cef6b\\exec-38e62b79-04b1-42b1-83c9-6de17397149a.png",
+          "exactPrompt": "Use case: illustration-story / precise scene correction. Edit the supplied image for a Korean life-simulation game; preserve its warm clean pixel-art style, limited palette and the friendly female clubmate's design. Replace the walking-outdoors third-person composition with the correct BEFORE-CHOICE scene INSIDE a nearly empty city bus at sunset. Camera is the player's own seated first-person eyes, not an external view. Only ONE other passenger, the teenage/young-adult clubmate in modest school-club clothes, sits diagonally across the aisle near the centre and turns toward the viewer, gently asking about a missed stop. The player's face/body/back must not be visible; at most neutral hands resting on a bag at the bottom frame. Show empty bus seats, an evening-lit window and a small non-readable bus-stop display shape. No other passengers, no paired couple standing outside, no romantic touching, no getting off, walking together or established dating. No readable letters/numerals/dialogue balloons/clock. New composition must be vertical 9:16, full-bleed, all important face and bus clues inside the central 70% of width so a 9:20 screen crop keeps them. The player's optional hands must naturally continue beyond the lower frame, never floating cut-off sleeves. No UI, borders, watermarks, photorealism, 3D or added grain. This is a still moment before the player chooses how to respond.",
+          "outputSha256": "1d4619d8eadcae044537a4a4dd91cc41eb03a6f308457f7d23921875bbe1c27f",
+          "status": "SELECTED_AI_STAGING",
+          "review": "One other clubmate inside an otherwise empty bus, direct first-person seat viewpoint; only player hands on bag, stop display is abstract; no walking or dating outcome. Face and hands centred enough for native crop review."
+        }
+      ],
+      "status": "ACCEPTED_AI_STAGING",
+      "reviewerType": "AI",
+      "nativePending": true,
+      "runtimeConnected": false,
+      "selectedPath": "build/refactor/content-art-staging/path_soc_03_portrait_v1.png",
+      "outputSha256": "1d4619d8eadcae044537a4a4dd91cc41eb03a6f308457f7d23921875bbe1c27f",
+      "width": 941,
+      "height": 1672,
+      "sourceImageDirectlyViewed": true,
+      "outputDirectlyViewed": true,
+      "visualReview": "One other clubmate inside an otherwise empty bus, direct first-person seat viewpoint; only player hands on bag, stop display is abstract; no walking or dating outcome. Face and hands centred enough for native crop review."
+    },
+    {
+      "eventId": "path_soc_10",
+      "sourceEventHash": "41696dab965854a9d87c93500d2cd7ae1ddd9b270e004d940c7dd0082b74b56e",
+      "sourceImagePath": "app/src/main/assets/images/week10/scenes/img_path_soc_10_001.png",
+      "sourceImageSha256": "64c9be8c48e154527e24d9b71960fe518ff795eafc002b272f0135b3a00a1b2b",
+      "sourceEvent": {
+        "eventId": "path_soc_10",
+        "stage": "TEEN",
+        "type": "NORMAL",
+        "isFallback": false,
+        "isMilestone": false,
+        "title": "축제가 끝나고 갈라진 무리",
+        "text": "축제 예산 문제로 친구들이 두 편으로 갈렸다. 단톡방 두 개에 다 내가 있다. 둘 다 내 대답만 기다린다.",
+        "imageId": "img_path_soc_10_001",
+        "conditions": {
+          "stats": {},
+          "requiredFlags": [
+            "soc_conflict"
+          ],
+          "blockedFlags": []
+        },
+        "choices": [
+          {
+            "choiceId": "A",
+            "label": "양쪽을 한자리에 부른다",
+            "statDelta": {
+              "사회성": 4,
+              "행복": 1,
+              "경제력": -1
+            },
+            "resultText": "떡볶이집에 다 불렀다. 처음 30분은 아무도 말이 없었다. 계산할 때쯤엔 다들 웃고 있었다.",
+            "addFlags": [
+              "best_friend",
+              "achv_peacemaker"
+            ],
+            "outcomes": [
+              {
+                "outcomeId": "a_peace",
+                "text": "떡볶이집에 다 불렀다. 처음 30분은 아무도 말이 없었다. 계산할 때쯤엔 다들 웃고 있었다.",
+                "chance": 60,
+                "primary": true,
+                "hidden": false,
+                "death": false,
+                "statDelta": {
+                  "사회성": 4,
+                  "행복": 1,
+                  "경제력": -1
+                },
+                "addFlags": [
+                  "best_friend",
+                  "achv_peacemaker"
+                ],
+                "chanceWeights": {
+                  "사회성": 3
+                }
+              },
+              {
+                "outcomeId": "a_worse",
+                "text": "한자리에 모였다가 더 크게 싸웠다. 그날 밤 단톡방 두 개에서 동시에 내보내졌다.",
+                "chance": 40,
+                "primary": false,
+                "hidden": false,
+                "death": false,
+                "statDelta": {
+                  "사회성": -2,
+                  "행복": -2
+                },
+                "addFlags": [],
+                "chanceWeights": {
+                  "사회성": -2
+                }
+              }
+            ],
+            "alwaysAvailable": true,
+            "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+            "conditionReview": "soft_incident",
+            "conditionBasis": "week10_path_followup"
+          },
+          {
+            "choiceId": "B",
+            "label": "한쪽 편에 선다",
+            "statDelta": {
+              "사회성": 1,
+              "행복": -1
+            },
+            "resultText": "한쪽과는 더 가까워졌다. 다른 쪽과는 졸업 사진에서만 같이 웃었다.",
+            "addFlags": [
+              "best_friend"
+            ],
+            "outcomes": [
+              {
+                "outcomeId": "b_side",
+                "text": "한쪽과는 더 가까워졌다. 다른 쪽과는 졸업 사진에서만 같이 웃었다.",
+                "chance": 100,
+                "primary": true,
+                "hidden": false,
+                "death": false,
+                "statDelta": {
+                  "사회성": 1,
+                  "행복": -1
+                },
+                "addFlags": [
+                  "best_friend"
+                ]
+              }
+            ],
+            "alwaysAvailable": true,
+            "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+            "conditionReview": "soft_incident",
+            "conditionBasis": "week10_path_followup"
+          },
+          {
+            "choiceId": "C",
+            "label": "둘 다 잠깐 거리를 둔다",
+            "statDelta": {
+              "지력": 2,
+              "행복": 1,
+              "사회성": -1
+            },
+            "resultText": "한 달 동안 도서관에 다녔다. 다시 돌아갔을 때 둘은 이미 화해해 있었다. 나만 몰랐다.",
+            "addFlags": [],
+            "outcomes": [
+              {
+                "outcomeId": "c_space",
+                "text": "한 달 동안 도서관에 다녔다. 다시 돌아갔을 때 둘은 이미 화해해 있었다. 나만 몰랐다.",
+                "chance": 100,
+                "primary": true,
+                "hidden": false,
+                "death": false,
+                "statDelta": {
+                  "지력": 2,
+                  "행복": 1,
+                  "사회성": -1
+                },
+                "addFlags": []
+              }
+            ],
+            "alwaysAvailable": true,
+            "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+            "conditionReview": "soft_incident",
+            "conditionBasis": "week10_path_followup"
+          }
+        ],
+        "priority": 0,
+        "kind": "INCIDENT",
+        "periods": [
+          "TEEN"
+        ],
+        "weight": 8,
+        "view": "FIRST_PERSON",
+        "lifePath": "SOCIAL",
+        "pathRole": "갈등 후 회복",
+        "followUps": [
+          "path_soc_03"
+        ]
+      },
+      "sourceReview": {
+        "reviewer": "Codex AI (/root/security_p0)",
+        "reviewerType": "AI",
+        "sourceTextAndAllOutcomesReviewed": true,
+        "sourceImageViewed": true,
+        "observedImage": "The low-resolution source shows festival debris and distant split groups, with no phone or two conversations awaiting the player.",
+        "editBrief": "Keep the post-festival school ground as background; add player hands holding one central phone with exactly two clearly separate non-text group-chat notifications. Keep two small separated friend groups within the centre region, no readable text.",
+        "preChoiceConstraints": "No reconciliation meeting, chosen faction, argument confrontation, expulsion from chats or library retreat.",
+        "generationDecision": "REPAIR_REQUIRED",
+        "reviewMethod": "Every current choice/outcome and conditions read; original PNG viewed individually with view_image."
+      },
+      "exactPrompt": "Use case: illustration-story / precise-object-edit. Edit this post-festival school illustration into a portrait 9:16 full-bleed native game scene, preserving its warm sunset pixel-art palette and school/festival remnants. Correct the missing story subject: first-person teenage player's TWO natural hands hold ONE central smartphone. On the phone show EXACTLY TWO clearly separated group-chat notification cards, each with a distinct small group-avatar symbol and simple non-readable message marks. The two chat groups are waiting for a reply; no sent player reply, typing text, numbers, readable letters or dialogue balloons. Place two small visibly separated friend groups in the schoolyard above/behind the phone, both within central 70% of the image, with leftover bunting and stage in background. They have split over festival budgeting; no physical confrontation, reconciliation meeting, restaurant, expelled chat, chosen faction or later library retreat. No player's face/body/back, no fixed player gender. Phone and two hands must remain central and complete in 9:20 crop; arms continue naturally from lower frame, no floating cut-off sleeves. Render crisp expressive pixel-game illustration, not photorealistic or 3D, no border, watermark or overlay game UI.",
+      "attempts": [
+        {
+          "sourceGeneratedPath": "C:\\Users\\jk030\\.codex\\generated_images\\01a1f1bc-6c39-7a10-a591-0d1f4e5cef6b\\exec-f996ead6-2b1d-4653-bd8c-1c355e6bafac.png",
+          "exactPrompt": "Use case: illustration-story / precise-object-edit. Edit this post-festival school illustration into a portrait 9:16 full-bleed native game scene, preserving its warm sunset pixel-art palette and school/festival remnants. Correct the missing story subject: first-person teenage player's TWO natural hands hold ONE central smartphone. On the phone show EXACTLY TWO clearly separated group-chat notification cards, each with a distinct small group-avatar symbol and simple non-readable message marks. The two chat groups are waiting for a reply; no sent player reply, typing text, numbers, readable letters or dialogue balloons. Place two small visibly separated friend groups in the schoolyard above/behind the phone, both within central 70% of the image, with leftover bunting and stage in background. They have split over festival budgeting; no physical confrontation, reconciliation meeting, restaurant, expelled chat, chosen faction or later library retreat. No player's face/body/back, no fixed player gender. Phone and two hands must remain central and complete in 9:20 crop; arms continue naturally from lower frame, no floating cut-off sleeves. Render crisp expressive pixel-game illustration, not photorealistic or 3D, no border, watermark or overlay game UI.",
+          "outputSha256": "964f52517800a19f992998f37372c2297102e92e536e84d0c8e686ff481d03c0",
+          "status": "SELECTED_AI_STAGING",
+          "review": "Exactly two group chat cards on one phone, two separated friend groups and festival remnants; two player hands originate at lower frame; no sent reply or reconciliation. Native narrow crop review pending."
+        }
+      ],
+      "status": "ACCEPTED_AI_STAGING",
+      "reviewerType": "AI",
+      "nativePending": true,
+      "runtimeConnected": false,
+      "selectedPath": "build/refactor/content-art-staging/path_soc_10_portrait_v1.png",
+      "outputSha256": "964f52517800a19f992998f37372c2297102e92e536e84d0c8e686ff481d03c0",
+      "width": 971,
+      "height": 1619,
+      "sourceImageDirectlyViewed": true,
+      "outputDirectlyViewed": true,
+      "visualReview": "Exactly two group chat cards on one phone, two separated friend groups and festival remnants; two player hands originate at lower frame; no sent reply or reconciliation. Native narrow crop review pending."
+    },
+    {
+      "eventId": "special_005",
+      "sourceEventHash": "c6942e067d9ffe5aaf95d7a70f638be8622757a0ee109d09bed9a60251e9ce1b",
+      "sourceImagePath": "app/src/main/assets/images/followup_20261031/img_special_auto_door_001.png",
+      "sourceImageSha256": "3cad0d77bfdd7df077493145f652ec2d51ad77a05b46f88e0545a50d8ffc9db5",
+      "sourceEvent": {
+        "eventId": "special_005",
+        "stage": "TEEN",
+        "type": "SPECIAL",
+        "isFallback": false,
+        "isMilestone": false,
+        "title": "나를 거부하는 자동문",
+        "text": "학교 자동문이 나만 인식 못 한다. 12번째 실패. 뒤에 줄 선 애들이 박수를 치기 시작했다.",
+        "imageId": "img_special_auto_door_001",
+        "conditions": {
+          "stats": {},
+          "requiredFlags": [],
+          "blockedFlags": []
+        },
+        "choices": [
+          {
+            "choiceId": "A",
+            "label": "옆문으로 간다",
+            "statDelta": {
+              "행복": -2,
+              "운": 1
+            },
+            "resultText": "옆문은 수동이었다. 아무도 기억 못 할 아침. 자동문도 끝까지 날 기억 못 했다.",
+            "addFlags": [
+              "survived_special"
+            ],
+            "outcomes": [
+              {
+                "outcomeId": "a_primary",
+                "text": "옆문은 수동이었다. 아무도 기억 못 할 아침. 자동문도 끝까지 날 기억 못 했다.",
+                "chance": 100,
+                "primary": true,
+                "hidden": false,
+                "death": false,
+                "statDelta": {
+                  "행복": -2,
+                  "운": 1
+                },
+                "addFlags": [
+                  "survived_special"
+                ],
+                "lifeDelta": -25,
+                "deathCause": "옆문까지 걸어간 굴욕 쇼크"
+              }
+            ],
+            "conditionReview": "confirmed",
+            "conditionBasis": "week10_meaning_review",
+            "alwaysAvailable": true,
+            "alwaysAvailableReason": "누구나 할 수 있는 회피·반응 행동이라 능력치로 잠그지 않음 (10주차 의미 검수)"
+          },
+          {
+            "choiceId": "B",
+            "label": "끝장을 본다",
+            "statDelta": {
+              "사회성": 2,
+              "행복": -4,
+              "지력": -1
+            },
+            "resultText": "13번째에 열림. 기립 박수. 그리고 복도에서 지각 벌점.",
+            "addFlags": [
+              "auto_door_legend"
+            ],
+            "outcomes": [
+              {
+                "outcomeId": "b_primary",
+                "text": "13번째에 열림. 기립 박수. 그리고 복도에서 지각 벌점.",
+                "chance": 100,
+                "primary": true,
+                "hidden": false,
+                "death": false,
+                "statDelta": {
+                  "사회성": 2,
+                  "행복": -4,
+                  "지력": -1
+                },
+                "addFlags": [
+                  "auto_door_legend"
+                ],
+                "lifeDelta": -25,
+                "deathCause": "자동문과의 13판 승부"
+              }
+            ],
+            "conditionReview": "confirmed",
+            "alwaysAvailableReason": "고집스럽게 재시도하는 코믹 행동은 행복 수치와 수행 자격의 직접 관계가 없어 열어둔다.",
+            "alwaysAvailable": true
+          },
+          {
+            "choiceId": "C",
+            "label": "센서 앞에서 팔을 휘저으며 춤춘다",
+            "statDelta": {
+              "사회성": 1,
+              "운": 1,
+              "행복": -3
+            },
+            "resultText": "문이 열렸다. 영상이 전교에 퍼졌다. 별명 '자동문 댄서'.",
+            "addFlags": [
+              "auto_door_legend"
+            ],
+            "outcomes": [
+              {
+                "outcomeId": "c_primary",
+                "text": "문이 열렸다. 영상이 전교에 퍼졌다. 별명 '자동문 댄서'.",
+                "chance": 100,
+                "primary": true,
+                "hidden": false,
+                "death": false,
+                "statDelta": {
+                  "사회성": 1,
+                  "운": 1,
+                  "행복": -3
+                },
+                "addFlags": [
+                  "auto_door_legend"
+                ],
+                "lifeDelta": -25,
+                "deathCause": "자동문 앞 막춤 과로"
+              }
+            ],
+            "conditionReview": "fallback_choice",
+            "conditionBasis": "semantic_flag_or_text_match",
+            "alwaysAvailable": true,
+            "alwaysAvailableReason": "사건 내 최소 한 선택지는 항상 실행 가능해야 함"
+          }
+        ],
+        "priority": 0,
+        "kind": "BIG_INCIDENT",
+        "periods": [
+          "TEEN"
+        ]
+      },
+      "sourceReview": {
+        "reviewer": "Codex AI (/root/security_p0)",
+        "reviewerType": "AI",
+        "sourceTextAndAllOutcomesReviewed": true,
+        "sourceImageViewed": true,
+        "observedImage": "The camera looks at three classmates clapping beside a closed school automatic door; it is not clearly the person blocked directly in front.",
+        "editBrief": "Move student first-person camera directly before closed sliding panels and visible sensor. Empty hands stay low; classmates clapping may appear at peripheral sides behind the player, without reflection of the player.",
+        "preChoiceConstraints": "Repeated failure and clapping are setup facts; no open door, side-door exit, dance pose, viral video or lateness punishment.",
+        "generationDecision": "REPAIR_REQUIRED",
+        "reviewMethod": "Every current choice/outcome and conditions read; original PNG viewed individually with view_image."
+      },
+      "exactPrompt": "Edit the referenced game artwork into a polished vertical 9:16 full-bleed scene for a Korean life-simulation game. Preserve warm amber/olive palette and carefully drawn retro pixel-illustration texture, but recompose to genuine first-person POV: the camera IS the teenage player standing directly in front of a CLOSED school automatic sliding glass door that has failed to recognize them twelve times. The closed seam of the two glass panels and the overhead motion sensor are clearly visible centrally. Three school classmates behind/beside the player are amused and clapping in a queue; show their readable faces and clapping hands clustered in the central 70% of the composition, seen naturally at oblique sides, not posing for a portrait. Player body is not shown; if needed show only one natural uniform-sleeved hand entering from bottom edge toward sensor, no floating limbs, no player reflection. Crucially this is BEFORE choosing an action: door must remain closed, no triumphant opening, dancing, manual-side-door escape, recording phone or late punishment. No literal words or numerals, no HUD, no frame, no film border, no caption. Use strong spatial depth, warm school corridor lighting, clean anatomy, age-appropriate students. All essential clues (closed door, sensor, classmates clapping) must survive a narrow centered mobile crop. Output a crisp detailed 9:16 portrait.",
+      "attempts": [
+        {
+          "sourceGeneratedPath": "C:\\Users\\jk030\\.codex\\generated_images\\01a1f1bc-6c39-7a10-a591-0d1f4e5cef6b\\exec-bbcd7eef-5bb4-40c2-b548-04ebdcd67c43.png",
+          "exactPrompt": "Edit the referenced game artwork into a polished vertical 9:16 full-bleed scene for a Korean life-simulation game. Preserve warm amber/olive palette and carefully drawn retro pixel-illustration texture, but recompose to genuine first-person POV: the camera IS the teenage player standing directly in front of a CLOSED school automatic sliding glass door that has failed to recognize them twelve times. The closed seam of the two glass panels and the overhead motion sensor are clearly visible centrally. Three school classmates behind/beside the player are amused and clapping in a queue; show their readable faces and clapping hands clustered in the central 70% of the composition, seen naturally at oblique sides, not posing for a portrait. Player body is not shown; if needed show only one natural uniform-sleeved hand entering from bottom edge toward sensor, no floating limbs, no player reflection. Crucially this is BEFORE choosing an action: door must remain closed, no triumphant opening, dancing, manual-side-door escape, recording phone or late punishment. No literal words or numerals, no HUD, no frame, no film border, no caption. Use strong spatial depth, warm school corridor lighting, clean anatomy, age-appropriate students. All essential clues (closed door, sensor, classmates clapping) must survive a narrow centered mobile crop. Output a crisp detailed 9:16 portrait.",
+          "outputSha256": "65b79af3ca6e9f4db02d3d2245e1086bfdd853b993dd20c141478cd590183da7",
+          "status": "SELECTED_AI_STAGING",
+          "review": "Closed school sliding door and central sensor directly ahead of first-person player; three clapping classmates, one connected uniform sleeve/hand. No future choice outcome. Right classmate near edge requires native crop inspection."
+        }
+      ],
+      "status": "ACCEPTED_AI_STAGING",
+      "reviewerType": "AI",
+      "nativePending": true,
+      "runtimeConnected": false,
+      "selectedPath": "build/refactor/content-art-staging/special_005_portrait_v1.png",
+      "outputSha256": "65b79af3ca6e9f4db02d3d2245e1086bfdd853b993dd20c141478cd590183da7",
+      "width": 941,
+      "height": 1672,
+      "sourceImageDirectlyViewed": true,
+      "outputDirectlyViewed": true,
+      "visualReview": "Closed school sliding door and central sensor directly ahead of first-person player; three clapping classmates, one connected uniform sleeve/hand. No future choice outcome. Right classmate near edge requires native crop inspection."
+    },
+    {
+      "eventId": "special_017",
+      "sourceEventHash": "5f3bc51a977f3dca36e5ab14b23240eb5bb866e6915af29ec25cf18bc4df69ce",
+      "sourceImagePath": "app/src/main/assets/images/followup_20261031/img_special_stuck_elevator_001.png",
+      "sourceImageSha256": "5c1977696335161e465f1d11c94670d3802fbad9a065cf2eef6b1bdfd0a96536",
+      "sourceEvent": {
+        "eventId": "special_017",
+        "stage": "TEEN",
+        "type": "SPECIAL",
+        "isFallback": false,
+        "isMilestone": false,
+        "title": "멈춘 엘리베이터",
+        "text": "학원 엘리베이터가 층 사이에 멈췄다. 안에는 나와 짝사랑하는 애 둘뿐. 관리실: \"30분 정도 걸려요.\"",
+        "imageId": "img_special_stuck_elevator_001",
+        "conditions": {
+          "stats": {},
+          "requiredFlags": [],
+          "blockedFlags": []
+        },
+        "choices": [
+          {
+            "choiceId": "A",
+            "label": "침착하게 말을 건다",
+            "statDelta": {
+              "사회성": 3,
+              "건강": -1
+            },
+            "resultText": "30분이 3분 같았다. 문이 열렸을 때 조금 아쉬웠다.",
+            "addFlags": [
+              "survived_special"
+            ],
+            "outcomes": [
+              {
+                "outcomeId": "a_primary",
+                "text": "30분이 3분 같았다. 문이 열렸을 때 조금 아쉬웠다.",
+                "chance": 100,
+                "primary": true,
+                "hidden": false,
+                "death": false,
+                "statDelta": {
+                  "사회성": 3,
+                  "건강": -1
+                },
+                "addFlags": [
+                  "survived_special"
+                ],
+                "lifeDelta": 0,
+                "deathCause": "엘리베이터 속 설렘 과다"
+              }
+            ],
+            "requiredStats": {
+              "사회성": 55
+            },
+            "conditionReview": "confirmed",
+            "conditionBasis": "single_positive_outcome_stat"
+          },
+          {
+            "choiceId": "B",
+            "label": "긴장해서 혼잣말을 한다",
+            "statDelta": {
+              "운": 1,
+              "행복": -3
+            },
+            "resultText": "혼잣말이 비상 인터폰을 타고 관리실에 전부 들렸다.",
+            "addFlags": [
+              "survived_special"
+            ],
+            "outcomes": [
+              {
+                "outcomeId": "b_primary",
+                "text": "혼잣말이 비상 인터폰을 타고 관리실에 전부 들렸다.",
+                "chance": 100,
+                "primary": true,
+                "hidden": false,
+                "death": false,
+                "statDelta": {
+                  "운": 1,
+                  "행복": -3
+                },
+                "addFlags": [
+                  "survived_special"
+                ],
+                "lifeDelta": -25,
+                "deathCause": "관리실 생중계 수치"
+              }
+            ],
+            "conditionReview": "confirmed",
+            "conditionBasis": "week10_meaning_review",
+            "alwaysAvailable": true,
+            "alwaysAvailableReason": "누구나 할 수 있는 회피·반응 행동이라 능력치로 잠그지 않음 (10주차 의미 검수)"
+          },
+          {
+            "choiceId": "C",
+            "label": "배에서 꼬르륵 소리가 난다",
+            "statDelta": {
+              "운": 2,
+              "사회성": -2,
+              "건강": -1
+            },
+            "resultText": "소리가 엘리베이터에 울렸다. 그 애가 말없이 초코바를 반 쪼개 줬다.",
+            "addFlags": [
+              "survived_special"
+            ],
+            "outcomes": [
+              {
+                "outcomeId": "c_primary",
+                "text": "소리가 엘리베이터에 울렸다. 그 애가 말없이 초코바를 반 쪼개 줬다.",
+                "chance": 100,
+                "primary": true,
+                "hidden": false,
+                "death": false,
+                "statDelta": {
+                  "운": 2,
+                  "사회성": -2,
+                  "건강": -1
+                },
+                "addFlags": [
+                  "survived_special"
+                ],
+                "lifeDelta": -25,
+                "deathCause": "꼬르륵 굴욕 쇼크"
+              }
+            ],
+            "conditionReview": "fallback_choice",
+            "conditionBasis": "single_positive_outcome_stat",
+            "alwaysAvailable": true,
+            "alwaysAvailableReason": "사건 내 최소 한 선택지는 항상 실행 가능해야 함"
+          }
+        ],
+        "priority": 0,
+        "kind": "BIG_INCIDENT",
+        "periods": [
+          "TEEN"
+        ]
+      },
+      "sourceReview": {
+        "reviewer": "Codex AI (/root/security_p0)",
+        "reviewerType": "AI",
+        "sourceTextAndAllOutcomesReviewed": true,
+        "sourceImageViewed": true,
+        "observedImage": "The source is an empty stopped elevator with only player hands/knees; the other student central to the event is absent.",
+        "editBrief": "Keep closed elevator and emergency speaker but add one age-appropriate classmate nearby, neutral expectant expression, no player reflection. First-person hands only; any floor display is unnumbered and cannot imply arrival.",
+        "preChoiceConstraints": "No doors opening, conversation already resolving tension, public broadcast of monologue or shared chocolate.",
+        "generationDecision": "REPAIR_REQUIRED",
+        "reviewMethod": "Every current choice/outcome and conditions read; original PNG viewed individually with view_image."
+      },
+      "exactPrompt": "Edit the referenced pixel-art elevator into a vertical 9:16 full-bleed Korean life-game scene. Keep the warm bronze elevator, old ceiling light, closed center doors, pixel-art shading and grain. Correct missing story information: exactly TWO teenagers are in the elevator: the unseen first-person player/camera and ONE other school-age classmate the player has a crush on. Show only that one classmate, standing near the right-center against side rail, face and upper body fully visible within central 70% of the portrait, neutral mildly uneasy waiting expression, modest school uniform. The player's natural two hands rest near the bottom edge, sleeves connect all the way to bottom frame, no visible player face/back/reflection. Elevator is stuck between floors; CLOSED doors, nonnumeric stopped display, emergency speaker and simple control buttons clearly visible. Management has said wait 30 minutes, but do NOT write text or numbers. This is the scene BEFORE any choice, so no chocolate (a future choice), no eating, no door opening, no rescue, no romantic action, no scripted conversation resolution. Strong readable composition with classmate, closed doors and control panel all central enough to survive mobile crop. No UI, no frame, no film motif. Preserve coherent two-person anatomy, first-person perspective and retro pixel illustration rather than photorealism. Output portrait9:16.",
+      "attempts": [
+        {
+          "sourceGeneratedPath": "C:\\Users\\jk030\\.codex\\generated_images\\01a1f1bc-6c39-7a10-a591-0d1f4e5cef6b\\exec-c32cb900-7b20-4f69-a8a0-49bdaf1707d2.png",
+          "exactPrompt": "Edit the referenced pixel-art elevator into a vertical 9:16 full-bleed Korean life-game scene. Keep the warm bronze elevator, old ceiling light, closed center doors, pixel-art shading and grain. Correct missing story information: exactly TWO teenagers are in the elevator: the unseen first-person player/camera and ONE other school-age classmate the player has a crush on. Show only that one classmate, standing near the right-center against side rail, face and upper body fully visible within central 70% of the portrait, neutral mildly uneasy waiting expression, modest school uniform. The player's natural two hands rest near the bottom edge, sleeves connect all the way to bottom frame, no visible player face/back/reflection. Elevator is stuck between floors; CLOSED doors, nonnumeric stopped display, emergency speaker and simple control buttons clearly visible. Management has said wait 30 minutes, but do NOT write text or numbers. This is the scene BEFORE any choice, so no chocolate (a future choice), no eating, no door opening, no rescue, no romantic action, no scripted conversation resolution. Strong readable composition with classmate, closed doors and control panel all central enough to survive mobile crop. No UI, no frame, no film motif. Preserve coherent two-person anatomy, first-person perspective and retro pixel illustration rather than photorealism. Output portrait9:16.",
+          "outputSha256": "a34b77fca2d39a3ce14ce19d22908e97dc74e00793fbfa52ad36664dee6f9c14",
+          "status": "SELECTED_AI_STAGING",
+          "review": "One classmate now present in closed bronze elevator with emergency panel; player seated first-person hands/knees only, connected sleeves. No chocolate, door opening or resolved romance."
+        }
+      ],
+      "status": "ACCEPTED_AI_STAGING",
+      "reviewerType": "AI",
+      "nativePending": true,
+      "runtimeConnected": false,
+      "selectedPath": "build/refactor/content-art-staging/special_017_portrait_v1.png",
+      "outputSha256": "a34b77fca2d39a3ce14ce19d22908e97dc74e00793fbfa52ad36664dee6f9c14",
+      "width": 941,
+      "height": 1672,
+      "sourceImageDirectlyViewed": true,
+      "outputDirectlyViewed": true,
+      "visualReview": "One classmate now present in closed bronze elevator with emergency panel; player seated first-person hands/knees only, connected sleeves. No chocolate, door opening or resolved romance."
+    },
+    {
+      "eventId": "teen_003",
+      "sourceEventHash": "7dac53e0364b604511849feac54c3c2eb4b072ebc40bb89cba4018083616b60d",
+      "sourceImagePath": "app/src/main/assets/images/followup_20261031/img_teen_club_001.png",
+      "sourceImageSha256": "b94a2324dca03e5a79577a9a7473ff65047773ceae337259da58271c060a5a5a",
+      "sourceEvent": {
+        "eventId": "teen_003",
+        "stage": "TEEN",
+        "type": "NORMAL",
+        "isFallback": false,
+        "isMilestone": false,
+        "title": "중학교 동아리",
+        "text": "선배들: \"운동부 오면 체력 보장!\" \"학술부 코딩반 오면 치킨 쿠폰!\" \"예술부 밴드 오면 무대 선다!\"",
+        "imageId": "img_teen_club_001",
+        "conditions": {
+          "stats": {},
+          "requiredFlags": [],
+          "blockedFlags": [
+            "v4:event:teen_019"
+          ]
+        },
+        "choices": [
+          {
+            "choiceId": "A",
+            "label": "운동부",
+            "statDelta": {
+              "운동능력": 4,
+              "건강": 1,
+              "지력": -2
+            },
+            "resultText": "매일 아침 운동장 열 바퀴. 몸은 가벼워졌고, 수업 시간엔 눈꺼풀이 무거워졌다.",
+            "addFlags": [
+              "teen_sports"
+            ],
+            "outcomes": [
+              {
+                "outcomeId": "a_primary",
+                "text": "매일 아침 운동장 열 바퀴. 몸은 가벼워졌고, 수업 시간엔 눈꺼풀이 무거워졌다.",
+                "chance": 100,
+                "lifeDelta": 10,
+                "primary": true,
+                "hidden": false,
+                "death": false,
+                "statDelta": {
+                  "운동능력": 4,
+                  "건강": 1,
+                  "지력": -2
+                },
+                "addFlags": [
+                  "teen_sports"
+                ]
+              }
+            ],
+            "requiredStats": {
+              "운동능력": 55
+            }
+          },
+          {
+            "choiceId": "B",
+            "label": "학술부 코딩반",
+            "statDelta": {
+              "지력": 4,
+              "사회성": -1
+            },
+            "resultText": "'Hello, World!' 출력 성공. 치킨 쿠폰은 선배들이 이미 썼다.",
+            "addFlags": [
+              "coding_club"
+            ],
+            "outcomes": [
+              {
+                "outcomeId": "b_primary",
+                "text": "'Hello, World!' 출력 성공. 치킨 쿠폰은 선배들이 이미 썼다.",
+                "chance": 100,
+                "primary": true,
+                "hidden": false,
+                "death": false,
+                "statDelta": {
+                  "지력": 4,
+                  "사회성": -1
+                },
+                "addFlags": [
+                  "coding_club"
+                ],
+                "lifeDelta": 10
+              }
+            ]
+          },
+          {
+            "choiceId": "C",
+            "label": "예술부 밴드",
+            "statDelta": {
+              "사회성": 3,
+              "행복": 3,
+              "지력": -1
+            },
+            "resultText": "베이스 담당. 아무도 베이스 소리를 구분 못 한다는 건 첫 공연 후에 알았다.",
+            "addFlags": [
+              "band_member"
+            ],
+            "outcomes": [
+              {
+                "outcomeId": "c_primary",
+                "text": "베이스 담당. 아무도 베이스 소리를 구분 못 한다는 건 첫 공연 후에 알았다.",
+                "chance": 100,
+                "primary": true,
+                "hidden": false,
+                "death": false,
+                "statDelta": {
+                  "사회성": 3,
+                  "행복": 3,
+                  "지력": -1
+                },
+                "addFlags": [
+                  "band_member"
+                ],
+                "lifeDelta": 10
+              }
+            ]
+          }
+        ],
+        "priority": 0,
+        "kind": "INCIDENT",
+        "periods": [
+          "TEEN"
+        ]
+      },
+      "sourceReview": {
+        "reviewer": "Codex AI (/root/security_p0)",
+        "reviewerType": "AI",
+        "sourceTextAndAllOutcomesReviewed": true,
+        "sourceImageViewed": true,
+        "observedImage": "The source shows the player painting with art-club classmates. It has already chosen one activity and misses sports/coding offers.",
+        "editBrief": "Rebuild a school club orientation corridor with three compact neutral offer cues: sports equipment, open laptop with abstract code blocks, and bass/band equipment. Student seniors invite without completing an enrolment; player hands empty.",
+        "preChoiceConstraints": "No painting session, running laps, successful program output, coupon redeemed or band performance.",
+        "generationDecision": "REPAIR_REQUIRED",
+        "reviewMethod": "Every current choice/outcome and conditions read; original PNG viewed individually with view_image."
+      },
+      "exactPrompt": "Rebuild the supplied warm pixel-illustration as a portrait 9:16 BEFORE-CHOICE middle-school club orientation. Preserve the source's appealing Korean school characters and warm sunlight, but remove painting/art class already in progress. Camera is the new student's first-person view with at most empty hands at lower edge, no player face, back, shoulder or reflection. In front are THREE inviting older school students clustered centrally, each with a distinct neutral club offer cue: sports student with basketball, academic coding student beside open laptop showing abstract unlabelled code blocks, band student with a bass guitar leaning on stand. Arrange these three coherent offers as a compact group centered across middle width so faces and all three props survive narrow phone crop. A small unredeemed coupon with a chicken icon may lie by laptop, no words. No enrolment already made, playing instruments/performance, painting, completed code output, running laps or coupon redeemed. No readable text/numbers, UI, frame, film strip. Detailed clean pixel-game illustration, vertical full-bleed, physical anatomy and props, strong foreground/midground/background depth, fully connected arms.",
+      "attempts": [
+        {
+          "sourceGeneratedPath": "C:\\Users\\jk030\\.codex\\generated_images\\01a1f1bc-6c39-7a10-a591-0d1f4e5cef6b\\exec-a523759d-193d-440d-81b7-be198fc87ba9.png",
+          "exactPrompt": "Rebuild the supplied warm pixel-illustration as a portrait 9:16 BEFORE-CHOICE middle-school club orientation. Preserve the source's appealing Korean school characters and warm sunlight, but remove painting/art class already in progress. Camera is the new student's first-person view with at most empty hands at lower edge, no player face, back, shoulder or reflection. In front are THREE inviting older school students clustered centrally, each with a distinct neutral club offer cue: sports student with basketball, academic coding student beside open laptop showing abstract unlabelled code blocks, band student with a bass guitar leaning on stand. Arrange these three coherent offers as a compact group centered across middle width so faces and all three props survive narrow phone crop. A small unredeemed coupon with a chicken icon may lie by laptop, no words. No enrolment already made, playing instruments/performance, painting, completed code output, running laps or coupon redeemed. No readable text/numbers, UI, frame, film strip. Detailed clean pixel-game illustration, vertical full-bleed, physical anatomy and props, strong foreground/midground/background depth, fully connected arms.",
+          "outputSha256": "3f536f903ecf828925c6643e799d377128fb90e05c580910f35bc7edc651f90d",
+          "status": "SELECTED_AI_STAGING",
+          "review": "Three inviting seniors with ball, abstract-code laptop and unplayed bass; no chosen club, painting or performed outcome. First-person empty hands with connected sleeves, centered faces. Native crop must retain ball/bass as distinct cues."
+        }
+      ],
+      "status": "ACCEPTED_AI_STAGING",
+      "reviewerType": "AI",
+      "nativePending": true,
+      "runtimeConnected": false,
+      "selectedPath": "build/refactor/content-art-staging/teen_003_portrait_v1.png",
+      "outputSha256": "3f536f903ecf828925c6643e799d377128fb90e05c580910f35bc7edc651f90d",
+      "width": 941,
+      "height": 1672,
+      "sourceImageDirectlyViewed": true,
+      "outputDirectlyViewed": true,
+      "visualReview": "Three inviting seniors with ball, abstract-code laptop and unplayed bass; no chosen club, painting or performed outcome. First-person empty hands with connected sleeves, centered faces. Native crop must retain ball/bass as distinct cues."
+    },
+    {
+      "eventId": "teen_007",
+      "sourceEventHash": "e86a1815d175d128842b5f1e0f2a563cfd7a032c8d3420ed3c3d62154dbbaa7d",
+      "sourceImagePath": "app/src/main/assets/images/followup_20261031/img_teen_midterm_001.png",
+      "sourceImageSha256": "1763ae0fffa28119dafa6a24d52cd5faed98485868ce4ee7a089726c08054f41",
+      "sourceEvent": {
+        "eventId": "teen_007",
+        "stage": "TEEN",
+        "type": "NORMAL",
+        "isFallback": false,
+        "isMilestone": false,
+        "title": "첫 중간고사",
+        "text": "친구: \"{nameCall}, PC방 딱 한 시간만!\" 시험은 일주일 남았다. 그 '한 시간'이 지켜진 적은 없다.",
+        "imageId": "img_teen_midterm_001",
+        "conditions": {
+          "stats": {},
+          "requiredFlags": [],
+          "blockedFlags": [
+            "v4:event:teen_019"
+          ]
+        },
+        "choices": [
+          {
+            "choiceId": "A",
+            "label": "독서실에 간다",
+            "statDelta": {
+              "지력": 5,
+              "사회성": -2,
+              "행복": -1
+            },
+            "resultText": "반 5등. 친구들 길드 이름은 끝까지 몰랐다.",
+            "addFlags": [
+              "study_hard"
+            ],
+            "outcomes": [
+              {
+                "outcomeId": "a_primary",
+                "text": "반 5등. 친구들 길드 이름은 끝까지 몰랐다.",
+                "chance": 70,
+                "primary": true,
+                "hidden": false,
+                "death": false,
+                "statDelta": {
+                  "지력": 5,
+                  "사회성": -2,
+                  "행복": -1
+                },
+                "addFlags": [
+                  "study_hard"
+                ],
+                "lifeDelta": 10,
+                "chanceWeights": {
+                  "지력": 2
+                }
+              },
+              {
+                "outcomeId": "a_desk_nap",
+                "text": "독서실 칸막이 안에서 매일 밤 잤다. 의자에 앉아 자는 법은 완벽하게 익혔다. 성적은 그대로였고, 목은 일주일 동안 돌아가지 않았다.",
+                "chance": 30,
+                "primary": false,
+                "hidden": false,
+                "death": false,
+                "statDelta": {
+                  "지력": 1,
+                  "건강": 2,
+                  "행복": -1
+                },
+                "addFlags": [],
+                "chanceWeights": {
+                  "건강": -2
+                }
+              }
+            ],
+            "requiredStats": {
+              "지력": 55
+            }
+          },
+          {
+            "choiceId": "B",
+            "label": "딱 한 시간만 간다",
+            "statDelta": {
+              "사회성": 2,
+              "행복": 2,
+              "지력": -2
+            },
+            "resultText": "네 시간 됨. 수학 시험 내내 머릿속에서 게임 BGM이 재생됐다.",
+            "addFlags": [],
+            "outcomes": [
+              {
+                "outcomeId": "b_primary",
+                "text": "네 시간 됨. 수학 시험 내내 머릿속에서 게임 BGM이 재생됐다.",
+                "chance": 100,
+                "primary": true,
+                "hidden": false,
+                "death": false,
+                "statDelta": {
+                  "사회성": 2,
+                  "행복": 2,
+                  "지력": -2
+                },
+                "addFlags": [],
+                "lifeDelta": 10
+              }
+            ]
+          },
+          {
+            "choiceId": "C",
+            "label": "친구들을 독서실로 끌고 간다",
+            "statDelta": {
+              "사회성": 2,
+              "지력": 2,
+              "행복": -2
+            },
+            "resultText": "독서실에서 다 같이 잤다. 그래도 평균은 올랐다.",
+            "addFlags": [
+              "study_hard"
+            ],
+            "outcomes": [
+              {
+                "outcomeId": "c_primary",
+                "text": "독서실에서 다 같이 잤다. 그래도 평균은 올랐다.",
+                "chance": 100,
+                "primary": true,
+                "hidden": false,
+                "death": false,
+                "statDelta": {
+                  "사회성": 2,
+                  "지력": 2,
+                  "행복": -2
+                },
+                "addFlags": [
+                  "study_hard"
+                ],
+                "lifeDelta": 10
+              }
+            ]
+          }
+        ],
+        "priority": 0,
+        "kind": "INCIDENT",
+        "periods": [
+          "TEEN"
+        ]
+      },
+      "sourceReview": {
+        "reviewer": "Codex AI (/root/security_p0)",
+        "reviewerType": "AI",
+        "sourceTextAndAllOutcomesReviewed": true,
+        "sourceImageViewed": true,
+        "observedImage": "The source has the player back/shoulder at the left while facing a friend in an after-school room; calendar, phone and study book are present.",
+        "editBrief": "Remove the visible player head/shoulder and shift to eye-level first-person looking at inviting friend. Preserve the book, anonymous calendar and game invitation phone together centrally, no readable dates or message text.",
+        "preChoiceConstraints": "No PC-cafe entry, hours already passed, study-room sleep, rank/score or completed exam.",
+        "generationDecision": "REPAIR_REQUIRED",
+        "reviewMethod": "Every current choice/outcome and conditions read; original PNG viewed individually with view_image."
+      },
+      "exactPrompt": "Edit this warm pixel-art Korean classroom illustration into portrait 9:16, full-bleed. Preserve the smiling inviting schoolboy, sunset windows, after-school empty room, central phone showing abstract game-invitation thumbnail, blank calendar grid and open study book. CRITICAL POV correction: completely remove the foreground player's visible head/back/shoulder at left. Camera is now directly the player's eyes seated at desk opposite that one schoolfriend. Optional two empty player hands enter naturally from bottom edge, no face/reflection/body. Friend leans on desk and invites the player to a PC cafe, but both are STILL in school a week before exams, before a choice. Keep friend's full face, invitation phone, calendar and study book tightly composed within central 70% so all survive tall phone crop. No grades, scores, completed exam, sleeping student, actual PC cafe, game session, passed hours or written dates/messages. Calendar and phone use neutral unlabelled marks, no legible words or numbers. Preserve warm cohesive retro pixel texture, no cinematic border or UI; no floating sleeves, extra hands or third person.",
+      "attempts": [
+        {
+          "sourceGeneratedPath": "C:\\Users\\jk030\\.codex\\generated_images\\01a1f1bc-6c39-7a10-a591-0d1f4e5cef6b\\exec-0866bc55-3e45-41cd-b52b-669b4e79aadd.png",
+          "exactPrompt": "Edit this warm pixel-art Korean classroom illustration into portrait 9:16, full-bleed. Preserve the smiling inviting schoolboy, sunset windows, after-school empty room, central phone showing abstract game-invitation thumbnail, blank calendar grid and open study book. CRITICAL POV correction: completely remove the foreground player's visible head/back/shoulder at left. Camera is now directly the player's eyes seated at desk opposite that one schoolfriend. Optional two empty player hands enter naturally from bottom edge, no face/reflection/body. Friend leans on desk and invites the player to a PC cafe, but both are STILL in school a week before exams, before a choice. Keep friend's full face, invitation phone, calendar and study book tightly composed within central 70% so all survive tall phone crop. No grades, scores, completed exam, sleeping student, actual PC cafe, game session, passed hours or written dates/messages. Calendar and phone use neutral unlabelled marks, no legible words or numbers. Preserve warm cohesive retro pixel texture, no cinematic border or UI; no floating sleeves, extra hands or third person.",
+          "outputSha256": "acc5006364d14a455307ef2f0cce75ec88d6d91cbeb93857a62860447b467f5d",
+          "status": "SELECTED_AI_STAGING",
+          "review": "Inviting friend, game invite on phone, anonymous calendar grid and study book remain in school; removed visible player head/shoulder, now first-person hands only. No exam grade or chosen PC cafe visit."
+        }
+      ],
+      "status": "ACCEPTED_AI_STAGING",
+      "reviewerType": "AI",
+      "nativePending": true,
+      "runtimeConnected": false,
+      "selectedPath": "build/refactor/content-art-staging/teen_007_portrait_v1.png",
+      "outputSha256": "acc5006364d14a455307ef2f0cce75ec88d6d91cbeb93857a62860447b467f5d",
+      "width": 941,
+      "height": 1672,
+      "sourceImageDirectlyViewed": true,
+      "outputDirectlyViewed": true,
+      "visualReview": "Inviting friend, game invite on phone, anonymous calendar grid and study book remain in school; removed visible player head/shoulder, now first-person hands only. No exam grade or chosen PC cafe visit."
+    },
+    {
+      "eventId": "teen_012",
+      "sourceEventHash": "efa4f5392697385703633278030b22708cd894c9829605d8e56fd6ce1d1316e1",
+      "sourceImagePath": "app/src/main/assets/images/followup_20261031/img_teen_band_stage_001.png",
+      "sourceImageSha256": "b7ab0929cd115b6564f8ff581459f6049306c0e9b683981e73e1b80585e20f2b",
+      "sourceEvent": {
+        "eventId": "teen_012",
+        "stage": "TEEN",
+        "type": "NORMAL",
+        "isFallback": false,
+        "isMilestone": false,
+        "title": "축제 무대 사고",
+        "text": "공연 10분 전. 보컬: \"(쉰 목소리로) {nameCall}… 네가 불러…\" 나는 베이스다.",
+        "imageId": "img_teen_band_stage_001",
+        "conditions": {
+          "stats": {},
+          "requiredFlags": [
+            "band_member"
+          ],
+          "blockedFlags": []
+        },
+        "choices": [
+          {
+            "choiceId": "A",
+            "label": "마이크를 잡는다",
+            "statDelta": {
+              "사회성": 4,
+              "행복": 3,
+              "건강": -1
+            },
+            "resultText": "첫 소절 음이탈. 관객들이 일부러인 줄 알고 떼창 시작. 레전드 무대 탄생.",
+            "addFlags": [
+              "stage_star"
+            ],
+            "outcomes": [
+              {
+                "outcomeId": "a_primary",
+                "text": "첫 소절 음이탈. 관객들이 일부러인 줄 알고 떼창 시작. 레전드 무대 탄생.",
+                "chance": 100,
+                "primary": true,
+                "hidden": false,
+                "death": false,
+                "statDelta": {
+                  "사회성": 4,
+                  "행복": 3,
+                  "건강": -1
+                },
+                "addFlags": [
+                  "stage_star"
+                ],
+                "lifeDelta": 4
+              }
+            ]
+          },
+          {
+            "choiceId": "B",
+            "label": "연주곡으로 바꾼다",
+            "statDelta": {
+              "지력": 1,
+              "행복": 1,
+              "사회성": -1
+            },
+            "resultText": "베이스 솔로. 관객 절반은 화장실, 남은 절반은 오열.",
+            "addFlags": [],
+            "outcomes": [
+              {
+                "outcomeId": "b_primary",
+                "text": "베이스 솔로. 관객 절반은 화장실, 남은 절반은 오열.",
+                "chance": 100,
+                "primary": true,
+                "hidden": false,
+                "death": false,
+                "statDelta": {
+                  "지력": 1,
+                  "행복": 1,
+                  "사회성": -1
+                },
+                "addFlags": []
+              }
+            ]
+          },
+          {
+            "choiceId": "C",
+            "label": "관객에게 마이크를 넘긴다",
+            "statDelta": {
+              "사회성": 3,
+              "운": 1,
+              "행복": -1
+            },
+            "resultText": "관객이 노래를 전부 불렀다. 우리는 반주만 했다. 공연 최고 점수.",
+            "addFlags": [
+              "stage_star"
+            ],
+            "outcomes": [
+              {
+                "outcomeId": "c_primary",
+                "text": "관객이 노래를 전부 불렀다. 우리는 반주만 했다. 공연 최고 점수.",
+                "chance": 100,
+                "primary": true,
+                "hidden": false,
+                "death": false,
+                "statDelta": {
+                  "사회성": 3,
+                  "운": 1,
+                  "행복": -1
+                },
+                "addFlags": [
+                  "stage_star"
+                ],
+                "lifeDelta": 10
+              }
+            ]
+          }
+        ],
+        "priority": 0,
+        "kind": "INCIDENT",
+        "periods": [
+          "TEEN"
+        ]
+      },
+      "sourceReview": {
+        "reviewer": "Codex AI (/root/security_p0)",
+        "reviewerType": "AI",
+        "sourceTextAndAllOutcomesReviewed": true,
+        "sourceImageViewed": true,
+        "observedImage": "The source shows the player back/shoulder beside a vocalist touching their throat, microphone and bass backstage. The scene timing is correct but POV is external.",
+        "editBrief": "Remove the player body/head and use bassist first-person POV toward the hoarse vocalist asking for help. Keep bass, unclaimed microphone and waiting backstage area within portrait centre; no specific readable countdown.",
+        "preChoiceConstraints": "No player already singing, instrumental solo, audience holding microphone, applause or scored performance.",
+        "generationDecision": "REPAIR_REQUIRED",
+        "reviewMethod": "Every current choice/outcome and conditions read; original PNG viewed individually with view_image."
+      },
+      "exactPrompt": "Edit the referenced backstage pixel-illustration into a vertical 9:16 full-bleed scene. Preserve warm pink-gold festival lighting, the teenage vocalist's design touching her sore throat and asking for help, waiting microphone on stand, bass guitar, cases and backstage setting. CRITICAL: remove the large foreground player's head/back/body on left. Camera IS the teenage bassist's first-person viewpoint toward the hoarse vocalist. Player identity is not visible; at most two empty hands connected to lower frame. Keep her complete face, throat-touching hand, unclaimed microphone and unplayed four-string bass all comfortably within central 70% of portrait width, staggered in depth. The festival stage remains waiting in background, before performance, with no crowd singing or applauding, no band playing. Show the pre-choice moment 10 minutes before performance without a written countdown. No one has grabbed the microphone, no solo or audience performance, no scores. Preserve crisp retro pixel-game texture and cohesive anatomy, no extra hands, floating sleeves, readable words/numbers, UI, border or film frame.",
+      "attempts": [
+        {
+          "sourceGeneratedPath": "C:\\Users\\jk030\\.codex\\generated_images\\01a1f1bc-6c39-7a10-a591-0d1f4e5cef6b\\exec-c8450932-b026-49ce-ab0a-8ff3cd7a66a4.png",
+          "exactPrompt": "Edit the referenced backstage pixel-illustration into a vertical 9:16 full-bleed scene. Preserve warm pink-gold festival lighting, the teenage vocalist's design touching her sore throat and asking for help, waiting microphone on stand, bass guitar, cases and backstage setting. CRITICAL: remove the large foreground player's head/back/body on left. Camera IS the teenage bassist's first-person viewpoint toward the hoarse vocalist. Player identity is not visible; at most two empty hands connected to lower frame. Keep her complete face, throat-touching hand, unclaimed microphone and unplayed four-string bass all comfortably within central 70% of portrait width, staggered in depth. The festival stage remains waiting in background, before performance, with no crowd singing or applauding, no band playing. Show the pre-choice moment 10 minutes before performance without a written countdown. No one has grabbed the microphone, no solo or audience performance, no scores. Preserve crisp retro pixel-game texture and cohesive anatomy, no extra hands, floating sleeves, readable words/numbers, UI, border or film frame.",
+          "outputSha256": "062a9e85a6716ca4ccf12df254716a6bfed6c12d4ebeaab09610931fdf667e22",
+          "status": "SELECTED_AI_STAGING",
+          "review": "First-person viewpoint, one hoarse vocalist touches throat and asks for help; microphone unclaimed, bass on stand, waiting stage. No player head/back or chosen performance. Native crop must retain bass at right and microphone at left."
+        }
+      ],
+      "status": "ACCEPTED_AI_STAGING",
+      "reviewerType": "AI",
+      "nativePending": true,
+      "runtimeConnected": false,
+      "selectedPath": "build/refactor/content-art-staging/teen_012_portrait_v1.png",
+      "outputSha256": "062a9e85a6716ca4ccf12df254716a6bfed6c12d4ebeaab09610931fdf667e22",
+      "width": 941,
+      "height": 1672,
+      "sourceImageDirectlyViewed": true,
+      "outputDirectlyViewed": true,
+      "visualReview": "First-person viewpoint, one hoarse vocalist touches throat and asks for help; microphone unclaimed, bass on stand, waiting stage. No player head/back or chosen performance. Native crop must retain bass at right and microphone at left."
+    },
+    {
+      "eventId": "teen_017",
+      "sourceEventHash": "294e3550893965cb2f063559e9d124b4910c6991a5ef88f678135d167c048ebf",
+      "sourceImagePath": "app/src/main/assets/images/followup_20261031/img_teen_screen_time_001.png",
+      "sourceImageSha256": "80bddefb8bad6869994e1489cd5beeb250a71764d5d68d055a4258a338f28a0a",
+      "sourceEvent": {
+        "eventId": "teen_017",
+        "stage": "TEEN",
+        "type": "NORMAL",
+        "isFallback": false,
+        "isMilestone": false,
+        "title": "스크린 타임 경고",
+        "text": "알림: '하루 평균 사용 시간 9시간 14분.' 같은 날 성적표 도착. 엄마: \"{nameCall}… 이리 와 봐.\"",
+        "imageId": "img_teen_screen_time_001",
+        "conditions": {
+          "stats": {},
+          "requiredFlags": [
+            "phone_addict"
+          ],
+          "blockedFlags": [
+            "self_control"
+          ]
+        },
+        "choices": [
+          {
+            "choiceId": "A",
+            "label": "게임 앱을 지운다",
+            "statDelta": {
+              "지력": 2,
+              "건강": 2,
+              "행복": -3
+            },
+            "resultText": "사흘간 허공에 스크롤. 일주일 뒤 머리가 맑아졌다. 길드에서는 사망 처리.",
+            "addFlags": [
+              "self_control"
+            ],
+            "outcomes": [
+              {
+                "outcomeId": "a_primary",
+                "text": "사흘간 허공에 스크롤. 일주일 뒤 머리가 맑아졌다. 길드에서는 사망 처리.",
+                "chance": 100,
+                "primary": true,
+                "hidden": false,
+                "death": false,
+                "statDelta": {
+                  "지력": 2,
+                  "건강": 2,
+                  "행복": -3
+                },
+                "addFlags": [
+                  "self_control"
+                ]
+              }
+            ]
+          },
+          {
+            "choiceId": "B",
+            "label": "몰래 계속한다",
+            "statDelta": {
+              "행복": 2,
+              "건강": -4,
+              "지력": -3
+            },
+            "resultText": "랭킹은 올랐다. 수업 중 잠꼬대로 스킬 이름을 외쳤다.",
+            "addFlags": [
+              "night_gamer"
+            ],
+            "outcomes": [
+              {
+                "outcomeId": "b_primary",
+                "text": "랭킹은 올랐다. 수업 중 잠꼬대로 스킬 이름을 외쳤다.",
+                "chance": 100,
+                "primary": true,
+                "hidden": false,
+                "death": false,
+                "statDelta": {
+                  "행복": 2,
+                  "건강": -4,
+                  "지력": -3
+                },
+                "addFlags": [
+                  "night_gamer"
+                ],
+                "deathCause": "밤샘 게임 과로"
+              }
+            ]
+          },
+          {
+            "choiceId": "C",
+            "label": "엄마를 게임에 초대한다",
+            "statDelta": {
+              "사회성": 3,
+              "운": 1,
+              "지력": -2
+            },
+            "resultText": "엄마가 나보다 잘했다. 이제 엄마가 폰을 안 놓는다.",
+            "addFlags": [],
+            "outcomes": [
+              {
+                "outcomeId": "c_primary",
+                "text": "엄마가 나보다 잘했다. 이제 엄마가 폰을 안 놓는다.",
+                "chance": 100,
+                "primary": true,
+                "hidden": false,
+                "death": false,
+                "statDelta": {
+                  "사회성": 3,
+                  "운": 1,
+                  "지력": -2
+                },
+                "addFlags": [],
+                "lifeDelta": 10
+              }
+            ]
+          }
+        ],
+        "priority": 0,
+        "kind": "INCIDENT",
+        "periods": [
+          "TEEN"
+        ]
+      },
+      "sourceReview": {
+        "reviewer": "Codex AI (/root/security_p0)",
+        "reviewerType": "AI",
+        "sourceTextAndAllOutcomesReviewed": true,
+        "sourceImageViewed": true,
+        "observedImage": "The source has phone usage chart and report card before mother, but legible A/B grades invent results. Both props are spread horizontally.",
+        "editBrief": "Keep parent conversation and screen-time/report-card comparison. Remove letter grades and replace them with unlabelled neutral cells; preserve anonymous usage chart with no exact printed hours. Recompose both central in portrait.",
+        "preChoiceConstraints": "No app deletion, confiscation, recovered grades, nighttime secret gaming or mother already playing.",
+        "generationDecision": "REPAIR_REQUIRED",
+        "reviewMethod": "Every current choice/outcome and conditions read; original PNG viewed individually with view_image."
+      },
+      "exactPrompt": "Edit the supplied warm Korean family pixel-art illustration into portrait9:16 full-bleed, preserving first-person POV, concerned mother at table, evening home interior, one smartphone usage warning and report card. Remove ALL letter grades A/B and all readable text/numerals from report card, replacing with neutral unlabelled gray-blue short marks and empty cells, no implied high/low grade. The phone shows anonymous screen-time bars with hourglass pictogram, no exact hours printed. Recompose the two complete props centered/staggered vertically in foreground: player's left hand naturally supports phone and right hand supports report card, both sleeves extend to lower frame; exactly two connected player hands. Mother's full face is centered above the props, listening and mildly concerned. Both phone/chart and report card must remain clear within central70% of image width after tall phone crop. Before choice: no deletion/uninstall, confiscation, secret gaming, recovered grades or mother playing game. No player face/back/reflection, no additional arms. Keep appealing detailed pixel-illustration and warm colors, no UI/captions/borders/film motifs.",
+      "attempts": [
+        {
+          "sourceGeneratedPath": "C:\\Users\\jk030\\.codex\\generated_images\\01a1f1bc-6c39-7a10-a591-0d1f4e5cef6b\\exec-c5c904e7-47f3-42f3-be28-f62cb2994f2d.png",
+          "exactPrompt": "Edit the supplied warm Korean family pixel-art illustration into portrait9:16 full-bleed, preserving first-person POV, concerned mother at table, evening home interior, one smartphone usage warning and report card. Remove ALL letter grades A/B and all readable text/numerals from report card, replacing with neutral unlabelled gray-blue short marks and empty cells, no implied high/low grade. The phone shows anonymous screen-time bars with hourglass pictogram, no exact hours printed. Recompose the two complete props centered/staggered vertically in foreground: player's left hand naturally supports phone and right hand supports report card, both sleeves extend to lower frame; exactly two connected player hands. Mother's full face is centered above the props, listening and mildly concerned. Both phone/chart and report card must remain clear within central70% of image width after tall phone crop. Before choice: no deletion/uninstall, confiscation, secret gaming, recovered grades or mother playing game. No player face/back/reflection, no additional arms. Keep appealing detailed pixel-illustration and warm colors, no UI/captions/borders/film motifs.",
+          "outputSha256": "fe29f16d3a5d8c9c1f6923df1ee650467e4324182590be8a2233b8b76c3cc8a8",
+          "status": "SELECTED_AI_STAGING",
+          "review": "Removed invented A/B grades; blank neutral report cells beside anonymous screen-time warning, concerned mother and two connected player hands. No app deletion, punishment or mother gaming. Both central props readable."
+        }
+      ],
+      "status": "ACCEPTED_AI_STAGING",
+      "reviewerType": "AI",
+      "nativePending": true,
+      "runtimeConnected": false,
+      "selectedPath": "build/refactor/content-art-staging/teen_017_portrait_v1.png",
+      "outputSha256": "fe29f16d3a5d8c9c1f6923df1ee650467e4324182590be8a2233b8b76c3cc8a8",
+      "width": 941,
+      "height": 1672,
+      "sourceImageDirectlyViewed": true,
+      "outputDirectlyViewed": true,
+      "visualReview": "Removed invented A/B grades; blank neutral report cells beside anonymous screen-time warning, concerned mother and two connected player hands. No app deletion, punishment or mother gaming. Both central props readable."
+    },
+    {
+      "eventId": "teen_022",
+      "sourceEventHash": "1fdc796299a90e50d46eba22ba18b11c78333b38b67dc25815924ca9e1d8beb3",
+      "sourceImagePath": "app/src/main/assets/images/followup_20261031/img_teen_school_trip_001.png",
+      "sourceImageSha256": "da0c649ab05fac460d18058ead0a99f306dac594366e86600bbe61558caaaa2b",
+      "sourceEvent": {
+        "eventId": "teen_022",
+        "stage": "TEEN",
+        "type": "NORMAL",
+        "isFallback": false,
+        "isMilestone": false,
+        "title": "수학여행의 밤",
+        "text": "친구들: \"{nameCall}, 옆방 가자!\" 복도 끝에 학생주임 선생님이 의자를 놓고 앉아 계신다.",
+        "imageId": "img_teen_school_trip_001",
+        "conditions": {
+          "stats": {},
+          "requiredFlags": [],
+          "blockedFlags": []
+        },
+        "choices": [
+          {
+            "choiceId": "A",
+            "label": "몰래 간다",
+            "statDelta": {
+              "사회성": 4,
+              "행복": 3,
+              "운": -2
+            },
+            "resultText": "문 열자마자 학생주임과 눈이 마주쳤다. 30분 벌섰다. 같이 벌선 애들과 평생 친구가 됐다.",
+            "addFlags": [],
+            "outcomes": [
+              {
+                "outcomeId": "a_primary",
+                "text": "문 열자마자 학생주임과 눈이 마주쳤다. 30분 벌섰다. 같이 벌선 애들과 평생 친구가 됐다.",
+                "chance": 100,
+                "primary": true,
+                "hidden": false,
+                "death": false,
+                "statDelta": {
+                  "사회성": 4,
+                  "행복": 3,
+                  "운": -2
+                },
+                "addFlags": [],
+                "lifeDelta": 10
+              }
+            ]
+          },
+          {
+            "choiceId": "B",
+            "label": "방에서 잔다",
+            "statDelta": {
+              "건강": 2,
+              "사회성": -2
+            },
+            "resultText": "다음 날 제일 쌩쌩했다. '어젯밤 전설' 얘기에는 끼지 못했다.",
+            "addFlags": [],
+            "outcomes": [
+              {
+                "outcomeId": "b_primary",
+                "text": "다음 날 제일 쌩쌩했다. '어젯밤 전설' 얘기에는 끼지 못했다.",
+                "chance": 100,
+                "primary": true,
+                "hidden": false,
+                "death": false,
+                "statDelta": {
+                  "건강": 2,
+                  "사회성": -2
+                },
+                "addFlags": []
+              }
+            ]
+          },
+          {
+            "choiceId": "C",
+            "label": "학생주임 선생님 옆에 앉아 같이 지킨다",
+            "statDelta": {
+              "운": 2,
+              "행복": 1,
+              "사회성": -3
+            },
+            "resultText": "새벽 2시, 선생님이 컵라면을 끓여 주셨다. 친구들의 습격을 전부 막았다. 배신자 칭호 획득.",
+            "addFlags": [],
+            "outcomes": [
+              {
+                "outcomeId": "c_primary",
+                "text": "새벽 2시, 선생님이 컵라면을 끓여 주셨다. 친구들의 습격을 전부 막았다. 배신자 칭호 획득.",
+                "chance": 100,
+                "primary": true,
+                "hidden": false,
+                "death": false,
+                "statDelta": {
+                  "운": 2,
+                  "행복": 1,
+                  "사회성": -3
+                },
+                "addFlags": []
+              }
+            ]
+          }
+        ],
+        "priority": 0,
+        "kind": "INCIDENT",
+        "periods": [
+          "TEEN"
+        ]
+      },
+      "sourceReview": {
+        "reviewer": "Codex AI (/root/security_p0)",
+        "reviewerType": "AI",
+        "sourceTextAndAllOutcomesReviewed": true,
+        "sourceImageViewed": true,
+        "observedImage": "The player back/head fills the lower foreground; friends invite from a door while the distant teacher is standing, unlike the seated teacher in the text.",
+        "editBrief": "Use first-person at room threshold with friends inviting nearby and the teacher visibly seated on a chair at corridor end. Preserve nighttime lodging corridor, keep all critical cues central.",
+        "preChoiceConstraints": "No leaving successfully, caught punishment, sleeping player, guard partnership or cup-noodle reward.",
+        "generationDecision": "REPAIR_REQUIRED",
+        "reviewMethod": "Every current choice/outcome and conditions read; original PNG viewed individually with view_image."
+      },
+      "exactPrompt": "Correct the supplied Korean school-trip pixel-art illustration into vertical9:16 full-bleed first-person. Preserve night lodging corridor, warm wall lamps, moonlit window and three mischievous classmates in school tracksuits inviting the player toward the neighbouring room. REMOVE the foreground player's visible head, back and backpack entirely: camera is player's own eyes paused at room threshold, at most one empty hand connected to lower frame. Crucial story correction: the stern student-dean teacher at the far end of hallway is SITTING ON A VISIBLE CHAIR, not standing. Place teacher and chair near the central vanishing point, clearly recognizable seated silhouette. Group all three friends' faces near left-center/right-center so faces stay within central70%; corridor teacher remains clearly visible between them. Keep friends waiting, no walking together already, no punishment, no asleep player, no guarding beside teacher or cup noodles. No new dialogue, text, numbers, UI, border or film motif. Crisp consistent warm retro pixel illustration, natural perspective, connected anatomy, vertical composition with clear near friends/mid hallway/far seated teacher.",
+      "attempts": [
+        {
+          "sourceGeneratedPath": "C:\\Users\\jk030\\.codex\\generated_images\\01a1f1bc-6c39-7a10-a591-0d1f4e5cef6b\\exec-0dd98856-cc22-444c-bfb6-991c4b486200.png",
+          "exactPrompt": "Correct the supplied Korean school-trip pixel-art illustration into vertical9:16 full-bleed first-person. Preserve night lodging corridor, warm wall lamps, moonlit window and three mischievous classmates in school tracksuits inviting the player toward the neighbouring room. REMOVE the foreground player's visible head, back and backpack entirely: camera is player's own eyes paused at room threshold, at most one empty hand connected to lower frame. Crucial story correction: the stern student-dean teacher at the far end of hallway is SITTING ON A VISIBLE CHAIR, not standing. Place teacher and chair near the central vanishing point, clearly recognizable seated silhouette. Group all three friends' faces near left-center/right-center so faces stay within central70%; corridor teacher remains clearly visible between them. Keep friends waiting, no walking together already, no punishment, no asleep player, no guarding beside teacher or cup noodles. No new dialogue, text, numbers, UI, border or film motif. Crisp consistent warm retro pixel illustration, natural perspective, connected anatomy, vertical composition with clear near friends/mid hallway/far seated teacher.",
+          "outputSha256": "9c129bd21e411f53af58ae178831e6f9f5e875f4b01eed1fee6cc060939c05c8",
+          "status": "SELECTED_AI_STAGING",
+          "review": "First-person threshold view; three inviting classmates and teacher now visibly seated on chair at corridor end. No player back/head, punishment or noodles. Output viewed before user pause; native crop pending."
+        }
+      ],
+      "status": "ACCEPTED_AI_STAGING",
+      "reviewerType": "AI",
+      "nativePending": true,
+      "runtimeConnected": false,
+      "selectedPath": "build/refactor/content-art-staging/teen_022_portrait_v1.png",
+      "outputSha256": "9c129bd21e411f53af58ae178831e6f9f5e875f4b01eed1fee6cc060939c05c8",
+      "width": 941,
+      "height": 1672,
+      "sourceImageDirectlyViewed": true,
+      "outputDirectlyViewed": true,
+      "visualReview": "First-person threshold view; three inviting classmates and teacher now visibly seated on chair at corridor end. No player back/head, punishment or noodles. Output viewed before user pause; native crop pending."
+    },
+    {
+      "eventId": "teen_027",
+      "sourceEventHash": "8e97b818878d56086aca850070437bc0c5c74965e46e6bdf5001a58267e37d43",
+      "sourceImagePath": "app/src/main/assets/images/followup_20261031/img_teen_father_car_001.png",
+      "sourceImageSha256": "602e7411cac09c1bec54cce7f3c85e7da30a011e5f0ff62bb355f1a629b44b0c",
+      "sourceEvent": {
+        "eventId": "teen_027",
+        "stage": "TEEN",
+        "type": "NORMAL",
+        "isFallback": false,
+        "isMilestone": false,
+        "title": "주차장의 아빠",
+        "text": "밤 11시. 창밖을 보니 아빠 차가 주차장에 서 있다. 시동은 꺼졌는데, 아빠가 30분째 안 내린다.",
+        "imageId": "img_teen_father_car_001",
+        "conditions": {
+          "stats": {},
+          "requiredFlags": [],
+          "blockedFlags": []
+        },
+        "choices": [
+          {
+            "choiceId": "A",
+            "label": "내려가서 창문을 두드린다",
+            "statDelta": {
+              "사회성": 3,
+              "건강": -1
+            },
+            "resultText": "아빠가 놀라며 웃었다. \"그냥… 노래 한 곡만 더 듣고 가려고.\" 같이 두 곡을 더 들었다.",
+            "addFlags": [
+              "family_bond"
+            ],
+            "outcomes": [
+              {
+                "outcomeId": "a_primary",
+                "text": "아빠가 놀라며 웃었다. \"그냥… 노래 한 곡만 더 듣고 가려고.\" 같이 두 곡을 더 들었다.",
+                "chance": 100,
+                "primary": true,
+                "hidden": false,
+                "death": false,
+                "statDelta": {
+                  "사회성": 3,
+                  "건강": -1
+                },
+                "addFlags": [
+                  "family_bond"
+                ],
+                "lifeDelta": 4
+              }
+            ]
+          },
+          {
+            "choiceId": "B",
+            "label": "모른 척 커튼을 친다",
+            "statDelta": {
+              "지력": 1,
+              "행복": -2
+            },
+            "resultText": "10분 뒤 현관문이 열렸다. 아빠는 평소처럼 \"밥 먹었냐\"고 물었다. 나도 평소처럼 대답했다.",
+            "addFlags": [],
+            "outcomes": [
+              {
+                "outcomeId": "b_primary",
+                "text": "10분 뒤 현관문이 열렸다. 아빠는 평소처럼 \"밥 먹었냐\"고 물었다. 나도 평소처럼 대답했다.",
+                "chance": 100,
+                "primary": true,
+                "hidden": false,
+                "death": false,
+                "statDelta": {
+                  "지력": 1,
+                  "행복": -2
+                },
+                "addFlags": []
+              }
+            ]
+          },
+          {
+            "choiceId": "C",
+            "label": "캔커피 두 개를 들고 조수석에 탄다",
+            "statDelta": {
+              "사회성": 2,
+              "행복": 1,
+              "경제력": -1
+            },
+            "resultText": "아빠는 말없이 커피를 받았다. 한참 뒤에 한마디 했다. \"{nameCall}, 너는 하고 싶은 거 해.\"",
+            "addFlags": [
+              "family_bond"
+            ],
+            "outcomes": [
+              {
+                "outcomeId": "c_primary",
+                "text": "아빠는 말없이 커피를 받았다. 한참 뒤에 한마디 했다. \"{nameCall}, 너는 하고 싶은 거 해.\"",
+                "chance": 100,
+                "primary": true,
+                "hidden": false,
+                "death": false,
+                "statDelta": {
+                  "사회성": 2,
+                  "행복": 1,
+                  "경제력": -1
+                },
+                "addFlags": [
+                  "family_bond"
+                ],
+                "lifeDelta": 10
+              }
+            ]
+          }
+        ],
+        "priority": 0,
+        "kind": "INCIDENT",
+        "periods": [
+          "TEEN"
+        ]
+      },
+      "sourceReview": {
+        "reviewer": "Codex AI (/root/security_p0)",
+        "reviewerType": "AI",
+        "sourceTextAndAllOutcomesReviewed": true,
+        "sourceImageViewed": true,
+        "observedImage": "The father silhouette is already visible in the parked central car, but the player head and torso are shown at the window.",
+        "editBrief": "Remove the visible player body and use first-person from the room window. Preserve the father inside the unlit parked car, quiet dark parking lot and open curtain edge.",
+        "preChoiceConstraints": "No coffee brought, window knocked, curtain closed, accident, job loss or father already returning.",
+        "historicalReasonReconciliation": "Keep the existing father cue; the historical claim he is absent is not current.",
+        "generationDecision": "REPAIR_REQUIRED",
+        "reviewMethod": "All current choices/outcomes and conditions read; original PNG individually viewed with view_image."
+      },
+      "exactPrompt": "Edit this quiet warm pixel-art nighttime parking-lot scene into portrait9:16 full-bleed. Preserve the apartment room window, curtains open on both sides, dim parking lot, streetlamp, father's dark parked car centered below the window, father still seated as recognizable silhouette behind windshield. CRITICAL POV: remove the large foreground player's head, torso and visible body completely; camera IS the teenage player's own eyes inside bedroom looking slightly downward through open curtains. At most one neutral hand rests naturally on lower window sill with sleeve connected to bottom edge, no player reflection. Put entire parked car and father's windshield silhouette in central60% of portrait; keep headlights and engine indicators OFF, car stationary. Maintain poignant stillness and distance, no emergency, crash, explicit job loss, crying, coffee cans, knocking on car window, entering passenger seat or father returning home. No visible clock/time text/numerals, logos, UI, borders or film strip. Keep source's dusk blue/amber palette, crisp pixel clusters and detailed warm illustration, anatomically coherent if hand shown. No invented outcome.",
+      "attempts": [
+        {
+          "sourceGeneratedPath": "C:\\Users\\jk030\\.codex\\generated_images\\01a1f1bc-6c39-7a10-a591-0d1f4e5cef6b\\exec-a49f5fc4-b193-4545-b2e4-b398ff389667.png",
+          "exactPrompt": "Edit this quiet warm pixel-art nighttime parking-lot scene into portrait9:16 full-bleed. Preserve the apartment room window, curtains open on both sides, dim parking lot, streetlamp, father's dark parked car centered below the window, father still seated as recognizable silhouette behind windshield. CRITICAL POV: remove the large foreground player's head, torso and visible body completely; camera IS the teenage player's own eyes inside bedroom looking slightly downward through open curtains. At most one neutral hand rests naturally on lower window sill with sleeve connected to bottom edge, no player reflection. Put entire parked car and father's windshield silhouette in central60% of portrait; keep headlights and engine indicators OFF, car stationary. Maintain poignant stillness and distance, no emergency, crash, explicit job loss, crying, coffee cans, knocking on car window, entering passenger seat or father returning home. No visible clock/time text/numerals, logos, UI, borders or film strip. Keep source's dusk blue/amber palette, crisp pixel clusters and detailed warm illustration, anatomically coherent if hand shown. No invented outcome.",
+          "outputSha256": "d08de92fd936df85fb958f42d7286d225522f136f798e0c13328ab97ea5bf820",
+          "status": "SELECTED_AI_STAGING",
+          "review": "Player head/body removed. First-person window view retains central parked car with father silhouette and headlights off; single connected hand on sill, no coffee or approaching car. Output viewed before user pause; native crop pending."
+        }
+      ],
+      "status": "ACCEPTED_AI_STAGING",
+      "reviewerType": "AI",
+      "nativePending": true,
+      "runtimeConnected": false,
+      "selectedPath": "build/refactor/content-art-staging/teen_027_portrait_v1.png",
+      "outputSha256": "d08de92fd936df85fb958f42d7286d225522f136f798e0c13328ab97ea5bf820",
+      "width": 941,
+      "height": 1672,
+      "sourceImageDirectlyViewed": true,
+      "outputDirectlyViewed": true,
+      "visualReview": "Player head/body removed. First-person window view retains central parked car with father silhouette and headlights off; single connected hand on sill, no coffee or approaching car. Output viewed before user pause; native crop pending."
+    },
+    {
+      "eventId": "teen_030",
+      "sourceEventHash": "0a9968ac1863acbb325b4ebba5df325c1b2abfabd1c96b588d319d97b9f27800",
+      "sourceImagePath": "app/src/main/assets/images/followup_20261031/img_teen_class_shirt_001.png",
+      "sourceImageSha256": "6b1d0bc07e9b421a390721271e13f9e4081df8af1e8f488f10b2f9836b40fc39",
+      "sourceEvent": {
+        "eventId": "teen_030",
+        "stage": "TEEN",
+        "type": "NORMAL",
+        "isFallback": false,
+        "isMilestone": false,
+        "title": "반티 투표",
+        "text": "체육대회 반티 투표. 후보는 흰 티, 공룡 잠옷, 각자 자유.",
+        "imageId": "img_teen_class_shirt_001",
+        "conditions": {
+          "stats": {},
+          "requiredFlags": [],
+          "blockedFlags": []
+        },
+        "choices": [
+          {
+            "choiceId": "A",
+            "label": "무난한 흰 티에 한 표",
+            "statDelta": {
+              "사회성": 1,
+              "행복": -1
+            },
+            "resultText": "흰 티가 됐다. 체육대회 사진 속 우리 반은 다른 반 뒤에 묻혀 있다.",
+            "addFlags": [],
+            "outcomes": [
+              {
+                "outcomeId": "a_primary",
+                "text": "흰 티가 됐다. 체육대회 사진 속 우리 반은 다른 반 뒤에 묻혀 있다.",
+                "chance": 100,
+                "primary": true,
+                "hidden": false,
+                "death": false,
+                "statDelta": {
+                  "사회성": 1,
+                  "행복": -1
+                },
+                "addFlags": []
+              }
+            ]
+          },
+          {
+            "choiceId": "B",
+            "label": "공룡 잠옷에 한 표",
+            "statDelta": {
+              "행복": 3,
+              "사회성": -1
+            },
+            "resultText": "공룡 잠옷이 1등. 운동장에 공룡 서른 마리가 뛰어다녔다. 사진이 학교 홈페이지 메인에 걸렸다.",
+            "addFlags": [
+              "dino_class"
+            ],
+            "outcomes": [
+              {
+                "outcomeId": "b_primary",
+                "text": "공룡 잠옷이 1등. 운동장에 공룡 서른 마리가 뛰어다녔다. 사진이 학교 홈페이지 메인에 걸렸다.",
+                "chance": 100,
+                "primary": true,
+                "hidden": false,
+                "death": false,
+                "statDelta": {
+                  "행복": 3,
+                  "사회성": -1
+                },
+                "addFlags": [
+                  "dino_class"
+                ],
+                "lifeDelta": 10
+              }
+            ]
+          },
+          {
+            "choiceId": "C",
+            "label": "각자 자유에 한 표",
+            "statDelta": {
+              "행복": 2,
+              "사회성": -2
+            },
+            "resultText": "반 전체가 제각각 입고 왔다. 다른 반이 우리를 '자유 반'이라고 불렀다.",
+            "addFlags": [],
+            "outcomes": [
+              {
+                "outcomeId": "c_primary",
+                "text": "반 전체가 제각각 입고 왔다. 다른 반이 우리를 '자유 반'이라고 불렀다.",
+                "chance": 100,
+                "primary": true,
+                "hidden": false,
+                "death": false,
+                "statDelta": {
+                  "행복": 2,
+                  "사회성": -2
+                },
+                "addFlags": []
+              }
+            ]
+          }
+        ],
+        "priority": 0,
+        "kind": "INCIDENT",
+        "periods": [
+          "TEEN"
+        ]
+      },
+      "sourceReview": {
+        "reviewer": "Codex AI (/root/security_p0)",
+        "reviewerType": "AI",
+        "sourceTextAndAllOutcomesReviewed": true,
+        "sourceImageViewed": true,
+        "observedImage": "Two samples, white shirt and dinosaur pajamas, hang above an unmarked ballot. The open individual-clothing option has no distinct cue.",
+        "editBrief": "Keep pending vote, two unworn samples and blank ballot; add a modest third sample grouping of varied ordinary clothing to distinguish each-own-clothes without text or a chosen result. Fit the choices centrally in portrait.",
+        "preChoiceConstraints": "No marked/cast vote, chosen uniform, field of students in dinosaur costumes or sports-day photo.",
+        "historicalReasonReconciliation": "The existing first two choices are correct; do not replace them.",
+        "generationDecision": "REPAIR_REQUIRED",
+        "reviewMethod": "All current choices/outcomes and conditions read; original PNG individually viewed with view_image."
+      },
+      "exactPrompt": null,
+      "attempts": [],
+      "status": "PENDING",
+      "reviewerType": "AI",
+      "nativePending": true,
+      "runtimeConnected": false
+    },
+    {
+      "eventId": "teen_033",
+      "sourceEventHash": "3f2f733b4bb277f59c4347cb34428c3bebfaef17ec89a3f901d42f66cfeeff80",
+      "sourceImagePath": "app/src/main/assets/images/followup_20261031/img_teen_yearbook_photo_001.png",
+      "sourceImageSha256": "5915e1d9ac9cb953990d8cd56a88515c2b0a36083ba67642f2312e31cb0c13d8",
+      "sourceEvent": {
+        "eventId": "teen_033",
+        "stage": "TEEN",
+        "type": "NORMAL",
+        "isFallback": false,
+        "isMilestone": false,
+        "title": "졸업앨범 촬영 날",
+        "text": "졸업앨범 개인 사진 찍는 날. 아침에 앞머리를 잘랐는데 망했다.",
+        "imageId": "img_teen_yearbook_photo_001",
+        "conditions": {
+          "stats": {},
+          "requiredFlags": [],
+          "blockedFlags": []
+        },
+        "choices": [
+          {
+            "choiceId": "A",
+            "label": "그냥 찍는다",
+            "statDelta": {
+              "사회성": 1,
+              "행복": -2
+            },
+            "resultText": "10년 뒤 동창회 화면에 이 사진이 떴다. 다들 박수를 쳤다.",
+            "addFlags": [],
+            "outcomes": [
+              {
+                "outcomeId": "a_primary",
+                "text": "10년 뒤 동창회 화면에 이 사진이 떴다. 다들 박수를 쳤다.",
+                "chance": 100,
+                "primary": true,
+                "hidden": false,
+                "death": false,
+                "statDelta": {
+                  "사회성": 1,
+                  "행복": -2
+                },
+                "addFlags": []
+              }
+            ]
+          },
+          {
+            "choiceId": "B",
+            "label": "모자를 쓰고 간다",
+            "statDelta": {
+              "행복": 2,
+              "사회성": -1
+            },
+            "resultText": "촬영 직전에 선생님이 모자를 벗겼다. 망한 앞머리가 그대로 찍혔다.",
+            "addFlags": [],
+            "outcomes": [
+              {
+                "outcomeId": "b_primary",
+                "text": "촬영 직전에 선생님이 모자를 벗겼다. 망한 앞머리가 그대로 찍혔다.",
+                "chance": 100,
+                "primary": true,
+                "hidden": false,
+                "death": false,
+                "statDelta": {
+                  "행복": 2,
+                  "사회성": -1
+                },
+                "addFlags": []
+              }
+            ]
+          },
+          {
+            "choiceId": "C",
+            "label": "친구에게 앞머리를 맡긴다",
+            "statDelta": {
+              "운": 2,
+              "행복": -1
+            },
+            "resultText": "친구가 실핀 열두 개로 고정해 줬다. 사진 속 나는 놀란 표정이다.",
+            "addFlags": [],
+            "outcomes": [
+              {
+                "outcomeId": "c_primary",
+                "text": "친구가 실핀 열두 개로 고정해 줬다. 사진 속 나는 놀란 표정이다.",
+                "chance": 100,
+                "primary": true,
+                "hidden": false,
+                "death": false,
+                "statDelta": {
+                  "운": 2,
+                  "행복": -1
+                },
+                "addFlags": []
+              }
+            ],
+            "requiredStats": {
+              "사회성": 55
+            }
+          }
+        ],
+        "priority": 0,
+        "kind": "INCIDENT",
+        "periods": [
+          "TEEN"
+        ]
+      },
+      "sourceReview": {
+        "reviewer": "Codex AI (/root/security_p0)",
+        "reviewerType": "AI",
+        "sourceTextAndAllOutcomesReviewed": true,
+        "sourceImageViewed": true,
+        "observedImage": "The source shows the player face/body seated for a photographer, and the bangs look ordinary.",
+        "editBrief": "Use the photographed student first-person POV toward a waiting camera/photographer. Show a few uneven fringe tips at the very top edge and optional empty hands low; no mirror, printed portrait or player face.",
+        "preChoiceConstraints": "Before shutter choice: no hat being removed, hair pinned by friend, finished graduation portrait or reunion screening.",
+        "historicalReasonReconciliation": "Do not solve hair visibility by adding a reflection that breaks first-person identity.",
+        "generationDecision": "REPAIR_REQUIRED",
+        "reviewMethod": "All current choices/outcomes and conditions read; original PNG individually viewed with view_image."
+      },
+      "exactPrompt": null,
+      "attempts": [],
+      "status": "PENDING",
+      "reviewerType": "AI",
+      "nativePending": true,
+      "runtimeConnected": false
+    }
+  ]
+}

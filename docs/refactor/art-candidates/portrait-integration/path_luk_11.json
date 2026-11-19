@@ -1,0 +1,29 @@
+{
+  "eventId": "path_luk_11",
+  "sourceAssetPath": "followup_20261031/img_path_luk_11_001.png",
+  "sourceSha256": "bf603ab3795b9b58c5f8d09b7e50d6ec9e55f425661d41ea9d62cfbc207928ed",
+  "variant": {
+    "assetPath": "presentation/portraits/img_path_luk_11_001_portrait_v1.png",
+    "sha256": "189dbb086ffced66efe77847300b3b0c6ee45a189b47c0642190bcda037e4975",
+    "width": 941,
+    "height": 1672,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root/security_p0)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/path_luk_11.json"
+  },
+  "reviewerType": "AI",
+  "reviewer": "Codex AI (/root/security_p0)",
+  "reviewStatus": "AI_REVIEWED_PRESENTATION",
+  "eventSourceHash": "28ec85ba19c098226dbdd5a9685fbc50d7b638c92f8360256eabaddaf11dfcba",
+  "semanticReview": "Producer read the current event conditions and every choice/outcome, inspected source and selected output. Full source snapshot and exact prompt are in the referenced production ledger. Native acceptance remains pending.",
+  "visualReview": "Individually viewed: one dripping ticket from wet trousers at washing machine; left half has distinct nontext grid marks, right half visibly smeared. No readable numbers, win/loss marker, drying/disposal/wallet result. Native pending.",
+  "cropReview": "Portrait candidate selected for native phone/small-phone scene and gameplay inspection; not final artwork acceptance.",
+  "actualProducer": "OpenAI built-in image_gen",
+  "generationMethod": "Built-in imagegen edit; exact prompts/output SHA/rejected attempts preserved in docs/refactor/art-candidates/content-art-revision-briefs-20261119.json",
+  "productionLedger": "docs/refactor/art-candidates/content-art-revision-briefs-20261119.json",
+  "nativePending": true,
+  "runtimeConnected": true,
+  "approvalChanged": false,
+  "selectedStagingSha256": "189dbb086ffced66efe77847300b3b0c6ee45a189b47c0642190bcda037e4975"
+}

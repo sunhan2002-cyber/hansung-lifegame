@@ -1,0 +1,202 @@
+{
+  "schemaVersion": 1,
+  "eventId": "child_006",
+  "status": "PASS",
+  "reviewer": "Codex AI / plan_audit",
+  "reviewerType": "AI",
+  "reviewDate": "2026-11-19",
+  "sourceEventHash": "cad81977af93fca2b823929e8996a403c0f7c40198a46c7393dc0b20ed04d674",
+  "sourceEventSnapshot": {
+    "eventId": "child_006",
+    "stage": "CHILD",
+    "type": "NORMAL",
+    "isFallback": false,
+    "isMilestone": false,
+    "title": "첫 심부름",
+    "text": "엄마: \"{nameCall}, 앞 가게에서 두부 한 모만 사 올래? 거스름돈 꼭 가져오고.\" 손에 천 원짜리 세 장이 있다.",
+    "imageId": "img_child_first_errand_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [],
+      "blockedFlags": []
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "두부만 사서 곧장 온다",
+        "statDelta": {
+          "사회성": 2,
+          "경제력": 1,
+          "행복": -1
+        },
+        "resultText": "거스름돈 800원까지 정확히 드렸다. 엄마가 \"다 컸네\" 하며 머리를 쓰다듬었다.",
+        "addFlags": [],
+        "outcomes": [
+          {
+            "outcomeId": "a_primary",
+            "text": "거스름돈 800원까지 정확히 드렸다. 엄마가 \"다 컸네\" 하며 머리를 쓰다듬었다.",
+            "chance": 100,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "사회성": 2,
+              "경제력": 1,
+              "행복": -1
+            },
+            "addFlags": [],
+            "lifeDelta": 10
+          }
+        ]
+      },
+      {
+        "choiceId": "B",
+        "label": "거스름돈으로 사탕을 산다",
+        "statDelta": {
+          "행복": 2,
+          "경제력": -1,
+          "사회성": -1
+        },
+        "resultText": "사탕은 달았다. 엄마는 그날 저녁 거스름돈 계산법을 한 번 더 알려 주셨다.",
+        "addFlags": [],
+        "outcomes": [
+          {
+            "outcomeId": "b_primary",
+            "text": "사탕은 달았다. 엄마는 그날 저녁 거스름돈 계산법을 한 번 더 알려 주셨다.",
+            "chance": 100,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 2,
+              "경제력": -1,
+              "사회성": -1
+            },
+            "addFlags": []
+          }
+        ]
+      },
+      {
+        "choiceId": "C",
+        "label": "가게 앞 고양이랑 놀다 온다",
+        "statDelta": {
+          "행복": 1,
+          "운": 1,
+          "지력": -1
+        },
+        "resultText": "두부를 잊고 콩나물을 사 갔다. 그날 저녁은 된장찌개 대신 콩나물국이 됐다.",
+        "addFlags": [],
+        "outcomes": [
+          {
+            "outcomeId": "c_primary",
+            "text": "두부를 잊고 콩나물을 사 갔다. 그날 저녁은 된장찌개 대신 콩나물국이 됐다.",
+            "chance": 100,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 1,
+              "운": 1,
+              "지력": -1
+            },
+            "addFlags": []
+          }
+        ]
+      }
+    ],
+    "priority": 0,
+    "kind": "INCIDENT",
+    "periods": [
+      "CHILD"
+    ]
+  },
+  "sourceReadScope": "Current complete event, conditions, every choice/outcome and flags/stat deltas/periods/follow-ups directly read before judgement.",
+  "sourceImage": {
+    "path": "app/src/main/assets/images/followup_20261031/img_child_first_errand_001.png",
+    "sha256": "95241b6df1cfe7aa725995922fe5cfdb398d33b0057073b1ab7cbd6da1c4ba51",
+    "width": 720,
+    "height": 540
+  },
+  "originalArtworkUnchangedSinceHistoricalReview": true,
+  "historicalReview": {
+    "eventId": "child_006",
+    "title": "첫 심부름",
+    "imageId": "img_child_first_errand_001",
+    "assetPath": "followup_20261031/img_child_first_errand_001.png",
+    "sha256": "95241b6df1cfe7aa725995922fe5cfdb398d33b0057073b1ab7cbd6da1c4ba51",
+    "eventSourceHash": "cad81977af93fca2b823929e8996a403c0f7c40198a46c7393dc0b20ed04d674",
+    "status": "REVISION_REQUIRED",
+    "reviewer": "김선한 담당 Codex 직접 대행 검수",
+    "reason": "본문의 천 원권 세 장과 그림의 지폐 수·도안이 다름",
+    "expectedAction": "천 원짜리 세 장을 받아 두부 심부름 준비",
+    "requiredObjects": "지폐 세 장, 가게 방향, 두부 판매 단서",
+    "sheet": "output/art-review-20261119/sheet-03.jpg",
+    "cell": 3,
+    "cropMethod": "ImageOps.fit centre-fill 360:800; simulated crop inspected directly, not an emulator capture",
+    "visualMethod": "원본 도트풍·색감·장면 파손·명백한 신체/사물 오류 직접 확인"
+  },
+  "presentationMetadata": [],
+  "captures": [
+    {
+      "path": "build/refactor/after/semantic-originals-thirteen-native/child_006_phone_scene.png",
+      "sha256": "1528c3a96762c6c2b26ee42fb2802cec92be8e8de99d9cd7095af7244faf01e8",
+      "width": 1080,
+      "height": 2400,
+      "screen": "phone",
+      "mode": "scene",
+      "cropReport": {
+        "eventId": "child_006",
+        "imageId": "img_child_first_errand_001",
+        "assetPath": "followup_20261031/img_child_first_errand_001.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.331..0.669",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/semantic-originals-thirteen-native/child_006_phone_play.png",
+      "sha256": "f682896f04b6bdebea593a82d244c01560a1d250d279147bc559c6623d9d8e2f",
+      "width": 1080,
+      "height": 2400,
+      "screen": "phone",
+      "mode": "play",
+      "cropReport": null
+    },
+    {
+      "path": "build/refactor/after/semantic-originals-thirteen-native/child_006_360x740_scene.png",
+      "sha256": "737919b5caa87a2f22cad972761881f271f9acc0c382cf66963c75b3fc87da94",
+      "width": 945,
+      "height": 1943,
+      "screen": "360x740",
+      "mode": "scene",
+      "cropReport": {
+        "eventId": "child_006",
+        "imageId": "img_child_first_errand_001",
+        "assetPath": "followup_20261031/img_child_first_errand_001.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.318..0.682",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/semantic-originals-thirteen-native/child_006_360x740_play.png",
+      "sha256": "c3681a5b36b1e75d03ec4b68a57f26fdd29cc322dc2f2c0ea01231f74da00f7e",
+      "width": 945,
+      "height": 1943,
+      "screen": "360x740",
+      "mode": "play",
+      "cropReport": null
+    }
+  ],
+  "semanticObservation": "엄마가 심부름 돈을 건네는 선택 전 시점이다. 원본에서 세 장의 겹친 지폐와 세 초상 영역을 직접 확인했다. 인쇄 액면은 판독되지 않아 각 천 원 표기를 검증했다고 주장하지 않는다. 두부 구매·사탕·고양이·콩나물·거스름돈 결과는 없다.",
+  "cropObservation": "두 native 크기에서 세 지폐와 건네는 엄마 손, 받는 아이 손이 함께 유지된다. 먼 가게는 거의 잘리지만 현재 핵심인 돈 전달은 온전히 보인다. 과거 지폐 개수 불일치는 원본 및 실제 캡처에서 재현되지 않았다.",
+  "uiObservation": "두 크기 모두 제목·본문·A/B/C가 읽히며 small도 세 카드가 footer 위에 남는다.",
+  "reviewMethod": "Codex AI directly inspected the full unchanged source PNG and all four unmodified native scene/play captures. Prior review is retained as historical evidence; this record is a new AI judgement, not human approval.",
+  "nativeMethod": "Production DecisionScreen, current parsed event/routing/PixelAssetLoader, fixture state in Android Compose instrumentation. Scene grid match >=0.95. Not complete game progression.",
+  "nativeRunLog": "build/refactor/semantic-originals-thirteen-and-choice-reachability.log",
+  "limitations": [
+    "Emulator captures, not physical-device review.",
+    "Only reviewed phone and 360x740 dimensions; not every font scale/aspect ratio.",
+    "Art review does not independently certify scrolling, TalkBack or complete game-flow transitions."
+  ]
+}

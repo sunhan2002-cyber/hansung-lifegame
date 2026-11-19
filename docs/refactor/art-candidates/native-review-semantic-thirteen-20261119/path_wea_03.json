@@ -1,0 +1,355 @@
+{
+  "schemaVersion": 1,
+  "eventId": "path_wea_03",
+  "status": "PASS",
+  "reviewer": "Codex AI / plan_audit",
+  "reviewerType": "AI",
+  "reviewDate": "2026-11-19",
+  "sourceEventHash": "361d3f55fc1bf679d3c7c3d729fed213695acab1c2267bd23e20b71499c71bb9",
+  "sourceEventSnapshot": {
+    "eventId": "path_wea_03",
+    "stage": "ADULT",
+    "type": "NORMAL",
+    "isFallback": false,
+    "isMilestone": true,
+    "title": "세 장의 계약서",
+    "text": "청년기의 마지막 해. 책상 위에 계약서가 세 장. 대기업 연봉 계약서, 스타트업 스톡옵션 계약서, 그리고 내 가게 임대 계약서. 고른 한 장이 앞으로 10년을 정한다.",
+    "imageId": "img_path_wea_03_001",
+    "conditions": {
+      "stats": {
+        "경제력": 62
+      },
+      "requiredFlags": [],
+      "blockedFlags": []
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "대기업에 입사한다",
+        "statDelta": {
+          "경제력": 3,
+          "행복": -1
+        },
+        "resultText": "새 회사 첫 월급날 부모님께 내복을 사 드렸다. 회사 근처 원룸 월세가 월급의 3분의 1이었다.",
+        "addFlags": [
+          "wea_path",
+          "career_office",
+          "corporate_job",
+          "job_employed",
+          "housing_monthly_rent",
+          "level_entry",
+          "career_office__path_wea_03",
+          "job_employed__path_wea_03",
+          "housing_monthly_rent__path_wea_03",
+          "level_entry__path_wea_03"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "a_corp",
+            "text": "새 회사 첫 월급날 부모님께 내복을 사 드렸다. 회사 근처 원룸 월세가 월급의 3분의 1이었다.",
+            "chance": 100,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "경제력": 3,
+              "행복": -1
+            },
+            "addFlags": [
+              "wea_path",
+              "career_office",
+              "corporate_job",
+              "job_employed",
+              "housing_monthly_rent",
+              "level_entry",
+              "career_office__path_wea_03",
+              "job_employed__path_wea_03",
+              "housing_monthly_rent__path_wea_03",
+              "level_entry__path_wea_03"
+            ],
+            "removeFlags": [
+              "job_retired",
+              "job_self_employed",
+              "job_unemployed"
+            ]
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "전환점에서 누구나 고를 수 있는 기본 선택지 (전체 잠금 방지)",
+        "conditionReview": "fallback_choice",
+        "conditionBasis": "week8_life_path"
+      },
+      {
+        "choiceId": "B",
+        "label": "스타트업에 들어간다",
+        "statDelta": {
+          "경제력": 4,
+          "행복": 2,
+          "건강": -2
+        },
+        "resultText": "회사가 3년 만에 크게 투자를 받았다. 스톡옵션 숫자에 0이 두 개 늘었다.",
+        "addFlags": [
+          "wea_path",
+          "career_startup",
+          "job_employed",
+          "achv_stock_option",
+          "level_entry",
+          "career_startup__path_wea_03",
+          "job_employed__path_wea_03",
+          "level_entry__path_wea_03"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "b_unicorn",
+            "text": "회사가 3년 만에 크게 투자를 받았다. 스톡옵션 숫자에 0이 두 개 늘었다.",
+            "chance": 35,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "경제력": 4,
+              "행복": 2,
+              "건강": -2
+            },
+            "addFlags": [
+              "wea_path",
+              "career_startup",
+              "job_employed",
+              "achv_stock_option",
+              "level_entry",
+              "career_startup__path_wea_03",
+              "job_employed__path_wea_03",
+              "level_entry__path_wea_03"
+            ],
+            "chanceWeights": {
+              "운": 3
+            },
+            "removeFlags": [
+              "job_retired",
+              "job_self_employed",
+              "job_unemployed"
+            ]
+          },
+          {
+            "outcomeId": "b_fold",
+            "text": "회사가 2년 만에 문을 닫았다. 스톡옵션은 종이가 됐다. 그래도 일하는 속도는 두 배가 됐다.",
+            "chance": 65,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "경제력": -2,
+              "지력": 2
+            },
+            "addFlags": [
+              "wea_path",
+              "career_startup",
+              "job_unemployed",
+              "career_startup__path_wea_03",
+              "job_unemployed__path_wea_03"
+            ],
+            "chanceWeights": {
+              "운": -2
+            },
+            "removeFlags": [
+              "job_employed",
+              "job_self_employed"
+            ]
+          }
+        ],
+        "conditionReview": "confirmed",
+        "alwaysAvailableReason": "이미 스타트업 계약서가 주어진 맥락에서 아르바이트 경력을 필수 자격으로 삼지 않는다.",
+        "alwaysAvailable": true
+      },
+      {
+        "choiceId": "C",
+        "label": "내 가게를 연다",
+        "statDelta": {
+          "경제력": 4,
+          "사회성": 2,
+          "건강": -2
+        },
+        "resultText": "오픈 날 엄마가 화분을 들고 왔다. 첫 손님은 엄마 친구였다. 1년 뒤엔 모르는 사람이 줄을 섰다.",
+        "addFlags": [
+          "wea_path",
+          "career_founder",
+          "startup_founder",
+          "own_shop",
+          "job_self_employed",
+          "career_founder__path_wea_03",
+          "job_self_employed__path_wea_03"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "c_store",
+            "text": "오픈 날 엄마가 화분을 들고 왔다. 첫 손님은 엄마 친구였다. 1년 뒤엔 모르는 사람이 줄을 섰다.",
+            "chance": 55,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "경제력": 4,
+              "사회성": 2,
+              "건강": -2
+            },
+            "addFlags": [
+              "wea_path",
+              "career_founder",
+              "startup_founder",
+              "own_shop",
+              "job_self_employed",
+              "career_founder__path_wea_03",
+              "job_self_employed__path_wea_03"
+            ],
+            "chanceWeights": {
+              "사회성": 2,
+              "운": 1
+            },
+            "removeFlags": [
+              "job_employed",
+              "job_retired",
+              "job_unemployed"
+            ]
+          },
+          {
+            "outcomeId": "c_slow",
+            "text": "손님이 하루에 세 명. 월세 날이 한 달에 두 번 오는 것 같았다.",
+            "chance": 45,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "경제력": -3,
+              "행복": -2
+            },
+            "addFlags": [
+              "wea_path",
+              "career_founder",
+              "own_shop",
+              "job_self_employed",
+              "wea_struggle",
+              "career_founder__path_wea_03",
+              "job_self_employed__path_wea_03"
+            ],
+            "chanceWeights": {
+              "운": -2
+            },
+            "removeFlags": [
+              "job_employed",
+              "job_retired",
+              "job_unemployed"
+            ]
+          }
+        ],
+        "requiredFlags": [
+          "wea_seller"
+        ],
+        "conditionReview": "confirmed",
+        "conditionBasis": "week8_life_path"
+      }
+    ],
+    "priority": 0,
+    "kind": "MILESTONE",
+    "periods": [
+      "YOUNG_ADULT"
+    ],
+    "yearInPeriod": 5,
+    "weight": 1,
+    "view": "FIRST_PERSON",
+    "lifePath": "WEALTH",
+    "pathRole": "전환점·직업",
+    "followUps": [
+      "path_wea_04",
+      "path_wea_06"
+    ]
+  },
+  "sourceReadScope": "Current complete event, conditions, every choice/outcome and flags/stat deltas/periods/follow-ups directly read before judgement.",
+  "sourceImage": {
+    "path": "app/src/main/assets/images/followup_20261031/img_path_wea_03_001.png",
+    "sha256": "a0de7b1fbeb84a8f81eac0154a3de2067c3d6115381dea2b9d5ba41adb644b43",
+    "width": 1448,
+    "height": 1086
+  },
+  "originalArtworkUnchangedSinceHistoricalReview": true,
+  "historicalReview": {
+    "eventId": "path_wea_03",
+    "title": "세 장의 계약서",
+    "imageId": "img_path_wea_03_001",
+    "assetPath": "followup_20261031/img_path_wea_03_001.png",
+    "sha256": "a0de7b1fbeb84a8f81eac0154a3de2067c3d6115381dea2b9d5ba41adb644b43",
+    "eventSourceHash": "361d3f55fc1bf679d3c7c3d729fed213695acab1c2267bd23e20b71499c71bb9",
+    "status": "REVISION_REQUIRED",
+    "reviewer": "김선한 담당 Codex 직접 대행 검수",
+    "reason": "세 계약서의 대기업·스톡옵션·가게가 그림상 주택·빌딩·가게로 달라지고 중앙 크롭에서 사라짐",
+    "expectedAction": "대기업 연봉 · 스타트업 스톡옵션 · 내 가게 임대 계약서 세 장을 펼침",
+    "requiredObjects": "계약서 3장(회사 로고 · 차트 · 가게 열쇠로 구분), 펜",
+    "sheet": "output/art-review-20261119/sheet-16.jpg",
+    "cell": 10,
+    "cropMethod": "ImageOps.fit centre-fill 360:800; simulated crop inspected directly, not an emulator capture",
+    "visualMethod": "원본 도트풍·색감·장면 파손·명백한 신체/사물 오류 직접 확인"
+  },
+  "presentationMetadata": [],
+  "captures": [
+    {
+      "path": "build/refactor/after/semantic-originals-thirteen-native/path_wea_03_phone_scene.png",
+      "sha256": "09cf5e6c5b687089ecf6079b30376a606596602fbdc1caa29548d4cd04be7644",
+      "width": 1080,
+      "height": 2400,
+      "screen": "phone",
+      "mode": "scene",
+      "cropReport": {
+        "eventId": "path_wea_03",
+        "imageId": "img_path_wea_03_001",
+        "assetPath": "followup_20261031/img_path_wea_03_001.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.331..0.669",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/semantic-originals-thirteen-native/path_wea_03_phone_play.png",
+      "sha256": "42a2a1c33020b6e195cec163268940d13d9dbc03269260ded8494df0a91a0564",
+      "width": 1080,
+      "height": 2400,
+      "screen": "phone",
+      "mode": "play",
+      "cropReport": null
+    },
+    {
+      "path": "build/refactor/after/semantic-originals-thirteen-native/path_wea_03_360x740_scene.png",
+      "sha256": "1540d7ff303f5cd0049ea1592120e2db456e75b91ea4da2c353bb5a7fe36b812",
+      "width": 945,
+      "height": 1943,
+      "screen": "360x740",
+      "mode": "scene",
+      "cropReport": {
+        "eventId": "path_wea_03",
+        "imageId": "img_path_wea_03_001",
+        "assetPath": "followup_20261031/img_path_wea_03_001.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.318..0.682",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/semantic-originals-thirteen-native/path_wea_03_360x740_play.png",
+      "sha256": "0b3b882ad7896866d9bf59817108be428693b203a7932c64a222b33568e463e9",
+      "width": 945,
+      "height": 1943,
+      "screen": "360x740",
+      "mode": "play",
+      "cropReport": null
+    }
+  ],
+  "semanticObservation": "대기업 건물·새싹과 성장 그래프·차양 달린 가게의 세 계약서와 종이에 닿지 않은 펜이다. 원본 오른쪽은 주택이 아니라 차양/진열창/가게 열쇠로 구별된다. 임금 수령·스톡옵션 행사·폐업·가게 개업 결과가 없다.",
+  "cropObservation": "두 native에서 세 장의 분리된 종이와 건물/성장 그래프/가게 기호를 식별한다. 좌우 종이 외곽은 잘리고 phone에서 열쇠는 화면 밖이나 가게의 차양·창문·문이 남아 세 선택의 핵심 구분은 유지된다.",
+  "uiObservation": "phone 세 카드 전체가 보인다. small C 문구는 읽히지만 카드 하단이 footer에 걸려 있으며 정지 캡처만으로 스크롤 여부를 인증하지 않는다.",
+  "reviewMethod": "Codex AI directly inspected the full unchanged source PNG and all four unmodified native scene/play captures. Prior review is retained as historical evidence; this record is a new AI judgement, not human approval.",
+  "nativeMethod": "Production DecisionScreen, current parsed event/routing/PixelAssetLoader, fixture state in Android Compose instrumentation. Scene grid match >=0.95. Not complete game progression.",
+  "nativeRunLog": "build/refactor/semantic-originals-thirteen-and-choice-reachability.log",
+  "limitations": [
+    "Emulator captures, not physical-device review.",
+    "Only reviewed phone and 360x740 dimensions; not every font scale/aspect ratio.",
+    "Art review does not independently certify scrolling, TalkBack or complete game-flow transitions."
+  ]
+}

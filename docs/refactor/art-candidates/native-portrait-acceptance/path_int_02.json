@@ -1,0 +1,71 @@
+{
+  "eventId": "path_int_02",
+  "reviewerType": "AI",
+  "scope": "Portrait phone and small-phone presentation",
+  "sourceEventHash": "80c11e9882954abdb1aa879e5fff456f46df42ee66ac5de8f5028a9fdcd35ce6",
+  "sourceReview": "docs/refactor/art-candidates/portrait-integration/path_int_02.json",
+  "sourceSha256": "64468871e66a74246da9eea83c12d4d3c4af192de8aa3c605850cfb768643f19",
+  "displayedVariant": {
+    "assetPath": "presentation/portraits/img_path_int_02_001_portrait_v1.png",
+    "sha256": "b63d3c7d15e2ac1feff6de14df06dcf46a8ae22178b9f40f52e2307e5d751d58",
+    "width": 941,
+    "height": 1672,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root/security_p0)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/path_int_02.json"
+  },
+  "nativeCaptures": [
+    {
+      "path": "build/refactor/after/portrait-fortythree-native/path_int_02_phone_scene.png",
+      "sha256": "83bd3f903d04bad9fa7cda0dad7844841ef01ed2a210c1c42c180cbb45dd8126",
+      "crop": {
+        "eventId": "path_int_02",
+        "imageId": "img_path_int_02_001",
+        "assetPath": "presentation/portraits/img_path_int_02_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/portrait-fortythree-native/path_int_02_phone_play.png",
+      "sha256": "6c6ddbd62886e8ab95fb5f6232281404629d1078295e730bf177097f4e198cc8",
+      "crop": {
+        "eventId": "path_int_02",
+        "imageId": "img_path_int_02_001",
+        "assetPath": "presentation/portraits/img_path_int_02_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/portrait-fortythree-native/path_int_02_360x740_scene.png",
+      "sha256": "1b4a536298e8017ef0685f26e5f8ba24ed602adca428ab90c0a20b34f809ce63",
+      "crop": {
+        "eventId": "path_int_02",
+        "imageId": "img_path_int_02_001",
+        "assetPath": "presentation/portraits/img_path_int_02_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/portrait-fortythree-native/path_int_02_360x740_play.png",
+      "sha256": "67e455778cea255e8f0660efbdeb233ec681832c33bf86d7946bd96d7d30f5aa",
+      "crop": {
+        "eventId": "path_int_02",
+        "imageId": "img_path_int_02_001",
+        "assetPath": "presentation/portraits/img_path_int_02_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    }
+  ],
+  "observation": "예전 화면에서 사라졌던 선생님 얼굴이 공고와 문제집 옆에 남는다.",
+  "decision": "PASS",
+  "method": "Individual visual inspection of both scene and gameplay frames together with producer semantic/source review and device capture match."
+}

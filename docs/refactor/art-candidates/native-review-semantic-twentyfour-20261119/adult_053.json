@@ -1,0 +1,204 @@
+{
+  "schemaVersion": 1,
+  "eventId": "adult_053",
+  "status": "PASS",
+  "reviewer": "Codex AI / plan_audit",
+  "reviewerType": "AI",
+  "reviewDate": "2026-11-19",
+  "sourceEventHash": "b83e576c7601a240c33aa4aab80b92a73fb794e7056cf361f2a52d5d5414f1c7",
+  "sourceEventSnapshot": {
+    "eventId": "adult_053",
+    "stage": "ADULT",
+    "type": "NORMAL",
+    "isFallback": false,
+    "isMilestone": false,
+    "title": "팔이 짧아졌다",
+    "text": "식당 메뉴판 글씨가 흐릿하다. 메뉴판을 점점 멀리 들어 본다. 팔이 모자라다.",
+    "imageId": "img_adult_reading_glasses_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [],
+      "blockedFlags": []
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "돋보기를 맞춘다",
+        "statDelta": {
+          "지력": 2,
+          "행복": -2
+        },
+        "resultText": "안경점 사장님이 \"다들 이 나이 되면 오세요\" 하며 웃었다. 세상이 다시 선명해졌다.",
+        "addFlags": [
+          "reading_glasses"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "a_primary",
+            "text": "안경점 사장님이 \"다들 이 나이 되면 오세요\" 하며 웃었다. 세상이 다시 선명해졌다.",
+            "chance": 100,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "지력": 2,
+              "행복": -2
+            },
+            "addFlags": [
+              "reading_glasses"
+            ]
+          }
+        ]
+      },
+      {
+        "choiceId": "B",
+        "label": "직원에게 추천 메뉴를 묻는다",
+        "statDelta": {
+          "사회성": 2,
+          "운": 1,
+          "경제력": -1
+        },
+        "resultText": "직원이 제일 비싼 메뉴를 추천했다. 맛은 있었다.",
+        "addFlags": [],
+        "outcomes": [
+          {
+            "outcomeId": "b_primary",
+            "text": "직원이 제일 비싼 메뉴를 추천했다. 맛은 있었다.",
+            "chance": 100,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "사회성": 2,
+              "운": 1,
+              "경제력": -1
+            },
+            "addFlags": [],
+            "lifeDelta": 10
+          }
+        ]
+      },
+      {
+        "choiceId": "C",
+        "label": "휴대폰으로 찍어서 확대한다",
+        "statDelta": {
+          "지력": 1,
+          "행복": 1,
+          "건강": -1
+        },
+        "resultText": "확대는 했는데 휴대폰 글씨도 안 보였다. 결국 둘 다 확대했다.",
+        "addFlags": [],
+        "outcomes": [
+          {
+            "outcomeId": "c_primary",
+            "text": "확대는 했는데 휴대폰 글씨도 안 보였다. 결국 둘 다 확대했다.",
+            "chance": 100,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "지력": 1,
+              "행복": 1,
+              "건강": -1
+            },
+            "addFlags": []
+          }
+        ]
+      }
+    ],
+    "priority": 0,
+    "kind": "INCIDENT",
+    "periods": [
+      "MIDDLE"
+    ]
+  },
+  "sourceReadScope": "Current complete event, conditions, every choice/outcome and flags/stat deltas/periods/follow-ups directly read before judgement.",
+  "sourceImage": {
+    "path": "app/src/main/assets/images/followup_20261031/img_adult_reading_glasses_001.png",
+    "sha256": "d35a164e2fe03d0dce7973137819470a30751f840d3c8d1927781d797ef57e24",
+    "width": 1448,
+    "height": 1086
+  },
+  "originalArtworkUnchangedSinceHistoricalReview": true,
+  "historicalReview": {
+    "eventId": "adult_053",
+    "title": "팔이 짧아졌다",
+    "imageId": "img_adult_reading_glasses_001",
+    "assetPath": "followup_20261031/img_adult_reading_glasses_001.png",
+    "sha256": "d35a164e2fe03d0dce7973137819470a30751f840d3c8d1927781d797ef57e24",
+    "eventSourceHash": "b83e576c7601a240c33aa4aab80b92a73fb794e7056cf361f2a52d5d5414f1c7",
+    "status": "REVISION_REQUIRED",
+    "reviewer": "김선한 담당 Codex 직접 대행 검수",
+    "reason": "본문의 메뉴판을 멀리 드는 동작과 반대로 가까이 들고 있음",
+    "expectedAction": "흐릿한 메뉴판을 팔을 뻗어 멀리 들어 봄",
+    "requiredObjects": "메뉴판(흐릿한 글씨), 뻗은 팔, 물컵",
+    "sheet": "output/art-review-20261119/sheet-11.jpg",
+    "cell": 11,
+    "cropMethod": "ImageOps.fit centre-fill 360:800; simulated crop inspected directly, not an emulator capture",
+    "visualMethod": "원본 도트풍·색감·장면 파손·명백한 신체/사물 오류 직접 확인"
+  },
+  "presentationMetadata": [],
+  "captures": [
+    {
+      "path": "build/refactor/after/originals-twentyfour-and-variants-native/adult_053_phone_scene.png",
+      "sha256": "bebe92cb72ee363ccdced9ef225191788ad09bcd1a59b69e42aa1016f01f97eb",
+      "width": 1080,
+      "height": 2400,
+      "screen": "phone",
+      "mode": "scene",
+      "cropReport": {
+        "eventId": "adult_053",
+        "imageId": "img_adult_reading_glasses_001",
+        "assetPath": "followup_20261031/img_adult_reading_glasses_001.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.331..0.669",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/originals-twentyfour-and-variants-native/adult_053_phone_play.png",
+      "sha256": "d3393225bce84097a0809c670a2f5b96a2b1959649a25ed72238827109016318",
+      "width": 1080,
+      "height": 2400,
+      "screen": "phone",
+      "mode": "play",
+      "cropReport": null
+    },
+    {
+      "path": "build/refactor/after/originals-twentyfour-and-variants-native/adult_053_360x740_scene.png",
+      "sha256": "e38f2178573de82d3ecf5eeb39b106b8d76831037f06028d20f34cf8a552675a",
+      "width": 945,
+      "height": 1943,
+      "screen": "360x740",
+      "mode": "scene",
+      "cropReport": {
+        "eventId": "adult_053",
+        "imageId": "img_adult_reading_glasses_001",
+        "assetPath": "followup_20261031/img_adult_reading_glasses_001.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.318..0.682",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/originals-twentyfour-and-variants-native/adult_053_360x740_play.png",
+      "sha256": "301de32ea94b274bfd245bb42b2f87a11b350fe3c3f84e8aa5d5ac99d681faa1",
+      "width": 945,
+      "height": 1943,
+      "screen": "360x740",
+      "mode": "play",
+      "cropReport": null
+    }
+  ],
+  "semanticObservation": "식당에서 글자가 흐릿한 메뉴를 곧게 뻗은 팔 끝에 들고 보는 1인칭이다. 메뉴가 가까워 보인다는 과거 의견과 달리 전체 원본의 팔 길이와 의자 원근은 멀리 들어 보는 상황을 나타낸다. 돋보기 구매·직원 추천 고가 주문·휴대전화 확대 결과는 없다.",
+  "cropObservation": "두 native에서 메뉴 전체와 길게 뻗은 팔, 손과 식당 테이블/금속컵 단서가 유지된다. 메뉴 안 글자는 의도적으로 흐릿한 블록이며 본문의 노안 상황과 맞는다.",
+  "uiObservation": "두 크기에서 제목·본문·세 선택지가 모두 읽힌다.",
+  "reviewMethod": "Codex AI directly inspected the full unchanged source PNG and all four unmodified native scene/play captures. Prior review is retained as historical evidence; this record is a new AI judgement, not human approval.",
+  "nativeMethod": "Production DecisionScreen, current parsed event/routing/PixelAssetLoader, fixture state in Android Compose instrumentation. Scene grid match >=0.95. Not complete game progression.",
+  "nativeRunLog": "build/refactor/depth-and-originals-twentyfour.log",
+  "limitations": [
+    "Emulator captures, not physical-device review.",
+    "Only reviewed phone and 360x740 dimensions; not every font scale/aspect ratio.",
+    "Art review does not independently certify scrolling, TalkBack or complete game-flow transitions."
+  ]
+}

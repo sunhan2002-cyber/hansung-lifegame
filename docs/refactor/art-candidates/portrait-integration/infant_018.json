@@ -1,0 +1,29 @@
+{
+  "eventId": "infant_018",
+  "sourceAssetPath": "followup_20261031/img_infant_cousin_001.png",
+  "sourceSha256": "2c4f55bd8b5b41c3fefc4e849c12345eab0c42ce1cf10dfd7498bc244066f5e4",
+  "variant": {
+    "assetPath": "presentation/portraits/img_infant_cousin_001_portrait_v1.png",
+    "sha256": "d2788805c5c9b71a72992a57a7a3dd96e643ba2a1b49834ead877e46638c616e",
+    "width": 941,
+    "height": 1672,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root/security_p0)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/infant_018.json"
+  },
+  "reviewerType": "AI",
+  "reviewer": "Codex AI (/root/security_p0)",
+  "reviewStatus": "AI_REVIEWED_PRESENTATION",
+  "eventSourceHash": "9eff4b53a090e0c67ca60ac6590a9dd25fff1824b98c5a9511e7094e0da834a7",
+  "semanticReview": "Producer read the current event conditions and every choice/outcome, inspected source and selected output. Full source snapshot and exact prompt are in the referenced production ledger. Native acceptance remains pending.",
+  "visualReview": "Individually viewed: older cousin holds the recognizable toy car; baby has two empty hands and no visible head; car remains in cousin hand with no handover/swap/departure. Portrait cues central, no readable text. Native pending.",
+  "cropReview": "Portrait candidate selected for native phone/small-phone scene and gameplay inspection; not final artwork acceptance.",
+  "actualProducer": "OpenAI built-in image_gen",
+  "generationMethod": "Built-in imagegen edit; exact prompts/output SHA/rejected attempts preserved in docs/refactor/art-candidates/content-art-revision-briefs-20261119.json",
+  "productionLedger": "docs/refactor/art-candidates/content-art-revision-briefs-20261119.json",
+  "nativePending": true,
+  "runtimeConnected": true,
+  "approvalChanged": false,
+  "selectedStagingSha256": "d2788805c5c9b71a72992a57a7a3dd96e643ba2a1b49834ead877e46638c616e"
+}

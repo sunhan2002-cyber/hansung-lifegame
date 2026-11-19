@@ -1,0 +1,279 @@
+{
+  "schemaVersion": 1,
+  "eventId": "path_hea_12",
+  "status": "PASS",
+  "reviewer": "Codex AI / plan_audit",
+  "reviewerType": "AI",
+  "reviewDate": "2026-11-19",
+  "sourceEventHash": "7aa49d2a68385918f3e272859542e8093c0ec5100785eb19c1330e3891c97a87",
+  "sourceEventSnapshot": {
+    "eventId": "path_hea_12",
+    "stage": "ADULT",
+    "type": "NORMAL",
+    "isFallback": false,
+    "isMilestone": false,
+    "title": "약봉지와 회의 일정",
+    "text": "아침 약, 점심 약, 저녁 약. 회의는 하루에 다섯 개다. 의사: \"{name} 님, 일을 줄이셔야 약이 듣습니다.\"",
+    "imageId": "img_path_hea_12_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [
+        "hea_chronic",
+        "job_employed"
+      ],
+      "blockedFlags": []
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "단축 근무를 신청한다",
+        "statDelta": {
+          "건강": 4,
+          "경제력": -3
+        },
+        "resultText": "주 4일 근무. 월급은 줄었지만 약봉지도 하나 줄었다. 목요일 저녁마다 산책을 했다.",
+        "addFlags": [
+          "health_chronic",
+          "healthy_routine"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "a_part",
+            "text": "주 4일 근무. 월급은 줄었지만 약봉지도 하나 줄었다. 목요일 저녁마다 산책을 했다.",
+            "chance": 65,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "건강": 4,
+              "경제력": -3
+            },
+            "addFlags": [
+              "health_chronic",
+              "healthy_routine"
+            ],
+            "chanceWeights": {
+              "건강": 2
+            }
+          },
+          {
+            "outcomeId": "a_denied",
+            "text": "신청서는 반려됐다. 대신 팀장이 오후 회의를 오전으로 몰아 줬다.",
+            "chance": 35,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "건강": 1,
+              "경제력": -1,
+              "행복": -2
+            },
+            "addFlags": [
+              "health_chronic"
+            ],
+            "chanceWeights": {
+              "사회성": -2
+            }
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week10_path_followup"
+      },
+      {
+        "choiceId": "B",
+        "label": "약을 먹으며 그대로 버틴다",
+        "statDelta": {
+          "경제력": 2,
+          "건강": -4
+        },
+        "resultText": "일정은 다 지켰다. 대신 약봉지가 하나 더 늘었다. 거울 속 얼굴빛이 회색이었다.",
+        "addFlags": [
+          "health_chronic",
+          "overwork"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "b_hold",
+            "text": "일정은 다 지켰다. 대신 약봉지가 하나 더 늘었다. 거울 속 얼굴빛이 회색이었다.",
+            "chance": 100,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "경제력": 2,
+              "건강": -4
+            },
+            "addFlags": [
+              "health_chronic",
+              "overwork"
+            ],
+            "deathCause": "약으로 버틴 과로"
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week10_path_followup"
+      },
+      {
+        "choiceId": "C",
+        "label": "같은 병을 가진 사람들의 모임을 연다",
+        "statDelta": {
+          "사회성": 3,
+          "건강": 2,
+          "경제력": -1
+        },
+        "resultText": "구청 회의실 하나를 빌렸다. 첫 달 여섯 명, 반년 뒤 서른 명. 다들 약 먹는 시간을 서로 알려 줬다.",
+        "addFlags": [
+          "health_chronic",
+          "achv_patient_circle"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "c_circle",
+            "text": "구청 회의실 하나를 빌렸다. 첫 달 여섯 명, 반년 뒤 서른 명. 다들 약 먹는 시간을 서로 알려 줬다.",
+            "chance": 70,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "사회성": 3,
+              "건강": 2,
+              "경제력": -1
+            },
+            "addFlags": [
+              "health_chronic",
+              "achv_patient_circle"
+            ],
+            "chanceWeights": {
+              "사회성": 2
+            }
+          },
+          {
+            "outcomeId": "c_small",
+            "text": "첫 모임에 온 사람은 둘이었다. 셋이서 서로 혈압을 재 줬다.",
+            "chance": 30,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "사회성": 1,
+              "건강": 1
+            },
+            "addFlags": [
+              "health_chronic"
+            ]
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week10_path_followup"
+      }
+    ],
+    "priority": 0,
+    "kind": "INCIDENT",
+    "periods": [
+      "MIDDLE"
+    ],
+    "weight": 8,
+    "view": "FIRST_PERSON",
+    "lifePath": "HEALTH",
+    "pathRole": "만성 질환·일 조정",
+    "followUps": [
+      "path_hea_07",
+      "path_hea_08"
+    ]
+  },
+  "sourceReadScope": "Current complete event, conditions, every choice/outcome and flags/stat deltas/periods/follow-ups directly read before judgement.",
+  "sourceImage": {
+    "path": "app/src/main/assets/images/followup_20261031/img_path_hea_12_001.png",
+    "sha256": "8fe878e2a624e2f9888dcdb657bed6a88dbe3cfcd02a23d822aba1b4e277f0a1",
+    "width": 720,
+    "height": 540
+  },
+  "originalArtworkUnchangedSinceHistoricalReview": true,
+  "historicalReview": {
+    "eventId": "path_hea_12",
+    "title": "약봉지와 회의 일정",
+    "imageId": "img_path_hea_12_001",
+    "assetPath": "followup_20261031/img_path_hea_12_001.png",
+    "sha256": "8fe878e2a624e2f9888dcdb657bed6a88dbe3cfcd02a23d822aba1b4e277f0a1",
+    "eventSourceHash": "7aa49d2a68385918f3e272859542e8093c0ec5100785eb19c1330e3891c97a87",
+    "status": "REVISION_REQUIRED",
+    "reviewer": "김선한 담당 Codex 직접 대행 검수",
+    "reason": "일복약·회의 일정표는 맞지만 약 사물 자체가 없어 복약 충돌 전달 약함",
+    "expectedAction": "아침·점심·저녁 약봉지 세 개와 빽빽한 회의 일정표를 내려다봄",
+    "requiredObjects": "약봉지 3개, 회의 일정표(칸만, 글자 판독 불필요), 물컵",
+    "sheet": "output/art-review-20261119/sheet-18.jpg",
+    "cell": 12,
+    "cropMethod": "ImageOps.fit centre-fill 360:800; simulated crop inspected directly, not an emulator capture",
+    "visualMethod": "원본 도트풍·색감·장면 파손·명백한 신체/사물 오류 직접 확인"
+  },
+  "presentationMetadata": [],
+  "captures": [
+    {
+      "path": "build/refactor/after/originals-twentyfour-and-variants-native/path_hea_12_phone_scene.png",
+      "sha256": "d2e79c26d17e3f47ac96b8a4ca3d3610438025e3cde824448903687a4d08a78e",
+      "width": 1080,
+      "height": 2400,
+      "screen": "phone",
+      "mode": "scene",
+      "cropReport": {
+        "eventId": "path_hea_12",
+        "imageId": "img_path_hea_12_001",
+        "assetPath": "followup_20261031/img_path_hea_12_001.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.331..0.669",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/originals-twentyfour-and-variants-native/path_hea_12_phone_play.png",
+      "sha256": "5ae07c8e6b4dcdaa05d46d240d6ad6ff929cf37bde13164151ace053b6588630",
+      "width": 1080,
+      "height": 2400,
+      "screen": "phone",
+      "mode": "play",
+      "cropReport": null
+    },
+    {
+      "path": "build/refactor/after/originals-twentyfour-and-variants-native/path_hea_12_360x740_scene.png",
+      "sha256": "27627e56c24afb7f7fd7d113ad42833de1c8e24a84863fff5222f98e8dec2d07",
+      "width": 945,
+      "height": 1943,
+      "screen": "360x740",
+      "mode": "scene",
+      "cropReport": {
+        "eventId": "path_hea_12",
+        "imageId": "img_path_hea_12_001",
+        "assetPath": "followup_20261031/img_path_hea_12_001.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.318..0.682",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/originals-twentyfour-and-variants-native/path_hea_12_360x740_play.png",
+      "sha256": "6a6de522a0e53f86a9baf91eb1765a8310f8f1f619a968a87e52869905159f0b",
+      "width": 945,
+      "height": 1943,
+      "screen": "360x740",
+      "mode": "play",
+      "cropReport": null
+    }
+  ],
+  "semanticObservation": "만성 질환 약을 하루 세 번 먹고 회의가 많은 현재 상태다. 세 봉투의 해/달 표시와 빽빽한 일정, 물컵이 세 번 복용과 직장 부담을 구별한다. 근무 단축 승인/거절, 약 추가, 환자 모임의 모든 분기를 읽었고 이 결과는 선행하지 않는다.",
+  "cropObservation": "양쪽 네이티브에서 분리된 약 봉투 세 개와 각 복용 표시, 바쁜 일정표와 물컵이 보존된다. 봉투 가장자리의 미세한 잘림은 개수와 내용을 지우지 않는다.",
+  "uiObservation": "두 화면 모두 A/B/C 문구가 보이며 작은 화면 C는 두 줄로 표시된다.",
+  "reviewMethod": "Codex AI directly inspected the full unchanged source PNG and all four unmodified native scene/play captures. Prior review is retained as historical evidence; this record is a new AI judgement, not human approval.",
+  "nativeMethod": "Production DecisionScreen, current parsed event/routing/PixelAssetLoader, fixture state in Android Compose instrumentation. Scene grid match >=0.95. Not complete game progression.",
+  "nativeRunLog": "build/refactor/depth-and-originals-twentyfour.log",
+  "limitations": [
+    "Emulator captures, not physical-device review.",
+    "Only reviewed phone and 360x740 dimensions; not every font scale/aspect ratio.",
+    "Art review does not independently certify scrolling, TalkBack or complete game-flow transitions."
+  ]
+}

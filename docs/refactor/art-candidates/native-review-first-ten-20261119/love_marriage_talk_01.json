@@ -1,0 +1,235 @@
+{
+  "schemaVersion": 1,
+  "eventId": "love_marriage_talk_01",
+  "status": "PASS",
+  "approvalScope": "Current source event and exact PNG; native phone and 360x740 Compose scene/play visual review",
+  "reviewer": "Codex AI / plan_audit",
+  "reviewerType": "AI",
+  "reviewDate": "2026-11-19",
+  "sourceEventHash": "3506135f5cf20c23260bdad319f96cb0dad6e768c868ca81be241924c6c21beb",
+  "sourceEventSnapshot": {
+    "eventId": "love_marriage_talk_01",
+    "stage": "ADULT",
+    "type": "NORMAL",
+    "isFallback": false,
+    "isMilestone": true,
+    "title": "결혼이라는 단어",
+    "text": "친구 결혼식에서 돌아오는 길. 연인이 조용히 물었다. \"{nameCall}, 우리도 결혼 생각해 볼까?\"",
+    "imageId": "img_love_marriage_talk_01_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [
+        "dating",
+        "rel_steady"
+      ],
+      "blockedFlags": [
+        "engaged",
+        "married",
+        "divorced",
+        "job_employed"
+      ]
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "\"좋아. 같이 준비하자\"",
+        "statDelta": {
+          "행복": 4,
+          "경제력": -1
+        },
+        "resultText": "그날 밤 둘이 통장 잔고와 달력을 나란히 펼쳤다. 숫자는 작았고 계획은 길었다. 다음 할 일은 양가 인사였다.",
+        "addFlags": [
+          "engaged"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "a_yes",
+            "text": "그날 밤 둘이 통장 잔고와 달력을 나란히 펼쳤다. 숫자는 작았고 계획은 길었다. 다음 할 일은 양가 인사였다.",
+            "chance": 100,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 4,
+              "경제력": -1
+            },
+            "addFlags": [
+              "engaged"
+            ]
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "관계 단계 전환점 — 연애·결혼·자녀는 능력치 자격이 아니라 의사 결정이라 잠그지 않고, 차이는 결과 분기와 후속 사실로 반영",
+        "conditionReview": "open_turning_point",
+        "conditionBasis": "week13_love_line"
+      },
+      {
+        "choiceId": "B",
+        "label": "\"지금처럼 연애만 하는 것도 좋아\"",
+        "statDelta": {
+          "행복": 2
+        },
+        "resultText": "연인은 잠깐 생각하더니 웃었다. '그럼 우리 속도대로 하자.' 대신 둘만의 기념일을 하나 더 만들었다.",
+        "addFlags": [
+          "long_term_dating"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "b_later",
+            "text": "연인은 잠깐 생각하더니 웃었다. '그럼 우리 속도대로 하자.' 대신 둘만의 기념일을 하나 더 만들었다.",
+            "chance": 100,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 2
+            },
+            "addFlags": [
+              "long_term_dating"
+            ]
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "관계 단계 전환점 — 연애·결혼·자녀는 능력치 자격이 아니라 의사 결정이라 잠그지 않고, 차이는 결과 분기와 후속 사실로 반영",
+        "conditionReview": "open_turning_point",
+        "conditionBasis": "week13_love_line"
+      },
+      {
+        "choiceId": "C",
+        "label": "\"결혼식 대신 둘이 여행 가는 건 어때?\"",
+        "statDelta": {
+          "행복": 3,
+          "경제력": -1
+        },
+        "resultText": "연인이 눈을 반짝였다. '여행도 가고 결혼식도 하자.' 할 일이 두 배로 늘었다.",
+        "addFlags": [
+          "engaged"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "c_trip",
+            "text": "연인이 눈을 반짝였다. '여행도 가고 결혼식도 하자.' 할 일이 두 배로 늘었다.",
+            "chance": 55,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 3,
+              "경제력": -1
+            },
+            "addFlags": [
+              "engaged"
+            ]
+          },
+          {
+            "outcomeId": "c_no",
+            "text": "연인이 웃었다. '여행은 좋고, 결혼은 조금 더 생각해 보자.' 그해 여름 둘은 제주도에 갔다.",
+            "chance": 45,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 2,
+              "경제력": -1
+            },
+            "addFlags": [
+              "long_term_dating"
+            ]
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "관계 단계 전환점 — 연애·결혼·자녀는 능력치 자격이 아니라 의사 결정이라 잠그지 않고, 차이는 결과 분기와 후속 사실로 반영",
+        "conditionReview": "open_turning_point",
+        "conditionBasis": "week13_love_line"
+      }
+    ],
+    "priority": 0,
+    "kind": "MILESTONE",
+    "periods": [
+      "YOUNG_ADULT",
+      "MIDDLE"
+    ],
+    "weight": 1,
+    "view": "FIRST_PERSON",
+    "pathRole": "러브라인 4단계 — 결혼 논의(재직 중이 아닌 사람 버전, 재직자는 adult_032)",
+    "followUps": [
+      "love_family_meet_01",
+      "path_soc_05"
+    ]
+  },
+  "sourceReadScope": "Title, full text, conditions, all choices, all outcomes including flags/stat deltas, periods and follow-ups directly read before visual judgement.",
+  "sourceImage": {
+    "path": "app/src/main/assets/images/img_love_marriage_talk_01_001.png",
+    "sha256": "449a2922d0d18b57ec49d32d93f65c34445993766e78b69d45d443927e839f98",
+    "width": 941,
+    "height": 1672
+  },
+  "generationManifest": "docs/refactor/art-candidates/generated-love-20261119.json",
+  "selectedGenerationOutput": "C:\\Users\\jk030\\.codex\\generated_images\\01a1f1bc-6c39-7a10-a591-0d1f4e5cef6b\\exec-2546fdf3-c93c-4a77-84a1-be4ae8639b7f.png",
+  "exactGenerationPromptSha256": "5c6686bea9f9af6897ceee9d3fa9810951c08a9c082ed9f21f30408b6af0f722",
+  "presentationMetadata": [],
+  "captures": [
+    {
+      "path": "build/refactor/after/ten-art-native/love_marriage_talk_01_phone_scene.png",
+      "sha256": "54ce85ba26ec28871f960ca954642c8ad6f2676e4f843332ccad9d4868f8083f",
+      "width": 1080,
+      "height": 2400,
+      "screen": "phone",
+      "mode": "scene",
+      "cropReport": {
+        "eventId": "love_marriage_talk_01",
+        "imageId": "img_love_marriage_talk_01_001",
+        "assetPath": "img_love_marriage_talk_01_001.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/ten-art-native/love_marriage_talk_01_phone_play.png",
+      "sha256": "9fd1ef19697ca6fa938d553008ef57f213766c9ef721ff91b6ea029fbb4326cc",
+      "width": 1080,
+      "height": 2400,
+      "screen": "phone",
+      "mode": "play",
+      "cropReport": null
+    },
+    {
+      "path": "build/refactor/after/ten-art-native/love_marriage_talk_01_360x740_scene.png",
+      "sha256": "24c03d1b129a726e2115f685061f078b57dec8b413b2607eb1a452b7354d0092",
+      "width": 945,
+      "height": 1943,
+      "screen": "360x740",
+      "mode": "scene",
+      "cropReport": {
+        "eventId": "love_marriage_talk_01",
+        "imageId": "img_love_marriage_talk_01_001",
+        "assetPath": "img_love_marriage_talk_01_001.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/ten-art-native/love_marriage_talk_01_360x740_play.png",
+      "sha256": "f6ba647ad8aa911355f75d1244ee552fd5b7893607e3e20e9e5c072cd50a3c78",
+      "width": 945,
+      "height": 1943,
+      "screen": "360x740",
+      "mode": "play",
+      "cropReport": null
+    }
+  ],
+  "semanticObservation": "결혼식에서 돌아오는 밤 버스 안의 대화이며 답례품 봉투와 서로 떨어진 손으로 선택 직전 상태를 유지한다. 반지·청혼 완료·결혼식 진행·달력/직장 변화 결과가 없다.",
+  "cropObservation": "phone/small 모두 버스 창, 밤 배경, 봉투와 손이 식별된다. 중심 소품이 잘리지 않는다.",
+  "uiObservation": "두 크기에서 제목·본문·세 선택지 문구가 읽힌다. small C의 줄바꿈은 범위 안에 남는다.",
+  "reviewMethod": "Codex AI directly inspected full source PNG and each of four unmodified native capture PNGs using view_image. This is an AI review, not a named human approval.",
+  "nativeMethod": "SceneCropReviewTest renders production DecisionScreen with current parsed event and actual routing/PixelAssetLoader in Android Compose instrumentation. Scene captures compare against designated crop >=0.95. The test uses a fixture play state and does not perform a complete game progression.",
+  "testSource": "app/src/androidTest/java/com/example/lifegame/ui/SceneCropReviewTest.kt",
+  "nativeRunLog": "build/refactor/scene-effects-and-ten-art.log",
+  "limitations": [
+    "Android emulator/Compose capture, not a physical device test.",
+    "Fixed reviewed phone and 360x740 sizes; no claim for every aspect ratio or font scale.",
+    "Visual art acceptance does not certify choice scrolling, TalkBack, or game-flow state transitions."
+  ]
+}

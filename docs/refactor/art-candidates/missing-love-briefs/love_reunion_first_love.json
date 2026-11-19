@@ -1,0 +1,250 @@
+{
+  "schemaVersion": 1,
+  "eventId": "love_reunion_first_love",
+  "title": "동창회의 빈자리",
+  "imageId": "img_love_reunion_first_love_001",
+  "status": "READY_FOR_GENERATION_NOT_ART_APPROVAL",
+  "author": "Codex AI",
+  "date": "2026-11-19",
+  "generationPriority": 17,
+  "currentAcceptanceStatus": "MISSING_PNG",
+  "sourceEventHash": "0035bbb271bd72339b923f1fe1e170cb27ee598ec805cd8c94fc14d5887f2e96",
+  "sourceEventPath": "app/src/main/assets/events.sample.json",
+  "sourceEventSnapshot": {
+    "eventId": "love_reunion_first_love",
+    "stage": "ADULT",
+    "type": "NORMAL",
+    "isFallback": false,
+    "isMilestone": false,
+    "title": "동창회의 빈자리",
+    "text": "고등학교 동창회. 헤어진 첫사랑이 옆 빈자리를 가리켰다. \"여기 앉아. 그때도 옆자리였잖아.\"",
+    "imageId": "img_love_reunion_first_love_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [
+        "breakup_once",
+        "ex_first_love"
+      ],
+      "blockedFlags": [
+        "dating",
+        "engaged",
+        "married"
+      ]
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "옆자리에 앉는다",
+        "statDelta": {
+          "행복": 3,
+          "사회성": 1
+        },
+        "resultText": "2차, 3차까지 옆자리였다. 집에 가는 길에 그 사람이 말했다. '우리 이번엔 천천히 해 보자.'",
+        "addFlags": [
+          "dating",
+          "rel_steady",
+          "partner_first_love",
+          "reunited"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "a_again",
+            "text": "2차, 3차까지 옆자리였다. 집에 가는 길에 그 사람이 말했다. '우리 이번엔 천천히 해 보자.'",
+            "chance": 60,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 3,
+              "사회성": 1
+            },
+            "addFlags": [
+              "dating",
+              "rel_steady",
+              "partner_first_love",
+              "reunited"
+            ],
+            "removeFlags": [
+              "ex_first_love"
+            ]
+          },
+          {
+            "outcomeId": "a_friend",
+            "text": "옛날 이야기로 밤을 새웠다. 헤어질 때 악수를 했다. 이제 진짜 친구였다.",
+            "chance": 40,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "사회성": 2
+            },
+            "addFlags": [
+              "closure"
+            ],
+            "removeFlags": [
+              "ex_first_love"
+            ]
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week13_love_line"
+      },
+      {
+        "choiceId": "B",
+        "label": "건너편 자리에 앉는다",
+        "statDelta": {
+          "행복": 1
+        },
+        "resultText": "건너편에서 눈이 마주칠 때마다 웃었다. 그거면 됐다.",
+        "addFlags": [
+          "closure"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "b_far",
+            "text": "건너편에서 눈이 마주칠 때마다 웃었다. 그거면 됐다.",
+            "chance": 100,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 1
+            },
+            "addFlags": [
+              "closure"
+            ],
+            "removeFlags": [
+              "ex_first_love"
+            ]
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week13_love_line"
+      },
+      {
+        "choiceId": "C",
+        "label": "그때 단체 사진 포즈를 그대로 다시 찍자고 한다",
+        "statDelta": {
+          "행복": 3,
+          "사회성": 1
+        },
+        "resultText": "동창 서른 명이 그 자리에서 단체 사진을 다시 찍었다. 이번에도 옆자리였다. 그 사진은 둘만 따로 저장했다.",
+        "addFlags": [
+          "dating",
+          "rel_steady",
+          "partner_first_love",
+          "reunited"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "c_photo",
+            "text": "동창 서른 명이 그 자리에서 단체 사진을 다시 찍었다. 이번에도 옆자리였다. 그 사진은 둘만 따로 저장했다.",
+            "chance": 55,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 3,
+              "사회성": 1
+            },
+            "addFlags": [
+              "dating",
+              "rel_steady",
+              "partner_first_love",
+              "reunited"
+            ],
+            "removeFlags": [
+              "ex_first_love"
+            ]
+          },
+          {
+            "outcomeId": "c_cringe",
+            "text": "아무도 그 포즈를 기억하지 못했다. 나만 기억하고 있었다.",
+            "chance": 45,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": -1
+            },
+            "addFlags": [
+              "closure"
+            ],
+            "removeFlags": [
+              "ex_first_love"
+            ]
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week13_love_line"
+      }
+    ],
+    "priority": 0,
+    "kind": "INCIDENT",
+    "periods": [
+      "YOUNG_ADULT",
+      "MIDDLE"
+    ],
+    "weight": 30,
+    "view": "FIRST_PERSON",
+    "pathRole": "러브라인 재회(첫사랑 후보)",
+    "followUps": [
+      "love_marriage_talk_01"
+    ]
+  },
+  "reviewScope": "Current complete event, conditions, every choice including legacy fields, all outcomes, probabilities, deltas and flags read for pre-choice art specification. No new image has been generated or approved by this brief.",
+  "reviewedChoiceIds": [
+    "A",
+    "B",
+    "C"
+  ],
+  "reviewedOutcomeIds": [
+    "a_again",
+    "a_friend",
+    "b_far",
+    "c_photo",
+    "c_cringe"
+  ],
+  "existingArtBriefPath": "docs/assignments/20261031/submissions/김선한_분류합본.csv",
+  "existingArtBriefSnapshot": {
+    "place": "동창회 식당",
+    "mainAction": "첫사랑이 가리킨 빈 옆자리를 본다",
+    "requiredObjects": "긴 테이블과 빈 의자",
+    "peopleAndAge": "청년·중년 동창들",
+    "timeOfDay": "저녁",
+    "approvedPerspective": "FIRST_PERSON",
+    "reuseOrNewReason": "NEW: 13주차 러브라인 신규 사건. 관계 단계(연인·약혼·배우자·자녀)를 선택 전보다 앞서 보여 주지 않는 전용 장면 필요"
+  },
+  "requestedAssetPath": "app/src/main/assets/images/img_love_reunion_first_love_001.png",
+  "preChoiceState": "성인이 된 고교 동창회에서 헤어진 첫사랑이 자기 옆 빈 의자를 가리킨다. 플레이어는 아직 어느 자리에 앉을지 결정하지 않았다.",
+  "composition": "식당 긴 테이블을 서 있는 플레이어 눈높이에서 본다. 중앙의 빈 의자와 바로 옆 전 연인의 열린 손짓을 핵심으로, 뒤쪽 성인 동창들·그릇은 낮은 대비.",
+  "ageAndAppearance": "청년~중년 성인 동창회. 교복·미성년 없음. 전 연인의 얼굴과 플레이어 성별 고정 없음.",
+  "forbiddenOutcomes": [
+    "플레이어가 이미 옆/건너편에 앉음",
+    "새 단체사진 촬영·사진 속 플레이어",
+    "악수·재결합 고백",
+    "함께 귀가",
+    "학창 시절 회상 교실"
+  ],
+  "briefCorrections": [
+    "고등학교 동창회는 현재 성인들의 모임이다. 반드시 비어 있는 의자와 가리키는 손을 함께 보존해 선택 전 상태를 전달한다."
+  ],
+  "generationPrompt": "Create one portrait 9:16 full-bleed game background, warm restrained Korean everyday-life pixel-art illustration. Crisp deliberate pixel clusters, coherent anatomy, softly separated light and shadow, not photorealism and not a UI mockup. Strict first-person player viewpoint: no player face, back of head, full player body, reflection, selfie or framed portrait of the player. Only naturally placed player hands or forearms may enter the frame. The player can be male or female; hands, clothing and visible partner styling must not encode a fixed player gender or a uniquely named past partner. All romantic participants are clearly adults; do not depict school-age children as romantic partners. Use age-flexible adult styling that can fit young adulthood or middle adulthood. If a partner must be visible, show non-identifying partial profile, cropped upper torso or hands rather than an identity-defining portrait. No readable text, letters, digits, logos, subtitles, speech bubbles, interface panels, progress indicators or button graphics. Any phone message cue must be an abstract non-text shape and never legible text. Keep all story-critical objects together inside the central 60% of the portrait width and middle 60% of height; leave the bottom 22% visually quiet for the game overlay, without drawing an overlay. This is the instant before the player chooses. Show the stated present situation only, with no success, failure, marriage, pregnancy, reconciliation, breakup or future achievement unless already established in the source conditions. \nSCENE: An ADULT high-school alumni reunion in a Korean restaurant in the evening, viewed from the standing players eyes before choosing a seat. A clearly EMPTY chair next to the former first-love partner is the central focal object; the former partner, shown as an adult hand and cropped torso, is gesturing gently toward that chair. A long dining table and other adult classmates sit in softer depth behind it. No one wears a school uniform. The player has not sat down, shaken hands, reunited romantically or posed for a group photograph. No camera-facing player, photo inset, classroom flashback, hand holding or walk home. Keep the empty seat and invitation gesture unmistakably visible together.",
+  "deliveryAndReview": {
+    "format": "PNG, portrait 9:16",
+    "originalAssets": "Preserve existing artwork and approval history. This is a missing-art candidate, not a replacement approval.",
+    "requiredChecks": [
+      "Read current event hash again before generation; stale briefs must be reread.",
+      "Inspect full image, anatomy, all required objects and absence of choice outcomes.",
+      "Inspect actual native portrait presentation and UI overlay at phone and narrow viewport.",
+      "Record image SHA, exact generation prompt, truthful AI producer/reviewer and per-event rationale before any separate approval action."
+    ],
+    "approvalOrManifestChanged": false
+  }
+}

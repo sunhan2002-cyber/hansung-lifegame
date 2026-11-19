@@ -1,0 +1,71 @@
+{
+  "eventId": "adult_044",
+  "reviewerType": "AI",
+  "scope": "Portrait phone and small-phone presentation",
+  "sourceEventHash": "868f6f1acb4ef6948a967ced3978ba01e7c3debe75a91365fdb98f898be355f0",
+  "sourceReview": "docs/refactor/art-candidates/portrait-integration/adult_044.json",
+  "sourceSha256": "9cfaca7cc5357f82a6589d74ebab2274537a3395296f85e183715463bc068dd0",
+  "displayedVariant": {
+    "assetPath": "presentation/portraits/img_adult_driving_test_001_portrait_v1.png",
+    "sha256": "9b428944e1ff61cc1794fba0b73d989a7fa91d51d7e0130a9f6194606dee165a",
+    "width": 941,
+    "height": 1672,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root/effects_tech)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/adult_044.json"
+  },
+  "nativeCaptures": [
+    {
+      "path": "build/refactor/after/portrait-fortythree-native/adult_044_phone_scene.png",
+      "sha256": "09d9ccaf829c89acfaf1467efc26bda4de9082570e4a1d68a23027055df24ab1",
+      "crop": {
+        "eventId": "adult_044",
+        "imageId": "img_adult_driving_test_001",
+        "assetPath": "presentation/portraits/img_adult_driving_test_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/portrait-fortythree-native/adult_044_phone_play.png",
+      "sha256": "a2047f6fc054a16adc3f2c26f0c8866bbc00b8e38a10877987b5229f69a46dbc",
+      "crop": {
+        "eventId": "adult_044",
+        "imageId": "img_adult_driving_test_001",
+        "assetPath": "presentation/portraits/img_adult_driving_test_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/portrait-fortythree-native/adult_044_360x740_scene.png",
+      "sha256": "bde5a35ff2e342428792aec785624054960ed69e9bea120eb9683794b1a1eafa",
+      "crop": {
+        "eventId": "adult_044",
+        "imageId": "img_adult_driving_test_001",
+        "assetPath": "presentation/portraits/img_adult_driving_test_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/portrait-fortythree-native/adult_044_360x740_play.png",
+      "sha256": "31ab3514b531e54bdcd9b5026c6727477399997385e365553d427320c9f12bc8",
+      "crop": {
+        "eventId": "adult_044",
+        "imageId": "img_adult_driving_test_001",
+        "assetPath": "presentation/portraits/img_adult_driving_test_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    }
+  ],
+  "observation": "운전석의 무릎과 핸들, 옆 좌석 검사자의 손·서류, 도로가 함께 보인다.",
+  "decision": "PASS",
+  "method": "Individual visual inspection of both scene and gameplay frames together with producer semantic/source review and device capture match."
+}

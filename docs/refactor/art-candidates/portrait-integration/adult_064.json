@@ -1,0 +1,29 @@
+{
+  "eventId": "adult_064",
+  "sourceAssetPath": "followup_20261031/img_adult_parents_spring_001.png",
+  "sourceSha256": "2baeca5662342c514f41f251f800542f5bcb2d873ea1eeb05a0655013b63e874",
+  "variant": {
+    "assetPath": "presentation/portraits/img_adult_parents_spring_001_portrait_v1.png",
+    "sha256": "f61bbd72eba33aa8d91f85c11931e3fdcc5e419d588043a373a5ce42539ee5c4",
+    "width": 941,
+    "height": 1672,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/adult_064.json"
+  },
+  "reviewerType": "AI",
+  "reviewer": "Codex AI (/root)",
+  "reviewStatus": "AI_REVIEWED_PRESENTATION",
+  "eventSourceHash": "a94af8a2f9d99ec6813d768127a3769dc64c2dfe5ebee5cc536a6c502e4aca6a",
+  "semanticReview": "Producer read the current event conditions and every choice/outcome, inspected source and selected output. Full source snapshot and exact prompt are in the referenced production ledger. Native acceptance remains pending.",
+  "visualReview": "Father in profile beside doctor, spring visible out window.",
+  "cropReview": "Portrait candidate selected for native phone/small-phone scene and gameplay inspection; not final artwork acceptance.",
+  "actualProducer": "OpenAI built-in image_gen",
+  "generationMethod": "Built-in imagegen edit; exact prompts/output SHA/rejected attempts preserved in docs/refactor/art-candidates/resumed-production-20261119.json",
+  "productionLedger": "docs/refactor/art-candidates/resumed-production-20261119.json",
+  "nativePending": true,
+  "runtimeConnected": true,
+  "approvalChanged": false,
+  "selectedStagingSha256": "f61bbd72eba33aa8d91f85c11931e3fdcc5e419d588043a373a5ce42539ee5c4"
+}

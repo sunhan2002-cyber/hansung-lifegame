@@ -1,0 +1,242 @@
+{
+  "schemaVersion": 1,
+  "eventId": "love_reunion_01",
+  "title": "헤어진 사람의 안부",
+  "imageId": "img_love_reunion_01_001",
+  "status": "READY_FOR_GENERATION_NOT_ART_APPROVAL",
+  "author": "Codex AI",
+  "date": "2026-11-19",
+  "generationPriority": 16,
+  "currentAcceptanceStatus": "MISSING_PNG",
+  "sourceEventHash": "df917da08f4e59283cc6b29819ece1add4eff2aeb6fbb10806d920369b4e7b1b",
+  "sourceEventPath": "app/src/main/assets/events.sample.json",
+  "sourceEventSnapshot": {
+    "eventId": "love_reunion_01",
+    "stage": "ADULT",
+    "type": "NORMAL",
+    "isFallback": false,
+    "isMilestone": false,
+    "title": "헤어진 사람의 안부",
+    "text": "헤어진 지 1년. 그 사람에게서 짧은 메시지가 왔다. '잘 지내? 그냥 생각나서.'",
+    "imageId": "img_love_reunion_01_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [
+        "breakup_once",
+        "ex_partner"
+      ],
+      "blockedFlags": [
+        "dating",
+        "engaged",
+        "married"
+      ]
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "만나서 밥 한번 먹자고 한다",
+        "statDelta": {
+          "행복": 3
+        },
+        "resultText": "식당에 앉자마자 둘 다 같은 메뉴를 시켰다. 이번엔 서두르지 말고 천천히 다시 만나기로 했다.",
+        "addFlags": [
+          "dating",
+          "rel_steady",
+          "reunited"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "a_again",
+            "text": "식당에 앉자마자 둘 다 같은 메뉴를 시켰다. 이번엔 서두르지 말고 천천히 다시 만나기로 했다.",
+            "chance": 55,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 3
+            },
+            "addFlags": [
+              "dating",
+              "rel_steady",
+              "reunited"
+            ],
+            "removeFlags": [
+              "ex_partner"
+            ]
+          },
+          {
+            "outcomeId": "a_closure",
+            "text": "반가웠다. 그리고 확실해졌다. 우리는 좋은 기억으로 남는 게 맞았다.",
+            "chance": 45,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 1,
+              "지력": 1
+            },
+            "addFlags": [
+              "closure"
+            ],
+            "removeFlags": [
+              "ex_partner"
+            ]
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week13_love_line"
+      },
+      {
+        "choiceId": "B",
+        "label": "'잘 지내'라고만 답한다",
+        "statDelta": {
+          "지력": 1
+        },
+        "resultText": "답장은 다섯 글자였다. 그걸로 충분했다.",
+        "addFlags": [
+          "closure"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "b_short",
+            "text": "답장은 다섯 글자였다. 그걸로 충분했다.",
+            "chance": 100,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "지력": 1
+            },
+            "addFlags": [
+              "closure"
+            ],
+            "removeFlags": [
+              "ex_partner"
+            ]
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week13_love_line"
+      },
+      {
+        "choiceId": "C",
+        "label": "1년 동안 찍은 셀카 중 제일 잘 나온 걸 프로필로 바꾼다",
+        "statDelta": {
+          "행복": 1
+        },
+        "resultText": "3분 뒤 프로필 '좋아요'가 하나 늘었다. 거기까지만 하기로 했다.",
+        "addFlags": [
+          "closure"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "c_seen",
+            "text": "3분 뒤 프로필 '좋아요'가 하나 늘었다. 거기까지만 하기로 했다.",
+            "chance": 60,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 1
+            },
+            "addFlags": [
+              "closure"
+            ],
+            "removeFlags": [
+              "ex_partner"
+            ]
+          },
+          {
+            "outcomeId": "c_call",
+            "text": "프로필을 본 그 사람이 전화를 걸어 왔다. '너 진짜 잘 지내는구나.' 통화가 두 시간 이어졌다.",
+            "chance": 40,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 3
+            },
+            "addFlags": [
+              "dating",
+              "rel_steady",
+              "reunited"
+            ],
+            "removeFlags": [
+              "ex_partner"
+            ]
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week13_love_line"
+      }
+    ],
+    "priority": 0,
+    "kind": "INCIDENT",
+    "periods": [
+      "YOUNG_ADULT",
+      "MIDDLE"
+    ],
+    "weight": 25,
+    "view": "FIRST_PERSON",
+    "pathRole": "러브라인 재회 — 결별 뒤 다시 만남 또는 정리",
+    "followUps": [
+      "love_marriage_talk_01"
+    ]
+  },
+  "reviewScope": "Current complete event, conditions, every choice including legacy fields, all outcomes, probabilities, deltas and flags read for pre-choice art specification. No new image has been generated or approved by this brief.",
+  "reviewedChoiceIds": [
+    "A",
+    "B",
+    "C"
+  ],
+  "reviewedOutcomeIds": [
+    "a_again",
+    "a_closure",
+    "b_short",
+    "c_seen",
+    "c_call"
+  ],
+  "existingArtBriefPath": "docs/assignments/20261031/submissions/김선한_분류합본.csv",
+  "existingArtBriefSnapshot": {
+    "place": "밤 방 안",
+    "mainAction": "헤어진 사람의 안부 메시지를 읽는다",
+    "requiredObjects": "휴대폰 안부 메시지",
+    "peopleAndAge": "주인공 혼자",
+    "timeOfDay": "밤",
+    "approvedPerspective": "FIRST_PERSON",
+    "reuseOrNewReason": "NEW: 13주차 러브라인 신규 사건. 관계 단계(연인·약혼·배우자·자녀)를 선택 전보다 앞서 보여 주지 않는 전용 장면 필요"
+  },
+  "requestedAssetPath": "app/src/main/assets/images/img_love_reunion_01_001.png",
+  "preChoiceState": "이별한 지 1년, 전 연인이 안부 메시지를 먼저 보냈다. 플레이어는 혼자 읽고 있으며 답장·만남·통화를 선택하지 않았다.",
+  "composition": "밤 방의 1인칭. 중앙에 휴대폰과 받은 메시지를 나타내는 추상적인 말풍선 하나. 주변에는 평범한 책상·램프, 상대 얼굴 사진이나 이별 상징 없음.",
+  "ageAndAppearance": "청년~중년 성인 혼자. 전 연인 특정 외형·성별·이름 없음.",
+  "forbiddenOutcomes": [
+    "이미 답장함·통화 중",
+    "식당 재회·같은 메뉴",
+    "프로필 셀카·좋아요",
+    "화해 포옹·연애 재개",
+    "감정 정리 완료·작별",
+    "전 연인 방 안 등장"
+  ],
+  "briefCorrections": [
+    "안부 메시지는 본문에서 설명하므로 이미지에 한글 문장을 넣지 않는다. 선택 C의 셀카는 플레이어 얼굴 노출과 결과 선결 모두 발생하여 금지한다."
+  ],
+  "generationPrompt": "Create one portrait 9:16 full-bleed game background, warm restrained Korean everyday-life pixel-art illustration. Crisp deliberate pixel clusters, coherent anatomy, softly separated light and shadow, not photorealism and not a UI mockup. Strict first-person player viewpoint: no player face, back of head, full player body, reflection, selfie or framed portrait of the player. Only naturally placed player hands or forearms may enter the frame. The player can be male or female; hands, clothing and visible partner styling must not encode a fixed player gender or a uniquely named past partner. All romantic participants are clearly adults; do not depict school-age children as romantic partners. Use age-flexible adult styling that can fit young adulthood or middle adulthood. If a partner must be visible, show non-identifying partial profile, cropped upper torso or hands rather than an identity-defining portrait. No readable text, letters, digits, logos, subtitles, speech bubbles, interface panels, progress indicators or button graphics. Any phone message cue must be an abstract non-text shape and never legible text. Keep all story-critical objects together inside the central 60% of the portrait width and middle 60% of height; leave the bottom 22% visually quiet for the game overlay, without drawing an overlay. This is the instant before the player chooses. Show the stated present situation only, with no success, failure, marriage, pregnancy, reconciliation, breakup or future achievement unless already established in the source conditions. \nSCENE: A quiet room at night, one year after a breakup. First-person close view of an adult hand holding a phone that has just received one message from a former partner. Show ONLY a small abstract incoming bubble without words, letters, numbers, sender avatar or extra phone interface; warm desk-lamp light in a subdued room. The player has not replied and the former partner is not present. No outgoing message, voice call, selfie, profile photo, like-heart, restaurant meal, reunion embrace, wedding ring or definitive farewell. The mood is surprised and uncertain, neither joyful reconciliation nor despair.",
+  "deliveryAndReview": {
+    "format": "PNG, portrait 9:16",
+    "originalAssets": "Preserve existing artwork and approval history. This is a missing-art candidate, not a replacement approval.",
+    "requiredChecks": [
+      "Read current event hash again before generation; stale briefs must be reread.",
+      "Inspect full image, anatomy, all required objects and absence of choice outcomes.",
+      "Inspect actual native portrait presentation and UI overlay at phone and narrow viewport.",
+      "Record image SHA, exact generation prompt, truthful AI producer/reviewer and per-event rationale before any separate approval action."
+    ],
+    "approvalOrManifestChanged": false
+  }
+}

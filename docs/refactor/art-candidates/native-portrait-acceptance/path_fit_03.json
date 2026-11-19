@@ -1,0 +1,71 @@
+{
+  "eventId": "path_fit_03",
+  "reviewerType": "AI",
+  "scope": "Portrait phone and small-phone presentation",
+  "sourceEventHash": "8f46de70b134c8ec814fa696657d2e5497ceca1f07c2ca677edd0f438f05f1df",
+  "sourceReview": "docs/refactor/art-candidates/portrait-integration/path_fit_03.json",
+  "sourceSha256": "f5a03cf613ce4b10597e78e94c2e42d6b448463777bedab6af0478ddde79a7a6",
+  "displayedVariant": {
+    "assetPath": "presentation/portraits/img_path_fit_03_001_portrait_v1.png",
+    "sha256": "23075f0d5b40e0b047562796f74ca10ea34a26c137697aa296c0a1d671597e74",
+    "width": 941,
+    "height": 1672,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root/security_p0)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/path_fit_03.json"
+  },
+  "nativeCaptures": [
+    {
+      "path": "build/refactor/after/portrait-fortythree-native/path_fit_03_phone_scene.png",
+      "sha256": "f9f7d187b41fd621f2612cbede1d079ff28c3ecc4f8cd1de1dbf3bdbc3c5a5fd",
+      "crop": {
+        "eventId": "path_fit_03",
+        "imageId": "img_path_fit_03_001",
+        "assetPath": "presentation/portraits/img_path_fit_03_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/portrait-fortythree-native/path_fit_03_phone_play.png",
+      "sha256": "f3aca66748ab80c0b87350105129d8ff956c22cd0bbdf4a7d6b9a596e0946757",
+      "crop": {
+        "eventId": "path_fit_03",
+        "imageId": "img_path_fit_03_001",
+        "assetPath": "presentation/portraits/img_path_fit_03_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/portrait-fortythree-native/path_fit_03_360x740_scene.png",
+      "sha256": "e35adda237fe94e811dcc3a0db8053d1d20ab108cbd7134f7c076170d992d4cc",
+      "crop": {
+        "eventId": "path_fit_03",
+        "imageId": "img_path_fit_03_001",
+        "assetPath": "presentation/portraits/img_path_fit_03_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/portrait-fortythree-native/path_fit_03_360x740_play.png",
+      "sha256": "8c6bc74201b755bfd7e5b25bb692c734bbf0bbfa6e81471d7ce1b393aa460d40",
+      "crop": {
+        "eventId": "path_fit_03",
+        "imageId": "img_path_fit_03_001",
+        "assetPath": "presentation/portraits/img_path_fit_03_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    }
+  ],
+  "observation": "운동 특기 제안을 건네는 사람과 옆의 서류, 빈 손이 보인다.",
+  "decision": "PASS",
+  "method": "Individual visual inspection of both scene and gameplay frames together with producer semantic/source review and device capture match."
+}

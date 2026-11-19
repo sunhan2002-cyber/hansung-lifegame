@@ -1,0 +1,290 @@
+{
+  "schemaVersion": 1,
+  "eventId": "path_wea_04",
+  "status": "REVISION_REQUIRED",
+  "reviewer": "Codex AI / plan_audit",
+  "reviewerType": "AI",
+  "reviewDate": "2026-11-19",
+  "sourceEventHash": "e57dbd81a0b2d25b38bdfd485a5b6d1e50d9176892675db207bbb518b3a79cb7",
+  "sourceEventSnapshot": {
+    "eventId": "path_wea_04",
+    "stage": "ADULT",
+    "type": "NORMAL",
+    "isFallback": false,
+    "isMilestone": false,
+    "title": "전셋집 계약 전날",
+    "text": "마음에 드는 전셋집을 찾았다. 시세보다 2천만 원 싸다. 집주인: \"내일 오전까지 계약금 넣으면 드릴게요.\" 등기부등본은 아직 안 봤다.",
+    "imageId": "img_path_wea_04_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [
+        "wea_path",
+        "job_employed"
+      ],
+      "blockedFlags": []
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "등기부등본부터 떼어 본다",
+        "statDelta": {
+          "지력": 2,
+          "경제력": 1,
+          "행복": -1
+        },
+        "resultText": "근저당이 잔뜩 잡혀 있었다. 그 집은 포기했다. 석 달 뒤 조금 비싼 집에 안전하게 들어갔다.",
+        "addFlags": [
+          "housing_jeonse",
+          "housing_jeonse__path_wea_04"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "a_safe",
+            "text": "근저당이 잔뜩 잡혀 있었다. 그 집은 포기했다. 석 달 뒤 조금 비싼 집에 안전하게 들어갔다.",
+            "chance": 70,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "지력": 2,
+              "경제력": 1,
+              "행복": -1
+            },
+            "addFlags": [
+              "housing_jeonse",
+              "housing_jeonse__path_wea_04"
+            ],
+            "chanceWeights": {
+              "지력": 2
+            }
+          },
+          {
+            "outcomeId": "a_clean",
+            "text": "서류가 깨끗했다. 시세보다 싸게 좋은 집에 들어갔다. 이삿날 짐을 풀다 웃음이 났다.",
+            "chance": 30,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "경제력": 3,
+              "행복": 2
+            },
+            "addFlags": [
+              "housing_jeonse",
+              "housing_jeonse__path_wea_04"
+            ],
+            "chanceWeights": {
+              "운": 2
+            }
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week8_life_path"
+      },
+      {
+        "choiceId": "B",
+        "label": "좋은 집은 빨리 잡아야 한다. 계약금을 넣는다",
+        "statDelta": {
+          "경제력": 2,
+          "운": -1
+        },
+        "resultText": "아무 일도 없었다. 2년 뒤 계약서를 정리하다 등기부등본을 처음 봤다. 식은땀이 났다.",
+        "addFlags": [
+          "housing_jeonse",
+          "housing_jeonse__path_wea_04"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "b_ok",
+            "text": "아무 일도 없었다. 2년 뒤 계약서를 정리하다 등기부등본을 처음 봤다. 식은땀이 났다.",
+            "chance": 55,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "경제력": 2,
+              "운": -1
+            },
+            "addFlags": [
+              "housing_jeonse",
+              "housing_jeonse__path_wea_04"
+            ],
+            "chanceWeights": {
+              "운": 2
+            }
+          },
+          {
+            "outcomeId": "b_scam",
+            "text": "집주인이 연락을 끊었다. 보증금 일부를 돌려받지 못했다. 그 뒤로 서류는 세 번씩 읽는다.",
+            "chance": 45,
+            "primary": false,
+            "hidden": true,
+            "death": false,
+            "statDelta": {
+              "경제력": -6,
+              "행복": -3,
+              "지력": 1
+            },
+            "addFlags": [
+              "wea_jeonse_loss",
+              "in_debt"
+            ],
+            "chanceWeights": {
+              "운": -2,
+              "지력": -2
+            }
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week8_life_path"
+      },
+      {
+        "choiceId": "C",
+        "label": "부모님 집에 조금 더 산다",
+        "statDelta": {
+          "경제력": 3,
+          "행복": -1,
+          "사회성": -1
+        },
+        "resultText": "월급의 절반을 저축했다. 대신 아직도 엄마가 아침에 깨운다.",
+        "addFlags": [
+          "housing_with_parents",
+          "housing_with_parents__path_wea_04"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "c_home",
+            "text": "월급의 절반을 저축했다. 대신 아직도 엄마가 아침에 깨운다.",
+            "chance": 100,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "경제력": 3,
+              "행복": -1,
+              "사회성": -1
+            },
+            "addFlags": [
+              "housing_with_parents",
+              "housing_with_parents__path_wea_04"
+            ]
+          }
+        ],
+        "blockedFlags": [
+          "housing_monthly_rent",
+          "v4:event:adult_004",
+          "v4:event:adult_045"
+        ],
+        "conditionReview": "confirmed",
+        "conditionBasis": "week8_life_path"
+      }
+    ],
+    "priority": 0,
+    "kind": "INCIDENT",
+    "periods": [
+      "YOUNG_ADULT",
+      "MIDDLE"
+    ],
+    "weight": 20,
+    "view": "FIRST_PERSON",
+    "lifePath": "WEALTH",
+    "pathRole": "주거·상호작용(지력·운)",
+    "followUps": [
+      "path_wea_05"
+    ]
+  },
+  "sourceReadScope": "Current complete event, conditions, every choice/outcome and flags/stat deltas/periods/follow-ups directly read before judgement.",
+  "sourceImage": {
+    "path": "app/src/main/assets/images/followup_20261031/img_path_wea_04_001.png",
+    "sha256": "dfdf892442b1ab14c262cc73c62e74742677a7aadd5472824c4245142d4eec9d",
+    "width": 720,
+    "height": 540
+  },
+  "originalArtworkUnchangedSinceHistoricalReview": true,
+  "historicalReview": {
+    "eventId": "path_wea_04",
+    "title": "전셋집 계약 전날",
+    "imageId": "img_path_wea_04_001",
+    "assetPath": "followup_20261031/img_path_wea_04_001.png",
+    "sha256": "dfdf892442b1ab14c262cc73c62e74742677a7aadd5472824c4245142d4eec9d",
+    "eventSourceHash": "e57dbd81a0b2d25b38bdfd485a5b6d1e50d9176892675db207bbb518b3a79cb7",
+    "status": "REVISION_REQUIRED",
+    "reviewer": "김선한 담당 Codex 직접 대행 검수",
+    "reason": "중앙 크롭에서 부동산 중개인이 잘리고 미확인 등기부의 단서 보강 필요",
+    "expectedAction": "집주인 앞에서 아직 서명 안 한 계약서를 든 채 빈 거실을 둘러봄",
+    "requiredObjects": "서명 전 계약서(글자 판독 불필요), 빈 거실, 창",
+    "sheet": "output/art-review-20261119/sheet-16.jpg",
+    "cell": 11,
+    "cropMethod": "ImageOps.fit centre-fill 360:800; simulated crop inspected directly, not an emulator capture",
+    "visualMethod": "원본 도트풍·색감·장면 파손·명백한 신체/사물 오류 직접 확인"
+  },
+  "presentationMetadata": [],
+  "captures": [
+    {
+      "path": "build/refactor/after/originals-twentyfour-and-variants-native/path_wea_04_phone_scene.png",
+      "sha256": "e8c2bab85ef38c74fae04607c627e6ccc84ac7210a4b363d0cde5b8ac67f471f",
+      "width": 1080,
+      "height": 2400,
+      "screen": "phone",
+      "mode": "scene",
+      "cropReport": {
+        "eventId": "path_wea_04",
+        "imageId": "img_path_wea_04_001",
+        "assetPath": "followup_20261031/img_path_wea_04_001.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.331..0.669",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/originals-twentyfour-and-variants-native/path_wea_04_phone_play.png",
+      "sha256": "1b14d8d7e3920442f8206d68a8182e6f016fdc5ed231f4cb597d727265dae7ed",
+      "width": 1080,
+      "height": 2400,
+      "screen": "phone",
+      "mode": "play",
+      "cropReport": null
+    },
+    {
+      "path": "build/refactor/after/originals-twentyfour-and-variants-native/path_wea_04_360x740_scene.png",
+      "sha256": "0d5f16c98c7a3841a406781d3641c38090e8468b544b2029b3b148523abef057",
+      "width": 945,
+      "height": 1943,
+      "screen": "360x740",
+      "mode": "scene",
+      "cropReport": {
+        "eventId": "path_wea_04",
+        "imageId": "img_path_wea_04_001",
+        "assetPath": "followup_20261031/img_path_wea_04_001.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.318..0.682",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/originals-twentyfour-and-variants-native/path_wea_04_360x740_play.png",
+      "sha256": "1b018d5c1e1397ddf5e818fe0a5b2e912f674e9c43d6f6aa0bc4b42fec0d9779",
+      "width": 945,
+      "height": 1943,
+      "screen": "360x740",
+      "mode": "play",
+      "cropReport": null
+    }
+  ],
+  "semanticObservation": "빈 전셋집을 집주인이 안내하며 아직 서명하지 않은 서류/펜을 손에 든 상태다. 등기부등본은 아직 발급/확인 전이므로 펼친 종이는 일반 계약 초안으로 해석되며 소유권 기록/근저당/송금 증거는 없다.",
+  "cropObservation": "두 native에서 안내하는 주인의 얼굴이 좌측에 절반으로 잘리고 손/서류는 유지된다. 주요 대화 상대와 미서명 서류를 동시에 안전 영역 안에 놓는 파생이 필요하다.",
+  "uiObservation": "두 크기에서 제목·본문·세 선택지 문구를 읽을 수 있다. small C 카드 하단 footer 경계는 별도 스크롤 검증 범위다.",
+  "reviewMethod": "Codex AI directly inspected the full unchanged source PNG and all four unmodified native scene/play captures. Prior review is retained as historical evidence; this record is a new AI judgement, not human approval.",
+  "nativeMethod": "Production DecisionScreen, current parsed event/routing/PixelAssetLoader, fixture state in Android Compose instrumentation. Scene grid match >=0.95. Not complete game progression.",
+  "nativeRunLog": "build/refactor/depth-and-originals-twentyfour.log",
+  "limitations": [
+    "Emulator captures, not physical-device review.",
+    "Only reviewed phone and 360x740 dimensions; not every font scale/aspect ratio.",
+    "Art review does not independently certify scrolling, TalkBack or complete game-flow transitions."
+  ],
+  "remainingWork": "원본 보존 세로 파생에서 집주인 완전한 얼굴/안내 손과 빈방 창문, 미서명 일반 초안/옆에 대기한 펜을 함께 보존. 등기부 확인/근저당 표시/입금완료/집열쇠 인수 결과 금지 후 native 재검수."
+}

@@ -1,0 +1,71 @@
+{
+  "eventId": "infant_003",
+  "reviewerType": "AI",
+  "scope": "Portrait phone and small-phone presentation",
+  "sourceEventHash": "aedeb6dc427424a93e795aad1feed8d05f33e8464c7d085e29bb22d27d3455ef",
+  "sourceReview": "docs/refactor/art-candidates/portrait-integration/infant_003.json",
+  "sourceSha256": "31cedd651c65a1d06ed2f0be2ed9720654e17c5a475ee9cab9041e830d66df1e",
+  "displayedVariant": {
+    "assetPath": "presentation/portraits/img_infant_remote_001_portrait_v1.png",
+    "sha256": "ca600e68055e4f6d6b712fd8d980a35d992f653232907ee406d36bfd962783b9",
+    "width": 941,
+    "height": 1672,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root/security_p0)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/infant_003.json"
+  },
+  "nativeCaptures": [
+    {
+      "path": "build/refactor/after/portrait-fortythree-native/infant_003_phone_scene.png",
+      "sha256": "8a1cef974bb12d62dc406195253815ac5385941b9e013e0fc036d9554c634072",
+      "crop": {
+        "eventId": "infant_003",
+        "imageId": "img_infant_remote_001",
+        "assetPath": "presentation/portraits/img_infant_remote_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/portrait-fortythree-native/infant_003_phone_play.png",
+      "sha256": "b9dafd8dddc941ed0b9aeee5a8f72956d99bde1e7760e4bcc0f767b658700485",
+      "crop": {
+        "eventId": "infant_003",
+        "imageId": "img_infant_remote_001",
+        "assetPath": "presentation/portraits/img_infant_remote_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/portrait-fortythree-native/infant_003_360x740_scene.png",
+      "sha256": "3bde4c320e1ed7b29dc8d57e208fa5dca62a427480cff40555b662e33ae9144e",
+      "crop": {
+        "eventId": "infant_003",
+        "imageId": "img_infant_remote_001",
+        "assetPath": "presentation/portraits/img_infant_remote_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/portrait-fortythree-native/infant_003_360x740_play.png",
+      "sha256": "cd342ceade543af8ef6c547c528f33619a38543a8b0ac8588f59dc946d88c375",
+      "crop": {
+        "eventId": "infant_003",
+        "imageId": "img_infant_remote_001",
+        "assetPath": "presentation/portraits/img_infant_remote_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    }
+  ],
+  "observation": "분해한 리모컨 부품과 다가올 수 있는 어른, 빈 손이 보인다.",
+  "decision": "PASS",
+  "method": "Individual visual inspection of both scene and gameplay frames together with producer semantic/source review and device capture match."
+}

@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "Codex AI / plan_audit",
+  "reviewerType": "AI",
+  "approvedEventIds": [
+    "child_006",
+    "child_030",
+    "adult_039",
+    "special_013",
+    "special_014",
+    "special_015",
+    "path_int_07",
+    "path_soc_01",
+    "path_wea_03",
+    "path_luk_02",
+    "path_luk_09"
+  ],
+  "pendingEventIds": [
+    "path_int_02",
+    "path_luk_01"
+  ],
+  "approvedCount": 11,
+  "previousGroupCount": 248,
+  "newGroupCount": 259,
+  "allPriorGroupObjectsUnchanged": true,
+  "allInputFieldsUnchanged": true,
+  "unapprovedRowsUnchanged": true
+}

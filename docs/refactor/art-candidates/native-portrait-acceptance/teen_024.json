@@ -1,0 +1,71 @@
+{
+  "eventId": "teen_024",
+  "reviewerType": "AI",
+  "scope": "Portrait phone and small-phone presentation",
+  "sourceEventHash": "beda4e5c4c3f75ffcd3fa3e9378681a1bf2b4d1a6b15644f27d558f6e9f438f9",
+  "sourceReview": "docs/refactor/art-candidates/portrait-integration/teen_024.json",
+  "sourceSha256": "5d31de411e494ce85686f8f5bc2910c30cecd9a1206aee5ae6d01542d6919622",
+  "displayedVariant": {
+    "assetPath": "presentation/portraits/img_teen_wrong_answer_001_portrait_v1.png",
+    "sha256": "41aa35cf0f5730479772071601f7eb1d75c7157302cec7e777ef54893f444349",
+    "width": 941,
+    "height": 1672,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/teen_024.json"
+  },
+  "nativeCaptures": [
+    {
+      "path": "build/refactor/resumed/final32/teen_024_phone_scene.png",
+      "sha256": "4757d84a11152abba710664c5f54b988f1199a8c4b0c86be5ec82f77509cb246",
+      "crop": {
+        "eventId": "teen_024",
+        "imageId": "img_teen_wrong_answer_001",
+        "assetPath": "presentation/portraits/img_teen_wrong_answer_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/final32/teen_024_phone_play.png",
+      "sha256": "7f7766f0c2058851cb0684519ecc8fa89289f31b2e56eb4b46eafb0ab7ecbc04",
+      "crop": {
+        "eventId": "teen_024",
+        "imageId": "img_teen_wrong_answer_001",
+        "assetPath": "presentation/portraits/img_teen_wrong_answer_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/final32/teen_024_360x740_scene.png",
+      "sha256": "381f6b12de6cb85b4c1209b5a352551ba7146234cf31989c336cb1ac0645bb2e",
+      "crop": {
+        "eventId": "teen_024",
+        "imageId": "img_teen_wrong_answer_001",
+        "assetPath": "presentation/portraits/img_teen_wrong_answer_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/final32/teen_024_360x740_play.png",
+      "sha256": "63dd1c2c17edaf336ba1a2e9498d11157919cb60c0e356dd835c9856943bbb51",
+      "crop": {
+        "eventId": "teen_024",
+        "imageId": "img_teen_wrong_answer_001",
+        "assetPath": "presentation/portraits/img_teen_wrong_answer_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    }
+  ],
+  "observation": "Teacher pointing to third line, board and student's notebook in a single vertical view.",
+  "decision": "PASS",
+  "method": "Individual visual inspection of both scene and gameplay frames together with producer semantic/source review and device capture match."
+}

@@ -1,0 +1,71 @@
+{
+  "eventId": "teen_039",
+  "reviewerType": "AI",
+  "scope": "Portrait phone and small-phone presentation",
+  "sourceEventHash": "e804c1af23cd4a8669b8b65a11735b85380167fb5491248fcb9a469357b9a8c6",
+  "sourceReview": "docs/refactor/art-candidates/portrait-integration/teen_039.json",
+  "sourceSha256": "15ff486af504a1e82fa8beffc225960d3f4097e6f92c32e9586037405d255820",
+  "displayedVariant": {
+    "assetPath": "presentation/portraits/img_teen_graduation_001_portrait_v1.png",
+    "sha256": "b374a54d7960a1845237bfc30281203a335e46ec8e399169f1886f6362ca4709",
+    "width": 940,
+    "height": 1672,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root/security_p0)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/teen_039.json"
+  },
+  "nativeCaptures": [
+    {
+      "path": "build/refactor/after/portrait-fortythree-native/teen_039_phone_scene.png",
+      "sha256": "892dd9a5ffc9ed0c8e5c08052ef4f973677a658f396fa68bcbe83b989340d512",
+      "crop": {
+        "eventId": "teen_039",
+        "imageId": "img_teen_graduation_001",
+        "assetPath": "presentation/portraits/img_teen_graduation_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/portrait-fortythree-native/teen_039_phone_play.png",
+      "sha256": "f5c539ab1ad065c20e844e18c44c25e0bfdcb90fd82b28f5e33b2a6e5081264a",
+      "crop": {
+        "eventId": "teen_039",
+        "imageId": "img_teen_graduation_001",
+        "assetPath": "presentation/portraits/img_teen_graduation_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/portrait-fortythree-native/teen_039_360x740_scene.png",
+      "sha256": "545390ea44cbf5ded6c37f35ee425ef1ac5c5d4df3c098b0d897e40a94a2ce36",
+      "crop": {
+        "eventId": "teen_039",
+        "imageId": "img_teen_graduation_001",
+        "assetPath": "presentation/portraits/img_teen_graduation_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.067..0.933",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/portrait-fortythree-native/teen_039_360x740_play.png",
+      "sha256": "0004fcf087efbcaf31d763148b0cdb1eceabc25a3c56f734f30a8fa5544f648f",
+      "crop": {
+        "eventId": "teen_039",
+        "imageId": "img_teen_graduation_001",
+        "assetPath": "presentation/portraits/img_teen_graduation_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.067..0.933",
+        "match": "1.000"
+      }
+    }
+  ],
+  "observation": "졸업식 친구들과 꽃다발 및 연락 화면이 보인다.",
+  "decision": "PASS",
+  "method": "Individual visual inspection of both scene and gameplay frames together with producer semantic/source review and device capture match."
+}

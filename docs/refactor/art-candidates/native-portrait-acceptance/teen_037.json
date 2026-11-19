@@ -1,0 +1,71 @@
+{
+  "eventId": "teen_037",
+  "reviewerType": "AI",
+  "scope": "Portrait phone and small-phone presentation",
+  "sourceEventHash": "7a943e7e0e20483d1a937d06a263c3574ea00b8b12bca3e5ba93e7e6cd3aa2cb",
+  "sourceReview": "docs/refactor/art-candidates/portrait-integration/teen_037.json",
+  "sourceSha256": "9b61d120e0f5197de7edb01743078d122f75a67e30bfe807da4428e2b13f57b5",
+  "displayedVariant": {
+    "assetPath": "presentation/portraits/img_teen_d100_001_portrait_v1.png",
+    "sha256": "689fb4b975e647a659077725e880447500b30ceafaf5dd287071ec7d753268e1",
+    "width": 941,
+    "height": 1672,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/teen_037.json"
+  },
+  "nativeCaptures": [
+    {
+      "path": "build/refactor/resumed/final32/teen_037_phone_scene.png",
+      "sha256": "dcbf3d36174590757dfc2972ab99583da26551b675c969560cfaacd1913bcbac",
+      "crop": {
+        "eventId": "teen_037",
+        "imageId": "img_teen_d100_001",
+        "assetPath": "presentation/portraits/img_teen_d100_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/final32/teen_037_phone_play.png",
+      "sha256": "5d9e69c6e4ce5e1a182f930c0deaa129cd7ce91a00728deb5be5d186f1a1c34e",
+      "crop": {
+        "eventId": "teen_037",
+        "imageId": "img_teen_d100_001",
+        "assetPath": "presentation/portraits/img_teen_d100_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/final32/teen_037_360x740_scene.png",
+      "sha256": "7f993b865d74beee88ef40c169c0f567fe95c5a493f2ac20a247287a3ad8e40e",
+      "crop": {
+        "eventId": "teen_037",
+        "imageId": "img_teen_d100_001",
+        "assetPath": "presentation/portraits/img_teen_d100_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/final32/teen_037_360x740_play.png",
+      "sha256": "852eaa538251c4c02416716190b108c223c73df4ac1f4f411b95ffa38b0041c4",
+      "crop": {
+        "eventId": "teen_037",
+        "imageId": "img_teen_d100_001",
+        "assetPath": "presentation/portraits/img_teen_d100_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    }
+  ],
+  "observation": "Revised board clearly reads D-365, classroom still in session.",
+  "decision": "PASS",
+  "method": "Individual visual inspection of both scene and gameplay frames together with producer semantic/source review and device capture match."
+}

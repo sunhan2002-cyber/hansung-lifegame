@@ -1,0 +1,226 @@
+{
+  "schemaVersion": 1,
+  "eventId": "special_015",
+  "status": "PASS",
+  "reviewer": "Codex AI / plan_audit",
+  "reviewerType": "AI",
+  "reviewDate": "2026-11-19",
+  "sourceEventHash": "cad2b196975c14f8a5c968e34400a5e3976e413fe67609b74a5e2c2d1821c407",
+  "sourceEventSnapshot": {
+    "eventId": "special_015",
+    "stage": "CHILD",
+    "type": "SPECIAL",
+    "isFallback": false,
+    "isMilestone": false,
+    "title": "날아가는 탕수육 소스",
+    "text": "급식 당번. 탕수육 소스 통을 옮기다 미끄러졌다. 소스 통이 공중에서 천천히 돈다.",
+    "imageId": "img_special_sauce_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [],
+      "blockedFlags": []
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "몸을 피한다",
+        "statDelta": {
+          "운동능력": 2,
+          "사회성": -2
+        },
+        "resultText": "피했다. 뒤에 서 있던 교감 선생님은 못 피했다.",
+        "addFlags": [
+          "survived_special"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "a_primary",
+            "text": "피했다. 뒤에 서 있던 교감 선생님은 못 피했다.",
+            "chance": 100,
+            "lifeDelta": -25,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "운동능력": 2,
+              "사회성": -2
+            },
+            "addFlags": [
+              "survived_special"
+            ]
+          }
+        ],
+        "requiredStats": {
+          "운동능력": 52
+        },
+        "conditionReview": "confirmed",
+        "conditionBasis": "single_positive_outcome_stat"
+      },
+      {
+        "choiceId": "B",
+        "label": "몸을 날려 받아 낸다",
+        "statDelta": {
+          "운동능력": 2,
+          "건강": -6
+        },
+        "resultText": "통은 받았다. 소스는 내가 다 받았다. 그날부터 별명이 '탕수육'이다.",
+        "addFlags": [
+          "special_injury"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "b_primary",
+            "text": "통은 받았다. 소스는 내가 다 받았다. 그날부터 별명이 '탕수육'이다.",
+            "chance": 100,
+            "lifeDelta": -25,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "운동능력": 2,
+              "건강": -6
+            },
+            "addFlags": [
+              "special_injury"
+            ]
+          }
+        ],
+        "requiredStats": {
+          "운동능력": 52
+        },
+        "conditionReview": "confirmed",
+        "conditionBasis": "single_positive_outcome_stat"
+      },
+      {
+        "choiceId": "C",
+        "label": "\"부먹이다!\"라고 외친다",
+        "statDelta": {
+          "행복": 3,
+          "사회성": -1,
+          "건강": -2
+        },
+        "resultText": "소스가 반 아이들 식판 위로 골고루 쏟아졌다. 그날 이후 우리 반 부먹·찍먹 논쟁은 끝났다.",
+        "addFlags": [
+          "survived_special"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "c_primary",
+            "text": "소스가 반 아이들 식판 위로 골고루 쏟아졌다. 그날 이후 우리 반 부먹·찍먹 논쟁은 끝났다.",
+            "chance": 100,
+            "lifeDelta": -25,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 3,
+              "사회성": -1,
+              "건강": -2
+            },
+            "addFlags": [
+              "survived_special"
+            ]
+          }
+        ],
+        "conditionReview": "fallback_choice",
+        "conditionBasis": "single_positive_outcome_stat",
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "사건 내 최소 한 선택지는 항상 실행 가능해야 함"
+      }
+    ],
+    "priority": 0,
+    "kind": "BIG_INCIDENT",
+    "periods": [
+      "CHILD"
+    ]
+  },
+  "sourceReadScope": "Current complete event, conditions, every choice/outcome and flags/stat deltas/periods/follow-ups directly read before judgement.",
+  "sourceImage": {
+    "path": "app/src/main/assets/images/followup_20261031/img_special_sauce_001.png",
+    "sha256": "f520a3c204131ba0712957da5f8b7cb6219070418e89635b1862fd70fe34be44",
+    "width": 720,
+    "height": 540
+  },
+  "originalArtworkUnchangedSinceHistoricalReview": true,
+  "historicalReview": {
+    "eventId": "special_015",
+    "title": "날아가는 탕수육 소스",
+    "imageId": "img_special_sauce_001",
+    "assetPath": "followup_20261031/img_special_sauce_001.png",
+    "sha256": "f520a3c204131ba0712957da5f8b7cb6219070418e89635b1862fd70fe34be44",
+    "eventSourceHash": "cad2b196975c14f8a5c968e34400a5e3976e413fe67609b74a5e2c2d1821c407",
+    "status": "REVISION_REQUIRED",
+    "reviewer": "김선한 담당 Codex 직접 대행 검수",
+    "reason": "탕수육 소스통이 떠 있으나 국자 손잡이와 인체 동작이 비자연스러움",
+    "expectedAction": "미끄러지는 순간 공중에서 도는 소스 통을 봄",
+    "requiredObjects": "회전 중인 소스 통; 탕수육 소스; 미끄러진 손",
+    "sheet": "output/art-review-20261119/sheet-14.jpg",
+    "cell": 7,
+    "cropMethod": "ImageOps.fit centre-fill 360:800; simulated crop inspected directly, not an emulator capture",
+    "visualMethod": "원본 도트풍·색감·장면 파손·명백한 신체/사물 오류 직접 확인"
+  },
+  "presentationMetadata": [],
+  "captures": [
+    {
+      "path": "build/refactor/after/semantic-originals-thirteen-native/special_015_phone_scene.png",
+      "sha256": "4bfe21371da3ec5612ef877faef3e0ef49472633d3c5a163a22af4a810e9ab18",
+      "width": 1080,
+      "height": 2400,
+      "screen": "phone",
+      "mode": "scene",
+      "cropReport": {
+        "eventId": "special_015",
+        "imageId": "img_special_sauce_001",
+        "assetPath": "followup_20261031/img_special_sauce_001.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.331..0.669",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/semantic-originals-thirteen-native/special_015_phone_play.png",
+      "sha256": "c86ad89606b26cddf784715b444c27bf00f717df89c226beb707a59102e8c105",
+      "width": 1080,
+      "height": 2400,
+      "screen": "phone",
+      "mode": "play",
+      "cropReport": null
+    },
+    {
+      "path": "build/refactor/after/semantic-originals-thirteen-native/special_015_360x740_scene.png",
+      "sha256": "9abac8793f388fdc0180495a53db967fbdced7d82c34986dfb8b104b6069db80",
+      "width": 945,
+      "height": 1943,
+      "screen": "360x740",
+      "mode": "scene",
+      "cropReport": {
+        "eventId": "special_015",
+        "imageId": "img_special_sauce_001",
+        "assetPath": "followup_20261031/img_special_sauce_001.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.318..0.682",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/semantic-originals-thirteen-native/special_015_360x740_play.png",
+      "sha256": "259bc88a5f2c25de8ac0354caac5c710ad9cff8d49b7a69e24a6cc0a68efe68a",
+      "width": 945,
+      "height": 1943,
+      "screen": "360x740",
+      "mode": "play",
+      "cropReport": null
+    }
+  ],
+  "semanticObservation": "급식실에서 놓친 금속 소스 통이 공중에 떠 있고 소스가 안에서 기울어지는 순간이다. 원본의 펼친 손은 다섯 손가락이며 국자는 그림에 없다. 교감에게 쏟음·몸에 받음·모든 식판에 소스를 뿌림 결과는 없다.",
+  "cropObservation": "두 native에서 공중의 통과 소스, 손, 급식실 식탁 맥락이 보인다. 통 오른쪽 손잡이 끝과 손의 바깥 손가락 일부는 잘리나 낙하 전 물체와 손의 관계가 명확하다. 과거 국자를 잡은 손 문제는 존재하지 않는 소품에 관한 지적이었다.",
+  "uiObservation": "두 크기에서 제목·본문·세 선택지가 모두 읽힌다.",
+  "reviewMethod": "Codex AI directly inspected the full unchanged source PNG and all four unmodified native scene/play captures. Prior review is retained as historical evidence; this record is a new AI judgement, not human approval.",
+  "nativeMethod": "Production DecisionScreen, current parsed event/routing/PixelAssetLoader, fixture state in Android Compose instrumentation. Scene grid match >=0.95. Not complete game progression.",
+  "nativeRunLog": "build/refactor/semantic-originals-thirteen-and-choice-reachability.log",
+  "limitations": [
+    "Emulator captures, not physical-device review.",
+    "Only reviewed phone and 360x740 dimensions; not every font scale/aspect ratio.",
+    "Art review does not independently certify scrolling, TalkBack or complete game-flow transitions."
+  ]
+}

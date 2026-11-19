@@ -1,0 +1,229 @@
+{
+  "schemaVersion": 1,
+  "eventId": "child_030",
+  "status": "PASS",
+  "reviewer": "Codex AI / plan_audit",
+  "reviewerType": "AI",
+  "reviewDate": "2026-11-19",
+  "sourceEventHash": "2b22a7adb67e97418ea7219eff01196b097b5f6b35c932d5ab96af0b19ba3baf",
+  "sourceEventSnapshot": {
+    "eventId": "child_030",
+    "stage": "CHILD",
+    "type": "NORMAL",
+    "isFallback": false,
+    "isMilestone": false,
+    "title": "수영 대회 결승",
+    "text": "구 대회 자유형 결승. 출발대에 섰는데 수경 끈이 끊어지기 직전이다. 심판이 호루라기를 문다.",
+    "imageId": "img_child_swim_meet_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [
+        "swim_club"
+      ],
+      "blockedFlags": []
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "그냥 뛰어든다",
+        "statDelta": {
+          "운동능력": 3,
+          "행복": 3,
+          "건강": -2
+        },
+        "resultText": "출발하자마자 수경이 벗겨졌다. 눈을 감고 헤엄쳤는데 1등이었다.",
+        "addFlags": [
+          "swim_star",
+          "sports_star"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "a_primary",
+            "text": "출발하자마자 수경이 벗겨졌다. 눈을 감고 헤엄쳤는데 1등이었다.",
+            "chance": 65,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "운동능력": 3,
+              "행복": 3,
+              "건강": -2
+            },
+            "addFlags": [
+              "swim_star",
+              "sports_star"
+            ],
+            "lifeDelta": 4,
+            "chanceWeights": {
+              "운동능력": 3
+            }
+          },
+          {
+            "outcomeId": "a_wall",
+            "text": "수경이 벗겨져 눈을 감고 헤엄쳤다. 손보다 머리가 먼저 벽에 닿았다. 4등. 이마의 혹은 1등만큼 컸다.",
+            "chance": 35,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "운동능력": 2,
+              "행복": -1,
+              "건강": 2
+            },
+            "addFlags": [],
+            "chanceWeights": {
+              "운동능력": -3
+            }
+          }
+        ]
+      },
+      {
+        "choiceId": "B",
+        "label": "손을 들어 시간을 달라고 한다",
+        "statDelta": {
+          "사회성": 2,
+          "운동능력": 1,
+          "행복": -1
+        },
+        "resultText": "수경은 고쳤지만 기다리는 동안 몸이 식었다. 3등. 대신 매너상도 받았다.",
+        "addFlags": [],
+        "outcomes": [
+          {
+            "outcomeId": "b_primary",
+            "text": "수경은 고쳤지만 기다리는 동안 몸이 식었다. 3등. 대신 매너상도 받았다.",
+            "chance": 100,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "사회성": 2,
+              "운동능력": 1,
+              "행복": -1
+            },
+            "addFlags": [],
+            "lifeDelta": 10
+          }
+        ]
+      },
+      {
+        "choiceId": "C",
+        "label": "수경을 벗어 던지고 뛴다",
+        "statDelta": {
+          "사회성": 2,
+          "운": -2
+        },
+        "resultText": "방향을 잃고 옆 레인으로 들어갔다. 실격. 옆 레인 선수와는 친구가 됐다.",
+        "addFlags": [],
+        "outcomes": [
+          {
+            "outcomeId": "c_primary",
+            "text": "방향을 잃고 옆 레인으로 들어갔다. 실격. 옆 레인 선수와는 친구가 됐다.",
+            "chance": 100,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "사회성": 2,
+              "운": -2
+            },
+            "addFlags": []
+          }
+        ]
+      }
+    ],
+    "priority": 0,
+    "kind": "INCIDENT",
+    "periods": [
+      "CHILD"
+    ]
+  },
+  "sourceReadScope": "Current complete event, conditions, every choice/outcome and flags/stat deltas/periods/follow-ups directly read before judgement.",
+  "sourceImage": {
+    "path": "app/src/main/assets/images/followup_20261031/img_child_swim_meet_001.png",
+    "sha256": "f0b0c921548a94066b668fa5abccbcf54e226e63224053c39a5113fd21e0c6f5",
+    "width": 720,
+    "height": 540
+  },
+  "originalArtworkUnchangedSinceHistoricalReview": true,
+  "historicalReview": {
+    "eventId": "child_030",
+    "title": "수영 대회 결승",
+    "imageId": "img_child_swim_meet_001",
+    "assetPath": "followup_20261031/img_child_swim_meet_001.png",
+    "sha256": "f0b0c921548a94066b668fa5abccbcf54e226e63224053c39a5113fd21e0c6f5",
+    "eventSourceHash": "2b22a7adb67e97418ea7219eff01196b097b5f6b35c932d5ab96af0b19ba3baf",
+    "status": "REVISION_REQUIRED",
+    "reviewer": "김선한 담당 Codex 직접 대행 검수",
+    "reason": "핵심인 끊어지기 직전 수경 끈의 손상이 식별되지 않음",
+    "expectedAction": "출발 직전 수경의 위태로운 끈을 내려다봄",
+    "requiredObjects": "수경 끈; 출발대; 수영 레인; 심판 호루라기",
+    "sheet": "output/art-review-20261119/sheet-04.jpg",
+    "cell": 11,
+    "cropMethod": "ImageOps.fit centre-fill 360:800; simulated crop inspected directly, not an emulator capture",
+    "visualMethod": "원본 도트풍·색감·장면 파손·명백한 신체/사물 오류 직접 확인"
+  },
+  "presentationMetadata": [],
+  "captures": [
+    {
+      "path": "build/refactor/after/semantic-originals-thirteen-native/child_030_phone_scene.png",
+      "sha256": "72e6f1fce27a16d4f5022ed513d1dd6171162f9aea49d807669095cc7f9977c8",
+      "width": 1080,
+      "height": 2400,
+      "screen": "phone",
+      "mode": "scene",
+      "cropReport": {
+        "eventId": "child_030",
+        "imageId": "img_child_swim_meet_001",
+        "assetPath": "followup_20261031/img_child_swim_meet_001.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.331..0.669",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/semantic-originals-thirteen-native/child_030_phone_play.png",
+      "sha256": "1989708157b6651e8ba96b9a6f2c04506dab04e1ffc549cd6116042cf579dc34",
+      "width": 1080,
+      "height": 2400,
+      "screen": "phone",
+      "mode": "play",
+      "cropReport": null
+    },
+    {
+      "path": "build/refactor/after/semantic-originals-thirteen-native/child_030_360x740_scene.png",
+      "sha256": "5b0f391fca8c9d5772f343793bced4828f3abc5130b0ca49e2d0d934bcad5453",
+      "width": 945,
+      "height": 1943,
+      "screen": "360x740",
+      "mode": "scene",
+      "cropReport": {
+        "eventId": "child_030",
+        "imageId": "img_child_swim_meet_001",
+        "assetPath": "followup_20261031/img_child_swim_meet_001.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.318..0.682",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/semantic-originals-thirteen-native/child_030_360x740_play.png",
+      "sha256": "eabead2af521b09d19f82113843b364b2bef66252ad2149063d35fb3c627d490",
+      "width": 945,
+      "height": 1943,
+      "screen": "360x740",
+      "mode": "play",
+      "cropReport": null
+    }
+  ],
+  "semanticObservation": "출발대에서 수경 끈이 거의 끊어질 듯 닳은 상태다. 가운데 연결부가 얇고 희게 해져 있으나 완전히 떨어지지 않았다. 이미 수영함·완전히 고쳐짐·메달·다른 레인 진입 결과가 없다.",
+  "cropObservation": "두 화면에서 끈의 얇은 연결부, 수경, 손, 수영장 레인, 심판과 출발대가 식별된다. 양 렌즈 외곽 일부는 잘리나 끈 문제가 중앙에 보인다. 과거 손상 표시 부재 지적은 실제 원본/캡처와 달랐다.",
+  "uiObservation": "두 화면 모두 제목·본문·세 선택지가 읽히고 카드가 footer 위에 남는다.",
+  "reviewMethod": "Codex AI directly inspected the full unchanged source PNG and all four unmodified native scene/play captures. Prior review is retained as historical evidence; this record is a new AI judgement, not human approval.",
+  "nativeMethod": "Production DecisionScreen, current parsed event/routing/PixelAssetLoader, fixture state in Android Compose instrumentation. Scene grid match >=0.95. Not complete game progression.",
+  "nativeRunLog": "build/refactor/semantic-originals-thirteen-and-choice-reachability.log",
+  "limitations": [
+    "Emulator captures, not physical-device review.",
+    "Only reviewed phone and 360x740 dimensions; not every font scale/aspect ratio.",
+    "Art review does not independently certify scrolling, TalkBack or complete game-flow transitions."
+  ]
+}

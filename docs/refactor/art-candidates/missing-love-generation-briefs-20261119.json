@@ -1,0 +1,111 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-19",
+  "status": "READY_FOR_GENERATION_NOT_ART_APPROVAL",
+  "expectedMissingEvents": 20,
+  "completedBriefs": 20,
+  "briefFiles": [
+    {
+      "eventId": "love_date_01",
+      "priority": 1,
+      "path": "docs/refactor/art-candidates/missing-love-briefs/love_date_01.json"
+    },
+    {
+      "eventId": "love_marriage_talk_01",
+      "priority": 2,
+      "path": "docs/refactor/art-candidates/missing-love-briefs/love_marriage_talk_01.json"
+    },
+    {
+      "eventId": "love_first_child_01",
+      "priority": 3,
+      "path": "docs/refactor/art-candidates/missing-love-briefs/love_first_child_01.json"
+    },
+    {
+      "eventId": "love_family_meet_01",
+      "priority": 4,
+      "path": "docs/refactor/art-candidates/missing-love-briefs/love_family_meet_01.json"
+    },
+    {
+      "eventId": "love_wedding_01",
+      "priority": 5,
+      "path": "docs/refactor/art-candidates/missing-love-briefs/love_wedding_01.json"
+    },
+    {
+      "eventId": "love_wedding_music",
+      "priority": 6,
+      "path": "docs/refactor/art-candidates/missing-love-briefs/love_wedding_music.json"
+    },
+    {
+      "eventId": "love_child_plan_01",
+      "priority": 7,
+      "path": "docs/refactor/art-candidates/missing-love-briefs/love_child_plan_01.json"
+    },
+    {
+      "eventId": "love_holiday_01",
+      "priority": 8,
+      "path": "docs/refactor/art-candidates/missing-love-briefs/love_holiday_01.json"
+    },
+    {
+      "eventId": "love_date_02",
+      "priority": 9,
+      "path": "docs/refactor/art-candidates/missing-love-briefs/love_date_02.json"
+    },
+    {
+      "eventId": "love_letter_01",
+      "priority": 10,
+      "path": "docs/refactor/art-candidates/missing-love-briefs/love_letter_01.json"
+    },
+    {
+      "eventId": "love_conflict_01",
+      "priority": 11,
+      "path": "docs/refactor/art-candidates/missing-love-briefs/love_conflict_01.json"
+    },
+    {
+      "eventId": "love_conflict_first_love",
+      "priority": 12,
+      "path": "docs/refactor/art-candidates/missing-love-briefs/love_conflict_first_love.json"
+    },
+    {
+      "eventId": "love_conflict_ideal",
+      "priority": 13,
+      "path": "docs/refactor/art-candidates/missing-love-briefs/love_conflict_ideal.json"
+    },
+    {
+      "eventId": "love_conflict_music",
+      "priority": 14,
+      "path": "docs/refactor/art-candidates/missing-love-briefs/love_conflict_music.json"
+    },
+    {
+      "eventId": "love_conflict_book",
+      "priority": 15,
+      "path": "docs/refactor/art-candidates/missing-love-briefs/love_conflict_book.json"
+    },
+    {
+      "eventId": "love_reunion_01",
+      "priority": 16,
+      "path": "docs/refactor/art-candidates/missing-love-briefs/love_reunion_01.json"
+    },
+    {
+      "eventId": "love_reunion_first_love",
+      "priority": 17,
+      "path": "docs/refactor/art-candidates/missing-love-briefs/love_reunion_first_love.json"
+    },
+    {
+      "eventId": "love_reunion_ideal",
+      "priority": 18,
+      "path": "docs/refactor/art-candidates/missing-love-briefs/love_reunion_ideal.json"
+    },
+    {
+      "eventId": "love_reunion_music",
+      "priority": 19,
+      "path": "docs/refactor/art-candidates/missing-love-briefs/love_reunion_music.json"
+    },
+    {
+      "eventId": "love_reunion_book",
+      "priority": 20,
+      "path": "docs/refactor/art-candidates/missing-love-briefs/love_reunion_book.json"
+    }
+  ],
+  "pendingBriefEventIds": [],
+  "approvalOrManifestChanged": false
+}

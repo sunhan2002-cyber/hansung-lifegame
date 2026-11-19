@@ -1,0 +1,11 @@
+Use-case: edit an existing Korean life-simulation event illustration. Produce one full-bleed vertical 9:16 portrait pixel-art scene for a mobile game. The supplied original is the edit target and style reference. Preserve its warm nostalgic color palette, visible handcrafted pixel clusters, gentle depth and everyday Korean setting, while correcting the scene exactly as specified below. The camera is always the player's own eyes: small hands/partial limbs are allowed, but never show the player's face, rear head, complete body, reflection or portrait. Other people may have natural faces. Keep every necessary story cue in the central 80% of portrait width; no panel border or UI. No readable words, letters, numerals, logos, captions, speech balloons, thought bubbles, decorative comic marks or watermarks. Do not insert text to explain missing visual content. Render a single coherent scene, not a montage. Avoid excessive smooth anime gradients; retain the source pixel-art rendering.
+
+CURRENT EVENT BEFORE ANY CHOICE (source text; do not typeset): 지호에게서 사진이 왔다. 빨간 삽을 든 두 아기. "{nameCall}, 우리 이거 찍은 지 딱 50년이다."
+
+REQUIRED EDIT: 노년 손이 든 폰 속 옛 스냅사진에 아기 둘과 빨간 모래삽을 보이게 하되 주인공의 얼굴·성별을 고정하지 않도록 두 아기는 뒤나 옆에서 비식별하게. 실제 현재 재회 인물은 제외.
+
+UNDECIDED CHOICES / OUTCOMES TO EXCLUDE: No current in-person reunion, neighborhood visit, parking lot/playground revisit, new shovel purchase, granddaughter photo, mass photo-sharing or nap result.
+
+Output an emotionally clear vertical 9:16 composition. All key people, object counts and cues must survive narrow portrait cropping. No extra choice result.
+
+Clarification: the only permitted rear views of children are INSIDE the old archival photo on the phone, showing exactly two non-identifiable babies with a red sand shovel; this is not a third-person view of the current player. The current elderly player is represented only by hands. No readable date or age numerals.

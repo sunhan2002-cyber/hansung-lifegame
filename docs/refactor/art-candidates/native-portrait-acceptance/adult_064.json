@@ -1,0 +1,71 @@
+{
+  "eventId": "adult_064",
+  "reviewerType": "AI",
+  "scope": "Portrait phone and small-phone presentation",
+  "sourceEventHash": "a94af8a2f9d99ec6813d768127a3769dc64c2dfe5ebee5cc536a6c502e4aca6a",
+  "sourceReview": "docs/refactor/art-candidates/portrait-integration/adult_064.json",
+  "sourceSha256": "2baeca5662342c514f41f251f800542f5bcb2d873ea1eeb05a0655013b63e874",
+  "displayedVariant": {
+    "assetPath": "presentation/portraits/img_adult_parents_spring_001_portrait_v1.png",
+    "sha256": "f61bbd72eba33aa8d91f85c11931e3fdcc5e419d588043a373a5ce42539ee5c4",
+    "width": 941,
+    "height": 1672,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/adult_064.json"
+  },
+  "nativeCaptures": [
+    {
+      "path": "build/refactor/resumed/final32/adult_064_phone_scene.png",
+      "sha256": "b289a8c2349776eabb3ba9cbde01df905805b9558ca35dbdfe94696eeeb0e37b",
+      "crop": {
+        "eventId": "adult_064",
+        "imageId": "img_adult_parents_spring_001",
+        "assetPath": "presentation/portraits/img_adult_parents_spring_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/final32/adult_064_phone_play.png",
+      "sha256": "c386cc1bcd8d94d002b3f2f5d797b7aca6adccb5e2040bdc3d5e0d1e627455a7",
+      "crop": {
+        "eventId": "adult_064",
+        "imageId": "img_adult_parents_spring_001",
+        "assetPath": "presentation/portraits/img_adult_parents_spring_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/final32/adult_064_360x740_scene.png",
+      "sha256": "c3dbc263e10340b28fb8845eced70bde2d5d09dc40b9f3e551f2d6f6d961344e",
+      "crop": {
+        "eventId": "adult_064",
+        "imageId": "img_adult_parents_spring_001",
+        "assetPath": "presentation/portraits/img_adult_parents_spring_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/final32/adult_064_360x740_play.png",
+      "sha256": "c52f6880dab357df81cb3d5312a16924b0283c43a44b15f2811e2deb5be3e996",
+      "crop": {
+        "eventId": "adult_064",
+        "imageId": "img_adult_parents_spring_001",
+        "assetPath": "presentation/portraits/img_adult_parents_spring_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    }
+  ],
+  "observation": "Father in profile beside doctor, spring visible out window.",
+  "decision": "PASS",
+  "method": "Individual visual inspection of both scene and gameplay frames together with producer semantic/source review and device capture match."
+}

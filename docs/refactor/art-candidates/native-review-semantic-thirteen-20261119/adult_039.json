@@ -1,0 +1,198 @@
+{
+  "schemaVersion": 1,
+  "eventId": "adult_039",
+  "status": "PASS",
+  "reviewer": "Codex AI / plan_audit",
+  "reviewerType": "AI",
+  "reviewDate": "2026-11-19",
+  "sourceEventHash": "c0de04b2623c70dd631facc855926ea105aeadc3b63a00b50ccc2400677878a7",
+  "sourceEventSnapshot": {
+    "eventId": "adult_039",
+    "stage": "ADULT",
+    "type": "NORMAL",
+    "isFallback": false,
+    "isMilestone": true,
+    "title": "첫 아이",
+    "text": "인사팀: \"{name} 님, 육아휴직 쓰실 건가요?\" 아기가 내 손가락을 꼭 쥐고 있다.",
+    "imageId": "img_adult_newborn_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [
+        "married",
+        "has_child",
+        "job_employed"
+      ],
+      "blockedFlags": [
+        "divorced",
+        "v4:event:love_first_child_01"
+      ]
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "육아휴직",
+        "statDelta": {
+          "행복": 4,
+          "사회성": 2,
+          "경제력": -4
+        },
+        "resultText": "아이의 첫 걸음마를 봤다. 세 걸음 만에 엉덩방아. 어디서 많이 본 장면이다.",
+        "addFlags": [
+          "devoted_parent"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "a_primary",
+            "text": "아이의 첫 걸음마를 봤다. 세 걸음 만에 엉덩방아. 어디서 많이 본 장면이다.",
+            "chance": 100,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 4,
+              "사회성": 2,
+              "경제력": -4
+            },
+            "addFlags": [
+              "devoted_parent"
+            ]
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "첫 아이 전환점 — 육아휴직과 계속 근무는 능력치로 잠그지 않고 결과와 후속 사실로 반영",
+        "conditionReview": "open_turning_point",
+        "conditionBasis": "week13_love_line"
+      },
+      {
+        "choiceId": "B",
+        "label": "계속 일한다",
+        "statDelta": {
+          "경제력": 4,
+          "행복": -2
+        },
+        "resultText": "일에 집중한 만큼 수입이 늘었다. 아이의 첫 단어는 '영상 통화'였다.",
+        "addFlags": [],
+        "outcomes": [
+          {
+            "outcomeId": "b_primary",
+            "text": "일에 집중한 만큼 수입이 늘었다. 아이의 첫 단어는 '영상 통화'였다.",
+            "chance": 100,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "경제력": 4,
+              "행복": -2
+            },
+            "addFlags": []
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "첫 아이 전환점 — 육아휴직과 계속 근무는 능력치로 잠그지 않고 결과와 후속 사실로 반영",
+        "conditionReview": "open_turning_point",
+        "conditionBasis": "week13_love_line"
+      }
+    ],
+    "priority": 0,
+    "kind": "MILESTONE",
+    "periods": [
+      "YOUNG_ADULT",
+      "MIDDLE"
+    ],
+    "weight": 1,
+    "followUps": [
+      "cross_03",
+      "cross_09",
+      "adult_055"
+    ]
+  },
+  "sourceReadScope": "Current complete event, conditions, every choice/outcome and flags/stat deltas/periods/follow-ups directly read before judgement.",
+  "sourceImage": {
+    "path": "app/src/main/assets/images/followup_20261031/img_adult_newborn_001.png",
+    "sha256": "40cfff0a03d9487665247f185d9271387fc7628d1239051fed9e958cf96005d5",
+    "width": 720,
+    "height": 540
+  },
+  "originalArtworkUnchangedSinceHistoricalReview": true,
+  "historicalReview": {
+    "eventId": "adult_039",
+    "title": "첫 아이",
+    "imageId": "img_adult_newborn_001",
+    "assetPath": "followup_20261031/img_adult_newborn_001.png",
+    "sha256": "40cfff0a03d9487665247f185d9271387fc7628d1239051fed9e958cf96005d5",
+    "eventSourceHash": "37cc841d2919ae2ad5df9b8197553abc58fe0cb87d4ed7010df8454ff92ecb26",
+    "status": "REVISION_REQUIRED",
+    "reviewer": "김선한 담당 Codex 직접 대행 검수",
+    "reason": "아기가 잡은 손가락과 통화 휴대폰은 보이나 본문 '신생아'보다 큰 아기 손 비율 검토 필요",
+    "expectedAction": "아기가 내 손가락을 꼭 쥔 채 인사팀 전화를 받음",
+    "requiredObjects": "아기 손, 내 손가락, 휴대폰, 아기 침대",
+    "sheet": "output/art-review-20261119/sheet-10.jpg",
+    "cell": 13,
+    "cropMethod": "ImageOps.fit centre-fill 360:800; simulated crop inspected directly, not an emulator capture",
+    "visualMethod": "원본 도트풍·색감·장면 파손·명백한 신체/사물 오류 직접 확인"
+  },
+  "presentationMetadata": [],
+  "captures": [
+    {
+      "path": "build/refactor/after/semantic-originals-thirteen-native/adult_039_phone_scene.png",
+      "sha256": "80f5d9f92e8f7fb9ee80ed528e12bbd0057657f2e718e1051ae5d8bfc3d5a032",
+      "width": 1080,
+      "height": 2400,
+      "screen": "phone",
+      "mode": "scene",
+      "cropReport": {
+        "eventId": "adult_039",
+        "imageId": "img_adult_newborn_001",
+        "assetPath": "followup_20261031/img_adult_newborn_001.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.331..0.669",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/semantic-originals-thirteen-native/adult_039_phone_play.png",
+      "sha256": "dcb740fb23a382a8d7e4041dac049e97cc2d3b3b39bf49a7ad423e0f8554e978",
+      "width": 1080,
+      "height": 2400,
+      "screen": "phone",
+      "mode": "play",
+      "cropReport": null
+    },
+    {
+      "path": "build/refactor/after/semantic-originals-thirteen-native/adult_039_360x740_scene.png",
+      "sha256": "441a1aa24bec0ea2d2baf4d23165774e5cd8a1e9e5375435c9c6f6c5105a4045",
+      "width": 945,
+      "height": 1943,
+      "screen": "360x740",
+      "mode": "scene",
+      "cropReport": {
+        "eventId": "adult_039",
+        "imageId": "img_adult_newborn_001",
+        "assetPath": "followup_20261031/img_adult_newborn_001.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.318..0.682",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/semantic-originals-thirteen-native/adult_039_360x740_play.png",
+      "sha256": "6e395d36411794d22567a1654c5861a4cd73a94b714877a51cc9de8f48da8b45",
+      "width": 945,
+      "height": 1943,
+      "screen": "360x740",
+      "mode": "play",
+      "cropReport": null
+    }
+  ],
+  "semanticObservation": "휴대전화와 아기가 손가락을 꽉 쥔 현재 상황이다. 아기 손이 성인 손보다 작고 유아용 침대가 보인다. 현재 본문은 신생아로 나이를 한정하지 않아 과거 신생아 비례 지적을 필수 조건으로 적용하지 않았다. 육아휴직 신청·첫걸음·소득 증가·영상통화 결과는 없다.",
+  "cropObservation": "두 화면에서 전화기, 아기 손과 성인 손가락의 접촉, 침대 맥락이 유지된다. 전화기 화면은 일반 통화 표식이며 인사팀이라는 인쇄 글자를 검증한 것은 아니다.",
+  "uiObservation": "두 크기 모두 제목·본문·두 선택지 전체를 읽을 수 있다.",
+  "reviewMethod": "Codex AI directly inspected the full unchanged source PNG and all four unmodified native scene/play captures. Prior review is retained as historical evidence; this record is a new AI judgement, not human approval.",
+  "nativeMethod": "Production DecisionScreen, current parsed event/routing/PixelAssetLoader, fixture state in Android Compose instrumentation. Scene grid match >=0.95. Not complete game progression.",
+  "nativeRunLog": "build/refactor/semantic-originals-thirteen-and-choice-reachability.log",
+  "limitations": [
+    "Emulator captures, not physical-device review.",
+    "Only reviewed phone and 360x740 dimensions; not every font scale/aspect ratio.",
+    "Art review does not independently certify scrolling, TalkBack or complete game-flow transitions."
+  ]
+}

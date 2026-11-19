@@ -1,0 +1,71 @@
+{
+  "eventId": "special_005",
+  "reviewerType": "AI",
+  "scope": "Portrait phone and small-phone presentation",
+  "sourceEventHash": "c6942e067d9ffe5aaf95d7a70f638be8622757a0ee109d09bed9a60251e9ce1b",
+  "sourceReview": "docs/refactor/art-candidates/portrait-integration/special_005.json",
+  "sourceSha256": "3cad0d77bfdd7df077493145f652ec2d51ad77a05b46f88e0545a50d8ffc9db5",
+  "displayedVariant": {
+    "assetPath": "presentation/portraits/img_special_auto_door_001_portrait_v1.png",
+    "sha256": "65b79af3ca6e9f4db02d3d2245e1086bfdd853b993dd20c141478cd590183da7",
+    "width": 941,
+    "height": 1672,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/special_005.json"
+  },
+  "nativeCaptures": [
+    {
+      "path": "build/refactor/resumed/native18/special_005_phone_scene.png",
+      "sha256": "a386fe6b169406d21281f3e91c7634e1ee225a7a8347becfa06575bd7f901a6a",
+      "crop": {
+        "eventId": "special_005",
+        "imageId": "img_special_auto_door_001",
+        "assetPath": "presentation/portraits/img_special_auto_door_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/native18/special_005_phone_play.png",
+      "sha256": "19fd50b75c90b2eda4ff7d7b080d9c081e5c9da70fa36678ab67af9833a01ccb",
+      "crop": {
+        "eventId": "special_005",
+        "imageId": "img_special_auto_door_001",
+        "assetPath": "presentation/portraits/img_special_auto_door_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/native18/special_005_360x740_scene.png",
+      "sha256": "d7032f0ab3b29347ea9bd1ab2a52501ff72fab012f049dccce7939f8369756d9",
+      "crop": {
+        "eventId": "special_005",
+        "imageId": "img_special_auto_door_001",
+        "assetPath": "presentation/portraits/img_special_auto_door_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/native18/special_005_360x740_play.png",
+      "sha256": "c692de5dda04b2a0bd149a64f6ce9cc060c6bc6d72d784f7ad702434f2a7127a",
+      "crop": {
+        "eventId": "special_005",
+        "imageId": "img_special_auto_door_001",
+        "assetPath": "presentation/portraits/img_special_auto_door_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    }
+  ],
+  "observation": "닫힌 자동문과 센서, 양옆의 박수치는 손들이 보인다.",
+  "decision": "PASS",
+  "method": "Individual visual inspection of both scene and gameplay frames together with producer semantic/source review and device capture match."
+}

@@ -1,0 +1,29 @@
+{
+  "eventId": "special_017",
+  "sourceAssetPath": "followup_20261031/img_special_stuck_elevator_001.png",
+  "sourceSha256": "5c1977696335161e465f1d11c94670d3802fbad9a065cf2eef6b1bdfd0a96536",
+  "variant": {
+    "assetPath": "presentation/portraits/img_special_stuck_elevator_001_portrait_v1.png",
+    "sha256": "a34b77fca2d39a3ce14ce19d22908e97dc74e00793fbfa52ad36664dee6f9c14",
+    "width": 941,
+    "height": 1672,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/special_017.json"
+  },
+  "reviewerType": "AI",
+  "reviewer": "Codex AI (/root)",
+  "reviewStatus": "AI_REVIEWED_PRESENTATION",
+  "eventSourceHash": "5f3bc51a977f3dca36e5ab14b23240eb5bb866e6915af29ec25cf18bc4df69ce",
+  "semanticReview": "Producer read the current event conditions and every choice/outcome, inspected source and selected output. Full source snapshot and exact prompt are in the referenced production ledger. Native acceptance remains pending.",
+  "visualReview": "One classmate now present in closed bronze elevator with emergency panel; player seated first-person hands/knees only, connected sleeves. No chocolate, door opening or resolved romance.",
+  "cropReview": "Portrait candidate selected for native phone/small-phone scene and gameplay inspection; not final artwork acceptance.",
+  "actualProducer": "OpenAI built-in image_gen",
+  "generationMethod": "Built-in imagegen edit; exact prompts/output SHA/rejected attempts preserved in docs/refactor/art-candidates/content-root-production-20261119.json",
+  "productionLedger": "docs/refactor/art-candidates/content-root-production-20261119.json",
+  "nativePending": true,
+  "runtimeConnected": true,
+  "approvalChanged": false,
+  "selectedStagingSha256": "a34b77fca2d39a3ce14ce19d22908e97dc74e00793fbfa52ad36664dee6f9c14"
+}

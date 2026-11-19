@@ -1,0 +1,29 @@
+{
+  "eventId": "path_luk_08",
+  "sourceAssetPath": "followup_20261031/img_path_luk_08_001.png",
+  "sourceSha256": "e79bd4a97ca7f25757e3b8008b7158ce2585fcaa8df2100490b009f5cb220999",
+  "variant": {
+    "assetPath": "presentation/portraits/img_path_luk_08_001_portrait_v1.png",
+    "sha256": "428b54e5ed1690c9a22d41e4e8c4f4a63eee96c15f839feef1c5b806daf72274",
+    "width": 961,
+    "height": 1637,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/path_luk_08.json"
+  },
+  "reviewerType": "AI",
+  "reviewer": "Codex AI (/root)",
+  "reviewStatus": "AI_REVIEWED_PRESENTATION",
+  "eventSourceHash": "dc21b967e33be0f19fbdefa4ac68aa0dcd8a845ec43fe234f975cac506d7885d",
+  "semanticReview": "Producer read the current event conditions and every choice/outcome, inspected source and selected output. Full source snapshot and exact prompt are in the referenced production ledger. Native acceptance remains pending.",
+  "visualReview": "Airline employee gestures at closed gate, ticket and baggage visible.",
+  "cropReview": "Portrait candidate selected for native phone/small-phone scene and gameplay inspection; not final artwork acceptance.",
+  "actualProducer": "OpenAI built-in image_gen",
+  "generationMethod": "Built-in imagegen edit; exact prompts/output SHA/rejected attempts preserved in docs/refactor/art-candidates/resumed-production-20261119.json",
+  "productionLedger": "docs/refactor/art-candidates/resumed-production-20261119.json",
+  "nativePending": true,
+  "runtimeConnected": true,
+  "approvalChanged": false,
+  "selectedStagingSha256": "428b54e5ed1690c9a22d41e4e8c4f4a63eee96c15f839feef1c5b806daf72274"
+}

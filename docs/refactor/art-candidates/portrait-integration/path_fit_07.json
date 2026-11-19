@@ -1,0 +1,29 @@
+{
+  "eventId": "path_fit_07",
+  "sourceAssetPath": "followup_20261031/img_path_fit_07_001.png",
+  "sourceSha256": "41081f1d0f219d0826d02322321071a63655b63fa829135d67d721479ff8f9b3",
+  "variant": {
+    "assetPath": "presentation/portraits/img_path_fit_07_001_portrait_v1.png",
+    "sha256": "62e08131ff2582463cfe8b23a4f5783b93b207d9d9d8375c81774a7bf2fb11fe",
+    "width": 967,
+    "height": 1627,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/path_fit_07.json"
+  },
+  "reviewerType": "AI",
+  "reviewer": "Codex AI (/root)",
+  "reviewStatus": "AI_REVIEWED_PRESENTATION",
+  "eventSourceHash": "c6a4bbe97925a131124c143fda3778bbf0d94e22e711fdf869beb0987f0727e7",
+  "semanticReview": "Producer read the current event conditions and every choice/outcome, inspected source and selected output. Full source snapshot and exact prompt are in the referenced production ledger. Native acceptance remains pending.",
+  "visualReview": "Physician and knee images with two phone offers for commentary and coaching.",
+  "cropReview": "Portrait candidate selected for native phone/small-phone scene and gameplay inspection; not final artwork acceptance.",
+  "actualProducer": "OpenAI built-in image_gen",
+  "generationMethod": "Built-in imagegen edit; exact prompts/output SHA/rejected attempts preserved in docs/refactor/art-candidates/resumed-production-20261119.json",
+  "productionLedger": "docs/refactor/art-candidates/resumed-production-20261119.json",
+  "nativePending": true,
+  "runtimeConnected": true,
+  "approvalChanged": false,
+  "selectedStagingSha256": "62e08131ff2582463cfe8b23a4f5783b93b207d9d9d8375c81774a7bf2fb11fe"
+}

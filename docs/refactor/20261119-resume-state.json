@@ -1,0 +1,136 @@
+{
+  "status": "LOCAL_EMULATOR_VALIDATION_COMPLETE",
+  "userRequest": "아까 하던 작업 이어서 해줘",
+  "date": "2026-11-19",
+  "repo": "C:/HSU/3-2/mobile/main-audit-20261119",
+  "branch": "codex/refactor-20261119",
+  "basis": "e08d25f",
+  "contract": [
+    "Resume only after user asks.",
+    "Keep full-screen illustration structure.",
+    "Emulator validation authorized; physical validation deferred.",
+    "No push/commit/deployment done or requested.",
+    "Root alone runs Gradle/adb serially."
+  ],
+  "latestArtAcceptance": {
+    "approved": 372,
+    "pending": 0,
+    "structuralErrors": 0,
+    "preferred": 372,
+    "fallback": 0
+  },
+  "runtimePortraitVariants": 96,
+  "latestRun": {
+    "tests": 141,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "log": "build/refactor/resumed/regression.log",
+    "xml": "build/refactor/resumed/regression",
+    "scope": "Unfiltered connectedDebugAndroidTest on API 36"
+  },
+  "unsummarizedRuns": [],
+  "tools": {
+    "adb": "C:/Users/jk030/AppData/Local/Android/Sdk/platform-tools/adb.exe",
+    "serial": "emulator-5582",
+    "avd": "Codex_Refactor_20261119",
+    "javaHome": "C:/Program Files/Android/Android Studio/jbr",
+    "androidHome": "C:/Users/jk030/AppData/Local/Android/Sdk",
+    "gradleExtra": "-Pandroid.injected.androidTest.leaveApksInstalledAfterRun=true"
+  },
+  "noRunningAgentWork": true,
+  "resumedOnUserRequest": "아까 하던 작업 이어서 해줘",
+  "pauseSnapshot": {
+    "rootArt": {
+      "ledger": "docs/refactor/art-candidates/content-root-production-20261119.json",
+      "selectedStaging": 10,
+      "runtimeConnected": false,
+      "pending": [
+        "teen_030",
+        "teen_033"
+      ],
+      "helper": "build/refactor/register_root_art_selection.py"
+    },
+    "effects": {
+      "ledger": "docs/refactor/art-candidates/crop-variant-production-20261119.json",
+      "cropSelected": 27,
+      "note": "26 of original27 plus path_hea_03",
+      "outputNeedsReview": [
+        "adult_078",
+        "adult_067"
+      ],
+      "contentLedger": "docs/refactor/art-candidates/content-effects-production-20261119.json",
+      "contentAndMixedNotGenerated": 15
+    },
+    "security": {
+      "ledger": "docs/refactor/art-candidates/content-art-revision-briefs-20261119.json",
+      "selected": 28,
+      "rejectedAttempts": 8,
+      "pending": [
+        "path_fit_09",
+        "path_luk_15"
+      ],
+      "notYetConnectedSelected": [
+        "cross_10",
+        "path_fit_15",
+        "path_hap_14",
+        "path_wea_14",
+        "adult_062"
+      ]
+    },
+    "planAudit": {
+      "nativePassedOriginal24": 17,
+      "portrait4Pending": [
+        "adult_007",
+        "adult_012",
+        "adult_027",
+        "adult_028"
+      ],
+      "native43Pending": true,
+      "newRepairIds": [
+        "adult_009",
+        "adult_016",
+        "adult_042",
+        "adult_064",
+        "adult_081",
+        "special_006",
+        "path_wea_04"
+      ]
+    },
+    "performance": {
+      "change": "SceneDepth mesh only during clear initial preview after blur reaches zero. Reading retains cached artwork/camera/light. Motion off/raw inspection static.",
+      "test": "build/refactor/p1/depth-preview-diagnostic-retest-results",
+      "testResult": "3/3 PASS",
+      "native": "build/refactor/after/scene-depth-intro",
+      "comparison": "build/refactor/after/depth-performance-comparison.json",
+      "limitations": "Software GPU emulator remains janky. Single 15-second samples; no physical FPS/battery/heat claims. Motion off zero drawn frames; 4950ms is zero-frame sentinel."
+    },
+    "resumeOrder": [
+      "Reconcile raw XML runs into device-latest-summary without deleting failures; current summary still only13runs.",
+      "plan_audit: portrait4 then native43 individual semantic/crop reviews and approval evidence; 7 held original scenes need new derivatives.",
+      "effects: inspect completed adult078/adult067, generate remaining11 content+4mixed; updated adult067 needs SceneAtmosphere/Depth anchors adjusted to new portrait.",
+      "security: finish path_fit09/path_luk15; root integrate last5 selected plus any new candidates; infant002 routing alternative still needs integration review.",
+      "root: finish teen030/033; integrate own10+new2 using reviewed-portrait helper; root native tests then independent art acceptance.",
+      "Integrate remaining crop candidates path_wea06/teen019/path_hea03 (adult078 afterreview), preserve originals.",
+      "Resolve remaining art151 scope incl teen024 partialcrop/adult072 existingportrait acceptance, not just generated candidates.",
+      "Update CI filter/required tests for AvatarBlinkTest and SceneDepthTest, changed SceneAtmosphereFlowTest count.",
+      "Complete bounded important-turningpoint enhancement if still required by approved plan; existing DecisionKindMark baseline is not new work.",
+      "Final Python all, debug/release JVM, lint, release build/security/hash, selected regression, native current before/after videos, launcher/update compatibility.",
+      "Document remaining physical validation separately; no full completion claim before required code/emulator work passes."
+    ]
+  },
+  "quality": "build/refactor/resumed/quality-summary.json",
+  "gallery": "docs/refactor/20261119-gallery/index.html",
+  "performance": "build/refactor/resumed/performance",
+  "resumeOrder": [
+    "Physical device sustained performance, thermals and battery.",
+    "Distribution signing and remote CI when authorized."
+  ],
+  "fullRegression": {
+    "status": "PASS",
+    "tests": 141,
+    "xml": "build/refactor/resumed/regression"
+  },
+  "physical": "deferred",
+  "packageDistribution": "unsigned; no push or deployment"
+}

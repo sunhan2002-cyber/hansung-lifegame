@@ -1,0 +1,71 @@
+{
+  "eventId": "cross_09",
+  "reviewerType": "AI",
+  "scope": "Portrait phone and small-phone presentation",
+  "sourceEventHash": "435f0c1e9973c82c7b2588e454ac1d07e307742720bd92a616a5e0ffb7fe0fa9",
+  "sourceReview": "docs/refactor/art-candidates/portrait-integration/cross_09.json",
+  "sourceSha256": "373c9c7a211e6426093b37d59d4502704140754176140051bc37e80327fd796b",
+  "displayedVariant": {
+    "assetPath": "presentation/portraits/img_cross_09_001_portrait_v1.png",
+    "sha256": "8c9b8384182b9f8062132e61985799c7fd70d7bc4b373eb1337be4cc0f1f03ad",
+    "width": 941,
+    "height": 1672,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root/effects_tech)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/cross_09.json"
+  },
+  "nativeCaptures": [
+    {
+      "path": "build/refactor/after/portrait-fortythree-native/cross_09_phone_scene.png",
+      "sha256": "95d7c760e35a2aab3ec6935d8680c3290869886870f69787b33b87803a281432",
+      "crop": {
+        "eventId": "cross_09",
+        "imageId": "img_cross_09_001",
+        "assetPath": "presentation/portraits/img_cross_09_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/portrait-fortythree-native/cross_09_phone_play.png",
+      "sha256": "486d256d064481950aff8426dd7921d6a09b2161c73756a19805744eb0dcf76f",
+      "crop": {
+        "eventId": "cross_09",
+        "imageId": "img_cross_09_001",
+        "assetPath": "presentation/portraits/img_cross_09_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/portrait-fortythree-native/cross_09_360x740_scene.png",
+      "sha256": "369a766be5fce1bab82551ff128c0f7e77b3a626a30d2777e5ff786aecebdbd3",
+      "crop": {
+        "eventId": "cross_09",
+        "imageId": "img_cross_09_001",
+        "assetPath": "presentation/portraits/img_cross_09_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/portrait-fortythree-native/cross_09_360x740_play.png",
+      "sha256": "f1c027bbd26d019e3f54ac3dc353438126ce3a6d30789522aa0206d2a25473e4",
+      "crop": {
+        "eventId": "cross_09",
+        "imageId": "img_cross_09_001",
+        "assetPath": "presentation/portraits/img_cross_09_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    }
+  ],
+  "observation": "학교 운동회 안내와 주말 근무 서류, 달력이 함께 남는다.",
+  "decision": "PASS",
+  "method": "Individual visual inspection of both scene and gameplay frames together with producer semantic/source review and device capture match."
+}

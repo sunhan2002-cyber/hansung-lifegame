@@ -1,0 +1,217 @@
+{
+  "schemaVersion": 1,
+  "eventId": "love_child_plan_01",
+  "title": "아이 이야기",
+  "imageId": "img_love_child_plan_01_001",
+  "status": "READY_FOR_GENERATION_NOT_ART_APPROVAL",
+  "author": "Codex AI",
+  "date": "2026-11-19",
+  "generationPriority": 7,
+  "currentAcceptanceStatus": "MISSING_PNG",
+  "sourceEventHash": "c23125c22a87aa9363de49a64363ee0f609d96b077ebc6d6bf7d0c28cac95c9a",
+  "sourceEventPath": "app/src/main/assets/events.sample.json",
+  "sourceEventSnapshot": {
+    "eventId": "love_child_plan_01",
+    "stage": "ADULT",
+    "type": "NORMAL",
+    "isFallback": false,
+    "isMilestone": true,
+    "title": "아이 이야기",
+    "text": "조카 돌잔치에서 돌아오는 차 안. 배우자가 창밖을 보다 말했다. \"{nameCall}, 우리도 아이 생각해 볼까?\"",
+    "imageId": "img_love_child_plan_01_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [
+        "married"
+      ],
+      "blockedFlags": [
+        "divorced",
+        "child_plan",
+        "no_child_plan",
+        "has_child",
+        "v4:event:adult_039"
+      ]
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "\"그래, 같이 준비해 보자\"",
+        "statDelta": {
+          "행복": 3,
+          "건강": 1,
+          "경제력": -2
+        },
+        "resultText": "그날부터 냉장고에 영양제가 두 병 늘었다. 이듬해 봄, 작은 울음소리가 집 안을 채웠다.",
+        "addFlags": [
+          "child_plan",
+          "has_child"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "a_plan",
+            "text": "그날부터 냉장고에 영양제가 두 병 늘었다. 이듬해 봄, 작은 울음소리가 집 안을 채웠다.",
+            "chance": 100,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 3,
+              "건강": 1,
+              "경제력": -2
+            },
+            "addFlags": [
+              "child_plan",
+              "has_child"
+            ]
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "관계 단계 전환점 — 연애·결혼·자녀는 능력치 자격이 아니라 의사 결정이라 잠그지 않고, 차이는 결과 분기와 후속 사실로 반영",
+        "conditionReview": "open_turning_point",
+        "conditionBasis": "week13_love_line"
+      },
+      {
+        "choiceId": "B",
+        "label": "\"우리 둘이서도 충분히 좋아\"",
+        "statDelta": {
+          "행복": 2
+        },
+        "resultText": "배우자가 고개를 끄덕였다. 대신 둘만의 목록을 적었다. 1번은 '매년 처음 가 보는 도시'.",
+        "addFlags": [
+          "no_child_plan"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "b_two",
+            "text": "배우자가 고개를 끄덕였다. 대신 둘만의 목록을 적었다. 1번은 '매년 처음 가 보는 도시'.",
+            "chance": 100,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 2
+            },
+            "addFlags": [
+              "no_child_plan"
+            ]
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "관계 단계 전환점 — 연애·결혼·자녀는 능력치 자격이 아니라 의사 결정이라 잠그지 않고, 차이는 결과 분기와 후속 사실로 반영",
+        "conditionReview": "open_turning_point",
+        "conditionBasis": "week13_love_line"
+      },
+      {
+        "choiceId": "C",
+        "label": "\"일단 화분부터 키워 보자\"",
+        "statDelta": {
+          "행복": 3,
+          "경제력": -2
+        },
+        "resultText": "화분은 1년을 버텼다. 그해 겨울 함께 초음파 사진을 들여다봤다. 이듬해 봄, 화분 옆 작은 침대에서 아이가 첫 울음을 터뜨렸다.",
+        "addFlags": [
+          "child_plan",
+          "has_child"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "c_plant",
+            "text": "화분은 1년을 버텼다. 그해 겨울 함께 초음파 사진을 들여다봤다. 이듬해 봄, 화분 옆 작은 침대에서 아이가 첫 울음을 터뜨렸다.",
+            "chance": 60,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 3,
+              "경제력": -2
+            },
+            "addFlags": [
+              "child_plan",
+              "has_child"
+            ]
+          },
+          {
+            "outcomeId": "c_dry",
+            "text": "화분이 한 달 만에 말라 버렸다. 둘은 한동안 둘이서 지내기로 했다.",
+            "chance": 40,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 1
+            },
+            "addFlags": [
+              "no_child_plan"
+            ]
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "관계 단계 전환점 — 연애·결혼·자녀는 능력치 자격이 아니라 의사 결정이라 잠그지 않고, 차이는 결과 분기와 후속 사실로 반영",
+        "conditionReview": "open_turning_point",
+        "conditionBasis": "week13_love_line"
+      }
+    ],
+    "priority": 0,
+    "kind": "MILESTONE",
+    "periods": [
+      "YOUNG_ADULT",
+      "MIDDLE"
+    ],
+    "weight": 1,
+    "view": "FIRST_PERSON",
+    "pathRole": "러브라인 6단계 — 자녀 계획·출산(계획한 이듬해 출생)",
+    "followUps": [
+      "adult_039",
+      "love_first_child_01",
+      "cross_04"
+    ]
+  },
+  "reviewScope": "Current complete event, conditions, every choice including legacy fields, all outcomes, probabilities, deltas and flags read for pre-choice art specification. No new image has been generated or approved by this brief.",
+  "reviewedChoiceIds": [
+    "A",
+    "B",
+    "C"
+  ],
+  "reviewedOutcomeIds": [
+    "a_plan",
+    "b_two",
+    "c_plant",
+    "c_dry"
+  ],
+  "existingArtBriefPath": "docs/assignments/20261031/submissions/김선한_분류합본.csv",
+  "existingArtBriefSnapshot": {
+    "place": "돌잔치에서 돌아오는 차 안",
+    "mainAction": "배우자가 아이 이야기를 꺼낸다",
+    "requiredObjects": "조수석과 창밖 풍경",
+    "peopleAndAge": "주인공과 배우자",
+    "timeOfDay": "저녁",
+    "approvedPerspective": "FIRST_PERSON",
+    "reuseOrNewReason": "NEW: 13주차 러브라인 신규 사건. 관계 단계(연인·약혼·배우자·자녀)를 선택 전보다 앞서 보여 주지 않는 전용 장면 필요"
+  },
+  "requestedAssetPath": "app/src/main/assets/images/img_love_child_plan_01_001.png",
+  "preChoiceState": "자녀가 없는 부부가 조카 돌잔치에서 돌아오는 차 안. 배우자가 창밖을 보며 아이 계획을 처음 묻는다. 임신·양육 계획·화분·둘만의 여행 목록은 아직 없다.",
+  "composition": "플레이어 시점으로 안전벨트를 한 조수석 배우자의 손·어깨 일부와 저녁 창밖을 본다. 운전 여부를 단정하는 핸들/휴대폰 조작 없이 실내와 창문 중심, 동승자가 중립적인 자세로 바깥을 보는 순간.",
+  "ageAndAppearance": "청년~중년 부부. 플레이어 성별과 배우자 외형·성별을 고정하지 않는다. 임신한 배나 자기 아이 없음.",
+  "forbiddenOutcomes": [
+    "초음파 사진·임신·자기 아기·아이 침대",
+    "영양제 두 병·냉장고·양육 준비 완료",
+    "건강한 화분 또는 말라 죽은 화분",
+    "여행 목록·도시 방문",
+    "돌잔치 아기를 본인 자녀로 표현"
+  ],
+  "briefCorrections": [
+    "돌잔치는 조카의 행사이며 has_child 차단 조건이 있다. 선택 C의 초음파·출생은 후속 결과라 현재 차 안에 넣지 않는다."
+  ],
+  "generationPrompt": "Create one portrait 9:16 full-bleed game background, warm restrained Korean everyday-life pixel-art illustration. Crisp deliberate pixel clusters, coherent anatomy, softly separated light and shadow, not photorealism and not a UI mockup. Strict first-person player viewpoint: no player face, back of head, full player body, reflection, selfie or framed portrait of the player. Only naturally placed player hands or forearms may enter the frame. The player can be male or female; hands, clothing and visible partner styling must not encode a fixed player gender or a uniquely named past partner. All romantic participants are clearly adults; do not depict school-age children as romantic partners. Use age-flexible adult styling that can fit young adulthood or middle adulthood. If a partner must be visible, show non-identifying partial profile, cropped upper torso or hands rather than an identity-defining portrait. No readable text, letters, digits, logos, subtitles, speech bubbles, interface panels, progress indicators or button graphics. Any phone message cue must be an abstract non-text shape and never legible text. Keep all story-critical objects together inside the central 60% of the portrait width and middle 60% of height; leave the bottom 22% visually quiet for the game overlay, without drawing an overlay. This is the instant before the player chooses. Show the stated present situation only, with no success, failure, marriage, pregnancy, reconciliation, breakup or future achievement unless already established in the source conditions. \nSCENE: The quiet interior of a car in the evening after attending a NIECES OR NEPHEWS first-birthday gathering. First-person view across the cabin toward the adult spouse sitting safely with a seat belt and looking out the side window, shown only by a relaxed hand, cropped shoulder and non-identifying partial profile. Soft dusk reflections, a calm unresolved conversation about whether to have children. The couple currently has NO children and has made NO decision about a child. No baby, car child seat, pregnancy belly, ultrasound print, crib, vitamins, potted plant, travel checklist or completed family plan. Do not show the player operating a phone, and do not fix the players role as a particular gender or driver.",
+  "deliveryAndReview": {
+    "format": "PNG, portrait 9:16",
+    "originalAssets": "Preserve existing artwork and approval history. This is a missing-art candidate, not a replacement approval.",
+    "requiredChecks": [
+      "Read current event hash again before generation; stale briefs must be reread.",
+      "Inspect full image, anatomy, all required objects and absence of choice outcomes.",
+      "Inspect actual native portrait presentation and UI overlay at phone and narrow viewport.",
+      "Record image SHA, exact generation prompt, truthful AI producer/reviewer and per-event rationale before any separate approval action."
+    ],
+    "approvalOrManifestChanged": false
+  }
+}

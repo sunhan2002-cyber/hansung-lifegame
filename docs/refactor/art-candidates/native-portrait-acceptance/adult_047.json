@@ -1,0 +1,71 @@
+{
+  "eventId": "adult_047",
+  "reviewerType": "AI",
+  "scope": "Portrait phone and small-phone presentation",
+  "sourceEventHash": "e9d007713e566ef9056f0e13e42689a79743a3a1d643598c57778202ba0c5bbb",
+  "sourceReview": "docs/refactor/art-candidates/portrait-integration/adult_047.json",
+  "sourceSha256": "60cda630b331b64626fdd6aa96c34b0a528e66e4a72e2318f6287d751d95286d",
+  "displayedVariant": {
+    "assetPath": "presentation/portraits/img_adult_wedding_invite_001_portrait_v1.png",
+    "sha256": "e9aff2e660df720e0b9d58b7e2f1b7c7354ebc92894e89d144b83a14bedde746",
+    "width": 941,
+    "height": 1672,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/adult_047.json"
+  },
+  "nativeCaptures": [
+    {
+      "path": "build/refactor/resumed/final32/adult_047_phone_scene.png",
+      "sha256": "600d8fb21759c1fdc2b4357ee39a1bc632d44aadaf97dfffd0638f9de170812b",
+      "crop": {
+        "eventId": "adult_047",
+        "imageId": "img_adult_wedding_invite_001",
+        "assetPath": "presentation/portraits/img_adult_wedding_invite_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/final32/adult_047_phone_play.png",
+      "sha256": "eb73a6b3eabcaeb41b463d3e5bbd79a2dbc413de13969ce82c55cfb7b41bfa6c",
+      "crop": {
+        "eventId": "adult_047",
+        "imageId": "img_adult_wedding_invite_001",
+        "assetPath": "presentation/portraits/img_adult_wedding_invite_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/final32/adult_047_360x740_scene.png",
+      "sha256": "2b24ef525f96430ce741b85138ef1f6faf3603759ca683d0f2d0a5dc33830f80",
+      "crop": {
+        "eventId": "adult_047",
+        "imageId": "img_adult_wedding_invite_001",
+        "assetPath": "presentation/portraits/img_adult_wedding_invite_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/final32/adult_047_360x740_play.png",
+      "sha256": "b8ddfe68434bd29cbc7dd4941332ed097164f232862f4a548c7a7e0b0caef98c",
+      "crop": {
+        "eventId": "adult_047",
+        "imageId": "img_adult_wedding_invite_001",
+        "assetPath": "presentation/portraits/img_adult_wedding_invite_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    }
+  ],
+  "observation": "Mobile wedding invitation with rings and a nearby envelope.",
+  "decision": "PASS",
+  "method": "Individual visual inspection of both scene and gameplay frames together with producer semantic/source review and device capture match."
+}

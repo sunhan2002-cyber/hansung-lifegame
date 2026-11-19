@@ -1,0 +1,329 @@
+{
+  "schemaVersion": 1,
+  "eventId": "adult_069",
+  "status": "PASS",
+  "reviewer": "Codex AI / plan_audit",
+  "reviewerType": "AI",
+  "reviewDate": "2026-11-19",
+  "sourceEventHash": "b20489d2a606d0e365dd37c10507ecc6278fc438bfdfecf9d9bd8e7cf2775824",
+  "sourceEventSnapshot": {
+    "eventId": "adult_069",
+    "stage": "ADULT",
+    "type": "NORMAL",
+    "isFallback": false,
+    "isMilestone": false,
+    "title": "승진 심사 전날",
+    "text": "내일은 승진 심사 날이다. 팀장님: \"{name} 씨, 이번엔 될 거야. 아마도.\" 그 '아마도'가 밤새 귀에서 맴돈다.",
+    "imageId": "img_pov_promotion_review_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [
+        "job_employed"
+      ],
+      "blockedFlags": [
+        "promoted",
+        "early_retire",
+        "career_athlete",
+        "pro_athlete",
+        "career_coach",
+        "coach_path",
+        "career_caster",
+        "career_trainer",
+        "career_gym_owner",
+        "career_founder",
+        "career_creator",
+        "career_freelancer",
+        "job_self_employed",
+        "job_retired"
+      ]
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "그동안의 성과를 숫자로 정리해 간다",
+        "statDelta": {
+          "경제력": 4,
+          "행복": 1,
+          "건강": -1
+        },
+        "resultText": "보고서 한 장에 3년이 담겼다. 심사위원들이 고개를 끄덕였다. 새로 나온 명함은 직함이 한 줄 길어져 있었다.",
+        "addFlags": [
+          "promoted",
+          "responsibility"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "a_promoted",
+            "text": "보고서 한 장에 3년이 담겼다. 심사위원들이 고개를 끄덕였다. 새로 나온 명함은 직함이 한 줄 길어져 있었다.",
+            "chance": 50,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "경제력": 4,
+              "행복": 1,
+              "건강": -1
+            },
+            "addFlags": [
+              "promoted",
+              "responsibility"
+            ],
+            "chanceWeights": {
+              "경제력": 3,
+              "지력": 2
+            },
+            "lifeDelta": 4
+          },
+          {
+            "outcomeId": "a_next_year",
+            "text": "숫자는 완벽했다. 그런데 이번엔 자리가 하나뿐이었다. 팀장님이 '내년엔 진짜'라며 커피를 사 줬다.",
+            "chance": 40,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "경제력": 1,
+              "지력": 1,
+              "행복": -2
+            },
+            "addFlags": [
+              "promotion_missed"
+            ],
+            "chanceWeights": {
+              "경제력": -2
+            }
+          },
+          {
+            "outcomeId": "a_transfer",
+            "text": "승진했다. 발령지는 바다가 보이는 지방 지사였다. 이제 출근길에 갈매기가 인사한다.",
+            "chance": 10,
+            "primary": false,
+            "hidden": true,
+            "death": false,
+            "statDelta": {
+              "경제력": 3,
+              "행복": 1,
+              "사회성": -2
+            },
+            "addFlags": [
+              "promoted",
+              "relocated"
+            ],
+            "chanceWeights": {
+              "운": -1
+            }
+          }
+        ]
+      },
+      {
+        "choiceId": "B",
+        "label": "평소 챙겨 온 사람들을 믿는다",
+        "statDelta": {
+          "경제력": 3,
+          "사회성": 1,
+          "지력": -1
+        },
+        "resultText": "심사장에 들어가니 심사위원 셋 중 둘이 같은 동호회 사람이었다. 분위기가 거의 동창회였다. 결과는 합격.",
+        "addFlags": [
+          "promoted"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "b_promoted",
+            "text": "심사장에 들어가니 심사위원 셋 중 둘이 같은 동호회 사람이었다. 분위기가 거의 동창회였다. 결과는 합격.",
+            "chance": 45,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "경제력": 3,
+              "사회성": 1,
+              "지력": -1
+            },
+            "addFlags": [
+              "promoted"
+            ],
+            "chanceWeights": {
+              "사회성": 4
+            },
+            "lifeDelta": 10
+          },
+          {
+            "outcomeId": "b_rumor",
+            "text": "'인맥으로 올라간다'는 소문이 결과보다 먼저 돌았다. 결과는 보류. 그래도 동호회 사람들이 위로 회식을 열어 줬다.",
+            "chance": 55,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "사회성": 1,
+              "경제력": -1,
+              "행복": -1
+            },
+            "addFlags": [
+              "promotion_missed"
+            ],
+            "chanceWeights": {
+              "사회성": -3
+            }
+          }
+        ]
+      },
+      {
+        "choiceId": "C",
+        "label": "심사장에서 회사 노래를 개사해 부른다",
+        "statDelta": {
+          "경제력": 2,
+          "사회성": 3,
+          "지력": -1
+        },
+        "resultText": "심사위원장이 박수를 쳤다. 승진은 물론이고, 다음 달 창립 기념식 사회까지 맡게 됐다.",
+        "addFlags": [
+          "promoted",
+          "absurd_event_witness"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "c_legend",
+            "text": "심사위원장이 박수를 쳤다. 승진은 물론이고, 다음 달 창립 기념식 사회까지 맡게 됐다.",
+            "chance": 30,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "경제력": 2,
+              "사회성": 3,
+              "지력": -1
+            },
+            "addFlags": [
+              "promoted",
+              "absurd_event_witness"
+            ],
+            "chanceWeights": {
+              "운": 3
+            },
+            "lifeDelta": 10
+          },
+          {
+            "outcomeId": "c_silence",
+            "text": "노래가 끝나자 정적이 흘렀다. 결과는 낙방. 그날 영상은 사내 메신저에서 3년째 돌고 있다.",
+            "chance": 70,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "사회성": 1,
+              "행복": -1,
+              "경제력": -1
+            },
+            "addFlags": [
+              "promotion_missed",
+              "absurd_event_witness"
+            ],
+            "chanceWeights": {
+              "운": -2
+            }
+          }
+        ]
+      }
+    ],
+    "priority": 0,
+    "kind": "INCIDENT",
+    "periods": [
+      "YOUNG_ADULT",
+      "MIDDLE"
+    ],
+    "weight": 2,
+    "view": "FIRST_PERSON",
+    "momentImageId": "img_moment_promotion_review_001"
+  },
+  "sourceReadScope": "Current complete event, conditions, every choice/outcome and flags/stat deltas/periods/follow-ups directly read before judgement.",
+  "sourceImage": {
+    "path": "app/src/main/assets/images/followup_20261031/img_pov_promotion_review_001.png",
+    "sha256": "0a002fec7def270dcb256aa260a5a78adda2f4a39c948417ac8c2ffedb4ebfba",
+    "width": 1448,
+    "height": 1086
+  },
+  "originalArtworkUnchangedSinceHistoricalReview": true,
+  "historicalReview": {
+    "eventId": "adult_069",
+    "title": "승진 심사 전날",
+    "imageId": "img_pov_promotion_review_001",
+    "assetPath": "followup_20261031/img_pov_promotion_review_001.png",
+    "sha256": "0a002fec7def270dcb256aa260a5a78adda2f4a39c948417ac8c2ffedb4ebfba",
+    "eventSourceHash": "b20489d2a606d0e365dd37c10507ecc6278fc438bfdfecf9d9bd8e7cf2775824",
+    "status": "REVISION_REQUIRED",
+    "reviewer": "김선한 담당 Codex 직접 대행 검수",
+    "reason": "승진심사 전날 사건에 일반 정장·침실만 있어 사건 구별 단서 보강 필요",
+    "expectedAction": "승진 심사 전날 밤 잠 못 들고 천장을 봄",
+    "requiredObjects": "침대, 걸어 둔 정장, 알람; 서류철 없음",
+    "sheet": "output/art-review-20261119/sheet-12.jpg",
+    "cell": 11,
+    "cropMethod": "ImageOps.fit centre-fill 360:800; simulated crop inspected directly, not an emulator capture",
+    "visualMethod": "원본 도트풍·색감·장면 파손·명백한 신체/사물 오류 직접 확인"
+  },
+  "presentationMetadata": [],
+  "captures": [
+    {
+      "path": "build/refactor/after/originals-twentyfour-and-variants-native/adult_069_phone_scene.png",
+      "sha256": "6cdf878084520ec42ac0cd987a9a4186100d297142fcc32234d4d4c9ed90effd",
+      "width": 1080,
+      "height": 2400,
+      "screen": "phone",
+      "mode": "scene",
+      "cropReport": {
+        "eventId": "adult_069",
+        "imageId": "img_pov_promotion_review_001",
+        "assetPath": "followup_20261031/img_pov_promotion_review_001.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.331..0.669",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/originals-twentyfour-and-variants-native/adult_069_phone_play.png",
+      "sha256": "bf8bced684c2a9a26112d21edeab3494480baee48ea288af46b82b3fefba9a8a",
+      "width": 1080,
+      "height": 2400,
+      "screen": "phone",
+      "mode": "play",
+      "cropReport": null
+    },
+    {
+      "path": "build/refactor/after/originals-twentyfour-and-variants-native/adult_069_360x740_scene.png",
+      "sha256": "1a49443d784d8c5da625b242a1e03cfaf6d422fdbe3c3deb8bd0a3ca88b554ff",
+      "width": 945,
+      "height": 1943,
+      "screen": "360x740",
+      "mode": "scene",
+      "cropReport": {
+        "eventId": "adult_069",
+        "imageId": "img_pov_promotion_review_001",
+        "assetPath": "followup_20261031/img_pov_promotion_review_001.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.318..0.682",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/originals-twentyfour-and-variants-native/adult_069_360x740_play.png",
+      "sha256": "a893ee586edbce5e8b29955b6c4ff1d0c2b87d10c62287c807e73e814962f342",
+      "width": 945,
+      "height": 1943,
+      "screen": "360x740",
+      "mode": "play",
+      "cropReport": null
+    }
+  ],
+  "semanticObservation": "내일 심사를 앞두고 침대에서 준비된 정장을 바라보는 밤이다. 정장/알람과 이불의 1인칭 시선이 대기와 긴장을 나타낸다. 아직 성과 보고서 정리·심사위원·승진 명함·지방 발령·노래나 낙방 결과는 없다.",
+  "cropObservation": "두 native에서 옷걸이와 정장 전체, 알람시계와 이불이 남는다. 심사장 자체를 보여야 한다는 과거 의견은 심사 전날 밤이라는 현재 원문과 맞지 않아 결과 장면을 추가하지 않는다.",
+  "uiObservation": "두 크기에서 제목·본문·세 선택지 문구를 읽을 수 있다. small C 카드 하단이 footer 경계라 별도 스크롤 검증을 이 아트 리뷰로 주장하지 않는다.",
+  "reviewMethod": "Codex AI directly inspected the full unchanged source PNG and all four unmodified native scene/play captures. Prior review is retained as historical evidence; this record is a new AI judgement, not human approval.",
+  "nativeMethod": "Production DecisionScreen, current parsed event/routing/PixelAssetLoader, fixture state in Android Compose instrumentation. Scene grid match >=0.95. Not complete game progression.",
+  "nativeRunLog": "build/refactor/depth-and-originals-twentyfour.log",
+  "limitations": [
+    "Emulator captures, not physical-device review.",
+    "Only reviewed phone and 360x740 dimensions; not every font scale/aspect ratio.",
+    "Art review does not independently certify scrolling, TalkBack or complete game-flow transitions."
+  ]
+}

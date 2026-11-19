@@ -1,0 +1,612 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-19",
+  "producer": "OpenAI built-in image_gen invoked by Codex AI",
+  "skillPath": "C:/Users/jk030/.codex/skills/.system/imagegen/SKILL.md",
+  "mode": "BUILTIN_ONLY_NO_CLI_OR_API",
+  "reviewer": "Codex AI (/root/plan_audit)",
+  "reviewerType": "AI",
+  "expectedEvents": 10,
+  "completedSourceReviews": 10,
+  "generationAttempts": 11,
+  "rejectedAttempts": 1,
+  "status": "ALL_TEN_SELECTED_SOURCE_REVIEWED_NATIVE_PENDING",
+  "runtimeAssetsChanged": false,
+  "approvalOrManifestChanged": false,
+  "limitations": [
+    "Source-only AI review does not certify actual native crop or game UI overlay.",
+    "Candidates remain in build/refactor/art-staging until root integrates after the current Gradle run.",
+    "No classification or art approval status was changed."
+  ],
+  "items": [
+    {
+      "eventId": "love_conflict_01",
+      "title": "말다툼 다음 날",
+      "imageId": "img_love_conflict_01_001",
+      "priority": 11,
+      "briefPath": "docs/refactor/art-candidates/missing-love-briefs/love_conflict_01.json",
+      "sourceEventHash": "ed6624036a1307824e3bd4af722bb6e5f0a6112386f144c3374cbddb9f1676bd",
+      "status": "SELECTED_SOURCE_NATIVE_PENDING",
+      "nativeReviewStatus": "NOT_PERFORMED",
+      "sourceGeneratedPath": "C:\\Users\\jk030\\.codex\\generated_images\\01a1f1e9-d1e7-7610-888a-7aff56bbb301\\exec-6f32a8b5-5f03-4a69-ad2a-40bde7aa1c26.png",
+      "stagingAssetPath": "build/refactor/art-staging/img_love_conflict_01_001.png",
+      "exactPrompt": "Create one portrait 9:16 full-bleed game background, warm restrained Korean everyday-life pixel-art illustration. Crisp deliberate pixel clusters, coherent anatomy, softly separated light and shadow, not photorealism and not a UI mockup. Strict first-person player viewpoint: no player face, back of head, full player body, reflection, selfie or framed portrait of the player. Only naturally placed player hands or forearms may enter the frame. The player can be male or female; hands, clothing and visible partner styling must not encode a fixed player gender or a uniquely named past partner. All romantic participants are clearly adults; do not depict school-age children as romantic partners. Use age-flexible adult styling that can fit young adulthood or middle adulthood. If a partner must be visible, show non-identifying partial profile, cropped upper torso or hands rather than an identity-defining portrait. No readable text, letters, digits, logos, subtitles, speech bubbles, interface panels, progress indicators or button graphics. Any phone message cue must be an abstract non-text shape and never legible text. Keep all story-critical objects together inside the central 60% of the portrait width and middle 60% of height; leave the bottom 22% visually quiet for the game overlay, without drawing an overlay. This is the instant before the player chooses. Show the stated present situation only, with no success, failure, marriage, pregnancy, reconciliation, breakup or future achievement unless already established in the source conditions. \nSCENE: A quiet bedroom at night after an argument with an adult partner the previous night. First-person close view of a phone held naturally in one hand, with a soft bedside lamp and dark bed fabrics behind it. The phone screen is deliberately minimal: a single small abstract three-dot typing cue on a blank subdued surface, no readable words, numerals, avatars, keyboard or decorative UI panels. The player waits, undecided. No other person in the room, active voice call, emoji, laughing cat, blocked symbol, cafe, tteokbokki, bread at the door, tears announcing a breakup or reconciliation embrace.",
+      "sourceVisualReview": {
+        "reviewer": "Codex AI (/root/plan_audit)",
+        "reviewerType": "AI",
+        "method": "Direct visual inspection of the complete built-in generated image displayed by the tool; source-only, not an emulator capture.",
+        "status": "SELECTED_SOURCE_NATIVE_PENDING",
+        "observations": [
+          "A single hand holds an intact phone with three abstract typing dots; no readable dialogue, avatar, sent emoji or blocked indicator.",
+          "Night bedroom and isolated waiting are clear; no lover, reconciliation, breakup or food from later branches is shown.",
+          "Phone and typing cue are central; the lower image is quiet bedding. Five fingers are accounted for by thumb and four curled fingers."
+        ],
+        "concerns": [
+          "Native crop and UI-overlay inspection remains required."
+        ]
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "sourceGeneratedPath": "C:\\Users\\jk030\\.codex\\generated_images\\01a1f1e9-d1e7-7610-888a-7aff56bbb301\\exec-6f32a8b5-5f03-4a69-ad2a-40bde7aa1c26.png",
+          "exactPrompt": "Create one portrait 9:16 full-bleed game background, warm restrained Korean everyday-life pixel-art illustration. Crisp deliberate pixel clusters, coherent anatomy, softly separated light and shadow, not photorealism and not a UI mockup. Strict first-person player viewpoint: no player face, back of head, full player body, reflection, selfie or framed portrait of the player. Only naturally placed player hands or forearms may enter the frame. The player can be male or female; hands, clothing and visible partner styling must not encode a fixed player gender or a uniquely named past partner. All romantic participants are clearly adults; do not depict school-age children as romantic partners. Use age-flexible adult styling that can fit young adulthood or middle adulthood. If a partner must be visible, show non-identifying partial profile, cropped upper torso or hands rather than an identity-defining portrait. No readable text, letters, digits, logos, subtitles, speech bubbles, interface panels, progress indicators or button graphics. Any phone message cue must be an abstract non-text shape and never legible text. Keep all story-critical objects together inside the central 60% of the portrait width and middle 60% of height; leave the bottom 22% visually quiet for the game overlay, without drawing an overlay. This is the instant before the player chooses. Show the stated present situation only, with no success, failure, marriage, pregnancy, reconciliation, breakup or future achievement unless already established in the source conditions. \nSCENE: A quiet bedroom at night after an argument with an adult partner the previous night. First-person close view of a phone held naturally in one hand, with a soft bedside lamp and dark bed fabrics behind it. The phone screen is deliberately minimal: a single small abstract three-dot typing cue on a blank subdued surface, no readable words, numerals, avatars, keyboard or decorative UI panels. The player waits, undecided. No other person in the room, active voice call, emoji, laughing cat, blocked symbol, cafe, tteokbokki, bread at the door, tears announcing a breakup or reconciliation embrace.",
+          "status": "SELECTED_SOURCE_NATIVE_PENDING",
+          "review": {
+            "status": "SELECTED_SOURCE_NATIVE_PENDING",
+            "observations": [
+              "A single hand holds an intact phone with three abstract typing dots; no readable dialogue, avatar, sent emoji or blocked indicator.",
+              "Night bedroom and isolated waiting are clear; no lover, reconciliation, breakup or food from later branches is shown.",
+              "Phone and typing cue are central; the lower image is quiet bedding. Five fingers are accounted for by thumb and four curled fingers."
+            ],
+            "concerns": [
+              "Native crop and UI-overlay inspection remains required."
+            ]
+          },
+          "sha256": "90f1926ce34e095760c2d028386f76786af6808eb4dda0309d48bd41ed140b38",
+          "exactPromptSha256": "9aed4ade21d5b122063ca384c42d92c8bb4e7a4af9d90246511d9adb1e785441",
+          "width": 941,
+          "height": 1672
+        }
+      ],
+      "approvalOrManifestChanged": false,
+      "width": 941,
+      "height": 1672,
+      "sourceSha256": "90f1926ce34e095760c2d028386f76786af6808eb4dda0309d48bd41ed140b38",
+      "stagedSha256": "90f1926ce34e095760c2d028386f76786af6808eb4dda0309d48bd41ed140b38",
+      "bytes": 1514274,
+      "exactPromptSha256": "9aed4ade21d5b122063ca384c42d92c8bb4e7a4af9d90246511d9adb1e785441"
+    },
+    {
+      "eventId": "love_conflict_first_love",
+      "title": "오래 알아서 더 서운한 날",
+      "imageId": "img_love_conflict_first_love_001",
+      "priority": 12,
+      "briefPath": "docs/refactor/art-candidates/missing-love-briefs/love_conflict_first_love.json",
+      "sourceEventHash": "6e42edd2377dcd37934fe80384cfb84963c7f959b9eb6eb19c3098f121c05e49",
+      "status": "SELECTED_SOURCE_NATIVE_PENDING",
+      "nativeReviewStatus": "NOT_PERFORMED",
+      "sourceGeneratedPath": "C:\\Users\\jk030\\.codex\\generated_images\\01a1f1e9-d1e7-7610-888a-7aff56bbb301\\exec-28313d27-e597-4e85-ba5c-b889234709a2.png",
+      "stagingAssetPath": "build/refactor/art-staging/img_love_conflict_first_love_001.png",
+      "exactPrompt": "Create one portrait 9:16 full-bleed game background, warm restrained Korean everyday-life pixel-art illustration. Crisp deliberate pixel clusters, coherent anatomy, softly separated light and shadow, not photorealism and not a UI mockup. Strict first-person player viewpoint: no player face, back of head, full player body, reflection, selfie or framed portrait of the player. Only naturally placed player hands or forearms may enter the frame. The player can be male or female; hands, clothing and visible partner styling must not encode a fixed player gender or a uniquely named past partner. All romantic participants are clearly adults; do not depict school-age children as romantic partners. Use age-flexible adult styling that can fit young adulthood or middle adulthood. If a partner must be visible, show non-identifying partial profile, cropped upper torso or hands rather than an identity-defining portrait. No readable text, letters, digits, logos, subtitles, speech bubbles, interface panels, progress indicators or button graphics. Any phone message cue must be an abstract non-text shape and never legible text. Keep all story-critical objects together inside the central 60% of the portrait width and middle 60% of height; leave the bottom 22% visually quiet for the game overlay, without drawing an overlay. This is the instant before the player chooses. Show the stated present situation only, with no success, failure, marriage, pregnancy, reconciliation, breakup or future achievement unless already established in the source conditions. \nSCENE: An unresolved conversation between two ADULT partners who have known each other since school, at a cafe table in afternoon light. First-person view of two drinks, the players calm hand at the near edge, and the partners slightly tense hands with a cropped upper torso across the table. There is emotional distance but no declared breakup. Absolutely no school photograph, album, school uniform, children, memory inset or flashback: a photograph is only a FUTURE possible choice and has not been taken out. No laughing together, touching backs, new date location or joined hands. Convey quiet hurt through posture rather than a fixed face or gender.",
+      "sourceVisualReview": {
+        "reviewer": "Codex AI (/root/plan_audit)",
+        "reviewerType": "AI",
+        "method": "Direct visual inspection of the complete built-in generated image displayed by the tool; source-only, not an emulator capture.",
+        "status": "SELECTED_SOURCE_NATIVE_PENDING",
+        "observations": [
+          "Adult partner upper torso and tense clasped hands across a cafe table; two drinks and the player own hand are visible.",
+          "No school photo, album, school uniform, shared laughter, renewed date or breakup outcome.",
+          "The cropped partner face does not identify the player; hands remain separate with a plausible table perspective."
+        ],
+        "concerns": [
+          "Native crop and UI-overlay inspection remains required."
+        ]
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "sourceGeneratedPath": "C:\\Users\\jk030\\.codex\\generated_images\\01a1f1e9-d1e7-7610-888a-7aff56bbb301\\exec-28313d27-e597-4e85-ba5c-b889234709a2.png",
+          "exactPrompt": "Create one portrait 9:16 full-bleed game background, warm restrained Korean everyday-life pixel-art illustration. Crisp deliberate pixel clusters, coherent anatomy, softly separated light and shadow, not photorealism and not a UI mockup. Strict first-person player viewpoint: no player face, back of head, full player body, reflection, selfie or framed portrait of the player. Only naturally placed player hands or forearms may enter the frame. The player can be male or female; hands, clothing and visible partner styling must not encode a fixed player gender or a uniquely named past partner. All romantic participants are clearly adults; do not depict school-age children as romantic partners. Use age-flexible adult styling that can fit young adulthood or middle adulthood. If a partner must be visible, show non-identifying partial profile, cropped upper torso or hands rather than an identity-defining portrait. No readable text, letters, digits, logos, subtitles, speech bubbles, interface panels, progress indicators or button graphics. Any phone message cue must be an abstract non-text shape and never legible text. Keep all story-critical objects together inside the central 60% of the portrait width and middle 60% of height; leave the bottom 22% visually quiet for the game overlay, without drawing an overlay. This is the instant before the player chooses. Show the stated present situation only, with no success, failure, marriage, pregnancy, reconciliation, breakup or future achievement unless already established in the source conditions. \nSCENE: An unresolved conversation between two ADULT partners who have known each other since school, at a cafe table in afternoon light. First-person view of two drinks, the players calm hand at the near edge, and the partners slightly tense hands with a cropped upper torso across the table. There is emotional distance but no declared breakup. Absolutely no school photograph, album, school uniform, children, memory inset or flashback: a photograph is only a FUTURE possible choice and has not been taken out. No laughing together, touching backs, new date location or joined hands. Convey quiet hurt through posture rather than a fixed face or gender.",
+          "status": "SELECTED_SOURCE_NATIVE_PENDING",
+          "review": {
+            "status": "SELECTED_SOURCE_NATIVE_PENDING",
+            "observations": [
+              "Adult partner upper torso and tense clasped hands across a cafe table; two drinks and the player own hand are visible.",
+              "No school photo, album, school uniform, shared laughter, renewed date or breakup outcome.",
+              "The cropped partner face does not identify the player; hands remain separate with a plausible table perspective."
+            ],
+            "concerns": [
+              "Native crop and UI-overlay inspection remains required."
+            ]
+          },
+          "sha256": "63a300b1283e3398f4b61f8cb07ceb6d824b0693094519ce67f454fe1cdd4e35",
+          "exactPromptSha256": "43ff0f8efa0dd17a1db8501a36b2d7eda1a15463abe738e716e05519a86a5bbe",
+          "width": 941,
+          "height": 1672
+        }
+      ],
+      "approvalOrManifestChanged": false,
+      "width": 941,
+      "height": 1672,
+      "sourceSha256": "63a300b1283e3398f4b61f8cb07ceb6d824b0693094519ce67f454fe1cdd4e35",
+      "stagedSha256": "63a300b1283e3398f4b61f8cb07ceb6d824b0693094519ce67f454fe1cdd4e35",
+      "bytes": 1922652,
+      "exactPromptSha256": "43ff0f8efa0dd17a1db8501a36b2d7eda1a15463abe738e716e05519a86a5bbe"
+    },
+    {
+      "eventId": "love_conflict_ideal",
+      "title": "이상형의 단점",
+      "imageId": "img_love_conflict_ideal_001",
+      "priority": 13,
+      "briefPath": "docs/refactor/art-candidates/missing-love-briefs/love_conflict_ideal.json",
+      "sourceEventHash": "78d42a8a39f9a20ea43b21abef36d3b8c774bb0835c2393927403741a6a5ca5c",
+      "status": "SELECTED_SOURCE_NATIVE_PENDING",
+      "nativeReviewStatus": "NOT_PERFORMED",
+      "sourceGeneratedPath": "C:\\Users\\jk030\\.codex\\generated_images\\01a1f1e9-d1e7-7610-888a-7aff56bbb301\\exec-05a4b64e-02fe-484d-a579-8270f3d46265.png",
+      "stagingAssetPath": "build/refactor/art-staging/img_love_conflict_ideal_001.png",
+      "exactPrompt": "Create one portrait 9:16 full-bleed game background, warm restrained Korean everyday-life pixel-art illustration. Crisp deliberate pixel clusters, coherent anatomy, softly separated light and shadow, not photorealism and not a UI mockup. Strict first-person player viewpoint: no player face, back of head, full player body, reflection, selfie or framed portrait of the player. Only naturally placed player hands or forearms may enter the frame. The player can be male or female; hands, clothing and visible partner styling must not encode a fixed player gender or a uniquely named past partner. All romantic participants are clearly adults; do not depict school-age children as romantic partners. Use age-flexible adult styling that can fit young adulthood or middle adulthood. If a partner must be visible, show non-identifying partial profile, cropped upper torso or hands rather than an identity-defining portrait. No readable text, letters, digits, logos, subtitles, speech bubbles, interface panels, progress indicators or button graphics. Any phone message cue must be an abstract non-text shape and never legible text. Keep all story-critical objects together inside the central 60% of the portrait width and middle 60% of height; leave the bottom 22% visually quiet for the game overlay, without drawing an overlay. This is the instant before the player chooses. Show the stated present situation only, with no success, failure, marriage, pregnancy, reconciliation, breakup or future achievement unless already established in the source conditions. \nSCENE: First-person waiting alone at an evening meeting spot beneath a modest Korean city clock tower. Centre the empty place where the partner is expected; one neutral adult hand loosely holds a phone with a dark unreadable screen in the middle foreground. A simple clock silhouette without legible digits appears above, warm lights starting to glow, stillness suggesting a long wait. The romantic partner has NOT arrived: no person rushing toward the player, apologising, checking clothes, waiting together or leaving after a breakup. No readable time, countdown, message, sign or numbered clock face. The unresolved absence is the story.\nCORRECTION TO PREVENT AN UNAUTHORED TIME: The clock tower must have a frosted, unlit opaque circular dial catching diffuse light, with NO visible clock hands, numerals, tick marks, symbols or readable time whatsoever. Keep the recognisable modest clock-tower silhouette, empty meeting spot, evening light and dark-screen phone. Do not introduce a waiting partner or any future outcome.",
+      "sourceVisualReview": {
+        "reviewer": "Codex AI (/root/plan_audit)",
+        "reviewerType": "AI",
+        "method": "Direct visual inspection of the complete built-in generated image displayed by the tool; source-only, not an emulator capture.",
+        "status": "SELECTED_SOURCE_NATIVE_PENDING",
+        "observations": [
+          "Empty evening meeting place with recognisable tower silhouette; the corrected opaque dial contains no readable hands, digits or time.",
+          "One plausible hand holds a dark phone; no partner has arrived and no apology or breakup has happened.",
+          "Waiting space, tower and phone form a central vertical composition."
+        ],
+        "concerns": [
+          "Native crop and UI-overlay inspection remains required."
+        ]
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "sourceGeneratedPath": "C:\\Users\\jk030\\.codex\\generated_images\\01a1f1e9-d1e7-7610-888a-7aff56bbb301\\exec-4ebf365d-202b-4917-87aa-12ee8b16d471.png",
+          "exactPrompt": "Create one portrait 9:16 full-bleed game background, warm restrained Korean everyday-life pixel-art illustration. Crisp deliberate pixel clusters, coherent anatomy, softly separated light and shadow, not photorealism and not a UI mockup. Strict first-person player viewpoint: no player face, back of head, full player body, reflection, selfie or framed portrait of the player. Only naturally placed player hands or forearms may enter the frame. The player can be male or female; hands, clothing and visible partner styling must not encode a fixed player gender or a uniquely named past partner. All romantic participants are clearly adults; do not depict school-age children as romantic partners. Use age-flexible adult styling that can fit young adulthood or middle adulthood. If a partner must be visible, show non-identifying partial profile, cropped upper torso or hands rather than an identity-defining portrait. No readable text, letters, digits, logos, subtitles, speech bubbles, interface panels, progress indicators or button graphics. Any phone message cue must be an abstract non-text shape and never legible text. Keep all story-critical objects together inside the central 60% of the portrait width and middle 60% of height; leave the bottom 22% visually quiet for the game overlay, without drawing an overlay. This is the instant before the player chooses. Show the stated present situation only, with no success, failure, marriage, pregnancy, reconciliation, breakup or future achievement unless already established in the source conditions. \nSCENE: First-person waiting alone at an evening meeting spot beneath a modest Korean city clock tower. Centre the empty place where the partner is expected; one neutral adult hand loosely holds a phone with a dark unreadable screen in the middle foreground. A simple clock silhouette without legible digits appears above, warm lights starting to glow, stillness suggesting a long wait. The romantic partner has NOT arrived: no person rushing toward the player, apologising, checking clothes, waiting together or leaving after a breakup. No readable time, countdown, message, sign or numbered clock face. The unresolved absence is the story.",
+          "status": "REJECTED_REGENERATE",
+          "review": {
+            "status": "REJECTED_REGENERATE",
+            "reasons": [
+              "Clock hands visibly depict about 10:10 against evening sunset, introducing a specific readable time not established in the source. The brief explicitly forbids readable time."
+            ],
+            "requiredCorrection": "Keep clock-tower silhouette and solitary wait; obscure the actual dial so no hands, ticks or time can be read."
+          },
+          "sha256": "5e453fde75dfedabb3852f1ca64a3f38888a58093c57a96f447f74be2bdda544",
+          "exactPromptSha256": "0e1a0846f2ef3c62bdf1983f62a8ee75378aee21950b2b89860d72ada2941c3a",
+          "width": 941,
+          "height": 1672
+        },
+        {
+          "attempt": 2,
+          "sourceGeneratedPath": "C:\\Users\\jk030\\.codex\\generated_images\\01a1f1e9-d1e7-7610-888a-7aff56bbb301\\exec-05a4b64e-02fe-484d-a579-8270f3d46265.png",
+          "exactPrompt": "Create one portrait 9:16 full-bleed game background, warm restrained Korean everyday-life pixel-art illustration. Crisp deliberate pixel clusters, coherent anatomy, softly separated light and shadow, not photorealism and not a UI mockup. Strict first-person player viewpoint: no player face, back of head, full player body, reflection, selfie or framed portrait of the player. Only naturally placed player hands or forearms may enter the frame. The player can be male or female; hands, clothing and visible partner styling must not encode a fixed player gender or a uniquely named past partner. All romantic participants are clearly adults; do not depict school-age children as romantic partners. Use age-flexible adult styling that can fit young adulthood or middle adulthood. If a partner must be visible, show non-identifying partial profile, cropped upper torso or hands rather than an identity-defining portrait. No readable text, letters, digits, logos, subtitles, speech bubbles, interface panels, progress indicators or button graphics. Any phone message cue must be an abstract non-text shape and never legible text. Keep all story-critical objects together inside the central 60% of the portrait width and middle 60% of height; leave the bottom 22% visually quiet for the game overlay, without drawing an overlay. This is the instant before the player chooses. Show the stated present situation only, with no success, failure, marriage, pregnancy, reconciliation, breakup or future achievement unless already established in the source conditions. \nSCENE: First-person waiting alone at an evening meeting spot beneath a modest Korean city clock tower. Centre the empty place where the partner is expected; one neutral adult hand loosely holds a phone with a dark unreadable screen in the middle foreground. A simple clock silhouette without legible digits appears above, warm lights starting to glow, stillness suggesting a long wait. The romantic partner has NOT arrived: no person rushing toward the player, apologising, checking clothes, waiting together or leaving after a breakup. No readable time, countdown, message, sign or numbered clock face. The unresolved absence is the story.\nCORRECTION TO PREVENT AN UNAUTHORED TIME: The clock tower must have a frosted, unlit opaque circular dial catching diffuse light, with NO visible clock hands, numerals, tick marks, symbols or readable time whatsoever. Keep the recognisable modest clock-tower silhouette, empty meeting spot, evening light and dark-screen phone. Do not introduce a waiting partner or any future outcome.",
+          "status": "SELECTED_SOURCE_NATIVE_PENDING",
+          "review": {
+            "status": "SELECTED_SOURCE_NATIVE_PENDING",
+            "observations": [
+              "Empty evening meeting place with recognisable tower silhouette; the corrected opaque dial contains no readable hands, digits or time.",
+              "One plausible hand holds a dark phone; no partner has arrived and no apology or breakup has happened.",
+              "Waiting space, tower and phone form a central vertical composition."
+            ],
+            "concerns": [
+              "Native crop and UI-overlay inspection remains required."
+            ]
+          },
+          "sha256": "28362feadf355272d5b41e6f832f69f792729203da6df9b940e7eccf34917827",
+          "exactPromptSha256": "3ee322513b82b46c68ba963fd65b7a0c104323e3f365ee7dfc55328a38b2d12b",
+          "width": 941,
+          "height": 1672
+        }
+      ],
+      "approvalOrManifestChanged": false,
+      "width": 941,
+      "height": 1672,
+      "sourceSha256": "28362feadf355272d5b41e6f832f69f792729203da6df9b940e7eccf34917827",
+      "stagedSha256": "28362feadf355272d5b41e6f832f69f792729203da6df9b940e7eccf34917827",
+      "bytes": 2062511,
+      "exactPromptSha256": "3ee322513b82b46c68ba963fd65b7a0c104323e3f365ee7dfc55328a38b2d12b"
+    },
+    {
+      "eventId": "love_conflict_music",
+      "title": "연주가 끝난 뒤",
+      "imageId": "img_love_conflict_music_001",
+      "priority": 14,
+      "briefPath": "docs/refactor/art-candidates/missing-love-briefs/love_conflict_music.json",
+      "sourceEventHash": "1e8eb42bee108be2658737d956e774d5fb2f244e5e50a17381de3ddc74a10590",
+      "status": "SELECTED_SOURCE_NATIVE_PENDING",
+      "nativeReviewStatus": "NOT_PERFORMED",
+      "sourceGeneratedPath": "C:\\Users\\jk030\\.codex\\generated_images\\01a1f1e9-d1e7-7610-888a-7aff56bbb301\\exec-18725b95-758d-4c02-ab27-3df661e97fc9.png",
+      "stagingAssetPath": "build/refactor/art-staging/img_love_conflict_music_001.png",
+      "exactPrompt": "Create one portrait 9:16 full-bleed game background, warm restrained Korean everyday-life pixel-art illustration. Crisp deliberate pixel clusters, coherent anatomy, softly separated light and shadow, not photorealism and not a UI mockup. Strict first-person player viewpoint: no player face, back of head, full player body, reflection, selfie or framed portrait of the player. Only naturally placed player hands or forearms may enter the frame. The player can be male or female; hands, clothing and visible partner styling must not encode a fixed player gender or a uniquely named past partner. All romantic participants are clearly adults; do not depict school-age children as romantic partners. Use age-flexible adult styling that can fit young adulthood or middle adulthood. If a partner must be visible, show non-identifying partial profile, cropped upper torso or hands rather than an identity-defining portrait. No readable text, letters, digits, logos, subtitles, speech bubbles, interface panels, progress indicators or button graphics. Any phone message cue must be an abstract non-text shape and never legible text. Keep all story-critical objects together inside the central 60% of the portrait width and middle 60% of height; leave the bottom 22% visually quiet for the game overlay, without drawing an overlay. This is the instant before the player chooses. Show the stated present situation only, with no success, failure, marriage, pregnancy, reconciliation, breakup or future achievement unless already established in the source conditions. \nSCENE: A small music rehearsal room in the evening just after practice. First-person viewpoint facing the adult partners resting hands and cropped upper torso, with an EMPTY music stand and a CLOSED guitar case grouped centrally. A soft rehearsal lamp, muted acoustic wall panels, no readable notes. The partner is asking to talk about something other than music; instruments are at rest and the conversation is unresolved. No metronome or gift box, new composed song or lyric sheet, concert stage, successful performance, weekend date elsewhere, embrace or explicit breakup. Show tension through the quiet gap between hands, without fixing identities or gender.",
+      "sourceVisualReview": {
+        "reviewer": "Codex AI (/root/plan_audit)",
+        "reviewerType": "AI",
+        "method": "Direct visual inspection of the complete built-in generated image displayed by the tool; source-only, not an emulator capture.",
+        "status": "SELECTED_SOURCE_NATIVE_PENDING",
+        "observations": [
+          "Empty music stand and closed guitar case remain central in a resting rehearsal room; no sheet music, new song or metronome gift.",
+          "Partner hands and player hands are distinct, naturally resting, with no embrace or completed breakup.",
+          "No readable wording or played instrument; open conversation after rehearsal is conveyed."
+        ],
+        "concerns": [
+          "Native crop and UI-overlay inspection remains required."
+        ]
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "sourceGeneratedPath": "C:\\Users\\jk030\\.codex\\generated_images\\01a1f1e9-d1e7-7610-888a-7aff56bbb301\\exec-18725b95-758d-4c02-ab27-3df661e97fc9.png",
+          "exactPrompt": "Create one portrait 9:16 full-bleed game background, warm restrained Korean everyday-life pixel-art illustration. Crisp deliberate pixel clusters, coherent anatomy, softly separated light and shadow, not photorealism and not a UI mockup. Strict first-person player viewpoint: no player face, back of head, full player body, reflection, selfie or framed portrait of the player. Only naturally placed player hands or forearms may enter the frame. The player can be male or female; hands, clothing and visible partner styling must not encode a fixed player gender or a uniquely named past partner. All romantic participants are clearly adults; do not depict school-age children as romantic partners. Use age-flexible adult styling that can fit young adulthood or middle adulthood. If a partner must be visible, show non-identifying partial profile, cropped upper torso or hands rather than an identity-defining portrait. No readable text, letters, digits, logos, subtitles, speech bubbles, interface panels, progress indicators or button graphics. Any phone message cue must be an abstract non-text shape and never legible text. Keep all story-critical objects together inside the central 60% of the portrait width and middle 60% of height; leave the bottom 22% visually quiet for the game overlay, without drawing an overlay. This is the instant before the player chooses. Show the stated present situation only, with no success, failure, marriage, pregnancy, reconciliation, breakup or future achievement unless already established in the source conditions. \nSCENE: A small music rehearsal room in the evening just after practice. First-person viewpoint facing the adult partners resting hands and cropped upper torso, with an EMPTY music stand and a CLOSED guitar case grouped centrally. A soft rehearsal lamp, muted acoustic wall panels, no readable notes. The partner is asking to talk about something other than music; instruments are at rest and the conversation is unresolved. No metronome or gift box, new composed song or lyric sheet, concert stage, successful performance, weekend date elsewhere, embrace or explicit breakup. Show tension through the quiet gap between hands, without fixing identities or gender.",
+          "status": "SELECTED_SOURCE_NATIVE_PENDING",
+          "review": {
+            "status": "SELECTED_SOURCE_NATIVE_PENDING",
+            "observations": [
+              "Empty music stand and closed guitar case remain central in a resting rehearsal room; no sheet music, new song or metronome gift.",
+              "Partner hands and player hands are distinct, naturally resting, with no embrace or completed breakup.",
+              "No readable wording or played instrument; open conversation after rehearsal is conveyed."
+            ],
+            "concerns": [
+              "Native crop and UI-overlay inspection remains required."
+            ]
+          },
+          "sha256": "5921f8282b4d40e3dfc961722619c986d26cd6a1c5867a83ba7eab1e4e6d5870",
+          "exactPromptSha256": "ba3d987b909f666f6cc37cf93246a10cf767ace61fbdbb0282164cf0792f46f1",
+          "width": 941,
+          "height": 1672
+        }
+      ],
+      "approvalOrManifestChanged": false,
+      "width": 941,
+      "height": 1672,
+      "sourceSha256": "5921f8282b4d40e3dfc961722619c986d26cd6a1c5867a83ba7eab1e4e6d5870",
+      "stagedSha256": "5921f8282b4d40e3dfc961722619c986d26cd6a1c5867a83ba7eab1e4e6d5870",
+      "bytes": 1812590,
+      "exactPromptSha256": "ba3d987b909f666f6cc37cf93246a10cf767ace61fbdbb0282164cf0792f46f1"
+    },
+    {
+      "eventId": "love_conflict_book",
+      "title": "같은 문장, 다른 생각",
+      "imageId": "img_love_conflict_book_001",
+      "priority": 15,
+      "briefPath": "docs/refactor/art-candidates/missing-love-briefs/love_conflict_book.json",
+      "sourceEventHash": "c5039811b3ae0471bf47dfd7c0441161d0ad88099e0250056f1ef4629f7a1fa7",
+      "status": "SELECTED_SOURCE_NATIVE_PENDING",
+      "nativeReviewStatus": "NOT_PERFORMED",
+      "sourceGeneratedPath": "C:\\Users\\jk030\\.codex\\generated_images\\01a1f1e9-d1e7-7610-888a-7aff56bbb301\\exec-4dbb3db8-b6b3-4448-95e8-85bd5ce99e45.png",
+      "stagingAssetPath": "build/refactor/art-staging/img_love_conflict_book_001.png",
+      "exactPrompt": "Create one portrait 9:16 full-bleed game background, warm restrained Korean everyday-life pixel-art illustration. Crisp deliberate pixel clusters, coherent anatomy, softly separated light and shadow, not photorealism and not a UI mockup. Strict first-person player viewpoint: no player face, back of head, full player body, reflection, selfie or framed portrait of the player. Only naturally placed player hands or forearms may enter the frame. The player can be male or female; hands, clothing and visible partner styling must not encode a fixed player gender or a uniquely named past partner. All romantic participants are clearly adults; do not depict school-age children as romantic partners. Use age-flexible adult styling that can fit young adulthood or middle adulthood. If a partner must be visible, show non-identifying partial profile, cropped upper torso or hands rather than an identity-defining portrait. No readable text, letters, digits, logos, subtitles, speech bubbles, interface panels, progress indicators or button graphics. Any phone message cue must be an abstract non-text shape and never legible text. Keep all story-critical objects together inside the central 60% of the portrait width and middle 60% of height; leave the bottom 22% visually quiet for the game overlay, without drawing an overlay. This is the instant before the player chooses. Show the stated present situation only, with no success, failure, marriage, pregnancy, reconciliation, breakup or future achievement unless already established in the source conditions. \nSCENE: A living-room table at night after an adult couple watched the same film and disagreed about it. First-person viewpoint with a book open to abstract unreadable page texture and ONE simple underline, two plain cinema ticket shapes, and the partners tense but nonviolent conversational hand gesture with a cropped torso across the table. A small warm lamp against blue night shadows. No legible book passage, title, ticket digits or star ratings. The disagreement is unresolved: no exchanged letters, tears, swapped books, phones with reviews or block symbols, noodles, embracing or final departure. Keep all story objects together in the central portrait area.",
+      "sourceVisualReview": {
+        "reviewer": "Codex AI (/root/plan_audit)",
+        "reviewerType": "AI",
+        "method": "Direct visual inspection of the complete built-in generated image displayed by the tool; source-only, not an emulator capture.",
+        "status": "SELECTED_SOURCE_NATIVE_PENDING",
+        "observations": [
+          "Night living-room table has an open book with one underline and two unlabelled movie tickets.",
+          "Raised conversational hands and separated player hand express unresolved disagreement; no physical violence, letter exchange, reviews, noodles or final breakup.",
+          "Book marks are abstract blocks, not readable words, and no player face is present."
+        ],
+        "concerns": [
+          "Native crop and UI-overlay inspection remains required."
+        ]
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "sourceGeneratedPath": "C:\\Users\\jk030\\.codex\\generated_images\\01a1f1e9-d1e7-7610-888a-7aff56bbb301\\exec-4dbb3db8-b6b3-4448-95e8-85bd5ce99e45.png",
+          "exactPrompt": "Create one portrait 9:16 full-bleed game background, warm restrained Korean everyday-life pixel-art illustration. Crisp deliberate pixel clusters, coherent anatomy, softly separated light and shadow, not photorealism and not a UI mockup. Strict first-person player viewpoint: no player face, back of head, full player body, reflection, selfie or framed portrait of the player. Only naturally placed player hands or forearms may enter the frame. The player can be male or female; hands, clothing and visible partner styling must not encode a fixed player gender or a uniquely named past partner. All romantic participants are clearly adults; do not depict school-age children as romantic partners. Use age-flexible adult styling that can fit young adulthood or middle adulthood. If a partner must be visible, show non-identifying partial profile, cropped upper torso or hands rather than an identity-defining portrait. No readable text, letters, digits, logos, subtitles, speech bubbles, interface panels, progress indicators or button graphics. Any phone message cue must be an abstract non-text shape and never legible text. Keep all story-critical objects together inside the central 60% of the portrait width and middle 60% of height; leave the bottom 22% visually quiet for the game overlay, without drawing an overlay. This is the instant before the player chooses. Show the stated present situation only, with no success, failure, marriage, pregnancy, reconciliation, breakup or future achievement unless already established in the source conditions. \nSCENE: A living-room table at night after an adult couple watched the same film and disagreed about it. First-person viewpoint with a book open to abstract unreadable page texture and ONE simple underline, two plain cinema ticket shapes, and the partners tense but nonviolent conversational hand gesture with a cropped torso across the table. A small warm lamp against blue night shadows. No legible book passage, title, ticket digits or star ratings. The disagreement is unresolved: no exchanged letters, tears, swapped books, phones with reviews or block symbols, noodles, embracing or final departure. Keep all story objects together in the central portrait area.",
+          "status": "SELECTED_SOURCE_NATIVE_PENDING",
+          "review": {
+            "status": "SELECTED_SOURCE_NATIVE_PENDING",
+            "observations": [
+              "Night living-room table has an open book with one underline and two unlabelled movie tickets.",
+              "Raised conversational hands and separated player hand express unresolved disagreement; no physical violence, letter exchange, reviews, noodles or final breakup.",
+              "Book marks are abstract blocks, not readable words, and no player face is present."
+            ],
+            "concerns": [
+              "Native crop and UI-overlay inspection remains required."
+            ]
+          },
+          "sha256": "ac3c05355964d7aff4f7dc28648fb22ecfaeea7010e87513521170137cda8d65",
+          "exactPromptSha256": "1572565a468b3726a927a9b2d58958fd398749d4e00b499b11dded55c594e79e",
+          "width": 941,
+          "height": 1672
+        }
+      ],
+      "approvalOrManifestChanged": false,
+      "width": 941,
+      "height": 1672,
+      "sourceSha256": "ac3c05355964d7aff4f7dc28648fb22ecfaeea7010e87513521170137cda8d65",
+      "stagedSha256": "ac3c05355964d7aff4f7dc28648fb22ecfaeea7010e87513521170137cda8d65",
+      "bytes": 1632728,
+      "exactPromptSha256": "1572565a468b3726a927a9b2d58958fd398749d4e00b499b11dded55c594e79e"
+    },
+    {
+      "eventId": "love_reunion_01",
+      "title": "헤어진 사람의 안부",
+      "imageId": "img_love_reunion_01_001",
+      "priority": 16,
+      "briefPath": "docs/refactor/art-candidates/missing-love-briefs/love_reunion_01.json",
+      "sourceEventHash": "df917da08f4e59283cc6b29819ece1add4eff2aeb6fbb10806d920369b4e7b1b",
+      "status": "SELECTED_SOURCE_NATIVE_PENDING",
+      "nativeReviewStatus": "NOT_PERFORMED",
+      "sourceGeneratedPath": "C:\\Users\\jk030\\.codex\\generated_images\\01a1f1e9-d1e7-7610-888a-7aff56bbb301\\exec-5aea81af-b760-4744-9bdf-c7f03d8a2f0d.png",
+      "stagingAssetPath": "build/refactor/art-staging/img_love_reunion_01_001.png",
+      "exactPrompt": "Create one portrait 9:16 full-bleed game background, warm restrained Korean everyday-life pixel-art illustration. Crisp deliberate pixel clusters, coherent anatomy, softly separated light and shadow, not photorealism and not a UI mockup. Strict first-person player viewpoint: no player face, back of head, full player body, reflection, selfie or framed portrait of the player. Only naturally placed player hands or forearms may enter the frame. The player can be male or female; hands, clothing and visible partner styling must not encode a fixed player gender or a uniquely named past partner. All romantic participants are clearly adults; do not depict school-age children as romantic partners. Use age-flexible adult styling that can fit young adulthood or middle adulthood. If a partner must be visible, show non-identifying partial profile, cropped upper torso or hands rather than an identity-defining portrait. No readable text, letters, digits, logos, subtitles, speech bubbles, interface panels, progress indicators or button graphics. Any phone message cue must be an abstract non-text shape and never legible text. Keep all story-critical objects together inside the central 60% of the portrait width and middle 60% of height; leave the bottom 22% visually quiet for the game overlay, without drawing an overlay. This is the instant before the player chooses. Show the stated present situation only, with no success, failure, marriage, pregnancy, reconciliation, breakup or future achievement unless already established in the source conditions. \nSCENE: A quiet room at night, one year after a breakup. First-person close view of an adult hand holding a phone that has just received one message from a former partner. Show ONLY a small abstract incoming bubble without words, letters, numbers, sender avatar or extra phone interface; warm desk-lamp light in a subdued room. The player has not replied and the former partner is not present. No outgoing message, voice call, selfie, profile photo, like-heart, restaurant meal, reunion embrace, wedding ring or definitive farewell. The mood is surprised and uncertain, neither joyful reconciliation nor despair.",
+      "sourceVisualReview": {
+        "reviewer": "Codex AI (/root/plan_audit)",
+        "reviewerType": "AI",
+        "method": "Direct visual inspection of the complete built-in generated image displayed by the tool; source-only, not an emulator capture.",
+        "status": "SELECTED_SOURCE_NATIVE_PENDING",
+        "observations": [
+          "A phone held by one coherent hand shows one abstract incoming message bubble; no readable message, avatar, outgoing reply, selfie, call or like.",
+          "A solitary adult viewpoint in a night room is maintained, with desk light and no former partner physically present.",
+          "The message and phone are central; no reunion or closure outcome is preselected."
+        ],
+        "concerns": [
+          "Native crop and UI-overlay inspection remains required."
+        ]
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "sourceGeneratedPath": "C:\\Users\\jk030\\.codex\\generated_images\\01a1f1e9-d1e7-7610-888a-7aff56bbb301\\exec-5aea81af-b760-4744-9bdf-c7f03d8a2f0d.png",
+          "exactPrompt": "Create one portrait 9:16 full-bleed game background, warm restrained Korean everyday-life pixel-art illustration. Crisp deliberate pixel clusters, coherent anatomy, softly separated light and shadow, not photorealism and not a UI mockup. Strict first-person player viewpoint: no player face, back of head, full player body, reflection, selfie or framed portrait of the player. Only naturally placed player hands or forearms may enter the frame. The player can be male or female; hands, clothing and visible partner styling must not encode a fixed player gender or a uniquely named past partner. All romantic participants are clearly adults; do not depict school-age children as romantic partners. Use age-flexible adult styling that can fit young adulthood or middle adulthood. If a partner must be visible, show non-identifying partial profile, cropped upper torso or hands rather than an identity-defining portrait. No readable text, letters, digits, logos, subtitles, speech bubbles, interface panels, progress indicators or button graphics. Any phone message cue must be an abstract non-text shape and never legible text. Keep all story-critical objects together inside the central 60% of the portrait width and middle 60% of height; leave the bottom 22% visually quiet for the game overlay, without drawing an overlay. This is the instant before the player chooses. Show the stated present situation only, with no success, failure, marriage, pregnancy, reconciliation, breakup or future achievement unless already established in the source conditions. \nSCENE: A quiet room at night, one year after a breakup. First-person close view of an adult hand holding a phone that has just received one message from a former partner. Show ONLY a small abstract incoming bubble without words, letters, numbers, sender avatar or extra phone interface; warm desk-lamp light in a subdued room. The player has not replied and the former partner is not present. No outgoing message, voice call, selfie, profile photo, like-heart, restaurant meal, reunion embrace, wedding ring or definitive farewell. The mood is surprised and uncertain, neither joyful reconciliation nor despair.",
+          "status": "SELECTED_SOURCE_NATIVE_PENDING",
+          "review": {
+            "status": "SELECTED_SOURCE_NATIVE_PENDING",
+            "observations": [
+              "A phone held by one coherent hand shows one abstract incoming message bubble; no readable message, avatar, outgoing reply, selfie, call or like.",
+              "A solitary adult viewpoint in a night room is maintained, with desk light and no former partner physically present.",
+              "The message and phone are central; no reunion or closure outcome is preselected."
+            ],
+            "concerns": [
+              "Native crop and UI-overlay inspection remains required."
+            ]
+          },
+          "sha256": "21e86ec1ff90039b470cb0608280cd1aa72584d17d8c53a05178f58adfed973f",
+          "exactPromptSha256": "c841e6330e4835b88da11481f2e92eb9cb2fdcc928aae1a1cae2b741c43e9d95",
+          "width": 941,
+          "height": 1672
+        }
+      ],
+      "approvalOrManifestChanged": false,
+      "width": 941,
+      "height": 1672,
+      "sourceSha256": "21e86ec1ff90039b470cb0608280cd1aa72584d17d8c53a05178f58adfed973f",
+      "stagedSha256": "21e86ec1ff90039b470cb0608280cd1aa72584d17d8c53a05178f58adfed973f",
+      "bytes": 1497087,
+      "exactPromptSha256": "c841e6330e4835b88da11481f2e92eb9cb2fdcc928aae1a1cae2b741c43e9d95"
+    },
+    {
+      "eventId": "love_reunion_first_love",
+      "title": "동창회의 빈자리",
+      "imageId": "img_love_reunion_first_love_001",
+      "priority": 17,
+      "briefPath": "docs/refactor/art-candidates/missing-love-briefs/love_reunion_first_love.json",
+      "sourceEventHash": "0035bbb271bd72339b923f1fe1e170cb27ee598ec805cd8c94fc14d5887f2e96",
+      "status": "SELECTED_SOURCE_NATIVE_PENDING",
+      "nativeReviewStatus": "NOT_PERFORMED",
+      "sourceGeneratedPath": "C:\\Users\\jk030\\.codex\\generated_images\\01a1f1e9-d1e7-7610-888a-7aff56bbb301\\exec-9ff73863-380b-4cfa-a2f5-e87d17fb7d2d.png",
+      "stagingAssetPath": "build/refactor/art-staging/img_love_reunion_first_love_001.png",
+      "exactPrompt": "Create one portrait 9:16 full-bleed game background, warm restrained Korean everyday-life pixel-art illustration. Crisp deliberate pixel clusters, coherent anatomy, softly separated light and shadow, not photorealism and not a UI mockup. Strict first-person player viewpoint: no player face, back of head, full player body, reflection, selfie or framed portrait of the player. Only naturally placed player hands or forearms may enter the frame. The player can be male or female; hands, clothing and visible partner styling must not encode a fixed player gender or a uniquely named past partner. All romantic participants are clearly adults; do not depict school-age children as romantic partners. Use age-flexible adult styling that can fit young adulthood or middle adulthood. If a partner must be visible, show non-identifying partial profile, cropped upper torso or hands rather than an identity-defining portrait. No readable text, letters, digits, logos, subtitles, speech bubbles, interface panels, progress indicators or button graphics. Any phone message cue must be an abstract non-text shape and never legible text. Keep all story-critical objects together inside the central 60% of the portrait width and middle 60% of height; leave the bottom 22% visually quiet for the game overlay, without drawing an overlay. This is the instant before the player chooses. Show the stated present situation only, with no success, failure, marriage, pregnancy, reconciliation, breakup or future achievement unless already established in the source conditions. \nSCENE: An ADULT high-school alumni reunion in a Korean restaurant in the evening, viewed from the standing players eyes before choosing a seat. A clearly EMPTY chair next to the former first-love partner is the central focal object; the former partner, shown as an adult hand and cropped torso, is gesturing gently toward that chair. A long dining table and other adult classmates sit in softer depth behind it. No one wears a school uniform. The player has not sat down, shaken hands, reunited romantically or posed for a group photograph. No camera-facing player, photo inset, classroom flashback, hand holding or walk home. Keep the empty seat and invitation gesture unmistakably visible together.",
+      "sourceVisualReview": {
+        "reviewer": "Codex AI (/root/plan_audit)",
+        "reviewerType": "AI",
+        "method": "Direct visual inspection of the complete built-in generated image displayed by the tool; source-only, not an emulator capture.",
+        "status": "SELECTED_SOURCE_NATIVE_PENDING",
+        "observations": [
+          "An adult class reunion restaurant includes a clearly empty adjacent chair and the former partners open hand inviting the player toward it.",
+          "The player remains a standing viewpoint; no seated player, group-photo pose, handshake, reunion embrace or school uniforms.",
+          "The hand and seat can be identified together; background people are adults and not player portraits."
+        ],
+        "concerns": [
+          "Chair extends toward the right edge; native crop must retain the empty seat together with the inviting hand."
+        ]
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "sourceGeneratedPath": "C:\\Users\\jk030\\.codex\\generated_images\\01a1f1e9-d1e7-7610-888a-7aff56bbb301\\exec-9ff73863-380b-4cfa-a2f5-e87d17fb7d2d.png",
+          "exactPrompt": "Create one portrait 9:16 full-bleed game background, warm restrained Korean everyday-life pixel-art illustration. Crisp deliberate pixel clusters, coherent anatomy, softly separated light and shadow, not photorealism and not a UI mockup. Strict first-person player viewpoint: no player face, back of head, full player body, reflection, selfie or framed portrait of the player. Only naturally placed player hands or forearms may enter the frame. The player can be male or female; hands, clothing and visible partner styling must not encode a fixed player gender or a uniquely named past partner. All romantic participants are clearly adults; do not depict school-age children as romantic partners. Use age-flexible adult styling that can fit young adulthood or middle adulthood. If a partner must be visible, show non-identifying partial profile, cropped upper torso or hands rather than an identity-defining portrait. No readable text, letters, digits, logos, subtitles, speech bubbles, interface panels, progress indicators or button graphics. Any phone message cue must be an abstract non-text shape and never legible text. Keep all story-critical objects together inside the central 60% of the portrait width and middle 60% of height; leave the bottom 22% visually quiet for the game overlay, without drawing an overlay. This is the instant before the player chooses. Show the stated present situation only, with no success, failure, marriage, pregnancy, reconciliation, breakup or future achievement unless already established in the source conditions. \nSCENE: An ADULT high-school alumni reunion in a Korean restaurant in the evening, viewed from the standing players eyes before choosing a seat. A clearly EMPTY chair next to the former first-love partner is the central focal object; the former partner, shown as an adult hand and cropped torso, is gesturing gently toward that chair. A long dining table and other adult classmates sit in softer depth behind it. No one wears a school uniform. The player has not sat down, shaken hands, reunited romantically or posed for a group photograph. No camera-facing player, photo inset, classroom flashback, hand holding or walk home. Keep the empty seat and invitation gesture unmistakably visible together.",
+          "status": "SELECTED_SOURCE_NATIVE_PENDING",
+          "review": {
+            "status": "SELECTED_SOURCE_NATIVE_PENDING",
+            "observations": [
+              "An adult class reunion restaurant includes a clearly empty adjacent chair and the former partners open hand inviting the player toward it.",
+              "The player remains a standing viewpoint; no seated player, group-photo pose, handshake, reunion embrace or school uniforms.",
+              "The hand and seat can be identified together; background people are adults and not player portraits."
+            ],
+            "concerns": [
+              "Chair extends toward the right edge; native crop must retain the empty seat together with the inviting hand."
+            ]
+          },
+          "sha256": "1a8d980824094120848bf8a348e444537d05b45caefe5544a18ea27337dda3bb",
+          "exactPromptSha256": "85308c10ead4a42a9638e98ba616582334bfdd4d18a9a28609ce944361fce5a4",
+          "width": 941,
+          "height": 1672
+        }
+      ],
+      "approvalOrManifestChanged": false,
+      "width": 941,
+      "height": 1672,
+      "sourceSha256": "1a8d980824094120848bf8a348e444537d05b45caefe5544a18ea27337dda3bb",
+      "stagedSha256": "1a8d980824094120848bf8a348e444537d05b45caefe5544a18ea27337dda3bb",
+      "bytes": 1935555,
+      "exactPromptSha256": "85308c10ead4a42a9638e98ba616582334bfdd4d18a9a28609ce944361fce5a4"
+    },
+    {
+      "eventId": "love_reunion_ideal",
+      "title": "다시 마주친 그 길",
+      "imageId": "img_love_reunion_ideal_001",
+      "priority": 18,
+      "briefPath": "docs/refactor/art-candidates/missing-love-briefs/love_reunion_ideal.json",
+      "sourceEventHash": "7fe95668bac338e9765e97b35bab05924948a4e5a2d54bfca1c0304f8bdc1924",
+      "status": "SELECTED_SOURCE_NATIVE_PENDING",
+      "nativeReviewStatus": "NOT_PERFORMED",
+      "sourceGeneratedPath": "C:\\Users\\jk030\\.codex\\generated_images\\01a1f1e9-d1e7-7610-888a-7aff56bbb301\\exec-bf496d89-4b7c-433e-92bc-efcc0cb0a644.png",
+      "stagingAssetPath": "build/refactor/art-staging/img_love_reunion_ideal_001.png",
+      "exactPrompt": "Create one portrait 9:16 full-bleed game background, warm restrained Korean everyday-life pixel-art illustration. Crisp deliberate pixel clusters, coherent anatomy, softly separated light and shadow, not photorealism and not a UI mockup. Strict first-person player viewpoint: no player face, back of head, full player body, reflection, selfie or framed portrait of the player. Only naturally placed player hands or forearms may enter the frame. The player can be male or female; hands, clothing and visible partner styling must not encode a fixed player gender or a uniquely named past partner. All romantic participants are clearly adults; do not depict school-age children as romantic partners. Use age-flexible adult styling that can fit young adulthood or middle adulthood. If a partner must be visible, show non-identifying partial profile, cropped upper torso or hands rather than an identity-defining portrait. No readable text, letters, digits, logos, subtitles, speech bubbles, interface panels, progress indicators or button graphics. Any phone message cue must be an abstract non-text shape and never legible text. Keep all story-critical objects together inside the central 60% of the portrait width and middle 60% of height; leave the bottom 22% visually quiet for the game overlay, without drawing an overlay. This is the instant before the player chooses. Show the stated present situation only, with no success, failure, marriage, pregnancy, reconciliation, breakup or future achievement unless already established in the source conditions. \nSCENE: The familiar crossing of an ordinary Korean street in gentle afternoon light, seen from the players first-person viewpoint. Across the narrow crossing stands the adult former partner in a quiet unhurried pose, hands lowered, NOT looking at or showing a watch. Keep the figure non-identifying by distance and soft detail, with the crossing and shared patch of pavement central. They have just noticed each other, before any greeting. No waving, embrace, apology, leaving silhouette, empty-after-waiting scene, raised wrist, readable clock, street text or romantic destiny symbols. Preserve open-ended recognition without deciding reconciliation.",
+      "sourceVisualReview": {
+        "reviewer": "Codex AI (/root/plan_audit)",
+        "reviewerType": "AI",
+        "method": "Direct visual inspection of the complete built-in generated image displayed by the tool; source-only, not an emulator capture.",
+        "status": "SELECTED_SOURCE_NATIVE_PENDING",
+        "observations": [
+          "The former partner stands across an ordinary crossing with both arms lowered and no watch-checking gesture.",
+          "The player is the viewpoint; no hand-wave, raised watch, reunion embrace, departure or second visit is depicted.",
+          "The central distant adult figure and crossing remain clear without legible signage or a player reflection."
+        ],
+        "concerns": [
+          "Native crop and UI-overlay inspection remains required."
+        ]
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "sourceGeneratedPath": "C:\\Users\\jk030\\.codex\\generated_images\\01a1f1e9-d1e7-7610-888a-7aff56bbb301\\exec-bf496d89-4b7c-433e-92bc-efcc0cb0a644.png",
+          "exactPrompt": "Create one portrait 9:16 full-bleed game background, warm restrained Korean everyday-life pixel-art illustration. Crisp deliberate pixel clusters, coherent anatomy, softly separated light and shadow, not photorealism and not a UI mockup. Strict first-person player viewpoint: no player face, back of head, full player body, reflection, selfie or framed portrait of the player. Only naturally placed player hands or forearms may enter the frame. The player can be male or female; hands, clothing and visible partner styling must not encode a fixed player gender or a uniquely named past partner. All romantic participants are clearly adults; do not depict school-age children as romantic partners. Use age-flexible adult styling that can fit young adulthood or middle adulthood. If a partner must be visible, show non-identifying partial profile, cropped upper torso or hands rather than an identity-defining portrait. No readable text, letters, digits, logos, subtitles, speech bubbles, interface panels, progress indicators or button graphics. Any phone message cue must be an abstract non-text shape and never legible text. Keep all story-critical objects together inside the central 60% of the portrait width and middle 60% of height; leave the bottom 22% visually quiet for the game overlay, without drawing an overlay. This is the instant before the player chooses. Show the stated present situation only, with no success, failure, marriage, pregnancy, reconciliation, breakup or future achievement unless already established in the source conditions. \nSCENE: The familiar crossing of an ordinary Korean street in gentle afternoon light, seen from the players first-person viewpoint. Across the narrow crossing stands the adult former partner in a quiet unhurried pose, hands lowered, NOT looking at or showing a watch. Keep the figure non-identifying by distance and soft detail, with the crossing and shared patch of pavement central. They have just noticed each other, before any greeting. No waving, embrace, apology, leaving silhouette, empty-after-waiting scene, raised wrist, readable clock, street text or romantic destiny symbols. Preserve open-ended recognition without deciding reconciliation.",
+          "status": "SELECTED_SOURCE_NATIVE_PENDING",
+          "review": {
+            "status": "SELECTED_SOURCE_NATIVE_PENDING",
+            "observations": [
+              "The former partner stands across an ordinary crossing with both arms lowered and no watch-checking gesture.",
+              "The player is the viewpoint; no hand-wave, raised watch, reunion embrace, departure or second visit is depicted.",
+              "The central distant adult figure and crossing remain clear without legible signage or a player reflection."
+            ],
+            "concerns": [
+              "Native crop and UI-overlay inspection remains required."
+            ]
+          },
+          "sha256": "bdaa69ed4079a64e3b700d8164fd6fcf3491cd5cd657feb41f2f8900bd742ae5",
+          "exactPromptSha256": "acfa01e6a0a0cf3fb7df7488425c73bdcd3030b48f35577a1c4907bf46055891",
+          "width": 941,
+          "height": 1672
+        }
+      ],
+      "approvalOrManifestChanged": false,
+      "width": 941,
+      "height": 1672,
+      "sourceSha256": "bdaa69ed4079a64e3b700d8164fd6fcf3491cd5cd657feb41f2f8900bd742ae5",
+      "stagedSha256": "bdaa69ed4079a64e3b700d8164fd6fcf3491cd5cd657feb41f2f8900bd742ae5",
+      "bytes": 2354945,
+      "exactPromptSha256": "acfa01e6a0a0cf3fb7df7488425c73bdcd3030b48f35577a1c4907bf46055891"
+    },
+    {
+      "eventId": "love_reunion_music",
+      "title": "연말 공연 포스터",
+      "imageId": "img_love_reunion_music_001",
+      "priority": 19,
+      "briefPath": "docs/refactor/art-candidates/missing-love-briefs/love_reunion_music.json",
+      "sourceEventHash": "d2f23238a827a7f97d3a8a28c43f1d4aaea29075fb1cfef7e6e462026246c03c",
+      "status": "SELECTED_SOURCE_NATIVE_PENDING",
+      "nativeReviewStatus": "NOT_PERFORMED",
+      "sourceGeneratedPath": "C:\\Users\\jk030\\.codex\\generated_images\\01a1f1e9-d1e7-7610-888a-7aff56bbb301\\exec-7ed16a79-96e3-4f0a-8c60-3b750d7307e4.png",
+      "stagingAssetPath": "build/refactor/art-staging/img_love_reunion_music_001.png",
+      "exactPrompt": "Create one portrait 9:16 full-bleed game background, warm restrained Korean everyday-life pixel-art illustration. Crisp deliberate pixel clusters, coherent anatomy, softly separated light and shadow, not photorealism and not a UI mockup. Strict first-person player viewpoint: no player face, back of head, full player body, reflection, selfie or framed portrait of the player. Only naturally placed player hands or forearms may enter the frame. The player can be male or female; hands, clothing and visible partner styling must not encode a fixed player gender or a uniquely named past partner. All romantic participants are clearly adults; do not depict school-age children as romantic partners. Use age-flexible adult styling that can fit young adulthood or middle adulthood. If a partner must be visible, show non-identifying partial profile, cropped upper torso or hands rather than an identity-defining portrait. No readable text, letters, digits, logos, subtitles, speech bubbles, interface panels, progress indicators or button graphics. Any phone message cue must be an abstract non-text shape and never legible text. Keep all story-critical objects together inside the central 60% of the portrait width and middle 60% of height; leave the bottom 22% visually quiet for the game overlay, without drawing an overlay. This is the instant before the player chooses. Show the stated present situation only, with no success, failure, marriage, pregnancy, reconciliation, breakup or future achievement unless already established in the source conditions. \nSCENE: A small Korean live-music venue during a year-end evening concert, viewed from an ordinary audience seat. An adult former partner is playing the first song on the softly lit stage, with a microphone and instrument visibly grouped at the centre. Their face is small and non-identifying; a few quiet adult audience silhouettes frame the lower sides. The player remains in the audience and has not joined the stage, applauded or called for an encore. No player hands performing or clapping, no duet, backstage conversation, bow after the show, reunion embrace, readable poster, artist name or song title. Intimate warm stage light and a still, undecided audience viewpoint.",
+      "sourceVisualReview": {
+        "reviewer": "Codex AI (/root/plan_audit)",
+        "reviewerType": "AI",
+        "method": "Direct visual inspection of the complete built-in generated image displayed by the tool; source-only, not an emulator capture.",
+        "status": "SELECTED_SOURCE_NATIVE_PENDING",
+        "observations": [
+          "A small central adult musician plays guitar at a microphone; the view is from seated audience level.",
+          "Audience figures remain quiet with no clapping or encore gesture; the player is not visible or on stage.",
+          "No readable song title, poster or artist name; no backstage reunion, stage duet or finished-show bow."
+        ],
+        "concerns": [
+          "Native crop and UI-overlay inspection remains required."
+        ]
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "sourceGeneratedPath": "C:\\Users\\jk030\\.codex\\generated_images\\01a1f1e9-d1e7-7610-888a-7aff56bbb301\\exec-7ed16a79-96e3-4f0a-8c60-3b750d7307e4.png",
+          "exactPrompt": "Create one portrait 9:16 full-bleed game background, warm restrained Korean everyday-life pixel-art illustration. Crisp deliberate pixel clusters, coherent anatomy, softly separated light and shadow, not photorealism and not a UI mockup. Strict first-person player viewpoint: no player face, back of head, full player body, reflection, selfie or framed portrait of the player. Only naturally placed player hands or forearms may enter the frame. The player can be male or female; hands, clothing and visible partner styling must not encode a fixed player gender or a uniquely named past partner. All romantic participants are clearly adults; do not depict school-age children as romantic partners. Use age-flexible adult styling that can fit young adulthood or middle adulthood. If a partner must be visible, show non-identifying partial profile, cropped upper torso or hands rather than an identity-defining portrait. No readable text, letters, digits, logos, subtitles, speech bubbles, interface panels, progress indicators or button graphics. Any phone message cue must be an abstract non-text shape and never legible text. Keep all story-critical objects together inside the central 60% of the portrait width and middle 60% of height; leave the bottom 22% visually quiet for the game overlay, without drawing an overlay. This is the instant before the player chooses. Show the stated present situation only, with no success, failure, marriage, pregnancy, reconciliation, breakup or future achievement unless already established in the source conditions. \nSCENE: A small Korean live-music venue during a year-end evening concert, viewed from an ordinary audience seat. An adult former partner is playing the first song on the softly lit stage, with a microphone and instrument visibly grouped at the centre. Their face is small and non-identifying; a few quiet adult audience silhouettes frame the lower sides. The player remains in the audience and has not joined the stage, applauded or called for an encore. No player hands performing or clapping, no duet, backstage conversation, bow after the show, reunion embrace, readable poster, artist name or song title. Intimate warm stage light and a still, undecided audience viewpoint.",
+          "status": "SELECTED_SOURCE_NATIVE_PENDING",
+          "review": {
+            "status": "SELECTED_SOURCE_NATIVE_PENDING",
+            "observations": [
+              "A small central adult musician plays guitar at a microphone; the view is from seated audience level.",
+              "Audience figures remain quiet with no clapping or encore gesture; the player is not visible or on stage.",
+              "No readable song title, poster or artist name; no backstage reunion, stage duet or finished-show bow."
+            ],
+            "concerns": [
+              "Native crop and UI-overlay inspection remains required."
+            ]
+          },
+          "sha256": "cccb6f33e89975a06970bfb95d5a1998c42657e3d66226bdf6bed66dc1076597",
+          "exactPromptSha256": "c16ce7dabca1e862879aea4ca15607cb17d668ec36ce4b0d46d670e6a60ff876",
+          "width": 941,
+          "height": 1672
+        }
+      ],
+      "approvalOrManifestChanged": false,
+      "width": 941,
+      "height": 1672,
+      "sourceSha256": "cccb6f33e89975a06970bfb95d5a1998c42657e3d66226bdf6bed66dc1076597",
+      "stagedSha256": "cccb6f33e89975a06970bfb95d5a1998c42657e3d66226bdf6bed66dc1076597",
+      "bytes": 1598696,
+      "exactPromptSha256": "c16ce7dabca1e862879aea4ca15607cb17d668ec36ce4b0d46d670e6a60ff876"
+    },
+    {
+      "eventId": "love_reunion_book",
+      "title": "돌려주지 못한 책",
+      "imageId": "img_love_reunion_book_001",
+      "priority": 20,
+      "briefPath": "docs/refactor/art-candidates/missing-love-briefs/love_reunion_book.json",
+      "sourceEventHash": "0191408f5f04a88337d21c01d8117c754a45b2ecc4407a5c0274d5b322ff4ea1",
+      "status": "SELECTED_SOURCE_NATIVE_PENDING",
+      "nativeReviewStatus": "NOT_PERFORMED",
+      "sourceGeneratedPath": "C:\\Users\\jk030\\.codex\\generated_images\\01a1f1e9-d1e7-7610-888a-7aff56bbb301\\exec-4d733ae0-65a2-47c6-94e2-07218c5d4b17.png",
+      "stagingAssetPath": "build/refactor/art-staging/img_love_reunion_book_001.png",
+      "exactPrompt": "Create one portrait 9:16 full-bleed game background, warm restrained Korean everyday-life pixel-art illustration. Crisp deliberate pixel clusters, coherent anatomy, softly separated light and shadow, not photorealism and not a UI mockup. Strict first-person player viewpoint: no player face, back of head, full player body, reflection, selfie or framed portrait of the player. Only naturally placed player hands or forearms may enter the frame. The player can be male or female; hands, clothing and visible partner styling must not encode a fixed player gender or a uniquely named past partner. All romantic participants are clearly adults; do not depict school-age children as romantic partners. Use age-flexible adult styling that can fit young adulthood or middle adulthood. If a partner must be visible, show non-identifying partial profile, cropped upper torso or hands rather than an identity-defining portrait. No readable text, letters, digits, logos, subtitles, speech bubbles, interface panels, progress indicators or button graphics. Any phone message cue must be an abstract non-text shape and never legible text. Keep all story-critical objects together inside the central 60% of the portrait width and middle 60% of height; leave the bottom 22% visually quiet for the game overlay, without drawing an overlay. This is the instant before the player chooses. Show the stated present situation only, with no success, failure, marriage, pregnancy, reconciliation, breakup or future achievement unless already established in the source conditions. \nSCENE: First-person view while tidying a bookshelf on a quiet afternoon. The players two naturally proportioned adult hands support a worn book open near its last page, where a small old note is tucked in. The book and note are central, with softly lit shelves behind. Page marks and the note must be abstract unreadable texture, with no letters, names, digits or portrait. The former partner is absent and the player has just discovered the note, before deciding what to do. No parcel box, shipping label, new written reply, returned-book handover, new book offered, competition certificate, award stage, cafe reunion or embrace.",
+      "sourceVisualReview": {
+        "reviewer": "Codex AI (/root/plan_audit)",
+        "reviewerType": "AI",
+        "method": "Direct visual inspection of the complete built-in generated image displayed by the tool; source-only, not an emulator capture.",
+        "status": "SELECTED_SOURCE_NATIVE_PENDING",
+        "observations": [
+          "Two coherent hands hold an old book at a bookshelf; an aged note is visible among the final pages.",
+          "Page and note marks are unreadable decorative texture; there is no player portrait, named former partner or legible message.",
+          "No parcel, handover, competition certificate, new reply or cafe reunion appears; the note remains central."
+        ],
+        "concerns": [
+          "Native crop and UI-overlay inspection remains required."
+        ]
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "sourceGeneratedPath": "C:\\Users\\jk030\\.codex\\generated_images\\01a1f1e9-d1e7-7610-888a-7aff56bbb301\\exec-4d733ae0-65a2-47c6-94e2-07218c5d4b17.png",
+          "exactPrompt": "Create one portrait 9:16 full-bleed game background, warm restrained Korean everyday-life pixel-art illustration. Crisp deliberate pixel clusters, coherent anatomy, softly separated light and shadow, not photorealism and not a UI mockup. Strict first-person player viewpoint: no player face, back of head, full player body, reflection, selfie or framed portrait of the player. Only naturally placed player hands or forearms may enter the frame. The player can be male or female; hands, clothing and visible partner styling must not encode a fixed player gender or a uniquely named past partner. All romantic participants are clearly adults; do not depict school-age children as romantic partners. Use age-flexible adult styling that can fit young adulthood or middle adulthood. If a partner must be visible, show non-identifying partial profile, cropped upper torso or hands rather than an identity-defining portrait. No readable text, letters, digits, logos, subtitles, speech bubbles, interface panels, progress indicators or button graphics. Any phone message cue must be an abstract non-text shape and never legible text. Keep all story-critical objects together inside the central 60% of the portrait width and middle 60% of height; leave the bottom 22% visually quiet for the game overlay, without drawing an overlay. This is the instant before the player chooses. Show the stated present situation only, with no success, failure, marriage, pregnancy, reconciliation, breakup or future achievement unless already established in the source conditions. \nSCENE: First-person view while tidying a bookshelf on a quiet afternoon. The players two naturally proportioned adult hands support a worn book open near its last page, where a small old note is tucked in. The book and note are central, with softly lit shelves behind. Page marks and the note must be abstract unreadable texture, with no letters, names, digits or portrait. The former partner is absent and the player has just discovered the note, before deciding what to do. No parcel box, shipping label, new written reply, returned-book handover, new book offered, competition certificate, award stage, cafe reunion or embrace.",
+          "status": "SELECTED_SOURCE_NATIVE_PENDING",
+          "review": {
+            "status": "SELECTED_SOURCE_NATIVE_PENDING",
+            "observations": [
+              "Two coherent hands hold an old book at a bookshelf; an aged note is visible among the final pages.",
+              "Page and note marks are unreadable decorative texture; there is no player portrait, named former partner or legible message.",
+              "No parcel, handover, competition certificate, new reply or cafe reunion appears; the note remains central."
+            ],
+            "concerns": [
+              "Native crop and UI-overlay inspection remains required."
+            ]
+          },
+          "sha256": "a321300ce17969108220d7ca04e85def579db827923e22c1b8e2de63de6d1618",
+          "exactPromptSha256": "280bafb937d16aa93672c820b00db129c1cc4eb7fd75a3c8f64ece9b8db04d08",
+          "width": 941,
+          "height": 1672
+        }
+      ],
+      "approvalOrManifestChanged": false,
+      "width": 941,
+      "height": 1672,
+      "sourceSha256": "a321300ce17969108220d7ca04e85def579db827923e22c1b8e2de63de6d1618",
+      "stagedSha256": "a321300ce17969108220d7ca04e85def579db827923e22c1b8e2de63de6d1618",
+      "bytes": 1827015,
+      "exactPromptSha256": "280bafb937d16aa93672c820b00db129c1cc4eb7fd75a3c8f64ece9b8db04d08"
+    }
+  ],
+  "stagedFiles": 10,
+  "stagedBytes": 18158053
+}

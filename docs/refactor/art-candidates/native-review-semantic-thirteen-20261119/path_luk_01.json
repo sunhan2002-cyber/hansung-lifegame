@@ -1,0 +1,228 @@
+{
+  "schemaVersion": 1,
+  "eventId": "path_luk_01",
+  "status": "REVISION_REQUIRED",
+  "reviewer": "Codex AI / plan_audit",
+  "reviewerType": "AI",
+  "reviewDate": "2026-11-19",
+  "sourceEventHash": "b3e7f1c250eab06b976d118f9749dcf970ec16f0c9f98b216dbd042568bdd19d",
+  "sourceEventSnapshot": {
+    "eventId": "path_luk_01",
+    "stage": "CHILD",
+    "type": "NORMAL",
+    "isFallback": false,
+    "isMilestone": false,
+    "title": "문구점 뽑기 3연속 1등",
+    "text": "문구점 뽑기에서 1등이 세 번 연속으로 나왔다. 사장님이 뽑기 기계를 흔들어 본다. 뒤에 줄 선 아이들이 웅성거린다.",
+    "imageId": "img_path_luk_01_001",
+    "conditions": {
+      "stats": {
+        "운": 59
+      },
+      "requiredFlags": [],
+      "blockedFlags": [
+        "hap_path"
+      ]
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "상품 하나를 뒤에 선 아이에게 준다",
+        "statDelta": {
+          "사회성": 2,
+          "운": 2,
+          "경제력": -1
+        },
+        "resultText": "그 아이가 다음 날 나한테 딱지 백 장을 들고 왔다. 그 아이는 지금도 내 친구다.",
+        "addFlags": [
+          "luk_path",
+          "sharing_habit"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "a_share",
+            "text": "그 아이가 다음 날 나한테 딱지 백 장을 들고 왔다. 그 아이는 지금도 내 친구다.",
+            "chance": 100,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "사회성": 2,
+              "운": 2,
+              "경제력": -1
+            },
+            "addFlags": [
+              "luk_path",
+              "sharing_habit"
+            ]
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week8_life_path"
+      },
+      {
+        "choiceId": "B",
+        "label": "한 번 더 뽑는다",
+        "statDelta": {
+          "운": 3,
+          "행복": 2,
+          "사회성": -1
+        },
+        "resultText": "네 번째도 1등이었다. 사장님이 그날 가게 문을 일찍 닫았다. 다음 날 뽑기 기계가 사라졌다.",
+        "addFlags": [
+          "luk_path",
+          "achv_lucky_streak"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "b_fourth",
+            "text": "네 번째도 1등이었다. 사장님이 그날 가게 문을 일찍 닫았다. 다음 날 뽑기 기계가 사라졌다.",
+            "chance": 40,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "운": 3,
+              "행복": 2,
+              "사회성": -1
+            },
+            "addFlags": [
+              "luk_path",
+              "achv_lucky_streak"
+            ],
+            "chanceWeights": {
+              "운": 3
+            }
+          },
+          {
+            "outcomeId": "b_blank",
+            "text": "꽝이었다. 그 뒤로 열 번 연속 꽝이었다. 운에도 총량이 있다는 걸 배웠다.",
+            "chance": 60,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "운": 1,
+              "경제력": -1,
+              "지력": 1
+            },
+            "addFlags": [
+              "luk_path"
+            ],
+            "chanceWeights": {
+              "운": -2
+            }
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week8_life_path"
+      }
+    ],
+    "priority": 0,
+    "kind": "INCIDENT",
+    "periods": [
+      "CHILD"
+    ],
+    "weight": 20,
+    "view": "FIRST_PERSON",
+    "lifePath": "LUCK",
+    "pathRole": "입구",
+    "followUps": [
+      "path_luk_02"
+    ]
+  },
+  "sourceReadScope": "Current complete event, conditions, every choice/outcome and flags/stat deltas/periods/follow-ups directly read before judgement.",
+  "sourceImage": {
+    "path": "app/src/main/assets/images/followup_20261031/img_path_luk_01_001.png",
+    "sha256": "dd4dd11c460352bdfa470e590d9ae1ab20b2f5f1156a8b92162665b5f2f8e277",
+    "width": 720,
+    "height": 540
+  },
+  "originalArtworkUnchangedSinceHistoricalReview": true,
+  "historicalReview": {
+    "eventId": "path_luk_01",
+    "title": "문구점 뽑기 3연속 1등",
+    "imageId": "img_path_luk_01_001",
+    "assetPath": "followup_20261031/img_path_luk_01_001.png",
+    "sha256": "dd4dd11c460352bdfa470e590d9ae1ab20b2f5f1156a8b92162665b5f2f8e277",
+    "eventSourceHash": "b3e7f1c250eab06b976d118f9749dcf970ec16f0c9f98b216dbd042568bdd19d",
+    "status": "REVISION_REQUIRED",
+    "reviewer": "김선한 담당 Codex 직접 대행 검수",
+    "reason": "세 번 뽑아 이미 1등인 결과를 고정한 장면; 선택 전 결과 확정 기준 재검토 필요",
+    "expectedAction": "사장님이 기계를 흔들고 뒤 아이들이 웅성거림",
+    "requiredObjects": "뽑기 기계; 당첨을 뜻하는 같은 상징 셋; 줄 선 아이들",
+    "sheet": "output/art-review-20261119/sheet-17.jpg",
+    "cell": 9,
+    "cropMethod": "ImageOps.fit centre-fill 360:800; simulated crop inspected directly, not an emulator capture",
+    "visualMethod": "원본 도트풍·색감·장면 파손·명백한 신체/사물 오류 직접 확인"
+  },
+  "presentationMetadata": [],
+  "captures": [
+    {
+      "path": "build/refactor/after/semantic-originals-thirteen-native/path_luk_01_phone_scene.png",
+      "sha256": "6f498dc3c49572f2ecc7f1e6f33c12c3f1343a24dfbfcedc844a26a9dabef03b",
+      "width": 1080,
+      "height": 2400,
+      "screen": "phone",
+      "mode": "scene",
+      "cropReport": {
+        "eventId": "path_luk_01",
+        "imageId": "img_path_luk_01_001",
+        "assetPath": "followup_20261031/img_path_luk_01_001.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.331..0.669",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/semantic-originals-thirteen-native/path_luk_01_phone_play.png",
+      "sha256": "55cd9bbd3433bc1784d4ad40d4dec4f963b4b8e0fe2aee7d63e2d9bd1ace63c8",
+      "width": 1080,
+      "height": 2400,
+      "screen": "phone",
+      "mode": "play",
+      "cropReport": null
+    },
+    {
+      "path": "build/refactor/after/semantic-originals-thirteen-native/path_luk_01_360x740_scene.png",
+      "sha256": "f019879243322965835f753b5592531e6be0ba528281bcbcc97714e7ce3fcd88",
+      "width": 945,
+      "height": 1943,
+      "screen": "360x740",
+      "mode": "scene",
+      "cropReport": {
+        "eventId": "path_luk_01",
+        "imageId": "img_path_luk_01_001",
+        "assetPath": "followup_20261031/img_path_luk_01_001.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.318..0.682",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/semantic-originals-thirteen-native/path_luk_01_360x740_play.png",
+      "sha256": "e2f4ca15a6f3de9cf21541f8b7657ea83d59c3f8e523109cb0e226a2ac7bfcb0",
+      "width": 945,
+      "height": 1943,
+      "screen": "360x740",
+      "mode": "play",
+      "cropReport": null
+    }
+  ],
+  "semanticObservation": "세 번 연속 1등은 선택 결과가 아니라 이미 발생한 본문 설정이므로 세 장 별 표식 자체는 적합하다. 네 번째 당첨·꽝·상품을 아이에게 건넴·폐점 결과는 없다.",
+  "cropObservation": "phone/small에서 세 표와 추첨기는 보이지만 기계를 만지는 사장님 얼굴이 한쪽 눈까지만 남고, 뒤의 줄 선 아이들은 전부 사라진다. 현재 본문 주요 인물과 선택 A의 상대를 함께 전달하지 못하므로 세로 표시 보류.",
+  "uiObservation": "두 화면에서 제목·본문·두 선택지가 읽힌다. small A 두 줄도 카드 내부에 남는다.",
+  "reviewMethod": "Codex AI directly inspected the full unchanged source PNG and all four unmodified native scene/play captures. Prior review is retained as historical evidence; this record is a new AI judgement, not human approval.",
+  "nativeMethod": "Production DecisionScreen, current parsed event/routing/PixelAssetLoader, fixture state in Android Compose instrumentation. Scene grid match >=0.95. Not complete game progression.",
+  "nativeRunLog": "build/refactor/semantic-originals-thirteen-and-choice-reachability.log",
+  "limitations": [
+    "Emulator captures, not physical-device review.",
+    "Only reviewed phone and 360x740 dimensions; not every font scale/aspect ratio.",
+    "Art review does not independently certify scrolling, TalkBack or complete game-flow transitions."
+  ],
+  "remainingWork": "원본 보존 후 별도 세로 파생으로 세 장 별 표식, 추첨기, 사장님 얼굴과 손, 뒤에 줄 선 아이들을 함께 배치. 네 번째 추첨/상품 양도 결과는 금지. phone/small native 재검수 필요."
+}

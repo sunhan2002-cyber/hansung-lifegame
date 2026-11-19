@@ -1,0 +1,217 @@
+{
+  "schemaVersion": 1,
+  "eventId": "adult_054",
+  "status": "PASS",
+  "reviewer": "Codex AI / plan_audit",
+  "reviewerType": "AI",
+  "reviewDate": "2026-11-19",
+  "sourceEventHash": "16cc2264bc2b979458a34a3dab47523f9818004e5c3a8d56a5ab96f0cb8cb899",
+  "sourceEventSnapshot": {
+    "eventId": "adult_054",
+    "stage": "ADULT",
+    "type": "NORMAL",
+    "isFallback": false,
+    "isMilestone": false,
+    "title": "회의 중 꿀잠",
+    "text": "오후 3시 임원 회의. 히터가 너무 따뜻하다. 꿈속에서 누가 부른다. \"…{name} 님. {name} 님!!\"",
+    "imageId": "img_adult_meeting_nap_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [
+        "class_nap_mom",
+        "job_employed"
+      ],
+      "blockedFlags": [
+        "career_athlete",
+        "pro_athlete",
+        "career_coach",
+        "coach_path",
+        "career_caster",
+        "career_trainer",
+        "career_gym_owner",
+        "career_founder",
+        "career_creator",
+        "career_freelancer",
+        "job_self_employed",
+        "early_retire",
+        "job_retired"
+      ]
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "\"엄마!\"",
+        "statDelta": {
+          "행복": 1,
+          "사회성": -3
+        },
+        "resultText": "회의실이 3초 동안 조용했다. 사장님: \"…그래, 엄마다. 보고서 32쪽 펴.\" 초등학교 때 들은 말을 40년 만에 또 들었다.",
+        "addFlags": [],
+        "outcomes": [
+          {
+            "outcomeId": "a_primary",
+            "text": "회의실이 3초 동안 조용했다. 사장님: \"…그래, 엄마다. 보고서 32쪽 펴.\" 초등학교 때 들은 말을 40년 만에 또 들었다.",
+            "chance": 100,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 1,
+              "사회성": -3
+            },
+            "addFlags": []
+          }
+        ]
+      },
+      {
+        "choiceId": "B",
+        "label": "박수를 치며 벌떡 일어난다",
+        "statDelta": {
+          "사회성": 2,
+          "운": 1,
+          "지력": -1
+        },
+        "resultText": "마침 사장님 발표가 끝난 참이었다. 사장님이 감동한 얼굴로 악수를 청했다.",
+        "addFlags": [],
+        "outcomes": [
+          {
+            "outcomeId": "b_primary",
+            "text": "마침 사장님 발표가 끝난 참이었다. 사장님이 감동한 얼굴로 악수를 청했다.",
+            "chance": 100,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "사회성": 2,
+              "운": 1,
+              "지력": -1
+            },
+            "addFlags": [],
+            "lifeDelta": 10
+          }
+        ]
+      },
+      {
+        "choiceId": "C",
+        "label": "침을 닦으며 \"저 안 잤습니다\"",
+        "statDelta": {
+          "운": 1,
+          "행복": 1,
+          "사회성": -2
+        },
+        "resultText": "사장님이 말없이 손거울을 건넸다. 볼에 보고서 쪽수가 찍혀 있었다.",
+        "addFlags": [],
+        "outcomes": [
+          {
+            "outcomeId": "c_primary",
+            "text": "사장님이 말없이 손거울을 건넸다. 볼에 보고서 쪽수가 찍혀 있었다.",
+            "chance": 100,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "운": 1,
+              "행복": 1,
+              "사회성": -2
+            },
+            "addFlags": []
+          }
+        ]
+      }
+    ],
+    "priority": 0,
+    "kind": "INCIDENT",
+    "periods": [
+      "MIDDLE"
+    ]
+  },
+  "sourceReadScope": "Current complete event, conditions, every choice/outcome and flags/stat deltas/periods/follow-ups directly read before judgement.",
+  "sourceImage": {
+    "path": "app/src/main/assets/images/followup_20261031/img_adult_meeting_nap_001.png",
+    "sha256": "c5a6a30eb18eae4726fc8444a0ca445d05085dd6d731d297c7092d21d054426d",
+    "width": 720,
+    "height": 540
+  },
+  "originalArtworkUnchangedSinceHistoricalReview": true,
+  "historicalReview": {
+    "eventId": "adult_054",
+    "title": "회의 중 꿀잠",
+    "imageId": "img_adult_meeting_nap_001",
+    "assetPath": "followup_20261031/img_adult_meeting_nap_001.png",
+    "sha256": "c5a6a30eb18eae4726fc8444a0ca445d05085dd6d731d297c7092d21d054426d",
+    "eventSourceHash": "16cc2264bc2b979458a34a3dab47523f9818004e5c3a8d56a5ab96f0cb8cb899",
+    "status": "REVISION_REQUIRED",
+    "reviewer": "김선한 담당 Codex 직접 대행 검수",
+    "reason": "회의 장면은 맞으나 졸다 불려 잠에서 깬 사건 단서가 부족함",
+    "expectedAction": "졸다 깨는 흐릿한 시야 너머로 임원들이 일제히 나를 봄",
+    "requiredObjects": "긴 회의 테이블, 히터 또는 온풍구, 빔프로젝터, 벽시계(3시)",
+    "sheet": "output/art-review-20261119/sheet-11.jpg",
+    "cell": 12,
+    "cropMethod": "ImageOps.fit centre-fill 360:800; simulated crop inspected directly, not an emulator capture",
+    "visualMethod": "원본 도트풍·색감·장면 파손·명백한 신체/사물 오류 직접 확인"
+  },
+  "presentationMetadata": [],
+  "captures": [
+    {
+      "path": "build/refactor/after/originals-twentyfour-and-variants-native/adult_054_phone_scene.png",
+      "sha256": "f697e31ae6f48f8068dfa71dc2be8b565a4e3105e002ffabaa5c8f0b183d1ac3",
+      "width": 1080,
+      "height": 2400,
+      "screen": "phone",
+      "mode": "scene",
+      "cropReport": {
+        "eventId": "adult_054",
+        "imageId": "img_adult_meeting_nap_001",
+        "assetPath": "followup_20261031/img_adult_meeting_nap_001.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.331..0.669",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/originals-twentyfour-and-variants-native/adult_054_phone_play.png",
+      "sha256": "e745b96ce768a55d151d943e159bde55b2072fa996d5d8422215e5a595665430",
+      "width": 1080,
+      "height": 2400,
+      "screen": "phone",
+      "mode": "play",
+      "cropReport": null
+    },
+    {
+      "path": "build/refactor/after/originals-twentyfour-and-variants-native/adult_054_360x740_scene.png",
+      "sha256": "55ea3a1f9fe3a6de0ea27783387181289cd02099f6b230e529d7b38284dc9d90",
+      "width": 945,
+      "height": 1943,
+      "screen": "360x740",
+      "mode": "scene",
+      "cropReport": {
+        "eventId": "adult_054",
+        "imageId": "img_adult_meeting_nap_001",
+        "assetPath": "followup_20261031/img_adult_meeting_nap_001.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.318..0.682",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/originals-twentyfour-and-variants-native/adult_054_360x740_play.png",
+      "sha256": "e4b287f62fd8b268af7001244f5e262c205511a1a356723489192fee5ba505b4",
+      "width": 945,
+      "height": 1943,
+      "screen": "360x740",
+      "mode": "play",
+      "cropReport": null
+    }
+  ],
+  "semanticObservation": "오후 3시 시계와 주황빛 히터가 있는 임원 회의에서 참가자들이 플레이어를 바라본다. 꿈에서 이름을 부르는 순간을 1인칭으로 표현하며 주인공 얼굴을 그릴 필요가 없다. 박수·악수·거울·뺨의 보고서 자국 등 선택 결과는 없다.",
+  "cropObservation": "두 native에서 중앙 상사의 얼굴과 손, 3시 시계, 히터, 회의 테이블이 남는다. 좌우 배경 참가자 일부는 잘리지만 핵심 대화 상대/난방/시간 맥락은 유지된다.",
+  "uiObservation": "두 크기에서 제목·본문·세 선택지가 모두 읽힌다.",
+  "reviewMethod": "Codex AI directly inspected the full unchanged source PNG and all four unmodified native scene/play captures. Prior review is retained as historical evidence; this record is a new AI judgement, not human approval.",
+  "nativeMethod": "Production DecisionScreen, current parsed event/routing/PixelAssetLoader, fixture state in Android Compose instrumentation. Scene grid match >=0.95. Not complete game progression.",
+  "nativeRunLog": "build/refactor/depth-and-originals-twentyfour.log",
+  "limitations": [
+    "Emulator captures, not physical-device review.",
+    "Only reviewed phone and 360x740 dimensions; not every font scale/aspect ratio.",
+    "Art review does not independently certify scrolling, TalkBack or complete game-flow transitions."
+  ]
+}

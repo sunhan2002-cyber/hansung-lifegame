@@ -1,0 +1,71 @@
+{
+  "eventId": "path_luk_08",
+  "reviewerType": "AI",
+  "scope": "Portrait phone and small-phone presentation",
+  "sourceEventHash": "dc21b967e33be0f19fbdefa4ac68aa0dcd8a845ec43fe234f975cac506d7885d",
+  "sourceReview": "docs/refactor/art-candidates/portrait-integration/path_luk_08.json",
+  "sourceSha256": "e79bd4a97ca7f25757e3b8008b7158ce2585fcaa8df2100490b009f5cb220999",
+  "displayedVariant": {
+    "assetPath": "presentation/portraits/img_path_luk_08_001_portrait_v1.png",
+    "sha256": "428b54e5ed1690c9a22d41e4e8c4f4a63eee96c15f839feef1c5b806daf72274",
+    "width": 961,
+    "height": 1637,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/path_luk_08.json"
+  },
+  "nativeCaptures": [
+    {
+      "path": "build/refactor/resumed/final32/path_luk_08_phone_scene.png",
+      "sha256": "acfd08d50c2ab85423f10c1d00f90df71469ae179ee9e396741c4f202034b9bb",
+      "crop": {
+        "eventId": "path_luk_08",
+        "imageId": "img_path_luk_08_001",
+        "assetPath": "presentation/portraits/img_path_luk_08_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.117..0.883",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/final32/path_luk_08_phone_play.png",
+      "sha256": "6d32e494e17163e32a4a340f945378123187a13452bbc7d9bca3a243957aa377",
+      "crop": {
+        "eventId": "path_luk_08",
+        "imageId": "img_path_luk_08_001",
+        "assetPath": "presentation/portraits/img_path_luk_08_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.117..0.883",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/final32/path_luk_08_360x740_scene.png",
+      "sha256": "7efdb5a2a74e248be1268616b4974357ab1cc53d344ca79039f2fa700c1d7072",
+      "crop": {
+        "eventId": "path_luk_08",
+        "imageId": "img_path_luk_08_001",
+        "assetPath": "presentation/portraits/img_path_luk_08_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.086..0.914",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/final32/path_luk_08_360x740_play.png",
+      "sha256": "6470f2df3049247c05fea327ba1960c46e6766e35f8b31cfc9ac29baef599f91",
+      "crop": {
+        "eventId": "path_luk_08",
+        "imageId": "img_path_luk_08_001",
+        "assetPath": "presentation/portraits/img_path_luk_08_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.086..0.914",
+        "match": "1.000"
+      }
+    }
+  ],
+  "observation": "Airline employee gestures at closed gate, ticket and baggage visible.",
+  "decision": "PASS",
+  "method": "Individual visual inspection of both scene and gameplay frames together with producer semantic/source review and device capture match."
+}

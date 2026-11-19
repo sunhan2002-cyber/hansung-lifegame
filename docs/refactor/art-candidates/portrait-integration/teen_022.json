@@ -1,0 +1,29 @@
+{
+  "eventId": "teen_022",
+  "sourceAssetPath": "followup_20261031/img_teen_school_trip_001.png",
+  "sourceSha256": "da0c649ab05fac460d18058ead0a99f306dac594366e86600bbe61558caaaa2b",
+  "variant": {
+    "assetPath": "presentation/portraits/img_teen_school_trip_001_portrait_v1.png",
+    "sha256": "9c129bd21e411f53af58ae178831e6f9f5e875f4b01eed1fee6cc060939c05c8",
+    "width": 941,
+    "height": 1672,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/teen_022.json"
+  },
+  "reviewerType": "AI",
+  "reviewer": "Codex AI (/root)",
+  "reviewStatus": "AI_REVIEWED_PRESENTATION",
+  "eventSourceHash": "1fdc796299a90e50d46eba22ba18b11c78333b38b67dc25815924ca9e1d8beb3",
+  "semanticReview": "Producer read the current event conditions and every choice/outcome, inspected source and selected output. Full source snapshot and exact prompt are in the referenced production ledger. Native acceptance remains pending.",
+  "visualReview": "First-person threshold view; three inviting classmates and teacher now visibly seated on chair at corridor end. No player back/head, punishment or noodles. Output viewed before user pause; native crop pending.",
+  "cropReview": "Portrait candidate selected for native phone/small-phone scene and gameplay inspection; not final artwork acceptance.",
+  "actualProducer": "OpenAI built-in image_gen",
+  "generationMethod": "Built-in imagegen edit; exact prompts/output SHA/rejected attempts preserved in docs/refactor/art-candidates/content-root-production-20261119.json",
+  "productionLedger": "docs/refactor/art-candidates/content-root-production-20261119.json",
+  "nativePending": true,
+  "runtimeConnected": true,
+  "approvalChanged": false,
+  "selectedStagingSha256": "9c129bd21e411f53af58ae178831e6f9f5e875f4b01eed1fee6cc060939c05c8"
+}

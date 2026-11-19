@@ -1,0 +1,205 @@
+{
+  "schemaVersion": 1,
+  "eventId": "adult_042",
+  "status": "REVISION_REQUIRED",
+  "reviewer": "Codex AI / plan_audit",
+  "reviewerType": "AI",
+  "reviewDate": "2026-11-19",
+  "sourceEventHash": "32633849cfead1240ebdd231c6535e165c1f665eabd53a95a69242da33fade62",
+  "sourceEventSnapshot": {
+    "eventId": "adult_042",
+    "stage": "ADULT",
+    "type": "NORMAL",
+    "isFallback": false,
+    "isMilestone": false,
+    "title": "이삿짐 속 상자",
+    "text": "이삿짐을 싸다가 옷장 위에서 먼지 쌓인 상자를 찾았다. 겉에 엄마 글씨로 '{name} 어릴 때'라고 적혀 있다.",
+    "imageId": "img_adult_childhood_box_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [],
+      "blockedFlags": []
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "열어 본다",
+        "statDelta": {
+          "행복": 3,
+          "경제력": -1
+        },
+        "resultText": "받아쓰기 시험지, 빠진 이를 넣어 둔 봉투, 삐뚤빼뚤한 편지. 짐 싸기가 두 시간 늦어져 이사 업체에 추가 요금을 냈다.",
+        "addFlags": [],
+        "outcomes": [
+          {
+            "outcomeId": "a_primary",
+            "text": "받아쓰기 시험지, 빠진 이를 넣어 둔 봉투, 삐뚤빼뚤한 편지. 짐 싸기가 두 시간 늦어져 이사 업체에 추가 요금을 냈다.",
+            "chance": 100,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 3,
+              "경제력": -1
+            },
+            "addFlags": [],
+            "lifeDelta": 10
+          }
+        ]
+      },
+      {
+        "choiceId": "B",
+        "label": "그대로 새집에 가져간다",
+        "statDelta": {
+          "행복": 1,
+          "건강": -1
+        },
+        "resultText": "생각보다 무거워서 허리를 조금 삐끗했다. 언젠가 아이와 같이 열어 보기로 했다.",
+        "addFlags": [],
+        "outcomes": [
+          {
+            "outcomeId": "b_primary",
+            "text": "생각보다 무거워서 허리를 조금 삐끗했다. 언젠가 아이와 같이 열어 보기로 했다.",
+            "chance": 100,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 1,
+              "건강": -1
+            },
+            "addFlags": []
+          }
+        ]
+      },
+      {
+        "choiceId": "C",
+        "label": "사진을 찍어 엄마에게 보낸다",
+        "statDelta": {
+          "사회성": 2,
+          "행복": 1,
+          "건강": -1
+        },
+        "resultText": "엄마와 한 시간을 통화했다. 짐은 밤 12시가 넘어서야 다 쌌다.",
+        "addFlags": [
+          "family_bond"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "c_primary",
+            "text": "엄마와 한 시간을 통화했다. 짐은 밤 12시가 넘어서야 다 쌌다.",
+            "chance": 100,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "사회성": 2,
+              "행복": 1,
+              "건강": -1
+            },
+            "addFlags": [
+              "family_bond"
+            ],
+            "lifeDelta": 4
+          }
+        ]
+      }
+    ],
+    "priority": 0,
+    "kind": "INCIDENT",
+    "periods": [
+      "YOUNG_ADULT",
+      "MIDDLE"
+    ]
+  },
+  "sourceReadScope": "Current complete event, conditions, every choice/outcome and flags/stat deltas/periods/follow-ups directly read before judgement.",
+  "sourceImage": {
+    "path": "app/src/main/assets/images/followup_20261031/img_adult_childhood_box_001.png",
+    "sha256": "0404e42c695f115720b90f54533ecaec35ba896a8f5b72722c4d59c769734adb",
+    "width": 720,
+    "height": 540
+  },
+  "originalArtworkUnchangedSinceHistoricalReview": true,
+  "historicalReview": {
+    "eventId": "adult_042",
+    "title": "이삿짐 속 상자",
+    "imageId": "img_adult_childhood_box_001",
+    "assetPath": "followup_20261031/img_adult_childhood_box_001.png",
+    "sha256": "0404e42c695f115720b90f54533ecaec35ba896a8f5b72722c4d59c769734adb",
+    "eventSourceHash": "32633849cfead1240ebdd231c6535e165c1f665eabd53a95a69242da33fade62",
+    "status": "REVISION_REQUIRED",
+    "reviewer": "김선한 담당 Codex 직접 대행 검수",
+    "reason": "엄마 글씨의 어린 시절 상자라는 본문 단서 대신 무문자 상자만 있음; 상자 속 추억 사물 보강 필요",
+    "expectedAction": "옷장 위에서 찾은 먼지 쌓인 닫힌 상자를 바라봄",
+    "requiredObjects": "닫힌 상자, 먼지, 손글씨 형태의 겉면; 내용물은 안 보임",
+    "sheet": "output/art-review-20261119/sheet-11.jpg",
+    "cell": 0,
+    "cropMethod": "ImageOps.fit centre-fill 360:800; simulated crop inspected directly, not an emulator capture",
+    "visualMethod": "원본 도트풍·색감·장면 파손·명백한 신체/사물 오류 직접 확인"
+  },
+  "presentationMetadata": [],
+  "captures": [
+    {
+      "path": "build/refactor/after/originals-twentyfour-and-variants-native/adult_042_phone_scene.png",
+      "sha256": "908b3b6c5653d10cb3fc791276abb760d807f6e8e8cbc0c7616e06d7910e799c",
+      "width": 1080,
+      "height": 2400,
+      "screen": "phone",
+      "mode": "scene",
+      "cropReport": {
+        "eventId": "adult_042",
+        "imageId": "img_adult_childhood_box_001",
+        "assetPath": "followup_20261031/img_adult_childhood_box_001.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.331..0.669",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/originals-twentyfour-and-variants-native/adult_042_phone_play.png",
+      "sha256": "b952a7404bf8f1d197bbada0257af2789e88a6f07491a06ea2c910600fe82d0b",
+      "width": 1080,
+      "height": 2400,
+      "screen": "phone",
+      "mode": "play",
+      "cropReport": null
+    },
+    {
+      "path": "build/refactor/after/originals-twentyfour-and-variants-native/adult_042_360x740_scene.png",
+      "sha256": "5d42b027a038867e322034081d2b1cf703e82c54384260fd0beba3b3eaae099c",
+      "width": 945,
+      "height": 1943,
+      "screen": "360x740",
+      "mode": "scene",
+      "cropReport": {
+        "eventId": "adult_042",
+        "imageId": "img_adult_childhood_box_001",
+        "assetPath": "followup_20261031/img_adult_childhood_box_001.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.318..0.682",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/originals-twentyfour-and-variants-native/adult_042_360x740_play.png",
+      "sha256": "eb8f4b924248b02701a97ff4bf377c71fe5bf834f4142c20a264114ce1dd11d1",
+      "width": 945,
+      "height": 1943,
+      "screen": "360x740",
+      "mode": "play",
+      "cropReport": null
+    }
+  ],
+  "semanticObservation": "이사 포장 중 닫힌 작은 추억 상자를 발견하는 선택 전 상태이며 선택 후 나오는 받아쓰기 종이·치아 봉투·편지 등은 보이지 않는다. 그러나 원문 핵심인 먼지 쌓인 상자와 엄마 손글씨 표지가 원본의 깨끗한 나무 잠금 상자에 없다.",
+  "cropObservation": "두 native에서 닫힌 나무 상자는 충분히 남지만 원본 자체에 식별 단서가 없어 크롭만으로는 해소되지 않는다.",
+  "uiObservation": "두 크기에서 제목·본문·세 선택지를 읽을 수 있다.",
+  "reviewMethod": "Codex AI directly inspected the full unchanged source PNG and all four unmodified native scene/play captures. Prior review is retained as historical evidence; this record is a new AI judgement, not human approval.",
+  "nativeMethod": "Production DecisionScreen, current parsed event/routing/PixelAssetLoader, fixture state in Android Compose instrumentation. Scene grid match >=0.95. Not complete game progression.",
+  "nativeRunLog": "build/refactor/depth-and-originals-twentyfour.log",
+  "limitations": [
+    "Emulator captures, not physical-device review.",
+    "Only reviewed phone and 360x740 dimensions; not every font scale/aspect ratio.",
+    "Art review does not independently certify scrolling, TalkBack or complete game-flow transitions."
+  ],
+  "remainingWork": "원본 보존 별도 파생에서 먼지 쌓인 닫힌 상자와 낡은 손글씨 표지(플레이어 이름 고정 금지)를 보강. 장롱 위 발견/이사 맥락 유지. 내부 추억 물건·개봉·통화·새집 결과 금지 후 native 재검수."
+}

@@ -1,0 +1,9 @@
+Use-case: edit an existing Korean life-simulation event illustration. Produce one full-bleed vertical 9:16 portrait pixel-art scene for a mobile game. The supplied original is the edit target and style reference. Preserve its warm nostalgic color palette, visible handcrafted pixel clusters, gentle depth and everyday Korean setting, while correcting the scene exactly as specified below. The camera is always the player's own eyes: small hands/partial limbs are allowed, but never show the player's face, rear head, complete body, reflection or portrait. Other people may have natural faces. Keep every necessary story cue in the central 80% of portrait width; no panel border or UI. No readable words, letters, numerals, logos, captions, speech balloons, thought bubbles, decorative comic marks or watermarks. Do not insert text to explain missing visual content. Render a single coherent scene, not a montage. Avoid excessive smooth anime gradients; retain the source pixel-art rendering.
+
+CURRENT EVENT BEFORE ANY CHOICE (source text; do not typeset): 손주가 문구점 뽑기 기계 앞에서 동전을 만지작거린다. 어릴 때부터 이상하게 운이 좋았다는 이야기를 하자 손주 눈이 커졌다.
+
+REQUIRED EDIT: 조부모 첫인칭으로 동전을 손에 쥐고 올려다보는 어린 손주와 아직 돌리지 않은 문구점 뽑기 기계, 노년 주인공 손만.
+
+UNDECIDED CHOICES / OUTCOMES TO EXCLUDE: 동전 투입/손잡이 돌리기·캡슐 수령·당첨/꽝·상품·저금통·동전 전부 전달을 미리 그리지 않는다.
+
+Output an emotionally clear vertical 9:16 composition. All key people, object counts and cues must survive narrow portrait cropping. No extra choice result.

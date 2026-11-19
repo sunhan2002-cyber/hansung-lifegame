@@ -1,0 +1,201 @@
+{
+  "schemaVersion": 1,
+  "eventId": "path_luk_02",
+  "status": "PASS",
+  "reviewer": "Codex AI / plan_audit",
+  "reviewerType": "AI",
+  "reviewDate": "2026-11-19",
+  "sourceEventHash": "8c4ea6f92526de6bc07180b42f9c09906d6b3c48e8e692fc5205fb808cbb7eb8",
+  "sourceEventSnapshot": {
+    "eventId": "path_luk_02",
+    "stage": "TEEN",
+    "type": "NORMAL",
+    "isFallback": false,
+    "isMilestone": false,
+    "title": "추첨으로 뽑힌 해외 연수",
+    "text": "교육청 해외 연수 추첨. 전교에서 한 명. 교감 선생님이 상자에서 종이를 꺼낸다. \"…{name}!\" 여권도 없다.",
+    "imageId": "img_path_luk_02_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [
+        "luk_path"
+      ],
+      "blockedFlags": []
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "여권을 만들고 연수를 간다",
+        "statDelta": {
+          "사회성": 2,
+          "지력": 2,
+          "경제력": -1
+        },
+        "resultText": "2주 동안 낯선 나라 학교에 다녔다. 말은 반도 못 알아들었다. 그래도 친구는 생겼다.",
+        "addFlags": [
+          "luk_exchange",
+          "achv_exchange"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "a_go",
+            "text": "2주 동안 낯선 나라 학교에 다녔다. 말은 반도 못 알아들었다. 그래도 친구는 생겼다.",
+            "chance": 100,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "사회성": 2,
+              "지력": 2,
+              "경제력": -1
+            },
+            "addFlags": [
+              "luk_exchange",
+              "achv_exchange"
+            ]
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week8_life_path"
+      },
+      {
+        "choiceId": "B",
+        "label": "꼭 가고 싶어 하던 친구에게 양보한다",
+        "statDelta": {
+          "사회성": 3,
+          "운": 1,
+          "지력": -1
+        },
+        "resultText": "친구가 다녀와서 기념품을 한 가방 줬다. 그해 우리 반 운은 다 그 친구한테 갔다. 다음 해엔 나한테 왔다.",
+        "addFlags": [
+          "helped_friend"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "b_give",
+            "text": "친구가 다녀와서 기념품을 한 가방 줬다. 그해 우리 반 운은 다 그 친구한테 갔다. 다음 해엔 나한테 왔다.",
+            "chance": 100,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "사회성": 3,
+              "운": 1,
+              "지력": -1
+            },
+            "addFlags": [
+              "helped_friend"
+            ]
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week8_life_path"
+      }
+    ],
+    "priority": 0,
+    "kind": "INCIDENT",
+    "periods": [
+      "TEEN"
+    ],
+    "weight": 20,
+    "view": "FIRST_PERSON",
+    "lifePath": "LUCK",
+    "pathRole": "뜻밖의 기회",
+    "followUps": [
+      "path_luk_03"
+    ]
+  },
+  "sourceReadScope": "Current complete event, conditions, every choice/outcome and flags/stat deltas/periods/follow-ups directly read before judgement.",
+  "sourceImage": {
+    "path": "app/src/main/assets/images/followup_20261031/img_path_luk_02_001.png",
+    "sha256": "485642ca0c64fd09e53ba8e9c9715701981096074d9ef584b812ac7665eb8c7f",
+    "width": 720,
+    "height": 540
+  },
+  "originalArtworkUnchangedSinceHistoricalReview": true,
+  "historicalReview": {
+    "eventId": "path_luk_02",
+    "title": "추첨으로 뽑힌 해외 연수",
+    "imageId": "img_path_luk_02_001",
+    "assetPath": "followup_20261031/img_path_luk_02_001.png",
+    "sha256": "485642ca0c64fd09e53ba8e9c9715701981096074d9ef584b812ac7665eb8c7f",
+    "eventSourceHash": "8c4ea6f92526de6bc07180b42f9c09906d6b3c48e8e692fc5205fb808cbb7eb8",
+    "status": "REVISION_REQUIRED",
+    "reviewer": "김선한 담당 Codex 직접 대행 검수",
+    "reason": "교장선생님의 추첨함은 있으나 교육청 해외 연수 장소·상징의 연결성 부족",
+    "expectedAction": "교감이 뽑은 종이로 이름을 발표",
+    "requiredObjects": "추첨 상자, 한 장의 추첨지",
+    "sheet": "output/art-review-20261119/sheet-17.jpg",
+    "cell": 10,
+    "cropMethod": "ImageOps.fit centre-fill 360:800; simulated crop inspected directly, not an emulator capture",
+    "visualMethod": "원본 도트풍·색감·장면 파손·명백한 신체/사물 오류 직접 확인"
+  },
+  "presentationMetadata": [],
+  "captures": [
+    {
+      "path": "build/refactor/after/semantic-originals-thirteen-native/path_luk_02_phone_scene.png",
+      "sha256": "a9484f3bd63794704ac5d03ca4cef516baabb5a7f1364bfda2e5d183e5634001",
+      "width": 1080,
+      "height": 2400,
+      "screen": "phone",
+      "mode": "scene",
+      "cropReport": {
+        "eventId": "path_luk_02",
+        "imageId": "img_path_luk_02_001",
+        "assetPath": "followup_20261031/img_path_luk_02_001.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.331..0.669",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/semantic-originals-thirteen-native/path_luk_02_phone_play.png",
+      "sha256": "6b1bfc948026bd7227d9548ffaae6bc474624a177cd3416a462d150a8afe8df3",
+      "width": 1080,
+      "height": 2400,
+      "screen": "phone",
+      "mode": "play",
+      "cropReport": null
+    },
+    {
+      "path": "build/refactor/after/semantic-originals-thirteen-native/path_luk_02_360x740_scene.png",
+      "sha256": "267f315b90307ad78f557b9c2a4d7ea3f0baf3b8fe9446976c3c23bfb5cf83d7",
+      "width": 945,
+      "height": 1943,
+      "screen": "360x740",
+      "mode": "scene",
+      "cropReport": {
+        "eventId": "path_luk_02",
+        "imageId": "img_path_luk_02_001",
+        "assetPath": "followup_20261031/img_path_luk_02_001.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.318..0.682",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/semantic-originals-thirteen-native/path_luk_02_360x740_play.png",
+      "sha256": "fa13935da27afede2c745a2a88ddba6d49f8d869737e1c38317d7c03ad6fb5ce",
+      "width": 945,
+      "height": 1943,
+      "screen": "360x740",
+      "mode": "play",
+      "cropReport": null
+    }
+  ],
+  "semanticObservation": "교감이 추첨 상자에서 뽑은 종이를 들고 이름을 부르는 현재 상태다. 뒤 세계지도와 비행 경로, 전체 원본의 비행기/지구본이 해외 연수 단서다. 여권은 없으며 여행·외국 친구·선물 결과도 없다.",
+  "cropObservation": "두 native에서 교감 전체 얼굴, 뽑은 종이와 양손, 추첨 상자, 플레이어 두 손 및 세계지도와 경로가 유지된다. 비행기와 지구본은 잘리지만 지도 자체로 해외 맥락이 남아 과거 해외 단서 부재 지적을 해소했다.",
+  "uiObservation": "두 크기에서 제목·본문·두 선택지 전체를 읽을 수 있다.",
+  "reviewMethod": "Codex AI directly inspected the full unchanged source PNG and all four unmodified native scene/play captures. Prior review is retained as historical evidence; this record is a new AI judgement, not human approval.",
+  "nativeMethod": "Production DecisionScreen, current parsed event/routing/PixelAssetLoader, fixture state in Android Compose instrumentation. Scene grid match >=0.95. Not complete game progression.",
+  "nativeRunLog": "build/refactor/semantic-originals-thirteen-and-choice-reachability.log",
+  "limitations": [
+    "Emulator captures, not physical-device review.",
+    "Only reviewed phone and 360x740 dimensions; not every font scale/aspect ratio.",
+    "Art review does not independently certify scrolling, TalkBack or complete game-flow transitions."
+  ]
+}

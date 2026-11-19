@@ -1,0 +1,71 @@
+{
+  "eventId": "adult_067",
+  "reviewerType": "AI",
+  "scope": "Portrait phone and small-phone presentation",
+  "sourceEventHash": "7e269d9a1aae3d5d2d742a983684ea04723bf246bd078768ab75ccfea2fa989b",
+  "sourceReview": "docs/refactor/art-candidates/portrait-integration/adult_067.json",
+  "sourceSha256": "5e44b7b62958b1b3a5985e6a60ccb66f0839ace52b89ba01bc58217f9cd37c18",
+  "displayedVariant": {
+    "assetPath": "presentation/portraits/img_adult_sunday_night_001_portrait_v1.png",
+    "sha256": "6cca4b028ccbad37dbe776592ff78c5d11e213a145331b879df48e7ce9a4108d",
+    "width": 960,
+    "height": 1637,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/adult_067.json"
+  },
+  "nativeCaptures": [
+    {
+      "path": "build/refactor/resumed/final32/adult_067_phone_scene.png",
+      "sha256": "3f9e1b51d2490c22977a51723ad302b41989d0fe86a56888e8f31f499a570919",
+      "crop": {
+        "eventId": "adult_067",
+        "imageId": "img_adult_sunday_night_001",
+        "assetPath": "presentation/portraits/img_adult_sunday_night_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.116..0.884",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/final32/adult_067_phone_play.png",
+      "sha256": "7401f910d94df00ecd9f73c512323dfab4969f774f8882fe225cb738d9e4be81",
+      "crop": {
+        "eventId": "adult_067",
+        "imageId": "img_adult_sunday_night_001",
+        "assetPath": "presentation/portraits/img_adult_sunday_night_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.116..0.884",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/final32/adult_067_360x740_scene.png",
+      "sha256": "004826f38ab156dcb984867461e5a035329f0a82c18e94a56c8c2ca2b5610f07",
+      "crop": {
+        "eventId": "adult_067",
+        "imageId": "img_adult_sunday_night_001",
+        "assetPath": "presentation/portraits/img_adult_sunday_night_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.085..0.915",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/final32/adult_067_360x740_play.png",
+      "sha256": "09d01d51b4b4488c2b593724247644a779bf8566a0bd22d3cf140f3f40d803b8",
+      "crop": {
+        "eventId": "adult_067",
+        "imageId": "img_adult_sunday_night_001",
+        "assetPath": "presentation/portraits/img_adult_sunday_night_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.085..0.915",
+        "match": "1.000"
+      }
+    }
+  ],
+  "observation": "Night bedroom desk, shut-off work activity, eleven on analogue clock, moonlit window and still-blank notebook.",
+  "decision": "PASS",
+  "method": "Individual visual inspection of both scene and gameplay frames together with producer semantic/source review and device capture match."
+}

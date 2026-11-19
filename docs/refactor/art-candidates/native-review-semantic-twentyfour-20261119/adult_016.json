@@ -1,0 +1,231 @@
+{
+  "schemaVersion": 1,
+  "eventId": "adult_016",
+  "status": "REVISION_REQUIRED",
+  "reviewer": "Codex AI / plan_audit",
+  "reviewerType": "AI",
+  "reviewDate": "2026-11-19",
+  "sourceEventHash": "1ff6b96f8e518ee2a26e82c84fc791da7e962d7ff974116041ba58d87afc345c",
+  "sourceEventSnapshot": {
+    "eventId": "adult_016",
+    "stage": "ADULT",
+    "type": "NORMAL",
+    "isFallback": false,
+    "isMilestone": false,
+    "title": "회식 자리 배치",
+    "text": "첫 회식. 삼겹살집 긴 테이블에 남은 자리는 셋. 팀장님 옆, 동기 옆, 문 앞 끝자리.",
+    "imageId": "img_adult_dinner_seats_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [
+        "early_job",
+        "job_employed"
+      ],
+      "blockedFlags": [
+        "career_athlete",
+        "pro_athlete",
+        "career_coach",
+        "coach_path",
+        "career_caster",
+        "career_trainer",
+        "career_gym_owner",
+        "career_founder",
+        "career_creator",
+        "career_freelancer",
+        "job_self_employed",
+        "early_retire",
+        "job_retired"
+      ]
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "팀장님 옆",
+        "statDelta": {
+          "사회성": 2,
+          "경제력": 1,
+          "건강": -2
+        },
+        "resultText": "팀장님의 신입 시절 이야기를 네 번 들었다. 잔이 빌 틈이 없었다.",
+        "addFlags": [
+          "seat_boss"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "a_primary",
+            "text": "팀장님의 신입 시절 이야기를 네 번 들었다. 잔이 빌 틈이 없었다.",
+            "chance": 100,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "사회성": 2,
+              "경제력": 1,
+              "건강": -2
+            },
+            "addFlags": [
+              "seat_boss"
+            ]
+          }
+        ]
+      },
+      {
+        "choiceId": "B",
+        "label": "동기 옆",
+        "statDelta": {
+          "사회성": 1,
+          "행복": 1,
+          "운": -1
+        },
+        "resultText": "테이블 밑으로 톡을 주고받았다. '살려줘' '나도'",
+        "addFlags": [
+          "seat_peer"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "b_primary",
+            "text": "테이블 밑으로 톡을 주고받았다. '살려줘' '나도'",
+            "chance": 100,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "사회성": 1,
+              "행복": 1,
+              "운": -1
+            },
+            "addFlags": [
+              "seat_peer"
+            ]
+          }
+        ]
+      },
+      {
+        "choiceId": "C",
+        "label": "문 앞 끝자리",
+        "statDelta": {
+          "건강": 1,
+          "사회성": 1,
+          "행복": -2
+        },
+        "resultText": "주문 받고, 물 채우고, 고기 굽고. 사실상 오늘의 직원이 됐다. 대신 제일 먼저 나갈 수 있다.",
+        "addFlags": [
+          "seat_door"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "c_primary",
+            "text": "주문 받고, 물 채우고, 고기 굽고. 사실상 오늘의 직원이 됐다. 대신 제일 먼저 나갈 수 있다.",
+            "chance": 100,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "건강": 1,
+              "사회성": 1,
+              "행복": -2
+            },
+            "addFlags": [
+              "seat_door"
+            ]
+          }
+        ]
+      }
+    ],
+    "priority": 0,
+    "kind": "INCIDENT",
+    "periods": [
+      "YOUNG_ADULT"
+    ]
+  },
+  "sourceReadScope": "Current complete event, conditions, every choice/outcome and flags/stat deltas/periods/follow-ups directly read before judgement.",
+  "sourceImage": {
+    "path": "app/src/main/assets/images/followup_20261031/img_adult_dinner_seats_001.png",
+    "sha256": "19fe038c02a418d219c16a69516a59e0c581e23c62a03ffd74f74ac83fb66665",
+    "width": 720,
+    "height": 540
+  },
+  "originalArtworkUnchangedSinceHistoricalReview": true,
+  "historicalReview": {
+    "eventId": "adult_016",
+    "title": "회식 자리 배치",
+    "imageId": "img_adult_dinner_seats_001",
+    "assetPath": "followup_20261031/img_adult_dinner_seats_001.png",
+    "sha256": "19fe038c02a418d219c16a69516a59e0c581e23c62a03ffd74f74ac83fb66665",
+    "eventSourceHash": "1ff6b96f8e518ee2a26e82c84fc791da7e962d7ff974116041ba58d87afc345c",
+    "status": "REVISION_REQUIRED",
+    "reviewer": "김선한 담당 Codex 직접 대행 검수",
+    "reason": "선택 후보인 팀장 옆·동기 옆·문 옆 세 자리 차이가 드러나지 않음",
+    "expectedAction": "남은 세 자리 중 어디 앉을지 둘러봄",
+    "requiredObjects": "긴 식탁, 빈 의자 세 개, 문, 불판",
+    "sheet": "output/art-review-20261119/sheet-09.jpg",
+    "cell": 6,
+    "cropMethod": "ImageOps.fit centre-fill 360:800; simulated crop inspected directly, not an emulator capture",
+    "visualMethod": "원본 도트풍·색감·장면 파손·명백한 신체/사물 오류 직접 확인"
+  },
+  "presentationMetadata": [],
+  "captures": [
+    {
+      "path": "build/refactor/after/originals-twentyfour-and-variants-native/adult_016_phone_scene.png",
+      "sha256": "2481637acc92051c20ff6a50e43095bde71faeb711eb5e93579b8adcdd31e01e",
+      "width": 1080,
+      "height": 2400,
+      "screen": "phone",
+      "mode": "scene",
+      "cropReport": {
+        "eventId": "adult_016",
+        "imageId": "img_adult_dinner_seats_001",
+        "assetPath": "followup_20261031/img_adult_dinner_seats_001.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.331..0.669",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/originals-twentyfour-and-variants-native/adult_016_phone_play.png",
+      "sha256": "a957ab57fbe27b79b2a021e9f3cfa6a4777a6944ee98e947d2b66d1e641ff22e",
+      "width": 1080,
+      "height": 2400,
+      "screen": "phone",
+      "mode": "play",
+      "cropReport": null
+    },
+    {
+      "path": "build/refactor/after/originals-twentyfour-and-variants-native/adult_016_360x740_scene.png",
+      "sha256": "f670252f09765bb076cfc2882d59ba57aedd507f58f648c3f69be4f30834882d",
+      "width": 945,
+      "height": 1943,
+      "screen": "360x740",
+      "mode": "scene",
+      "cropReport": {
+        "eventId": "adult_016",
+        "imageId": "img_adult_dinner_seats_001",
+        "assetPath": "followup_20261031/img_adult_dinner_seats_001.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.318..0.682",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/originals-twentyfour-and-variants-native/adult_016_360x740_play.png",
+      "sha256": "8a36ea85fd9f954b3cbb5038f1dee410235ab8ca25967ca4fe19b9fced2e43fa",
+      "width": 945,
+      "height": 1943,
+      "screen": "360x740",
+      "mode": "play",
+      "cropReport": null
+    }
+  ],
+  "semanticObservation": "전체 원본에는 빈 의자 세 개, 팀장처럼 보이는 선배와 동기들, 문이 있어 자리 선택 전 상태와 맞는다. 플레이어 착석·술 권함·휴대폰 대화·직원처럼 일하는 결과는 없다.",
+  "cropObservation": "두 native에서 가운데 빈자리 하나만 온전히 남고 좌우 두 의자는 가장자리 일부만 보이며 동기 얼굴들이 사라진다. 팀장 얼굴도 phone에서 일부 잘려 세 자리 비교라는 현재 사건 핵심이 훼손된다.",
+  "uiObservation": "두 크기에서 제목·본문·세 선택지가 모두 읽힌다.",
+  "reviewMethod": "Codex AI directly inspected the full unchanged source PNG and all four unmodified native scene/play captures. Prior review is retained as historical evidence; this record is a new AI judgement, not human approval.",
+  "nativeMethod": "Production DecisionScreen, current parsed event/routing/PixelAssetLoader, fixture state in Android Compose instrumentation. Scene grid match >=0.95. Not complete game progression.",
+  "nativeRunLog": "build/refactor/depth-and-originals-twentyfour.log",
+  "limitations": [
+    "Emulator captures, not physical-device review.",
+    "Only reviewed phone and 360x740 dimensions; not every font scale/aspect ratio.",
+    "Art review does not independently certify scrolling, TalkBack or complete game-flow transitions."
+  ],
+  "remainingWork": "원본 보존 별도 세로 파생에서 빈 의자 정확히 세 개, 팀장과 동기, 문과 불판의 관계를 한 화면에 재배치. 아직 아무 자리도 고르지 않은 입장 시점 유지 후 phone/small native 재검수."
+}

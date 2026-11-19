@@ -1,0 +1,71 @@
+{
+  "eventId": "path_fit_02",
+  "reviewerType": "AI",
+  "scope": "Portrait phone and small-phone presentation",
+  "sourceEventHash": "8e40455931f50d2bf5b965269a551b9bfa59f6049a95f872e609f1e0ddcf654a",
+  "sourceReview": "docs/refactor/art-candidates/portrait-integration/path_fit_02.json",
+  "sourceSha256": "e68304b1bb65a782b1bb1c87221de91ea438a8adeee593ce273e4ec45f653af3",
+  "displayedVariant": {
+    "assetPath": "presentation/portraits/img_path_fit_02_001_portrait_v1.png",
+    "sha256": "9d8c73004c4fecceb6d2a9d7d73ae8d615ae76ce4212b281ac59923e03053c47",
+    "width": 941,
+    "height": 1672,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root/security_p0)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/path_fit_02.json"
+  },
+  "nativeCaptures": [
+    {
+      "path": "build/refactor/after/portrait-fortythree-native/path_fit_02_phone_scene.png",
+      "sha256": "3b66056fdfe4c864a6797aaa2cb32aa5bde62e56a61f35b42cf800d324c31c0c",
+      "crop": {
+        "eventId": "path_fit_02",
+        "imageId": "img_path_fit_02_001",
+        "assetPath": "presentation/portraits/img_path_fit_02_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/portrait-fortythree-native/path_fit_02_phone_play.png",
+      "sha256": "53fbae5e88fc6d4ecc9473a4569764d525f49a075caa41da787563e4215a3729",
+      "crop": {
+        "eventId": "path_fit_02",
+        "imageId": "img_path_fit_02_001",
+        "assetPath": "presentation/portraits/img_path_fit_02_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/portrait-fortythree-native/path_fit_02_360x740_scene.png",
+      "sha256": "6b6a22c585077c2d2c2635af7f5cea668bcda224d9ebc9036433a774f15130c3",
+      "crop": {
+        "eventId": "path_fit_02",
+        "imageId": "img_path_fit_02_001",
+        "assetPath": "presentation/portraits/img_path_fit_02_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/portrait-fortythree-native/path_fit_02_360x740_play.png",
+      "sha256": "cc92ccdb4b73bda0bbf61c41e1a13ce5ff38e7d844eb2273fd82503ded1c259c",
+      "crop": {
+        "eventId": "path_fit_02",
+        "imageId": "img_path_fit_02_001",
+        "assetPath": "presentation/portraits/img_path_fit_02_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    }
+  ],
+  "observation": "출발선에서 풀린 운동화 끈을 확인할 수 있다.",
+  "decision": "PASS",
+  "method": "Individual visual inspection of both scene and gameplay frames together with producer semantic/source review and device capture match."
+}

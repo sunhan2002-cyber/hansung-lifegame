@@ -1,0 +1,71 @@
+{
+  "eventId": "special_017",
+  "reviewerType": "AI",
+  "scope": "Portrait phone and small-phone presentation",
+  "sourceEventHash": "5f3bc51a977f3dca36e5ab14b23240eb5bb866e6915af29ec25cf18bc4df69ce",
+  "sourceReview": "docs/refactor/art-candidates/portrait-integration/special_017.json",
+  "sourceSha256": "5c1977696335161e465f1d11c94670d3802fbad9a065cf2eef6b1bdfd0a96536",
+  "displayedVariant": {
+    "assetPath": "presentation/portraits/img_special_stuck_elevator_001_portrait_v1.png",
+    "sha256": "a34b77fca2d39a3ce14ce19d22908e97dc74e00793fbfa52ad36664dee6f9c14",
+    "width": 941,
+    "height": 1672,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/special_017.json"
+  },
+  "nativeCaptures": [
+    {
+      "path": "build/refactor/resumed/native18/special_017_phone_scene.png",
+      "sha256": "000e68ff79842800ef4b230e98feb60842e0af41d670c888e716645d8804d241",
+      "crop": {
+        "eventId": "special_017",
+        "imageId": "img_special_stuck_elevator_001",
+        "assetPath": "presentation/portraits/img_special_stuck_elevator_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/native18/special_017_phone_play.png",
+      "sha256": "4393a6018019748af95f9cb63a836863b2974ee731033ade396d87e36f15385c",
+      "crop": {
+        "eventId": "special_017",
+        "imageId": "img_special_stuck_elevator_001",
+        "assetPath": "presentation/portraits/img_special_stuck_elevator_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/native18/special_017_360x740_scene.png",
+      "sha256": "34bca8c8525c922f9f3b431f5fa1eb64705f95674b0615b532125f949b5d03d9",
+      "crop": {
+        "eventId": "special_017",
+        "imageId": "img_special_stuck_elevator_001",
+        "assetPath": "presentation/portraits/img_special_stuck_elevator_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/native18/special_017_360x740_play.png",
+      "sha256": "e985907cfd8b5b9e606f3d1d70694abdc436696aa5a0ecf8ad53d2bacf5407a9",
+      "crop": {
+        "eventId": "special_017",
+        "imageId": "img_special_stuck_elevator_001",
+        "assetPath": "presentation/portraits/img_special_stuck_elevator_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    }
+  ],
+  "observation": "닫힌 승강기 안에서 기다리는 상대방의 얼굴과 비상 패널이 남는다.",
+  "decision": "PASS",
+  "method": "Individual visual inspection of both scene and gameplay frames together with producer semantic/source review and device capture match."
+}

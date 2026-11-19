@@ -1,0 +1,253 @@
+{
+  "schemaVersion": 1,
+  "eventId": "love_letter_01",
+  "status": "PASS",
+  "approvalScope": "Current source event and exact PNG; native phone and 360x740 Compose scene/play visual review",
+  "reviewer": "Codex AI / plan_audit",
+  "reviewerType": "AI",
+  "reviewDate": "2026-11-19",
+  "sourceEventHash": "c26bc87ac36127589808fc7f9a443eec49311835fef9ca1543127a28ff85431f",
+  "sourceEventSnapshot": {
+    "eventId": "love_letter_01",
+    "stage": "ADULT",
+    "type": "NORMAL",
+    "isFallback": false,
+    "isMilestone": false,
+    "title": "편지 친구의 전화",
+    "text": "전역하고 첫 주말. 1년 넘게 편지를 주고받던 사람이 처음으로 전화를 걸었다. \"{nameCall}, 편지 말고 얼굴 보고 이야기할래?\"",
+    "imageId": "img_love_letter_01_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [
+        "letter_friend",
+        "military_done"
+      ],
+      "blockedFlags": [
+        "dating",
+        "engaged",
+        "married"
+      ]
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "만나자고 한다",
+        "statDelta": {
+          "행복": 3,
+          "사회성": 1
+        },
+        "resultText": "편지로는 수다쟁이였는데 만나니 둘 다 말이 없었다. 헤어질 때 그 사람이 쪽지를 건넸다. '다음엔 말로 할게.'",
+        "addFlags": [
+          "dating",
+          "dating__love_letter_01",
+          "partner_letter"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "a_meet",
+            "text": "편지로는 수다쟁이였는데 만나니 둘 다 말이 없었다. 헤어질 때 그 사람이 쪽지를 건넸다. '다음엔 말로 할게.'",
+            "chance": 70,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 3,
+              "사회성": 1
+            },
+            "addFlags": [
+              "dating",
+              "dating__love_letter_01",
+              "partner_letter"
+            ]
+          },
+          {
+            "outcomeId": "a_pen",
+            "text": "만나 보니 편지 속 사람과 조금 달랐다. 우리는 편지 친구로 남기로 했다.",
+            "chance": 30,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "사회성": 1
+            },
+            "addFlags": []
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week13_love_line"
+      },
+      {
+        "choiceId": "B",
+        "label": "편지로 답장한다",
+        "statDelta": {
+          "행복": 3
+        },
+        "resultText": "열세 번째 답장을 보냈다. 마지막 줄에 '이번엔 직접 만나자'고 썼다. 일주일 뒤 우체국 앞에서 만났다.",
+        "addFlags": [
+          "dating",
+          "dating__love_letter_01",
+          "partner_letter"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "b_letter",
+            "text": "열세 번째 답장을 보냈다. 마지막 줄에 '이번엔 직접 만나자'고 썼다. 일주일 뒤 우체국 앞에서 만났다.",
+            "chance": 100,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 3
+            },
+            "addFlags": [
+              "dating",
+              "dating__love_letter_01",
+              "partner_letter"
+            ]
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week13_love_line"
+      },
+      {
+        "choiceId": "C",
+        "label": "편지 속 맞춤법 틀린 곳을 모아서 보여 준다",
+        "statDelta": {
+          "행복": 3,
+          "지력": 1
+        },
+        "resultText": "그 사람이 빨간 펜을 꺼냈다. 내 편지에서 틀린 곳이 두 배 많았다. 둘 다 웃다가 저녁까지 먹었다.",
+        "addFlags": [
+          "dating",
+          "dating__love_letter_01",
+          "partner_letter"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "c_red",
+            "text": "그 사람이 빨간 펜을 꺼냈다. 내 편지에서 틀린 곳이 두 배 많았다. 둘 다 웃다가 저녁까지 먹었다.",
+            "chance": 55,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 3,
+              "지력": 1
+            },
+            "addFlags": [
+              "dating",
+              "dating__love_letter_01",
+              "partner_letter"
+            ]
+          },
+          {
+            "outcomeId": "c_mad",
+            "text": "그 사람이 조용히 말했다. '다음 편지는 안 쓸게.' 정말 오지 않았다.",
+            "chance": 45,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": -2
+            },
+            "addFlags": []
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week13_love_line"
+      }
+    ],
+    "priority": 0,
+    "kind": "INCIDENT",
+    "periods": [
+      "YOUNG_ADULT"
+    ],
+    "weight": 30,
+    "view": "FIRST_PERSON",
+    "pathRole": "러브라인 1단계(편지 후보) — 입영 통지서의 편지 친구와 만남",
+    "followUps": [
+      "love_date_01"
+    ]
+  },
+  "sourceReadScope": "Title, full text, conditions, all choices, all outcomes including flags/stat deltas, periods and follow-ups directly read before visual judgement.",
+  "sourceImage": {
+    "path": "app/src/main/assets/images/img_love_letter_01_001.png",
+    "sha256": "32ec176891cf748cca445ce0bdac3764a379d0862646f01d0d86ffa559dc7549",
+    "width": 941,
+    "height": 1672
+  },
+  "generationManifest": "docs/refactor/art-candidates/generated-love-20261119.json",
+  "selectedGenerationOutput": "C:\\Users\\jk030\\.codex\\generated_images\\01a1f1bc-6c39-7a10-a591-0d1f4e5cef6b\\exec-b5f04b90-f586-48b7-86d7-8f07aeb79c6c.png",
+  "exactGenerationPromptSha256": "71be66054898ad9916386f7cb8316101d4d0b734243619ca7e7c69fd86313e30",
+  "presentationMetadata": [],
+  "captures": [
+    {
+      "path": "build/refactor/after/ten-art-native/love_letter_01_phone_scene.png",
+      "sha256": "6f7e2d52bf05bc991cc0476b7ccc784dc80a789f995b24a2d2c269437d6120a5",
+      "width": 1080,
+      "height": 2400,
+      "screen": "phone",
+      "mode": "scene",
+      "cropReport": {
+        "eventId": "love_letter_01",
+        "imageId": "img_love_letter_01_001",
+        "assetPath": "img_love_letter_01_001.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/ten-art-native/love_letter_01_phone_play.png",
+      "sha256": "f31afef2309be61b656e32108fa70aecf62c7585f05dc564f900ce456b762863",
+      "width": 1080,
+      "height": 2400,
+      "screen": "phone",
+      "mode": "play",
+      "cropReport": null
+    },
+    {
+      "path": "build/refactor/after/ten-art-native/love_letter_01_360x740_scene.png",
+      "sha256": "fa8e45b87dafaf3742678a0bcae2d0382ff7cc5fa9a83d0b743e4d9893e91d41",
+      "width": 945,
+      "height": 1943,
+      "screen": "360x740",
+      "mode": "scene",
+      "cropReport": {
+        "eventId": "love_letter_01",
+        "imageId": "img_love_letter_01_001",
+        "assetPath": "img_love_letter_01_001.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/ten-art-native/love_letter_01_360x740_play.png",
+      "sha256": "79bfbf81b1a02397d5480642091e5cd6d983fe67de32fc5cb85121bbca95d3fd",
+      "width": 945,
+      "height": 1943,
+      "screen": "360x740",
+      "mode": "play",
+      "cropReport": null
+    }
+  ],
+  "semanticObservation": "전역 후 편지 친구의 첫 전화를 받은 현재 상황으로 편지 묶음과 수신 전화 기호가 함께 있다. 성인 플레이어 손만 보이며 연락처·주소·읽을 수 있는 편지 글씨·빨간 교정 표시가 없다. 만남·답장 발송·데이트/결별 결과를 그리지 않는다.",
+  "cropObservation": "phone/small에서 편지 묶음과 전화 기호가 충분히 남는다. 가장자리 종이 일부/손목은 잘리지만 핵심 소품의 종류와 상태가 명확하다.",
+  "uiObservation": "phone에서 제목·본문·세 선택지가 읽힌다. small 초기 viewport의 C 두 번째 줄 일부가 footer 아래여서 정지 캡처만으로 C 도달성을 인증하지 않는다.",
+  "reviewMethod": "Codex AI directly inspected full source PNG and each of four unmodified native capture PNGs using view_image. This is an AI review, not a named human approval.",
+  "nativeMethod": "SceneCropReviewTest renders production DecisionScreen with current parsed event and actual routing/PixelAssetLoader in Android Compose instrumentation. Scene captures compare against designated crop >=0.95. The test uses a fixture play state and does not perform a complete game progression.",
+  "testSource": "app/src/androidTest/java/com/example/lifegame/ui/SceneCropReviewTest.kt",
+  "nativeRunLog": "build/refactor/scene-effects-and-ten-art.log",
+  "limitations": [
+    "Android emulator/Compose capture, not a physical device test.",
+    "Fixed reviewed phone and 360x740 sizes; no claim for every aspect ratio or font scale.",
+    "Visual art acceptance does not certify choice scrolling, TalkBack, or game-flow state transitions."
+  ]
+}

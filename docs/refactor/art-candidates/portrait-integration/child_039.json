@@ -1,0 +1,29 @@
+{
+  "eventId": "child_039",
+  "sourceAssetPath": "followup_20261031/img_child_vacation_001.png",
+  "sourceSha256": "add360662c5d1da4842e54f7d2cd63491676b48423904748f5f8932afbfcd400",
+  "variant": {
+    "assetPath": "presentation/portraits/img_child_vacation_001_portrait_v1.png",
+    "sha256": "b4c98ae8293ea1c1d3052dee59aa2db4d6d01a805cd5e39c676c533a808fee08",
+    "width": 941,
+    "height": 1672,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root/effects_tech)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/child_039.json"
+  },
+  "reviewerType": "AI",
+  "reviewer": "Codex AI (/root/effects_tech)",
+  "reviewStatus": "AI_REVIEWED_PRESENTATION",
+  "eventSourceHash": "a3d4287e10167c97536557799ee0ff16c629b523f9ca7bb9d40e16849af6164d",
+  "semanticReview": "Producer read the current event conditions and every choice/outcome, inspected source and selected output. Full source snapshot and exact prompt are in the referenced production ledger. Native acceptance remains pending.",
+  "visualReview": "국소수정으로 두 소매가 기존손에서하단프레임까지연속연결됨. 부모·두책자·선택전상황변경없고9:20핵심유지. 이전선정철회출력은SHA/백업보존. native pending.",
+  "cropReview": "Portrait candidate selected for native phone/small-phone scene and gameplay inspection; not final artwork acceptance.",
+  "actualProducer": "OpenAI built-in image_gen",
+  "generationMethod": "Built-in imagegen edit; exact prompts/output SHA/rejected attempts preserved in docs/refactor/art-candidates/crop-variant-production-20261119.json",
+  "productionLedger": "docs/refactor/art-candidates/crop-variant-production-20261119.json",
+  "nativePending": true,
+  "runtimeConnected": true,
+  "approvalChanged": false,
+  "selectedStagingSha256": "b4c98ae8293ea1c1d3052dee59aa2db4d6d01a805cd5e39c676c533a808fee08"
+}

@@ -1,0 +1,71 @@
+{
+  "eventId": "adult_027",
+  "reviewerType": "AI",
+  "scope": "Portrait phone and small-phone presentation",
+  "sourceEventHash": "37596cc18bf93bd24582cd94502ec48119894f0dc71fd8d840442a70e3435b06",
+  "sourceReview": "docs/refactor/art-candidates/crop-variant-integration/adult_027.json",
+  "sourceSha256": "3762c74c49b1dd3b7307cf109e3d8ae315afa020307ac04df6b70f768c16a9e9",
+  "displayedVariant": {
+    "assetPath": "presentation/portraits/img_adult_gym_001_portrait_v1.png",
+    "sha256": "9a19afe6d33fbab027373e5812edf5f8f001e5b48120e5704a45b9f716741ca8",
+    "width": 941,
+    "height": 1672,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI",
+    "reviewEvidence": "docs/refactor/art-candidates/crop-variant-integration/adult_027.json"
+  },
+  "nativeCaptures": [
+    {
+      "path": "build/refactor/after/originals-twentyfour-and-variants-native/adult_027_phone_scene.png",
+      "sha256": "ba4c95929c947e316e88c717166865f4c0f1700fda96e7f3d654a950788b8c86",
+      "crop": {
+        "eventId": "adult_027",
+        "imageId": "img_adult_gym_001",
+        "assetPath": "presentation/portraits/img_adult_gym_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/originals-twentyfour-and-variants-native/adult_027_phone_play.png",
+      "sha256": "07d490e38332f9598a06fa132645eebac47d523933fc6285f125e504d80d8820",
+      "crop": {
+        "eventId": "adult_027",
+        "imageId": "img_adult_gym_001",
+        "assetPath": "presentation/portraits/img_adult_gym_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/originals-twentyfour-and-variants-native/adult_027_360x740_scene.png",
+      "sha256": "a79ed62c5f4cddbc3ca98a96fc66ddc358d838449ee4db4b0e3132160b8ac7da",
+      "crop": {
+        "eventId": "adult_027",
+        "imageId": "img_adult_gym_001",
+        "assetPath": "presentation/portraits/img_adult_gym_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/originals-twentyfour-and-variants-native/adult_027_360x740_play.png",
+      "sha256": "987d743bc7b7d83b4880076d074ecf6ac8361bb874d02978403a3f69caa39756",
+      "crop": {
+        "eventId": "adult_027",
+        "imageId": "img_adult_gym_001",
+        "assetPath": "presentation/portraits/img_adult_gym_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    }
+  ],
+  "observation": "상담자와 건강 결과지 및 운동 안내지가 함께 보인다.",
+  "decision": "PASS",
+  "method": "Individual visual inspection of both scene and gameplay frames together with producer semantic/source review and device capture match."
+}

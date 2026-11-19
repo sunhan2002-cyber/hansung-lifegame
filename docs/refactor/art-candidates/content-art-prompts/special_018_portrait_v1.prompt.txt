@@ -1,0 +1,9 @@
+Use-case: edit an existing Korean life-simulation event illustration. Produce one full-bleed vertical 9:16 portrait pixel-art scene for a mobile game. The supplied original is the edit target and style reference. Preserve its warm nostalgic color palette, visible handcrafted pixel clusters, gentle depth and everyday Korean setting, while correcting the scene exactly as specified below. The camera is always the player's own eyes: small hands/partial limbs are allowed, but never show the player's face, rear head, complete body, reflection or portrait. Other people may have natural faces. Keep every necessary story cue in the central 80% of portrait width; no panel border or UI. No readable words, letters, numerals, logos, captions, speech balloons, thought bubbles, decorative comic marks or watermarks. Do not insert text to explain missing visual content. Render a single coherent scene, not a montage. Avoid excessive smooth anime gradients; retain the source pixel-art rendering.
+
+CURRENT EVENT BEFORE ANY CHOICE (source text; do not typeset): 회사 로비 회전문에 들어갔는데 나갈 타이밍을 놓쳤다. 벌써 다섯 바퀴째. 출근 1분 전이다.
+
+REQUIRED EDIT: 최소 수정으로 무숫자 시계를 8시 59분에 맞춘다. 회전문 안쪽 칸·휘는 반사와 로비를 보존하고 사원증은 비식별 무문자 실루엣만 유지.
+
+UNDECIDED CHOICES / OUTCOMES TO EXCLUDE: 12바퀴 뒤 주저앉음·경비원이 정지·회전문 탈출·팀장 통화는 선택 이후이므로 금지.
+
+Output an emotionally clear vertical 9:16 composition. All key people, object counts and cues must survive narrow portrait cropping. No extra choice result.

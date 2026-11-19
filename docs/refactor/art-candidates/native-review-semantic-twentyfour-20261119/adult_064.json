@@ -1,0 +1,222 @@
+{
+  "schemaVersion": 1,
+  "eventId": "adult_064",
+  "status": "REVISION_REQUIRED",
+  "reviewer": "Codex AI / plan_audit",
+  "reviewerType": "AI",
+  "reviewDate": "2026-11-19",
+  "sourceEventHash": "a94af8a2f9d99ec6813d768127a3769dc64c2dfe5ebee5cc536a6c502e4aca6a",
+  "sourceEventSnapshot": {
+    "eventId": "adult_064",
+    "stage": "ADULT",
+    "type": "NORMAL",
+    "isFallback": false,
+    "isMilestone": false,
+    "title": "부모님의 봄",
+    "text": "아빠가 봄에 바다를 보고 싶다고 하셨다. 의사 선생님은 조용히 말했다. \"가실 수 있을 때 다녀오세요.\"",
+    "imageId": "img_adult_parents_spring_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [],
+      "blockedFlags": []
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "하던 일을 미루고 같이 떠난다",
+        "statDelta": {
+          "행복": 3,
+          "사회성": 2,
+          "경제력": -3
+        },
+        "resultText": "바닷가 식당에서 아빠가 내 접시에 생선 살을 발라 주셨다. 50년째 똑같았다.",
+        "addFlags": [
+          "family_bond",
+          "parents_last_trip"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "a_primary",
+            "text": "바닷가 식당에서 아빠가 내 접시에 생선 살을 발라 주셨다. 50년째 똑같았다.",
+            "chance": 100,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 3,
+              "사회성": 2,
+              "경제력": -3
+            },
+            "addFlags": [
+              "family_bond",
+              "parents_last_trip"
+            ],
+            "lifeDelta": 10
+          }
+        ]
+      },
+      {
+        "choiceId": "B",
+        "label": "가족사진을 찍으러 간다",
+        "statDelta": {
+          "사회성": 2,
+          "행복": 2,
+          "경제력": -2
+        },
+        "resultText": "사진사가 \"웃으세요\" 하자 아빠가 제일 먼저 웃었다. 그 사진은 지금 거실 한가운데 걸려 있다.",
+        "addFlags": [
+          "family_bond"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "b_primary",
+            "text": "사진사가 \"웃으세요\" 하자 아빠가 제일 먼저 웃었다. 그 사진은 지금 거실 한가운데 걸려 있다.",
+            "chance": 100,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "사회성": 2,
+              "행복": 2,
+              "경제력": -2
+            },
+            "addFlags": [
+              "family_bond"
+            ],
+            "lifeDelta": 10
+          }
+        ]
+      },
+      {
+        "choiceId": "C",
+        "label": "아빠의 옛 친구들을 수소문해 모은다",
+        "statDelta": {
+          "사회성": 3,
+          "지력": 1,
+          "건강": -2
+        },
+        "resultText": "40년 만에 모인 아빠 친구 다섯 명. 아빠가 그렇게 크게 웃는 걸 처음 봤다.",
+        "addFlags": [
+          "family_bond"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "c_primary",
+            "text": "40년 만에 모인 아빠 친구 다섯 명. 아빠가 그렇게 크게 웃는 걸 처음 봤다.",
+            "chance": 100,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "사회성": 3,
+              "지력": 1,
+              "건강": -2
+            },
+            "addFlags": [
+              "family_bond"
+            ],
+            "lifeDelta": 4
+          }
+        ],
+        "requiredStats": {
+          "사회성": 58
+        }
+      }
+    ],
+    "priority": 0,
+    "kind": "INCIDENT",
+    "periods": [
+      "MIDDLE"
+    ]
+  },
+  "sourceReadScope": "Current complete event, conditions, every choice/outcome and flags/stat deltas/periods/follow-ups directly read before judgement.",
+  "sourceImage": {
+    "path": "app/src/main/assets/images/followup_20261031/img_adult_parents_spring_001.png",
+    "sha256": "2baeca5662342c514f41f251f800542f5bcb2d873ea1eeb05a0655013b63e874",
+    "width": 720,
+    "height": 540
+  },
+  "originalArtworkUnchangedSinceHistoricalReview": true,
+  "historicalReview": {
+    "eventId": "adult_064",
+    "title": "부모님의 봄",
+    "imageId": "img_adult_parents_spring_001",
+    "assetPath": "followup_20261031/img_adult_parents_spring_001.png",
+    "sha256": "2baeca5662342c514f41f251f800542f5bcb2d873ea1eeb05a0655013b63e874",
+    "eventSourceHash": "a94af8a2f9d99ec6813d768127a3769dc64c2dfe5ebee5cc536a6c502e4aca6a",
+    "status": "REVISION_REQUIRED",
+    "reviewer": "김선한 담당 Codex 직접 대행 검수",
+    "reason": "중앙 크롭에서 아버지·의사 얼굴이 잘리고 봄바다 희망 단서도 없음",
+    "expectedAction": "의사가 조용히 말하는 것을 듣다가 곁의 아빠를 봄",
+    "requiredObjects": "진료 책상, 창밖의 봄꽃, 곁에 앉은 아빠의 손",
+    "sheet": "output/art-review-20261119/sheet-12.jpg",
+    "cell": 6,
+    "cropMethod": "ImageOps.fit centre-fill 360:800; simulated crop inspected directly, not an emulator capture",
+    "visualMethod": "원본 도트풍·색감·장면 파손·명백한 신체/사물 오류 직접 확인"
+  },
+  "presentationMetadata": [],
+  "captures": [
+    {
+      "path": "build/refactor/after/originals-twentyfour-and-variants-native/adult_064_phone_scene.png",
+      "sha256": "1f1dbc72087bd5cc375ef55e40ddc6ed562eff9cf087988457534b3c4a0bfab3",
+      "width": 1080,
+      "height": 2400,
+      "screen": "phone",
+      "mode": "scene",
+      "cropReport": {
+        "eventId": "adult_064",
+        "imageId": "img_adult_parents_spring_001",
+        "assetPath": "followup_20261031/img_adult_parents_spring_001.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.331..0.669",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/originals-twentyfour-and-variants-native/adult_064_phone_play.png",
+      "sha256": "199752319551fdf5c2e23339481b60d6584bbc33a2b8b2fba9143c3c0b697ba0",
+      "width": 1080,
+      "height": 2400,
+      "screen": "phone",
+      "mode": "play",
+      "cropReport": null
+    },
+    {
+      "path": "build/refactor/after/originals-twentyfour-and-variants-native/adult_064_360x740_scene.png",
+      "sha256": "63a59d48532d6714b6a5858c727b7f40aad801e2a23ce5152fcf7af0f913283c",
+      "width": 945,
+      "height": 1943,
+      "screen": "360x740",
+      "mode": "scene",
+      "cropReport": {
+        "eventId": "adult_064",
+        "imageId": "img_adult_parents_spring_001",
+        "assetPath": "followup_20261031/img_adult_parents_spring_001.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.318..0.682",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/originals-twentyfour-and-variants-native/adult_064_360x740_play.png",
+      "sha256": "ec6f50d09c1c14064ba43debf6468a645276988fb83abba76a5ebe04ece4d981",
+      "width": 945,
+      "height": 1943,
+      "screen": "360x740",
+      "mode": "play",
+      "cropReport": null
+    }
+  ],
+  "semanticObservation": "봄꽃이 보이는 진료실에서 의사 상담을 들으며 노년 아버지 손을 잡는 현재 장면이다. 바다 여행·가족사진 촬영·옛 친구 재회 결과는 없다.",
+  "cropObservation": "원본에는 아버지 머리와 의사 전신 상반부가 있으나 두 native에서 아버지 머리가 완전히 화면 밖이다. 손과 어깨만으로 주요 인물인 아버지가 충분히 전달되지 않아 세로 파생이 필요하다.",
+  "uiObservation": "두 크기에서 제목·본문·세 선택지를 읽을 수 있고 small의 긴 C 문구는 두 줄로 남는다.",
+  "reviewMethod": "Codex AI directly inspected the full unchanged source PNG and all four unmodified native scene/play captures. Prior review is retained as historical evidence; this record is a new AI judgement, not human approval.",
+  "nativeMethod": "Production DecisionScreen, current parsed event/routing/PixelAssetLoader, fixture state in Android Compose instrumentation. Scene grid match >=0.95. Not complete game progression.",
+  "nativeRunLog": "build/refactor/depth-and-originals-twentyfour.log",
+  "limitations": [
+    "Emulator captures, not physical-device review.",
+    "Only reviewed phone and 360x740 dimensions; not every font scale/aspect ratio.",
+    "Art review does not independently certify scrolling, TalkBack or complete game-flow transitions."
+  ],
+  "remainingWork": "원본 보존 세로 파생에서 노년 아버지의 머리/옆모습, 잡은 손, 의사의 얼굴과 진료실/봄꽃을 중앙 안전 영역 안에 보존. 바다 방문·사진·재회 결과 없이 native 재검수."
+}

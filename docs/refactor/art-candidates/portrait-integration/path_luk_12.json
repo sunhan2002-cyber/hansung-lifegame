@@ -1,0 +1,29 @@
+{
+  "eventId": "path_luk_12",
+  "sourceAssetPath": "followup_20261031/img_path_luk_12_001.png",
+  "sourceSha256": "06cb338801d00a27ac8232ecf00c88c8779008633538f8707ae776787ec25737",
+  "variant": {
+    "assetPath": "presentation/portraits/img_path_luk_12_001_portrait_v1.png",
+    "sha256": "079b54a126da7d07ca840772fc86815bb008c75bead17f3504999cf5571607ff",
+    "width": 941,
+    "height": 1672,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root/effects_tech)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/path_luk_12.json"
+  },
+  "reviewerType": "AI",
+  "reviewer": "Codex AI (/root/effects_tech)",
+  "reviewStatus": "AI_REVIEWED_PRESENTATION",
+  "eventSourceHash": "ef15d7517a9bf1c8cc2b3c5c5ed8f194deabf622b0af56155fd45bd6508458ed",
+  "semanticReview": "Producer read the current event conditions and every choice/outcome, inspected source and selected output. Full source snapshot and exact prompt are in the referenced production ledger. Native acceptance remains pending.",
+  "visualReview": "과거 피해 자료와 새 메시지폰을 중앙으로 함께 이동, 원본 거실·앉은 POV·두손 유지. 피해금환급/신고완료/새송금/강의결과 없음. 문서와 전화 전체가9:20안, 해부구조 명백한 문제없음. native pending.",
+  "cropReview": "Portrait candidate selected for native phone/small-phone scene and gameplay inspection; not final artwork acceptance.",
+  "actualProducer": "OpenAI built-in image_gen",
+  "generationMethod": "Built-in imagegen edit; exact prompts/output SHA/rejected attempts preserved in docs/refactor/art-candidates/crop-variant-production-20261119.json",
+  "productionLedger": "docs/refactor/art-candidates/crop-variant-production-20261119.json",
+  "nativePending": true,
+  "runtimeConnected": true,
+  "approvalChanged": false,
+  "selectedStagingSha256": "079b54a126da7d07ca840772fc86815bb008c75bead17f3504999cf5571607ff"
+}

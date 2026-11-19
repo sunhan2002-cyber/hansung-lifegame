@@ -1,0 +1,71 @@
+{
+  "eventId": "teen_027",
+  "reviewerType": "AI",
+  "scope": "Portrait phone and small-phone presentation",
+  "sourceEventHash": "8e97b818878d56086aca850070437bc0c5c74965e46e6bdf5001a58267e37d43",
+  "sourceReview": "docs/refactor/art-candidates/portrait-integration/teen_027.json",
+  "sourceSha256": "602e7411cac09c1bec54cce7f3c85e7da30a011e5f0ff62bb355f1a629b44b0c",
+  "displayedVariant": {
+    "assetPath": "presentation/portraits/img_teen_father_car_001_portrait_v1.png",
+    "sha256": "d08de92fd936df85fb958f42d7286d225522f136f798e0c13328ab97ea5bf820",
+    "width": 941,
+    "height": 1672,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/teen_027.json"
+  },
+  "nativeCaptures": [
+    {
+      "path": "build/refactor/resumed/native18/teen_027_phone_scene.png",
+      "sha256": "d09637826239d6a204637e55595d0fb54b097758fdfc67053f351b3888b5e54d",
+      "crop": {
+        "eventId": "teen_027",
+        "imageId": "img_teen_father_car_001",
+        "assetPath": "presentation/portraits/img_teen_father_car_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/native18/teen_027_phone_play.png",
+      "sha256": "43a67ac33a9f751df01aa6ebab7d387616805151c9f94bcd9a8ba34d67320634",
+      "crop": {
+        "eventId": "teen_027",
+        "imageId": "img_teen_father_car_001",
+        "assetPath": "presentation/portraits/img_teen_father_car_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/native18/teen_027_360x740_scene.png",
+      "sha256": "8cc3388a5ffc16ff8e5adb85954ab3b0bb6eb447940334beca3114f87a39e44e",
+      "crop": {
+        "eventId": "teen_027",
+        "imageId": "img_teen_father_car_001",
+        "assetPath": "presentation/portraits/img_teen_father_car_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/native18/teen_027_360x740_play.png",
+      "sha256": "01b1bb66c471044056ce218c14ccd7b517c6ca0fc418a94d03f91ece317bb374",
+      "crop": {
+        "eventId": "teen_027",
+        "imageId": "img_teen_father_car_001",
+        "assetPath": "presentation/portraits/img_teen_father_car_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    }
+  ],
+  "observation": "창밖 주차된 차 안에 아버지 실루엣이 보이고 헤드라이트는 꺼져 있다.",
+  "decision": "PASS",
+  "method": "Individual visual inspection of both scene and gameplay frames together with producer semantic/source review and device capture match."
+}

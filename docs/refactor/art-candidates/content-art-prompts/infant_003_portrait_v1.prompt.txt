@@ -1,0 +1,9 @@
+Use-case: edit an existing Korean life-simulation event illustration. Produce one full-bleed vertical 9:16 portrait pixel-art scene for a mobile game. The supplied original is the edit target and style reference. Preserve its warm nostalgic color palette, visible handcrafted pixel clusters, gentle depth and everyday Korean setting, while correcting the scene exactly as specified below. The camera is always the player's own eyes: small hands/partial limbs are allowed, but never show the player's face, rear head, complete body, reflection or portrait. Other people may have natural faces. Keep every necessary story cue in the central 80% of portrait width; no panel border or UI. No readable words, letters, numerals, logos, captions, speech balloons, thought bubbles, decorative comic marks or watermarks. Do not insert text to explain missing visual content. Render a single coherent scene, not a montage. Avoid excessive smooth anime gradients; retain the source pixel-art rendering.
+
+CURRENT EVENT BEFORE ANY CHOICE (source text; do not typeset): 아빠: "{nameCall}, 리모컨 어디 갔어?" 리모컨은 지금 내 손에서 여섯 조각이 되어 있다.
+
+REQUIRED EDIT: Lower the camera to an infant on the living-room floor. Arrange exactly six visibly separate remote components close together beside empty small hands. Keep recognizable sofa and television scenery, with a father looking for the remote; no repair in progress.
+
+UNDECIDED CHOICES / OUTCOMES TO EXCLUDE: Remote stays disassembled; do not show successful reassembly, an extra seventh spare part, pieces under the sofa or a phone lifted to the ceiling.
+
+Output an inviting, emotionally clear 9:16 portrait composition; preserve the scene's ordinary proportions and age-appropriate people. No extra objects or action that resolve the event.

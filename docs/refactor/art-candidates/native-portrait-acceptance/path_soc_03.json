@@ -1,0 +1,71 @@
+{
+  "eventId": "path_soc_03",
+  "reviewerType": "AI",
+  "scope": "Portrait phone and small-phone presentation",
+  "sourceEventHash": "cc2d9da1909b2283b3b720e0678888d48a1b7baa393f961015333e40d224eff0",
+  "sourceReview": "docs/refactor/art-candidates/portrait-integration/path_soc_03.json",
+  "sourceSha256": "9cc885b7df64858d8dd3b7e47b8ab1ef1b173abe2a1affeeef6b9d134cb0aebd",
+  "displayedVariant": {
+    "assetPath": "presentation/portraits/img_path_soc_03_001_portrait_v1.png",
+    "sha256": "1d4619d8eadcae044537a4a4dd91cc41eb03a6f308457f7d23921875bbe1c27f",
+    "width": 941,
+    "height": 1672,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/path_soc_03.json"
+  },
+  "nativeCaptures": [
+    {
+      "path": "build/refactor/resumed/native18/path_soc_03_phone_scene.png",
+      "sha256": "76d03f7c41f01ca2c7448e12f878fb1547469c2f64b2acd682a0a376ea7fb554",
+      "crop": {
+        "eventId": "path_soc_03",
+        "imageId": "img_path_soc_03_001",
+        "assetPath": "presentation/portraits/img_path_soc_03_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/native18/path_soc_03_phone_play.png",
+      "sha256": "c7cf3933a7c8c6ad3a5c6db972e699f00820e16c81241889d2d2321bbe59b12e",
+      "crop": {
+        "eventId": "path_soc_03",
+        "imageId": "img_path_soc_03_001",
+        "assetPath": "presentation/portraits/img_path_soc_03_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/native18/path_soc_03_360x740_scene.png",
+      "sha256": "bfb558433be449b16e88b76c75b54fdb352c8ba182dd323160e5c7818f600118",
+      "crop": {
+        "eventId": "path_soc_03",
+        "imageId": "img_path_soc_03_001",
+        "assetPath": "presentation/portraits/img_path_soc_03_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/native18/path_soc_03_360x740_play.png",
+      "sha256": "6c0309008ca40e215da4bed0a9acf55b388cb92ceefbc04515897798e4bad9bf",
+      "crop": {
+        "eventId": "path_soc_03",
+        "imageId": "img_path_soc_03_001",
+        "assetPath": "presentation/portraits/img_path_soc_03_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    }
+  ],
+  "observation": "빈 버스와 앞에 앉은 동아리 친구 한 명이 있다.",
+  "decision": "PASS",
+  "method": "Individual visual inspection of both scene and gameplay frames together with producer semantic/source review and device capture match."
+}

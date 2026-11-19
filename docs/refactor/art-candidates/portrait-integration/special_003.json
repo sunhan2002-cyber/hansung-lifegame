@@ -1,0 +1,29 @@
+{
+  "eventId": "special_003",
+  "sourceAssetPath": "followup_20261031/img_special_hornet_001.png",
+  "sourceSha256": "8b7caf6fe98a443b4375ac009a7aba0545be9c464f7563243cd4046c6223d86a",
+  "variant": {
+    "assetPath": "presentation/portraits/img_special_hornet_001_portrait_v1.png",
+    "sha256": "b2d7dbe39c0dca5dcbc66ad544faeff164c860e41020580eb063949acd99bc7a",
+    "width": 941,
+    "height": 1672,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root/security_p0)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/special_003.json"
+  },
+  "reviewerType": "AI",
+  "reviewer": "Codex AI (/root/security_p0)",
+  "reviewStatus": "AI_REVIEWED_PRESENTATION",
+  "eventSourceHash": "74a14a8a24c533978246e2fcb7d4f9eb910ea75969638d93f138434f07864ed5",
+  "semanticReview": "Producer read the current event conditions and every choice/outcome, inspected source and selected output. Full source snapshot and exact prompt are in the referenced production ledger. Native acceptance remains pending.",
+  "visualReview": "Individually viewed: natural-sized hornet recedes above, falling leaf close to player, picnic/gimbap and paused collar hand; giant human-faced hornet and sparkle marks removed. Initial sting is established in source; no swollen throat, collapse, rescue or revenge. Native pending.",
+  "cropReview": "Portrait candidate selected for native phone/small-phone scene and gameplay inspection; not final artwork acceptance.",
+  "actualProducer": "OpenAI built-in image_gen",
+  "generationMethod": "Built-in imagegen edit; exact prompts/output SHA/rejected attempts preserved in docs/refactor/art-candidates/content-art-revision-briefs-20261119.json",
+  "productionLedger": "docs/refactor/art-candidates/content-art-revision-briefs-20261119.json",
+  "nativePending": true,
+  "runtimeConnected": true,
+  "approvalChanged": false,
+  "selectedStagingSha256": "b2d7dbe39c0dca5dcbc66ad544faeff164c860e41020580eb063949acd99bc7a"
+}

@@ -1,0 +1,29 @@
+{
+  "eventId": "adult_067",
+  "sourceAssetPath": "followup_20261031/img_adult_sunday_night_001.png",
+  "sourceSha256": "5e44b7b62958b1b3a5985e6a60ccb66f0839ace52b89ba01bc58217f9cd37c18",
+  "variant": {
+    "assetPath": "presentation/portraits/img_adult_sunday_night_001_portrait_v1.png",
+    "sha256": "6cca4b028ccbad37dbe776592ff78c5d11e213a145331b879df48e7ce9a4108d",
+    "width": 960,
+    "height": 1637,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/adult_067.json"
+  },
+  "reviewerType": "AI",
+  "reviewer": "Codex AI (/root)",
+  "reviewStatus": "AI_REVIEWED_PRESENTATION",
+  "eventSourceHash": "7e269d9a1aae3d5d2d742a983684ea04723bf246bd078768ab75ccfea2fa989b",
+  "semanticReview": "Producer read the current event conditions and every choice/outcome, inspected source and selected output. Full source snapshot and exact prompt are in the referenced production ledger. Native acceptance remains pending.",
+  "visualReview": "Night bedroom desk, shut-off work activity, eleven on analogue clock, moonlit window and still-blank notebook.",
+  "cropReview": "Portrait candidate selected for native phone/small-phone scene and gameplay inspection; not final artwork acceptance.",
+  "actualProducer": "OpenAI built-in image_gen",
+  "generationMethod": "Built-in imagegen edit; exact prompts/output SHA/rejected attempts preserved in docs/refactor/art-candidates/resumed-production-20261119.json",
+  "productionLedger": "docs/refactor/art-candidates/resumed-production-20261119.json",
+  "nativePending": true,
+  "runtimeConnected": true,
+  "approvalChanged": false,
+  "selectedStagingSha256": "6cca4b028ccbad37dbe776592ff78c5d11e213a145331b879df48e7ce9a4108d"
+}

@@ -1,0 +1,209 @@
+{
+  "schemaVersion": 1,
+  "eventId": "adult_009",
+  "status": "REVISION_REQUIRED",
+  "reviewer": "Codex AI / plan_audit",
+  "reviewerType": "AI",
+  "reviewDate": "2026-11-19",
+  "sourceEventHash": "51bb7ea1f5cf44e1bb5c854bbca41723076cada5ac62a1b5765783598af66cce",
+  "sourceEventSnapshot": {
+    "eventId": "adult_009",
+    "stage": "ADULT",
+    "type": "NORMAL",
+    "isFallback": false,
+    "isMilestone": false,
+    "title": "건배사를 해라",
+    "text": "친구: \"야, {name}! 건배사 해!\" 모두 잔을 들고 나를 본다.",
+    "imageId": "img_adult_drinks_toast_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [
+        "seat_friends"
+      ],
+      "blockedFlags": []
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "\"우리의 우정을 위하여!\"",
+        "statDelta": {
+          "사회성": 1,
+          "행복": 1,
+          "운": -1
+        },
+        "resultText": "무난했다. 10년 뒤 모임에서도 똑같은 건배사를 하고 있다.",
+        "addFlags": [],
+        "outcomes": [
+          {
+            "outcomeId": "a_primary",
+            "text": "무난했다. 10년 뒤 모임에서도 똑같은 건배사를 하고 있다.",
+            "chance": 100,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "사회성": 1,
+              "행복": 1,
+              "운": -1
+            },
+            "addFlags": []
+          }
+        ]
+      },
+      {
+        "choiceId": "B",
+        "label": "\"친! 친구야, 구! 구해 줘, 야! 야, 계산은 네가 해!\"",
+        "statDelta": {
+          "사회성": 3,
+          "운": 1,
+          "건강": -1
+        },
+        "resultText": "가게가 뒤집어졌다. 계산은 진짜 그 친구가 했다.",
+        "addFlags": [],
+        "outcomes": [
+          {
+            "outcomeId": "b_primary",
+            "text": "가게가 뒤집어졌다. 계산은 진짜 그 친구가 했다.",
+            "chance": 100,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "사회성": 3,
+              "운": 1,
+              "건강": -1
+            },
+            "addFlags": [],
+            "lifeDelta": 4
+          }
+        ],
+        "requiredStats": {
+          "사회성": 58
+        }
+      },
+      {
+        "choiceId": "C",
+        "label": "\"건배사는 사장님께 넘깁니다!\"",
+        "statDelta": {
+          "행복": 2,
+          "경제력": 1,
+          "사회성": -1
+        },
+        "resultText": "사장님이 서비스 계란찜을 들고 와서 건배사를 했다. 그날 최고의 안주였다.",
+        "addFlags": [],
+        "outcomes": [
+          {
+            "outcomeId": "c_primary",
+            "text": "사장님이 서비스 계란찜을 들고 와서 건배사를 했다. 그날 최고의 안주였다.",
+            "chance": 100,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 2,
+              "경제력": 1,
+              "사회성": -1
+            },
+            "addFlags": [],
+            "lifeDelta": 10
+          }
+        ]
+      }
+    ],
+    "priority": 0,
+    "kind": "INCIDENT",
+    "periods": [
+      "YOUNG_ADULT"
+    ]
+  },
+  "sourceReadScope": "Current complete event, conditions, every choice/outcome and flags/stat deltas/periods/follow-ups directly read before judgement.",
+  "sourceImage": {
+    "path": "app/src/main/assets/images/followup_20261031/img_adult_drinks_toast_001.png",
+    "sha256": "9369be89f20c4e00641a9b20cd1de6c37b466f52bcff68a0915b5d9c9811ad4a",
+    "width": 720,
+    "height": 540
+  },
+  "originalArtworkUnchangedSinceHistoricalReview": true,
+  "historicalReview": {
+    "eventId": "adult_009",
+    "title": "건배사를 해라",
+    "imageId": "img_adult_drinks_toast_001",
+    "assetPath": "followup_20261031/img_adult_drinks_toast_001.png",
+    "sha256": "9369be89f20c4e00641a9b20cd1de6c37b466f52bcff68a0915b5d9c9811ad4a",
+    "eventSourceHash": "51bb7ea1f5cf44e1bb5c854bbca41723076cada5ac62a1b5765783598af66cce",
+    "status": "REVISION_REQUIRED",
+    "reviewer": "김선한 담당 Codex 직접 대행 검수",
+    "reason": "모두 잔을 들고 기다리는 본문과 달리 잔들이 탁자에 놓여 있음",
+    "expectedAction": "친구들이 잔을 든 채 일제히 나를 보며 건배사를 기다림",
+    "requiredObjects": "내 손의 잔, 친구들의 들린 잔, 불판·안주",
+    "sheet": "output/art-review-20261119/sheet-08.jpg",
+    "cell": 15,
+    "cropMethod": "ImageOps.fit centre-fill 360:800; simulated crop inspected directly, not an emulator capture",
+    "visualMethod": "원본 도트풍·색감·장면 파손·명백한 신체/사물 오류 직접 확인"
+  },
+  "presentationMetadata": [],
+  "captures": [
+    {
+      "path": "build/refactor/after/originals-twentyfour-and-variants-native/adult_009_phone_scene.png",
+      "sha256": "7f26f036ca0c5f0f061d5e801957334bb4076b1cc1aeaa2b1f07d78d9b8baf4f",
+      "width": 1080,
+      "height": 2400,
+      "screen": "phone",
+      "mode": "scene",
+      "cropReport": {
+        "eventId": "adult_009",
+        "imageId": "img_adult_drinks_toast_001",
+        "assetPath": "followup_20261031/img_adult_drinks_toast_001.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.331..0.669",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/originals-twentyfour-and-variants-native/adult_009_phone_play.png",
+      "sha256": "cfb8618655cf0e0b74b9cfb741fe38155f834bf9659e88e375ce6d22b23022b5",
+      "width": 1080,
+      "height": 2400,
+      "screen": "phone",
+      "mode": "play",
+      "cropReport": null
+    },
+    {
+      "path": "build/refactor/after/originals-twentyfour-and-variants-native/adult_009_360x740_scene.png",
+      "sha256": "0d7b2adcb2a3407db1b295f581494e3153cda5fd3f3f6de9d36994a51c485190",
+      "width": 945,
+      "height": 1943,
+      "screen": "360x740",
+      "mode": "scene",
+      "cropReport": {
+        "eventId": "adult_009",
+        "imageId": "img_adult_drinks_toast_001",
+        "assetPath": "followup_20261031/img_adult_drinks_toast_001.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.318..0.682",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/originals-twentyfour-and-variants-native/adult_009_360x740_play.png",
+      "sha256": "2aaa70a0bfe5412e70bbba00247d54ed86a999be865a3fdfe75cc739389e64c4",
+      "width": 945,
+      "height": 1943,
+      "screen": "360x740",
+      "mode": "play",
+      "cropReport": null
+    }
+  ],
+  "semanticObservation": "전체 원본에는 친구 세 명과 플레이어가 실제로 잔을 들고 있어 과거 잔이 탁자 위에만 있다는 지적은 틀렸다. 아직 잔이 부딪치지 않았고 계산·사장님 건배·서비스 계란찜 결과는 없다.",
+  "cropObservation": "phone/small 중앙 크롭에서 왼쪽 친구 잔이 사라지고 오른쪽 친구 얼굴은 거의 화면 밖이며 왼쪽 얼굴도 한쪽 눈까지만 남는다. 모두 나를 보며 잔을 든 여러 친구라는 핵심 구도를 충분히 보존하지 못해 세로 표시를 보류한다.",
+  "uiObservation": "두 화면에서 제목·본문·세 선택지가 읽힌다. 긴 B 문구도 두 줄로 카드 내부에 남는다.",
+  "reviewMethod": "Codex AI directly inspected the full unchanged source PNG and all four unmodified native scene/play captures. Prior review is retained as historical evidence; this record is a new AI judgement, not human approval.",
+  "nativeMethod": "Production DecisionScreen, current parsed event/routing/PixelAssetLoader, fixture state in Android Compose instrumentation. Scene grid match >=0.95. Not complete game progression.",
+  "nativeRunLog": "build/refactor/depth-and-originals-twentyfour.log",
+  "limitations": [
+    "Emulator captures, not physical-device review.",
+    "Only reviewed phone and 360x740 dimensions; not every font scale/aspect ratio.",
+    "Art review does not independently certify scrolling, TalkBack or complete game-flow transitions."
+  ],
+  "remainingWork": "원본 보존 별도 세로 파생. 친구 세 명의 얼굴/들린 잔과 플레이어 손의 잔, 불판을 중앙 안전 영역에 함께 배치. 건배 완료·계산·사장님 등장 결과 금지. 두 native 크기 재검수."
+}

@@ -1,0 +1,29 @@
+{
+  "eventId": "teen_027",
+  "sourceAssetPath": "followup_20261031/img_teen_father_car_001.png",
+  "sourceSha256": "602e7411cac09c1bec54cce7f3c85e7da30a011e5f0ff62bb355f1a629b44b0c",
+  "variant": {
+    "assetPath": "presentation/portraits/img_teen_father_car_001_portrait_v1.png",
+    "sha256": "d08de92fd936df85fb958f42d7286d225522f136f798e0c13328ab97ea5bf820",
+    "width": 941,
+    "height": 1672,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/teen_027.json"
+  },
+  "reviewerType": "AI",
+  "reviewer": "Codex AI (/root)",
+  "reviewStatus": "AI_REVIEWED_PRESENTATION",
+  "eventSourceHash": "8e97b818878d56086aca850070437bc0c5c74965e46e6bdf5001a58267e37d43",
+  "semanticReview": "Producer read the current event conditions and every choice/outcome, inspected source and selected output. Full source snapshot and exact prompt are in the referenced production ledger. Native acceptance remains pending.",
+  "visualReview": "Player head/body removed. First-person window view retains central parked car with father silhouette and headlights off; single connected hand on sill, no coffee or approaching car. Output viewed before user pause; native crop pending.",
+  "cropReview": "Portrait candidate selected for native phone/small-phone scene and gameplay inspection; not final artwork acceptance.",
+  "actualProducer": "OpenAI built-in image_gen",
+  "generationMethod": "Built-in imagegen edit; exact prompts/output SHA/rejected attempts preserved in docs/refactor/art-candidates/content-root-production-20261119.json",
+  "productionLedger": "docs/refactor/art-candidates/content-root-production-20261119.json",
+  "nativePending": true,
+  "runtimeConnected": true,
+  "approvalChanged": false,
+  "selectedStagingSha256": "d08de92fd936df85fb958f42d7286d225522f136f798e0c13328ab97ea5bf820"
+}

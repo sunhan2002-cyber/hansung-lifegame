@@ -1,0 +1,236 @@
+{
+  "schemaVersion": 1,
+  "eventId": "love_wedding_music",
+  "title": "연주로 채운 축가",
+  "imageId": "img_love_wedding_music_001",
+  "status": "READY_FOR_GENERATION_NOT_ART_APPROVAL",
+  "author": "Codex AI",
+  "date": "2026-11-19",
+  "generationPriority": 6,
+  "currentAcceptanceStatus": "MISSING_PNG",
+  "sourceEventHash": "89b7c330fb92393c36c6ea263a9cd534473182b1b42f81acd729592c028ec5ae",
+  "sourceEventPath": "app/src/main/assets/events.sample.json",
+  "sourceEventSnapshot": {
+    "eventId": "love_wedding_music",
+    "stage": "ADULT",
+    "type": "NORMAL",
+    "isFallback": false,
+    "isMilestone": true,
+    "title": "연주로 채운 축가",
+    "text": "결혼식 축가 순서. 같이 연주하던 사람들이 악기를 들고 일어섰다. 리더가 마이크를 잡았다. \"이 곡, 두 사람이 처음 같이 연주한 노래입니다.\"",
+    "imageId": "img_love_wedding_music_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [
+        "engaged",
+        "families_met",
+        "partner_music"
+      ],
+      "blockedFlags": [
+        "married",
+        "divorced"
+      ]
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "같이 무대에 올라 한 소절 부른다",
+        "statDelta": {
+          "행복": 5,
+          "사회성": 3,
+          "경제력": -4
+        },
+        "resultText": "축가가 듀엣이 됐다가 합창이 됐다. 하객석까지 따라 불렀다. 그날 결혼식은 공연이 됐다.",
+        "addFlags": [
+          "married",
+          "achv_band_wedding"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "a_sing",
+            "text": "축가가 듀엣이 됐다가 합창이 됐다. 하객석까지 따라 불렀다. 그날 결혼식은 공연이 됐다.",
+            "chance": 100,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 5,
+              "사회성": 3,
+              "경제력": -4
+            },
+            "addFlags": [
+              "married",
+              "achv_band_wedding"
+            ],
+            "removeFlags": [
+              "engaged"
+            ]
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "관계 단계 전환점 — 연애·결혼·자녀는 능력치 자격이 아니라 의사 결정이라 잠그지 않고, 차이는 결과 분기와 후속 사실로 반영",
+        "conditionReview": "open_turning_point",
+        "conditionBasis": "week13_love_line"
+      },
+      {
+        "choiceId": "B",
+        "label": "자리에서 듣기만 한다",
+        "statDelta": {
+          "행복": 4,
+          "경제력": -4
+        },
+        "resultText": "박자가 조금씩 틀렸다. 그래서 더 좋았다. 연인이 내 손을 꼭 잡았다.",
+        "addFlags": [
+          "married",
+          "achv_band_wedding"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "b_listen",
+            "text": "박자가 조금씩 틀렸다. 그래서 더 좋았다. 연인이 내 손을 꼭 잡았다.",
+            "chance": 100,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 4,
+              "경제력": -4
+            },
+            "addFlags": [
+              "married",
+              "achv_band_wedding"
+            ],
+            "removeFlags": [
+              "engaged"
+            ]
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "관계 단계 전환점 — 연애·결혼·자녀는 능력치 자격이 아니라 의사 결정이라 잠그지 않고, 차이는 결과 분기와 후속 사실로 반영",
+        "conditionReview": "open_turning_point",
+        "conditionBasis": "week13_love_line"
+      },
+      {
+        "choiceId": "C",
+        "label": "드럼 스틱을 빌려 직접 친다",
+        "statDelta": {
+          "행복": 4,
+          "사회성": 1,
+          "경제력": -4
+        },
+        "resultText": "결혼식 역사상 가장 시끄러운 축가였다. 식장 직원도 박자를 탔다.",
+        "addFlags": [
+          "married",
+          "achv_band_wedding"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "c_drum",
+            "text": "결혼식 역사상 가장 시끄러운 축가였다. 식장 직원도 박자를 탔다.",
+            "chance": 55,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 4,
+              "사회성": 1,
+              "경제력": -4
+            },
+            "addFlags": [
+              "married",
+              "achv_band_wedding"
+            ],
+            "removeFlags": [
+              "engaged"
+            ]
+          },
+          {
+            "outcomeId": "c_snap",
+            "text": "첫 박자에 스틱이 부러졌다. 나머지는 하객들이 손뼉으로 박자를 맞췄다.",
+            "chance": 45,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 3,
+              "경제력": -4
+            },
+            "addFlags": [
+              "married",
+              "achv_band_wedding"
+            ],
+            "removeFlags": [
+              "engaged"
+            ]
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "관계 단계 전환점 — 연애·결혼·자녀는 능력치 자격이 아니라 의사 결정이라 잠그지 않고, 차이는 결과 분기와 후속 사실로 반영",
+        "conditionReview": "open_turning_point",
+        "conditionBasis": "week13_love_line"
+      }
+    ],
+    "priority": 0,
+    "kind": "MILESTONE",
+    "periods": [
+      "YOUNG_ADULT",
+      "MIDDLE",
+      "OLD_AGE"
+    ],
+    "weight": 1,
+    "view": "FIRST_PERSON",
+    "pathRole": "러브라인 5단계(음악 후보) — 결혼식",
+    "followUps": [
+      "love_holiday_01",
+      "love_child_plan_01"
+    ]
+  },
+  "reviewScope": "Current complete event, conditions, every choice including legacy fields, all outcomes, probabilities, deltas and flags read for pre-choice art specification. No new image has been generated or approved by this brief.",
+  "reviewedChoiceIds": [
+    "A",
+    "B",
+    "C"
+  ],
+  "reviewedOutcomeIds": [
+    "a_sing",
+    "b_listen",
+    "c_drum",
+    "c_snap"
+  ],
+  "existingArtBriefPath": "docs/assignments/20261031/submissions/김선한_분류합본.csv",
+  "existingArtBriefSnapshot": {
+    "place": "결혼식장 무대",
+    "mainAction": "함께 연주하던 사람들이 축가를 연주한다",
+    "requiredObjects": "악기와 마이크",
+    "peopleAndAge": "하객과 연주자들",
+    "timeOfDay": "낮",
+    "approvedPerspective": "FIRST_PERSON",
+    "reuseOrNewReason": "NEW: 13주차 러브라인 신규 사건. 관계 단계(연인·약혼·배우자·자녀)를 선택 전보다 앞서 보여 주지 않는 전용 장면 필요"
+  },
+  "requestedAssetPath": "app/src/main/assets/images/img_love_wedding_music_001.png",
+  "preChoiceState": "약혼한 연인의 결혼식 축가 순서. 함께 연주하던 동료들이 악기를 들고 일어섰고 리더가 소개하는 순간. 플레이어는 아직 무대에 오르거나 노래·드럼·박수를 선택하지 않았다.",
+  "composition": "플레이어가 앉은 예식장 앞자리에서 작은 무대를 본다. 중앙 리더의 마이크와 준비 자세의 악기·동료, 가장자리 하객 머리 일부. 플레이어 전신이나 무대 위 플레이어 없음.",
+  "ageAndAppearance": "결혼 당사자는 청년~노년 가능. 연주자는 성인으로 묘사하되 특정 성별 커플이나 청년 밴드로 고정하지 않는다.",
+  "forbiddenOutcomes": [
+    "플레이어가 무대에서 듀엣·합창·드럼 연주",
+    "하객 전원이 합창하거나 박수로 박자를 맞춘 완료 장면",
+    "부러진 스틱",
+    "연인이 손을 꽉 잡은 선택 B 결과",
+    "업적 배지·결혼 완료 표시"
+  ],
+  "briefCorrections": [
+    "기존 분류의 축가를 연주한다는 문구를 본문의 소개·준비 순간으로 좁혔다. 마이크와 악기는 보존하되 플레이어의 참여를 선결하지 않는다."
+  ],
+  "generationPrompt": "Create one portrait 9:16 full-bleed game background, warm restrained Korean everyday-life pixel-art illustration. Crisp deliberate pixel clusters, coherent anatomy, softly separated light and shadow, not photorealism and not a UI mockup. Strict first-person player viewpoint: no player face, back of head, full player body, reflection, selfie or framed portrait of the player. Only naturally placed player hands or forearms may enter the frame. The player can be male or female; hands, clothing and visible partner styling must not encode a fixed player gender or a uniquely named past partner. All romantic participants are clearly adults; do not depict school-age children as romantic partners. Use age-flexible adult styling that can fit young, middle or older adulthood; do not impose a youthful face or body on an older-player route. If a partner must be visible, show non-identifying partial profile, cropped upper torso or hands rather than an identity-defining portrait. No readable text, letters, digits, logos, subtitles, speech bubbles, interface panels, progress indicators or button graphics. Any phone message cue must be an abstract non-text shape and never legible text. Keep all story-critical objects together inside the central 60% of the portrait width and middle 60% of height; leave the bottom 22% visually quiet for the game overlay, without drawing an overlay. This is the instant before the player chooses. Show the stated present situation only, with no success, failure, marriage, pregnancy, reconciliation, breakup or future achievement unless already established in the source conditions. \nSCENE: A small live-music area inside a daytime Korean wedding hall, seen from the players seated front-row viewpoint. Adult musician friends have just STOOD UP holding their instruments ready; the band leader is holding a microphone to introduce the next song. Group the microphone, resting guitar and waiting musicians centrally under gentle wedding-hall light, with understated flowers and a few cropped adult guest silhouettes at the sides. This is the spoken introduction BEFORE the player chooses to join or listen. The player is not on stage, not drumming or singing; the audience is not yet a mass choir. No snapped sticks, joined couple hands, applause climax, achievement symbols, readable signage or marriage-completion graphics. The unseen wedding couple can be young, middle-aged or elderly.",
+  "deliveryAndReview": {
+    "format": "PNG, portrait 9:16",
+    "originalAssets": "Preserve existing artwork and approval history. This is a missing-art candidate, not a replacement approval.",
+    "requiredChecks": [
+      "Read current event hash again before generation; stale briefs must be reread.",
+      "Inspect full image, anatomy, all required objects and absence of choice outcomes.",
+      "Inspect actual native portrait presentation and UI overlay at phone and narrow viewport.",
+      "Record image SHA, exact generation prompt, truthful AI producer/reviewer and per-event rationale before any separate approval action."
+    ],
+    "approvalOrManifestChanged": false
+  }
+}

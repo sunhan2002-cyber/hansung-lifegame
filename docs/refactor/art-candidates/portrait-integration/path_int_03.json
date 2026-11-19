@@ -1,0 +1,30 @@
+{
+  "eventId": "path_int_03",
+  "sourceAssetPath": "followup_20261031/img_path_int_03_001.png",
+  "sourceSha256": "08623c4e23e6a577b23b3b97b50c33258e681ba17c60e13213304a0f8b3574f1",
+  "variant": {
+    "assetPath": "presentation/portraits/img_path_int_03_001_portrait_v1.png",
+    "sha256": "86f0a48360cb9f768e14d26c437c891d5ab159b6e9efae65a47d8f0de3ce2551",
+    "width": 941,
+    "height": 1672,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root/security_p0)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/path_int_03.json",
+    "focalX": 0.555
+  },
+  "reviewerType": "AI",
+  "reviewer": "Codex AI (/root/security_p0)",
+  "reviewStatus": "AI_REVIEWED_PRESENTATION",
+  "eventSourceHash": "ac6bd16b3ce56b5a08af2ddea45b467ab48e6215c54ec82651cb46ad7bfccd03",
+  "semanticReview": "Producer read the current event conditions and every choice/outcome, inspected source and selected output. Full source snapshot and exact prompt are in the referenced production ledger. Native acceptance remains pending.",
+  "visualReview": "Individually viewed: five countable stacked workbooks, exactly three cans, separate plain open notebook, paused hands. Teacher/sleep thought bubble and readable characters removed. No exam/result action. Native pending.",
+  "cropReview": "Raise horizontal focal point from 0.50 to 0.555 to keep the third drink and five stacked books in the phone view; native recheck pending.",
+  "actualProducer": "OpenAI built-in image_gen",
+  "generationMethod": "Built-in imagegen edit; exact prompts/output SHA/rejected attempts preserved in docs/refactor/art-candidates/content-art-revision-briefs-20261119.json",
+  "productionLedger": "docs/refactor/art-candidates/content-art-revision-briefs-20261119.json",
+  "nativePending": true,
+  "runtimeConnected": true,
+  "approvalChanged": false,
+  "selectedStagingSha256": "86f0a48360cb9f768e14d26c437c891d5ab159b6e9efae65a47d8f0de3ce2551"
+}

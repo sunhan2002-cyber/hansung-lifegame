@@ -1,0 +1,71 @@
+{
+  "eventId": "path_luk_12",
+  "reviewerType": "AI",
+  "scope": "Portrait phone and small-phone presentation",
+  "sourceEventHash": "ef15d7517a9bf1c8cc2b3c5c5ed8f194deabf622b0af56155fd45bd6508458ed",
+  "sourceReview": "docs/refactor/art-candidates/portrait-integration/path_luk_12.json",
+  "sourceSha256": "06cb338801d00a27ac8232ecf00c88c8779008633538f8707ae776787ec25737",
+  "displayedVariant": {
+    "assetPath": "presentation/portraits/img_path_luk_12_001_portrait_v1.png",
+    "sha256": "079b54a126da7d07ca840772fc86815bb008c75bead17f3504999cf5571607ff",
+    "width": 941,
+    "height": 1672,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root/effects_tech)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/path_luk_12.json"
+  },
+  "nativeCaptures": [
+    {
+      "path": "build/refactor/after/portrait-fortythree-native/path_luk_12_phone_scene.png",
+      "sha256": "ef920e87424857621382b53174f0fb215d62ae6d8ab1150f6a920121b34a9cc6",
+      "crop": {
+        "eventId": "path_luk_12",
+        "imageId": "img_path_luk_12_001",
+        "assetPath": "presentation/portraits/img_path_luk_12_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/portrait-fortythree-native/path_luk_12_phone_play.png",
+      "sha256": "5f22adc0e34fd857860c1ec4b484ac8f7b38571a45b5b4272272c686bf51c3a3",
+      "crop": {
+        "eventId": "path_luk_12",
+        "imageId": "img_path_luk_12_001",
+        "assetPath": "presentation/portraits/img_path_luk_12_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/portrait-fortythree-native/path_luk_12_360x740_scene.png",
+      "sha256": "eb5a14cda0b60459c19ef99097ddccb715694f3ae4856f65b9bf370e8fe73cba",
+      "crop": {
+        "eventId": "path_luk_12",
+        "imageId": "img_path_luk_12_001",
+        "assetPath": "presentation/portraits/img_path_luk_12_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/portrait-fortythree-native/path_luk_12_360x740_play.png",
+      "sha256": "06e290dd5bd66183deda440c218f4f7731d37ba2277b3b7b911a09c971ffbc0a",
+      "crop": {
+        "eventId": "path_luk_12",
+        "imageId": "img_path_luk_12_001",
+        "assetPath": "presentation/portraits/img_path_luk_12_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    }
+  ],
+  "observation": "수상한 재연락을 받은 휴대폰과 기존 서류가 보인다.",
+  "decision": "PASS",
+  "method": "Individual visual inspection of both scene and gameplay frames together with producer semantic/source review and device capture match."
+}

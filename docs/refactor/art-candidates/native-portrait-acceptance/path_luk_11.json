@@ -1,0 +1,71 @@
+{
+  "eventId": "path_luk_11",
+  "reviewerType": "AI",
+  "scope": "Portrait phone and small-phone presentation",
+  "sourceEventHash": "28ec85ba19c098226dbdd5a9685fbc50d7b638c92f8360256eabaddaf11dfcba",
+  "sourceReview": "docs/refactor/art-candidates/portrait-integration/path_luk_11.json",
+  "sourceSha256": "bf603ab3795b9b58c5f8d09b7e50d6ec9e55f425661d41ea9d62cfbc207928ed",
+  "displayedVariant": {
+    "assetPath": "presentation/portraits/img_path_luk_11_001_portrait_v1.png",
+    "sha256": "189dbb086ffced66efe77847300b3b0c6ee45a189b47c0642190bcda037e4975",
+    "width": 941,
+    "height": 1672,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root/security_p0)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/path_luk_11.json"
+  },
+  "nativeCaptures": [
+    {
+      "path": "build/refactor/after/portrait-fortythree-native/path_luk_11_phone_scene.png",
+      "sha256": "d6c68b291a8f2c185710068dab861238038a82dc026cc98453ad4b7990e7fcef",
+      "crop": {
+        "eventId": "path_luk_11",
+        "imageId": "img_path_luk_11_001",
+        "assetPath": "presentation/portraits/img_path_luk_11_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/portrait-fortythree-native/path_luk_11_phone_play.png",
+      "sha256": "ec97fad7710ebcb878e02dfb19ac5335d40dd6ee08799de6ef4911b218bc3943",
+      "crop": {
+        "eventId": "path_luk_11",
+        "imageId": "img_path_luk_11_001",
+        "assetPath": "presentation/portraits/img_path_luk_11_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/portrait-fortythree-native/path_luk_11_360x740_scene.png",
+      "sha256": "cfeb91b9b512b9414228f8e693cb41747f97d68748a02446f25d577fed27f286",
+      "crop": {
+        "eventId": "path_luk_11",
+        "imageId": "img_path_luk_11_001",
+        "assetPath": "presentation/portraits/img_path_luk_11_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/portrait-fortythree-native/path_luk_11_360x740_play.png",
+      "sha256": "008cc0ec6995e6f6c291c3ff70341ed855b2df3a46fa04e5d8577ba400d34a88",
+      "crop": {
+        "eventId": "path_luk_11",
+        "imageId": "img_path_luk_11_001",
+        "assetPath": "presentation/portraits/img_path_luk_11_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    }
+  ],
+  "observation": "젖은 바지와 세탁기 앞에서 발견한 표가 보인다.",
+  "decision": "PASS",
+  "method": "Individual visual inspection of both scene and gameplay frames together with producer semantic/source review and device capture match."
+}

@@ -1,0 +1,243 @@
+{
+  "schemaVersion": 1,
+  "eventId": "love_holiday_01",
+  "status": "PASS",
+  "approvalScope": "Current source event and exact PNG; native phone and 360x740 Compose scene/play visual review",
+  "reviewer": "Codex AI / plan_audit",
+  "reviewerType": "AI",
+  "reviewDate": "2026-11-19",
+  "sourceEventHash": "6389b56c0d18294cc136edeac1d9950cf6325e9074e8e7981bd0bdbaf4266b73",
+  "sourceEventSnapshot": {
+    "eventId": "love_holiday_01",
+    "stage": "ADULT",
+    "type": "NORMAL",
+    "isFallback": false,
+    "isMilestone": false,
+    "title": "결혼 후 첫 명절",
+    "text": "결혼 후 첫 명절. 배우자네 부엌에 들어서자 처음 보는 친척 열두 명이 동시에 나를 봤다. \"{nameCall} 왔구나! 전 부칠 줄 알아?\"",
+    "imageId": "img_love_holiday_01_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [
+        "married"
+      ],
+      "blockedFlags": [
+        "divorced"
+      ]
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "앞치마를 매고 전을 부친다",
+        "statDelta": {
+          "사회성": 3
+        },
+        "resultText": "동그랑땡 서른 개를 부쳤다. 모양은 제각각이었다. 큰어머니가 제일 못생긴 걸 골라 드셨다.",
+        "addFlags": [
+          "family_bond"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "a_cook",
+            "text": "동그랑땡 서른 개를 부쳤다. 모양은 제각각이었다. 큰어머니가 제일 못생긴 걸 골라 드셨다.",
+            "chance": 70,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "사회성": 3
+            },
+            "addFlags": [
+              "family_bond"
+            ]
+          },
+          {
+            "outcomeId": "a_burn",
+            "text": "첫 판을 다 태웠다. 그 뒤로 명절마다 '전 태운 사람'으로 불린다.",
+            "chance": 30,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "사회성": 1,
+              "행복": 1
+            },
+            "addFlags": [
+              "family_memory"
+            ]
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week13_love_line"
+      },
+      {
+        "choiceId": "B",
+        "label": "어르신들 옆에 앉아 이야기를 듣는다",
+        "statDelta": {
+          "사회성": 2,
+          "행복": 2
+        },
+        "resultText": "배우자의 어릴 적 이야기를 세 시간 들었다. 집에 오는 길에 배우자가 물었다. '무슨 얘기 들었어?' 웃음만 나왔다.",
+        "addFlags": [
+          "family_bond"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "b_listen",
+            "text": "배우자의 어릴 적 이야기를 세 시간 들었다. 집에 오는 길에 배우자가 물었다. '무슨 얘기 들었어?' 웃음만 나왔다.",
+            "chance": 100,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "사회성": 2,
+              "행복": 2
+            },
+            "addFlags": [
+              "family_bond"
+            ]
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week13_love_line"
+      },
+      {
+        "choiceId": "C",
+        "label": "조카들과 윷놀이 판을 벌인다",
+        "statDelta": {
+          "행복": 2,
+          "경제력": -1
+        },
+        "resultText": "판돈 없이 시작한 윷놀이가 세뱃돈 내기로 끝났다. 내가 제일 많이 잃었다.",
+        "addFlags": [
+          "family_memory"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "c_lose",
+            "text": "판돈 없이 시작한 윷놀이가 세뱃돈 내기로 끝났다. 내가 제일 많이 잃었다.",
+            "chance": 60,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 2,
+              "경제력": -1
+            },
+            "addFlags": [
+              "family_memory"
+            ]
+          },
+          {
+            "outcomeId": "c_win",
+            "text": "모가 세 번 나왔다. 조카들이 나를 '윷 신'이라고 부른다.",
+            "chance": 40,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 2,
+              "운": 1
+            },
+            "addFlags": [
+              "family_memory"
+            ]
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week13_love_line"
+      }
+    ],
+    "priority": 0,
+    "kind": "INCIDENT",
+    "periods": [
+      "YOUNG_ADULT",
+      "MIDDLE"
+    ],
+    "weight": 30,
+    "view": "FIRST_PERSON",
+    "pathRole": "결혼 후 가족 모임 — 결혼 전 상견례와 구분",
+    "followUps": []
+  },
+  "sourceReadScope": "Title, full text, conditions, all choices, all outcomes including flags/stat deltas, periods and follow-ups directly read before visual judgement.",
+  "sourceImage": {
+    "path": "app/src/main/assets/images/img_love_holiday_01_001.png",
+    "sha256": "d9eef92661debdb79c4882483cd8b9e4a84be78e4d2eaa1ed675214020787645",
+    "width": 941,
+    "height": 1672
+  },
+  "generationManifest": "docs/refactor/art-candidates/generated-love-20261119.json",
+  "selectedGenerationOutput": "C:\\Users\\jk030\\.codex\\generated_images\\01a1f1bc-6c39-7a10-a591-0d1f4e5cef6b\\exec-90b5f947-3dcb-42a1-aee1-66f53b7183c1.png",
+  "exactGenerationPromptSha256": "959435b1fdc3dd142c4a2bbe182e8f98783f45bf052bf04dc89334af946ca868",
+  "presentationMetadata": [],
+  "captures": [
+    {
+      "path": "build/refactor/after/ten-art-native/love_holiday_01_phone_scene.png",
+      "sha256": "1274c7f3890e755f5f04ea73b16a5c9e3d7c2bb19997734c5ec440f8300b0bcf",
+      "width": 1080,
+      "height": 2400,
+      "screen": "phone",
+      "mode": "scene",
+      "cropReport": {
+        "eventId": "love_holiday_01",
+        "imageId": "img_love_holiday_01_001",
+        "assetPath": "img_love_holiday_01_001.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/ten-art-native/love_holiday_01_phone_play.png",
+      "sha256": "c206f1e2f5ef564a4777613b15104a83bda66ab57bfce6eaa654aa4f7c5a7121",
+      "width": 1080,
+      "height": 2400,
+      "screen": "phone",
+      "mode": "play",
+      "cropReport": null
+    },
+    {
+      "path": "build/refactor/after/ten-art-native/love_holiday_01_360x740_scene.png",
+      "sha256": "36c12ba41caed087b6a073d68c452504cacba8f5d8eda7c91d3125dc80c30ffe",
+      "width": 945,
+      "height": 1943,
+      "screen": "360x740",
+      "mode": "scene",
+      "cropReport": {
+        "eventId": "love_holiday_01",
+        "imageId": "img_love_holiday_01_001",
+        "assetPath": "img_love_holiday_01_001.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/ten-art-native/love_holiday_01_360x740_play.png",
+      "sha256": "e625bc132211063f3a1683767e6e555b9bd73f57390dd992ea943cd449e2a2ce",
+      "width": 945,
+      "height": 1943,
+      "screen": "360x740",
+      "mode": "play",
+      "cropReport": null
+    }
+  ],
+  "semanticObservation": "결혼 후 첫 명절 부엌 입구에서 친척 12명이 플레이어를 돌아본다. 직접 세어 12명을 확인했다. 빈 팬과 준비 재료가 있으며 플레이어가 전을 부침·태움·윷놀이·세뱃돈 결과를 먼저 보이지 않는다.",
+  "cropObservation": "phone/small에서도 친척 12명의 얼굴이 식별되고 빈 팬/재료가 중앙에 유지된다. 가장자리 귀/어깨 일부 잘림은 있으나 주요 얼굴과 사건 식별은 보존된다.",
+  "uiObservation": "두 크기에서 제목·본문·세 선택지가 읽힌다. small B 두 줄도 카드 내부에 남는다.",
+  "reviewMethod": "Codex AI directly inspected full source PNG and each of four unmodified native capture PNGs using view_image. This is an AI review, not a named human approval.",
+  "nativeMethod": "SceneCropReviewTest renders production DecisionScreen with current parsed event and actual routing/PixelAssetLoader in Android Compose instrumentation. Scene captures compare against designated crop >=0.95. The test uses a fixture play state and does not perform a complete game progression.",
+  "testSource": "app/src/androidTest/java/com/example/lifegame/ui/SceneCropReviewTest.kt",
+  "nativeRunLog": "build/refactor/scene-effects-and-ten-art.log",
+  "limitations": [
+    "Android emulator/Compose capture, not a physical device test.",
+    "Fixed reviewed phone and 360x740 sizes; no claim for every aspect ratio or font scale.",
+    "Visual art acceptance does not certify choice scrolling, TalkBack, or game-flow state transitions."
+  ]
+}
