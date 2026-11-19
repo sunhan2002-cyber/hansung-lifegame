@@ -14,6 +14,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clipToBounds
 import androidx.compose.ui.graphics.asAndroidBitmap
 import androidx.compose.ui.platform.LocalDensity
+import androidx.compose.ui.semantics.SemanticsActions
+import androidx.compose.ui.test.SemanticsMatcher
 import androidx.compose.ui.test.SemanticsNodeInteraction
 import androidx.compose.ui.test.assertCountEquals
 import androidx.compose.ui.test.assertIsDisplayed
@@ -28,6 +30,9 @@ import androidx.compose.ui.test.onRoot
 import androidx.compose.ui.test.performClick
 import androidx.compose.ui.test.performScrollTo
 import androidx.compose.ui.test.performTextInput
+import androidx.compose.ui.test.performSemanticsAction
+import androidx.compose.ui.test.performTouchInput
+import androidx.compose.ui.test.swipeUp
 import androidx.compose.ui.unit.Density
 import androidx.compose.ui.unit.dp
 import androidx.test.ext.junit.runners.AndroidJUnit4
@@ -292,7 +297,8 @@ class Week13FrontendFinishFlowTest {
         compose.onNodeWithTag("auto_event_card").assertInsideWidth("자동 사건 카드").assertStartsOnScreen("자동 사건 카드")
         compose.onNodeWithTag("auto_event_text", useUnmergedTree = true).assertTextContains(event.text)
             .assertInsideWidth("자동 사건 문장").assertStartsOnScreen("자동 사건 문장")
-        compose.onNodeWithTag("auto_event_record_only", useUnmergedTree = true).assertExists()
+        compose.onNodeWithTag("auto_event_record_only", useUnmergedTree = true).assertIsDisplayed()
+            .assertInsideWidth("기록 전용 안내").assertStartsOnScreen("기록 전용 안내")
         compose.onAllNodesWithTag("auto_event_changes", useUnmergedTree = true).assertCountEquals(0)
         compose.onAllNodesWithTag("auto_event_recall", useUnmergedTree = true).assertCountEquals(0)
         save("finish_auto_record_only_360x640_200.png")
@@ -304,6 +310,81 @@ class Week13FrontendFinishFlowTest {
         assertEquals("읽는 동안에는 넘어가지 않는다", PlayPhase.AUTO, requireNotNull(vm.play).phase)
         advance(hold - YEAR_MILLIS_AT_1X)
         assertEquals(PlayPhase.DECISION, requireNotNull(vm.play).phase)
+        assertNull(vm.play?.automaticEvent)
+    }
+
+    private fun recordOnlyAutomaticEvent(): LifeGameViewModel {
+        lateinit var vm: LifeGameViewModel
+        compose.runOnUiThread {
+            vm = LifeGameViewModel(app)
+            vm.startNewLife(NewLifeProfile("재겸", Gender.FEMALE, null, runSeed = 20261116L))
+            vm.chooseDecision("A")
+            vm.continueAfterOutcome()
+            vm.advanceYear()
+        }
+        assertEquals("auto_infant_dol_photo_music", vm.play?.automaticEvent?.eventId)
+        return vm
+    }
+
+    @Test
+    fun readingDetailsAtLargeTextPausesTheAutomaticEventUntilExplicitResume() {
+        val vm = recordOnlyAutomaticEvent()
+        val before = requireNotNull(vm.play)
+        val event = requireNotNull(before.automaticEvent)
+        val records = requireNotNull(V4ProgressStore(app).load()).state.automaticEventRecords
+        val hold = automaticEventHoldMillis(event)
+        compose.mainClock.autoAdvance = false
+        small(fontScale = 2f, width = 360, height = 640) { PlayHost(gameViewModel = vm, onGoHome = {}) }
+        advance(400)
+        awaitTag("auto_event_card")
+        compose.onNodeWithTag("auto_event_record_only", useUnmergedTree = true).assertIsDisplayed()
+        compose.onNodeWithTag("player_avatar_button").assertIsDisplayed().performClick()
+        awaitTag("life_facts_sheet")
+        advance(400)
+        assertFalse(requireNotNull(vm.play).autoPlaying)
+        advance(hold * 2)
+        assertEquals(before.yearInPeriod, vm.play?.yearInPeriod)
+        assertEquals(event.eventId, vm.play?.automaticEvent?.eventId)
+        assertEquals(before.stats, vm.play?.stats)
+        assertEquals(records, requireNotNull(V4ProgressStore(app).load()).state.automaticEventRecords)
+
+        // Use the sheet's own accessibility dismiss action, not the Activity's back dispatcher.
+        compose.onNode(SemanticsMatcher.keyIsDefined(SemanticsActions.Dismiss))
+            .performSemanticsAction(SemanticsActions.Dismiss) { it() }
+        advance(500)
+        compose.onAllNodesWithTag("life_facts_sheet").assertCountEquals(0)
+        assertFalse(requireNotNull(vm.play).autoPlaying)
+        advance(hold + 100)
+        assertEquals(event.eventId, vm.play?.automaticEvent?.eventId)
+        compose.onNodeWithTag("play_pause").assertIsDisplayed().performClick()
+        advance(64)
+        assertTrue(requireNotNull(vm.play).autoPlaying)
+        advance(hold + 100)
+        assertEquals(PlayPhase.DECISION, vm.play?.phase)
+        assertNull(vm.play?.automaticEvent)
+        assertEquals(records, requireNotNull(V4ProgressStore(app).load()).state.automaticEventRecords)
+    }
+
+    @Test
+    fun scrollingTheLargeAutomaticCardAlsoPausesUntilExplicitResume() {
+        val vm = recordOnlyAutomaticEvent()
+        val before = requireNotNull(vm.play)
+        val event = requireNotNull(before.automaticEvent)
+        val hold = automaticEventHoldMillis(event)
+        compose.mainClock.autoAdvance = false
+        small(fontScale = 2f, width = 360, height = 640) { PlayHost(gameViewModel = vm, onGoHome = {}) }
+        advance(400)
+        awaitTag("auto_event_card")
+        compose.onNodeWithTag("auto_progress_content").performTouchInput { swipeUp(durationMillis = 250) }
+        advance(500)
+        assertFalse(requireNotNull(vm.play).autoPlaying)
+        advance(hold * 2)
+        assertEquals(before.yearInPeriod, vm.play?.yearInPeriod)
+        assertEquals(event.eventId, vm.play?.automaticEvent?.eventId)
+        assertEquals(before.stats, vm.play?.stats)
+        compose.onNodeWithTag("play_pause").assertIsDisplayed().performClick()
+        advance(hold + 100)
+        assertEquals(PlayPhase.DECISION, vm.play?.phase)
         assertNull(vm.play?.automaticEvent)
     }
 

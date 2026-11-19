@@ -289,6 +289,7 @@ class Week10EndingFlowTest {
                 onOpenTitles = { titles += 1 },
             )
         }
+        composeRule.onNodeWithTag("home_past_lives").performScrollTo().performClick()
         composeRule.onNodeWithTag("finished_life_0").performScrollTo().performClick()
         assertEquals(record.runId, opened)
         composeRule.onNodeWithTag("home_titles").performScrollTo().performClick()
