@@ -58,8 +58,8 @@
     {
       "owner": "김재겸",
       "total": 70,
-      "delivered": 1,
-      "remaining": 69,
+      "delivered": 47,
+      "remaining": 23,
       "pilotEventId": "adult_026"
     },
     {
@@ -130,7 +130,7 @@
       "briefDecisionBy": "김선한 담당 Codex 조정",
       "artApprovalStatus": "APPROVED",
       "eventSourceHashes": {
-        "adult_001": "e843922be0e3f125d248bcd436097c5b39f620dd2d3406f17b4e9e48aa8bbb34"
+        "adult_001": "d2651dc502189103b42cedff383b3f0e198f7631ba8f76893c2fcfce1d0a9f99"
       },
       "delivery": {
         "assetPath": "followup_20261031/img_adult_crossroad_001.png",
@@ -175,7 +175,7 @@
       "briefDecisionBy": "김선한 담당 Codex 조정",
       "artApprovalStatus": "APPROVED",
       "eventSourceHashes": {
-        "adult_002": "51104de8bc82d564e2a1a87c890f4d16e6f2cbb84f012e9d0074c17437cd91d5"
+        "adult_002": "0dcd1067d6ee7b34e7a4a0e2efd136505523c45e5f2225c8b57ebf7f887a468b"
       },
       "delivery": {
         "assetPath": "followup_20261031/img_adult_pro_offer_001.png",
@@ -195,7 +195,7 @@
       "title": "음이탈 레전드",
       "workType": "NEW",
       "productionOwner": "김재겸",
-      "productionStatus": "ASSIGNED_AFTER_SAMPLE_APPROVAL",
+      "productionStatus": "ACCEPTED_IN_INTEGRATION_BRANCH",
       "sourceImageId": "img_adult_audition_001",
       "targetImageId": "img_adult_audition_001",
       "targetAssetPath": "followup_20261031/img_adult_audition_001.png",
@@ -211,9 +211,18 @@
       "productionInstructions": "adult_003: NEW: 바이럴 영상 알림이라는 고유 사물. 다른 휴대폰 장면과 화면 내용이 달라 공유 불가",
       "briefDecision": "PRODUCTION_BRIEF_LOCKED",
       "briefDecisionBy": "김선한 담당 Codex 조정",
-      "artApprovalStatus": "PENDING_PNG_REVIEW",
+      "artApprovalStatus": "APPROVED",
       "eventSourceHashes": {
-        "adult_003": "7180499cfc3f17aed81a92a85384c20ede9b333fa41b5524b025b95b7627d442"
+        "adult_003": "da0049c9ce925b9f497f37c0fa12f669881e2000fc5d2dda5ce820669d8182dc"
+      },
+      "delivery": {
+        "assetPath": "followup_20261031/img_adult_audition_001.png",
+        "sha256": "032615ad7b72c8c7375cec4470f3b96e89e21fcc0648fefe72fb6a3f390181c9",
+        "width": 1448,
+        "height": 1086,
+        "actualProducer": "김재겸",
+        "reviewEvidence": "docs\\assignments\\20261031\\submissions\\통합_그림검토_20261105.json",
+        "deliveryStatus": "ACCEPTED_IN_INTEGRATION_BRANCH"
       }
     },
     {
@@ -603,8 +612,8 @@
       "briefDecisionBy": "김선한 담당 Codex 조정",
       "artApprovalStatus": "APPROVED",
       "eventSourceHashes": {
-        "adult_015": "ac0ac7b2b187566a18de7f40d51010cc705f8fc3da449b04cdc52b2fba91ce28",
-        "adult_080": "c4112a9084eca88bb7b5e2a4dcf8c0157f10710603a5d788c1310c044770f49e"
+        "adult_015": "62b7e13c6d19bc5e4d67426281aa11fb342168a73e3e844f2465f961dbc1c270",
+        "adult_080": "45524d97e3958d8982a887088a9055446f7af4d902aea6026ea00379fe47948f"
       },
       "delivery": {
         "assetPath": "followup_20261031/img_adult_first_salary_001.png",
@@ -682,7 +691,7 @@
       "title": "동기와 탈출 작전",
       "workType": "NEW",
       "productionOwner": "김재겸",
-      "productionStatus": "ASSIGNED_AFTER_SAMPLE_APPROVAL",
+      "productionStatus": "ACCEPTED_IN_INTEGRATION_BRANCH",
       "sourceImageId": "img_adult_dinner_escape_001",
       "targetImageId": "img_adult_dinner_escape_001",
       "targetAssetPath": "followup_20261031/img_adult_dinner_escape_001.png",
@@ -698,9 +707,18 @@
       "productionInstructions": "adult_018: NEW: 회식 자리 + 탈출 신호라는 행동이 고유",
       "briefDecision": "PRODUCTION_BRIEF_LOCKED",
       "briefDecisionBy": "김선한 담당 Codex 조정",
-      "artApprovalStatus": "PENDING_PNG_REVIEW",
+      "artApprovalStatus": "APPROVED",
       "eventSourceHashes": {
-        "adult_018": "119f02406ad1918b7d6db672b7b436276a154fbde0bc6ad4e5eb3d714d821d23"
+        "adult_018": "cc0c27f79bce6271b3b726659b453ef2988f4f0ac2117e1d377ad51ef338a7db"
+      },
+      "delivery": {
+        "assetPath": "followup_20261031/img_adult_dinner_escape_001.png",
+        "sha256": "3bc304d4ab52f04e08b02a92566227239e434ef581f8810e9d670385f45c2be7",
+        "width": 1448,
+        "height": 1086,
+        "actualProducer": "김재겸",
+        "reviewEvidence": "docs\\assignments\\20261031\\submissions\\통합_그림검토_20261105.json",
+        "deliveryStatus": "ACCEPTED_IN_INTEGRATION_BRANCH"
       }
     },
     {
@@ -827,7 +845,7 @@
       "title": "길을 묻는 사람",
       "workType": "NEW",
       "productionOwner": "김재겸",
-      "productionStatus": "ASSIGNED_AFTER_SAMPLE_APPROVAL",
+      "productionStatus": "ACCEPTED_IN_INTEGRATION_BRANCH",
       "sourceImageId": "img_adult_asking_way_001",
       "targetImageId": "img_adult_asking_way_001",
       "targetAssetPath": "followup_20261031/img_adult_asking_way_001.png",
@@ -843,9 +861,18 @@
       "productionInstructions": "adult_023: NEW: 거리에서 낯선 사람과 마주치는 장면은 내 대상 중 하나뿐",
       "briefDecision": "PRODUCTION_BRIEF_LOCKED",
       "briefDecisionBy": "김선한 담당 Codex 조정",
-      "artApprovalStatus": "PENDING_PNG_REVIEW",
+      "artApprovalStatus": "APPROVED",
       "eventSourceHashes": {
-        "adult_023": "6f444bc9446a24fd3dadad0023fd1341966f314c9800e19a1b0ad2d6e9bf631c"
+        "adult_023": "3a680a2fa72cd449a09af11b9797b8f3ea45ac1658d333850f7e15ae8fb1b3d1"
+      },
+      "delivery": {
+        "assetPath": "followup_20261031/img_adult_asking_way_001.png",
+        "sha256": "3180760eadf03062c25cb3356b5f8715343b9f477438a7f99f28602d8e1741c3",
+        "width": 1448,
+        "height": 1086,
+        "actualProducer": "김재겸",
+        "reviewEvidence": "docs\\assignments\\20261031\\submissions\\통합_그림검토_20261105.json",
+        "deliveryStatus": "ACCEPTED_IN_INTEGRATION_BRANCH"
       }
     },
     {
@@ -939,7 +966,7 @@
       "briefDecisionBy": "김선한 담당 Codex 조정",
       "artApprovalStatus": "APPROVED",
       "eventSourceHashes": {
-        "adult_026": "4acfa3e3bf9f1ddf5a8afe3cc3237251f1b73deecb77e5996f1ac43f0f456c36"
+        "adult_026": "5f8d88d50b7248f62177f4b1c83aa6c372cdd9d474887686a4430b2967e00678"
       },
       "delivery": {
         "assetPath": "followup_20261031/img_adult_crypto_001.png",
@@ -1143,7 +1170,7 @@
       "briefDecisionBy": "김선한 담당 Codex 조정",
       "artApprovalStatus": "APPROVED",
       "eventSourceHashes": {
-        "adult_032": "c3810212d9242c6a3325fb9c8eeee607490f3a90388f6670a245f3cdc75703bd"
+        "adult_032": "6d12fae6073e29a4d2fd21ddc133abc213adec311896c6683c125c58e1fc3cc2"
       },
       "delivery": {
         "assetPath": "followup_20261031/img_adult_proposal_001.png",
@@ -1163,7 +1190,7 @@
       "title": "아빠와 팔씨름",
       "workType": "NEW",
       "productionOwner": "김재겸",
-      "productionStatus": "ASSIGNED_AFTER_SAMPLE_APPROVAL",
+      "productionStatus": "ACCEPTED_IN_INTEGRATION_BRANCH",
       "sourceImageId": "img_adult_arm_wrestling_001",
       "targetImageId": "img_adult_arm_wrestling_001",
       "targetAssetPath": "followup_20261031/img_adult_arm_wrestling_001.png",
@@ -1179,9 +1206,18 @@
       "productionInstructions": "adult_033: NEW: 팔씨름 직전 손 맞잡기 구도. 결과(이김 · 짐)는 그리지 않음",
       "briefDecision": "PRODUCTION_BRIEF_LOCKED",
       "briefDecisionBy": "김선한 담당 Codex 조정",
-      "artApprovalStatus": "PENDING_PNG_REVIEW",
+      "artApprovalStatus": "APPROVED",
       "eventSourceHashes": {
-        "adult_033": "ce17765bf3a47239a80665a32e82d76baa196215345e337b45f5d5f63b9c167a"
+        "adult_033": "8268036e0498e7426414150876d8bf14f43cbe317baabc7df8ac3457ebc7c70c"
+      },
+      "delivery": {
+        "assetPath": "followup_20261031/img_adult_arm_wrestling_001.png",
+        "sha256": "ee13872d7058eb552257687becd6fbb04f072b95e8be4a215ae392221e03cd78",
+        "width": 1448,
+        "height": 1086,
+        "actualProducer": "김재겸",
+        "reviewEvidence": "docs\\assignments\\20261031\\submissions\\통합_그림검토_20261105.json",
+        "deliveryStatus": "ACCEPTED_IN_INTEGRATION_BRANCH"
       }
     },
     {
@@ -1481,7 +1517,7 @@
       "title": "엄마의 수술",
       "workType": "NEW",
       "productionOwner": "김재겸",
-      "productionStatus": "ASSIGNED_AFTER_SAMPLE_APPROVAL",
+      "productionStatus": "ACCEPTED_IN_INTEGRATION_BRANCH",
       "sourceImageId": "img_adult_hospital_001",
       "targetImageId": "img_adult_hospital_001",
       "targetAssetPath": "followup_20261031/img_adult_hospital_001.png",
@@ -1497,9 +1533,18 @@
       "productionInstructions": "adult_043: NEW: 지정 ID는 hospital이지만 본문은 회사에서 받는 전화. 병원 그림은 결과 선점이라 제외",
       "briefDecision": "PRODUCTION_BRIEF_LOCKED",
       "briefDecisionBy": "김선한 담당 Codex 조정",
-      "artApprovalStatus": "PENDING_PNG_REVIEW",
+      "artApprovalStatus": "APPROVED",
       "eventSourceHashes": {
-        "adult_043": "dcd5764935c12c83310fb1d4f6ef88f1a75fbb23f2bdedfc2bb5bdc89d4bd60e"
+        "adult_043": "61837fd3cf1fd8604925b53f95664af747433a38bf0af929db7f5e422ae6cca1"
+      },
+      "delivery": {
+        "assetPath": "followup_20261031/img_adult_hospital_001.png",
+        "sha256": "35ad64e0089064bf9c12c2f4dc589f814a6d4176aa196714f8cadb2b12705654",
+        "width": 1448,
+        "height": 1086,
+        "actualProducer": "김재겸",
+        "reviewEvidence": "docs\\assignments\\20261031\\submissions\\통합_그림검토_20261105.json",
+        "deliveryStatus": "ACCEPTED_IN_INTEGRATION_BRANCH"
       }
     },
     {
@@ -1640,7 +1685,7 @@
       "title": "절대 안 죽는 화분",
       "workType": "NEW",
       "productionOwner": "김재겸",
-      "productionStatus": "ASSIGNED_AFTER_SAMPLE_APPROVAL",
+      "productionStatus": "ACCEPTED_IN_INTEGRATION_BRANCH",
       "sourceImageId": "img_adult_office_plant_001",
       "targetImageId": "img_adult_office_plant_001",
       "targetAssetPath": "followup_20261031/img_adult_office_plant_001.png",
@@ -1656,9 +1701,18 @@
       "productionInstructions": "adult_048: NEW: 화분 선물 장면 고유",
       "briefDecision": "PRODUCTION_BRIEF_LOCKED",
       "briefDecisionBy": "김선한 담당 Codex 조정",
-      "artApprovalStatus": "PENDING_PNG_REVIEW",
+      "artApprovalStatus": "APPROVED",
       "eventSourceHashes": {
-        "adult_048": "96ed67bea7ea34aafcc182517d195bb2614a71814070cc04e6d8e25853ab33f0"
+        "adult_048": "05e8b0d25dd0e4c34c7c0e94a30b1b2ed5c6dd8d7dbf09724add7a0fed9d0d30"
+      },
+      "delivery": {
+        "assetPath": "followup_20261031/img_adult_office_plant_001.png",
+        "sha256": "5271697aa395ac01931b548f6a0580533deed55e0846675107df3be6f3aa2b0f",
+        "width": 1448,
+        "height": 1086,
+        "actualProducer": "김재겸",
+        "reviewEvidence": "docs\\assignments\\20261031\\submissions\\통합_그림검토_20261105.json",
+        "deliveryStatus": "ACCEPTED_IN_INTEGRATION_BRANCH"
       }
     },
     {
@@ -1792,7 +1846,7 @@
       "title": "팔이 짧아졌다",
       "workType": "NEW",
       "productionOwner": "김재겸",
-      "productionStatus": "ASSIGNED_AFTER_SAMPLE_APPROVAL",
+      "productionStatus": "ACCEPTED_IN_INTEGRATION_BRANCH",
       "sourceImageId": "img_adult_reading_glasses_001",
       "targetImageId": "img_adult_reading_glasses_001",
       "targetAssetPath": "followup_20261031/img_adult_reading_glasses_001.png",
@@ -1808,9 +1862,18 @@
       "productionInstructions": "adult_053: NEW: 노안 메뉴판 장면 고유",
       "briefDecision": "PRODUCTION_BRIEF_LOCKED",
       "briefDecisionBy": "김선한 담당 Codex 조정",
-      "artApprovalStatus": "PENDING_PNG_REVIEW",
+      "artApprovalStatus": "APPROVED",
       "eventSourceHashes": {
-        "adult_053": "c0b5bd4304850e520b4ec235509e1287a4ab88d22ddfbfe2e064dcbbde785f11"
+        "adult_053": "b83e576c7601a240c33aa4aab80b92a73fb794e7056cf361f2a52d5d5414f1c7"
+      },
+      "delivery": {
+        "assetPath": "followup_20261031/img_adult_reading_glasses_001.png",
+        "sha256": "d35a164e2fe03d0dce7973137819470a30751f840d3c8d1927781d797ef57e24",
+        "width": 1448,
+        "height": 1086,
+        "actualProducer": "김재겸",
+        "reviewEvidence": "docs\\assignments\\20261031\\submissions\\통합_그림검토_20261105.json",
+        "deliveryStatus": "ACCEPTED_IN_INTEGRATION_BRANCH"
       }
     },
     {
@@ -1937,7 +2000,7 @@
       "title": "재검 통지서",
       "workType": "NEW",
       "productionOwner": "김재겸",
-      "productionStatus": "ASSIGNED_AFTER_SAMPLE_APPROVAL",
+      "productionStatus": "ACCEPTED_IN_INTEGRATION_BRANCH",
       "sourceImageId": "img_adult_health_recheck_001",
       "targetImageId": "img_adult_health_recheck_001",
       "targetAssetPath": "followup_20261031/img_adult_health_recheck_001.png",
@@ -1953,9 +2016,18 @@
       "productionInstructions": "adult_058: NEW: 아버지 진단서(path_hea_11)와 서류 · 인물 · 상황 다름",
       "briefDecision": "PRODUCTION_BRIEF_LOCKED",
       "briefDecisionBy": "김선한 담당 Codex 조정",
-      "artApprovalStatus": "PENDING_PNG_REVIEW",
+      "artApprovalStatus": "APPROVED",
       "eventSourceHashes": {
-        "adult_058": "54f7e8c3bfb46848f81d0d88a0952781ddc423683e3255628bbe75cecca7cc5a"
+        "adult_058": "375e083e9465e1f149b33acbc4e18cc38e166c603d7d294b6055008e06039a10"
+      },
+      "delivery": {
+        "assetPath": "followup_20261031/img_adult_health_recheck_001.png",
+        "sha256": "0c95258890a0890cd52a05829e3ea8a2adfc0eecd551f7d850401dd0c204853d",
+        "width": 1448,
+        "height": 1086,
+        "actualProducer": "김재겸",
+        "reviewEvidence": "docs\\assignments\\20261031\\submissions\\통합_그림검토_20261105.json",
+        "deliveryStatus": "ACCEPTED_IN_INTEGRATION_BRANCH"
       }
     },
     {
@@ -2082,7 +2154,7 @@
       "title": "빈 방",
       "workType": "NEW",
       "productionOwner": "김재겸",
-      "productionStatus": "ASSIGNED_AFTER_SAMPLE_APPROVAL",
+      "productionStatus": "ACCEPTED_IN_INTEGRATION_BRANCH",
       "sourceImageId": "img_adult_empty_nest_001",
       "targetImageId": "img_adult_empty_nest_001",
       "targetAssetPath": "followup_20261031/img_adult_empty_nest_001.png",
@@ -2098,9 +2170,18 @@
       "productionInstructions": "adult_063: NEW: 빈 방 고유. 사람 없이 사물로 감정 표현",
       "briefDecision": "PRODUCTION_BRIEF_LOCKED",
       "briefDecisionBy": "김선한 담당 Codex 조정",
-      "artApprovalStatus": "PENDING_PNG_REVIEW",
+      "artApprovalStatus": "APPROVED",
       "eventSourceHashes": {
-        "adult_063": "e7b91498d704ebc2d52b92544c2ce554c476886baa7c0bc1d7e1193707734cc1"
+        "adult_063": "fc758d692a42cd4982d429b4770e6a2570fd2dbe30cda0b8c8052188e0d0942d"
+      },
+      "delivery": {
+        "assetPath": "followup_20261031/img_adult_empty_nest_001.png",
+        "sha256": "db5f3fe141ec17ed8a941e492db019e57c67c26cba9ec8b41db40f5600e3dae5",
+        "width": 1448,
+        "height": 1086,
+        "actualProducer": "김재겸",
+        "reviewEvidence": "docs\\assignments\\20261031\\submissions\\통합_그림검토_20261105.json",
+        "deliveryStatus": "ACCEPTED_IN_INTEGRATION_BRANCH"
       }
     },
     {
@@ -2252,7 +2333,7 @@
       "briefDecisionBy": "김선한 담당 Codex 조정",
       "artApprovalStatus": "APPROVED",
       "eventSourceHashes": {
-        "adult_068": "a0ae7dba130e0df248e3f3bb852ace5d8e8866e69e1815e757ec7a6a60b2d86d"
+        "adult_068": "8733ee6a0fbb2d727a572e16cb1c63b6118ed765ef4ddd6727891af7b5d8d1f9"
       },
       "delivery": {
         "assetPath": "design_preview/week7/img_pov_flu_morning_001.png",
@@ -2272,7 +2353,7 @@
       "title": "승진 심사 전날",
       "workType": "NEW",
       "productionOwner": "김재겸",
-      "productionStatus": "ASSIGNED_AFTER_SAMPLE_APPROVAL",
+      "productionStatus": "ACCEPTED_IN_INTEGRATION_BRANCH",
       "sourceImageId": "img_pov_promotion_review_001",
       "targetImageId": "img_pov_promotion_review_001",
       "targetAssetPath": "followup_20261031/img_pov_promotion_review_001.png",
@@ -2295,9 +2376,18 @@
       "productionInstructions": "adult_069: NEW: 심사 결과를 그리지 않는 불면 장면 / 제작 명세는 2차 의미·크롭 검토 반영본을 따른다.",
       "briefDecision": "PRODUCTION_BRIEF_LOCKED",
       "briefDecisionBy": "김선한 담당 Codex 조정",
-      "artApprovalStatus": "PENDING_PNG_REVIEW",
+      "artApprovalStatus": "APPROVED",
       "eventSourceHashes": {
-        "adult_069": "70990af796d69c87ddcf49f26acce9379e14bec8929327dc552d9c9661886f30"
+        "adult_069": "b20489d2a606d0e365dd37c10507ecc6278fc438bfdfecf9d9bd8e7cf2775824"
+      },
+      "delivery": {
+        "assetPath": "followup_20261031/img_pov_promotion_review_001.png",
+        "sha256": "0a002fec7def270dcb256aa260a5a78adda2f4a39c948417ac8c2ffedb4ebfba",
+        "width": 1448,
+        "height": 1086,
+        "actualProducer": "김재겸",
+        "reviewEvidence": "docs\\assignments\\20261031\\submissions\\통합_그림검토_20261105.json",
+        "deliveryStatus": "ACCEPTED_IN_INTEGRATION_BRANCH"
       }
     },
     {
@@ -2326,7 +2416,7 @@
       "briefDecisionBy": "김선한 담당 Codex 조정",
       "artApprovalStatus": "APPROVED",
       "eventSourceHashes": {
-        "adult_070": "cca53572fd2791a39dd6a9f20cfb2c53ee8637e731630af7086d4f0bcef9e156"
+        "adult_070": "84e7a80e3e6d2314bbf0f6d5b15f0519a6030c125db61a1cdd5764f6a87c604b"
       },
       "delivery": {
         "assetPath": "design_preview/week7/img_pov_layoff_door_001.png",
@@ -2469,7 +2559,7 @@
       "title": "모닥불 옆자리",
       "workType": "NEW",
       "productionOwner": "김재겸",
-      "productionStatus": "ASSIGNED_AFTER_SAMPLE_APPROVAL",
+      "productionStatus": "ACCEPTED_IN_INTEGRATION_BRANCH",
       "sourceImageId": "img_pov_campfire_001",
       "targetImageId": "img_pov_campfire_001",
       "targetAssetPath": "followup_20261031/img_pov_campfire_001.png",
@@ -2485,9 +2575,18 @@
       "productionInstructions": "adult_075: NEW: 모닥불 MT 고유",
       "briefDecision": "PRODUCTION_BRIEF_LOCKED",
       "briefDecisionBy": "김선한 담당 Codex 조정",
-      "artApprovalStatus": "PENDING_PNG_REVIEW",
+      "artApprovalStatus": "APPROVED",
       "eventSourceHashes": {
-        "adult_075": "2fba693e46fa47033f8f544521c60cec7d1168f1c090b7be0fae60e35436d560"
+        "adult_075": "1c33aa64da25f14940d426a6be8d169b5012e70b6492428c363e5b57039de73c"
+      },
+      "delivery": {
+        "assetPath": "followup_20261031/img_pov_campfire_001.png",
+        "sha256": "294430f0669a350a655776c24d7affa68bc922faca0c0201be28a9f92ae79a6a",
+        "width": 1448,
+        "height": 1086,
+        "actualProducer": "김재겸",
+        "reviewEvidence": "docs\\assignments\\20261031\\submissions\\통합_그림검토_20261105.json",
+        "deliveryStatus": "ACCEPTED_IN_INTEGRATION_BRANCH"
       }
     },
     {
@@ -3041,7 +3140,7 @@
       "title": "예술부 반 고르기",
       "workType": "NEW",
       "productionOwner": "김재겸",
-      "productionStatus": "ASSIGNED_AFTER_SAMPLE_APPROVAL",
+      "productionStatus": "ACCEPTED_IN_INTEGRATION_BRANCH",
       "sourceImageId": "img_child_arts_pick_001",
       "targetImageId": "img_child_arts_pick_001",
       "targetAssetPath": "followup_20261031/img_child_arts_pick_001.png",
@@ -3057,9 +3156,18 @@
       "productionInstructions": "child_013: NEW: 세 동아리 소품이 모두 보여야 함",
       "briefDecision": "PRODUCTION_BRIEF_LOCKED",
       "briefDecisionBy": "김선한 담당 Codex 조정",
-      "artApprovalStatus": "PENDING_PNG_REVIEW",
+      "artApprovalStatus": "APPROVED",
       "eventSourceHashes": {
-        "child_013": "4deb842c97c1e73fc12b6afc3f7e8f12c50e6a497de95374b15abbc535a3b366"
+        "child_013": "eba2a37c5c2cdc6078827d828afe44f2075daaaa6ad30db92905754dcdcbbc37"
+      },
+      "delivery": {
+        "assetPath": "followup_20261031/img_child_arts_pick_001.png",
+        "sha256": "340c49cc0557a83e9dcc2115e56d24465a96ee7b9b2d3e0c9ec59a385e15ce7d",
+        "width": 1448,
+        "height": 1086,
+        "actualProducer": "김재겸",
+        "reviewEvidence": "docs\\assignments\\20261031\\submissions\\통합_그림검토_20261105.json",
+        "deliveryStatus": "ACCEPTED_IN_INTEGRATION_BRANCH"
       }
     },
     {
@@ -3193,7 +3301,7 @@
       "title": "응원단장 스카우트",
       "workType": "NEW",
       "productionOwner": "김재겸",
-      "productionStatus": "ASSIGNED_AFTER_SAMPLE_APPROVAL",
+      "productionStatus": "ACCEPTED_IN_INTEGRATION_BRANCH",
       "sourceImageId": "img_child_cheer_leader_001",
       "targetImageId": "img_child_cheer_leader_001",
       "targetAssetPath": "followup_20261031/img_child_cheer_leader_001.png",
@@ -3209,9 +3317,18 @@
       "productionInstructions": "child_018: NEW: 오래달리기(teen_009)와 같은 운동장이라도 연령 · 행동 다름",
       "briefDecision": "PRODUCTION_BRIEF_LOCKED",
       "briefDecisionBy": "김선한 담당 Codex 조정",
-      "artApprovalStatus": "PENDING_PNG_REVIEW",
+      "artApprovalStatus": "APPROVED",
       "eventSourceHashes": {
-        "child_018": "0e0330982a3000e3ade6a4b793c07f9a349c8b36c934ccaef364aa2a5e81b724"
+        "child_018": "787852e35895306f864cf5c9ac8fe68a75deb4bc00e81f4230d9a09c6d3e4548"
+      },
+      "delivery": {
+        "assetPath": "followup_20261031/img_child_cheer_leader_001.png",
+        "sha256": "4f2f3816c01ad04c9d44dbd67f92524f4837a1696b41f9ffc5c06c56346a68f1",
+        "width": 1448,
+        "height": 1086,
+        "actualProducer": "김재겸",
+        "reviewEvidence": "docs\\assignments\\20261031\\submissions\\통합_그림검토_20261105.json",
+        "deliveryStatus": "ACCEPTED_IN_INTEGRATION_BRANCH"
       }
     },
     {
@@ -3345,7 +3462,7 @@
       "title": "급식의 시금치",
       "workType": "NEW",
       "productionOwner": "김재겸",
-      "productionStatus": "ASSIGNED_AFTER_SAMPLE_APPROVAL",
+      "productionStatus": "ACCEPTED_IN_INTEGRATION_BRANCH",
       "sourceImageId": "img_child_lunch_001",
       "targetImageId": "img_child_lunch_001",
       "targetAssetPath": "followup_20261031/img_child_lunch_001.png",
@@ -3361,9 +3478,18 @@
       "productionInstructions": "child_023: NEW: 브로콜리 급식(타 담당) · 급식 새치기(teen_004)와 사물 · 행동이 달라 별도",
       "briefDecision": "PRODUCTION_BRIEF_LOCKED",
       "briefDecisionBy": "김선한 담당 Codex 조정",
-      "artApprovalStatus": "PENDING_PNG_REVIEW",
+      "artApprovalStatus": "APPROVED",
       "eventSourceHashes": {
-        "child_023": "f90bb67827a1d9bd1248dd3effd3eff1df32ec84081c8df5e491c24c9aca5b45"
+        "child_023": "f922f1176af4773c68a99419591da28ceb74f51027e48062258211fa04300722"
+      },
+      "delivery": {
+        "assetPath": "followup_20261031/img_child_lunch_001.png",
+        "sha256": "3948bb839738b6468252b8538f92f6a198d5a44acbf6e01df61fe3e400f4c664",
+        "width": 1448,
+        "height": 1086,
+        "actualProducer": "김재겸",
+        "reviewEvidence": "docs\\assignments\\20261031\\submissions\\통합_그림검토_20261105.json",
+        "deliveryStatus": "ACCEPTED_IN_INTEGRATION_BRANCH"
       }
     },
     {
@@ -3490,7 +3616,7 @@
       "title": "누가 날 부른다",
       "workType": "NEW",
       "productionOwner": "김재겸",
-      "productionStatus": "ASSIGNED_AFTER_SAMPLE_APPROVAL",
+      "productionStatus": "ACCEPTED_IN_INTEGRATION_BRANCH",
       "sourceImageId": "img_child_class_nap_001",
       "targetImageId": "img_child_class_nap_001",
       "targetAssetPath": "followup_20261031/img_child_class_nap_001.png",
@@ -3506,9 +3632,18 @@
       "productionInstructions": "child_028: NEW: 꿈과 현실이 겹친 시점 고유",
       "briefDecision": "PRODUCTION_BRIEF_LOCKED",
       "briefDecisionBy": "김선한 담당 Codex 조정",
-      "artApprovalStatus": "PENDING_PNG_REVIEW",
+      "artApprovalStatus": "APPROVED",
       "eventSourceHashes": {
-        "child_028": "253935bc9c24b899cd9a32c141b38147450073d2e7fee3cb9390c3746b1ef180"
+        "child_028": "7d149d09edfa9be4ce9713a32eb7806db97dfaf02c31866657d6a7703b0c2fdc"
+      },
+      "delivery": {
+        "assetPath": "followup_20261031/img_child_class_nap_001.png",
+        "sha256": "01e6b708365fe95658d74e80ca7e4bdbdc4900d6b1728147bbae264dc82bc64a",
+        "width": 1448,
+        "height": 1086,
+        "actualProducer": "김재겸",
+        "reviewEvidence": "docs\\assignments\\20261031\\submissions\\통합_그림검토_20261105.json",
+        "deliveryStatus": "ACCEPTED_IN_INTEGRATION_BRANCH"
       }
     },
     {
@@ -3925,7 +4060,7 @@
       "title": "학교 앞 병아리",
       "workType": "NEW",
       "productionOwner": "김재겸",
-      "productionStatus": "ASSIGNED_AFTER_SAMPLE_APPROVAL",
+      "productionStatus": "ACCEPTED_IN_INTEGRATION_BRANCH",
       "sourceImageId": "img_child_chick_001",
       "targetImageId": "img_child_chick_001",
       "targetAssetPath": "followup_20261031/img_child_chick_001.png",
@@ -3941,9 +4076,18 @@
       "productionInstructions": "child_043: NEW: 병아리 노점 고유",
       "briefDecision": "PRODUCTION_BRIEF_LOCKED",
       "briefDecisionBy": "김선한 담당 Codex 조정",
-      "artApprovalStatus": "PENDING_PNG_REVIEW",
+      "artApprovalStatus": "APPROVED",
       "eventSourceHashes": {
-        "child_043": "75a38463f1d73cdbd3dae6ab4549a655feca4d40fc7d47b0280e4f43c6bf192b"
+        "child_043": "9fa08b3223cac6f85e1e6a2ae4da2475e107cfc58e914b423b159a3adb30fe63"
+      },
+      "delivery": {
+        "assetPath": "followup_20261031/img_child_chick_001.png",
+        "sha256": "9146436172d7ab15013231fbfb19a45cefe8442574773b09df0f84414cefbb7f",
+        "width": 1448,
+        "height": 1086,
+        "actualProducer": "김재겸",
+        "reviewEvidence": "docs\\assignments\\20261031\\submissions\\통합_그림검토_20261105.json",
+        "deliveryStatus": "ACCEPTED_IN_INTEGRATION_BRANCH"
       }
     },
     {
@@ -4215,7 +4359,7 @@
       "title": "사업 종료 안내 메일",
       "workType": "NEW",
       "productionOwner": "김재겸",
-      "productionStatus": "ASSIGNED_AFTER_SAMPLE_APPROVAL",
+      "productionStatus": "ACCEPTED_IN_INTEGRATION_BRANCH",
       "sourceImageId": "img_cross_06_001",
       "targetImageId": "img_cross_06_001",
       "targetAssetPath": "followup_20261031/img_cross_06_001.png",
@@ -4231,9 +4375,18 @@
       "productionInstructions": "cross_06: NEW: 해고 통보(타 담당 문 앞 장면)와 장소 · 사물 다름",
       "briefDecision": "PRODUCTION_BRIEF_LOCKED",
       "briefDecisionBy": "김선한 담당 Codex 조정",
-      "artApprovalStatus": "PENDING_PNG_REVIEW",
+      "artApprovalStatus": "APPROVED",
       "eventSourceHashes": {
-        "cross_06": "8202fb64aaff13f8f2339e76c11a22350541699a7102b88176d4680fa700c18c"
+        "cross_06": "e7aea73d779c960fe635c69f3302335e41ebf6385529bca9ddf273a12f221b2f"
+      },
+      "delivery": {
+        "assetPath": "followup_20261031/img_cross_06_001.png",
+        "sha256": "06381995592f3e8e01361449fe568d930c9bc9fceb485c0c9d4a5491bd86fd73",
+        "width": 1448,
+        "height": 1086,
+        "actualProducer": "김재겸",
+        "reviewEvidence": "docs\\assignments\\20261031\\submissions\\통합_그림검토_20261105.json",
+        "deliveryStatus": "ACCEPTED_IN_INTEGRATION_BRANCH"
       }
     },
     {
@@ -4374,7 +4527,7 @@
       "title": "계단에서 넘어진 엄마",
       "workType": "NEW",
       "productionOwner": "김재겸",
-      "productionStatus": "ASSIGNED_AFTER_SAMPLE_APPROVAL",
+      "productionStatus": "ACCEPTED_IN_INTEGRATION_BRANCH",
       "sourceImageId": "img_cross_11_001",
       "targetImageId": "img_cross_11_001",
       "targetAssetPath": "followup_20261031/img_cross_11_001.png",
@@ -4390,9 +4543,18 @@
       "productionInstructions": "cross_11: NEW: 엄마 수술 전화(adult_043, 바쁜 사무실 낮)와 장소 · 시간 · 분위기 달라 별도",
       "briefDecision": "PRODUCTION_BRIEF_LOCKED",
       "briefDecisionBy": "김선한 담당 Codex 조정",
-      "artApprovalStatus": "PENDING_PNG_REVIEW",
+      "artApprovalStatus": "APPROVED",
       "eventSourceHashes": {
-        "cross_11": "b9a2b4a2ccd8827e2a1a19ed4f8ebbdfbc84974aa477664dd5c0f7f273ce79fc"
+        "cross_11": "db226d571ee1ec6bd6e18188551ccd913e9271e14ec2801ae3587e4f7c1b1347"
+      },
+      "delivery": {
+        "assetPath": "followup_20261031/img_cross_11_001.png",
+        "sha256": "bafa1404d7bb450d5475c65c39a261194bf66fbaaf90d67ea2ffdbdf21c799da",
+        "width": 1448,
+        "height": 1086,
+        "actualProducer": "김재겸",
+        "reviewEvidence": "docs\\assignments\\20261031\\submissions\\통합_그림검토_20261105.json",
+        "deliveryStatus": "ACCEPTED_IN_INTEGRATION_BRANCH"
       }
     },
     {
@@ -4664,7 +4826,7 @@
       "title": "첫 단어 내기",
       "workType": "NEW",
       "productionOwner": "김재겸",
-      "productionStatus": "ASSIGNED_AFTER_SAMPLE_APPROVAL",
+      "productionStatus": "ACCEPTED_IN_INTEGRATION_BRANCH",
       "sourceImageId": "img_infant_first_word_001",
       "targetImageId": "img_infant_first_word_001",
       "targetAssetPath": "followup_20261031/img_infant_first_word_001.png",
@@ -4680,9 +4842,18 @@
       "productionInstructions": "infant_009: NEW: 첫 단어 내기 고유",
       "briefDecision": "PRODUCTION_BRIEF_LOCKED",
       "briefDecisionBy": "김선한 담당 Codex 조정",
-      "artApprovalStatus": "PENDING_PNG_REVIEW",
+      "artApprovalStatus": "APPROVED",
       "eventSourceHashes": {
-        "infant_009": "6175493314e88fb262809d79f9430a015437a6f123ad33bdd089ad4e1f91991e"
+        "infant_009": "e6dfdf0aa55233dc82bed6389e3d6e2afbcf799a365130cf7883cd7ab62ad05a"
+      },
+      "delivery": {
+        "assetPath": "followup_20261031/img_infant_first_word_001.png",
+        "sha256": "cf357b70ef809a9880ce3380a4acb00bba2f599834bdaf939b7c6f2525997c3a",
+        "width": 1448,
+        "height": 1086,
+        "actualProducer": "김재겸",
+        "reviewEvidence": "docs\\assignments\\20261031\\submissions\\통합_그림검토_20261105.json",
+        "deliveryStatus": "ACCEPTED_IN_INTEGRATION_BRANCH"
       }
     },
     {
@@ -5403,7 +5574,7 @@
       "title": "전국체전 결승, 무릎의 소리",
       "workType": "NEW",
       "productionOwner": "김재겸",
-      "productionStatus": "ASSIGNED_AFTER_SAMPLE_APPROVAL",
+      "productionStatus": "ACCEPTED_IN_INTEGRATION_BRANCH",
       "sourceImageId": "img_path_fit_04_001",
       "targetImageId": "img_path_fit_04_001",
       "targetAssetPath": "followup_20261031/img_path_fit_04_001.png",
@@ -5426,9 +5597,18 @@
       "productionInstructions": "path_fit_04: NEW: 결승 전 무릎 이상. 노년 무릎(path_fit_16)과 연령 · 장소 다름 / 제작 명세는 2차 의미·크롭 검토 반영본을 따른다.",
       "briefDecision": "PRODUCTION_BRIEF_LOCKED",
       "briefDecisionBy": "김선한 담당 Codex 조정",
-      "artApprovalStatus": "PENDING_PNG_REVIEW",
+      "artApprovalStatus": "APPROVED",
       "eventSourceHashes": {
-        "path_fit_04": "2bc53eba6750a8d3c506ded93c1541ecfd29fd001a3f44bd487cc84fc7e0ea70"
+        "path_fit_04": "72c0765e6cae1e97628f3e4a489305e78154e62c236ded4be2831877ecc1efda"
+      },
+      "delivery": {
+        "assetPath": "followup_20261031/img_path_fit_04_001.png",
+        "sha256": "ca0c97b0f1af8039c66a651127ceda003b86c86158a5c992ec218536bede9b14",
+        "width": 1448,
+        "height": 1086,
+        "actualProducer": "김재겸",
+        "reviewEvidence": "docs\\assignments\\20261031\\submissions\\통합_그림검토_20261105.json",
+        "deliveryStatus": "ACCEPTED_IN_INTEGRATION_BRANCH"
       }
     },
     {
@@ -5622,7 +5802,7 @@
       "title": "도장 관장님의 대회 추천",
       "workType": "NEW",
       "productionOwner": "김재겸",
-      "productionStatus": "ASSIGNED_AFTER_SAMPLE_APPROVAL",
+      "productionStatus": "ACCEPTED_IN_INTEGRATION_BRANCH",
       "sourceImageId": "img_path_fit_11_001",
       "targetImageId": "img_path_fit_11_001",
       "targetAssetPath": "followup_20261031/img_path_fit_11_001.png",
@@ -5638,9 +5818,18 @@
       "productionInstructions": "path_fit_11: NEW: 도장 장면 고유",
       "briefDecision": "PRODUCTION_BRIEF_LOCKED",
       "briefDecisionBy": "김선한 담당 Codex 조정",
-      "artApprovalStatus": "PENDING_PNG_REVIEW",
+      "artApprovalStatus": "APPROVED",
       "eventSourceHashes": {
-        "path_fit_11": "687faad707de352e57cbb70b1b55733c9dfcbf9b378d6a22c7e201f3184bcf47"
+        "path_fit_11": "af94451d40ba0bdfa5462dfa0f58a3a96ad553a8c5cf6f7d480eba7f38100f76"
+      },
+      "delivery": {
+        "assetPath": "followup_20261031/img_path_fit_11_001.png",
+        "sha256": "d32dd1fd8c620c17eca5cd046670563be21ab54d47ed9fa1e3ba91bce32001a4",
+        "width": 1448,
+        "height": 1086,
+        "actualProducer": "김재겸",
+        "reviewEvidence": "docs\\assignments\\20261031\\submissions\\통합_그림검토_20261105.json",
+        "deliveryStatus": "ACCEPTED_IN_INTEGRATION_BRANCH"
       }
     },
     {
@@ -5781,7 +5970,7 @@
       "title": "비 오는 날 무릎이 먼저 안다",
       "workType": "NEW",
       "productionOwner": "김재겸",
-      "productionStatus": "ASSIGNED_AFTER_SAMPLE_APPROVAL",
+      "productionStatus": "ACCEPTED_IN_INTEGRATION_BRANCH",
       "sourceImageId": "img_path_fit_16_001",
       "targetImageId": "img_path_fit_16_001",
       "targetAssetPath": "followup_20261031/img_path_fit_16_001.png",
@@ -5797,9 +5986,18 @@
       "productionInstructions": "path_fit_16: NEW: path_fit_04와 별도(노년 · 집 · 전화)",
       "briefDecision": "PRODUCTION_BRIEF_LOCKED",
       "briefDecisionBy": "김선한 담당 Codex 조정",
-      "artApprovalStatus": "PENDING_PNG_REVIEW",
+      "artApprovalStatus": "APPROVED",
       "eventSourceHashes": {
-        "path_fit_16": "10b28b8f8c2eee11d9b84e3578d9045020a8905c72138baa4f9fee0a62db4a84"
+        "path_fit_16": "c1914fd274d1fe6735a45d24eed7bef6440d6f4a4a3b4400c99bd96d4fac525a"
+      },
+      "delivery": {
+        "assetPath": "followup_20261031/img_path_fit_16_001.png",
+        "sha256": "0a73ce70eb7f353ac38bb1527183df50beab35c61434d9811e1f715475d08f3d",
+        "width": 1448,
+        "height": 1086,
+        "actualProducer": "김재겸",
+        "reviewEvidence": "docs\\assignments\\20261031\\submissions\\통합_그림검토_20261105.json",
+        "deliveryStatus": "ACCEPTED_IN_INTEGRATION_BRANCH"
       }
     },
     {
@@ -5926,7 +6124,7 @@
       "title": "연봉이냐 저녁이냐",
       "workType": "NEW",
       "productionOwner": "김재겸",
-      "productionStatus": "ASSIGNED_AFTER_SAMPLE_APPROVAL",
+      "productionStatus": "ACCEPTED_IN_INTEGRATION_BRANCH",
       "sourceImageId": "img_path_hap_03_001",
       "targetImageId": "img_path_hap_03_001",
       "targetAssetPath": "followup_20261031/img_path_hap_03_001.png",
@@ -5942,9 +6140,18 @@
       "productionInstructions": "path_hap_03: NEW: 세 장의 계약서(path_wea_03)와 선택 대상 사물이 달라 별도",
       "briefDecision": "PRODUCTION_BRIEF_LOCKED",
       "briefDecisionBy": "김선한 담당 Codex 조정",
-      "artApprovalStatus": "PENDING_PNG_REVIEW",
+      "artApprovalStatus": "APPROVED",
       "eventSourceHashes": {
-        "path_hap_03": "efe4f5b44d19cdd8a53a759dddff0ba4cc7e75ba17c957169104166e7f7b0ecf"
+        "path_hap_03": "6041ad8e5de0cc1011d054e719836c72e8d9e0a49fd3c61bfbfd9e1b46086d95"
+      },
+      "delivery": {
+        "assetPath": "followup_20261031/img_path_hap_03_001.png",
+        "sha256": "a7af4eb457ed03b3d5f7988e64bed8157cbc76bbb77f838b483ff93f079aca50",
+        "width": 1448,
+        "height": 1086,
+        "actualProducer": "김재겸",
+        "reviewEvidence": "docs\\assignments\\20261031\\submissions\\통합_그림검토_20261105.json",
+        "deliveryStatus": "ACCEPTED_IN_INTEGRATION_BRANCH"
       }
     },
     {
@@ -6085,7 +6292,7 @@
       "title": "문화센터 할머니 할아버지 선생님",
       "workType": "NEW",
       "productionOwner": "김재겸",
-      "productionStatus": "ASSIGNED_AFTER_SAMPLE_APPROVAL",
+      "productionStatus": "ACCEPTED_IN_INTEGRATION_BRANCH",
       "sourceImageId": "img_path_hap_08_001",
       "targetImageId": "img_path_hap_08_001",
       "targetAssetPath": "followup_20261031/img_path_hap_08_001.png",
@@ -6108,9 +6315,18 @@
       "productionInstructions": "path_hap_08: NEW: path_int_17과 같은 게시판 배경 구도 공유 가능. 핵심 사물(기타)이 달라 그룹은 별도 / 제작 명세는 2차 의미·크롭 검토 반영본을 따른다.",
       "briefDecision": "PRODUCTION_BRIEF_LOCKED",
       "briefDecisionBy": "김선한 담당 Codex 조정",
-      "artApprovalStatus": "PENDING_PNG_REVIEW",
+      "artApprovalStatus": "APPROVED",
       "eventSourceHashes": {
-        "path_hap_08": "c257e9d35d73cdf8e09170219a111538a2407ce723001e62f81bdea2d596ed8d"
+        "path_hap_08": "6cc5500035edb6299629f0b9ff8bd3e0b5390220505ce6c07ffeecca67dcd46b"
+      },
+      "delivery": {
+        "assetPath": "followup_20261031/img_path_hap_08_001.png",
+        "sha256": "eac93c3eb7a2fc9fd7474a8565b247158b5bd52b613624b3606ce5810d02bdad",
+        "width": 1448,
+        "height": 1086,
+        "actualProducer": "김재겸",
+        "reviewEvidence": "docs\\assignments\\20261031\\submissions\\통합_그림검토_20261105.json",
+        "deliveryStatus": "ACCEPTED_IN_INTEGRATION_BRANCH"
       }
     },
     {
@@ -6139,7 +6355,7 @@
       "briefDecisionBy": "김선한 담당 Codex 조정",
       "artApprovalStatus": "APPROVED",
       "eventSourceHashes": {
-        "path_hap_09": "b201c87331c075dd19f7338edad6cb6121da3589643a190446b9864a8460ec48"
+        "path_hap_09": "1c6bf046296a34d0335f461a8d791b8241f51bcdfb0a2a753d78fb96372be833"
       },
       "deliveredSourceCommit": "c81208cc4dd6e4fd45e979b950d6fe28398a2e32",
       "deliveredSha256": "9a2bebf47ec0e7bb06b4b9d9d3c53306ec77a0c33934567d4b0cc3875381196a",
@@ -6313,7 +6529,7 @@
       "title": "주민센터 로비의 첫 개인전",
       "workType": "NEW",
       "productionOwner": "김재겸",
-      "productionStatus": "ASSIGNED_AFTER_SAMPLE_APPROVAL",
+      "productionStatus": "ACCEPTED_IN_INTEGRATION_BRANCH",
       "sourceImageId": "img_path_hap_15_001",
       "targetImageId": "img_path_hap_15_001",
       "targetAssetPath": "followup_20261031/img_path_hap_15_001.png",
@@ -6329,9 +6545,18 @@
       "productionInstructions": "path_hap_15: NEW: 지정 ID는 개인전이지만 선택 전이라 집 상자 장면",
       "briefDecision": "PRODUCTION_BRIEF_LOCKED",
       "briefDecisionBy": "김선한 담당 Codex 조정",
-      "artApprovalStatus": "PENDING_PNG_REVIEW",
+      "artApprovalStatus": "APPROVED",
       "eventSourceHashes": {
-        "path_hap_15": "38c2fe8c45c2c66ce6e747a934b4e3b655d3dc80f5f556ee586a502c51b7055a"
+        "path_hap_15": "34e9a25d17e01121ea9f327b70a251c8ec50b5c4850107235d8e616aabb89443"
+      },
+      "delivery": {
+        "assetPath": "followup_20261031/img_path_hap_15_001.png",
+        "sha256": "64af2fb395ce1b0f6850ce5c0896ed81c8ccbd4c4672de3c269b0ce16c949b0b",
+        "width": 1448,
+        "height": 1086,
+        "actualProducer": "김재겸",
+        "reviewEvidence": "docs\\assignments\\20261031\\submissions\\통합_그림검토_20261105.json",
+        "deliveryStatus": "ACCEPTED_IN_INTEGRATION_BRANCH"
       }
     },
     {
@@ -6389,7 +6614,7 @@
       "briefDecisionBy": "김선한 담당 Codex 조정",
       "artApprovalStatus": "APPROVED",
       "eventSourceHashes": {
-        "path_hea_01": "4f85f19b48d63c7897ad9116c43e176f71381a41adc8e61714d773a4248501a2"
+        "path_hea_01": "bd3c51ae73bccca10a45b8f59f7adc2c9565bc0bab44626e62ea631d6c5ca1f4"
       },
       "delivery": {
         "assetPath": "followup_20261031/img_path_hea_01_001.png",
@@ -6474,7 +6699,7 @@
       "title": "주말 등산 모임 대장",
       "workType": "NEW",
       "productionOwner": "김재겸",
-      "productionStatus": "ASSIGNED_AFTER_SAMPLE_APPROVAL",
+      "productionStatus": "ACCEPTED_IN_INTEGRATION_BRANCH",
       "sourceImageId": "img_path_hea_04_001",
       "targetImageId": "img_path_hea_04_001",
       "targetAssetPath": "followup_20261031/img_path_hea_04_001.png",
@@ -6490,9 +6715,18 @@
       "productionInstructions": "path_hea_04: NEW: 등산 모임 장면 고유",
       "briefDecision": "PRODUCTION_BRIEF_LOCKED",
       "briefDecisionBy": "김선한 담당 Codex 조정",
-      "artApprovalStatus": "PENDING_PNG_REVIEW",
+      "artApprovalStatus": "APPROVED",
       "eventSourceHashes": {
-        "path_hea_04": "44ed3fc4a7a4a33b9e5b704dd9d707ff75b77f1927652d56290b01c62e0c4c4e"
+        "path_hea_04": "d9d0dd8c363f6c4956ff457fb69e12ea3358118e63f2b2731b5bad15c7ef0612"
+      },
+      "delivery": {
+        "assetPath": "followup_20261031/img_path_hea_04_001.png",
+        "sha256": "0d44da57cc255e52d4ddeda522156f08ffa2b654e81c1278437d7fc464890cec",
+        "width": 1448,
+        "height": 1086,
+        "actualProducer": "김재겸",
+        "reviewEvidence": "docs\\assignments\\20261031\\submissions\\통합_그림검토_20261105.json",
+        "deliveryStatus": "ACCEPTED_IN_INTEGRATION_BRANCH"
       }
     },
     {
@@ -6637,7 +6871,7 @@
       "briefDecisionBy": "김선한 담당 Codex 조정",
       "artApprovalStatus": "APPROVED",
       "eventSourceHashes": {
-        "path_hea_09": "91d227ea0b9d97fa3e0e9b2d5b20bb7d12deea5fc4a71fb119eb528ec0fffbec"
+        "path_hea_09": "77df2bb471000f24a51cb24862f6db054f35a7c182bde5e6819c4179cc9be7ff"
       },
       "delivery": {
         "assetPath": "week10/scenes/img_path_hea_09_001.png",
@@ -6699,7 +6933,7 @@
       "title": "아버지의 당뇨 진단",
       "workType": "NEW",
       "productionOwner": "김재겸",
-      "productionStatus": "ASSIGNED_AFTER_SAMPLE_APPROVAL",
+      "productionStatus": "ACCEPTED_IN_INTEGRATION_BRANCH",
       "sourceImageId": "img_path_hea_11_001",
       "targetImageId": "img_path_hea_11_001",
       "targetAssetPath": "followup_20261031/img_path_hea_11_001.png",
@@ -6715,9 +6949,18 @@
       "productionInstructions": "path_hea_11: NEW: adult_058(내 재검 결과지)과 인물 · 사물 다름",
       "briefDecision": "PRODUCTION_BRIEF_LOCKED",
       "briefDecisionBy": "김선한 담당 Codex 조정",
-      "artApprovalStatus": "PENDING_PNG_REVIEW",
+      "artApprovalStatus": "APPROVED",
       "eventSourceHashes": {
-        "path_hea_11": "a1b09962c29fac67ef341ca9ed23c6dded22ddfac8af1bfe8dd0b2a1d72f02ac"
+        "path_hea_11": "af78000dea0b908c956b3c9e2180714820edeaabef31a22c30837d9ea1dccac0"
+      },
+      "delivery": {
+        "assetPath": "followup_20261031/img_path_hea_11_001.png",
+        "sha256": "769b1132789267cc1aa9026a16614fba535e03b56a94c8ea79f215292a17de08",
+        "width": 1448,
+        "height": 1086,
+        "actualProducer": "김재겸",
+        "reviewEvidence": "docs\\assignments\\20261031\\submissions\\통합_그림검토_20261105.json",
+        "deliveryStatus": "ACCEPTED_IN_INTEGRATION_BRANCH"
       }
     },
     {
@@ -6844,7 +7087,7 @@
       "title": "가정 시간 요리 실습",
       "workType": "NEW",
       "productionOwner": "김재겸",
-      "productionStatus": "ASSIGNED_AFTER_SAMPLE_APPROVAL",
+      "productionStatus": "ACCEPTED_IN_INTEGRATION_BRANCH",
       "sourceImageId": "img_path_hea_16_001",
       "targetImageId": "img_path_hea_16_001",
       "targetAssetPath": "followup_20261031/img_path_hea_16_001.png",
@@ -6860,9 +7103,18 @@
       "productionInstructions": "path_hea_16: NEW: 브로콜리 급식(타 담당, 급식실)과 장소 · 행동(요리) 달라 별도",
       "briefDecision": "PRODUCTION_BRIEF_LOCKED",
       "briefDecisionBy": "김선한 담당 Codex 조정",
-      "artApprovalStatus": "PENDING_PNG_REVIEW",
+      "artApprovalStatus": "APPROVED",
       "eventSourceHashes": {
-        "path_hea_16": "497f90dd80a4d3b036c4f193c089192a9ae98052b058441bd3d326fc65493547"
+        "path_hea_16": "bc09b0c77aa7c4fd5445032c75956486a87596f90382fb62c8954ff5eab87fe4"
+      },
+      "delivery": {
+        "assetPath": "followup_20261031/img_path_hea_16_001.png",
+        "sha256": "bb0443474c47d3a62ac170f6bbb556466e08f3cacd38b3fbbf28d31d57f81cba",
+        "width": 1448,
+        "height": 1086,
+        "actualProducer": "김재겸",
+        "reviewEvidence": "docs\\assignments\\20261031\\submissions\\통합_그림검토_20261105.json",
+        "deliveryStatus": "ACCEPTED_IN_INTEGRATION_BRANCH"
       }
     },
     {
@@ -6989,7 +7241,7 @@
       "title": "쉬어 가는 1년, 다시 수능",
       "workType": "NEW",
       "productionOwner": "김재겸",
-      "productionStatus": "ASSIGNED_AFTER_SAMPLE_APPROVAL",
+      "productionStatus": "ACCEPTED_IN_INTEGRATION_BRANCH",
       "sourceImageId": "img_path_int_05_001",
       "targetImageId": "img_path_int_05_001",
       "targetAssetPath": "followup_20261031/img_path_int_05_001.png",
@@ -7005,9 +7257,18 @@
       "productionInstructions": "path_int_05: NEW: 갈림길 사물 두 개가 핵심",
       "briefDecision": "PRODUCTION_BRIEF_LOCKED",
       "briefDecisionBy": "김선한 담당 Codex 조정",
-      "artApprovalStatus": "PENDING_PNG_REVIEW",
+      "artApprovalStatus": "APPROVED",
       "eventSourceHashes": {
-        "path_int_05": "d531fe19f764bf13fe2ab35dfa93983876e019e1b38214f268c8f3ff9ea25441"
+        "path_int_05": "4f87015e9af10f92cd0b6e81425f823d53181ecff2e890145f358c0aaa0a4490"
+      },
+      "delivery": {
+        "assetPath": "followup_20261031/img_path_int_05_001.png",
+        "sha256": "a8d84237f74e78b362fbfbc75760fbd8ff2da0ae5599c45e6399a2a08d5c5ceb",
+        "width": 1448,
+        "height": 1086,
+        "actualProducer": "김재겸",
+        "reviewEvidence": "docs\\assignments\\20261031\\submissions\\통합_그림검토_20261105.json",
+        "deliveryStatus": "ACCEPTED_IN_INTEGRATION_BRANCH"
       }
     },
     {
@@ -7154,7 +7415,7 @@
       "briefDecisionBy": "김선한 담당 Codex 조정",
       "artApprovalStatus": "APPROVED",
       "eventSourceHashes": {
-        "path_int_10": "eec445afdeccbd278c48f895f3d5e4d51870737fcdee63be51f962b1fedfa2ac"
+        "path_int_10": "e8709bf2253c2131b434b3605e40f533587f0dd1de1be2a2aae4d7d8ee21f65a"
       },
       "deliveredSourceCommit": "c81208cc4dd6e4fd45e979b950d6fe28398a2e32",
       "deliveredSha256": "2310c99efc4329e19add5e8c43043960ffb8a9ee27627a90eb91b72ec6efb348",
@@ -7205,7 +7466,7 @@
       "title": "논문에서 빠진 내 이름",
       "workType": "NEW",
       "productionOwner": "김재겸",
-      "productionStatus": "ASSIGNED_AFTER_SAMPLE_APPROVAL",
+      "productionStatus": "ACCEPTED_IN_INTEGRATION_BRANCH",
       "sourceImageId": "img_path_int_12_001",
       "targetImageId": "img_path_int_12_001",
       "targetAssetPath": "followup_20261031/img_path_int_12_001.png",
@@ -7221,9 +7482,18 @@
       "productionInstructions": "path_int_12: NEW: 연구실 고유",
       "briefDecision": "PRODUCTION_BRIEF_LOCKED",
       "briefDecisionBy": "김선한 담당 Codex 조정",
-      "artApprovalStatus": "PENDING_PNG_REVIEW",
+      "artApprovalStatus": "APPROVED",
       "eventSourceHashes": {
-        "path_int_12": "ef2e4e810267fbc931b8e7e9013dfe5b249a7e6545adf9e978af403f536ed66e"
+        "path_int_12": "29e42ccf74f6d68c006ea5189c15a45465addee500bb2361ab9e88dee92275c4"
+      },
+      "delivery": {
+        "assetPath": "followup_20261031/img_path_int_12_001.png",
+        "sha256": "ba02a9e32db0d842911c56fd34de5b355e8573753ab6a338f2a1f74587cbfcf3",
+        "width": 1448,
+        "height": 1086,
+        "actualProducer": "김재겸",
+        "reviewEvidence": "docs\\assignments\\20261031\\submissions\\통합_그림검토_20261105.json",
+        "deliveryStatus": "ACCEPTED_IN_INTEGRATION_BRANCH"
       }
     },
     {
@@ -7357,7 +7627,7 @@
       "title": "복지관 스마트폰 교실",
       "workType": "NEW",
       "productionOwner": "김재겸",
-      "productionStatus": "ASSIGNED_AFTER_SAMPLE_APPROVAL",
+      "productionStatus": "ACCEPTED_IN_INTEGRATION_BRANCH",
       "sourceImageId": "img_path_int_17_001",
       "targetImageId": "img_path_int_17_001",
       "targetAssetPath": "followup_20261031/img_path_int_17_001.png",
@@ -7373,9 +7643,18 @@
       "productionInstructions": "path_int_17: NEW: path_hap_08과 배경 공유 가능, 핵심 사물(스마트폰) · 행동(모집 공고) 달라 별도",
       "briefDecision": "PRODUCTION_BRIEF_LOCKED",
       "briefDecisionBy": "김선한 담당 Codex 조정",
-      "artApprovalStatus": "PENDING_PNG_REVIEW",
+      "artApprovalStatus": "APPROVED",
       "eventSourceHashes": {
-        "path_int_17": "3d668a77b39d1afeb6ad0e30e499edd9e378050f3c0d00bb7f32ffabfa74fdcc"
+        "path_int_17": "35d3b5f30c3b113da04a1f642a8f25c6904fdccb250658e07c4cf67716f98d30"
+      },
+      "delivery": {
+        "assetPath": "followup_20261031/img_path_int_17_001.png",
+        "sha256": "605605e6b299ac5d2cc4a82942566cff0ccd6a7b9de733064d46792badbf06c1",
+        "width": 1448,
+        "height": 1086,
+        "actualProducer": "김재겸",
+        "reviewEvidence": "docs\\assignments\\20261031\\submissions\\통합_그림검토_20261105.json",
+        "deliveryStatus": "ACCEPTED_IN_INTEGRATION_BRANCH"
       }
     },
     {
@@ -7509,7 +7788,7 @@
       "title": "엘리베이터 안의 30초",
       "workType": "NEW",
       "productionOwner": "김재겸",
-      "productionStatus": "ASSIGNED_AFTER_SAMPLE_APPROVAL",
+      "productionStatus": "ACCEPTED_IN_INTEGRATION_BRANCH",
       "sourceImageId": "img_path_luk_04_001",
       "targetImageId": "img_path_luk_04_001",
       "targetAssetPath": "followup_20261031/img_path_luk_04_001.png",
@@ -7525,9 +7804,18 @@
       "productionInstructions": "path_luk_04: NEW: special_008과 엘리베이터 내부 공유 가능, 인물 수 · 행동 달라 별도",
       "briefDecision": "PRODUCTION_BRIEF_LOCKED",
       "briefDecisionBy": "김선한 담당 Codex 조정",
-      "artApprovalStatus": "PENDING_PNG_REVIEW",
+      "artApprovalStatus": "APPROVED",
       "eventSourceHashes": {
-        "path_luk_04": "bc791eb51a2c6317ed3ee52623b3a73fc345de901aaa7491b6f94fe9ffb5352f"
+        "path_luk_04": "780a131d09d5da251ee8c2cae7f71026ebb27ed3259630ae7038abd468a35d38"
+      },
+      "delivery": {
+        "assetPath": "followup_20261031/img_path_luk_04_001.png",
+        "sha256": "430dba39ab864f4299b0540f16e7b862163a8cd247e4c467f5135dfb0d93ed3c",
+        "width": 1448,
+        "height": 1086,
+        "actualProducer": "김재겸",
+        "reviewEvidence": "docs\\assignments\\20261031\\submissions\\통합_그림검토_20261105.json",
+        "deliveryStatus": "ACCEPTED_IN_INTEGRATION_BRANCH"
       }
     },
     {
@@ -7686,7 +7974,7 @@
       "briefDecisionBy": "김선한 담당 Codex 조정",
       "artApprovalStatus": "APPROVED",
       "eventSourceHashes": {
-        "path_luk_09": "10a4ee240806a51300766be5389a649c4c176da88c93e956f0d05a564afbb5ae"
+        "path_luk_09": "044f476cda2c5fd0c702285ce1c9b4af53b715443897422d055e3652183207d5"
       },
       "delivery": {
         "assetPath": "week10/scenes/img_path_luk_09_001.png",
@@ -7742,7 +8030,7 @@
       "title": "바지 주머니 속 복권",
       "workType": "NEW",
       "productionOwner": "김재겸",
-      "productionStatus": "ASSIGNED_AFTER_SAMPLE_APPROVAL",
+      "productionStatus": "ACCEPTED_IN_INTEGRATION_BRANCH",
       "sourceImageId": "img_path_luk_11_001",
       "targetImageId": "img_path_luk_11_001",
       "targetAssetPath": "followup_20261031/img_path_luk_11_001.png",
@@ -7758,9 +8046,18 @@
       "productionInstructions": "path_luk_11: NEW: 젖은 복권 고유. 당첨 여부 표시 금지",
       "briefDecision": "PRODUCTION_BRIEF_LOCKED",
       "briefDecisionBy": "김선한 담당 Codex 조정",
-      "artApprovalStatus": "PENDING_PNG_REVIEW",
+      "artApprovalStatus": "APPROVED",
       "eventSourceHashes": {
-        "path_luk_11": "248838d5e56cd9a07cf4f12a341477b97b067aa0eeaae5bdb9c336a8113a8b8d"
+        "path_luk_11": "28ec85ba19c098226dbdd5a9685fbc50d7b638c92f8360256eabaddaf11dfcba"
+      },
+      "delivery": {
+        "assetPath": "followup_20261031/img_path_luk_11_001.png",
+        "sha256": "bf603ab3795b9b58c5f8d09b7e50d6ec9e55f425661d41ea9d62cfbc207928ed",
+        "width": 1448,
+        "height": 1086,
+        "actualProducer": "김재겸",
+        "reviewEvidence": "docs\\assignments\\20261031\\submissions\\통합_그림검토_20261105.json",
+        "deliveryStatus": "ACCEPTED_IN_INTEGRATION_BRANCH"
       }
     },
     {
@@ -7894,7 +8191,7 @@
       "title": "경품 추첨 크루즈",
       "workType": "NEW",
       "productionOwner": "김재겸",
-      "productionStatus": "ASSIGNED_AFTER_SAMPLE_APPROVAL",
+      "productionStatus": "ACCEPTED_IN_INTEGRATION_BRANCH",
       "sourceImageId": "img_path_luk_16_001",
       "targetImageId": "img_path_luk_16_001",
       "targetAssetPath": "followup_20261031/img_path_luk_16_001.png",
@@ -7910,9 +8207,18 @@
       "productionInstructions": "path_luk_16: NEW: 당첨 연락 장면. 크루즈 탑승은 결과라 제외",
       "briefDecision": "PRODUCTION_BRIEF_LOCKED",
       "briefDecisionBy": "김선한 담당 Codex 조정",
-      "artApprovalStatus": "PENDING_PNG_REVIEW",
+      "artApprovalStatus": "APPROVED",
       "eventSourceHashes": {
-        "path_luk_16": "585efc1666e4df5b5f76ca71c0b5ce08e4cb6479a33e5e07f228cae68154a2a5"
+        "path_luk_16": "d5fd43044a7e4d7b9699a637dfda7dd52ce440b6b00baa0ba1dd6a9816608150"
+      },
+      "delivery": {
+        "assetPath": "followup_20261031/img_path_luk_16_001.png",
+        "sha256": "2c0575ee2f1505034ba1e6eca9c090216a571d3809116d7771712d8a6cb39e04",
+        "width": 1448,
+        "height": 1086,
+        "actualProducer": "김재겸",
+        "reviewEvidence": "docs\\assignments\\20261031\\submissions\\통합_그림검토_20261105.json",
+        "deliveryStatus": "ACCEPTED_IN_INTEGRATION_BRANCH"
       }
     },
     {
@@ -8039,7 +8345,7 @@
       "title": "사람으로 들어온 일자리",
       "workType": "NEW",
       "productionOwner": "김재겸",
-      "productionStatus": "ASSIGNED_AFTER_SAMPLE_APPROVAL",
+      "productionStatus": "ACCEPTED_IN_INTEGRATION_BRANCH",
       "sourceImageId": "img_path_soc_04_001",
       "targetImageId": "img_path_soc_04_001",
       "targetAssetPath": "followup_20261031/img_path_soc_04_001.png",
@@ -8055,9 +8361,18 @@
       "productionInstructions": "path_soc_04: NEW: 사람(인연)이 핵심이라 합격 통지(path_hap_03) · 계약서(path_wea_03)와 별도",
       "briefDecision": "PRODUCTION_BRIEF_LOCKED",
       "briefDecisionBy": "김선한 담당 Codex 조정",
-      "artApprovalStatus": "PENDING_PNG_REVIEW",
+      "artApprovalStatus": "APPROVED",
       "eventSourceHashes": {
-        "path_soc_04": "c553758e4736372ee437a3a662fd30da0305b0063aae0af8356ec3460c774f87"
+        "path_soc_04": "5880948fb8c344893973e8f91b780436670c3c4f16a73658c70d99063f77bfa6"
+      },
+      "delivery": {
+        "assetPath": "followup_20261031/img_path_soc_04_001.png",
+        "sha256": "97e00f2695d66f76a2449104799105522a7850ebb05d9be4325e48e8eed1fa7d",
+        "width": 1448,
+        "height": 1086,
+        "actualProducer": "김재겸",
+        "reviewEvidence": "docs\\assignments\\20261031\\submissions\\통합_그림검토_20261105.json",
+        "deliveryStatus": "ACCEPTED_IN_INTEGRATION_BRANCH"
       }
     },
     {
@@ -8256,7 +8571,7 @@
       "title": "같이 살 집을 구하는 친구들",
       "workType": "NEW",
       "productionOwner": "김재겸",
-      "productionStatus": "ASSIGNED_AFTER_SAMPLE_APPROVAL",
+      "productionStatus": "ACCEPTED_IN_INTEGRATION_BRANCH",
       "sourceImageId": "img_path_soc_11_001",
       "targetImageId": "img_path_soc_11_001",
       "targetAssetPath": "followup_20261031/img_path_soc_11_001.png",
@@ -8272,9 +8587,18 @@
       "productionInstructions": "path_soc_11: NEW: 동거 제안 고유",
       "briefDecision": "PRODUCTION_BRIEF_LOCKED",
       "briefDecisionBy": "김선한 담당 Codex 조정",
-      "artApprovalStatus": "PENDING_PNG_REVIEW",
+      "artApprovalStatus": "APPROVED",
       "eventSourceHashes": {
-        "path_soc_11": "bad9086aada8a3f78751ad37e547118af2a5316e3f9c42c8788944e467315214"
+        "path_soc_11": "2630cf917028914e699673c1da1eadb252c27863dbb2f3bfd4b17af41628e325"
+      },
+      "delivery": {
+        "assetPath": "followup_20261031/img_path_soc_11_001.png",
+        "sha256": "74d4186dbfdce4f8a225b95d007c6f26db01817f955b3b80b6488381b40a9a1a",
+        "width": 1448,
+        "height": 1086,
+        "actualProducer": "김재겸",
+        "reviewEvidence": "docs\\assignments\\20261031\\submissions\\통합_그림검토_20261105.json",
+        "deliveryStatus": "ACCEPTED_IN_INTEGRATION_BRANCH"
       }
     },
     {
@@ -8698,7 +9022,7 @@
       "title": "회사를 사겠다는 전화",
       "workType": "NEW",
       "productionOwner": "김재겸",
-      "productionStatus": "ASSIGNED_AFTER_SAMPLE_APPROVAL",
+      "productionStatus": "ACCEPTED_IN_INTEGRATION_BRANCH",
       "sourceImageId": "img_path_wea_08_001",
       "targetImageId": "img_path_wea_08_001",
       "targetAssetPath": "followup_20261031/img_path_wea_08_001.png",
@@ -8714,9 +9038,18 @@
       "productionInstructions": "path_wea_08: NEW: 대표실 고유",
       "briefDecision": "PRODUCTION_BRIEF_LOCKED",
       "briefDecisionBy": "김선한 담당 Codex 조정",
-      "artApprovalStatus": "PENDING_PNG_REVIEW",
+      "artApprovalStatus": "APPROVED",
       "eventSourceHashes": {
-        "path_wea_08": "98e4a5150af9516bd3b65b1c46f8d57eb814197d0e12a586ec69088a93404040"
+        "path_wea_08": "f2f12c80eae6cc1cfe8480a8eaea6be543f54b077b75f2978506f4b4358ccd90"
+      },
+      "delivery": {
+        "assetPath": "followup_20261031/img_path_wea_08_001.png",
+        "sha256": "87e874120c8d0c14e0a433882443ebd15ea9fd6ed0ed0716773d9b1edc46be31",
+        "width": 1448,
+        "height": 1086,
+        "actualProducer": "김재겸",
+        "reviewEvidence": "docs\\assignments\\20261031\\submissions\\통합_그림검토_20261105.json",
+        "deliveryStatus": "ACCEPTED_IN_INTEGRATION_BRANCH"
       }
     },
     {
@@ -8903,7 +9236,7 @@
       "title": "임원 제안",
       "workType": "NEW",
       "productionOwner": "김재겸",
-      "productionStatus": "ASSIGNED_AFTER_SAMPLE_APPROVAL",
+      "productionStatus": "ACCEPTED_IN_INTEGRATION_BRANCH",
       "sourceImageId": "img_path_wea_15_001",
       "targetImageId": "img_path_wea_15_001",
       "targetAssetPath": "followup_20261031/img_path_wea_15_001.png",
@@ -8919,9 +9252,18 @@
       "productionInstructions": "path_wea_15: NEW: 1:1 제안 자리라 회식(adult_018) · 술자리(adult_008)와 별도",
       "briefDecision": "PRODUCTION_BRIEF_LOCKED",
       "briefDecisionBy": "김선한 담당 Codex 조정",
-      "artApprovalStatus": "PENDING_PNG_REVIEW",
+      "artApprovalStatus": "APPROVED",
       "eventSourceHashes": {
-        "path_wea_15": "eee182599ec8a2d11de57cc0e74af0206b73c5801d61ee4287b07b681042c28f"
+        "path_wea_15": "1ef3156613abc00ec33bac14a4b779538213d0061222823df96ef9a4c6dbe914"
+      },
+      "delivery": {
+        "assetPath": "followup_20261031/img_path_wea_15_001.png",
+        "sha256": "a9de12a225296ef213c19e7aaf46585a6c297bc7e3264c375e41305e3c8d9ca0",
+        "width": 1448,
+        "height": 1086,
+        "actualProducer": "김재겸",
+        "reviewEvidence": "docs\\assignments\\20261031\\submissions\\통합_그림검토_20261105.json",
+        "deliveryStatus": "ACCEPTED_IN_INTEGRATION_BRANCH"
       }
     },
     {
@@ -9338,7 +9680,7 @@
       "title": "비눗방울 대참사",
       "workType": "NEW",
       "productionOwner": "김재겸",
-      "productionStatus": "ASSIGNED_AFTER_SAMPLE_APPROVAL",
+      "productionStatus": "ACCEPTED_IN_INTEGRATION_BRANCH",
       "sourceImageId": "img_special_bubble_001",
       "targetImageId": "img_special_bubble_001",
       "targetAssetPath": "followup_20261031/img_special_bubble_001.png",
@@ -9354,9 +9696,18 @@
       "productionInstructions": "special_013: NEW: 큰 돌발 고유",
       "briefDecision": "PRODUCTION_BRIEF_LOCKED",
       "briefDecisionBy": "김선한 담당 Codex 조정",
-      "artApprovalStatus": "PENDING_PNG_REVIEW",
+      "artApprovalStatus": "APPROVED",
       "eventSourceHashes": {
-        "special_013": "bc01b983f715f7f0edb409300117edc8feef45b75d3d511e9094833ec7a86065"
+        "special_013": "7d3c65ed93346e57acf899698c6766b894a444fed5d1a27afbe5311d4ec3137f"
+      },
+      "delivery": {
+        "assetPath": "followup_20261031/img_special_bubble_001.png",
+        "sha256": "dd6b0234e1a317f812b21b7578abb5b89d6b99f185b17ff8d932af7e2ab2a4ab",
+        "width": 1448,
+        "height": 1086,
+        "actualProducer": "김재겸",
+        "reviewEvidence": "docs\\assignments\\20261031\\submissions\\통합_그림검토_20261105.json",
+        "deliveryStatus": "ACCEPTED_IN_INTEGRATION_BRANCH"
       }
     },
     {
@@ -9628,7 +9979,7 @@
       "title": "급식 새치기",
       "workType": "NEW",
       "productionOwner": "김재겸",
-      "productionStatus": "ASSIGNED_AFTER_SAMPLE_APPROVAL",
+      "productionStatus": "ACCEPTED_IN_INTEGRATION_BRANCH",
       "sourceImageId": "img_teen_lunch_line_001",
       "targetImageId": "img_teen_lunch_line_001",
       "targetAssetPath": "followup_20261031/img_teen_lunch_line_001.png",
@@ -9644,9 +9995,18 @@
       "productionInstructions": "teen_004: NEW: child_023(교실 급식)과 장소 · 행동 다름",
       "briefDecision": "PRODUCTION_BRIEF_LOCKED",
       "briefDecisionBy": "김선한 담당 Codex 조정",
-      "artApprovalStatus": "PENDING_PNG_REVIEW",
+      "artApprovalStatus": "APPROVED",
       "eventSourceHashes": {
-        "teen_004": "4b67a4617b07ae292571d1531b60e9651bd4ca27bf77d4524c2a17c285692bdc"
+        "teen_004": "fdb9cbc112cf924fc0906eaf842d59a96562a3e0b684a0e3641d1bbd01955ddc"
+      },
+      "delivery": {
+        "assetPath": "followup_20261031/img_teen_lunch_line_001.png",
+        "sha256": "f0438e671f68f6dc8b50cfda9e3383a0cd31b8c72fd7500c17b96a939c7ae5fb",
+        "width": 1448,
+        "height": 1086,
+        "actualProducer": "김재겸",
+        "reviewEvidence": "docs\\assignments\\20261031\\submissions\\통합_그림검토_20261105.json",
+        "deliveryStatus": "ACCEPTED_IN_INTEGRATION_BRANCH"
       }
     },
     {
@@ -9780,7 +10140,7 @@
       "title": "오래달리기 측정",
       "workType": "NEW",
       "productionOwner": "김재겸",
-      "productionStatus": "ASSIGNED_AFTER_SAMPLE_APPROVAL",
+      "productionStatus": "ACCEPTED_IN_INTEGRATION_BRANCH",
       "sourceImageId": "img_teen_running_001",
       "targetImageId": "img_teen_running_001",
       "targetAssetPath": "followup_20261031/img_teen_running_001.png",
@@ -9796,9 +10156,18 @@
       "productionInstructions": "teen_009: NEW: child_018과 운동장 공유 가능하나 연령 · 행동 달라 별도",
       "briefDecision": "PRODUCTION_BRIEF_LOCKED",
       "briefDecisionBy": "김선한 담당 Codex 조정",
-      "artApprovalStatus": "PENDING_PNG_REVIEW",
+      "artApprovalStatus": "APPROVED",
       "eventSourceHashes": {
-        "teen_009": "beab2b40c0744aadd23be8faa84fc8adb9822f66d99f902f7587a294043de5dd"
+        "teen_009": "1fa449f2ff648ff3e5dbc403a0d1b8e82e8d1ecca427a44fccb2cb22f9b34c9e"
+      },
+      "delivery": {
+        "assetPath": "followup_20261031/img_teen_running_001.png",
+        "sha256": "de2741a0b0bd6b58dd577e3b4dfd7a361876dced00678307d0b52dd8ed7b86bd",
+        "width": 1448,
+        "height": 1086,
+        "actualProducer": "김재겸",
+        "reviewEvidence": "docs\\assignments\\20261031\\submissions\\통합_그림검토_20261105.json",
+        "deliveryStatus": "ACCEPTED_IN_INTEGRATION_BRANCH"
       }
     },
     {
@@ -10084,7 +10453,7 @@
       "title": "고등학교 원서",
       "workType": "NEW",
       "productionOwner": "김재겸",
-      "productionStatus": "ASSIGNED_AFTER_SAMPLE_APPROVAL",
+      "productionStatus": "ACCEPTED_IN_INTEGRATION_BRANCH",
       "sourceImageId": "img_teen_high_school_001",
       "targetImageId": "img_teen_high_school_001",
       "targetAssetPath": "followup_20261031/img_teen_high_school_001.png",
@@ -10100,9 +10469,18 @@
       "productionInstructions": "teen_019: NEW: 전환점(MILESTONE). 고른 학교는 그리지 않음",
       "briefDecision": "PRODUCTION_BRIEF_LOCKED",
       "briefDecisionBy": "김선한 담당 Codex 조정",
-      "artApprovalStatus": "PENDING_PNG_REVIEW",
+      "artApprovalStatus": "APPROVED",
       "eventSourceHashes": {
-        "teen_019": "bf2a46ee484cb3074367f9de52f23341f4375c353dd73d512d763d35ef92e41a"
+        "teen_019": "1cc636640476afa04f9d8a58bae88a0bd3cbe854563049233bb7cfd59744c7e1"
+      },
+      "delivery": {
+        "assetPath": "followup_20261031/img_teen_high_school_001.png",
+        "sha256": "e2ccf5cf612a03148f59dccd2d1d3b4a962f1ed90bd47625231fdf0959697df8",
+        "width": 1448,
+        "height": 1086,
+        "actualProducer": "김재겸",
+        "reviewEvidence": "docs\\assignments\\20261031\\submissions\\통합_그림검토_20261105.json",
+        "deliveryStatus": "ACCEPTED_IN_INTEGRATION_BRANCH"
       }
     },
     {
@@ -10229,7 +10607,7 @@
       "title": "선생님의 오답",
       "workType": "NEW",
       "productionOwner": "김재겸",
-      "productionStatus": "ASSIGNED_AFTER_SAMPLE_APPROVAL",
+      "productionStatus": "ACCEPTED_IN_INTEGRATION_BRANCH",
       "sourceImageId": "img_teen_wrong_answer_001",
       "targetImageId": "img_teen_wrong_answer_001",
       "targetAssetPath": "followup_20261031/img_teen_wrong_answer_001.png",
@@ -10245,9 +10623,18 @@
       "productionInstructions": "teen_024: NEW: 칠판 오답 고유",
       "briefDecision": "PRODUCTION_BRIEF_LOCKED",
       "briefDecisionBy": "김선한 담당 Codex 조정",
-      "artApprovalStatus": "PENDING_PNG_REVIEW",
+      "artApprovalStatus": "APPROVED",
       "eventSourceHashes": {
-        "teen_024": "41d7427aead12973faa3748f964d875c055725af94ac9738aba5d1074d17516a"
+        "teen_024": "beda4e5c4c3f75ffcd3fa3e9378681a1bf2b4d1a6b15644f27d558f6e9f438f9"
+      },
+      "delivery": {
+        "assetPath": "followup_20261031/img_teen_wrong_answer_001.png",
+        "sha256": "5d31de411e494ce85686f8f5bc2910c30cecd9a1206aee5ae6d01542d6919622",
+        "width": 1448,
+        "height": 1086,
+        "actualProducer": "김재겸",
+        "reviewEvidence": "docs\\assignments\\20261031\\submissions\\통합_그림검토_20261105.json",
+        "deliveryStatus": "ACCEPTED_IN_INTEGRATION_BRANCH"
       }
     },
     {
@@ -10381,7 +10768,7 @@
       "title": "4교시 매점 달리기",
       "workType": "NEW",
       "productionOwner": "김재겸",
-      "productionStatus": "ASSIGNED_AFTER_SAMPLE_APPROVAL",
+      "productionStatus": "ACCEPTED_IN_INTEGRATION_BRANCH",
       "sourceImageId": "img_teen_school_store_001",
       "targetImageId": "img_teen_school_store_001",
       "targetAssetPath": "followup_20261031/img_teen_school_store_001.png",
@@ -10404,9 +10791,18 @@
       "productionInstructions": "teen_029: NEW: 매점 달리기 고유 / 제작 명세는 2차 의미·크롭 검토 반영본을 따른다.",
       "briefDecision": "PRODUCTION_BRIEF_LOCKED",
       "briefDecisionBy": "김선한 담당 Codex 조정",
-      "artApprovalStatus": "PENDING_PNG_REVIEW",
+      "artApprovalStatus": "APPROVED",
       "eventSourceHashes": {
-        "teen_029": "633a55c6ccba0d4435836fb989d6a0e481f129ffb5a8392fef0705ab68475b30"
+        "teen_029": "20847fa28596088fdd12ff80982be9e2eb64530448680da97bcc84b667453fc5"
+      },
+      "delivery": {
+        "assetPath": "followup_20261031/img_teen_school_store_001.png",
+        "sha256": "6655f8ce3a429dee1b75803f9888a6c2d770757ed83eb714d912147b67efe565",
+        "width": 1448,
+        "height": 1086,
+        "actualProducer": "김재겸",
+        "reviewEvidence": "docs\\assignments\\20261031\\submissions\\통합_그림검토_20261105.json",
+        "deliveryStatus": "ACCEPTED_IN_INTEGRATION_BRANCH"
       }
     },
     {
@@ -10547,7 +10943,7 @@
       "title": "셀프 염색",
       "workType": "NEW",
       "productionOwner": "김재겸",
-      "productionStatus": "ASSIGNED_AFTER_SAMPLE_APPROVAL",
+      "productionStatus": "ACCEPTED_IN_INTEGRATION_BRANCH",
       "sourceImageId": "img_teen_hair_dye_001",
       "targetImageId": "img_teen_hair_dye_001",
       "targetAssetPath": "followup_20261031/img_teen_hair_dye_001.png",
@@ -10563,9 +10959,18 @@
       "productionInstructions": "teen_034: NEW: 염색 결과(성공 · 실패)는 그리지 않음",
       "briefDecision": "PRODUCTION_BRIEF_LOCKED",
       "briefDecisionBy": "김선한 담당 Codex 조정",
-      "artApprovalStatus": "PENDING_PNG_REVIEW",
+      "artApprovalStatus": "APPROVED",
       "eventSourceHashes": {
-        "teen_034": "47131c720b0b6f7415236c3a5b296dc60469b84f38169eae519946f7f769bddc"
+        "teen_034": "2f6d2d84ddf02a149e5a5045368ae554f9edc933ee4737f359d9d0b7cce003c5"
+      },
+      "delivery": {
+        "assetPath": "followup_20261031/img_teen_hair_dye_001.png",
+        "sha256": "da074a59a9769df3d83be351d4fc29aff5309fd67b6fc0824546a32022b04df3",
+        "width": 1448,
+        "height": 1086,
+        "actualProducer": "김재겸",
+        "reviewEvidence": "docs\\assignments\\20261031\\submissions\\통합_그림검토_20261105.json",
+        "deliveryStatus": "ACCEPTED_IN_INTEGRATION_BRANCH"
       }
     },
     {
@@ -10692,7 +11097,7 @@
       "title": "졸업식 날",
       "workType": "NEW",
       "productionOwner": "김재겸",
-      "productionStatus": "ASSIGNED_AFTER_SAMPLE_APPROVAL",
+      "productionStatus": "ACCEPTED_IN_INTEGRATION_BRANCH",
       "sourceImageId": "img_teen_graduation_001",
       "targetImageId": "img_teen_graduation_001",
       "targetAssetPath": "followup_20261031/img_teen_graduation_001.png",
@@ -10708,9 +11113,18 @@
       "productionInstructions": "teen_039: NEW: 전환점(MILESTONE) 고유",
       "briefDecision": "PRODUCTION_BRIEF_LOCKED",
       "briefDecisionBy": "김선한 담당 Codex 조정",
-      "artApprovalStatus": "PENDING_PNG_REVIEW",
+      "artApprovalStatus": "APPROVED",
       "eventSourceHashes": {
-        "teen_039": "70536b49b4706ee3a2a4112cbeb18d26d0136b2cc009e227a6a0f2a7d59c6a18"
+        "teen_039": "e804c1af23cd4a8669b8b65a11735b85380167fb5491248fcb9a469357b9a8c6"
+      },
+      "delivery": {
+        "assetPath": "followup_20261031/img_teen_graduation_001.png",
+        "sha256": "15ff486af504a1e82fa8beffc225960d3f4097e6f92c32e9586037405d255820",
+        "width": 1448,
+        "height": 1086,
+        "actualProducer": "김재겸",
+        "reviewEvidence": "docs\\assignments\\20261031\\submissions\\통합_그림검토_20261105.json",
+        "deliveryStatus": "ACCEPTED_IN_INTEGRATION_BRANCH"
       }
     },
     {
@@ -10810,8 +11224,8 @@
   ],
   "progressAsOf": "2026-11-05",
   "deliveryProgress": {
-    "deliveredGroups": 12,
-    "unproducedGroups": 336,
+    "deliveredGroups": 58,
+    "unproducedGroups": 290,
     "quotas": [
       {
         "owner": "김선한",
@@ -10830,8 +11244,8 @@
       {
         "owner": "김재겸",
         "total": 70,
-        "delivered": 1,
-        "remaining": 69,
+        "delivered": 47,
+        "remaining": 23,
         "pilotEventId": "adult_026"
       },
       {
