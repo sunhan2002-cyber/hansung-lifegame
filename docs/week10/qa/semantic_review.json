@@ -1598,6 +1598,442 @@
       "verdict": "KEEP_CONDITION",
       "reason": "신입을 가르치는 대인 전달 수행에 사회성 55를 유지한다.",
       "week13Migration": "2026-11-13 신기훈: 선택지 라벨 끝 마침표만 제거. 제목·본문·라벨 단어·조건·사건 종류는 그대로라 기존 판정을 유지하고 지문만 갱신(새 승인 아님)."
+    },
+    {
+      "id": "adult_039:A",
+      "title": "첫 아이",
+      "label": "육아휴직",
+      "requirements": {},
+      "sourceHash": "2b48f262297a4c1e5e9cff80e92f3f906795fdc6000a141d18edd3a9ff176fe7",
+      "fullSourceHash": "a670de9253fd0f5eb6f897d511d313fcfbedce568ceb616343a1d1e567f2529f",
+      "reviewVersion": 2,
+      "reviewScope": "CHOICE_AVAILABILITY_AND_OUTCOME_CAUSALITY_V2",
+      "reviewedAt": "2026-11-19",
+      "reviewer": "Codex AI — 원문·사건 조건·선택·모든 결과를 직접 읽은 의미 검토",
+      "reviewedOutcomeIds": [
+        "a_primary"
+      ],
+      "verdict": "KEEP_OPEN",
+      "reason": "혼인·자녀·재직 조건이 먼저 충족된 부모의 육아휴직 선택은 능력치 자격으로 잠그지 않는다. 첫 걸음마를 함께한 기쁨·관계 증가와 수입 감소, devoted_parent가 결과에 맞는다. 서술 근거가 없는 lifeDelta +10을 제거해 청년·중년 연간 건강 감소 -5만 적용되도록 검토했다."
+    },
+    {
+      "id": "adult_039:B",
+      "title": "첫 아이",
+      "label": "계속 일한다",
+      "requirements": {},
+      "sourceHash": "6eb3bcb07701a30764fcfc5a93df6008b88f37e7e1ec72e533c5717acadcb2e2",
+      "fullSourceHash": "b22723acaf1a46b516a4deb7713aa4f9d72141f583fb19d3520f5e68df775fd0",
+      "reviewVersion": 2,
+      "reviewScope": "CHOICE_AVAILABILITY_AND_OUTCOME_CAUSALITY_V2",
+      "reviewedAt": "2026-11-19",
+      "reviewer": "Codex AI — 원문·사건 조건·선택·모든 결과를 직접 읽은 의미 검토",
+      "reviewedOutcomeIds": [
+        "b_primary"
+      ],
+      "verdict": "KEEP_OPEN",
+      "reason": "계속 근무는 육아휴직과 함께 열린 대안이다. 경제력 +4·행복 -2는 수입 증가와 아이와 떨어져 있는 결과에 대응한다. 미기록 직급 승진을 단정하던 문구를 수입 증가로 교정했고 근거 없는 lifeDelta +10을 제거했다. 기존 고용·직급 사실을 새로 만들어내지 않는다."
+    },
+    {
+      "id": "path_soc_05:A",
+      "title": "상견례 대참사",
+      "label": "그날 축구 영상을 찾아서 같이 본다",
+      "requirements": {},
+      "sourceHash": "05da00f5786aebedfcab01033f1003ef88f00fb75fa8e1d7cea3a9d6f21a9774",
+      "fullSourceHash": "a1db43a6370c0ae1df65f41c4f1db1ea762087fc234ba19d4e956cd96366d3ca",
+      "reviewVersion": 2,
+      "reviewScope": "CHOICE_AVAILABILITY_AND_OUTCOME_CAUSALITY_V2",
+      "reviewedAt": "2026-11-19",
+      "reviewer": "Codex AI — 원문·사건 조건·선택·모든 결과를 직접 읽은 의미 검토",
+      "reviewedOutcomeIds": [
+        "a_video",
+        "a_worse"
+      ],
+      "verdict": "KEEP_OPEN",
+      "reason": "약혼·사회성 경로이며 미혼·상견례 전이라는 발생 조건을 확인했다. 영상 보기 자체를 잠그지 않고 화해 60/갈등 40에 사회성·운 가중치를 사용한다. 두 결과의 families_met 및 가족 유대/갈등 사실이 맞으며 화해 결과와 무관한 지력 -1은 제거했다."
+    },
+    {
+      "id": "path_soc_05:B",
+      "title": "상견례 대참사",
+      "label": "신혼집 이야기로 화제를 돌린다",
+      "requirements": {},
+      "sourceHash": "e7ab7b8f573c9addb178c18150dcf061b20f3489b9f8ff4b180f15270ff6d59a",
+      "fullSourceHash": "2ec9b1fab02dab79c149872eda11c06b47aa36631dd01409458786aef1ea75e4",
+      "reviewVersion": 2,
+      "reviewScope": "CHOICE_AVAILABILITY_AND_OUTCOME_CAUSALITY_V2",
+      "reviewedAt": "2026-11-19",
+      "reviewer": "Codex AI — 원문·사건 조건·선택·모든 결과를 직접 읽은 의미 검토",
+      "reviewedOutcomeIds": [
+        "b_house",
+        "b_rent"
+      ],
+      "verdict": "KEEP_OPEN",
+      "reason": "화제 전환은 재산 자격 없이 시도할 수 있다. 경제력은 양가 지원의 전세 70/자력 월세 30 분기에 반영된다. 결과 문장의 실제 주거와 housing_jeonse/housing_monthly_rent 및 families_met가 일치한다. 결혼 이전의 신혼집 준비이므로 married는 미리 부여하지 않는다."
+    },
+    {
+      "id": "love_date_01:A",
+      "title": "세 번째 데이트",
+      "label": "주말 여행 계획을 같이 짠다",
+      "requirements": {},
+      "sourceHash": "055dedaaff11a00e4c8610742847150b95d583dd1b93e9c954e8598978c0bba4",
+      "fullSourceHash": "cbe78cdd09bf2b1d2136d8a576906d25b90aeef7bf49b3b614c6f8949342b030",
+      "reviewVersion": 2,
+      "reviewScope": "CHOICE_AVAILABILITY_AND_OUTCOME_CAUSALITY_V2",
+      "reviewedAt": "2026-11-19",
+      "reviewer": "Codex AI — 원문·사건 조건·선택·모든 결과를 직접 읽은 의미 검토",
+      "reviewedOutcomeIds": [
+        "a_steady",
+        "a_clash"
+      ],
+      "verdict": "KEEP_OPEN",
+      "reason": "연애 중이지만 아직 안정/갈등·약혼·결혼으로 진행하지 않은 관계의 선택이다. 여행 계획에 별도 능력치 자격은 필요하지 않으며 즐거운 여행 70/계획 갈등 30의 문장·행복·지출·rel_steady/rel_conflict가 서로 일치한다."
+    },
+    {
+      "id": "love_date_01:B",
+      "title": "세 번째 데이트",
+      "label": "바쁘니까 다음에 정하자고 한다",
+      "requirements": {},
+      "sourceHash": "f726efb819bea5a85170388b036431cf417393fba8bbf61c5da69a630851b892",
+      "fullSourceHash": "dbb02c4efb3c0f7ad0ef03e91ce17aeccbb6735b93c8da1b708ed497ce86de86",
+      "reviewVersion": 2,
+      "reviewScope": "CHOICE_AVAILABILITY_AND_OUTCOME_CAUSALITY_V2",
+      "reviewedAt": "2026-11-19",
+      "reviewer": "Codex AI — 원문·사건 조건·선택·모든 결과를 직접 읽은 의미 검토",
+      "reviewedOutcomeIds": [
+        "b_cool",
+        "b_walk"
+      ],
+      "verdict": "KEEP_OPEN",
+      "reason": "일정 유보도 열린 대안이어야 한다. 소원해지는 결과 60은 행복 -2와 rel_conflict, 상대가 제안한 산책 40은 행복 +2·건강 +1과 rel_steady로 반영되어 시도와 결과를 혼동하지 않는다."
+    },
+    {
+      "id": "love_date_01:C",
+      "title": "세 번째 데이트",
+      "label": "서로 휴대폰 사진첩을 공개하기로 한다",
+      "requirements": {},
+      "sourceHash": "3713f84a3cd9516496e241175baddceb76ed62177f71b565fea7b1720d083f78",
+      "fullSourceHash": "a112f31504c2540512d90c460d8af32d8ae678a4d80d4283ea7a1b634a707a50",
+      "reviewVersion": 2,
+      "reviewScope": "CHOICE_AVAILABILITY_AND_OUTCOME_CAUSALITY_V2",
+      "reviewedAt": "2026-11-19",
+      "reviewer": "Codex AI — 원문·사건 조건·선택·모든 결과를 직접 읽은 의미 검토",
+      "reviewedOutcomeIds": [
+        "c_laugh",
+        "c_oops"
+      ],
+      "verdict": "KEEP_OPEN",
+      "reason": "서로 동의한 사진 공유 제안은 능력치로 잠그지 않는다. 웃는 결과 65는 관계 안정, 공개 범위를 논의하다 갈등하는 결과 35는 행복 -3·rel_conflict와 맞는다. 기록되지 않은 전 애인을 단정하던 실패 문구를 공개 범위의 의견 차이로 교정했다."
+    },
+    {
+      "id": "love_marriage_talk_01:A",
+      "title": "결혼이라는 단어",
+      "label": "\"좋아. 같이 준비하자\"",
+      "requirements": {},
+      "sourceHash": "bd81965674b0a000881cd131fbc8d6fa79c146f6380d7c973f8963bbea4f03f0",
+      "fullSourceHash": "774979a45536bfc03a255e3decb7f8bfb6a255d6fe97f0cc8100f02c23ca1daf",
+      "reviewVersion": 2,
+      "reviewScope": "CHOICE_AVAILABILITY_AND_OUTCOME_CAUSALITY_V2",
+      "reviewedAt": "2026-11-19",
+      "reviewer": "Codex AI — 원문·사건 조건·선택·모든 결과를 직접 읽은 의미 검토",
+      "reviewedOutcomeIds": [
+        "a_yes"
+      ],
+      "verdict": "KEEP_OPEN",
+      "reason": "dating·rel_steady이며 약혼/결혼 전인 사람의 결혼 준비 동의다. 재직자는 adult_032를 사용하는 별도 경로이므로 job_employed 차단은 자격 박탈이 아닌 사건 중복 방지다. 준비 비용 -1·행복 +4·engaged가 문장과 맞으며 결혼을 미리 완료하지 않는다."
+    },
+    {
+      "id": "love_marriage_talk_01:B",
+      "title": "결혼이라는 단어",
+      "label": "\"지금처럼 연애만 하는 것도 좋아\"",
+      "requirements": {},
+      "sourceHash": "c43eb1baa734a62366912bb7ae6b068dbda6b83b2c7af1630dd4ff0a779e5225",
+      "fullSourceHash": "a2e10adec54d05fd5638d8f9638aefacca054d989294b22bbe68a32602bdfb7f",
+      "reviewVersion": 2,
+      "reviewScope": "CHOICE_AVAILABILITY_AND_OUTCOME_CAUSALITY_V2",
+      "reviewedAt": "2026-11-19",
+      "reviewer": "Codex AI — 원문·사건 조건·선택·모든 결과를 직접 읽은 의미 검토",
+      "reviewedOutcomeIds": [
+        "b_later"
+      ],
+      "verdict": "KEEP_OPEN",
+      "reason": "결혼을 유보하고 연애를 이어가는 결정을 능력치로 잠그지 않는다. 합의하는 문장과 행복 +2·long_term_dating이 맞고 engaged/married를 추가하지 않아 의사 결정이 보존된다."
+    },
+    {
+      "id": "love_marriage_talk_01:C",
+      "title": "결혼이라는 단어",
+      "label": "\"결혼식 대신 둘이 여행 가는 건 어때?\"",
+      "requirements": {},
+      "sourceHash": "bb4789f27c35de4b0c16264c3505933b587aba0084c0d5ef8d0e6ca7acfc0f5d",
+      "fullSourceHash": "3bd2344ee0f56b31bbf70fa74b3d392be156df89eb6a519aa7f055bf6464f214",
+      "reviewVersion": 2,
+      "reviewScope": "CHOICE_AVAILABILITY_AND_OUTCOME_CAUSALITY_V2",
+      "reviewedAt": "2026-11-19",
+      "reviewer": "Codex AI — 원문·사건 조건·선택·모든 결과를 직접 읽은 의미 검토",
+      "reviewedOutcomeIds": [
+        "c_trip",
+        "c_no"
+      ],
+      "verdict": "KEEP_OPEN",
+      "reason": "결혼식 대신 여행 제안은 열린 선택이다. 상대가 둘 다 제안하는 결과 55만 engaged를 추가하고, 결혼을 더 생각하는 결과 45는 long_term_dating으로 남긴다. 두 분기의 지출·행복 및 후속 상견례의 약혼 조건이 일치한다."
+    },
+    {
+      "id": "love_family_meet_01:A",
+      "title": "양가 인사",
+      "label": "내가 먼저 양가 부모님을 소개한다",
+      "requirements": {},
+      "sourceHash": "413f3bd39c40651cb727258fa65128c2a5d0d9bd9ec4f2d3a77309e2c3b07ea6",
+      "fullSourceHash": "0d75c073c107db384c412d72a7b5a4418e097734eaac01925be55e945811f3b6",
+      "reviewVersion": 2,
+      "reviewScope": "CHOICE_AVAILABILITY_AND_OUTCOME_CAUSALITY_V2",
+      "reviewedAt": "2026-11-19",
+      "reviewer": "Codex AI — 원문·사건 조건·선택·모든 결과를 직접 읽은 의미 검토",
+      "reviewedOutcomeIds": [
+        "a_warm",
+        "a_stiff"
+      ],
+      "verdict": "KEEP_OPEN",
+      "reason": "약혼했지만 상견례·결혼 전이며 사회성 경로 전용 상견례와 중복되지 않는 조건이다. 직접 소개의 따뜻함 70/어색함 30 모두 만남은 완료되어 families_met를 추가하고 family_bond는 분위기가 풀린 경우만 부여한다."
+    },
+    {
+      "id": "love_family_meet_01:B",
+      "title": "양가 인사",
+      "label": "연인이 준비한 이야기에 맞장구친다",
+      "requirements": {},
+      "sourceHash": "22abdf2098870b2fdc61e7841004f9a913aadc8415fa88a95057dd04d99a814b",
+      "fullSourceHash": "70db90aad3510b677c052d91d6630f18875e347bbb5d80bfebe1dc69137f92ec",
+      "reviewVersion": 2,
+      "reviewScope": "CHOICE_AVAILABILITY_AND_OUTCOME_CAUSALITY_V2",
+      "reviewedAt": "2026-11-19",
+      "reviewer": "Codex AI — 원문·사건 조건·선택·모든 결과를 직접 읽은 의미 검토",
+      "reviewedOutcomeIds": [
+        "b_team"
+      ],
+      "verdict": "KEEP_OPEN",
+      "reason": "연인의 소개를 돕는 행동은 능력치 자격이 필요하지 않다. 협력하는 문장과 사회성 +2·행복 +1·families_met가 일치하고 결혼은 아직 완료하지 않는다."
+    },
+    {
+      "id": "love_family_meet_01:C",
+      "title": "양가 인사",
+      "label": "긴장해서 물을 연거푸 세 잔 마신다",
+      "requirements": {},
+      "sourceHash": "8722417ea69621a6bf6726071bf4b0c3a67a505152a4f421beb4e291f99f5c1f",
+      "fullSourceHash": "5735ea292cc09941993a60ff324e4f7232d2faa8e83d5c1ebcaf3daa9a3cce14",
+      "reviewVersion": 2,
+      "reviewScope": "CHOICE_AVAILABILITY_AND_OUTCOME_CAUSALITY_V2",
+      "reviewedAt": "2026-11-19",
+      "reviewer": "Codex AI — 원문·사건 조건·선택·모든 결과를 직접 읽은 의미 검토",
+      "reviewedOutcomeIds": [
+        "c_water",
+        "c_spill"
+      ],
+      "verdict": "KEEP_OPEN",
+      "reason": "긴장해서 물을 마시는 희극적 선택도 열린 대안이다. 자리를 비우는 결과 60/물을 쏟는 결과 40 모두 상견례를 완료하며, 사회성 -1과 family_memory는 실수 분기에만 있어 결과 차이가 보존된다."
+    },
+    {
+      "id": "love_wedding_01:A",
+      "title": "결혼식 10분 전",
+      "label": "\"응, 근데 좋아\"",
+      "requirements": {},
+      "sourceHash": "95b31ce2a0a97402531753c3f773004ff672e2ed98a43fb26d7c302c14a5fe3a",
+      "fullSourceHash": "b0b9144945b9d471487158901a2174d50226c6adfd0722496d9f525041c8a54d",
+      "reviewVersion": 2,
+      "reviewScope": "CHOICE_AVAILABILITY_AND_OUTCOME_CAUSALITY_V2",
+      "reviewedAt": "2026-11-19",
+      "reviewer": "Codex AI — 원문·사건 조건·선택·모든 결과를 직접 읽은 의미 검토",
+      "reviewedOutcomeIds": [
+        "a_vow"
+      ],
+      "verdict": "KEEP_OPEN",
+      "reason": "약혼·상견례 완료이며 음악 인연 전용 결혼식과 중복되지 않는 조건을 확인했다. 감정을 표현하는 선택에 능력치 자격은 필요하지 않다. 서약·결혼 비용·행복/사회성 변화와 married 추가·engaged 제거가 일치한다."
+    },
+    {
+      "id": "love_wedding_01:B",
+      "title": "결혼식 10분 전",
+      "label": "식장 입구에서 하객 한 명 한 명과 인사한다",
+      "requirements": {},
+      "sourceHash": "46b3d3642696ba09fe269ab2b04468d7bc0aa2a89a75438f4ccdc2f3e9351f76",
+      "fullSourceHash": "1cc4ba3faa122d0326e2597f233e65b5e1cf26dc53f474214702c383c9af29b2",
+      "reviewVersion": 2,
+      "reviewScope": "CHOICE_AVAILABILITY_AND_OUTCOME_CAUSALITY_V2",
+      "reviewedAt": "2026-11-19",
+      "reviewer": "Codex AI — 원문·사건 조건·선택·모든 결과를 직접 읽은 의미 검토",
+      "reviewedOutcomeIds": [
+        "b_greet"
+      ],
+      "verdict": "KEEP_OPEN",
+      "reason": "하객 인사는 열린 행동이며 사회성 +3·행복 +3과 행사 비용 -4가 문장에 대응한다. 결과에서 결혼을 완료하고 약혼을 해제하여 관계 단계가 함께 갱신된다."
+    },
+    {
+      "id": "love_wedding_01:C",
+      "title": "결혼식 10분 전",
+      "label": "입장할 때 몰래 준비한 춤을 춘다",
+      "requirements": {},
+      "sourceHash": "37f8b4eb57f350d905336af78f7edbb1d9c3a4a4d905990327235951c7eeb6e5",
+      "fullSourceHash": "85ba72f3e1bde0299d16e2cfe02bebf8cb4d1183ed0df7b85ede5be788042dd7",
+      "reviewVersion": 2,
+      "reviewScope": "CHOICE_AVAILABILITY_AND_OUTCOME_CAUSALITY_V2",
+      "reviewedAt": "2026-11-19",
+      "reviewer": "Codex AI — 원문·사건 조건·선택·모든 결과를 직접 읽은 의미 검토",
+      "reviewedOutcomeIds": [
+        "c_dance",
+        "c_slip"
+      ],
+      "verdict": "KEEP_OPEN",
+      "reason": "입장 춤을 시도할 자격을 잠그지 않고 성공 60/실수 40의 행복·사회성 차이로 표현한다. 두 분기 모두 실제 결혼식이므로 married/engaged 전환과 비용은 동일하게 적용하는 것이 타당하다."
+    },
+    {
+      "id": "love_wedding_music:A",
+      "title": "연주로 채운 축가",
+      "label": "같이 무대에 올라 한 소절 부른다",
+      "requirements": {},
+      "sourceHash": "24685764f97ef61748951742e36a89d11ad655e6dfcbb1068cc2e9e533a01d34",
+      "fullSourceHash": "c35639d409d653a9f0f158414bd56425f54e4120a30bc6299f473b18cc176feb",
+      "reviewVersion": 2,
+      "reviewScope": "CHOICE_AVAILABILITY_AND_OUTCOME_CAUSALITY_V2",
+      "reviewedAt": "2026-11-19",
+      "reviewer": "Codex AI — 원문·사건 조건·선택·모든 결과를 직접 읽은 의미 검토",
+      "reviewedOutcomeIds": [
+        "a_sing"
+      ],
+      "verdict": "KEEP_OPEN",
+      "reason": "partner_music·약혼·상견례 조건의 음악 결혼식이다. 노래 참여는 능력치 자격 없이 가능하며 합창과 사회성/행복 증가, 비용·married·achv_band_wedding·engaged 제거가 일치한다."
+    },
+    {
+      "id": "love_wedding_music:B",
+      "title": "연주로 채운 축가",
+      "label": "자리에서 듣기만 한다",
+      "requirements": {},
+      "sourceHash": "c7d2adc2765938a76778fdff5d3fb4d6c405adec321c40c3d46d1d18c4ebd1d8",
+      "fullSourceHash": "6208b9ec661c9b3a38b729d0709fac4a1b46be9751a3bc846d8e435cfb5c1c4a",
+      "reviewVersion": 2,
+      "reviewScope": "CHOICE_AVAILABILITY_AND_OUTCOME_CAUSALITY_V2",
+      "reviewedAt": "2026-11-19",
+      "reviewer": "Codex AI — 원문·사건 조건·선택·모든 결과를 직접 읽은 의미 검토",
+      "reviewedOutcomeIds": [
+        "b_listen"
+      ],
+      "verdict": "KEEP_OPEN",
+      "reason": "자리에서 듣는 대안도 결혼식과 축가의 경험을 공유한다. 참여를 강요하지 않고 행복 증가와 비용을 반영하며 음악 결혼 업적 및 관계 단계 전환은 노래 참여 여부와 무관하게 성립한다."
+    },
+    {
+      "id": "love_wedding_music:C",
+      "title": "연주로 채운 축가",
+      "label": "드럼 스틱을 빌려 직접 친다",
+      "requirements": {},
+      "sourceHash": "2f889c636d5366598a1a464443d8d850f6b5be2fc285be8b2a64d5f49ae2e2ce",
+      "fullSourceHash": "20473cb85b2fb85dba0a7df0e56c14da31eafba900529d60af868337f5bc8581",
+      "reviewVersion": 2,
+      "reviewScope": "CHOICE_AVAILABILITY_AND_OUTCOME_CAUSALITY_V2",
+      "reviewedAt": "2026-11-19",
+      "reviewer": "Codex AI — 원문·사건 조건·선택·모든 결과를 직접 읽은 의미 검토",
+      "reviewedOutcomeIds": [
+        "c_drum",
+        "c_snap"
+      ],
+      "verdict": "KEEP_OPEN",
+      "reason": "드럼 참여는 열린 행동이며 연주 55/스틱 파손 45의 문장과 행복·사회성 차이가 맞는다. 실수도 결혼을 취소시키지 않으므로 두 결과의 혼인·업적·약혼 해제·비용 처리가 일치한다."
+    },
+    {
+      "id": "love_child_plan_01:A",
+      "title": "아이 이야기",
+      "label": "\"그래, 같이 준비해 보자\"",
+      "requirements": {},
+      "sourceHash": "49713bccdd93de43295503b1165bf9a77f07f7a5467e93d370e3c8e9b730d86c",
+      "fullSourceHash": "280ca589fc8a09ab2ed184fc8a613d3275e94613ae2edd284c72d500cf98acf2",
+      "reviewVersion": 2,
+      "reviewScope": "CHOICE_AVAILABILITY_AND_OUTCOME_CAUSALITY_V2",
+      "reviewedAt": "2026-11-19",
+      "reviewer": "Codex AI — 원문·사건 조건·선택·모든 결과를 직접 읽은 의미 검토",
+      "reviewedOutcomeIds": [
+        "a_plan"
+      ],
+      "verdict": "KEEP_OPEN",
+      "reason": "혼인 중이고 기존 자녀/자녀 계획이 없는 상태에서 함께 준비하는 선택이다. 결과가 이듬해 출생까지 명시하므로 child_plan·has_child 및 첫아이 사실과 일치하며, 준비의 건강·행복 증가와 비용 감소를 확인했다."
+    },
+    {
+      "id": "love_child_plan_01:B",
+      "title": "아이 이야기",
+      "label": "\"우리 둘이서도 충분히 좋아\"",
+      "requirements": {},
+      "sourceHash": "fd29baadd3aef2520e406656f37f711cab9055945e8fbcd4fa3416ddbb89e35e",
+      "fullSourceHash": "e14ad4a83927fb4b10b45bf86633652280c7e8793083260abdc33db9911f3240",
+      "reviewVersion": 2,
+      "reviewScope": "CHOICE_AVAILABILITY_AND_OUTCOME_CAUSALITY_V2",
+      "reviewedAt": "2026-11-19",
+      "reviewer": "Codex AI — 원문·사건 조건·선택·모든 결과를 직접 읽은 의미 검토",
+      "reviewedOutcomeIds": [
+        "b_two"
+      ],
+      "verdict": "KEEP_OPEN",
+      "reason": "자녀 없이 둘이 살기로 하는 결정도 동등하게 열린 선택이다. 동의·행복 +2·no_child_plan이 일치하고 has_child를 부여하지 않으며 후속 자녀 계획 사건의 차단 조건으로 선택을 보존한다."
+    },
+    {
+      "id": "love_child_plan_01:C",
+      "title": "아이 이야기",
+      "label": "\"일단 화분부터 키워 보자\"",
+      "requirements": {},
+      "sourceHash": "d4118f6883702fa6e349716068aac65c88daebcfb59b92dfdeb100b3e88f7bf6",
+      "fullSourceHash": "2a7741cc2550ce3fa46750be39f3cf759bab553413db13d6025b3e574ee61190",
+      "reviewVersion": 2,
+      "reviewScope": "CHOICE_AVAILABILITY_AND_OUTCOME_CAUSALITY_V2",
+      "reviewedAt": "2026-11-19",
+      "reviewer": "Codex AI — 원문·사건 조건·선택·모든 결과를 직접 읽은 의미 검토",
+      "reviewedOutcomeIds": [
+        "c_plant",
+        "c_dry"
+      ],
+      "verdict": "KEEP_OPEN",
+      "reason": "화분부터 돌보는 선택의 성공 60/미루기 40은 모두 열린 분기다. 성공 문구를 이듬해 실제 출생까지 보완하여 has_child→childrenAtLeast=1 및 후속 육아 사건과 일치시켰다. 실패에는 no_child_plan만 부여하고 자녀를 기록하지 않는다."
+    },
+    {
+      "id": "love_first_child_01:A",
+      "title": "새벽 4시의 첫 아이",
+      "label": "내가 밤을 맡는다",
+      "requirements": {},
+      "sourceHash": "b777383a86dcaab477b160bb895597087287cd11257f919cd09ccd4f18068e72",
+      "fullSourceHash": "89f07ca7f12847e940201e48f386fba5ee691a9ba8cc0c2d42439dd18aaac08b",
+      "reviewVersion": 2,
+      "reviewScope": "CHOICE_AVAILABILITY_AND_OUTCOME_CAUSALITY_V2",
+      "reviewedAt": "2026-11-19",
+      "reviewer": "Codex AI — 원문·사건 조건·선택·모든 결과를 직접 읽은 의미 검토",
+      "reviewedOutcomeIds": [
+        "a_night"
+      ],
+      "verdict": "KEEP_OPEN",
+      "reason": "혼인·실제 자녀가 있고 재직 부모 전용 adult_039와 중복되지 않는 조건이다. 밤을 맡아 첫해를 돌보는 선택과 건강 -2·행복 +4·devoted_parent가 맞는다. 자녀 수를 다시 늘리지 않으며 연간 건강 변화는 엔진이 별도로 한 번 적용한다."
+    },
+    {
+      "id": "love_first_child_01:B",
+      "title": "새벽 4시의 첫 아이",
+      "label": "두 시간씩 번갈아 잔다",
+      "requirements": {},
+      "sourceHash": "4ffdea9d463ca46534b29c96c697a5c809fe5be313efdcfee17c009db7bdbe04",
+      "fullSourceHash": "9f770a76ace491b5f1be6f75f876ab37ce12a67fdd9e8bfbf3ad96562102aecf",
+      "reviewVersion": 2,
+      "reviewScope": "CHOICE_AVAILABILITY_AND_OUTCOME_CAUSALITY_V2",
+      "reviewedAt": "2026-11-19",
+      "reviewer": "Codex AI — 원문·사건 조건·선택·모든 결과를 직접 읽은 의미 검토",
+      "reviewedOutcomeIds": [
+        "b_shift"
+      ],
+      "verdict": "KEEP_OPEN",
+      "reason": "교대 육아는 능력치 자격 없이 선택 가능하다. 교대표·협력하는 첫해와 건강 -1·행복 +3·사회성 +1·family_bond가 맞으며 기존 자녀 사실을 중복 생성하지 않는다."
+    },
+    {
+      "id": "love_first_child_01:C",
+      "title": "새벽 4시의 첫 아이",
+      "label": "아기한테 누가 먼저 잘지 물어본다",
+      "requirements": {},
+      "sourceHash": "2d29bd890929d4dcb82a6e6a05044b3e9c0d9079aadb5b0c1f2ddee753beea7e",
+      "fullSourceHash": "ecc63383ad555c81570b131b1a1c38b5c8d1946309bf2306798d1b185f892922",
+      "reviewVersion": 2,
+      "reviewScope": "CHOICE_AVAILABILITY_AND_OUTCOME_CAUSALITY_V2",
+      "reviewedAt": "2026-11-19",
+      "reviewer": "Codex AI — 원문·사건 조건·선택·모든 결과를 직접 읽은 의미 검토",
+      "reviewedOutcomeIds": [
+        "c_ask"
+      ],
+      "verdict": "KEEP_OPEN",
+      "reason": "아기에게 묻는 희극적 대안은 이해력 자격으로 잠그지 않는다. 밤새 잠들지 못한 결과의 건강 -2와 가족 추억·행복 +3이 맞으며 실제 아이나 배우자의 관계 단계를 새로 만들어내지 않는다."
     }
   ],
   "week13LabelPeriodMigration": {
@@ -1606,5 +2042,45 @@
     "rule": "old sourceHash가 직전 main(HEAD) 내용과 일치하고, 새 입력이 라벨 끝 마침표 제거만 다른 항목만 지문을 갱신한다. 그 외 변경·신규 MILESTONE/BIG_INCIDENT 선택은 UNREVIEWED_OR_CHANGED로 남긴다.",
     "migrated": 141,
     "notMigrated": []
-  }
+  },
+  "reviewScopeVersions": {
+    "1": "기존 선택 개방성 검토. outcomes 전체를 2026-11-19에 새로 검토했다는 뜻이 아님.",
+    "2": "사건 발생 조건과 해당 선택의 모든 결과·플래그·보상까지 검토. 별도 fullSourceHash로 변경을 감지함. 이미지 승인은 별도."
+  },
+  "additionalReviews": [
+    {
+      "reviewedAt": "2026-11-19",
+      "reviewer": "Codex AI",
+      "reviewVersion": 2,
+      "ids": [
+        "adult_039:A",
+        "adult_039:B",
+        "path_soc_05:A",
+        "path_soc_05:B",
+        "love_date_01:A",
+        "love_date_01:B",
+        "love_date_01:C",
+        "love_marriage_talk_01:A",
+        "love_marriage_talk_01:B",
+        "love_marriage_talk_01:C",
+        "love_family_meet_01:A",
+        "love_family_meet_01:B",
+        "love_family_meet_01:C",
+        "love_wedding_01:A",
+        "love_wedding_01:B",
+        "love_wedding_01:C",
+        "love_wedding_music:A",
+        "love_wedding_music:B",
+        "love_wedding_music:C",
+        "love_child_plan_01:A",
+        "love_child_plan_01:B",
+        "love_child_plan_01:C",
+        "love_first_child_01:A",
+        "love_first_child_01:B",
+        "love_first_child_01:C"
+      ],
+      "evidence": "docs/qa/semantic_review_20261119.md",
+      "limitations": "AI 의미 검토이며 사람의 교차 검수나 플레이 통계상의 밸런스 보증이 아님. 기존 V1 검토를 V2로 일괄 승격하지 않음."
+    }
+  ]
 }

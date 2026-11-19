@@ -5616,7 +5616,7 @@
     }
   },
   {
-    "groupId": "direct_20261119_path_soc_05",
+    "groupId": "ai_rereview_20261119_path_soc_05",
     "imageId": "img_path_soc_05_001",
     "assetPath": "followup_20261031/img_path_soc_05_001.png",
     "sha256": "35bd49a77c3df8dbc7df3f16847c4cc799a786f085ba508f1d47b90f221d692b",
@@ -5625,31 +5625,17 @@
       "path_soc_05"
     ],
     "eventSourceHashes": {
-      "path_soc_05": "96776b829593e13e5bdc8fef7a9cdd1b27a1a1e601ea2a4b5199bd682740cb4d"
+      "path_soc_05": "e224b14a234478eb77ee27db39a6e5a87f82d335f232d7da20cb477c81dacdc9"
     },
-    "semanticReviewer": "김선한 담당 Codex 직접 대행 검수",
-    "visualReviewer": "김선한 담당 Codex 직접 대행 검수",
-    "cropReviewer": "김선한 담당 Codex 직접 대행 검수 (중앙 크롭 계산 재현 검수)",
-    "reviewEvidence": {
-      "eventId": "path_soc_05",
-      "title": "상견례 대참사",
-      "imageId": "img_path_soc_05_001",
-      "assetPath": "followup_20261031/img_path_soc_05_001.png",
-      "sha256": "35bd49a77c3df8dbc7df3f16847c4cc799a786f085ba508f1d47b90f221d692b",
-      "eventSourceHash": "96776b829593e13e5bdc8fef7a9cdd1b27a1a1e601ea2a4b5199bd682740cb4d",
-      "status": "PASS",
-      "reviewer": "김선한 담당 Codex 직접 대행 검수",
-      "reason": "본문의 장소·인물·행동을 원본과 대조하고 360×800 중앙 크롭의 상황 식별 가능성을 직접 확인",
-      "expectedAction": "두 아버지가 상을 사이에 두고 손짓하며 축구 결승 이야기를 함",
-      "requiredObjects": "한정식 상, 두 아버지의 손짓, 곁의 어머니들",
-      "sheet": "output/art-review-20261119/sheet-16.jpg",
-      "cell": 3,
-      "cropMethod": "ImageOps.fit centre-fill 360:800; simulated crop inspected directly, not an emulator capture",
-      "visualMethod": "원본 도트풍·색감·장면 파손·명백한 신체/사물 오류 직접 확인"
-    },
+    "semanticReviewer": "Codex AI",
+    "visualReviewer": "Codex AI",
+    "cropReviewer": "Codex AI (calculated portrait crops)",
+    "reviewEvidence": "docs/refactor/art-candidates/path_soc_05-rereview-20261119.json",
     "resolvedIssueEvidence": {
-      "path_soc_05": "본문의 장소·인물·행동을 원본과 대조하고 360×800 중앙 크롭의 상황 식별 가능성을 직접 확인"
-    }
+      "path_soc_05": "docs/refactor/art-candidates/path_soc_05-rereview-20261119.json"
+    },
+    "reviewerType": "AI",
+    "previousApprovalHistory": "docs/refactor/art-candidates/path_soc_05-history-before-rereview-20261119.json"
   },
   {
     "groupId": "direct_20261119_path_soc_06",
@@ -7953,6 +7939,3561 @@
     },
     "resolvedIssueEvidence": {
       "cross_12": "본문의 장소·인물·행동을 원본과 대조하고 360×800 중앙 크롭의 상황 식별 가능성을 직접 확인"
+    }
+  },
+  {
+    "groupId": "ai_native_20261119_love_date_01",
+    "imageId": "img_love_date_01_001",
+    "assetPath": "img_love_date_01_001.png",
+    "sha256": "e2d92693697d18347ffd30017bb3429c265dc63b895fe11237c9dee8a4da17d6",
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "love_date_01"
+    ],
+    "eventSourceHashes": {
+      "love_date_01": "102cb39c6be70d2018a0c3ff2d7524ddf5429d3236b23be88040eaf764de08b1"
+    },
+    "semanticReviewer": "Codex AI / plan_audit — full current event and outcomes",
+    "visualReviewer": "Codex AI / plan_audit — full PNG and native captures",
+    "cropReviewer": "Codex AI / plan_audit — actual phone and 360x740 scene/play captures",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-review-first-ten-20261119/love_date_01.json",
+    "resolvedIssueEvidence": {
+      "love_date_01": "Previously NO_FILE; built-in generated exact source, registered current routing, and individually reviewed native captures: docs/refactor/art-candidates/native-review-first-ten-20261119/love_date_01.json"
+    }
+  },
+  {
+    "groupId": "ai_native_20261119_love_marriage_talk_01",
+    "imageId": "img_love_marriage_talk_01_001",
+    "assetPath": "img_love_marriage_talk_01_001.png",
+    "sha256": "449a2922d0d18b57ec49d32d93f65c34445993766e78b69d45d443927e839f98",
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "love_marriage_talk_01"
+    ],
+    "eventSourceHashes": {
+      "love_marriage_talk_01": "3506135f5cf20c23260bdad319f96cb0dad6e768c868ca81be241924c6c21beb"
+    },
+    "semanticReviewer": "Codex AI / plan_audit — full current event and outcomes",
+    "visualReviewer": "Codex AI / plan_audit — full PNG and native captures",
+    "cropReviewer": "Codex AI / plan_audit — actual phone and 360x740 scene/play captures",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-review-first-ten-20261119/love_marriage_talk_01.json",
+    "resolvedIssueEvidence": {
+      "love_marriage_talk_01": "Previously NO_FILE; built-in generated exact source, registered current routing, and individually reviewed native captures: docs/refactor/art-candidates/native-review-first-ten-20261119/love_marriage_talk_01.json"
+    }
+  },
+  {
+    "groupId": "ai_native_20261119_love_first_child_01",
+    "imageId": "img_love_first_child_01_001",
+    "assetPath": "img_love_first_child_01_001.png",
+    "sha256": "14d16a95f74bd65904b9f4187db5b369c6fc00c276127e596d5a3333933a1300",
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "love_first_child_01"
+    ],
+    "eventSourceHashes": {
+      "love_first_child_01": "c0f4855f4dd932ce8901554e7e898a81fa2bc0dd5438b79b846ac314ba197e59"
+    },
+    "semanticReviewer": "Codex AI / plan_audit — full current event and outcomes",
+    "visualReviewer": "Codex AI / plan_audit — full PNG and native captures",
+    "cropReviewer": "Codex AI / plan_audit — actual phone and 360x740 scene/play captures",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-review-first-ten-20261119/love_first_child_01.json",
+    "resolvedIssueEvidence": {
+      "love_first_child_01": "Previously NO_FILE; built-in generated exact source, registered current routing, and individually reviewed native captures: docs/refactor/art-candidates/native-review-first-ten-20261119/love_first_child_01.json"
+    }
+  },
+  {
+    "groupId": "ai_native_20261119_love_family_meet_01",
+    "imageId": "img_love_family_meet_01_001",
+    "assetPath": "img_love_family_meet_01_001.png",
+    "sha256": "e2e085101cdd701d50396bb05698498f7a1820605cf4cbac8b6aec1399fb60c9",
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "love_family_meet_01"
+    ],
+    "eventSourceHashes": {
+      "love_family_meet_01": "6193a7a6d173501e1550f0f377839d351b1635b0a8f032eedf7ad9c8880411c6"
+    },
+    "semanticReviewer": "Codex AI / plan_audit — full current event and outcomes",
+    "visualReviewer": "Codex AI / plan_audit — full PNG and native captures",
+    "cropReviewer": "Codex AI / plan_audit — actual phone and 360x740 scene/play captures",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-review-first-ten-20261119/love_family_meet_01.json",
+    "resolvedIssueEvidence": {
+      "love_family_meet_01": "Previously NO_FILE; built-in generated exact source, registered current routing, and individually reviewed native captures: docs/refactor/art-candidates/native-review-first-ten-20261119/love_family_meet_01.json"
+    }
+  },
+  {
+    "groupId": "ai_native_20261119_love_wedding_01",
+    "imageId": "img_love_wedding_01_001",
+    "assetPath": "img_love_wedding_01_001.png",
+    "sha256": "21fb68acf28504c0ef18b6fc669a8ea0579f221906b9dcfd90279a3654f16ef4",
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "love_wedding_01"
+    ],
+    "eventSourceHashes": {
+      "love_wedding_01": "d99441caa4e1fe80bb26adfbfdef07d3f9f1a39fb6ba4d96e7d1d423212b49a1"
+    },
+    "semanticReviewer": "Codex AI / plan_audit — full current event and outcomes",
+    "visualReviewer": "Codex AI / plan_audit — full PNG and native captures",
+    "cropReviewer": "Codex AI / plan_audit — actual phone and 360x740 scene/play captures",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-review-first-ten-20261119/love_wedding_01.json",
+    "resolvedIssueEvidence": {
+      "love_wedding_01": "Previously NO_FILE; built-in generated exact source, registered current routing, and individually reviewed native captures: docs/refactor/art-candidates/native-review-first-ten-20261119/love_wedding_01.json"
+    }
+  },
+  {
+    "groupId": "ai_native_20261119_love_wedding_music",
+    "imageId": "img_love_wedding_music_001",
+    "assetPath": "img_love_wedding_music_001.png",
+    "sha256": "c48883bf1e8b4f0cd1fc8c519cac2751cff161c305b935caad3c997f9f559474",
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "love_wedding_music"
+    ],
+    "eventSourceHashes": {
+      "love_wedding_music": "89b7c330fb92393c36c6ea263a9cd534473182b1b42f81acd729592c028ec5ae"
+    },
+    "semanticReviewer": "Codex AI / plan_audit — full current event and outcomes",
+    "visualReviewer": "Codex AI / plan_audit — full PNG and native captures",
+    "cropReviewer": "Codex AI / plan_audit — actual phone and 360x740 scene/play captures",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-review-first-ten-20261119/love_wedding_music.json",
+    "resolvedIssueEvidence": {
+      "love_wedding_music": "Previously NO_FILE; built-in generated exact source, registered current routing, and individually reviewed native captures: docs/refactor/art-candidates/native-review-first-ten-20261119/love_wedding_music.json"
+    }
+  },
+  {
+    "groupId": "ai_native_20261119_love_child_plan_01",
+    "imageId": "img_love_child_plan_01_001",
+    "assetPath": "img_love_child_plan_01_001.png",
+    "sha256": "2b2782c2f26cda34510e3893a3b6895c4f34748be188198e79ae3dc40a24c978",
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "love_child_plan_01"
+    ],
+    "eventSourceHashes": {
+      "love_child_plan_01": "c23125c22a87aa9363de49a64363ee0f609d96b077ebc6d6bf7d0c28cac95c9a"
+    },
+    "semanticReviewer": "Codex AI / plan_audit — full current event and outcomes",
+    "visualReviewer": "Codex AI / plan_audit — full PNG and native captures",
+    "cropReviewer": "Codex AI / plan_audit — actual phone and 360x740 scene/play captures",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-review-first-ten-20261119/love_child_plan_01.json",
+    "resolvedIssueEvidence": {
+      "love_child_plan_01": "Previously NO_FILE; built-in generated exact source, registered current routing, and individually reviewed native captures: docs/refactor/art-candidates/native-review-first-ten-20261119/love_child_plan_01.json"
+    }
+  },
+  {
+    "groupId": "ai_native_20261119_love_holiday_01",
+    "imageId": "img_love_holiday_01_001",
+    "assetPath": "img_love_holiday_01_001.png",
+    "sha256": "d9eef92661debdb79c4882483cd8b9e4a84be78e4d2eaa1ed675214020787645",
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "love_holiday_01"
+    ],
+    "eventSourceHashes": {
+      "love_holiday_01": "6389b56c0d18294cc136edeac1d9950cf6325e9074e8e7981bd0bdbaf4266b73"
+    },
+    "semanticReviewer": "Codex AI / plan_audit — full current event and outcomes",
+    "visualReviewer": "Codex AI / plan_audit — full PNG and native captures",
+    "cropReviewer": "Codex AI / plan_audit — actual phone and 360x740 scene/play captures",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-review-first-ten-20261119/love_holiday_01.json",
+    "resolvedIssueEvidence": {
+      "love_holiday_01": "Previously NO_FILE; built-in generated exact source, registered current routing, and individually reviewed native captures: docs/refactor/art-candidates/native-review-first-ten-20261119/love_holiday_01.json"
+    }
+  },
+  {
+    "groupId": "ai_native_20261119_love_date_02",
+    "imageId": "img_love_date_02_001",
+    "assetPath": "img_love_date_02_001.png",
+    "sha256": "6b257e9423bb3dabb17e6072ff40c78c436318e8cbb57bb8c6896b0f3fa7c9d4",
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "love_date_02"
+    ],
+    "eventSourceHashes": {
+      "love_date_02": "137e19f3f712c9f8f2ea04377da9b1f69c23c860a9bda799eb1916d452426a33"
+    },
+    "semanticReviewer": "Codex AI / plan_audit — full current event and outcomes",
+    "visualReviewer": "Codex AI / plan_audit — full PNG and native captures",
+    "cropReviewer": "Codex AI / plan_audit — actual phone and 360x740 scene/play captures",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-review-first-ten-20261119/love_date_02.json",
+    "resolvedIssueEvidence": {
+      "love_date_02": "Previously NO_FILE; built-in generated exact source, registered current routing, and individually reviewed native captures: docs/refactor/art-candidates/native-review-first-ten-20261119/love_date_02.json"
+    }
+  },
+  {
+    "groupId": "ai_native_20261119_love_letter_01",
+    "imageId": "img_love_letter_01_001",
+    "assetPath": "img_love_letter_01_001.png",
+    "sha256": "32ec176891cf748cca445ce0bdac3764a379d0862646f01d0d86ffa559dc7549",
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "love_letter_01"
+    ],
+    "eventSourceHashes": {
+      "love_letter_01": "c26bc87ac36127589808fc7f9a443eec49311835fef9ca1543127a28ff85431f"
+    },
+    "semanticReviewer": "Codex AI / plan_audit — full current event and outcomes",
+    "visualReviewer": "Codex AI / plan_audit — full PNG and native captures",
+    "cropReviewer": "Codex AI / plan_audit — actual phone and 360x740 scene/play captures",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-review-first-ten-20261119/love_letter_01.json",
+    "resolvedIssueEvidence": {
+      "love_letter_01": "Previously NO_FILE; built-in generated exact source, registered current routing, and individually reviewed native captures: docs/refactor/art-candidates/native-review-first-ten-20261119/love_letter_01.json"
+    }
+  },
+  {
+    "groupId": "ai_native_20261119_love_conflict_01",
+    "imageId": "img_love_conflict_01_001",
+    "assetPath": "img_love_conflict_01_001.png",
+    "sha256": "90f1926ce34e095760c2d028386f76786af6808eb4dda0309d48bd41ed140b38",
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "love_conflict_01"
+    ],
+    "eventSourceHashes": {
+      "love_conflict_01": "ed6624036a1307824e3bd4af722bb6e5f0a6112386f144c3374cbddb9f1676bd"
+    },
+    "semanticReviewer": "Codex AI / plan_audit — full current event and outcomes",
+    "visualReviewer": "Codex AI / plan_audit — exact source and native captures",
+    "cropReviewer": "Codex AI / plan_audit — phone and 360x740 native captures",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-review-secondary-ten-20261119/love_conflict_01.json",
+    "resolvedIssueEvidence": {
+      "love_conflict_01": "Previously NO_FILE; exact built-in generated source and current routing individually verified against native captures: docs/refactor/art-candidates/native-review-secondary-ten-20261119/love_conflict_01.json"
+    }
+  },
+  {
+    "groupId": "ai_native_20261119_love_conflict_first_love",
+    "imageId": "img_love_conflict_first_love_001",
+    "assetPath": "img_love_conflict_first_love_001.png",
+    "sha256": "63a300b1283e3398f4b61f8cb07ceb6d824b0693094519ce67f454fe1cdd4e35",
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "love_conflict_first_love"
+    ],
+    "eventSourceHashes": {
+      "love_conflict_first_love": "6e42edd2377dcd37934fe80384cfb84963c7f959b9eb6eb19c3098f121c05e49"
+    },
+    "semanticReviewer": "Codex AI / plan_audit — full current event and outcomes",
+    "visualReviewer": "Codex AI / plan_audit — exact source and native captures",
+    "cropReviewer": "Codex AI / plan_audit — phone and 360x740 native captures",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-review-secondary-ten-20261119/love_conflict_first_love.json",
+    "resolvedIssueEvidence": {
+      "love_conflict_first_love": "Previously NO_FILE; exact built-in generated source and current routing individually verified against native captures: docs/refactor/art-candidates/native-review-secondary-ten-20261119/love_conflict_first_love.json"
+    }
+  },
+  {
+    "groupId": "ai_native_20261119_love_conflict_ideal",
+    "imageId": "img_love_conflict_ideal_001",
+    "assetPath": "img_love_conflict_ideal_001.png",
+    "sha256": "28362feadf355272d5b41e6f832f69f792729203da6df9b940e7eccf34917827",
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "love_conflict_ideal"
+    ],
+    "eventSourceHashes": {
+      "love_conflict_ideal": "78d42a8a39f9a20ea43b21abef36d3b8c774bb0835c2393927403741a6a5ca5c"
+    },
+    "semanticReviewer": "Codex AI / plan_audit — full current event and outcomes",
+    "visualReviewer": "Codex AI / plan_audit — exact source and native captures",
+    "cropReviewer": "Codex AI / plan_audit — phone and 360x740 native captures",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-review-secondary-ten-20261119/love_conflict_ideal.json",
+    "resolvedIssueEvidence": {
+      "love_conflict_ideal": "Previously NO_FILE; exact built-in generated source and current routing individually verified against native captures: docs/refactor/art-candidates/native-review-secondary-ten-20261119/love_conflict_ideal.json"
+    }
+  },
+  {
+    "groupId": "ai_native_20261119_love_conflict_music",
+    "imageId": "img_love_conflict_music_001",
+    "assetPath": "img_love_conflict_music_001.png",
+    "sha256": "5921f8282b4d40e3dfc961722619c986d26cd6a1c5867a83ba7eab1e4e6d5870",
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "love_conflict_music"
+    ],
+    "eventSourceHashes": {
+      "love_conflict_music": "1e8eb42bee108be2658737d956e774d5fb2f244e5e50a17381de3ddc74a10590"
+    },
+    "semanticReviewer": "Codex AI / plan_audit — full current event and outcomes",
+    "visualReviewer": "Codex AI / plan_audit — exact source and native captures",
+    "cropReviewer": "Codex AI / plan_audit — phone and 360x740 native captures",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-review-secondary-ten-20261119/love_conflict_music.json",
+    "resolvedIssueEvidence": {
+      "love_conflict_music": "Previously NO_FILE; exact built-in generated source and current routing individually verified against native captures: docs/refactor/art-candidates/native-review-secondary-ten-20261119/love_conflict_music.json"
+    }
+  },
+  {
+    "groupId": "ai_native_20261119_love_conflict_book",
+    "imageId": "img_love_conflict_book_001",
+    "assetPath": "img_love_conflict_book_001.png",
+    "sha256": "ac3c05355964d7aff4f7dc28648fb22ecfaeea7010e87513521170137cda8d65",
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "love_conflict_book"
+    ],
+    "eventSourceHashes": {
+      "love_conflict_book": "c5039811b3ae0471bf47dfd7c0441161d0ad88099e0250056f1ef4629f7a1fa7"
+    },
+    "semanticReviewer": "Codex AI / plan_audit — full current event and outcomes",
+    "visualReviewer": "Codex AI / plan_audit — exact source and native captures",
+    "cropReviewer": "Codex AI / plan_audit — phone and 360x740 native captures",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-review-secondary-ten-20261119/love_conflict_book.json",
+    "resolvedIssueEvidence": {
+      "love_conflict_book": "Previously NO_FILE; exact built-in generated source and current routing individually verified against native captures: docs/refactor/art-candidates/native-review-secondary-ten-20261119/love_conflict_book.json"
+    }
+  },
+  {
+    "groupId": "ai_native_20261119_love_reunion_01",
+    "imageId": "img_love_reunion_01_001",
+    "assetPath": "img_love_reunion_01_001.png",
+    "sha256": "21e86ec1ff90039b470cb0608280cd1aa72584d17d8c53a05178f58adfed973f",
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "love_reunion_01"
+    ],
+    "eventSourceHashes": {
+      "love_reunion_01": "df917da08f4e59283cc6b29819ece1add4eff2aeb6fbb10806d920369b4e7b1b"
+    },
+    "semanticReviewer": "Codex AI / plan_audit — full current event and outcomes",
+    "visualReviewer": "Codex AI / plan_audit — exact source and native captures",
+    "cropReviewer": "Codex AI / plan_audit — phone and 360x740 native captures",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-review-secondary-ten-20261119/love_reunion_01.json",
+    "resolvedIssueEvidence": {
+      "love_reunion_01": "Previously NO_FILE; exact built-in generated source and current routing individually verified against native captures: docs/refactor/art-candidates/native-review-secondary-ten-20261119/love_reunion_01.json"
+    }
+  },
+  {
+    "groupId": "ai_native_20261119_love_reunion_first_love",
+    "imageId": "img_love_reunion_first_love_001",
+    "assetPath": "img_love_reunion_first_love_001.png",
+    "sha256": "1a8d980824094120848bf8a348e444537d05b45caefe5544a18ea27337dda3bb",
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "love_reunion_first_love"
+    ],
+    "eventSourceHashes": {
+      "love_reunion_first_love": "0035bbb271bd72339b923f1fe1e170cb27ee598ec805cd8c94fc14d5887f2e96"
+    },
+    "semanticReviewer": "Codex AI / plan_audit — full current event and outcomes",
+    "visualReviewer": "Codex AI / plan_audit — exact source and native captures",
+    "cropReviewer": "Codex AI / plan_audit — phone and 360x740 native captures",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-review-secondary-ten-20261119/love_reunion_first_love.json",
+    "resolvedIssueEvidence": {
+      "love_reunion_first_love": "Previously NO_FILE; exact built-in generated source and current routing individually verified against native captures: docs/refactor/art-candidates/native-review-secondary-ten-20261119/love_reunion_first_love.json"
+    }
+  },
+  {
+    "groupId": "ai_native_20261119_love_reunion_ideal",
+    "imageId": "img_love_reunion_ideal_001",
+    "assetPath": "img_love_reunion_ideal_001.png",
+    "sha256": "bdaa69ed4079a64e3b700d8164fd6fcf3491cd5cd657feb41f2f8900bd742ae5",
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "love_reunion_ideal"
+    ],
+    "eventSourceHashes": {
+      "love_reunion_ideal": "7fe95668bac338e9765e97b35bab05924948a4e5a2d54bfca1c0304f8bdc1924"
+    },
+    "semanticReviewer": "Codex AI / plan_audit — full current event and outcomes",
+    "visualReviewer": "Codex AI / plan_audit — exact source and native captures",
+    "cropReviewer": "Codex AI / plan_audit — phone and 360x740 native captures",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-review-secondary-ten-20261119/love_reunion_ideal.json",
+    "resolvedIssueEvidence": {
+      "love_reunion_ideal": "Previously NO_FILE; exact built-in generated source and current routing individually verified against native captures: docs/refactor/art-candidates/native-review-secondary-ten-20261119/love_reunion_ideal.json"
+    }
+  },
+  {
+    "groupId": "ai_native_20261119_love_reunion_music",
+    "imageId": "img_love_reunion_music_001",
+    "assetPath": "img_love_reunion_music_001.png",
+    "sha256": "cccb6f33e89975a06970bfb95d5a1998c42657e3d66226bdf6bed66dc1076597",
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "love_reunion_music"
+    ],
+    "eventSourceHashes": {
+      "love_reunion_music": "d2f23238a827a7f97d3a8a28c43f1d4aaea29075fb1cfef7e6e462026246c03c"
+    },
+    "semanticReviewer": "Codex AI / plan_audit — full current event and outcomes",
+    "visualReviewer": "Codex AI / plan_audit — exact source and native captures",
+    "cropReviewer": "Codex AI / plan_audit — phone and 360x740 native captures",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-review-secondary-ten-20261119/love_reunion_music.json",
+    "resolvedIssueEvidence": {
+      "love_reunion_music": "Previously NO_FILE; exact built-in generated source and current routing individually verified against native captures: docs/refactor/art-candidates/native-review-secondary-ten-20261119/love_reunion_music.json"
+    }
+  },
+  {
+    "groupId": "ai_native_20261119_love_reunion_book",
+    "imageId": "img_love_reunion_book_001",
+    "assetPath": "img_love_reunion_book_001.png",
+    "sha256": "a321300ce17969108220d7ca04e85def579db827923e22c1b8e2de63de6d1618",
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "love_reunion_book"
+    ],
+    "eventSourceHashes": {
+      "love_reunion_book": "0191408f5f04a88337d21c01d8117c754a45b2ecc4407a5c0274d5b322ff4ea1"
+    },
+    "semanticReviewer": "Codex AI / plan_audit — full current event and outcomes",
+    "visualReviewer": "Codex AI / plan_audit — exact source and native captures",
+    "cropReviewer": "Codex AI / plan_audit — phone and 360x740 native captures",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-review-secondary-ten-20261119/love_reunion_book.json",
+    "resolvedIssueEvidence": {
+      "love_reunion_book": "Previously NO_FILE; exact built-in generated source and current routing individually verified against native captures: docs/refactor/art-candidates/native-review-secondary-ten-20261119/love_reunion_book.json"
+    }
+  },
+  {
+    "groupId": "ai_native_20261119_adult_019",
+    "imageId": "img_adult_dinner_door_001",
+    "assetPath": "followup_20261031/img_adult_dinner_door_001.png",
+    "sha256": "0d174b0af21f409c0093d64f45279d1485749d093f893ff2e8679adf40880ecf",
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "adult_019"
+    ],
+    "eventSourceHashes": {
+      "adult_019": "d996af5227b1387e4d331efc81a04ca82759faa7379b527a036b04ef1a6393d6"
+    },
+    "semanticReviewer": "Codex AI / plan_audit — complete current event and outcomes",
+    "visualReviewer": "Codex AI / plan_audit — unchanged full PNG and native captures",
+    "cropReviewer": "Codex AI / plan_audit — native phone and 360x740 scene/play",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-review-focal-eight-20261119/adult_019.json",
+    "resolvedIssueEvidence": {
+      "adult_019": "focalX 0.655의 실제 두 화면에서 부장 머리와 양눈·얼굴, 불판과 고기, 집게 및 잡은 손이 함께 남아 기존 얼굴/손 크롭 우려를 해소했다. 문 자체는 화면 밖이지만 핵심 행동/소품은 유지된다. Evidence: docs/refactor/art-candidates/native-review-focal-eight-20261119/adult_019.json"
+    }
+  },
+  {
+    "groupId": "ai_native_20261119_path_hea_08",
+    "imageId": "img_path_hea_08_001",
+    "assetPath": "followup_20261031/img_path_hea_08_001.png",
+    "sha256": "4b1975f6a9858c0acf0439f0b46458e5836e40b5438f78fb0cd8ed74cd75f334",
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "path_hea_08"
+    ],
+    "eventSourceHashes": {
+      "path_hea_08": "8bef419c16cab302178d4e04dfc26f9e4dff3bc84bb2173b8912e5cbbb6460f0"
+    },
+    "semanticReviewer": "Codex AI / plan_audit — complete current event and outcomes",
+    "visualReviewer": "Codex AI / plan_audit — unchanged full PNG and native captures",
+    "cropReviewer": "Codex AI / plan_audit — native phone and 360x740 scene/play",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-review-focal-eight-20261119/path_hea_08.json",
+    "resolvedIssueEvidence": {
+      "path_hea_08": "focalX 0.445에서 노인 두 명의 전체 얼굴과 대화 표정, 번호표와 플레이어 손, 대기의자가 두 화면에 함께 남는다. 원본의 세 번째 인물은 대부분 화면 밖이지만 원문에 특정 인원 조건은 없다. Evidence: docs/refactor/art-candidates/native-review-focal-eight-20261119/path_hea_08.json"
+    }
+  },
+  {
+    "groupId": "ai_native_20261119_path_hea_14",
+    "imageId": "img_path_hea_14_001",
+    "assetPath": "followup_20261031/img_path_hea_14_001.png",
+    "sha256": "6822d03393958875970ec46a49aeb299893be5fd8294e97a0ae9fb3f97955c0e",
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "path_hea_14"
+    ],
+    "eventSourceHashes": {
+      "path_hea_14": "63b92233bf828444763a4ad3a620d4faf0c4e284f79552faa777b88c53d06635"
+    },
+    "semanticReviewer": "Codex AI / plan_audit — complete current event and outcomes",
+    "visualReviewer": "Codex AI / plan_audit — unchanged full PNG and native captures",
+    "cropReviewer": "Codex AI / plan_audit — native phone and 360x740 scene/play",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-review-focal-eight-20261119/path_hea_14.json",
+    "resolvedIssueEvidence": {
+      "path_hea_14": "focalX 0.56에서 두 화면 모두 모집 포스터 네 모서리와 체조 삽화·메가폰·달력·연락 기호가 유지된다. 옆 직원은 손 일부만 남지만 핵심 게시물과 플레이어 시점은 명확하다. Evidence: docs/refactor/art-candidates/native-review-focal-eight-20261119/path_hea_14.json"
+    }
+  },
+  {
+    "groupId": "ai_native_20261119_teen_029",
+    "imageId": "img_teen_school_store_001",
+    "assetPath": "followup_20261031/img_teen_school_store_001.png",
+    "sha256": "6655f8ce3a429dee1b75803f9888a6c2d770757ed83eb714d912147b67efe565",
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "teen_029"
+    ],
+    "eventSourceHashes": {
+      "teen_029": "20847fa28596088fdd12ff80982be9e2eb64530448680da97bcc84b667453fc5"
+    },
+    "semanticReviewer": "Codex AI / plan_audit — complete current event and outcomes",
+    "visualReviewer": "Codex AI / plan_audit — unchanged full PNG and native captures",
+    "cropReviewer": "Codex AI / plan_audit — native phone and 360x740 scene/play",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-review-focal-eight-20261119/teen_029.json",
+    "resolvedIssueEvidence": {
+      "teen_029": "focalX 0.62에서 두 화면 모두 종·계단·달리는 여러 친구의 전신·열린 문과 플레이어 손 일부가 함께 남는다. 좌측 끝 학생 일부는 잘리나 사건 핵심 다중 인물이 유지된다. Evidence: docs/refactor/art-candidates/native-review-focal-eight-20261119/teen_029.json"
+    }
+  },
+  {
+    "groupId": "ai_native_20261119_adult_010",
+    "imageId": "img_adult_drinks_grill_001",
+    "assetPath": "followup_20261031/img_adult_drinks_grill_001.png",
+    "sha256": "51a4301848766acc3265db39ec21a6c25f26f373c134dd715f9bfec48bcaeea7",
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "adult_010"
+    ],
+    "eventSourceHashes": {
+      "adult_010": "4d5de09fdd8b52c5d2a64424ccc0b96e529ec25f7d7fd58a1a03fe5d97a1d7bd"
+    },
+    "semanticReviewer": "Codex AI / plan_audit — complete current event and outcomes",
+    "visualReviewer": "Codex AI / plan_audit — unchanged full PNG and native captures",
+    "cropReviewer": "Codex AI / plan_audit — native phone and 360x740 scene/play",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-review-focal-eight-20261119/adult_010.json",
+    "resolvedIssueEvidence": {
+      "adult_010": "별도 focal 수정 없는 현재 중앙 native 렌더에서도 두 화면에 고기 한 점·계산서·두 친구 얼굴·잔이 동시에 남는다. 과거 합성 중앙 크롭의 우려는 실제 캡처에서 재현되지 않아 새 근거로 해소하며 과거 기록은 유지한다. Evidence: docs/refactor/art-candidates/native-review-focal-eight-20261119/adult_010.json"
+    }
+  },
+  {
+    "groupId": "ai_native_20261119_adult_018",
+    "imageId": "img_adult_dinner_escape_001",
+    "assetPath": "followup_20261031/img_adult_dinner_escape_001.png",
+    "sha256": "3bc304d4ab52f04e08b02a92566227239e434ef581f8810e9d670385f45c2be7",
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "adult_018"
+    ],
+    "eventSourceHashes": {
+      "adult_018": "cc0c27f79bce6271b3b726659b453ef2988f4f0ac2117e1d377ad51ef338a7db"
+    },
+    "semanticReviewer": "Codex AI / plan_audit — complete current event and outcomes",
+    "visualReviewer": "Codex AI / plan_audit — unchanged full PNG and native captures",
+    "cropReviewer": "Codex AI / plan_audit — native phone and 360x740 scene/play",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-review-focal-eight-20261119/adult_018.json",
+    "resolvedIssueEvidence": {
+      "adult_018": "현재 중앙 native 렌더에서 두 화면 모두 휴대폰 대화 영역·불판·먼저 움직이는 동기의 머리와 몸/손짓이 함께 남는다. 과거 합성 크롭 결함은 이번 실제 렌더에서 재현되지 않았고 새 캡처로 해결을 입증했다. Evidence: docs/refactor/art-candidates/native-review-focal-eight-20261119/adult_018.json"
+    }
+  },
+  {
+    "groupId": "ai_native_20261119_path_luk_04",
+    "imageId": "img_path_luk_04_001",
+    "assetPath": "followup_20261031/img_path_luk_04_001.png",
+    "sha256": "430dba39ab864f4299b0540f16e7b862163a8cd247e4c467f5135dfb0d93ed3c",
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "path_luk_04"
+    ],
+    "eventSourceHashes": {
+      "path_luk_04": "780a131d09d5da251ee8c2cae7f71026ebb27ed3259630ae7038abd468a35d38"
+    },
+    "semanticReviewer": "Codex AI / plan_audit — complete current event and outcomes",
+    "visualReviewer": "Codex AI / plan_audit — unchanged full PNG and native captures",
+    "cropReviewer": "Codex AI / plan_audit — native phone and 360x740 scene/play",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-review-focal-eight-20261119/path_luk_04.json",
+    "resolvedIssueEvidence": {
+      "path_luk_04": "현재 중앙 native 렌더 두 화면에서 상대 양눈·얼굴과 이력서 핵심 영역, 층 표시 기호가 함께 남는다. 우측 머리/어깨 외곽 일부는 잘리지만 대화 표정과 이력서 식별이 명확하여 과거 핵심요소 소실 우려를 해소했다. Evidence: docs/refactor/art-candidates/native-review-focal-eight-20261119/path_luk_04.json"
+    }
+  },
+  {
+    "groupId": "ai_native_20261119_child_006",
+    "imageId": "img_child_first_errand_001",
+    "assetPath": "followup_20261031/img_child_first_errand_001.png",
+    "sha256": "95241b6df1cfe7aa725995922fe5cfdb398d33b0057073b1ab7cbd6da1c4ba51",
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "child_006"
+    ],
+    "eventSourceHashes": {
+      "child_006": "cad81977af93fca2b823929e8996a403c0f7c40198a46c7393dc0b20ed04d674"
+    },
+    "semanticReviewer": "Codex AI / plan_audit — complete current event and outcomes",
+    "visualReviewer": "Codex AI / plan_audit — unchanged full PNG and native captures",
+    "cropReviewer": "Codex AI / plan_audit — native phone and 360x740 scene/play",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-review-semantic-thirteen-20261119/child_006.json",
+    "resolvedIssueEvidence": {
+      "child_006": "두 native 크기에서 세 지폐와 건네는 엄마 손, 받는 아이 손이 함께 유지된다. 먼 가게는 거의 잘리지만 현재 핵심인 돈 전달은 온전히 보인다. 과거 지폐 개수 불일치는 원본 및 실제 캡처에서 재현되지 않았다. Evidence: docs/refactor/art-candidates/native-review-semantic-thirteen-20261119/child_006.json"
+    }
+  },
+  {
+    "groupId": "ai_native_20261119_child_030",
+    "imageId": "img_child_swim_meet_001",
+    "assetPath": "followup_20261031/img_child_swim_meet_001.png",
+    "sha256": "f0b0c921548a94066b668fa5abccbcf54e226e63224053c39a5113fd21e0c6f5",
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "child_030"
+    ],
+    "eventSourceHashes": {
+      "child_030": "2b22a7adb67e97418ea7219eff01196b097b5f6b35c932d5ab96af0b19ba3baf"
+    },
+    "semanticReviewer": "Codex AI / plan_audit — complete current event and outcomes",
+    "visualReviewer": "Codex AI / plan_audit — unchanged full PNG and native captures",
+    "cropReviewer": "Codex AI / plan_audit — native phone and 360x740 scene/play",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-review-semantic-thirteen-20261119/child_030.json",
+    "resolvedIssueEvidence": {
+      "child_030": "두 화면에서 끈의 얇은 연결부, 수경, 손, 수영장 레인, 심판과 출발대가 식별된다. 양 렌즈 외곽 일부는 잘리나 끈 문제가 중앙에 보인다. 과거 손상 표시 부재 지적은 실제 원본/캡처와 달랐다. Evidence: docs/refactor/art-candidates/native-review-semantic-thirteen-20261119/child_030.json"
+    }
+  },
+  {
+    "groupId": "ai_native_20261119_adult_039",
+    "imageId": "img_adult_newborn_001",
+    "assetPath": "followup_20261031/img_adult_newborn_001.png",
+    "sha256": "40cfff0a03d9487665247f185d9271387fc7628d1239051fed9e958cf96005d5",
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "adult_039"
+    ],
+    "eventSourceHashes": {
+      "adult_039": "c0de04b2623c70dd631facc855926ea105aeadc3b63a00b50ccc2400677878a7"
+    },
+    "semanticReviewer": "Codex AI / plan_audit — complete current event and outcomes",
+    "visualReviewer": "Codex AI / plan_audit — unchanged full PNG and native captures",
+    "cropReviewer": "Codex AI / plan_audit — native phone and 360x740 scene/play",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-review-semantic-thirteen-20261119/adult_039.json",
+    "resolvedIssueEvidence": {
+      "adult_039": "두 화면에서 전화기, 아기 손과 성인 손가락의 접촉, 침대 맥락이 유지된다. 전화기 화면은 일반 통화 표식이며 인사팀이라는 인쇄 글자를 검증한 것은 아니다. Evidence: docs/refactor/art-candidates/native-review-semantic-thirteen-20261119/adult_039.json"
+    }
+  },
+  {
+    "groupId": "ai_native_20261119_special_013",
+    "imageId": "img_special_bubble_001",
+    "assetPath": "followup_20261031/img_special_bubble_001.png",
+    "sha256": "dd6b0234e1a317f812b21b7578abb5b89d6b99f185b17ff8d932af7e2ab2a4ab",
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "special_013"
+    ],
+    "eventSourceHashes": {
+      "special_013": "7d3c65ed93346e57acf899698c6766b894a444fed5d1a27afbe5311d4ec3137f"
+    },
+    "semanticReviewer": "Codex AI / plan_audit — complete current event and outcomes",
+    "visualReviewer": "Codex AI / plan_audit — unchanged full PNG and native captures",
+    "cropReviewer": "Codex AI / plan_audit — native phone and 360x740 scene/play",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-review-semantic-thirteen-20261119/special_013.json",
+    "resolvedIssueEvidence": {
+      "special_013": "두 화면 모두 열린 병 입구와 액체 일부, 사용하지 않는 원형 막대, 중앙 방울 사슬과 딸꾹질 표시가 남는다. 병 왼쪽과 먼 엄마 일부는 잘리지만 핵심 전경은 보인다. 방울이 이미 나온다는 현재 설정을 반영해 과거 결과 선노출 지적을 해소한다. Evidence: docs/refactor/art-candidates/native-review-semantic-thirteen-20261119/special_013.json"
+    }
+  },
+  {
+    "groupId": "ai_native_20261119_special_014",
+    "imageId": "img_special_static_slide_001",
+    "assetPath": "followup_20261031/img_special_static_slide_001.png",
+    "sha256": "808f5aa6ba8a7cd810558f29b46584e5310b6996bbca967f9551908d955dd205",
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "special_014"
+    ],
+    "eventSourceHashes": {
+      "special_014": "501aaaa4a6c5337bdfb9f30d71848c67523b1d7d7bea5dc0a4e0ba49d014e3b3"
+    },
+    "semanticReviewer": "Codex AI / plan_audit — complete current event and outcomes",
+    "visualReviewer": "Codex AI / plan_audit — unchanged full PNG and native captures",
+    "cropReviewer": "Codex AI / plan_audit — native phone and 360x740 scene/play",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-review-semantic-thirteen-20261119/special_014.json",
+    "resolvedIssueEvidence": {
+      "special_014": "두 native에서 솟은 머리 그림자, 미끄럼틀 끝, 친구의 온전한 내민 손과 양눈/표정이 보인다. 친구 오른쪽 외곽은 일부 잘리지만 주요 표정과 동작은 남는다. 과거 그림자만으로 머리를 표현했다는 지적을 현재 1인칭 구도로 재평가했다. Evidence: docs/refactor/art-candidates/native-review-semantic-thirteen-20261119/special_014.json"
+    }
+  },
+  {
+    "groupId": "ai_native_20261119_special_015",
+    "imageId": "img_special_sauce_001",
+    "assetPath": "followup_20261031/img_special_sauce_001.png",
+    "sha256": "f520a3c204131ba0712957da5f8b7cb6219070418e89635b1862fd70fe34be44",
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "special_015"
+    ],
+    "eventSourceHashes": {
+      "special_015": "cad2b196975c14f8a5c968e34400a5e3976e413fe67609b74a5e2c2d1821c407"
+    },
+    "semanticReviewer": "Codex AI / plan_audit — complete current event and outcomes",
+    "visualReviewer": "Codex AI / plan_audit — unchanged full PNG and native captures",
+    "cropReviewer": "Codex AI / plan_audit — native phone and 360x740 scene/play",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-review-semantic-thirteen-20261119/special_015.json",
+    "resolvedIssueEvidence": {
+      "special_015": "두 native에서 공중의 통과 소스, 손, 급식실 식탁 맥락이 보인다. 통 오른쪽 손잡이 끝과 손의 바깥 손가락 일부는 잘리나 낙하 전 물체와 손의 관계가 명확하다. 과거 국자를 잡은 손 문제는 존재하지 않는 소품에 관한 지적이었다. Evidence: docs/refactor/art-candidates/native-review-semantic-thirteen-20261119/special_015.json"
+    }
+  },
+  {
+    "groupId": "ai_native_20261119_path_int_07",
+    "imageId": "img_path_int_07_001",
+    "assetPath": "followup_20261031/img_path_int_07_001.png",
+    "sha256": "1e699b96a3e7fbd9ce7b5bb98aa3365eddbf70ccdfd9cbc960f0c20081821d62",
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "path_int_07"
+    ],
+    "eventSourceHashes": {
+      "path_int_07": "e4d4855ddb393a321d6f5a251e3ae60014de057bdad4b336e5663f3c51cc998d"
+    },
+    "semanticReviewer": "Codex AI / plan_audit — complete current event and outcomes",
+    "visualReviewer": "Codex AI / plan_audit — unchanged full PNG and native captures",
+    "cropReviewer": "Codex AI / plan_audit — native phone and 360x740 scene/play",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-review-semantic-thirteen-20261119/path_int_07.json",
+    "resolvedIssueEvidence": {
+      "path_int_07": "두 native에서 학업 도해 노트, 서류가방 기호, 체크박스와 연필 기호가 동시에 식별된다. phone 좌측 가방 외곽/우측 연필 끝은 조금 잘리지만 의미가 유지되고 small은 두 기호가 더 넓게 보인다. Evidence: docs/refactor/art-candidates/native-review-semantic-thirteen-20261119/path_int_07.json"
+    }
+  },
+  {
+    "groupId": "ai_native_20261119_path_soc_01",
+    "imageId": "img_path_soc_01_001",
+    "assetPath": "followup_20261031/img_path_soc_01_001.png",
+    "sha256": "0adda98bcb377f9657b6663f69b9d1ab96d3bc34402c8473ce3f891273635e3b",
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "path_soc_01"
+    ],
+    "eventSourceHashes": {
+      "path_soc_01": "654cd606bf7e16769f9587a286af651dbf323d8393cbe6c4341a289a378f4b1d"
+    },
+    "semanticReviewer": "Codex AI / plan_audit — complete current event and outcomes",
+    "visualReviewer": "Codex AI / plan_audit — unchanged full PNG and native captures",
+    "cropReviewer": "Codex AI / plan_audit — native phone and 360x740 scene/play",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-review-semantic-thirteen-20261119/path_soc_01.json",
+    "resolvedIssueEvidence": {
+      "path_soc_01": "두 native에서 빈 교탁, 하단 양손 일부, 정면 친구와 양옆 친구들의 얼굴 일부가 함께 남아 청중을 바라보는 연설자의 시점이 유지된다. 중앙 친구 얼굴은 온전하고 종이가 없는 면적도 충분하다. Evidence: docs/refactor/art-candidates/native-review-semantic-thirteen-20261119/path_soc_01.json"
+    }
+  },
+  {
+    "groupId": "ai_native_20261119_path_wea_03",
+    "imageId": "img_path_wea_03_001",
+    "assetPath": "followup_20261031/img_path_wea_03_001.png",
+    "sha256": "a0de7b1fbeb84a8f81eac0154a3de2067c3d6115381dea2b9d5ba41adb644b43",
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "path_wea_03"
+    ],
+    "eventSourceHashes": {
+      "path_wea_03": "361d3f55fc1bf679d3c7c3d729fed213695acab1c2267bd23e20b71499c71bb9"
+    },
+    "semanticReviewer": "Codex AI / plan_audit — complete current event and outcomes",
+    "visualReviewer": "Codex AI / plan_audit — unchanged full PNG and native captures",
+    "cropReviewer": "Codex AI / plan_audit — native phone and 360x740 scene/play",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-review-semantic-thirteen-20261119/path_wea_03.json",
+    "resolvedIssueEvidence": {
+      "path_wea_03": "두 native에서 세 장의 분리된 종이와 건물/성장 그래프/가게 기호를 식별한다. 좌우 종이 외곽은 잘리고 phone에서 열쇠는 화면 밖이나 가게의 차양·창문·문이 남아 세 선택의 핵심 구분은 유지된다. Evidence: docs/refactor/art-candidates/native-review-semantic-thirteen-20261119/path_wea_03.json"
+    }
+  },
+  {
+    "groupId": "ai_native_20261119_path_luk_02",
+    "imageId": "img_path_luk_02_001",
+    "assetPath": "followup_20261031/img_path_luk_02_001.png",
+    "sha256": "485642ca0c64fd09e53ba8e9c9715701981096074d9ef584b812ac7665eb8c7f",
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "path_luk_02"
+    ],
+    "eventSourceHashes": {
+      "path_luk_02": "8c4ea6f92526de6bc07180b42f9c09906d6b3c48e8e692fc5205fb808cbb7eb8"
+    },
+    "semanticReviewer": "Codex AI / plan_audit — complete current event and outcomes",
+    "visualReviewer": "Codex AI / plan_audit — unchanged full PNG and native captures",
+    "cropReviewer": "Codex AI / plan_audit — native phone and 360x740 scene/play",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-review-semantic-thirteen-20261119/path_luk_02.json",
+    "resolvedIssueEvidence": {
+      "path_luk_02": "두 native에서 교감 전체 얼굴, 뽑은 종이와 양손, 추첨 상자, 플레이어 두 손 및 세계지도와 경로가 유지된다. 비행기와 지구본은 잘리지만 지도 자체로 해외 맥락이 남아 과거 해외 단서 부재 지적을 해소했다. Evidence: docs/refactor/art-candidates/native-review-semantic-thirteen-20261119/path_luk_02.json"
+    }
+  },
+  {
+    "groupId": "ai_native_20261119_path_luk_09",
+    "imageId": "img_path_luk_09_001",
+    "assetPath": "week10/scenes/img_path_luk_09_001.png",
+    "sha256": "2c49a65a54344fa134df732fe69ff3445f6d2f7e7430d27d34dc865e8fab46c5",
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "path_luk_09"
+    ],
+    "eventSourceHashes": {
+      "path_luk_09": "044f476cda2c5fd0c702285ce1c9b4af53b715443897422d055e3652183207d5"
+    },
+    "semanticReviewer": "Codex AI / plan_audit — complete current event and outcomes",
+    "visualReviewer": "Codex AI / plan_audit — unchanged full PNG and native captures",
+    "cropReviewer": "Codex AI / plan_audit — native phone and 360x740 scene/play",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-review-semantic-thirteen-20261119/path_luk_09.json",
+    "resolvedIssueEvidence": {
+      "path_luk_09": "두 native에서 배출구 안 정확히 두 캔의 몸체와 닫힌 탭이 유지된다. 손 일부는 왼쪽 가장자리에 남고 오른손/반환구는 잘리지만 핵심 두 캔 상황은 온전히 보인다. 과거 가격 글자 문제는 현 원본에 판독 가능한 가격 글자가 없어 재현되지 않았다. Evidence: docs/refactor/art-candidates/native-review-semantic-thirteen-20261119/path_luk_09.json"
+    }
+  },
+  {
+    "groupId": "ai_native_20261119_adult_005",
+    "imageId": "img_adult_ideal_type_001",
+    "assetPath": "followup_20261031/img_adult_ideal_type_001.png",
+    "sha256": "e9706290d447f87fddb3b104d80fc88871c949b5e59df4eea4dbf191a3da0579",
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "adult_005"
+    ],
+    "eventSourceHashes": {
+      "adult_005": "7f9d92711d2b62d44b0fa2a30b62d9baa1bde18fed03654722dd70657c586173"
+    },
+    "semanticReviewer": "Codex AI / plan_audit — complete current event and outcomes",
+    "visualReviewer": "Codex AI / plan_audit — unchanged full PNG and native captures",
+    "cropReviewer": "Codex AI / plan_audit — native phone and 360x740 scene/play",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-review-semantic-twentyfour-20261119/adult_005.json",
+    "resolvedIssueEvidence": {
+      "adult_005": "두 화면에서 인물 머리부터 신발까지 온전히 남고 보도와 주택가 시야도 유지된다. 과거 뒷모습만 있다는 지적은 원문의 앞에 서 있는 사람이라는 설정과 모순되지 않아 실제 전체/세로 구도로 해소했다. Evidence: docs/refactor/art-candidates/native-review-semantic-twentyfour-20261119/adult_005.json"
+    }
+  },
+  {
+    "groupId": "ai_native_20261119_adult_035",
+    "imageId": "img_adult_reunion_001",
+    "assetPath": "followup_20261031/img_adult_reunion_001.png",
+    "sha256": "6213941cea7b0e12016991bf2ac28689584f042345aac2f2d26e525570239b81",
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "adult_035"
+    ],
+    "eventSourceHashes": {
+      "adult_035": "b5813378c0702d351eed12a0ee1b89ae8a88ace20a6b385e7419e0eff58b9e07"
+    },
+    "semanticReviewer": "Codex AI / plan_audit — complete current event and outcomes",
+    "visualReviewer": "Codex AI / plan_audit — unchanged full PNG and native captures",
+    "cropReviewer": "Codex AI / plan_audit — native phone and 360x740 scene/play",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-review-semantic-twentyfour-20261119/adult_035.json",
+    "resolvedIssueEvidence": {
+      "adult_035": "두 native에서 전체 휴대전화와 손, 그룹 아이콘과 핀 공지, 여러 프로필/메시지 블록이 유지된다. 과거 재회 단서 부족 지적은 본문의 사전 공지 상태 및 비문자 화면 요구와 대조하여 해소했다. Evidence: docs/refactor/art-candidates/native-review-semantic-twentyfour-20261119/adult_035.json"
+    }
+  },
+  {
+    "groupId": "ai_native_20261119_adult_036",
+    "imageId": "img_adult_time_capsule_001",
+    "assetPath": "followup_20261031/img_adult_time_capsule_001.png",
+    "sha256": "6786c787cb062a394d1e3575b64c839b7f03887bba7432096327b2879d0721a1",
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "adult_036"
+    ],
+    "eventSourceHashes": {
+      "adult_036": "0e53d9288d5e6674e9b54817fa1be6efeb8686595fd8090e10e50fa6f5973fd0"
+    },
+    "semanticReviewer": "Codex AI / plan_audit — complete current event and outcomes",
+    "visualReviewer": "Codex AI / plan_audit — unchanged full PNG and native captures",
+    "cropReviewer": "Codex AI / plan_audit — native phone and 360x740 scene/play",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-review-semantic-twentyfour-20261119/adult_036.json",
+    "resolvedIssueEvidence": {
+      "adult_036": "두 native에서 휴대전화 전체, 양손과 상대 프로필/메시지가 온전히 남는다. 과거 약속 단서 부족 지적은 선택 전 수신 상태에 회상이나 결과 이미지를 추가할 이유가 되지 않으며 현재 본문과 UI가 구체 내용을 전달한다. Evidence: docs/refactor/art-candidates/native-review-semantic-twentyfour-20261119/adult_036.json"
+    }
+  },
+  {
+    "groupId": "ai_native_20261119_adult_040",
+    "imageId": "img_adult_mural_001",
+    "assetPath": "followup_20261031/img_adult_mural_001.png",
+    "sha256": "ec05970ccdefe45e3f0c4a20ec9fcd43834d39d04489f0c4f140eae3d15daff4",
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "adult_040"
+    ],
+    "eventSourceHashes": {
+      "adult_040": "d3068dc230f063894a2e39380c2e33ba9be6fef684c8536272b9954c35763e5d"
+    },
+    "semanticReviewer": "Codex AI / plan_audit — complete current event and outcomes",
+    "visualReviewer": "Codex AI / plan_audit — unchanged full PNG and native captures",
+    "cropReviewer": "Codex AI / plan_audit — native phone and 360x740 scene/play",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-review-semantic-twentyfour-20261119/adult_040.json",
+    "resolvedIssueEvidence": {
+      "adult_040": "두 native에서 휴대전화 전체와 롤러 문서/벽 낙서 사진이 모두 유지된다. 과거 모집과 옛 사진의 구별이 부족하다는 우려는 두 개 독립 첨부와 그림 소품을 직접 확인해 해소했다. Evidence: docs/refactor/art-candidates/native-review-semantic-twentyfour-20261119/adult_040.json"
+    }
+  },
+  {
+    "groupId": "ai_native_20261119_adult_053",
+    "imageId": "img_adult_reading_glasses_001",
+    "assetPath": "followup_20261031/img_adult_reading_glasses_001.png",
+    "sha256": "d35a164e2fe03d0dce7973137819470a30751f840d3c8d1927781d797ef57e24",
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "adult_053"
+    ],
+    "eventSourceHashes": {
+      "adult_053": "b83e576c7601a240c33aa4aab80b92a73fb794e7056cf361f2a52d5d5414f1c7"
+    },
+    "semanticReviewer": "Codex AI / plan_audit — complete current event and outcomes",
+    "visualReviewer": "Codex AI / plan_audit — unchanged full PNG and native captures",
+    "cropReviewer": "Codex AI / plan_audit — native phone and 360x740 scene/play",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-review-semantic-twentyfour-20261119/adult_053.json",
+    "resolvedIssueEvidence": {
+      "adult_053": "두 native에서 메뉴 전체와 길게 뻗은 팔, 손과 식당 테이블/금속컵 단서가 유지된다. 메뉴 안 글자는 의도적으로 흐릿한 블록이며 본문의 노안 상황과 맞는다. Evidence: docs/refactor/art-candidates/native-review-semantic-twentyfour-20261119/adult_053.json"
+    }
+  },
+  {
+    "groupId": "ai_native_20261119_adult_054",
+    "imageId": "img_adult_meeting_nap_001",
+    "assetPath": "followup_20261031/img_adult_meeting_nap_001.png",
+    "sha256": "c5a6a30eb18eae4726fc8444a0ca445d05085dd6d731d297c7092d21d054426d",
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "adult_054"
+    ],
+    "eventSourceHashes": {
+      "adult_054": "16cc2264bc2b979458a34a3dab47523f9818004e5c3a8d56a5ab96f0cb8cb899"
+    },
+    "semanticReviewer": "Codex AI / plan_audit — complete current event and outcomes",
+    "visualReviewer": "Codex AI / plan_audit — unchanged full PNG and native captures",
+    "cropReviewer": "Codex AI / plan_audit — native phone and 360x740 scene/play",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-review-semantic-twentyfour-20261119/adult_054.json",
+    "resolvedIssueEvidence": {
+      "adult_054": "두 native에서 중앙 상사의 얼굴과 손, 3시 시계, 히터, 회의 테이블이 남는다. 좌우 배경 참가자 일부는 잘리지만 핵심 대화 상대/난방/시간 맥락은 유지된다. Evidence: docs/refactor/art-candidates/native-review-semantic-twentyfour-20261119/adult_054.json"
+    }
+  },
+  {
+    "groupId": "ai_native_20261119_adult_058",
+    "imageId": "img_adult_health_recheck_001",
+    "assetPath": "followup_20261031/img_adult_health_recheck_001.png",
+    "sha256": "0c95258890a0890cd52a05829e3ea8a2adfc0eecd551f7d850401dd0c204853d",
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "adult_058"
+    ],
+    "eventSourceHashes": {
+      "adult_058": "375e083e9465e1f149b33acbc4e18cc38e166c603d7d294b6055008e06039a10"
+    },
+    "semanticReviewer": "Codex AI / plan_audit — complete current event and outcomes",
+    "visualReviewer": "Codex AI / plan_audit — unchanged full PNG and native captures",
+    "cropReviewer": "Codex AI / plan_audit — native phone and 360x740 scene/play",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-review-semantic-twentyfour-20261119/adult_058.json",
+    "resolvedIssueEvidence": {
+      "adult_058": "두 native에서 결과표와 붉은 강조 전체, 양손, 봉투와 안경이 유지된다. 과거 내시경 단서 부족은 아트에 의료 결과를 미리 그릴 사유가 아니다. Evidence: docs/refactor/art-candidates/native-review-semantic-twentyfour-20261119/adult_058.json"
+    }
+  },
+  {
+    "groupId": "ai_native_20261119_adult_060",
+    "imageId": "img_adult_fandom_001",
+    "assetPath": "followup_20261031/img_adult_fandom_001.png",
+    "sha256": "efbde05e2b5253e26913328293345085c25260983e750f567aadcd81dfb722eb",
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "adult_060"
+    ],
+    "eventSourceHashes": {
+      "adult_060": "9235dca0099669a5bbf244429cce2602544c59bc037b313d104ae52bfc4d2f45"
+    },
+    "semanticReviewer": "Codex AI / plan_audit — complete current event and outcomes",
+    "visualReviewer": "Codex AI / plan_audit — unchanged full PNG and native captures",
+    "cropReviewer": "Codex AI / plan_audit — native phone and 360x740 scene/play",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-review-semantic-twentyfour-20261119/adult_060.json",
+    "resolvedIssueEvidence": {
+      "adult_060": "두 native에서 영상 속 가수/마이크/조명 전체와 위아래 기기 테두리 및 손, 새벽 창문이 유지되어 직접 공연장에 간 장면과 혼동되지 않는다. Evidence: docs/refactor/art-candidates/native-review-semantic-twentyfour-20261119/adult_060.json"
+    }
+  },
+  {
+    "groupId": "ai_native_20261119_adult_068",
+    "imageId": "img_pov_flu_morning_001",
+    "assetPath": "design_preview/week7/img_pov_flu_morning_001.png",
+    "sha256": "faeb5151de8c89893624a09475f0608207d774ff113e603d2f30d5d516dce328",
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "adult_068"
+    ],
+    "eventSourceHashes": {
+      "adult_068": "8733ee6a0fbb2d727a572e16cb1c63b6118ed765ef4ddd6727891af7b5d8d1f9"
+    },
+    "semanticReviewer": "Codex AI / plan_audit — complete current event and outcomes",
+    "visualReviewer": "Codex AI / plan_audit — unchanged full PNG and native captures",
+    "cropReviewer": "Codex AI / plan_audit — native phone and 360x740 scene/play",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-review-semantic-twentyfour-20261119/adult_068.json",
+    "resolvedIssueEvidence": {
+      "adult_068": "두 native에서 체온계 전체와 손, 메시지 휴대전화, 물컵과 이불이 유지된다. 원본의 아침 창문 일부는 잘리지만 체온 확인과 메시지 수신이라는 현재 행동은 명확하다. Evidence: docs/refactor/art-candidates/native-review-semantic-twentyfour-20261119/adult_068.json"
+    }
+  },
+  {
+    "groupId": "ai_native_20261119_adult_069",
+    "imageId": "img_pov_promotion_review_001",
+    "assetPath": "followup_20261031/img_pov_promotion_review_001.png",
+    "sha256": "0a002fec7def270dcb256aa260a5a78adda2f4a39c948417ac8c2ffedb4ebfba",
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "adult_069"
+    ],
+    "eventSourceHashes": {
+      "adult_069": "b20489d2a606d0e365dd37c10507ecc6278fc438bfdfecf9d9bd8e7cf2775824"
+    },
+    "semanticReviewer": "Codex AI / plan_audit — complete current event and outcomes",
+    "visualReviewer": "Codex AI / plan_audit — unchanged full PNG and native captures",
+    "cropReviewer": "Codex AI / plan_audit — native phone and 360x740 scene/play",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-review-semantic-twentyfour-20261119/adult_069.json",
+    "resolvedIssueEvidence": {
+      "adult_069": "두 native에서 옷걸이와 정장 전체, 알람시계와 이불이 남는다. 심사장 자체를 보여야 한다는 과거 의견은 심사 전날 밤이라는 현재 원문과 맞지 않아 결과 장면을 추가하지 않는다. Evidence: docs/refactor/art-candidates/native-review-semantic-twentyfour-20261119/adult_069.json"
+    }
+  },
+  {
+    "groupId": "ai_native_20261119_path_wea_09",
+    "imageId": "img_path_wea_09_001",
+    "assetPath": "week10/scenes/img_path_wea_09_001.png",
+    "sha256": "ca2f641b36d0aa698c3666a3364327d98f79582d3a7ee38955c426350f53e282",
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "path_wea_09"
+    ],
+    "eventSourceHashes": {
+      "path_wea_09": "0684b6c6b003fdd2d5589efd3aea5f7f4ef96d894a166d88eaff88807ba381a2"
+    },
+    "semanticReviewer": "Codex AI / plan_audit — complete current event and outcomes",
+    "visualReviewer": "Codex AI / plan_audit — unchanged full PNG and native captures",
+    "cropReviewer": "Codex AI / plan_audit — native phone and 360x740 scene/play",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-review-semantic-twentyfour-20261119/path_wea_09.json",
+    "resolvedIssueEvidence": {
+      "path_wea_09": "두 native에서 핵심 분배 도표 전체와 변호사의 설명 손/정장, 플레이어 양손이 남는다. 원본부터 문서 중심으로 얼굴을 프레임 밖에 둔 구도이며 native가 새로 얼굴을 절단한 사례는 아니다. 낮은 원본 해상도 픽셀 표현은 남지만 도표 의미는 식별된다. Evidence: docs/refactor/art-candidates/native-review-semantic-twentyfour-20261119/path_wea_09.json"
+    }
+  },
+  {
+    "groupId": "ai_native_20261119_path_luk_06",
+    "imageId": "img_path_luk_06_001",
+    "assetPath": "followup_20261031/img_path_luk_06_001.png",
+    "sha256": "513b8941e36e5ed3fc2bc34e2e1ba05410c4a5aa8fed7a576c1a80b565da92d0",
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "path_luk_06"
+    ],
+    "eventSourceHashes": {
+      "path_luk_06": "c1b844114e9bb48e8992bafec923af1b50502eb3c90adf99170180c2fac08ea2"
+    },
+    "semanticReviewer": "Codex AI / plan_audit — complete current event and outcomes",
+    "visualReviewer": "Codex AI / plan_audit — unchanged full PNG and native captures",
+    "cropReviewer": "Codex AI / plan_audit — native phone and 360x740 scene/play",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-review-semantic-twentyfour-20261119/path_luk_06.json",
+    "resolvedIssueEvidence": {
+      "path_luk_06": "두 크기에서 지갑·두꺼운 현금·신분증의 온전한 얼굴 및 출근길이 유지된다. 외곽 손 일부는 잘려도 돈이나 신분증의 의미를 훼손하지 않는다. Evidence: docs/refactor/art-candidates/native-review-semantic-twentyfour-20261119/path_luk_06.json"
+    }
+  },
+  {
+    "groupId": "ai_native_20261119_path_hea_12",
+    "imageId": "img_path_hea_12_001",
+    "assetPath": "followup_20261031/img_path_hea_12_001.png",
+    "sha256": "8fe878e2a624e2f9888dcdb657bed6a88dbe3cfcd02a23d822aba1b4e277f0a1",
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "path_hea_12"
+    ],
+    "eventSourceHashes": {
+      "path_hea_12": "7aa49d2a68385918f3e272859542e8093c0ec5100785eb19c1330e3891c97a87"
+    },
+    "semanticReviewer": "Codex AI / plan_audit — complete current event and outcomes",
+    "visualReviewer": "Codex AI / plan_audit — unchanged full PNG and native captures",
+    "cropReviewer": "Codex AI / plan_audit — native phone and 360x740 scene/play",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-review-semantic-twentyfour-20261119/path_hea_12.json",
+    "resolvedIssueEvidence": {
+      "path_hea_12": "양쪽 네이티브에서 분리된 약 봉투 세 개와 각 복용 표시, 바쁜 일정표와 물컵이 보존된다. 봉투 가장자리의 미세한 잘림은 개수와 내용을 지우지 않는다. Evidence: docs/refactor/art-candidates/native-review-semantic-twentyfour-20261119/path_hea_12.json"
+    }
+  },
+  {
+    "groupId": "ai_native_20261119_path_int_18",
+    "imageId": "img_path_int_18_001",
+    "assetPath": "followup_20261031/img_path_int_18_001.png",
+    "sha256": "74a20fa7d8386345862bf167a5a88b08bcc223a488f37375460764d304eb7076",
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "path_int_18"
+    ],
+    "eventSourceHashes": {
+      "path_int_18": "a52f0a7d71a2e157c4ed16bf3b7f87121fbcade773f30267b092bb9caef58cdd"
+    },
+    "semanticReviewer": "Codex AI / plan_audit — complete current event and outcomes",
+    "visualReviewer": "Codex AI / plan_audit — unchanged full PNG and native captures",
+    "cropReviewer": "Codex AI / plan_audit — native phone and 360x740 scene/play",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-review-semantic-twentyfour-20261119/path_int_18.json",
+    "resolvedIssueEvidence": {
+      "path_int_18": "휴대폰 전체, 앱 스케치, 펜촉과 손가락, 열차 좌석과 창문이 양쪽에서 유지된다. 역사 검토의 펜 사용 지적은 이 휴대폰 스케치 표현에서 물리적 모순이 아니다. Evidence: docs/refactor/art-candidates/native-review-semantic-twentyfour-20261119/path_int_18.json"
+    }
+  },
+  {
+    "groupId": "ai_native_20261119_path_wea_16",
+    "imageId": "img_path_wea_16_001",
+    "assetPath": "followup_20261031/img_path_wea_16_001.png",
+    "sha256": "4980e95185e54322619d38692ec4ef0e9da41a6ac3ef43dfbcb5a9a24a94a260",
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "path_wea_16"
+    ],
+    "eventSourceHashes": {
+      "path_wea_16": "e2c075e18316ec2e784a0d0ff58d4ba03cead638c1d87077e311e454393a9048"
+    },
+    "semanticReviewer": "Codex AI / plan_audit — complete current event and outcomes",
+    "visualReviewer": "Codex AI / plan_audit — unchanged full PNG and native captures",
+    "cropReviewer": "Codex AI / plan_audit — native phone and 360x740 scene/play",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-review-semantic-twentyfour-20261119/path_wea_16.json",
+    "resolvedIssueEvidence": {
+      "path_wea_16": "양쪽에서 통장 프린터, 통장 입금 행과 가리키는 손, 수신 전화기가 보인다. 전화기 우측 모서리만 잘리고 중앙 수신 아이콘은 보존되어 전화의 의미를 잃지 않는다. Evidence: docs/refactor/art-candidates/native-review-semantic-twentyfour-20261119/path_wea_16.json"
+    }
+  },
+  {
+    "groupId": "ai_native_20261119_path_hap_12",
+    "imageId": "img_path_hap_12_001",
+    "assetPath": "followup_20261031/img_path_hap_12_001.png",
+    "sha256": "8173fd83ac1dcb267a6eecf4845a54d958add5d8133e6c5b90744f1174655dc8",
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "path_hap_12"
+    ],
+    "eventSourceHashes": {
+      "path_hap_12": "38fa0cbecb54bc3dab75cea4fd156b8131bbe72abb2e198b7cc4360c4e14dfdb"
+    },
+    "semanticReviewer": "Codex AI / plan_audit — complete current event and outcomes",
+    "visualReviewer": "Codex AI / plan_audit — unchanged full PNG and native captures",
+    "cropReviewer": "Codex AI / plan_audit — native phone and 360x740 scene/play",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-review-semantic-twentyfour-20261119/path_hap_12.json",
+    "resolvedIssueEvidence": {
+      "path_hap_12": "두 크기에서 삼각김밥 두 개, 펜촉과 첫 기록 영역이 온전하다. 365일 완성 노트나 결과 인물은 없다. Evidence: docs/refactor/art-candidates/native-review-semantic-twentyfour-20261119/path_hap_12.json"
+    }
+  },
+  {
+    "groupId": "ai_native_20261119_path_luk_16",
+    "imageId": "img_path_luk_16_001",
+    "assetPath": "followup_20261031/img_path_luk_16_001.png",
+    "sha256": "2c0575ee2f1505034ba1e6eca9c090216a571d3809116d7771712d8a6cb39e04",
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "path_luk_16"
+    ],
+    "eventSourceHashes": {
+      "path_luk_16": "d5fd43044a7e4d7b9699a637dfda7dd52ce440b6b00baa0ba1dd6a9816608150"
+    },
+    "semanticReviewer": "Codex AI / plan_audit — complete current event and outcomes",
+    "visualReviewer": "Codex AI / plan_audit — unchanged full PNG and native captures",
+    "cropReviewer": "Codex AI / plan_audit — native phone and 360x740 scene/play",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-review-semantic-twentyfour-20261119/path_luk_16.json",
+    "resolvedIssueEvidence": {
+      "path_luk_16": "두 네이티브에서 전화기의 선물/카트/수신 버튼과 크루즈 안내장 전체 선박, 추첨권이 남는다. 과거 지적과 달리 크루즈 단서가 잘리지 않는다. Evidence: docs/refactor/art-candidates/native-review-semantic-twentyfour-20261119/path_luk_16.json"
+    }
+  },
+  {
+    "groupId": "ai_portrait_native_adult_007",
+    "imageId": "img_adult_friends_drinks_001",
+    "assetPath": "followup_20261031/img_adult_friends_drinks_001.png",
+    "sha256": "5593c9ea563fdac3b92e6534f4daf2c548d14ec03e1d458f63b7be66a10d020b",
+    "approvedPresentation": {
+      "assetPath": "presentation/portraits/img_adult_friends_drinks_001_portrait_v1.png",
+      "sha256": "fa535d759628339b22a55b3c99b9ac33f902c56c81be1f1df825fcefaed15caa"
+    },
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "adult_007"
+    ],
+    "eventSourceHashes": {
+      "adult_007": "d8a49ff815eaf15c674cb4b4b622efc3acbc2d75dbfdeae078997df908189fa8"
+    },
+    "semanticReviewer": "Codex AI",
+    "visualReviewer": "Codex AI",
+    "cropReviewer": "Codex AI",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/adult_007.json",
+    "resolvedIssueEvidence": {
+      "adult_007": "네 명의 친구와 불판, 빈 의자가 두 화면에 함께 보인다."
+    }
+  },
+  {
+    "groupId": "ai_portrait_native_adult_012",
+    "imageId": "img_adult_campus_001",
+    "assetPath": "followup_20261031/img_adult_campus_001.png",
+    "sha256": "8d2a400bfae95281bffc7b8e2ee54fd39a9f88783c2c584e4f39a20da28c1dc3",
+    "approvedPresentation": {
+      "assetPath": "presentation/portraits/img_adult_campus_001_portrait_v1.png",
+      "sha256": "f1256a01f6cffd916c6409c4934826ae5d61405898d65cd32a82a89e3f8fa0b3"
+    },
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "adult_012"
+    ],
+    "eventSourceHashes": {
+      "adult_012": "c4770a1add499605fb57a77eae46c0ecccab94b7a90e627e36c9020e0e4d211a"
+    },
+    "semanticReviewer": "Codex AI",
+    "visualReviewer": "Codex AI",
+    "cropReviewer": "Codex AI",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/adult_012.json",
+    "resolvedIssueEvidence": {
+      "adult_012": "건네는 동아리 안내와 양손의 학업 서류가 모두 남는다."
+    }
+  },
+  {
+    "groupId": "ai_portrait_native_adult_027",
+    "imageId": "img_adult_gym_001",
+    "assetPath": "followup_20261031/img_adult_gym_001.png",
+    "sha256": "3762c74c49b1dd3b7307cf109e3d8ae315afa020307ac04df6b70f768c16a9e9",
+    "approvedPresentation": {
+      "assetPath": "presentation/portraits/img_adult_gym_001_portrait_v1.png",
+      "sha256": "9a19afe6d33fbab027373e5812edf5f8f001e5b48120e5704a45b9f716741ca8"
+    },
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "adult_027"
+    ],
+    "eventSourceHashes": {
+      "adult_027": "37596cc18bf93bd24582cd94502ec48119894f0dc71fd8d840442a70e3435b06"
+    },
+    "semanticReviewer": "Codex AI",
+    "visualReviewer": "Codex AI",
+    "cropReviewer": "Codex AI",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/adult_027.json",
+    "resolvedIssueEvidence": {
+      "adult_027": "상담자와 건강 결과지 및 운동 안내지가 함께 보인다."
+    }
+  },
+  {
+    "groupId": "ai_portrait_native_adult_028",
+    "imageId": "img_adult_first_car_001",
+    "assetPath": "followup_20261031/img_adult_first_car_001.png",
+    "sha256": "8193911908ce12934731cab5ebcfddd15c985aa57283c35ae9eb64cb04add8b0",
+    "approvedPresentation": {
+      "assetPath": "presentation/portraits/img_adult_first_car_001_portrait_v1.png",
+      "sha256": "31029c4d981cfb36dfa6aa594bc89454d89d851591956bd0d6b6c767b14be98d"
+    },
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "adult_028"
+    ],
+    "eventSourceHashes": {
+      "adult_028": "dde8995d1f06ec3e1ea92251ddbe4d6f6be36d0cac5ef676a0384a2c1ea69b5e"
+    },
+    "semanticReviewer": "Codex AI",
+    "visualReviewer": "Codex AI",
+    "cropReviewer": "Codex AI",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/adult_028.json",
+    "resolvedIssueEvidence": {
+      "adult_028": "차 옆의 판매원과 전시 차량이 모두 보이고 구매 전이다."
+    }
+  },
+  {
+    "groupId": "ai_portrait_native_infant_003",
+    "imageId": "img_infant_remote_001",
+    "assetPath": "followup_20261031/img_infant_remote_001.png",
+    "sha256": "31cedd651c65a1d06ed2f0be2ed9720654e17c5a475ee9cab9041e830d66df1e",
+    "approvedPresentation": {
+      "assetPath": "presentation/portraits/img_infant_remote_001_portrait_v1.png",
+      "sha256": "ca600e68055e4f6d6b712fd8d980a35d992f653232907ee406d36bfd962783b9"
+    },
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "infant_003"
+    ],
+    "eventSourceHashes": {
+      "infant_003": "aedeb6dc427424a93e795aad1feed8d05f33e8464c7d085e29bb22d27d3455ef"
+    },
+    "semanticReviewer": "Codex AI (/root/security_p0)",
+    "visualReviewer": "Codex AI",
+    "cropReviewer": "Codex AI",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/infant_003.json",
+    "resolvedIssueEvidence": {
+      "infant_003": "분해한 리모컨 부품과 다가올 수 있는 어른, 빈 손이 보인다."
+    }
+  },
+  {
+    "groupId": "ai_portrait_native_infant_007",
+    "imageId": "img_infant_toys_001",
+    "assetPath": "followup_20261031/img_infant_toys_001.png",
+    "sha256": "be47f735bafcc153ea6e02ecc20e66e7b62f4ccb101e559c87a82d0d907be86c",
+    "approvedPresentation": {
+      "assetPath": "presentation/portraits/img_infant_toys_001_portrait_v1.png",
+      "sha256": "7908541fe39354738515bb54efa2c0519377d16a634240e955290661c007304e"
+    },
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "infant_007"
+    ],
+    "eventSourceHashes": {
+      "infant_007": "a72e45159d2b7581c27b3405cba07987ad6310c5ed0a05aa15fa12d2eea7a77a"
+    },
+    "semanticReviewer": "Codex AI (/root/security_p0)",
+    "visualReviewer": "Codex AI",
+    "cropReviewer": "Codex AI",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/infant_007.json",
+    "resolvedIssueEvidence": {
+      "infant_007": "피아노·판사봉·지폐 세 물건과 아직 잡지 않은 아기 손이 함께 보인다."
+    }
+  },
+  {
+    "groupId": "ai_portrait_native_infant_008",
+    "imageId": "img_infant_vaccine_001",
+    "assetPath": "followup_20261031/img_infant_vaccine_001.png",
+    "sha256": "2719674593fbd0af2a84cb1be57302dd510fe023d373359b857d06cd8f51a896",
+    "approvedPresentation": {
+      "assetPath": "presentation/portraits/img_infant_vaccine_001_portrait_v1.png",
+      "sha256": "38b97eb275ec8c68456f992207f7c84fa4d0e173db42b611ebf489c6de833960"
+    },
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "infant_008"
+    ],
+    "eventSourceHashes": {
+      "infant_008": "d417503d87e1907b1781d58a3bf70ae552e59dbffa3e4c0a6bbf79d398cfdb50"
+    },
+    "semanticReviewer": "Codex AI (/root/security_p0)",
+    "visualReviewer": "Codex AI",
+    "cropReviewer": "Codex AI",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/infant_008.json",
+    "resolvedIssueEvidence": {
+      "infant_008": "마스크 쓴 간호사와 아기의 발, 손이 보이며 주사를 맞은 결과는 없다."
+    }
+  },
+  {
+    "groupId": "ai_portrait_native_infant_018",
+    "imageId": "img_infant_cousin_001",
+    "assetPath": "followup_20261031/img_infant_cousin_001.png",
+    "sha256": "2c4f55bd8b5b41c3fefc4e849c12345eab0c42ce1cf10dfd7498bc244066f5e4",
+    "approvedPresentation": {
+      "assetPath": "presentation/portraits/img_infant_cousin_001_portrait_v1.png",
+      "sha256": "d2788805c5c9b71a72992a57a7a3dd96e643ba2a1b49834ead877e46638c616e"
+    },
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "infant_018"
+    ],
+    "eventSourceHashes": {
+      "infant_018": "9eff4b53a090e0c67ca60ac6590a9dd25fff1824b98c5a9511e7094e0da834a7"
+    },
+    "semanticReviewer": "Codex AI (/root/security_p0)",
+    "visualReviewer": "Codex AI",
+    "cropReviewer": "Codex AI",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/infant_018.json",
+    "resolvedIssueEvidence": {
+      "infant_018": "무릎을 굽힌 사촌이 자동차 장난감을 내밀고 아이 손은 비어 있다."
+    }
+  },
+  {
+    "groupId": "ai_portrait_native_child_007",
+    "imageId": "img_child_dream_001",
+    "assetPath": "followup_20261031/img_child_dream_001.png",
+    "sha256": "fe886a469ead746ba8c8dfd600a59f54b835abcb1db775b112c8215f432d4411",
+    "approvedPresentation": {
+      "assetPath": "presentation/portraits/img_child_dream_001_portrait_v1.png",
+      "sha256": "a3f61a46e23f0b4210abf51c424bb911dcabfdd71d3569978d2d5020a62b66a9"
+    },
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "child_007"
+    ],
+    "eventSourceHashes": {
+      "child_007": "f38339109baabe246b71443f6f5cf291c13fc81815623c06343c82aecaa62caa"
+    },
+    "semanticReviewer": "Codex AI (/root/security_p0)",
+    "visualReviewer": "Codex AI",
+    "cropReviewer": "Codex AI",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/child_007.json",
+    "resolvedIssueEvidence": {
+      "child_007": "빈 발표 카드와 기다리는 반 친구들이 아이 눈높이에 남는다."
+    }
+  },
+  {
+    "groupId": "ai_portrait_native_child_012",
+    "imageId": "img_child_culture_pick_001",
+    "assetPath": "followup_20261031/img_child_culture_pick_001.png",
+    "sha256": "360e55da212b180cc7a8c0e4feb09b7b8199f1f60747228ac11847db0d72595d",
+    "approvedPresentation": {
+      "assetPath": "presentation/portraits/img_child_culture_pick_001_portrait_v1.png",
+      "sha256": "7eb9358b2b74e915ed89c4122b519855e74e62735b15bae0d448b777686209a0"
+    },
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "child_012"
+    ],
+    "eventSourceHashes": {
+      "child_012": "005bd46555ea49f5c1cb9a36b45516f164c4dd61cc3dbcbfea8fd877225fbdbf"
+    },
+    "semanticReviewer": "Codex AI (/root/security_p0)",
+    "visualReviewer": "Codex AI",
+    "cropReviewer": "Codex AI",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/child_012.json",
+    "resolvedIssueEvidence": {
+      "child_012": "장식 가면 아래 실제 선택 패널은 과학 실험, 독서, 바둑 세 개다."
+    }
+  },
+  {
+    "groupId": "ai_portrait_native_child_027",
+    "imageId": "img_child_smartphone_001",
+    "assetPath": "followup_20261031/img_child_smartphone_001.png",
+    "sha256": "f7b2577535b874e4246986d9f0e3821531f61e6a87afdb3182964a7e442edf9a",
+    "approvedPresentation": {
+      "assetPath": "presentation/portraits/img_child_smartphone_001_portrait_v1.png",
+      "sha256": "d12963768ca2f45fcab080c3a25d0db8fa033b94237d7e5b43f000f62906fc46"
+    },
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "child_027"
+    ],
+    "eventSourceHashes": {
+      "child_027": "0bd815d2395cd02a9964d5b9d42cb55369d2e70c36d15c25f73cedfd610cf56b"
+    },
+    "semanticReviewer": "Codex AI (/root/security_p0)",
+    "visualReviewer": "Codex AI",
+    "cropReviewer": "Codex AI",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/child_027.json",
+    "resolvedIssueEvidence": {
+      "child_027": "부모 두 사람, 스마트폰, 서명 전 계약서가 중앙에 남는다."
+    }
+  },
+  {
+    "groupId": "ai_portrait_native_child_039",
+    "imageId": "img_child_vacation_001",
+    "assetPath": "followup_20261031/img_child_vacation_001.png",
+    "sha256": "add360662c5d1da4842e54f7d2cd63491676b48423904748f5f8932afbfcd400",
+    "approvedPresentation": {
+      "assetPath": "presentation/portraits/img_child_vacation_001_portrait_v1.png",
+      "sha256": "b4c98ae8293ea1c1d3052dee59aa2db4d6d01a805cd5e39c676c533a808fee08"
+    },
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "child_039"
+    ],
+    "eventSourceHashes": {
+      "child_039": "a3d4287e10167c97536557799ee0ff16c629b523f9ca7bb9d40e16849af6164d"
+    },
+    "semanticReviewer": "Codex AI (/root/effects_tech)",
+    "visualReviewer": "Codex AI",
+    "cropReviewer": "Codex AI",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/child_039.json",
+    "resolvedIssueEvidence": {
+      "child_039": "두 여행 자료와 부모 얼굴이 보이고 아이 소매가 하단까지 이어진다."
+    }
+  },
+  {
+    "groupId": "ai_portrait_native_child_041",
+    "imageId": "img_child_swing_line_001",
+    "assetPath": "followup_20261031/img_child_swing_line_001.png",
+    "sha256": "e9dadea02bad787835f77aa5656e344ed7419f540b441be540d33cd27f5919fd",
+    "approvedPresentation": {
+      "assetPath": "presentation/portraits/img_child_swing_line_001_portrait_v1.png",
+      "sha256": "8b7c20b803bacefcb3e3364ec14ecc0b1ae1ff115be062f52f50c23860f23ae6"
+    },
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "child_041"
+    ],
+    "eventSourceHashes": {
+      "child_041": "51556ffdb0c1f90ac87eb64f34026a58d84fc8e27b76aab0f79e32b89b4fbfd3"
+    },
+    "semanticReviewer": "Codex AI (/root/security_p0)",
+    "visualReviewer": "Codex AI",
+    "cropReviewer": "Codex AI",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/child_041.json",
+    "resolvedIssueEvidence": {
+      "child_041": "빈 그네와 주변에 기다리는 아이들이 보이고 누구도 아직 타지 않았다."
+    }
+  },
+  {
+    "groupId": "ai_portrait_native_teen_039",
+    "imageId": "img_teen_graduation_001",
+    "assetPath": "followup_20261031/img_teen_graduation_001.png",
+    "sha256": "15ff486af504a1e82fa8beffc225960d3f4097e6f92c32e9586037405d255820",
+    "approvedPresentation": {
+      "assetPath": "presentation/portraits/img_teen_graduation_001_portrait_v1.png",
+      "sha256": "b374a54d7960a1845237bfc30281203a335e46ec8e399169f1886f6362ca4709"
+    },
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "teen_039"
+    ],
+    "eventSourceHashes": {
+      "teen_039": "e804c1af23cd4a8669b8b65a11735b85380167fb5491248fcb9a469357b9a8c6"
+    },
+    "semanticReviewer": "Codex AI (/root/security_p0)",
+    "visualReviewer": "Codex AI",
+    "cropReviewer": "Codex AI",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/teen_039.json",
+    "resolvedIssueEvidence": {
+      "teen_039": "졸업식 친구들과 꽃다발 및 연락 화면이 보인다."
+    }
+  },
+  {
+    "groupId": "ai_portrait_native_adult_044",
+    "imageId": "img_adult_driving_test_001",
+    "assetPath": "followup_20261031/img_adult_driving_test_001.png",
+    "sha256": "9cfaca7cc5357f82a6589d74ebab2274537a3395296f85e183715463bc068dd0",
+    "approvedPresentation": {
+      "assetPath": "presentation/portraits/img_adult_driving_test_001_portrait_v1.png",
+      "sha256": "9b428944e1ff61cc1794fba0b73d989a7fa91d51d7e0130a9f6194606dee165a"
+    },
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "adult_044"
+    ],
+    "eventSourceHashes": {
+      "adult_044": "868f6f1acb4ef6948a967ced3978ba01e7c3debe75a91365fdb98f898be355f0"
+    },
+    "semanticReviewer": "Codex AI (/root/effects_tech)",
+    "visualReviewer": "Codex AI",
+    "cropReviewer": "Codex AI",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/adult_044.json",
+    "resolvedIssueEvidence": {
+      "adult_044": "운전석의 무릎과 핸들, 옆 좌석 검사자의 손·서류, 도로가 함께 보인다."
+    }
+  },
+  {
+    "groupId": "ai_portrait_native_adult_051",
+    "imageId": "img_adult_father_70th_001",
+    "assetPath": "followup_20261031/img_adult_father_70th_001.png",
+    "sha256": "69ef22116c7b7a8744105a44aed982e863baa0b705cba31cfe084f3997e51860",
+    "approvedPresentation": {
+      "assetPath": "presentation/portraits/img_adult_father_70th_001_portrait_v1.png",
+      "sha256": "48d0e105dfe838ee3e8a3f3e1cbaec095cadbc160d2c36425c38adb6e0686875"
+    },
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "adult_051"
+    ],
+    "eventSourceHashes": {
+      "adult_051": "0a03258a6f868a88d2fa98705e2fc607fdcb3f15e3c73d5c24108d3ce41b1f61"
+    },
+    "semanticReviewer": "Codex AI (/root/security_p0)",
+    "visualReviewer": "Codex AI",
+    "cropReviewer": "Codex AI",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/adult_051.json",
+    "resolvedIssueEvidence": {
+      "adult_051": "휴대폰 가족 채팅과 일정 기호가 중앙에 있다."
+    }
+  },
+  {
+    "groupId": "ai_portrait_native_adult_052",
+    "imageId": "img_adult_birthday_001",
+    "assetPath": "followup_20261031/img_adult_birthday_001.png",
+    "sha256": "5661800b2dbf92526e2233ba8680877145832710fe43c364ab315c98687b1762",
+    "approvedPresentation": {
+      "assetPath": "presentation/portraits/img_adult_birthday_001_portrait_v1.png",
+      "sha256": "7e4577e216da66f48297ff68827d39f02985b28280435c6956ab67e65d18e682"
+    },
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "adult_052"
+    ],
+    "eventSourceHashes": {
+      "adult_052": "6cbdddd04532d3ae9ef433c15dabcee694543575b95c7f2ffbcfd3e4ce696aa2"
+    },
+    "semanticReviewer": "Codex AI (/root/security_p0)",
+    "visualReviewer": "Codex AI",
+    "cropReviewer": "Codex AI",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/adult_052.json",
+    "resolvedIssueEvidence": {
+      "adult_052": "가족과 촛불 케이크, 아직 자르지 않은 생일상이 보인다."
+    }
+  },
+  {
+    "groupId": "ai_portrait_native_special_002",
+    "imageId": "img_special_dog_carry_001",
+    "assetPath": "followup_20261031/img_special_dog_carry_001.png",
+    "sha256": "7caf99f29f164d229e575d540ebda05fd38c2b8e420417443eaa9e2b46f67852",
+    "approvedPresentation": {
+      "assetPath": "presentation/portraits/img_special_dog_carry_001_portrait_v1.png",
+      "sha256": "6ea45624423c809379b5a92b66bb45800d37a81fe737fdd85a7ec47430c7774a"
+    },
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "special_002"
+    ],
+    "eventSourceHashes": {
+      "special_002": "686e6e24c9bfed5acdb97eda4e8424057e3977bb1d89e2d9771c2eec28309c46"
+    },
+    "semanticReviewer": "Codex AI (/root/security_p0)",
+    "visualReviewer": "Codex AI",
+    "cropReviewer": "Codex AI",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/special_002.json",
+    "resolvedIssueEvidence": {
+      "special_002": "개가 아이의 담요를 물고 있고 강아지 침대가 뒤에 보인다."
+    }
+  },
+  {
+    "groupId": "ai_portrait_native_special_003",
+    "imageId": "img_special_hornet_001",
+    "assetPath": "followup_20261031/img_special_hornet_001.png",
+    "sha256": "8b7caf6fe98a443b4375ac009a7aba0545be9c464f7563243cd4046c6223d86a",
+    "approvedPresentation": {
+      "assetPath": "presentation/portraits/img_special_hornet_001_portrait_v1.png",
+      "sha256": "b2d7dbe39c0dca5dcbc66ad544faeff164c860e41020580eb063949acd99bc7a"
+    },
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "special_003"
+    ],
+    "eventSourceHashes": {
+      "special_003": "74a14a8a24c533978246e2fcb7d4f9eb910ea75969638d93f138434f07864ed5"
+    },
+    "semanticReviewer": "Codex AI (/root/security_p0)",
+    "visualReviewer": "Codex AI",
+    "cropReviewer": "Codex AI",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/special_003.json",
+    "resolvedIssueEvidence": {
+      "special_003": "도시락과 내려오는 낙엽, 친구들이 같은 장면에 남는다."
+    }
+  },
+  {
+    "groupId": "ai_portrait_native_special_007",
+    "imageId": "img_special_water_bottle_001",
+    "assetPath": "followup_20261031/img_special_water_bottle_001.png",
+    "sha256": "9e8122c7e4a4ad13701a2594652223223adee65f2251df6fa4e4a5033a4a45c9",
+    "approvedPresentation": {
+      "assetPath": "presentation/portraits/img_special_water_bottle_001_portrait_v1.png",
+      "sha256": "2bb85889f04e52bf6394d0e0607f31c9ca04f9856d6c3961110edc64c3749e5d"
+    },
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "special_007"
+    ],
+    "eventSourceHashes": {
+      "special_007": "61ffa6ea7859268eaa5023312a60a872d5322d3d3964fdb9fe20364ed0391e7a"
+    },
+    "semanticReviewer": "Codex AI (/root/security_p0)",
+    "visualReviewer": "Codex AI",
+    "cropReviewer": "Codex AI",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/special_007.json",
+    "resolvedIssueEvidence": {
+      "special_007": "면접관 세 명과 닫힌 물병, 양손을 모두 식별할 수 있다."
+    }
+  },
+  {
+    "groupId": "ai_portrait_native_special_009",
+    "imageId": "img_special_health_research_001",
+    "assetPath": "followup_20261031/img_special_health_research_001.png",
+    "sha256": "da9082e698969a933099f112d79c45c63e0e69ecad05f35ab273a3a30a5ff3e6",
+    "approvedPresentation": {
+      "assetPath": "presentation/portraits/img_special_health_research_001_portrait_v1.png",
+      "sha256": "db7ecbf3039f1b4e15b8049af7d5729c7d9c95ee420615e65a5afea9153ac31e"
+    },
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "special_009"
+    ],
+    "eventSourceHashes": {
+      "special_009": "91c97d9dc2ffc8fd75a695a3fe1d178890bb08e25fe1be39112f1e8694ed5812"
+    },
+    "semanticReviewer": "Codex AI (/root/effects_tech)",
+    "visualReviewer": "Codex AI",
+    "cropReviewer": "Codex AI",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/special_009.json",
+    "resolvedIssueEvidence": {
+      "special_009": "진료진과 검진표가 함께 보이고 왼쪽 인물도 구분된다."
+    }
+  },
+  {
+    "groupId": "ai_portrait_native_special_012",
+    "imageId": "img_special_robot_vacuum_001",
+    "assetPath": "followup_20261031/img_special_robot_vacuum_001.png",
+    "sha256": "f07ced21b4ce9bf23545e1073c5d59b9b6f735b9c05b9c1ffccc031e4f5cb5c6",
+    "approvedPresentation": {
+      "assetPath": "presentation/portraits/img_special_robot_vacuum_001_portrait_v1.png",
+      "sha256": "6f3c6054f94f37ada83ba06b0c9bfa2e9ddfe007afb2e6fb54c5b9b8845bcc55"
+    },
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "special_012"
+    ],
+    "eventSourceHashes": {
+      "special_012": "2ff487983a15a29ee971728d32e49986cbef67ac48045fe682085c24042f116d"
+    },
+    "semanticReviewer": "Codex AI (/root/security_p0)",
+    "visualReviewer": "Codex AI",
+    "cropReviewer": "Codex AI",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/special_012.json",
+    "resolvedIssueEvidence": {
+      "special_012": "로봇 청소기에 옷자락이 걸린 장면과 손이 남는다."
+    }
+  },
+  {
+    "groupId": "ai_portrait_native_special_018",
+    "imageId": "img_special_revolving_door_001",
+    "assetPath": "followup_20261031/img_special_revolving_door_001.png",
+    "sha256": "2090848e90dd24d366c093c3129da4b9a47c68ad12eb6396e846cb6e9d92bfc5",
+    "approvedPresentation": {
+      "assetPath": "presentation/portraits/img_special_revolving_door_001_portrait_v1.png",
+      "sha256": "0b1cbbe9e46f7b1c98c9bea39132d1fdd4f48bb6c5ae9f0ec74af744f7d05d7e"
+    },
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "special_018"
+    ],
+    "eventSourceHashes": {
+      "special_018": "19fa3b51329e3af2a611771cddc22fe70dbbea018f1ae5d4b65698aaff230b3f"
+    },
+    "semanticReviewer": "Codex AI (/root/security_p0)",
+    "visualReviewer": "Codex AI",
+    "cropReviewer": "Codex AI",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/special_018.json",
+    "resolvedIssueEvidence": {
+      "special_018": "회전문과 사원증, 벽시계가 화면 중앙에 있다."
+    }
+  },
+  {
+    "groupId": "ai_portrait_native_path_int_01",
+    "imageId": "img_path_int_01_001",
+    "assetPath": "followup_20261031/img_path_int_01_001.png",
+    "sha256": "d85ddfccbe1b325985e25f7e715d3d14148e3eb3061f74a60b2d72ae5cb85a5b",
+    "approvedPresentation": {
+      "assetPath": "presentation/portraits/img_path_int_01_001_portrait_v1.png",
+      "sha256": "685132847716a14c2c7b77dc3933e1b512cf78b179c8a95be08a63bdeabdcab9"
+    },
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "path_int_01"
+    ],
+    "eventSourceHashes": {
+      "path_int_01": "e4d87e6fdcb25966f923bc360b7eea5abf7f89f419fcf27b0121bd16b1761fb2"
+    },
+    "semanticReviewer": "Codex AI (/root/effects_tech)",
+    "visualReviewer": "Codex AI",
+    "cropReviewer": "Codex AI",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/path_int_01.json",
+    "resolvedIssueEvidence": {
+      "path_int_01": "선생님과 경시대회 안내, 양손 자료가 중앙에 남는다."
+    }
+  },
+  {
+    "groupId": "ai_portrait_native_path_int_02",
+    "imageId": "img_path_int_02_001",
+    "assetPath": "followup_20261031/img_path_int_02_001.png",
+    "sha256": "64468871e66a74246da9eea83c12d4d3c4af192de8aa3c605850cfb768643f19",
+    "approvedPresentation": {
+      "assetPath": "presentation/portraits/img_path_int_02_001_portrait_v1.png",
+      "sha256": "b63d3c7d15e2ac1feff6de14df06dcf46a8ae22178b9f40f52e2307e5d751d58"
+    },
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "path_int_02"
+    ],
+    "eventSourceHashes": {
+      "path_int_02": "80c11e9882954abdb1aa879e5fff456f46df42ee66ac5de8f5028a9fdcd35ce6"
+    },
+    "semanticReviewer": "Codex AI (/root/security_p0)",
+    "visualReviewer": "Codex AI",
+    "cropReviewer": "Codex AI",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/path_int_02.json",
+    "resolvedIssueEvidence": {
+      "path_int_02": "예전 화면에서 사라졌던 선생님 얼굴이 공고와 문제집 옆에 남는다."
+    }
+  },
+  {
+    "groupId": "ai_portrait_native_path_int_08",
+    "imageId": "img_path_int_08_001",
+    "assetPath": "followup_20261031/img_path_int_08_001.png",
+    "sha256": "dbdc6bdb19dab36b0e0635bcb13986b28e83fbd3f5110cef5932e7d254d12ab1",
+    "approvedPresentation": {
+      "assetPath": "presentation/portraits/img_path_int_08_001_portrait_v1.png",
+      "sha256": "09732b407055928aac51b918c78a17940c462d2bb3c6ecc04c13e3e42e4cbe01"
+    },
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "path_int_08"
+    ],
+    "eventSourceHashes": {
+      "path_int_08": "0ecc9cb62d5d3c34effe161fe5fbe6c82fd8fab7d284b891571037cb1e86c78a"
+    },
+    "semanticReviewer": "Codex AI (/root/effects_tech)",
+    "visualReviewer": "Codex AI",
+    "cropReviewer": "Codex AI",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/path_int_08.json",
+    "resolvedIssueEvidence": {
+      "path_int_08": "마감 노트북과 가족 연락 화면이 책상 위에 함께 있다."
+    }
+  },
+  {
+    "groupId": "ai_portrait_native_path_fit_01",
+    "imageId": "img_path_fit_01_001",
+    "assetPath": "followup_20261031/img_path_fit_01_001.png",
+    "sha256": "d2bb4ff368c5619756b13363a8b9532525b2007fbef07cc8d7d83e24bb8136d8",
+    "approvedPresentation": {
+      "assetPath": "presentation/portraits/img_path_fit_01_001_portrait_v1.png",
+      "sha256": "f0e35758c91c29885a25e1bebca9027b0e1b0d6c4927eb884fbf265fb9f2ed82"
+    },
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "path_fit_01"
+    ],
+    "eventSourceHashes": {
+      "path_fit_01": "6629f09816186124c0c1d4d063bfd0698059ada559aa1717c7352ed6ae2a1d56"
+    },
+    "semanticReviewer": "Codex AI (/root/effects_tech)",
+    "visualReviewer": "Codex AI",
+    "cropReviewer": "Codex AI",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/path_fit_01.json",
+    "resolvedIssueEvidence": {
+      "path_fit_01": "명함을 내미는 코치, 운동장, 관찰하는 아이 시점이 남는다."
+    }
+  },
+  {
+    "groupId": "ai_portrait_native_path_fit_02",
+    "imageId": "img_path_fit_02_001",
+    "assetPath": "followup_20261031/img_path_fit_02_001.png",
+    "sha256": "e68304b1bb65a782b1bb1c87221de91ea438a8adeee593ce273e4ec45f653af3",
+    "approvedPresentation": {
+      "assetPath": "presentation/portraits/img_path_fit_02_001_portrait_v1.png",
+      "sha256": "9d8c73004c4fecceb6d2a9d7d73ae8d615ae76ce4212b281ac59923e03053c47"
+    },
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "path_fit_02"
+    ],
+    "eventSourceHashes": {
+      "path_fit_02": "8e40455931f50d2bf5b965269a551b9bfa59f6049a95f872e609f1e0ddcf654a"
+    },
+    "semanticReviewer": "Codex AI (/root/security_p0)",
+    "visualReviewer": "Codex AI",
+    "cropReviewer": "Codex AI",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/path_fit_02.json",
+    "resolvedIssueEvidence": {
+      "path_fit_02": "출발선에서 풀린 운동화 끈을 확인할 수 있다."
+    }
+  },
+  {
+    "groupId": "ai_portrait_native_path_fit_03",
+    "imageId": "img_path_fit_03_001",
+    "assetPath": "followup_20261031/img_path_fit_03_001.png",
+    "sha256": "f5a03cf613ce4b10597e78e94c2e42d6b448463777bedab6af0478ddde79a7a6",
+    "approvedPresentation": {
+      "assetPath": "presentation/portraits/img_path_fit_03_001_portrait_v1.png",
+      "sha256": "23075f0d5b40e0b047562796f74ca10ea34a26c137697aa296c0a1d671597e74"
+    },
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "path_fit_03"
+    ],
+    "eventSourceHashes": {
+      "path_fit_03": "8f46de70b134c8ec814fa696657d2e5497ceca1f07c2ca677edd0f438f05f1df"
+    },
+    "semanticReviewer": "Codex AI (/root/security_p0)",
+    "visualReviewer": "Codex AI",
+    "cropReviewer": "Codex AI",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/path_fit_03.json",
+    "resolvedIssueEvidence": {
+      "path_fit_03": "운동 특기 제안을 건네는 사람과 옆의 서류, 빈 손이 보인다."
+    }
+  },
+  {
+    "groupId": "ai_portrait_native_path_soc_02",
+    "imageId": "img_path_soc_02_001",
+    "assetPath": "followup_20261031/img_path_soc_02_001.png",
+    "sha256": "c9a80a64d713b73b428307c84a23d9266a0bddfaadc337c95483968aa1d6699a",
+    "approvedPresentation": {
+      "assetPath": "presentation/portraits/img_path_soc_02_001_portrait_v1.png",
+      "sha256": "c8dc7b5e8dfa97230d62991fa9b2228842703d4fb2a0843a8d735f49754a6dc8"
+    },
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "path_soc_02"
+    ],
+    "eventSourceHashes": {
+      "path_soc_02": "2ed2c506f8b73581fa5b519dc5998147fd5c9abe9680402e02e1d6c724fea4a7"
+    },
+    "semanticReviewer": "Codex AI (/root/effects_tech)",
+    "visualReviewer": "Codex AI",
+    "cropReviewer": "Codex AI",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/path_soc_02.json",
+    "resolvedIssueEvidence": {
+      "path_soc_02": "축제 회의의 두 사람과 계획 자료가 한 화면에 남는다."
+    }
+  },
+  {
+    "groupId": "ai_portrait_native_path_hap_03",
+    "imageId": "img_path_hap_03_001",
+    "assetPath": "followup_20261031/img_path_hap_03_001.png",
+    "sha256": "a7af4eb457ed03b3d5f7988e64bed8157cbc76bbb77f838b483ff93f079aca50",
+    "approvedPresentation": {
+      "assetPath": "presentation/portraits/img_path_hap_03_001_portrait_v1.png",
+      "sha256": "0d15c668ad1181fff8884c4e9512b0e3f10f960b9eb505fdf95fdfd6302cfd87"
+    },
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "path_hap_03"
+    ],
+    "eventSourceHashes": {
+      "path_hap_03": "6041ad8e5de0cc1011d054e719836c72e8d9e0a49fd3c61bfbfd9e1b46086d95"
+    },
+    "semanticReviewer": "Codex AI (/root/effects_tech)",
+    "visualReviewer": "Codex AI",
+    "cropReviewer": "Codex AI",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/path_hap_03.json",
+    "resolvedIssueEvidence": {
+      "path_hap_03": "두 제안서와 휴대폰의 상대방이 함께 보인다."
+    }
+  },
+  {
+    "groupId": "ai_portrait_native_path_luk_01",
+    "imageId": "img_path_luk_01_001",
+    "assetPath": "followup_20261031/img_path_luk_01_001.png",
+    "sha256": "dd4dd11c460352bdfa470e590d9ae1ab20b2f5f1156a8b92162665b5f2f8e277",
+    "approvedPresentation": {
+      "assetPath": "presentation/portraits/img_path_luk_01_001_portrait_v1.png",
+      "sha256": "bea5b8a83faf1b0e4dc14837f6b7af5a343499e8175701fb320050e636dbdb5a"
+    },
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "path_luk_01"
+    ],
+    "eventSourceHashes": {
+      "path_luk_01": "b3e7f1c250eab06b976d118f9749dcf970ec16f0c9f98b216dbd042568bdd19d"
+    },
+    "semanticReviewer": "Codex AI (/root/security_p0)",
+    "visualReviewer": "Codex AI",
+    "cropReviewer": "Codex AI",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/path_luk_01.json",
+    "resolvedIssueEvidence": {
+      "path_luk_01": "세 별 표식 카드와 사장님 얼굴·손, 추첨기, 뒤의 아이들이 남는다."
+    }
+  },
+  {
+    "groupId": "ai_portrait_native_path_hea_02",
+    "imageId": "img_path_hea_02_001",
+    "assetPath": "followup_20261031/img_path_hea_02_001.png",
+    "sha256": "be1183a80910abbbb5f83343c54a6c6e8ee1c696f16cd2b4055865312ac72c95",
+    "approvedPresentation": {
+      "assetPath": "presentation/portraits/img_path_hea_02_001_portrait_v1.png",
+      "sha256": "d40a1a7f212fa14a23f3b4f8e468147703845d9260dd02183728457db7d54e4e"
+    },
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "path_hea_02"
+    ],
+    "eventSourceHashes": {
+      "path_hea_02": "5b667b6961ef8ef2777f6b5b44ac4ad08c4bdd4204ea37b7dfbf260b9aacdcb3"
+    },
+    "semanticReviewer": "Codex AI (/root/security_p0)",
+    "visualReviewer": "Codex AI",
+    "cropReviewer": "Codex AI",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/path_hea_02.json",
+    "resolvedIssueEvidence": {
+      "path_hea_02": "새벽 시계와 휴대폰, 펼친 공부 자료가 놓여 있다."
+    }
+  },
+  {
+    "groupId": "ai_portrait_native_path_hea_05",
+    "imageId": "img_path_hea_05_001",
+    "assetPath": "followup_20261031/img_path_hea_05_001.png",
+    "sha256": "be3e4d1d9ce4b43776dba7b3c93862cb7d069a02fc42fb4c02947fdc422c7455",
+    "approvedPresentation": {
+      "assetPath": "presentation/portraits/img_path_hea_05_001_portrait_v1.png",
+      "sha256": "300e0155d72702be5d5f73d12e00c6d5450e054ff2b2b8ab88285c8abc3984ef"
+    },
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "path_hea_05"
+    ],
+    "eventSourceHashes": {
+      "path_hea_05": "a4df3d1978f6501cd2ace5981197e25fdeec87aca1d60d2511ea4ded19df5127"
+    },
+    "semanticReviewer": "Codex AI (/root/effects_tech)",
+    "visualReviewer": "Codex AI",
+    "cropReviewer": "Codex AI",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/path_hea_05.json",
+    "resolvedIssueEvidence": {
+      "path_hea_05": "의사와 진단서 및 검사표가 함께 보인다."
+    }
+  },
+  {
+    "groupId": "ai_portrait_native_path_hea_11",
+    "imageId": "img_path_hea_11_001",
+    "assetPath": "followup_20261031/img_path_hea_11_001.png",
+    "sha256": "769b1132789267cc1aa9026a16614fba535e03b56a94c8ea79f215292a17de08",
+    "approvedPresentation": {
+      "assetPath": "presentation/portraits/img_path_hea_11_001_portrait_v1.png",
+      "sha256": "d7c3d2e2294b0860a75e86b745e6d58a7b31e2dc3ab1fad7c77278669dafb93d"
+    },
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "path_hea_11"
+    ],
+    "eventSourceHashes": {
+      "path_hea_11": "af78000dea0b908c956b3c9e2180714820edeaabef31a22c30837d9ea1dccac0"
+    },
+    "semanticReviewer": "Codex AI (/root/effects_tech)",
+    "visualReviewer": "Codex AI",
+    "cropReviewer": "Codex AI",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/path_hea_11.json",
+    "resolvedIssueEvidence": {
+      "path_hea_11": "아버지와 저녁 식사, 식탁의 진단 자료 모두 보인다."
+    }
+  },
+  {
+    "groupId": "ai_portrait_native_path_fit_12",
+    "imageId": "img_path_fit_12_001",
+    "assetPath": "followup_20261031/img_path_fit_12_001.png",
+    "sha256": "c2bd740ba752c5f01c498943493c5b5c0f5aa911d2452c2de987e6197cf30ad1",
+    "approvedPresentation": {
+      "assetPath": "presentation/portraits/img_path_fit_12_001_portrait_v1.png",
+      "sha256": "770b80ad68172f7ec47374aa2d89e09aaa8bd627b4888bc4653ccda44f0ce5d9"
+    },
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "path_fit_12"
+    ],
+    "eventSourceHashes": {
+      "path_fit_12": "81547b064316cd404e67122d20e934d59c9ea40fc49e84038db7cb2be012f4b0"
+    },
+    "semanticReviewer": "Codex AI (/root/effects_tech)",
+    "visualReviewer": "Codex AI",
+    "cropReviewer": "Codex AI",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/path_fit_12.json",
+    "resolvedIssueEvidence": {
+      "path_fit_12": "탈락 통보를 확인하는 휴대폰과 운동화·무릎이 보인다."
+    }
+  },
+  {
+    "groupId": "ai_portrait_native_path_fit_14",
+    "imageId": "img_path_fit_14_001",
+    "assetPath": "followup_20261031/img_path_fit_14_001.png",
+    "sha256": "47d03d73c6dcc3c004b32d9cd9abd725e7fe80bfb2f51a9e83a11db1a74ef095",
+    "approvedPresentation": {
+      "assetPath": "presentation/portraits/img_path_fit_14_001_portrait_v1.png",
+      "sha256": "4cecc2e5cebb17676cc216dec180623b9eeafbd46332353e0ce7377563e53a40"
+    },
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "path_fit_14"
+    ],
+    "eventSourceHashes": {
+      "path_fit_14": "39e07c0c77c45fae41b37fe19d3cf0798f10ece46118a2bdfc8baec55c68e4ea"
+    },
+    "semanticReviewer": "Codex AI (/root/effects_tech)",
+    "visualReviewer": "Codex AI",
+    "cropReviewer": "Codex AI",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/path_fit_14.json",
+    "resolvedIssueEvidence": {
+      "path_fit_14": "탈의실과 두 제안 자료, 무릎을 짚은 손이 남는다."
+    }
+  },
+  {
+    "groupId": "ai_portrait_native_path_soc_15",
+    "imageId": "img_path_soc_15_001",
+    "assetPath": "followup_20261031/img_path_soc_15_001.png",
+    "sha256": "2dd589f3125779f7b005fc6f256386f41c9dcc9dde84d4cfee63ab95c0fa262b",
+    "approvedPresentation": {
+      "assetPath": "presentation/portraits/img_path_soc_15_001_portrait_v1.png",
+      "sha256": "68563fe7e6bd4b9ef464918e5388b5abdd31335db08645f6caca508d4c0ae7cb"
+    },
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "path_soc_15"
+    ],
+    "eventSourceHashes": {
+      "path_soc_15": "aea67b9f3aa0bf2ab213f05a1ed37dd9d8b4bb49ec04d8202b97fd2e929292e9"
+    },
+    "semanticReviewer": "Codex AI (/root/effects_tech)",
+    "visualReviewer": "Codex AI",
+    "cropReviewer": "Codex AI",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/path_soc_15.json",
+    "resolvedIssueEvidence": {
+      "path_soc_15": "육아 동료와 아이들, 단체 채팅 화면이 함께 보인다."
+    }
+  },
+  {
+    "groupId": "ai_portrait_native_path_wea_13",
+    "imageId": "img_path_wea_13_001",
+    "assetPath": "followup_20261031/img_path_wea_13_001.png",
+    "sha256": "019fc04ee1d055c626f5cc18ecc6b4b43b8dbcf4495046aee1bca7cbba110be4",
+    "approvedPresentation": {
+      "assetPath": "presentation/portraits/img_path_wea_13_001_portrait_v1.png",
+      "sha256": "28878ddd18f871cf461218f893cf151a3c9b47b8554e1b8ae07b10246b87a510"
+    },
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "path_wea_13"
+    ],
+    "eventSourceHashes": {
+      "path_wea_13": "c426d5cdc0ebc9afc8395510077a61a7d8e417f02d0d158a0283ae7e71a9c1eb"
+    },
+    "semanticReviewer": "Codex AI (/root/effects_tech)",
+    "visualReviewer": "Codex AI",
+    "cropReviewer": "Codex AI",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/path_wea_13.json",
+    "resolvedIssueEvidence": {
+      "path_wea_13": "집 관련 서류와 휴대폰 및 상의하는 가족이 보인다."
+    }
+  },
+  {
+    "groupId": "ai_portrait_native_path_hap_13",
+    "imageId": "img_path_hap_13_001",
+    "assetPath": "followup_20261031/img_path_hap_13_001.png",
+    "sha256": "e7362e6bd02a58be22ad8f818e9d0bc5291d4c8791d457dbafb656c02a50933d",
+    "approvedPresentation": {
+      "assetPath": "presentation/portraits/img_path_hap_13_001_portrait_v1.png",
+      "sha256": "112e176a374df655004a3149e5e48fcae414e25e322b89b67ceaf359234155eb"
+    },
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "path_hap_13"
+    ],
+    "eventSourceHashes": {
+      "path_hap_13": "5c081596928336d4ada61d705f393f462f400f25565700923083cc63cacf9380"
+    },
+    "semanticReviewer": "Codex AI (/root/effects_tech)",
+    "visualReviewer": "Codex AI",
+    "cropReviewer": "Codex AI",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/path_hap_13.json",
+    "resolvedIssueEvidence": {
+      "path_hap_13": "달력과 배우자, 부모의 사진이 담긴 화면이 중앙에 남는다."
+    }
+  },
+  {
+    "groupId": "ai_portrait_native_path_luk_11",
+    "imageId": "img_path_luk_11_001",
+    "assetPath": "followup_20261031/img_path_luk_11_001.png",
+    "sha256": "bf603ab3795b9b58c5f8d09b7e50d6ec9e55f425661d41ea9d62cfbc207928ed",
+    "approvedPresentation": {
+      "assetPath": "presentation/portraits/img_path_luk_11_001_portrait_v1.png",
+      "sha256": "189dbb086ffced66efe77847300b3b0c6ee45a189b47c0642190bcda037e4975"
+    },
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "path_luk_11"
+    ],
+    "eventSourceHashes": {
+      "path_luk_11": "28ec85ba19c098226dbdd5a9685fbc50d7b638c92f8360256eabaddaf11dfcba"
+    },
+    "semanticReviewer": "Codex AI (/root/security_p0)",
+    "visualReviewer": "Codex AI",
+    "cropReviewer": "Codex AI",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/path_luk_11.json",
+    "resolvedIssueEvidence": {
+      "path_luk_11": "젖은 바지와 세탁기 앞에서 발견한 표가 보인다."
+    }
+  },
+  {
+    "groupId": "ai_portrait_native_path_luk_12",
+    "imageId": "img_path_luk_12_001",
+    "assetPath": "followup_20261031/img_path_luk_12_001.png",
+    "sha256": "06cb338801d00a27ac8232ecf00c88c8779008633538f8707ae776787ec25737",
+    "approvedPresentation": {
+      "assetPath": "presentation/portraits/img_path_luk_12_001_portrait_v1.png",
+      "sha256": "079b54a126da7d07ca840772fc86815bb008c75bead17f3504999cf5571607ff"
+    },
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "path_luk_12"
+    ],
+    "eventSourceHashes": {
+      "path_luk_12": "ef15d7517a9bf1c8cc2b3c5c5ed8f194deabf622b0af56155fd45bd6508458ed"
+    },
+    "semanticReviewer": "Codex AI (/root/effects_tech)",
+    "visualReviewer": "Codex AI",
+    "cropReviewer": "Codex AI",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/path_luk_12.json",
+    "resolvedIssueEvidence": {
+      "path_luk_12": "수상한 재연락을 받은 휴대폰과 기존 서류가 보인다."
+    }
+  },
+  {
+    "groupId": "ai_portrait_native_cross_01",
+    "imageId": "img_cross_01_001",
+    "assetPath": "followup_20261031/img_cross_01_001.png",
+    "sha256": "1ef454ccb0eba362aae7659c1b054629fe6c1ad21136af5d7c1927e369697d1f",
+    "approvedPresentation": {
+      "assetPath": "presentation/portraits/img_cross_01_001_portrait_v1.png",
+      "sha256": "0ea2e601ff1795cab99c698f53b1774585b1975a673b5199ac7ecb8e55e55e92"
+    },
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "cross_01"
+    ],
+    "eventSourceHashes": {
+      "cross_01": "be7d2d70255d28ed9fa2cce6c3a70e67affe3a6ff4946aa343d527caa829ec80"
+    },
+    "semanticReviewer": "Codex AI (/root/effects_tech)",
+    "visualReviewer": "Codex AI",
+    "cropReviewer": "Codex AI",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/cross_01.json",
+    "resolvedIssueEvidence": {
+      "cross_01": "집 세 채의 안내와 두 사람의 손, 설명하는 중개인이 보인다."
+    }
+  },
+  {
+    "groupId": "ai_portrait_native_cross_06",
+    "imageId": "img_cross_06_001",
+    "assetPath": "followup_20261031/img_cross_06_001.png",
+    "sha256": "06381995592f3e8e01361449fe568d930c9bc9fceb485c0c9d4a5491bd86fd73",
+    "approvedPresentation": {
+      "assetPath": "presentation/portraits/img_cross_06_001_portrait_v1.png",
+      "sha256": "049d1385289cc5806ed7e8653d385e6491c233caa4c6a1044d103f9471a62ecb"
+    },
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "cross_06"
+    ],
+    "eventSourceHashes": {
+      "cross_06": "e7aea73d779c960fe635c69f3302335e41ebf6385529bca9ddf273a12f221b2f"
+    },
+    "semanticReviewer": "Codex AI (/root/effects_tech)",
+    "visualReviewer": "Codex AI",
+    "cropReviewer": "Codex AI",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/cross_06.json",
+    "resolvedIssueEvidence": {
+      "cross_06": "사업 종료 메일을 읽는 휴대폰과 회의하는 사람들이 남는다."
+    }
+  },
+  {
+    "groupId": "ai_portrait_native_cross_08",
+    "imageId": "img_cross_08_001",
+    "assetPath": "followup_20261031/img_cross_08_001.png",
+    "sha256": "a0e37f53d51ab28901e03f33e13c3c1cf08be3959caf0a51e4d0bee81969551e",
+    "approvedPresentation": {
+      "assetPath": "presentation/portraits/img_cross_08_001_portrait_v1.png",
+      "sha256": "098784587d250c8c861e8f3436e25bc6ec84850d80b5c56e0ca061bd92c90c03"
+    },
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "cross_08"
+    ],
+    "eventSourceHashes": {
+      "cross_08": "61811b90ec9b7c47a6e64c359d5ee10c884cdc04dcc89c1ef92a0affd1a2e307"
+    },
+    "semanticReviewer": "Codex AI (/root/effects_tech)",
+    "visualReviewer": "Codex AI",
+    "cropReviewer": "Codex AI",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/cross_08.json",
+    "resolvedIssueEvidence": {
+      "cross_08": "검진 일정과 발표 자료, 휴대폰을 각기 구분할 수 있다."
+    }
+  },
+  {
+    "groupId": "ai_portrait_native_cross_09",
+    "imageId": "img_cross_09_001",
+    "assetPath": "followup_20261031/img_cross_09_001.png",
+    "sha256": "373c9c7a211e6426093b37d59d4502704140754176140051bc37e80327fd796b",
+    "approvedPresentation": {
+      "assetPath": "presentation/portraits/img_cross_09_001_portrait_v1.png",
+      "sha256": "8c9b8384182b9f8062132e61985799c7fd70d7bc4b373eb1337be4cc0f1f03ad"
+    },
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "cross_09"
+    ],
+    "eventSourceHashes": {
+      "cross_09": "435f0c1e9973c82c7b2588e454ac1d07e307742720bd92a616a5e0ffb7fe0fa9"
+    },
+    "semanticReviewer": "Codex AI (/root/effects_tech)",
+    "visualReviewer": "Codex AI",
+    "cropReviewer": "Codex AI",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/cross_09.json",
+    "resolvedIssueEvidence": {
+      "cross_09": "학교 운동회 안내와 주말 근무 서류, 달력이 함께 남는다."
+    }
+  },
+  {
+    "groupId": "ai_portrait_native_teen_003",
+    "imageId": "img_teen_club_001",
+    "assetPath": "followup_20261031/img_teen_club_001.png",
+    "sha256": "b94a2324dca03e5a79577a9a7473ff65047773ceae337259da58271c060a5a5a",
+    "approvedPresentation": {
+      "assetPath": "presentation/portraits/img_teen_club_001_portrait_v1.png",
+      "sha256": "3f536f903ecf828925c6643e799d377128fb90e05c580910f35bc7edc651f90d"
+    },
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "teen_003"
+    ],
+    "eventSourceHashes": {
+      "teen_003": "7dac53e0364b604511849feac54c3c2eb4b072ebc40bb89cba4018083616b60d"
+    },
+    "semanticReviewer": "Codex AI (/root)",
+    "visualReviewer": "Codex AI",
+    "cropReviewer": "Codex AI",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/teen_003.json",
+    "resolvedIssueEvidence": {
+      "teen_003": "농구공·노트북·베이스와 세 동아리 선배가 보인다."
+    }
+  },
+  {
+    "groupId": "ai_portrait_native_teen_007",
+    "imageId": "img_teen_midterm_001",
+    "assetPath": "followup_20261031/img_teen_midterm_001.png",
+    "sha256": "1763ae0fffa28119dafa6a24d52cd5faed98485868ce4ee7a089726c08054f41",
+    "approvedPresentation": {
+      "assetPath": "presentation/portraits/img_teen_midterm_001_portrait_v1.png",
+      "sha256": "acc5006364d14a455307ef2f0cce75ec88d6d91cbeb93857a62860447b467f5d"
+    },
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "teen_007"
+    ],
+    "eventSourceHashes": {
+      "teen_007": "e86a1815d175d128842b5f1e0f2a563cfd7a032c8d3420ed3c3d62154dbbaa7d"
+    },
+    "semanticReviewer": "Codex AI (/root)",
+    "visualReviewer": "Codex AI",
+    "cropReviewer": "Codex AI",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/teen_007.json",
+    "resolvedIssueEvidence": {
+      "teen_007": "권유하는 친구와 초대 전화·달력·공부 책을 구분할 수 있다."
+    }
+  },
+  {
+    "groupId": "ai_portrait_native_teen_012",
+    "imageId": "img_teen_band_stage_001",
+    "assetPath": "followup_20261031/img_teen_band_stage_001.png",
+    "sha256": "b7ab0929cd115b6564f8ff581459f6049306c0e9b683981e73e1b80585e20f2b",
+    "approvedPresentation": {
+      "assetPath": "presentation/portraits/img_teen_band_stage_001_portrait_v1.png",
+      "sha256": "062a9e85a6716ca4ccf12df254716a6bfed6c12d4ebeaab09610931fdf667e22"
+    },
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "teen_012"
+    ],
+    "eventSourceHashes": {
+      "teen_012": "efa4f5392697385703633278030b22708cd894c9829605d8e56fd6ce1d1316e1"
+    },
+    "semanticReviewer": "Codex AI (/root)",
+    "visualReviewer": "Codex AI",
+    "cropReviewer": "Codex AI",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/teen_012.json",
+    "resolvedIssueEvidence": {
+      "teen_012": "목을 짚은 보컬과 손대지 않은 마이크 및 베이스가 보인다."
+    }
+  },
+  {
+    "groupId": "ai_portrait_native_teen_017",
+    "imageId": "img_teen_screen_time_001",
+    "assetPath": "followup_20261031/img_teen_screen_time_001.png",
+    "sha256": "80bddefb8bad6869994e1489cd5beeb250a71764d5d68d055a4258a338f28a0a",
+    "approvedPresentation": {
+      "assetPath": "presentation/portraits/img_teen_screen_time_001_portrait_v1.png",
+      "sha256": "fe29f16d3a5d8c9c1f6923df1ee650467e4324182590be8a2233b8b76c3cc8a8"
+    },
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "teen_017"
+    ],
+    "eventSourceHashes": {
+      "teen_017": "294e3550893965cb2f063559e9d124b4910c6991a5ef88f678135d167c048ebf"
+    },
+    "semanticReviewer": "Codex AI (/root)",
+    "visualReviewer": "Codex AI",
+    "cropReviewer": "Codex AI",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/teen_017.json",
+    "resolvedIssueEvidence": {
+      "teen_017": "엄마와 문자 등급 없는 성적표, 스크린 타임 경고가 남는다."
+    }
+  },
+  {
+    "groupId": "ai_portrait_native_teen_019",
+    "imageId": "img_teen_high_school_001",
+    "assetPath": "followup_20261031/img_teen_high_school_001.png",
+    "sha256": "e2ccf5cf612a03148f59dccd2d1d3b4a962f1ed90bd47625231fdf0959697df8",
+    "approvedPresentation": {
+      "assetPath": "presentation/portraits/img_teen_high_school_001_portrait_v1.png",
+      "sha256": "cdd4a9f396246f377a8da794b3cc6a1974487bec5a22ec41486714402d02e4b7"
+    },
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "teen_019"
+    ],
+    "eventSourceHashes": {
+      "teen_019": "1cc636640476afa04f9d8a58bae88a0bd3cbe854563049233bb7cfd59744c7e1"
+    },
+    "semanticReviewer": "Codex AI (/root/effects_tech)",
+    "visualReviewer": "Codex AI",
+    "cropReviewer": "Codex AI",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/teen_019.json",
+    "resolvedIssueEvidence": {
+      "teen_019": "부모 두 명과 입학 자료, 비어 있는 원서가 중앙에 있다."
+    }
+  },
+  {
+    "groupId": "ai_portrait_native_teen_022",
+    "imageId": "img_teen_school_trip_001",
+    "assetPath": "followup_20261031/img_teen_school_trip_001.png",
+    "sha256": "da0c649ab05fac460d18058ead0a99f306dac594366e86600bbe61558caaaa2b",
+    "approvedPresentation": {
+      "assetPath": "presentation/portraits/img_teen_school_trip_001_portrait_v1.png",
+      "sha256": "9c129bd21e411f53af58ae178831e6f9f5e875f4b01eed1fee6cc060939c05c8"
+    },
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "teen_022"
+    ],
+    "eventSourceHashes": {
+      "teen_022": "1fdc796299a90e50d46eba22ba18b11c78333b38b67dc25815924ca9e1d8beb3"
+    },
+    "semanticReviewer": "Codex AI (/root)",
+    "visualReviewer": "Codex AI",
+    "cropReviewer": "Codex AI",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/teen_022.json",
+    "resolvedIssueEvidence": {
+      "teen_022": "권유하는 친구들 너머 의자에 앉은 선생님을 식별할 수 있다."
+    }
+  },
+  {
+    "groupId": "ai_portrait_native_teen_027",
+    "imageId": "img_teen_father_car_001",
+    "assetPath": "followup_20261031/img_teen_father_car_001.png",
+    "sha256": "602e7411cac09c1bec54cce7f3c85e7da30a011e5f0ff62bb355f1a629b44b0c",
+    "approvedPresentation": {
+      "assetPath": "presentation/portraits/img_teen_father_car_001_portrait_v1.png",
+      "sha256": "d08de92fd936df85fb958f42d7286d225522f136f798e0c13328ab97ea5bf820"
+    },
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "teen_027"
+    ],
+    "eventSourceHashes": {
+      "teen_027": "8e97b818878d56086aca850070437bc0c5c74965e46e6bdf5001a58267e37d43"
+    },
+    "semanticReviewer": "Codex AI (/root)",
+    "visualReviewer": "Codex AI",
+    "cropReviewer": "Codex AI",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/teen_027.json",
+    "resolvedIssueEvidence": {
+      "teen_027": "창밖 주차된 차 안에 아버지 실루엣이 보이고 헤드라이트는 꺼져 있다."
+    }
+  },
+  {
+    "groupId": "ai_portrait_native_adult_062",
+    "imageId": "img_adult_lifelong_friend_001",
+    "assetPath": "followup_20261031/img_adult_lifelong_friend_001.png",
+    "sha256": "3a9198e0400cd35666909ef223141460b9df49ac52052a8f578ddef63e15f198",
+    "approvedPresentation": {
+      "assetPath": "presentation/portraits/img_adult_lifelong_friend_001_portrait_v1.png",
+      "sha256": "1de8340cdec9e4ac2bc9f906a6459af99d923dfa2fe5f4c99936e287343db56d"
+    },
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "adult_062"
+    ],
+    "eventSourceHashes": {
+      "adult_062": "c1e102d0758788519ae1fe971dc7a26eb1d2a5f8e5c540bf233c1c0693753a8e"
+    },
+    "semanticReviewer": "Codex AI (/root/security_p0)",
+    "visualReviewer": "Codex AI",
+    "cropReviewer": "Codex AI",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/adult_062.json",
+    "resolvedIssueEvidence": {
+      "adult_062": "추억의 사진을 보여주는 휴대폰이 중앙에 남는다."
+    }
+  },
+  {
+    "groupId": "ai_portrait_native_special_005",
+    "imageId": "img_special_auto_door_001",
+    "assetPath": "followup_20261031/img_special_auto_door_001.png",
+    "sha256": "3cad0d77bfdd7df077493145f652ec2d51ad77a05b46f88e0545a50d8ffc9db5",
+    "approvedPresentation": {
+      "assetPath": "presentation/portraits/img_special_auto_door_001_portrait_v1.png",
+      "sha256": "65b79af3ca6e9f4db02d3d2245e1086bfdd853b993dd20c141478cd590183da7"
+    },
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "special_005"
+    ],
+    "eventSourceHashes": {
+      "special_005": "c6942e067d9ffe5aaf95d7a70f638be8622757a0ee109d09bed9a60251e9ce1b"
+    },
+    "semanticReviewer": "Codex AI (/root)",
+    "visualReviewer": "Codex AI",
+    "cropReviewer": "Codex AI",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/special_005.json",
+    "resolvedIssueEvidence": {
+      "special_005": "닫힌 자동문과 센서, 양옆의 박수치는 손들이 보인다."
+    }
+  },
+  {
+    "groupId": "ai_portrait_native_special_017",
+    "imageId": "img_special_stuck_elevator_001",
+    "assetPath": "followup_20261031/img_special_stuck_elevator_001.png",
+    "sha256": "5c1977696335161e465f1d11c94670d3802fbad9a065cf2eef6b1bdfd0a96536",
+    "approvedPresentation": {
+      "assetPath": "presentation/portraits/img_special_stuck_elevator_001_portrait_v1.png",
+      "sha256": "a34b77fca2d39a3ce14ce19d22908e97dc74e00793fbfa52ad36664dee6f9c14"
+    },
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "special_017"
+    ],
+    "eventSourceHashes": {
+      "special_017": "5f3bc51a977f3dca36e5ab14b23240eb5bb866e6915af29ec25cf18bc4df69ce"
+    },
+    "semanticReviewer": "Codex AI (/root)",
+    "visualReviewer": "Codex AI",
+    "cropReviewer": "Codex AI",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/special_017.json",
+    "resolvedIssueEvidence": {
+      "special_017": "닫힌 승강기 안에서 기다리는 상대방의 얼굴과 비상 패널이 남는다."
+    }
+  },
+  {
+    "groupId": "ai_portrait_native_path_soc_03",
+    "imageId": "img_path_soc_03_001",
+    "assetPath": "followup_20261031/img_path_soc_03_001.png",
+    "sha256": "9cc885b7df64858d8dd3b7e47b8ab1ef1b173abe2a1affeeef6b9d134cb0aebd",
+    "approvedPresentation": {
+      "assetPath": "presentation/portraits/img_path_soc_03_001_portrait_v1.png",
+      "sha256": "1d4619d8eadcae044537a4a4dd91cc41eb03a6f308457f7d23921875bbe1c27f"
+    },
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "path_soc_03"
+    ],
+    "eventSourceHashes": {
+      "path_soc_03": "cc2d9da1909b2283b3b720e0678888d48a1b7baa393f961015333e40d224eff0"
+    },
+    "semanticReviewer": "Codex AI (/root)",
+    "visualReviewer": "Codex AI",
+    "cropReviewer": "Codex AI",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/path_soc_03.json",
+    "resolvedIssueEvidence": {
+      "path_soc_03": "빈 버스와 앞에 앉은 동아리 친구 한 명이 있다."
+    }
+  },
+  {
+    "groupId": "ai_portrait_native_path_wea_06",
+    "imageId": "img_path_wea_06_001",
+    "assetPath": "followup_20261031/img_path_wea_06_001.png",
+    "sha256": "92a99e88ce83fd04acd63b51de5577309c54a5be0936c0c7bde08b6694232eef",
+    "approvedPresentation": {
+      "assetPath": "presentation/portraits/img_path_wea_06_001_portrait_v1.png",
+      "sha256": "ef3fb719c63047a4742262d5da419b50aa90b9a759e95c3bc13b9d0e88acdf35"
+    },
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "path_wea_06"
+    ],
+    "eventSourceHashes": {
+      "path_wea_06": "f47d391bcbbf9377ca1f009e94879232621e660cedbe9e1363d86ec37627e511"
+    },
+    "semanticReviewer": "Codex AI (/root/effects_tech)",
+    "visualReviewer": "Codex AI",
+    "cropReviewer": "Codex AI",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/path_wea_06.json",
+    "resolvedIssueEvidence": {
+      "path_wea_06": "지출 자료들과 가족 메시지가 책상 주변에 남는다."
+    }
+  },
+  {
+    "groupId": "ai_portrait_native_path_hea_03",
+    "imageId": "img_path_hea_03_001",
+    "assetPath": "followup_20261031/img_path_hea_03_001.png",
+    "sha256": "120563260f1d1f58912f6fd8093e1e6ab2f8d5d3d4810cb3466070aaa3af2afc",
+    "approvedPresentation": {
+      "assetPath": "presentation/portraits/img_path_hea_03_001_portrait_v1.png",
+      "sha256": "cb2a2d8860468718b20d25bbcb26c81af1f4bee8e9d11d74e6d0cc6ea394ecc9"
+    },
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "path_hea_03"
+    ],
+    "eventSourceHashes": {
+      "path_hea_03": "4f3548293ae22092a439f285ae59c085bffa4650112ef3cba9b4f2a93506a8ec"
+    },
+    "semanticReviewer": "Codex AI (/root/effects_tech)",
+    "visualReviewer": "Codex AI",
+    "cropReviewer": "Codex AI",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/path_hea_03.json",
+    "resolvedIssueEvidence": {
+      "path_hea_03": "의사와 검진표, 유일한 노란 줄이 맨 아래에 보인다."
+    }
+  },
+  {
+    "groupId": "ai_portrait_native_path_fit_15",
+    "imageId": "img_path_fit_15_001",
+    "assetPath": "followup_20261031/img_path_fit_15_001.png",
+    "sha256": "613cecccc872370860037dae388f99acd768030656b08de977e4db7c2e0e95d2",
+    "approvedPresentation": {
+      "assetPath": "presentation/portraits/img_path_fit_15_001_portrait_v1.png",
+      "sha256": "d632914d3c4a4ecb34ebc7b90b457fbafe2f49345fa9ba9715215ab93d4c44d9"
+    },
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "path_fit_15"
+    ],
+    "eventSourceHashes": {
+      "path_fit_15": "01a5c70496689d094f1b20d68b48865ca766145002ba1992c2e5999070eff6df"
+    },
+    "semanticReviewer": "Codex AI (/root/security_p0)",
+    "visualReviewer": "Codex AI",
+    "cropReviewer": "Codex AI",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/path_fit_15.json",
+    "resolvedIssueEvidence": {
+      "path_fit_15": "운동하는 학생들과 제안을 건네는 교직원을 함께 볼 수 있다."
+    }
+  },
+  {
+    "groupId": "ai_portrait_native_path_soc_10",
+    "imageId": "img_path_soc_10_001",
+    "assetPath": "week10/scenes/img_path_soc_10_001.png",
+    "sha256": "64c9be8c48e154527e24d9b71960fe518ff795eafc002b272f0135b3a00a1b2b",
+    "approvedPresentation": {
+      "assetPath": "presentation/portraits/img_path_soc_10_001_portrait_v1.png",
+      "sha256": "964f52517800a19f992998f37372c2297102e92e536e84d0c8e686ff481d03c0"
+    },
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "path_soc_10"
+    ],
+    "eventSourceHashes": {
+      "path_soc_10": "41696dab965854a9d87c93500d2cd7ae1ddd9b270e004d940c7dd0082b74b56e"
+    },
+    "semanticReviewer": "Codex AI (/root)",
+    "visualReviewer": "Codex AI",
+    "cropReviewer": "Codex AI",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/path_soc_10.json",
+    "resolvedIssueEvidence": {
+      "path_soc_10": "축제 후 두 무리와 두 채팅 알림이 함께 나타난다."
+    }
+  },
+  {
+    "groupId": "ai_portrait_native_path_wea_14",
+    "imageId": "img_path_wea_14_001",
+    "assetPath": "followup_20261031/img_path_wea_14_001.png",
+    "sha256": "260da2f5dce0a0dd7e7b7af56bf0e7a36d197fc0107947951b674bef067d2077",
+    "approvedPresentation": {
+      "assetPath": "presentation/portraits/img_path_wea_14_001_portrait_v1.png",
+      "sha256": "6f0c18b3c40d8b9f1b792b018f36a29963647df3eacfc05629e1425cf9e80589"
+    },
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "path_wea_14"
+    ],
+    "eventSourceHashes": {
+      "path_wea_14": "be5ab24bd71295d667c38b9b8a69321cec39e10e3d873a20f950a8b96dac22f5"
+    },
+    "semanticReviewer": "Codex AI (/root/security_p0)",
+    "visualReviewer": "Codex AI",
+    "cropReviewer": "Codex AI",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/path_wea_14.json",
+    "resolvedIssueEvidence": {
+      "path_wea_14": "아이와 계산기, 여러 학원비 자료가 보인다."
+    }
+  },
+  {
+    "groupId": "ai_portrait_native_path_hap_14",
+    "imageId": "img_path_hap_14_001",
+    "assetPath": "followup_20261031/img_path_hap_14_001.png",
+    "sha256": "babbeebeeae1b2b3aebebfbc0bc67ce90e9d52f9ef1d2d347d439afce5c0fa8e",
+    "approvedPresentation": {
+      "assetPath": "presentation/portraits/img_path_hap_14_001_portrait_v1.png",
+      "sha256": "077dd86ac91f4b0d9cf5c3fc57bbae0f7097aa81bee5af446f2d3c167a7c73e3"
+    },
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "path_hap_14"
+    ],
+    "eventSourceHashes": {
+      "path_hap_14": "388d32cca431fc39b208dec5ca1efaafb0a711815a8777c00ae9980dfa695714"
+    },
+    "semanticReviewer": "Codex AI (/root/security_p0)",
+    "visualReviewer": "Codex AI",
+    "cropReviewer": "Codex AI",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/path_hap_14.json",
+    "resolvedIssueEvidence": {
+      "path_hap_14": "피아노와 꽉 찬 일정표를 한 장면에서 본다."
+    }
+  },
+  {
+    "groupId": "ai_portrait_native_cross_10",
+    "imageId": "img_cross_10_001",
+    "assetPath": "followup_20261031/img_cross_10_001.png",
+    "sha256": "3855a9675dec30e42cc809a9c4a392a09d3b386d20a8526c3306c56fc4917a17",
+    "approvedPresentation": {
+      "assetPath": "presentation/portraits/img_cross_10_001_portrait_v1.png",
+      "sha256": "7e77cbccf9d7ccb9186f1c628d34e4521b960e50c5dd2531d36dbcc3ab2ff306"
+    },
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "cross_10"
+    ],
+    "eventSourceHashes": {
+      "cross_10": "6bc6e7c1823ef48114add004dab28ecbfed2ef50b3249610000094278d7d435b"
+    },
+    "semanticReviewer": "Codex AI (/root/security_p0)",
+    "visualReviewer": "Codex AI",
+    "cropReviewer": "Codex AI",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/cross_10.json",
+    "resolvedIssueEvidence": {
+      "cross_10": "명절의 빈 식탁과 두 연락을 보여주는 전화가 남는다."
+    }
+  },
+  {
+    "groupId": "ai_portrait_native_teen_035",
+    "imageId": "img_teen_bus_terminal_001",
+    "assetPath": "followup_20261031/img_teen_bus_terminal_001.png",
+    "sha256": "7a71a5af4d7a1aa4772aa0a571f0864b535e6d960e4e58bab4b6999e1eaa4e39",
+    "approvedPresentation": {
+      "assetPath": "presentation/portraits/img_teen_bus_terminal_001_portrait_v1.png",
+      "sha256": "1dbfc0331d9881777a4d7add7d97af7114bdc84a15a006d6de19290cc2ef6867"
+    },
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "teen_035"
+    ],
+    "eventSourceHashes": {
+      "teen_035": "b09abace763b657b6f0b420b432219ff97f345b7c062ee0b482a56b271662c82"
+    },
+    "semanticReviewer": "Codex AI (/root)",
+    "visualReviewer": "Codex AI",
+    "cropReviewer": "Codex AI",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/teen_035.json",
+    "resolvedIssueEvidence": {
+      "teen_035": "Empty night bus, seated viewer, late hour on phone."
+    }
+  },
+  {
+    "groupId": "ai_portrait_native_teen_037",
+    "imageId": "img_teen_d100_001",
+    "assetPath": "followup_20261031/img_teen_d100_001.png",
+    "sha256": "9b61d120e0f5197de7edb01743078d122f75a67e30bfe807da4428e2b13f57b5",
+    "approvedPresentation": {
+      "assetPath": "presentation/portraits/img_teen_d100_001_portrait_v1.png",
+      "sha256": "689fb4b975e647a659077725e880447500b30ceafaf5dd287071ec7d753268e1"
+    },
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "teen_037"
+    ],
+    "eventSourceHashes": {
+      "teen_037": "7a943e7e0e20483d1a937d06a263c3574ea00b8b12bca3e5ba93e7e6cd3aa2cb"
+    },
+    "semanticReviewer": "Codex AI (/root)",
+    "visualReviewer": "Codex AI",
+    "cropReviewer": "Codex AI",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/teen_037.json",
+    "resolvedIssueEvidence": {
+      "teen_037": "Revised board clearly reads D-365, classroom still in session."
+    }
+  },
+  {
+    "groupId": "ai_portrait_native_adult_021",
+    "imageId": "img_adult_hangover_001",
+    "assetPath": "followup_20261031/img_adult_hangover_001.png",
+    "sha256": "8eaa2261b98f615fa42e93968cb7ead24fda4cca415bb60fee96459046801ce3",
+    "approvedPresentation": {
+      "assetPath": "presentation/portraits/img_adult_hangover_001_portrait_v1.png",
+      "sha256": "aca623262189702146a0e39992c28ad577a7f6d1b2982e2575acd988673611cd"
+    },
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "adult_021"
+    ],
+    "eventSourceHashes": {
+      "adult_021": "213e767900213733017a9e1c7d2dd56f0bec34e95d10db2b19b0dd870ba09290"
+    },
+    "semanticReviewer": "Codex AI (/root)",
+    "visualReviewer": "Codex AI",
+    "cropReviewer": "Codex AI",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/adult_021.json",
+    "resolvedIssueEvidence": {
+      "adult_021": "Alarm, morning bed and group video appear together."
+    }
+  },
+  {
+    "groupId": "ai_portrait_native_adult_046",
+    "imageId": "img_adult_scam_call_001",
+    "assetPath": "followup_20261031/img_adult_scam_call_001.png",
+    "sha256": "fecbf296e46fc2e97c20be96c5f8d25a6fb952d1b8566f81fe35cb88810d6a2b",
+    "approvedPresentation": {
+      "assetPath": "presentation/portraits/img_adult_scam_call_001_portrait_v1.png",
+      "sha256": "fa46dbe6ea6e01fc3f786c087b48b9128ec52f45c50a7065c8ca7cb0edd59434"
+    },
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "adult_046"
+    ],
+    "eventSourceHashes": {
+      "adult_046": "73ae729a4d0c186ff0d6cbdf796a2969512128399944df844950f9c770d3e665"
+    },
+    "semanticReviewer": "Codex AI (/root)",
+    "visualReviewer": "Codex AI",
+    "cropReviewer": "Codex AI",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/adult_046.json",
+    "resolvedIssueEvidence": {
+      "adult_046": "Caller on handset at home; no payment, reply or later outcome."
+    }
+  },
+  {
+    "groupId": "ai_portrait_native_adult_047",
+    "imageId": "img_adult_wedding_invite_001",
+    "assetPath": "followup_20261031/img_adult_wedding_invite_001.png",
+    "sha256": "60cda630b331b64626fdd6aa96c34b0a528e66e4a72e2318f6287d751d95286d",
+    "approvedPresentation": {
+      "assetPath": "presentation/portraits/img_adult_wedding_invite_001_portrait_v1.png",
+      "sha256": "e9aff2e660df720e0b9d58b7e2f1b7c7354ebc92894e89d144b83a14bedde746"
+    },
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "adult_047"
+    ],
+    "eventSourceHashes": {
+      "adult_047": "e9d007713e566ef9056f0e13e42689a79743a3a1d643598c57778202ba0c5bbb"
+    },
+    "semanticReviewer": "Codex AI (/root)",
+    "visualReviewer": "Codex AI",
+    "cropReviewer": "Codex AI",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/adult_047.json",
+    "resolvedIssueEvidence": {
+      "adult_047": "Mobile wedding invitation with rings and a nearby envelope."
+    }
+  },
+  {
+    "groupId": "ai_portrait_native_adult_074",
+    "imageId": "img_pov_dating_app_001",
+    "assetPath": "followup_20261031/img_pov_dating_app_001.png",
+    "sha256": "2c3ca40a3bed4c6f5698f00b2c16b308022ce19fc45aa7b8e3da226f46a6dc30",
+    "approvedPresentation": {
+      "assetPath": "presentation/portraits/img_pov_dating_app_001_portrait_v1.png",
+      "sha256": "9048ce94b61ee650a6c2177de1ed065319868923ec90bc85385a73276d5e4641"
+    },
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "adult_074"
+    ],
+    "eventSourceHashes": {
+      "adult_074": "61227218ed2902074c77d115616d59d566ef66a9ded8a52d621d36e90560347b"
+    },
+    "semanticReviewer": "Codex AI (/root)",
+    "visualReviewer": "Codex AI",
+    "cropReviewer": "Codex AI",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/adult_074.json",
+    "resolvedIssueEvidence": {
+      "adult_074": "Match notification depicts both cat and hiking symbols on screen."
+    }
+  },
+  {
+    "groupId": "ai_portrait_native_adult_079",
+    "imageId": "img_pov_id_badge_001",
+    "assetPath": "followup_20261031/img_pov_id_badge_001.png",
+    "sha256": "3b7205a7093a912769bc0fe38b212161e436f216704c5820ff4432f5def1b1a1",
+    "approvedPresentation": {
+      "assetPath": "presentation/portraits/img_pov_id_badge_001_portrait_v1.png",
+      "sha256": "3f8605be2cd49c023f088a7b4c58e184298e7aade2f16021d7510893ceef8c49"
+    },
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "adult_079"
+    ],
+    "eventSourceHashes": {
+      "adult_079": "56e327a2d1df1733737ac563701ec0222438b10796d1e4c6cd73892b1a87bf1a"
+    },
+    "semanticReviewer": "Codex AI (/root)",
+    "visualReviewer": "Codex AI",
+    "cropReviewer": "Codex AI",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/adult_079.json",
+    "resolvedIssueEvidence": {
+      "adult_079": "HR presents photo badge with nervous portrait, colleague waiting nearby."
+    }
+  },
+  {
+    "groupId": "ai_portrait_native_path_fit_07",
+    "imageId": "img_path_fit_07_001",
+    "assetPath": "followup_20261031/img_path_fit_07_001.png",
+    "sha256": "41081f1d0f219d0826d02322321071a63655b63fa829135d67d721479ff8f9b3",
+    "approvedPresentation": {
+      "assetPath": "presentation/portraits/img_path_fit_07_001_portrait_v1.png",
+      "sha256": "62e08131ff2582463cfe8b23a4f5783b93b207d9d9d8375c81774a7bf2fb11fe"
+    },
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "path_fit_07"
+    ],
+    "eventSourceHashes": {
+      "path_fit_07": "c6a4bbe97925a131124c143fda3778bbf0d94e22e711fdf869beb0987f0727e7"
+    },
+    "semanticReviewer": "Codex AI (/root)",
+    "visualReviewer": "Codex AI",
+    "cropReviewer": "Codex AI",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/path_fit_07.json",
+    "resolvedIssueEvidence": {
+      "path_fit_07": "Physician and knee images with two phone offers for commentary and coaching."
+    }
+  },
+  {
+    "groupId": "ai_portrait_native_path_hea_10",
+    "imageId": "img_path_hea_10_001",
+    "assetPath": "week10/scenes/img_path_hea_10_001.png",
+    "sha256": "0e64d429c30dcd3cd3ccfc6b288a4d0f9726ab1c941e46a5a61464d904eaea7e",
+    "approvedPresentation": {
+      "assetPath": "presentation/portraits/img_path_hea_10_001_portrait_v1.png",
+      "sha256": "2830fe519a358fc85cddf6aa00726dd5ae7dd7bf8960d928eee1598f725471f6"
+    },
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "path_hea_10"
+    ],
+    "eventSourceHashes": {
+      "path_hea_10": "830d9b90e150f3610b456aaec447c7ae76e82d25df010af2306bdfa4783776d8"
+    },
+    "semanticReviewer": "Codex AI (/root)",
+    "visualReviewer": "Codex AI",
+    "cropReviewer": "Codex AI",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/path_hea_10.json",
+    "resolvedIssueEvidence": {
+      "path_hea_10": "Supervisor speaking, lit office with colleagues at night and wall clock."
+    }
+  },
+  {
+    "groupId": "ai_portrait_native_path_int_04",
+    "imageId": "img_path_int_04_001",
+    "assetPath": "followup_20261031/img_path_int_04_001.png",
+    "sha256": "436bcded91b0fc53c0f25da44a874d3201587d5be9db0583287208d6fb2681cf",
+    "approvedPresentation": {
+      "assetPath": "presentation/portraits/img_path_int_04_001_portrait_v1.png",
+      "sha256": "6cd90000621c42048830e4f54578242a2d3f07a1f744e9b286b7659f976611f5"
+    },
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "path_int_04"
+    ],
+    "eventSourceHashes": {
+      "path_int_04": "7dfd8b4281e71eccc77d466fd571b3a4bc394234eba829871931d3aeeb6fefbb"
+    },
+    "semanticReviewer": "Codex AI (/root)",
+    "visualReviewer": "Codex AI",
+    "cropReviewer": "Codex AI",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/path_int_04.json",
+    "resolvedIssueEvidence": {
+      "path_int_04": "3.98 transcript and research lab notice are simultaneously visible."
+    }
+  },
+  {
+    "groupId": "ai_portrait_native_path_int_11",
+    "imageId": "img_path_int_11_001",
+    "assetPath": "followup_20261031/img_path_int_11_001.png",
+    "sha256": "5c93bfb5ee109aaf5a3eb1f6fb8d171c0db402f80a4a4ccfddad9ec294375232",
+    "approvedPresentation": {
+      "assetPath": "presentation/portraits/img_path_int_11_001_portrait_v1.png",
+      "sha256": "20e0187de79231b8eccc0343a5804068a5837c975f7bc1742471308b1b4fd0b2"
+    },
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "path_int_11"
+    ],
+    "eventSourceHashes": {
+      "path_int_11": "bd08cd41a02d54543594ef78d1f837503b3a6d278e705b81fa10962f4a24e016"
+    },
+    "semanticReviewer": "Codex AI (/root)",
+    "visualReviewer": "Codex AI",
+    "cropReviewer": "Codex AI",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/path_int_11.json",
+    "resolvedIssueEvidence": {
+      "path_int_11": "Professor addressing class, viewer has not raised either hand."
+    }
+  },
+  {
+    "groupId": "ai_portrait_native_path_hap_02",
+    "imageId": "img_path_hap_02_001",
+    "assetPath": "followup_20261031/img_path_hap_02_001.png",
+    "sha256": "7f09bd34135c43afb3454ec164dd2f85b42a7f06a5393b24e195f9a2c5bd7d14",
+    "approvedPresentation": {
+      "assetPath": "presentation/portraits/img_path_hap_02_001_portrait_v1.png",
+      "sha256": "4df6fc2eeaed6a477c66ae4979088b9df786e9bc6051f36de74ac465b9e098a4"
+    },
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "path_hap_02"
+    ],
+    "eventSourceHashes": {
+      "path_hap_02": "fe45d9801ff894721ef3fe786462f4aed23dad2f08ea0d34b9d650f7c90cb858"
+    },
+    "semanticReviewer": "Codex AI (/root)",
+    "visualReviewer": "Codex AI",
+    "cropReviewer": "Codex AI",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/path_hap_02.json",
+    "resolvedIssueEvidence": {
+      "path_hap_02": "Counsellor offers business program; player's notebook has music and sketch."
+    }
+  },
+  {
+    "groupId": "ai_portrait_native_path_luk_08",
+    "imageId": "img_path_luk_08_001",
+    "assetPath": "followup_20261031/img_path_luk_08_001.png",
+    "sha256": "e79bd4a97ca7f25757e3b8008b7158ce2585fcaa8df2100490b009f5cb220999",
+    "approvedPresentation": {
+      "assetPath": "presentation/portraits/img_path_luk_08_001_portrait_v1.png",
+      "sha256": "428b54e5ed1690c9a22d41e4e8c4f4a63eee96c15f839feef1c5b806daf72274"
+    },
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "path_luk_08"
+    ],
+    "eventSourceHashes": {
+      "path_luk_08": "dc21b967e33be0f19fbdefa4ac68aa0dcd8a845ec43fe234f975cac506d7885d"
+    },
+    "semanticReviewer": "Codex AI (/root)",
+    "visualReviewer": "Codex AI",
+    "cropReviewer": "Codex AI",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/path_luk_08.json",
+    "resolvedIssueEvidence": {
+      "path_luk_08": "Airline employee gestures at closed gate, ticket and baggage visible."
+    }
+  },
+  {
+    "groupId": "ai_portrait_native_path_soc_09",
+    "imageId": "img_path_soc_09_001",
+    "assetPath": "week10/scenes/img_path_soc_09_001.png",
+    "sha256": "7502542b42fa2bb39a2e2e890b858909a3736019bd9e25ff457efc87de3c53ed",
+    "approvedPresentation": {
+      "assetPath": "presentation/portraits/img_path_soc_09_001_portrait_v1.png",
+      "sha256": "d632daddefceb20075e9b2e345eb1d7e73af10805f79cb6353860359daee7db1"
+    },
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "path_soc_09"
+    ],
+    "eventSourceHashes": {
+      "path_soc_09": "f9b556fda72ae51046cedeecdc4ebdd86d0e472778c059593124b7cf14235129"
+    },
+    "semanticReviewer": "Codex AI (/root)",
+    "visualReviewer": "Codex AI",
+    "cropReviewer": "Codex AI",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/path_soc_09.json",
+    "resolvedIssueEvidence": {
+      "path_soc_09": "Two guest books and party guests with raised hands before decision."
+    }
+  },
+  {
+    "groupId": "ai_portrait_native_path_wea_10",
+    "imageId": "img_path_wea_10_001",
+    "assetPath": "week10/scenes/img_path_wea_10_001.png",
+    "sha256": "25b1247d1ebcb47308668ff27ff391a00e528f0f40ed34df4e071a9e542ce621",
+    "approvedPresentation": {
+      "assetPath": "presentation/portraits/img_path_wea_10_001_portrait_v1.png",
+      "sha256": "68c66825260a2e1dec1575620a6dd5c9db90c2b062871f912dbdd7b62c6db20b"
+    },
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "path_wea_10"
+    ],
+    "eventSourceHashes": {
+      "path_wea_10": "6a052b5f3f5890ddaff4669c8d3e8eb17f62a55e39464fa8515d0ee270b592f1"
+    },
+    "semanticReviewer": "Codex AI (/root)",
+    "visualReviewer": "Codex AI",
+    "cropReviewer": "Codex AI",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/path_wea_10.json",
+    "resolvedIssueEvidence": {
+      "path_wea_10": "Daytime convenience store manager offers night work via moon and pay symbols."
+    }
+  },
+  {
+    "groupId": "ai_portrait_native_path_fit_09",
+    "imageId": "img_path_fit_09_001",
+    "assetPath": "week10/scenes/img_path_fit_09_001.png",
+    "sha256": "ccbeb5a6ffaaedaa22f0a1d8ed50e958208dbb78c4a865b7178b0027d7720959",
+    "approvedPresentation": {
+      "assetPath": "presentation/portraits/img_path_fit_09_001_portrait_v1.png",
+      "sha256": "f7fff6397eb29ce3acc951e41fa8bfe1288cfaba813c2d8eb322ab1f90eb30c2"
+    },
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "path_fit_09"
+    ],
+    "eventSourceHashes": {
+      "path_fit_09": "012e49bed01e548a01628f548d54359c23f5f7625cb6670a7fac180ace68ae42"
+    },
+    "semanticReviewer": "Codex AI (/root)",
+    "visualReviewer": "Codex AI",
+    "cropReviewer": "Codex AI",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/path_fit_09.json",
+    "resolvedIssueEvidence": {
+      "path_fit_09": "Registration worker looks up at senior runner seated at the desk."
+    }
+  },
+  {
+    "groupId": "ai_portrait_native_path_luk_15",
+    "imageId": "img_path_luk_15_001",
+    "assetPath": "followup_20261031/img_path_luk_15_001.png",
+    "sha256": "d36a5a47cb826b396d66b8277d7e975ed81fac08cb28d2f148b8dede8f64407d",
+    "approvedPresentation": {
+      "assetPath": "presentation/portraits/img_path_luk_15_001_portrait_v1.png",
+      "sha256": "2e4d22f91cbf6f756a10c27f955e2f35290ae243b98d47e01b6cecca81657795"
+    },
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "path_luk_15"
+    ],
+    "eventSourceHashes": {
+      "path_luk_15": "b21baf8250328bb823797aab7ea1ee72655412a9ddf46d0e07d6bfa1a7b77af1"
+    },
+    "semanticReviewer": "Codex AI (/root)",
+    "visualReviewer": "Codex AI",
+    "cropReviewer": "Codex AI",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/path_luk_15.json",
+    "resolvedIssueEvidence": {
+      "path_luk_15": "Grandchild handling coin by stationary capsule machine, viewer's hands empty."
+    }
+  },
+  {
+    "groupId": "ai_portrait_native_teen_030",
+    "imageId": "img_teen_class_shirt_001",
+    "assetPath": "followup_20261031/img_teen_class_shirt_001.png",
+    "sha256": "6b1d0bc07e9b421a390721271e13f9e4081df8af1e8f488f10b2f9836b40fc39",
+    "approvedPresentation": {
+      "assetPath": "presentation/portraits/img_teen_class_shirt_001_portrait_v1.png",
+      "sha256": "0013e882f7dac256c2673b3d4adc45f62ade4ed0455619f578cc52480cc87fe0"
+    },
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "teen_030"
+    ],
+    "eventSourceHashes": {
+      "teen_030": "0a9968ac1863acbb325b4ebba5df325c1b2abfabd1c96b588d319d97b9f27800"
+    },
+    "semanticReviewer": "Codex AI (/root)",
+    "visualReviewer": "Codex AI",
+    "cropReviewer": "Codex AI",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/teen_030.json",
+    "resolvedIssueEvidence": {
+      "teen_030": "Three clothing options hanging over ballot box, paper still unmarked."
+    }
+  },
+  {
+    "groupId": "ai_portrait_native_teen_033",
+    "imageId": "img_teen_yearbook_photo_001",
+    "assetPath": "followup_20261031/img_teen_yearbook_photo_001.png",
+    "sha256": "5915e1d9ac9cb953990d8cd56a88515c2b0a36083ba67642f2312e31cb0c13d8",
+    "approvedPresentation": {
+      "assetPath": "presentation/portraits/img_teen_yearbook_photo_001_portrait_v1.png",
+      "sha256": "9498d4f3a9ecdc991b98783516767f7d2e5323db1c1b5381ea7c0fbfffe26ab3"
+    },
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "teen_033"
+    ],
+    "eventSourceHashes": {
+      "teen_033": "3f2f733b4bb277f59c4347cb34428c3bebfaef17ec89a3f901d42f66cfeeff80"
+    },
+    "semanticReviewer": "Codex AI (/root)",
+    "visualReviewer": "Codex AI",
+    "cropReviewer": "Codex AI",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/teen_033.json",
+    "resolvedIssueEvidence": {
+      "teen_033": "Uneven fringe in first-person frame above waiting yearbook camera."
+    }
+  },
+  {
+    "groupId": "ai_portrait_native_adult_009",
+    "imageId": "img_adult_drinks_toast_001",
+    "assetPath": "followup_20261031/img_adult_drinks_toast_001.png",
+    "sha256": "9369be89f20c4e00641a9b20cd1de6c37b466f52bcff68a0915b5d9c9811ad4a",
+    "approvedPresentation": {
+      "assetPath": "presentation/portraits/img_adult_drinks_toast_001_portrait_v1.png",
+      "sha256": "f096c02c615d604259a5dcf9c745548aaa9500289143230bbe48bc1fb562c3f1"
+    },
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "adult_009"
+    ],
+    "eventSourceHashes": {
+      "adult_009": "51bb7ea1f5cf44e1bb5c854bbca41723076cada5ac62a1b5765783598af66cce"
+    },
+    "semanticReviewer": "Codex AI (/root)",
+    "visualReviewer": "Codex AI",
+    "cropReviewer": "Codex AI",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/adult_009.json",
+    "resolvedIssueEvidence": {
+      "adult_009": "Three faces and three raised glasses addressing viewer before toast."
+    }
+  },
+  {
+    "groupId": "ai_portrait_native_adult_016",
+    "imageId": "img_adult_dinner_seats_001",
+    "assetPath": "followup_20261031/img_adult_dinner_seats_001.png",
+    "sha256": "19fe038c02a418d219c16a69516a59e0c581e23c62a03ffd74f74ac83fb66665",
+    "approvedPresentation": {
+      "assetPath": "presentation/portraits/img_adult_dinner_seats_001_portrait_v1.png",
+      "sha256": "999dfaac6ec9ea90ad7c550d30df0b700b2282c5aebd0ca441938d355b0b72d1"
+    },
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "adult_016"
+    ],
+    "eventSourceHashes": {
+      "adult_016": "1ff6b96f8e518ee2a26e82c84fc791da7e962d7ff974116041ba58d87afc345c"
+    },
+    "semanticReviewer": "Codex AI (/root)",
+    "visualReviewer": "Codex AI",
+    "cropReviewer": "Codex AI",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/adult_016.json",
+    "resolvedIssueEvidence": {
+      "adult_016": "Three empty places visible at barbecue gathering before choosing a seat."
+    }
+  },
+  {
+    "groupId": "ai_portrait_native_adult_042",
+    "imageId": "img_adult_childhood_box_001",
+    "assetPath": "followup_20261031/img_adult_childhood_box_001.png",
+    "sha256": "0404e42c695f115720b90f54533ecaec35ba896a8f5b72722c4d59c769734adb",
+    "approvedPresentation": {
+      "assetPath": "presentation/portraits/img_adult_childhood_box_001_portrait_v1.png",
+      "sha256": "91182251c862c60c82ca792cdae5d712e92c5befb2456bbcc8f38c70f37e4b38"
+    },
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "adult_042"
+    ],
+    "eventSourceHashes": {
+      "adult_042": "32633849cfead1240ebdd231c6535e165c1f665eabd53a95a69242da33fade62"
+    },
+    "semanticReviewer": "Codex AI (/root)",
+    "visualReviewer": "Codex AI",
+    "cropReviewer": "Codex AI",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/adult_042.json",
+    "resolvedIssueEvidence": {
+      "adult_042": "Closed dusty keepsake box with handwritten childhood label, no template placeholder."
+    }
+  },
+  {
+    "groupId": "ai_portrait_native_adult_064",
+    "imageId": "img_adult_parents_spring_001",
+    "assetPath": "followup_20261031/img_adult_parents_spring_001.png",
+    "sha256": "2baeca5662342c514f41f251f800542f5bcb2d873ea1eeb05a0655013b63e874",
+    "approvedPresentation": {
+      "assetPath": "presentation/portraits/img_adult_parents_spring_001_portrait_v1.png",
+      "sha256": "f61bbd72eba33aa8d91f85c11931e3fdcc5e419d588043a373a5ce42539ee5c4"
+    },
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "adult_064"
+    ],
+    "eventSourceHashes": {
+      "adult_064": "a94af8a2f9d99ec6813d768127a3769dc64c2dfe5ebee5cc536a6c502e4aca6a"
+    },
+    "semanticReviewer": "Codex AI (/root)",
+    "visualReviewer": "Codex AI",
+    "cropReviewer": "Codex AI",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/adult_064.json",
+    "resolvedIssueEvidence": {
+      "adult_064": "Father in profile beside doctor, spring visible out window."
+    }
+  },
+  {
+    "groupId": "ai_portrait_native_adult_081",
+    "imageId": "img_pov_welcome_party_001",
+    "assetPath": "followup_20261031/img_pov_welcome_party_001.png",
+    "sha256": "488f48996d0ce2c6f7cf894f35f1a7a4fddc6c7b09653bce9bd435a80a97d9b1",
+    "approvedPresentation": {
+      "assetPath": "presentation/portraits/img_pov_welcome_party_001_portrait_v1.png",
+      "sha256": "85154c755dd2241ba442998b11c026a443fc916b8d115c38fd12c0ed208ae9ea"
+    },
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "adult_081"
+    ],
+    "eventSourceHashes": {
+      "adult_081": "a5c050135f1cc60eef340cef0cb597574638b7c3128575f7bb206ace45aa9f6a"
+    },
+    "semanticReviewer": "Codex AI (/root)",
+    "visualReviewer": "Codex AI",
+    "cropReviewer": "Codex AI",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/adult_081.json",
+    "resolvedIssueEvidence": {
+      "adult_081": "Team leader listening behind expectant colleagues, no thought bubbles."
+    }
+  },
+  {
+    "groupId": "ai_portrait_native_special_006",
+    "imageId": "img_special_dream_answer_001",
+    "assetPath": "followup_20261031/img_special_dream_answer_001.png",
+    "sha256": "bb7316511c7e2194b6f4b2d5a4094d375c7c6c76360cf4ea8e077cc3aca67152",
+    "approvedPresentation": {
+      "assetPath": "presentation/portraits/img_special_dream_answer_001_portrait_v1.png",
+      "sha256": "fff7f7e0783842bac9fa9a7c835bedf601c5ff9213326a31724950f1a23ea3c3"
+    },
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "special_006"
+    ],
+    "eventSourceHashes": {
+      "special_006": "d1e1a63457a5f08d7aeaf7ba25ec027f3d1affbca450aed00b87a632b1e7a7f4"
+    },
+    "semanticReviewer": "Codex AI (/root)",
+    "visualReviewer": "Codex AI",
+    "cropReviewer": "Codex AI",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/special_006.json",
+    "resolvedIssueEvidence": {
+      "special_006": "Exam questions, visible blood-marked tissues and tissue box."
+    }
+  },
+  {
+    "groupId": "ai_portrait_native_path_wea_04",
+    "imageId": "img_path_wea_04_001",
+    "assetPath": "followup_20261031/img_path_wea_04_001.png",
+    "sha256": "dfdf892442b1ab14c262cc73c62e74742677a7aadd5472824c4245142d4eec9d",
+    "approvedPresentation": {
+      "assetPath": "presentation/portraits/img_path_wea_04_001_portrait_v1.png",
+      "sha256": "e0e897c07a62f60f5a7c94fef430826010b27ef377dc3537080e466f6dc303cd"
+    },
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "path_wea_04"
+    ],
+    "eventSourceHashes": {
+      "path_wea_04": "e57dbd81a0b2d25b38bdfd485a5b6d1e50d9176892675db207bbb518b3a79cb7"
+    },
+    "semanticReviewer": "Codex AI (/root)",
+    "visualReviewer": "Codex AI",
+    "cropReviewer": "Codex AI",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/path_wea_04.json",
+    "resolvedIssueEvidence": {
+      "path_wea_04": "Landlord showing vacant apartment, unsigned offer and clock. Deposit absent."
+    }
+  },
+  {
+    "groupId": "ai_portrait_native_adult_078",
+    "imageId": "img_pov_treadmill_001",
+    "assetPath": "followup_20261031/img_pov_treadmill_001.png",
+    "sha256": "f4ddccba50c6171344fed71f0eac867f388a645259b395447276fa64c2de19cc",
+    "approvedPresentation": {
+      "assetPath": "presentation/portraits/img_pov_treadmill_001_portrait_v1.png",
+      "sha256": "ebc95588788737bd27cb689c8c036e16bd1c8ce0cd232324e0b994cef8446f0c"
+    },
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "adult_078"
+    ],
+    "eventSourceHashes": {
+      "adult_078": "fce347016cad78bb142f464c3d88b09f23e6cf74b643dffab6d59cfe0bcd891b"
+    },
+    "semanticReviewer": "Codex AI (/root)",
+    "visualReviewer": "Codex AI",
+    "cropReviewer": "Codex AI",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/adult_078.json",
+    "resolvedIssueEvidence": {
+      "adult_078": "Adjacent runner's single belt, viewer's own handrail and fallen earbud in gap."
+    }
+  },
+  {
+    "groupId": "ai_portrait_native_adult_067",
+    "imageId": "img_adult_sunday_night_001",
+    "assetPath": "followup_20261031/img_adult_sunday_night_001.png",
+    "sha256": "5e44b7b62958b1b3a5985e6a60ccb66f0839ace52b89ba01bc58217f9cd37c18",
+    "approvedPresentation": {
+      "assetPath": "presentation/portraits/img_adult_sunday_night_001_portrait_v1.png",
+      "sha256": "6cca4b028ccbad37dbe776592ff78c5d11e213a145331b879df48e7ce9a4108d"
+    },
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "adult_067"
+    ],
+    "eventSourceHashes": {
+      "adult_067": "7e269d9a1aae3d5d2d742a983684ea04723bf246bd078768ab75ccfea2fa989b"
+    },
+    "semanticReviewer": "Codex AI (/root)",
+    "visualReviewer": "Codex AI",
+    "cropReviewer": "Codex AI",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/adult_067.json",
+    "resolvedIssueEvidence": {
+      "adult_067": "Night bedroom desk, shut-off work activity, eleven on analogue clock, moonlit window and still-blank notebook."
+    }
+  },
+  {
+    "groupId": "ai_portrait_native_teen_024",
+    "imageId": "img_teen_wrong_answer_001",
+    "assetPath": "followup_20261031/img_teen_wrong_answer_001.png",
+    "sha256": "5d31de411e494ce85686f8f5bc2910c30cecd9a1206aee5ae6d01542d6919622",
+    "approvedPresentation": {
+      "assetPath": "presentation/portraits/img_teen_wrong_answer_001_portrait_v1.png",
+      "sha256": "41aa35cf0f5730479772071601f7eb1d75c7157302cec7e777ef54893f444349"
+    },
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "teen_024"
+    ],
+    "eventSourceHashes": {
+      "teen_024": "beda4e5c4c3f75ffcd3fa3e9378681a1bf2b4d1a6b15644f27d558f6e9f438f9"
+    },
+    "semanticReviewer": "Codex AI (/root)",
+    "visualReviewer": "Codex AI",
+    "cropReviewer": "Codex AI",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/teen_024.json",
+    "resolvedIssueEvidence": {
+      "teen_024": "Teacher pointing to third line, board and student's notebook in a single vertical view."
+    }
+  },
+  {
+    "groupId": "ai_portrait_native_infant_002",
+    "imageId": "img_infant_first_tooth_001",
+    "assetPath": "followup_20261031/img_infant_first_tooth_001.png",
+    "sha256": "3c37868794fbed03f80c01f77b3c31ba8885a4ed88c0215333164165823e5c95",
+    "approvedPresentation": {
+      "assetPath": "presentation/portraits/img_infant_first_tooth_001_portrait_v1.png",
+      "sha256": "a8e86003c3a1fe10cab0d0d47e39f3db5ae575cf574e059ac086284f42494318"
+    },
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "infant_002"
+    ],
+    "eventSourceHashes": {
+      "infant_002": "4db47762b935140fc1746b9768862a97de3cf975b648e0f739b260872a842d4f"
+    },
+    "semanticReviewer": "Codex AI (/root)",
+    "visualReviewer": "Codex AI",
+    "cropReviewer": "Codex AI",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/infant_002.json",
+    "resolvedIssueEvidence": {
+      "infant_002": "Mother offers ring teether; infant's small open hands await a choice."
+    }
+  },
+  {
+    "groupId": "ai_portrait_native_adult_072",
+    "imageId": "img_pov_first_card_001",
+    "assetPath": "followup_20261031/img_pov_first_card_001.png",
+    "sha256": "e8b321c9fffff153bf5a4a47eef2c67a67097db7acf14f218013ad79b33a2121",
+    "approvedPresentation": {
+      "assetPath": "presentation/portraits/img_pov_first_card_001_portrait_v1.png",
+      "sha256": "91490db70d899eae008069ff82dded8cc100ba89d654cb02c599b2f90e6cf011"
+    },
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "adult_072"
+    ],
+    "eventSourceHashes": {
+      "adult_072": "295aa3bbc0bd22d2f4716f4b3f5c8613062ec6c5e8de08cbb3702e61132aec5e"
+    },
+    "semanticReviewer": "Codex AI",
+    "visualReviewer": "Codex AI",
+    "cropReviewer": "Codex AI",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/adult_072.json",
+    "resolvedIssueEvidence": {
+      "adult_072": "서로 다른 진로를 나타내는 두 서류와 빈칸, 책상 앞의 두 손이 두 화면에서 모두 보인다. 본문에서는 세 진로 선택지가 같은 장면과 연결된다."
+    }
+  },
+  {
+    "groupId": "ai_portrait_native_path_int_03",
+    "imageId": "img_path_int_03_001",
+    "assetPath": "followup_20261031/img_path_int_03_001.png",
+    "sha256": "08623c4e23e6a577b23b3b97b50c33258e681ba17c60e13213304a0f8b3574f1",
+    "approvedPresentation": {
+      "assetPath": "presentation/portraits/img_path_int_03_001_portrait_v1.png",
+      "sha256": "86f0a48360cb9f768e14d26c437c891d5ab159b6e9efae65a47d8f0de3ce2551"
+    },
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "path_int_03"
+    ],
+    "eventSourceHashes": {
+      "path_int_03": "ac6bd16b3ce56b5a08af2ddea45b467ab48e6215c54ec82651cb46ad7bfccd03"
+    },
+    "semanticReviewer": "Codex AI (/root/security_p0)",
+    "visualReviewer": "Codex AI",
+    "cropReviewer": "Codex AI",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/path_int_03.json",
+    "resolvedIssueEvidence": {
+      "path_int_03": "보라색부터 주황색까지 겹친 책 다섯 권과 파란 캔 세 개의 윗면·몸통이 두 화면에서 확인된다. 보통 폭 확대 캡처로 오른쪽 캔의 바깥 윤곽까지 확인했다."
     }
   }
 ]
