@@ -5522,7 +5522,10 @@
     "fileName": "img_love_date_01_001.png",
     "fallbackText": "세 번째 데이트 장면 준비 중",
     "style": "pixel_art",
-    "perspective": "first_person"
+    "perspective": "first_person",
+    "sourceFormat": "portrait_9_16",
+    "width": 941,
+    "height": 1672
   },
   {
     "imageId": "img_love_date_02_001",
@@ -5532,7 +5535,10 @@
     "fileName": "img_love_date_02_001.png",
     "fallbackText": "다시 시작한 연애 장면 준비 중",
     "style": "pixel_art",
-    "perspective": "first_person"
+    "perspective": "first_person",
+    "sourceFormat": "portrait_9_16",
+    "width": 941,
+    "height": 1672
   },
   {
     "imageId": "img_love_conflict_01_001",
@@ -5542,7 +5548,10 @@
     "fileName": "img_love_conflict_01_001.png",
     "fallbackText": "말다툼 다음 날 장면 준비 중",
     "style": "pixel_art",
-    "perspective": "first_person"
+    "perspective": "first_person",
+    "sourceFormat": "portrait_9_16",
+    "width": 941,
+    "height": 1672
   },
   {
     "imageId": "img_love_conflict_first_love_001",
@@ -5552,7 +5561,10 @@
     "fileName": "img_love_conflict_first_love_001.png",
     "fallbackText": "오래 알아서 더 서운한 날 장면 준비 중",
     "style": "pixel_art",
-    "perspective": "first_person"
+    "perspective": "first_person",
+    "sourceFormat": "portrait_9_16",
+    "width": 941,
+    "height": 1672
   },
   {
     "imageId": "img_love_conflict_ideal_001",
@@ -5562,7 +5574,10 @@
     "fileName": "img_love_conflict_ideal_001.png",
     "fallbackText": "이상형의 단점 장면 준비 중",
     "style": "pixel_art",
-    "perspective": "first_person"
+    "perspective": "first_person",
+    "sourceFormat": "portrait_9_16",
+    "width": 941,
+    "height": 1672
   },
   {
     "imageId": "img_love_conflict_music_001",
@@ -5572,7 +5587,10 @@
     "fileName": "img_love_conflict_music_001.png",
     "fallbackText": "연주가 끝난 뒤 장면 준비 중",
     "style": "pixel_art",
-    "perspective": "first_person"
+    "perspective": "first_person",
+    "sourceFormat": "portrait_9_16",
+    "width": 941,
+    "height": 1672
   },
   {
     "imageId": "img_love_conflict_book_001",
@@ -5582,7 +5600,10 @@
     "fileName": "img_love_conflict_book_001.png",
     "fallbackText": "같은 문장, 다른 생각 장면 준비 중",
     "style": "pixel_art",
-    "perspective": "first_person"
+    "perspective": "first_person",
+    "sourceFormat": "portrait_9_16",
+    "width": 941,
+    "height": 1672
   },
   {
     "imageId": "img_love_reunion_01_001",
@@ -5592,7 +5613,10 @@
     "fileName": "img_love_reunion_01_001.png",
     "fallbackText": "헤어진 사람의 안부 장면 준비 중",
     "style": "pixel_art",
-    "perspective": "first_person"
+    "perspective": "first_person",
+    "sourceFormat": "portrait_9_16",
+    "width": 941,
+    "height": 1672
   },
   {
     "imageId": "img_love_reunion_first_love_001",
@@ -5602,7 +5626,10 @@
     "fileName": "img_love_reunion_first_love_001.png",
     "fallbackText": "동창회의 빈자리 장면 준비 중",
     "style": "pixel_art",
-    "perspective": "first_person"
+    "perspective": "first_person",
+    "sourceFormat": "portrait_9_16",
+    "width": 941,
+    "height": 1672
   },
   {
     "imageId": "img_love_reunion_ideal_001",
@@ -5612,7 +5639,10 @@
     "fileName": "img_love_reunion_ideal_001.png",
     "fallbackText": "다시 마주친 그 길 장면 준비 중",
     "style": "pixel_art",
-    "perspective": "first_person"
+    "perspective": "first_person",
+    "sourceFormat": "portrait_9_16",
+    "width": 941,
+    "height": 1672
   },
   {
     "imageId": "img_love_reunion_music_001",
@@ -5622,7 +5652,10 @@
     "fileName": "img_love_reunion_music_001.png",
     "fallbackText": "연말 공연 포스터 장면 준비 중",
     "style": "pixel_art",
-    "perspective": "first_person"
+    "perspective": "first_person",
+    "sourceFormat": "portrait_9_16",
+    "width": 941,
+    "height": 1672
   },
   {
     "imageId": "img_love_reunion_book_001",
@@ -5632,7 +5665,10 @@
     "fileName": "img_love_reunion_book_001.png",
     "fallbackText": "돌려주지 못한 책 장면 준비 중",
     "style": "pixel_art",
-    "perspective": "first_person"
+    "perspective": "first_person",
+    "sourceFormat": "portrait_9_16",
+    "width": 941,
+    "height": 1672
   },
   {
     "imageId": "img_love_letter_01_001",
@@ -5642,7 +5678,10 @@
     "fileName": "img_love_letter_01_001.png",
     "fallbackText": "편지 친구의 전화 장면 준비 중",
     "style": "pixel_art",
-    "perspective": "first_person"
+    "perspective": "first_person",
+    "sourceFormat": "portrait_9_16",
+    "width": 941,
+    "height": 1672
   },
   {
     "imageId": "img_love_marriage_talk_01_001",
@@ -5652,7 +5691,10 @@
     "fileName": "img_love_marriage_talk_01_001.png",
     "fallbackText": "결혼이라는 단어 장면 준비 중",
     "style": "pixel_art",
-    "perspective": "first_person"
+    "perspective": "first_person",
+    "sourceFormat": "portrait_9_16",
+    "width": 941,
+    "height": 1672
   },
   {
     "imageId": "img_love_family_meet_01_001",
@@ -5662,7 +5704,10 @@
     "fileName": "img_love_family_meet_01_001.png",
     "fallbackText": "양가 인사 장면 준비 중",
     "style": "pixel_art",
-    "perspective": "first_person"
+    "perspective": "first_person",
+    "sourceFormat": "portrait_9_16",
+    "width": 941,
+    "height": 1672
   },
   {
     "imageId": "img_love_wedding_01_001",
@@ -5672,7 +5717,10 @@
     "fileName": "img_love_wedding_01_001.png",
     "fallbackText": "결혼식 10분 전 장면 준비 중",
     "style": "pixel_art",
-    "perspective": "first_person"
+    "perspective": "first_person",
+    "sourceFormat": "portrait_9_16",
+    "width": 941,
+    "height": 1672
   },
   {
     "imageId": "img_love_wedding_music_001",
@@ -5682,7 +5730,10 @@
     "fileName": "img_love_wedding_music_001.png",
     "fallbackText": "연주로 채운 축가 장면 준비 중",
     "style": "pixel_art",
-    "perspective": "first_person"
+    "perspective": "first_person",
+    "sourceFormat": "portrait_9_16",
+    "width": 941,
+    "height": 1672
   },
   {
     "imageId": "img_love_holiday_01_001",
@@ -5692,7 +5743,10 @@
     "fileName": "img_love_holiday_01_001.png",
     "fallbackText": "결혼 후 첫 명절 장면 준비 중",
     "style": "pixel_art",
-    "perspective": "first_person"
+    "perspective": "first_person",
+    "sourceFormat": "portrait_9_16",
+    "width": 941,
+    "height": 1672
   },
   {
     "imageId": "img_love_child_plan_01_001",
@@ -5702,7 +5756,10 @@
     "fileName": "img_love_child_plan_01_001.png",
     "fallbackText": "아이 이야기 장면 준비 중",
     "style": "pixel_art",
-    "perspective": "first_person"
+    "perspective": "first_person",
+    "sourceFormat": "portrait_9_16",
+    "width": 941,
+    "height": 1672
   },
   {
     "imageId": "img_love_first_child_01_001",
@@ -5712,6 +5769,9 @@
     "fileName": "img_love_first_child_01_001.png",
     "fallbackText": "새벽 4시의 첫 아이 장면 준비 중",
     "style": "pixel_art",
-    "perspective": "first_person"
+    "perspective": "first_person",
+    "sourceFormat": "portrait_9_16",
+    "width": 941,
+    "height": 1672
   }
 ]

@@ -1,0 +1,1577 @@
+{
+  "schemaVersion": 1,
+  "images": [
+    {
+      "assetPath": "followup_20261031/img_teen_wrong_answer_001.png",
+      "sourceSha256": "5d31de411e494ce85686f8f5bc2910c30cecd9a1206aee5ae6d01542d6919622",
+      "focalX": 0.5,
+      "focalY": 0.5,
+      "portraitVariant": {
+        "assetPath": "presentation/portraits/img_teen_wrong_answer_001_portrait_v1.png",
+        "sha256": "41aa35cf0f5730479772071601f7eb1d75c7157302cec7e777ef54893f444349",
+        "width": 941,
+        "height": 1672,
+        "reviewStatus": "AI_REVIEWED_PRESENTATION",
+        "reviewerType": "AI",
+        "reviewer": "Codex AI (/root)",
+        "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/teen_024.json"
+      }
+    },
+    {
+      "assetPath": "followup_20261031/img_pov_first_card_001.png",
+      "sourceSha256": "e8b321c9fffff153bf5a4a47eef2c67a67097db7acf14f218013ad79b33a2121",
+      "focalX": 0.5,
+      "focalY": 0.5,
+      "portraitVariant": {
+        "assetPath": "presentation/portraits/img_pov_first_card_001_portrait_v1.png",
+        "sha256": "91490db70d899eae008069ff82dded8cc100ba89d654cb02c599b2f90e6cf011",
+        "width": 941,
+        "height": 1672,
+        "reviewStatus": "AI_REVIEWED_PRESENTATION",
+        "reviewerType": "AI",
+        "reviewer": "Codex AI",
+        "reviewEvidence": "docs/refactor/art-candidates/portrait-review-20261119.json"
+      }
+    },
+    {
+      "assetPath": "followup_20261031/img_adult_dinner_door_001.png",
+      "sourceSha256": "0d174b0af21f409c0093d64f45279d1485749d093f893ff2e8679adf40880ecf",
+      "focalX": 0.655,
+      "focalY": 0.5,
+      "note": "Original PNG retained. Individual core-visibility improvement for adult_019; simulated 360x800 and 360x740 crops reviewed. Native review pending; no legacy artwork approval. See docs/refactor/art-candidates/crop-review-20261119.json."
+    },
+    {
+      "assetPath": "followup_20261031/img_path_hea_03_001.png",
+      "sourceSha256": "120563260f1d1f58912f6fd8093e1e6ab2f8d5d3d4810cb3466070aaa3af2afc",
+      "focalX": 0.5,
+      "focalY": 0.5,
+      "portraitVariant": {
+        "assetPath": "presentation/portraits/img_path_hea_03_001_portrait_v1.png",
+        "sha256": "cb2a2d8860468718b20d25bbcb26c81af1f4bee8e9d11d74e6d0cc6ea394ecc9",
+        "width": 941,
+        "height": 1672,
+        "reviewStatus": "AI_REVIEWED_PRESENTATION",
+        "reviewerType": "AI",
+        "reviewer": "Codex AI (/root/effects_tech)",
+        "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/path_hea_03.json"
+      }
+    },
+    {
+      "assetPath": "followup_20261031/img_path_hea_08_001.png",
+      "sourceSha256": "4b1975f6a9858c0acf0439f0b46458e5836e40b5438f78fb0cd8ed74cd75f334",
+      "focalX": 0.445,
+      "focalY": 0.5,
+      "note": "Original PNG retained. Individual core-visibility improvement for path_hea_08; simulated 360x800 and 360x740 crops reviewed. Native review pending; no legacy artwork approval. See docs/refactor/art-candidates/crop-review-20261119.json."
+    },
+    {
+      "assetPath": "followup_20261031/img_path_hea_14_001.png",
+      "sourceSha256": "6822d03393958875970ec46a49aeb299893be5fd8294e97a0ae9fb3f97955c0e",
+      "focalX": 0.56,
+      "focalY": 0.5,
+      "note": "Original PNG retained. Individual core-visibility improvement for path_hea_14; simulated 360x800 and 360x740 crops reviewed. Native review pending; no legacy artwork approval. See docs/refactor/art-candidates/crop-review-20261119.json."
+    },
+    {
+      "assetPath": "followup_20261031/img_teen_school_store_001.png",
+      "sourceSha256": "6655f8ce3a429dee1b75803f9888a6c2d770757ed83eb714d912147b67efe565",
+      "focalX": 0.62,
+      "focalY": 0.5,
+      "note": "Original PNG retained. Individual core-visibility improvement for teen_029; simulated 360x800 and 360x740 crops reviewed. Native review pending; no legacy artwork approval. See docs/refactor/art-candidates/crop-review-20261119.json."
+    },
+    {
+      "assetPath": "img_love_first_child_01_001.png",
+      "sourceSha256": "14d16a95f74bd65904b9f4187db5b369c6fc00c276127e596d5a3333933a1300",
+      "focalX": 0.62,
+      "focalY": 0.5,
+      "note": "Keep the baby's closed eye and the finger-holding contact together after native review found the central phone crop hid the sleeping expression. Original generated PNG retained; follow-up native verification pending."
+    },
+    {
+      "assetPath": "followup_20261031/img_adult_friends_drinks_001.png",
+      "sourceSha256": "5593c9ea563fdac3b92e6534f4daf2c548d14ec03e1d458f63b7be66a10d020b",
+      "focalX": 0.5,
+      "focalY": 0.5,
+      "portraitVariant": {
+        "assetPath": "presentation/portraits/img_adult_friends_drinks_001_portrait_v1.png",
+        "sha256": "fa535d759628339b22a55b3c99b9ac33f902c56c81be1f1df825fcefaed15caa",
+        "width": 941,
+        "height": 1672,
+        "reviewStatus": "AI_REVIEWED_PRESENTATION",
+        "reviewerType": "AI",
+        "reviewer": "Codex AI",
+        "reviewEvidence": "docs/refactor/art-candidates/crop-variant-integration/adult_007.json"
+      }
+    },
+    {
+      "assetPath": "followup_20261031/img_adult_campus_001.png",
+      "sourceSha256": "8d2a400bfae95281bffc7b8e2ee54fd39a9f88783c2c584e4f39a20da28c1dc3",
+      "focalX": 0.5,
+      "focalY": 0.5,
+      "portraitVariant": {
+        "assetPath": "presentation/portraits/img_adult_campus_001_portrait_v1.png",
+        "sha256": "f1256a01f6cffd916c6409c4934826ae5d61405898d65cd32a82a89e3f8fa0b3",
+        "width": 941,
+        "height": 1672,
+        "reviewStatus": "AI_REVIEWED_PRESENTATION",
+        "reviewerType": "AI",
+        "reviewer": "Codex AI",
+        "reviewEvidence": "docs/refactor/art-candidates/crop-variant-integration/adult_012.json"
+      }
+    },
+    {
+      "assetPath": "followup_20261031/img_adult_gym_001.png",
+      "sourceSha256": "3762c74c49b1dd3b7307cf109e3d8ae315afa020307ac04df6b70f768c16a9e9",
+      "focalX": 0.5,
+      "focalY": 0.5,
+      "portraitVariant": {
+        "assetPath": "presentation/portraits/img_adult_gym_001_portrait_v1.png",
+        "sha256": "9a19afe6d33fbab027373e5812edf5f8f001e5b48120e5704a45b9f716741ca8",
+        "width": 941,
+        "height": 1672,
+        "reviewStatus": "AI_REVIEWED_PRESENTATION",
+        "reviewerType": "AI",
+        "reviewer": "Codex AI",
+        "reviewEvidence": "docs/refactor/art-candidates/crop-variant-integration/adult_027.json"
+      }
+    },
+    {
+      "assetPath": "followup_20261031/img_adult_first_car_001.png",
+      "sourceSha256": "8193911908ce12934731cab5ebcfddd15c985aa57283c35ae9eb64cb04add8b0",
+      "focalX": 0.5,
+      "focalY": 0.5,
+      "portraitVariant": {
+        "assetPath": "presentation/portraits/img_adult_first_car_001_portrait_v1.png",
+        "sha256": "31029c4d981cfb36dfa6aa594bc89454d89d851591956bd0d6b6c767b14be98d",
+        "width": 941,
+        "height": 1672,
+        "reviewStatus": "AI_REVIEWED_PRESENTATION",
+        "reviewerType": "AI",
+        "reviewer": "Codex AI",
+        "reviewEvidence": "docs/refactor/art-candidates/crop-variant-integration/adult_028.json"
+      }
+    },
+    {
+      "assetPath": "followup_20261031/img_adult_driving_test_001.png",
+      "sourceSha256": "9cfaca7cc5357f82a6589d74ebab2274537a3395296f85e183715463bc068dd0",
+      "focalX": 0.5,
+      "focalY": 0.5,
+      "portraitVariant": {
+        "assetPath": "presentation/portraits/img_adult_driving_test_001_portrait_v1.png",
+        "sha256": "9b428944e1ff61cc1794fba0b73d989a7fa91d51d7e0130a9f6194606dee165a",
+        "width": 941,
+        "height": 1672,
+        "reviewStatus": "AI_REVIEWED_PRESENTATION",
+        "reviewerType": "AI",
+        "reviewer": "Codex AI (/root/effects_tech)",
+        "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/adult_044.json"
+      }
+    },
+    {
+      "assetPath": "followup_20261031/img_child_vacation_001.png",
+      "sourceSha256": "add360662c5d1da4842e54f7d2cd63491676b48423904748f5f8932afbfcd400",
+      "focalX": 0.5,
+      "focalY": 0.5,
+      "portraitVariant": {
+        "assetPath": "presentation/portraits/img_child_vacation_001_portrait_v1.png",
+        "sha256": "b4c98ae8293ea1c1d3052dee59aa2db4d6d01a805cd5e39c676c533a808fee08",
+        "width": 941,
+        "height": 1672,
+        "reviewStatus": "AI_REVIEWED_PRESENTATION",
+        "reviewerType": "AI",
+        "reviewer": "Codex AI (/root/effects_tech)",
+        "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/child_039.json"
+      }
+    },
+    {
+      "assetPath": "followup_20261031/img_cross_01_001.png",
+      "sourceSha256": "1ef454ccb0eba362aae7659c1b054629fe6c1ad21136af5d7c1927e369697d1f",
+      "focalX": 0.5,
+      "focalY": 0.5,
+      "portraitVariant": {
+        "assetPath": "presentation/portraits/img_cross_01_001_portrait_v1.png",
+        "sha256": "0ea2e601ff1795cab99c698f53b1774585b1975a673b5199ac7ecb8e55e55e92",
+        "width": 941,
+        "height": 1671,
+        "reviewStatus": "AI_REVIEWED_PRESENTATION",
+        "reviewerType": "AI",
+        "reviewer": "Codex AI (/root/effects_tech)",
+        "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/cross_01.json"
+      }
+    },
+    {
+      "assetPath": "followup_20261031/img_cross_06_001.png",
+      "sourceSha256": "06381995592f3e8e01361449fe568d930c9bc9fceb485c0c9d4a5491bd86fd73",
+      "focalX": 0.5,
+      "focalY": 0.5,
+      "portraitVariant": {
+        "assetPath": "presentation/portraits/img_cross_06_001_portrait_v1.png",
+        "sha256": "049d1385289cc5806ed7e8653d385e6491c233caa4c6a1044d103f9471a62ecb",
+        "width": 941,
+        "height": 1672,
+        "reviewStatus": "AI_REVIEWED_PRESENTATION",
+        "reviewerType": "AI",
+        "reviewer": "Codex AI (/root/effects_tech)",
+        "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/cross_06.json"
+      }
+    },
+    {
+      "assetPath": "followup_20261031/img_cross_08_001.png",
+      "sourceSha256": "a0e37f53d51ab28901e03f33e13c3c1cf08be3959caf0a51e4d0bee81969551e",
+      "focalX": 0.5,
+      "focalY": 0.5,
+      "portraitVariant": {
+        "assetPath": "presentation/portraits/img_cross_08_001_portrait_v1.png",
+        "sha256": "098784587d250c8c861e8f3436e25bc6ec84850d80b5c56e0ca061bd92c90c03",
+        "width": 941,
+        "height": 1672,
+        "reviewStatus": "AI_REVIEWED_PRESENTATION",
+        "reviewerType": "AI",
+        "reviewer": "Codex AI (/root/effects_tech)",
+        "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/cross_08.json"
+      }
+    },
+    {
+      "assetPath": "followup_20261031/img_cross_09_001.png",
+      "sourceSha256": "373c9c7a211e6426093b37d59d4502704140754176140051bc37e80327fd796b",
+      "focalX": 0.5,
+      "focalY": 0.5,
+      "portraitVariant": {
+        "assetPath": "presentation/portraits/img_cross_09_001_portrait_v1.png",
+        "sha256": "8c9b8384182b9f8062132e61985799c7fd70d7bc4b373eb1337be4cc0f1f03ad",
+        "width": 941,
+        "height": 1672,
+        "reviewStatus": "AI_REVIEWED_PRESENTATION",
+        "reviewerType": "AI",
+        "reviewer": "Codex AI (/root/effects_tech)",
+        "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/cross_09.json"
+      }
+    },
+    {
+      "assetPath": "followup_20261031/img_path_fit_01_001.png",
+      "sourceSha256": "d2bb4ff368c5619756b13363a8b9532525b2007fbef07cc8d7d83e24bb8136d8",
+      "focalX": 0.5,
+      "focalY": 0.5,
+      "portraitVariant": {
+        "assetPath": "presentation/portraits/img_path_fit_01_001_portrait_v1.png",
+        "sha256": "f0e35758c91c29885a25e1bebca9027b0e1b0d6c4927eb884fbf265fb9f2ed82",
+        "width": 941,
+        "height": 1672,
+        "reviewStatus": "AI_REVIEWED_PRESENTATION",
+        "reviewerType": "AI",
+        "reviewer": "Codex AI (/root/effects_tech)",
+        "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/path_fit_01.json"
+      }
+    },
+    {
+      "assetPath": "followup_20261031/img_path_fit_12_001.png",
+      "sourceSha256": "c2bd740ba752c5f01c498943493c5b5c0f5aa911d2452c2de987e6197cf30ad1",
+      "focalX": 0.5,
+      "focalY": 0.5,
+      "portraitVariant": {
+        "assetPath": "presentation/portraits/img_path_fit_12_001_portrait_v1.png",
+        "sha256": "770b80ad68172f7ec47374aa2d89e09aaa8bd627b4888bc4653ccda44f0ce5d9",
+        "width": 941,
+        "height": 1672,
+        "reviewStatus": "AI_REVIEWED_PRESENTATION",
+        "reviewerType": "AI",
+        "reviewer": "Codex AI (/root/effects_tech)",
+        "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/path_fit_12.json"
+      }
+    },
+    {
+      "assetPath": "followup_20261031/img_path_fit_14_001.png",
+      "sourceSha256": "47d03d73c6dcc3c004b32d9cd9abd725e7fe80bfb2f51a9e83a11db1a74ef095",
+      "focalX": 0.5,
+      "focalY": 0.5,
+      "portraitVariant": {
+        "assetPath": "presentation/portraits/img_path_fit_14_001_portrait_v1.png",
+        "sha256": "4cecc2e5cebb17676cc216dec180623b9eeafbd46332353e0ce7377563e53a40",
+        "width": 941,
+        "height": 1672,
+        "reviewStatus": "AI_REVIEWED_PRESENTATION",
+        "reviewerType": "AI",
+        "reviewer": "Codex AI (/root/effects_tech)",
+        "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/path_fit_14.json"
+      }
+    },
+    {
+      "assetPath": "followup_20261031/img_path_hap_03_001.png",
+      "sourceSha256": "a7af4eb457ed03b3d5f7988e64bed8157cbc76bbb77f838b483ff93f079aca50",
+      "focalX": 0.5,
+      "focalY": 0.5,
+      "portraitVariant": {
+        "assetPath": "presentation/portraits/img_path_hap_03_001_portrait_v1.png",
+        "sha256": "0d15c668ad1181fff8884c4e9512b0e3f10f960b9eb505fdf95fdfd6302cfd87",
+        "width": 941,
+        "height": 1672,
+        "reviewStatus": "AI_REVIEWED_PRESENTATION",
+        "reviewerType": "AI",
+        "reviewer": "Codex AI (/root/effects_tech)",
+        "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/path_hap_03.json"
+      }
+    },
+    {
+      "assetPath": "followup_20261031/img_path_hap_13_001.png",
+      "sourceSha256": "e7362e6bd02a58be22ad8f818e9d0bc5291d4c8791d457dbafb656c02a50933d",
+      "focalX": 0.5,
+      "focalY": 0.5,
+      "portraitVariant": {
+        "assetPath": "presentation/portraits/img_path_hap_13_001_portrait_v1.png",
+        "sha256": "112e176a374df655004a3149e5e48fcae414e25e322b89b67ceaf359234155eb",
+        "width": 941,
+        "height": 1672,
+        "reviewStatus": "AI_REVIEWED_PRESENTATION",
+        "reviewerType": "AI",
+        "reviewer": "Codex AI (/root/effects_tech)",
+        "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/path_hap_13.json"
+      }
+    },
+    {
+      "assetPath": "followup_20261031/img_path_hea_05_001.png",
+      "sourceSha256": "be3e4d1d9ce4b43776dba7b3c93862cb7d069a02fc42fb4c02947fdc422c7455",
+      "focalX": 0.5,
+      "focalY": 0.5,
+      "portraitVariant": {
+        "assetPath": "presentation/portraits/img_path_hea_05_001_portrait_v1.png",
+        "sha256": "300e0155d72702be5d5f73d12e00c6d5450e054ff2b2b8ab88285c8abc3984ef",
+        "width": 941,
+        "height": 1672,
+        "reviewStatus": "AI_REVIEWED_PRESENTATION",
+        "reviewerType": "AI",
+        "reviewer": "Codex AI (/root/effects_tech)",
+        "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/path_hea_05.json"
+      }
+    },
+    {
+      "assetPath": "followup_20261031/img_path_hea_11_001.png",
+      "sourceSha256": "769b1132789267cc1aa9026a16614fba535e03b56a94c8ea79f215292a17de08",
+      "focalX": 0.5,
+      "focalY": 0.5,
+      "portraitVariant": {
+        "assetPath": "presentation/portraits/img_path_hea_11_001_portrait_v1.png",
+        "sha256": "d7c3d2e2294b0860a75e86b745e6d58a7b31e2dc3ab1fad7c77278669dafb93d",
+        "width": 941,
+        "height": 1672,
+        "reviewStatus": "AI_REVIEWED_PRESENTATION",
+        "reviewerType": "AI",
+        "reviewer": "Codex AI (/root/effects_tech)",
+        "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/path_hea_11.json"
+      }
+    },
+    {
+      "assetPath": "followup_20261031/img_path_int_01_001.png",
+      "sourceSha256": "d85ddfccbe1b325985e25f7e715d3d14148e3eb3061f74a60b2d72ae5cb85a5b",
+      "focalX": 0.5,
+      "focalY": 0.5,
+      "portraitVariant": {
+        "assetPath": "presentation/portraits/img_path_int_01_001_portrait_v1.png",
+        "sha256": "685132847716a14c2c7b77dc3933e1b512cf78b179c8a95be08a63bdeabdcab9",
+        "width": 941,
+        "height": 1672,
+        "reviewStatus": "AI_REVIEWED_PRESENTATION",
+        "reviewerType": "AI",
+        "reviewer": "Codex AI (/root/effects_tech)",
+        "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/path_int_01.json"
+      }
+    },
+    {
+      "assetPath": "followup_20261031/img_path_int_08_001.png",
+      "sourceSha256": "dbdc6bdb19dab36b0e0635bcb13986b28e83fbd3f5110cef5932e7d254d12ab1",
+      "focalX": 0.5,
+      "focalY": 0.5,
+      "portraitVariant": {
+        "assetPath": "presentation/portraits/img_path_int_08_001_portrait_v1.png",
+        "sha256": "09732b407055928aac51b918c78a17940c462d2bb3c6ecc04c13e3e42e4cbe01",
+        "width": 941,
+        "height": 1672,
+        "reviewStatus": "AI_REVIEWED_PRESENTATION",
+        "reviewerType": "AI",
+        "reviewer": "Codex AI (/root/effects_tech)",
+        "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/path_int_08.json"
+      }
+    },
+    {
+      "assetPath": "followup_20261031/img_path_luk_12_001.png",
+      "sourceSha256": "06cb338801d00a27ac8232ecf00c88c8779008633538f8707ae776787ec25737",
+      "focalX": 0.5,
+      "focalY": 0.5,
+      "portraitVariant": {
+        "assetPath": "presentation/portraits/img_path_luk_12_001_portrait_v1.png",
+        "sha256": "079b54a126da7d07ca840772fc86815bb008c75bead17f3504999cf5571607ff",
+        "width": 941,
+        "height": 1672,
+        "reviewStatus": "AI_REVIEWED_PRESENTATION",
+        "reviewerType": "AI",
+        "reviewer": "Codex AI (/root/effects_tech)",
+        "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/path_luk_12.json"
+      }
+    },
+    {
+      "assetPath": "followup_20261031/img_path_soc_02_001.png",
+      "sourceSha256": "c9a80a64d713b73b428307c84a23d9266a0bddfaadc337c95483968aa1d6699a",
+      "focalX": 0.5,
+      "focalY": 0.5,
+      "portraitVariant": {
+        "assetPath": "presentation/portraits/img_path_soc_02_001_portrait_v1.png",
+        "sha256": "c8dc7b5e8dfa97230d62991fa9b2228842703d4fb2a0843a8d735f49754a6dc8",
+        "width": 941,
+        "height": 1672,
+        "reviewStatus": "AI_REVIEWED_PRESENTATION",
+        "reviewerType": "AI",
+        "reviewer": "Codex AI (/root/effects_tech)",
+        "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/path_soc_02.json"
+      }
+    },
+    {
+      "assetPath": "followup_20261031/img_path_soc_15_001.png",
+      "sourceSha256": "2dd589f3125779f7b005fc6f256386f41c9dcc9dde84d4cfee63ab95c0fa262b",
+      "focalX": 0.5,
+      "focalY": 0.5,
+      "portraitVariant": {
+        "assetPath": "presentation/portraits/img_path_soc_15_001_portrait_v1.png",
+        "sha256": "68563fe7e6bd4b9ef464918e5388b5abdd31335db08645f6caca508d4c0ae7cb",
+        "width": 941,
+        "height": 1672,
+        "reviewStatus": "AI_REVIEWED_PRESENTATION",
+        "reviewerType": "AI",
+        "reviewer": "Codex AI (/root/effects_tech)",
+        "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/path_soc_15.json"
+      }
+    },
+    {
+      "assetPath": "followup_20261031/img_path_wea_13_001.png",
+      "sourceSha256": "019fc04ee1d055c626f5cc18ecc6b4b43b8dbcf4495046aee1bca7cbba110be4",
+      "focalX": 0.5,
+      "focalY": 0.5,
+      "portraitVariant": {
+        "assetPath": "presentation/portraits/img_path_wea_13_001_portrait_v1.png",
+        "sha256": "28878ddd18f871cf461218f893cf151a3c9b47b8554e1b8ae07b10246b87a510",
+        "width": 941,
+        "height": 1672,
+        "reviewStatus": "AI_REVIEWED_PRESENTATION",
+        "reviewerType": "AI",
+        "reviewer": "Codex AI (/root/effects_tech)",
+        "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/path_wea_13.json"
+      }
+    },
+    {
+      "assetPath": "followup_20261031/img_special_health_research_001.png",
+      "sourceSha256": "da9082e698969a933099f112d79c45c63e0e69ecad05f35ab273a3a30a5ff3e6",
+      "focalX": 0.5,
+      "focalY": 0.5,
+      "portraitVariant": {
+        "assetPath": "presentation/portraits/img_special_health_research_001_portrait_v1.png",
+        "sha256": "db7ecbf3039f1b4e15b8049af7d5729c7d9c95ee420615e65a5afea9153ac31e",
+        "width": 941,
+        "height": 1672,
+        "reviewStatus": "AI_REVIEWED_PRESENTATION",
+        "reviewerType": "AI",
+        "reviewer": "Codex AI (/root/effects_tech)",
+        "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/special_009.json"
+      }
+    },
+    {
+      "assetPath": "followup_20261031/img_infant_toys_001.png",
+      "sourceSha256": "be47f735bafcc153ea6e02ecc20e66e7b62f4ccb101e559c87a82d0d907be86c",
+      "focalX": 0.5,
+      "focalY": 0.5,
+      "portraitVariant": {
+        "assetPath": "presentation/portraits/img_infant_toys_001_portrait_v1.png",
+        "sha256": "7908541fe39354738515bb54efa2c0519377d16a634240e955290661c007304e",
+        "width": 941,
+        "height": 1672,
+        "reviewStatus": "AI_REVIEWED_PRESENTATION",
+        "reviewerType": "AI",
+        "reviewer": "Codex AI (/root/security_p0)",
+        "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/infant_007.json"
+      }
+    },
+    {
+      "assetPath": "followup_20261031/img_infant_remote_001.png",
+      "sourceSha256": "31cedd651c65a1d06ed2f0be2ed9720654e17c5a475ee9cab9041e830d66df1e",
+      "focalX": 0.5,
+      "focalY": 0.5,
+      "portraitVariant": {
+        "assetPath": "presentation/portraits/img_infant_remote_001_portrait_v1.png",
+        "sha256": "ca600e68055e4f6d6b712fd8d980a35d992f653232907ee406d36bfd962783b9",
+        "width": 941,
+        "height": 1672,
+        "reviewStatus": "AI_REVIEWED_PRESENTATION",
+        "reviewerType": "AI",
+        "reviewer": "Codex AI (/root/security_p0)",
+        "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/infant_003.json"
+      }
+    },
+    {
+      "assetPath": "followup_20261031/img_infant_vaccine_001.png",
+      "sourceSha256": "2719674593fbd0af2a84cb1be57302dd510fe023d373359b857d06cd8f51a896",
+      "focalX": 0.5,
+      "focalY": 0.5,
+      "portraitVariant": {
+        "assetPath": "presentation/portraits/img_infant_vaccine_001_portrait_v1.png",
+        "sha256": "38b97eb275ec8c68456f992207f7c84fa4d0e173db42b611ebf489c6de833960",
+        "width": 941,
+        "height": 1672,
+        "reviewStatus": "AI_REVIEWED_PRESENTATION",
+        "reviewerType": "AI",
+        "reviewer": "Codex AI (/root/security_p0)",
+        "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/infant_008.json"
+      }
+    },
+    {
+      "assetPath": "followup_20261031/img_infant_cousin_001.png",
+      "sourceSha256": "2c4f55bd8b5b41c3fefc4e849c12345eab0c42ce1cf10dfd7498bc244066f5e4",
+      "focalX": 0.5,
+      "focalY": 0.5,
+      "portraitVariant": {
+        "assetPath": "presentation/portraits/img_infant_cousin_001_portrait_v1.png",
+        "sha256": "d2788805c5c9b71a72992a57a7a3dd96e643ba2a1b49834ead877e46638c616e",
+        "width": 941,
+        "height": 1672,
+        "reviewStatus": "AI_REVIEWED_PRESENTATION",
+        "reviewerType": "AI",
+        "reviewer": "Codex AI (/root/security_p0)",
+        "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/infant_018.json"
+      }
+    },
+    {
+      "assetPath": "followup_20261031/img_path_fit_03_001.png",
+      "sourceSha256": "f5a03cf613ce4b10597e78e94c2e42d6b448463777bedab6af0478ddde79a7a6",
+      "focalX": 0.5,
+      "focalY": 0.5,
+      "portraitVariant": {
+        "assetPath": "presentation/portraits/img_path_fit_03_001_portrait_v1.png",
+        "sha256": "23075f0d5b40e0b047562796f74ca10ea34a26c137697aa296c0a1d671597e74",
+        "width": 941,
+        "height": 1672,
+        "reviewStatus": "AI_REVIEWED_PRESENTATION",
+        "reviewerType": "AI",
+        "reviewer": "Codex AI (/root/security_p0)",
+        "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/path_fit_03.json"
+      }
+    },
+    {
+      "assetPath": "followup_20261031/img_path_int_02_001.png",
+      "sourceSha256": "64468871e66a74246da9eea83c12d4d3c4af192de8aa3c605850cfb768643f19",
+      "focalX": 0.5,
+      "focalY": 0.5,
+      "portraitVariant": {
+        "assetPath": "presentation/portraits/img_path_int_02_001_portrait_v1.png",
+        "sha256": "b63d3c7d15e2ac1feff6de14df06dcf46a8ae22178b9f40f52e2307e5d751d58",
+        "width": 941,
+        "height": 1672,
+        "reviewStatus": "AI_REVIEWED_PRESENTATION",
+        "reviewerType": "AI",
+        "reviewer": "Codex AI (/root/security_p0)",
+        "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/path_int_02.json"
+      }
+    },
+    {
+      "assetPath": "followup_20261031/img_path_int_03_001.png",
+      "sourceSha256": "08623c4e23e6a577b23b3b97b50c33258e681ba17c60e13213304a0f8b3574f1",
+      "focalX": 0.5,
+      "focalY": 0.5,
+      "portraitVariant": {
+        "assetPath": "presentation/portraits/img_path_int_03_001_portrait_v1.png",
+        "sha256": "86f0a48360cb9f768e14d26c437c891d5ab159b6e9efae65a47d8f0de3ce2551",
+        "width": 941,
+        "height": 1672,
+        "reviewStatus": "AI_REVIEWED_PRESENTATION",
+        "reviewerType": "AI",
+        "reviewer": "Codex AI (/root/security_p0)",
+        "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/path_int_03.json",
+        "focalX": 0.555
+      }
+    },
+    {
+      "assetPath": "followup_20261031/img_teen_graduation_001.png",
+      "sourceSha256": "15ff486af504a1e82fa8beffc225960d3f4097e6f92c32e9586037405d255820",
+      "focalX": 0.5,
+      "focalY": 0.5,
+      "portraitVariant": {
+        "assetPath": "presentation/portraits/img_teen_graduation_001_portrait_v1.png",
+        "sha256": "b374a54d7960a1845237bfc30281203a335e46ec8e399169f1886f6362ca4709",
+        "width": 940,
+        "height": 1672,
+        "reviewStatus": "AI_REVIEWED_PRESENTATION",
+        "reviewerType": "AI",
+        "reviewer": "Codex AI (/root/security_p0)",
+        "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/teen_039.json"
+      }
+    },
+    {
+      "assetPath": "followup_20261031/img_special_dog_carry_001.png",
+      "sourceSha256": "7caf99f29f164d229e575d540ebda05fd38c2b8e420417443eaa9e2b46f67852",
+      "focalX": 0.5,
+      "focalY": 0.5,
+      "portraitVariant": {
+        "assetPath": "presentation/portraits/img_special_dog_carry_001_portrait_v1.png",
+        "sha256": "6ea45624423c809379b5a92b66bb45800d37a81fe737fdd85a7ec47430c7774a",
+        "width": 941,
+        "height": 1672,
+        "reviewStatus": "AI_REVIEWED_PRESENTATION",
+        "reviewerType": "AI",
+        "reviewer": "Codex AI (/root/security_p0)",
+        "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/special_002.json"
+      }
+    },
+    {
+      "assetPath": "followup_20261031/img_special_robot_vacuum_001.png",
+      "sourceSha256": "f07ced21b4ce9bf23545e1073c5d59b9b6f735b9c05b9c1ffccc031e4f5cb5c6",
+      "focalX": 0.5,
+      "focalY": 0.5,
+      "portraitVariant": {
+        "assetPath": "presentation/portraits/img_special_robot_vacuum_001_portrait_v1.png",
+        "sha256": "6f3c6054f94f37ada83ba06b0c9bfa2e9ddfe007afb2e6fb54c5b9b8845bcc55",
+        "width": 941,
+        "height": 1672,
+        "reviewStatus": "AI_REVIEWED_PRESENTATION",
+        "reviewerType": "AI",
+        "reviewer": "Codex AI (/root/security_p0)",
+        "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/special_012.json"
+      }
+    },
+    {
+      "assetPath": "followup_20261031/img_child_dream_001.png",
+      "sourceSha256": "fe886a469ead746ba8c8dfd600a59f54b835abcb1db775b112c8215f432d4411",
+      "focalX": 0.5,
+      "focalY": 0.5,
+      "portraitVariant": {
+        "assetPath": "presentation/portraits/img_child_dream_001_portrait_v1.png",
+        "sha256": "a3f61a46e23f0b4210abf51c424bb911dcabfdd71d3569978d2d5020a62b66a9",
+        "width": 941,
+        "height": 1672,
+        "reviewStatus": "AI_REVIEWED_PRESENTATION",
+        "reviewerType": "AI",
+        "reviewer": "Codex AI (/root/security_p0)",
+        "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/child_007.json"
+      }
+    },
+    {
+      "assetPath": "followup_20261031/img_child_culture_pick_001.png",
+      "sourceSha256": "360e55da212b180cc7a8c0e4feb09b7b8199f1f60747228ac11847db0d72595d",
+      "focalX": 0.5,
+      "focalY": 0.5,
+      "portraitVariant": {
+        "assetPath": "presentation/portraits/img_child_culture_pick_001_portrait_v1.png",
+        "sha256": "7eb9358b2b74e915ed89c4122b519855e74e62735b15bae0d448b777686209a0",
+        "width": 941,
+        "height": 1672,
+        "reviewStatus": "AI_REVIEWED_PRESENTATION",
+        "reviewerType": "AI",
+        "reviewer": "Codex AI (/root/security_p0)",
+        "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/child_012.json"
+      }
+    },
+    {
+      "assetPath": "followup_20261031/img_child_smartphone_001.png",
+      "sourceSha256": "f7b2577535b874e4246986d9f0e3821531f61e6a87afdb3182964a7e442edf9a",
+      "focalX": 0.5,
+      "focalY": 0.5,
+      "portraitVariant": {
+        "assetPath": "presentation/portraits/img_child_smartphone_001_portrait_v1.png",
+        "sha256": "d12963768ca2f45fcab080c3a25d0db8fa033b94237d7e5b43f000f62906fc46",
+        "width": 941,
+        "height": 1672,
+        "reviewStatus": "AI_REVIEWED_PRESENTATION",
+        "reviewerType": "AI",
+        "reviewer": "Codex AI (/root/security_p0)",
+        "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/child_027.json"
+      }
+    },
+    {
+      "assetPath": "followup_20261031/img_child_swing_line_001.png",
+      "sourceSha256": "e9dadea02bad787835f77aa5656e344ed7419f540b441be540d33cd27f5919fd",
+      "focalX": 0.5,
+      "focalY": 0.5,
+      "portraitVariant": {
+        "assetPath": "presentation/portraits/img_child_swing_line_001_portrait_v1.png",
+        "sha256": "8b7c20b803bacefcb3e3364ec14ecc0b1ae1ff115be062f52f50c23860f23ae6",
+        "width": 941,
+        "height": 1672,
+        "reviewStatus": "AI_REVIEWED_PRESENTATION",
+        "reviewerType": "AI",
+        "reviewer": "Codex AI (/root/security_p0)",
+        "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/child_041.json"
+      }
+    },
+    {
+      "assetPath": "followup_20261031/img_path_fit_02_001.png",
+      "sourceSha256": "e68304b1bb65a782b1bb1c87221de91ea438a8adeee593ce273e4ec45f653af3",
+      "focalX": 0.5,
+      "focalY": 0.5,
+      "portraitVariant": {
+        "assetPath": "presentation/portraits/img_path_fit_02_001_portrait_v1.png",
+        "sha256": "9d8c73004c4fecceb6d2a9d7d73ae8d615ae76ce4212b281ac59923e03053c47",
+        "width": 941,
+        "height": 1672,
+        "reviewStatus": "AI_REVIEWED_PRESENTATION",
+        "reviewerType": "AI",
+        "reviewer": "Codex AI (/root/security_p0)",
+        "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/path_fit_02.json"
+      }
+    },
+    {
+      "assetPath": "followup_20261031/img_path_luk_01_001.png",
+      "sourceSha256": "dd4dd11c460352bdfa470e590d9ae1ab20b2f5f1156a8b92162665b5f2f8e277",
+      "focalX": 0.5,
+      "focalY": 0.5,
+      "portraitVariant": {
+        "assetPath": "presentation/portraits/img_path_luk_01_001_portrait_v1.png",
+        "sha256": "bea5b8a83faf1b0e4dc14837f6b7af5a343499e8175701fb320050e636dbdb5a",
+        "width": 941,
+        "height": 1672,
+        "reviewStatus": "AI_REVIEWED_PRESENTATION",
+        "reviewerType": "AI",
+        "reviewer": "Codex AI (/root/security_p0)",
+        "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/path_luk_01.json"
+      }
+    },
+    {
+      "assetPath": "followup_20261031/img_special_hornet_001.png",
+      "sourceSha256": "8b7caf6fe98a443b4375ac009a7aba0545be9c464f7563243cd4046c6223d86a",
+      "focalX": 0.5,
+      "focalY": 0.5,
+      "portraitVariant": {
+        "assetPath": "presentation/portraits/img_special_hornet_001_portrait_v1.png",
+        "sha256": "b2d7dbe39c0dca5dcbc66ad544faeff164c860e41020580eb063949acd99bc7a",
+        "width": 941,
+        "height": 1672,
+        "reviewStatus": "AI_REVIEWED_PRESENTATION",
+        "reviewerType": "AI",
+        "reviewer": "Codex AI (/root/security_p0)",
+        "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/special_003.json"
+      }
+    },
+    {
+      "assetPath": "followup_20261031/img_path_hea_02_001.png",
+      "sourceSha256": "be1183a80910abbbb5f83343c54a6c6e8ee1c696f16cd2b4055865312ac72c95",
+      "focalX": 0.5,
+      "focalY": 0.5,
+      "portraitVariant": {
+        "assetPath": "presentation/portraits/img_path_hea_02_001_portrait_v1.png",
+        "sha256": "d40a1a7f212fa14a23f3b4f8e468147703845d9260dd02183728457db7d54e4e",
+        "width": 941,
+        "height": 1672,
+        "reviewStatus": "AI_REVIEWED_PRESENTATION",
+        "reviewerType": "AI",
+        "reviewer": "Codex AI (/root/security_p0)",
+        "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/path_hea_02.json"
+      }
+    },
+    {
+      "assetPath": "followup_20261031/img_path_luk_11_001.png",
+      "sourceSha256": "bf603ab3795b9b58c5f8d09b7e50d6ec9e55f425661d41ea9d62cfbc207928ed",
+      "focalX": 0.5,
+      "focalY": 0.5,
+      "portraitVariant": {
+        "assetPath": "presentation/portraits/img_path_luk_11_001_portrait_v1.png",
+        "sha256": "189dbb086ffced66efe77847300b3b0c6ee45a189b47c0642190bcda037e4975",
+        "width": 941,
+        "height": 1672,
+        "reviewStatus": "AI_REVIEWED_PRESENTATION",
+        "reviewerType": "AI",
+        "reviewer": "Codex AI (/root/security_p0)",
+        "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/path_luk_11.json"
+      }
+    },
+    {
+      "assetPath": "followup_20261031/img_special_water_bottle_001.png",
+      "sourceSha256": "9e8122c7e4a4ad13701a2594652223223adee65f2251df6fa4e4a5033a4a45c9",
+      "focalX": 0.5,
+      "focalY": 0.5,
+      "portraitVariant": {
+        "assetPath": "presentation/portraits/img_special_water_bottle_001_portrait_v1.png",
+        "sha256": "2bb85889f04e52bf6394d0e0607f31c9ca04f9856d6c3961110edc64c3749e5d",
+        "width": 941,
+        "height": 1672,
+        "reviewStatus": "AI_REVIEWED_PRESENTATION",
+        "reviewerType": "AI",
+        "reviewer": "Codex AI (/root/security_p0)",
+        "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/special_007.json"
+      }
+    },
+    {
+      "assetPath": "followup_20261031/img_special_revolving_door_001.png",
+      "sourceSha256": "2090848e90dd24d366c093c3129da4b9a47c68ad12eb6396e846cb6e9d92bfc5",
+      "focalX": 0.5,
+      "focalY": 0.5,
+      "portraitVariant": {
+        "assetPath": "presentation/portraits/img_special_revolving_door_001_portrait_v1.png",
+        "sha256": "0b1cbbe9e46f7b1c98c9bea39132d1fdd4f48bb6c5ae9f0ec74af744f7d05d7e",
+        "width": 941,
+        "height": 1672,
+        "reviewStatus": "AI_REVIEWED_PRESENTATION",
+        "reviewerType": "AI",
+        "reviewer": "Codex AI (/root/security_p0)",
+        "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/special_018.json"
+      }
+    },
+    {
+      "assetPath": "followup_20261031/img_adult_father_70th_001.png",
+      "sourceSha256": "69ef22116c7b7a8744105a44aed982e863baa0b705cba31cfe084f3997e51860",
+      "focalX": 0.5,
+      "focalY": 0.5,
+      "portraitVariant": {
+        "assetPath": "presentation/portraits/img_adult_father_70th_001_portrait_v1.png",
+        "sha256": "48d0e105dfe838ee3e8a3f3e1cbaec095cadbc160d2c36425c38adb6e0686875",
+        "width": 941,
+        "height": 1672,
+        "reviewStatus": "AI_REVIEWED_PRESENTATION",
+        "reviewerType": "AI",
+        "reviewer": "Codex AI (/root/security_p0)",
+        "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/adult_051.json"
+      }
+    },
+    {
+      "assetPath": "followup_20261031/img_adult_birthday_001.png",
+      "sourceSha256": "5661800b2dbf92526e2233ba8680877145832710fe43c364ab315c98687b1762",
+      "focalX": 0.5,
+      "focalY": 0.5,
+      "portraitVariant": {
+        "assetPath": "presentation/portraits/img_adult_birthday_001_portrait_v1.png",
+        "sha256": "7e4577e216da66f48297ff68827d39f02985b28280435c6956ab67e65d18e682",
+        "width": 941,
+        "height": 1672,
+        "reviewStatus": "AI_REVIEWED_PRESENTATION",
+        "reviewerType": "AI",
+        "reviewer": "Codex AI (/root/security_p0)",
+        "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/adult_052.json"
+      }
+    },
+    {
+      "assetPath": "followup_20261031/img_path_soc_03_001.png",
+      "sourceSha256": "9cc885b7df64858d8dd3b7e47b8ab1ef1b173abe2a1affeeef6b9d134cb0aebd",
+      "focalX": 0.5,
+      "focalY": 0.5,
+      "portraitVariant": {
+        "assetPath": "presentation/portraits/img_path_soc_03_001_portrait_v1.png",
+        "sha256": "1d4619d8eadcae044537a4a4dd91cc41eb03a6f308457f7d23921875bbe1c27f",
+        "width": 941,
+        "height": 1672,
+        "reviewStatus": "AI_REVIEWED_PRESENTATION",
+        "reviewerType": "AI",
+        "reviewer": "Codex AI (/root)",
+        "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/path_soc_03.json"
+      }
+    },
+    {
+      "assetPath": "week10/scenes/img_path_soc_10_001.png",
+      "sourceSha256": "64c9be8c48e154527e24d9b71960fe518ff795eafc002b272f0135b3a00a1b2b",
+      "focalX": 0.5,
+      "focalY": 0.5,
+      "portraitVariant": {
+        "assetPath": "presentation/portraits/img_path_soc_10_001_portrait_v1.png",
+        "sha256": "964f52517800a19f992998f37372c2297102e92e536e84d0c8e686ff481d03c0",
+        "width": 971,
+        "height": 1619,
+        "reviewStatus": "AI_REVIEWED_PRESENTATION",
+        "reviewerType": "AI",
+        "reviewer": "Codex AI (/root)",
+        "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/path_soc_10.json"
+      }
+    },
+    {
+      "assetPath": "followup_20261031/img_special_auto_door_001.png",
+      "sourceSha256": "3cad0d77bfdd7df077493145f652ec2d51ad77a05b46f88e0545a50d8ffc9db5",
+      "focalX": 0.5,
+      "focalY": 0.5,
+      "portraitVariant": {
+        "assetPath": "presentation/portraits/img_special_auto_door_001_portrait_v1.png",
+        "sha256": "65b79af3ca6e9f4db02d3d2245e1086bfdd853b993dd20c141478cd590183da7",
+        "width": 941,
+        "height": 1672,
+        "reviewStatus": "AI_REVIEWED_PRESENTATION",
+        "reviewerType": "AI",
+        "reviewer": "Codex AI (/root)",
+        "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/special_005.json"
+      }
+    },
+    {
+      "assetPath": "followup_20261031/img_special_stuck_elevator_001.png",
+      "sourceSha256": "5c1977696335161e465f1d11c94670d3802fbad9a065cf2eef6b1bdfd0a96536",
+      "focalX": 0.5,
+      "focalY": 0.5,
+      "portraitVariant": {
+        "assetPath": "presentation/portraits/img_special_stuck_elevator_001_portrait_v1.png",
+        "sha256": "a34b77fca2d39a3ce14ce19d22908e97dc74e00793fbfa52ad36664dee6f9c14",
+        "width": 941,
+        "height": 1672,
+        "reviewStatus": "AI_REVIEWED_PRESENTATION",
+        "reviewerType": "AI",
+        "reviewer": "Codex AI (/root)",
+        "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/special_017.json"
+      }
+    },
+    {
+      "assetPath": "followup_20261031/img_teen_club_001.png",
+      "sourceSha256": "b94a2324dca03e5a79577a9a7473ff65047773ceae337259da58271c060a5a5a",
+      "focalX": 0.5,
+      "focalY": 0.5,
+      "portraitVariant": {
+        "assetPath": "presentation/portraits/img_teen_club_001_portrait_v1.png",
+        "sha256": "3f536f903ecf828925c6643e799d377128fb90e05c580910f35bc7edc651f90d",
+        "width": 941,
+        "height": 1672,
+        "reviewStatus": "AI_REVIEWED_PRESENTATION",
+        "reviewerType": "AI",
+        "reviewer": "Codex AI (/root)",
+        "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/teen_003.json"
+      }
+    },
+    {
+      "assetPath": "followup_20261031/img_teen_midterm_001.png",
+      "sourceSha256": "1763ae0fffa28119dafa6a24d52cd5faed98485868ce4ee7a089726c08054f41",
+      "focalX": 0.5,
+      "focalY": 0.5,
+      "portraitVariant": {
+        "assetPath": "presentation/portraits/img_teen_midterm_001_portrait_v1.png",
+        "sha256": "acc5006364d14a455307ef2f0cce75ec88d6d91cbeb93857a62860447b467f5d",
+        "width": 941,
+        "height": 1672,
+        "reviewStatus": "AI_REVIEWED_PRESENTATION",
+        "reviewerType": "AI",
+        "reviewer": "Codex AI (/root)",
+        "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/teen_007.json"
+      }
+    },
+    {
+      "assetPath": "followup_20261031/img_teen_band_stage_001.png",
+      "sourceSha256": "b7ab0929cd115b6564f8ff581459f6049306c0e9b683981e73e1b80585e20f2b",
+      "focalX": 0.5,
+      "focalY": 0.5,
+      "portraitVariant": {
+        "assetPath": "presentation/portraits/img_teen_band_stage_001_portrait_v1.png",
+        "sha256": "062a9e85a6716ca4ccf12df254716a6bfed6c12d4ebeaab09610931fdf667e22",
+        "width": 941,
+        "height": 1672,
+        "reviewStatus": "AI_REVIEWED_PRESENTATION",
+        "reviewerType": "AI",
+        "reviewer": "Codex AI (/root)",
+        "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/teen_012.json"
+      }
+    },
+    {
+      "assetPath": "followup_20261031/img_teen_screen_time_001.png",
+      "sourceSha256": "80bddefb8bad6869994e1489cd5beeb250a71764d5d68d055a4258a338f28a0a",
+      "focalX": 0.5,
+      "focalY": 0.5,
+      "portraitVariant": {
+        "assetPath": "presentation/portraits/img_teen_screen_time_001_portrait_v1.png",
+        "sha256": "fe29f16d3a5d8c9c1f6923df1ee650467e4324182590be8a2233b8b76c3cc8a8",
+        "width": 941,
+        "height": 1672,
+        "reviewStatus": "AI_REVIEWED_PRESENTATION",
+        "reviewerType": "AI",
+        "reviewer": "Codex AI (/root)",
+        "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/teen_017.json"
+      }
+    },
+    {
+      "assetPath": "followup_20261031/img_teen_school_trip_001.png",
+      "sourceSha256": "da0c649ab05fac460d18058ead0a99f306dac594366e86600bbe61558caaaa2b",
+      "focalX": 0.5,
+      "focalY": 0.5,
+      "portraitVariant": {
+        "assetPath": "presentation/portraits/img_teen_school_trip_001_portrait_v1.png",
+        "sha256": "9c129bd21e411f53af58ae178831e6f9f5e875f4b01eed1fee6cc060939c05c8",
+        "width": 941,
+        "height": 1672,
+        "reviewStatus": "AI_REVIEWED_PRESENTATION",
+        "reviewerType": "AI",
+        "reviewer": "Codex AI (/root)",
+        "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/teen_022.json"
+      }
+    },
+    {
+      "assetPath": "followup_20261031/img_teen_father_car_001.png",
+      "sourceSha256": "602e7411cac09c1bec54cce7f3c85e7da30a011e5f0ff62bb355f1a629b44b0c",
+      "focalX": 0.5,
+      "focalY": 0.5,
+      "portraitVariant": {
+        "assetPath": "presentation/portraits/img_teen_father_car_001_portrait_v1.png",
+        "sha256": "d08de92fd936df85fb958f42d7286d225522f136f798e0c13328ab97ea5bf820",
+        "width": 941,
+        "height": 1672,
+        "reviewStatus": "AI_REVIEWED_PRESENTATION",
+        "reviewerType": "AI",
+        "reviewer": "Codex AI (/root)",
+        "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/teen_027.json"
+      }
+    },
+    {
+      "assetPath": "followup_20261031/img_cross_10_001.png",
+      "sourceSha256": "3855a9675dec30e42cc809a9c4a392a09d3b386d20a8526c3306c56fc4917a17",
+      "focalX": 0.5,
+      "focalY": 0.5,
+      "portraitVariant": {
+        "assetPath": "presentation/portraits/img_cross_10_001_portrait_v1.png",
+        "sha256": "7e77cbccf9d7ccb9186f1c628d34e4521b960e50c5dd2531d36dbcc3ab2ff306",
+        "width": 941,
+        "height": 1672,
+        "reviewStatus": "AI_REVIEWED_PRESENTATION",
+        "reviewerType": "AI",
+        "reviewer": "Codex AI (/root/security_p0)",
+        "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/cross_10.json"
+      }
+    },
+    {
+      "assetPath": "followup_20261031/img_path_fit_15_001.png",
+      "sourceSha256": "613cecccc872370860037dae388f99acd768030656b08de977e4db7c2e0e95d2",
+      "focalX": 0.5,
+      "focalY": 0.5,
+      "portraitVariant": {
+        "assetPath": "presentation/portraits/img_path_fit_15_001_portrait_v1.png",
+        "sha256": "d632914d3c4a4ecb34ebc7b90b457fbafe2f49345fa9ba9715215ab93d4c44d9",
+        "width": 941,
+        "height": 1672,
+        "reviewStatus": "AI_REVIEWED_PRESENTATION",
+        "reviewerType": "AI",
+        "reviewer": "Codex AI (/root/security_p0)",
+        "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/path_fit_15.json"
+      }
+    },
+    {
+      "assetPath": "followup_20261031/img_path_hap_14_001.png",
+      "sourceSha256": "babbeebeeae1b2b3aebebfbc0bc67ce90e9d52f9ef1d2d347d439afce5c0fa8e",
+      "focalX": 0.5,
+      "focalY": 0.5,
+      "portraitVariant": {
+        "assetPath": "presentation/portraits/img_path_hap_14_001_portrait_v1.png",
+        "sha256": "077dd86ac91f4b0d9cf5c3fc57bbae0f7097aa81bee5af446f2d3c167a7c73e3",
+        "width": 941,
+        "height": 1672,
+        "reviewStatus": "AI_REVIEWED_PRESENTATION",
+        "reviewerType": "AI",
+        "reviewer": "Codex AI (/root/security_p0)",
+        "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/path_hap_14.json"
+      }
+    },
+    {
+      "assetPath": "followup_20261031/img_path_wea_14_001.png",
+      "sourceSha256": "260da2f5dce0a0dd7e7b7af56bf0e7a36d197fc0107947951b674bef067d2077",
+      "focalX": 0.5,
+      "focalY": 0.5,
+      "portraitVariant": {
+        "assetPath": "presentation/portraits/img_path_wea_14_001_portrait_v1.png",
+        "sha256": "6f0c18b3c40d8b9f1b792b018f36a29963647df3eacfc05629e1425cf9e80589",
+        "width": 941,
+        "height": 1672,
+        "reviewStatus": "AI_REVIEWED_PRESENTATION",
+        "reviewerType": "AI",
+        "reviewer": "Codex AI (/root/security_p0)",
+        "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/path_wea_14.json"
+      }
+    },
+    {
+      "assetPath": "followup_20261031/img_adult_lifelong_friend_001.png",
+      "sourceSha256": "3a9198e0400cd35666909ef223141460b9df49ac52052a8f578ddef63e15f198",
+      "focalX": 0.5,
+      "focalY": 0.5,
+      "portraitVariant": {
+        "assetPath": "presentation/portraits/img_adult_lifelong_friend_001_portrait_v1.png",
+        "sha256": "1de8340cdec9e4ac2bc9f906a6459af99d923dfa2fe5f4c99936e287343db56d",
+        "width": 941,
+        "height": 1672,
+        "reviewStatus": "AI_REVIEWED_PRESENTATION",
+        "reviewerType": "AI",
+        "reviewer": "Codex AI (/root/security_p0)",
+        "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/adult_062.json"
+      }
+    },
+    {
+      "assetPath": "followup_20261031/img_path_wea_06_001.png",
+      "sourceSha256": "92a99e88ce83fd04acd63b51de5577309c54a5be0936c0c7bde08b6694232eef",
+      "focalX": 0.5,
+      "focalY": 0.5,
+      "portraitVariant": {
+        "assetPath": "presentation/portraits/img_path_wea_06_001_portrait_v1.png",
+        "sha256": "ef3fb719c63047a4742262d5da419b50aa90b9a759e95c3bc13b9d0e88acdf35",
+        "width": 981,
+        "height": 1602,
+        "reviewStatus": "AI_REVIEWED_PRESENTATION",
+        "reviewerType": "AI",
+        "reviewer": "Codex AI (/root/effects_tech)",
+        "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/path_wea_06.json"
+      }
+    },
+    {
+      "assetPath": "followup_20261031/img_teen_high_school_001.png",
+      "sourceSha256": "e2ccf5cf612a03148f59dccd2d1d3b4a962f1ed90bd47625231fdf0959697df8",
+      "focalX": 0.5,
+      "focalY": 0.5,
+      "portraitVariant": {
+        "assetPath": "presentation/portraits/img_teen_high_school_001_portrait_v1.png",
+        "sha256": "cdd4a9f396246f377a8da794b3cc6a1974487bec5a22ec41486714402d02e4b7",
+        "width": 981,
+        "height": 1602,
+        "reviewStatus": "AI_REVIEWED_PRESENTATION",
+        "reviewerType": "AI",
+        "reviewer": "Codex AI (/root/effects_tech)",
+        "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/teen_019.json"
+      }
+    },
+    {
+      "assetPath": "followup_20261031/img_teen_bus_terminal_001.png",
+      "sourceSha256": "7a71a5af4d7a1aa4772aa0a571f0864b535e6d960e4e58bab4b6999e1eaa4e39",
+      "focalX": 0.5,
+      "focalY": 0.5,
+      "portraitVariant": {
+        "assetPath": "presentation/portraits/img_teen_bus_terminal_001_portrait_v1.png",
+        "sha256": "1dbfc0331d9881777a4d7add7d97af7114bdc84a15a006d6de19290cc2ef6867",
+        "width": 962,
+        "height": 1635,
+        "reviewStatus": "AI_REVIEWED_PRESENTATION",
+        "reviewerType": "AI",
+        "reviewer": "Codex AI (/root)",
+        "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/teen_035.json"
+      }
+    },
+    {
+      "assetPath": "followup_20261031/img_teen_d100_001.png",
+      "sourceSha256": "9b61d120e0f5197de7edb01743078d122f75a67e30bfe807da4428e2b13f57b5",
+      "focalX": 0.5,
+      "focalY": 0.5,
+      "portraitVariant": {
+        "assetPath": "presentation/portraits/img_teen_d100_001_portrait_v1.png",
+        "sha256": "689fb4b975e647a659077725e880447500b30ceafaf5dd287071ec7d753268e1",
+        "width": 941,
+        "height": 1672,
+        "reviewStatus": "AI_REVIEWED_PRESENTATION",
+        "reviewerType": "AI",
+        "reviewer": "Codex AI (/root)",
+        "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/teen_037.json"
+      }
+    },
+    {
+      "assetPath": "followup_20261031/img_adult_hangover_001.png",
+      "sourceSha256": "8eaa2261b98f615fa42e93968cb7ead24fda4cca415bb60fee96459046801ce3",
+      "focalX": 0.5,
+      "focalY": 0.5,
+      "portraitVariant": {
+        "assetPath": "presentation/portraits/img_adult_hangover_001_portrait_v1.png",
+        "sha256": "aca623262189702146a0e39992c28ad577a7f6d1b2982e2575acd988673611cd",
+        "width": 941,
+        "height": 1672,
+        "reviewStatus": "AI_REVIEWED_PRESENTATION",
+        "reviewerType": "AI",
+        "reviewer": "Codex AI (/root)",
+        "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/adult_021.json"
+      }
+    },
+    {
+      "assetPath": "followup_20261031/img_adult_scam_call_001.png",
+      "sourceSha256": "fecbf296e46fc2e97c20be96c5f8d25a6fb952d1b8566f81fe35cb88810d6a2b",
+      "focalX": 0.5,
+      "focalY": 0.5,
+      "portraitVariant": {
+        "assetPath": "presentation/portraits/img_adult_scam_call_001_portrait_v1.png",
+        "sha256": "fa46dbe6ea6e01fc3f786c087b48b9128ec52f45c50a7065c8ca7cb0edd59434",
+        "width": 967,
+        "height": 1626,
+        "reviewStatus": "AI_REVIEWED_PRESENTATION",
+        "reviewerType": "AI",
+        "reviewer": "Codex AI (/root)",
+        "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/adult_046.json"
+      }
+    },
+    {
+      "assetPath": "followup_20261031/img_adult_wedding_invite_001.png",
+      "sourceSha256": "60cda630b331b64626fdd6aa96c34b0a528e66e4a72e2318f6287d751d95286d",
+      "focalX": 0.5,
+      "focalY": 0.5,
+      "portraitVariant": {
+        "assetPath": "presentation/portraits/img_adult_wedding_invite_001_portrait_v1.png",
+        "sha256": "e9aff2e660df720e0b9d58b7e2f1b7c7354ebc92894e89d144b83a14bedde746",
+        "width": 941,
+        "height": 1672,
+        "reviewStatus": "AI_REVIEWED_PRESENTATION",
+        "reviewerType": "AI",
+        "reviewer": "Codex AI (/root)",
+        "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/adult_047.json"
+      }
+    },
+    {
+      "assetPath": "followup_20261031/img_pov_dating_app_001.png",
+      "sourceSha256": "2c3ca40a3bed4c6f5698f00b2c16b308022ce19fc45aa7b8e3da226f46a6dc30",
+      "focalX": 0.5,
+      "focalY": 0.5,
+      "portraitVariant": {
+        "assetPath": "presentation/portraits/img_pov_dating_app_001_portrait_v1.png",
+        "sha256": "9048ce94b61ee650a6c2177de1ed065319868923ec90bc85385a73276d5e4641",
+        "width": 941,
+        "height": 1672,
+        "reviewStatus": "AI_REVIEWED_PRESENTATION",
+        "reviewerType": "AI",
+        "reviewer": "Codex AI (/root)",
+        "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/adult_074.json"
+      }
+    },
+    {
+      "assetPath": "followup_20261031/img_pov_id_badge_001.png",
+      "sourceSha256": "3b7205a7093a912769bc0fe38b212161e436f216704c5820ff4432f5def1b1a1",
+      "focalX": 0.5,
+      "focalY": 0.5,
+      "portraitVariant": {
+        "assetPath": "presentation/portraits/img_pov_id_badge_001_portrait_v1.png",
+        "sha256": "3f8605be2cd49c023f088a7b4c58e184298e7aade2f16021d7510893ceef8c49",
+        "width": 981,
+        "height": 1602,
+        "reviewStatus": "AI_REVIEWED_PRESENTATION",
+        "reviewerType": "AI",
+        "reviewer": "Codex AI (/root)",
+        "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/adult_079.json"
+      }
+    },
+    {
+      "assetPath": "followup_20261031/img_path_fit_07_001.png",
+      "sourceSha256": "41081f1d0f219d0826d02322321071a63655b63fa829135d67d721479ff8f9b3",
+      "focalX": 0.5,
+      "focalY": 0.5,
+      "portraitVariant": {
+        "assetPath": "presentation/portraits/img_path_fit_07_001_portrait_v1.png",
+        "sha256": "62e08131ff2582463cfe8b23a4f5783b93b207d9d9d8375c81774a7bf2fb11fe",
+        "width": 967,
+        "height": 1627,
+        "reviewStatus": "AI_REVIEWED_PRESENTATION",
+        "reviewerType": "AI",
+        "reviewer": "Codex AI (/root)",
+        "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/path_fit_07.json"
+      }
+    },
+    {
+      "assetPath": "week10/scenes/img_path_hea_10_001.png",
+      "sourceSha256": "0e64d429c30dcd3cd3ccfc6b288a4d0f9726ab1c941e46a5a61464d904eaea7e",
+      "focalX": 0.5,
+      "focalY": 0.5,
+      "portraitVariant": {
+        "assetPath": "presentation/portraits/img_path_hea_10_001_portrait_v1.png",
+        "sha256": "2830fe519a358fc85cddf6aa00726dd5ae7dd7bf8960d928eee1598f725471f6",
+        "width": 967,
+        "height": 1626,
+        "reviewStatus": "AI_REVIEWED_PRESENTATION",
+        "reviewerType": "AI",
+        "reviewer": "Codex AI (/root)",
+        "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/path_hea_10.json"
+      }
+    },
+    {
+      "assetPath": "followup_20261031/img_path_int_04_001.png",
+      "sourceSha256": "436bcded91b0fc53c0f25da44a874d3201587d5be9db0583287208d6fb2681cf",
+      "focalX": 0.5,
+      "focalY": 0.5,
+      "portraitVariant": {
+        "assetPath": "presentation/portraits/img_path_int_04_001_portrait_v1.png",
+        "sha256": "6cd90000621c42048830e4f54578242a2d3f07a1f744e9b286b7659f976611f5",
+        "width": 968,
+        "height": 1625,
+        "reviewStatus": "AI_REVIEWED_PRESENTATION",
+        "reviewerType": "AI",
+        "reviewer": "Codex AI (/root)",
+        "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/path_int_04.json"
+      }
+    },
+    {
+      "assetPath": "followup_20261031/img_path_int_11_001.png",
+      "sourceSha256": "5c93bfb5ee109aaf5a3eb1f6fb8d171c0db402f80a4a4ccfddad9ec294375232",
+      "focalX": 0.5,
+      "focalY": 0.5,
+      "portraitVariant": {
+        "assetPath": "presentation/portraits/img_path_int_11_001_portrait_v1.png",
+        "sha256": "20e0187de79231b8eccc0343a5804068a5837c975f7bc1742471308b1b4fd0b2",
+        "width": 941,
+        "height": 1672,
+        "reviewStatus": "AI_REVIEWED_PRESENTATION",
+        "reviewerType": "AI",
+        "reviewer": "Codex AI (/root)",
+        "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/path_int_11.json"
+      }
+    },
+    {
+      "assetPath": "followup_20261031/img_path_hap_02_001.png",
+      "sourceSha256": "7f09bd34135c43afb3454ec164dd2f85b42a7f06a5393b24e195f9a2c5bd7d14",
+      "focalX": 0.5,
+      "focalY": 0.5,
+      "portraitVariant": {
+        "assetPath": "presentation/portraits/img_path_hap_02_001_portrait_v1.png",
+        "sha256": "4df6fc2eeaed6a477c66ae4979088b9df786e9bc6051f36de74ac465b9e098a4",
+        "width": 941,
+        "height": 1672,
+        "reviewStatus": "AI_REVIEWED_PRESENTATION",
+        "reviewerType": "AI",
+        "reviewer": "Codex AI (/root)",
+        "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/path_hap_02.json"
+      }
+    },
+    {
+      "assetPath": "followup_20261031/img_path_luk_08_001.png",
+      "sourceSha256": "e79bd4a97ca7f25757e3b8008b7158ce2585fcaa8df2100490b009f5cb220999",
+      "focalX": 0.5,
+      "focalY": 0.5,
+      "portraitVariant": {
+        "assetPath": "presentation/portraits/img_path_luk_08_001_portrait_v1.png",
+        "sha256": "428b54e5ed1690c9a22d41e4e8c4f4a63eee96c15f839feef1c5b806daf72274",
+        "width": 961,
+        "height": 1637,
+        "reviewStatus": "AI_REVIEWED_PRESENTATION",
+        "reviewerType": "AI",
+        "reviewer": "Codex AI (/root)",
+        "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/path_luk_08.json"
+      }
+    },
+    {
+      "assetPath": "week10/scenes/img_path_soc_09_001.png",
+      "sourceSha256": "7502542b42fa2bb39a2e2e890b858909a3736019bd9e25ff457efc87de3c53ed",
+      "focalX": 0.5,
+      "focalY": 0.5,
+      "portraitVariant": {
+        "assetPath": "presentation/portraits/img_path_soc_09_001_portrait_v1.png",
+        "sha256": "d632daddefceb20075e9b2e345eb1d7e73af10805f79cb6353860359daee7db1",
+        "width": 962,
+        "height": 1635,
+        "reviewStatus": "AI_REVIEWED_PRESENTATION",
+        "reviewerType": "AI",
+        "reviewer": "Codex AI (/root)",
+        "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/path_soc_09.json"
+      }
+    },
+    {
+      "assetPath": "week10/scenes/img_path_wea_10_001.png",
+      "sourceSha256": "25b1247d1ebcb47308668ff27ff391a00e528f0f40ed34df4e071a9e542ce621",
+      "focalX": 0.5,
+      "focalY": 0.5,
+      "portraitVariant": {
+        "assetPath": "presentation/portraits/img_path_wea_10_001_portrait_v1.png",
+        "sha256": "68c66825260a2e1dec1575620a6dd5c9db90c2b062871f912dbdd7b62c6db20b",
+        "width": 968,
+        "height": 1625,
+        "reviewStatus": "AI_REVIEWED_PRESENTATION",
+        "reviewerType": "AI",
+        "reviewer": "Codex AI (/root)",
+        "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/path_wea_10.json"
+      }
+    },
+    {
+      "assetPath": "week10/scenes/img_path_fit_09_001.png",
+      "sourceSha256": "ccbeb5a6ffaaedaa22f0a1d8ed50e958208dbb78c4a865b7178b0027d7720959",
+      "focalX": 0.5,
+      "focalY": 0.5,
+      "portraitVariant": {
+        "assetPath": "presentation/portraits/img_path_fit_09_001_portrait_v1.png",
+        "sha256": "f7fff6397eb29ce3acc951e41fa8bfe1288cfaba813c2d8eb322ab1f90eb30c2",
+        "width": 941,
+        "height": 1672,
+        "reviewStatus": "AI_REVIEWED_PRESENTATION",
+        "reviewerType": "AI",
+        "reviewer": "Codex AI (/root)",
+        "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/path_fit_09.json"
+      }
+    },
+    {
+      "assetPath": "followup_20261031/img_path_luk_15_001.png",
+      "sourceSha256": "d36a5a47cb826b396d66b8277d7e975ed81fac08cb28d2f148b8dede8f64407d",
+      "focalX": 0.5,
+      "focalY": 0.5,
+      "portraitVariant": {
+        "assetPath": "presentation/portraits/img_path_luk_15_001_portrait_v1.png",
+        "sha256": "2e4d22f91cbf6f756a10c27f955e2f35290ae243b98d47e01b6cecca81657795",
+        "width": 941,
+        "height": 1672,
+        "reviewStatus": "AI_REVIEWED_PRESENTATION",
+        "reviewerType": "AI",
+        "reviewer": "Codex AI (/root)",
+        "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/path_luk_15.json"
+      }
+    },
+    {
+      "assetPath": "followup_20261031/img_teen_class_shirt_001.png",
+      "sourceSha256": "6b1d0bc07e9b421a390721271e13f9e4081df8af1e8f488f10b2f9836b40fc39",
+      "focalX": 0.5,
+      "focalY": 0.5,
+      "portraitVariant": {
+        "assetPath": "presentation/portraits/img_teen_class_shirt_001_portrait_v1.png",
+        "sha256": "0013e882f7dac256c2673b3d4adc45f62ade4ed0455619f578cc52480cc87fe0",
+        "width": 941,
+        "height": 1672,
+        "reviewStatus": "AI_REVIEWED_PRESENTATION",
+        "reviewerType": "AI",
+        "reviewer": "Codex AI (/root)",
+        "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/teen_030.json"
+      }
+    },
+    {
+      "assetPath": "followup_20261031/img_teen_yearbook_photo_001.png",
+      "sourceSha256": "5915e1d9ac9cb953990d8cd56a88515c2b0a36083ba67642f2312e31cb0c13d8",
+      "focalX": 0.5,
+      "focalY": 0.5,
+      "portraitVariant": {
+        "assetPath": "presentation/portraits/img_teen_yearbook_photo_001_portrait_v1.png",
+        "sha256": "9498d4f3a9ecdc991b98783516767f7d2e5323db1c1b5381ea7c0fbfffe26ab3",
+        "width": 941,
+        "height": 1672,
+        "reviewStatus": "AI_REVIEWED_PRESENTATION",
+        "reviewerType": "AI",
+        "reviewer": "Codex AI (/root)",
+        "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/teen_033.json"
+      }
+    },
+    {
+      "assetPath": "followup_20261031/img_adult_drinks_toast_001.png",
+      "sourceSha256": "9369be89f20c4e00641a9b20cd1de6c37b466f52bcff68a0915b5d9c9811ad4a",
+      "focalX": 0.5,
+      "focalY": 0.5,
+      "portraitVariant": {
+        "assetPath": "presentation/portraits/img_adult_drinks_toast_001_portrait_v1.png",
+        "sha256": "f096c02c615d604259a5dcf9c745548aaa9500289143230bbe48bc1fb562c3f1",
+        "width": 941,
+        "height": 1672,
+        "reviewStatus": "AI_REVIEWED_PRESENTATION",
+        "reviewerType": "AI",
+        "reviewer": "Codex AI (/root)",
+        "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/adult_009.json"
+      }
+    },
+    {
+      "assetPath": "followup_20261031/img_adult_dinner_seats_001.png",
+      "sourceSha256": "19fe038c02a418d219c16a69516a59e0c581e23c62a03ffd74f74ac83fb66665",
+      "focalX": 0.5,
+      "focalY": 0.5,
+      "portraitVariant": {
+        "assetPath": "presentation/portraits/img_adult_dinner_seats_001_portrait_v1.png",
+        "sha256": "999dfaac6ec9ea90ad7c550d30df0b700b2282c5aebd0ca441938d355b0b72d1",
+        "width": 941,
+        "height": 1672,
+        "reviewStatus": "AI_REVIEWED_PRESENTATION",
+        "reviewerType": "AI",
+        "reviewer": "Codex AI (/root)",
+        "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/adult_016.json"
+      }
+    },
+    {
+      "assetPath": "followup_20261031/img_adult_childhood_box_001.png",
+      "sourceSha256": "0404e42c695f115720b90f54533ecaec35ba896a8f5b72722c4d59c769734adb",
+      "focalX": 0.5,
+      "focalY": 0.5,
+      "portraitVariant": {
+        "assetPath": "presentation/portraits/img_adult_childhood_box_001_portrait_v1.png",
+        "sha256": "91182251c862c60c82ca792cdae5d712e92c5befb2456bbcc8f38c70f37e4b38",
+        "width": 941,
+        "height": 1672,
+        "reviewStatus": "AI_REVIEWED_PRESENTATION",
+        "reviewerType": "AI",
+        "reviewer": "Codex AI (/root)",
+        "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/adult_042.json"
+      }
+    },
+    {
+      "assetPath": "followup_20261031/img_adult_parents_spring_001.png",
+      "sourceSha256": "2baeca5662342c514f41f251f800542f5bcb2d873ea1eeb05a0655013b63e874",
+      "focalX": 0.5,
+      "focalY": 0.5,
+      "portraitVariant": {
+        "assetPath": "presentation/portraits/img_adult_parents_spring_001_portrait_v1.png",
+        "sha256": "f61bbd72eba33aa8d91f85c11931e3fdcc5e419d588043a373a5ce42539ee5c4",
+        "width": 941,
+        "height": 1672,
+        "reviewStatus": "AI_REVIEWED_PRESENTATION",
+        "reviewerType": "AI",
+        "reviewer": "Codex AI (/root)",
+        "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/adult_064.json"
+      }
+    },
+    {
+      "assetPath": "followup_20261031/img_pov_welcome_party_001.png",
+      "sourceSha256": "488f48996d0ce2c6f7cf894f35f1a7a4fddc6c7b09653bce9bd435a80a97d9b1",
+      "focalX": 0.5,
+      "focalY": 0.5,
+      "portraitVariant": {
+        "assetPath": "presentation/portraits/img_pov_welcome_party_001_portrait_v1.png",
+        "sha256": "85154c755dd2241ba442998b11c026a443fc916b8d115c38fd12c0ed208ae9ea",
+        "width": 941,
+        "height": 1672,
+        "reviewStatus": "AI_REVIEWED_PRESENTATION",
+        "reviewerType": "AI",
+        "reviewer": "Codex AI (/root)",
+        "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/adult_081.json"
+      }
+    },
+    {
+      "assetPath": "followup_20261031/img_special_dream_answer_001.png",
+      "sourceSha256": "bb7316511c7e2194b6f4b2d5a4094d375c7c6c76360cf4ea8e077cc3aca67152",
+      "focalX": 0.5,
+      "focalY": 0.5,
+      "portraitVariant": {
+        "assetPath": "presentation/portraits/img_special_dream_answer_001_portrait_v1.png",
+        "sha256": "fff7f7e0783842bac9fa9a7c835bedf601c5ff9213326a31724950f1a23ea3c3",
+        "width": 941,
+        "height": 1672,
+        "reviewStatus": "AI_REVIEWED_PRESENTATION",
+        "reviewerType": "AI",
+        "reviewer": "Codex AI (/root)",
+        "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/special_006.json"
+      }
+    },
+    {
+      "assetPath": "followup_20261031/img_path_wea_04_001.png",
+      "sourceSha256": "dfdf892442b1ab14c262cc73c62e74742677a7aadd5472824c4245142d4eec9d",
+      "focalX": 0.5,
+      "focalY": 0.5,
+      "portraitVariant": {
+        "assetPath": "presentation/portraits/img_path_wea_04_001_portrait_v1.png",
+        "sha256": "e0e897c07a62f60f5a7c94fef430826010b27ef377dc3537080e466f6dc303cd",
+        "width": 941,
+        "height": 1672,
+        "reviewStatus": "AI_REVIEWED_PRESENTATION",
+        "reviewerType": "AI",
+        "reviewer": "Codex AI (/root)",
+        "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/path_wea_04.json"
+      }
+    },
+    {
+      "assetPath": "followup_20261031/img_pov_treadmill_001.png",
+      "sourceSha256": "f4ddccba50c6171344fed71f0eac867f388a645259b395447276fa64c2de19cc",
+      "focalX": 0.5,
+      "focalY": 0.5,
+      "portraitVariant": {
+        "assetPath": "presentation/portraits/img_pov_treadmill_001_portrait_v1.png",
+        "sha256": "ebc95588788737bd27cb689c8c036e16bd1c8ce0cd232324e0b994cef8446f0c",
+        "width": 841,
+        "height": 1870,
+        "reviewStatus": "AI_REVIEWED_PRESENTATION",
+        "reviewerType": "AI",
+        "reviewer": "Codex AI (/root)",
+        "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/adult_078.json"
+      }
+    },
+    {
+      "assetPath": "followup_20261031/img_adult_sunday_night_001.png",
+      "sourceSha256": "5e44b7b62958b1b3a5985e6a60ccb66f0839ace52b89ba01bc58217f9cd37c18",
+      "focalX": 0.5,
+      "focalY": 0.5,
+      "portraitVariant": {
+        "assetPath": "presentation/portraits/img_adult_sunday_night_001_portrait_v1.png",
+        "sha256": "6cca4b028ccbad37dbe776592ff78c5d11e213a145331b879df48e7ce9a4108d",
+        "width": 960,
+        "height": 1637,
+        "reviewStatus": "AI_REVIEWED_PRESENTATION",
+        "reviewerType": "AI",
+        "reviewer": "Codex AI (/root)",
+        "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/adult_067.json"
+      }
+    },
+    {
+      "assetPath": "followup_20261031/img_infant_first_tooth_001.png",
+      "sourceSha256": "3c37868794fbed03f80c01f77b3c31ba8885a4ed88c0215333164165823e5c95",
+      "focalX": 0.5,
+      "focalY": 0.5,
+      "portraitVariant": {
+        "assetPath": "presentation/portraits/img_infant_first_tooth_001_portrait_v1.png",
+        "sha256": "a8e86003c3a1fe10cab0d0d47e39f3db5ae575cf574e059ac086284f42494318",
+        "width": 941,
+        "height": 1672,
+        "reviewStatus": "AI_REVIEWED_PRESENTATION",
+        "reviewerType": "AI",
+        "reviewer": "Codex AI (/root)",
+        "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/infant_002.json"
+      }
+    }
+  ]
+}
