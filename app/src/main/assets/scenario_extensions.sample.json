@@ -3,7 +3,7 @@
   "owner": "신기훈",
   "createdAt": "2026-11-13",
   "status": "앱이 읽음(ui/ScenarioExtensions.kt, 김재겸 #77). 판정은 이번 인생의 실제 선택 기록과 현재 플래그만 쓴다.",
-  "updatedAt": "2026-11-16",
+  "updatedAt": "2026-11-20",
   "rules": {
     "recall": "회상 문구는 현재 인생의 실제 선택 기록에 sourceEventId:sourceChoiceIds 중 하나가 있고 requiredFlags를 모두 가졌으며 blockedFlags가 없을 때만 표시한다. 기록이 없으면 문구를 만들지 않는다.",
     "recallLimit": "한 사건에는 회상 1줄, 결말에는 최대 3줄. 같은 slotId는 한 인생에서 사건 1회 + 결말 1회까지만 표시한다.",
@@ -81,6 +81,7 @@
       "line": "축제 날 단체 사진에서 옆자리에 섰던 그 애였다.",
       "showIn": [
         "adult_077",
+        "love_wedding_first_love",
         "ENDING"
       ],
       "note": "축제 인연 회상. adult_077은 축제 때 그 사람의 연락이라 회상 한 줄이 같은 사람을 가리킨다"
@@ -97,8 +98,9 @@
       "blockedFlags": [],
       "line": "세 정거장을 같이 걸어서 돌아갔던 그 사람이다.",
       "showIn": [
-        "love_date_01",
+        "love_date_first_love",
         "love_conflict_first_love",
+        "love_wedding_first_love",
         "ENDING"
       ],
       "note": "버스 인연. 결별 뒤에는 dating__path_soc_03이 지워져 표시되지 않는다"
@@ -156,7 +158,9 @@
       "line": "'우리… 결혼할까?'에 답했던 그 주, 메일함에는 파견 제안도 있었다.",
       "showIn": [
         "love_wedding_01",
+        "love_wedding_first_love",
         "love_wedding_music",
+        "love_wedding_book",
         "ENDING"
       ],
       "note": ""
@@ -177,7 +181,9 @@
       "line": "친구 결혼식에서 돌아오던 그 밤, 처음 결혼 이야기를 꺼냈다.",
       "showIn": [
         "love_wedding_01",
+        "love_wedding_first_love",
         "love_wedding_music",
+        "love_wedding_book",
         "ENDING"
       ],
       "note": ""
@@ -192,7 +198,7 @@
         "married"
       ],
       "blockedFlags": [],
-      "line": "입장하며 30초 춤을 추던 그 결혼식 영상이 아직 단톡방 공지에 있다.",
+      "line": "결혼식 축하 순서에서 30초 춤을 추던 영상이 아직 단톡방 공지에 있다.",
       "showIn": [
         "love_holiday_01",
         "ENDING"
@@ -385,7 +391,7 @@
           "married"
         ],
         "title": "결혼식",
-        "line": "결혼식 10분 전, '{choiceLabel}'."
+        "line": "결혼식 날, '{choiceLabel}'."
       },
       {
         "cardId": "tp_family_wedding_music",
@@ -394,8 +400,8 @@
         "requiredFlags": [
           "married"
         ],
-        "title": "연주로 채운 축가",
-        "line": "축가 순서에 '{choiceLabel}'."
+        "title": "연주로 채운 결혼식",
+        "line": "입장곡이 흐르던 결혼식에서 '{choiceLabel}'."
       },
       {
         "cardId": "tp_family_child_plan",
@@ -446,6 +452,36 @@
         ],
         "title": "식탁 위의 침묵",
         "line": "식탁 위의 침묵 앞에서 '{choiceLabel}'."
+      },
+      {
+        "cardId": "tp_family_wedding_first_love",
+        "eventId": "love_wedding_first_love",
+        "priority": 55,
+        "requiredFlags": [
+          "married"
+        ],
+        "title": "단체 사진 앞의 결혼식",
+        "line": "학창 시절 단체 사진 앞에서 '{choiceLabel}'."
+      },
+      {
+        "cardId": "tp_family_wedding_book",
+        "eventId": "love_wedding_book",
+        "priority": 55,
+        "requiredFlags": [
+          "married"
+        ],
+        "title": "책갈피 길 결혼식",
+        "line": "책갈피 길 결혼식에서 '{choiceLabel}'."
+      },
+      {
+        "cardId": "tp_family_postpone",
+        "eventId": "love_wedding_prep_01",
+        "priority": 40,
+        "requiredFlags": [
+          "wedding_postponed"
+        ],
+        "title": "결혼 준비",
+        "line": "결혼식 석 달 전, '{choiceLabel}'. 반지는 그대로였다."
       }
     ]
   },
@@ -800,44 +836,6 @@
       },
       "appearances": [
         {
-          "type": "EVENT",
-          "id": "adult_077",
-          "requiredFlags": [
-            "first_love"
-          ],
-          "blockedFlags": [
-            "dating",
-            "engaged",
-            "married"
-          ]
-        },
-        {
-          "type": "EVENT",
-          "id": "love_date_01",
-          "requiredFlags": [
-            "dating__adult_077"
-          ],
-          "blockedFlags": []
-        },
-        {
-          "type": "EVENT",
-          "id": "love_conflict_first_love",
-          "requiredFlags": [
-            "dating__adult_077",
-            "rel_conflict"
-          ],
-          "blockedFlags": []
-        },
-        {
-          "type": "EVENT",
-          "id": "love_reunion_first_love",
-          "requiredFlags": [
-            "ex_first_love",
-            "v4:event:adult_077"
-          ],
-          "blockedFlags": []
-        },
-        {
           "type": "AUTO",
           "id": "auto_teen_festival_photo",
           "requiredFlags": [
@@ -854,6 +852,60 @@
           "blockedFlags": [
             "partner_first_love"
           ]
+        },
+        {
+          "type": "EVENT",
+          "id": "adult_077",
+          "requiredFlags": [
+            "first_love"
+          ],
+          "blockedFlags": [
+            "dating",
+            "engaged",
+            "married"
+          ]
+        },
+        {
+          "type": "EVENT",
+          "id": "love_date_first_love",
+          "requiredFlags": [
+            "dating__adult_077"
+          ],
+          "blockedFlags": []
+        },
+        {
+          "type": "EVENT",
+          "id": "love_episode_first_love",
+          "requiredFlags": [
+            "dating__adult_077"
+          ],
+          "blockedFlags": []
+        },
+        {
+          "type": "EVENT",
+          "id": "love_conflict_first_love",
+          "requiredFlags": [
+            "dating__adult_077",
+            "rel_conflict"
+          ],
+          "blockedFlags": []
+        },
+        {
+          "type": "EVENT",
+          "id": "love_wedding_first_love",
+          "requiredFlags": [
+            "dating__adult_077"
+          ],
+          "blockedFlags": []
+        },
+        {
+          "type": "EVENT",
+          "id": "love_reunion_first_love",
+          "requiredFlags": [
+            "ex_first_love",
+            "v4:event:adult_077"
+          ],
+          "blockedFlags": []
         }
       ],
       "neverShowIf": "축제 사건에서 마음을 표현하지 않은 인생"
@@ -873,7 +925,15 @@
       "appearances": [
         {
           "type": "EVENT",
-          "id": "love_date_01",
+          "id": "love_date_first_love",
+          "requiredFlags": [
+            "dating__path_soc_03"
+          ],
+          "blockedFlags": []
+        },
+        {
+          "type": "EVENT",
+          "id": "love_episode_first_love",
           "requiredFlags": [
             "dating__path_soc_03"
           ],
@@ -885,6 +945,14 @@
           "requiredFlags": [
             "dating__path_soc_03",
             "rel_conflict"
+          ],
+          "blockedFlags": []
+        },
+        {
+          "type": "EVENT",
+          "id": "love_wedding_first_love",
+          "requiredFlags": [
+            "dating__path_soc_03"
           ],
           "blockedFlags": []
         },
@@ -939,6 +1007,14 @@
             "ex_ideal"
           ],
           "blockedFlags": []
+        },
+        {
+          "type": "EVENT",
+          "id": "love_wedding_01",
+          "requiredFlags": [
+            "partner_ideal"
+          ],
+          "blockedFlags": []
         }
       ],
       "neverShowIf": "이상형과 연락처를 주고받지 못한 인생"
@@ -981,6 +1057,14 @@
             "ex_ideal"
           ],
           "blockedFlags": []
+        },
+        {
+          "type": "EVENT",
+          "id": "love_wedding_01",
+          "requiredFlags": [
+            "partner_ideal"
+          ],
+          "blockedFlags": []
         }
       ],
       "neverShowIf": "술자리에서 이상형 옆에 앉지 않았거나 연락처를 받지 못한 인생"
@@ -1000,7 +1084,15 @@
       "appearances": [
         {
           "type": "EVENT",
-          "id": "love_date_01",
+          "id": "love_date_music",
+          "requiredFlags": [
+            "dating__path_hap_05"
+          ],
+          "blockedFlags": []
+        },
+        {
+          "type": "EVENT",
+          "id": "love_episode_music",
           "requiredFlags": [
             "dating__path_hap_05"
           ],
@@ -1017,17 +1109,17 @@
         },
         {
           "type": "EVENT",
-          "id": "love_reunion_music",
+          "id": "love_wedding_music",
           "requiredFlags": [
-            "ex_music"
+            "dating__path_hap_05"
           ],
           "blockedFlags": []
         },
         {
           "type": "EVENT",
-          "id": "love_wedding_music",
+          "id": "love_reunion_music",
           "requiredFlags": [
-            "partner_music"
+            "ex_music"
           ],
           "blockedFlags": []
         }
@@ -1050,7 +1142,15 @@
       "appearances": [
         {
           "type": "EVENT",
-          "id": "love_date_01",
+          "id": "love_date_music",
+          "requiredFlags": [
+            "dating__adult_075"
+          ],
+          "blockedFlags": []
+        },
+        {
+          "type": "EVENT",
+          "id": "love_episode_music",
           "requiredFlags": [
             "dating__adult_075"
           ],
@@ -1067,17 +1167,17 @@
         },
         {
           "type": "EVENT",
-          "id": "love_reunion_music",
+          "id": "love_wedding_music",
           "requiredFlags": [
-            "ex_music"
+            "dating__adult_075"
           ],
           "blockedFlags": []
         },
         {
           "type": "EVENT",
-          "id": "love_wedding_music",
+          "id": "love_reunion_music",
           "requiredFlags": [
-            "partner_music"
+            "ex_music"
           ],
           "blockedFlags": []
         }
@@ -1099,7 +1199,16 @@
       "appearances": [
         {
           "type": "EVENT",
-          "id": "love_date_01",
+          "id": "love_date_book",
+          "requiredFlags": [
+            "partner_book",
+            "dating__adult_074"
+          ],
+          "blockedFlags": []
+        },
+        {
+          "type": "EVENT",
+          "id": "love_episode_book",
           "requiredFlags": [
             "partner_book",
             "dating__adult_074"
@@ -1113,6 +1222,15 @@
             "partner_book",
             "dating__adult_074",
             "rel_conflict"
+          ],
+          "blockedFlags": []
+        },
+        {
+          "type": "EVENT",
+          "id": "love_wedding_book",
+          "requiredFlags": [
+            "partner_book",
+            "dating__adult_074"
           ],
           "blockedFlags": []
         },
@@ -1142,7 +1260,15 @@
       "appearances": [
         {
           "type": "EVENT",
-          "id": "love_date_01",
+          "id": "love_date_book",
+          "requiredFlags": [
+            "dating__path_soc_11"
+          ],
+          "blockedFlags": []
+        },
+        {
+          "type": "EVENT",
+          "id": "love_episode_book",
           "requiredFlags": [
             "dating__path_soc_11"
           ],
@@ -1154,6 +1280,14 @@
           "requiredFlags": [
             "dating__path_soc_11",
             "rel_conflict"
+          ],
+          "blockedFlags": []
+        },
+        {
+          "type": "EVENT",
+          "id": "love_wedding_book",
+          "requiredFlags": [
+            "dating__path_soc_11"
           ],
           "blockedFlags": []
         },
@@ -1219,6 +1353,14 @@
             "ex_partner"
           ],
           "blockedFlags": []
+        },
+        {
+          "type": "EVENT",
+          "id": "love_wedding_01",
+          "requiredFlags": [
+            "partner_letter"
+          ],
+          "blockedFlags": []
         }
       ],
       "neverShowIf": "편지 결과가 나오지 않은 인생"
@@ -1258,6 +1400,14 @@
           "id": "love_reunion_01",
           "requiredFlags": [
             "ex_partner"
+          ],
+          "blockedFlags": []
+        },
+        {
+          "type": "EVENT",
+          "id": "love_wedding_01",
+          "requiredFlags": [
+            "partner_app"
           ],
           "blockedFlags": []
         }
@@ -1302,6 +1452,14 @@
             "ex_partner"
           ],
           "blockedFlags": []
+        },
+        {
+          "type": "EVENT",
+          "id": "love_wedding_01",
+          "requiredFlags": [
+            "partner_closing"
+          ],
+          "blockedFlags": []
         }
       ],
       "neverShowIf": "마감 뒤 연애가 시작되지 않은 인생"
@@ -1344,6 +1502,14 @@
             "ex_partner"
           ],
           "blockedFlags": []
+        },
+        {
+          "type": "EVENT",
+          "id": "love_wedding_01",
+          "requiredFlags": [
+            "partner_gym"
+          ],
+          "blockedFlags": []
         }
       ],
       "neverShowIf": "헬스장에서 연애가 시작되지 않은 인생"
@@ -1384,6 +1550,14 @@
           "id": "love_reunion_01",
           "requiredFlags": [
             "ex_partner"
+          ],
+          "blockedFlags": []
+        },
+        {
+          "type": "EVENT",
+          "id": "love_wedding_01",
+          "requiredFlags": [
+            "partner_blind_date"
           ],
           "blockedFlags": []
         }

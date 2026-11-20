@@ -246,6 +246,12 @@
     "label": "결혼 약속"
   },
   {
+    "flag": "wedding_postponed",
+    "fact": "maritalStatus",
+    "value": "DATING",
+    "label": "결혼 보류(연애 중)"
+  },
+  {
     "flag": "married",
     "fact": "maritalStatus",
     "value": "MARRIED",

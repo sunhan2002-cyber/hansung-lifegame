@@ -1,0 +1,397 @@
+{
+  "schemaVersion": 1,
+  "owner": "신기훈(시나리오) · 구현 확인: 김우영(게임 로직)",
+  "createdAt": "2026-11-20",
+  "status": "PROPOSED — 사건 JSON은 이 계약대로 반영됨. 엔진의 상대 ID 상태·기록 표시는 김우영·김재겸 구현 대상",
+  "stages": [
+    {
+      "stage": "MEET",
+      "flags": [
+        "dating",
+        "partner_<route>",
+        "met_<person>",
+        "dating__<만난 사건>"
+      ],
+      "note": "만남 사건의 교제 선택. 같은 사건에 거절 선택이 있다"
+    },
+    {
+      "stage": "FIRST_DATE",
+      "events": [
+        "love_date_first_love",
+        "love_date_music",
+        "love_date_book",
+        "love_date_01(그 밖)"
+      ],
+      "adds": [
+        "rel_warm(경로)",
+        "rel_steady(공통)",
+        "rel_conflict"
+      ]
+    },
+    {
+      "stage": "CONFLICT",
+      "events": [
+        "love_conflict_<route>",
+        "love_conflict_01"
+      ],
+      "adds": [
+        "rel_warm(경로 화해)",
+        "rel_steady(공통 화해)",
+        "breakup_once + ex_<route>(결별)"
+      ]
+    },
+    {
+      "stage": "EPISODE",
+      "events": [
+        "love_episode_first_love",
+        "love_episode_music",
+        "love_episode_book"
+      ],
+      "requires": [
+        "rel_warm"
+      ],
+      "adds": [
+        "rel_steady"
+      ]
+    },
+    {
+      "stage": "MARRIAGE_TALK",
+      "events": [
+        "adult_032(재직)",
+        "love_marriage_talk_01(비재직)"
+      ],
+      "requires": [
+        "dating",
+        "rel_steady"
+      ],
+      "adds": [
+        "engaged",
+        "long_term_dating(보류)"
+      ]
+    },
+    {
+      "stage": "FAMILIES",
+      "events": [
+        "path_soc_05(사회성 경로)",
+        "love_family_meet_01"
+      ],
+      "requires": [
+        "engaged"
+      ],
+      "adds": [
+        "families_met"
+      ]
+    },
+    {
+      "stage": "PREPARATION",
+      "events": [
+        "love_wedding_prep_01"
+      ],
+      "requires": [
+        "engaged",
+        "families_met"
+      ],
+      "adds": [
+        "wedding_ready",
+        "wedding_postponed + long_term_dating(보류, engaged 제거)"
+      ]
+    },
+    {
+      "stage": "CEREMONY",
+      "events": [
+        "love_wedding_first_love",
+        "love_wedding_music",
+        "love_wedding_book",
+        "love_wedding_01(그 밖)"
+      ],
+      "requires": [
+        "engaged",
+        "families_met",
+        "wedding_ready",
+        "partner_<route>(경로 본식)"
+      ],
+      "adds": [
+        "married(유일한 혼인 확정)",
+        "spouse_<route|other>"
+      ],
+      "removes": [
+        "engaged",
+        "wedding_ready"
+      ]
+    }
+  ],
+  "marriageRule": {
+    "confirmOnlyAt": [
+      "love_wedding_first_love",
+      "love_wedding_music",
+      "love_wedding_book",
+      "love_wedding_01"
+    ],
+    "once": "본식 사건은 married를 차단하고 완료 플래그(v4:event:)로 다시 열리지 않는다. 모든 본식 결과가 married와 spouse_* 하나를 함께 추가한다.",
+    "notCounted": [
+      "adult_073 결혼식 하객",
+      "love_wedding_prep_01 결혼 준비",
+      "이전 결혼식 10분 전 대기실(지금은 love_wedding_01 본문 첫 문장)"
+    ],
+    "partnerIdAtCeremony": "본식 직전 플래그의 dating__<만난 사건>과 met_* 조합으로 partnerId를 정한다(아래 partners). spouse_<route>는 경로 확인용이다."
+  },
+  "partners": [
+    {
+      "partnerId": "festival",
+      "route": "first_love",
+      "label": "축제 날 옆자리였던 그 애",
+      "origin": "teen_021 → adult_077",
+      "datingChoices": {
+        "teen_021": [
+          "A",
+          "C"
+        ],
+        "adult_077": [
+          "A",
+          "C"
+        ]
+      },
+      "persistentFlag": "met_festival",
+      "currentScopedFlag": "dating__adult_077",
+      "currentPartnerFlag": "partner_first_love",
+      "ceremony": "love_wedding_first_love",
+      "firstDate": "love_date_first_love",
+      "episode": "love_episode_first_love"
+    },
+    {
+      "partnerId": "bus",
+      "route": "first_love",
+      "label": "집에 가는 버스가 같던 사람",
+      "origin": "path_soc_03",
+      "datingChoices": {
+        "path_soc_03": [
+          "A"
+        ]
+      },
+      "persistentFlag": "met_bus",
+      "currentScopedFlag": "dating__path_soc_03",
+      "currentPartnerFlag": "partner_first_love",
+      "ceremony": "love_wedding_first_love",
+      "firstDate": "love_date_first_love",
+      "episode": "love_episode_first_love"
+    },
+    {
+      "partnerId": "music_band",
+      "route": "music",
+      "label": "합주 모임에서 만난 사람",
+      "origin": "path_hap_05",
+      "datingChoices": {
+        "path_hap_05": [
+          "A"
+        ]
+      },
+      "persistentFlag": "met_music_band",
+      "currentScopedFlag": "dating__path_hap_05",
+      "currentPartnerFlag": "partner_music",
+      "ceremony": "love_wedding_music",
+      "firstDate": "love_date_music",
+      "episode": "love_episode_music"
+    },
+    {
+      "partnerId": "music_campfire",
+      "route": "music",
+      "label": "MT 모닥불 옆 기타 치던 사람",
+      "origin": "adult_075",
+      "datingChoices": {
+        "adult_075": [
+          "A",
+          "B"
+        ]
+      },
+      "persistentFlag": "met_music_campfire",
+      "currentScopedFlag": "dating__adult_075",
+      "currentPartnerFlag": "partner_music",
+      "ceremony": "love_wedding_music",
+      "firstDate": "love_date_music",
+      "episode": "love_episode_music"
+    },
+    {
+      "partnerId": "book_club",
+      "route": "book",
+      "label": "독서 모임에서 같은 문장에 밑줄 그은 사람",
+      "origin": "adult_074 C",
+      "datingChoices": {
+        "adult_074": [
+          "C"
+        ]
+      },
+      "persistentFlag": "met_book_club",
+      "currentScopedFlag": "dating__adult_074",
+      "currentPartnerFlag": "partner_book",
+      "ceremony": "love_wedding_book",
+      "firstDate": "love_date_book",
+      "episode": "love_episode_book"
+    },
+    {
+      "partnerId": "book_blind",
+      "route": "book",
+      "label": "같은 책을 들고 온 소개팅 상대",
+      "origin": "path_soc_11 C",
+      "datingChoices": {
+        "path_soc_11": [
+          "C"
+        ]
+      },
+      "persistentFlag": "met_book_blind",
+      "currentScopedFlag": "dating__path_soc_11",
+      "currentPartnerFlag": "partner_book",
+      "ceremony": "love_wedding_book",
+      "firstDate": "love_date_book",
+      "episode": "love_episode_book"
+    },
+    {
+      "partnerId": "ideal_street",
+      "route": "other",
+      "label": "길에서 마주친 이상형",
+      "origin": "adult_005 / adult_006",
+      "datingChoices": {
+        "adult_005": [
+          "A",
+          "C"
+        ],
+        "adult_006": [
+          "A"
+        ]
+      },
+      "persistentFlag": "met_ideal_street",
+      "currentScopedFlag": null,
+      "currentPartnerFlag": "partner_ideal",
+      "ceremony": "love_wedding_01",
+      "firstDate": "love_date_01",
+      "episode": null
+    },
+    {
+      "partnerId": "ideal_bar",
+      "route": "other",
+      "label": "술자리 옆자리의 이상형",
+      "origin": "adult_008",
+      "datingChoices": {
+        "adult_008": [
+          "A",
+          "B"
+        ]
+      },
+      "persistentFlag": "met_ideal_bar",
+      "currentScopedFlag": null,
+      "currentPartnerFlag": "partner_ideal",
+      "ceremony": "love_wedding_01",
+      "firstDate": "love_date_01",
+      "episode": null
+    },
+    {
+      "partnerId": "app",
+      "route": "other",
+      "label": "소개팅 앱 첫 매칭 상대",
+      "origin": "adult_074 A",
+      "datingChoices": {
+        "adult_074": [
+          "A"
+        ]
+      },
+      "persistentFlag": "met_app",
+      "currentScopedFlag": "dating__adult_074",
+      "currentPartnerFlag": "partner_app",
+      "ceremony": "love_wedding_01",
+      "firstDate": "love_date_01",
+      "episode": null
+    },
+    {
+      "partnerId": "closing",
+      "route": "other",
+      "label": "마감을 같이 하던 사람",
+      "origin": "adult_076",
+      "datingChoices": {
+        "adult_076": [
+          "A",
+          "C"
+        ]
+      },
+      "persistentFlag": "met_closing",
+      "currentScopedFlag": "dating__adult_076",
+      "currentPartnerFlag": "partner_closing",
+      "ceremony": "love_wedding_01",
+      "firstDate": "love_date_01",
+      "episode": null
+    },
+    {
+      "partnerId": "gym",
+      "route": "other",
+      "label": "런닝머신 옆자리 사람",
+      "origin": "adult_078",
+      "datingChoices": {
+        "adult_078": [
+          "A",
+          "B"
+        ]
+      },
+      "persistentFlag": "met_gym",
+      "currentScopedFlag": "dating__adult_078",
+      "currentPartnerFlag": "partner_gym",
+      "ceremony": "love_wedding_01",
+      "firstDate": "love_date_01",
+      "episode": null
+    },
+    {
+      "partnerId": "blind_date",
+      "route": "other",
+      "label": "소개팅·부케로 만난 사람",
+      "origin": "adult_073",
+      "datingChoices": {
+        "adult_073": [
+          "A",
+          "C"
+        ]
+      },
+      "persistentFlag": "met_blind_date",
+      "currentScopedFlag": "dating__adult_073",
+      "currentPartnerFlag": "partner_blind_date",
+      "ceremony": "love_wedding_01",
+      "firstDate": "love_date_01",
+      "episode": null
+    },
+    {
+      "partnerId": "letter",
+      "route": "other",
+      "label": "훈련소 편지 친구",
+      "origin": "adult_071 → love_letter_01",
+      "datingChoices": {
+        "love_letter_01": [
+          "A",
+          "B",
+          "C"
+        ]
+      },
+      "persistentFlag": "letter_friend",
+      "currentScopedFlag": "dating__love_letter_01",
+      "currentPartnerFlag": "partner_letter",
+      "ceremony": "love_wedding_01",
+      "firstDate": "love_date_01",
+      "episode": null
+    }
+  ],
+  "exits": {
+    "decline": "만남 사건에서 교제하지 않는 선택(예: adult_074 B, path_hap_05 B, path_soc_03 B)",
+    "breakup": "love_conflict_<route>·love_conflict_01·love_date_02의 결별 결과: dating·partner_*·dating__* 제거, breakup_once·ex_<route> 추가",
+    "postponeTalk": "adult_032 B·love_marriage_talk_01 B/C: long_term_dating",
+    "postponeWedding": "love_wedding_prep_01 B: wedding_postponed + long_term_dating, engaged 제거(생애 사실 DATING \"결혼 보류\")",
+    "singleLife": "adult_073 B, path_hap_05 B, path_soc_11 A/B, cross_02: single_life",
+    "reunion": "love_reunion_<route>/01: dating + rel_steady + reunited(첫 데이트·에피소드 없이 결혼 논의로)"
+  },
+  "saveCompatibility": [
+    "사건 ID는 지우지 않았다. love_wedding_01·love_wedding_music은 같은 ID로 본식이 됐고, 대기 중 선택도 그대로 복원된다.",
+    "이미 married인 저장은 그대로 결혼 상태다(본식이 married를 차단). spouse_* 플래그가 없으면 상대 미상 결혼으로 표시한다.",
+    "engaged+families_met만 있는 구버전 저장은 결혼 준비(love_wedding_prep_01) → 본식 순서로 이어진다.",
+    "경로 상대와 rel_steady가 이미 있는 구버전 저장은 첫 데이트·에피소드를 건너뛰고 결혼 논의로 간다.",
+    "경로 갈등 중인 구버전 저장은 화해하면 rel_warm → 에피소드 → 결혼 논의로 이어진다."
+  ],
+  "requestsToWooyoung": [
+    "본식 결과에서만 혼인을 확정: 엔진이 married를 다른 경로로 추가하지 않는지 확인(콘텐츠는 감사 스크립트로 보장).",
+    "partnerId 상태: 교제 시작 시 currentScopedFlag/persistentFlag로 partnerId를 정하고, 결별 시 해제, 본식에서 배우자로 고정.",
+    "기존 married 저장 보존과 최초 본식 보상 1회."
+  ]
+}
