@@ -170,6 +170,9 @@ data class NewLifeProfile(
     val startingRollRaw: String? = null,
     /** 실행 시드. 같은 출발선 도전 코드에서 정한 값이면 그대로 쓰고, null이면 엔진이 새로 정한다. */
     val runSeed: Long? = null,
+    /** 시작 버튼을 누른 시점의 남은 재굴림. 저장 후 복원해도 추가 재굴림을 만들지 않는다. */
+    val rerollsRemaining: Int = 0,
+    val diceRule: DiceRule = DiceRule.SUM_LG2,
     /** 사진 없이 고른 외형과(선택) 사진 참조. 저장 모델에 그대로 들어간다. */
     val avatar: AvatarConfig = AvatarConfig(),
 )

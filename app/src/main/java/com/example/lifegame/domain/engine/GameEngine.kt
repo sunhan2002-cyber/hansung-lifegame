@@ -404,6 +404,7 @@ class GameEngine(
         require(state.flags.none(choice.blockedFlags::contains)) { "choice is blocked by current flags" }
 
         val outcome = pickOutcome(state, event, choice.choiceId, choice.outcomes)
+        MarriageContract.requireFirstWedding(event.eventId, state.flags, outcome.addFlags)
         val combinedDelta = resolveOutcomeStatDelta(state.period, outcome)
         val afterStats = state.stats.apply(combinedDelta)
         val healthDepleted = afterStats.health <= 0
@@ -627,6 +628,7 @@ class GameEngine(
 
     private fun canShowPeriodDecision(state: PeriodRunState, event: DecisionEvent): Boolean =
         state.period in event.periods &&
+            (!event.eventId.startsWith("love_wedding_") || MarriageContract.canFinalize(state.flags)) &&
             completedEventFlag(event.eventId) !in state.flags &&
             event.statConditions.matches(state.stats) &&
             event.lifeFactConditions.matches(state.lifeFacts) &&

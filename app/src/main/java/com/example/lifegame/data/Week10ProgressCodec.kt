@@ -29,7 +29,7 @@ import org.json.JSONObject
 
 /** SharedPreferences와 분리한 순수 JSON 코덱. JVM 테스트에서 마이그레이션까지 검증한다. */
 internal object Week10ProgressCodec {
-    private const val VERSION = 4
+    private const val VERSION = 5
 
     fun encode(run: V4SavedRun): String = JSONObject().apply {
         put("saveFormatVersion", VERSION)
@@ -43,6 +43,8 @@ internal object Week10ProgressCodec {
         put("presentation", run.presentation.toJson())
         put("narrativeRecords", run.narrativeRecords.toJsonArray { it.toJson() })
         put("startingRollRaw", run.startingRollRaw)
+        put("startingDiceRule", run.startingDiceRule)
+        put("rerollsRemaining", run.rerollsRemaining)
         put("extensionState", run.extensionState.toJson())
     }.toString()
 
@@ -61,6 +63,8 @@ internal object Week10ProgressCodec {
             presentation = root.optJSONObject("presentation")?.toPresentationState() ?: PresentationState(),
             narrativeRecords = root.optJSONArray("narrativeRecords").objects { it.toRunNarrativeRecord() },
             startingRollRaw = root.nullableString("startingRollRaw"),
+            startingDiceRule = root.nullableString("startingDiceRule"),
+            rerollsRemaining = root.optInt("rerollsRemaining", 0).coerceIn(0, 3),
             extensionState = root.optJSONObject("extensionState")?.toRunExtensionState() ?: RunExtensionState(),
         )
     }.getOrNull()
@@ -207,6 +211,7 @@ internal object Week10ProgressCodec {
             put("input", challengeCode.input); put("genderFlag", challengeCode.genderFlag)
             put("startingRollRaw", challengeCode.startingRollRaw); put("seed", challengeCode.seed)
             put("valid", challengeCode.valid)
+            put("diceRuleVersion", challengeCode.diceRuleVersion)
         })
     }
 
@@ -223,6 +228,7 @@ internal object Week10ProgressCodec {
                 startingRollRaw = it.nullableString("startingRollRaw"),
                 seed = if (it.has("seed") && !it.isNull("seed")) it.getLong("seed") else null,
                 valid = it.optBoolean("valid"),
+                diceRuleVersion = it.nullableString("diceRuleVersion"),
             )
         } ?: ChallengeCodeState(),
     )
