@@ -1386,9 +1386,9 @@
       }
     }
   },
-  "submissionState": "ASSIGNED_WORK_COMPLETE_READY_FOR_COMMIT_AND_PR_PREPARATION",
+  "submissionState": "SUBMITTED_PR_OPEN_UNMERGED",
   "prSubmission": {
-    "status": "PREPARED_FOR_COMMIT_AND_PUSH",
+    "status": "SUBMITTED_OPEN_UNMERGED",
     "headBranch": "codex/week14-wonryul-images",
     "baseBranch": "feat/week14-kihoon-wedding-routes",
     "dependencyPullRequest": 83,
@@ -1404,6 +1404,10 @@
       "baseCommit": "a0096529dab37f45b9038987f01b2d55201d4a72",
       "localBranch": "codex/week14-wonryul-images"
     },
-    "mergeAuthorized": false
+    "mergeAuthorized": false,
+    "number": 86,
+    "url": "https://github.com/sunhan2002-cyber/hansung-lifegame/pull/86",
+    "workCommit": "f23faded796b55460ea9b09d888919e06805d9a8",
+    "mergePerformed": false
   }
 }
