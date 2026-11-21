@@ -63,6 +63,8 @@ data class LifeRecordUi(
     val turningPoints: List<TurningPointUi> = emptyList(),
     /** 이번 인생에서 다시 만난, 관계가 이어진 사람 */
     val npcsMetAgain: List<NpcReturnUi> = emptyList(),
+    /** 인연: 같은 상대 · 함께한 연애 사건 · 실제 결혼식 결과(2026-11-20). 연애 기록이 없으면 null. */
+    val partnerStory: PartnerStoryUi? = null,
     /** 저절로 지나간 일(자동 사건). 선택 기록과 섞지 않고 따로 "자동"으로 보여 준다. */
     val automaticEvents: List<AutoRecordLineUi> = emptyList(),
 )
@@ -229,6 +231,9 @@ fun buildLifeRecordUi(record: CompletedLifeRecord, content: RecordContent): Life
             autoAppearances = state.automaticEventRecords.map { it.toAppearance(content.automaticEvents) },
         ),
         automaticEvents = autoRecordLines(state.automaticEventRecords, periods, content.automaticEvents),
+        partnerStory = partnerStoryOf(
+            state.flags, record.choices, state.automaticEventRecords, content.decisions, content.automaticEvents, periods,
+        ),
     )
 }
 

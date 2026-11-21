@@ -537,6 +537,44 @@ private fun LifeExtensionSections(record: LifeRecordUi) {
             }
         }
     }
+    record.partnerStory?.let { story ->
+        // 2026-11-20: 연애 사건과 같은 상대, 함께한 연애 사건, 실제 결혼식 결과를 한 칸에. 기록에 있는 것만 보여 준다.
+        Column(Modifier.fillMaxWidth().testTag("certificate_partner"), verticalArrangement = Arrangement.spacedBy(6.dp)) {
+            CertificateSectionTitle("인연")
+            val headline = listOfNotNull(
+                story.partner?.let { "${it.label}(${it.originPeriodName} ${it.originYear}번째 해)" },
+                story.status.ifBlank { null },
+            ).joinToString(" · ")
+            if (headline.isNotBlank()) {
+                Text(
+                    text = headline,
+                    color = LifeGameInk,
+                    fontSize = 15.sp,
+                    lineHeight = 22.sp,
+                    modifier = Modifier.testTag("certificate_partner_name"),
+                )
+            }
+            story.moments.takeLast(4).forEach { moment ->
+                Text(
+                    text = "${moment.periodName} ${moment.year}번째 해 「${moment.title}」 · ${moment.choiceLabel}",
+                    color = LifeGameInkSecondary,
+                    fontSize = 14.sp,
+                    lineHeight = 20.sp,
+                    modifier = Modifier.testTag("certificate_partner_moment_${moment.eventId}"),
+                )
+            }
+            story.wedding?.let { wedding ->
+                Text(
+                    text = "결혼식 · ${wedding.periodName} ${wedding.year}번째 해 「${wedding.title}」 · ${wedding.choiceLabel}",
+                    color = LifeGameInk,
+                    fontSize = 14.sp,
+                    fontWeight = FontWeight.Bold,
+                    lineHeight = 20.sp,
+                    modifier = Modifier.testTag("certificate_wedding"),
+                )
+            }
+        }
+    }
     if (record.automaticEvents.isNotEmpty()) {
         // 자동 사건은 선택 기록(내 인생의 계기 · 그때 그 선택)과 섞지 않고 따로, "자동" 표시와 함께 남긴다.
         Column(Modifier.fillMaxWidth().testTag("certificate_auto_events"), verticalArrangement = Arrangement.spacedBy(6.dp)) {

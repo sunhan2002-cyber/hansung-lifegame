@@ -115,6 +115,8 @@ data class DecisionUi(
     val recall: RecallLine? = null,
     /** 이 사건에 다시 나오는, 관계가 이어진 사람. 관계 플래그와 처음 만난 기록이 있을 때만 있다. */
     val returningNpc: NpcReturnUi? = null,
+    /** 연애 · 결혼 사건에서 지금 함께하는 상대(2026-11-20). 상대 플래그를 붙인 실제 기록이 있을 때만 있다. */
+    val partner: PartnerUi? = null,
 ) {
     /** 갈림길이 아닌 결정은 모두 돌발이다. 모든 돌발은 왜곡 전환을 쓴다 (R-23). */
     val isIncident: Boolean get() = kind != DecisionKind.MILESTONE
@@ -571,7 +573,18 @@ fun buildPeriodPlayState(
                     periods,
                     priorAutoAppearances = autoAppearances,
                 ),
-            )
+            ).let { built ->
+                // 연애 · 결혼 사건에는 지금 함께하는 상대를 붙인다(같은 사람이 기록 화면의 "인연"에도 이어진다).
+                val inRelationship = state.flags.any { it == "dating" || it == "engaged" || it == "married" }
+                if (built.returningNpc == null && inRelationship && PartnerStory.isLoveEvent(pending.eventId)) {
+                    built.copy(
+                        partner = partnerOf(
+                            state.flags, runChoices, state.automaticEventRecords,
+                            content.decisions, content.automaticEvents, periods,
+                        ),
+                    )
+                } else built
+            }
         },
         outcome = outcome,
         isDead = isDead || outcome?.endsLife == true,

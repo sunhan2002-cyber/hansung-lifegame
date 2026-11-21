@@ -61,6 +61,9 @@ import kotlinx.coroutines.withContext
 import kotlinx.coroutines.withTimeoutOrNull
 import kotlinx.coroutines.flow.collect
 
+/** 진행 중 인생 리셋의 저장 확인 단계 */
+enum class LifeResetProgress { WAITING, DONE, FAILED }
+
 class LifeGameViewModel @JvmOverloads constructor(
     application: Application,
     private val repository: ContentRepository = ContentRepository(application),
@@ -758,6 +761,70 @@ class LifeGameViewModel @JvmOverloads constructor(
         futureLook = null
     }
 
+    /** 진행 중 인생 리셋이 디스크 확인을 기다리는 중인지. 이 동안 화면은 "정리 중"을 보여 주고 진행 저장을 하지 않는다. */
+    var lifeResetPending by mutableStateOf(false)
+        private set
+
+    /** 리셋을 하지 못했을 때 보여 줄 안내. 지금 인생은 그대로 남아 있다. */
+    var lifeResetError by mutableStateOf<String?>(null)
+        private set
+
+    fun clearLifeResetError() {
+        lifeResetError = null
+    }
+
+    /**
+     * 진행 중 "인생 리셋" 1단계(2026-11-20 과제). 현재 진행 슬롯만 지운다. 완료한 지난 인생 · 칭호 · 화면 설정은 그대로다.
+     * 화면 상태는 디스크 저장이 확인될 때까지 유지하고([completeLifeReset]), 실패하면 되돌린다([cancelLifeReset]).
+     * 연타 · 중복 호출은 한 번만 처리한다. 결말에 닿은 인생은 리셋하지 않는다(완료 기록 중복 방지).
+     * 저장 계층의 리셋 규칙(김우영 담당)이 들어오면 이 함수만 그쪽을 부르면 된다.
+     */
+    fun startLifeReset(): Boolean {
+        if (lifeResetPending) return true
+        val current = play ?: return false
+        if (current.phase == PlayPhase.ENDED) return false
+        if (!canPersistNextAction()) {
+            lifeResetError = LIFE_RESET_ERROR_MESSAGE
+            return false
+        }
+        if (!v4ProgressStore.clear()) {
+            lifeResetError = LIFE_RESET_ERROR_MESSAGE
+            return false
+        }
+        lifeResetRevision = (saveState.value as? SaveState.Pending)?.revision ?: 0L
+        lifeResetPending = true
+        return true
+    }
+
+    private var lifeResetRevision = Long.MAX_VALUE
+
+    /** 리셋이 만든 저장 요청이 디스크에 기록됐는지. 그 전의 저장 완료 표시는 리셋 완료로 보지 않는다. */
+    fun lifeResetProgress(): LifeResetProgress = when (val state = saveState.value) {
+        is SaveState.Durable -> if (state.revision >= lifeResetRevision) LifeResetProgress.DONE else LifeResetProgress.WAITING
+        is SaveState.Failed -> if (state.revision >= lifeResetRevision) LifeResetProgress.FAILED else LifeResetProgress.WAITING
+        else -> LifeResetProgress.WAITING
+    }
+
+    /** 리셋 2단계: 디스크에서 슬롯이 지워진 것이 확인되면 현재 인생 화면 상태를 비운다. 대기 중 자동 진행도 함께 사라진다. */
+    fun completeLifeReset() {
+        if (!lifeResetPending) return
+        futureJob?.cancel()
+        cancelRunningFaceRequest()
+        clearPlay()
+        currentRecord = null
+        futureLook = null
+        playError = null
+        lifeResetPending = false
+    }
+
+    /** 리셋을 확정하지 못했으면 지금 인생을 다시 저장해 그대로 둔다. */
+    fun cancelLifeReset() {
+        if (!lifeResetPending) return
+        lifeResetPending = false
+        lifeResetError = LIFE_RESET_ERROR_MESSAGE
+        publishPlay()
+    }
+
     /** 홈의 지난 인생 / 기록 화면에서 다시 여는 기록 */
     fun recordFor(runId: String): LifeRecordUi? =
         completedLives.firstOrNull { it.runId == runId }?.let { buildLifeRecordUi(it, recordContent) }
@@ -988,6 +1055,8 @@ class LifeGameViewModel @JvmOverloads constructor(
     }
 
     private fun publishPlay() {
+        // 인생 리셋 중에는 지우는 중인 인생을 다시 저장하지 않는다(늦게 도착한 화면 콜백이 슬롯을 되살리지 않게).
+        if (lifeResetPending) return
         val step = playStep ?: return
         val content = playContent ?: return
         val ending = if (step.phase == TurnPhase.ENDING) endingFor(step.state) else null
@@ -1174,6 +1243,7 @@ class LifeGameViewModel @JvmOverloads constructor(
         const val REAL_FACE_TIMEOUT_MS = 150_000L
         const val MAX_SKIP_YEARS = 200
         const val CONTENT_ERROR_MESSAGE = "게임 데이터를 불러오지 못했습니다. 저장된 인생은 보존되어 있습니다."
+        const val LIFE_RESET_ERROR_MESSAGE = "인생을 정리하지 못했어요. 진행 중인 인생은 그대로 있어요."
         const val SAVE_ERROR_MESSAGE = "진행 상황을 기기에 저장하지 못했습니다. 공간을 확인한 뒤 다시 저장해 주세요."
     }
 }
