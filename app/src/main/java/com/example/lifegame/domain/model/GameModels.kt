@@ -509,6 +509,8 @@ data class ChallengeCodeState(
     val startingRollRaw: String? = null,
     val seed: Long? = null,
     val valid: Boolean = false,
+    /** LG1=legacy 보정, LG2=두 눈 합 증가. 옛 저장은 null이며 LG1로 해석한다. */
+    val diceRuleVersion: String? = null,
 )
 
 /** 한 인생 안의 확장 기능 근거만 저장한다. 다른 완료 인생과 합치지 않는다. */

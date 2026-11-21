@@ -78,7 +78,8 @@ import com.example.lifegame.ui.PLAYER_NAME_MAX_LENGTH
 import com.example.lifegame.ui.StarterUi
 import com.example.lifegame.ui.StartingDice
 import com.example.lifegame.ui.StartingRoll
-import com.example.lifegame.ui.StatRoll
+import com.example.lifegame.ui.StartingStatResult
+import com.example.lifegame.ui.DiceRule
 import com.example.lifegame.ui.components.rememberReduceMotion
 import com.example.lifegame.ui.theme.LifeGameStatDown
 import com.example.lifegame.ui.theme.LifeGameStatUp
@@ -128,6 +129,7 @@ fun CharacterSelectScreen(
     var nameInput by rememberSaveable { mutableStateOf("") }
     var gender by rememberSaveable { mutableStateOf<Gender?>(null) }
     var rollRaw by rememberSaveable { mutableStateOf<String?>(null) }
+    var diceRuleName by rememberSaveable { mutableStateOf(DiceRule.SUM_LG2.name) }
     var rerollsLeft by rememberSaveable { mutableStateOf(StartingDice.REROLLS) }
     // 이 출발선의 실행 시드. 도전 코드에 담기고, 코드로 시작하면 코드의 시드로 바뀐다.
     var runSeed by rememberSaveable { mutableStateOf(kotlin.random.Random.nextLong() and Long.MAX_VALUE) }
@@ -182,7 +184,8 @@ fun CharacterSelectScreen(
 
     BackHandler(enabled = sheet?.status == GenerationStatus.LOADING) { onCancelFaceSheet() }
     val previewName = normalizePlayerName(nameInput)
-    val roll = StartingRoll.decode(rollRaw)
+    val diceRule = runCatching { DiceRule.valueOf(diceRuleName) }.getOrDefault(DiceRule.SUM_LG2)
+    val roll = StartingRoll.decode(rollRaw, diceRule)
     val tendency = roll?.let { StartingDice.tendencyOf(it.delta, starters) }
     val ready = gender != null && roll != null
 
@@ -276,7 +279,8 @@ fun CharacterSelectScreen(
                 rerollsLeft = rerollsLeft,
                 onRoll = {
                     if (roll != null) rerollsLeft -= 1
-                    rollRaw = StartingDice.roll().encode()
+                    diceRuleName = DiceRule.SUM_LG2.name
+                    rollRaw = StartingDice.roll(rule = DiceRule.SUM_LG2).encode()
                     rollNonce += 1
                 },
             )
@@ -284,7 +288,7 @@ fun CharacterSelectScreen(
             SectionLabel("같은 출발선 도전 코드", trailing = "선택")
             ChallengeCodeSection(
                 code = if (gender != null && rollRaw != null) {
-                    ChallengeCode.encode(ChallengeStart(gender!!, rollRaw!!, runSeed))
+                    ChallengeCode.encode(ChallengeStart(gender!!, rollRaw!!, runSeed, diceRule))
                 } else {
                     null
                 },
@@ -297,6 +301,7 @@ fun CharacterSelectScreen(
                         is ChallengeCodeResult.Valid -> {
                             gender = result.start.gender
                             rollRaw = result.start.rollRaw
+                            diceRuleName = result.start.diceRule.name
                             runSeed = result.start.seed
                             rerollsLeft = 0 // 친구와 같은 출발선이라 다시 굴리지 않는다
                             // 도전 코드는 이미 확정된 주사위 값을 공유하므로 셔플 애니메이션을 재생하지 않는다.
@@ -388,6 +393,8 @@ fun CharacterSelectScreen(
                         rolledDelta = rolled.delta,
                         startingRollRaw = rolled.encode(),
                         runSeed = runSeed,
+                        rerollsRemaining = rerollsLeft,
+                        diceRule = rolled.rule,
                         avatar = AvatarConfig(
                             skinToneId = skinId,
                             hairId = hairId,
@@ -492,7 +499,7 @@ private fun DicePanel(
                 lineHeight = 18.sp,
                 modifier = Modifier.testTag("dice_rule"),
             )
-            shown.rolls.forEach { stat -> DiceRow(stat, settled) }
+            shown.results.forEach { stat -> DiceRow(stat, settled) }
             if (settled && tendency != null) {
                 Spacer(Modifier.height(2.dp))
                 Text(
@@ -526,13 +533,13 @@ private const val DICE_SHUFFLE_FRAMES = 7
 private const val DICE_SHUFFLE_FRAME_MS = 70L
 
 /**
- * 능력치 한 줄: 이름 · 주사위 두 개 · 계산식 두 줄(`1 + 3 = 4` / `50 − 6 = 44`).
- * 화면 낭독은 "운동능력: 눈 1 + 눈 3 = 합계 4, 기본 50 보정 −6, 최종 44"로 한 번에 읽는다.
+ * 능력치 한 줄: 이름 · 주사위 두 개 · 계산식 두 줄(`1 + 3 = 4` / `50 + 4 = 54`).
+ * 화면 낭독도 엔진이 넘긴 합·증가량·최종값을 그대로 읽는다.
  * 계산식 칸은 고정 폭이 없어 큰 글씨에서는 이름이 두 줄로 접히고 숫자는 잘리지 않는다.
  */
 @Composable
-private fun DiceRow(stat: StatRoll, settled: Boolean) {
-    val delta = stat.delta
+private fun DiceRow(stat: StartingStatResult, settled: Boolean) {
+    val delta = stat.increase
     val signed = if (delta < 0) "−${-delta}" else "+$delta"
     val spoken = "${stat.label}: 눈 ${stat.first} + 눈 ${stat.second} = 합계 ${stat.sum}, 기본 50 보정 $signed, 최종 ${stat.finalValue}"
     Row(
@@ -702,7 +709,7 @@ private fun ChallengeCodeSection(
             onValueChange = onInputChange,
             modifier = Modifier.fillMaxWidth().testTag("challenge_input"),
             label = { Text("친구의 도전 코드") },
-            placeholder = { Text("LG1-…") },
+            placeholder = { Text("LG2-… (기존 LG1도 가능)") },
             singleLine = true,
             isError = isError,
             colors = OutlinedTextFieldDefaults.colors(

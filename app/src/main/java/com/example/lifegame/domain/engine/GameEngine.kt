@@ -404,6 +404,7 @@ class GameEngine(
         require(state.flags.none(choice.blockedFlags::contains)) { "choice is blocked by current flags" }
 
         val outcome = pickOutcome(state, event, choice.choiceId, choice.outcomes)
+        MarriageContract.requireFirstWedding(event.eventId, state.flags, outcome.addFlags)
         val combinedDelta = resolveOutcomeStatDelta(state.period, outcome)
         val afterStats = state.stats.apply(combinedDelta)
         val healthDepleted = afterStats.health <= 0
@@ -412,8 +413,9 @@ class GameEngine(
         val selectedEmploymentFlag = outcome.addFlags.lastOrNull { it in employmentFlags }
         val replacedEmploymentFlags = if (selectedEmploymentFlag != null) employmentFlags else emptySet()
         val normalizedAdds = (outcome.addFlags - employmentFlags) + listOfNotNull(selectedEmploymentFlag)
-        val nextFlags = (state.flags - outcome.removeFlags - replacedEmploymentFlags - normalizedAdds) +
+        val rawNextFlags = (state.flags - outcome.removeFlags - replacedEmploymentFlags - normalizedAdds) +
             normalizedAdds + completedEventFlag(event.eventId)
+        val nextFlags = MarriageContract.synchronizeIdentity(event.eventId, choiceId, rawNextFlags)
         val nextFacts = state.lifeFacts
             .removeRules(outcome.removeFlags + replacedEmploymentFlags, lifeFactRules)
             .applyRules(normalizedAdds + completedEventFlag(event.eventId), lifeFactRules)
@@ -627,6 +629,7 @@ class GameEngine(
 
     private fun canShowPeriodDecision(state: PeriodRunState, event: DecisionEvent): Boolean =
         state.period in event.periods &&
+            (event.eventId !in MarriageContract.weddingEventIds || MarriageContract.canFinalize(event.eventId, state.flags)) &&
             completedEventFlag(event.eventId) !in state.flags &&
             event.statConditions.matches(state.stats) &&
             event.lifeFactConditions.matches(state.lifeFacts) &&

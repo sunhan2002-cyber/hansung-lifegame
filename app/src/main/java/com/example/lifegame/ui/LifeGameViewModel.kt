@@ -16,6 +16,8 @@ import com.example.lifegame.domain.engine.GameEngine
 import com.example.lifegame.domain.engine.GameSession
 import com.example.lifegame.domain.engine.PeriodGameSession
 import com.example.lifegame.domain.engine.RunExtensionApi
+import com.example.lifegame.domain.engine.CurrentLifeResetCoordinator
+import com.example.lifegame.domain.engine.CurrentLifeResetResult
 import com.example.lifegame.domain.model.AvatarConfig
 import com.example.lifegame.domain.model.AwardedTitle
 import com.example.lifegame.domain.model.Choice
@@ -166,6 +168,8 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
     private var playStep: TurnStep? = null
     private var playerNameForPlay: String = DEFAULT_PLAYER_NAME
     private var startingRollRawForRun: String? = null
+    private var startingDiceRuleForRun: DiceRule = DiceRule.LEGACY_LG1
+    private var rerollsRemainingForRun: Int = 0
     private var extensionStateForRun = RunExtensionState()
     private var characterImageIdForPlay: String? = null
     /** 고른 선택지 기록. 결말 화면의 "주요 선택"에 쓴다. */
@@ -240,6 +244,29 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
     /** 프로필 화면 문구(동의 · 안내)를 실제 전송 기준으로 바꿀지 */
     val usesRealFaceGeneration: Boolean get() = realFaceClient != null
     private var savedCompletedRunId: String? = null
+    private val resetCoordinator = CurrentLifeResetCoordinator()
+
+    /**
+     * 진행 중 인생만 원자적으로 폐기한다. 완료 기록·칭호·설정은 건드리지 않는다.
+     * 저장 삭제가 실패하면 화면과 세션을 그대로 둬 다음 실행에서도 복구할 수 있다.
+     */
+    fun resetCurrentLife(): Boolean {
+        return when (resetCoordinator.reset(v4ProgressStore::clearCurrentLifeAtomically) {
+            futureJob?.cancel()
+            faceJob?.cancel()
+            clearPlay()
+        }) {
+            CurrentLifeResetResult.SUCCESS -> {
+                playError = null
+                true
+            }
+            CurrentLifeResetResult.STORAGE_FAILURE -> {
+                playError = "진행 데이터를 정리하지 못했습니다. 기존 인생을 보존했습니다."
+                false
+            }
+            CurrentLifeResetResult.ALREADY_RUNNING -> false
+        }
+    }
 
     private val recordContent: RecordContent by lazy {
         val v4 = repository.loadV4Content()
@@ -340,6 +367,8 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
         val name = normalizePlayerName(profile.name)
         val nameCall = nameCallOf(name)
         startingRollRawForRun = profile.startingRollRaw
+        startingDiceRuleForRun = profile.diceRule
+        rerollsRemainingForRun = profile.rerollsRemaining.coerceIn(0, StartingDice.REROLLS)
         extensionStateForRun = RunExtensionState(
             challengeCode = ChallengeCodeState(
                 input = if (profile.startingRollRaw != null && profile.runSeed != null) {
@@ -349,6 +378,7 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
                 startingRollRaw = profile.startingRollRaw,
                 seed = profile.runSeed,
                 valid = profile.startingRollRaw != null && profile.runSeed != null,
+                diceRuleVersion = profile.diceRule.name,
             ),
         )
         val content = repository.loadV4Content()
@@ -403,6 +433,7 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
                     startingRollRaw = raw,
                     seed = step.state.runSeed,
                     valid = true,
+                    diceRuleVersion = profile.diceRule.name,
                 ),
             )
         }
@@ -460,6 +491,10 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
         runChoiceHistory += saved.choices
         narrativeRecords = saved.narrativeRecords
         startingRollRawForRun = saved.startingRollRaw
+        startingDiceRuleForRun = saved.startingDiceRule?.let {
+            runCatching { DiceRule.valueOf(it) }.getOrNull()
+        } ?: DiceRule.LEGACY_LG1
+        rerollsRemainingForRun = saved.rerollsRemaining.coerceIn(0, StartingDice.REROLLS)
         extensionStateForRun = saved.extensionState
         presentationForRun = saved.presentation
         choiceLog += saved.choices.map { record ->
@@ -1021,6 +1056,8 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
                 presentation = presentationForRun,
                 narrativeRecords = narrativeRecords,
                 startingRollRaw = startingRollRawForRun,
+                startingDiceRule = startingDiceRuleForRun.name,
+                rerollsRemaining = rerollsRemainingForRun,
                 extensionState = extensionStateForRun,
             ),
         )
@@ -1076,6 +1113,8 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
         runChoiceHistory.clear()
         narrativeRecords = emptyList()
         startingRollRawForRun = null
+        startingDiceRuleForRun = DiceRule.LEGACY_LG1
+        rerollsRemainingForRun = 0
         extensionStateForRun = RunExtensionState()
         presentationForRun = PresentationState()
         profilePhotoPresentation = PresentationState()

@@ -69,7 +69,7 @@ class FeedbackFeaturesTest {
         repeat(200) {
             val roll = StartingDice.roll(random)
             assertEquals(StartingDice.STAT_LABELS, roll.rolls.map { it.label })
-            roll.rolls.forEach { assertTrue(it.delta in -10..10) }
+            roll.rolls.forEach { assertTrue(it.delta in 2..12) }
             assertEquals(roll, StartingRoll.decode(roll.encode()))
             assertEquals(0, roll.delta.health)
         }
@@ -81,8 +81,11 @@ class FeedbackFeaturesTest {
     fun diceSumAndFinalStatUseTheSameRawEyesShownToPlayer() {
         val roll = StatRoll("지력", 1, 3)
         assertEquals(4, roll.sum)
-        assertEquals(-6, roll.delta)
-        assertEquals(44, roll.finalValue)
+        assertEquals(4, roll.delta)
+        assertEquals(54, roll.finalValue)
+        val legacy = StatRoll("지력", 1, 3, DiceRule.LEGACY_LG1)
+        assertEquals(-6, legacy.delta)
+        assertEquals(44, legacy.finalValue)
     }
 
     @Test
