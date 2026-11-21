@@ -19,7 +19,6 @@ import com.example.lifegame.ui.screens.DOLJABI_EVENT_ID
 import com.example.lifegame.ui.screens.doljabiCaption
 import com.example.lifegame.ui.screens.doljabiPreviewAlreadyShown
 import com.example.lifegame.ui.screens.shouldPlayDoljabiCutscene
-import com.example.lifegame.ui.screens.startingStatSpeech
 import java.io.File
 import org.json.JSONObject
 import org.junit.Assert.assertEquals
@@ -59,26 +58,37 @@ class Week13JaegyeomUiTest {
 
     private val start = ChallengeStart(Gender.MALE, "1,3,6,6,2,2,5,1,4,4,3,3", seed = 1_731_500_000_123L)
 
-    // ---- 2026-11-20: 시작 능력치 줄은 최종값 · 증감만(규칙은 그대로) ----
+    // ---- 2026-11-20 과제: 3D 눈과 능력치 줄 1:1 (값은 로직 결과를 그대로) ----
 
     @Test
-    fun `starting stat rows keep the dice rule but read only the value and the change`() {
-        // 규칙은 그대로: 능력치마다 두 눈, (합 - 7) × 2, 40~60.
-        assertEquals(44, StatRoll("운동능력", 1, 3).finalValue)
-        assertEquals(40, StatRoll("지력", 1, 1).finalValue)
-        assertEquals(60, StatRoll("운", 6, 6).finalValue)
-        (2..12).forEach { sum ->
-            val first = maxOf(1, sum - 6)
-            assertEquals(50 + (sum - 7) * 2, StatRoll("행복", first, sum - first).finalValue)
+    fun `starting stat rows carry the logic's eyes, sum, increase and final value`() {
+        val roll = checkNotNull(StartingRoll.decode("3,4,2,5,6,1,1,4,5,4,2,2"))
+        val rows = startingStatRows(roll)
+        assertEquals(listOf("운동능력", "지력", "사회성", "경제력", "행복", "운"), rows.map { it.label })
+        // 화면은 규칙을 다시 계산하지 않는다: 줄의 모든 숫자는 로직(StatRoll)의 값이다(규칙 변경은 김우영 담당).
+        rows.zip(roll.rolls).forEach { (row, stat) ->
+            assertEquals(stat.first, row.first)
+            assertEquals(stat.second, row.second)
+            assertEquals(stat.sum, row.sum)
+            assertEquals(stat.delta, row.increase)
+            assertEquals(stat.finalValue, row.finalValue)
+            assertEquals(row.finalValue, row.base + row.increase)
+            val shown = row.formula.replace('\u00A0', ' ')
+            assertTrue(shown, shown.startsWith("${stat.first} + ${stat.second} = ${stat.sum} · ${row.base} "))
+            assertTrue(shown, shown.endsWith(" = ${stat.finalValue}"))
+            assertTrue(row.speech, row.speech.startsWith("${stat.label}, 주사위 ${stat.first}"))
+            assertTrue(row.speech, row.speech.contains("합 ${stat.sum}") && row.speech.endsWith("${stat.finalValue}"))
         }
-        // 낭독은 주사위 눈 · 계산식 없이 값과 증감만.
-        assertEquals("운동능력 44, 보통보다 6 낮음", startingStatSpeech(StatRoll("운동능력", 1, 3)))
-        assertEquals("운 56, 보통보다 6 높음", startingStatSpeech(StatRoll("운", 5, 5)))
-        assertEquals("행복 50, 보통", startingStatSpeech(StatRoll("행복", 3, 4)))
-        listOf(StatRoll("지력", 4, 1), StatRoll("경제력", 2, 6)).forEach { roll ->
-            val speech = startingStatSpeech(roll)
-            assertFalse(speech, speech.contains("눈") || speech.contains("합계") || speech.contains("주사위"))
-        }
+        // 11/20 통합지시서 예시의 모양(경제력 1 + 4 = 5 → +5 → 55)과 내림 · 그대로의 모양.
+        val up = StartingStatRowUi("경제력", 1, 4, 5, 5, 50, 55)
+        assertEquals("1 + 4 = 5 · 50 + 5 = 55", up.formula.replace('\u00A0', ' '))
+        assertEquals("경제력, 주사위 1과 4, 합 5, 50에서 5 올라 55", up.speech)
+        val down = StartingStatRowUi("지력", 4, 1, 5, -4, 50, 46)
+        assertEquals("4 + 1 = 5 · 50 − 4 = 46", down.formula.replace('\u00A0', ' '))
+        assertEquals("지력, 주사위 4와 1, 합 5, 50에서 4 내려 46", down.speech)
+        assertEquals("행복, 주사위 3과 4, 합 7, 50 그대로 50", StartingStatRowUi("행복", 3, 4, 7, 0, 50, 50).speech)
+        // 줄바꿈은 가운데 점에서만: 덩어리 안에는 일반 공백이 없다.
+        assertEquals(listOf("1\u00A0+\u00A04\u00A0=\u00A05", "50\u00A0+\u00A05\u00A0=\u00A055"), up.formula.split(" · "))
     }
 
     @Test

@@ -16,6 +16,9 @@ import androidx.compose.ui.test.junit4.createComposeRule
 import androidx.compose.ui.test.onAllNodesWithTag
 import androidx.compose.ui.test.onNodeWithTag
 import androidx.compose.ui.test.onNodeWithText
+import androidx.compose.ui.test.assertTextEquals
+import androidx.compose.ui.test.onAllNodesWithText
+import androidx.compose.ui.test.assertCountEquals
 import androidx.compose.ui.test.isRoot
 import androidx.compose.ui.test.onLast
 import androidx.compose.ui.test.performClick
@@ -156,7 +159,13 @@ class IterationScreensTest {
         val older = compose.onNodeWithText("공원 벤치에 앉아 지나가는 사람들을 구경하는 게 일과가 되었다.").fetchSemanticsNode().positionInRoot.y
         assertTrue("최신 기록이 위", top < older)
         compose.onAllNodesWithTag("log_kind_choice", useUnmergedTree = true).fetchSemanticsNodes().let { assertTrue(it.isNotEmpty()) }
-        compose.onAllNodesWithTag("log_kind_story", useUnmergedTree = true).fetchSemanticsNodes().let { assertTrue(it.isNotEmpty()) }
+        // 2026-11-20: 이야기 줄에는 "그해 이야기" 꼬리표를 붙이지 않고, 같은 해의 "노년기 · 2번째 해"는 한 번만 쓴다.
+        compose.onAllNodesWithTag("log_kind_story", useUnmergedTree = true).assertCountEquals(0)
+        compose.onAllNodesWithText("그해 이야기", useUnmergedTree = true).assertCountEquals(0)
+        compose.onAllNodesWithText("노년기 · 2번째 해", substring = true, useUnmergedTree = true).assertCountEquals(0)
+        compose.onNodeWithTag("year_log_header_0", useUnmergedTree = true).assertTextEquals("2번째 해")
+        compose.onAllNodesWithTag("year_log_header_1", useUnmergedTree = true).assertCountEquals(0)
+        compose.onNodeWithTag("year_log_header_2", useUnmergedTree = true).assertTextEquals("1번째 해")
     }
 
     /**

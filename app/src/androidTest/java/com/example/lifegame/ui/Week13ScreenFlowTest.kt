@@ -15,6 +15,9 @@ import androidx.compose.ui.semantics.getOrNull
 import androidx.compose.ui.test.assertCountEquals
 import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.assertTextContains
+import androidx.compose.ui.test.assertContentDescriptionEquals
+import androidx.compose.ui.test.assertIsSelected
+import androidx.compose.ui.test.assertIsNotSelected
 import androidx.compose.ui.test.assertTextEquals
 import androidx.compose.ui.test.hasText
 import androidx.compose.ui.test.captureToImage
@@ -205,28 +208,32 @@ class Week13ScreenFlowTest {
     }
 
     @Test
-    fun diceRowsShowOnlyTheFinalValueAndTheChange() {
+    fun diceRowsLinkEachStatToItsEyesSumIncreaseAndFinalValue() {
         compose.mainClock.autoAdvance = true
         setScreen { CharacterSelectScreen(starters = emptyList(), onStart = {}) }
         applyFixedChallengeCode()
         compose.onNodeWithTag("challenge_message").assertExists()
-        compose.onNodeWithTag("dice_rule").performScrollTo().assertIsDisplayed().assertTextContains("40~60", substring = true)
-        // 2026-11-20: 능력치 줄에는 주사위 그림 · 계산식 없이 최종값과 증감만. 값은 같은 규칙(눈 1 + 눈 3 → 44)이다.
-        val row = compose.onNodeWithTag("dice_row_운동능력").performScrollTo()
-        row.assertIsDisplayed()
-        val spoken = row.fetchSemanticsNode().config.getOrNull(SemanticsProperties.ContentDescription).orEmpty().joinToString()
-        assertEquals("운동능력 44, 보통보다 6 낮음", spoken)
-        compose.onNodeWithTag("dice_value_운동능력", useUnmergedTree = true).assertTextEquals("44")
-        compose.onNodeWithTag("dice_change_운동능력", useUnmergedTree = true).assertTextEquals("−6")
-        compose.onNodeWithTag("dice_value_지력", useUnmergedTree = true).assertTextEquals("50")
-        compose.onNodeWithTag("dice_change_지력", useUnmergedTree = true).assertTextEquals("±0")
-        compose.onAllNodes(hasText("합계", substring = true), useUnmergedTree = true).assertCountEquals(0)
-        compose.onAllNodes(hasContentDescription("주사위", substring = true), useUnmergedTree = true)
-            .fetchSemanticsNodes().forEach { node ->
-                assertTrue("능력치 줄에 주사위 그림이 남아 있다", node.config.getOrNull(SemanticsProperties.TestTag) == "dice_3d_stage")
-            }
-        // 코드로 정한 출발선은 다시 굴리지 않는다.
+        // 2026-11-20 과제: 줄마다 "눈 + 눈 = 합 · 기본 ± 증가량 = 최종값". 숫자는 로직 결과 그대로다(규칙은 김우영 담당).
+        val rows = startingStatRows(checkNotNull(StartingRoll.decode("1,3,3,4,3,4,3,4,3,4,3,4")))
+        compose.onNodeWithTag("dice_rule").performScrollTo().assertIsDisplayed()
+        rows.forEach { expected ->
+            val row = compose.onNodeWithTag("dice_row_${expected.label}").performScrollTo()
+            row.assertIsDisplayed()
+            val spoken = row.fetchSemanticsNode().config.getOrNull(SemanticsProperties.ContentDescription).orEmpty().joinToString()
+            assertEquals(expected.speech, spoken)
+            compose.onNodeWithTag("dice_formula_${expected.label}", useUnmergedTree = true).assertTextEquals(expected.formula)
+        }
+        // 3D 위에는 지금 보이는 눈의 능력치 이름이 붙고(처음은 운동능력), 줄을 누르면 그 능력치의 눈으로 바뀐다.
+        compose.onNodeWithTag("dice_3d_label").performScrollTo().assertTextEquals("운동능력의 두 눈")
+        compose.onNodeWithTag("dice_3d_stage").assertContentDescriptionEquals("운동능력: 주사위 1, 주사위 3, 합계 4")
+        compose.onNodeWithTag("dice_row_지력").performScrollTo().performClick()
+        compose.onNodeWithTag("dice_3d_label").performScrollTo().assertTextEquals("지력의 두 눈")
+        compose.onNodeWithTag("dice_3d_stage").assertContentDescriptionEquals("지력: 주사위 3, 주사위 4, 합계 7")
+        compose.onNodeWithTag("dice_row_지력").assertIsSelected()
+        compose.onNodeWithTag("dice_row_운동능력").assertIsNotSelected()
+        // 줄을 눌러도 다시 굴리지 않는다: 코드로 정한 출발선은 그대로이고 재굴림 버튼도 생기지 않는다.
         compose.onNodeWithTag("dice_no_reroll").assertExists()
+        compose.onNodeWithTag("dice_formula_운동능력", useUnmergedTree = true).assertTextEquals(rows.first().formula)
         save("w13_dice_values.png")
     }
 
