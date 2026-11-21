@@ -21,8 +21,6 @@ import com.example.lifegame.domain.engine.PeriodGameSession
 import com.example.lifegame.domain.engine.PeriodSessionFactory
 import com.example.lifegame.domain.engine.SessionStartProfile
 import com.example.lifegame.domain.engine.RunExtensionApi
-import com.example.lifegame.domain.engine.CurrentLifeResetCoordinator
-import com.example.lifegame.domain.engine.CurrentLifeResetResult
 import com.example.lifegame.domain.model.AvatarConfig
 import com.example.lifegame.domain.model.AwardedTitle
 import com.example.lifegame.domain.model.Choice
@@ -255,29 +253,6 @@ class LifeGameViewModel @JvmOverloads constructor(
     /** 프로필 화면 문구(동의 · 안내)를 실제 전송 기준으로 바꿀지 */
     val usesRealFaceGeneration: Boolean get() = realFaceClient != null
     private var savedCompletedRunId: String? = null
-    private val resetCoordinator = CurrentLifeResetCoordinator()
-
-    /**
-     * 진행 중 인생만 원자적으로 폐기한다. 완료 기록·칭호·설정은 건드리지 않는다.
-     * 저장 삭제가 실패하면 화면과 세션을 그대로 둬 다음 실행에서도 복구할 수 있다.
-     */
-    fun resetCurrentLife(): Boolean {
-        return when (resetCoordinator.reset(v4ProgressStore::clearCurrentLifeAtomically) {
-            futureJob?.cancel()
-            faceJob?.cancel()
-            clearPlay()
-        }) {
-            CurrentLifeResetResult.SUCCESS -> {
-                playError = null
-                true
-            }
-            CurrentLifeResetResult.STORAGE_FAILURE -> {
-                playError = "진행 데이터를 정리하지 못했습니다. 기존 인생을 보존했습니다."
-                false
-            }
-            CurrentLifeResetResult.ALREADY_RUNNING -> false
-        }
-    }
 
     private val recordContent: RecordContent by lazy {
         val v4 = repository.loadV4Content()
@@ -387,7 +362,7 @@ class LifeGameViewModel @JvmOverloads constructor(
         extensionStateForRun = RunExtensionState(
             challengeCode = ChallengeCodeState(
                 input = if (profile.startingRollRaw != null && profile.runSeed != null) {
-                    ChallengeCode.encode(ChallengeStart(profile.gender, profile.startingRollRaw, profile.runSeed))
+                    ChallengeCode.encode(ChallengeStart(profile.gender, profile.startingRollRaw, profile.runSeed, profile.diceRule))
                 } else "",
                 genderFlag = profile.gender.flag,
                 startingRollRaw = profile.startingRollRaw,
@@ -429,7 +404,7 @@ class LifeGameViewModel @JvmOverloads constructor(
         profile.startingRollRaw?.let { raw ->
             extensionStateForRun = extensionStateForRun.copy(
                 challengeCode = ChallengeCodeState(
-                    input = ChallengeCode.encode(ChallengeStart(profile.gender, raw, step.state.runSeed)),
+                    input = ChallengeCode.encode(ChallengeStart(profile.gender, raw, step.state.runSeed, profile.diceRule)),
                     genderFlag = profile.gender.flag,
                     startingRollRaw = raw,
                     seed = step.state.runSeed,
@@ -812,7 +787,6 @@ class LifeGameViewModel @JvmOverloads constructor(
      * 진행 중 "인생 리셋" 1단계(2026-11-20 과제). 현재 진행 슬롯만 지운다. 완료한 지난 인생 · 칭호 · 화면 설정은 그대로다.
      * 화면 상태는 디스크 저장이 확인될 때까지 유지하고([completeLifeReset]), 실패하면 되돌린다([cancelLifeReset]).
      * 연타 · 중복 호출은 한 번만 처리한다. 결말에 닿은 인생은 리셋하지 않는다(완료 기록 중복 방지).
-     * 저장 계층의 리셋 규칙(김우영 담당)이 들어오면 이 함수만 그쪽을 부르면 된다.
      */
     fun startLifeReset(): Boolean {
         if (lifeResetPending) return true

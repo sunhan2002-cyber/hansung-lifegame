@@ -5,9 +5,7 @@ import kotlin.math.abs
 /**
  * 프로필 주사위 결과 한 줄(2026-11-20 과제: 3D 눈과 능력치 줄을 1:1로 연결).
  *
- * 눈 · 합 · 증가량 · 최종값은 로직([StatRoll])이 준 값을 그대로 옮긴다. 화면은 규칙을 다시 계산하지 않는다.
- * 증가 규칙(11/20 통합지시서: 두 눈의 합이 그대로 증가량)과 도전 코드 버전은 김우영 담당이므로, 로직 결과 객체가 바뀌면
- * [startingStatRows]만 맞추면 된다.
+ * 눈 · 합 · 증가량 · 최종값은 엔진의 [StartingStatResult]를 사용한다.
  */
 data class StartingStatRowUi(
     val label: String,
@@ -42,14 +40,14 @@ data class StartingStatRowUi(
     }
 }
 
-fun startingStatRows(roll: StartingRoll): List<StartingStatRowUi> = roll.rolls.map { stat ->
+fun startingStatRows(roll: StartingRoll): List<StartingStatRowUi> = roll.results.map { stat ->
     StartingStatRowUi(
         label = stat.label,
         first = stat.first,
         second = stat.second,
         sum = stat.sum,
-        increase = stat.delta,
-        base = stat.finalValue - stat.delta,
+        increase = stat.increase,
+        base = stat.finalValue - stat.increase,
         finalValue = stat.finalValue,
     )
 }

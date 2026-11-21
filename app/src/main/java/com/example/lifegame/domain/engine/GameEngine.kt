@@ -631,7 +631,7 @@ class GameEngine(
 
     private fun canShowPeriodDecision(state: PeriodRunState, event: DecisionEvent): Boolean =
         state.period in event.periods &&
-            (!event.eventId.startsWith("love_wedding_") || MarriageContract.canFinalize(state.flags)) &&
+            (!MarriageContract.isCeremony(event.eventId) || MarriageContract.canFinalize(state.flags)) &&
             completedEventFlag(event.eventId) !in state.flags &&
             event.statConditions.matches(state.stats) &&
             event.lifeFactConditions.matches(state.lifeFacts) &&

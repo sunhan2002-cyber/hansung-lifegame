@@ -1,6 +1,7 @@
 package com.example.lifegame.ui
 
 import com.example.lifegame.domain.engine.AutomaticEventRule
+import com.example.lifegame.domain.engine.MarriageContract
 import com.example.lifegame.domain.model.AutomaticEventRecord
 import com.example.lifegame.domain.model.DecisionEvent
 import com.example.lifegame.domain.model.LifePeriod
@@ -12,7 +13,6 @@ import com.example.lifegame.domain.model.RunChoiceRecord
  *
  * 상대는 이번 인생에서 실제로 상대 플래그(`partner_*`)를 붙인 선택 결과나 자동 사건으로만 정한다. 이름을 지어내지 않고
  * "「모닥불 옆자리」에서 만난 사람"처럼 처음 만난 사건으로 부른다. 결혼식은 실제로 고른 결혼식 사건 결과만 보여 준다.
- * 김우영 · 신기훈이 합의한 상대 ID와 본식 사건 ID가 들어오면 [PARTNER_FLAGS] · [isWeddingEvent]를 그 값으로 바꾸면 된다.
  */
 object PartnerStory {
     /** 현재 콘텐츠의 상대 플래그. 사건 JSON의 addFlags에서 가져온 목록이다. */
@@ -21,8 +21,7 @@ object PartnerStory {
         "partner_app", "partner_closing", "partner_gym", "partner_blind_date", "partner_second_chance",
     )
 
-    /** 결혼식 사건. 친구 결혼식(하객)은 포함하지 않는다. 신기훈의 독립 본식 사건 ID가 정해지면 여기에 더한다. */
-    fun isWeddingEvent(eventId: String): Boolean = eventId.startsWith("love_wedding") || eventId.startsWith("love_ceremony")
+    fun isWeddingEvent(eventId: String): Boolean = MarriageContract.isCeremony(eventId)
 
     /** 연애 맥락의 사건(만남 이후의 데이트 · 갈등 · 결혼 이야기 · 양가 인사 · 결혼식 등). */
     fun isLoveEvent(eventId: String): Boolean = eventId.startsWith("love_") || eventId == "adult_032"

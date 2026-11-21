@@ -97,9 +97,6 @@ class V4ProgressStore(private val prefs: SharedPreferences) {
         if (edit != null) publish(edit) else { persistence.confirmChanges(); true }
     }
 
-    /** 진행 중 인생만 동기 커밋한다. 실패하면 메모리 상태를 버리지 않도록 호출자에게 알린다. */
-    fun clearCurrentLifeAtomically(): Boolean = prefs.edit().remove(KEY).commit()
-
     fun loadCompletedLives(): List<CompletedLifeRecord> =
         (readRecords(PENDING_COMPLETED_KEY) + readRecords(COMPLETED_KEY)).distinctBy { it.runId }
 

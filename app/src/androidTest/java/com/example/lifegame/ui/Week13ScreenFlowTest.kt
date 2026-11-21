@@ -62,7 +62,7 @@ import org.junit.runner.RunWith
 
 /**
  * 2026-11-13 김재겸 과제(화면 흐름 · 시연 조작 · 커스터마이징)의 기기 테스트.
- * 돌잡이 컷신 표시 · 건너뛰기 · 완료 · 복원, 커스터마이징 선택값 저장 · 복원, 주사위 결과 줄(최종값 · 증감만, 11/20 변경),
+ * 돌잡이 컷신 표시 · 건너뛰기 · 완료 · 복원, 커스터마이징 선택값 저장 · 복원, 주사위 결과 줄,
  * 도전 코드 입력 · 오류, 결말 계기 카드 · 회상 · 다시 만난 사람, 칭호 목표.
  * 실제 ViewModel을 쓰는 테스트는 테스트 전용 이름의 저장소를 쓰고 끝나면 지운다(실제 저장 파일은 건드리지 않음).
  */
@@ -188,7 +188,8 @@ class Week13ScreenFlowTest {
     // ---- 캐릭터 선택: 주사위 계산식 · 도전 코드 · 커스터마이징 ----
 
     /** 도전 코드로 주사위를 정해 첫 줄(운동능력)이 눈 1 · 눈 3이 되게 한다. 나머지는 3 · 4(합 7, 보정 0). */
-    private val fixedCode = ChallengeCode.encode(ChallengeStart(Gender.FEMALE, "1,3,3,4,3,4,3,4,3,4,3,4", seed = 20261113L))
+    private val fixedRoll = "1,3,3,4,3,4,1,4,3,4,3,4"
+    private val fixedCode = ChallengeCode.encode(ChallengeStart(Gender.FEMALE, fixedRoll, seed = 20261113L))
 
     /** Finish the IME resize before finding the button's touch coordinates. Never bypass onApply. */
     private fun enterCodeAndTapApply(code: String) {
@@ -213,8 +214,9 @@ class Week13ScreenFlowTest {
         setScreen { CharacterSelectScreen(starters = emptyList(), onStart = {}) }
         applyFixedChallengeCode()
         compose.onNodeWithTag("challenge_message").assertExists()
-        // 2026-11-20 과제: 줄마다 "눈 + 눈 = 합 · 기본 ± 증가량 = 최종값". 숫자는 로직 결과 그대로다(규칙은 김우영 담당).
-        val rows = startingStatRows(checkNotNull(StartingRoll.decode("1,3,3,4,3,4,3,4,3,4,3,4")))
+        val rows = startingStatRows(checkNotNull(StartingRoll.decode(fixedRoll)))
+        val wealth = rows.single { it.label == "경제력" }
+        assertEquals(listOf(1, 4, 5, 5, 55), listOf(wealth.first, wealth.second, wealth.sum, wealth.increase, wealth.finalValue))
         compose.onNodeWithTag("dice_rule").performScrollTo().assertIsDisplayed()
         rows.forEach { expected ->
             val row = compose.onNodeWithTag("dice_row_${expected.label}").performScrollTo()
@@ -280,11 +282,32 @@ class Week13ScreenFlowTest {
         assertEquals("hair_color_blond", saved.avatar.hairColorId)
         assertEquals("outfit_green", saved.avatar.outfitColorId)
         assertEquals(20261113L, saved.state.runSeed)
+        assertEquals(55, saved.state.stats.wealth)
+        assertEquals(DiceRule.SUM_LG2.name, saved.startingDiceRule)
         lateinit var restarted: LifeGameViewModel
         compose.runOnUiThread { restarted = LifeGameViewModel(app).apply { continueLife() } }
         val look = requireNotNull(restarted.play).avatar
         assertEquals("hair_color_blond", look.hairColorId)
         assertEquals("outfit_green", look.outfitColorId)
+        assertEquals(55, requireNotNull(restarted.play).stats.wealth)
+    }
+
+    @Test
+    fun aLegacyChallengeKeepsItsRuleInPlayAndInTheSavedShareCode() {
+        var started: NewLifeProfile? = null
+        compose.mainClock.autoAdvance = true
+        setScreen { CharacterSelectScreen(starters = emptyList(), onStart = { started = it }) }
+        val legacy = ChallengeStart(Gender.FEMALE, fixedRoll, 20261113L, DiceRule.LEGACY_LG1)
+        val code = ChallengeCode.encode(legacy)
+        enterCodeAndTapApply(code)
+        compose.onNodeWithTag("challenge_message").assertTextContains("도전 코드의 출발선", substring = true)
+        compose.onNodeWithText("이 인생 시작하기").performClick()
+        compose.runOnUiThread { LifeGameViewModel(app).startNewLife(requireNotNull(started)) }
+
+        val saved = requireNotNull(V4ProgressStore(app).load())
+        assertEquals(46, saved.state.stats.wealth)
+        assertEquals(DiceRule.LEGACY_LG1.name, saved.startingDiceRule)
+        assertEquals(code, saved.extensionState.challengeCode.input)
     }
 
     @Test

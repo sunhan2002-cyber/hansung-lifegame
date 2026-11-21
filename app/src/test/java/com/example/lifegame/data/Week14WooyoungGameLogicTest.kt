@@ -1,7 +1,5 @@
 package com.example.lifegame.data
 
-import com.example.lifegame.domain.engine.CurrentLifeResetCoordinator
-import com.example.lifegame.domain.engine.CurrentLifeResetResult
 import com.example.lifegame.domain.engine.MarriageContract
 import com.example.lifegame.domain.model.LifePeriod
 import com.example.lifegame.domain.model.PeriodRunState
@@ -76,17 +74,8 @@ class Week14WooyoungGameLogicTest {
         assertEquals(run, Week10ProgressCodec.decode(Week10ProgressCodec.encode(run)))
     }
 
-    @Test fun `reset keeps runtime on storage failure and clears once on success`() {
-        val coordinator = CurrentLifeResetCoordinator()
-        var cleared = 0
-        assertEquals(CurrentLifeResetResult.STORAGE_FAILURE, coordinator.reset({ false }) { cleared++ })
-        assertEquals(0, cleared)
-        assertEquals(CurrentLifeResetResult.SUCCESS, coordinator.reset({ true }) { cleared++ })
-        assertEquals(1, cleared)
-    }
-
     @Test fun `wedding requires one partner and every prior stage`() {
-        val ready = setOf("dating", "engaged", "families_met", "partner_music")
+        val ready = setOf("dating", "engaged", "families_met", "wedding_ready", "partner_music")
         MarriageContract.requireFirstWedding("love_wedding_music", ready, setOf("married"))
         assertTrue(runCatching {
             MarriageContract.requireFirstWedding("love_wedding_music", ready + "partner_book", setOf("married"))
@@ -96,6 +85,12 @@ class Week14WooyoungGameLogicTest {
         }.isFailure)
         assertTrue(runCatching {
             MarriageContract.requireFirstWedding("love_wedding_music", ready + "married", setOf("married"))
+        }.isFailure)
+        assertTrue(runCatching {
+            MarriageContract.requireFirstWedding("love_wedding_music", ready - "wedding_ready", setOf("married"))
+        }.isFailure)
+        assertTrue(runCatching {
+            MarriageContract.requireFirstWedding("love_wedding_prep_01", ready, setOf("married"))
         }.isFailure)
     }
 
