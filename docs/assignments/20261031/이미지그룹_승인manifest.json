@@ -4077,7 +4077,7 @@
       "adult_032"
     ],
     "eventSourceHashes": {
-      "adult_032": "6d12fae6073e29a4d2fd21ddc133abc213adec311896c6683c125c58e1fc3cc2"
+      "adult_032": "9ead29ce1d318a93f8fdd045b9e4101bf725d810be849b8f825e9a21e09cdd05"
     },
     "semanticReviewer": "김선한 담당 Codex 직접 대행 검수",
     "visualReviewer": "김선한 담당 Codex 직접 대행 검수",
@@ -4101,6 +4101,18 @@
     },
     "resolvedIssueEvidence": {
       "adult_032": "본문의 장소·인물·행동을 원본과 대조하고 360×800 중앙 크롭의 상황 식별 가능성을 직접 확인"
+    },
+    "eventRechecks": {
+      "adult_032": {
+        "reviewedAt": "2026-11-21",
+        "reviewerType": "AI",
+        "reviewer": "Codex AI (김선한 통합 QA)",
+        "assetPath": "followup_20261031/img_adult_proposal_001.png",
+        "sha256": "31350b7bd373f80bd8719a6464c5b144725493a3f9455f739e9de8b88ac15374",
+        "eventSourceHash": "9ead29ce1d318a93f8fdd045b9e4101bf725d810be849b8f825e9a21e09cdd05",
+        "method": "원본과 360:740 중앙 크롭 모의 화면을 현재 사건 내용과 대조",
+        "reason": "노트북의 파견 메일과 마주 잡은 손이 청혼·파견 사이의 결정을 보여 준다. 약혼으로 이어지는 선택의 성공을 미리 그리지 않는다."
+      }
     }
   },
   {
@@ -5625,7 +5637,7 @@
       "path_soc_05"
     ],
     "eventSourceHashes": {
-      "path_soc_05": "e224b14a234478eb77ee27db39a6e5a87f82d335f232d7da20cb477c81dacdc9"
+      "path_soc_05": "d46a4dc59ee33df2480dc60ef17baf53204392b5fa9bd95573bb2e50d1c7420c"
     },
     "semanticReviewer": "Codex AI",
     "visualReviewer": "Codex AI",
@@ -5635,7 +5647,19 @@
       "path_soc_05": "docs/refactor/art-candidates/path_soc_05-rereview-20261119.json"
     },
     "reviewerType": "AI",
-    "previousApprovalHistory": "docs/refactor/art-candidates/path_soc_05-history-before-rereview-20261119.json"
+    "previousApprovalHistory": "docs/refactor/art-candidates/path_soc_05-history-before-rereview-20261119.json",
+    "eventRechecks": {
+      "path_soc_05": {
+        "reviewedAt": "2026-11-21",
+        "reviewerType": "AI",
+        "reviewer": "Codex AI (김선한 통합 QA)",
+        "assetPath": "followup_20261031/img_path_soc_05_001.png",
+        "sha256": "35bd49a77c3df8dbc7df3f16847c4cc799a786f085ba508f1d47b90f221d692b",
+        "eventSourceHash": "d46a4dc59ee33df2480dc60ef17baf53204392b5fa9bd95573bb2e50d1c7420c",
+        "method": "원본과 360:740 중앙 크롭 모의 화면을 현재 사건 내용과 대조",
+        "reason": "한정식 상과 서로 말을 주고받는 양가 아버지가 보인다. 영상이나 주거 선택의 결과는 미리 나오지 않는다."
+      }
+    }
   },
   {
     "groupId": "direct_20261119_path_soc_06",
@@ -7951,7 +7975,7 @@
       "love_date_01"
     ],
     "eventSourceHashes": {
-      "love_date_01": "102cb39c6be70d2018a0c3ff2d7524ddf5429d3236b23be88040eaf764de08b1"
+      "love_date_01": "7f5e9c5899cb11d1b9e54b15d0201a81fd4dc16fc13e7936f09df94a69566ebb"
     },
     "semanticReviewer": "Codex AI / plan_audit — full current event and outcomes",
     "visualReviewer": "Codex AI / plan_audit — full PNG and native captures",
@@ -7960,6 +7984,18 @@
     "reviewEvidence": "docs/refactor/art-candidates/native-review-first-ten-20261119/love_date_01.json",
     "resolvedIssueEvidence": {
       "love_date_01": "Previously NO_FILE; built-in generated exact source, registered current routing, and individually reviewed native captures: docs/refactor/art-candidates/native-review-first-ten-20261119/love_date_01.json"
+    },
+    "eventRechecks": {
+      "love_date_01": {
+        "reviewedAt": "2026-11-21",
+        "reviewerType": "AI",
+        "reviewer": "Codex AI (김선한 통합 QA)",
+        "assetPath": "img_love_date_01_001.png",
+        "sha256": "e2d92693697d18347ffd30017bb3429c265dc63b895fe11237c9dee8a4da17d6",
+        "eventSourceHash": "7f5e9c5899cb11d1b9e54b15d0201a81fd4dc16fc13e7936f09df94a69566ebb",
+        "method": "원본과 360:740 중앙 크롭 모의 화면을 현재 사건 내용과 대조",
+        "reason": "카페에서 둘이 마주 앉았고 음료와 두 휴대폰이 보인다. 사진첩을 아직 열지 않아 수정 선택의 맥락을 유지한다."
+      }
     }
   },
   {
@@ -8014,7 +8050,7 @@
       "love_family_meet_01"
     ],
     "eventSourceHashes": {
-      "love_family_meet_01": "6193a7a6d173501e1550f0f377839d351b1635b0a8f032eedf7ad9c8880411c6"
+      "love_family_meet_01": "1be6275516d8247f307b367b77afbe0813cd63d8685ae423b001fbb13842baa1"
     },
     "semanticReviewer": "Codex AI / plan_audit — full current event and outcomes",
     "visualReviewer": "Codex AI / plan_audit — full PNG and native captures",
@@ -8023,6 +8059,18 @@
     "reviewEvidence": "docs/refactor/art-candidates/native-review-first-ten-20261119/love_family_meet_01.json",
     "resolvedIssueEvidence": {
       "love_family_meet_01": "Previously NO_FILE; built-in generated exact source, registered current routing, and individually reviewed native captures: docs/refactor/art-candidates/native-review-first-ten-20261119/love_family_meet_01.json"
+    },
+    "eventRechecks": {
+      "love_family_meet_01": {
+        "reviewedAt": "2026-11-21",
+        "reviewerType": "AI",
+        "reviewer": "Codex AI (김선한 통합 QA)",
+        "assetPath": "img_love_family_meet_01_001.png",
+        "sha256": "e2e085101cdd701d50396bb05698498f7a1820605cf4cbac8b6aec1399fb60c9",
+        "eventSourceHash": "1be6275516d8247f307b367b77afbe0813cd63d8685ae423b001fbb13842baa1",
+        "method": "원본과 360:740 중앙 크롭 모의 화면을 현재 사건 내용과 대조",
+        "reason": "양가 식사 자리와 식탁 아래 잡은 손이 보인다. 인사 성공이나 물을 엎지르는 결과는 미리 나오지 않는다."
+      }
     }
   },
   {
@@ -8182,7 +8230,7 @@
       "love_conflict_first_love"
     ],
     "eventSourceHashes": {
-      "love_conflict_first_love": "6e42edd2377dcd37934fe80384cfb84963c7f959b9eb6eb19c3098f121c05e49"
+      "love_conflict_first_love": "ab028f997bc5f65905b2dc4c7a2d9e6fe8a29682cd235dad68a73c6233322379"
     },
     "semanticReviewer": "Codex AI / plan_audit — full current event and outcomes",
     "visualReviewer": "Codex AI / plan_audit — exact source and native captures",
@@ -8191,6 +8239,18 @@
     "reviewEvidence": "docs/refactor/art-candidates/native-review-secondary-ten-20261119/love_conflict_first_love.json",
     "resolvedIssueEvidence": {
       "love_conflict_first_love": "Previously NO_FILE; exact built-in generated source and current routing individually verified against native captures: docs/refactor/art-candidates/native-review-secondary-ten-20261119/love_conflict_first_love.json"
+    },
+    "eventRechecks": {
+      "love_conflict_first_love": {
+        "reviewedAt": "2026-11-21",
+        "reviewerType": "AI",
+        "reviewer": "Codex AI (김선한 통합 QA)",
+        "assetPath": "img_love_conflict_first_love_001.png",
+        "sha256": "63a300b1283e3398f4b61f8cb07ceb6d824b0693094519ce67f454fe1cdd4e35",
+        "eventSourceHash": "ab028f997bc5f65905b2dc4c7a2d9e6fe8a29682cd235dad68a73c6233322379",
+        "method": "원본과 360:740 중앙 크롭 모의 화면을 현재 사건 내용과 대조",
+        "reason": "두 음료 사이에서 손을 모으고 대화하는 장면이다. 대화 후 화해 또는 결별을 먼저 보여 주지 않는다."
+      }
     }
   },
   {
@@ -8224,7 +8284,7 @@
       "love_conflict_music"
     ],
     "eventSourceHashes": {
-      "love_conflict_music": "1e8eb42bee108be2658737d956e774d5fb2f244e5e50a17381de3ddc74a10590"
+      "love_conflict_music": "5f4c71e699fdd04a3c7fe13725f4053cf2d82ea274bbbe3dc429cfcd853f2a91"
     },
     "semanticReviewer": "Codex AI / plan_audit — full current event and outcomes",
     "visualReviewer": "Codex AI / plan_audit — exact source and native captures",
@@ -8233,6 +8293,18 @@
     "reviewEvidence": "docs/refactor/art-candidates/native-review-secondary-ten-20261119/love_conflict_music.json",
     "resolvedIssueEvidence": {
       "love_conflict_music": "Previously NO_FILE; exact built-in generated source and current routing individually verified against native captures: docs/refactor/art-candidates/native-review-secondary-ten-20261119/love_conflict_music.json"
+    },
+    "eventRechecks": {
+      "love_conflict_music": {
+        "reviewedAt": "2026-11-21",
+        "reviewerType": "AI",
+        "reviewer": "Codex AI (김선한 통합 QA)",
+        "assetPath": "img_love_conflict_music_001.png",
+        "sha256": "5921f8282b4d40e3dfc961722619c986d26cd6a1c5867a83ba7eab1e4e6d5870",
+        "eventSourceHash": "5f4c71e699fdd04a3c7fe13725f4053cf2d82ea274bbbe3dc429cfcd853f2a91",
+        "method": "원본과 360:740 중앙 크롭 모의 화면을 현재 사건 내용과 대조",
+        "reason": "악기 케이스와 보면대가 남고, 상대와 거리를 둔 채 손을 두고 있어 음악 인연의 갈등 장면을 읽을 수 있다."
+      }
     }
   },
   {
