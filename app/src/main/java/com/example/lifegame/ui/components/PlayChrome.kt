@@ -32,6 +32,12 @@ import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.progressSemantics
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Text
+import androidx.compose.material3.DropdownMenu
+import androidx.compose.material3.DropdownMenuItem
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.setValue
+import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.remember
@@ -188,6 +194,54 @@ fun PlayTopBar(
             avatar(Modifier.size(width = 56.dp, height = 66.dp))
         }
         HealthGauge(health = health, onDark = onDark, modifier = Modifier.weight(1f))
+        LocalPlayMenu.current?.let { menu -> PlayMenuButton(menu, onDark) }
+    }
+}
+
+/**
+ * 진행 화면 메뉴(2026-11-20 과제: 진행 중 "인생 리셋"). [PlayTopBar]가 있는 자동 진행 · 사건 화면에 같은 메뉴가 붙는다.
+ * 메뉴를 여는 동안 자동 진행은 멈추고([onOpen]), 그냥 닫으면 다시 흐른다([onDismiss]). 실제 리셋 확인은 호스트가 띄운다.
+ */
+class PlayMenuActions(
+    val onOpen: () -> Unit,
+    val onDismiss: () -> Unit,
+    val onResetLife: () -> Unit,
+)
+
+val LocalPlayMenu = staticCompositionLocalOf<PlayMenuActions?> { null }
+
+@Composable
+private fun PlayMenuButton(menu: PlayMenuActions, onDark: Boolean) {
+    var open by remember { mutableStateOf(false) }
+    val shape = RoundedCornerShape(8.dp)
+    val ink = if (onDark) Color.White else com.example.lifegame.ui.theme.LifeGameInk
+    Box {
+        Text(
+            text = "메뉴",
+            color = ink,
+            fontSize = 14.sp,
+            fontWeight = FontWeight.Medium,
+            textAlign = TextAlign.Center,
+            modifier = Modifier
+                .heightIn(min = 48.dp)
+                .widthIn(min = 56.dp)
+                .clip(shape)
+                .clickable(role = Role.Button) { menu.onOpen(); open = true }
+                .padding(horizontal = 10.dp, vertical = 13.dp)
+                .semantics { contentDescription = "메뉴 열기. 인생 리셋" }
+                .testTag("play_menu"),
+        )
+        DropdownMenu(
+            expanded = open,
+            onDismissRequest = { open = false; menu.onDismiss() },
+            modifier = Modifier.testTag("play_menu_list"),
+        ) {
+            DropdownMenuItem(
+                text = { Text("인생 리셋") },
+                onClick = { open = false; menu.onResetLife() },
+                modifier = Modifier.testTag("play_menu_reset"),
+            )
+        }
     }
 }
 

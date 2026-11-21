@@ -15,6 +15,9 @@ import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.CompositionLocalProvider
+import com.example.lifegame.ui.components.PlayMenuActions
+import com.example.lifegame.ui.components.LocalPlayMenu
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -162,6 +165,12 @@ fun LifeGameApp(
                                 popUpTo(Routes.HOME) { inclusive = true }
                             }
                         },
+                        // 인생 리셋을 확정하면 새 인생의 프로필 · 주사위 화면으로 바로 간다. 뒤로 가면 홈이다.
+                        onStartNewLife = {
+                            navController.navigateOnce(Routes.PROFILE) {
+                                popUpTo(Routes.HOME)
+                            }
+                        },
                     )
                 }
             }
@@ -194,10 +203,66 @@ fun LifeGameApp(
 internal fun PlayHost(
     gameViewModel: LifeGameViewModel,
     onGoHome: () -> Unit,
+    onStartNewLife: () -> Unit = onGoHome,
 ) {
     val play = gameViewModel.play
     val saveState by gameViewModel.saveState.collectAsState()
     var finishing by rememberSaveable { mutableStateOf(false) }
+    // ---- 진행 중 "인생 리셋"(2026-11-20 과제) ----
+    var resetConfirm by rememberSaveable { mutableStateOf(false) }
+    var resetting by rememberSaveable { mutableStateOf(false) }
+    var resumeAfterMenu by rememberSaveable { mutableStateOf(false) }
+    val resumeIfPaused: () -> Unit = {
+        if (resumeAfterMenu) {
+            resumeAfterMenu = false
+            if (gameViewModel.play?.autoPlaying == false) gameViewModel.togglePlaying()
+        }
+    }
+    val playMenu = remember(gameViewModel) {
+        PlayMenuActions(
+            // 메뉴를 보는 동안 자동 진행이 저절로 다음 해로 넘어가지 않게 멈춘다.
+            onOpen = {
+                if (gameViewModel.play?.phase == PlayPhase.AUTO && gameViewModel.play?.autoPlaying == true) {
+                    gameViewModel.togglePlaying()
+                    resumeAfterMenu = true
+                }
+            },
+            onDismiss = { resumeIfPaused() },
+            onResetLife = { resetConfirm = true },
+        )
+    }
+    val confirmReset: () -> Unit = {
+        resetConfirm = false
+        if (!resetting && gameViewModel.startLifeReset()) {
+            resumeAfterMenu = false
+            resetting = true
+        } else if (!resetting) {
+            resumeIfPaused()
+        }
+    }
+    BackHandler(enabled = resetting) { /* 지운 것이 디스크에 확인될 때까지 화면을 지킨다. */ }
+    LaunchedEffect(resetting, saveState) {
+        if (!resetting) return@LaunchedEffect
+        if (!gameViewModel.lifeResetPending) {
+            // 프로세스가 다시 만들어진 경우: 슬롯이 없으면 리셋이 끝난 것이고, 남아 있으면 그 인생을 그대로 이어 간다.
+            resetting = false
+            if (!gameViewModel.hasStoredRun) onStartNewLife() else gameViewModel.continueLife()
+            return@LaunchedEffect
+        }
+        // 화면에 모인 저장 상태가 한 프레임 늦을 수 있어, 리셋이 만든 저장 요청의 결과만 본다.
+        when (gameViewModel.lifeResetProgress()) {
+            LifeResetProgress.DONE -> {
+                gameViewModel.completeLifeReset()
+                resetting = false
+                onStartNewLife()
+            }
+            LifeResetProgress.FAILED -> {
+                gameViewModel.cancelLifeReset()
+                resetting = false
+            }
+            LifeResetProgress.WAITING -> Unit
+        }
+    }
     BackHandler(enabled = finishing) { /* Keep the final checkpoint visible until disk completion. */ }
     val finishAndGoHome: () -> Unit = {
         if (!finishing) {
@@ -231,7 +296,37 @@ internal fun PlayHost(
             Box(Modifier.fillMaxSize().background(LifeGamePaper), contentAlignment = Alignment.Center) {
                 Text("인생 기록을 저장하고 있어요…", modifier = Modifier.testTag("ending_save_pending"))
             }
-        } else PlayPhaseScreen(play, gameViewModel, onGoHome, finishAndGoHome)
+        } else if (resetting) {
+            Box(Modifier.fillMaxSize().background(LifeGamePaper), contentAlignment = Alignment.Center) {
+                Text("지금 인생을 정리하고 있어요…", modifier = Modifier.testTag("life_reset_pending"))
+            }
+        } else CompositionLocalProvider(LocalPlayMenu provides playMenu.takeIf { play != null && play.phase != PlayPhase.ENDED }) {
+            PlayPhaseScreen(play, gameViewModel, onGoHome, finishAndGoHome)
+        }
+        if (resetConfirm) {
+            AlertDialog(
+                onDismissRequest = { resetConfirm = false; resumeIfPaused() },
+                modifier = Modifier.testTag("life_reset_dialog"),
+                text = { Text("현재 진행 중인 인생은 사라집니다. 새 인생을 시작할까요?") },
+                confirmButton = {
+                    TextButton(onClick = confirmReset, modifier = Modifier.testTag("life_reset_confirm")) { Text("새 인생 시작") }
+                },
+                dismissButton = {
+                    TextButton(
+                        onClick = { resetConfirm = false; resumeIfPaused() },
+                        modifier = Modifier.testTag("life_reset_cancel"),
+                    ) { Text("취소") }
+                },
+            )
+        }
+        gameViewModel.lifeResetError?.let { message ->
+            AlertDialog(
+                onDismissRequest = gameViewModel::clearLifeResetError,
+                modifier = Modifier.testTag("life_reset_error"),
+                text = { Text(message) },
+                confirmButton = { TextButton(onClick = gameViewModel::clearLifeResetError) { Text("확인") } },
+            )
+        }
         if (guardingTaps) {
             Box(
                 Modifier

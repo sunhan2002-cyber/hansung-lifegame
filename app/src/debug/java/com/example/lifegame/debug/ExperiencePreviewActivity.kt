@@ -1,6 +1,17 @@
 package com.example.lifegame.debug
 
 import android.os.Bundle
+import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.unit.dp
+import com.example.lifegame.ui.StartingRoll
+import com.example.lifegame.ui.screens.DicePanel
+import com.example.lifegame.ui.theme.LifeGamePaper
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
@@ -31,12 +42,14 @@ import com.example.lifegame.ui.theme.LifeGameTheme
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 
+private const val PREVIEW_DICE = "3,4,2,5,6,1,1,4,5,4,2,2"
+
 /** Debug APK only. No current/completed life store, network request, seed or reward is touched. */
 class ExperiencePreviewActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val requested = intent.getStringExtra("scene") ?: "home"
-        if (requested !in setOf("home", "teen_024", "adult_072", "adult_067")) { finish(); return }
+        if (requested !in setOf("home", "dice", "teen_024", "adult_072", "adult_067")) { finish(); return }
         val motion = intent.getBooleanExtra("motion", true)
         enableEdgeToEdge()
         WindowCompat.getInsetsController(window, window.decorView).apply {
@@ -47,6 +60,18 @@ class ExperiencePreviewActivity : ComponentActivity() {
             LifeGameTheme {
                 CompositionLocalProvider(LocalExperiencePreferences provides ExperiencePreferences(motionEnabled = motion, hapticsEnabled = false)) {
                     if (requested == "home") HomeScreen(null, emptyList(), {}, {})
+                    else if (requested == "dice") {
+                        // 2026-11-20: 고정 굴림(경제력 1 + 4 포함)으로 프로필 주사위 패널만 측정한다. 저장 · 난수는 건드리지 않는다.
+                        Box(Modifier.fillMaxSize().background(LifeGamePaper).verticalScroll(rememberScrollState()).padding(16.dp)) {
+                            DicePanel(
+                                roll = StartingRoll.decode(PREVIEW_DICE),
+                                rollNonce = 1,
+                                tendency = null,
+                                rerollsLeft = 2,
+                                onRoll = {},
+                            )
+                        }
+                    }
                     else {
                         var state by remember { mutableStateOf<PeriodPlayUiState?>(null) }
                         LaunchedEffect(requested) { state = withContext(Dispatchers.IO) { scene(requested) } }

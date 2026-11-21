@@ -59,6 +59,15 @@ import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.platform.LocalFocusManager
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.semantics.Role
+import androidx.compose.ui.semantics.onClick
+import androidx.compose.ui.semantics.role
+import androidx.compose.ui.semantics.selected
+import androidx.compose.ui.semantics.stateDescription
+import androidx.compose.ui.text.SpanStyle
+import androidx.compose.ui.text.buildAnnotatedString
+import androidx.compose.ui.text.withStyle
+import com.example.lifegame.ui.StartingStatRowUi
+import com.example.lifegame.ui.startingStatRows
 import androidx.compose.ui.semantics.clearAndSetSemantics
 import androidx.compose.ui.semantics.heading
 import androidx.compose.ui.semantics.testTag
@@ -445,13 +454,14 @@ fun CharacterSelectScreen(
 }
 
 /**
- * 타고난 능력치 정하기. 주사위는 굴리는 연출(3D)로만 보여 주고, 능력치 줄에는 주사위 그림 · 계산식 없이
- * 최종값과 기본 50에서의 증감만 보여 준다(2026-11-20 사용자 결정: 계산식이 직관적이지 않음).
- * 값은 지금 규칙 그대로(능력치마다 주사위 두 개, (합 - 7) × 2, 40~60) 정해져 저장 · 도전 코드 · 밸런스가 같다.
+ * 타고난 능력치 정하기(2026-11-20 과제: 3D 눈과 능력치 줄 1:1).
+ * 3D 주사위 위에 지금 보이는 눈이 어느 능력치인지 이름을 붙이고, 여섯 줄은 각각 "1 + 4 = 5 · 50 + 5 = 55"처럼
+ * 그 능력치의 두 눈 · 합 · 실제 증가량 · 최종값을 보여 준다. 줄을 누르면 위 3D(정지 그림 대체 포함)가 그 능력치의 눈으로 바뀐다.
+ * 숫자는 로직 결과([startingStatRows])를 그대로 쓰고 화면에서 규칙을 계산하지 않는다. 다시 굴리기 · 연타 잠금은 그대로다.
  * 굴린 값과 가장 닮은 성향을 아래에 한 줄로 보여 준다.
  */
 @Composable
-private fun DicePanel(
+internal fun DicePanel(
     roll: StartingRoll?,
     rollNonce: Int,
     tendency: StarterUi?,
@@ -487,18 +497,26 @@ private fun DicePanel(
                 lineHeight = 20.sp,
             )
         } else {
-            // 굴리는 연출. 주사위 눈을 특정 능력치의 계산으로 읽게 하지 않도록 이름표를 붙이지 않는다.
-            roll.rolls.firstOrNull()?.let { stat ->
-                Dice3DStage(first = stat.first, second = stat.second, rollNonce = rollNonce, label = stat.label)
-            }
+            val rows = remember(roll) { startingStatRows(roll) }
+            // 회전 · 복원 뒤에도 보던 능력치를 그대로 보여 준다. 굴림 결과나 재굴림 횟수에는 영향이 없다.
+            var shownIndex by rememberSaveable { mutableStateOf(0) }
+            val shown = rows.getOrElse(shownIndex) { rows.first() }
             Text(
-                text = "타고난 능력치는 40~60 사이에서 정해져요. 50이 보통이에요.",
+                text = "${shown.label}의 두 눈",
+                color = LifeGameInk,
+                fontSize = 14.sp,
+                fontWeight = FontWeight.Medium,
+                modifier = Modifier.testTag("dice_3d_label"),
+            )
+            Dice3DStage(first = shown.first, second = shown.second, rollNonce = rollNonce, label = shown.label)
+            Text(
+                text = "능력치마다 주사위 두 개를 굴려요. 줄을 누르면 그 능력치의 두 눈을 위에서 볼 수 있어요.",
                 color = LifeGameInkSecondary,
                 fontSize = 13.sp,
                 lineHeight = 18.sp,
                 modifier = Modifier.testTag("dice_rule"),
             )
-            roll.rolls.forEach { stat -> DiceRow(stat) }
+            rows.forEachIndexed { index, row -> DiceRow(row, shown = index == shownIndex, onShow = { shownIndex = index }) }
             if (tendency != null) {
                 Spacer(Modifier.height(2.dp))
                 Text(
@@ -529,64 +547,61 @@ private fun DicePanel(
     }
 }
 
-/** 능력치 한 줄: 이름 · 최종값 · 기본 50에서의 증감(오르면 파랑, 내리면 빨강, 그대로면 회색). */
+/**
+ * 능력치 한 줄: "경제력 · 1 + 4 = 5 · 50 + 5 = 55". 증가량은 오르면 파랑, 내리면 빨강, 그대로면 회색, 최종값은 굵게.
+ * 누르면 위 3D 주사위가 이 능력치의 두 눈을 보여 준다(다시 굴리지 않는다). 낭독도 같은 값을 읽는다.
+ */
 @Composable
-private fun DiceRow(stat: StatRoll) {
-    val change = when {
-        stat.delta > 0 -> "+${stat.delta}"
-        stat.delta < 0 -> "−${-stat.delta}"
-        else -> "±0"
-    }
-    val changeColor = when {
-        stat.delta > 0 -> LifeGameStatUp
-        stat.delta < 0 -> LifeGameStatDown
+private fun DiceRow(row: StartingStatRowUi, shown: Boolean, onShow: () -> Unit) {
+    val increaseColor = when {
+        row.increase > 0 -> LifeGameStatUp
+        row.increase < 0 -> LifeGameStatDown
         else -> LifeGameInkTertiary
     }
-    val changeBackground = when {
-        stat.delta > 0 -> LifeGameStatUpSoft
-        stat.delta < 0 -> LifeGameStatDownSoft
-        else -> LifeGameMuted
+    val formula = buildAnnotatedString {
+        append(row.diceText)
+        append(" · ")
+        append("${row.base}\u00A0")
+        withStyle(SpanStyle(color = increaseColor, fontWeight = FontWeight.Bold)) { append(row.increaseText) }
+        append("\u00A0=\u00A0")
+        withStyle(SpanStyle(color = LifeGameInk, fontWeight = FontWeight.Bold)) { append("${row.finalValue}") }
     }
+    val shape = RoundedCornerShape(8.dp)
     Row(
         Modifier
             .fillMaxWidth()
-            .heightIn(min = 32.dp)
+            .heightIn(min = 48.dp)
+            .clip(shape)
+            .background(if (shown) LifeGameMuted else LifeGameCard)
+            .selectable(selected = shown, role = Role.RadioButton, onClick = onShow)
+            .padding(horizontal = 8.dp, vertical = 6.dp)
             .clearAndSetSemantics {
-                contentDescription = startingStatSpeech(stat)
-                testTag = "dice_row_${stat.label}"
+                contentDescription = row.speech
+                stateDescription = if (shown) "위 주사위에 보이는 중" else "누르면 위 주사위에 보여요"
+                selected = shown
+                role = Role.RadioButton
+                onClick(label = "${row.label}의 두 눈 보기") { onShow(); true }
+                testTag = "dice_row_${row.label}"
             },
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.spacedBy(10.dp),
     ) {
-        Text(stat.label, color = LifeGameInk, fontSize = 15.sp, modifier = Modifier.weight(1f))
         Text(
-            text = "${stat.finalValue}",
+            row.label,
             color = LifeGameInk,
-            fontSize = 18.sp,
-            fontWeight = FontWeight.Bold,
-            modifier = Modifier.testTag("dice_value_${stat.label}"),
+            fontSize = 15.sp,
+            fontWeight = if (shown) FontWeight.Bold else FontWeight.Normal,
+            modifier = Modifier.widthIn(min = 64.dp).testTag("dice_label_${row.label}"),
         )
         Text(
-            text = change,
-            color = changeColor,
-            fontSize = 13.sp,
-            fontWeight = FontWeight.Bold,
-            textAlign = TextAlign.Center,
-            modifier = Modifier
-                .widthIn(min = 44.dp)
-                .clip(RoundedCornerShape(6.dp))
-                .background(changeBackground)
-                .padding(horizontal = 6.dp, vertical = 2.dp)
-                .testTag("dice_change_${stat.label}"),
+            text = formula,
+            color = LifeGameInkSecondary,
+            fontSize = 14.sp,
+            lineHeight = 20.sp,
+            textAlign = TextAlign.End,
+            modifier = Modifier.weight(1f).testTag("dice_formula_${row.label}"),
         )
     }
-}
-
-/** 화면 낭독: "지력 46, 보통보다 4 낮음". 주사위 눈 · 계산식은 읽지 않는다. */
-internal fun startingStatSpeech(stat: StatRoll): String = "${stat.label} ${stat.finalValue}, " + when {
-    stat.delta > 0 -> "보통보다 ${stat.delta} 높음"
-    stat.delta < 0 -> "보통보다 ${-stat.delta} 낮음"
-    else -> "보통"
 }
 
 @Composable

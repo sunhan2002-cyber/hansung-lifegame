@@ -632,6 +632,17 @@ private fun ExtensionNotes(decision: DecisionUi) {
             modifier = Modifier.testTag("decision_npc"),
         )
     }
+    decision.partner?.let { partner ->
+        Text(
+            text = "함께하는 사람 · ${partner.label}" + if (partner.status.isBlank()) "" else " · ${partner.status}",
+            color = LifeGamePaper.copy(alpha = 0.9f),
+            fontSize = 14.sp,
+            lineHeight = 20.sp,
+            textAlign = TextAlign.Center,
+            style = TextStyle(shadow = OnSceneShadow),
+            modifier = Modifier.testTag("decision_partner"),
+        )
+    }
 }
 
 /**
