@@ -107,6 +107,36 @@ class Week13PlausibilityTest(unittest.TestCase):
         self.assertTrue(any("dedupeKey" in m for m in messages))
         self.assertTrue(any("imageUse" in m for m in messages))
 
+    def test_marriage_only_at_independent_ceremony(self):
+        bundle = self.fresh()
+        outcome = self.event(bundle, "love_wedding_prep_01")["choices"][0]["outcomes"][0]
+        outcome["addFlags"] = outcome["addFlags"] + ["married"]
+        self.assertTrue(any("ceremony must require" in m for m in self.messages(bundle)))
+
+    def test_ceremony_needs_entrance_and_vow(self):
+        bundle = self.fresh()
+        self.event(bundle, "love_wedding_book")["choices"][0]["label"] = "그냥 앉아 있는다"
+        self.assertTrue(any("entrance and a vow" in m for m in self.messages(bundle)))
+
+    def test_marriage_label_must_store_marriage(self):
+        bundle = self.fresh()
+        self.event(bundle, "adult_032")["choices"][0]["label"] = "결혼한다"
+        self.assertTrue(any("label promises marriage" in m for m in self.messages(bundle)))
+
+    def test_route_conflict_cannot_skip_episode(self):
+        bundle = self.fresh()
+        outcome = self.event(bundle, "love_conflict_music")["choices"][0]["outcomes"][0]
+        outcome["addFlags"] = ["rel_steady"]
+        self.assertTrue(any("route:music" in m for m in self.messages(bundle)))
+
+    def test_preparation_keeps_postpone_branch(self):
+        bundle = self.fresh()
+        choice = self.event(bundle, "love_wedding_prep_01")["choices"][1]
+        for outcome in choice["outcomes"]:
+            outcome["addFlags"] = ["wedding_ready"]
+            outcome.pop("removeFlags", None)
+        self.assertTrue(any("postponing" in m for m in self.messages(bundle)))
+
     def test_recall_must_point_to_real_choice(self):
         bundle = self.fresh()
         bundle["ext"]["recallSlots"][0]["sourceChoiceIds"] = ["Z"]
