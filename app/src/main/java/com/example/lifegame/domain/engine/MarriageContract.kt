@@ -7,6 +7,7 @@ object MarriageContract {
     const val ENGAGED = "engaged"
     const val FAMILIES_MET = "families_met"
     const val WEDDING_READY = "wedding_ready"
+    const val PREPARATION_EVENT = "love_wedding_prep_01"
     const val PARTNER_PREFIX = "partner_"
 
     private val ceremonies = setOf("love_wedding_01", "love_wedding_first_love", "love_wedding_music", "love_wedding_book")
@@ -17,10 +18,12 @@ object MarriageContract {
         .filterTo(linkedSetOf()) { it.startsWith(PARTNER_PREFIX) && it.length > PARTNER_PREFIX.length }
         .mapTo(linkedSetOf()) { it.removePrefix(PARTNER_PREFIX) }
 
-    fun canFinalize(flags: Set<String>): Boolean =
+    fun canPrepare(flags: Set<String>): Boolean =
         MARRIED !in flags &&
-            DATING in flags && ENGAGED in flags && FAMILIES_MET in flags && WEDDING_READY in flags &&
+            DATING in flags && ENGAGED in flags && FAMILIES_MET in flags &&
             partnerIds(flags).size == 1
+
+    fun canFinalize(flags: Set<String>): Boolean = WEDDING_READY in flags && canPrepare(flags)
 
     /** 실제 본식 결과에서만 혼인을 확정하며 같은 인생에 보상·기록을 재적용하지 않는다. */
     fun requireFirstWedding(eventId: String, beforeFlags: Set<String>, outcomeAdds: Set<String>) {

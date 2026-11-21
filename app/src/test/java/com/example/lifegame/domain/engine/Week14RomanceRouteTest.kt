@@ -2,6 +2,7 @@ package com.example.lifegame.domain.engine
 
 import com.example.lifegame.data.V4ContentParser
 import com.example.lifegame.domain.model.LifePeriod
+import com.example.lifegame.domain.model.PeriodRunState
 import com.example.lifegame.domain.model.StatDelta
 import com.example.lifegame.domain.model.TurnPhase
 import org.json.JSONArray
@@ -130,6 +131,31 @@ class Week14RomanceRouteTest {
 
     private fun Life.married(atEvent: String, partner: String) =
         steps.any { it.eventId == atEvent && "married" in it.added && partner in it.before }
+
+    @Test fun restoringAnOldPendingWeddingRechecksPreparationWithoutReapplyingFocus() {
+        val saved = PeriodRunState(
+            runId = "legacy-wedding",
+            runSeed = 20261125L,
+            period = LifePeriod.MIDDLE,
+            yearInPeriod = 2,
+            pendingDecisionId = "love_wedding_01",
+            flags = setOf("dating", "engaged", "families_met", "partner_ideal"),
+        )
+        val waiting = session(saved.runSeed).restoreSaved(saved)
+        assertEquals(TurnPhase.DECISION, waiting.phase)
+        assertEquals("love_wedding_prep_01", waiting.state.pendingDecisionId)
+        assertEquals(saved.stats, waiting.state.stats)
+        assertEquals(saved.flags, waiting.state.flags)
+        assertEquals(saved.moments, waiting.state.moments)
+        assertEquals(saved.yearInPeriod, waiting.state.yearInPeriod)
+
+        val alreadyMarried = saved.copy(flags = saved.flags + "married")
+        val resumed = session(saved.runSeed).restoreSaved(alreadyMarried)
+        assertEquals(null, resumed.state.pendingDecisionId)
+        assertEquals(saved.yearInPeriod + 1, resumed.state.yearInPeriod)
+        assertEquals(saved.stats.wealth, resumed.state.stats.wealth)
+        assertTrue("married" in resumed.state.flags)
+    }
 
     @Test fun threeRoutesReachTheirOwnCeremonyAndAllExitsStayOpen() {
         // focus index: 0 건강 1 운동 2 지력 3 사회성 4 경제력 5 행복 6 운

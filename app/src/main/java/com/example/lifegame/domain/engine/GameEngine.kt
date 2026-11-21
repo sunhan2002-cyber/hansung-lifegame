@@ -309,6 +309,19 @@ class GameEngine(
             val event = requireNotNull(decisions.firstOrNull { it.eventId == eventId }) {
                 "pending decision is not available in current content"
             }
+            // A save from before the preparation step can already be waiting at a ceremony.
+            if (MarriageContract.isCeremony(eventId) && !MarriageContract.canFinalize(state.flags)) {
+                val preparation = decisions.firstOrNull {
+                    it.eventId == MarriageContract.PREPARATION_EVENT &&
+                        MarriageContract.canPrepare(state.flags) &&
+                        canShowPeriodDecision(state, it)
+                }
+                return if (preparation != null) {
+                    decisionStep(state.copy(pendingDecisionId = preparation.eventId), preparation)
+                } else {
+                    completeYearWithoutDecision(state.copy(pendingDecisionId = null), orderedPeriods)
+                }
+            }
             return decisionStep(state, event)
         }
 
@@ -365,12 +378,19 @@ class GameEngine(
             )
         }
 
-        val stateAfterYear = stateAfterFocus.copy(
-            stats = stateAfterFocus.stats.apply(
-                StatDelta(health = annualHealthDelta(state.period)),
-                minHealth = MIN_STAT,
-            ),
-        )
+        return completeYearWithoutDecision(stateAfterFocus, orderedPeriods, recordText, focus)
+    }
+
+    private fun completeYearWithoutDecision(
+        state: PeriodRunState,
+        orderedPeriods: List<PeriodDefinition>,
+        recordText: String? = null,
+        focus: Focus? = null,
+    ): TurnStep {
+        val stateAfterYear = state.copy(stats = state.stats.apply(
+            StatDelta(health = annualHealthDelta(state.period)),
+            minHealth = MIN_STAT,
+        ))
         healthDeathStep(stateAfterYear)?.let { return it }
         val nextState = movePeriodCalendar(stateAfterYear, orderedPeriods)
         val needsFocus = !nextState.isEnding && requiresFocusSelection(nextState)
@@ -383,8 +403,8 @@ class GameEngine(
             },
             recordText = recordText,
             transitionCue = if (needsFocus) TransitionCue.CHAPTER else null,
-            sceneImageId = focus.sceneImageId,
-            momentImageId = focus.momentImageId,
+            sceneImageId = focus?.sceneImageId,
+            momentImageId = focus?.momentImageId,
             canAutoAdvance = !nextState.isEnding && !needsFocus,
             needsFocusSelection = needsFocus,
         )
