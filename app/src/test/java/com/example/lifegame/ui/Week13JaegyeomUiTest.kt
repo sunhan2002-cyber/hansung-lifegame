@@ -94,7 +94,7 @@ class Week13JaegyeomUiTest {
     @Test
     fun `challenge code round trips gender dice and seed`() {
         val code = ChallengeCode.encode(start)
-        assertTrue(code, code.startsWith("LG1-M-136622514433-"))
+        assertTrue(code, code.startsWith("LG2-M-136622514433-"))
         assertEquals(ChallengeCodeResult.Valid(start), ChallengeCode.decode(code))
         assertEquals("소문자 · 공백도 받는다", ChallengeCodeResult.Valid(start), ChallengeCode.decode(" ${code.lowercase()} "))
     }
@@ -105,7 +105,7 @@ class Week13JaegyeomUiTest {
         fun message(input: String) = (ChallengeCode.decode(input) as ChallengeCodeResult.Invalid).message
         assertEquals("코드를 입력해 주세요.", message("   "))
         assertEquals("인생게임 도전 코드가 아니거나 지원하지 않는 형식입니다.", message("ABC-123"))
-        assertEquals("인생게임 도전 코드가 아니거나 지원하지 않는 형식입니다.", message(code.replaceFirst("LG1", "LG9")))
+        assertEquals("인생게임 도전 코드가 아니거나 지원하지 않는 형식입니다.", message(code.replaceFirst("LG2", "LG9")))
         // 주사위 한 자리를 잘못 옮겨 적으면 검사 자리가 맞지 않는다.
         val typo = code.replaceFirst("136622514433", "136622514434")
         assertEquals("코드 일부가 틀렸습니다. 다시 확인해 주세요.", message(typo))

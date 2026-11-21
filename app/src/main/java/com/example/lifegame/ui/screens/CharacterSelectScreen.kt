@@ -87,7 +87,7 @@ import com.example.lifegame.ui.PLAYER_NAME_MAX_LENGTH
 import com.example.lifegame.ui.StarterUi
 import com.example.lifegame.ui.StartingDice
 import com.example.lifegame.ui.StartingRoll
-import com.example.lifegame.ui.StatRoll
+import com.example.lifegame.ui.DiceRule
 import com.example.lifegame.ui.components.rememberReduceMotion
 import com.example.lifegame.ui.components.dice.Dice3DStage
 import com.example.lifegame.ui.theme.LifeGameStatDown
@@ -141,6 +141,7 @@ fun CharacterSelectScreen(
     var nameInput by rememberSaveable { mutableStateOf("") }
     var gender by rememberSaveable { mutableStateOf<Gender?>(null) }
     var rollRaw by rememberSaveable { mutableStateOf<String?>(null) }
+    var diceRuleName by rememberSaveable { mutableStateOf(DiceRule.SUM_LG2.name) }
     var rerollsLeft by rememberSaveable { mutableStateOf(StartingDice.REROLLS) }
     // 이 출발선의 실행 시드. 도전 코드에 담기고, 코드로 시작하면 코드의 시드로 바뀐다.
     var runSeed by rememberSaveable { mutableStateOf(kotlin.random.Random.nextLong() and Long.MAX_VALUE) }
@@ -195,7 +196,8 @@ fun CharacterSelectScreen(
 
     BackHandler(enabled = sheet?.status == GenerationStatus.LOADING) { onCancelFaceSheet() }
     val previewName = normalizePlayerName(nameInput)
-    val roll = StartingRoll.decode(rollRaw)
+    val diceRule = runCatching { DiceRule.valueOf(diceRuleName) }.getOrDefault(DiceRule.SUM_LG2)
+    val roll = StartingRoll.decode(rollRaw, diceRule)
     val tendency = roll?.let { StartingDice.tendencyOf(it.delta, starters) }
     val ready = gender != null && roll != null
 
@@ -289,7 +291,8 @@ fun CharacterSelectScreen(
                 rerollsLeft = rerollsLeft,
                 onRoll = {
                     if (roll != null) rerollsLeft -= 1
-                    rollRaw = StartingDice.roll().encode()
+                    diceRuleName = DiceRule.SUM_LG2.name
+                    rollRaw = StartingDice.roll(rule = DiceRule.SUM_LG2).encode()
                     rollNonce += 1
                 },
             )
@@ -297,7 +300,7 @@ fun CharacterSelectScreen(
             SectionLabel("같은 출발선 도전 코드", trailing = "선택")
             ChallengeCodeSection(
                 code = if (gender != null && rollRaw != null) {
-                    ChallengeCode.encode(ChallengeStart(gender!!, rollRaw!!, runSeed))
+                    ChallengeCode.encode(ChallengeStart(gender!!, rollRaw!!, runSeed, diceRule))
                 } else {
                     null
                 },
@@ -310,6 +313,7 @@ fun CharacterSelectScreen(
                         is ChallengeCodeResult.Valid -> {
                             gender = result.start.gender
                             rollRaw = result.start.rollRaw
+                            diceRuleName = result.start.diceRule.name
                             runSeed = result.start.seed
                             rerollsLeft = 0 // 친구와 같은 출발선이라 다시 굴리지 않는다
                             // 도전 코드는 이미 확정된 주사위 값을 공유하므로 셔플 애니메이션을 재생하지 않는다.
@@ -400,6 +404,8 @@ fun CharacterSelectScreen(
                         rolledDelta = rolled.delta,
                         startingRollRaw = rolled.encode(),
                         runSeed = runSeed,
+                        rerollsRemaining = rerollsLeft,
+                        diceRule = rolled.rule,
                         avatar = AvatarConfig(
                             skinToneId = skinId,
                             hairId = hairId,
@@ -707,7 +713,7 @@ private fun ChallengeCodeSection(
             onValueChange = onInputChange,
             modifier = Modifier.fillMaxWidth().testTag("challenge_input"),
             label = { Text("친구의 도전 코드") },
-            placeholder = { Text("LG1-…") },
+            placeholder = { Text("LG2-… (기존 LG1도 가능)") },
             singleLine = true,
             isError = isError,
             colors = OutlinedTextFieldDefaults.colors(

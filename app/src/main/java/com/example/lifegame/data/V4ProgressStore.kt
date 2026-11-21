@@ -27,6 +27,8 @@ data class V4SavedRun(
     val narrativeRecords: List<RunNarrativeRecord> = emptyList(),
     /** 시작 주사위의 원본 두 눈. null이면 v1~v4 저장으로 간주한다. */
     val startingRollRaw: String? = null,
+    val startingDiceRule: String? = null,
+    val rerollsRemaining: Int = 0,
     val extensionState: RunExtensionState = RunExtensionState(),
 )
 
@@ -94,6 +96,9 @@ class V4ProgressStore(private val prefs: SharedPreferences) {
         val edit = failedEdit
         if (edit != null) publish(edit) else { persistence.confirmChanges(); true }
     }
+
+    /** 진행 중 인생만 동기 커밋한다. 실패하면 메모리 상태를 버리지 않도록 호출자에게 알린다. */
+    fun clearCurrentLifeAtomically(): Boolean = prefs.edit().remove(KEY).commit()
 
     fun loadCompletedLives(): List<CompletedLifeRecord> =
         (readRecords(PENDING_COMPLETED_KEY) + readRecords(COMPLETED_KEY)).distinctBy { it.runId }
