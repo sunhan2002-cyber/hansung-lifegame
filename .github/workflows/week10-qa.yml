@@ -4,7 +4,7 @@ on:
   pull_request:
     branches: [main]
   push:
-    branches: [main]
+    branches: [main, codex/week14-sunhan-ci-20261121]
   workflow_dispatch:
     inputs:
       final_acceptance:
