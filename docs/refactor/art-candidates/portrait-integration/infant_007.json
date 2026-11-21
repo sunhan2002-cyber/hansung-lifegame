@@ -1,0 +1,29 @@
+{
+  "eventId": "infant_007",
+  "sourceAssetPath": "followup_20261031/img_infant_toys_001.png",
+  "sourceSha256": "be47f735bafcc153ea6e02ecc20e66e7b62f4ccb101e559c87a82d0d907be86c",
+  "variant": {
+    "assetPath": "presentation/portraits/img_infant_toys_001_portrait_v1.png",
+    "sha256": "7908541fe39354738515bb54efa2c0519377d16a634240e955290661c007304e",
+    "width": 941,
+    "height": 1672,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root/security_p0)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/infant_007.json"
+  },
+  "reviewerType": "AI",
+  "reviewer": "Codex AI (/root/security_p0)",
+  "reviewStatus": "AI_REVIEWED_PRESENTATION",
+  "eventSourceHash": "a72e45159d2b7581c27b3405cba07987ad6310c5ed0a05aa15fa12d2eea7a77a",
+  "semanticReview": "Producer read the current event conditions and every choice/outcome, inspected source and selected output. Full source snapshot and exact prompt are in the referenced production ledger. Native acceptance remains pending.",
+  "visualReview": "Generated output visually inspected: all three separate doljabi options in portrait, two empty baby hands, family waits without clapping, no visible readable digits/text, no choice taken. Player lap is partial first-person foreground, not a visible third-person identity. Native overlay/crop not yet reviewed.",
+  "cropReview": "Portrait candidate selected for native phone/small-phone scene and gameplay inspection; not final artwork acceptance.",
+  "actualProducer": "OpenAI built-in image_gen",
+  "generationMethod": "Built-in imagegen edit; exact prompts/output SHA/rejected attempts preserved in docs/refactor/art-candidates/content-art-revision-briefs-20261119.json",
+  "productionLedger": "docs/refactor/art-candidates/content-art-revision-briefs-20261119.json",
+  "nativePending": true,
+  "runtimeConnected": true,
+  "approvalChanged": false,
+  "selectedStagingSha256": "7908541fe39354738515bb54efa2c0519377d16a634240e955290661c007304e"
+}

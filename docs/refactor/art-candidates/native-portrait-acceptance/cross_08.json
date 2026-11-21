@@ -1,0 +1,71 @@
+{
+  "eventId": "cross_08",
+  "reviewerType": "AI",
+  "scope": "Portrait phone and small-phone presentation",
+  "sourceEventHash": "61811b90ec9b7c47a6e64c359d5ee10c884cdc04dcc89c1ef92a0affd1a2e307",
+  "sourceReview": "docs/refactor/art-candidates/portrait-integration/cross_08.json",
+  "sourceSha256": "a0e37f53d51ab28901e03f33e13c3c1cf08be3959caf0a51e4d0bee81969551e",
+  "displayedVariant": {
+    "assetPath": "presentation/portraits/img_cross_08_001_portrait_v1.png",
+    "sha256": "098784587d250c8c861e8f3436e25bc6ec84850d80b5c56e0ca061bd92c90c03",
+    "width": 941,
+    "height": 1672,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root/effects_tech)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/cross_08.json"
+  },
+  "nativeCaptures": [
+    {
+      "path": "build/refactor/after/portrait-fortythree-native/cross_08_phone_scene.png",
+      "sha256": "e78a84f6e62d428fd8b10297b2c8771be8959c8204185b0690c928275395c117",
+      "crop": {
+        "eventId": "cross_08",
+        "imageId": "img_cross_08_001",
+        "assetPath": "presentation/portraits/img_cross_08_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/portrait-fortythree-native/cross_08_phone_play.png",
+      "sha256": "e0a070d39f739ffbac75b27652f7edfadee75d1135ac63e55e84378aefaacba4",
+      "crop": {
+        "eventId": "cross_08",
+        "imageId": "img_cross_08_001",
+        "assetPath": "presentation/portraits/img_cross_08_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/portrait-fortythree-native/cross_08_360x740_scene.png",
+      "sha256": "d59ddfc2bf71160bb2a92184eaa8ae5ce7e347abf4bc368d6a0ccb6dfbd7f515",
+      "crop": {
+        "eventId": "cross_08",
+        "imageId": "img_cross_08_001",
+        "assetPath": "presentation/portraits/img_cross_08_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/portrait-fortythree-native/cross_08_360x740_play.png",
+      "sha256": "564f242c8faa9c4e14e5959097d98e8f50f0e3af83896192ef5680aa106f664d",
+      "crop": {
+        "eventId": "cross_08",
+        "imageId": "img_cross_08_001",
+        "assetPath": "presentation/portraits/img_cross_08_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    }
+  ],
+  "observation": "검진 일정과 발표 자료, 휴대폰을 각기 구분할 수 있다.",
+  "decision": "PASS",
+  "method": "Individual visual inspection of both scene and gameplay frames together with producer semantic/source review and device capture match."
+}

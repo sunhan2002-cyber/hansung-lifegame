@@ -1,0 +1,29 @@
+{
+  "eventId": "adult_052",
+  "sourceAssetPath": "followup_20261031/img_adult_birthday_001.png",
+  "sourceSha256": "5661800b2dbf92526e2233ba8680877145832710fe43c364ab315c98687b1762",
+  "variant": {
+    "assetPath": "presentation/portraits/img_adult_birthday_001_portrait_v1.png",
+    "sha256": "7e4577e216da66f48297ff68827d39f02985b28280435c6956ab67e65d18e682",
+    "width": 941,
+    "height": 1672,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root/security_p0)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/adult_052.json"
+  },
+  "reviewerType": "AI",
+  "reviewer": "Codex AI (/root/security_p0)",
+  "reviewStatus": "AI_REVIEWED_PRESENTATION",
+  "eventSourceHash": "6cbdddd04532d3ae9ef433c15dabcee694543575b95c7f2ffbcfd3e4ce696aa2",
+  "semanticReview": "Producer read the current event conditions and every choice/outcome, inspected source and selected output. Full source snapshot and exact prompt are in the referenced production ledger. Native acceptance remains pending.",
+  "visualReview": "Individually viewed: exactly four large plain cylinder candles remain lit; first-person adult hands and waiting family, no numeral-shaped candles, extinguishing, forty candles/fire alarm/neighbors or new-course outcome. Native pending.",
+  "cropReview": "Portrait candidate selected for native phone/small-phone scene and gameplay inspection; not final artwork acceptance.",
+  "actualProducer": "OpenAI built-in image_gen",
+  "generationMethod": "Built-in imagegen edit; exact prompts/output SHA/rejected attempts preserved in docs/refactor/art-candidates/content-art-revision-briefs-20261119.json",
+  "productionLedger": "docs/refactor/art-candidates/content-art-revision-briefs-20261119.json",
+  "nativePending": true,
+  "runtimeConnected": true,
+  "approvalChanged": false,
+  "selectedStagingSha256": "7e4577e216da66f48297ff68827d39f02985b28280435c6956ab67e65d18e682"
+}

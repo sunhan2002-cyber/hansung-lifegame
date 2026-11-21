@@ -1,0 +1,220 @@
+{
+  "schemaVersion": 1,
+  "eventId": "special_014",
+  "status": "PASS",
+  "reviewer": "Codex AI / plan_audit",
+  "reviewerType": "AI",
+  "reviewDate": "2026-11-19",
+  "sourceEventHash": "501aaaa4a6c5337bdfb9f30d71848c67523b1d7d7bea5dc0a4e0ba49d014e3b3",
+  "sourceEventSnapshot": {
+    "eventId": "special_014",
+    "stage": "CHILD",
+    "type": "SPECIAL",
+    "isFallback": false,
+    "isMilestone": false,
+    "title": "미끄럼틀 정전기",
+    "text": "플라스틱 미끄럼틀을 타고 내려왔더니 머리카락이 전부 하늘로 솟았다. 옆 친구가 손을 내민다.",
+    "imageId": "img_special_static_slide_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [],
+      "blockedFlags": []
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "손을 잡는다",
+        "statDelta": {
+          "사회성": 1,
+          "건강": -2
+        },
+        "resultText": "\"빠직!\" 둘 다 놀라서 울었다. 머리는 30분 동안 서 있었다.",
+        "addFlags": [
+          "survived_special"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "a_primary",
+            "text": "\"빠직!\" 둘 다 놀라서 울었다. 머리는 30분 동안 서 있었다.",
+            "chance": 100,
+            "lifeDelta": -25,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "사회성": 1,
+              "건강": -2
+            },
+            "addFlags": [
+              "survived_special"
+            ]
+          }
+        ],
+        "conditionReview": "confirmed",
+        "alwaysAvailableReason": "친구가 내민 손을 잡는 단순 행동은 사회성 수행 자격을 요구하지 않는다.",
+        "alwaysAvailable": true
+      },
+      {
+        "choiceId": "B",
+        "label": "친구 다섯 명과 줄줄이 손을 잡는다",
+        "statDelta": {
+          "사회성": 3,
+          "건강": -5
+        },
+        "resultText": "\"빠지지직!\" 다섯 명이 동시에 비명을 질렀다. 다음 날 미끄럼틀 앞에 '손잡기 금지'가 붙었다.",
+        "addFlags": [
+          "special_injury"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "b_primary",
+            "text": "\"빠지지직!\" 다섯 명이 동시에 비명을 질렀다. 다음 날 미끄럼틀 앞에 '손잡기 금지'가 붙었다.",
+            "chance": 100,
+            "lifeDelta": -25,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "사회성": 3,
+              "건강": -5
+            },
+            "addFlags": [
+              "special_injury"
+            ]
+          }
+        ],
+        "requiredStats": {
+          "사회성": 52
+        }
+      },
+      {
+        "choiceId": "C",
+        "label": "그 머리로 사진을 찍는다",
+        "statDelta": {
+          "행복": 3,
+          "건강": -1
+        },
+        "resultText": "사자 머리 사진이 반 앨범 표지가 됐다.",
+        "addFlags": [
+          "survived_special"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "c_primary",
+            "text": "사자 머리 사진이 반 앨범 표지가 됐다.",
+            "chance": 100,
+            "lifeDelta": -25,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 3,
+              "건강": -1
+            },
+            "addFlags": [
+              "survived_special"
+            ]
+          }
+        ],
+        "conditionReview": "fallback_choice",
+        "conditionBasis": "single_positive_outcome_stat",
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "사건 내 최소 한 선택지는 항상 실행 가능해야 함"
+      }
+    ],
+    "priority": 0,
+    "kind": "BIG_INCIDENT",
+    "periods": [
+      "CHILD"
+    ]
+  },
+  "sourceReadScope": "Current complete event, conditions, every choice/outcome and flags/stat deltas/periods/follow-ups directly read before judgement.",
+  "sourceImage": {
+    "path": "app/src/main/assets/images/followup_20261031/img_special_static_slide_001.png",
+    "sha256": "808f5aa6ba8a7cd810558f29b46584e5310b6996bbca967f9551908d955dd205",
+    "width": 720,
+    "height": 540
+  },
+  "originalArtworkUnchangedSinceHistoricalReview": true,
+  "historicalReview": {
+    "eventId": "special_014",
+    "title": "미끄럼틀 정전기",
+    "imageId": "img_special_static_slide_001",
+    "assetPath": "followup_20261031/img_special_static_slide_001.png",
+    "sha256": "808f5aa6ba8a7cd810558f29b46584e5310b6996bbca967f9551908d955dd205",
+    "eventSourceHash": "501aaaa4a6c5337bdfb9f30d71848c67523b1d7d7bea5dc0a4e0ba49d014e3b3",
+    "status": "REVISION_REQUIRED",
+    "reviewer": "김선한 담당 Codex 직접 대행 검수",
+    "reason": "주인공 그림자에만 가시 머리; 정전기로 솟은 주인공 머리의 직관적 표현 재검토 필요",
+    "expectedAction": "머리카락이 솟은 채 내려오자 옆 친구가 손을 내밈",
+    "requiredObjects": "미끄럼틀, 내민 친구 손, 땅에 비친 머리카락이 솟은 그림자",
+    "sheet": "output/art-review-20261119/sheet-14.jpg",
+    "cell": 6,
+    "cropMethod": "ImageOps.fit centre-fill 360:800; simulated crop inspected directly, not an emulator capture",
+    "visualMethod": "원본 도트풍·색감·장면 파손·명백한 신체/사물 오류 직접 확인"
+  },
+  "presentationMetadata": [],
+  "captures": [
+    {
+      "path": "build/refactor/after/semantic-originals-thirteen-native/special_014_phone_scene.png",
+      "sha256": "8398b55177708b7934d7e78a3dca379c55a4f683df65d907b445cb1a3804cf66",
+      "width": 1080,
+      "height": 2400,
+      "screen": "phone",
+      "mode": "scene",
+      "cropReport": {
+        "eventId": "special_014",
+        "imageId": "img_special_static_slide_001",
+        "assetPath": "followup_20261031/img_special_static_slide_001.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.331..0.669",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/semantic-originals-thirteen-native/special_014_phone_play.png",
+      "sha256": "1b6573a95376cf4753a2e61034a2c0167ceb7c5ddf333f5dd825f7939cdcf81a",
+      "width": 1080,
+      "height": 2400,
+      "screen": "phone",
+      "mode": "play",
+      "cropReport": null
+    },
+    {
+      "path": "build/refactor/after/semantic-originals-thirteen-native/special_014_360x740_scene.png",
+      "sha256": "e20bc9e2f128876c266004b2a9583f1e6edff9e650190be30004d973ca0d4199",
+      "width": 945,
+      "height": 1943,
+      "screen": "360x740",
+      "mode": "scene",
+      "cropReport": {
+        "eventId": "special_014",
+        "imageId": "img_special_static_slide_001",
+        "assetPath": "followup_20261031/img_special_static_slide_001.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.318..0.682",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/semantic-originals-thirteen-native/special_014_360x740_play.png",
+      "sha256": "a9a519f5601d3c565cba3bb9c120cf1ff7f931164b9864fc494daf6694945f7e",
+      "width": 945,
+      "height": 1943,
+      "screen": "360x740",
+      "mode": "play",
+      "cropReport": null
+    }
+  ],
+  "semanticObservation": "미끄럼틀을 내려온 뒤 머리가 솟은 자기 그림자를 보고 옆 친구가 손을 내민 선택 전 장면이다. 손은 아직 잡지 않았고 정전기 접촉·다섯 명 연결·사진 촬영 결과가 없다. 자기 머리를 직접 보기 어려운 1인칭에서 그림자는 타당한 표현이다.",
+  "cropObservation": "두 native에서 솟은 머리 그림자, 미끄럼틀 끝, 친구의 온전한 내민 손과 양눈/표정이 보인다. 친구 오른쪽 외곽은 일부 잘리지만 주요 표정과 동작은 남는다. 과거 그림자만으로 머리를 표현했다는 지적을 현재 1인칭 구도로 재평가했다.",
+  "uiObservation": "두 크기에서 제목·본문·세 선택지가 읽힌다. small B는 두 줄이지만 카드 안에 남는다.",
+  "reviewMethod": "Codex AI directly inspected the full unchanged source PNG and all four unmodified native scene/play captures. Prior review is retained as historical evidence; this record is a new AI judgement, not human approval.",
+  "nativeMethod": "Production DecisionScreen, current parsed event/routing/PixelAssetLoader, fixture state in Android Compose instrumentation. Scene grid match >=0.95. Not complete game progression.",
+  "nativeRunLog": "build/refactor/semantic-originals-thirteen-and-choice-reachability.log",
+  "limitations": [
+    "Emulator captures, not physical-device review.",
+    "Only reviewed phone and 360x740 dimensions; not every font scale/aspect ratio.",
+    "Art review does not independently certify scrolling, TalkBack or complete game-flow transitions."
+  ]
+}

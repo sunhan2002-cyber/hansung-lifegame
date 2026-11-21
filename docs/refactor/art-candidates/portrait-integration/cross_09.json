@@ -1,0 +1,29 @@
+{
+  "eventId": "cross_09",
+  "sourceAssetPath": "followup_20261031/img_cross_09_001.png",
+  "sourceSha256": "373c9c7a211e6426093b37d59d4502704140754176140051bc37e80327fd796b",
+  "variant": {
+    "assetPath": "presentation/portraits/img_cross_09_001_portrait_v1.png",
+    "sha256": "8c9b8384182b9f8062132e61985799c7fd70d7bc4b373eb1337be4cc0f1f03ad",
+    "width": 941,
+    "height": 1672,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root/effects_tech)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/cross_09.json"
+  },
+  "reviewerType": "AI",
+  "reviewer": "Codex AI (/root/effects_tech)",
+  "reviewStatus": "AI_REVIEWED_PRESENTATION",
+  "eventSourceHash": "435f0c1e9973c82c7b2588e454ac1d07e307742720bd92a616a5e0ffb7fe0fa9",
+  "semanticReview": "Producer read the current event conditions and every choice/outcome, inspected source and selected output. Full source snapshot and exact prompt are in the referenced production ledger. Native acceptance remains pending.",
+  "visualReview": "원본 두 문서·달력·시계 찬 두 손·사무실 유지. 양쪽 문서가9:20 crop 안에 온전히 남으며 어린이는 원본처럼 인쇄물 그림 안에만 있어 운동회 참석 결과가 아니다. 팔이 프레임 끝까지 연결됨. 문서 외곽은60%폭보다 넓어 native 확인 필요.",
+  "cropReview": "Portrait candidate selected for native phone/small-phone scene and gameplay inspection; not final artwork acceptance.",
+  "actualProducer": "OpenAI built-in image_gen",
+  "generationMethod": "Built-in imagegen edit; exact prompts/output SHA/rejected attempts preserved in docs/refactor/art-candidates/crop-variant-production-20261119.json",
+  "productionLedger": "docs/refactor/art-candidates/crop-variant-production-20261119.json",
+  "nativePending": true,
+  "runtimeConnected": true,
+  "approvalChanged": false,
+  "selectedStagingSha256": "8c9b8384182b9f8062132e61985799c7fd70d7bc4b373eb1337be4cc0f1f03ad"
+}

@@ -1,0 +1,261 @@
+{
+  "schemaVersion": 1,
+  "eventId": "path_int_02",
+  "status": "REVISION_REQUIRED",
+  "reviewer": "Codex AI / plan_audit",
+  "reviewerType": "AI",
+  "reviewDate": "2026-11-19",
+  "sourceEventHash": "80c11e9882954abdb1aa879e5fff456f46df42ee66ac5de8f5028a9fdcd35ce6",
+  "sourceEventSnapshot": {
+    "eventId": "path_int_02",
+    "stage": "TEEN",
+    "type": "NORMAL",
+    "isFallback": false,
+    "isMilestone": true,
+    "title": "영재교육원 선발 시험",
+    "text": "게시판에 공문이 붙었다. '과학영재교육원 선발 시험 — 학교 추천 1명.' 담임이 나를 본다. 엄마는 이미 문제집을 사 왔다.",
+    "imageId": "img_path_int_02_001",
+    "conditions": {
+      "stats": {
+        "지력": 72
+      },
+      "requiredFlags": [],
+      "blockedFlags": []
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "추천을 받아 시험을 본다",
+        "statDelta": {
+          "지력": 4,
+          "사회성": -1
+        },
+        "resultText": "합격. 토요일마다 대학 실험실에 갔다. 처음으로 '질문이 좋다'는 말을 들었다.",
+        "addFlags": [
+          "int_path",
+          "int_gifted",
+          "achv_gifted_program"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "a_pass",
+            "text": "합격. 토요일마다 대학 실험실에 갔다. 처음으로 '질문이 좋다'는 말을 들었다.",
+            "chance": 55,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "지력": 4,
+              "사회성": -1
+            },
+            "addFlags": [
+              "int_path",
+              "int_gifted",
+              "achv_gifted_program"
+            ],
+            "chanceWeights": {
+              "지력": 3
+            }
+          },
+          {
+            "outcomeId": "a_fail",
+            "text": "시험 전날 밤을 새웠다. 문제는 쉬웠는데 머리가 돌지 않았다. 불합격. 잠이 실력이라는 걸 그날 배웠다.",
+            "chance": 45,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "지력": 1,
+              "건강": -2
+            },
+            "addFlags": [
+              "int_path",
+              "int_gifted_fail"
+            ],
+            "chanceWeights": {
+              "건강": -2
+            }
+          }
+        ],
+        "requiredStats": {
+          "지력": 75
+        },
+        "conditionReview": "confirmed",
+        "conditionBasis": "week8_life_path"
+      },
+      {
+        "choiceId": "B",
+        "label": "혼자 공부하는 게 더 맞다",
+        "statDelta": {
+          "지력": 2,
+          "사회성": -1
+        },
+        "resultText": "학교 도서관 구석 자리를 내 자리로 만들었다. 사서 선생님이 그 자리에 '예약석' 쪽지를 붙여 줬다.",
+        "addFlags": [
+          "int_path",
+          "int_self_study"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "b_self",
+            "text": "학교 도서관 구석 자리를 내 자리로 만들었다. 사서 선생님이 그 자리에 '예약석' 쪽지를 붙여 줬다.",
+            "chance": 100,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "지력": 2,
+              "사회성": -1
+            },
+            "addFlags": [
+              "int_path",
+              "int_self_study"
+            ]
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "전환점에서 누구나 고를 수 있는 기본 선택지 (전체 잠금 방지)",
+        "conditionReview": "fallback_choice",
+        "conditionBasis": "week8_life_path"
+      },
+      {
+        "choiceId": "C",
+        "label": "추천을 친구에게 양보한다",
+        "statDelta": {
+          "지력": 2,
+          "사회성": 2,
+          "운": -1
+        },
+        "resultText": "친구가 합격했다. 친구는 토요일마다 배운 걸 나한테 그대로 가르쳐 줬다. 둘 다 성적이 올랐다.",
+        "addFlags": [
+          "int_path",
+          "helped_friend"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "c_yield",
+            "text": "친구가 합격했다. 친구는 토요일마다 배운 걸 나한테 그대로 가르쳐 줬다. 둘 다 성적이 올랐다.",
+            "chance": 100,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "지력": 2,
+              "사회성": 2,
+              "운": -1
+            },
+            "addFlags": [
+              "int_path",
+              "helped_friend"
+            ]
+          }
+        ],
+        "conditionReview": "confirmed",
+        "alwaysAvailableReason": "추천을 친구에게 양보하는 의사 자체는 사회성 자격과 구분해 열어둔다.",
+        "alwaysAvailable": true
+      }
+    ],
+    "priority": 0,
+    "kind": "MILESTONE",
+    "periods": [
+      "TEEN"
+    ],
+    "weight": 1,
+    "view": "FIRST_PERSON",
+    "lifePath": "INTELLIGENCE",
+    "pathRole": "전환점",
+    "followUps": [
+      "path_int_03"
+    ]
+  },
+  "sourceReadScope": "Current complete event, conditions, every choice/outcome and flags/stat deltas/periods/follow-ups directly read before judgement.",
+  "sourceImage": {
+    "path": "app/src/main/assets/images/followup_20261031/img_path_int_02_001.png",
+    "sha256": "64468871e66a74246da9eea83c12d4d3c4af192de8aa3c605850cfb768643f19",
+    "width": 720,
+    "height": 540
+  },
+  "originalArtworkUnchangedSinceHistoricalReview": true,
+  "historicalReview": {
+    "eventId": "path_int_02",
+    "title": "영재교육원 선발 시험",
+    "imageId": "img_path_int_02_001",
+    "assetPath": "followup_20261031/img_path_int_02_001.png",
+    "sha256": "64468871e66a74246da9eea83c12d4d3c4af192de8aa3c605850cfb768643f19",
+    "eventSourceHash": "80c11e9882954abdb1aa879e5fff456f46df42ee66ac5de8f5028a9fdcd35ce6",
+    "status": "REVISION_REQUIRED",
+    "reviewer": "김선한 담당 Codex 직접 대행 검수",
+    "reason": "영재원 시험·학교 추천 한 명의 의미가 일반 원자 게시물만으로 전달되기 어려움",
+    "expectedAction": "선발 공문과 새 문제집을 살피며 담임 시선을 느낌",
+    "requiredObjects": "게시판의 무문자 공고; 문제집",
+    "sheet": "output/art-review-20261119/sheet-14.jpg",
+    "cell": 13,
+    "cropMethod": "ImageOps.fit centre-fill 360:800; simulated crop inspected directly, not an emulator capture",
+    "visualMethod": "원본 도트풍·색감·장면 파손·명백한 신체/사물 오류 직접 확인"
+  },
+  "presentationMetadata": [],
+  "captures": [
+    {
+      "path": "build/refactor/after/semantic-originals-thirteen-native/path_int_02_phone_scene.png",
+      "sha256": "49054526b229bcb94a9898b050aee051bff99de382d7e9b9a9e82d388b0822e4",
+      "width": 1080,
+      "height": 2400,
+      "screen": "phone",
+      "mode": "scene",
+      "cropReport": {
+        "eventId": "path_int_02",
+        "imageId": "img_path_int_02_001",
+        "assetPath": "followup_20261031/img_path_int_02_001.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.331..0.669",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/semantic-originals-thirteen-native/path_int_02_phone_play.png",
+      "sha256": "04972208baf1ef0957e60aed261b40a314d66bf7958177acdfc5122c891954d4",
+      "width": 1080,
+      "height": 2400,
+      "screen": "phone",
+      "mode": "play",
+      "cropReport": null
+    },
+    {
+      "path": "build/refactor/after/semantic-originals-thirteen-native/path_int_02_360x740_scene.png",
+      "sha256": "3a2cc6fd32d5e66457f10498e224e792bdad2517fedb639cc01905fab2eda778",
+      "width": 945,
+      "height": 1943,
+      "screen": "360x740",
+      "mode": "scene",
+      "cropReport": {
+        "eventId": "path_int_02",
+        "imageId": "img_path_int_02_001",
+        "assetPath": "followup_20261031/img_path_int_02_001.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.318..0.682",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/semantic-originals-thirteen-native/path_int_02_360x740_play.png",
+      "sha256": "826d9d5bae7a27177194bfa7361712dccc574021128a13387f02832e810bac04",
+      "width": 945,
+      "height": 1943,
+      "screen": "360x740",
+      "mode": "play",
+      "cropReport": null
+    }
+  ],
+  "semanticObservation": "전체 원본의 과학 공고·문제집·플레이어를 보는 담임은 현재 본문과 맞다. 시험 합격/불합격·도서관 자리·친구 합격 결과는 없다. 공고의 원자 기호는 과학 분야 단서이며 학교 추천 인원이라는 글자를 그림에 추가할 필요는 없다.",
+  "cropObservation": "실제 phone 및 small 중앙 크롭에는 공고와 문제집만 남고 담임이 완전히 사라진다. 원문에서 플레이어를 직접 보는 주요 인물이므로 원본의 내용 적합성과 별개로 현재 세로 표시를 인수하지 않는다.",
+  "uiObservation": "phone 전체 세 카드가 보인다. small C 문구는 읽히나 카드 하단이 footer에 걸린다. 이 정지 캡처는 스크롤 검증을 대신하지 않는다.",
+  "reviewMethod": "Codex AI directly inspected the full unchanged source PNG and all four unmodified native scene/play captures. Prior review is retained as historical evidence; this record is a new AI judgement, not human approval.",
+  "nativeMethod": "Production DecisionScreen, current parsed event/routing/PixelAssetLoader, fixture state in Android Compose instrumentation. Scene grid match >=0.95. Not complete game progression.",
+  "nativeRunLog": "build/refactor/semantic-originals-thirteen-and-choice-reachability.log",
+  "limitations": [
+    "Emulator captures, not physical-device review.",
+    "Only reviewed phone and 360x740 dimensions; not every font scale/aspect ratio.",
+    "Art review does not independently certify scrolling, TalkBack or complete game-flow transitions."
+  ],
+  "remainingWork": "원본을 보존한 별도 세로 파생에서 과학 공고, 문제집/플레이어 손, 담임 얼굴과 시선을 동시에 보존. 접수 완료나 합격 결과는 넣지 않고 두 native 크기로 재검수."
+}

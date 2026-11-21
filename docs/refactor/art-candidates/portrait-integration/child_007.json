@@ -1,0 +1,29 @@
+{
+  "eventId": "child_007",
+  "sourceAssetPath": "followup_20261031/img_child_dream_001.png",
+  "sourceSha256": "fe886a469ead746ba8c8dfd600a59f54b835abcb1db775b112c8215f432d4411",
+  "variant": {
+    "assetPath": "presentation/portraits/img_child_dream_001_portrait_v1.png",
+    "sha256": "a3f61a46e23f0b4210abf51c424bb911dcabfdd71d3569978d2d5020a62b66a9",
+    "width": 941,
+    "height": 1672,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root/security_p0)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/child_007.json"
+  },
+  "reviewerType": "AI",
+  "reviewer": "Codex AI (/root/security_p0)",
+  "reviewStatus": "AI_REVIEWED_PRESENTATION",
+  "eventSourceHash": "f38339109baabe246b71443f6f5cf291c13fc81815623c06343c82aecaa62caa",
+  "semanticReview": "Producer read the current event conditions and every choice/outcome, inspected source and selected output. Full source snapshot and exact prompt are in the referenced production ledger. Native acceptance remains pending.",
+  "visualReview": "Individually viewed: child first-person empty note card at presentation position, classmates face player and teacher stands at side, no visible player body or selected dream. Background occupation poster is generic classroom decoration, no dinosaur/answer or endorsement outcome. Native pending.",
+  "cropReview": "Portrait candidate selected for native phone/small-phone scene and gameplay inspection; not final artwork acceptance.",
+  "actualProducer": "OpenAI built-in image_gen",
+  "generationMethod": "Built-in imagegen edit; exact prompts/output SHA/rejected attempts preserved in docs/refactor/art-candidates/content-art-revision-briefs-20261119.json",
+  "productionLedger": "docs/refactor/art-candidates/content-art-revision-briefs-20261119.json",
+  "nativePending": true,
+  "runtimeConnected": true,
+  "approvalChanged": false,
+  "selectedStagingSha256": "a3f61a46e23f0b4210abf51c424bb911dcabfdd71d3569978d2d5020a62b66a9"
+}

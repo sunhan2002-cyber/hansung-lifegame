@@ -1,0 +1,29 @@
+{
+  "eventId": "path_hea_11",
+  "sourceAssetPath": "followup_20261031/img_path_hea_11_001.png",
+  "sourceSha256": "769b1132789267cc1aa9026a16614fba535e03b56a94c8ea79f215292a17de08",
+  "variant": {
+    "assetPath": "presentation/portraits/img_path_hea_11_001_portrait_v1.png",
+    "sha256": "d7c3d2e2294b0860a75e86b745e6d58a7b31e2dc3ab1fad7c77278669dafb93d",
+    "width": 941,
+    "height": 1672,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root/effects_tech)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/path_hea_11.json"
+  },
+  "reviewerType": "AI",
+  "reviewer": "Codex AI (/root/effects_tech)",
+  "reviewStatus": "AI_REVIEWED_PRESENTATION",
+  "eventSourceHash": "af78000dea0b908c956b3c9e2180714820edeaabef31a22c30837d9ea1dccac0",
+  "semanticReview": "Producer read the current event conditions and every choice/outcome, inspected source and selected output. Full source snapshot and exact prompt are in the referenced production ledger. Native acceptance remains pending.",
+  "visualReview": "핵심 아버지 얼굴·검진표 전체·잡채 접시 전체가 중앙9:20영역에 함께 남음. 원본 어머니/남성가족·반찬·정상젓가락동작 유지. 양옆 가족 얼굴 외곽은 원본처럼 넓어9:20에서 일부 잘리므로 완전한 전체인물 safe-area 충족 아님. 건강식/젓가락압수/회복결과 없음. native pending.",
+  "cropReview": "Portrait candidate selected for native phone/small-phone scene and gameplay inspection; not final artwork acceptance.",
+  "actualProducer": "OpenAI built-in image_gen",
+  "generationMethod": "Built-in imagegen edit; exact prompts/output SHA/rejected attempts preserved in docs/refactor/art-candidates/crop-variant-production-20261119.json",
+  "productionLedger": "docs/refactor/art-candidates/crop-variant-production-20261119.json",
+  "nativePending": true,
+  "runtimeConnected": true,
+  "approvalChanged": false,
+  "selectedStagingSha256": "d7c3d2e2294b0860a75e86b745e6d58a7b31e2dc3ab1fad7c77278669dafb93d"
+}

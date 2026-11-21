@@ -1,0 +1,209 @@
+{
+  "schemaVersion": 1,
+  "eventId": "adult_010",
+  "status": "PASS",
+  "reviewer": "Codex AI / plan_audit",
+  "reviewerType": "AI",
+  "reviewDate": "2026-11-19",
+  "sourceEventHash": "4d5de09fdd8b52c5d2a64424ccc0b96e529ec25f7d7fd58a1a03fe5d97a1d7bd",
+  "sourceEventSnapshot": {
+    "eventId": "adult_010",
+    "stage": "ADULT",
+    "type": "NORMAL",
+    "isFallback": false,
+    "isMilestone": false,
+    "title": "고기 장인의 밤",
+    "text": "고기를 다 굽고 보니 다들 취해 있다. 불판 위엔 마지막 한 점, 테이블 끝엔 계산서가 있다.",
+    "imageId": "img_adult_drinks_grill_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [
+        "seat_grill"
+      ],
+      "blockedFlags": []
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "마지막 한 점을 먹는다",
+        "statDelta": {
+          "행복": 3,
+          "사회성": -1
+        },
+        "resultText": "오늘 처음 먹는 고기였다. 세상에서 제일 맛있는 한 점이었다.",
+        "addFlags": [],
+        "outcomes": [
+          {
+            "outcomeId": "a_primary",
+            "text": "오늘 처음 먹는 고기였다. 세상에서 제일 맛있는 한 점이었다.",
+            "chance": 100,
+            "lifeDelta": 10,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 3,
+              "사회성": -1
+            },
+            "addFlags": []
+          }
+        ]
+      },
+      {
+        "choiceId": "B",
+        "label": "계산서를 조용히 가져간다",
+        "statDelta": {
+          "사회성": 3,
+          "경제력": -4
+        },
+        "resultText": "몰래 계산했다. 다음 날 단톡방에 '어제 누가 계산했냐'가 50개. 끝까지 말하지 않았다.",
+        "addFlags": [
+          "secret_payer"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "b_primary",
+            "text": "몰래 계산했다. 다음 날 단톡방에 '어제 누가 계산했냐'가 50개. 끝까지 말하지 않았다.",
+            "chance": 100,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "사회성": 3,
+              "경제력": -4
+            },
+            "addFlags": [
+              "secret_payer"
+            ]
+          }
+        ]
+      },
+      {
+        "choiceId": "C",
+        "label": "취한 친구들을 한 명씩 택시에 태운다",
+        "statDelta": {
+          "사회성": 4,
+          "건강": -3
+        },
+        "resultText": "마지막 친구까지 보내고 나니 막차가 끊겼다. 한 시간을 걸어 집에 갔다. 다음 날 모두에게서 고맙다는 연락이 왔다.",
+        "addFlags": [
+          "designated_hero"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "c_primary",
+            "text": "마지막 친구까지 보내고 나니 막차가 끊겼다. 한 시간을 걸어 집에 갔다. 다음 날 모두에게서 고맙다는 연락이 왔다.",
+            "chance": 100,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "사회성": 4,
+              "건강": -3
+            },
+            "addFlags": [
+              "designated_hero"
+            ]
+          }
+        ],
+        "requiredStats": {
+          "사회성": 58
+        }
+      }
+    ],
+    "priority": 0,
+    "kind": "INCIDENT",
+    "periods": [
+      "YOUNG_ADULT"
+    ]
+  },
+  "sourceReadScope": "Current complete event, conditions, every choice/outcome and flags/stat deltas/periods/follow-ups directly read before judgement.",
+  "sourceImage": {
+    "path": "app/src/main/assets/images/followup_20261031/img_adult_drinks_grill_001.png",
+    "sha256": "51a4301848766acc3265db39ec21a6c25f26f373c134dd715f9bfec48bcaeea7",
+    "width": 720,
+    "height": 540
+  },
+  "originalArtworkUnchangedSinceHistoricalReview": true,
+  "historicalReview": {
+    "eventId": "adult_010",
+    "title": "고기 장인의 밤",
+    "imageId": "img_adult_drinks_grill_001",
+    "assetPath": "followup_20261031/img_adult_drinks_grill_001.png",
+    "sha256": "51a4301848766acc3265db39ec21a6c25f26f373c134dd715f9bfec48bcaeea7",
+    "eventSourceHash": "4d5de09fdd8b52c5d2a64424ccc0b96e529ec25f7d7fd58a1a03fe5d97a1d7bd",
+    "status": "REVISION_REQUIRED",
+    "reviewer": "김선한 담당 Codex 직접 대행 검수",
+    "reason": "중앙 크롭에서 마지막 고기 한 점과 계산서가 모두 남지 않음",
+    "expectedAction": "다 구운 뒤 마지막 고기와 계산서를 내려다봄",
+    "requiredObjects": "불판의 고기 한 점; 테이블 끝 계산서; 잔",
+    "sheet": "output/art-review-20261119/sheet-09.jpg",
+    "cell": 0,
+    "cropMethod": "ImageOps.fit centre-fill 360:800; simulated crop inspected directly, not an emulator capture",
+    "visualMethod": "원본 도트풍·색감·장면 파손·명백한 신체/사물 오류 직접 확인"
+  },
+  "presentationMetadata": [],
+  "captures": [
+    {
+      "path": "build/refactor/after/secondary-art-focals-native/adult_010_phone_scene.png",
+      "sha256": "490d9158643e71964a6cfd171114e845c051bd20d8f38b58fabbf5ee90932af2",
+      "width": 1080,
+      "height": 2400,
+      "screen": "phone",
+      "mode": "scene",
+      "cropReport": {
+        "eventId": "adult_010",
+        "imageId": "img_adult_drinks_grill_001",
+        "assetPath": "followup_20261031/img_adult_drinks_grill_001.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.331..0.669",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/secondary-art-focals-native/adult_010_phone_play.png",
+      "sha256": "454f63007e23f53b89e1f570cf339127d8006624c1f4589cdb809237ab4ecfb6",
+      "width": 1080,
+      "height": 2400,
+      "screen": "phone",
+      "mode": "play",
+      "cropReport": null
+    },
+    {
+      "path": "build/refactor/after/secondary-art-focals-native/adult_010_360x740_scene.png",
+      "sha256": "221ff3d90c78766e7c321d1e2f90f922af599cb481bc425cbbf6b0f0460d5dc8",
+      "width": 945,
+      "height": 1943,
+      "screen": "360x740",
+      "mode": "scene",
+      "cropReport": {
+        "eventId": "adult_010",
+        "imageId": "img_adult_drinks_grill_001",
+        "assetPath": "followup_20261031/img_adult_drinks_grill_001.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.318..0.682",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/secondary-art-focals-native/adult_010_360x740_play.png",
+      "sha256": "af9eb5c2c2807a280c65c692a4a09433501de76fa4cefad84408752fd7232fe2",
+      "width": 945,
+      "height": 1943,
+      "screen": "360x740",
+      "mode": "play",
+      "cropReport": null
+    }
+  ],
+  "semanticObservation": "불판에 정확히 마지막 고기 한 점과 테이블 반대편 계산서, 취한 두 성인이 보이는 선택 전 장면이다. 고기를 먹음·계산서 가져감·택시 귀가 결과는 없다. 가격/상호 글자가 없다.",
+  "cropObservation": "별도 focal 수정 없는 현재 중앙 native 렌더에서도 두 화면에 고기 한 점·계산서·두 친구 얼굴·잔이 동시에 남는다. 과거 합성 중앙 크롭의 우려는 실제 캡처에서 재현되지 않아 새 근거로 해소하며 과거 기록은 유지한다.",
+  "uiObservation": "두 화면에서 제목·본문·세 선택지가 읽힌다. small C 두 줄도 카드 안에 남는다.",
+  "reviewMethod": "Codex AI directly inspected the full unchanged source PNG and all four unmodified native scene/play captures. Prior review is retained as historical evidence; this record is a new AI judgement, not human approval.",
+  "nativeMethod": "Production DecisionScreen, current parsed event/routing/PixelAssetLoader, fixture state in Android Compose instrumentation. Scene grid match >=0.95. Not complete game progression.",
+  "nativeRunLog": "build/refactor/secondary-art-focals-completion.log",
+  "limitations": [
+    "Emulator captures, not physical-device review.",
+    "Only reviewed phone and 360x740 dimensions; not every font scale/aspect ratio.",
+    "Art review does not independently certify scrolling, TalkBack or complete game-flow transitions."
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "eventId": "special_009",
+  "reviewerType": "AI",
+  "scope": "Portrait phone and small-phone presentation",
+  "sourceEventHash": "91c97d9dc2ffc8fd75a695a3fe1d178890bb08e25fe1be39112f1e8694ed5812",
+  "sourceReview": "docs/refactor/art-candidates/portrait-integration/special_009.json",
+  "sourceSha256": "da9082e698969a933099f112d79c45c63e0e69ecad05f35ab273a3a30a5ff3e6",
+  "displayedVariant": {
+    "assetPath": "presentation/portraits/img_special_health_research_001_portrait_v1.png",
+    "sha256": "db7ecbf3039f1b4e15b8049af7d5729c7d9c95ee420615e65a5afea9153ac31e",
+    "width": 941,
+    "height": 1672,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root/effects_tech)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/special_009.json"
+  },
+  "nativeCaptures": [
+    {
+      "path": "build/refactor/after/portrait-fortythree-native/special_009_phone_scene.png",
+      "sha256": "7dedb9d4c53424b163ead9882f1238cd7e8f7e93160d9ebd1c0110002cd7e408",
+      "crop": {
+        "eventId": "special_009",
+        "imageId": "img_special_health_research_001",
+        "assetPath": "presentation/portraits/img_special_health_research_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/portrait-fortythree-native/special_009_phone_play.png",
+      "sha256": "2c797ac7b2fd633367fa7c54ba3b35d36beed8bf7ba3b79edb641395eb0a03e3",
+      "crop": {
+        "eventId": "special_009",
+        "imageId": "img_special_health_research_001",
+        "assetPath": "presentation/portraits/img_special_health_research_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/portrait-fortythree-native/special_009_360x740_scene.png",
+      "sha256": "2fb57ff9774accad775a0c58a48f7289e8c8de2925d57a27ade17ac529b50c56",
+      "crop": {
+        "eventId": "special_009",
+        "imageId": "img_special_health_research_001",
+        "assetPath": "presentation/portraits/img_special_health_research_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/portrait-fortythree-native/special_009_360x740_play.png",
+      "sha256": "b3f3ec451e5446637c8b78b1cb0bb1862a236153e3004970d1db2af1e7039329",
+      "crop": {
+        "eventId": "special_009",
+        "imageId": "img_special_health_research_001",
+        "assetPath": "presentation/portraits/img_special_health_research_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    }
+  ],
+  "observation": "진료진과 검진표가 함께 보이고 왼쪽 인물도 구분된다.",
+  "decision": "PASS",
+  "method": "Individual visual inspection of both scene and gameplay frames together with producer semantic/source review and device capture match."
+}

@@ -7,10 +7,12 @@ import android.graphics.Color as AndroidColor
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.requiredSize
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.draw.clipToBounds
 import androidx.compose.ui.graphics.asAndroidBitmap
 import androidx.compose.ui.graphics.toArgb
@@ -22,8 +24,11 @@ import androidx.compose.ui.test.onNodeWithTag
 import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.onRoot
 import androidx.compose.ui.test.performClick
+import androidx.compose.ui.test.performScrollTo
+import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.performTouchInput
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.Density
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.platform.app.InstrumentationRegistry
 import com.example.lifegame.data.ContentRepository
@@ -31,7 +36,12 @@ import com.example.lifegame.data.ImageRoutingRepository
 import com.example.lifegame.data.V4ContentParser
 import com.example.lifegame.domain.model.DecisionEvent
 import com.example.lifegame.domain.model.Stats
+import com.example.lifegame.domain.model.PresentationState
+import com.example.lifegame.domain.model.EventImageExposureStatus
+import com.example.lifegame.ui.components.ExperiencePreferences
+import com.example.lifegame.ui.components.LocalExperiencePreferences
 import com.example.lifegame.ui.images.PixelAssetLoader
+import com.example.lifegame.ui.images.SceneFocalPoint
 import com.example.lifegame.ui.screens.DecisionScreen
 import com.example.lifegame.ui.screens.TAP_GUARD_MILLIS
 import com.example.lifegame.ui.theme.LifeGamePicture
@@ -39,7 +49,6 @@ import com.example.lifegame.ui.theme.LifeGameTheme
 import java.io.File
 import kotlin.math.abs
 import kotlin.math.max
-import kotlin.math.roundToInt
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertTrue
 import org.junit.Rule
@@ -126,6 +135,42 @@ class SceneCropReviewTest {
         Box(Modifier.requiredSize(360.dp, 740.dp).clipToBounds()) { screen() }
     }
 
+    @Test fun longChoicesRemainReachableAtNormalAndDoubleFontSizeOnASmallPhone() {
+        val ids = listOf("love_family_meet_01", "love_letter_01", "love_wedding_music", "love_date_02", "path_int_18")
+        var decision by mutableStateOf(decisionOf(events.first { it.eventId == ids.first() }))
+        var fontScale by mutableStateOf(1f)
+        val chosen = mutableListOf<String>()
+        composeRule.setContent {
+            val density = LocalDensity.current.density
+            CompositionLocalProvider(LocalDensity provides Density(density, fontScale),
+                LocalExperiencePreferences provides ExperiencePreferences(motionEnabled = false, hapticsEnabled = false)) {
+                LifeGameTheme {
+                    Box(Modifier.requiredSize(360.dp, 640.dp).clipToBounds()) {
+                        DecisionScreen(playState(decision).copy(presentation = PresentationState(
+                            exposedEventId = decision.eventId, eventImageExposure = EventImageExposureStatus.SHOWN,
+                        )), onChoose = { chosen += it }, onContinue = {})
+                    }
+                }
+            }
+        }
+        for (scale in listOf(1f, 2f)) for (id in ids) {
+            composeRule.runOnIdle { fontScale = scale; decision = decisionOf(events.first { it.eventId == id }) }
+            val last = composeRule.onNodeWithTag("decision_choice_C")
+            last.performScrollTo().assertIsDisplayed()
+            val button = last.fetchSemanticsNode().boundsInRoot
+            val viewport = composeRule.onNodeWithTag("decision_content").fetchSemanticsNode().boundsInRoot
+            assertTrue("$id font=$scale C is not fully inside scroll viewport", button.top >= viewport.top - 1 && button.bottom <= viewport.bottom + 1)
+            save("${id}_font${scale.toInt()}_last_choice.png", composeRule.onRoot().captureToImage().asAndroidBitmap())
+            val before = chosen.size
+            last.performTouchInput { click(center) }
+            last.performTouchInput { click(center) }
+            composeRule.runOnIdle {
+                assertEquals("$id font=$scale must select only once", before + 1, chosen.size)
+                assertEquals("C", chosen.last())
+            }
+        }
+    }
+
     private fun reviewAll(label: String, frame: @Composable (@Composable () -> Unit) -> Unit) {
         val expectedEvents = requestedEvents ?: setOf("path_hap_09", "path_int_10")
         assertTrue("요청한 사건이 모두 실제 이미지 경로에 있어야 한다", routedEvents.map { it.eventId }.containsAll(expectedEvents))
@@ -170,10 +215,11 @@ class SceneCropReviewTest {
                 "${event.eventId}: 그림을 하나도 읽지 못했다"
             }
             assertEquals("${event.eventId}: 사건 그림 대신 다른 후보가 쓰였다", expectedId, loaded.candidate.imageId)
-            val expected = centerCrop(loaded.bitmap, size.width, size.height)
-            val match = awaitMatch(expected) { scene.captureToImage().asAndroidBitmap() }
-            assertTrue("${event.eventId}: 장면 보기 화면이 ${loaded.candidate.path}의 가운데 크롭과 다르다 ($match)", match >= 0.95f)
+            val expected = focalCrop(loaded.bitmap, size.width, size.height, loaded.focal)
+            val match = try { awaitMatch(expected) { scene.captureToImage().asAndroidBitmap() } }
+                finally { expected.recycle() }
             save("${event.eventId}_${label}_scene.png", composeRule.onRoot().captureToImage().asAndroidBitmap())
+            assertTrue("${event.eventId}: 장면 보기 화면이 ${loaded.candidate.path}의 지정 크롭과 다르다 ($match)", match >= 0.95f)
 
             // 장면 보기에서 한 번 터치로 돌아온 실제 플레이 화면
             composeRule.onNodeWithTag("scene_only").performTouchInput { click(center) }
@@ -182,7 +228,7 @@ class SceneCropReviewTest {
 
             val scale = max(size.width / loaded.bitmap.width.toFloat(), size.height / loaded.bitmap.height.toFloat())
             val visible = size.width / scale / loaded.bitmap.width
-            val from = (1 - visible) / 2
+            val from = (loaded.focal.x - visible / 2).coerceIn(0f, (1 - visible).coerceAtLeast(0f))
             report.append("${event.eventId}\t$expectedId\t${loaded.candidate.path}\t${size.width}x${size.height}\t")
                 .append("%.3f..%.3f\t%.3f\n".format(from, from + visible, match))
         }
@@ -198,7 +244,9 @@ class SceneCropReviewTest {
     private fun awaitMatch(expected: Bitmap, capture: () -> Bitmap): Float {
         var best = 0f
         repeat(60) {
-            best = max(best, similarity(expected, capture()))
+            val actual = capture()
+            try { best = max(best, similarity(expected, actual)) }
+            finally { actual.recycle() }
             if (best >= 0.95f) return best
             Thread.sleep(50)
             composeRule.mainClock.advanceTimeByFrame()
@@ -207,16 +255,19 @@ class SceneCropReviewTest {
     }
 
     /** 앱(SceneImage)과 같은 방식: 비율 유지 확대 후 가운데 정렬, 보간 없음. */
-    private fun centerCrop(source: Bitmap, width: Int, height: Int): Bitmap {
+    private fun focalCrop(source: Bitmap, width: Int, height: Int, focal: SceneFocalPoint): Bitmap {
         val scale = max(width / source.width.toFloat(), height / source.height.toFloat())
-        val scaled = Bitmap.createScaledBitmap(
-            source, (source.width * scale).roundToInt().coerceAtLeast(1),
-            (source.height * scale).roundToInt().coerceAtLeast(1), false,
-        )
+        // The renderer now scales directly into a floating-point destination rectangle.
+        // Rounding an intermediate bitmap first shifts high-detail portrait pixels by one
+        // pixel at narrow sizes and is not the specified native crop any more.
+        val drawnWidth = source.width * scale
+        val drawnHeight = source.height * scale
+        val left = (width / 2f - focal.x * drawnWidth).coerceIn((width - drawnWidth).coerceAtMost(0f), 0f)
+        val top = (height / 2f - focal.y * drawnHeight).coerceIn((height - drawnHeight).coerceAtMost(0f), 0f)
         return Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888).also { out ->
             Canvas(out).apply {
                 drawColor(LifeGamePicture.toArgb())
-                drawBitmap(scaled, (width - scaled.width) / 2f, (height - scaled.height) / 2f,
+                drawBitmap(source, null, android.graphics.RectF(left, top, left + drawnWidth, top + drawnHeight),
                     Paint().apply { isFilterBitmap = false; isDither = false })
             }
         }
@@ -244,6 +295,7 @@ class SceneCropReviewTest {
     }
 
     private fun save(fileName: String, bitmap: Bitmap) {
-        File(outputDir(), fileName).outputStream().use { assertTrue(bitmap.compress(Bitmap.CompressFormat.PNG, 100, it)) }
+        try { File(outputDir(), fileName).outputStream().use { assertTrue(bitmap.compress(Bitmap.CompressFormat.PNG, 100, it)) } }
+        finally { bitmap.recycle() }
     }
 }

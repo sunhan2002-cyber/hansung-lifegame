@@ -1,0 +1,71 @@
+{
+  "eventId": "special_002",
+  "reviewerType": "AI",
+  "scope": "Portrait phone and small-phone presentation",
+  "sourceEventHash": "686e6e24c9bfed5acdb97eda4e8424057e3977bb1d89e2d9771c2eec28309c46",
+  "sourceReview": "docs/refactor/art-candidates/portrait-integration/special_002.json",
+  "sourceSha256": "7caf99f29f164d229e575d540ebda05fd38c2b8e420417443eaa9e2b46f67852",
+  "displayedVariant": {
+    "assetPath": "presentation/portraits/img_special_dog_carry_001_portrait_v1.png",
+    "sha256": "6ea45624423c809379b5a92b66bb45800d37a81fe737fdd85a7ec47430c7774a",
+    "width": 941,
+    "height": 1672,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root/security_p0)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/special_002.json"
+  },
+  "nativeCaptures": [
+    {
+      "path": "build/refactor/after/portrait-fortythree-native/special_002_phone_scene.png",
+      "sha256": "034415dcd552f3639b13fb822ee6c78b9618b3ce42f1d0521c5e770b7d92e44d",
+      "crop": {
+        "eventId": "special_002",
+        "imageId": "img_special_dog_carry_001",
+        "assetPath": "presentation/portraits/img_special_dog_carry_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/portrait-fortythree-native/special_002_phone_play.png",
+      "sha256": "af8bb8b60cc0017afc0e138e627b82e1ef5e1caae3c9bd7e1ecc067c1a69c116",
+      "crop": {
+        "eventId": "special_002",
+        "imageId": "img_special_dog_carry_001",
+        "assetPath": "presentation/portraits/img_special_dog_carry_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/portrait-fortythree-native/special_002_360x740_scene.png",
+      "sha256": "064715b60293f1d8828d605bdb6b09a5549fb28d45a30e8748caf17a7cdc9308",
+      "crop": {
+        "eventId": "special_002",
+        "imageId": "img_special_dog_carry_001",
+        "assetPath": "presentation/portraits/img_special_dog_carry_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/portrait-fortythree-native/special_002_360x740_play.png",
+      "sha256": "8f36124e8ef60f69c8ceacbc7cc0b0eeab89693559fd5369b42962363ddb8dff",
+      "crop": {
+        "eventId": "special_002",
+        "imageId": "img_special_dog_carry_001",
+        "assetPath": "presentation/portraits/img_special_dog_carry_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    }
+  ],
+  "observation": "개가 아이의 담요를 물고 있고 강아지 침대가 뒤에 보인다.",
+  "decision": "PASS",
+  "method": "Individual visual inspection of both scene and gameplay frames together with producer semantic/source review and device capture match."
+}

@@ -1,0 +1,233 @@
+{
+  "schemaVersion": 1,
+  "eventId": "adult_005",
+  "status": "PASS",
+  "reviewer": "Codex AI / plan_audit",
+  "reviewerType": "AI",
+  "reviewDate": "2026-11-19",
+  "sourceEventHash": "7f9d92711d2b62d44b0fa2a30b62d9baa1bde18fed03654722dd70657c586173",
+  "sourceEventSnapshot": {
+    "eventId": "adult_005",
+    "stage": "ADULT",
+    "type": "NORMAL",
+    "isFallback": false,
+    "isMilestone": false,
+    "title": "이상형 발견",
+    "text": "길을 가다 멈췄다. 저 앞에 이상형이 서 있다. 심장이 너무 시끄럽다.",
+    "imageId": "img_adult_ideal_type_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [],
+      "blockedFlags": [
+        "dating",
+        "married",
+        "engaged"
+      ]
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "번호를 물어본다",
+        "statDelta": {
+          "사회성": 1,
+          "행복": -3
+        },
+        "resultText": "용기 내서 물어봤다. \"아, 죄송해요. 기다리는 사람이 있어서요.\" 잠시 뒤 도착한 그 사람은 나랑 똑같은 옷을 입고 있었다.",
+        "addFlags": [],
+        "outcomes": [
+          {
+            "outcomeId": "a_primary",
+            "text": "용기 내서 물어봤다. \"아, 죄송해요. 기다리는 사람이 있어서요.\" 잠시 뒤 도착한 그 사람은 나랑 똑같은 옷을 입고 있었다.",
+            "chance": 70,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "사회성": 1,
+              "행복": -3
+            },
+            "addFlags": [],
+            "lifeDelta": 10
+          },
+          {
+            "outcomeId": "a_number",
+            "text": "\"…저도 아까부터 보고 있었어요.\" 번호를 받았다. 손이 떨려서 이름을 세 번 틀리게 저장했다.",
+            "chance": 30,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "사회성": 3,
+              "행복": 3,
+              "건강": 10
+            },
+            "addFlags": [
+              "met_ideal",
+              "dating",
+              "partner_ideal",
+              "met_ideal_street"
+            ],
+            "chanceWeights": {
+              "사회성": 3,
+              "운": 2
+            }
+          }
+        ]
+      },
+      {
+        "choiceId": "B",
+        "label": "\"내가 되겠어…?\" 그냥 간다",
+        "statDelta": {
+          "지력": 1,
+          "행복": -3
+        },
+        "resultText": "세 걸음 가다 뒤돌아봤다. 이상형도 뒤돌아보고 있었다. 둘 다 황급히 고개를 돌렸다.",
+        "addFlags": [],
+        "outcomes": [
+          {
+            "outcomeId": "b_primary",
+            "text": "세 걸음 가다 뒤돌아봤다. 이상형도 뒤돌아보고 있었다. 둘 다 황급히 고개를 돌렸다.",
+            "chance": 100,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "지력": 1,
+              "행복": -3
+            },
+            "addFlags": []
+          }
+        ]
+      },
+      {
+        "choiceId": "C",
+        "label": "모른 척 같은 방향으로 걷는다",
+        "statDelta": {
+          "운": 2,
+          "사회성": -2
+        },
+        "resultText": "10분째 같은 방향. 이상형이 돌아봤다. \"…저 따라오시는 거예요?\" 알고 보니 옆집 이웃이었다.",
+        "addFlags": [
+          "met_ideal",
+          "dating",
+          "partner_ideal",
+          "met_ideal_street"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "c_primary",
+            "text": "10분째 같은 방향. 이상형이 돌아봤다. \"…저 따라오시는 거예요?\" 알고 보니 옆집 이웃이었다.",
+            "chance": 100,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "운": 2,
+              "사회성": -2
+            },
+            "addFlags": [
+              "met_ideal",
+              "dating",
+              "partner_ideal",
+              "met_ideal_street"
+            ]
+          }
+        ]
+      }
+    ],
+    "priority": 0,
+    "kind": "INCIDENT",
+    "periods": [
+      "YOUNG_ADULT"
+    ]
+  },
+  "sourceReadScope": "Current complete event, conditions, every choice/outcome and flags/stat deltas/periods/follow-ups directly read before judgement.",
+  "sourceImage": {
+    "path": "app/src/main/assets/images/followup_20261031/img_adult_ideal_type_001.png",
+    "sha256": "e9706290d447f87fddb3b104d80fc88871c949b5e59df4eea4dbf191a3da0579",
+    "width": 720,
+    "height": 540
+  },
+  "originalArtworkUnchangedSinceHistoricalReview": true,
+  "historicalReview": {
+    "eventId": "adult_005",
+    "title": "이상형 발견",
+    "imageId": "img_adult_ideal_type_001",
+    "assetPath": "followup_20261031/img_adult_ideal_type_001.png",
+    "sha256": "e9706290d447f87fddb3b104d80fc88871c949b5e59df4eea4dbf191a3da0579",
+    "eventSourceHash": "7f9d92711d2b62d44b0fa2a30b62d9baa1bde18fed03654722dd70657c586173",
+    "status": "REVISION_REQUIRED",
+    "reviewer": "김선한 담당 Codex 직접 대행 검수",
+    "reason": "이상형을 뒤에서 보기만 하며 장소는 맞지만 구체적 상대 단서 재검토 필요",
+    "expectedAction": "걸음을 멈춘 시선 앞에 호감 가는 동년배 한 명",
+    "requiredObjects": "보도와 앞서 있는 인물",
+    "sheet": "output/art-review-20261119/sheet-08.jpg",
+    "cell": 11,
+    "cropMethod": "ImageOps.fit centre-fill 360:800; simulated crop inspected directly, not an emulator capture",
+    "visualMethod": "원본 도트풍·색감·장면 파손·명백한 신체/사물 오류 직접 확인"
+  },
+  "presentationMetadata": [],
+  "captures": [
+    {
+      "path": "build/refactor/after/originals-twentyfour-and-variants-native/adult_005_phone_scene.png",
+      "sha256": "ce592f439237ecf3d10f73112e485cf3c63c44a2b6b202a5f17f459f39b48344",
+      "width": 1080,
+      "height": 2400,
+      "screen": "phone",
+      "mode": "scene",
+      "cropReport": {
+        "eventId": "adult_005",
+        "imageId": "img_adult_ideal_type_001",
+        "assetPath": "followup_20261031/img_adult_ideal_type_001.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.331..0.669",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/originals-twentyfour-and-variants-native/adult_005_phone_play.png",
+      "sha256": "62a726aec80d1c9ceb6f6e19cf5e1dbc586623800a028fda544528995e1eb4cb",
+      "width": 1080,
+      "height": 2400,
+      "screen": "phone",
+      "mode": "play",
+      "cropReport": null
+    },
+    {
+      "path": "build/refactor/after/originals-twentyfour-and-variants-native/adult_005_360x740_scene.png",
+      "sha256": "d0e7be129e7e7950e2c220b49ee38fde4c39f6987b6c7af0f55e87b42ddf4d10",
+      "width": 945,
+      "height": 1943,
+      "screen": "360x740",
+      "mode": "scene",
+      "cropReport": {
+        "eventId": "adult_005",
+        "imageId": "img_adult_ideal_type_001",
+        "assetPath": "followup_20261031/img_adult_ideal_type_001.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.318..0.682",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/originals-twentyfour-and-variants-native/adult_005_360x740_play.png",
+      "sha256": "7243235a83ba0c06421c337e6ffd75794959d1cc80dca5636a1342c13ce8c254",
+      "width": 945,
+      "height": 1943,
+      "screen": "360x740",
+      "mode": "play",
+      "cropReport": null
+    }
+  ],
+  "semanticObservation": "길에서 멈춰 서 있는 동년배 성인 한 명을 플레이어가 바라보는 선택 전 모습이다. 얼굴을 정면으로 보여야 한다는 현재 원문 조건은 없으며 인물의 성별도 고정하지 않는다. 번호 교환·거절 상대 도착·같이 걷기·뒤돌아봄 결과는 없다.",
+  "cropObservation": "두 화면에서 인물 머리부터 신발까지 온전히 남고 보도와 주택가 시야도 유지된다. 과거 뒷모습만 있다는 지적은 원문의 앞에 서 있는 사람이라는 설정과 모순되지 않아 실제 전체/세로 구도로 해소했다.",
+  "uiObservation": "두 크기에서 제목·본문·세 선택지를 모두 읽을 수 있다.",
+  "reviewMethod": "Codex AI directly inspected the full unchanged source PNG and all four unmodified native scene/play captures. Prior review is retained as historical evidence; this record is a new AI judgement, not human approval.",
+  "nativeMethod": "Production DecisionScreen, current parsed event/routing/PixelAssetLoader, fixture state in Android Compose instrumentation. Scene grid match >=0.95. Not complete game progression.",
+  "nativeRunLog": "build/refactor/depth-and-originals-twentyfour.log",
+  "limitations": [
+    "Emulator captures, not physical-device review.",
+    "Only reviewed phone and 360x740 dimensions; not every font scale/aspect ratio.",
+    "Art review does not independently certify scrolling, TalkBack or complete game-flow transitions."
+  ]
+}

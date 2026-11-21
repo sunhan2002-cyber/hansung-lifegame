@@ -1,0 +1,71 @@
+{
+  "eventId": "path_soc_02",
+  "reviewerType": "AI",
+  "scope": "Portrait phone and small-phone presentation",
+  "sourceEventHash": "2ed2c506f8b73581fa5b519dc5998147fd5c9abe9680402e02e1d6c724fea4a7",
+  "sourceReview": "docs/refactor/art-candidates/portrait-integration/path_soc_02.json",
+  "sourceSha256": "c9a80a64d713b73b428307c84a23d9266a0bddfaadc337c95483968aa1d6699a",
+  "displayedVariant": {
+    "assetPath": "presentation/portraits/img_path_soc_02_001_portrait_v1.png",
+    "sha256": "c8dc7b5e8dfa97230d62991fa9b2228842703d4fb2a0843a8d735f49754a6dc8",
+    "width": 941,
+    "height": 1672,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root/effects_tech)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/path_soc_02.json"
+  },
+  "nativeCaptures": [
+    {
+      "path": "build/refactor/after/portrait-fortythree-native/path_soc_02_phone_scene.png",
+      "sha256": "ccdebed758e23026a508ca5379e35b8690b0a700c5e49cc5a385093255de5574",
+      "crop": {
+        "eventId": "path_soc_02",
+        "imageId": "img_path_soc_02_001",
+        "assetPath": "presentation/portraits/img_path_soc_02_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/portrait-fortythree-native/path_soc_02_phone_play.png",
+      "sha256": "3d97e9a9b687b01a61edaaa95e2c87efcf92381807fe11846968d8e2987bd569",
+      "crop": {
+        "eventId": "path_soc_02",
+        "imageId": "img_path_soc_02_001",
+        "assetPath": "presentation/portraits/img_path_soc_02_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/portrait-fortythree-native/path_soc_02_360x740_scene.png",
+      "sha256": "c8156053c2338d3a84d7e6182cd230e2cbfb2b75bc5dcbb3dea16c7230a02735",
+      "crop": {
+        "eventId": "path_soc_02",
+        "imageId": "img_path_soc_02_001",
+        "assetPath": "presentation/portraits/img_path_soc_02_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/portrait-fortythree-native/path_soc_02_360x740_play.png",
+      "sha256": "5ce66b832ec7b407488e35ceea53a657ec73c13f282dcf1e8a8bbd46e91f0cfe",
+      "crop": {
+        "eventId": "path_soc_02",
+        "imageId": "img_path_soc_02_001",
+        "assetPath": "presentation/portraits/img_path_soc_02_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    }
+  ],
+  "observation": "축제 회의의 두 사람과 계획 자료가 한 화면에 남는다.",
+  "decision": "PASS",
+  "method": "Individual visual inspection of both scene and gameplay frames together with producer semantic/source review and device capture match."
+}

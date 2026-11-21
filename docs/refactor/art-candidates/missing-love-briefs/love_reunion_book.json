@@ -1,0 +1,251 @@
+{
+  "schemaVersion": 1,
+  "eventId": "love_reunion_book",
+  "title": "돌려주지 못한 책",
+  "imageId": "img_love_reunion_book_001",
+  "status": "READY_FOR_GENERATION_NOT_ART_APPROVAL",
+  "author": "Codex AI",
+  "date": "2026-11-19",
+  "generationPriority": 20,
+  "currentAcceptanceStatus": "MISSING_PNG",
+  "sourceEventHash": "0191408f5f04a88337d21c01d8117c754a45b2ecc4407a5c0274d5b322ff4ea1",
+  "sourceEventPath": "app/src/main/assets/events.sample.json",
+  "sourceEventSnapshot": {
+    "eventId": "love_reunion_book",
+    "stage": "ADULT",
+    "type": "NORMAL",
+    "isFallback": false,
+    "isMilestone": false,
+    "title": "돌려주지 못한 책",
+    "text": "책장을 정리하다 헤어진 그 사람의 책을 찾았다. 마지막 장에 메모가 있다. '다 읽으면 감상 말해 줘.'",
+    "imageId": "img_love_reunion_book_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [
+        "breakup_once",
+        "ex_book"
+      ],
+      "blockedFlags": [
+        "dating",
+        "engaged",
+        "married"
+      ]
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "책을 돌려주러 간다",
+        "statDelta": {
+          "행복": 3,
+          "지력": 1
+        },
+        "resultText": "감상을 말하는 데 세 시간이 걸렸다. 그 사람이 다음 책을 내밀었다.",
+        "addFlags": [
+          "dating",
+          "rel_steady",
+          "partner_book",
+          "reunited"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "a_again",
+            "text": "감상을 말하는 데 세 시간이 걸렸다. 그 사람이 다음 책을 내밀었다.",
+            "chance": 55,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 3,
+              "지력": 1
+            },
+            "addFlags": [
+              "dating",
+              "rel_steady",
+              "partner_book",
+              "reunited"
+            ],
+            "removeFlags": [
+              "ex_book"
+            ]
+          },
+          {
+            "outcomeId": "a_return",
+            "text": "책을 건네고 감상을 짧게 말했다. 그 사람이 웃었다. '고마워. 이제 다 읽었네.'",
+            "chance": 45,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "지력": 1
+            },
+            "addFlags": [
+              "closure"
+            ],
+            "removeFlags": [
+              "ex_book"
+            ]
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week13_love_line"
+      },
+      {
+        "choiceId": "B",
+        "label": "택배로 보낸다",
+        "statDelta": {
+          "지력": 1
+        },
+        "resultText": "택배 상자에 감상 한 줄을 넣었다. '좋았어. 고마웠어.'",
+        "addFlags": [
+          "closure"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "b_mail",
+            "text": "택배 상자에 감상 한 줄을 넣었다. '좋았어. 고마웠어.'",
+            "chance": 100,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "지력": 1
+            },
+            "addFlags": [
+              "closure"
+            ],
+            "removeFlags": [
+              "ex_book"
+            ]
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week13_love_line"
+      },
+      {
+        "choiceId": "C",
+        "label": "감상문을 독후감 대회에 낸다",
+        "statDelta": {
+          "행복": 3,
+          "지력": 1
+        },
+        "resultText": "장려상을 받았다. 시상식 객석에 그 사람이 앉아 있었다. 끝나고 같이 커피를 마셨다.",
+        "addFlags": [
+          "dating",
+          "rel_steady",
+          "partner_book",
+          "reunited"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "c_prize",
+            "text": "장려상을 받았다. 시상식 객석에 그 사람이 앉아 있었다. 끝나고 같이 커피를 마셨다.",
+            "chance": 50,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 3,
+              "지력": 1
+            },
+            "addFlags": [
+              "dating",
+              "rel_steady",
+              "partner_book",
+              "reunited"
+            ],
+            "removeFlags": [
+              "ex_book"
+            ]
+          },
+          {
+            "outcomeId": "c_none",
+            "text": "낙선했다. 책은 그날 택배로 보냈다.",
+            "chance": 50,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": -1
+            },
+            "addFlags": [
+              "closure"
+            ],
+            "removeFlags": [
+              "ex_book"
+            ]
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week13_love_line"
+      }
+    ],
+    "priority": 0,
+    "kind": "INCIDENT",
+    "periods": [
+      "YOUNG_ADULT",
+      "MIDDLE"
+    ],
+    "weight": 30,
+    "view": "FIRST_PERSON",
+    "pathRole": "러브라인 재회(책 후보)",
+    "followUps": [
+      "love_marriage_talk_01"
+    ]
+  },
+  "reviewScope": "Current complete event, conditions, every choice including legacy fields, all outcomes, probabilities, deltas and flags read for pre-choice art specification. No new image has been generated or approved by this brief.",
+  "reviewedChoiceIds": [
+    "A",
+    "B",
+    "C"
+  ],
+  "reviewedOutcomeIds": [
+    "a_again",
+    "a_return",
+    "b_mail",
+    "c_prize",
+    "c_none"
+  ],
+  "existingArtBriefPath": "docs/assignments/20261031/submissions/김선한_분류합본.csv",
+  "existingArtBriefSnapshot": {
+    "place": "책장 앞",
+    "mainAction": "헤어진 사람의 책 속 메모를 발견한다",
+    "requiredObjects": "메모가 끼워진 책",
+    "peopleAndAge": "주인공 혼자",
+    "timeOfDay": "오후",
+    "approvedPerspective": "FIRST_PERSON",
+    "reuseOrNewReason": "NEW: 13주차 러브라인 신규 사건. 관계 단계(연인·약혼·배우자·자녀)를 선택 전보다 앞서 보여 주지 않는 전용 장면 필요"
+  },
+  "requestedAssetPath": "app/src/main/assets/images/img_love_reunion_book_001.png",
+  "preChoiceState": "책장을 정리하다 전 연인의 책을 찾고 마지막 장의 메모를 발견한 순간. 책 반환·택배·감상문 제출 여부는 정하지 않았다.",
+  "composition": "오후 책장 앞 1인칭. 중앙에서 두 손이 마지막 부분이 펼쳐진 책을 자연스럽게 받치고 작은 메모지 한 장이 끼워져 있다. 글씨는 읽을 수 없는 추상 흔적으로만.",
+  "ageAndAppearance": "청년~중년 성인 혼자. 플레이어와 전 연인 사진·이름·성별 특정 없음.",
+  "forbiddenOutcomes": [
+    "전 연인과 책 전달·새 책 받기",
+    "택배 상자/송장/포장 완료",
+    "독후감 대회·상장·시상식",
+    "커피 재회",
+    "이미 쓴 감상 답장",
+    "읽을 수 있는 메모 문장"
+  ],
+  "briefCorrections": [
+    "메모의 의미는 본문이 제공한다. 선택 후의 감상문·택배상자는 현재 책장 소품으로 미리 넣지 않는다."
+  ],
+  "generationPrompt": "Create one portrait 9:16 full-bleed game background, warm restrained Korean everyday-life pixel-art illustration. Crisp deliberate pixel clusters, coherent anatomy, softly separated light and shadow, not photorealism and not a UI mockup. Strict first-person player viewpoint: no player face, back of head, full player body, reflection, selfie or framed portrait of the player. Only naturally placed player hands or forearms may enter the frame. The player can be male or female; hands, clothing and visible partner styling must not encode a fixed player gender or a uniquely named past partner. All romantic participants are clearly adults; do not depict school-age children as romantic partners. Use age-flexible adult styling that can fit young adulthood or middle adulthood. If a partner must be visible, show non-identifying partial profile, cropped upper torso or hands rather than an identity-defining portrait. No readable text, letters, digits, logos, subtitles, speech bubbles, interface panels, progress indicators or button graphics. Any phone message cue must be an abstract non-text shape and never legible text. Keep all story-critical objects together inside the central 60% of the portrait width and middle 60% of height; leave the bottom 22% visually quiet for the game overlay, without drawing an overlay. This is the instant before the player chooses. Show the stated present situation only, with no success, failure, marriage, pregnancy, reconciliation, breakup or future achievement unless already established in the source conditions. \nSCENE: First-person view while tidying a bookshelf on a quiet afternoon. The players two naturally proportioned adult hands support a worn book open near its last page, where a small old note is tucked in. The book and note are central, with softly lit shelves behind. Page marks and the note must be abstract unreadable texture, with no letters, names, digits or portrait. The former partner is absent and the player has just discovered the note, before deciding what to do. No parcel box, shipping label, new written reply, returned-book handover, new book offered, competition certificate, award stage, cafe reunion or embrace.",
+  "deliveryAndReview": {
+    "format": "PNG, portrait 9:16",
+    "originalAssets": "Preserve existing artwork and approval history. This is a missing-art candidate, not a replacement approval.",
+    "requiredChecks": [
+      "Read current event hash again before generation; stale briefs must be reread.",
+      "Inspect full image, anatomy, all required objects and absence of choice outcomes.",
+      "Inspect actual native portrait presentation and UI overlay at phone and narrow viewport.",
+      "Record image SHA, exact generation prompt, truthful AI producer/reviewer and per-event rationale before any separate approval action."
+    ],
+    "approvalOrManifestChanged": false
+  }
+}

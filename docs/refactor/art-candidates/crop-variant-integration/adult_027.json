@@ -1,0 +1,28 @@
+{
+  "eventId": "adult_027",
+  "sourceAssetPath": "followup_20261031/img_adult_gym_001.png",
+  "sourceSha256": "3762c74c49b1dd3b7307cf109e3d8ae315afa020307ac04df6b70f768c16a9e9",
+  "variant": {
+    "assetPath": "presentation/portraits/img_adult_gym_001_portrait_v1.png",
+    "sha256": "9a19afe6d33fbab027373e5812edf5f8f001e5b48120e5704a45b9f716741ca8",
+    "width": 941,
+    "height": 1672,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI",
+    "reviewEvidence": "docs/refactor/art-candidates/crop-variant-integration/adult_027.json"
+  },
+  "reviewerType": "AI",
+  "reviewer": "Codex AI",
+  "reviewStatus": "AI_REVIEWED_PRESENTATION",
+  "eventSourceHash": "37596cc18bf93bd24582cd94502ec48119894f0dc71fd8d840442a70e3435b06",
+  "semanticReview": "Producer reviewed current conditions and every choice/outcome. Root independently inspected the selected full-resolution output. Selection remains pre-choice; no outcome is forced. See production ledger full snapshot.",
+  "visualReview": "의사·검진표·운동 전단과 주인공 두 손을 유지. 두 문서 전체와 의사 얼굴이 9:20 중앙 crop 안에 남으며 등록/운동 결과를 추가하지 않음. 전단 오른쪽 끝은 중앙60%폭 경계 약간 밖; native 확인 필요. 명백한 구조 결함 없음.",
+  "cropReview": "Portrait recomposition selected after source review; native phone and small phone verification pending. This is not final artwork acceptance.",
+  "actualProducer": "OpenAI built-in image_gen",
+  "generationMethod": "Built-in imagegen edit; exact prompts and rejected attempts preserved in crop-variant-production-20261119.json",
+  "nativePending": true,
+  "runtimeConnected": true,
+  "approvalChanged": false,
+  "selectedStagingSha256": "9a19afe6d33fbab027373e5812edf5f8f001e5b48120e5704a45b9f716741ca8"
+}

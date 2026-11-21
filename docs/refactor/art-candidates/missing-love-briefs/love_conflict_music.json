@@ -1,0 +1,323 @@
+{
+  "schemaVersion": 1,
+  "eventId": "love_conflict_music",
+  "title": "연주가 끝난 뒤",
+  "imageId": "img_love_conflict_music_001",
+  "status": "READY_FOR_GENERATION_NOT_ART_APPROVAL",
+  "author": "Codex AI",
+  "date": "2026-11-19",
+  "generationPriority": 14,
+  "currentAcceptanceStatus": "MISSING_PNG",
+  "sourceEventHash": "1e8eb42bee108be2658737d956e774d5fb2f244e5e50a17381de3ddc74a10590",
+  "sourceEventPath": "app/src/main/assets/events.sample.json",
+  "sourceEventSnapshot": {
+    "eventId": "love_conflict_music",
+    "stage": "ADULT",
+    "type": "NORMAL",
+    "isFallback": false,
+    "isMilestone": false,
+    "title": "연주가 끝난 뒤",
+    "text": "같이 연주할 때는 맞던 박자가 연애에선 자꾸 어긋난다. 연인: \"{nameCall}, 우리 음악 말고 다른 이야기도 할 수 있어?\"",
+    "imageId": "img_love_conflict_music_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [
+        "dating",
+        "rel_conflict",
+        "partner_music"
+      ],
+      "blockedFlags": [
+        "engaged",
+        "married",
+        "divorced"
+      ]
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "악기 없는 주말 데이트를 잡는다",
+        "statDelta": {
+          "행복": 3
+        },
+        "resultText": "악기 없이 만나니 처음엔 어색했다. 두 번째부터는 오히려 편했다. 서로의 다른 취미를 처음 알았다.",
+        "addFlags": [
+          "rel_steady"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "a_date",
+            "text": "악기 없이 만나니 처음엔 어색했다. 두 번째부터는 오히려 편했다. 서로의 다른 취미를 처음 알았다.",
+            "chance": 70,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 3
+            },
+            "addFlags": [
+              "rel_steady"
+            ],
+            "removeFlags": [
+              "rel_conflict"
+            ]
+          },
+          {
+            "outcomeId": "a_quiet",
+            "text": "음악이 빠지니 할 말이 없었다. 둘은 같이 연주하는 친구로 돌아가기로 했다.",
+            "chance": 30,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": -3
+            },
+            "addFlags": [
+              "breakup_once",
+              "ex_music"
+            ],
+            "removeFlags": [
+              "dating",
+              "rel_steady",
+              "rel_conflict",
+              "partner_first_love",
+              "partner_ideal",
+              "partner_music",
+              "partner_book",
+              "partner_app",
+              "partner_closing",
+              "partner_gym",
+              "partner_letter",
+              "partner_blind_date",
+              "dating__adult_073",
+              "dating__adult_074",
+              "dating__adult_075",
+              "dating__adult_076",
+              "dating__adult_077",
+              "dating__adult_078",
+              "dating__path_soc_03",
+              "dating__path_soc_11",
+              "dating__path_hap_05",
+              "dating__love_letter_01"
+            ]
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week13_love_line"
+      },
+      {
+        "choiceId": "B",
+        "label": "둘이 같이 곡을 하나 만든다",
+        "statDelta": {
+          "행복": 3,
+          "사회성": 1
+        },
+        "resultText": "가사는 연인이, 코드는 내가 썼다. 제목은 '박자 안 맞는 노래'. 주변 사람들이 제일 좋아했다.",
+        "addFlags": [
+          "rel_steady"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "b_song",
+            "text": "가사는 연인이, 코드는 내가 썼다. 제목은 '박자 안 맞는 노래'. 주변 사람들이 제일 좋아했다.",
+            "chance": 60,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 3,
+              "사회성": 1
+            },
+            "addFlags": [
+              "rel_steady"
+            ],
+            "removeFlags": [
+              "rel_conflict"
+            ]
+          },
+          {
+            "outcomeId": "b_fight",
+            "text": "후렴 한 줄로 사흘을 싸웠다. 곡은 완성됐고, 우리는 끝났다.",
+            "chance": 40,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": -4
+            },
+            "addFlags": [
+              "breakup_once",
+              "ex_music"
+            ],
+            "removeFlags": [
+              "dating",
+              "rel_steady",
+              "rel_conflict",
+              "partner_first_love",
+              "partner_ideal",
+              "partner_music",
+              "partner_book",
+              "partner_app",
+              "partner_closing",
+              "partner_gym",
+              "partner_letter",
+              "partner_blind_date",
+              "dating__adult_073",
+              "dating__adult_074",
+              "dating__adult_075",
+              "dating__adult_076",
+              "dating__adult_077",
+              "dating__adult_078",
+              "dating__path_soc_03",
+              "dating__path_soc_11",
+              "dating__path_hap_05",
+              "dating__love_letter_01"
+            ]
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week13_love_line"
+      },
+      {
+        "choiceId": "C",
+        "label": "메트로놈을 선물한다",
+        "statDelta": {
+          "행복": 2
+        },
+        "resultText": "연인이 메트로놈을 보고 웃었다. '이거 우리 연애 박자 맞추라는 거야?' 맞다.",
+        "addFlags": [
+          "rel_steady"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "c_joke",
+            "text": "연인이 메트로놈을 보고 웃었다. '이거 우리 연애 박자 맞추라는 거야?' 맞다.",
+            "chance": 55,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 2
+            },
+            "addFlags": [
+              "rel_steady"
+            ],
+            "removeFlags": [
+              "rel_conflict"
+            ]
+          },
+          {
+            "outcomeId": "c_offended",
+            "text": "농담이 통하지 않았다. 그 메트로놈은 연습실 선반에 아직 있다.",
+            "chance": 45,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": -3
+            },
+            "addFlags": [
+              "breakup_once",
+              "ex_music"
+            ],
+            "removeFlags": [
+              "dating",
+              "rel_steady",
+              "rel_conflict",
+              "partner_first_love",
+              "partner_ideal",
+              "partner_music",
+              "partner_book",
+              "partner_app",
+              "partner_closing",
+              "partner_gym",
+              "partner_letter",
+              "partner_blind_date",
+              "dating__adult_073",
+              "dating__adult_074",
+              "dating__adult_075",
+              "dating__adult_076",
+              "dating__adult_077",
+              "dating__adult_078",
+              "dating__path_soc_03",
+              "dating__path_soc_11",
+              "dating__path_hap_05",
+              "dating__love_letter_01"
+            ]
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week13_love_line"
+      }
+    ],
+    "priority": 0,
+    "kind": "INCIDENT",
+    "periods": [
+      "YOUNG_ADULT",
+      "MIDDLE"
+    ],
+    "weight": 80,
+    "view": "FIRST_PERSON",
+    "pathRole": "러브라인 3단계(음악 후보) — 갈등: 화해 또는 결별",
+    "followUps": [
+      "love_reunion_music",
+      "love_wedding_music"
+    ]
+  },
+  "reviewScope": "Current complete event, conditions, every choice including legacy fields, all outcomes, probabilities, deltas and flags read for pre-choice art specification. No new image has been generated or approved by this brief.",
+  "reviewedChoiceIds": [
+    "A",
+    "B",
+    "C"
+  ],
+  "reviewedOutcomeIds": [
+    "a_date",
+    "a_quiet",
+    "b_song",
+    "b_fight",
+    "c_joke",
+    "c_offended"
+  ],
+  "existingArtBriefPath": "docs/assignments/20261031/submissions/김선한_분류합본.csv",
+  "existingArtBriefSnapshot": {
+    "place": "합주 연습실",
+    "mainAction": "연주 뒤 연인과 대화가 어긋난다",
+    "requiredObjects": "보면대와 기타 케이스",
+    "peopleAndAge": "청년 연인 두 사람",
+    "timeOfDay": "저녁",
+    "approvedPerspective": "FIRST_PERSON",
+    "reuseOrNewReason": "NEW: 13주차 러브라인 신규 사건. 관계 단계(연인·약혼·배우자·자녀)를 선택 전보다 앞서 보여 주지 않는 전용 장면 필요"
+  },
+  "requestedAssetPath": "app/src/main/assets/images/img_love_conflict_music_001.png",
+  "preChoiceState": "함께 연주하던 성인 연인이 음악 말고 다른 이야기도 하고 싶다고 묻는 순간. 새로운 데이트·작곡·선물은 아직 없다.",
+  "composition": "저녁 합주 연습실의 1인칭. 중앙에 빈 보면대와 닫힌 기타 케이스, 연인의 쉬고 있는 손·상체 일부를 가까이 배치. 악기는 연주 중이 아니라 쉬는 상태.",
+  "ageAndAppearance": "청년~중년 성인 연인. 특정 밴드 인물 얼굴·성별이나 플레이어 뒷모습 없음.",
+  "forbiddenOutcomes": [
+    "악기 없이 주말 데이트",
+    "새 공동 작곡·완성 악보·곡 제목",
+    "메트로놈 선물 또는 상자",
+    "사흘간 다툼·이별 결과",
+    "연주 친구로 돌아갔다는 확정",
+    "무대 성공 공연"
+  ],
+  "briefCorrections": [
+    "필수 보면대·기타 케이스는 유지한다. 선택 C의 메트로놈이나 선택 B의 새 악보는 현재 연습실 소품으로 추가하지 않는다."
+  ],
+  "generationPrompt": "Create one portrait 9:16 full-bleed game background, warm restrained Korean everyday-life pixel-art illustration. Crisp deliberate pixel clusters, coherent anatomy, softly separated light and shadow, not photorealism and not a UI mockup. Strict first-person player viewpoint: no player face, back of head, full player body, reflection, selfie or framed portrait of the player. Only naturally placed player hands or forearms may enter the frame. The player can be male or female; hands, clothing and visible partner styling must not encode a fixed player gender or a uniquely named past partner. All romantic participants are clearly adults; do not depict school-age children as romantic partners. Use age-flexible adult styling that can fit young adulthood or middle adulthood. If a partner must be visible, show non-identifying partial profile, cropped upper torso or hands rather than an identity-defining portrait. No readable text, letters, digits, logos, subtitles, speech bubbles, interface panels, progress indicators or button graphics. Any phone message cue must be an abstract non-text shape and never legible text. Keep all story-critical objects together inside the central 60% of the portrait width and middle 60% of height; leave the bottom 22% visually quiet for the game overlay, without drawing an overlay. This is the instant before the player chooses. Show the stated present situation only, with no success, failure, marriage, pregnancy, reconciliation, breakup or future achievement unless already established in the source conditions. \nSCENE: A small music rehearsal room in the evening just after practice. First-person viewpoint facing the adult partners resting hands and cropped upper torso, with an EMPTY music stand and a CLOSED guitar case grouped centrally. A soft rehearsal lamp, muted acoustic wall panels, no readable notes. The partner is asking to talk about something other than music; instruments are at rest and the conversation is unresolved. No metronome or gift box, new composed song or lyric sheet, concert stage, successful performance, weekend date elsewhere, embrace or explicit breakup. Show tension through the quiet gap between hands, without fixing identities or gender.",
+  "deliveryAndReview": {
+    "format": "PNG, portrait 9:16",
+    "originalAssets": "Preserve existing artwork and approval history. This is a missing-art candidate, not a replacement approval.",
+    "requiredChecks": [
+      "Read current event hash again before generation; stale briefs must be reread.",
+      "Inspect full image, anatomy, all required objects and absence of choice outcomes.",
+      "Inspect actual native portrait presentation and UI overlay at phone and narrow viewport.",
+      "Record image SHA, exact generation prompt, truthful AI producer/reviewer and per-event rationale before any separate approval action."
+    ],
+    "approvalOrManifestChanged": false
+  }
+}

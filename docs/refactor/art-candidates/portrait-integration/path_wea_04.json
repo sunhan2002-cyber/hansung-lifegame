@@ -1,0 +1,29 @@
+{
+  "eventId": "path_wea_04",
+  "sourceAssetPath": "followup_20261031/img_path_wea_04_001.png",
+  "sourceSha256": "dfdf892442b1ab14c262cc73c62e74742677a7aadd5472824c4245142d4eec9d",
+  "variant": {
+    "assetPath": "presentation/portraits/img_path_wea_04_001_portrait_v1.png",
+    "sha256": "e0e897c07a62f60f5a7c94fef430826010b27ef377dc3537080e466f6dc303cd",
+    "width": 941,
+    "height": 1672,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/path_wea_04.json"
+  },
+  "reviewerType": "AI",
+  "reviewer": "Codex AI (/root)",
+  "reviewStatus": "AI_REVIEWED_PRESENTATION",
+  "eventSourceHash": "e57dbd81a0b2d25b38bdfd485a5b6d1e50d9176892675db207bbb518b3a79cb7",
+  "semanticReview": "Producer read the current event conditions and every choice/outcome, inspected source and selected output. Full source snapshot and exact prompt are in the referenced production ledger. Native acceptance remains pending.",
+  "visualReview": "Landlord showing vacant apartment, unsigned offer and clock. Deposit absent.",
+  "cropReview": "Portrait candidate selected for native phone/small-phone scene and gameplay inspection; not final artwork acceptance.",
+  "actualProducer": "OpenAI built-in image_gen",
+  "generationMethod": "Built-in imagegen edit; exact prompts/output SHA/rejected attempts preserved in docs/refactor/art-candidates/resumed-production-20261119.json",
+  "productionLedger": "docs/refactor/art-candidates/resumed-production-20261119.json",
+  "nativePending": true,
+  "runtimeConnected": true,
+  "approvalChanged": false,
+  "selectedStagingSha256": "e0e897c07a62f60f5a7c94fef430826010b27ef377dc3537080e466f6dc303cd"
+}

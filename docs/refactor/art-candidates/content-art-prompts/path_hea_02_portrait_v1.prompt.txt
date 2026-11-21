@@ -1,0 +1,9 @@
+Use-case: edit an existing Korean life-simulation event illustration. Produce one full-bleed vertical 9:16 portrait pixel-art scene for a mobile game. The supplied original is the edit target and style reference. Preserve its warm nostalgic color palette, visible handcrafted pixel clusters, gentle depth and everyday Korean setting, while correcting the scene exactly as specified below. The camera is always the player's own eyes: small hands/partial limbs are allowed, but never show the player's face, rear head, complete body, reflection or portrait. Other people may have natural faces. Keep every necessary story cue in the central 80% of portrait width; no panel border or UI. No readable words, letters, numerals, logos, captions, speech balloons, thought bubbles, decorative comic marks or watermarks. Do not insert text to explain missing visual content. Render a single coherent scene, not a montage. Avoid excessive smooth anime gradients; retain the source pixel-art rendering.
+
+CURRENT EVENT BEFORE ANY CHOICE (source text; do not typeset): 시험 기간 새벽 2시. 친구들 단톡방은 아직 불이 켜져 있다. "다들 몇 시까지 함?" 눈꺼풀이 문제집보다 무겁다.
+
+REQUIRED EDIT: Preserve late-night desk, dark window, study book and anonymous group chat. Replace the digital clock with a non-numeral analog dial whose hands indicate about two, and bring phone/book/time cue into the portrait centre. No readable book equations, clock digits or message text.
+
+UNDECIDED CHOICES / OUTCOMES TO EXCLUDE: No lamp turned off, sleeping in bed, opened energy drink, exam, collapse or school infirmary.
+
+Output an inviting, emotionally clear 9:16 portrait composition; preserve the scene's ordinary proportions and age-appropriate people. No extra objects or action that resolve the event.

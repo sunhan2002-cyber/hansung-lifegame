@@ -1,0 +1,71 @@
+{
+  "eventId": "child_012",
+  "reviewerType": "AI",
+  "scope": "Portrait phone and small-phone presentation",
+  "sourceEventHash": "005bd46555ea49f5c1cb9a36b45516f164c4dd61cc3dbcbfea8fd877225fbdbf",
+  "sourceReview": "docs/refactor/art-candidates/portrait-integration/child_012.json",
+  "sourceSha256": "360e55da212b180cc7a8c0e4feb09b7b8199f1f60747228ac11847db0d72595d",
+  "displayedVariant": {
+    "assetPath": "presentation/portraits/img_child_culture_pick_001_portrait_v1.png",
+    "sha256": "7eb9358b2b74e915ed89c4122b519855e74e62735b15bae0d448b777686209a0",
+    "width": 941,
+    "height": 1672,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root/security_p0)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/child_012.json"
+  },
+  "nativeCaptures": [
+    {
+      "path": "build/refactor/after/portrait-fortythree-native/child_012_phone_scene.png",
+      "sha256": "dc8e6ef9f12da0c287d0bfc8f63701ec7f154287ff954f9d17214f607c0a6bbc",
+      "crop": {
+        "eventId": "child_012",
+        "imageId": "img_child_culture_pick_001",
+        "assetPath": "presentation/portraits/img_child_culture_pick_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/portrait-fortythree-native/child_012_phone_play.png",
+      "sha256": "897e79d4a41afaac324057ba61b77465550ca31502ffc5877e19bb44bfd7ebed",
+      "crop": {
+        "eventId": "child_012",
+        "imageId": "img_child_culture_pick_001",
+        "assetPath": "presentation/portraits/img_child_culture_pick_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/portrait-fortythree-native/child_012_360x740_scene.png",
+      "sha256": "b60805da395f64e0831cd680736f77e711358e0df517b21d631db67b17c04842",
+      "crop": {
+        "eventId": "child_012",
+        "imageId": "img_child_culture_pick_001",
+        "assetPath": "presentation/portraits/img_child_culture_pick_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/portrait-fortythree-native/child_012_360x740_play.png",
+      "sha256": "1e884a179776c7028c661add242387e7ed7846b141757751ac812c81cf312bfc",
+      "crop": {
+        "eventId": "child_012",
+        "imageId": "img_child_culture_pick_001",
+        "assetPath": "presentation/portraits/img_child_culture_pick_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    }
+  ],
+  "observation": "장식 가면 아래 실제 선택 패널은 과학 실험, 독서, 바둑 세 개다.",
+  "decision": "PASS",
+  "method": "Individual visual inspection of both scene and gameplay frames together with producer semantic/source review and device capture match."
+}

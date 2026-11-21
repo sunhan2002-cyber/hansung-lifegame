@@ -1,0 +1,206 @@
+{
+  "schemaVersion": 1,
+  "eventId": "adult_060",
+  "status": "PASS",
+  "reviewer": "Codex AI / plan_audit",
+  "reviewerType": "AI",
+  "reviewDate": "2026-11-19",
+  "sourceEventHash": "9235dca0099669a5bbf244429cce2602544c59bc037b313d104ae52bfc4d2f45",
+  "sourceEventSnapshot": {
+    "eventId": "adult_060",
+    "stage": "ADULT",
+    "type": "NORMAL",
+    "isFallback": false,
+    "isMilestone": false,
+    "title": "늦게 배운 덕질",
+    "text": "새벽에 우연히 본 아이돌 무대 영상을 세 번째 돌려 보는 중이다. 알고리즘이 나를 완전히 파악했다.",
+    "imageId": "img_adult_fandom_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [],
+      "blockedFlags": []
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "팬클럽에 가입한다",
+        "statDelta": {
+          "행복": 3,
+          "경제력": -3
+        },
+        "resultText": "팬 사인회 줄에서 옆 사람이 물었다. \"자녀분 대신 오셨어요?\" 아니요, 제가 팬입니다.",
+        "addFlags": [
+          "fan_life"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "a_primary",
+            "text": "팬 사인회 줄에서 옆 사람이 물었다. \"자녀분 대신 오셨어요?\" 아니요, 제가 팬입니다.",
+            "chance": 100,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 3,
+              "경제력": -3
+            },
+            "addFlags": [
+              "fan_life"
+            ]
+          }
+        ]
+      },
+      {
+        "choiceId": "B",
+        "label": "몰래 혼자 본다",
+        "statDelta": {
+          "행복": 1,
+          "사회성": -1
+        },
+        "resultText": "가족 몰래 이어폰을 꼈다. 응원법을 혼자 다 외웠다.",
+        "addFlags": [],
+        "outcomes": [
+          {
+            "outcomeId": "b_primary",
+            "text": "가족 몰래 이어폰을 꼈다. 응원법을 혼자 다 외웠다.",
+            "chance": 100,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 1,
+              "사회성": -1
+            },
+            "addFlags": []
+          }
+        ]
+      },
+      {
+        "choiceId": "C",
+        "label": "가족 단톡방에 응원봉 사진을 올린다",
+        "statDelta": {
+          "사회성": 2,
+          "행복": 1,
+          "운": -1
+        },
+        "resultText": "반응은 'ㅋㅋㅋ' 37개. 다음 콘서트는 온 가족이 같이 가기로 했다.",
+        "addFlags": [
+          "fan_life"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "c_primary",
+            "text": "반응은 'ㅋㅋㅋ' 37개. 다음 콘서트는 온 가족이 같이 가기로 했다.",
+            "chance": 100,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "사회성": 2,
+              "행복": 1,
+              "운": -1
+            },
+            "addFlags": [
+              "fan_life"
+            ],
+            "lifeDelta": 10
+          }
+        ]
+      }
+    ],
+    "priority": 0,
+    "kind": "INCIDENT",
+    "periods": [
+      "MIDDLE"
+    ]
+  },
+  "sourceReadScope": "Current complete event, conditions, every choice/outcome and flags/stat deltas/periods/follow-ups directly read before judgement.",
+  "sourceImage": {
+    "path": "app/src/main/assets/images/followup_20261031/img_adult_fandom_001.png",
+    "sha256": "efbde05e2b5253e26913328293345085c25260983e750f567aadcd81dfb722eb",
+    "width": 720,
+    "height": 540
+  },
+  "originalArtworkUnchangedSinceHistoricalReview": true,
+  "historicalReview": {
+    "eventId": "adult_060",
+    "title": "늦게 배운 덕질",
+    "imageId": "img_adult_fandom_001",
+    "assetPath": "followup_20261031/img_adult_fandom_001.png",
+    "sha256": "efbde05e2b5253e26913328293345085c25260983e750f567aadcd81dfb722eb",
+    "eventSourceHash": "9235dca0099669a5bbf244429cce2602544c59bc037b313d104ae52bfc4d2f45",
+    "status": "REVISION_REQUIRED",
+    "reviewer": "김선한 담당 Codex 직접 대행 검수",
+    "reason": "아이돌 영상의 무대는 보이나 읽을 숫자·문자가 일부 포함된 화면 검토 필요",
+    "expectedAction": "새벽에 같은 아이돌 무대 영상을 다시 보는 중",
+    "requiredObjects": "휴대폰 또는 영상 화면; 무대 조명과 가수 실루엣",
+    "sheet": "output/art-review-20261119/sheet-12.jpg",
+    "cell": 2,
+    "cropMethod": "ImageOps.fit centre-fill 360:800; simulated crop inspected directly, not an emulator capture",
+    "visualMethod": "원본 도트풍·색감·장면 파손·명백한 신체/사물 오류 직접 확인"
+  },
+  "presentationMetadata": [],
+  "captures": [
+    {
+      "path": "build/refactor/after/originals-twentyfour-and-variants-native/adult_060_phone_scene.png",
+      "sha256": "7d3ea6844c99b83f4a62f912e3ed2c2598f7b98e4d7d0e75e7f5ec88a0eb9585",
+      "width": 1080,
+      "height": 2400,
+      "screen": "phone",
+      "mode": "scene",
+      "cropReport": {
+        "eventId": "adult_060",
+        "imageId": "img_adult_fandom_001",
+        "assetPath": "followup_20261031/img_adult_fandom_001.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.331..0.669",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/originals-twentyfour-and-variants-native/adult_060_phone_play.png",
+      "sha256": "d08dd84688fc49e8f3129ebc84929f8669f9ec538766825fc4a4aa3f54f0df55",
+      "width": 1080,
+      "height": 2400,
+      "screen": "phone",
+      "mode": "play",
+      "cropReport": null
+    },
+    {
+      "path": "build/refactor/after/originals-twentyfour-and-variants-native/adult_060_360x740_scene.png",
+      "sha256": "4d66ae8b650762700e777229390224b2d03647ad44f0f84fd0e646bfd226f059",
+      "width": 945,
+      "height": 1943,
+      "screen": "360x740",
+      "mode": "scene",
+      "cropReport": {
+        "eventId": "adult_060",
+        "imageId": "img_adult_fandom_001",
+        "assetPath": "followup_20261031/img_adult_fandom_001.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.318..0.682",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/originals-twentyfour-and-variants-native/adult_060_360x740_play.png",
+      "sha256": "f6fd96c309d36ad26a2283c07a9404987b37114a9ec716030fa7488aeed8918f",
+      "width": 945,
+      "height": 1943,
+      "screen": "360x740",
+      "mode": "play",
+      "cropReport": null
+    }
+  ],
+  "semanticObservation": "어두운 집에서 휴대전화로 무대 영상을 반복 보는 상태다. 중앙 가수 실루엣과 조명, 재생 막대만 있고 실명·로고·숫자 없는 화면이다. 팬클럽 가입·팬미팅·응원봉 공유·가족 콘서트 결과는 없다.",
+  "cropObservation": "두 native에서 영상 속 가수/마이크/조명 전체와 위아래 기기 테두리 및 손, 새벽 창문이 유지되어 직접 공연장에 간 장면과 혼동되지 않는다.",
+  "uiObservation": "두 크기에서 제목·본문·세 선택지를 읽을 수 있고 small의 긴 C 문구도 카드 안 두 줄로 남는다.",
+  "reviewMethod": "Codex AI directly inspected the full unchanged source PNG and all four unmodified native scene/play captures. Prior review is retained as historical evidence; this record is a new AI judgement, not human approval.",
+  "nativeMethod": "Production DecisionScreen, current parsed event/routing/PixelAssetLoader, fixture state in Android Compose instrumentation. Scene grid match >=0.95. Not complete game progression.",
+  "nativeRunLog": "build/refactor/depth-and-originals-twentyfour.log",
+  "limitations": [
+    "Emulator captures, not physical-device review.",
+    "Only reviewed phone and 360x740 dimensions; not every font scale/aspect ratio.",
+    "Art review does not independently certify scrolling, TalkBack or complete game-flow transitions."
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "eventId": "cross_01",
+  "reviewerType": "AI",
+  "scope": "Portrait phone and small-phone presentation",
+  "sourceEventHash": "be7d2d70255d28ed9fa2cce6c3a70e67affe3a6ff4946aa343d527caa829ec80",
+  "sourceReview": "docs/refactor/art-candidates/portrait-integration/cross_01.json",
+  "sourceSha256": "1ef454ccb0eba362aae7659c1b054629fe6c1ad21136af5d7c1927e369697d1f",
+  "displayedVariant": {
+    "assetPath": "presentation/portraits/img_cross_01_001_portrait_v1.png",
+    "sha256": "0ea2e601ff1795cab99c698f53b1774585b1975a673b5199ac7ecb8e55e55e92",
+    "width": 941,
+    "height": 1671,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root/effects_tech)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/cross_01.json"
+  },
+  "nativeCaptures": [
+    {
+      "path": "build/refactor/after/portrait-fortythree-native/cross_01_phone_scene.png",
+      "sha256": "f68b79c8210a1894b3cdcaa6078b44ebed40d2b1238a994604d4971e96c4786f",
+      "crop": {
+        "eventId": "cross_01",
+        "imageId": "img_cross_01_001",
+        "assetPath": "presentation/portraits/img_cross_01_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/portrait-fortythree-native/cross_01_phone_play.png",
+      "sha256": "f55c0661fe4770b79e74179acf89cacd59157269b578ab3edc19c64b397b5c6b",
+      "crop": {
+        "eventId": "cross_01",
+        "imageId": "img_cross_01_001",
+        "assetPath": "presentation/portraits/img_cross_01_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/portrait-fortythree-native/cross_01_360x740_scene.png",
+      "sha256": "db429f4a38f8b5d15a51dbfc3b5efc30494f64629ba6fead54e66ffb68fd314c",
+      "crop": {
+        "eventId": "cross_01",
+        "imageId": "img_cross_01_001",
+        "assetPath": "presentation/portraits/img_cross_01_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/portrait-fortythree-native/cross_01_360x740_play.png",
+      "sha256": "dfe39a6140664534a8f06d8d44ced616cb465f4e9007cf87cfcdb672266219dd",
+      "crop": {
+        "eventId": "cross_01",
+        "imageId": "img_cross_01_001",
+        "assetPath": "presentation/portraits/img_cross_01_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    }
+  ],
+  "observation": "집 세 채의 안내와 두 사람의 손, 설명하는 중개인이 보인다.",
+  "decision": "PASS",
+  "method": "Individual visual inspection of both scene and gameplay frames together with producer semantic/source review and device capture match."
+}

@@ -1,0 +1,71 @@
+{
+  "eventId": "path_soc_15",
+  "reviewerType": "AI",
+  "scope": "Portrait phone and small-phone presentation",
+  "sourceEventHash": "aea67b9f3aa0bf2ab213f05a1ed37dd9d8b4bb49ec04d8202b97fd2e929292e9",
+  "sourceReview": "docs/refactor/art-candidates/portrait-integration/path_soc_15.json",
+  "sourceSha256": "2dd589f3125779f7b005fc6f256386f41c9dcc9dde84d4cfee63ab95c0fa262b",
+  "displayedVariant": {
+    "assetPath": "presentation/portraits/img_path_soc_15_001_portrait_v1.png",
+    "sha256": "68563fe7e6bd4b9ef464918e5388b5abdd31335db08645f6caca508d4c0ae7cb",
+    "width": 941,
+    "height": 1672,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root/effects_tech)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/path_soc_15.json"
+  },
+  "nativeCaptures": [
+    {
+      "path": "build/refactor/after/portrait-fortythree-native/path_soc_15_phone_scene.png",
+      "sha256": "a9a4ec870516cd8304b186da6f5a79bf2ac4c8cd582a01c5934797ff8e8930c6",
+      "crop": {
+        "eventId": "path_soc_15",
+        "imageId": "img_path_soc_15_001",
+        "assetPath": "presentation/portraits/img_path_soc_15_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/portrait-fortythree-native/path_soc_15_phone_play.png",
+      "sha256": "5fec8a3be7144209d5e076401ae5b3b6314122c443cd26d818cd71b4fb76ea77",
+      "crop": {
+        "eventId": "path_soc_15",
+        "imageId": "img_path_soc_15_001",
+        "assetPath": "presentation/portraits/img_path_soc_15_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/portrait-fortythree-native/path_soc_15_360x740_scene.png",
+      "sha256": "b8cfc19e59a7f68889adf0c6c93986d17600798fd39571a411c34503fbd6cafd",
+      "crop": {
+        "eventId": "path_soc_15",
+        "imageId": "img_path_soc_15_001",
+        "assetPath": "presentation/portraits/img_path_soc_15_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/portrait-fortythree-native/path_soc_15_360x740_play.png",
+      "sha256": "e88db3fc057af26ff5d16288ae76d2567ad50ccf0687f1c25e7bf544a6e14fb5",
+      "crop": {
+        "eventId": "path_soc_15",
+        "imageId": "img_path_soc_15_001",
+        "assetPath": "presentation/portraits/img_path_soc_15_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    }
+  ],
+  "observation": "육아 동료와 아이들, 단체 채팅 화면이 함께 보인다.",
+  "decision": "PASS",
+  "method": "Individual visual inspection of both scene and gameplay frames together with producer semantic/source review and device capture match."
+}

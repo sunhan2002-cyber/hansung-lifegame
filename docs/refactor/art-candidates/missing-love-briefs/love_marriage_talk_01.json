@@ -1,0 +1,212 @@
+{
+  "schemaVersion": 1,
+  "eventId": "love_marriage_talk_01",
+  "title": "결혼이라는 단어",
+  "imageId": "img_love_marriage_talk_01_001",
+  "status": "READY_FOR_GENERATION_NOT_ART_APPROVAL",
+  "author": "Codex AI",
+  "date": "2026-11-19",
+  "generationPriority": 2,
+  "currentAcceptanceStatus": "MISSING_PNG",
+  "sourceEventHash": "3506135f5cf20c23260bdad319f96cb0dad6e768c868ca81be241924c6c21beb",
+  "sourceEventPath": "app/src/main/assets/events.sample.json",
+  "sourceEventSnapshot": {
+    "eventId": "love_marriage_talk_01",
+    "stage": "ADULT",
+    "type": "NORMAL",
+    "isFallback": false,
+    "isMilestone": true,
+    "title": "결혼이라는 단어",
+    "text": "친구 결혼식에서 돌아오는 길. 연인이 조용히 물었다. \"{nameCall}, 우리도 결혼 생각해 볼까?\"",
+    "imageId": "img_love_marriage_talk_01_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [
+        "dating",
+        "rel_steady"
+      ],
+      "blockedFlags": [
+        "engaged",
+        "married",
+        "divorced",
+        "job_employed"
+      ]
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "\"좋아. 같이 준비하자\"",
+        "statDelta": {
+          "행복": 4,
+          "경제력": -1
+        },
+        "resultText": "그날 밤 둘이 통장 잔고와 달력을 나란히 펼쳤다. 숫자는 작았고 계획은 길었다. 다음 할 일은 양가 인사였다.",
+        "addFlags": [
+          "engaged"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "a_yes",
+            "text": "그날 밤 둘이 통장 잔고와 달력을 나란히 펼쳤다. 숫자는 작았고 계획은 길었다. 다음 할 일은 양가 인사였다.",
+            "chance": 100,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 4,
+              "경제력": -1
+            },
+            "addFlags": [
+              "engaged"
+            ]
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "관계 단계 전환점 — 연애·결혼·자녀는 능력치 자격이 아니라 의사 결정이라 잠그지 않고, 차이는 결과 분기와 후속 사실로 반영",
+        "conditionReview": "open_turning_point",
+        "conditionBasis": "week13_love_line"
+      },
+      {
+        "choiceId": "B",
+        "label": "\"지금처럼 연애만 하는 것도 좋아\"",
+        "statDelta": {
+          "행복": 2
+        },
+        "resultText": "연인은 잠깐 생각하더니 웃었다. '그럼 우리 속도대로 하자.' 대신 둘만의 기념일을 하나 더 만들었다.",
+        "addFlags": [
+          "long_term_dating"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "b_later",
+            "text": "연인은 잠깐 생각하더니 웃었다. '그럼 우리 속도대로 하자.' 대신 둘만의 기념일을 하나 더 만들었다.",
+            "chance": 100,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 2
+            },
+            "addFlags": [
+              "long_term_dating"
+            ]
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "관계 단계 전환점 — 연애·결혼·자녀는 능력치 자격이 아니라 의사 결정이라 잠그지 않고, 차이는 결과 분기와 후속 사실로 반영",
+        "conditionReview": "open_turning_point",
+        "conditionBasis": "week13_love_line"
+      },
+      {
+        "choiceId": "C",
+        "label": "\"결혼식 대신 둘이 여행 가는 건 어때?\"",
+        "statDelta": {
+          "행복": 3,
+          "경제력": -1
+        },
+        "resultText": "연인이 눈을 반짝였다. '여행도 가고 결혼식도 하자.' 할 일이 두 배로 늘었다.",
+        "addFlags": [
+          "engaged"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "c_trip",
+            "text": "연인이 눈을 반짝였다. '여행도 가고 결혼식도 하자.' 할 일이 두 배로 늘었다.",
+            "chance": 55,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 3,
+              "경제력": -1
+            },
+            "addFlags": [
+              "engaged"
+            ]
+          },
+          {
+            "outcomeId": "c_no",
+            "text": "연인이 웃었다. '여행은 좋고, 결혼은 조금 더 생각해 보자.' 그해 여름 둘은 제주도에 갔다.",
+            "chance": 45,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 2,
+              "경제력": -1
+            },
+            "addFlags": [
+              "long_term_dating"
+            ]
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "관계 단계 전환점 — 연애·결혼·자녀는 능력치 자격이 아니라 의사 결정이라 잠그지 않고, 차이는 결과 분기와 후속 사실로 반영",
+        "conditionReview": "open_turning_point",
+        "conditionBasis": "week13_love_line"
+      }
+    ],
+    "priority": 0,
+    "kind": "MILESTONE",
+    "periods": [
+      "YOUNG_ADULT",
+      "MIDDLE"
+    ],
+    "weight": 1,
+    "view": "FIRST_PERSON",
+    "pathRole": "러브라인 4단계 — 결혼 논의(재직 중이 아닌 사람 버전, 재직자는 adult_032)",
+    "followUps": [
+      "love_family_meet_01",
+      "path_soc_05"
+    ]
+  },
+  "reviewScope": "Current complete event, conditions, every choice including legacy fields, all outcomes, probabilities, deltas and flags read for pre-choice art specification. No new image has been generated or approved by this brief.",
+  "reviewedChoiceIds": [
+    "A",
+    "B",
+    "C"
+  ],
+  "reviewedOutcomeIds": [
+    "a_yes",
+    "b_later",
+    "c_trip",
+    "c_no"
+  ],
+  "existingArtBriefPath": "docs/assignments/20261031/submissions/김선한_분류합본.csv",
+  "existingArtBriefSnapshot": {
+    "place": "밤 버스 안",
+    "mainAction": "결혼식에서 돌아오며 결혼 이야기를 꺼낸다",
+    "requiredObjects": "버스 창문과 하객 답례품",
+    "peopleAndAge": "청년·중년 연인 두 사람",
+    "timeOfDay": "밤",
+    "approvedPerspective": "FIRST_PERSON",
+    "reuseOrNewReason": "NEW: 13주차 러브라인 신규 사건. 관계 단계(연인·약혼·배우자·자녀)를 선택 전보다 앞서 보여 주지 않는 전용 장면 필요"
+  },
+  "requestedAssetPath": "app/src/main/assets/images/img_love_marriage_talk_01_001.png",
+  "preChoiceState": "관계가 안정된 연인과 친구 결혼식에서 돌아오는 길. 결혼을 생각해 볼지 처음 묻는 순간이며 아직 약혼·혼인 상태가 아니다. 비재직 조건이므로 직장 소품을 만들지 않는다.",
+  "composition": "밤 버스의 나란한 두 좌석을 플레이어 눈높이에서 비스듬히 본다. 옆자리 연인의 손·옆모습 일부, 버스 창문, 작은 무문자 하객 답례품을 중앙에 모은다. 웨딩드레스나 턱시도 대신 단정한 하객 옷차림.",
+  "ageAndAppearance": "청년~중년의 성인 연인. 플레이어 성별과 상대 정체를 특정하지 않는다. 손에 결혼·약혼 반지를 넣지 않는다.",
+  "forbiddenOutcomes": [
+    "무릎 꿇은 청혼, 반지, 약혼 확정",
+    "자신들의 결혼식·서약·혼인신고",
+    "통장 잔고와 달력을 펼친 결혼 준비",
+    "양가 상견례",
+    "제주도/신혼여행/여행 예약",
+    "직장 사원증·회사 유니폼"
+  ],
+  "briefCorrections": [
+    "기존 상세분류의 밤 버스는 본문을 해치지 않는 배경 연출이다. 친구의 결혼식 하객이었다는 사실과 본인들의 결혼 완료를 구분한다."
+  ],
+  "generationPrompt": "Create one portrait 9:16 full-bleed game background, warm restrained Korean everyday-life pixel-art illustration. Crisp deliberate pixel clusters, coherent anatomy, softly separated light and shadow, not photorealism and not a UI mockup. Strict first-person player viewpoint: no player face, back of head, full player body, reflection, selfie or framed portrait of the player. Only naturally placed player hands or forearms may enter the frame. The player can be male or female; hands, clothing and visible partner styling must not encode a fixed player gender or a uniquely named past partner. All romantic participants are clearly adults; do not depict school-age children as romantic partners. Use age-flexible adult styling that can fit young adulthood or middle adulthood. If a partner must be visible, show non-identifying partial profile, cropped upper torso or hands rather than an identity-defining portrait. No readable text, letters, digits, logos, subtitles, speech bubbles, interface panels, progress indicators or button graphics. Any phone message cue must be an abstract non-text shape and never legible text. Keep all story-critical objects together inside the central 60% of the portrait width and middle 60% of height; leave the bottom 22% visually quiet for the game overlay, without drawing an overlay. This is the instant before the player chooses. Show the stated present situation only, with no success, failure, marriage, pregnancy, reconciliation, breakup or future achievement unless already established in the source conditions. \nSCENE: An ordinary city bus at night on the way home from a FRIENDS wedding. First-person view from one seat toward the adjacent adult partner, who is quietly raising a question about their future. Their relaxed hands, a cropped non-identifying side profile and a small plain wedding-guest favour bag are grouped centrally; dark blue city light through the bus window and a warm overhead light. Both people wear modest wedding-GUEST clothes, not bridal clothing. The couple is dating and NOT engaged or married. No rings, proposal pose, bride or groom, wedding ceremony, open bankbook, calendar plan, family meeting, workplace badge, tickets or holiday destination. Leave the conversation unresolved.",
+  "deliveryAndReview": {
+    "format": "PNG, portrait 9:16",
+    "originalAssets": "Preserve existing artwork and approval history. This is a missing-art candidate, not a replacement approval.",
+    "requiredChecks": [
+      "Read current event hash again before generation; stale briefs must be reread.",
+      "Inspect full image, anatomy, all required objects and absence of choice outcomes.",
+      "Inspect actual native portrait presentation and UI overlay at phone and narrow viewport.",
+      "Record image SHA, exact generation prompt, truthful AI producer/reviewer and per-event rationale before any separate approval action."
+    ],
+    "approvalOrManifestChanged": false
+  }
+}

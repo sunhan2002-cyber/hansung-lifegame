@@ -1,0 +1,71 @@
+{
+  "eventId": "path_soc_10",
+  "reviewerType": "AI",
+  "scope": "Portrait phone and small-phone presentation",
+  "sourceEventHash": "41696dab965854a9d87c93500d2cd7ae1ddd9b270e004d940c7dd0082b74b56e",
+  "sourceReview": "docs/refactor/art-candidates/portrait-integration/path_soc_10.json",
+  "sourceSha256": "64c9be8c48e154527e24d9b71960fe518ff795eafc002b272f0135b3a00a1b2b",
+  "displayedVariant": {
+    "assetPath": "presentation/portraits/img_path_soc_10_001_portrait_v1.png",
+    "sha256": "964f52517800a19f992998f37372c2297102e92e536e84d0c8e686ff481d03c0",
+    "width": 971,
+    "height": 1619,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/path_soc_10.json"
+  },
+  "nativeCaptures": [
+    {
+      "path": "build/refactor/resumed/native18/path_soc_10_phone_scene.png",
+      "sha256": "de464d2968237263e5b85097b24a1d9e293ef3323193c196e78bb947c0cd276a",
+      "crop": {
+        "eventId": "path_soc_10",
+        "imageId": "img_path_soc_10_001",
+        "assetPath": "presentation/portraits/img_path_soc_10_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.125..0.875",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/native18/path_soc_10_phone_play.png",
+      "sha256": "3f3caf79ae4bd3cb531af760f9950df1bf7cd67c5e2dd40c180f12f93c138425",
+      "crop": {
+        "eventId": "path_soc_10",
+        "imageId": "img_path_soc_10_001",
+        "assetPath": "presentation/portraits/img_path_soc_10_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.125..0.875",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/native18/path_soc_10_360x740_scene.png",
+      "sha256": "64e125258d16e6a94f96851f763e62cfd8b30273d3698a15bbf23a2076b4b10e",
+      "crop": {
+        "eventId": "path_soc_10",
+        "imageId": "img_path_soc_10_001",
+        "assetPath": "presentation/portraits/img_path_soc_10_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.095..0.905",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/native18/path_soc_10_360x740_play.png",
+      "sha256": "6f51169330d62bb58d3cd90964b66cf9c7b9dc2dea761422a3b75f8cc9a477c4",
+      "crop": {
+        "eventId": "path_soc_10",
+        "imageId": "img_path_soc_10_001",
+        "assetPath": "presentation/portraits/img_path_soc_10_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.095..0.905",
+        "match": "1.000"
+      }
+    }
+  ],
+  "observation": "축제 후 두 무리와 두 채팅 알림이 함께 나타난다.",
+  "decision": "PASS",
+  "method": "Individual visual inspection of both scene and gameplay frames together with producer semantic/source review and device capture match."
+}

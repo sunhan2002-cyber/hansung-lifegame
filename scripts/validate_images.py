@@ -9,11 +9,64 @@ import zlib
 from pathlib import Path, PurePosixPath
 
 STAT_TAGS = {"health", "fitness", "intelligence", "social", "wealth", "happiness", "luck"}
+PORTRAIT_SOURCE_FORMAT = "portrait_9_16"
 
 
 def valid_dimensions(width, height):
     return (type(width) is int and type(height) is int and width > 0 and height > 0
             and width * 3 == height * 4)
+
+
+def valid_portrait_dimensions(width, height):
+    """Generated portrait masters allow rounding, never a different composition ratio."""
+    return (type(width) is int and type(height) is int
+            and 0 < width <= 4096 and 0 < height <= 4096
+            and abs(width * 16 - height * 9) * 100 < height * 9)
+
+
+def image_dimension_errors(image, actual=None):
+    """Legacy originals stay 4:3; a new portrait POV requires explicit measured metadata."""
+    errors = []
+    declared_format = image.get("sourceFormat")
+    width, height = image.get("width"), image.get("height")
+    if declared_format == PORTRAIT_SOURCE_FORMAT:
+        if image.get("usage") != "pov":
+            errors.append("portrait source must be dedicated event POV art")
+        if not valid_portrait_dimensions(width, height):
+            errors.append("portrait metadata requires integer width/height <=4096 and 9:16 error <1%")
+        if actual is not None and not valid_portrait_dimensions(*actual):
+            errors.append(f"portrait PNG must have 9:16 error <1% and dimensions <=4096: {actual}")
+    elif declared_format is not None:
+        errors.append(f"unknown sourceFormat: {declared_format}")
+    else:
+        if (width is not None or height is not None) and not valid_dimensions(width, height):
+            errors.append("legacy metadata dimensions must be positive integers with 4:3 ratio")
+        if actual is not None and not valid_dimensions(*actual):
+            errors.append(f"legacy PNG dimensions must be positive 4:3: {actual}")
+    if actual is not None and (width is not None or height is not None) and actual != (width, height):
+        errors.append(f"metadata dimensions differ from actual PNG: {(width, height)} != {actual}")
+    return errors
+
+
+def portrait_registration_errors(catalog, routing, events):
+    """Opt-in portrait masters may not replace generic or unreferenced assets."""
+    errors = []
+    routed_ids = {item["imageId"] for item in routing["assets"]}
+    generic_ids = set(routing.get("requiredImageIds", []))
+    for key in ("periodPortraits", "statScenes", "periodScenes", "endingScenes"):
+        generic_ids.update(routing.get(key, {}).values())
+    event_ids = {event.get("povImageId") or event.get("imageId") for event in events}
+    for image in catalog:
+        if image.get("sourceFormat") != PORTRAIT_SOURCE_FORMAT:
+            continue
+        image_id = image["imageId"]
+        if image_id in generic_ids:
+            errors.append(f"generic image must retain the legacy 4:3 format: {image_id}")
+        if image_id not in event_ids:
+            errors.append(f"portrait source is not a preferred event image: {image_id}")
+        if image_id not in routed_ids:
+            errors.append(f"portrait source must be explicitly routed: {image_id}")
+    return errors
 
 
 def safe_path(value):
@@ -74,6 +127,7 @@ def audit_routing(root):
     try:
         routing = json.loads((asset_dir / "image_routing.json").read_text(encoding="utf-8"))
         catalog = json.loads((asset_dir / "image_ids.sample.json").read_text(encoding="utf-8"))
+        events = json.loads((asset_dir / "events.sample.json").read_text(encoding="utf-8"))
         periods = json.loads((asset_dir / "periods.sample.json").read_text(encoding="utf-8"))
         focuses = json.loads((asset_dir / "focuses.sample.json").read_text(encoding="utf-8"))
         if routing["schemaVersion"] != 1:
@@ -88,6 +142,7 @@ def audit_routing(root):
         registered = {item["imageId"]: item for item in catalog}
         by_id = {item["imageId"]: item for item in items}
         required = routing["requiredImageIds"]
+        errors.extend(portrait_registration_errors(catalog, routing, events))
         if len(required) != 13 or len(set(required)) != 13:
             errors.append("week8 requires exactly 13 distinct new image IDs")
         for item in items:
@@ -107,11 +162,7 @@ def audit_routing(root):
             actual = read_size(packaged_image)
             if actual is None:
                 errors.append(f"missing or invalid PNG: {image_id} ({image_path})")
-            elif not valid_dimensions(*actual):
-                errors.append(f"image must have positive 4:3 dimensions: {image_id}: {actual}")
-            elif any(key in registered[image_id] for key in ("width", "height")):
-                if actual != (registered[image_id].get("width"), registered[image_id].get("height")):
-                    errors.append(f"metadata dimensions mismatch: {image_id}")
+            errors.extend(f"{image_id}: {error}" for error in image_dimension_errors(registered[image_id], actual))
             # Android gives debug assets priority over main assets at the same path.
             # A stale preview copy must not silently replace the reviewed game art.
             debug_override = root / "app/src/debug/assets/images" / PurePosixPath(image_path)
@@ -140,7 +191,6 @@ def audit_routing(root):
             if item.get("usage") != "scene" or item.get("statTag") != tag:
                 errors.append(f"stat mapping mismatch: {tag}")
         event_tags = routing.get("eventStatTags", {})
-        events = json.loads((asset_dir / "events.sample.json").read_text(encoding="utf-8"))
         event_ids = {event["eventId"] for event in events}
         if not isinstance(event_tags, dict):
             errors.append("eventStatTags must be an object")

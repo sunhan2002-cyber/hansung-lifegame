@@ -1,0 +1,241 @@
+{
+  "schemaVersion": 1,
+  "eventId": "love_child_plan_01",
+  "status": "PASS",
+  "approvalScope": "Current source event and exact PNG; native phone and 360x740 Compose scene/play visual review",
+  "reviewer": "Codex AI / plan_audit",
+  "reviewerType": "AI",
+  "reviewDate": "2026-11-19",
+  "sourceEventHash": "c23125c22a87aa9363de49a64363ee0f609d96b077ebc6d6bf7d0c28cac95c9a",
+  "sourceEventSnapshot": {
+    "eventId": "love_child_plan_01",
+    "stage": "ADULT",
+    "type": "NORMAL",
+    "isFallback": false,
+    "isMilestone": true,
+    "title": "아이 이야기",
+    "text": "조카 돌잔치에서 돌아오는 차 안. 배우자가 창밖을 보다 말했다. \"{nameCall}, 우리도 아이 생각해 볼까?\"",
+    "imageId": "img_love_child_plan_01_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [
+        "married"
+      ],
+      "blockedFlags": [
+        "divorced",
+        "child_plan",
+        "no_child_plan",
+        "has_child",
+        "v4:event:adult_039"
+      ]
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "\"그래, 같이 준비해 보자\"",
+        "statDelta": {
+          "행복": 3,
+          "건강": 1,
+          "경제력": -2
+        },
+        "resultText": "그날부터 냉장고에 영양제가 두 병 늘었다. 이듬해 봄, 작은 울음소리가 집 안을 채웠다.",
+        "addFlags": [
+          "child_plan",
+          "has_child"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "a_plan",
+            "text": "그날부터 냉장고에 영양제가 두 병 늘었다. 이듬해 봄, 작은 울음소리가 집 안을 채웠다.",
+            "chance": 100,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 3,
+              "건강": 1,
+              "경제력": -2
+            },
+            "addFlags": [
+              "child_plan",
+              "has_child"
+            ]
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "관계 단계 전환점 — 연애·결혼·자녀는 능력치 자격이 아니라 의사 결정이라 잠그지 않고, 차이는 결과 분기와 후속 사실로 반영",
+        "conditionReview": "open_turning_point",
+        "conditionBasis": "week13_love_line"
+      },
+      {
+        "choiceId": "B",
+        "label": "\"우리 둘이서도 충분히 좋아\"",
+        "statDelta": {
+          "행복": 2
+        },
+        "resultText": "배우자가 고개를 끄덕였다. 대신 둘만의 목록을 적었다. 1번은 '매년 처음 가 보는 도시'.",
+        "addFlags": [
+          "no_child_plan"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "b_two",
+            "text": "배우자가 고개를 끄덕였다. 대신 둘만의 목록을 적었다. 1번은 '매년 처음 가 보는 도시'.",
+            "chance": 100,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 2
+            },
+            "addFlags": [
+              "no_child_plan"
+            ]
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "관계 단계 전환점 — 연애·결혼·자녀는 능력치 자격이 아니라 의사 결정이라 잠그지 않고, 차이는 결과 분기와 후속 사실로 반영",
+        "conditionReview": "open_turning_point",
+        "conditionBasis": "week13_love_line"
+      },
+      {
+        "choiceId": "C",
+        "label": "\"일단 화분부터 키워 보자\"",
+        "statDelta": {
+          "행복": 3,
+          "경제력": -2
+        },
+        "resultText": "화분은 1년을 버텼다. 그해 겨울 함께 초음파 사진을 들여다봤다. 이듬해 봄, 화분 옆 작은 침대에서 아이가 첫 울음을 터뜨렸다.",
+        "addFlags": [
+          "child_plan",
+          "has_child"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "c_plant",
+            "text": "화분은 1년을 버텼다. 그해 겨울 함께 초음파 사진을 들여다봤다. 이듬해 봄, 화분 옆 작은 침대에서 아이가 첫 울음을 터뜨렸다.",
+            "chance": 60,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 3,
+              "경제력": -2
+            },
+            "addFlags": [
+              "child_plan",
+              "has_child"
+            ]
+          },
+          {
+            "outcomeId": "c_dry",
+            "text": "화분이 한 달 만에 말라 버렸다. 둘은 한동안 둘이서 지내기로 했다.",
+            "chance": 40,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 1
+            },
+            "addFlags": [
+              "no_child_plan"
+            ]
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "관계 단계 전환점 — 연애·결혼·자녀는 능력치 자격이 아니라 의사 결정이라 잠그지 않고, 차이는 결과 분기와 후속 사실로 반영",
+        "conditionReview": "open_turning_point",
+        "conditionBasis": "week13_love_line"
+      }
+    ],
+    "priority": 0,
+    "kind": "MILESTONE",
+    "periods": [
+      "YOUNG_ADULT",
+      "MIDDLE"
+    ],
+    "weight": 1,
+    "view": "FIRST_PERSON",
+    "pathRole": "러브라인 6단계 — 자녀 계획·출산(계획한 이듬해 출생)",
+    "followUps": [
+      "adult_039",
+      "love_first_child_01",
+      "cross_04"
+    ]
+  },
+  "sourceReadScope": "Title, full text, conditions, all choices, all outcomes including flags/stat deltas, periods and follow-ups directly read before visual judgement.",
+  "sourceImage": {
+    "path": "app/src/main/assets/images/img_love_child_plan_01_001.png",
+    "sha256": "2b2782c2f26cda34510e3893a3b6895c4f34748be188198e79ae3dc40a24c978",
+    "width": 941,
+    "height": 1672
+  },
+  "generationManifest": "docs/refactor/art-candidates/generated-love-20261119.json",
+  "selectedGenerationOutput": "C:\\Users\\jk030\\.codex\\generated_images\\01a1f1bc-6c39-7a10-a591-0d1f4e5cef6b\\exec-dd5b0de9-4b0e-4333-af1c-92abef7d16d6.png",
+  "exactGenerationPromptSha256": "ac0554b5656b0b6a3033e989de9a7c38a435f9c581ef2f58d2108b0255311058",
+  "presentationMetadata": [],
+  "captures": [
+    {
+      "path": "build/refactor/after/ten-art-native/love_child_plan_01_phone_scene.png",
+      "sha256": "8c16ca943c008156dc929b1e2d2d1a51c6eaf0cd7f46b7b537f0c16de0144960",
+      "width": 1080,
+      "height": 2400,
+      "screen": "phone",
+      "mode": "scene",
+      "cropReport": {
+        "eventId": "love_child_plan_01",
+        "imageId": "img_love_child_plan_01_001",
+        "assetPath": "img_love_child_plan_01_001.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/ten-art-native/love_child_plan_01_phone_play.png",
+      "sha256": "59a9e6f8b818db934139404575074f2a34f087c3e5406fb22ceabced13b24b16",
+      "width": 1080,
+      "height": 2400,
+      "screen": "phone",
+      "mode": "play",
+      "cropReport": null
+    },
+    {
+      "path": "build/refactor/after/ten-art-native/love_child_plan_01_360x740_scene.png",
+      "sha256": "a74298ee5ce90b8c01fe053b60f72b8b16be1a8936ed30a533a932644577f942",
+      "width": 945,
+      "height": 1943,
+      "screen": "360x740",
+      "mode": "scene",
+      "cropReport": {
+        "eventId": "love_child_plan_01",
+        "imageId": "img_love_child_plan_01_001",
+        "assetPath": "img_love_child_plan_01_001.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/ten-art-native/love_child_plan_01_360x740_play.png",
+      "sha256": "cb2e97345b2fdc30ee4a779a4287ca919953643330bc344c478405ddafc8aa16",
+      "width": 945,
+      "height": 1943,
+      "screen": "360x740",
+      "mode": "play",
+      "cropReport": null
+    }
+  ],
+  "semanticObservation": "돌잔치에서 돌아오는 차 안에서 배우자가 창밖을 보며 자녀 계획을 묻는 선택 전 장면이다. 안전벨트를 맨 성인 배우자와 창밖 풍경만 있으며 아기·임신·초음파·영양제·화분·둘만의 여행 결과가 없다.",
+  "cropObservation": "phone/small에서 자동차 창과 안전벨트, 배우자 손/부분 옆모습이 유지된다. 플레이어 얼굴이나 반사는 없다.",
+  "uiObservation": "두 크기에서 제목·본문·A/B/C가 읽히며 선택지 영역이 잘리지 않는다.",
+  "reviewMethod": "Codex AI directly inspected full source PNG and each of four unmodified native capture PNGs using view_image. This is an AI review, not a named human approval.",
+  "nativeMethod": "SceneCropReviewTest renders production DecisionScreen with current parsed event and actual routing/PixelAssetLoader in Android Compose instrumentation. Scene captures compare against designated crop >=0.95. The test uses a fixture play state and does not perform a complete game progression.",
+  "testSource": "app/src/androidTest/java/com/example/lifegame/ui/SceneCropReviewTest.kt",
+  "nativeRunLog": "build/refactor/scene-effects-and-ten-art.log",
+  "limitations": [
+    "Android emulator/Compose capture, not a physical device test.",
+    "Fixed reviewed phone and 360x740 sizes; no claim for every aspect ratio or font scale.",
+    "Visual art acceptance does not certify choice scrolling, TalkBack, or game-flow state transitions."
+  ]
+}

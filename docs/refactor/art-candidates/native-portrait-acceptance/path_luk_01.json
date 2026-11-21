@@ -1,0 +1,71 @@
+{
+  "eventId": "path_luk_01",
+  "reviewerType": "AI",
+  "scope": "Portrait phone and small-phone presentation",
+  "sourceEventHash": "b3e7f1c250eab06b976d118f9749dcf970ec16f0c9f98b216dbd042568bdd19d",
+  "sourceReview": "docs/refactor/art-candidates/portrait-integration/path_luk_01.json",
+  "sourceSha256": "dd4dd11c460352bdfa470e590d9ae1ab20b2f5f1156a8b92162665b5f2f8e277",
+  "displayedVariant": {
+    "assetPath": "presentation/portraits/img_path_luk_01_001_portrait_v1.png",
+    "sha256": "bea5b8a83faf1b0e4dc14837f6b7af5a343499e8175701fb320050e636dbdb5a",
+    "width": 941,
+    "height": 1672,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root/security_p0)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/path_luk_01.json"
+  },
+  "nativeCaptures": [
+    {
+      "path": "build/refactor/after/portrait-fortythree-native/path_luk_01_phone_scene.png",
+      "sha256": "2ee9317fb561261b4fd8b125ea1da4d111971c36d0c8905d643ed8459bedd4d6",
+      "crop": {
+        "eventId": "path_luk_01",
+        "imageId": "img_path_luk_01_001",
+        "assetPath": "presentation/portraits/img_path_luk_01_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/portrait-fortythree-native/path_luk_01_phone_play.png",
+      "sha256": "c0fbfd1166a66297be2d9f842bf490a96dd5284423f7d4dcfccf294b76acedbf",
+      "crop": {
+        "eventId": "path_luk_01",
+        "imageId": "img_path_luk_01_001",
+        "assetPath": "presentation/portraits/img_path_luk_01_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/portrait-fortythree-native/path_luk_01_360x740_scene.png",
+      "sha256": "983714f31c7a5820ab90137a8a80b0b6c0a3e6b67bff974c04558f6f08c0aa75",
+      "crop": {
+        "eventId": "path_luk_01",
+        "imageId": "img_path_luk_01_001",
+        "assetPath": "presentation/portraits/img_path_luk_01_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/portrait-fortythree-native/path_luk_01_360x740_play.png",
+      "sha256": "fe1292df385cabba11df07514d094a97b0a02dc0bf4d524b731780d23123fa87",
+      "crop": {
+        "eventId": "path_luk_01",
+        "imageId": "img_path_luk_01_001",
+        "assetPath": "presentation/portraits/img_path_luk_01_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    }
+  ],
+  "observation": "세 별 표식 카드와 사장님 얼굴·손, 추첨기, 뒤의 아이들이 남는다.",
+  "decision": "PASS",
+  "method": "Individual visual inspection of both scene and gameplay frames together with producer semantic/source review and device capture match."
+}

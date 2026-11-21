@@ -1,11 +1,15 @@
 package com.example.lifegame.domain.engine
 
 import com.example.lifegame.data.V4ContentParser
+import com.example.lifegame.data.AutomaticEventParser
 import com.example.lifegame.domain.model.*
+import com.example.lifegame.ui.StartingDice
+import com.example.lifegame.ui.parseStarters
 import org.json.JSONArray
 import org.json.JSONObject
 import java.io.File
 import java.security.MessageDigest
+import kotlin.random.Random
 
 /** Offline QA executable using the same parser, session and authored assets as the app. */
 object Week10SimulationRunner {
@@ -17,6 +21,10 @@ object Week10SimulationRunner {
     private val byId = events.associateBy { it.eventId }
     private val facts = V4ContentParser.parseLifeFactRules(json("life_facts"))
     private val endings = V4ContentParser.parseEndings(json("endings"))
+    private val automaticEvents = V4ContentParser.parseAutomaticEvents(json("auto_events"))
+    private val automaticEventRules = AutomaticEventParser.parse(json("auto_events"))
+    private val starters = parseStarters(json("characters"))
+    private val sessionFactory = PeriodSessionFactory(periods, focuses, events, endings, facts, automaticEvents, automaticEventRules)
     private val titles = JSONArray(json("titles"))
     private val appTitles = V4ContentParser.parseTitles(json("titles"))
     private val prefixes = listOf("hea", "fit", "int", "soc", "wea", "hap", "luk")
@@ -26,11 +34,22 @@ object Week10SimulationRunner {
     private enum class Policy { RANDOM, TARGET, LOW_HEALTH, LOW_STATS, BOUNDARY }
     private data class Spec(val policy: Policy, val target: StatKey, val seed: Long)
 
-    private fun session(seed: Long) = PeriodGameSession(
-        periods, focuses, events, endings, facts,
-        engine = GameEngine(skipInfantFocus = true, guaranteeYearlyIncident = true),
-        runIdFactory = { "week10-$seed" }, runSeedFactory = { seed },
-    )
+    internal fun profileFor(seed: Long): SessionStartProfile {
+        val roll = StartingDice.roll(Random(seed))
+        val starter = requireNotNull(StartingDice.tendencyOf(roll.delta, starters)) { "No authored starter profiles" }
+        return SessionStartProfile(
+            genderFlag = if (seed % 2L == 0L) "gender_male" else "gender_female",
+            starterId = starter.starterId,
+            starterDelta = starter.statDelta,
+            starterFlags = starter.startFlags,
+            rolledDelta = roll.delta,
+            startingRollRaw = roll.encode(),
+            runSeed = seed,
+        )
+    }
+
+    internal fun simulate(policy: String, target: StatKey, seed: Long): JSONObject =
+        play(Spec(Policy.valueOf(policy), target, seed), sampleRestoration = true)
 
     @JvmStatic fun main(args: Array<String>) {
         val out = File(args.getOrElse(0) { "build/reports/week10" }).apply { mkdirs() }
@@ -57,6 +76,7 @@ object Week10SimulationRunner {
         val seenEvents = mutableSetOf<String>()
         val seenOutcomes = mutableSetOf<String>()
         val seenEndings = mutableSetOf<String>()
+        val seenAutomaticEvents = mutableSetOf<String>()
         val issues = mutableListOf<JSONObject>()
         val examples = linkedMapOf<String, MutableList<JSONObject>>()
         var replayChecks = 0
@@ -65,7 +85,7 @@ object Week10SimulationRunner {
                 val run = play(spec, sampleRestoration = index % 250 == 0)
                 if (index % 500 == 0) {
                     val replay = play(spec, sampleRestoration = false)
-                    if (listOf("trace", "endingId", "facts", "stats", "flags").any { run.get(it).toString() != replay.get(it).toString() }) {
+                    if (listOf("startProfile", "trace", "automaticTrace", "endingId", "facts", "stats", "flags").any { run.get(it).toString() != replay.get(it).toString() }) {
                         run.getJSONArray("violations").put("REPLAY_MISMATCH")
                     }
                     replayChecks++
@@ -80,6 +100,8 @@ object Week10SimulationRunner {
                     seenOutcomes += "${row.getString("eventId")}:${row.getString("choiceId")}:${row.getString("outcomeId")}"
                 }
                 seenEndings += run.optString("endingId")
+                val automaticTrace = run.getJSONArray("automaticTrace")
+                repeat(automaticTrace.length()) { i -> seenAutomaticEvents += automaticTrace.getJSONObject(i).getString("eventId") }
                 val fail = run.getJSONArray("violations")
                 if (fail.length() > 0) issues += run
                 val match = run.optBoolean("pathEnding")
@@ -90,7 +112,11 @@ object Week10SimulationRunner {
             }
         }
         val report = JSONObject().apply {
-            put("schemaVersion", 1)
+            put("schemaVersion", 2)
+            put("initialization", "APP_SESSION_FACTORY_WITH_SEEDED_DICE_STARTER_AND_ALTERNATING_GENDER")
+            put("policyScope", "TARGET is greedy authored base-chance stat gain, not an ending-aware optimal strategy; RANDOM randomizes choices but selects target focus")
+            put("syntheticPolicies", JSONArray(listOf("LOW_STATS", "BOUNDARY")))
+            put("startingDicePolicy", "ONE_SEEDED_ROLL_NO_REROLLS; gender male on even seed, female on odd seed")
             put("sourceCommit", args.getOrElse(1) { "unrecorded" })
             put("runs", specs.size)
             put("durationMs", System.currentTimeMillis() - began)
@@ -105,6 +131,8 @@ object Week10SimulationRunner {
             put("unseenEvents", JSONArray(events.map { it.eventId }.filterNot { it in seenEvents }.sorted()))
             put("seenOutcomes", seenOutcomes.size)
             put("seenEndings", seenEndings.size)
+            put("seenAutomaticEvents", seenAutomaticEvents.size)
+            put("unseenAutomaticEvents", JSONArray(automaticEvents.map { it.eventId }.filterNot { it in seenAutomaticEvents }.sorted()))
             put("unseenEndings", JSONArray(endings.map { it.endingId }.filterNot { it in seenEndings }.sorted()))
             put("invariantFailureRuns", issues.size)
         }
@@ -117,22 +145,25 @@ object Week10SimulationRunner {
     }
 
     private fun play(spec: Spec, sampleRestoration: Boolean): JSONObject {
-        val game = session(spec.seed)
-        var step = game.start()
-        val initial = when (spec.policy) {
+        val profile = profileFor(spec.seed)
+        val syntheticOverride = when (spec.policy) {
             Policy.LOW_STATS -> Stats(10, 10, 10, 10, 10, 10, 10)
             Policy.BOUNDARY -> initialBoundaries[(spec.seed % initialBoundaries.size).toInt()].let { v -> Stats(v, v, v, v, v, v, v) }
-            else -> Stats()
+            else -> null
         }
-        if (initial != Stats()) step = game.restoreSaved(step.state.copy(stats = initial))
+        val initial = syntheticOverride ?: profile.initialStats
+        val started = sessionFactory.start(profile, "week10-${spec.seed}", syntheticOverride)
+        val game = started.session
+        var step = started.step
         val trace = JSONArray()
         val violations = mutableListOf<String>()
         var steps = 0
         while (step.phase != TurnPhase.ENDING && steps++ < 150) {
             if (step.state.isDead) violations += "DEAD_BUT_PROGRESSING"
+            if (step.state.stats.health == 0 && !step.state.isDead) violations += "ZERO_HEALTH_BUT_ALIVE"
             if (step.state.stats.values().any { it !in 0..100 }) violations += "STAT_OUT_OF_RANGE"
             if (sampleRestoration) {
-                val restored = session(spec.seed).restoreSaved(step.state)
+                val restored = sessionFactory.create().restoreSaved(step.state)
                 if (restored.state != step.state || restored.phase != step.phase || restored.pendingDecision != step.pendingDecision) {
                     violations += "ENGINE_RESTORE_MISMATCH:${step.state.period}:${step.state.yearInPeriod}"
                 }
@@ -182,23 +213,51 @@ object Week10SimulationRunner {
         if (GameEngine().resolveTitle(state, appTitles).titleId != expectedTitle(state)) violations += "TITLE_RESOLVER_MISMATCH"
         if (!state.isEnding) violations += "DID_NOT_END_WITHIN_150"
         if (!state.isDead) violations += "ENDING_WITHOUT_FINAL_DEATH"
-        if (state.lifeFacts.deathPeriod in setOf(LifePeriod.INFANT, LifePeriod.CHILD)) violations += "FORBIDDEN_EARLY_DEATH"
+        // All ages can die at health zero. Early death alone is not a failed invariant.
+        if (state.lifeFacts.deathPeriod in setOf(LifePeriod.INFANT, LifePeriod.CHILD) && state.stats.health > 0) {
+            violations += "EARLY_DEATH_WITH_POSITIVE_HEALTH"
+        }
         if (state.endingPeriod != state.lifeFacts.deathPeriod) violations += "DEATH_PERIOD_MISMATCH"
         if (state.lifeFacts.deathCause.isNullOrBlank()) violations += "MISSING_DEATH_CAUSE"
         if (game.ending == null) violations += "NO_ENDING_RESOLVED"
         if (sampleRestoration && state.isEnding && game.advance().state != state) violations += "PROGRESSED_AFTER_ENDING"
         return JSONObject().apply {
             put("policy", spec.policy.name); put("target", spec.target.name); put("seed", spec.seed)
+            put("startProfile", JSONObject().apply {
+                put("version", 1); put("genderFlag", profile.genderFlag); put("starterId", profile.starterId)
+                put("startingRollRaw", profile.startingRollRaw); put("runSeed", profile.runSeed)
+                put("initialFlags", JSONArray(profile.initialFlags.sorted()))
+                put("diceStats", profile.initialStats.toJson()); put("effectiveInitialStats", initial.toJson())
+                put("syntheticStatsOverride", syntheticOverride?.toJson() ?: JSONObject.NULL)
+            })
             put("initialStats", initial.toJson()); put("endingId", game.ending?.endingId ?: "")
             put("pathEnding", game.ending?.endingId?.startsWith("ending_path_${prefixes[spec.target.ordinal]}_") == true)
             put("deathPeriod", state.lifeFacts.deathPeriod?.name ?: "UNKNOWN"); put("deathCause", state.lifeFacts.deathCause ?: "")
             put("stats", state.stats.toJson()); put("facts", factsJson(state.lifeFacts))
             put("flags", JSONArray(state.flags.sorted())); put("expectedTitleId", expectedTitle(state))
             put("actualTitleId", GameEngine().resolveTitle(state, appTitles).titleId)
+            put("targetPathDiagnostics", pathDiagnostics(state, spec.target))
+            put("automaticTrace", JSONArray(state.automaticEventRecords.map { record -> JSONObject().apply {
+                put("eventId", record.eventId); put("period", record.period.name); put("year", record.yearInPeriod)
+                put("triggerToken", record.triggerToken); put("delta", JSONArray(record.appliedDelta.values()))
+            } }))
             put("bigIncidents", (0 until trace.length()).count { trace.getJSONObject(it).getString("kind") == "BIG_INCIDENT" })
             put("trace", trace); put("steps", steps); put("violations", JSONArray(violations.distinct()))
         }
     }
+
+    private fun pathDiagnostics(state: PeriodRunState, target: StatKey) = JSONObject(
+        endings.filter { it.endingId.startsWith("ending_path_${prefixes[target.ordinal]}_") }.associate { ending ->
+            val c = ending.conditions
+            ending.endingId to JSONObject().apply {
+                put("missingFlags", JSONArray((c.requiredFlags - state.flags).sorted()))
+                put("blockedFlags", JSONArray(c.blockedFlags.intersect(state.flags).sorted()))
+                put("statsMatch", c.stats.matches(state.stats)); put("lifeFactsMatch", c.lifeFacts.matches(state.lifeFacts))
+                put("eligible", c.stats.matches(state.stats) && c.lifeFacts.matches(state.lifeFacts) &&
+                    state.flags.containsAll(c.requiredFlags) && c.blockedFlags.none { it in state.flags })
+            }
+        },
+    )
 
     private fun expected(choice: DecisionOption, stat: StatKey): Double = choice.outcomes.sumOf {
         (it.statDelta.values()[stat.ordinal] + if (stat == StatKey.HEALTH) it.lifeDelta else 0).toDouble() * it.chance
@@ -229,6 +288,18 @@ object Week10SimulationRunner {
             put("titleMismatches", runs.count { it.getString("actualTitleId") != it.getString("expectedTitleId") })
             put("bigIncidentHistogram", JSONObject(tracesBig.groupingBy { it.toString() }.eachCount()))
             put("meanBigIncidents", tracesBig.average())
+            put("genderDistribution", JSONObject(runs.groupingBy { it.getJSONObject("startProfile").getString("genderFlag") }.eachCount()))
+            put("starterDistribution", JSONObject(runs.groupingBy { it.getJSONObject("startProfile").getString("starterId") }.eachCount()))
+            put("targetPathDiagnostics", JSONObject(runs.first().getJSONObject("targetPathDiagnostics").keys().asSequence().associateWith { endingId ->
+                val diagnostics = runs.map { it.getJSONObject("targetPathDiagnostics").getJSONObject(endingId) }
+                JSONObject().apply {
+                    put("eligibleRuns", diagnostics.count { it.getBoolean("eligible") })
+                    put("statsMismatchRuns", diagnostics.count { !it.getBoolean("statsMatch") })
+                    put("lifeFactsMismatchRuns", diagnostics.count { !it.getBoolean("lifeFactsMatch") })
+                    put("missingFlags", JSONObject(diagnostics.flatMap { strings(it.getJSONArray("missingFlags")) }.groupingBy { it }.eachCount()))
+                    put("blockedFlags", JSONObject(diagnostics.flatMap { strings(it.getJSONArray("blockedFlags")) }.groupingBy { it }.eachCount()))
+                }
+            }))
             put("factDistributions", JSONObject(listOf("educationLevel", "fieldOfStudy", "careerTrack", "careerLevel", "employmentStatus", "maritalStatus", "childrenCount", "housingType", "wealthBand").associateWith { key ->
                 JSONObject(runs.groupingBy { it.getJSONObject("facts").opt(key)?.toString() ?: "UNRECORDED" }.eachCount().toSortedMap())
             }))

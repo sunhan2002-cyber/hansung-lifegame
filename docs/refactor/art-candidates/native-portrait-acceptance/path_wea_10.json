@@ -1,0 +1,71 @@
+{
+  "eventId": "path_wea_10",
+  "reviewerType": "AI",
+  "scope": "Portrait phone and small-phone presentation",
+  "sourceEventHash": "6a052b5f3f5890ddaff4669c8d3e8eb17f62a55e39464fa8515d0ee270b592f1",
+  "sourceReview": "docs/refactor/art-candidates/portrait-integration/path_wea_10.json",
+  "sourceSha256": "25b1247d1ebcb47308668ff27ff391a00e528f0f40ed34df4e071a9e542ce621",
+  "displayedVariant": {
+    "assetPath": "presentation/portraits/img_path_wea_10_001_portrait_v1.png",
+    "sha256": "68c66825260a2e1dec1575620a6dd5c9db90c2b062871f912dbdd7b62c6db20b",
+    "width": 968,
+    "height": 1625,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/path_wea_10.json"
+  },
+  "nativeCaptures": [
+    {
+      "path": "build/refactor/resumed/final32/path_wea_10_phone_scene.png",
+      "sha256": "33862c83cc1b9b98003b7fbdfa44fd8b92844c12ecb480efe0b0db6ec865352f",
+      "crop": {
+        "eventId": "path_wea_10",
+        "imageId": "img_path_wea_10_001",
+        "assetPath": "presentation/portraits/img_path_wea_10_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.122..0.878",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/final32/path_wea_10_phone_play.png",
+      "sha256": "b421e4bc82dd4ff6ddedae1fbb06c4bb7b441179557153023277ad27fb8ab56d",
+      "crop": {
+        "eventId": "path_wea_10",
+        "imageId": "img_path_wea_10_001",
+        "assetPath": "presentation/portraits/img_path_wea_10_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.122..0.878",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/final32/path_wea_10_360x740_scene.png",
+      "sha256": "07b93064e5e5ad807b6fc1493e66473777de03063c4b7f584d8c54f74d2568a8",
+      "crop": {
+        "eventId": "path_wea_10",
+        "imageId": "img_path_wea_10_001",
+        "assetPath": "presentation/portraits/img_path_wea_10_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.092..0.908",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/final32/path_wea_10_360x740_play.png",
+      "sha256": "a00dc201cfb59d9e4489930f774f4b48a62f58b812f361f7006caa1bbb9f25f1",
+      "crop": {
+        "eventId": "path_wea_10",
+        "imageId": "img_path_wea_10_001",
+        "assetPath": "presentation/portraits/img_path_wea_10_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.092..0.908",
+        "match": "1.000"
+      }
+    }
+  ],
+  "observation": "Daytime convenience store manager offers night work via moon and pay symbols.",
+  "decision": "PASS",
+  "method": "Individual visual inspection of both scene and gameplay frames together with producer semantic/source review and device capture match."
+}

@@ -1,0 +1,227 @@
+{
+  "schemaVersion": 1,
+  "eventId": "love_family_meet_01",
+  "title": "양가 인사",
+  "imageId": "img_love_family_meet_01_001",
+  "status": "READY_FOR_GENERATION_NOT_ART_APPROVAL",
+  "author": "Codex AI",
+  "date": "2026-11-19",
+  "generationPriority": 4,
+  "currentAcceptanceStatus": "MISSING_PNG",
+  "sourceEventHash": "6193a7a6d173501e1550f0f377839d351b1635b0a8f032eedf7ad9c8880411c6",
+  "sourceEventPath": "app/src/main/assets/events.sample.json",
+  "sourceEventSnapshot": {
+    "eventId": "love_family_meet_01",
+    "stage": "ADULT",
+    "type": "NORMAL",
+    "isFallback": false,
+    "isMilestone": true,
+    "title": "양가 인사",
+    "text": "상견례 날. 한정식집 방 안에 양가 부모님이 처음 마주 앉았다. 엄마가 식탁 밑으로 내 손을 꼭 잡았다. 아무도 먼저 수저를 들지 않는다.",
+    "imageId": "img_love_family_meet_01_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [
+        "engaged"
+      ],
+      "blockedFlags": [
+        "families_met",
+        "married",
+        "divorced",
+        "soc_path"
+      ]
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "내가 먼저 양가 부모님을 소개한다",
+        "statDelta": {
+          "사회성": 3
+        },
+        "resultText": "준비한 소개말은 반도 못 했다. 그래도 두 집 아버지가 같은 낚시터를 다닌다는 걸 알아냈다. 분위기가 풀렸다.",
+        "addFlags": [
+          "families_met",
+          "family_bond"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "a_warm",
+            "text": "준비한 소개말은 반도 못 했다. 그래도 두 집 아버지가 같은 낚시터를 다닌다는 걸 알아냈다. 분위기가 풀렸다.",
+            "chance": 70,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "사회성": 3
+            },
+            "addFlags": [
+              "families_met",
+              "family_bond"
+            ]
+          },
+          {
+            "outcomeId": "a_stiff",
+            "text": "소개는 매끄러웠는데 대화는 날씨에서 멈췄다. 그래도 결혼 날짜는 정해졌다.",
+            "chance": 30,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "사회성": 1
+            },
+            "addFlags": [
+              "families_met"
+            ]
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "관계 단계 전환점 — 연애·결혼·자녀는 능력치 자격이 아니라 의사 결정이라 잠그지 않고, 차이는 결과 분기와 후속 사실로 반영",
+        "conditionReview": "open_turning_point",
+        "conditionBasis": "week13_love_line"
+      },
+      {
+        "choiceId": "B",
+        "label": "연인이 준비한 이야기에 맞장구친다",
+        "statDelta": {
+          "사회성": 2,
+          "행복": 1
+        },
+        "resultText": "연인이 이야기를 꺼낼 때마다 내가 웃음을 보탰다. 끝나고 양가 어머니가 동시에 말했다. '둘이 잘 맞네.'",
+        "addFlags": [
+          "families_met"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "b_team",
+            "text": "연인이 이야기를 꺼낼 때마다 내가 웃음을 보탰다. 끝나고 양가 어머니가 동시에 말했다. '둘이 잘 맞네.'",
+            "chance": 100,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "사회성": 2,
+              "행복": 1
+            },
+            "addFlags": [
+              "families_met"
+            ]
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "관계 단계 전환점 — 연애·결혼·자녀는 능력치 자격이 아니라 의사 결정이라 잠그지 않고, 차이는 결과 분기와 후속 사실로 반영",
+        "conditionReview": "open_turning_point",
+        "conditionBasis": "week13_love_line"
+      },
+      {
+        "choiceId": "C",
+        "label": "긴장해서 물을 연거푸 세 잔 마신다",
+        "statDelta": {
+          "행복": 1
+        },
+        "resultText": "화장실을 네 번 다녀왔다. 돌아올 때마다 분위기가 조금씩 좋아져 있었다. 나만 빼고 다들 친해졌다.",
+        "addFlags": [
+          "families_met"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "c_water",
+            "text": "화장실을 네 번 다녀왔다. 돌아올 때마다 분위기가 조금씩 좋아져 있었다. 나만 빼고 다들 친해졌다.",
+            "chance": 60,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 1
+            },
+            "addFlags": [
+              "families_met"
+            ]
+          },
+          {
+            "outcomeId": "c_spill",
+            "text": "네 번째 잔을 엎질렀다. 사돈어른 바지에. 그 이야기는 결혼식 축사에 들어갔다.",
+            "chance": 40,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "사회성": -1,
+              "행복": 1
+            },
+            "addFlags": [
+              "families_met",
+              "family_memory"
+            ]
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "관계 단계 전환점 — 연애·결혼·자녀는 능력치 자격이 아니라 의사 결정이라 잠그지 않고, 차이는 결과 분기와 후속 사실로 반영",
+        "conditionReview": "open_turning_point",
+        "conditionBasis": "week13_love_line"
+      }
+    ],
+    "priority": 0,
+    "kind": "MILESTONE",
+    "periods": [
+      "YOUNG_ADULT",
+      "MIDDLE",
+      "OLD_AGE"
+    ],
+    "weight": 1,
+    "view": "FIRST_PERSON",
+    "pathRole": "러브라인 4-2단계 — 결혼 전 상견례(결혼 후 가족 모임과 구분)",
+    "followUps": [
+      "love_wedding_01"
+    ]
+  },
+  "reviewScope": "Current complete event, conditions, every choice including legacy fields, all outcomes, probabilities, deltas and flags read for pre-choice art specification. No new image has been generated or approved by this brief.",
+  "reviewedChoiceIds": [
+    "A",
+    "B",
+    "C"
+  ],
+  "reviewedOutcomeIds": [
+    "a_warm",
+    "a_stiff",
+    "b_team",
+    "c_water",
+    "c_spill"
+  ],
+  "existingArtBriefPath": "docs/assignments/20261031/submissions/김선한_분류합본.csv",
+  "existingArtBriefSnapshot": {
+    "place": "한정식집 방",
+    "mainAction": "상견례에서 양가 부모님이 처음 마주 앉는다",
+    "requiredObjects": "한정식 상차림",
+    "peopleAndAge": "연인과 양가 부모님",
+    "timeOfDay": "점심",
+    "approvedPerspective": "FIRST_PERSON",
+    "reuseOrNewReason": "NEW: 13주차 러브라인 신규 사건. 관계 단계(연인·약혼·배우자·자녀)를 선택 전보다 앞서 보여 주지 않는 전용 장면 필요"
+  },
+  "requestedAssetPath": "app/src/main/assets/images/img_love_family_meet_01_001.png",
+  "preChoiceState": "약혼 후 양가 부모가 한정식집에서 처음 만난 순간. 어머니가 식탁 아래 플레이어 손을 잡고 있으며 누구도 아직 수저를 들지 않았다.",
+  "composition": "플레이어 자리의 1인칭으로 정돈된 상차림과 서로 마주 앉은 양가 부모의 긴장된 손·상체를 본다. 중앙 하단 식탁 가장자리 아래에 어머니의 손과 플레이어 손 접촉이 분명히 보이되 UI 여백보다 위에 둔다.",
+  "ageAndAppearance": "YOUNG_ADULT/MIDDLE/OLD_AGE 모두 허용. 플레이어·연인은 성인~노년을 특정하지 않는 손과 의복 일부만, 부모는 더 나이 든 성인. 플레이어 성별·얼굴 고정 없음.",
+  "forbiddenOutcomes": [
+    "이미 식사 중인 모습·들어 올린 수저",
+    "낚시 이야기로 친해진 결과",
+    "정해진 결혼 날짜·달력",
+    "엎질러진 물·젖은 바지",
+    "화장실 이동",
+    "결혼식 완료"
+  ],
+  "briefCorrections": [
+    "누구도 수저를 들지 않았다는 현재 상태와 식탁 아래 손잡기를 함께 보존한다. 기존 청년 고정 해석 대신 OLD_AGE 경로도 지원한다."
+  ],
+  "generationPrompt": "Create one portrait 9:16 full-bleed game background, warm restrained Korean everyday-life pixel-art illustration. Crisp deliberate pixel clusters, coherent anatomy, softly separated light and shadow, not photorealism and not a UI mockup. Strict first-person player viewpoint: no player face, back of head, full player body, reflection, selfie or framed portrait of the player. Only naturally placed player hands or forearms may enter the frame. The player can be male or female; hands, clothing and visible partner styling must not encode a fixed player gender or a uniquely named past partner. All romantic participants are clearly adults; do not depict school-age children as romantic partners. Use age-flexible adult styling that can fit young, middle or older adulthood; do not impose a youthful face or body on an older-player route. If a partner must be visible, show non-identifying partial profile, cropped upper torso or hands rather than an identity-defining portrait. No readable text, letters, digits, logos, subtitles, speech bubbles, interface panels, progress indicators or button graphics. Any phone message cue must be an abstract non-text shape and never legible text. Keep all story-critical objects together inside the central 60% of the portrait width and middle 60% of height; leave the bottom 22% visually quiet for the game overlay, without drawing an overlay. This is the instant before the player chooses. Show the stated present situation only, with no success, failure, marriage, pregnancy, reconciliation, breakup or future achievement unless already established in the source conditions. \nSCENE: First-person view seated in a private Korean restaurant room at the very start of the two families first meeting before a wedding. A carefully arranged Korean meal fills the central table, with every spoon and chopstick still resting neatly and all dishes untouched. Show four older adult parents seated opposite and beside the couple, using cropped torsos and reserved hands rather than detailed faces. The essential detail is the players mother gently holding the players hand UNDER the near table edge; frame this clearly in the middle lower area above the bottom overlay reserve. No one has begun eating or laughing together, no spilled water, calendar, fishing equipment or ceremony. The couple can be young, middle-aged or older adults: show no age-defining player face, bridal dress or youthful-only styling. Quiet daylight and slightly formal anticipation.",
+  "deliveryAndReview": {
+    "format": "PNG, portrait 9:16",
+    "originalAssets": "Preserve existing artwork and approval history. This is a missing-art candidate, not a replacement approval.",
+    "requiredChecks": [
+      "Read current event hash again before generation; stale briefs must be reread.",
+      "Inspect full image, anatomy, all required objects and absence of choice outcomes.",
+      "Inspect actual native portrait presentation and UI overlay at phone and narrow viewport.",
+      "Record image SHA, exact generation prompt, truthful AI producer/reviewer and per-event rationale before any separate approval action."
+    ],
+    "approvalOrManifestChanged": false
+  }
+}

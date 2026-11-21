@@ -1,0 +1,331 @@
+{
+  "schemaVersion": 1,
+  "eventId": "love_date_02",
+  "status": "PASS",
+  "approvalScope": "Current source event and exact PNG; native phone and 360x740 Compose scene/play visual review",
+  "reviewer": "Codex AI / plan_audit",
+  "reviewerType": "AI",
+  "reviewDate": "2026-11-19",
+  "sourceEventHash": "137e19f3f712c9f8f2ea04377da9b1f69c23c860a9bda799eb1916d452426a33",
+  "sourceEventSnapshot": {
+    "eventId": "love_date_02",
+    "stage": "ADULT",
+    "type": "NORMAL",
+    "isFallback": false,
+    "isMilestone": false,
+    "title": "다시 시작한 연애",
+    "text": "새로 만난 사람과 세 번째 약속. 이번엔 서두르지 않기로 했다. 연인: \"{nameCall}, 다음 주에도 시간 돼?\"",
+    "imageId": "img_love_date_02_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [
+        "dating",
+        "breakup_once"
+      ],
+      "blockedFlags": [
+        "rel_steady",
+        "rel_conflict",
+        "engaged",
+        "married",
+        "divorced",
+        "reunited"
+      ]
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "\"응, 다음 주도 그다음 주도\"",
+        "statDelta": {
+          "행복": 3,
+          "사회성": 1
+        },
+        "resultText": "약속이 하나씩 쌓였다. 석 달 뒤 둘은 서로의 친구들에게 정식으로 인사했다.",
+        "addFlags": [
+          "rel_steady"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "a_steady",
+            "text": "약속이 하나씩 쌓였다. 석 달 뒤 둘은 서로의 친구들에게 정식으로 인사했다.",
+            "chance": 75,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 3,
+              "사회성": 1
+            },
+            "addFlags": [
+              "rel_steady"
+            ]
+          },
+          {
+            "outcomeId": "a_slow",
+            "text": "너무 서두른 걸까. 연인이 한발 물러섰다. 우리는 좋은 친구로 지내기로 했다.",
+            "chance": 25,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": -2
+            },
+            "addFlags": [],
+            "removeFlags": [
+              "dating",
+              "rel_steady",
+              "rel_conflict",
+              "partner_first_love",
+              "partner_ideal",
+              "partner_music",
+              "partner_book",
+              "partner_app",
+              "partner_closing",
+              "partner_gym",
+              "partner_letter",
+              "partner_blind_date",
+              "dating__adult_073",
+              "dating__adult_074",
+              "dating__adult_075",
+              "dating__adult_076",
+              "dating__adult_077",
+              "dating__adult_078",
+              "dating__path_soc_03",
+              "dating__path_soc_11",
+              "dating__path_hap_05",
+              "dating__love_letter_01"
+            ]
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week13_love_line"
+      },
+      {
+        "choiceId": "B",
+        "label": "지난 연애 이야기를 솔직하게 한다",
+        "statDelta": {
+          "사회성": 2,
+          "행복": 2
+        },
+        "resultText": "연인도 자기 이야기를 꺼냈다. 둘 다 한 번씩 넘어져 본 사람이었다. 그래서 더 조심스럽게 손을 잡았다.",
+        "addFlags": [
+          "rel_steady"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "b_honest",
+            "text": "연인도 자기 이야기를 꺼냈다. 둘 다 한 번씩 넘어져 본 사람이었다. 그래서 더 조심스럽게 손을 잡았다.",
+            "chance": 65,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "사회성": 2,
+              "행복": 2
+            },
+            "addFlags": [
+              "rel_steady"
+            ]
+          },
+          {
+            "outcomeId": "b_heavy",
+            "text": "이야기가 너무 길었다. 연인이 말했다. \"아직 정리가 덜 된 것 같아.\"",
+            "chance": 35,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": -3
+            },
+            "addFlags": [],
+            "removeFlags": [
+              "dating",
+              "rel_steady",
+              "rel_conflict",
+              "partner_first_love",
+              "partner_ideal",
+              "partner_music",
+              "partner_book",
+              "partner_app",
+              "partner_closing",
+              "partner_gym",
+              "partner_letter",
+              "partner_blind_date",
+              "dating__adult_073",
+              "dating__adult_074",
+              "dating__adult_075",
+              "dating__adult_076",
+              "dating__adult_077",
+              "dating__adult_078",
+              "dating__path_soc_03",
+              "dating__path_soc_11",
+              "dating__path_hap_05",
+              "dating__love_letter_01"
+            ]
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week13_love_line"
+      },
+      {
+        "choiceId": "C",
+        "label": "첫 데이트 장소를 전 연인과 갔던 식당으로 잡는다",
+        "statDelta": {
+          "행복": 1,
+          "운": 1
+        },
+        "resultText": "사장님이 나를 알아봤다. \"어머, 또 오셨네요!\" 연인이 웃었다. 다행히 웃었다.",
+        "addFlags": [
+          "rel_steady"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "c_caught",
+            "text": "사장님이 나를 알아봤다. \"어머, 또 오셨네요!\" 연인이 웃었다. 다행히 웃었다.",
+            "chance": 50,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 1,
+              "운": 1
+            },
+            "addFlags": [
+              "rel_steady"
+            ]
+          },
+          {
+            "outcomeId": "c_awkward",
+            "text": "사장님이 전 연인의 안부를 물었다. 그날 이후 연락이 뜸해졌다.",
+            "chance": 50,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": -3
+            },
+            "addFlags": [],
+            "removeFlags": [
+              "dating",
+              "rel_steady",
+              "rel_conflict",
+              "partner_first_love",
+              "partner_ideal",
+              "partner_music",
+              "partner_book",
+              "partner_app",
+              "partner_closing",
+              "partner_gym",
+              "partner_letter",
+              "partner_blind_date",
+              "dating__adult_073",
+              "dating__adult_074",
+              "dating__adult_075",
+              "dating__adult_076",
+              "dating__adult_077",
+              "dating__adult_078",
+              "dating__path_soc_03",
+              "dating__path_soc_11",
+              "dating__path_hap_05",
+              "dating__love_letter_01"
+            ]
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week13_love_line"
+      }
+    ],
+    "priority": 0,
+    "kind": "INCIDENT",
+    "periods": [
+      "YOUNG_ADULT",
+      "MIDDLE"
+    ],
+    "weight": 100,
+    "view": "FIRST_PERSON",
+    "pathRole": "러브라인 2단계(재시작) — 결별 뒤 새 인연의 관계 심화",
+    "followUps": [
+      "love_marriage_talk_01"
+    ]
+  },
+  "sourceReadScope": "Title, full text, conditions, all choices, all outcomes including flags/stat deltas, periods and follow-ups directly read before visual judgement.",
+  "sourceImage": {
+    "path": "app/src/main/assets/images/img_love_date_02_001.png",
+    "sha256": "6b257e9423bb3dabb17e6072ff40c78c436318e8cbb57bb8c6896b0f3fa7c9d4",
+    "width": 941,
+    "height": 1672
+  },
+  "generationManifest": "docs/refactor/art-candidates/generated-love-20261119.json",
+  "selectedGenerationOutput": "C:\\Users\\jk030\\.codex\\generated_images\\01a1f1bc-6c39-7a10-a591-0d1f4e5cef6b\\exec-4ab24623-58a2-4890-99ca-067bac87bc71.png",
+  "exactGenerationPromptSha256": "c48bacfeb510d8b0d35f0fe7d92faaec0ce92722de28ea81af5083f6ebb33ab9",
+  "presentationMetadata": [],
+  "captures": [
+    {
+      "path": "build/refactor/after/ten-art-native/love_date_02_phone_scene.png",
+      "sha256": "8e10e1c532f8f9a2ff0d2c07dcd1db236a8a89c366fbe06acca7692d35b2bcb5",
+      "width": 1080,
+      "height": 2400,
+      "screen": "phone",
+      "mode": "scene",
+      "cropReport": {
+        "eventId": "love_date_02",
+        "imageId": "img_love_date_02_001",
+        "assetPath": "img_love_date_02_001.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/ten-art-native/love_date_02_phone_play.png",
+      "sha256": "d86df1ab7820c5371eb0621dc71fb3d41a1bbb862df7f8badefd19cfaa3bd39c",
+      "width": 1080,
+      "height": 2400,
+      "screen": "phone",
+      "mode": "play",
+      "cropReport": null
+    },
+    {
+      "path": "build/refactor/after/ten-art-native/love_date_02_360x740_scene.png",
+      "sha256": "b75aded952db8c7de6494c99c7bb3d1d7378a043ffaca35be70f5f703780d7cb",
+      "width": 945,
+      "height": 1943,
+      "screen": "360x740",
+      "mode": "scene",
+      "cropReport": {
+        "eventId": "love_date_02",
+        "imageId": "img_love_date_02_001",
+        "assetPath": "img_love_date_02_001.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/ten-art-native/love_date_02_360x740_play.png",
+      "sha256": "dd5fa01afcd11848d8e58d604b218fea2c0208008571e53523729549ab0da2ce",
+      "width": 945,
+      "height": 1943,
+      "screen": "360x740",
+      "mode": "play",
+      "cropReport": null
+    }
+  ],
+  "semanticObservation": "새 연인과 세 번째 약속에서 다음 약속을 묻는 조심스러운 식사 장면이다. 손은 서로 잡지 않았고 과거 연인·식당 주인의 인사·친구 소개·결별·기념일 확정 결과가 없다. 일반 식당 배경 자체는 전 연인과 갔던 특정 식당임을 확정하지 않는다.",
+  "cropObservation": "phone/small에서 성인 상대의 비식별 상반신/손, 두 식사 접시가 유지된다. 플레이어 얼굴/반사는 없다.",
+  "uiObservation": "phone에서 제목·본문·세 선택지가 읽힌다. small C 문구는 보이나 카드 하단이 footer에 걸려 스크롤 상호작용 확인은 별도다.",
+  "reviewMethod": "Codex AI directly inspected full source PNG and each of four unmodified native capture PNGs using view_image. This is an AI review, not a named human approval.",
+  "nativeMethod": "SceneCropReviewTest renders production DecisionScreen with current parsed event and actual routing/PixelAssetLoader in Android Compose instrumentation. Scene captures compare against designated crop >=0.95. The test uses a fixture play state and does not perform a complete game progression.",
+  "testSource": "app/src/androidTest/java/com/example/lifegame/ui/SceneCropReviewTest.kt",
+  "nativeRunLog": "build/refactor/scene-effects-and-ten-art.log",
+  "limitations": [
+    "Android emulator/Compose capture, not a physical device test.",
+    "Fixed reviewed phone and 360x740 sizes; no claim for every aspect ratio or font scale.",
+    "Visual art acceptance does not certify choice scrolling, TalkBack, or game-flow state transitions."
+  ]
+}

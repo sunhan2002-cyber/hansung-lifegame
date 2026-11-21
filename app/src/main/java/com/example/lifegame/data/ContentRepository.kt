@@ -17,36 +17,88 @@ import com.example.lifegame.domain.model.Focus
 import com.example.lifegame.domain.model.PeriodDefinition
 import com.example.lifegame.domain.model.StatConditions
 import com.example.lifegame.domain.model.StatDelta
+import com.example.lifegame.domain.engine.AutomaticEventRule
 import org.json.JSONArray
 import org.json.JSONObject
 
-class ContentRepository(
-    private val context: Context,
-) {
-    fun loadPeriodDefinitions(): List<PeriodDefinition> = runCatching {
-        V4ContentParser.parsePeriods(readAsset(PERIODS_FILE))
-    }.getOrElse { emptyList() }
+data class PlayableContent(
+    val content: V4Content,
+    val endings: List<Ending>,
+    val automaticEventRules: List<AutomaticEventRule>,
+)
 
-    fun loadFocuses(): List<Focus> = runCatching {
-        V4ContentParser.parseFocuses(readAsset(FOCUSES_FILE))
-    }.getOrElse { emptyList() }
+class ContentRepository(private val loader: CachedContentLoader) {
+    constructor(context: Context) : this(CachedContentLoader { name ->
+        context.assets.open(name).bufferedReader(Charsets.UTF_8).use { it.readText() }
+    })
 
-    fun loadDecisionEvents(): List<DecisionEvent> = runCatching {
-        V4ContentParser.parseDecisionEvents(readAsset(EVENTS_FILE))
-    }.getOrElse { emptyList() }
+    private val periods = ContentAsset(PERIODS_FILE, V4ContentParser::parsePeriods) {
+        when {
+            it.isEmpty() -> "EMPTY_PERIODS"
+            it.map { period -> period.period }.distinct().size != it.size -> "DUPLICATE_PERIOD"
+            it.any { period -> period.years <= 0 } -> "INVALID_PERIOD_LENGTH"
+            else -> null
+        }
+    }
+    private val focuses = ContentAsset(FOCUSES_FILE, V4ContentParser::parseFocuses) {
+        if (it.isEmpty()) "EMPTY_FOCUSES" else null
+    }
+    private val decisions = ContentAsset(EVENTS_FILE, V4ContentParser::parseDecisionEvents) {
+        when {
+            it.isEmpty() -> "EMPTY_DECISIONS"
+            it.any { event -> event.choices.isEmpty() } -> "EMPTY_CHOICES"
+            else -> null
+        }
+    }
+    private val facts = ContentAsset(LIFE_FACTS_FILE, V4ContentParser::parseLifeFactRules)
+    private val titles = ContentAsset(TITLES_FILE, V4ContentParser::parseTitles) {
+        if (it.count { title -> title.isDefault } != 1) "DEFAULT_TITLE_REQUIRED" else null
+    }
+    private val automaticEvents = ContentAsset(AUTO_EVENTS_FILE, V4ContentParser::parseAutomaticEvents)
+    private val automaticRules = ContentAsset(AUTO_EVENTS_FILE, AutomaticEventParser::parse)
+    private val endings = ContentAsset(ENDINGS_FILE, V4ContentParser::parseEndings) {
+        if (it.count { ending -> ending.isDefault } != 1) "DEFAULT_ENDING_REQUIRED" else null
+    }
+    private val images = ContentAsset(IMAGE_IDS_FILE, { raw: String ->
+        val array = JSONArray(raw)
+        List(array.length()) { array.getJSONObject(it).toImageAsset() }
+    })
+    private val legacyEvents = ContentAsset(EVENTS_FILE, { raw: String ->
+        val array = JSONArray(raw)
+        List(array.length()) { array.getJSONObject(it).toGameEvent() }
+    })
 
-    /** 시나리오 PR의 플래그→인생 사실 카탈로그. 병합 전에는 빈 목록으로 안전하게 동작한다. */
-    fun loadLifeFactRules() = runCatching {
-        V4ContentParser.parseLifeFactRules(readAsset(LIFE_FACTS_FILE))
-    }.getOrElse { emptyList() }
+    val issues: List<ContentIssue> get() = loader.issues
+    val fingerprints: Map<String, String> get() = loader.fingerprints
 
-    fun loadTitles(): List<LifeTitle> = runCatching {
-        V4ContentParser.parseTitles(readAsset(TITLES_FILE))
-    }.getOrElse { emptyList() }
+    // Compatibility APIs keep callers that display optional/archived content safe. Play entry points
+    // must use loadPlayableContent(), which never treats failed required files as empty valid content.
+    fun loadPeriodDefinitions(): List<PeriodDefinition> = loader.load(periods).valueOrNull().orEmpty()
+    fun loadFocuses(): List<Focus> = loader.load(focuses).valueOrNull().orEmpty()
+    fun loadDecisionEvents(): List<DecisionEvent> = loader.load(decisions).valueOrNull().orEmpty()
+    fun loadLifeFactRules() = loader.load(facts).valueOrNull().orEmpty()
+    fun loadTitles(): List<LifeTitle> = loader.load(titles).valueOrNull().orEmpty()
+    fun loadAutomaticEvents() = loader.load(automaticEvents).valueOrNull().orEmpty()
+    fun loadAutomaticEventRules() = loader.load(automaticRules).valueOrNull().orEmpty()
 
-    fun loadAutomaticEvents() = runCatching {
-        V4ContentParser.parseAutomaticEvents(readAsset(AUTO_EVENTS_FILE))
-    }.getOrElse { emptyList() }
+    private val playable: ContentLoadResult<PlayableContent> by lazy {
+        val results = listOf(loader.load(periods), loader.load(focuses), loader.load(decisions),
+            loader.load(facts), loader.load(titles), loader.load(automaticEvents),
+            loader.load(endings), loader.load(automaticRules))
+        val failures = results.filterIsInstance<ContentLoadResult.Failed>().flatMap { it.issues }.distinct().toMutableList()
+        if (failures.isEmpty() && loadAutomaticEvents().map { it.eventId }.toSet() !=
+            loadAutomaticEventRules().map { it.event.eventId }.toSet()) {
+            failures += ContentIssue(AUTO_EVENTS_FILE, ContentFailureKind.VALIDATION,
+                "INCOMPLETE_AUTOMATIC_RULES", loader.fingerprints[AUTO_EVENTS_FILE])
+        }
+        if (failures.isNotEmpty()) ContentLoadResult.Failed(failures)
+        else ContentLoadResult.Ready(
+            PlayableContent(loadV4Content(), loadEndings(), loadAutomaticEventRules()),
+            loader.fingerprints,
+        )
+    }
+
+    fun loadPlayableContent(): ContentLoadResult<PlayableContent> = playable
 
     fun loadV4Content(): V4Content = V4Content(
         periods = loadPeriodDefinitions(),
@@ -57,25 +109,12 @@ class ContentRepository(
         automaticEvents = loadAutomaticEvents(),
     )
 
-    fun loadEvents(): List<GameEvent> = runCatching {
-        val array = JSONArray(readAsset(EVENTS_FILE))
-        List(array.length()) { index -> array.getJSONObject(index).toGameEvent() }
-    }.getOrElse { emptyList() }
-
-    fun loadEndings(): List<Ending> = runCatching {
-        V4ContentParser.parseEndings(readAsset(ENDINGS_FILE))
-    }.getOrElse { emptyList() }
-
-    fun loadImageAssets(): List<ImageAsset> = runCatching {
-        val array = JSONArray(readAsset(IMAGE_IDS_FILE))
-        List(array.length()) { index -> array.getJSONObject(index).toImageAsset() }
-    }.getOrElse { emptyList() }
+    fun loadEvents(): List<GameEvent> = loader.load(legacyEvents).valueOrNull().orEmpty()
+    fun loadEndings(): List<Ending> = loader.load(endings).valueOrNull().orEmpty()
+    fun loadImageAssets(): List<ImageAsset> = loader.load(images).valueOrNull().orEmpty()
 
     fun findImageAsset(imageId: String): ImageAsset? =
         loadImageAssets().firstOrNull { it.imageId == imageId }
-
-    private fun readAsset(fileName: String): String =
-        context.assets.open(fileName).bufferedReader(Charsets.UTF_8).use { it.readText() }
 
     private fun JSONObject.toGameEvent(): GameEvent = GameEvent(
         eventId = getString("eventId"),

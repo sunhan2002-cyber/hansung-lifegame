@@ -1,0 +1,249 @@
+{
+  "schemaVersion": 1,
+  "eventId": "love_family_meet_01",
+  "status": "PASS",
+  "approvalScope": "Current source event and exact PNG; native phone and 360x740 Compose scene/play visual review",
+  "reviewer": "Codex AI / plan_audit",
+  "reviewerType": "AI",
+  "reviewDate": "2026-11-19",
+  "sourceEventHash": "6193a7a6d173501e1550f0f377839d351b1635b0a8f032eedf7ad9c8880411c6",
+  "sourceEventSnapshot": {
+    "eventId": "love_family_meet_01",
+    "stage": "ADULT",
+    "type": "NORMAL",
+    "isFallback": false,
+    "isMilestone": true,
+    "title": "양가 인사",
+    "text": "상견례 날. 한정식집 방 안에 양가 부모님이 처음 마주 앉았다. 엄마가 식탁 밑으로 내 손을 꼭 잡았다. 아무도 먼저 수저를 들지 않는다.",
+    "imageId": "img_love_family_meet_01_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [
+        "engaged"
+      ],
+      "blockedFlags": [
+        "families_met",
+        "married",
+        "divorced",
+        "soc_path"
+      ]
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "내가 먼저 양가 부모님을 소개한다",
+        "statDelta": {
+          "사회성": 3
+        },
+        "resultText": "준비한 소개말은 반도 못 했다. 그래도 두 집 아버지가 같은 낚시터를 다닌다는 걸 알아냈다. 분위기가 풀렸다.",
+        "addFlags": [
+          "families_met",
+          "family_bond"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "a_warm",
+            "text": "준비한 소개말은 반도 못 했다. 그래도 두 집 아버지가 같은 낚시터를 다닌다는 걸 알아냈다. 분위기가 풀렸다.",
+            "chance": 70,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "사회성": 3
+            },
+            "addFlags": [
+              "families_met",
+              "family_bond"
+            ]
+          },
+          {
+            "outcomeId": "a_stiff",
+            "text": "소개는 매끄러웠는데 대화는 날씨에서 멈췄다. 그래도 결혼 날짜는 정해졌다.",
+            "chance": 30,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "사회성": 1
+            },
+            "addFlags": [
+              "families_met"
+            ]
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "관계 단계 전환점 — 연애·결혼·자녀는 능력치 자격이 아니라 의사 결정이라 잠그지 않고, 차이는 결과 분기와 후속 사실로 반영",
+        "conditionReview": "open_turning_point",
+        "conditionBasis": "week13_love_line"
+      },
+      {
+        "choiceId": "B",
+        "label": "연인이 준비한 이야기에 맞장구친다",
+        "statDelta": {
+          "사회성": 2,
+          "행복": 1
+        },
+        "resultText": "연인이 이야기를 꺼낼 때마다 내가 웃음을 보탰다. 끝나고 양가 어머니가 동시에 말했다. '둘이 잘 맞네.'",
+        "addFlags": [
+          "families_met"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "b_team",
+            "text": "연인이 이야기를 꺼낼 때마다 내가 웃음을 보탰다. 끝나고 양가 어머니가 동시에 말했다. '둘이 잘 맞네.'",
+            "chance": 100,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "사회성": 2,
+              "행복": 1
+            },
+            "addFlags": [
+              "families_met"
+            ]
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "관계 단계 전환점 — 연애·결혼·자녀는 능력치 자격이 아니라 의사 결정이라 잠그지 않고, 차이는 결과 분기와 후속 사실로 반영",
+        "conditionReview": "open_turning_point",
+        "conditionBasis": "week13_love_line"
+      },
+      {
+        "choiceId": "C",
+        "label": "긴장해서 물을 연거푸 세 잔 마신다",
+        "statDelta": {
+          "행복": 1
+        },
+        "resultText": "화장실을 네 번 다녀왔다. 돌아올 때마다 분위기가 조금씩 좋아져 있었다. 나만 빼고 다들 친해졌다.",
+        "addFlags": [
+          "families_met"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "c_water",
+            "text": "화장실을 네 번 다녀왔다. 돌아올 때마다 분위기가 조금씩 좋아져 있었다. 나만 빼고 다들 친해졌다.",
+            "chance": 60,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 1
+            },
+            "addFlags": [
+              "families_met"
+            ]
+          },
+          {
+            "outcomeId": "c_spill",
+            "text": "네 번째 잔을 엎질렀다. 사돈어른 바지에. 그 이야기는 결혼식 축사에 들어갔다.",
+            "chance": 40,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "사회성": -1,
+              "행복": 1
+            },
+            "addFlags": [
+              "families_met",
+              "family_memory"
+            ]
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "관계 단계 전환점 — 연애·결혼·자녀는 능력치 자격이 아니라 의사 결정이라 잠그지 않고, 차이는 결과 분기와 후속 사실로 반영",
+        "conditionReview": "open_turning_point",
+        "conditionBasis": "week13_love_line"
+      }
+    ],
+    "priority": 0,
+    "kind": "MILESTONE",
+    "periods": [
+      "YOUNG_ADULT",
+      "MIDDLE",
+      "OLD_AGE"
+    ],
+    "weight": 1,
+    "view": "FIRST_PERSON",
+    "pathRole": "러브라인 4-2단계 — 결혼 전 상견례(결혼 후 가족 모임과 구분)",
+    "followUps": [
+      "love_wedding_01"
+    ]
+  },
+  "sourceReadScope": "Title, full text, conditions, all choices, all outcomes including flags/stat deltas, periods and follow-ups directly read before visual judgement.",
+  "sourceImage": {
+    "path": "app/src/main/assets/images/img_love_family_meet_01_001.png",
+    "sha256": "e2e085101cdd701d50396bb05698498f7a1820605cf4cbac8b6aec1399fb60c9",
+    "width": 941,
+    "height": 1672
+  },
+  "generationManifest": "docs/refactor/art-candidates/generated-love-20261119.json",
+  "selectedGenerationOutput": "C:\\Users\\jk030\\.codex\\generated_images\\01a1f1bc-6c39-7a10-a591-0d1f4e5cef6b\\exec-3ee049e3-96af-43e7-addc-da2e39c946fa.png",
+  "exactGenerationPromptSha256": "90fe04af42435e49b8db14567b42e3ddb5279fac467df7e340a32d781b829bd7",
+  "presentationMetadata": [],
+  "captures": [
+    {
+      "path": "build/refactor/after/ten-art-native/love_family_meet_01_phone_scene.png",
+      "sha256": "2a020f2920bb72907a80e8146e80ebe9ddff9da15154a3ed222322bd8b3c0086",
+      "width": 1080,
+      "height": 2400,
+      "screen": "phone",
+      "mode": "scene",
+      "cropReport": {
+        "eventId": "love_family_meet_01",
+        "imageId": "img_love_family_meet_01_001",
+        "assetPath": "img_love_family_meet_01_001.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/ten-art-native/love_family_meet_01_phone_play.png",
+      "sha256": "8c963d208a2bdb4f3f135abdada4d7735f069f25b1992f50034c789e3ba39f20",
+      "width": 1080,
+      "height": 2400,
+      "screen": "phone",
+      "mode": "play",
+      "cropReport": null
+    },
+    {
+      "path": "build/refactor/after/ten-art-native/love_family_meet_01_360x740_scene.png",
+      "sha256": "7baf90ee79cbce7ce01f4b16f9f6c852a3daf090bbce9eacfb86cf6089675dad",
+      "width": 945,
+      "height": 1943,
+      "screen": "360x740",
+      "mode": "scene",
+      "cropReport": {
+        "eventId": "love_family_meet_01",
+        "imageId": "img_love_family_meet_01_001",
+        "assetPath": "img_love_family_meet_01_001.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/ten-art-native/love_family_meet_01_360x740_play.png",
+      "sha256": "5a7355201844dbc2ca2822daecb63faeb5d365b575dcdf8f5f4aa0a8bacc94cb",
+      "width": 945,
+      "height": 1943,
+      "screen": "360x740",
+      "mode": "play",
+      "cropReport": null
+    }
+  ],
+  "semanticObservation": "상견례 식탁에서 숟가락을 들기 전의 긴장과 식탁 아래 어머니가 플레이어 손을 잡는 현재 행동을 확인했다. 맞은편 부모 둘과 옆 어머니가 보이고 다른 가족은 화면 밖이다. 물을 쏟음·갈등 해소·결혼 확정 결과가 없다.",
+  "cropObservation": "phone/small 모두 맞은편 두 부모 얼굴과 핵심인 식탁 아래 손 접촉이 남는다. 옆 어머니는 의도된 일부 실루엣이며 얼굴 전체를 보존한다고 주장하지 않는다.",
+  "uiObservation": "phone의 제목·본문·세 선택지는 읽힌다. small 초기 viewport에서 C 일부가 footer 아래에 있으므로 이 정지 캡처만으로 C 스크롤 도달성을 인증하지 않는다.",
+  "reviewMethod": "Codex AI directly inspected full source PNG and each of four unmodified native capture PNGs using view_image. This is an AI review, not a named human approval.",
+  "nativeMethod": "SceneCropReviewTest renders production DecisionScreen with current parsed event and actual routing/PixelAssetLoader in Android Compose instrumentation. Scene captures compare against designated crop >=0.95. The test uses a fixture play state and does not perform a complete game progression.",
+  "testSource": "app/src/androidTest/java/com/example/lifegame/ui/SceneCropReviewTest.kt",
+  "nativeRunLog": "build/refactor/scene-effects-and-ten-art.log",
+  "limitations": [
+    "Android emulator/Compose capture, not a physical device test.",
+    "Fixed reviewed phone and 360x740 sizes; no claim for every aspect ratio or font scale.",
+    "Visual art acceptance does not certify choice scrolling, TalkBack, or game-flow state transitions."
+  ]
+}

@@ -41,6 +41,9 @@ def audit(events, baseline, rows, routing, catalog, images, groups=None):
         if not key or count != 1: errors.append(f'invalid/duplicate group: {key}')
     by_group = {g['groupId']:g for g in (groups or []) if g.get('groupId')}
     approved = set()
+    presentation_file = images.parent / 'image_presentation.json'
+    presentations = {m['assetPath']: m.get('portraitVariant', {}) for m in
+                     json.loads(presentation_file.read_text(encoding='utf-8-sig'))['images']} if presentation_file.exists() else {}
     for group_id,g in by_group.items():
         if g.get('approvalStatus') != 'APPROVED': continue
         path = g.get('assetPath','')
@@ -59,6 +62,16 @@ def audit(events, baseline, rows, routing, catalog, images, groups=None):
         if assets.get(g.get('imageId')) != path:
             errors.append(f'approved group is not routed: {group_id}')
             continue
+        if 'approvedPresentation' in g:
+            displayed = g['approvedPresentation']
+            active = presentations.get(path, {})
+            variant_path = displayed.get('assetPath', '')
+            if (not safe_path(variant_path) or active.get('assetPath') != variant_path
+                    or active.get('sha256') != displayed.get('sha256')
+                    or not (images / variant_path).is_file()
+                    or hashlib.sha256((images / variant_path).read_bytes()).hexdigest() != displayed.get('sha256')):
+                errors.append(f'approved presentation changed: {group_id}')
+                continue
         generic_ids = set(routing.get('statScenes',{}).values()) | set(routing.get('periodScenes',{}).values()) | set(routing.get('periodPortraits',{}).values())
         if g.get('imageId') in generic_ids:
             errors.append(f'generic fallback is not dedicated event completion: {group_id}')
@@ -89,6 +102,8 @@ def audit(events, baseline, rows, routing, catalog, images, groups=None):
         group_id = row.get('approvedGroupId','')
         group = by_group.get(group_id,{})
         reasons = []
+        if row.get('productionStatus') == 'PORTRAIT_NATIVE_AI_REVIEWED' and not group.get('approvedPresentation'):
+            reasons.append('approved presentation fingerprint missing')
         if row.get('classificationStatus') != 'APPROVED': reasons.append('classification not approved')
         if not row.get('semanticReviewer'): reasons.append('semantic cross review pending')
         if not row.get('visualReviewer'): reasons.append('visual cross review pending')

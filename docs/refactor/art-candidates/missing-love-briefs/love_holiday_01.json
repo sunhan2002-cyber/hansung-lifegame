@@ -1,0 +1,220 @@
+{
+  "schemaVersion": 1,
+  "eventId": "love_holiday_01",
+  "title": "결혼 후 첫 명절",
+  "imageId": "img_love_holiday_01_001",
+  "status": "READY_FOR_GENERATION_NOT_ART_APPROVAL",
+  "author": "Codex AI",
+  "date": "2026-11-19",
+  "generationPriority": 8,
+  "currentAcceptanceStatus": "MISSING_PNG",
+  "sourceEventHash": "6389b56c0d18294cc136edeac1d9950cf6325e9074e8e7981bd0bdbaf4266b73",
+  "sourceEventPath": "app/src/main/assets/events.sample.json",
+  "sourceEventSnapshot": {
+    "eventId": "love_holiday_01",
+    "stage": "ADULT",
+    "type": "NORMAL",
+    "isFallback": false,
+    "isMilestone": false,
+    "title": "결혼 후 첫 명절",
+    "text": "결혼 후 첫 명절. 배우자네 부엌에 들어서자 처음 보는 친척 열두 명이 동시에 나를 봤다. \"{nameCall} 왔구나! 전 부칠 줄 알아?\"",
+    "imageId": "img_love_holiday_01_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [
+        "married"
+      ],
+      "blockedFlags": [
+        "divorced"
+      ]
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "앞치마를 매고 전을 부친다",
+        "statDelta": {
+          "사회성": 3
+        },
+        "resultText": "동그랑땡 서른 개를 부쳤다. 모양은 제각각이었다. 큰어머니가 제일 못생긴 걸 골라 드셨다.",
+        "addFlags": [
+          "family_bond"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "a_cook",
+            "text": "동그랑땡 서른 개를 부쳤다. 모양은 제각각이었다. 큰어머니가 제일 못생긴 걸 골라 드셨다.",
+            "chance": 70,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "사회성": 3
+            },
+            "addFlags": [
+              "family_bond"
+            ]
+          },
+          {
+            "outcomeId": "a_burn",
+            "text": "첫 판을 다 태웠다. 그 뒤로 명절마다 '전 태운 사람'으로 불린다.",
+            "chance": 30,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "사회성": 1,
+              "행복": 1
+            },
+            "addFlags": [
+              "family_memory"
+            ]
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week13_love_line"
+      },
+      {
+        "choiceId": "B",
+        "label": "어르신들 옆에 앉아 이야기를 듣는다",
+        "statDelta": {
+          "사회성": 2,
+          "행복": 2
+        },
+        "resultText": "배우자의 어릴 적 이야기를 세 시간 들었다. 집에 오는 길에 배우자가 물었다. '무슨 얘기 들었어?' 웃음만 나왔다.",
+        "addFlags": [
+          "family_bond"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "b_listen",
+            "text": "배우자의 어릴 적 이야기를 세 시간 들었다. 집에 오는 길에 배우자가 물었다. '무슨 얘기 들었어?' 웃음만 나왔다.",
+            "chance": 100,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "사회성": 2,
+              "행복": 2
+            },
+            "addFlags": [
+              "family_bond"
+            ]
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week13_love_line"
+      },
+      {
+        "choiceId": "C",
+        "label": "조카들과 윷놀이 판을 벌인다",
+        "statDelta": {
+          "행복": 2,
+          "경제력": -1
+        },
+        "resultText": "판돈 없이 시작한 윷놀이가 세뱃돈 내기로 끝났다. 내가 제일 많이 잃었다.",
+        "addFlags": [
+          "family_memory"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "c_lose",
+            "text": "판돈 없이 시작한 윷놀이가 세뱃돈 내기로 끝났다. 내가 제일 많이 잃었다.",
+            "chance": 60,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 2,
+              "경제력": -1
+            },
+            "addFlags": [
+              "family_memory"
+            ]
+          },
+          {
+            "outcomeId": "c_win",
+            "text": "모가 세 번 나왔다. 조카들이 나를 '윷 신'이라고 부른다.",
+            "chance": 40,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 2,
+              "운": 1
+            },
+            "addFlags": [
+              "family_memory"
+            ]
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week13_love_line"
+      }
+    ],
+    "priority": 0,
+    "kind": "INCIDENT",
+    "periods": [
+      "YOUNG_ADULT",
+      "MIDDLE"
+    ],
+    "weight": 30,
+    "view": "FIRST_PERSON",
+    "pathRole": "결혼 후 가족 모임 — 결혼 전 상견례와 구분",
+    "followUps": []
+  },
+  "reviewScope": "Current complete event, conditions, every choice including legacy fields, all outcomes, probabilities, deltas and flags read for pre-choice art specification. No new image has been generated or approved by this brief.",
+  "reviewedChoiceIds": [
+    "A",
+    "B",
+    "C"
+  ],
+  "reviewedOutcomeIds": [
+    "a_cook",
+    "a_burn",
+    "b_listen",
+    "c_lose",
+    "c_win"
+  ],
+  "existingArtBriefPath": "docs/assignments/20261031/submissions/김선한_분류합본.csv",
+  "existingArtBriefSnapshot": {
+    "place": "배우자 본가 부엌",
+    "mainAction": "결혼 후 첫 명절에 친척들과 마주한다",
+    "requiredObjects": "전 부치는 프라이팬",
+    "peopleAndAge": "배우자 친척들",
+    "timeOfDay": "명절 낮",
+    "approvedPerspective": "FIRST_PERSON",
+    "reuseOrNewReason": "NEW: 13주차 러브라인 신규 사건. 관계 단계(연인·약혼·배우자·자녀)를 선택 전보다 앞서 보여 주지 않는 전용 장면 필요"
+  },
+  "requestedAssetPath": "app/src/main/assets/images/img_love_holiday_01_001.png",
+  "preChoiceState": "결혼 후 첫 명절에 배우자 본가 부엌에 막 들어선 순간. 처음 보는 친척 열두 명이 돌아보고 전 부칠 줄 아는지 묻는다. 플레이어는 아직 조리·이야기·윷놀이를 선택하지 않았다.",
+  "composition": "부엌 입구의 1인칭. 중앙 조리대의 프라이팬·준비 재료와 돌아보는 친척 무리를 함께 보되 가장자리/뒤편의 열두 친척으로 붐비는 집을 표현. 플레이어 손에 조리 도구를 쥐여 주지 않는다.",
+  "ageAndAppearance": "플레이어는 청년~중년 성인. 친척은 다양한 성인·어르신과 배경 아이 일부가 가능하나 플레이어 자녀로 단정하지 않는다. 특정 성별에게 조리 역할을 고정하지 않는다.",
+  "forbiddenOutcomes": [
+    "플레이어 앞치마 착용·전 뒤집기 완료",
+    "태운 첫 판·완성 동그랑땡 30개",
+    "윷놀이 판·판돈·세뱃돈 결과",
+    "어르신 옆에서 이미 긴 이야기를 듣는 장면",
+    "플레이어 얼굴·전신"
+  ],
+  "briefCorrections": [
+    "필수 프라이팬은 조리대의 준비 상태로 두고 선택 A의 조리 행동을 미리 그리지 않는다. 열두 친척은 개별 얼굴보다 공간의 붐빔과 시선으로 표현한다."
+  ],
+  "generationPrompt": "Create one portrait 9:16 full-bleed game background, warm restrained Korean everyday-life pixel-art illustration. Crisp deliberate pixel clusters, coherent anatomy, softly separated light and shadow, not photorealism and not a UI mockup. Strict first-person player viewpoint: no player face, back of head, full player body, reflection, selfie or framed portrait of the player. Only naturally placed player hands or forearms may enter the frame. The player can be male or female; hands, clothing and visible partner styling must not encode a fixed player gender or a uniquely named past partner. All romantic participants are clearly adults; do not depict school-age children as romantic partners. Use age-flexible adult styling that can fit young adulthood or middle adulthood. If a partner must be visible, show non-identifying partial profile, cropped upper torso or hands rather than an identity-defining portrait. No readable text, letters, digits, logos, subtitles, speech bubbles, interface panels, progress indicators or button graphics. Any phone message cue must be an abstract non-text shape and never legible text. Keep all story-critical objects together inside the central 60% of the portrait width and middle 60% of height; leave the bottom 22% visually quiet for the game overlay, without drawing an overlay. This is the instant before the player chooses. Show the stated present situation only, with no success, failure, marriage, pregnancy, reconciliation, breakup or future achievement unless already established in the source conditions. \nSCENE: First-person view just entering the spouses family kitchen on the couples FIRST holiday after marriage. A busy warm Korean home: twelve relatives in a coherent mix of clearly separated partial figures at different depths turn toward the doorway, with adults and elders most prominent. Avoid a row of twelve detailed faces; keep anatomy natural. Centrally show a clean frying pan resting on the cooking surface and ingredients ready for jeon. The player has only arrived and has not put on an apron or picked up a utensil. Friendly yet slightly overwhelming attention, daylight, no completed or burnt batch, no player cooking, no yut game, gambling money, child claimed as the players own, readable banners or dialogue bubbles.",
+  "deliveryAndReview": {
+    "format": "PNG, portrait 9:16",
+    "originalAssets": "Preserve existing artwork and approval history. This is a missing-art candidate, not a replacement approval.",
+    "requiredChecks": [
+      "Read current event hash again before generation; stale briefs must be reread.",
+      "Inspect full image, anatomy, all required objects and absence of choice outcomes.",
+      "Inspect actual native portrait presentation and UI overlay at phone and narrow viewport.",
+      "Record image SHA, exact generation prompt, truthful AI producer/reviewer and per-event rationale before any separate approval action."
+    ],
+    "approvalOrManifestChanged": false
+  }
+}

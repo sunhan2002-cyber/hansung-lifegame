@@ -57,6 +57,7 @@ import com.example.lifegame.ui.avatar.PlayerAvatar
 import com.example.lifegame.ui.images.rememberPixelAsset
 import androidx.compose.ui.platform.LocalDensity
 import com.example.lifegame.ui.components.InkButton
+import com.example.lifegame.ui.components.CompletionSealHeader
 import com.example.lifegame.ui.components.LifeMutedOnDark
 import com.example.lifegame.ui.components.LifePaperOnDark
 import com.example.lifegame.ui.components.LineButton
@@ -103,6 +104,8 @@ fun EndingFlowScreen(
     initialStep: EndingStep = EndingStep.RECAP,
 ) {
     var step by rememberSaveable(record.runId) { mutableStateOf(initialStep) }
+    // Presentation-only consumption survives replay and Activity recreation. Archived records open quietly.
+    var completionPresented by rememberSaveable(record.runId) { mutableStateOf(initialStep == EndingStep.CERTIFICATE) }
     val look = futureLook?.takeIf { it.key == record.runId }
 
     BackHandler(enabled = step != initialStep) {
@@ -132,6 +135,8 @@ fun EndingFlowScreen(
             onReplay = { step = EndingStep.RECAP },
             onDone = onDone,
             doneLabel = doneLabel,
+            celebrate = !completionPresented,
+            onCelebrationConsumed = { completionPresented = true },
             modifier = modifier,
         )
     }
@@ -386,6 +391,8 @@ private fun CertificateView(
     onReplay: () -> Unit,
     onDone: () -> Unit,
     doneLabel: String,
+    celebrate: Boolean,
+    onCelebrationConsumed: () -> Unit,
     modifier: Modifier = Modifier,
 ) {
     Column(
@@ -402,13 +409,11 @@ private fun CertificateView(
                 .testTag("certificate"),
             verticalArrangement = Arrangement.spacedBy(14.dp),
         ) {
-            Text(
-                text = "인생기록증",
-                color = LifeGameInkSecondary,
-                fontSize = 14.sp,
-                fontWeight = FontWeight.Bold,
-                letterSpacing = 2.sp,
-                modifier = Modifier.semantics { heading() },
+            CompletionSealHeader(
+                runId = record.runId,
+                titleEarned = record.title != null,
+                celebrate = celebrate,
+                onConsumed = onCelebrationConsumed,
             )
             val shape = RoundedCornerShape(12.dp)
             Row(
@@ -528,6 +533,44 @@ private fun LifeExtensionSections(record: LifeRecordUi) {
                     fontSize = 14.sp,
                     lineHeight = 20.sp,
                     modifier = Modifier.testTag("certificate_npc_${npc.npcId}"),
+                )
+            }
+        }
+    }
+    record.partnerStory?.let { story ->
+        // 2026-11-20: 연애 사건과 같은 상대, 함께한 연애 사건, 실제 결혼식 결과를 한 칸에. 기록에 있는 것만 보여 준다.
+        Column(Modifier.fillMaxWidth().testTag("certificate_partner"), verticalArrangement = Arrangement.spacedBy(6.dp)) {
+            CertificateSectionTitle("인연")
+            val headline = listOfNotNull(
+                story.partner?.let { "${it.label}(${it.originPeriodName} ${it.originYear}번째 해)" },
+                story.status.ifBlank { null },
+            ).joinToString(" · ")
+            if (headline.isNotBlank()) {
+                Text(
+                    text = headline,
+                    color = LifeGameInk,
+                    fontSize = 15.sp,
+                    lineHeight = 22.sp,
+                    modifier = Modifier.testTag("certificate_partner_name"),
+                )
+            }
+            story.moments.takeLast(4).forEach { moment ->
+                Text(
+                    text = "${moment.periodName} ${moment.year}번째 해 「${moment.title}」 · ${moment.choiceLabel}",
+                    color = LifeGameInkSecondary,
+                    fontSize = 14.sp,
+                    lineHeight = 20.sp,
+                    modifier = Modifier.testTag("certificate_partner_moment_${moment.eventId}"),
+                )
+            }
+            story.wedding?.let { wedding ->
+                Text(
+                    text = "결혼식 · ${wedding.periodName} ${wedding.year}번째 해 「${wedding.title}」 · ${wedding.choiceLabel}",
+                    color = LifeGameInk,
+                    fontSize = 14.sp,
+                    fontWeight = FontWeight.Bold,
+                    lineHeight = 20.sp,
+                    modifier = Modifier.testTag("certificate_wedding"),
                 )
             }
         }

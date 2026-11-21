@@ -23,6 +23,14 @@ import org.junit.Test
 
 /** 10주차: 건강 색 구간 · 완료 기록 → 기록증 · 주마등 · 칭호 수집 변환 */
 class LifeRecordUiTest {
+    @Test fun recordKeepsReadablePeriodNamesWhenOptionalDisplayDefinitionsAreUnavailable() {
+        val ui = buildLifeRecordUi(record(), RecordContent(emptyList()))
+        assertEquals("노년기", ui.finalPeriodName)
+        assertFalse(ui.summary.lifeLine.contains("OLD_AGE"))
+        assertFalse(ui.summary.endedAt.contains("OLD_AGE"))
+        assertEquals("노년기까지 삶", record().toFinishedLifeUi(emptyList()).endedAt)
+    }
+
     private val assets = File("src/main/assets")
     private val periods = V4ContentParser.parsePeriods(File(assets, "periods.sample.json").readText())
     private val routing = ImageRouting.parse(File(assets, "image_routing.json").readText())

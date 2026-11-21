@@ -1,0 +1,71 @@
+{
+  "eventId": "path_int_08",
+  "reviewerType": "AI",
+  "scope": "Portrait phone and small-phone presentation",
+  "sourceEventHash": "0ecc9cb62d5d3c34effe161fe5fbe6c82fd8fab7d284b891571037cb1e86c78a",
+  "sourceReview": "docs/refactor/art-candidates/portrait-integration/path_int_08.json",
+  "sourceSha256": "dbdc6bdb19dab36b0e0635bcb13986b28e83fbd3f5110cef5932e7d254d12ab1",
+  "displayedVariant": {
+    "assetPath": "presentation/portraits/img_path_int_08_001_portrait_v1.png",
+    "sha256": "09732b407055928aac51b918c78a17940c462d2bb3c6ecc04c13e3e42e4cbe01",
+    "width": 941,
+    "height": 1672,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root/effects_tech)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/path_int_08.json"
+  },
+  "nativeCaptures": [
+    {
+      "path": "build/refactor/after/portrait-fortythree-native/path_int_08_phone_scene.png",
+      "sha256": "0894d07fe01cf51a8a5c7a4e9f243aa9833d198a2834943711d12b40e5c36633",
+      "crop": {
+        "eventId": "path_int_08",
+        "imageId": "img_path_int_08_001",
+        "assetPath": "presentation/portraits/img_path_int_08_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/portrait-fortythree-native/path_int_08_phone_play.png",
+      "sha256": "17419d9dd3d8023b9b4d936e35f41c871a957ac95b2bd195632126a38e8d195d",
+      "crop": {
+        "eventId": "path_int_08",
+        "imageId": "img_path_int_08_001",
+        "assetPath": "presentation/portraits/img_path_int_08_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/portrait-fortythree-native/path_int_08_360x740_scene.png",
+      "sha256": "6b67a941ac236fc5c9baede84d52b0b02794e4a0ff003a0c497fb0962f142de0",
+      "crop": {
+        "eventId": "path_int_08",
+        "imageId": "img_path_int_08_001",
+        "assetPath": "presentation/portraits/img_path_int_08_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/portrait-fortythree-native/path_int_08_360x740_play.png",
+      "sha256": "9c2bd3ccbed48da5918da8886a638048d1e30e44fa8370e8a8024c7a4707a8de",
+      "crop": {
+        "eventId": "path_int_08",
+        "imageId": "img_path_int_08_001",
+        "assetPath": "presentation/portraits/img_path_int_08_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    }
+  ],
+  "observation": "마감 노트북과 가족 연락 화면이 책상 위에 함께 있다.",
+  "decision": "PASS",
+  "method": "Individual visual inspection of both scene and gameplay frames together with producer semantic/source review and device capture match."
+}

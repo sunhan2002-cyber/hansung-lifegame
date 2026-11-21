@@ -1,0 +1,248 @@
+{
+  "schemaVersion": 1,
+  "eventId": "love_reunion_music",
+  "title": "연말 공연 포스터",
+  "imageId": "img_love_reunion_music_001",
+  "status": "READY_FOR_GENERATION_NOT_ART_APPROVAL",
+  "author": "Codex AI",
+  "date": "2026-11-19",
+  "generationPriority": 19,
+  "currentAcceptanceStatus": "MISSING_PNG",
+  "sourceEventHash": "d2f23238a827a7f97d3a8a28c43f1d4aaea29075fb1cfef7e6e462026246c03c",
+  "sourceEventPath": "app/src/main/assets/events.sample.json",
+  "sourceEventSnapshot": {
+    "eventId": "love_reunion_music",
+    "stage": "ADULT",
+    "type": "NORMAL",
+    "isFallback": false,
+    "isMilestone": false,
+    "title": "연말 공연 포스터",
+    "text": "연말 공연 포스터에 헤어진 그 사람 이름이 있었다. 첫 곡은 우리가 같이 연습하던 노래였다.",
+    "imageId": "img_love_reunion_music_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [
+        "breakup_once",
+        "ex_music"
+      ],
+      "blockedFlags": [
+        "dating",
+        "engaged",
+        "married"
+      ]
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "무대에 올라가 반주를 맞춘다",
+        "statDelta": {
+          "행복": 3,
+          "사회성": 1
+        },
+        "resultText": "박자가 딱 맞았다. 공연이 끝나고 그 사람이 말했다. '역시 너랑 해야 맞아.'",
+        "addFlags": [
+          "dating",
+          "rel_steady",
+          "partner_music",
+          "reunited"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "a_again",
+            "text": "박자가 딱 맞았다. 공연이 끝나고 그 사람이 말했다. '역시 너랑 해야 맞아.'",
+            "chance": 60,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 3,
+              "사회성": 1
+            },
+            "addFlags": [
+              "dating",
+              "rel_steady",
+              "partner_music",
+              "reunited"
+            ],
+            "removeFlags": [
+              "ex_music"
+            ]
+          },
+          {
+            "outcomeId": "a_bandmate",
+            "text": "마지막 소절까지 맞췄다. 무대 뒤에서 서로 수고했다고만 했다. 좋은 연주 동료로 남았다.",
+            "chance": 40,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "사회성": 2
+            },
+            "addFlags": [
+              "closure"
+            ],
+            "removeFlags": [
+              "ex_music"
+            ]
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week13_love_line"
+      },
+      {
+        "choiceId": "B",
+        "label": "객석에서 박수만 친다",
+        "statDelta": {
+          "행복": 1
+        },
+        "resultText": "제일 크게 박수를 쳤다. 그 사람이 객석을 보고 고개를 숙였다.",
+        "addFlags": [
+          "closure"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "b_clap",
+            "text": "제일 크게 박수를 쳤다. 그 사람이 객석을 보고 고개를 숙였다.",
+            "chance": 100,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 1
+            },
+            "addFlags": [
+              "closure"
+            ],
+            "removeFlags": [
+              "ex_music"
+            ]
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week13_love_line"
+      },
+      {
+        "choiceId": "C",
+        "label": "앙코르를 혼자 외친다",
+        "statDelta": {
+          "행복": 3
+        },
+        "resultText": "앙코르 곡에는 내 반주가 필요했다. 무대 위에서 둘이 다시 웃었다.",
+        "addFlags": [
+          "dating",
+          "rel_steady",
+          "partner_music",
+          "reunited"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "c_encore",
+            "text": "앙코르 곡에는 내 반주가 필요했다. 무대 위에서 둘이 다시 웃었다.",
+            "chance": 50,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 3
+            },
+            "addFlags": [
+              "dating",
+              "rel_steady",
+              "partner_music",
+              "reunited"
+            ],
+            "removeFlags": [
+              "ex_music"
+            ]
+          },
+          {
+            "outcomeId": "c_alone",
+            "text": "아무도 따라 외치지 않았다. 혼자 외친 앙코르가 공연장에 울렸다.",
+            "chance": 50,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": -1
+            },
+            "addFlags": [
+              "closure"
+            ],
+            "removeFlags": [
+              "ex_music"
+            ]
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week13_love_line"
+      }
+    ],
+    "priority": 0,
+    "kind": "INCIDENT",
+    "periods": [
+      "YOUNG_ADULT",
+      "MIDDLE"
+    ],
+    "weight": 30,
+    "view": "FIRST_PERSON",
+    "pathRole": "러브라인 재회(음악 후보)",
+    "followUps": [
+      "love_wedding_music"
+    ]
+  },
+  "reviewScope": "Current complete event, conditions, every choice including legacy fields, all outcomes, probabilities, deltas and flags read for pre-choice art specification. No new image has been generated or approved by this brief.",
+  "reviewedChoiceIds": [
+    "A",
+    "B",
+    "C"
+  ],
+  "reviewedOutcomeIds": [
+    "a_again",
+    "a_bandmate",
+    "b_clap",
+    "c_encore",
+    "c_alone"
+  ],
+  "existingArtBriefPath": "docs/assignments/20261031/submissions/김선한_분류합본.csv",
+  "existingArtBriefSnapshot": {
+    "place": "작은 공연장 객석",
+    "mainAction": "헤어진 연주자의 무대를 본다",
+    "requiredObjects": "무대 조명과 마이크",
+    "peopleAndAge": "공연자와 관객",
+    "timeOfDay": "저녁",
+    "approvedPerspective": "FIRST_PERSON",
+    "reuseOrNewReason": "NEW: 13주차 러브라인 신규 사건. 관계 단계(연인·약혼·배우자·자녀)를 선택 전보다 앞서 보여 주지 않는 전용 장면 필요"
+  },
+  "requestedAssetPath": "app/src/main/assets/images/img_love_reunion_music_001.png",
+  "preChoiceState": "연말 공연장 객석에서 헤어진 연인의 연주를 본다. 첫 곡이 함께 연습하던 곡이다. 플레이어는 아직 무대에 오르거나 박수·앙코르를 선택하지 않았다.",
+  "composition": "작은 공연장 객석의 1인칭. 중앙에 무대의 성인 연주자, 마이크와 악기. 객석 테두리는 낮은 대비, 플레이어 악기/연주하는 손 없음.",
+  "ageAndAppearance": "청년~중년 성인 전 연인과 성인 관객. 플레이어 정체·성별 고정 없음. 공연자 얼굴은 작고 비식별.",
+  "forbiddenOutcomes": [
+    "플레이어가 무대에서 반주·앙코르 합주",
+    "박수 치는 플레이어 손·큰 환호",
+    "무대 뒤 대화·재결합",
+    "공연 종료 인사",
+    "읽을 수 있는 이름·포스터·노래 제목"
+  ],
+  "briefCorrections": [
+    "현재 장소는 객석이다. 공연 포스터의 전 연인 이름은 본문 정보로만 두고 이미지 텍스트를 넣지 않는다."
+  ],
+  "generationPrompt": "Create one portrait 9:16 full-bleed game background, warm restrained Korean everyday-life pixel-art illustration. Crisp deliberate pixel clusters, coherent anatomy, softly separated light and shadow, not photorealism and not a UI mockup. Strict first-person player viewpoint: no player face, back of head, full player body, reflection, selfie or framed portrait of the player. Only naturally placed player hands or forearms may enter the frame. The player can be male or female; hands, clothing and visible partner styling must not encode a fixed player gender or a uniquely named past partner. All romantic participants are clearly adults; do not depict school-age children as romantic partners. Use age-flexible adult styling that can fit young adulthood or middle adulthood. If a partner must be visible, show non-identifying partial profile, cropped upper torso or hands rather than an identity-defining portrait. No readable text, letters, digits, logos, subtitles, speech bubbles, interface panels, progress indicators or button graphics. Any phone message cue must be an abstract non-text shape and never legible text. Keep all story-critical objects together inside the central 60% of the portrait width and middle 60% of height; leave the bottom 22% visually quiet for the game overlay, without drawing an overlay. This is the instant before the player chooses. Show the stated present situation only, with no success, failure, marriage, pregnancy, reconciliation, breakup or future achievement unless already established in the source conditions. \nSCENE: A small Korean live-music venue during a year-end evening concert, viewed from an ordinary audience seat. An adult former partner is playing the first song on the softly lit stage, with a microphone and instrument visibly grouped at the centre. Their face is small and non-identifying; a few quiet adult audience silhouettes frame the lower sides. The player remains in the audience and has not joined the stage, applauded or called for an encore. No player hands performing or clapping, no duet, backstage conversation, bow after the show, reunion embrace, readable poster, artist name or song title. Intimate warm stage light and a still, undecided audience viewpoint.",
+  "deliveryAndReview": {
+    "format": "PNG, portrait 9:16",
+    "originalAssets": "Preserve existing artwork and approval history. This is a missing-art candidate, not a replacement approval.",
+    "requiredChecks": [
+      "Read current event hash again before generation; stale briefs must be reread.",
+      "Inspect full image, anatomy, all required objects and absence of choice outcomes.",
+      "Inspect actual native portrait presentation and UI overlay at phone and narrow viewport.",
+      "Record image SHA, exact generation prompt, truthful AI producer/reviewer and per-event rationale before any separate approval action."
+    ],
+    "approvalOrManifestChanged": false
+  }
+}

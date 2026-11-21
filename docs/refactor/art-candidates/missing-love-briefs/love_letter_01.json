@@ -1,0 +1,231 @@
+{
+  "schemaVersion": 1,
+  "eventId": "love_letter_01",
+  "title": "편지 친구의 전화",
+  "imageId": "img_love_letter_01_001",
+  "status": "READY_FOR_GENERATION_NOT_ART_APPROVAL",
+  "author": "Codex AI",
+  "date": "2026-11-19",
+  "generationPriority": 10,
+  "currentAcceptanceStatus": "MISSING_PNG",
+  "sourceEventHash": "c26bc87ac36127589808fc7f9a443eec49311835fef9ca1543127a28ff85431f",
+  "sourceEventPath": "app/src/main/assets/events.sample.json",
+  "sourceEventSnapshot": {
+    "eventId": "love_letter_01",
+    "stage": "ADULT",
+    "type": "NORMAL",
+    "isFallback": false,
+    "isMilestone": false,
+    "title": "편지 친구의 전화",
+    "text": "전역하고 첫 주말. 1년 넘게 편지를 주고받던 사람이 처음으로 전화를 걸었다. \"{nameCall}, 편지 말고 얼굴 보고 이야기할래?\"",
+    "imageId": "img_love_letter_01_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [
+        "letter_friend",
+        "military_done"
+      ],
+      "blockedFlags": [
+        "dating",
+        "engaged",
+        "married"
+      ]
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "만나자고 한다",
+        "statDelta": {
+          "행복": 3,
+          "사회성": 1
+        },
+        "resultText": "편지로는 수다쟁이였는데 만나니 둘 다 말이 없었다. 헤어질 때 그 사람이 쪽지를 건넸다. '다음엔 말로 할게.'",
+        "addFlags": [
+          "dating",
+          "dating__love_letter_01",
+          "partner_letter"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "a_meet",
+            "text": "편지로는 수다쟁이였는데 만나니 둘 다 말이 없었다. 헤어질 때 그 사람이 쪽지를 건넸다. '다음엔 말로 할게.'",
+            "chance": 70,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 3,
+              "사회성": 1
+            },
+            "addFlags": [
+              "dating",
+              "dating__love_letter_01",
+              "partner_letter"
+            ]
+          },
+          {
+            "outcomeId": "a_pen",
+            "text": "만나 보니 편지 속 사람과 조금 달랐다. 우리는 편지 친구로 남기로 했다.",
+            "chance": 30,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "사회성": 1
+            },
+            "addFlags": []
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week13_love_line"
+      },
+      {
+        "choiceId": "B",
+        "label": "편지로 답장한다",
+        "statDelta": {
+          "행복": 3
+        },
+        "resultText": "열세 번째 답장을 보냈다. 마지막 줄에 '이번엔 직접 만나자'고 썼다. 일주일 뒤 우체국 앞에서 만났다.",
+        "addFlags": [
+          "dating",
+          "dating__love_letter_01",
+          "partner_letter"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "b_letter",
+            "text": "열세 번째 답장을 보냈다. 마지막 줄에 '이번엔 직접 만나자'고 썼다. 일주일 뒤 우체국 앞에서 만났다.",
+            "chance": 100,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 3
+            },
+            "addFlags": [
+              "dating",
+              "dating__love_letter_01",
+              "partner_letter"
+            ]
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week13_love_line"
+      },
+      {
+        "choiceId": "C",
+        "label": "편지 속 맞춤법 틀린 곳을 모아서 보여 준다",
+        "statDelta": {
+          "행복": 3,
+          "지력": 1
+        },
+        "resultText": "그 사람이 빨간 펜을 꺼냈다. 내 편지에서 틀린 곳이 두 배 많았다. 둘 다 웃다가 저녁까지 먹었다.",
+        "addFlags": [
+          "dating",
+          "dating__love_letter_01",
+          "partner_letter"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "c_red",
+            "text": "그 사람이 빨간 펜을 꺼냈다. 내 편지에서 틀린 곳이 두 배 많았다. 둘 다 웃다가 저녁까지 먹었다.",
+            "chance": 55,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 3,
+              "지력": 1
+            },
+            "addFlags": [
+              "dating",
+              "dating__love_letter_01",
+              "partner_letter"
+            ]
+          },
+          {
+            "outcomeId": "c_mad",
+            "text": "그 사람이 조용히 말했다. '다음 편지는 안 쓸게.' 정말 오지 않았다.",
+            "chance": 45,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": -2
+            },
+            "addFlags": []
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week13_love_line"
+      }
+    ],
+    "priority": 0,
+    "kind": "INCIDENT",
+    "periods": [
+      "YOUNG_ADULT"
+    ],
+    "weight": 30,
+    "view": "FIRST_PERSON",
+    "pathRole": "러브라인 1단계(편지 후보) — 입영 통지서의 편지 친구와 만남",
+    "followUps": [
+      "love_date_01"
+    ]
+  },
+  "reviewScope": "Current complete event, conditions, every choice including legacy fields, all outcomes, probabilities, deltas and flags read for pre-choice art specification. No new image has been generated or approved by this brief.",
+  "reviewedChoiceIds": [
+    "A",
+    "B",
+    "C"
+  ],
+  "reviewedOutcomeIds": [
+    "a_meet",
+    "a_pen",
+    "b_letter",
+    "c_red",
+    "c_mad"
+  ],
+  "existingArtBriefPath": "docs/assignments/20261031/submissions/김선한_분류합본.csv",
+  "existingArtBriefSnapshot": {
+    "place": "자취방 책상",
+    "mainAction": "편지 친구의 첫 전화를 받는다",
+    "requiredObjects": "편지 묶음과 울리는 휴대폰",
+    "peopleAndAge": "주인공 혼자",
+    "timeOfDay": "주말 오전",
+    "approvedPerspective": "FIRST_PERSON",
+    "reuseOrNewReason": "NEW: 13주차 러브라인 신규 사건. 관계 단계(연인·약혼·배우자·자녀)를 선택 전보다 앞서 보여 주지 않는 전용 장면 필요"
+  },
+  "requestedAssetPath": "app/src/main/assets/images/img_love_letter_01_001.png",
+  "preChoiceState": "군 복무를 마친 뒤 첫 주말, 1년간 편지를 주고받던 사람이 처음 전화하여 대면 만남을 제안한다. 아직 연애나 만남에 응하지 않았다.",
+  "composition": "주말 오전 자취방 책상. 중앙에 주소·글씨가 보이지 않는 편지 묶음과 소리가 오는 휴대폰, 플레이어 손이 받거나 가까이 놓인 1인칭. 상대는 물리적으로 방 안에 없다.",
+  "ageAndAppearance": "이 사건은 YOUNG_ADULT만 허용. 청년 성인의 중립적인 손, 군 제대가 플레이어 성별을 시각적으로 고정하지 않게 군복·군번줄 배제.",
+  "forbiddenOutcomes": [
+    "이미 카페/우체국에서 직접 만남",
+    "대면 상대 얼굴",
+    "빨간 펜 첨삭·분노한 편지",
+    "13번째 답장을 쓰거나 부친 결과",
+    "연애 확정·손잡기",
+    "현역 군부대 장면"
+  ],
+  "briefCorrections": [
+    "첫 전화라는 현재 상태를 표현하되 휴대폰 UI/발신자 문자는 추상적인 빛으로만 표현한다. 이전 편지 묶음만 사용하고 새 답장 결과는 금지한다."
+  ],
+  "generationPrompt": "Create one portrait 9:16 full-bleed game background, warm restrained Korean everyday-life pixel-art illustration. Crisp deliberate pixel clusters, coherent anatomy, softly separated light and shadow, not photorealism and not a UI mockup. Strict first-person player viewpoint: no player face, back of head, full player body, reflection, selfie or framed portrait of the player. Only naturally placed player hands or forearms may enter the frame. The player can be male or female; hands, clothing and visible partner styling must not encode a fixed player gender or a uniquely named past partner. All romantic participants are clearly adults; do not depict school-age children as romantic partners. This event is restricted to young ADULTHOOD; depict an adult, never a school-age child. If a partner must be visible, show non-identifying partial profile, cropped upper torso or hands rather than an identity-defining portrait. No readable text, letters, digits, logos, subtitles, speech bubbles, interface panels, progress indicators or button graphics. Any phone message cue must be an abstract non-text shape and never legible text. Keep all story-critical objects together inside the central 60% of the portrait width and middle 60% of height; leave the bottom 22% visually quiet for the game overlay, without drawing an overlay. This is the instant before the player chooses. Show the stated present situation only, with no success, failure, marriage, pregnancy, reconciliation, breakup or future achievement unless already established in the source conditions. \nSCENE: A young ADULTS small rented room on a calm weekend morning after finishing military service. First-person view of a wooden desk holding a bundle of old plain envelopes and a softly lit mobile phone receiving the first voice call from a long-term pen pal. A naturally positioned neutral adult hand may rest beside or hold the phone. No readable address, handwriting, phone labels or caller portrait. Soft morning window light and tentative curiosity. The pen pal is NOT physically present; they have not met face-to-face or started dating. No uniform, barracks, red correction pen, new reply being written, post-office counter, restaurant date, embrace or ring.",
+  "deliveryAndReview": {
+    "format": "PNG, portrait 9:16",
+    "originalAssets": "Preserve existing artwork and approval history. This is a missing-art candidate, not a replacement approval.",
+    "requiredChecks": [
+      "Read current event hash again before generation; stale briefs must be reread.",
+      "Inspect full image, anatomy, all required objects and absence of choice outcomes.",
+      "Inspect actual native portrait presentation and UI overlay at phone and narrow viewport.",
+      "Record image SHA, exact generation prompt, truthful AI producer/reviewer and per-event rationale before any separate approval action."
+    ],
+    "approvalOrManifestChanged": false
+  }
+}

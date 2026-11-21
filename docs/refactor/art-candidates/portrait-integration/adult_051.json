@@ -1,0 +1,29 @@
+{
+  "eventId": "adult_051",
+  "sourceAssetPath": "followup_20261031/img_adult_father_70th_001.png",
+  "sourceSha256": "69ef22116c7b7a8744105a44aed982e863baa0b705cba31cfe084f3997e51860",
+  "variant": {
+    "assetPath": "presentation/portraits/img_adult_father_70th_001_portrait_v1.png",
+    "sha256": "48d0e105dfe838ee3e8a3f3e1cbaec095cadbc160d2c36425c38adb6e0686875",
+    "width": 941,
+    "height": 1672,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root/security_p0)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/adult_051.json"
+  },
+  "reviewerType": "AI",
+  "reviewer": "Codex AI (/root/security_p0)",
+  "reviewStatus": "AI_REVIEWED_PRESENTATION",
+  "eventSourceHash": "0a03258a6f868a88d2fa98705e2fc607fdcb3f15e3c73d5c24108d3ce41b1f61",
+  "semanticReview": "Producer read the current event conditions and every choice/outcome, inspected source and selected output. Full source snapshot and exact prompt are in the referenced production ledger. Native acceptance remains pending.",
+  "visualReview": "Individually viewed: family chat is still planning in living room, 70 and emphasis marks replaced by blank calendar/group pictograms; no banquet, travel, finished video or father's reaction. Tiny device/background texture is non-lexical rather than typed text. Native pending.",
+  "cropReview": "Portrait candidate selected for native phone/small-phone scene and gameplay inspection; not final artwork acceptance.",
+  "actualProducer": "OpenAI built-in image_gen",
+  "generationMethod": "Built-in imagegen edit; exact prompts/output SHA/rejected attempts preserved in docs/refactor/art-candidates/content-art-revision-briefs-20261119.json",
+  "productionLedger": "docs/refactor/art-candidates/content-art-revision-briefs-20261119.json",
+  "nativePending": true,
+  "runtimeConnected": true,
+  "approvalChanged": false,
+  "selectedStagingSha256": "48d0e105dfe838ee3e8a3f3e1cbaec095cadbc160d2c36425c38adb6e0686875"
+}

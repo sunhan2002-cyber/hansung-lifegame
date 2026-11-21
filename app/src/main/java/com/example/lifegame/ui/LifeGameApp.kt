@@ -1,5 +1,6 @@
 package com.example.lifegame.ui
 
+import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -10,13 +11,25 @@ import androidx.compose.foundation.layout.safeDrawingPadding
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
+import androidx.compose.material3.AlertDialog
+import androidx.compose.material3.TextButton
+import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.CompositionLocalProvider
+import com.example.lifegame.ui.components.PlayMenuActions
+import com.example.lifegame.ui.components.LocalPlayMenu
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.semantics.LiveRegionMode
+import androidx.compose.ui.semantics.liveRegion
+import androidx.compose.ui.semantics.semantics
+import com.example.lifegame.data.SaveState
 import androidx.compose.ui.input.pointer.PointerEventPass
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.platform.testTag
@@ -69,12 +82,19 @@ fun LifeGameApp(
 ) {
     LifeGameTheme {
         Surface(modifier = Modifier.fillMaxSize(), color = LifeGamePaper) {
+            val saveState by gameViewModel.saveState.collectAsState()
+            Box(Modifier.fillMaxSize()) {
             NavHost(navController = navController, startDestination = Routes.HOME) {
                 composable(Routes.HOME) {
+                    val latestRecord = remember(gameViewModel.completedLives) {
+                        gameViewModel.completedLives.firstOrNull()?.let { gameViewModel.recordFor(it.runId) }
+                    }
                     HomeScreen(
                         lifeCard = gameViewModel.lifeCard,
                         finishedLives = gameViewModel.finishedLives,
-                        message = gameViewModel.playError,
+                        message = gameViewModel.playError ?: gameViewModel.contentWarning,
+                        latestRecord = latestRecord,
+                        hasRecoverableSave = gameViewModel.hasStoredRun,
                         onContinue = {
                             gameViewModel.continueLife()
                             navController.navigateOnce(Routes.PLAY)
@@ -145,8 +165,35 @@ fun LifeGameApp(
                                 popUpTo(Routes.HOME) { inclusive = true }
                             }
                         },
+                        // 인생 리셋을 확정하면 새 인생의 프로필 · 주사위 화면으로 바로 간다. 뒤로 가면 홈이다.
+                        onStartNewLife = {
+                            navController.navigateOnce(Routes.PROFILE) {
+                                popUpTo(Routes.HOME)
+                            }
+                        },
                     )
                 }
+            }
+            // Disk durability is separate from an immediate in-memory save. Fast writes need no flash.
+            var showPending by remember { mutableStateOf(false) }
+            val pending = saveState is SaveState.Pending
+            LaunchedEffect(pending) {
+                showPending = false
+                if (pending) { delay(350); showPending = true }
+            }
+            if (showPending) Text(
+                "저장 중…", style = MaterialTheme.typography.labelMedium,
+                modifier = Modifier.align(Alignment.TopEnd).safeDrawingPadding().padding(8.dp)
+                    .background(LifeGamePaper).padding(horizontal = 10.dp, vertical = 6.dp)
+                    .testTag("save_pending").semantics { liveRegion = LiveRegionMode.Polite },
+            )
+            if (saveState is SaveState.Failed) AlertDialog(
+                onDismissRequest = {},
+                modifier = Modifier.testTag("save_failure"),
+                title = { Text("진행 내용을 저장하지 못했어요") },
+                text = { Text(gameViewModel.saveWarning ?: "현재 화면의 진행은 유지하고 있어요. 저장 공간을 확인한 뒤 다시 시도해 주세요.") },
+                confirmButton = { TextButton(onClick = { gameViewModel.retrySave() }) { Text("저장 다시 시도") } },
+            )
             }
         }
     }
@@ -156,8 +203,84 @@ fun LifeGameApp(
 internal fun PlayHost(
     gameViewModel: LifeGameViewModel,
     onGoHome: () -> Unit,
+    onStartNewLife: () -> Unit = onGoHome,
 ) {
     val play = gameViewModel.play
+    val saveState by gameViewModel.saveState.collectAsState()
+    var finishing by rememberSaveable { mutableStateOf(false) }
+    // ---- 진행 중 "인생 리셋"(2026-11-20 과제) ----
+    var resetConfirm by rememberSaveable { mutableStateOf(false) }
+    var resetting by rememberSaveable { mutableStateOf(false) }
+    var resumeAfterMenu by rememberSaveable { mutableStateOf(false) }
+    val resumeIfPaused: () -> Unit = {
+        if (resumeAfterMenu) {
+            resumeAfterMenu = false
+            if (gameViewModel.play?.autoPlaying == false) gameViewModel.togglePlaying()
+        }
+    }
+    val playMenu = remember(gameViewModel) {
+        PlayMenuActions(
+            // 메뉴를 보는 동안 자동 진행이 저절로 다음 해로 넘어가지 않게 멈춘다.
+            onOpen = {
+                if (gameViewModel.play?.phase == PlayPhase.AUTO && gameViewModel.play?.autoPlaying == true) {
+                    gameViewModel.togglePlaying()
+                    resumeAfterMenu = true
+                }
+            },
+            onDismiss = { resumeIfPaused() },
+            onResetLife = { resetConfirm = true },
+        )
+    }
+    val confirmReset: () -> Unit = {
+        resetConfirm = false
+        if (!resetting && gameViewModel.startLifeReset()) {
+            resumeAfterMenu = false
+            resetting = true
+        } else if (!resetting) {
+            resumeIfPaused()
+        }
+    }
+    BackHandler(enabled = resetting) { /* 지운 것이 디스크에 확인될 때까지 화면을 지킨다. */ }
+    LaunchedEffect(resetting, saveState) {
+        if (!resetting) return@LaunchedEffect
+        if (!gameViewModel.lifeResetPending) {
+            // 프로세스가 다시 만들어진 경우: 슬롯이 없으면 리셋이 끝난 것이고, 남아 있으면 그 인생을 그대로 이어 간다.
+            resetting = false
+            if (!gameViewModel.hasStoredRun) onStartNewLife() else gameViewModel.continueLife()
+            return@LaunchedEffect
+        }
+        // 화면에 모인 저장 상태가 한 프레임 늦을 수 있어, 리셋이 만든 저장 요청의 결과만 본다.
+        when (gameViewModel.lifeResetProgress()) {
+            LifeResetProgress.DONE -> {
+                gameViewModel.completeLifeReset()
+                resetting = false
+                onStartNewLife()
+            }
+            LifeResetProgress.FAILED -> {
+                gameViewModel.cancelLifeReset()
+                resetting = false
+            }
+            LifeResetProgress.WAITING -> Unit
+        }
+    }
+    BackHandler(enabled = finishing) { /* Keep the final checkpoint visible until disk completion. */ }
+    val finishAndGoHome: () -> Unit = {
+        if (!finishing) {
+            gameViewModel.finishLife()
+            if (gameViewModel.play == null) finishing = true
+        }
+    }
+    LaunchedEffect(finishing, saveState) {
+        if (finishing && saveState is SaveState.Durable) onGoHome()
+        if (finishing && saveState is SaveState.Idle) {
+            // A new process has no in-flight writes. Atomic slot removal proves completion;
+            // otherwise recover the saved ending and let the player finish it again safely.
+            if (!gameViewModel.hasStoredRun) onGoHome() else {
+                finishing = false
+                gameViewModel.continueLife()
+            }
+        }
+    }
     // 화면이 바뀐 직후 잠깐(연타 보호 시간) 터치를 받지 않는다. "계속하기"를 빠르게 여러 번 누르면 첫 터치로 화면이 바뀌고
     // 남은 터치가 새 화면의 같은 자리 버튼(배속 · 초점 고르기 등)을 눌렀다(2026-11-09 작은 화면 실기 확인).
     // 보호는 화면이 바뀐 그 프레임부터 켠다(효과에서 켜면 한두 프레임 늦어 그 사이 터치가 새 화면에 닿는다).
@@ -169,7 +292,41 @@ internal fun PlayHost(
         settledPhase = phase
     }
     Box(Modifier.fillMaxSize()) {
-        PlayPhaseScreen(play, gameViewModel, onGoHome)
+        if (finishing) {
+            Box(Modifier.fillMaxSize().background(LifeGamePaper), contentAlignment = Alignment.Center) {
+                Text("인생 기록을 저장하고 있어요…", modifier = Modifier.testTag("ending_save_pending"))
+            }
+        } else if (resetting) {
+            Box(Modifier.fillMaxSize().background(LifeGamePaper), contentAlignment = Alignment.Center) {
+                Text("지금 인생을 정리하고 있어요…", modifier = Modifier.testTag("life_reset_pending"))
+            }
+        } else CompositionLocalProvider(LocalPlayMenu provides playMenu.takeIf { play != null && play.phase != PlayPhase.ENDED }) {
+            PlayPhaseScreen(play, gameViewModel, onGoHome, finishAndGoHome)
+        }
+        if (resetConfirm) {
+            AlertDialog(
+                onDismissRequest = { resetConfirm = false; resumeIfPaused() },
+                modifier = Modifier.testTag("life_reset_dialog"),
+                text = { Text("현재 진행 중인 인생은 사라집니다. 새 인생을 시작할까요?") },
+                confirmButton = {
+                    TextButton(onClick = confirmReset, modifier = Modifier.testTag("life_reset_confirm")) { Text("새 인생 시작") }
+                },
+                dismissButton = {
+                    TextButton(
+                        onClick = { resetConfirm = false; resumeIfPaused() },
+                        modifier = Modifier.testTag("life_reset_cancel"),
+                    ) { Text("취소") }
+                },
+            )
+        }
+        gameViewModel.lifeResetError?.let { message ->
+            AlertDialog(
+                onDismissRequest = gameViewModel::clearLifeResetError,
+                modifier = Modifier.testTag("life_reset_error"),
+                text = { Text(message) },
+                confirmButton = { TextButton(onClick = gameViewModel::clearLifeResetError) { Text("확인") } },
+            )
+        }
         if (guardingTaps) {
             Box(
                 Modifier
@@ -190,6 +347,7 @@ private fun PlayPhaseScreen(
     play: PeriodPlayUiState?,
     gameViewModel: LifeGameViewModel,
     onGoHome: () -> Unit,
+    onFinish: () -> Unit,
 ) {
     when (play?.phase) {
         PlayPhase.CHAPTER -> ChapterFocusScreen(
@@ -231,18 +389,12 @@ private fun PlayPhaseScreen(
                     futureLook = gameViewModel.futureLook,
                     onRequestFuture = { gameViewModel.requestFutureLook(record.runId) },
                     onCancelFuture = gameViewModel::cancelFutureLook,
-                    onDone = {
-                        gameViewModel.finishLife()
-                        onGoHome()
-                    },
+                    onDone = onFinish,
                 )
             } else {
                 RunEndScreen(
                     state = play,
-                    onDone = {
-                        gameViewModel.finishLife()
-                        onGoHome()
-                    },
+                    onDone = onFinish,
                 )
             }
         }

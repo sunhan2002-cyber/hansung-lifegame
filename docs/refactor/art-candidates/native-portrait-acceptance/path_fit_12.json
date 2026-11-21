@@ -1,0 +1,71 @@
+{
+  "eventId": "path_fit_12",
+  "reviewerType": "AI",
+  "scope": "Portrait phone and small-phone presentation",
+  "sourceEventHash": "81547b064316cd404e67122d20e934d59c9ea40fc49e84038db7cb2be012f4b0",
+  "sourceReview": "docs/refactor/art-candidates/portrait-integration/path_fit_12.json",
+  "sourceSha256": "c2bd740ba752c5f01c498943493c5b5c0f5aa911d2452c2de987e6197cf30ad1",
+  "displayedVariant": {
+    "assetPath": "presentation/portraits/img_path_fit_12_001_portrait_v1.png",
+    "sha256": "770b80ad68172f7ec47374aa2d89e09aaa8bd627b4888bc4653ccda44f0ce5d9",
+    "width": 941,
+    "height": 1672,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root/effects_tech)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/path_fit_12.json"
+  },
+  "nativeCaptures": [
+    {
+      "path": "build/refactor/after/portrait-fortythree-native/path_fit_12_phone_scene.png",
+      "sha256": "94b61da72571958c3d408821185979949ef45ecb7c65d340ca89dec767e64cd2",
+      "crop": {
+        "eventId": "path_fit_12",
+        "imageId": "img_path_fit_12_001",
+        "assetPath": "presentation/portraits/img_path_fit_12_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/portrait-fortythree-native/path_fit_12_phone_play.png",
+      "sha256": "5800ade301cfa8621bb3f8d06534858e9579e84af9b6dc2de2521ecb897f9cec",
+      "crop": {
+        "eventId": "path_fit_12",
+        "imageId": "img_path_fit_12_001",
+        "assetPath": "presentation/portraits/img_path_fit_12_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/portrait-fortythree-native/path_fit_12_360x740_scene.png",
+      "sha256": "7998467918b6f48b163eb44b87c6c7845e2a9e1ceb9d209860b127150dc65696",
+      "crop": {
+        "eventId": "path_fit_12",
+        "imageId": "img_path_fit_12_001",
+        "assetPath": "presentation/portraits/img_path_fit_12_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/portrait-fortythree-native/path_fit_12_360x740_play.png",
+      "sha256": "f5a53bc6028333c9bd0458eebed9084e8c415991b76643e83b0ef8285b87dd83",
+      "crop": {
+        "eventId": "path_fit_12",
+        "imageId": "img_path_fit_12_001",
+        "assetPath": "presentation/portraits/img_path_fit_12_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    }
+  ],
+  "observation": "탈락 통보를 확인하는 휴대폰과 운동화·무릎이 보인다.",
+  "decision": "PASS",
+  "method": "Individual visual inspection of both scene and gameplay frames together with producer semantic/source review and device capture match."
+}

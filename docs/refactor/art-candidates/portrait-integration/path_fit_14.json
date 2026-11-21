@@ -1,0 +1,29 @@
+{
+  "eventId": "path_fit_14",
+  "sourceAssetPath": "followup_20261031/img_path_fit_14_001.png",
+  "sourceSha256": "47d03d73c6dcc3c004b32d9cd9abd725e7fe80bfb2f51a9e83a11db1a74ef095",
+  "variant": {
+    "assetPath": "presentation/portraits/img_path_fit_14_001_portrait_v1.png",
+    "sha256": "4cecc2e5cebb17676cc216dec180623b9eeafbd46332353e0ce7377563e53a40",
+    "width": 941,
+    "height": 1672,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root/effects_tech)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/path_fit_14.json"
+  },
+  "reviewerType": "AI",
+  "reviewer": "Codex AI (/root/effects_tech)",
+  "reviewStatus": "AI_REVIEWED_PRESENTATION",
+  "eventSourceHash": "39e07c0c77c45fae41b37fe19d3cf0798f10ece46118a2bdfc8baec55c68e4ea",
+  "semanticReview": "Producer read the current event conditions and every choice/outcome, inspected source and selected output. Full source snapshot and exact prompt are in the referenced production ledger. Native acceptance remains pending.",
+  "visualReview": "두 제안서(경기장/해외 항공), 무릎 보호대, 원본 야구 라커룸·두 손 유지. 두 문서 전체와 보호대가9:20 중앙 crop에서 함께 보인다. 은퇴 확정·해외 도착·부상 결과 추가 없음. 문서 외곽은60%폭 밖 일부; native pending.",
+  "cropReview": "Portrait candidate selected for native phone/small-phone scene and gameplay inspection; not final artwork acceptance.",
+  "actualProducer": "OpenAI built-in image_gen",
+  "generationMethod": "Built-in imagegen edit; exact prompts/output SHA/rejected attempts preserved in docs/refactor/art-candidates/crop-variant-production-20261119.json",
+  "productionLedger": "docs/refactor/art-candidates/crop-variant-production-20261119.json",
+  "nativePending": true,
+  "runtimeConnected": true,
+  "approvalChanged": false,
+  "selectedStagingSha256": "4cecc2e5cebb17676cc216dec180623b9eeafbd46332353e0ce7377563e53a40"
+}

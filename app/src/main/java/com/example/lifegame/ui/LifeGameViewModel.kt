@@ -7,6 +7,9 @@ import androidx.compose.runtime.setValue
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.lifegame.data.ContentRepository
+import com.example.lifegame.data.ContentLoadResult
+import com.example.lifegame.data.PlayableContent
+import com.example.lifegame.data.SaveState
 import com.example.lifegame.data.ProgressStore
 import com.example.lifegame.data.SavedGame
 import com.example.lifegame.data.V4ProgressStore
@@ -15,6 +18,8 @@ import com.example.lifegame.data.V4LoadResult
 import com.example.lifegame.domain.engine.GameEngine
 import com.example.lifegame.domain.engine.GameSession
 import com.example.lifegame.domain.engine.PeriodGameSession
+import com.example.lifegame.domain.engine.PeriodSessionFactory
+import com.example.lifegame.domain.engine.SessionStartProfile
 import com.example.lifegame.domain.engine.RunExtensionApi
 import com.example.lifegame.domain.model.AvatarConfig
 import com.example.lifegame.domain.model.AwardedTitle
@@ -38,8 +43,7 @@ import com.example.lifegame.domain.model.appendOnce
 import com.example.lifegame.domain.model.TurnPhase
 import com.example.lifegame.domain.model.TurnStep
 import com.example.lifegame.domain.engine.bodyTypeFor
-import com.example.lifegame.BuildConfig
-import com.example.lifegame.data.OpenAiFaceSheetClient
+import com.example.lifegame.data.FaceSheetClients
 import com.example.lifegame.domain.generation.FaceSheetRequest
 import com.example.lifegame.domain.generation.GenerationClient
 import com.example.lifegame.domain.generation.FakeGenerationClient
@@ -55,12 +59,17 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import kotlinx.coroutines.withTimeoutOrNull
+import kotlinx.coroutines.flow.collect
 
-class LifeGameViewModel(application: Application) : AndroidViewModel(application) {
+/** 진행 중 인생 리셋의 저장 확인 단계 */
+enum class LifeResetProgress { WAITING, DONE, FAILED }
 
-    private val repository = ContentRepository(application)
+class LifeGameViewModel @JvmOverloads constructor(
+    application: Application,
+    private val repository: ContentRepository = ContentRepository(application),
+    private val v4ProgressStore: V4ProgressStore = V4ProgressStore(application),
+) : AndroidViewModel(application) {
     private val progressStore = ProgressStore(application)
-    private val v4ProgressStore = V4ProgressStore(application)
     private var session: GameSession? = null
 
     var uiState by mutableStateOf(LifeGameUiState(hasSaveData = progressStore.hasSaveData()))
@@ -193,6 +202,15 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
     var playError by mutableStateOf<String?>(null)
         private set
 
+    var contentWarning by mutableStateOf<String?>(null)
+        private set
+    var saveWarning by mutableStateOf<String?>(null)
+        private set
+    val saveState get() = v4ProgressStore.saveState
+    val hasStoredRun: Boolean get() = v4ProgressStore.hasSave()
+    fun retrySave() = v4ProgressStore.retrySave()
+    fun awaitSave() = v4ProgressStore.awaitDurable()
+
     /** 완료 인생은 김우영 저장소(V4ProgressStore)가 원본이다. 화면은 여기서 읽기만 한다. */
     var completedLives by mutableStateOf(v4ProgressStore.loadCompletedLives())
         private set
@@ -227,15 +245,8 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
     private var faceJob: Job? = null
     private var faceRequestId: String? = null
 
-    /**
-     * 사진 → 얼굴 시트 실제 생성(OpenAI). local.properties에 OPENAI_API_KEY가 있을 때만 만든다.
-     * 없으면 기존 Fake 응답으로 동작한다(테스트 · 키 없는 빌드).
-     */
-    private val realFaceClient: GenerationClient? by lazy {
-        BuildConfig.OPENAI_API_KEY.takeIf { it.isNotBlank() }?.let {
-            OpenAiFaceSheetClient(getApplication(), it, BuildConfig.OPENAI_IMAGE_MODEL)
-        }
-    }
+    /** Online generation remains disabled until an authenticated backend is configured. */
+    private val realFaceClient: GenerationClient? by lazy { FaceSheetClients.onlineClient() }
 
     /** 프로필 화면 문구(동의 · 안내)를 실제 전송 기준으로 바꿀지 */
     val usesRealFaceGeneration: Boolean get() = realFaceClient != null
@@ -319,7 +330,8 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
                 avatar = current.avatar,
             )
         } ?: v4ProgressStore.load()?.let { saved ->
-            val content = repository.loadV4Content()
+            val content = (repository.loadPlayableContent() as? ContentLoadResult.Ready)?.value?.content
+                ?: return@let null
             val period = content.periods.firstOrNull { it.period == saved.state.period }
             val focus = content.focuses.firstOrNull { it.focusId == saved.state.selectedFocusId }
             LifeCardUi(
@@ -337,6 +349,9 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
         }
 
     fun startNewLife(profile: NewLifeProfile) {
+        if (!canPersistNextAction()) return
+        val bundle = requirePlayableContent() ?: return
+        val content = bundle.content
         val name = normalizePlayerName(profile.name)
         val nameCall = nameCallOf(name)
         startingRollRawForRun = profile.startingRollRaw
@@ -351,50 +366,36 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
                 valid = profile.startingRollRaw != null && profile.runSeed != null,
             ),
         )
-        val content = repository.loadV4Content()
-        if (content.periods.isEmpty() || content.focuses.isEmpty()) {
-            clearPlay()
-            playError = "시기 또는 초점 데이터를 불러오지 못했습니다."
-            return
-        }
         // 엔진에 넘기기 전에 이름을 바꿔 두면 결정 · 결과 · 기록 문장 어디에도 {name}이 남지 않는다.
         val focuses = content.focuses.map { it.withPlayerName(name, nameCall) }
         val decisions = content.decisions.map { it.withPlayerName(name, nameCall) }
-        val newSession = PeriodGameSession(
+        val sessionFactory = PeriodSessionFactory(
             periods = content.periods,
             focuses = focuses,
             decisions = decisions,
-            endings = repository.loadEndings().map { it.withPlayerName(name, nameCall) },
+            endings = bundle.endings.map { it.withPlayerName(name, nameCall) },
             lifeFactRules = content.lifeFactRules,
             automaticEvents = content.automaticEvents,
-            engine = com.example.lifegame.domain.engine.GameEngine(
-                skipInfantFocus = true,
-                guaranteeYearlyIncident = true,
-            ),
-            automaticEventPicker = automaticEventPickerFor(content.periods),
+            automaticEventRules = bundle.automaticEventRules,
         )
         val starter = starters.firstOrNull { it.starterId == profile.starterId }
-        val step = runCatching {
-            val first = newSession.start().state
-            // 주사위로 정한 시작 능력치 · 성향 플래그 · 성별을 넣는다. 남자는 청년기에 입영 통지서를 받는다.
-            val startFlags = buildSet {
-                addAll(starter?.startFlags.orEmpty())
-                add(profile.gender.flag)
-                if (profile.gender == Gender.MALE) add(MILITARY_SERVICE_FLAG)
-            }
-            newSession.restore(
-                first.copy(
-                    stats = (profile.rolledDelta ?: starter?.statDelta)?.let { first.stats.plusClamped(it) } ?: first.stats,
-                    flags = first.flags + startFlags,
-                    // 같은 출발선 도전 코드로 시작하면 코드의 시드를 쓴다(결과 추첨이 같은 시드에서 출발).
-                    runSeed = profile.runSeed ?: first.runSeed,
-                ),
-            )
+        val started = runCatching {
+            sessionFactory.start(SessionStartProfile(
+                genderFlag = profile.gender.flag,
+                starterId = profile.starterId,
+                starterDelta = starter?.statDelta ?: com.example.lifegame.domain.model.StatDelta(),
+                starterFlags = starter?.startFlags.orEmpty(),
+                rolledDelta = profile.rolledDelta,
+                startingRollRaw = profile.startingRollRaw,
+                runSeed = profile.runSeed,
+            ))
         }.getOrElse {
             clearPlay()
             playError = "새 인생을 시작하지 못했습니다."
             return
         }
+        val newSession = started.session
+        val step = started.step
         profile.startingRollRaw?.let { raw ->
             extensionStateForRun = extensionStateForRun.copy(
                 challengeCode = ChallengeCodeState(
@@ -432,24 +433,26 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
         speed = PLAY_SPEEDS.first()
         died = false
         playError = null
-        v4ProgressStore.clear()
+        // The first checkpoint atomically archives any unreadable previous slot before replacing it.
         applyStep(step)
     }
 
     fun continueLife() {
+        if (!canPersistNextAction()) return
         val saved = when (val loaded = v4ProgressStore.loadResult()) {
             V4LoadResult.Empty -> {
                 playError = "저장된 인생이 없습니다. 새 인생을 시작해 주세요."
                 return
             }
             V4LoadResult.Invalid -> {
-                v4ProgressStore.clear()
-                playError = "저장 데이터가 손상되었거나 새 버전과 호환되지 않습니다. 새 인생을 시작해 주세요."
+                clearPlay()
+                playError = "저장된 인생을 읽을 수 없어 원본을 보존했습니다. 앱을 업데이트하거나 새 인생을 시작할 수 있습니다."
                 return
             }
             is V4LoadResult.Loaded -> loaded.run
         }
-        val content = repository.loadV4Content()
+        val bundle = requirePlayableContent() ?: return
+        val content = bundle.content
         val name = normalizePlayerName(saved.playerName)
         val nameCall = nameCallOf(name)
         val focuses = content.focuses.map { it.withPlayerName(name, nameCall) }
@@ -474,19 +477,15 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
         currentRecord = null
         futureLook = null
         savedCompletedRunId = null
-        playSession = PeriodGameSession(
+        playSession = PeriodSessionFactory(
             content.periods,
             focuses,
             decisions,
-            endings = repository.loadEndings().map { it.withPlayerName(name, nameCall) },
+            endings = bundle.endings.map { it.withPlayerName(name, nameCall) },
             lifeFactRules = content.lifeFactRules,
             automaticEvents = content.automaticEvents,
-            engine = com.example.lifegame.domain.engine.GameEngine(
-                skipInfantFocus = true,
-                guaranteeYearlyIncident = true,
-            ),
-            automaticEventPicker = automaticEventPickerFor(content.periods),
-        )
+            automaticEventRules = bundle.automaticEventRules,
+        ).create()
         playerNameForPlay = name
         characterImageIdForPlay = saved.state.flags.firstNotNullOfOrNull { flag ->
             when (flag) {
@@ -527,7 +526,28 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
         decisionYear = saved.pendingOutcome?.yearInPeriod
             ?: saved.choices.lastOrNull()?.yearInPeriod.takeIf { outcome != null }
         died = saved.state.isDead; playError = null
-        applyStep(withRestoredAutomaticEvent(playSession!!.restoreSaved(saved.state)))
+        val restored = runCatching { playSession!!.restoreSaved(saved.state) }.getOrElse {
+            clearPlay()
+            playError = "이 버전에서 인생을 이어갈 수 없어 저장 원본을 보존했습니다."
+            return
+        }
+        applyStep(withRestoredAutomaticEvent(restored))
+    }
+
+    private fun requirePlayableContent(): PlayableContent? = when (val loaded = repository.loadPlayableContent()) {
+        is ContentLoadResult.Ready -> loaded.value.also { contentWarning = null }
+        is ContentLoadResult.Failed -> {
+            clearPlay()
+            contentWarning = CONTENT_ERROR_MESSAGE
+            playError = CONTENT_ERROR_MESSAGE
+            null
+        }
+    }
+
+    private fun canPersistNextAction(): Boolean {
+        if (saveState.value !is SaveState.Failed) return true
+        saveWarning = SAVE_ERROR_MESSAGE
+        return false
     }
 
     /**
@@ -542,24 +562,20 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
         return if (shownLast) step.copy(automaticEvent = last, recordText = last.text) else step
     }
 
-    /** 콘텐츠 자동 사건 규칙(신기훈 auto_events.sample.json). 없거나 깨지면 자동 사건 없이 진행한다. */
+    /** Required play data is checked at entry; record-only views can still display saved text. */
     private val automaticEventRules: List<com.example.lifegame.domain.engine.AutomaticEventRule> by lazy {
-        runCatching {
-            getApplication<Application>().assets.open(AUTO_EVENTS_FILE).bufferedReader().use { it.readText() }
-        }.map(com.example.lifegame.data.AutomaticEventParser::parse).getOrElse { emptyList() }
+        repository.loadAutomaticEventRules()
     }
 
-    private fun automaticEventPickerFor(periods: List<com.example.lifegame.domain.model.PeriodDefinition>) =
-        automaticEventRules.takeIf { it.isNotEmpty() }
-            ?.let { com.example.lifegame.domain.engine.AutomaticEventPicker(it, periods) }
-
     fun selectFocus(focusId: String) {
+        if (!canPersistNextAction()) return
         val current = playSession ?: return
         runStep { current.selectFocus(focusId) }
     }
 
     /** 자동 진행 타이머가 한 해마다 부른다. 결정이 걸리면 엔진이 멈춘 상태를 돌려준다. */
     fun advanceYear() {
+        if (!canPersistNextAction()) return
         if (play?.phase != PlayPhase.AUTO) return
         val current = playSession ?: return
         runStep { current.advance() }
@@ -567,6 +583,7 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
 
     /** "다음 결정까지": 결정 · 장 표지 · 끝이 나올 때까지 해를 한 번에 넘긴다. */
     fun skipToNextDecision() {
+        if (!canPersistNextAction()) return
         if (play?.phase != PlayPhase.AUTO) return
         val current = playSession ?: return
         runStep {
@@ -581,6 +598,7 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
     }
 
     fun chooseDecision(choiceId: String) {
+        if (!canPersistNextAction()) return
         val current = playSession ?: return
         val decision = play?.decision ?: return
         if (outcome != null) return
@@ -669,6 +687,7 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
 
     /** 결과를 읽고 나서 다음 해 · 장 표지 · 끝으로 넘어간다. */
     fun continueAfterOutcome() {
+        if (!canPersistNextAction()) return
         if (outcome == null) return
         outcome = null
         pendingOutcomeSnapshot = null
@@ -679,12 +698,14 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
 
     /** 화면 연출 확인만 저장한다. 엔진 선택이나 보상 적용을 다시 호출하지 않는다. */
     fun markEventImageShown(eventId: String) {
+        if (!canPersistNextAction()) return
         presentationForRun = presentationForRun.markEventImageShown(eventId)
         publishPlay()
     }
 
     /** 애니메이션 재생 완료만 기록한다. 능력치 변화는 이미 엔진에서 한 번 적용된 상태다. */
     fun markResultAnimationConsumed(displayId: String) {
+        if (!canPersistNextAction()) return
         presentationForRun = presentationForRun.consumeResultAnimation(displayId)
         publishPlay()
     }
@@ -694,6 +715,7 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
      * 한 번만 기록된다. 새 인생은 [PresentationState] 기본값(시작 전)에서 다시 시작한다.
      */
     fun setCutsceneStatus(status: CutsceneStatus) {
+        if (!canPersistNextAction()) return
         val current = presentationForRun.cutscene
         if (current == status || current == CutsceneStatus.COMPLETED || current == CutsceneStatus.SKIPPED) return
         presentationForRun = presentationForRun.copy(cutscene = status)
@@ -701,6 +723,7 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
     }
 
     fun setPhotoFlowStatus(status: PhotoFlowStatus, failureReason: String? = null) {
+        if (!canPersistNextAction()) return
         profilePhotoPresentation = profilePhotoPresentation.updatePhotoFlow(status, failureReason)
         if (playSession != null) {
             presentationForRun = presentationForRun.updatePhotoFlow(status, failureReason)
@@ -709,11 +732,13 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
     }
 
     fun togglePlaying() {
+        if (!canPersistNextAction()) return
         autoPlaying = !autoPlaying
         publishPlay()
     }
 
     fun setSpeed(value: Int) {
+        if (!canPersistNextAction()) return
         if (value !in PLAY_SPEEDS) return
         speed = value
         publishPlay()
@@ -724,14 +749,80 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
      * 결말에 닿을 때 이미 같은 runId로 저장했으므로 여기서는 같은 기록을 다시 덮어쓸 뿐이다(중복 없음).
      */
     fun finishLife() {
+        if (!canPersistNextAction()) return
         play?.takeIf { it.phase == PlayPhase.ENDED } ?: return
         val finalState = playStep?.state ?: return
-        saveCompletedLife(finalState)
+        val record = completedRecordFor(finalState)
+        if (!v4ProgressStore.finish(record)) return
+        completedLives = v4ProgressStore.loadCompletedLives()
         futureJob?.cancel()
         clearPlay()
         currentRecord = null
         futureLook = null
-        v4ProgressStore.clear()
+    }
+
+    /** 진행 중 인생 리셋이 디스크 확인을 기다리는 중인지. 이 동안 화면은 "정리 중"을 보여 주고 진행 저장을 하지 않는다. */
+    var lifeResetPending by mutableStateOf(false)
+        private set
+
+    /** 리셋을 하지 못했을 때 보여 줄 안내. 지금 인생은 그대로 남아 있다. */
+    var lifeResetError by mutableStateOf<String?>(null)
+        private set
+
+    fun clearLifeResetError() {
+        lifeResetError = null
+    }
+
+    /**
+     * 진행 중 "인생 리셋" 1단계(2026-11-20 과제). 현재 진행 슬롯만 지운다. 완료한 지난 인생 · 칭호 · 화면 설정은 그대로다.
+     * 화면 상태는 디스크 저장이 확인될 때까지 유지하고([completeLifeReset]), 실패하면 되돌린다([cancelLifeReset]).
+     * 연타 · 중복 호출은 한 번만 처리한다. 결말에 닿은 인생은 리셋하지 않는다(완료 기록 중복 방지).
+     * 저장 계층의 리셋 규칙(김우영 담당)이 들어오면 이 함수만 그쪽을 부르면 된다.
+     */
+    fun startLifeReset(): Boolean {
+        if (lifeResetPending) return true
+        val current = play ?: return false
+        if (current.phase == PlayPhase.ENDED) return false
+        if (!canPersistNextAction()) {
+            lifeResetError = LIFE_RESET_ERROR_MESSAGE
+            return false
+        }
+        if (!v4ProgressStore.clear()) {
+            lifeResetError = LIFE_RESET_ERROR_MESSAGE
+            return false
+        }
+        lifeResetRevision = (saveState.value as? SaveState.Pending)?.revision ?: 0L
+        lifeResetPending = true
+        return true
+    }
+
+    private var lifeResetRevision = Long.MAX_VALUE
+
+    /** 리셋이 만든 저장 요청이 디스크에 기록됐는지. 그 전의 저장 완료 표시는 리셋 완료로 보지 않는다. */
+    fun lifeResetProgress(): LifeResetProgress = when (val state = saveState.value) {
+        is SaveState.Durable -> if (state.revision >= lifeResetRevision) LifeResetProgress.DONE else LifeResetProgress.WAITING
+        is SaveState.Failed -> if (state.revision >= lifeResetRevision) LifeResetProgress.FAILED else LifeResetProgress.WAITING
+        else -> LifeResetProgress.WAITING
+    }
+
+    /** 리셋 2단계: 디스크에서 슬롯이 지워진 것이 확인되면 현재 인생 화면 상태를 비운다. 대기 중 자동 진행도 함께 사라진다. */
+    fun completeLifeReset() {
+        if (!lifeResetPending) return
+        futureJob?.cancel()
+        cancelRunningFaceRequest()
+        clearPlay()
+        currentRecord = null
+        futureLook = null
+        playError = null
+        lifeResetPending = false
+    }
+
+    /** 리셋을 확정하지 못했으면 지금 인생을 다시 저장해 그대로 둔다. */
+    fun cancelLifeReset() {
+        if (!lifeResetPending) return
+        lifeResetPending = false
+        lifeResetError = LIFE_RESET_ERROR_MESSAGE
+        publishPlay()
     }
 
     /** 홈의 지난 인생 / 기록 화면에서 다시 여는 기록 */
@@ -846,7 +937,7 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
                 is GenerationResult.Success -> GenerationUi(
                     photoRef,
                     GenerationStatus.READY,
-                    "얼굴 시트 예시 응답을 받았습니다. 생성 서버 키가 없는 빌드라 화면에는 고른 기본 외형으로 보입니다.",
+                    "온라인 얼굴 생성은 아직 연결되지 않았습니다. 사진은 전송하지 않고 고른 기본 외형으로 보여 줍니다.",
                     value = result.value,
                 )
                 is GenerationResult.Failure -> GenerationUi(photoRef, GenerationStatus.FALLBACK, "얼굴을 만들지 못했습니다. 기본 모습으로 진행합니다.")
@@ -916,15 +1007,6 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
         )
     }
 
-    /** runId 기준 upsert. 결말 화면을 다시 열거나 홈으로 가도 같은 기록 하나만 남는다. */
-    private fun saveCompletedLife(finalState: PeriodRunState): CompletedLifeRecord {
-        val record = completedRecordFor(finalState)
-        v4ProgressStore.saveCompletedLife(record)
-        savedCompletedRunId = record.runId
-        completedLives = v4ProgressStore.loadCompletedLives()
-        return record
-    }
-
     /** 공유 URI 접근이 만료됐으면 사진 참조를 지우고 기본 외형으로 이어 간다. 이미 만든 얼굴 시트는 원본 사진 없이도 쓴다. */
     private fun withReadablePhoto(avatar: AvatarConfig): AvatarConfig {
         val ref = avatar.portraitRef ?: return avatar
@@ -973,6 +1055,8 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
     }
 
     private fun publishPlay() {
+        // 인생 리셋 중에는 지우는 중인 인생을 다시 저장하지 않는다(늦게 도착한 화면 콜백이 슬롯을 되살리지 않게).
+        if (lifeResetPending) return
         val step = playStep ?: return
         val content = playContent ?: return
         val ending = if (step.phase == TurnPhase.ENDING) endingFor(step.state) else null
@@ -980,12 +1064,12 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
             awardedTitleForRun = resolveTitleFor(step.state)
         }
         refreshExtensionState(step.state)
+        var completedForCheckpoint: CompletedLifeRecord? = null
         if (step.phase == TurnPhase.ENDING) {
-            // 결말에 닿는 순간 완료 기록을 저장한다. 주마등 도중 앱이 꺼져도 기록은 남고, 다시 저장해도 runId로 덮어쓴다.
-            val record = if (savedCompletedRunId == step.state.runId) {
-                completedLives.firstOrNull { it.runId == step.state.runId } ?: saveCompletedLife(step.state)
-            } else {
-                saveCompletedLife(step.state)
+            val existing = completedLives.firstOrNull { it.runId == step.state.runId }
+                ?.takeIf { savedCompletedRunId == step.state.runId }
+            val record = existing ?: completedRecordFor(step.state).also {
+                completedForCheckpoint = it
             }
             if (currentRecord?.runId != record.runId) currentRecord = buildLifeRecordUi(record, recordContent)
         }
@@ -1009,7 +1093,7 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
             outcomePeriod = pendingOutcomeSnapshot?.period?.takeIf { outcome != null },
             runChoices = runChoiceHistory.toList(),
         )
-        v4ProgressStore.save(
+        val accepted = v4ProgressStore.save(
             V4SavedRun(
                 playerName = playerNameForPlay,
                 state = step.state,
@@ -1023,7 +1107,12 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
                 startingRollRaw = startingRollRawForRun,
                 extensionState = extensionStateForRun,
             ),
+            completed = completedForCheckpoint,
         )
+        completedForCheckpoint?.takeIf { accepted }?.let {
+            savedCompletedRunId = it.runId
+            completedLives = v4ProgressStore.loadCompletedLives()
+        }
     }
 
     private fun refreshExtensionState(state: PeriodRunState) {
@@ -1126,6 +1215,22 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
         return null
     }
 
+    init {
+        viewModelScope.launch {
+            saveState.collect { state ->
+                saveWarning = if (state is SaveState.Failed) {
+                    SAVE_ERROR_MESSAGE
+                } else null
+            }
+        }
+        // Warm the immutable asset bundle off the UI thread. Immediate play requests share the
+        // same cache and still receive an explicit failure rather than silently empty content.
+        viewModelScope.launch {
+            val result = withContext(Dispatchers.IO) { repository.loadPlayableContent() }
+            contentWarning = if (result is ContentLoadResult.Failed) CONTENT_ERROR_MESSAGE else null
+        }
+    }
+
     private companion object {
         const val CHARACTERS_FILE = "characters.sample.json"
         const val LIFE_FACTS_FILE = "life_facts.sample.json"
@@ -1137,5 +1242,8 @@ class LifeGameViewModel(application: Application) : AndroidViewModel(application
         /** 실제 이미지 생성은 30초~1분 넘게 걸릴 수 있다. 이보다 길면 끊고 기본 모습을 권한다. */
         const val REAL_FACE_TIMEOUT_MS = 150_000L
         const val MAX_SKIP_YEARS = 200
+        const val CONTENT_ERROR_MESSAGE = "게임 데이터를 불러오지 못했습니다. 저장된 인생은 보존되어 있습니다."
+        const val LIFE_RESET_ERROR_MESSAGE = "인생을 정리하지 못했어요. 진행 중인 인생은 그대로 있어요."
+        const val SAVE_ERROR_MESSAGE = "진행 상황을 기기에 저장하지 못했습니다. 공간을 확인한 뒤 다시 저장해 주세요."
     }
 }

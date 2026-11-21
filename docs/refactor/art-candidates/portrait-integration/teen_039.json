@@ -1,0 +1,29 @@
+{
+  "eventId": "teen_039",
+  "sourceAssetPath": "followup_20261031/img_teen_graduation_001.png",
+  "sourceSha256": "15ff486af504a1e82fa8beffc225960d3f4097e6f92c32e9586037405d255820",
+  "variant": {
+    "assetPath": "presentation/portraits/img_teen_graduation_001_portrait_v1.png",
+    "sha256": "b374a54d7960a1845237bfc30281203a335e46ec8e399169f1886f6362ca4709",
+    "width": 940,
+    "height": 1672,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root/security_p0)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/teen_039.json"
+  },
+  "reviewerType": "AI",
+  "reviewer": "Codex AI (/root/security_p0)",
+  "reviewStatus": "AI_REVIEWED_PRESENTATION",
+  "eventSourceHash": "e804c1af23cd4a8669b8b65a11735b85380167fb5491248fcb9a469357b9a8c6",
+  "semanticReview": "Producer read the current event conditions and every choice/outcome, inspected source and selected output. Full source snapshot and exact prompt are in the referenced production ledger. Native acceptance remains pending.",
+  "visualReview": "Individually viewed: uniform sleeves, graduation school and friends holding flour still in bags; anonymous phone notification central with no fixed clock/text. No thrown flour or restaurant/result. Native pending.",
+  "cropReview": "Portrait candidate selected for native phone/small-phone scene and gameplay inspection; not final artwork acceptance.",
+  "actualProducer": "OpenAI built-in image_gen",
+  "generationMethod": "Built-in imagegen edit; exact prompts/output SHA/rejected attempts preserved in docs/refactor/art-candidates/content-art-revision-briefs-20261119.json",
+  "productionLedger": "docs/refactor/art-candidates/content-art-revision-briefs-20261119.json",
+  "nativePending": true,
+  "runtimeConnected": true,
+  "approvalChanged": false,
+  "selectedStagingSha256": "b374a54d7960a1845237bfc30281203a335e46ec8e399169f1886f6362ca4709"
+}

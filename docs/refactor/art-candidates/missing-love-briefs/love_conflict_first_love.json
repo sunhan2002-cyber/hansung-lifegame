@@ -1,0 +1,324 @@
+{
+  "schemaVersion": 1,
+  "eventId": "love_conflict_first_love",
+  "title": "오래 알아서 더 서운한 날",
+  "imageId": "img_love_conflict_first_love_001",
+  "status": "READY_FOR_GENERATION_NOT_ART_APPROVAL",
+  "author": "Codex AI",
+  "date": "2026-11-19",
+  "generationPriority": 12,
+  "currentAcceptanceStatus": "MISSING_PNG",
+  "sourceEventHash": "6e42edd2377dcd37934fe80384cfb84963c7f959b9eb6eb19c3098f121c05e49",
+  "sourceEventPath": "app/src/main/assets/events.sample.json",
+  "sourceEventSnapshot": {
+    "eventId": "love_conflict_first_love",
+    "stage": "ADULT",
+    "type": "NORMAL",
+    "isFallback": false,
+    "isMilestone": false,
+    "title": "오래 알아서 더 서운한 날",
+    "text": "학창 시절부터 알던 사람이라 더 서운하다. 연인: \"{nameCall}, 너는 아직도 그때처럼 내 마음을 다 안다고 생각하지?\"",
+    "imageId": "img_love_conflict_first_love_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [
+        "dating",
+        "rel_conflict",
+        "partner_first_love"
+      ],
+      "blockedFlags": [
+        "engaged",
+        "married",
+        "divorced"
+      ]
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "그때 사진을 꺼내 와 이야기를 다시 시작한다",
+        "statDelta": {
+          "사회성": 2,
+          "행복": 3
+        },
+        "resultText": "사진 속 우리는 단체 사진 끝에 나란히 서 있었다. '그때도 네가 먼저 말 걸었잖아.' 둘 다 웃음이 터졌다.",
+        "addFlags": [
+          "rel_steady"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "a_memory",
+            "text": "사진 속 우리는 단체 사진 끝에 나란히 서 있었다. '그때도 네가 먼저 말 걸었잖아.' 둘 다 웃음이 터졌다.",
+            "chance": 65,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "사회성": 2,
+              "행복": 3
+            },
+            "addFlags": [
+              "rel_steady"
+            ],
+            "removeFlags": [
+              "rel_conflict"
+            ]
+          },
+          {
+            "outcomeId": "a_past",
+            "text": "연인이 사진을 내려놨다. '나는 그때 말고 지금 이야기를 하고 싶어.' 그날 우리는 헤어졌다.",
+            "chance": 35,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": -4
+            },
+            "addFlags": [
+              "breakup_once",
+              "ex_first_love"
+            ],
+            "removeFlags": [
+              "dating",
+              "rel_steady",
+              "rel_conflict",
+              "partner_first_love",
+              "partner_ideal",
+              "partner_music",
+              "partner_book",
+              "partner_app",
+              "partner_closing",
+              "partner_gym",
+              "partner_letter",
+              "partner_blind_date",
+              "dating__adult_073",
+              "dating__adult_074",
+              "dating__adult_075",
+              "dating__adult_076",
+              "dating__adult_077",
+              "dating__adult_078",
+              "dating__path_soc_03",
+              "dating__path_soc_11",
+              "dating__path_hap_05",
+              "dating__love_letter_01"
+            ]
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week13_love_line"
+      },
+      {
+        "choiceId": "B",
+        "label": "지금의 서로를 다시 알아가자고 한다",
+        "statDelta": {
+          "지력": 1,
+          "행복": 2
+        },
+        "resultText": "첫 데이트를 다시 하기로 했다. 처음 가 보는 동네, 처음 먹어 보는 음식. 서로 몰랐던 게 꽤 많았다.",
+        "addFlags": [
+          "rel_steady"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "b_new",
+            "text": "첫 데이트를 다시 하기로 했다. 처음 가 보는 동네, 처음 먹어 보는 음식. 서로 몰랐던 게 꽤 많았다.",
+            "chance": 75,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "지력": 1,
+              "행복": 2
+            },
+            "addFlags": [
+              "rel_steady"
+            ],
+            "removeFlags": [
+              "rel_conflict"
+            ]
+          },
+          {
+            "outcomeId": "b_tired",
+            "text": "다시 알아가는 일에 둘 다 지쳤다. 서로 좋은 기억으로 남기자고 했다.",
+            "chance": 25,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": -3
+            },
+            "addFlags": [
+              "breakup_once",
+              "ex_first_love"
+            ],
+            "removeFlags": [
+              "dating",
+              "rel_steady",
+              "rel_conflict",
+              "partner_first_love",
+              "partner_ideal",
+              "partner_music",
+              "partner_book",
+              "partner_app",
+              "partner_closing",
+              "partner_gym",
+              "partner_letter",
+              "partner_blind_date",
+              "dating__adult_073",
+              "dating__adult_074",
+              "dating__adult_075",
+              "dating__adult_076",
+              "dating__adult_077",
+              "dating__adult_078",
+              "dating__path_soc_03",
+              "dating__path_soc_11",
+              "dating__path_hap_05",
+              "dating__love_letter_01"
+            ]
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week13_love_line"
+      },
+      {
+        "choiceId": "C",
+        "label": "학창 시절 별명으로 부르며 애교를 부린다",
+        "statDelta": {
+          "행복": 2
+        },
+        "resultText": "연인이 '그 별명 아직도 기억해?' 하며 등을 때렸다. 화가 풀린 건지 맞은 건지 모르겠다.",
+        "addFlags": [
+          "rel_steady"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "c_laugh",
+            "text": "연인이 '그 별명 아직도 기억해?' 하며 등을 때렸다. 화가 풀린 건지 맞은 건지 모르겠다.",
+            "chance": 50,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 2
+            },
+            "addFlags": [
+              "rel_steady"
+            ],
+            "removeFlags": [
+              "rel_conflict"
+            ]
+          },
+          {
+            "outcomeId": "c_cringe",
+            "text": "분위기가 더 싸해졌다. 그 별명은 연인이 제일 싫어하던 별명이었다.",
+            "chance": 50,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": -3
+            },
+            "addFlags": [
+              "breakup_once",
+              "ex_first_love"
+            ],
+            "removeFlags": [
+              "dating",
+              "rel_steady",
+              "rel_conflict",
+              "partner_first_love",
+              "partner_ideal",
+              "partner_music",
+              "partner_book",
+              "partner_app",
+              "partner_closing",
+              "partner_gym",
+              "partner_letter",
+              "partner_blind_date",
+              "dating__adult_073",
+              "dating__adult_074",
+              "dating__adult_075",
+              "dating__adult_076",
+              "dating__adult_077",
+              "dating__adult_078",
+              "dating__path_soc_03",
+              "dating__path_soc_11",
+              "dating__path_hap_05",
+              "dating__love_letter_01"
+            ]
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week13_love_line"
+      }
+    ],
+    "priority": 0,
+    "kind": "INCIDENT",
+    "periods": [
+      "YOUNG_ADULT",
+      "MIDDLE"
+    ],
+    "weight": 80,
+    "view": "FIRST_PERSON",
+    "pathRole": "러브라인 3단계(첫사랑 후보) — 갈등: 화해 또는 결별",
+    "followUps": [
+      "love_reunion_first_love"
+    ]
+  },
+  "reviewScope": "Current complete event, conditions, every choice including legacy fields, all outcomes, probabilities, deltas and flags read for pre-choice art specification. No new image has been generated or approved by this brief.",
+  "reviewedChoiceIds": [
+    "A",
+    "B",
+    "C"
+  ],
+  "reviewedOutcomeIds": [
+    "a_memory",
+    "a_past",
+    "b_new",
+    "b_tired",
+    "c_laugh",
+    "c_cringe"
+  ],
+  "existingArtBriefPath": "docs/assignments/20261031/submissions/김선한_분류합본.csv",
+  "existingArtBriefSnapshot": {
+    "place": "카페 테이블",
+    "mainAction": "오래된 단체 사진을 사이에 두고 서운함을 이야기한다",
+    "requiredObjects": "학창 시절 단체 사진",
+    "peopleAndAge": "청년 연인 두 사람",
+    "timeOfDay": "오후",
+    "approvedPerspective": "FIRST_PERSON",
+    "reuseOrNewReason": "NEW: 13주차 러브라인 신규 사건. 관계 단계(연인·약혼·배우자·자녀)를 선택 전보다 앞서 보여 주지 않는 전용 장면 필요"
+  },
+  "requestedAssetPath": "app/src/main/assets/images/img_love_conflict_first_love_001.png",
+  "preChoiceState": "학창 시절부터 알던 성인 연인이 현재의 마음을 안다고 단정하는 태도에 서운함을 말한다. 과거 사진은 아직 꺼내지 않았다.",
+  "composition": "오후 카페 테이블에서 연인의 다소 굳은 손·상체 일부와 플레이어의 조용히 놓인 손, 두 잔을 중앙에 둔다. 서로 손을 잡지 않으며 사진·앨범 없음.",
+  "ageAndAppearance": "현재 청년~중년 성인. 학창 시절 언급을 교복·미성년 연애 장면으로 바꾸지 않는다. 플레이어와 상대 정체·성별 중립.",
+  "forbiddenOutcomes": [
+    "옛 단체사진·사진첩을 이미 꺼냄",
+    "함께 사진을 보며 웃음",
+    "새 동네 첫 데이트 재시작",
+    "등을 때리는 애교 반응",
+    "이별 확정",
+    "교복·학교 시절 회상 이미지"
+  ],
+  "briefCorrections": [
+    "기존 제작분류는 학창 시절 단체사진을 필수로 적었으나 현재 본문에는 없고 선택 A에서 처음 꺼낸다. 현재 사건 원문을 우선하여 사진을 금지한다."
+  ],
+  "generationPrompt": "Create one portrait 9:16 full-bleed game background, warm restrained Korean everyday-life pixel-art illustration. Crisp deliberate pixel clusters, coherent anatomy, softly separated light and shadow, not photorealism and not a UI mockup. Strict first-person player viewpoint: no player face, back of head, full player body, reflection, selfie or framed portrait of the player. Only naturally placed player hands or forearms may enter the frame. The player can be male or female; hands, clothing and visible partner styling must not encode a fixed player gender or a uniquely named past partner. All romantic participants are clearly adults; do not depict school-age children as romantic partners. Use age-flexible adult styling that can fit young adulthood or middle adulthood. If a partner must be visible, show non-identifying partial profile, cropped upper torso or hands rather than an identity-defining portrait. No readable text, letters, digits, logos, subtitles, speech bubbles, interface panels, progress indicators or button graphics. Any phone message cue must be an abstract non-text shape and never legible text. Keep all story-critical objects together inside the central 60% of the portrait width and middle 60% of height; leave the bottom 22% visually quiet for the game overlay, without drawing an overlay. This is the instant before the player chooses. Show the stated present situation only, with no success, failure, marriage, pregnancy, reconciliation, breakup or future achievement unless already established in the source conditions. \nSCENE: An unresolved conversation between two ADULT partners who have known each other since school, at a cafe table in afternoon light. First-person view of two drinks, the players calm hand at the near edge, and the partners slightly tense hands with a cropped upper torso across the table. There is emotional distance but no declared breakup. Absolutely no school photograph, album, school uniform, children, memory inset or flashback: a photograph is only a FUTURE possible choice and has not been taken out. No laughing together, touching backs, new date location or joined hands. Convey quiet hurt through posture rather than a fixed face or gender.",
+  "deliveryAndReview": {
+    "format": "PNG, portrait 9:16",
+    "originalAssets": "Preserve existing artwork and approval history. This is a missing-art candidate, not a replacement approval.",
+    "requiredChecks": [
+      "Read current event hash again before generation; stale briefs must be reread.",
+      "Inspect full image, anatomy, all required objects and absence of choice outcomes.",
+      "Inspect actual native portrait presentation and UI overlay at phone and narrow viewport.",
+      "Record image SHA, exact generation prompt, truthful AI producer/reviewer and per-event rationale before any separate approval action."
+    ],
+    "approvalOrManifestChanged": false
+  }
+}

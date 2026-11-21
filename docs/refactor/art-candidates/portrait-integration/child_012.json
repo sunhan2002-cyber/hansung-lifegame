@@ -1,0 +1,29 @@
+{
+  "eventId": "child_012",
+  "sourceAssetPath": "followup_20261031/img_child_culture_pick_001.png",
+  "sourceSha256": "360e55da212b180cc7a8c0e4feb09b7b8199f1f60747228ac11847db0d72595d",
+  "variant": {
+    "assetPath": "presentation/portraits/img_child_culture_pick_001_portrait_v1.png",
+    "sha256": "7eb9358b2b74e915ed89c4122b519855e74e62735b15bae0d448b777686209a0",
+    "width": 941,
+    "height": 1672,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root/security_p0)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/child_012.json"
+  },
+  "reviewerType": "AI",
+  "reviewer": "Codex AI (/root/security_p0)",
+  "reviewStatus": "AI_REVIEWED_PRESENTATION",
+  "eventSourceHash": "005bd46555ea49f5c1cb9a36b45516f164c4dd61cc3dbcbfea8fd877225fbdbf",
+  "semanticReview": "Producer read the current event conditions and every choice/outcome, inspected source and selected output. Full source snapshot and exact prompt are in the referenced production ledger. Native acceptance remains pending.",
+  "visualReview": "Individually viewed: exactly three central option panels now show science glassware, reading books and Go board with black/white stones; Korean heading and music notes removed. No performed experiment/debate/match or chosen club. Generic theatre-mask trim remains on the blank header as source decoration, not a fourth option; native reviewer should confirm it is not confusing.",
+  "cropReview": "Portrait candidate selected for native phone/small-phone scene and gameplay inspection; not final artwork acceptance.",
+  "actualProducer": "OpenAI built-in image_gen",
+  "generationMethod": "Built-in imagegen edit; exact prompts/output SHA/rejected attempts preserved in docs/refactor/art-candidates/content-art-revision-briefs-20261119.json",
+  "productionLedger": "docs/refactor/art-candidates/content-art-revision-briefs-20261119.json",
+  "nativePending": true,
+  "runtimeConnected": true,
+  "approvalChanged": false,
+  "selectedStagingSha256": "7eb9358b2b74e915ed89c4122b519855e74e62735b15bae0d448b777686209a0"
+}

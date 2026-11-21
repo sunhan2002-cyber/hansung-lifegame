@@ -1,0 +1,71 @@
+{
+  "eventId": "teen_012",
+  "reviewerType": "AI",
+  "scope": "Portrait phone and small-phone presentation",
+  "sourceEventHash": "efa4f5392697385703633278030b22708cd894c9829605d8e56fd6ce1d1316e1",
+  "sourceReview": "docs/refactor/art-candidates/portrait-integration/teen_012.json",
+  "sourceSha256": "b7ab0929cd115b6564f8ff581459f6049306c0e9b683981e73e1b80585e20f2b",
+  "displayedVariant": {
+    "assetPath": "presentation/portraits/img_teen_band_stage_001_portrait_v1.png",
+    "sha256": "062a9e85a6716ca4ccf12df254716a6bfed6c12d4ebeaab09610931fdf667e22",
+    "width": 941,
+    "height": 1672,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/teen_012.json"
+  },
+  "nativeCaptures": [
+    {
+      "path": "build/refactor/resumed/native18/teen_012_phone_scene.png",
+      "sha256": "c52ddfe07479e1adf36c787310d65b5cbfd0f59eb6d7d79d28f563de204ab564",
+      "crop": {
+        "eventId": "teen_012",
+        "imageId": "img_teen_band_stage_001",
+        "assetPath": "presentation/portraits/img_teen_band_stage_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/native18/teen_012_phone_play.png",
+      "sha256": "ff8d77646cf0a3ccc3cca7cbb28778273c1a230df8bf2349d2b047e4c5c467d9",
+      "crop": {
+        "eventId": "teen_012",
+        "imageId": "img_teen_band_stage_001",
+        "assetPath": "presentation/portraits/img_teen_band_stage_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/native18/teen_012_360x740_scene.png",
+      "sha256": "40f5e2e7452038e7573f4f16f72e6bf78c5f727309464832656e9cbf5c871641",
+      "crop": {
+        "eventId": "teen_012",
+        "imageId": "img_teen_band_stage_001",
+        "assetPath": "presentation/portraits/img_teen_band_stage_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/native18/teen_012_360x740_play.png",
+      "sha256": "99606e1ae37db06a9d63e4ccec2e7783a05d22ad564404e22539390f133a3a4d",
+      "crop": {
+        "eventId": "teen_012",
+        "imageId": "img_teen_band_stage_001",
+        "assetPath": "presentation/portraits/img_teen_band_stage_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    }
+  ],
+  "observation": "목을 짚은 보컬과 손대지 않은 마이크 및 베이스가 보인다.",
+  "decision": "PASS",
+  "method": "Individual visual inspection of both scene and gameplay frames together with producer semantic/source review and device capture match."
+}

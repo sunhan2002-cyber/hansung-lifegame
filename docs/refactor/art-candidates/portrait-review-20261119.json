@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-19",
+  "eventId": "adult_072",
+  "eventSourceHash": "295aa3bbc0bd22d2f4716f4b3f5c8613062ec6c5e8de08cbb3702e61132aec5e",
+  "sourceAssetPath": "followup_20261031/img_pov_first_card_001.png",
+  "sourceSha256": "e8b321c9fffff153bf5a4a47eef2c67a67097db7acf14f218013ad79b33a2121",
+  "variant": {
+    "assetPath": "presentation/portraits/img_pov_first_card_001_portrait_v1.png",
+    "sha256": "91490db70d899eae008069ff82dded8cc100ba89d654cb02c599b2f90e6cf011",
+    "width": 941,
+    "height": 1672,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-review-20261119.json"
+  },
+  "assignmentOwner": "정원률",
+  "actualProducer": "Codex AI (current user-authorized refactoring)",
+  "generationMethod": "built-in image_gen; supplied PNG copied byte-for-byte without resizing",
+  "generationPromptSource": "docs/refactor/art-candidates/portrait-generation-prompt.txt (exact built-in image_gen prompt)",
+  "reviewer": "Codex AI",
+  "reviewerType": "AI",
+  "reviewStatus": "AI_REVIEWED_PRESENTATION",
+  "scope": "This portrait presentation variant only. Original PNG, legacy catalogue, and legacy event acceptance remain unchanged. AI review with actual Android emulator evidence; no human approval implied.",
+  "semanticReview": "Read adult_072 title/body/choices/results. Both pre-choice documents appear side-by-side: work briefcase symbol and examination pencil/form symbol. No employment result, acceptance text or business card in hand.",
+  "visualReview": "Opened and inspected full 941x1672 PNG: warm pixel-like illustration, first-person seated view, two empty hands, both complete documents, no protagonist face or legible UI text.",
+  "cropReview": "Inspected actual Android 16/API 36 application screenshot adult_072_phone_scene.png: both complete pre-choice documents and empty hands remain visible in the full-bleed portrait. SceneCropReviewTest passed on the emulator's full viewport and the 360x740dp viewport, retaining the original pixel-match threshold. PortraitVariantTest passed both source/variant selection and fallback checks. Evidence: build/refactor/after/followup-20261103-crop/ and build/refactor/p1-device-refined-results/. This does not certify other event artwork."
+}

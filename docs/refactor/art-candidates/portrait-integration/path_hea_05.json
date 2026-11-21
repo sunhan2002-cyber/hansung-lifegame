@@ -1,0 +1,29 @@
+{
+  "eventId": "path_hea_05",
+  "sourceAssetPath": "followup_20261031/img_path_hea_05_001.png",
+  "sourceSha256": "be3e4d1d9ce4b43776dba7b3c93862cb7d069a02fc42fb4c02947fdc422c7455",
+  "variant": {
+    "assetPath": "presentation/portraits/img_path_hea_05_001_portrait_v1.png",
+    "sha256": "300e0155d72702be5d5f73d12e00c6d5450e054ff2b2b8ab88285c8abc3984ef",
+    "width": 941,
+    "height": 1672,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root/effects_tech)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/path_hea_05.json"
+  },
+  "reviewerType": "AI",
+  "reviewer": "Codex AI (/root/effects_tech)",
+  "reviewStatus": "AI_REVIEWED_PRESENTATION",
+  "eventSourceHash": "a4df3d1978f6501cd2ace5981197e25fdeec87aca1d60d2511ea4ded19df5127",
+  "semanticReview": "Producer read the current event conditions and every choice/outcome, inspected source and selected output. Full source snapshot and exact prompt are in the referenced production ledger. Native acceptance remains pending.",
+  "visualReview": "진단서와 생활습관 안내 두 자료를 축소 중앙 배치하고 의사 상체·청진기·설명 전 손 모양·주인공두손 유지. 원본밖 의사얼굴이 세로구성으로 추가되어 동일인 얼굴 확정 근거는 없음. 치료/회복 결과 없고9:20핵심 보존. native pending.",
+  "cropReview": "Portrait candidate selected for native phone/small-phone scene and gameplay inspection; not final artwork acceptance.",
+  "actualProducer": "OpenAI built-in image_gen",
+  "generationMethod": "Built-in imagegen edit; exact prompts/output SHA/rejected attempts preserved in docs/refactor/art-candidates/crop-variant-production-20261119.json",
+  "productionLedger": "docs/refactor/art-candidates/crop-variant-production-20261119.json",
+  "nativePending": true,
+  "runtimeConnected": true,
+  "approvalChanged": false,
+  "selectedStagingSha256": "300e0155d72702be5d5f73d12e00c6d5450e054ff2b2b8ab88285c8abc3984ef"
+}

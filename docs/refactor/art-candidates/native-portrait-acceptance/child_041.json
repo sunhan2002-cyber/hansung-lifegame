@@ -1,0 +1,71 @@
+{
+  "eventId": "child_041",
+  "reviewerType": "AI",
+  "scope": "Portrait phone and small-phone presentation",
+  "sourceEventHash": "51556ffdb0c1f90ac87eb64f34026a58d84fc8e27b76aab0f79e32b89b4fbfd3",
+  "sourceReview": "docs/refactor/art-candidates/portrait-integration/child_041.json",
+  "sourceSha256": "e9dadea02bad787835f77aa5656e344ed7419f540b441be540d33cd27f5919fd",
+  "displayedVariant": {
+    "assetPath": "presentation/portraits/img_child_swing_line_001_portrait_v1.png",
+    "sha256": "8b7c20b803bacefcb3e3364ec14ecc0b1ae1ff115be062f52f50c23860f23ae6",
+    "width": 941,
+    "height": 1672,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root/security_p0)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/child_041.json"
+  },
+  "nativeCaptures": [
+    {
+      "path": "build/refactor/after/portrait-fortythree-native/child_041_phone_scene.png",
+      "sha256": "f3c8a8f0a31492b05903fa3597532bc3aa78f90bb3fc1b8b917136da873b63cf",
+      "crop": {
+        "eventId": "child_041",
+        "imageId": "img_child_swing_line_001",
+        "assetPath": "presentation/portraits/img_child_swing_line_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/portrait-fortythree-native/child_041_phone_play.png",
+      "sha256": "7b4c4ac862318feb936a16088874444577ff497568079701f0edbfb14745fe23",
+      "crop": {
+        "eventId": "child_041",
+        "imageId": "img_child_swing_line_001",
+        "assetPath": "presentation/portraits/img_child_swing_line_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/portrait-fortythree-native/child_041_360x740_scene.png",
+      "sha256": "da1faf16cb5a243bfd35fd1e7d652fe7ff9c455fca4c13f9b9e953d3d8ef25b9",
+      "crop": {
+        "eventId": "child_041",
+        "imageId": "img_child_swing_line_001",
+        "assetPath": "presentation/portraits/img_child_swing_line_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/portrait-fortythree-native/child_041_360x740_play.png",
+      "sha256": "8bab950fcf5fe08244e1e03eb133ca6eb2489fe66a75e572557a3ff4138e3744",
+      "crop": {
+        "eventId": "child_041",
+        "imageId": "img_child_swing_line_001",
+        "assetPath": "presentation/portraits/img_child_swing_line_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    }
+  ],
+  "observation": "빈 그네와 주변에 기다리는 아이들이 보이고 누구도 아직 타지 않았다.",
+  "decision": "PASS",
+  "method": "Individual visual inspection of both scene and gameplay frames together with producer semantic/source review and device capture match."
+}

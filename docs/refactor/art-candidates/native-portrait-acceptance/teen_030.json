@@ -1,0 +1,71 @@
+{
+  "eventId": "teen_030",
+  "reviewerType": "AI",
+  "scope": "Portrait phone and small-phone presentation",
+  "sourceEventHash": "0a9968ac1863acbb325b4ebba5df325c1b2abfabd1c96b588d319d97b9f27800",
+  "sourceReview": "docs/refactor/art-candidates/portrait-integration/teen_030.json",
+  "sourceSha256": "6b1d0bc07e9b421a390721271e13f9e4081df8af1e8f488f10b2f9836b40fc39",
+  "displayedVariant": {
+    "assetPath": "presentation/portraits/img_teen_class_shirt_001_portrait_v1.png",
+    "sha256": "0013e882f7dac256c2673b3d4adc45f62ade4ed0455619f578cc52480cc87fe0",
+    "width": 941,
+    "height": 1672,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/teen_030.json"
+  },
+  "nativeCaptures": [
+    {
+      "path": "build/refactor/resumed/final32/teen_030_phone_scene.png",
+      "sha256": "99616a6129b837e0b3dc3826b7a8fbcaf8ed84eaedbd0296474103aec67a3c26",
+      "crop": {
+        "eventId": "teen_030",
+        "imageId": "img_teen_class_shirt_001",
+        "assetPath": "presentation/portraits/img_teen_class_shirt_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/final32/teen_030_phone_play.png",
+      "sha256": "bef79207bf8896626683b06fee7ec9dc00db404f8bf0e54175ab2830b12d8de6",
+      "crop": {
+        "eventId": "teen_030",
+        "imageId": "img_teen_class_shirt_001",
+        "assetPath": "presentation/portraits/img_teen_class_shirt_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/final32/teen_030_360x740_scene.png",
+      "sha256": "5a60584de1a1fde2ee28c94640cacb9dbba45ef04cfe67ca55e523d351830591",
+      "crop": {
+        "eventId": "teen_030",
+        "imageId": "img_teen_class_shirt_001",
+        "assetPath": "presentation/portraits/img_teen_class_shirt_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/final32/teen_030_360x740_play.png",
+      "sha256": "8d5ac90c482f0a92ec910c7fdc786b01787a1aebb2f511040d4b031f10d92e98",
+      "crop": {
+        "eventId": "teen_030",
+        "imageId": "img_teen_class_shirt_001",
+        "assetPath": "presentation/portraits/img_teen_class_shirt_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    }
+  ],
+  "observation": "Three clothing options hanging over ballot box, paper still unmarked.",
+  "decision": "PASS",
+  "method": "Individual visual inspection of both scene and gameplay frames together with producer semantic/source review and device capture match."
+}

@@ -1,0 +1,29 @@
+{
+  "eventId": "child_041",
+  "sourceAssetPath": "followup_20261031/img_child_swing_line_001.png",
+  "sourceSha256": "e9dadea02bad787835f77aa5656e344ed7419f540b441be540d33cd27f5919fd",
+  "variant": {
+    "assetPath": "presentation/portraits/img_child_swing_line_001_portrait_v1.png",
+    "sha256": "8b7c20b803bacefcb3e3364ec14ecc0b1ae1ff115be062f52f50c23860f23ae6",
+    "width": 941,
+    "height": 1672,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root/security_p0)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/child_041.json"
+  },
+  "reviewerType": "AI",
+  "reviewer": "Codex AI (/root/security_p0)",
+  "reviewStatus": "AI_REVIEWED_PRESENTATION",
+  "eventSourceHash": "51556ffdb0c1f90ac87eb64f34026a58d84fc8e27b76aab0f79e32b89b4fbfd3",
+  "semanticReview": "Producer read the current event conditions and every choice/outcome, inspected source and selected output. Full source snapshot and exact prompt are in the referenced production ledger. Native acceptance remains pending.",
+  "visualReview": "Second attempt individually viewed: one empty central swing and clear path, four other children split at near sides looking toward player, two empty player hands. No one seated or already swinging. First ambiguous front-queue candidate rejected and retained; native overlay must still show waiting children.",
+  "cropReview": "Portrait candidate selected for native phone/small-phone scene and gameplay inspection; not final artwork acceptance.",
+  "actualProducer": "OpenAI built-in image_gen",
+  "generationMethod": "Built-in imagegen edit; exact prompts/output SHA/rejected attempts preserved in docs/refactor/art-candidates/content-art-revision-briefs-20261119.json",
+  "productionLedger": "docs/refactor/art-candidates/content-art-revision-briefs-20261119.json",
+  "nativePending": true,
+  "runtimeConnected": true,
+  "approvalChanged": false,
+  "selectedStagingSha256": "8b7c20b803bacefcb3e3364ec14ecc0b1ae1ff115be062f52f50c23860f23ae6"
+}

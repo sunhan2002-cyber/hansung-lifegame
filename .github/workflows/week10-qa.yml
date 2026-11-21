@@ -1,4 +1,4 @@
-name: Week 10 QA
+name: Android and content QA
 
 on:
   pull_request:
@@ -8,7 +8,7 @@ on:
   workflow_dispatch:
     inputs:
       final_acceptance:
-        description: Enforce unfinished final release gates as failures
+        description: Run the full device suite and enforce all unfinished release gates
         type: boolean
         default: false
 
@@ -22,7 +22,7 @@ concurrency:
 jobs:
   data-and-android:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: ${{ inputs.final_acceptance && 180 || 45 }}
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
       - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7
@@ -36,13 +36,14 @@ jobs:
         run: |
           python scripts/validate_content.py
           python scripts/validate_images.py
+          python scripts/validate_portrait_variants.py
           python scripts/validate_week8_contracts.py
           python scripts/audit_choice_conditions.py
           python scripts/audit_event_stat_classification.py
           python -m unittest discover -s scripts/tests -v
           python scripts/validate_week10.py --report build/week10/content_audit.json
           python scripts/validate_followup_image_coverage.py --report build/week10/event_image_coverage.json
-      - name: Ensure Android 35 packages
+      - name: Ensure Android 35 build and emulator packages
         run: |
           python - <<'PY'
           import os, pathlib, shutil, subprocess
@@ -51,20 +52,98 @@ jobs:
           manager = shutil.which('sdkmanager') or next((str(p) for p in candidates if p.is_file()), None)
           if manager is None:
               raise RuntimeError(f'Android SDK manager missing under {root}')
-          subprocess.run([manager, 'platforms;android-35', 'build-tools;35.0.0'], input=('y' + chr(10)) * 30, text=True, check=True)
+          subprocess.run([manager, 'platforms;android-35', 'build-tools;35.0.0', 'platform-tools', 'emulator',
+                          'system-images;android-35;google_apis;x86_64'],
+                         input=('y' + chr(10)) * 30, text=True, check=True)
+          with open(os.environ['GITHUB_PATH'], 'a', encoding='utf-8') as stream:
+              for path in [pathlib.Path(manager).parent, root / 'platform-tools', root / 'emulator']:
+                  stream.write(str(path) + '\n')
           PY
-      - name: Unit tests, 10000 real lives, and APKs
+      - name: Lint, unit tests, 10000 real lives, and APKs
         run: |
           chmod +x gradlew
-          ./gradlew test :app:week10Simulation assembleDebug assembleRelease assembleDebugAndroidTest --no-daemon --max-workers=2 -Pweek10ReportDir=../build/week10/simulation -Pweek10SourceCommit="$(git rev-parse HEAD)"
+          ./gradlew :app:lintDebug test :app:week10Simulation assembleDebug assembleRelease assembleDebugAndroidTest --no-daemon --max-workers=2 -Pweek10ReportDir=../build/week10/simulation -Pweek10SourceCommit="$(git rev-parse HEAD)"
           python scripts/summarize_week10.py --input build/week10/simulation --out build/week10/assessment
           cat build/week10/assessment/simulation_report.md >> "$GITHUB_STEP_SUMMARY"
           sha256sum app/build/outputs/apk/debug/*.apk app/build/outputs/apk/release/*.apk > build/week10/apk-sha256.txt
-      - name: Enforce final release targets when requested
-        if: ${{ github.event_name == 'workflow_dispatch' && inputs.final_acceptance }}
+      - name: Verify the release APK contains no direct generation client or service key
+        run: python scripts/verify_release_security.py --apk app/build/outputs/apk/release/app-release-unsigned.apk
+      - name: Run Android device tests on API 35
+        timeout-minutes: ${{ inputs.final_acceptance && 135 || 20 }}
+        env:
+          FINAL_ACCEPTANCE: ${{ github.event_name == 'workflow_dispatch' && inputs.final_acceptance }}
+          ANDROID_SERIAL: emulator-5554
+        run: |
+          test -e /dev/kvm
+          sudo chmod a+rw /dev/kvm
+          # avdmanager and the emulator default to different AVD folders on the runner
+          # (emulator 37: "Unknown AVD name [lifegame_ci]"). Pin one folder for both.
+          export ANDROID_AVD_HOME="$HOME/.android/avd"
+          mkdir -p build/week10/device "$ANDROID_AVD_HOME"
+          printf 'no\n' | avdmanager create avd --force --name lifegame_ci --package 'system-images;android-35;google_apis;x86_64' --device pixel_2
+          emulator -list-avds
+          adb start-server
+          emulator -avd lifegame_ci -port 5554 -no-window -no-audio -no-boot-anim -no-snapshot -gpu software -accel on -memory 2048 > build/week10/device/emulator.log 2>&1 &
+          emulator_pid=$!
+          cleanup() {
+            result=$?
+            trap - EXIT
+            timeout 10s adb -s "$ANDROID_SERIAL" logcat -d > build/week10/device/logcat.txt 2>&1 || true
+            timeout 10s adb -s "$ANDROID_SERIAL" emu kill || true
+            kill "$emulator_pid" 2>/dev/null || true
+            exit "$result"
+          }
+          trap cleanup EXIT
+          booted=false
+          boot_deadline=$((SECONDS + 360))
+          while [ "$SECONDS" -lt "$boot_deadline" ]; do
+            if ! kill -0 "$emulator_pid" 2>/dev/null; then
+              cat build/week10/device/emulator.log
+              exit 1
+            fi
+            if [ "$(timeout 5s adb -s "$ANDROID_SERIAL" shell getprop sys.boot_completed 2>/dev/null | tr -d '\r')" = '1' ]; then
+              booted=true
+              break
+            fi
+            sleep 2
+          done
+          if [ "$booted" != true ]; then
+            echo 'Android emulator did not finish booting within the bounded wait.'
+            exit 1
+          fi
+          adb -s "$ANDROID_SERIAL" shell input keyevent 82
+          device_args=()
+          if [ "$FINAL_ACCEPTANCE" != true ]; then
+            device_args+=('-Pandroid.testInstrumentationRunnerArguments.class=com.example.lifegame.ui.Week13ScreenFlowTest,com.example.lifegame.ui.Week13FrontendFinishFlowTest,com.example.lifegame.ui.ResultRewardOnceTest,com.example.lifegame.ui.CompletedLifeRecoveryTest,com.example.lifegame.ui.ContentAndSaveFailureTest,com.example.lifegame.ui.ExperienceEffectsTest,com.example.lifegame.ui.HomeLobbyTest,com.example.lifegame.ui.EndingDurabilityRecreationTest,com.example.lifegame.ui.Dice3DTest,com.example.lifegame.ui.PortraitVariantTest,com.example.lifegame.ui.CompletionCelebrationTest,com.example.lifegame.ui.SceneAtmosphereFlowTest,com.example.lifegame.ui.AvatarBlinkTest,com.example.lifegame.ui.SceneDepthTest')
+          fi
+          ./gradlew :app:connectedDebugAndroidTest --no-daemon --max-workers=2 "${device_args[@]}"
+          python scripts/verify_android_test_results.py --results app/build/outputs/androidTest-results/connected/debug \
+            --require-class com.example.lifegame.ui.Week13ScreenFlowTest \
+            --require-class com.example.lifegame.ui.Week13FrontendFinishFlowTest \
+            --require-class com.example.lifegame.ui.ResultRewardOnceTest \
+            --require-class com.example.lifegame.ui.CompletedLifeRecoveryTest \
+            --require-class com.example.lifegame.ui.ContentAndSaveFailureTest \
+            --require-class com.example.lifegame.ui.ExperienceEffectsTest \
+            --require-class com.example.lifegame.ui.HomeLobbyTest \
+            --require-class com.example.lifegame.ui.EndingDurabilityRecreationTest \
+            --require-class com.example.lifegame.ui.Dice3DTest \
+            --require-class com.example.lifegame.ui.PortraitVariantTest \
+            --require-class com.example.lifegame.ui.CompletionCelebrationTest \
+            --require-class com.example.lifegame.ui.SceneAtmosphereFlowTest \
+            --require-class com.example.lifegame.ui.AvatarBlinkTest \
+            --require-class com.example.lifegame.ui.SceneDepthTest \
+            --report build/week10/device/verified-results.json
+      - name: Enforce release semantic review
+        if: ${{ !cancelled() && github.event_name == 'workflow_dispatch' && inputs.final_acceptance }}
         run: |
           python scripts/validate_week10.py --report build/week10/content_audit.json --acceptance
+      - name: Enforce release image acceptance
+        if: ${{ !cancelled() && github.event_name == 'workflow_dispatch' && inputs.final_acceptance }}
+        run: |
           python scripts/validate_followup_image_coverage.py --report build/week10/event_image_coverage.json --acceptance
+      - name: Enforce release simulation targets
+        if: ${{ !cancelled() && github.event_name == 'workflow_dispatch' && inputs.final_acceptance }}
+        run: |
           python scripts/summarize_week10.py --input build/week10/simulation --out build/week10/assessment --acceptance
       - name: Preserve QA evidence even on failure
         if: always()
@@ -76,4 +155,5 @@ jobs:
             build/week10/
             app/build/reports/
             app/build/test-results/
+            app/build/outputs/androidTest-results/
             app/build/outputs/apk/

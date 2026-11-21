@@ -1,0 +1,9 @@
+Use-case: edit an existing Korean life-simulation event illustration. Produce one full-bleed vertical 9:16 portrait pixel-art scene for a mobile game. The supplied original is the edit target and style reference. Preserve its warm nostalgic color palette, visible handcrafted pixel clusters, gentle depth and everyday Korean setting, while correcting the scene exactly as specified below. The camera is always the player's own eyes: small hands/partial limbs are allowed, but never show the player's face, rear head, complete body, reflection or portrait. Other people may have natural faces. Keep every necessary story cue in the central 80% of portrait width; no panel border or UI. No readable words, letters, numerals, logos, captions, speech balloons, thought bubbles, decorative comic marks or watermarks. Do not insert text to explain missing visual content. Render a single coherent scene, not a montage. Avoid excessive smooth anime gradients; retain the source pixel-art rendering.
+
+CURRENT EVENT BEFORE ANY CHOICE (source text; do not typeset): 이혼하고 맞는 첫 명절. 부모님은 '그냥 와라'라고만 했다. 친구 단톡방엔 '명절에 갈 데 없는 사람 모여라'가 올라왔다.
+
+REQUIRED EDIT: 혼자 있는 집의 첫인칭 손과 폰에 부모/친구를 구분하는 두 비식별 알림, 비어 있는 식탁을 중앙 세로 구도로 새로 편집.
+
+UNDECIDED CHOICES / OUTCOMES TO EXCLUDE: 부모님 집 방문·가족 질문·친구 다섯 명 모임·음식상·기차여행·해변국밥은 선택 이전에 보이지 않게 한다.
+
+Output an emotionally clear vertical 9:16 composition. All key people, object counts and cues must survive narrow portrait cropping. No extra choice result.

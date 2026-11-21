@@ -1,0 +1,285 @@
+{
+  "schemaVersion": 1,
+  "eventId": "love_reunion_ideal",
+  "status": "PASS",
+  "reviewer": "Codex AI / plan_audit",
+  "reviewerType": "AI",
+  "reviewDate": "2026-11-19",
+  "approvalScope": "Current complete event and exact PNG; phone and 360x740 native Compose scene/play visual review",
+  "sourceEventHash": "7fe95668bac338e9765e97b35bab05924948a4e5a2d54bfca1c0304f8bdc1924",
+  "sourceEventSnapshot": {
+    "eventId": "love_reunion_ideal",
+    "stage": "ADULT",
+    "type": "NORMAL",
+    "isFallback": false,
+    "isMilestone": false,
+    "title": "다시 마주친 그 길",
+    "text": "처음 반했던 그 길, 그 자리. 헤어진 그 사람이 또 거기 서 있었다. 이번엔 시계를 보고 있지 않았다.",
+    "imageId": "img_love_reunion_ideal_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [
+        "breakup_once",
+        "ex_ideal"
+      ],
+      "blockedFlags": [
+        "dating",
+        "engaged",
+        "married"
+      ]
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "먼저 인사한다",
+        "statDelta": {
+          "행복": 3
+        },
+        "resultText": "\"요즘은 안 늦어.\" 그 사람이 시계를 보여 줬다. 10분 빠르게 맞춰져 있었다.",
+        "addFlags": [
+          "dating",
+          "rel_steady",
+          "partner_ideal",
+          "reunited"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "a_again",
+            "text": "\"요즘은 안 늦어.\" 그 사람이 시계를 보여 줬다. 10분 빠르게 맞춰져 있었다.",
+            "chance": 55,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 3
+            },
+            "addFlags": [
+              "dating",
+              "rel_steady",
+              "partner_ideal",
+              "reunited"
+            ],
+            "removeFlags": [
+              "ex_ideal"
+            ]
+          },
+          {
+            "outcomeId": "a_hello",
+            "text": "인사만 하고 각자 갈 길을 갔다. 세 걸음 가다 돌아봤다. 이번엔 그 사람이 먼저 손을 흔들었다.",
+            "chance": 45,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 1
+            },
+            "addFlags": [
+              "closure"
+            ],
+            "removeFlags": [
+              "ex_ideal"
+            ]
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week13_love_line"
+      },
+      {
+        "choiceId": "B",
+        "label": "모른 척 지나간다",
+        "statDelta": {
+          "지력": 1
+        },
+        "resultText": "지나치고 나서야 심장이 조용하다는 걸 알았다. 이제 정말 괜찮았다.",
+        "addFlags": [
+          "closure"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "b_pass",
+            "text": "지나치고 나서야 심장이 조용하다는 걸 알았다. 이제 정말 괜찮았다.",
+            "chance": 100,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "지력": 1
+            },
+            "addFlags": [
+              "closure"
+            ],
+            "removeFlags": [
+              "ex_ideal"
+            ]
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week13_love_line"
+      },
+      {
+        "choiceId": "C",
+        "label": "이번엔 내가 40분 뒤에 다시 와 본다",
+        "statDelta": {
+          "행복": 3,
+          "운": 1
+        },
+        "resultText": "40분 뒤 돌아와 보니 그 사람이 아직 기다리고 있었다. '이제 내 마음 알겠지?'",
+        "addFlags": [
+          "dating",
+          "rel_steady",
+          "partner_ideal",
+          "reunited"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "c_wait",
+            "text": "40분 뒤 돌아와 보니 그 사람이 아직 기다리고 있었다. '이제 내 마음 알겠지?'",
+            "chance": 50,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 3,
+              "운": 1
+            },
+            "addFlags": [
+              "dating",
+              "rel_steady",
+              "partner_ideal",
+              "reunited"
+            ],
+            "removeFlags": [
+              "ex_ideal"
+            ]
+          },
+          {
+            "outcomeId": "c_gone",
+            "text": "40분 뒤엔 아무도 없었다. 당연했다.",
+            "chance": 50,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": -1
+            },
+            "addFlags": [
+              "closure"
+            ],
+            "removeFlags": [
+              "ex_ideal"
+            ]
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week13_love_line"
+      }
+    ],
+    "priority": 0,
+    "kind": "INCIDENT",
+    "periods": [
+      "YOUNG_ADULT",
+      "MIDDLE"
+    ],
+    "weight": 30,
+    "view": "FIRST_PERSON",
+    "pathRole": "러브라인 재회(이상형 후보)",
+    "followUps": [
+      "love_marriage_talk_01"
+    ]
+  },
+  "sourceReadScope": "Title, full text, conditions, every choice and outcome including flags/stat deltas, periods and follow-ups directly read.",
+  "sourceImage": {
+    "path": "app/src/main/assets/images/img_love_reunion_ideal_001.png",
+    "sha256": "bdaa69ed4079a64e3b700d8164fd6fcf3491cd5cd657feb41f2f8900bd742ae5",
+    "width": 941,
+    "height": 1672
+  },
+  "generationManifest": "docs/refactor/art-candidates/generated-love-secondary-20261119.json",
+  "selectedGenerationOutput": "C:\\Users\\jk030\\.codex\\generated_images\\01a1f1e9-d1e7-7610-888a-7aff56bbb301\\exec-bf496d89-4b7c-433e-92bc-efcc0cb0a644.png",
+  "exactGenerationPromptSha256": "acfa01e6a0a0cf3fb7df7488425c73bdcd3030b48f35577a1c4907bf46055891",
+  "sourceGenerationReview": {
+    "reviewer": "Codex AI (/root/plan_audit)",
+    "reviewerType": "AI",
+    "method": "Direct visual inspection of the complete built-in generated image displayed by the tool; source-only, not an emulator capture.",
+    "status": "SELECTED_SOURCE_NATIVE_PENDING",
+    "observations": [
+      "The former partner stands across an ordinary crossing with both arms lowered and no watch-checking gesture.",
+      "The player is the viewpoint; no hand-wave, raised watch, reunion embrace, departure or second visit is depicted.",
+      "The central distant adult figure and crossing remain clear without legible signage or a player reflection."
+    ],
+    "concerns": [
+      "Native crop and UI-overlay inspection remains required."
+    ]
+  },
+  "presentationMetadata": [],
+  "captures": [
+    {
+      "path": "build/refactor/after/secondary-art-focals-native/love_reunion_ideal_phone_scene.png",
+      "sha256": "9569ebddbf06e6a59843267b4185c3edcb51d2b6f21160d3c9dd30936f5da19c",
+      "width": 1080,
+      "height": 2400,
+      "screen": "phone",
+      "mode": "scene",
+      "cropReport": {
+        "eventId": "love_reunion_ideal",
+        "imageId": "img_love_reunion_ideal_001",
+        "assetPath": "img_love_reunion_ideal_001.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/secondary-art-focals-native/love_reunion_ideal_phone_play.png",
+      "sha256": "5f8e8c20d1d32d1a14b5ccd3e2a81e64bac2391d339e28837e4ac2c98dc36308",
+      "width": 1080,
+      "height": 2400,
+      "screen": "phone",
+      "mode": "play",
+      "cropReport": null
+    },
+    {
+      "path": "build/refactor/after/secondary-art-focals-native/love_reunion_ideal_360x740_scene.png",
+      "sha256": "368c260cae75bc71a4818c8ec6445d534ed4cab9dcd64cade1584759a6162e64",
+      "width": 945,
+      "height": 1943,
+      "screen": "360x740",
+      "mode": "scene",
+      "cropReport": {
+        "eventId": "love_reunion_ideal",
+        "imageId": "img_love_reunion_ideal_001",
+        "assetPath": "img_love_reunion_ideal_001.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/secondary-art-focals-native/love_reunion_ideal_360x740_play.png",
+      "sha256": "3b57821499dca751d90b73b50551d9b957f1b27f23b3377852de89b4353ca21f",
+      "width": 945,
+      "height": 1943,
+      "screen": "360x740",
+      "mode": "play",
+      "cropReport": null
+    }
+  ],
+  "semanticObservation": "5개 결과를 읽었다. 횡단보도 건너 성인이 두 팔을 내리고 서 있다. 손목시계 확인·손 인사·포옹·떠남·다음 만남 결과가 없다. 플레이어 얼굴/반사가 없다.",
+  "cropObservation": "두 화면 모두 중앙의 먼 성인 전신과 횡단보도 맥락이 유지된다.",
+  "uiObservation": "두 화면에서 제목·본문·세 선택지가 읽힌다. small C 마지막 한 글자 줄바꿈은 있으나 가려지지 않는다.",
+  "reviewMethod": "The same Codex AI agent generated and directly inspected the full selected source during production, verified exact current runtime SHA equality, then directly inspected all four unmodified native captures. This is not an independent human approval.",
+  "nativeMethod": "SceneCropReviewTest renders production DecisionScreen with current parsed event and actual routing/PixelAssetLoader in Compose instrumentation. Scene captures match designated crop >=0.95; fixture play state does not constitute a complete game progression.",
+  "testSource": "app/src/androidTest/java/com/example/lifegame/ui/SceneCropReviewTest.kt",
+  "nativeRunLog": "build/refactor/secondary-art-focals-completion.log",
+  "limitations": [
+    "Android emulator/Compose capture, not physical-device testing.",
+    "Only reviewed phone and 360x740 dimensions; not all font scales/aspect ratios.",
+    "Art approval does not independently certify choice scrolling, TalkBack or complete game state transitions."
+  ]
+}

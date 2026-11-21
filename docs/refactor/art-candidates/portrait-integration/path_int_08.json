@@ -1,0 +1,29 @@
+{
+  "eventId": "path_int_08",
+  "sourceAssetPath": "followup_20261031/img_path_int_08_001.png",
+  "sourceSha256": "dbdc6bdb19dab36b0e0635bcb13986b28e83fbd3f5110cef5932e7d254d12ab1",
+  "variant": {
+    "assetPath": "presentation/portraits/img_path_int_08_001_portrait_v1.png",
+    "sha256": "09732b407055928aac51b918c78a17940c462d2bb3c6ecc04c13e3e42e4cbe01",
+    "width": 941,
+    "height": 1672,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root/effects_tech)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/path_int_08.json"
+  },
+  "reviewerType": "AI",
+  "reviewer": "Codex AI (/root/effects_tech)",
+  "reviewStatus": "AI_REVIEWED_PRESENTATION",
+  "eventSourceHash": "0ecc9cb62d5d3c34effe161fe5fbe6c82fd8fab7d284b891571037cb1e86c78a",
+  "semanticReview": "Producer read the current event conditions and every choice/outcome, inspected source and selected output. Full source snapshot and exact prompt are in the referenced production ledger. Native acceptance remains pending.",
+  "visualReview": "노트북 연구화면·가족단톡 전화·노트·펜잡은 오른손과 왼손을 유지. 두 주요 화면과 노트 내용이9:20에 함께 남고 제출성공/가족모임/쓰러짐/주스 사건 없음. 핵심 일부는60%폭밖이지만 phone crop 안전, native pending.",
+  "cropReview": "Portrait candidate selected for native phone/small-phone scene and gameplay inspection; not final artwork acceptance.",
+  "actualProducer": "OpenAI built-in image_gen",
+  "generationMethod": "Built-in imagegen edit; exact prompts/output SHA/rejected attempts preserved in docs/refactor/art-candidates/crop-variant-production-20261119.json",
+  "productionLedger": "docs/refactor/art-candidates/crop-variant-production-20261119.json",
+  "nativePending": true,
+  "runtimeConnected": true,
+  "approvalChanged": false,
+  "selectedStagingSha256": "09732b407055928aac51b918c78a17940c462d2bb3c6ecc04c13e3e42e4cbe01"
+}

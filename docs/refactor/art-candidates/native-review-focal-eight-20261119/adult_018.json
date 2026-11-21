@@ -1,0 +1,209 @@
+{
+  "schemaVersion": 1,
+  "eventId": "adult_018",
+  "status": "PASS",
+  "reviewer": "Codex AI / plan_audit",
+  "reviewerType": "AI",
+  "reviewDate": "2026-11-19",
+  "sourceEventHash": "cc0c27f79bce6271b3b726659b453ef2988f4f0ac2117e1d377ad51ef338a7db",
+  "sourceEventSnapshot": {
+    "eventId": "adult_018",
+    "stage": "ADULT",
+    "type": "NORMAL",
+    "isFallback": false,
+    "isMilestone": false,
+    "title": "동기와 탈출 작전",
+    "text": "동기(톡): \"나 화장실 간다고 하고 나갈게. 5분 뒤에 너도 나와.\" 1차가 한창이다.",
+    "imageId": "img_adult_dinner_escape_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [
+        "seat_peer",
+        "job_employed"
+      ],
+      "blockedFlags": []
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "작전대로 탈출한다",
+        "statDelta": {
+          "행복": 3,
+          "사회성": -2
+        },
+        "resultText": "편의점 앞에서 동기와 컵라면을 먹었다. 오늘 먹은 것 중 제일 맛있었다. 다음 날 팀장님: \"둘이 어디 갔었어?\"",
+        "addFlags": [
+          "peer_friend"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "a_primary",
+            "text": "편의점 앞에서 동기와 컵라면을 먹었다. 오늘 먹은 것 중 제일 맛있었다. 다음 날 팀장님: \"둘이 어디 갔었어?\"",
+            "chance": 100,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 3,
+              "사회성": -2
+            },
+            "addFlags": [
+              "peer_friend"
+            ]
+          }
+        ]
+      },
+      {
+        "choiceId": "B",
+        "label": "남아서 동기 핑계를 대 준다",
+        "statDelta": {
+          "사회성": 2,
+          "운": 1,
+          "행복": -1
+        },
+        "resultText": "\"배탈 났대요.\" 팀장님이 약국에서 약을 사 오셨다. 30분 뒤 돌아온 동기가 멀쩡한 배로 약을 먹었다.",
+        "addFlags": [],
+        "outcomes": [
+          {
+            "outcomeId": "b_primary",
+            "text": "\"배탈 났대요.\" 팀장님이 약국에서 약을 사 오셨다. 30분 뒤 돌아온 동기가 멀쩡한 배로 약을 먹었다.",
+            "chance": 100,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "사회성": 2,
+              "운": 1,
+              "행복": -1
+            },
+            "addFlags": [],
+            "lifeDelta": 10
+          }
+        ]
+      },
+      {
+        "choiceId": "C",
+        "label": "둘 다 끝까지 버틴다",
+        "statDelta": {
+          "사회성": 3,
+          "건강": -3
+        },
+        "resultText": "새벽 1시, 동기와 나는 전우가 됐다. 그 뒤로 힘들 때마다 '그날 회식' 이야기를 한다.",
+        "addFlags": [
+          "peer_friend"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "c_primary",
+            "text": "새벽 1시, 동기와 나는 전우가 됐다. 그 뒤로 힘들 때마다 '그날 회식' 이야기를 한다.",
+            "chance": 100,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "사회성": 3,
+              "건강": -3
+            },
+            "addFlags": [
+              "peer_friend"
+            ]
+          }
+        ]
+      }
+    ],
+    "priority": 0,
+    "kind": "INCIDENT",
+    "periods": [
+      "YOUNG_ADULT"
+    ]
+  },
+  "sourceReadScope": "Current complete event, conditions, every choice/outcome and flags/stat deltas/periods/follow-ups directly read before judgement.",
+  "sourceImage": {
+    "path": "app/src/main/assets/images/followup_20261031/img_adult_dinner_escape_001.png",
+    "sha256": "3bc304d4ab52f04e08b02a92566227239e434ef581f8810e9d670385f45c2be7",
+    "width": 1448,
+    "height": 1086
+  },
+  "originalArtworkUnchangedSinceHistoricalReview": true,
+  "historicalReview": {
+    "eventId": "adult_018",
+    "title": "동기와 탈출 작전",
+    "imageId": "img_adult_dinner_escape_001",
+    "assetPath": "followup_20261031/img_adult_dinner_escape_001.png",
+    "sha256": "3bc304d4ab52f04e08b02a92566227239e434ef581f8810e9d670385f45c2be7",
+    "eventSourceHash": "cc0c27f79bce6271b3b726659b453ef2988f4f0ac2117e1d377ad51ef338a7db",
+    "status": "REVISION_REQUIRED",
+    "reviewer": "김선한 담당 Codex 직접 대행 검수",
+    "reason": "중앙 크롭에서 탈출 중인 동기·연락 휴대폰 조합이 온전히 남지 않음",
+    "expectedAction": "동기 톡을 보며 탈출 타이밍을 잼, 동기가 화장실 가는 척 일어남",
+    "requiredObjects": "휴대폰(톡 화면 형태만), 불판, 술잔, 일어서는 동기 뒷모습",
+    "sheet": "output/art-review-20261119/sheet-09.jpg",
+    "cell": 8,
+    "cropMethod": "ImageOps.fit centre-fill 360:800; simulated crop inspected directly, not an emulator capture",
+    "visualMethod": "원본 도트풍·색감·장면 파손·명백한 신체/사물 오류 직접 확인"
+  },
+  "presentationMetadata": [],
+  "captures": [
+    {
+      "path": "build/refactor/after/secondary-art-focals-native/adult_018_phone_scene.png",
+      "sha256": "ece24fde73b260b7e872cf37c1f5ef6a39ccb0fd2d0d2a9d9de875fff5a08409",
+      "width": 1080,
+      "height": 2400,
+      "screen": "phone",
+      "mode": "scene",
+      "cropReport": {
+        "eventId": "adult_018",
+        "imageId": "img_adult_dinner_escape_001",
+        "assetPath": "followup_20261031/img_adult_dinner_escape_001.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.331..0.669",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/secondary-art-focals-native/adult_018_phone_play.png",
+      "sha256": "f44b35388ff98d07d8e57b62d99305a526d903c4dc7cb9c081295c8227b5b5a7",
+      "width": 1080,
+      "height": 2400,
+      "screen": "phone",
+      "mode": "play",
+      "cropReport": null
+    },
+    {
+      "path": "build/refactor/after/secondary-art-focals-native/adult_018_360x740_scene.png",
+      "sha256": "ba6d81bfebb5638a2819c86c91a794966efe31cdf71df0150d4debeeab6e5934",
+      "width": 945,
+      "height": 1943,
+      "screen": "360x740",
+      "mode": "scene",
+      "cropReport": {
+        "eventId": "adult_018",
+        "imageId": "img_adult_dinner_escape_001",
+        "assetPath": "followup_20261031/img_adult_dinner_escape_001.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.318..0.682",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/secondary-art-focals-native/adult_018_360x740_play.png",
+      "sha256": "62d0e165efcecbc377d47f1354a39ee5222c87b15f8d5c93b6aec1e45e4c3399",
+      "width": 945,
+      "height": 1943,
+      "screen": "360x740",
+      "mode": "play",
+      "cropReport": null
+    }
+  ],
+  "semanticObservation": "회식 불판 앞에서 휴대폰 대화를 보는 플레이어와 문 쪽으로 먼저 움직이는 동기가 보인다. 플레이어는 아직 식탁에 있고 편의점 컵라면·약·끝까지 버틴 새벽 결과가 없다. 채팅은 읽을 수 없는 일반 말풍선 형태다.",
+  "cropObservation": "현재 중앙 native 렌더에서 두 화면 모두 휴대폰 대화 영역·불판·먼저 움직이는 동기의 머리와 몸/손짓이 함께 남는다. 과거 합성 크롭 결함은 이번 실제 렌더에서 재현되지 않았고 새 캡처로 해결을 입증했다.",
+  "uiObservation": "두 화면 모두 제목·본문·A/B/C가 읽힌다.",
+  "reviewMethod": "Codex AI directly inspected the full unchanged source PNG and all four unmodified native scene/play captures. Prior review is retained as historical evidence; this record is a new AI judgement, not human approval.",
+  "nativeMethod": "Production DecisionScreen, current parsed event/routing/PixelAssetLoader, fixture state in Android Compose instrumentation. Scene grid match >=0.95. Not complete game progression.",
+  "nativeRunLog": "build/refactor/secondary-art-focals-completion.log",
+  "limitations": [
+    "Emulator captures, not physical-device review.",
+    "Only reviewed phone and 360x740 dimensions; not every font scale/aspect ratio.",
+    "Art review does not independently certify scrolling, TalkBack or complete game-flow transitions."
+  ]
+}

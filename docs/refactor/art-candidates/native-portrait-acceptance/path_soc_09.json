@@ -1,0 +1,71 @@
+{
+  "eventId": "path_soc_09",
+  "reviewerType": "AI",
+  "scope": "Portrait phone and small-phone presentation",
+  "sourceEventHash": "f9b556fda72ae51046cedeecdc4ebdd86d0e472778c059593124b7cf14235129",
+  "sourceReview": "docs/refactor/art-candidates/portrait-integration/path_soc_09.json",
+  "sourceSha256": "7502542b42fa2bb39a2e2e890b858909a3736019bd9e25ff457efc87de3c53ed",
+  "displayedVariant": {
+    "assetPath": "presentation/portraits/img_path_soc_09_001_portrait_v1.png",
+    "sha256": "d632daddefceb20075e9b2e345eb1d7e73af10805f79cb6353860359daee7db1",
+    "width": 962,
+    "height": 1635,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/path_soc_09.json"
+  },
+  "nativeCaptures": [
+    {
+      "path": "build/refactor/resumed/final32/path_soc_09_phone_scene.png",
+      "sha256": "a9868737bcbbacbbfcd0eb8b546800cc41ea5ade86f2d7494a786ec7d09d363e",
+      "crop": {
+        "eventId": "path_soc_09",
+        "imageId": "img_path_soc_09_001",
+        "assetPath": "presentation/portraits/img_path_soc_09_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.118..0.882",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/final32/path_soc_09_phone_play.png",
+      "sha256": "9a892285920d652db142a831a5a862eade05e693b01ce463f3c304962c4d6eb2",
+      "crop": {
+        "eventId": "path_soc_09",
+        "imageId": "img_path_soc_09_001",
+        "assetPath": "presentation/portraits/img_path_soc_09_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.118..0.882",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/final32/path_soc_09_360x740_scene.png",
+      "sha256": "a8594958b9b6195437e089378e1a4d1d3a66e79fc03854d2ee30fac3b4fbd38e",
+      "crop": {
+        "eventId": "path_soc_09",
+        "imageId": "img_path_soc_09_001",
+        "assetPath": "presentation/portraits/img_path_soc_09_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.087..0.913",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/final32/path_soc_09_360x740_play.png",
+      "sha256": "0190c2f34e9af8a07b0f099efae286bebdadf3d29bfa8fb950419226faa251f6",
+      "crop": {
+        "eventId": "path_soc_09",
+        "imageId": "img_path_soc_09_001",
+        "assetPath": "presentation/portraits/img_path_soc_09_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.087..0.913",
+        "match": "1.000"
+      }
+    }
+  ],
+  "observation": "Two guest books and party guests with raised hands before decision.",
+  "decision": "PASS",
+  "method": "Individual visual inspection of both scene and gameplay frames together with producer semantic/source review and device capture match."
+}

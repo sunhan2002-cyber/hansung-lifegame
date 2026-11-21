@@ -1,0 +1,219 @@
+{
+  "schemaVersion": 1,
+  "eventId": "special_013",
+  "status": "PASS",
+  "reviewer": "Codex AI / plan_audit",
+  "reviewerType": "AI",
+  "reviewDate": "2026-11-19",
+  "sourceEventHash": "7d3c65ed93346e57acf899698c6766b894a444fed5d1a27afbe5311d4ec3137f",
+  "sourceEventSnapshot": {
+    "eventId": "special_013",
+    "stage": "INFANT",
+    "type": "SPECIAL",
+    "isFallback": false,
+    "isMilestone": false,
+    "title": "비눗방울 대참사",
+    "text": "비눗방울 놀이 중에 비눗물을 한 모금 마셔 버렸다. 딸꾹질할 때마다 입에서 비눗방울이 나온다.",
+    "imageId": "img_special_bubble_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [],
+      "blockedFlags": []
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "엄마를 부른다",
+        "statDelta": {
+          "건강": -2,
+          "사회성": 1
+        },
+        "resultText": "물을 세 컵 마셨다. 그래도 딸꾹질할 때마다 비눗방울이 하나씩 나왔다.",
+        "addFlags": [
+          "survived_special"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "a_primary",
+            "text": "물을 세 컵 마셨다. 그래도 딸꾹질할 때마다 비눗방울이 하나씩 나왔다.",
+            "chance": 100,
+            "lifeDelta": -25,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "건강": -2,
+              "사회성": 1
+            },
+            "addFlags": [
+              "survived_special"
+            ]
+          }
+        ],
+        "alwaysAvailable": true,
+        "conditionReview": "infant_baseline",
+        "alwaysAvailableReason": "영아기 기본 선택지는 초기 능력치 조건 없이 제공"
+      },
+      {
+        "choiceId": "B",
+        "label": "한 모금 더 마셔 본다",
+        "statDelta": {
+          "행복": 1,
+          "건강": -6
+        },
+        "resultText": "배가 아파 병원에 갔다. 의사 선생님이 \"오늘은 거품 그만\"이라고 했다.",
+        "addFlags": [
+          "special_injury"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "b_primary",
+            "text": "배가 아파 병원에 갔다. 의사 선생님이 \"오늘은 거품 그만\"이라고 했다.",
+            "chance": 100,
+            "lifeDelta": -25,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 1,
+              "건강": -6
+            },
+            "addFlags": [
+              "special_injury"
+            ]
+          }
+        ],
+        "alwaysAvailable": true,
+        "conditionReview": "infant_baseline",
+        "alwaysAvailableReason": "영아기 기본 선택지는 초기 능력치 조건 없이 제공"
+      },
+      {
+        "choiceId": "C",
+        "label": "입으로 후~ 불어 본다",
+        "statDelta": {
+          "운": 3,
+          "건강": -3
+        },
+        "resultText": "입에서 비눗방울이 열 개 나왔다. 할아버지가 그걸 동영상으로 찍었다.",
+        "addFlags": [
+          "survived_special"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "c_primary",
+            "text": "입에서 비눗방울이 열 개 나왔다. 할아버지가 그걸 동영상으로 찍었다.",
+            "chance": 100,
+            "lifeDelta": -25,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "운": 3,
+              "건강": -3
+            },
+            "addFlags": [
+              "survived_special"
+            ]
+          }
+        ],
+        "alwaysAvailable": true,
+        "conditionReview": "infant_baseline",
+        "alwaysAvailableReason": "영아기 기본 선택지는 초기 능력치 조건 없이 제공"
+      }
+    ],
+    "priority": 0,
+    "kind": "BIG_INCIDENT",
+    "periods": [
+      "INFANT"
+    ]
+  },
+  "sourceReadScope": "Current complete event, conditions, every choice/outcome and flags/stat deltas/periods/follow-ups directly read before judgement.",
+  "sourceImage": {
+    "path": "app/src/main/assets/images/followup_20261031/img_special_bubble_001.png",
+    "sha256": "dd6b0234e1a317f812b21b7578abb5b89d6b99f185b17ff8d932af7e2ab2a4ab",
+    "width": 1448,
+    "height": 1086
+  },
+  "originalArtworkUnchangedSinceHistoricalReview": true,
+  "historicalReview": {
+    "eventId": "special_013",
+    "title": "비눗방울 대참사",
+    "imageId": "img_special_bubble_001",
+    "assetPath": "followup_20261031/img_special_bubble_001.png",
+    "sha256": "dd6b0234e1a317f812b21b7578abb5b89d6b99f185b17ff8d932af7e2ab2a4ab",
+    "eventSourceHash": "7d3c65ed93346e57acf899698c6766b894a444fed5d1a27afbe5311d4ec3137f",
+    "status": "REVISION_REQUIRED",
+    "reviewer": "김선한 담당 Codex 직접 대행 검수",
+    "reason": "마신 비눗물·딸꾹질 단서 없이 평범한 비눗방울 놀이로만 보임",
+    "expectedAction": "비눗물을 마셔 딸꾹질할 때마다 눈앞에 비눗방울이 나옴",
+    "requiredObjects": "비눗방울 통 · 막대, 눈앞의 비눗방울들",
+    "sheet": "output/art-review-20261119/sheet-14.jpg",
+    "cell": 5,
+    "cropMethod": "ImageOps.fit centre-fill 360:800; simulated crop inspected directly, not an emulator capture",
+    "visualMethod": "원본 도트풍·색감·장면 파손·명백한 신체/사물 오류 직접 확인"
+  },
+  "presentationMetadata": [],
+  "captures": [
+    {
+      "path": "build/refactor/after/semantic-originals-thirteen-native/special_013_phone_scene.png",
+      "sha256": "baec91929c121a6599658b8cb9a4210c378cabf05644cb3c3ddba0eaa6164556",
+      "width": 1080,
+      "height": 2400,
+      "screen": "phone",
+      "mode": "scene",
+      "cropReport": {
+        "eventId": "special_013",
+        "imageId": "img_special_bubble_001",
+        "assetPath": "followup_20261031/img_special_bubble_001.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.331..0.669",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/semantic-originals-thirteen-native/special_013_phone_play.png",
+      "sha256": "85d663da601a3f82e5bd745780dea9c31eef43ebfbca4cab3195c269b0da51d1",
+      "width": 1080,
+      "height": 2400,
+      "screen": "phone",
+      "mode": "play",
+      "cropReport": null
+    },
+    {
+      "path": "build/refactor/after/semantic-originals-thirteen-native/special_013_360x740_scene.png",
+      "sha256": "cd35eba3052b46da72d671741ef58653dab7c5ba5817912f799cae23be5d367e",
+      "width": 945,
+      "height": 1943,
+      "screen": "360x740",
+      "mode": "scene",
+      "cropReport": {
+        "eventId": "special_013",
+        "imageId": "img_special_bubble_001",
+        "assetPath": "followup_20261031/img_special_bubble_001.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.318..0.682",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/semantic-originals-thirteen-native/special_013_360x740_play.png",
+      "sha256": "a3a42d2324765757b1202cf89126f0fe5e814965a9b0bedd1c23870c22d54542",
+      "width": 945,
+      "height": 1943,
+      "screen": "360x740",
+      "mode": "play",
+      "cropReport": null
+    }
+  ],
+  "semanticObservation": "비눗방울 물을 이미 삼킨 뒤 딸꾹질과 함께 방울이 생기는 본문 상태다. 손의 사용 중이 아닌 막대와 중앙 수직 방울 사슬, 하단 딸꾹질 표식을 구분했다. 두 번째 마시기·물 세 컵·병원·할아버지 촬영·열 개 방울 결과가 없다.",
+  "cropObservation": "두 화면 모두 열린 병 입구와 액체 일부, 사용하지 않는 원형 막대, 중앙 방울 사슬과 딸꾹질 표시가 남는다. 병 왼쪽과 먼 엄마 일부는 잘리지만 핵심 전경은 보인다. 방울이 이미 나온다는 현재 설정을 반영해 과거 결과 선노출 지적을 해소한다.",
+  "uiObservation": "두 크기에서 제목·본문·세 선택지가 모두 읽힌다.",
+  "reviewMethod": "Codex AI directly inspected the full unchanged source PNG and all four unmodified native scene/play captures. Prior review is retained as historical evidence; this record is a new AI judgement, not human approval.",
+  "nativeMethod": "Production DecisionScreen, current parsed event/routing/PixelAssetLoader, fixture state in Android Compose instrumentation. Scene grid match >=0.95. Not complete game progression.",
+  "nativeRunLog": "build/refactor/semantic-originals-thirteen-and-choice-reachability.log",
+  "limitations": [
+    "Emulator captures, not physical-device review.",
+    "Only reviewed phone and 360x740 dimensions; not every font scale/aspect ratio.",
+    "Art review does not independently certify scrolling, TalkBack or complete game-flow transitions."
+  ]
+}

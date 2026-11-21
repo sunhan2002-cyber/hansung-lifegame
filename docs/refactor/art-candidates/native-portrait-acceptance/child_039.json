@@ -1,0 +1,71 @@
+{
+  "eventId": "child_039",
+  "reviewerType": "AI",
+  "scope": "Portrait phone and small-phone presentation",
+  "sourceEventHash": "a3d4287e10167c97536557799ee0ff16c629b523f9ca7bb9d40e16849af6164d",
+  "sourceReview": "docs/refactor/art-candidates/portrait-integration/child_039.json",
+  "sourceSha256": "add360662c5d1da4842e54f7d2cd63491676b48423904748f5f8932afbfcd400",
+  "displayedVariant": {
+    "assetPath": "presentation/portraits/img_child_vacation_001_portrait_v1.png",
+    "sha256": "b4c98ae8293ea1c1d3052dee59aa2db4d6d01a805cd5e39c676c533a808fee08",
+    "width": 941,
+    "height": 1672,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root/effects_tech)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/child_039.json"
+  },
+  "nativeCaptures": [
+    {
+      "path": "build/refactor/after/portrait-fortythree-native/child_039_phone_scene.png",
+      "sha256": "9075c716ff6bb4fa8e89677552e4f851751b71e1a0f3a84bacb85de1ce79999b",
+      "crop": {
+        "eventId": "child_039",
+        "imageId": "img_child_vacation_001",
+        "assetPath": "presentation/portraits/img_child_vacation_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/portrait-fortythree-native/child_039_phone_play.png",
+      "sha256": "719704f91d7fbecf7822c60f225c9d5ce59e199e7cf473f9d924e44e3c5d8709",
+      "crop": {
+        "eventId": "child_039",
+        "imageId": "img_child_vacation_001",
+        "assetPath": "presentation/portraits/img_child_vacation_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/portrait-fortythree-native/child_039_360x740_scene.png",
+      "sha256": "f3053b0119b019865ff4f806fa0bd8904c8bbe54e2e882994a17dd9f88919f13",
+      "crop": {
+        "eventId": "child_039",
+        "imageId": "img_child_vacation_001",
+        "assetPath": "presentation/portraits/img_child_vacation_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/portrait-fortythree-native/child_039_360x740_play.png",
+      "sha256": "400a9237daeeeb3448532f69dbae04dfc0cb2e70e6cf85b5025ebc88dd43cb13",
+      "crop": {
+        "eventId": "child_039",
+        "imageId": "img_child_vacation_001",
+        "assetPath": "presentation/portraits/img_child_vacation_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    }
+  ],
+  "observation": "두 여행 자료와 부모 얼굴이 보이고 아이 소매가 하단까지 이어진다.",
+  "decision": "PASS",
+  "method": "Individual visual inspection of both scene and gameplay frames together with producer semantic/source review and device capture match."
+}

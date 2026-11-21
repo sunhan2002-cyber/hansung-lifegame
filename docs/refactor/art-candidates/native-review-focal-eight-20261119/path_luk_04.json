@@ -1,0 +1,303 @@
+{
+  "schemaVersion": 1,
+  "eventId": "path_luk_04",
+  "status": "PASS",
+  "reviewer": "Codex AI / plan_audit",
+  "reviewerType": "AI",
+  "reviewDate": "2026-11-19",
+  "sourceEventHash": "780a131d09d5da251ee8c2cae7f71026ebb27ed3259630ae7038abd468a35d38",
+  "sourceEventSnapshot": {
+    "eventId": "path_luk_04",
+    "stage": "ADULT",
+    "type": "NORMAL",
+    "isFallback": false,
+    "isMilestone": true,
+    "title": "엘리베이터 안의 30초",
+    "text": "면접 보러 가는 엘리베이터. 옆 사람이 내 이력서를 흘끗 본다. \"어, 이 동네 출신이세요? 저도요.\" 30층까지 30초 남았다.",
+    "imageId": "img_path_luk_04_001",
+    "conditions": {
+      "stats": {
+        "운": 64
+      },
+      "requiredFlags": [
+        "luk_path"
+      ],
+      "blockedFlags": []
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "동네 이야기로 30초를 꽉 채운다",
+        "statDelta": {
+          "운": 3,
+          "경제력": 3,
+          "지력": -1
+        },
+        "resultText": "면접장에 들어가니 그 사람이 가운데 앉아 있었다. 대표였다. 합격 이유는 아직도 모른다.",
+        "addFlags": [
+          "career_office",
+          "job_employed",
+          "luk_lucky_hire",
+          "level_entry",
+          "career_office__path_luk_04",
+          "job_employed__path_luk_04",
+          "level_entry__path_luk_04"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "a_ceo",
+            "text": "면접장에 들어가니 그 사람이 가운데 앉아 있었다. 대표였다. 합격 이유는 아직도 모른다.",
+            "chance": 60,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "운": 3,
+              "경제력": 3,
+              "지력": -1
+            },
+            "addFlags": [
+              "career_office",
+              "job_employed",
+              "luk_lucky_hire",
+              "level_entry",
+              "career_office__path_luk_04",
+              "job_employed__path_luk_04",
+              "level_entry__path_luk_04"
+            ],
+            "chanceWeights": {
+              "운": 2,
+              "사회성": 1
+            },
+            "removeFlags": [
+              "job_retired",
+              "job_self_employed",
+              "job_unemployed"
+            ]
+          },
+          {
+            "outcomeId": "a_nothing",
+            "text": "그냥 같은 동네 사람이었다. 면접은 평범하게 떨어졌다. 대신 동네 맛집을 하나 알게 됐다.",
+            "chance": 40,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "사회성": 1,
+              "행복": -1
+            },
+            "addFlags": [
+              "luk_missed"
+            ]
+          }
+        ],
+        "conditionReview": "confirmed",
+        "conditionBasis": "week10_qa_semantic_review",
+        "requiredStats": {
+          "사회성": 58
+        }
+      },
+      {
+        "choiceId": "B",
+        "label": "조용히 면접 답변을 외운다",
+        "statDelta": {
+          "지력": 2,
+          "경제력": 2,
+          "운": -1
+        },
+        "resultText": "준비한 답이 그대로 나왔다. 운이 아니라 연습이었다. 그래도 사람들은 운이 좋았다고 했다.",
+        "addFlags": [
+          "career_office",
+          "job_employed",
+          "level_entry",
+          "career_office__path_luk_04",
+          "job_employed__path_luk_04",
+          "level_entry__path_luk_04"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "b_study",
+            "text": "준비한 답이 그대로 나왔다. 운이 아니라 연습이었다. 그래도 사람들은 운이 좋았다고 했다.",
+            "chance": 100,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "지력": 2,
+              "경제력": 2,
+              "운": -1
+            },
+            "addFlags": [
+              "career_office",
+              "job_employed",
+              "level_entry",
+              "career_office__path_luk_04",
+              "job_employed__path_luk_04",
+              "level_entry__path_luk_04"
+            ],
+            "removeFlags": [
+              "job_retired",
+              "job_self_employed",
+              "job_unemployed"
+            ]
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "전환점에서 누구나 고를 수 있는 기본 선택지 (전체 잠금 방지)",
+        "conditionReview": "fallback_choice",
+        "conditionBasis": "week8_life_path"
+      },
+      {
+        "choiceId": "C",
+        "label": "면접 대신 동전 던지기로 진로를 정한다",
+        "statDelta": {
+          "행복": 3,
+          "운": 2,
+          "경제력": -2
+        },
+        "resultText": "앞면이 나왔다. 앞면은 '떠난다'였다. 다음 달 남쪽 섬의 게스트하우스에서 일하고 있었다.",
+        "addFlags": [
+          "career_freelancer",
+          "job_self_employed",
+          "luk_wanderer",
+          "career_freelancer__path_luk_04",
+          "job_self_employed__path_luk_04"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "c_coin",
+            "text": "앞면이 나왔다. 앞면은 '떠난다'였다. 다음 달 남쪽 섬의 게스트하우스에서 일하고 있었다.",
+            "chance": 100,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 3,
+              "운": 2,
+              "경제력": -2
+            },
+            "addFlags": [
+              "career_freelancer",
+              "job_self_employed",
+              "luk_wanderer",
+              "career_freelancer__path_luk_04",
+              "job_self_employed__path_luk_04"
+            ],
+            "removeFlags": [
+              "job_employed",
+              "job_retired",
+              "job_unemployed"
+            ]
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week8_life_path"
+      }
+    ],
+    "priority": 0,
+    "kind": "MILESTONE",
+    "periods": [
+      "YOUNG_ADULT"
+    ],
+    "yearInPeriod": 5,
+    "weight": 1,
+    "view": "FIRST_PERSON",
+    "lifePath": "LUCK",
+    "pathRole": "전환점·직업",
+    "followUps": [
+      "path_luk_05",
+      "path_luk_06"
+    ]
+  },
+  "sourceReadScope": "Current complete event, conditions, every choice/outcome and flags/stat deltas/periods/follow-ups directly read before judgement.",
+  "sourceImage": {
+    "path": "app/src/main/assets/images/followup_20261031/img_path_luk_04_001.png",
+    "sha256": "430dba39ab864f4299b0540f16e7b862163a8cd247e4c467f5135dfb0d93ed3c",
+    "width": 1448,
+    "height": 1086
+  },
+  "originalArtworkUnchangedSinceHistoricalReview": true,
+  "historicalReview": {
+    "eventId": "path_luk_04",
+    "title": "엘리베이터 안의 30초",
+    "imageId": "img_path_luk_04_001",
+    "assetPath": "followup_20261031/img_path_luk_04_001.png",
+    "sha256": "430dba39ab864f4299b0540f16e7b862163a8cd247e4c467f5135dfb0d93ed3c",
+    "eventSourceHash": "780a131d09d5da251ee8c2cae7f71026ebb27ed3259630ae7038abd468a35d38",
+    "status": "REVISION_REQUIRED",
+    "reviewer": "김선한 담당 Codex 직접 대행 검수",
+    "reason": "중앙 크롭에서 이력서·엘리베이터 상대가 잘림",
+    "expectedAction": "면접 가는 길, 옆 사람이 내 이력서를 흘끗 보며 말을 검",
+    "requiredObjects": "이력서 파일, 층 표시(숫자 판독 불필요), 정장",
+    "sheet": "output/art-review-20261119/sheet-17.jpg",
+    "cell": 12,
+    "cropMethod": "ImageOps.fit centre-fill 360:800; simulated crop inspected directly, not an emulator capture",
+    "visualMethod": "원본 도트풍·색감·장면 파손·명백한 신체/사물 오류 직접 확인"
+  },
+  "presentationMetadata": [],
+  "captures": [
+    {
+      "path": "build/refactor/after/secondary-art-focals-native/path_luk_04_phone_scene.png",
+      "sha256": "79cf95c01e1ed060d492acb60d002baad6f02e2bff661306e2ac1dd4f9c38625",
+      "width": 1080,
+      "height": 2400,
+      "screen": "phone",
+      "mode": "scene",
+      "cropReport": {
+        "eventId": "path_luk_04",
+        "imageId": "img_path_luk_04_001",
+        "assetPath": "followup_20261031/img_path_luk_04_001.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.331..0.669",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/secondary-art-focals-native/path_luk_04_phone_play.png",
+      "sha256": "f5ef68acaf1ce3aa059526a168ce834ec360501b7287e6452df20d3e9a843a8b",
+      "width": 1080,
+      "height": 2400,
+      "screen": "phone",
+      "mode": "play",
+      "cropReport": null
+    },
+    {
+      "path": "build/refactor/after/secondary-art-focals-native/path_luk_04_360x740_scene.png",
+      "sha256": "a9e2d2687beb57be8e5bc06db9bde5f3e12bbadfdb86700fc7b5dce98708e39f",
+      "width": 945,
+      "height": 1943,
+      "screen": "360x740",
+      "mode": "scene",
+      "cropReport": {
+        "eventId": "path_luk_04",
+        "imageId": "img_path_luk_04_001",
+        "assetPath": "followup_20261031/img_path_luk_04_001.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.318..0.682",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/secondary-art-focals-native/path_luk_04_360x740_play.png",
+      "sha256": "d7fc29741cbc2debcbd378accfb1a2c4390477dfd6de3abf7554907c56b9ac04",
+      "width": 945,
+      "height": 1943,
+      "screen": "360x740",
+      "mode": "play",
+      "cropReport": null
+    }
+  ],
+  "semanticObservation": "엘리베이터에서 이력서를 든 플레이어 쪽을 보고 말을 거는 정장 성인이다. 대표임의 확정·면접 합격/불합격·동전 던지기·섬으로 이직 결과가 없다. 이력서 사진은 특징 없는 도형이며 이름/개인정보/층수는 읽히지 않는다.",
+  "cropObservation": "현재 중앙 native 렌더 두 화면에서 상대 양눈·얼굴과 이력서 핵심 영역, 층 표시 기호가 함께 남는다. 우측 머리/어깨 외곽 일부는 잘리지만 대화 표정과 이력서 식별이 명확하여 과거 핵심요소 소실 우려를 해소했다.",
+  "uiObservation": "두 화면에서 제목·본문·세 선택지가 읽힌다. small C 두 줄은 카드 내부에 유지된다.",
+  "reviewMethod": "Codex AI directly inspected the full unchanged source PNG and all four unmodified native scene/play captures. Prior review is retained as historical evidence; this record is a new AI judgement, not human approval.",
+  "nativeMethod": "Production DecisionScreen, current parsed event/routing/PixelAssetLoader, fixture state in Android Compose instrumentation. Scene grid match >=0.95. Not complete game progression.",
+  "nativeRunLog": "build/refactor/secondary-art-focals-completion.log",
+  "limitations": [
+    "Emulator captures, not physical-device review.",
+    "Only reviewed phone and 360x740 dimensions; not every font scale/aspect ratio.",
+    "Art review does not independently certify scrolling, TalkBack or complete game-flow transitions."
+  ]
+}

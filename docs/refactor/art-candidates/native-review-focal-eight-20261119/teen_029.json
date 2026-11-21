@@ -1,0 +1,209 @@
+{
+  "schemaVersion": 1,
+  "eventId": "teen_029",
+  "status": "PASS",
+  "reviewer": "Codex AI / plan_audit",
+  "reviewerType": "AI",
+  "reviewDate": "2026-11-19",
+  "sourceEventHash": "20847fa28596088fdd12ff80982be9e2eb64530448680da97bcc84b667453fc5",
+  "sourceEventSnapshot": {
+    "eventId": "teen_029",
+    "stage": "TEEN",
+    "type": "NORMAL",
+    "isFallback": false,
+    "isMilestone": false,
+    "title": "4교시 매점 달리기",
+    "text": "4교시 종이 울렸다. 매점 크림빵은 딱 열 개뿐이다.",
+    "imageId": "img_teen_school_store_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [],
+      "blockedFlags": []
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "전력 질주한다",
+        "statDelta": {
+          "운동능력": 2,
+          "행복": 1,
+          "건강": -1
+        },
+        "resultText": "빵을 손에 넣었다. 복도에서 뛰다가 학생주임 선생님 수첩에 이름이 적혔다.",
+        "addFlags": [],
+        "outcomes": [
+          {
+            "outcomeId": "a_primary",
+            "text": "빵을 손에 넣었다. 복도에서 뛰다가 학생주임 선생님 수첩에 이름이 적혔다.",
+            "chance": 100,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "운동능력": 2,
+              "행복": 1,
+              "건강": -1
+            },
+            "addFlags": [],
+            "lifeDelta": 4
+          }
+        ]
+      },
+      {
+        "choiceId": "B",
+        "label": "발 빠른 친구에게 부탁한다",
+        "statDelta": {
+          "사회성": 2,
+          "경제력": -1
+        },
+        "resultText": "친구가 빵을 두 개 사 왔다. 심부름값으로 우유를 사 줬다.",
+        "addFlags": [],
+        "outcomes": [
+          {
+            "outcomeId": "b_primary",
+            "text": "친구가 빵을 두 개 사 왔다. 심부름값으로 우유를 사 줬다.",
+            "chance": 100,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "사회성": 2,
+              "경제력": -1
+            },
+            "addFlags": []
+          }
+        ],
+        "requiredStats": {
+          "사회성": 55
+        }
+      },
+      {
+        "choiceId": "C",
+        "label": "그냥 급식을 먹는다",
+        "statDelta": {
+          "건강": 2,
+          "행복": -1
+        },
+        "resultText": "오늘 급식 반찬은 크림빵이었다.",
+        "addFlags": [],
+        "outcomes": [
+          {
+            "outcomeId": "c_primary",
+            "text": "오늘 급식 반찬은 크림빵이었다.",
+            "chance": 100,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "건강": 2,
+              "행복": -1
+            },
+            "addFlags": []
+          }
+        ]
+      }
+    ],
+    "priority": 0,
+    "kind": "INCIDENT",
+    "periods": [
+      "TEEN"
+    ]
+  },
+  "sourceReadScope": "Current complete event, conditions, every choice/outcome and flags/stat deltas/periods/follow-ups directly read before judgement.",
+  "sourceImage": {
+    "path": "app/src/main/assets/images/followup_20261031/img_teen_school_store_001.png",
+    "sha256": "6655f8ce3a429dee1b75803f9888a6c2d770757ed83eb714d912147b67efe565",
+    "width": 1448,
+    "height": 1086
+  },
+  "originalArtworkUnchangedSinceHistoricalReview": true,
+  "historicalReview": {
+    "eventId": "teen_029",
+    "title": "4교시 매점 달리기",
+    "imageId": "img_teen_school_store_001",
+    "assetPath": "followup_20261031/img_teen_school_store_001.png",
+    "sha256": "6655f8ce3a429dee1b75803f9888a6c2d770757ed83eb714d912147b67efe565",
+    "eventSourceHash": "20847fa28596088fdd12ff80982be9e2eb64530448680da97bcc84b667453fc5",
+    "status": "REVISION_REQUIRED",
+    "reviewer": "김선한 담당 Codex 직접 대행 검수",
+    "reason": "매점 달리기 핵심인 계단·달리는 친구들이 중앙 크롭에서 크게 사라짐",
+    "expectedAction": "주인공은 출발 전, 복도로 뛰어나가는 다른 아이들을 바라봄",
+    "requiredObjects": "열린 교실 문, 복도, 먼저 뛰는 아이들; 매점 도착·크림빵 확보 결과 없음",
+    "sheet": "output/art-review-20261119/sheet-07.jpg",
+    "cell": 9,
+    "cropMethod": "ImageOps.fit centre-fill 360:800; simulated crop inspected directly, not an emulator capture",
+    "visualMethod": "원본 도트풍·색감·장면 파손·명백한 신체/사물 오류 직접 확인"
+  },
+  "presentationMetadata": [
+    {
+      "assetPath": "followup_20261031/img_teen_school_store_001.png",
+      "sourceSha256": "6655f8ce3a429dee1b75803f9888a6c2d770757ed83eb714d912147b67efe565",
+      "focalX": 0.62,
+      "focalY": 0.5,
+      "note": "Original PNG retained. Individual core-visibility improvement for teen_029; simulated 360x800 and 360x740 crops reviewed. Native review pending; no legacy artwork approval. See docs/refactor/art-candidates/crop-review-20261119.json."
+    }
+  ],
+  "captures": [
+    {
+      "path": "build/refactor/after/secondary-art-focals-native/teen_029_phone_scene.png",
+      "sha256": "bb20dbdbb392e1544e0a5e476ee17d422fc573a707bbf812eb2a79f54288c77e",
+      "width": 1080,
+      "height": 2400,
+      "screen": "phone",
+      "mode": "scene",
+      "cropReport": {
+        "eventId": "teen_029",
+        "imageId": "img_teen_school_store_001",
+        "assetPath": "followup_20261031/img_teen_school_store_001.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.451..0.789",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/secondary-art-focals-native/teen_029_phone_play.png",
+      "sha256": "c178292638de36095eaef7552b334b39da718ed359de646107cb3284a7fee00c",
+      "width": 1080,
+      "height": 2400,
+      "screen": "phone",
+      "mode": "play",
+      "cropReport": null
+    },
+    {
+      "path": "build/refactor/after/secondary-art-focals-native/teen_029_360x740_scene.png",
+      "sha256": "5e85864cb2ff3db1141c635fec07a0e075f44f261745a910281601c8c84e40ea",
+      "width": 945,
+      "height": 1943,
+      "screen": "360x740",
+      "mode": "scene",
+      "cropReport": {
+        "eventId": "teen_029",
+        "imageId": "img_teen_school_store_001",
+        "assetPath": "followup_20261031/img_teen_school_store_001.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.438..0.802",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/secondary-art-focals-native/teen_029_360x740_play.png",
+      "sha256": "d72403a18d286567a0be563680b88ac73ae9591e3262b64cc24e64db286a4cf7",
+      "width": 945,
+      "height": 1943,
+      "screen": "360x740",
+      "mode": "play",
+      "cropReport": null
+    }
+  ],
+  "semanticObservation": "종이 울리고 다른 학생들이 먼저 복도 계단으로 뛰는 동안 플레이어는 문에 손을 댄 출발 전 시점이다. 본인 질주·빵 획득·선생님 수첩·친구 심부름 완료·급식 결과가 없다.",
+  "cropObservation": "focalX 0.62에서 두 화면 모두 종·계단·달리는 여러 친구의 전신·열린 문과 플레이어 손 일부가 함께 남는다. 좌측 끝 학생 일부는 잘리나 사건 핵심 다중 인물이 유지된다.",
+  "uiObservation": "두 화면에서 제목·본문·세 선택지가 모두 읽힌다. fixture의 청년 footer는 검수용 상태이며 사건의 TEEN 실제 게임 전환을 검증한 것은 아니다.",
+  "reviewMethod": "Codex AI directly inspected the full unchanged source PNG and all four unmodified native scene/play captures. Prior review is retained as historical evidence; this record is a new AI judgement, not human approval.",
+  "nativeMethod": "Production DecisionScreen, current parsed event/routing/PixelAssetLoader, fixture state in Android Compose instrumentation. Scene grid match >=0.95. Not complete game progression.",
+  "nativeRunLog": "build/refactor/secondary-art-focals-completion.log",
+  "limitations": [
+    "Emulator captures, not physical-device review.",
+    "Only reviewed phone and 360x740 dimensions; not every font scale/aspect ratio.",
+    "Art review does not independently certify scrolling, TalkBack or complete game-flow transitions."
+  ]
+}

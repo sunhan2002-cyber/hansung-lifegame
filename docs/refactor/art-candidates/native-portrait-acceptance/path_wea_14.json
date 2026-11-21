@@ -1,0 +1,71 @@
+{
+  "eventId": "path_wea_14",
+  "reviewerType": "AI",
+  "scope": "Portrait phone and small-phone presentation",
+  "sourceEventHash": "be5ab24bd71295d667c38b9b8a69321cec39e10e3d873a20f950a8b96dac22f5",
+  "sourceReview": "docs/refactor/art-candidates/portrait-integration/path_wea_14.json",
+  "sourceSha256": "260da2f5dce0a0dd7e7b7af56bf0e7a36d197fc0107947951b674bef067d2077",
+  "displayedVariant": {
+    "assetPath": "presentation/portraits/img_path_wea_14_001_portrait_v1.png",
+    "sha256": "6f0c18b3c40d8b9f1b792b018f36a29963647df3eacfc05629e1425cf9e80589",
+    "width": 941,
+    "height": 1672,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root/security_p0)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/path_wea_14.json"
+  },
+  "nativeCaptures": [
+    {
+      "path": "build/refactor/resumed/native18/path_wea_14_phone_scene.png",
+      "sha256": "cc2f73c18c6200bbed5824ad4f63374ee0907525cd3ffe9c9f40c21821d696bb",
+      "crop": {
+        "eventId": "path_wea_14",
+        "imageId": "img_path_wea_14_001",
+        "assetPath": "presentation/portraits/img_path_wea_14_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/native18/path_wea_14_phone_play.png",
+      "sha256": "79d78b08a1b44dcb551c27e7e5871c62f0931adc5b0cb422628ed6e2abfcbef3",
+      "crop": {
+        "eventId": "path_wea_14",
+        "imageId": "img_path_wea_14_001",
+        "assetPath": "presentation/portraits/img_path_wea_14_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/native18/path_wea_14_360x740_scene.png",
+      "sha256": "79537f96f28f699db11574860ee97cc9dada854fb89503dbf0fa593e0425952e",
+      "crop": {
+        "eventId": "path_wea_14",
+        "imageId": "img_path_wea_14_001",
+        "assetPath": "presentation/portraits/img_path_wea_14_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/native18/path_wea_14_360x740_play.png",
+      "sha256": "74b04120ee4befb7c9552f57e437441d168d5614d04d1500d13b5952191c938f",
+      "crop": {
+        "eventId": "path_wea_14",
+        "imageId": "img_path_wea_14_001",
+        "assetPath": "presentation/portraits/img_path_wea_14_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    }
+  ],
+  "observation": "아이와 계산기, 여러 학원비 자료가 보인다.",
+  "decision": "PASS",
+  "method": "Individual visual inspection of both scene and gameplay frames together with producer semantic/source review and device capture match."
+}

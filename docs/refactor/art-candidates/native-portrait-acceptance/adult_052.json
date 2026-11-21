@@ -1,0 +1,71 @@
+{
+  "eventId": "adult_052",
+  "reviewerType": "AI",
+  "scope": "Portrait phone and small-phone presentation",
+  "sourceEventHash": "6cbdddd04532d3ae9ef433c15dabcee694543575b95c7f2ffbcfd3e4ce696aa2",
+  "sourceReview": "docs/refactor/art-candidates/portrait-integration/adult_052.json",
+  "sourceSha256": "5661800b2dbf92526e2233ba8680877145832710fe43c364ab315c98687b1762",
+  "displayedVariant": {
+    "assetPath": "presentation/portraits/img_adult_birthday_001_portrait_v1.png",
+    "sha256": "7e4577e216da66f48297ff68827d39f02985b28280435c6956ab67e65d18e682",
+    "width": 941,
+    "height": 1672,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root/security_p0)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/adult_052.json"
+  },
+  "nativeCaptures": [
+    {
+      "path": "build/refactor/after/portrait-fortythree-native/adult_052_phone_scene.png",
+      "sha256": "9acdb12c8a91e187b40517e2746df6d13bfddc470b6576f7d96f7b61f26f4240",
+      "crop": {
+        "eventId": "adult_052",
+        "imageId": "img_adult_birthday_001",
+        "assetPath": "presentation/portraits/img_adult_birthday_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/portrait-fortythree-native/adult_052_phone_play.png",
+      "sha256": "73c2276b2a62d57fca122c46f81b7a85d6e40e1040324793e8c989496659726d",
+      "crop": {
+        "eventId": "adult_052",
+        "imageId": "img_adult_birthday_001",
+        "assetPath": "presentation/portraits/img_adult_birthday_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/portrait-fortythree-native/adult_052_360x740_scene.png",
+      "sha256": "afac7e1c3d799db58c49a2483d77f8cd8103c9f3c214adc3af3a4de62751d19e",
+      "crop": {
+        "eventId": "adult_052",
+        "imageId": "img_adult_birthday_001",
+        "assetPath": "presentation/portraits/img_adult_birthday_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/portrait-fortythree-native/adult_052_360x740_play.png",
+      "sha256": "a4d721c70fd6193947cea707d28a4fad2b52914fbb32634f494f878814bc948e",
+      "crop": {
+        "eventId": "adult_052",
+        "imageId": "img_adult_birthday_001",
+        "assetPath": "presentation/portraits/img_adult_birthday_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    }
+  ],
+  "observation": "가족과 촛불 케이크, 아직 자르지 않은 생일상이 보인다.",
+  "decision": "PASS",
+  "method": "Individual visual inspection of both scene and gameplay frames together with producer semantic/source review and device capture match."
+}

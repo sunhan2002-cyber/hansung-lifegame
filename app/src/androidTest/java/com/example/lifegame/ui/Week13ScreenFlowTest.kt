@@ -15,6 +15,11 @@ import androidx.compose.ui.semantics.getOrNull
 import androidx.compose.ui.test.assertCountEquals
 import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.assertTextContains
+import androidx.compose.ui.test.assertContentDescriptionEquals
+import androidx.compose.ui.test.assertIsSelected
+import androidx.compose.ui.test.assertIsNotSelected
+import androidx.compose.ui.test.assertTextEquals
+import androidx.compose.ui.test.hasText
 import androidx.compose.ui.test.captureToImage
 import androidx.compose.ui.test.click
 import androidx.compose.ui.test.hasContentDescription
@@ -30,6 +35,7 @@ import androidx.compose.ui.test.performTouchInput
 import androidx.compose.ui.unit.Density
 import androidx.compose.ui.unit.dp
 import androidx.test.ext.junit.runners.AndroidJUnit4
+import androidx.test.espresso.Espresso
 import androidx.test.platform.app.InstrumentationRegistry
 import com.example.lifegame.data.V4ProgressStore
 import com.example.lifegame.domain.model.CutsceneStatus
@@ -56,7 +62,7 @@ import org.junit.runner.RunWith
 
 /**
  * 2026-11-13 김재겸 과제(화면 흐름 · 시연 조작 · 커스터마이징)의 기기 테스트.
- * 돌잡이 컷신 표시 · 건너뛰기 · 완료 · 복원, 커스터마이징 선택값 저장 · 복원, 주사위 계산식 읽기(`눈 1 + 눈 3 = 합계 4`),
+ * 돌잡이 컷신 표시 · 건너뛰기 · 완료 · 복원, 커스터마이징 선택값 저장 · 복원, 주사위 결과 줄(최종값 · 증감만, 11/20 변경),
  * 도전 코드 입력 · 오류, 결말 계기 카드 · 회상 · 다시 만난 사람, 칭호 목표.
  * 실제 ViewModel을 쓰는 테스트는 테스트 전용 이름의 저장소를 쓰고 끝나면 지운다(실제 저장 파일은 건드리지 않음).
  */
@@ -184,23 +190,51 @@ class Week13ScreenFlowTest {
     /** 도전 코드로 주사위를 정해 첫 줄(운동능력)이 눈 1 · 눈 3이 되게 한다. 나머지는 3 · 4(합 7, 보정 0). */
     private val fixedCode = ChallengeCode.encode(ChallengeStart(Gender.FEMALE, "1,3,3,4,3,4,3,4,3,4,3,4", seed = 20261113L))
 
+    /** Finish the IME resize before finding the button's touch coordinates. Never bypass onApply. */
+    private fun enterCodeAndTapApply(code: String) {
+        compose.onNodeWithTag("challenge_input").performScrollTo().performTextInput(code)
+        compose.onNodeWithTag("challenge_input").assertTextContains(code, substring = false)
+        Espresso.closeSoftKeyboard()
+        compose.waitForIdle()
+        compose.onNodeWithTag("challenge_apply").performScrollTo().assertIsDisplayed()
+        compose.waitForIdle()
+        compose.onNodeWithTag("challenge_apply").performTouchInput { click() }
+    }
+
+    private fun applyFixedChallengeCode() {
+        enterCodeAndTapApply(fixedCode)
+        // A missed tap must fail here, before later appearance or dice assertions mask its cause.
+        compose.onNodeWithTag("challenge_message").assertTextContains("도전 코드의 출발선", substring = true)
+    }
+
     @Test
-    fun diceRowsReadTheEyesTheSumAndTheCorrectedValue() {
+    fun diceRowsLinkEachStatToItsEyesSumIncreaseAndFinalValue() {
         compose.mainClock.autoAdvance = true
         setScreen { CharacterSelectScreen(starters = emptyList(), onStart = {}) }
-        compose.onNodeWithTag("challenge_input").performScrollTo().performTextInput(fixedCode)
-        compose.onNodeWithTag("challenge_apply").performScrollTo().performClick()
+        applyFixedChallengeCode()
         compose.onNodeWithTag("challenge_message").assertExists()
+        // 2026-11-20 과제: 줄마다 "눈 + 눈 = 합 · 기본 ± 증가량 = 최종값". 숫자는 로직 결과 그대로다(규칙은 김우영 담당).
+        val rows = startingStatRows(checkNotNull(StartingRoll.decode("1,3,3,4,3,4,3,4,3,4,3,4")))
         compose.onNodeWithTag("dice_rule").performScrollTo().assertIsDisplayed()
-        val row = compose.onNodeWithTag("dice_row_운동능력").performScrollTo()
-        row.assertIsDisplayed()
-        val spoken = row.fetchSemanticsNode().config.getOrNull(SemanticsProperties.ContentDescription).orEmpty().joinToString()
-        assertTrue("눈 1 + 눈 3 = 합계 4가 읽혀야 한다: $spoken", spoken.contains("눈 1 + 눈 3 = 합계 4"))
-        assertTrue("보정 전후 값: $spoken", spoken.contains("기본 50 보정 −6, 최종 44"))
-        // 줄 안의 계산식 글자(1 + 3 = 4 / 50 − 6 = 44)는 화면 낭독에서 한 문장으로 합쳐 읽히므로 위 설명으로 확인한다.
-        // 코드로 정한 출발선은 다시 굴리지 않는다.
+        rows.forEach { expected ->
+            val row = compose.onNodeWithTag("dice_row_${expected.label}").performScrollTo()
+            row.assertIsDisplayed()
+            val spoken = row.fetchSemanticsNode().config.getOrNull(SemanticsProperties.ContentDescription).orEmpty().joinToString()
+            assertEquals(expected.speech, spoken)
+            compose.onNodeWithTag("dice_formula_${expected.label}", useUnmergedTree = true).assertTextEquals(expected.formula)
+        }
+        // 3D 위에는 지금 보이는 눈의 능력치 이름이 붙고(처음은 운동능력), 줄을 누르면 그 능력치의 눈으로 바뀐다.
+        compose.onNodeWithTag("dice_3d_label").performScrollTo().assertTextEquals("운동능력의 두 눈")
+        compose.onNodeWithTag("dice_3d_stage").assertContentDescriptionEquals("운동능력: 주사위 1, 주사위 3, 합계 4")
+        compose.onNodeWithTag("dice_row_지력").performScrollTo().performClick()
+        compose.onNodeWithTag("dice_3d_label").performScrollTo().assertTextEquals("지력의 두 눈")
+        compose.onNodeWithTag("dice_3d_stage").assertContentDescriptionEquals("지력: 주사위 3, 주사위 4, 합계 7")
+        compose.onNodeWithTag("dice_row_지력").assertIsSelected()
+        compose.onNodeWithTag("dice_row_운동능력").assertIsNotSelected()
+        // 줄을 눌러도 다시 굴리지 않는다: 코드로 정한 출발선은 그대로이고 재굴림 버튼도 생기지 않는다.
         compose.onNodeWithTag("dice_no_reroll").assertExists()
-        save("w13_dice_formula.png")
+        compose.onNodeWithTag("dice_formula_운동능력", useUnmergedTree = true).assertTextEquals(rows.first().formula)
+        save("w13_dice_values.png")
     }
 
     @Test
@@ -210,8 +244,7 @@ class Week13ScreenFlowTest {
         compose.onNodeWithTag("challenge_apply").performScrollTo().performClick()
         compose.onNodeWithTag("challenge_error").assertTextContains("코드를 입력해 주세요.")
         val broken = fixedCode.dropLast(1) + if (fixedCode.last() == 'A') "B" else "A"
-        compose.onNodeWithTag("challenge_input").performScrollTo().performTextInput(broken)
-        compose.onNodeWithTag("challenge_apply").performScrollTo().performClick()
+        enterCodeAndTapApply(broken)
         compose.onNodeWithTag("challenge_error").assertTextContains("코드 일부가 틀렸습니다", substring = true)
         compose.onAllNodesWithTag("dice_row_운동능력").assertCountEquals(0)
     }
@@ -221,8 +254,7 @@ class Week13ScreenFlowTest {
         var started: NewLifeProfile? = null
         compose.mainClock.autoAdvance = true
         setScreen { CharacterSelectScreen(starters = emptyList(), onStart = { started = it }) }
-        compose.onNodeWithTag("challenge_input").performScrollTo().performTextInput(fixedCode)
-        compose.onNodeWithTag("challenge_apply").performScrollTo().performClick()
+        applyFixedChallengeCode()
         compose.onNodeWithTag("option_hair_color_blond").performScrollTo().performClick()
         compose.onNodeWithTag("option_outfit_green").performScrollTo().performClick()
         // 미리보기 세 장(영아 · 청소년 · 중년)에 같은 설명이 붙고, 노년은 흰머리라 염색 표시가 없다.
@@ -259,8 +291,7 @@ class Week13ScreenFlowTest {
     fun characterScreenFitsASmallScreenWithLargeText() {
         compose.mainClock.autoAdvance = true
         setScreen(fontScale = 2.0f, width = 360, height = 640) { CharacterSelectScreen(starters = emptyList(), onStart = {}) }
-        compose.onNodeWithTag("challenge_input").performScrollTo().performTextInput(fixedCode)
-        compose.onNodeWithTag("challenge_apply").performScrollTo().performClick()
+        applyFixedChallengeCode()
         val rootWidth = compose.onRoot().fetchSemanticsNode().size.width
         listOf("dice_row_운동능력", "dice_row_운", "option_outfit_purple", "option_hair_color_ash", "challenge_code").forEach { tag ->
             val node = compose.onNodeWithTag(tag).performScrollTo().fetchSemanticsNode()

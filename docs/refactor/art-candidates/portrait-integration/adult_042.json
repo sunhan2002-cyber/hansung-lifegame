@@ -1,0 +1,29 @@
+{
+  "eventId": "adult_042",
+  "sourceAssetPath": "followup_20261031/img_adult_childhood_box_001.png",
+  "sourceSha256": "0404e42c695f115720b90f54533ecaec35ba896a8f5b72722c4d59c769734adb",
+  "variant": {
+    "assetPath": "presentation/portraits/img_adult_childhood_box_001_portrait_v1.png",
+    "sha256": "91182251c862c60c82ca792cdae5d712e92c5befb2456bbcc8f38c70f37e4b38",
+    "width": 941,
+    "height": 1672,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/adult_042.json"
+  },
+  "reviewerType": "AI",
+  "reviewer": "Codex AI (/root)",
+  "reviewStatus": "AI_REVIEWED_PRESENTATION",
+  "eventSourceHash": "32633849cfead1240ebdd231c6535e165c1f665eabd53a95a69242da33fade62",
+  "semanticReview": "Producer read the current event conditions and every choice/outcome, inspected source and selected output. Full source snapshot and exact prompt are in the referenced production ledger. Native acceptance remains pending.",
+  "visualReview": "Closed dusty keepsake box with handwritten childhood label, no template placeholder.",
+  "cropReview": "Portrait candidate selected for native phone/small-phone scene and gameplay inspection; not final artwork acceptance.",
+  "actualProducer": "OpenAI built-in image_gen",
+  "generationMethod": "Built-in imagegen edit; exact prompts/output SHA/rejected attempts preserved in docs/refactor/art-candidates/resumed-production-20261119.json",
+  "productionLedger": "docs/refactor/art-candidates/resumed-production-20261119.json",
+  "nativePending": true,
+  "runtimeConnected": true,
+  "approvalChanged": false,
+  "selectedStagingSha256": "91182251c862c60c82ca792cdae5d712e92c5befb2456bbcc8f38c70f37e4b38"
+}

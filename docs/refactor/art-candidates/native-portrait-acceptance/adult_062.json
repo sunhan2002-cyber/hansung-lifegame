@@ -1,0 +1,71 @@
+{
+  "eventId": "adult_062",
+  "reviewerType": "AI",
+  "scope": "Portrait phone and small-phone presentation",
+  "sourceEventHash": "c1e102d0758788519ae1fe971dc7a26eb1d2a5f8e5c540bf233c1c0693753a8e",
+  "sourceReview": "docs/refactor/art-candidates/portrait-integration/adult_062.json",
+  "sourceSha256": "3a9198e0400cd35666909ef223141460b9df49ac52052a8f578ddef63e15f198",
+  "displayedVariant": {
+    "assetPath": "presentation/portraits/img_adult_lifelong_friend_001_portrait_v1.png",
+    "sha256": "1de8340cdec9e4ac2bc9f906a6459af99d923dfa2fe5f4c99936e287343db56d",
+    "width": 941,
+    "height": 1672,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root/security_p0)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/adult_062.json"
+  },
+  "nativeCaptures": [
+    {
+      "path": "build/refactor/resumed/native18/adult_062_phone_scene.png",
+      "sha256": "523465cebe76665ed4124e012e4bba93388012e7ef1616577950e009109fe7cb",
+      "crop": {
+        "eventId": "adult_062",
+        "imageId": "img_adult_lifelong_friend_001",
+        "assetPath": "presentation/portraits/img_adult_lifelong_friend_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/native18/adult_062_phone_play.png",
+      "sha256": "c8946f7f59db0013e46352cba346d9e50ec21bd08e523115e7311500cfb14061",
+      "crop": {
+        "eventId": "adult_062",
+        "imageId": "img_adult_lifelong_friend_001",
+        "assetPath": "presentation/portraits/img_adult_lifelong_friend_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/native18/adult_062_360x740_scene.png",
+      "sha256": "399d0a2b1c24be1621762e986630d7ed18676374dad5b0dd5b12135683491bcc",
+      "crop": {
+        "eventId": "adult_062",
+        "imageId": "img_adult_lifelong_friend_001",
+        "assetPath": "presentation/portraits/img_adult_lifelong_friend_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/native18/adult_062_360x740_play.png",
+      "sha256": "53b1ed6899f79fcbf15c0f1c63f66eccf5736471893b36d84f2ee99f3b8bd2d3",
+      "crop": {
+        "eventId": "adult_062",
+        "imageId": "img_adult_lifelong_friend_001",
+        "assetPath": "presentation/portraits/img_adult_lifelong_friend_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    }
+  ],
+  "observation": "추억의 사진을 보여주는 휴대폰이 중앙에 남는다.",
+  "decision": "PASS",
+  "method": "Individual visual inspection of both scene and gameplay frames together with producer semantic/source review and device capture match."
+}

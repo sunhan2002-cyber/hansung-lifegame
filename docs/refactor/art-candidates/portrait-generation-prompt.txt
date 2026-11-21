@@ -1,0 +1,8 @@
+Tool: built-in image_gen (not CLI/API fallback)
+Date: 2026-11-19
+Edit target: app/src/main/assets/images/followup_20261031/img_pov_first_card_001.png
+Output: app/src/main/assets/images/presentation/portraits/img_pov_first_card_001_portrait_v1.png
+Transparent background: false
+
+Exact prompt:
+Edit the reference game illustration into a portrait 9:16 mobile full-screen derivative. The reference is the edit target. Preserve its warm Korean pixel-art style, earthy palette, first-person seated viewpoint, desk, two hesitant relaxed empty hands, left job offer sheet with briefcase pictogram, right exam registration sheet with pen pictogram, window and green desk lamp. This is the moment BEFORE a life choice; neither document is selected, signed, held, or handed over. Recompose the two complete documents side by side near the middle of the portrait frame, both within the central 70 percent of width and vertical 38 to 65 percent. Keep both hands below the documents with natural anatomy. Extend the room/window above and desktop below to make a tall full-bleed scene, no frames, borders, film strip, captions, UI, letterforms, letters, numbers, logos, watermark. Documents use simple abstract rectangular strokes only, matching the reference. Pixel edges and coherent low-resolution art, no photorealism and no smooth 3D rendering. Preserve narrative and props rather than cutting off one document. This image is an alternative mobile composition, not an edit overwriting the original.

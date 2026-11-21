@@ -95,7 +95,7 @@ class Week7ImageSamplePreviewTest {
         }
         assertEquals(80, checked.size)
         assertEquals(mapOf((1448 to 1086) to 15, (720 to 540) to 65), checked.groupingBy { it }.eachCount())
-        composeRule.onNodeWithText("디자인 미리보기").performClick()
+        composeRule.onNodeWithText("디자인 미리보기").performScrollTo().performClick()
         val directory = requireNotNull(context.getExternalFilesDir("week7-uiux"))
         assertTrue(directory.isDirectory || directory.mkdirs())
         Week7ImageSamples.forEachIndexed { index, sample ->

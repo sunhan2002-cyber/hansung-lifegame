@@ -1,0 +1,71 @@
+{
+  "eventId": "adult_042",
+  "reviewerType": "AI",
+  "scope": "Portrait phone and small-phone presentation",
+  "sourceEventHash": "32633849cfead1240ebdd231c6535e165c1f665eabd53a95a69242da33fade62",
+  "sourceReview": "docs/refactor/art-candidates/portrait-integration/adult_042.json",
+  "sourceSha256": "0404e42c695f115720b90f54533ecaec35ba896a8f5b72722c4d59c769734adb",
+  "displayedVariant": {
+    "assetPath": "presentation/portraits/img_adult_childhood_box_001_portrait_v1.png",
+    "sha256": "91182251c862c60c82ca792cdae5d712e92c5befb2456bbcc8f38c70f37e4b38",
+    "width": 941,
+    "height": 1672,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/adult_042.json"
+  },
+  "nativeCaptures": [
+    {
+      "path": "build/refactor/resumed/final32/adult_042_phone_scene.png",
+      "sha256": "4b5e541df8a231c7ef1cc577b84b3c3171851fd71d0062892464a7a81ae384ac",
+      "crop": {
+        "eventId": "adult_042",
+        "imageId": "img_adult_childhood_box_001",
+        "assetPath": "presentation/portraits/img_adult_childhood_box_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/final32/adult_042_phone_play.png",
+      "sha256": "e4264c062cdb8c1e534213ee851b245e74e32351a080a702319ee48d4d651e30",
+      "crop": {
+        "eventId": "adult_042",
+        "imageId": "img_adult_childhood_box_001",
+        "assetPath": "presentation/portraits/img_adult_childhood_box_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/final32/adult_042_360x740_scene.png",
+      "sha256": "c13bd2809bd26225bcb5d245d603a21e000c5f1a74ece33fa7a992ba4d1e9597",
+      "crop": {
+        "eventId": "adult_042",
+        "imageId": "img_adult_childhood_box_001",
+        "assetPath": "presentation/portraits/img_adult_childhood_box_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/final32/adult_042_360x740_play.png",
+      "sha256": "3941c7f4b8fe49a2f0319e4466df59bab6502f222b86ae73d6918a7b0befe426",
+      "crop": {
+        "eventId": "adult_042",
+        "imageId": "img_adult_childhood_box_001",
+        "assetPath": "presentation/portraits/img_adult_childhood_box_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    }
+  ],
+  "observation": "Closed dusty keepsake box with handwritten childhood label, no template placeholder.",
+  "decision": "PASS",
+  "method": "Individual visual inspection of both scene and gameplay frames together with producer semantic/source review and device capture match."
+}

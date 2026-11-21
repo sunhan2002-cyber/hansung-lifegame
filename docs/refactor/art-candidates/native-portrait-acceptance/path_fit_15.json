@@ -1,0 +1,71 @@
+{
+  "eventId": "path_fit_15",
+  "reviewerType": "AI",
+  "scope": "Portrait phone and small-phone presentation",
+  "sourceEventHash": "01a5c70496689d094f1b20d68b48865ca766145002ba1992c2e5999070eff6df",
+  "sourceReview": "docs/refactor/art-candidates/portrait-integration/path_fit_15.json",
+  "sourceSha256": "613cecccc872370860037dae388f99acd768030656b08de977e4db7c2e0e95d2",
+  "displayedVariant": {
+    "assetPath": "presentation/portraits/img_path_fit_15_001_portrait_v1.png",
+    "sha256": "d632914d3c4a4ecb34ebc7b90b457fbafe2f49345fa9ba9715215ab93d4c44d9",
+    "width": 941,
+    "height": 1672,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root/security_p0)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/path_fit_15.json"
+  },
+  "nativeCaptures": [
+    {
+      "path": "build/refactor/resumed/native18/path_fit_15_phone_scene.png",
+      "sha256": "144a1cdb7a252f394754ea01568c0a28ea70ef607641d3c35f0350998a1ace7f",
+      "crop": {
+        "eventId": "path_fit_15",
+        "imageId": "img_path_fit_15_001",
+        "assetPath": "presentation/portraits/img_path_fit_15_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/native18/path_fit_15_phone_play.png",
+      "sha256": "ed65821d17ee49d3329475cf030d69ba393dbe29e553b9cfac2aa8d5609aa37c",
+      "crop": {
+        "eventId": "path_fit_15",
+        "imageId": "img_path_fit_15_001",
+        "assetPath": "presentation/portraits/img_path_fit_15_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/native18/path_fit_15_360x740_scene.png",
+      "sha256": "31927535da39c24f321fdfcd8c8fa30e887d95c9bb27898634ebdd2c2b77d180",
+      "crop": {
+        "eventId": "path_fit_15",
+        "imageId": "img_path_fit_15_001",
+        "assetPath": "presentation/portraits/img_path_fit_15_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/native18/path_fit_15_360x740_play.png",
+      "sha256": "1affb864a0a3a240e0f8dc5379d867f339ee58a2b758253d36efa8c4cefb839b",
+      "crop": {
+        "eventId": "path_fit_15",
+        "imageId": "img_path_fit_15_001",
+        "assetPath": "presentation/portraits/img_path_fit_15_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    }
+  ],
+  "observation": "운동하는 학생들과 제안을 건네는 교직원을 함께 볼 수 있다.",
+  "decision": "PASS",
+  "method": "Individual visual inspection of both scene and gameplay frames together with producer semantic/source review and device capture match."
+}

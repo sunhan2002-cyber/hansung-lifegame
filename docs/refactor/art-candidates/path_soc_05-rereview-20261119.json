@@ -1,0 +1,201 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-19",
+  "reviewId": "ai_rereview_20261119_path_soc_05",
+  "eventId": "path_soc_05",
+  "imageId": "img_path_soc_05_001",
+  "assetPath": "followup_20261031/img_path_soc_05_001.png",
+  "sha256": "35bd49a77c3df8dbc7df3f16847c4cc799a786f085ba508f1d47b90f221d692b",
+  "eventSourceHash": "e224b14a234478eb77ee27db39a6e5a87f82d335f232d7da20cb477c81dacdc9",
+  "status": "PASS",
+  "reviewer": "Codex AI",
+  "reviewerType": "AI",
+  "reviewScope": "Independent rereview of the unchanged original PNG against current complete event, conditions, both choices, all four outcomes, probabilities, stat deltas, flags, periods and follow-ups. No human approval or new device test claimed.",
+  "previousApprovalHistory": "docs/refactor/art-candidates/path_soc_05-history-before-rereview-20261119.json",
+  "previousEventSourceHash": "96776b829593e13e5bdc8fef7a9cdd1b27a1a1e601ea2a4b5199bd682740cb4d",
+  "reason": "Two fathers gesture toward each other across the family meal before any choice. Neither watching a video, shaking hands, signing a home contract nor moving into a home is depicted. Removing the unexplained intelligence penalty from A/a_video does not change this pre-choice scene.",
+  "semanticReview": {
+    "preChoice": "Private dining room, Korean meal, two older men talking with separate open/pointing hands; seated first-person hands in foreground and accompanying family members at sides.",
+    "choiceA": "Video search remains a future action. There is no screen, shared viewing, handshake, reconciliatory embrace or wedding toast. Both a_video and a_worse remain possible.",
+    "choiceB": "There is no housing document, money transfer, new empty room or moving scene; both b_house and b_rent remain possible.",
+    "conditions": "Current engaged requirement and divorced/married/families_met blocks match a first family meeting before wedding. The historical classification note about a married requirement is obsolete and is preserved as history rather than treated as current truth."
+  },
+  "visualReview": "Opened full 720x540 PNG. Warm restrained pixel-art style; no readable UI text or protagonist face. The two main fathers and meal are recognizable; their hands do not touch, so a handshake outcome is not implied.",
+  "cropReview": "Opened both centered 360x800 and 320x640 calculated previews. Both fathers faces and separate gestures, the dining table and first-person hands remain visible. Side mothers/other guests and part of the shoulders are outside the tall crop; the source contains them, but the crop is approved for the core two-father interaction, not a claim that every secondary participant remains visible.",
+  "cropEvidence": [
+    {
+      "assetPath": "docs/refactor/art-candidates/path_soc_05-crop-360x800.png",
+      "sha256": "df646427830d9a485ee454d684fed76e11d76c472336e2ac8fd50c87a926b425",
+      "viewport": "360x800",
+      "method": "Pillow ImageOps.fit, centered, nearest neighbour; opened and visually inspected. Calculated preview, not an Android screenshot."
+    },
+    {
+      "assetPath": "docs/refactor/art-candidates/path_soc_05-crop-320x640.png",
+      "sha256": "85e05623382485dd2873e8f862e19b0b5ea9fe2127fb228090febcd7cc064006",
+      "viewport": "320x640",
+      "method": "Pillow ImageOps.fit, centered, nearest neighbour; opened and visually inspected. Calculated preview, not an Android screenshot."
+    }
+  ],
+  "deviceVerification": "Not run for this individual rereview; previews are calculated. Existing broader device verification is separate.",
+  "reviewedEventSnapshot": {
+    "eventId": "path_soc_05",
+    "stage": "ADULT",
+    "type": "NORMAL",
+    "isFallback": false,
+    "isMilestone": true,
+    "title": "상견례 대참사",
+    "text": "상견례 자리. 양가 아버지가 같은 고등학교 라이벌이었다는 게 밝혀졌다. 고등학교 때 축구 결승 이야기가 다시 시작됐다.",
+    "imageId": "img_path_soc_05_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [
+        "soc_path",
+        "engaged"
+      ],
+      "blockedFlags": [
+        "divorced",
+        "married",
+        "families_met"
+      ]
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "그날 축구 영상을 찾아서 같이 본다",
+        "statDelta": {
+          "사회성": 3,
+          "행복": 2
+        },
+        "resultText": "오프사이드였다. 두 분이 동시에 일어나 악수했다. 결혼식 축사는 두 아버지가 같이 하기로 했다.",
+        "addFlags": [
+          "family_bond",
+          "achv_family_peace",
+          "family_memory",
+          "families_met"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "a_video",
+            "text": "오프사이드였다. 두 분이 동시에 일어나 악수했다. 결혼식 축사는 두 아버지가 같이 하기로 했다.",
+            "chance": 60,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "사회성": 3,
+              "행복": 2
+            },
+            "addFlags": [
+              "family_bond",
+              "achv_family_peace",
+              "family_memory",
+              "families_met"
+            ],
+            "chanceWeights": {
+              "사회성": 2,
+              "운": 1
+            }
+          },
+          {
+            "outcomeId": "a_worse",
+            "text": "영상은 더 애매했다. 그날 이후 명절마다 그 장면을 다시 돌려 본다.",
+            "chance": 40,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "사회성": 1,
+              "행복": -1
+            },
+            "addFlags": [
+              "family_conflict",
+              "families_met"
+            ]
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week8_life_path"
+      },
+      {
+        "choiceId": "B",
+        "label": "신혼집 이야기로 화제를 돌린다",
+        "statDelta": {
+          "행복": 2,
+          "경제력": 1,
+          "사회성": -1
+        },
+        "resultText": "양가가 조금씩 보태 주기로 했다. 결혼식 전에 작은 전셋집부터 계약했다. 빈 거실에 둘이 누워 천장을 봤다.",
+        "addFlags": [
+          "housing_jeonse",
+          "housing_jeonse__path_soc_05",
+          "families_met"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "b_house",
+            "text": "양가가 조금씩 보태 주기로 했다. 결혼식 전에 작은 전셋집부터 계약했다. 빈 거실에 둘이 누워 천장을 봤다.",
+            "chance": 70,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 2,
+              "경제력": 1,
+              "사회성": -1
+            },
+            "addFlags": [
+              "housing_jeonse",
+              "housing_jeonse__path_soc_05",
+              "families_met"
+            ],
+            "chanceWeights": {
+              "경제력": 2
+            }
+          },
+          {
+            "outcomeId": "b_rent",
+            "text": "집 이야기에 분위기가 더 무거워졌다. 결국 둘이 모은 돈으로 월세방부터 구했다.",
+            "chance": 30,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "경제력": -2,
+              "행복": 1
+            },
+            "addFlags": [
+              "housing_monthly_rent",
+              "housing_monthly_rent__path_soc_05",
+              "families_met"
+            ],
+            "chanceWeights": {
+              "경제력": -2
+            }
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week8_life_path"
+      }
+    ],
+    "priority": 0,
+    "kind": "MILESTONE",
+    "periods": [
+      "YOUNG_ADULT",
+      "MIDDLE",
+      "OLD_AGE"
+    ],
+    "weight": 20,
+    "view": "FIRST_PERSON",
+    "lifePath": "SOCIAL",
+    "pathRole": "결혼 전 상견례·상호작용(경제력)",
+    "followUps": [
+      "love_wedding_01",
+      "love_wedding_music",
+      "path_soc_07"
+    ]
+  }
+}

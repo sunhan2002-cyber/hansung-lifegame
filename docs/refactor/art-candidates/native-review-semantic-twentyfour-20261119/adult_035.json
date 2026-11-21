@@ -1,0 +1,195 @@
+{
+  "schemaVersion": 1,
+  "eventId": "adult_035",
+  "status": "PASS",
+  "reviewer": "Codex AI / plan_audit",
+  "reviewerType": "AI",
+  "reviewDate": "2026-11-19",
+  "sourceEventHash": "b5813378c0702d351eed12a0ee1b89ae8a88ace20a6b385e7419e0eff58b9e07",
+  "sourceEventSnapshot": {
+    "eventId": "adult_035",
+    "stage": "ADULT",
+    "type": "NORMAL",
+    "isFallback": false,
+    "isMilestone": false,
+    "title": "10년 만의 동창회",
+    "text": "초등학교 단톡방에 공지가 떴다. '10년 만에 동창회 합니다! 이번 주 토요일.' 기억나는 이름은 절반뿐이다.",
+    "imageId": "img_adult_reunion_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [],
+      "blockedFlags": []
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "간다",
+        "statDelta": {
+          "사회성": 3,
+          "경제력": -2
+        },
+        "resultText": "처음엔 어색했지만 운동회 얘기가 나오자 다들 그때로 돌아갔다. 2차까지 갔다.",
+        "addFlags": [],
+        "outcomes": [
+          {
+            "outcomeId": "a_primary",
+            "text": "처음엔 어색했지만 운동회 얘기가 나오자 다들 그때로 돌아갔다. 2차까지 갔다.",
+            "chance": 100,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "사회성": 3,
+              "경제력": -2
+            },
+            "addFlags": []
+          }
+        ]
+      },
+      {
+        "choiceId": "B",
+        "label": "안 간다",
+        "statDelta": {
+          "건강": 1,
+          "사회성": -2
+        },
+        "resultText": "토요일 밤, 단톡방에 단체 사진이 올라왔다. 한참을 확대해서 봤다.",
+        "addFlags": [],
+        "outcomes": [
+          {
+            "outcomeId": "b_primary",
+            "text": "토요일 밤, 단톡방에 단체 사진이 올라왔다. 한참을 확대해서 봤다.",
+            "chance": 100,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "건강": 1,
+              "사회성": -2
+            },
+            "addFlags": []
+          }
+        ]
+      },
+      {
+        "choiceId": "C",
+        "label": "단톡방에 인사만 남긴다",
+        "statDelta": {
+          "사회성": 1,
+          "행복": -1
+        },
+        "resultText": "\"다음엔 꼭 갈게!\" 답장이 열두 개 달렸다. 다음 동창회는 10년 뒤라고 한다.",
+        "addFlags": [],
+        "outcomes": [
+          {
+            "outcomeId": "c_primary",
+            "text": "\"다음엔 꼭 갈게!\" 답장이 열두 개 달렸다. 다음 동창회는 10년 뒤라고 한다.",
+            "chance": 100,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "사회성": 1,
+              "행복": -1
+            },
+            "addFlags": []
+          }
+        ]
+      }
+    ],
+    "priority": 0,
+    "kind": "INCIDENT",
+    "periods": [
+      "YOUNG_ADULT"
+    ]
+  },
+  "sourceReadScope": "Current complete event, conditions, every choice/outcome and flags/stat deltas/periods/follow-ups directly read before judgement.",
+  "sourceImage": {
+    "path": "app/src/main/assets/images/followup_20261031/img_adult_reunion_001.png",
+    "sha256": "6213941cea7b0e12016991bf2ac28689584f042345aac2f2d26e525570239b81",
+    "width": 720,
+    "height": 540
+  },
+  "originalArtworkUnchangedSinceHistoricalReview": true,
+  "historicalReview": {
+    "eventId": "adult_035",
+    "title": "10년 만의 동창회",
+    "imageId": "img_adult_reunion_001",
+    "assetPath": "followup_20261031/img_adult_reunion_001.png",
+    "sha256": "6213941cea7b0e12016991bf2ac28689584f042345aac2f2d26e525570239b81",
+    "eventSourceHash": "b5813378c0702d351eed12a0ee1b89ae8a88ace20a6b385e7419e0eff58b9e07",
+    "status": "REVISION_REQUIRED",
+    "reviewer": "김선한 담당 Codex 직접 대행 검수",
+    "reason": "동창회 초대 사건을 일반 단톡방 그림만으로 표현; 재회 단서 추가 필요",
+    "expectedAction": "동창회 공지를 받고 낯익은 프로필을 훑음",
+    "requiredObjects": "휴대폰; 비문자 그룹 아이콘과 메시지 블록",
+    "sheet": "output/art-review-20261119/sheet-10.jpg",
+    "cell": 9,
+    "cropMethod": "ImageOps.fit centre-fill 360:800; simulated crop inspected directly, not an emulator capture",
+    "visualMethod": "원본 도트풍·색감·장면 파손·명백한 신체/사물 오류 직접 확인"
+  },
+  "presentationMetadata": [],
+  "captures": [
+    {
+      "path": "build/refactor/after/originals-twentyfour-and-variants-native/adult_035_phone_scene.png",
+      "sha256": "b6ad096ad66b508e7d83b35a34c32ea443db067bc75e74ee468767c9a7acf9ff",
+      "width": 1080,
+      "height": 2400,
+      "screen": "phone",
+      "mode": "scene",
+      "cropReport": {
+        "eventId": "adult_035",
+        "imageId": "img_adult_reunion_001",
+        "assetPath": "followup_20261031/img_adult_reunion_001.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.331..0.669",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/originals-twentyfour-and-variants-native/adult_035_phone_play.png",
+      "sha256": "fc64b4fa7e514f93fa55d0d59868c5f4965e9b173378ecef5ba25c0d93449aac",
+      "width": 1080,
+      "height": 2400,
+      "screen": "phone",
+      "mode": "play",
+      "cropReport": null
+    },
+    {
+      "path": "build/refactor/after/originals-twentyfour-and-variants-native/adult_035_360x740_scene.png",
+      "sha256": "30d6b8ff22eb583526d20a642ff0b6a0f8761870afdcd540115fee5759006fd5",
+      "width": 945,
+      "height": 1943,
+      "screen": "360x740",
+      "mode": "scene",
+      "cropReport": {
+        "eventId": "adult_035",
+        "imageId": "img_adult_reunion_001",
+        "assetPath": "followup_20261031/img_adult_reunion_001.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.318..0.682",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/originals-twentyfour-and-variants-native/adult_035_360x740_play.png",
+      "sha256": "d0d5898c8ffbfabd7460f93f9d494994aed2cf826c9a6fdc41a5e12e7137a4be",
+      "width": 945,
+      "height": 1943,
+      "screen": "360x740",
+      "mode": "play",
+      "cropReport": null
+    }
+  ],
+  "semanticObservation": "집에서 휴대전화 단체 채팅의 고정 공지와 여러 프로필/말풍선을 보는 현재 상황이다. 재회는 아직 선택 A 이후이므로 실제 모임이나 결과인 단체 사진을 추가하면 오히려 선노출이다. 열두 답장·인사 전송 완료도 없다.",
+  "cropObservation": "두 native에서 전체 휴대전화와 손, 그룹 아이콘과 핀 공지, 여러 프로필/메시지 블록이 유지된다. 과거 재회 단서 부족 지적은 본문의 사전 공지 상태 및 비문자 화면 요구와 대조하여 해소했다.",
+  "uiObservation": "두 크기에서 제목·본문·A/B/C를 읽을 수 있다. small C 카드 하단이 footer 경계에 닿아 정지 캡처만으로 스크롤을 인증하지 않는다.",
+  "reviewMethod": "Codex AI directly inspected the full unchanged source PNG and all four unmodified native scene/play captures. Prior review is retained as historical evidence; this record is a new AI judgement, not human approval.",
+  "nativeMethod": "Production DecisionScreen, current parsed event/routing/PixelAssetLoader, fixture state in Android Compose instrumentation. Scene grid match >=0.95. Not complete game progression.",
+  "nativeRunLog": "build/refactor/depth-and-originals-twentyfour.log",
+  "limitations": [
+    "Emulator captures, not physical-device review.",
+    "Only reviewed phone and 360x740 dimensions; not every font scale/aspect ratio.",
+    "Art review does not independently certify scrolling, TalkBack or complete game-flow transitions."
+  ]
+}

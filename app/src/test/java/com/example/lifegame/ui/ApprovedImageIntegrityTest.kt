@@ -3,6 +3,7 @@ package com.example.lifegame.ui
 import com.example.lifegame.ui.preview.Week7ImageSamples
 import java.io.File
 import java.security.MessageDigest
+import kotlin.math.abs
 import org.json.JSONArray
 import org.json.JSONObject
 import org.junit.Assert.assertEquals
@@ -22,11 +23,12 @@ import org.junit.Test
 class ApprovedImageIntegrityTest {
     private val images = File("src/main/assets/images")
     private val docs = File("../docs/assignments")
-    private val registry: Map<String, Pair<Int, Int>> = JSONArray(File("src/main/assets/image_ids.sample.json").readText()).let { array ->
+    private val registryItems: Map<String, JSONObject> = JSONArray(File("src/main/assets/image_ids.sample.json").readText()).let { array ->
         List(array.length()) { array.getJSONObject(it) }
             .filter { it.has("width") && it.has("height") }
-            .associate { it.getString("fileName") to (it.getInt("width") to it.getInt("height")) }
+            .associateBy { it.getString("fileName") }
     }
+    private val registry = registryItems.mapValues { (_, item) -> item.getInt("width") to item.getInt("height") }
     private val filesByName: Map<String, File> by lazy {
         val byName = images.walkTopDown().filter { it.isFile && it.extension == "png" }.associateBy { it.name }.toMutableMap()
         // Archived art may share a filename with its replacement. Validate the file actually routed in the app.
@@ -51,6 +53,20 @@ class ApprovedImageIntegrityTest {
     private fun sha256(file: File): String =
         MessageDigest.getInstance("SHA-256").digest(file.readBytes()).joinToString("") { "%02x".format(it) }
 
+    /** Existing originals retain 4:3; only explicitly declared new event POV masters opt in. */
+    private fun assertDeclaredFormat(fileName: String, dimensions: Pair<Int, Int>) {
+        val (width, height) = dimensions
+        val item = registryItems[fileName]
+        if (item?.has("sourceFormat") == true) {
+            assertEquals(fileName, "portrait_9_16", item.getString("sourceFormat"))
+            assertEquals(fileName, "pov", item.getString("usage"))
+            assertTrue(fileName, width in 1..4096 && height in 1..4096)
+            assertTrue(fileName, abs(width.toLong() * 16 - height.toLong() * 9) * 100 < height.toLong() * 9)
+        } else {
+            assertTrue(fileName, width > 0 && height > 0 && width.toLong() * 3 == height.toLong() * 4)
+        }
+    }
+
     @Test
     fun `approved group images keep the approved bytes and their registered size`() {
         val manifest = JSONArray(File(docs, "20261031/이미지그룹_승인manifest.json").readText())
@@ -63,7 +79,7 @@ class ApprovedImageIntegrityTest {
             // 승인 그림은 재압축하지 않은 승인 바이트 그대로다(크기는 그림마다 다르다: 1448×1086 · 1280×960 · 300×225).
             assertEquals(entry.getString("imageId"), entry.getString("sha256"), sha256(file))
             registry[file.name]?.let { assertEquals("registered size of ${file.name}", it, size(file)) }
-            assertTrue(file.name, size(file).let { (w, h) -> w * 3 == h * 4 })
+            assertDeclaredFormat(file.name, size(file))
         }
     }
 
@@ -89,8 +105,8 @@ class ApprovedImageIntegrityTest {
                 ?.let { "$name ${it.first}x${it.second} != ${expected.first}x${expected.second}" }
         }
         assertTrue(mismatches.take(10).joinToString(), mismatches.isEmpty())
-        // 등록 크기는 모두 4:3이다.
-        assertTrue(registry.values.all { (w, h) -> w * 3 == h * 4 })
+        // 기존 승인 원본은 4:3 유지, 신규 사건 세로 원본은 명시된 형식과 실측 크기를 검증한다.
+        registry.forEach { (fileName, dimensions) -> assertDeclaredFormat(fileName, dimensions) }
     }
 
     @Test

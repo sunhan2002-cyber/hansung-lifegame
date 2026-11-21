@@ -1,0 +1,71 @@
+{
+  "eventId": "adult_079",
+  "reviewerType": "AI",
+  "scope": "Portrait phone and small-phone presentation",
+  "sourceEventHash": "56e327a2d1df1733737ac563701ec0222438b10796d1e4c6cd73892b1a87bf1a",
+  "sourceReview": "docs/refactor/art-candidates/portrait-integration/adult_079.json",
+  "sourceSha256": "3b7205a7093a912769bc0fe38b212161e436f216704c5820ff4432f5def1b1a1",
+  "displayedVariant": {
+    "assetPath": "presentation/portraits/img_pov_id_badge_001_portrait_v1.png",
+    "sha256": "3f8605be2cd49c023f088a7b4c58e184298e7aade2f16021d7510893ceef8c49",
+    "width": 981,
+    "height": 1602,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/adult_079.json"
+  },
+  "nativeCaptures": [
+    {
+      "path": "build/refactor/resumed/final32/adult_079_phone_scene.png",
+      "sha256": "40a091434bed356c35db85cf20241d4190c21e87e9ae7d8e075334a6f5bb67f9",
+      "crop": {
+        "eventId": "adult_079",
+        "imageId": "img_pov_id_badge_001",
+        "assetPath": "presentation/portraits/img_pov_id_badge_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.133..0.867",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/final32/adult_079_phone_play.png",
+      "sha256": "e1ea6d7c0f22585efe4e28aaf53d20800d0b871bf8a0342bbe4d20a6d07463de",
+      "crop": {
+        "eventId": "adult_079",
+        "imageId": "img_pov_id_badge_001",
+        "assetPath": "presentation/portraits/img_pov_id_badge_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.133..0.867",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/final32/adult_079_360x740_scene.png",
+      "sha256": "0860b3d5f5e3eb2b294b3ee07a724a02d25922cf827d0a2b8df1851b247c1c3d",
+      "crop": {
+        "eventId": "adult_079",
+        "imageId": "img_pov_id_badge_001",
+        "assetPath": "presentation/portraits/img_pov_id_badge_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.103..0.897",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/final32/adult_079_360x740_play.png",
+      "sha256": "0620b09126da714ce8e7c187daf841132e3503304bd7c35a74736ed25077d47c",
+      "crop": {
+        "eventId": "adult_079",
+        "imageId": "img_pov_id_badge_001",
+        "assetPath": "presentation/portraits/img_pov_id_badge_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.103..0.897",
+        "match": "1.000"
+      }
+    }
+  ],
+  "observation": "HR presents photo badge with nervous portrait, colleague waiting nearby.",
+  "decision": "PASS",
+  "method": "Individual visual inspection of both scene and gameplay frames together with producer semantic/source review and device capture match."
+}

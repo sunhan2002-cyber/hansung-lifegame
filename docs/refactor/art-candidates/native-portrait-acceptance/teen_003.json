@@ -1,0 +1,71 @@
+{
+  "eventId": "teen_003",
+  "reviewerType": "AI",
+  "scope": "Portrait phone and small-phone presentation",
+  "sourceEventHash": "7dac53e0364b604511849feac54c3c2eb4b072ebc40bb89cba4018083616b60d",
+  "sourceReview": "docs/refactor/art-candidates/portrait-integration/teen_003.json",
+  "sourceSha256": "b94a2324dca03e5a79577a9a7473ff65047773ceae337259da58271c060a5a5a",
+  "displayedVariant": {
+    "assetPath": "presentation/portraits/img_teen_club_001_portrait_v1.png",
+    "sha256": "3f536f903ecf828925c6643e799d377128fb90e05c580910f35bc7edc651f90d",
+    "width": 941,
+    "height": 1672,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/teen_003.json"
+  },
+  "nativeCaptures": [
+    {
+      "path": "build/refactor/resumed/native18/teen_003_phone_scene.png",
+      "sha256": "80f2399508b0804e29efb4f0bf881adbce27f684d8545021a73e946613a95fe8",
+      "crop": {
+        "eventId": "teen_003",
+        "imageId": "img_teen_club_001",
+        "assetPath": "presentation/portraits/img_teen_club_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/native18/teen_003_phone_play.png",
+      "sha256": "30b08d07857ae121afc3fbd8b9c81d863969482659821ffab266d6f076c6c538",
+      "crop": {
+        "eventId": "teen_003",
+        "imageId": "img_teen_club_001",
+        "assetPath": "presentation/portraits/img_teen_club_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/native18/teen_003_360x740_scene.png",
+      "sha256": "6b5316c5ac64bbeb5e3d81fa38d1e41431daa85d831d33800a4316314c4fcf1b",
+      "crop": {
+        "eventId": "teen_003",
+        "imageId": "img_teen_club_001",
+        "assetPath": "presentation/portraits/img_teen_club_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/native18/teen_003_360x740_play.png",
+      "sha256": "64ba8840732163fbc41b97ba94e03bd974f57c5f6bb72773b7e75d50dbc95b5e",
+      "crop": {
+        "eventId": "teen_003",
+        "imageId": "img_teen_club_001",
+        "assetPath": "presentation/portraits/img_teen_club_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    }
+  ],
+  "observation": "농구공·노트북·베이스와 세 동아리 선배가 보인다.",
+  "decision": "PASS",
+  "method": "Individual visual inspection of both scene and gameplay frames together with producer semantic/source review and device capture match."
+}

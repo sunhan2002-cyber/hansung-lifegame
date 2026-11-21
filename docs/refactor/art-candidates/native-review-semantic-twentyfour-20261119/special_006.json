@@ -1,0 +1,225 @@
+{
+  "schemaVersion": 1,
+  "eventId": "special_006",
+  "status": "REVISION_REQUIRED",
+  "reviewer": "Codex AI / plan_audit",
+  "reviewerType": "AI",
+  "reviewDate": "2026-11-19",
+  "sourceEventHash": "d1e1a63457a5f08d7aeaf7ba25ec027f3d1affbca450aed00b87a632b1e7a7f4",
+  "sourceEventSnapshot": {
+    "eventId": "special_006",
+    "stage": "TEEN",
+    "type": "SPECIAL",
+    "isFallback": false,
+    "isMilestone": false,
+    "title": "꿈속의 정답",
+    "text": "꿈에서 본 문제가 시험지에 그대로 나왔다. 너무 놀라서 코피가 터졌다. 안 멈춘다.",
+    "imageId": "img_special_dream_answer_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [],
+      "blockedFlags": []
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "휴지로 막고 푼다",
+        "statDelta": {
+          "지력": 3,
+          "건강": -3
+        },
+        "resultText": "휴지 한 통 소진, 만점. 선생님: \"열정이 느껴지는 핏자국이구나.\"",
+        "addFlags": [
+          "survived_special"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "a_primary",
+            "text": "휴지 한 통 소진, 만점. 선생님: \"열정이 느껴지는 핏자국이구나.\"",
+            "chance": 100,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "지력": 3,
+              "건강": -3
+            },
+            "addFlags": [
+              "survived_special"
+            ],
+            "lifeDelta": -25,
+            "deathCause": "만점과 맞바꾼 코피"
+          }
+        ],
+        "conditionReview": "confirmed",
+        "conditionBasis": "week10_qa_semantic_review",
+        "requiredStats": {
+          "지력": 55
+        }
+      },
+      {
+        "choiceId": "B",
+        "label": "예언자처럼 행동한다",
+        "statDelta": {
+          "사회성": -4,
+          "운": 2
+        },
+        "resultText": "다음 시험 문제를 '예언'했다. 전부 맞았다. '미래에서 온 애' 소문. 아무도 옆에 안 앉는다.",
+        "addFlags": [
+          "weird_rumor"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "b_primary",
+            "text": "다음 시험 문제를 '예언'했다. 전부 맞았다. '미래에서 온 애' 소문. 아무도 옆에 안 앉는다.",
+            "chance": 100,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "사회성": -4,
+              "운": 2
+            },
+            "addFlags": [
+              "weird_rumor"
+            ],
+            "lifeDelta": -25,
+            "deathCause": "예언자 행세"
+          }
+        ],
+        "conditionReview": "confirmed",
+        "conditionBasis": "week10_meaning_review",
+        "requiredStats": {
+          "사회성": 55
+        }
+      },
+      {
+        "choiceId": "C",
+        "label": "다시 잔다",
+        "statDelta": {
+          "운": 1,
+          "건강": 1,
+          "지력": -4
+        },
+        "resultText": "꿈에서 다음 과목 문제를 봤다. 깨어 보니 시험이 다 끝나 있었다.",
+        "addFlags": [],
+        "outcomes": [
+          {
+            "outcomeId": "c_primary",
+            "text": "꿈에서 다음 과목 문제를 봤다. 깨어 보니 시험이 다 끝나 있었다.",
+            "chance": 100,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "운": 1,
+              "건강": 1,
+              "지력": -4
+            },
+            "addFlags": [],
+            "lifeDelta": -25,
+            "deathCause": "시험 시간 숙면 과다"
+          }
+        ],
+        "alwaysAvailable": true,
+        "conditionReview": "confirmed",
+        "alwaysAvailableReason": "서술·반응·돌발 선택지로 능력치 잠금보다 선택 가능성이 우선"
+      }
+    ],
+    "priority": 0,
+    "kind": "BIG_INCIDENT",
+    "periods": [
+      "TEEN"
+    ]
+  },
+  "sourceReadScope": "Current complete event, conditions, every choice/outcome and flags/stat deltas/periods/follow-ups directly read before judgement.",
+  "sourceImage": {
+    "path": "app/src/main/assets/images/followup_20261031/img_special_dream_answer_001.png",
+    "sha256": "bb7316511c7e2194b6f4b2d5a4094d375c7c6c76360cf4ea8e077cc3aca67152",
+    "width": 720,
+    "height": 540
+  },
+  "originalArtworkUnchangedSinceHistoricalReview": true,
+  "historicalReview": {
+    "eventId": "special_006",
+    "title": "꿈속의 정답",
+    "imageId": "img_special_dream_answer_001",
+    "assetPath": "followup_20261031/img_special_dream_answer_001.png",
+    "sha256": "bb7316511c7e2194b6f4b2d5a4094d375c7c6c76360cf4ea8e077cc3aca67152",
+    "eventSourceHash": "d1e1a63457a5f08d7aeaf7ba25ec027f3d1affbca450aed00b87a632b1e7a7f4",
+    "status": "REVISION_REQUIRED",
+    "reviewer": "김선한 담당 Codex 직접 대행 검수",
+    "reason": "수학 시험과 휴지는 있으나 꿈에서 본 정답·멈추지 않는 코피의 핵심 단서가 없음",
+    "expectedAction": "꿈에서 본 문제를 알아보고 코피에 놀람",
+    "requiredObjects": "시험지, 휴지, 책상",
+    "sheet": "output/art-review-20261119/sheet-13.jpg",
+    "cell": 14,
+    "cropMethod": "ImageOps.fit centre-fill 360:800; simulated crop inspected directly, not an emulator capture",
+    "visualMethod": "원본 도트풍·색감·장면 파손·명백한 신체/사물 오류 직접 확인"
+  },
+  "presentationMetadata": [],
+  "captures": [
+    {
+      "path": "build/refactor/after/originals-twentyfour-and-variants-native/special_006_phone_scene.png",
+      "sha256": "f05c50aa34a6e368e78350ba8f4cb6b44a0143e5be45d3832baed7fdeae85055",
+      "width": 1080,
+      "height": 2400,
+      "screen": "phone",
+      "mode": "scene",
+      "cropReport": {
+        "eventId": "special_006",
+        "imageId": "img_special_dream_answer_001",
+        "assetPath": "followup_20261031/img_special_dream_answer_001.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.331..0.669",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/originals-twentyfour-and-variants-native/special_006_phone_play.png",
+      "sha256": "736e64fd1e1ea844f21adc31280bda09c8659721613e3e9d5644597b12e474cc",
+      "width": 1080,
+      "height": 2400,
+      "screen": "phone",
+      "mode": "play",
+      "cropReport": null
+    },
+    {
+      "path": "build/refactor/after/originals-twentyfour-and-variants-native/special_006_360x740_scene.png",
+      "sha256": "fd96d65244dc06194d9a02d9fc59a28535c0436e0743ff33da08002719f411f5",
+      "width": 945,
+      "height": 1943,
+      "screen": "360x740",
+      "mode": "scene",
+      "cropReport": {
+        "eventId": "special_006",
+        "imageId": "img_special_dream_answer_001",
+        "assetPath": "followup_20261031/img_special_dream_answer_001.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.318..0.682",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/originals-twentyfour-and-variants-native/special_006_360x740_play.png",
+      "sha256": "63ac592163387910f041139c2e099365463f4e982d41a9d50cc4c9061a41019a",
+      "width": 945,
+      "height": 1943,
+      "screen": "360x740",
+      "mode": "play",
+      "cropReport": null
+    }
+  ],
+  "semanticObservation": "교실에서 아직 풀지 않은 도형 시험지를 보고 놀라며 코피가 묻은 휴지를 손에 든 현재 상황이다. 만점·예언 결과·시험 중 잠듦은 없다.",
+  "cropObservation": "원본 오른쪽의 휴지상자/사용한 휴지/손에 든 붉은 얼룩 휴지가 두 native에서 모두 사라져 시험지만 남는다. 코피가 멈추지 않는 현재 사건 핵심 단서가 크롭으로 유실된다.",
+  "uiObservation": "두 크기에서 제목·본문·세 선택지가 모두 읽힌다.",
+  "reviewMethod": "Codex AI directly inspected the full unchanged source PNG and all four unmodified native scene/play captures. Prior review is retained as historical evidence; this record is a new AI judgement, not human approval.",
+  "nativeMethod": "Production DecisionScreen, current parsed event/routing/PixelAssetLoader, fixture state in Android Compose instrumentation. Scene grid match >=0.95. Not complete game progression.",
+  "nativeRunLog": "build/refactor/depth-and-originals-twentyfour.log",
+  "limitations": [
+    "Emulator captures, not physical-device review.",
+    "Only reviewed phone and 360x740 dimensions; not every font scale/aspect ratio.",
+    "Art review does not independently certify scrolling, TalkBack or complete game-flow transitions."
+  ],
+  "remainingWork": "원본 보존 세로 파생에서 시험지와 아직 펜을 대지 않은 손, 작은 붉은 얼룩 휴지 및 휴지상자를 중앙 안전 영역 안에 배치. 소량의 비고어 코피 단서만, 완성 답안/점수/수면 결과 금지 후 native 재검수."
+}

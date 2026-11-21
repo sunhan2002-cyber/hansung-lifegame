@@ -1,0 +1,218 @@
+{
+  "schemaVersion": 1,
+  "eventId": "path_luk_06",
+  "status": "PASS",
+  "reviewer": "Codex AI / plan_audit",
+  "reviewerType": "AI",
+  "reviewDate": "2026-11-19",
+  "sourceEventHash": "c1b844114e9bb48e8992bafec923af1b50502eb3c90adf99170180c2fac08ea2",
+  "sourceEventSnapshot": {
+    "eventId": "path_luk_06",
+    "stage": "ADULT",
+    "type": "NORMAL",
+    "isFallback": false,
+    "isMilestone": false,
+    "title": "주운 지갑의 주인",
+    "text": "출근길에 지갑을 주웠다. 신분증 사진 속 얼굴이 낯익다. 어제 뉴스에 나온 기업 회장님이다. 지갑 안에 현금이 두툼하다.",
+    "imageId": "img_path_luk_06_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [
+        "luk_path",
+        "job_employed"
+      ],
+      "blockedFlags": []
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "바로 근처 파출소에 맡긴다",
+        "statDelta": {
+          "운": 3,
+          "사회성": 2,
+          "경제력": -1
+        },
+        "resultText": "그날은 지각했다. 일주일 뒤 회장님 비서에게서 연락이 왔다. 감사 인사와 함께 회사 견학 초대장이 왔다. 그 견학에서 일이 시작됐다.",
+        "addFlags": [
+          "luk_patron",
+          "achv_good_deed"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "a_return",
+            "text": "그날은 지각했다. 일주일 뒤 회장님 비서에게서 연락이 왔다. 감사 인사와 함께 회사 견학 초대장이 왔다. 그 견학에서 일이 시작됐다.",
+            "chance": 50,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "운": 3,
+              "사회성": 2,
+              "경제력": -1
+            },
+            "addFlags": [
+              "luk_patron",
+              "achv_good_deed"
+            ],
+            "chanceWeights": {
+              "운": 3
+            }
+          },
+          {
+            "outcomeId": "a_thanks",
+            "text": "감사 문자가 한 통 왔다. 그게 다였다. 그래도 그날 하루 종일 기분이 좋았다.",
+            "chance": 50,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 2,
+              "운": 1,
+              "경제력": -1
+            },
+            "addFlags": [
+              "achv_good_deed"
+            ]
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week8_life_path"
+      },
+      {
+        "choiceId": "B",
+        "label": "직접 회사로 찾아간다",
+        "statDelta": {
+          "사회성": 1,
+          "행복": -1,
+          "운": -1
+        },
+        "resultText": "로비에서 경비원에게 막혔다. 지갑은 결국 경비원이 전해 줬다. 나는 지각했다.",
+        "addFlags": [],
+        "outcomes": [
+          {
+            "outcomeId": "b_visit",
+            "text": "로비에서 경비원에게 막혔다. 지갑은 결국 경비원이 전해 줬다. 나는 지각했다.",
+            "chance": 100,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "사회성": 1,
+              "행복": -1,
+              "운": -1
+            },
+            "addFlags": []
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week8_life_path"
+      }
+    ],
+    "priority": 0,
+    "kind": "INCIDENT",
+    "periods": [
+      "YOUNG_ADULT",
+      "MIDDLE"
+    ],
+    "weight": 20,
+    "view": "FIRST_PERSON",
+    "lifePath": "LUCK",
+    "pathRole": "뜻밖의 인연",
+    "followUps": [
+      "path_luk_07"
+    ]
+  },
+  "sourceReadScope": "Current complete event, conditions, every choice/outcome and flags/stat deltas/periods/follow-ups directly read before judgement.",
+  "sourceImage": {
+    "path": "app/src/main/assets/images/followup_20261031/img_path_luk_06_001.png",
+    "sha256": "513b8941e36e5ed3fc2bc34e2e1ba05410c4a5aa8fed7a576c1a80b565da92d0",
+    "width": 720,
+    "height": 540
+  },
+  "originalArtworkUnchangedSinceHistoricalReview": true,
+  "historicalReview": {
+    "eventId": "path_luk_06",
+    "title": "주운 지갑의 주인",
+    "imageId": "img_path_luk_06_001",
+    "assetPath": "followup_20261031/img_path_luk_06_001.png",
+    "sha256": "513b8941e36e5ed3fc2bc34e2e1ba05410c4a5aa8fed7a576c1a80b565da92d0",
+    "eventSourceHash": "c1b844114e9bb48e8992bafec923af1b50502eb3c90adf99170180c2fac08ea2",
+    "status": "REVISION_REQUIRED",
+    "reviewer": "김선한 담당 Codex 직접 대행 검수",
+    "reason": "신분증에 읽을 문자·낯선 사람 얼굴을 직접 노출; 비식별 구체성 검토 필요",
+    "expectedAction": "주운 지갑 속 두툼한 현금과 낯익은 타인의 신분증을 봄",
+    "requiredObjects": "열린 지갑; 현금; 타인의 비식별 초상 카드",
+    "sheet": "output/art-review-20261119/sheet-17.jpg",
+    "cell": 14,
+    "cropMethod": "ImageOps.fit centre-fill 360:800; simulated crop inspected directly, not an emulator capture",
+    "visualMethod": "원본 도트풍·색감·장면 파손·명백한 신체/사물 오류 직접 확인"
+  },
+  "presentationMetadata": [],
+  "captures": [
+    {
+      "path": "build/refactor/after/originals-twentyfour-and-variants-native/path_luk_06_phone_scene.png",
+      "sha256": "e8bc5f346bd3546b86ec62e081dd7662edb0d7b5b3c75e5f8fa8d9e79b15d0e1",
+      "width": 1080,
+      "height": 2400,
+      "screen": "phone",
+      "mode": "scene",
+      "cropReport": {
+        "eventId": "path_luk_06",
+        "imageId": "img_path_luk_06_001",
+        "assetPath": "followup_20261031/img_path_luk_06_001.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.331..0.669",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/originals-twentyfour-and-variants-native/path_luk_06_phone_play.png",
+      "sha256": "ad73ec3cc6e1a54874b1f372d50c11df2e0c220f75d88a7b32f8a1ce71e94485",
+      "width": 1080,
+      "height": 2400,
+      "screen": "phone",
+      "mode": "play",
+      "cropReport": null
+    },
+    {
+      "path": "build/refactor/after/originals-twentyfour-and-variants-native/path_luk_06_360x740_scene.png",
+      "sha256": "a11da933d950365621450cd6c82b455d30be9d3d08c87a62e07e37bb5223c401",
+      "width": 945,
+      "height": 1943,
+      "screen": "360x740",
+      "mode": "scene",
+      "cropReport": {
+        "eventId": "path_luk_06",
+        "imageId": "img_path_luk_06_001",
+        "assetPath": "followup_20261031/img_path_luk_06_001.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.318..0.682",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/originals-twentyfour-and-variants-native/path_luk_06_360x740_play.png",
+      "sha256": "8a789240804e1b06f16d09b0618a3d029864e6f978df5b72156d1e7867eefb37",
+      "width": 945,
+      "height": 1943,
+      "screen": "360x740",
+      "mode": "play",
+      "cropReport": null
+    }
+  ],
+  "semanticObservation": "출근길에 주운 지갑의 현금과 CEO 신분증을 확인하는 선택 전 상태다. 가상의 노인 증명사진은 신원 인지에 필요하고 실제 개인 식별 문자열은 없다. 모든 조건과 A의 비서 초대/감사 분기, B의 경비 제지 및 지각 결과를 읽었으며 그 결과는 그림에 선행하지 않는다.",
+  "cropObservation": "두 크기에서 지갑·두꺼운 현금·신분증의 온전한 얼굴 및 출근길이 유지된다. 외곽 손 일부는 잘려도 돈이나 신분증의 의미를 훼손하지 않는다.",
+  "uiObservation": "두 화면의 A/B 문구가 읽힌다.",
+  "reviewMethod": "Codex AI directly inspected the full unchanged source PNG and all four unmodified native scene/play captures. Prior review is retained as historical evidence; this record is a new AI judgement, not human approval.",
+  "nativeMethod": "Production DecisionScreen, current parsed event/routing/PixelAssetLoader, fixture state in Android Compose instrumentation. Scene grid match >=0.95. Not complete game progression.",
+  "nativeRunLog": "build/refactor/depth-and-originals-twentyfour.log",
+  "limitations": [
+    "Emulator captures, not physical-device review.",
+    "Only reviewed phone and 360x740 dimensions; not every font scale/aspect ratio.",
+    "Art review does not independently certify scrolling, TalkBack or complete game-flow transitions."
+  ]
+}

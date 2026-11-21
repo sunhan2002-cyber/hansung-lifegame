@@ -1,0 +1,29 @@
+{
+  "eventId": "path_wea_14",
+  "sourceAssetPath": "followup_20261031/img_path_wea_14_001.png",
+  "sourceSha256": "260da2f5dce0a0dd7e7b7af56bf0e7a36d197fc0107947951b674bef067d2077",
+  "variant": {
+    "assetPath": "presentation/portraits/img_path_wea_14_001_portrait_v1.png",
+    "sha256": "6f0c18b3c40d8b9f1b792b018f36a29963647df3eacfc05629e1425cf9e80589",
+    "width": 941,
+    "height": 1672,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root/security_p0)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/path_wea_14.json"
+  },
+  "reviewerType": "AI",
+  "reviewer": "Codex AI (/root/security_p0)",
+  "reviewStatus": "AI_REVIEWED_PRESENTATION",
+  "eventSourceHash": "be5ab24bd71295d667c38b9b8a69321cec39e10e3d873a20f950a8b96dac22f5",
+  "semanticReview": "Producer read the current event conditions and every choice/outcome, inspected source and selected output. Full source snapshot and exact prompt are in the referenced production ledger. Native acceptance remains pending.",
+  "visualReview": "Second attempt individually viewed: exactly three separate fanned bills with reading/geometric/keyboard pictograms, child central and calculator now entirely blank-keyed. No canceled class, budget completion, performance or travel. First text-bearing calculator candidate rejected and retained. Native pending.",
+  "cropReview": "Portrait candidate selected for native phone/small-phone scene and gameplay inspection; not final artwork acceptance.",
+  "actualProducer": "OpenAI built-in image_gen",
+  "generationMethod": "Built-in imagegen edit; exact prompts/output SHA/rejected attempts preserved in docs/refactor/art-candidates/content-art-revision-briefs-20261119.json",
+  "productionLedger": "docs/refactor/art-candidates/content-art-revision-briefs-20261119.json",
+  "nativePending": true,
+  "runtimeConnected": true,
+  "approvalChanged": false,
+  "selectedStagingSha256": "6f0c18b3c40d8b9f1b792b018f36a29963647df3eacfc05629e1425cf9e80589"
+}

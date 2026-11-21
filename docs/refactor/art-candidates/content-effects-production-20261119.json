@@ -1,0 +1,2897 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-19",
+  "producer": "/root/effects_tech",
+  "reviewerType": "AI",
+  "scopeGroups": {
+    "contentCorrection": 12,
+    "mixedCropContent": 4
+  },
+  "items": [
+    {
+      "eventId": "teen_035",
+      "scopeGroup": "CONTENT_CORRECTION_12",
+      "sourcePath": "C:\\HSU\\3-2\\mobile\\main-audit-20261119\\app\\src\\main\\assets\\images\\followup_20261031\\img_teen_bus_terminal_001.png",
+      "sourceSha256": "7a71a5af4d7a1aa4772aa0a571f0864b535e6d960e4e58bab4b6999e1eaa4e39",
+      "referencePath": "C:\\HSU\\3-2\\mobile\\main-audit-20261119\\app\\src\\main\\assets\\images\\followup_20261031\\img_teen_bus_terminal_001.png",
+      "referenceSha256": "7a71a5af4d7a1aa4772aa0a571f0864b535e6d960e4e58bab4b6999e1eaa4e39",
+      "sourceDirectlyViewed": true,
+      "currentConditionsAllChoicesAndOutcomesReviewed": true,
+      "eventSnapshot": {
+        "eventId": "teen_035",
+        "stage": "TEEN",
+        "type": "NORMAL",
+        "isFallback": false,
+        "isMilestone": false,
+        "title": "종점에서 눈을 떴다",
+        "text": "학원 끝나고 버스에서 잠들었다. 눈을 떠 보니 종점이다. 밤 11시.",
+        "imageId": "img_teen_bus_terminal_001",
+        "conditions": {
+          "stats": {},
+          "requiredFlags": [],
+          "blockedFlags": []
+        },
+        "choices": [
+          {
+            "choiceId": "A",
+            "label": "부모님께 전화한다",
+            "statDelta": {
+              "사회성": 1,
+              "행복": -2
+            },
+            "resultText": "아빠가 데리러 왔다. 차 안에서 아무 말 없다가 편의점에서 핫바를 사 줬다.",
+            "addFlags": [],
+            "outcomes": [
+              {
+                "outcomeId": "a_primary",
+                "text": "아빠가 데리러 왔다. 차 안에서 아무 말 없다가 편의점에서 핫바를 사 줬다.",
+                "chance": 100,
+                "primary": true,
+                "hidden": false,
+                "death": false,
+                "statDelta": {
+                  "사회성": 1,
+                  "행복": -2
+                },
+                "addFlags": []
+              }
+            ]
+          },
+          {
+            "choiceId": "B",
+            "label": "반대 방향 버스를 기다린다",
+            "statDelta": {
+              "지력": 1,
+              "건강": -2
+            },
+            "resultText": "자정이 넘어 집에 왔다. 숙제는 버스에서 다 했다.",
+            "addFlags": [],
+            "outcomes": [
+              {
+                "outcomeId": "b_primary",
+                "text": "자정이 넘어 집에 왔다. 숙제는 버스에서 다 했다.",
+                "chance": 100,
+                "primary": true,
+                "hidden": false,
+                "death": false,
+                "statDelta": {
+                  "지력": 1,
+                  "건강": -2
+                },
+                "addFlags": []
+              }
+            ]
+          },
+          {
+            "choiceId": "C",
+            "label": "기사님께 사정을 말한다",
+            "statDelta": {
+              "사회성": 2,
+              "운": 1,
+              "건강": -1
+            },
+            "resultText": "기사님이 차고지에서 컵라면을 나눠 주셨다. 그리고 다음 차로 동네 앞까지 태워 주셨다.",
+            "addFlags": [],
+            "outcomes": [
+              {
+                "outcomeId": "c_primary",
+                "text": "기사님이 차고지에서 컵라면을 나눠 주셨다. 그리고 다음 차로 동네 앞까지 태워 주셨다.",
+                "chance": 100,
+                "primary": true,
+                "hidden": false,
+                "death": false,
+                "statDelta": {
+                  "사회성": 2,
+                  "운": 1,
+                  "건강": -1
+                },
+                "addFlags": [],
+                "lifeDelta": 4
+              }
+            ]
+          }
+        ],
+        "priority": 0,
+        "kind": "INCIDENT",
+        "periods": [
+          "TEEN"
+        ]
+      },
+      "originalReview": {
+        "reviewer": "Codex AI (/root/security_p0)",
+        "reviewerType": "AI",
+        "sourceTextAndAllOutcomesReviewed": true,
+        "sourceImageViewed": true,
+        "observedImage": "Empty late-night terminal bus is correct, but the held phone contains explicit 11:00 digits.",
+        "editBrief": "Preserve empty seats, distant driver and dark terminal. Replace the phone digits with a simple non-numeral analog clock cue around eleven; keep no readable letters/numbers.",
+        "preChoiceConstraints": "No parent car, waiting reverse bus, homework finished, driver noodles or ride home.",
+        "historicalReasonReconciliation": "Night eleven is a setup fact; remove text rather than invent another time.",
+        "generationDecision": "REPAIR_REQUIRED",
+        "reviewMethod": "All current choices/outcomes and conditions read; original PNG individually viewed with view_image."
+      },
+      "exactPrompt": "Use case: precise-object-edit / narrative correction of an existing Korean life-simulation illustration. Image1 is the original style and object reference; preserve its pixel-art-like blocky shading, palette, era, character designs when retained, and coherent illustrated material. Rebuild only the scene details explicitly required below to match the actual PRE-CHOICE story. Make one opaque full-bleed portrait9:16 (941x1672 preferred). It is not a poster, screenshot, collage, stretched crop or film frame.\nPut essential whole objects, meaningful hands and faces together in central60% width and height where feasible; stagger naturally in depth. All important clues must survive centered9:20 phone crop. Peripheral environment fills margins. Correct human anatomy, exactly the stated people/hands, sleeves continuously connected to body/frame. No detached arms, duplicated props or impossible perspective. No readable letters/numbers/captions, invented UI labels, logos, watermark or border. Abstract document lines and story-required pictograms are allowed. Do not anticipate any future choice result.\nSCENE SPECIFICATION:\nPhone screen must show a simple ANALOG clock with NO digits: minute hand up, hour hand toward eleven. Same empty dark bus, distant driver, teen hands. No comic effects.\nAuthoritative story context (do not print): 학원 끝나고 버스에서 잠들었다. 눈을 떠 보니 종점이다. 밤 11시.\nUNSELECTED choices: 부모님께 전화한다 / 반대 방향 버스를 기다린다 / 기사님께 사정을 말한다\nPrior-state conditions: {\"stats\": {}, \"requiredFlags\": [], \"blockedFlags\": []}.\nForbidden future results: No parent car, waiting reverse bus, homework finished, driver noodles or ride home.\nAll exact story wording stays in the actual app text overlay, not painted into this image.",
+      "requestedAspect": "9:16",
+      "tool": "built-in image_gen",
+      "attempts": [],
+      "selectedPath": null,
+      "outputSha256": null,
+      "reviewStatus": "GENERATION_PENDING",
+      "nativePending": true,
+      "runtimeConnected": false,
+      "approvalChanged": false
+    },
+    {
+      "eventId": "teen_037",
+      "scopeGroup": "CONTENT_CORRECTION_12",
+      "sourcePath": "C:\\HSU\\3-2\\mobile\\main-audit-20261119\\app\\src\\main\\assets\\images\\followup_20261031\\img_teen_d100_001.png",
+      "sourceSha256": "9b61d120e0f5197de7edb01743078d122f75a67e30bfe807da4428e2b13f57b5",
+      "referencePath": "C:\\HSU\\3-2\\mobile\\main-audit-20261119\\app\\src\\main\\assets\\images\\followup_20261031\\img_teen_d100_001.png",
+      "referenceSha256": "9b61d120e0f5197de7edb01743078d122f75a67e30bfe807da4428e2b13f57b5",
+      "sourceDirectlyViewed": true,
+      "currentConditionsAllChoicesAndOutcomesReviewed": true,
+      "eventSnapshot": {
+        "eventId": "teen_037",
+        "stage": "TEEN",
+        "type": "NORMAL",
+        "isFallback": false,
+        "isMilestone": false,
+        "title": "수능 D-365",
+        "text": "고2 마지막 날, 칠판에 'D-365'. 누군가 '아직 1년이나?'라고 썼고, 누군가 '1년밖에?'로 고쳤다.",
+        "imageId": "img_teen_d100_001",
+        "conditions": {
+          "stats": {},
+          "requiredFlags": [
+            "v4:event:teen_019"
+          ],
+          "blockedFlags": [
+            "vocational_high",
+            "v4:event:teen_038"
+          ]
+        },
+        "choices": [
+          {
+            "choiceId": "A",
+            "label": "잠을 줄이고 문제집을 판다",
+            "statDelta": {
+              "지력": 5,
+              "건강": -2,
+              "행복": -2
+            },
+            "resultText": "모의고사 상승. 다크서클은 턱까지 하강. 엄마: \"판다니?\"",
+            "addFlags": [
+              "exam_ready"
+            ],
+            "outcomes": [
+              {
+                "outcomeId": "a_primary",
+                "text": "모의고사 상승. 다크서클은 턱까지 하강. 엄마: \"판다니?\"",
+                "chance": 100,
+                "primary": true,
+                "hidden": false,
+                "death": false,
+                "statDelta": {
+                  "지력": 5,
+                  "건강": -2,
+                  "행복": -2
+                },
+                "addFlags": [
+                  "exam_ready"
+                ]
+              }
+            ]
+          },
+          {
+            "choiceId": "B",
+            "label": "운동도 같이 한다",
+            "statDelta": {
+              "건강": 3,
+              "지력": 1,
+              "사회성": -1
+            },
+            "resultText": "점수는 천천히 올랐다. 1년 뒤 수능 날 아침, 나만 쌩쌩했다.",
+            "addFlags": [],
+            "outcomes": [
+              {
+                "outcomeId": "b_primary",
+                "text": "점수는 천천히 올랐다. 1년 뒤 수능 날 아침, 나만 쌩쌩했다.",
+                "chance": 100,
+                "primary": true,
+                "hidden": false,
+                "death": false,
+                "statDelta": {
+                  "건강": 3,
+                  "지력": 1,
+                  "사회성": -1
+                },
+                "addFlags": [],
+                "lifeDelta": 10
+              }
+            ],
+            "requiredStats": {
+              "운동능력": 55
+            }
+          },
+          {
+            "choiceId": "C",
+            "label": "옆에 'D-364: 치킨'이라고 쓴다",
+            "statDelta": {
+              "사회성": 3,
+              "행복": 2,
+              "지력": -2
+            },
+            "resultText": "반 전체가 동의했다. 다음 날 치킨 파티. 담임 선생님이 제일 많이 드셨다.",
+            "addFlags": [],
+            "outcomes": [
+              {
+                "outcomeId": "c_primary",
+                "text": "반 전체가 동의했다. 다음 날 치킨 파티. 담임 선생님이 제일 많이 드셨다.",
+                "chance": 100,
+                "primary": true,
+                "hidden": false,
+                "death": false,
+                "statDelta": {
+                  "사회성": 3,
+                  "행복": 2,
+                  "지력": -2
+                },
+                "addFlags": [],
+                "lifeDelta": 10
+              }
+            ]
+          }
+        ],
+        "priority": 0,
+        "kind": "INCIDENT",
+        "periods": [
+          "TEEN"
+        ]
+      },
+      "originalReview": {
+        "reviewer": "Codex AI (/root/security_p0)",
+        "reviewerType": "AI",
+        "sourceTextAndAllOutcomesReviewed": true,
+        "sourceImageViewed": true,
+        "observedImage": "The original board explicitly reads D-365 and contains a graduation cap/book doodle. The calendar text belongs in the game body.",
+        "editBrief": "Preserve the classroom before choices with empty workbook and two contrasting anonymous note/doodle clusters on the board; remove D-365, any letters and exact numbers. Keep a blank calendar-like arrangement as context.",
+        "preChoiceConstraints": "No test scores improved, exhausted student, exam completion or chicken party/order.",
+        "historicalReasonReconciliation": "Countdown wording stays in the actual UI text; no need for illegible replacement lettering.",
+        "generationDecision": "REPAIR_REQUIRED",
+        "reviewMethod": "All current choices/outcomes and conditions read; original PNG individually viewed with view_image."
+      },
+      "exactPrompt": "Use case: precise-object-edit / narrative correction of an existing Korean life-simulation illustration. Image1 is the original style and object reference; preserve its pixel-art-like blocky shading, palette, era, character designs when retained, and coherent illustrated material. Rebuild only the scene details explicitly required below to match the actual PRE-CHOICE story. Make one opaque full-bleed portrait9:16 (941x1672 preferred). It is not a poster, screenshot, collage, stretched crop or film frame.\nPut essential whole objects, meaningful hands and faces together in central60% width and height where feasible; stagger naturally in depth. All important clues must survive centered9:20 phone crop. Peripheral environment fills margins. Correct human anatomy, exactly the stated people/hands, sleeves continuously connected to body/frame. No detached arms, duplicated props or impossible perspective. No readable letters/numbers/captions, invented UI labels, logos, watermark or border. Abstract document lines and story-required pictograms are allowed. Do not anticipate any future choice result.\nSCENE SPECIFICATION:\nRemove the large D-365 lettering and graduation-cap symbol. Board has only two anonymous contrasting doodles, one hopeful sun and one worried scribble, and a blank calendar grid. Keep all five classmates, workbook and two teen hands. No chicken or exam success.\nAuthoritative story context (do not print): 고2 마지막 날, 칠판에 'D-365'. 누군가 '아직 1년이나?'라고 썼고, 누군가 '1년밖에?'로 고쳤다.\nUNSELECTED choices: 잠을 줄이고 문제집을 판다 / 운동도 같이 한다 / 옆에 'D-364: 치킨'이라고 쓴다\nPrior-state conditions: {\"stats\": {}, \"requiredFlags\": [\"v4:event:teen_019\"], \"blockedFlags\": [\"vocational_high\", \"v4:event:teen_038\"]}.\nForbidden future results: No test scores improved, exhausted student, exam completion or chicken party/order.\nAll exact story wording stays in the actual app text overlay, not painted into this image.",
+      "requestedAspect": "9:16",
+      "tool": "built-in image_gen",
+      "attempts": [],
+      "selectedPath": null,
+      "outputSha256": null,
+      "reviewStatus": "GENERATION_PENDING",
+      "nativePending": true,
+      "runtimeConnected": false,
+      "approvalChanged": false
+    },
+    {
+      "eventId": "adult_021",
+      "scopeGroup": "CONTENT_CORRECTION_12",
+      "sourcePath": "C:\\HSU\\3-2\\mobile\\main-audit-20261119\\app\\src\\main\\assets\\images\\followup_20261031\\img_adult_hangover_001.png",
+      "sourceSha256": "8eaa2261b98f615fa42e93968cb7ead24fda4cca415bb60fee96459046801ce3",
+      "referencePath": "C:\\HSU\\3-2\\mobile\\main-audit-20261119\\app\\src\\main\\assets\\images\\followup_20261031\\img_adult_hangover_001.png",
+      "referenceSha256": "8eaa2261b98f615fa42e93968cb7ead24fda4cca415bb60fee96459046801ce3",
+      "sourceDirectlyViewed": true,
+      "currentConditionsAllChoicesAndOutcomesReviewed": true,
+      "eventSnapshot": {
+        "eventId": "adult_021",
+        "stage": "ADULT",
+        "type": "NORMAL",
+        "isFallback": false,
+        "isMilestone": false,
+        "title": "회식 다음 날 아침",
+        "text": "알람이 울린다. 8시 10분. 머리가 깨질 것 같다. 단톡방엔 어젯밤 내가 팀장님과 춤추는 영상이 올라와 있다.",
+        "imageId": "img_adult_hangover_001",
+        "conditions": {
+          "stats": {},
+          "requiredFlags": [
+            "blackout_work",
+            "job_employed"
+          ],
+          "blockedFlags": []
+        },
+        "choices": [
+          {
+            "choiceId": "A",
+            "label": "숙취해소제 두 병을 마시고 출근한다",
+            "statDelta": {
+              "사회성": 1,
+              "경제력": -1,
+              "건강": -2
+            },
+            "resultText": "지각은 안 했다. 팀장님이 나보다 더 창백한 얼굴로 앉아 있었다. 눈이 마주치자 둘 다 못 본 척했다.",
+            "addFlags": [],
+            "outcomes": [
+              {
+                "outcomeId": "a_primary",
+                "text": "지각은 안 했다. 팀장님이 나보다 더 창백한 얼굴로 앉아 있었다. 눈이 마주치자 둘 다 못 본 척했다.",
+                "chance": 100,
+                "primary": true,
+                "hidden": false,
+                "death": false,
+                "statDelta": {
+                  "사회성": 1,
+                  "경제력": -1,
+                  "건강": -2
+                },
+                "addFlags": []
+              }
+            ]
+          },
+          {
+            "choiceId": "B",
+            "label": "반차를 쓴다",
+            "statDelta": {
+              "건강": 2,
+              "사회성": -2
+            },
+            "resultText": "오후에 출근하니 모두가 웃음을 참았다. 영상 조회수가 팀원 수보다 많았다.",
+            "addFlags": [],
+            "outcomes": [
+              {
+                "outcomeId": "b_primary",
+                "text": "오후에 출근하니 모두가 웃음을 참았다. 영상 조회수가 팀원 수보다 많았다.",
+                "chance": 100,
+                "primary": true,
+                "hidden": false,
+                "death": false,
+                "statDelta": {
+                  "건강": 2,
+                  "사회성": -2
+                },
+                "addFlags": []
+              }
+            ]
+          },
+          {
+            "choiceId": "C",
+            "label": "영상에 '좋아요'를 누른다",
+            "statDelta": {
+              "사회성": 2,
+              "운": 1,
+              "건강": -2
+            },
+            "resultText": "팀장님도 '좋아요'를 눌렀다. 그 영상은 연말에 '올해의 영상'으로 뽑혔다.",
+            "addFlags": [],
+            "outcomes": [
+              {
+                "outcomeId": "c_primary",
+                "text": "팀장님도 '좋아요'를 눌렀다. 그 영상은 연말에 '올해의 영상'으로 뽑혔다.",
+                "chance": 100,
+                "primary": true,
+                "hidden": false,
+                "death": false,
+                "statDelta": {
+                  "사회성": 2,
+                  "운": 1,
+                  "건강": -2
+                },
+                "addFlags": []
+              }
+            ]
+          }
+        ],
+        "priority": 0,
+        "kind": "INCIDENT",
+        "periods": [
+          "YOUNG_ADULT"
+        ]
+      },
+      "originalReview": {
+        "reviewer": "Codex AI (/root/security_p0)",
+        "reviewerType": "AI",
+        "sourceTextAndAllOutcomesReviewed": true,
+        "sourceImageViewed": true,
+        "observedImage": "The phone shows the previous-night group video, but a digital alarm reads roughly 11:11 rather than the specified morning 8:10. Comic punctuation surrounds props.",
+        "editBrief": "Preserve morning bed and paused group dance thumbnail. Replace clock with a non-numeral analog face pointing about 8:10, remove comic punctuation and readable UI text; hold empty hand and phone centrally.",
+        "preChoiceConstraints": "No remedies consumed, work arrival, half-day leave taken, like activated or year-end award.",
+        "historicalReasonReconciliation": "The actual current digits differ from both the body and the old 11:10 description.",
+        "generationDecision": "REPAIR_REQUIRED",
+        "reviewMethod": "All current choices/outcomes and conditions read; original PNG individually viewed with view_image."
+      },
+      "exactPrompt": "Use case: precise-object-edit / narrative correction of an existing Korean life-simulation illustration. Image1 is the original style and object reference; preserve its pixel-art-like blocky shading, palette, era, character designs when retained, and coherent illustrated material. Rebuild only the scene details explicitly required below to match the actual PRE-CHOICE story. Make one opaque full-bleed portrait9:16 (941x1672 preferred). It is not a poster, screenshot, collage, stretched crop or film frame.\nPut essential whole objects, meaningful hands and faces together in central60% width and height where feasible; stagger naturally in depth. All important clues must survive centered9:20 phone crop. Peripheral environment fills margins. Correct human anatomy, exactly the stated people/hands, sleeves continuously connected to body/frame. No detached arms, duplicated props or impossible perspective. No readable letters/numbers/captions, invented UI labels, logos, watermark or border. Abstract document lines and story-required pictograms are allowed. Do not anticipate any future choice result.\nSCENE SPECIFICATION:\nSame first-person morning bed, pajama sleeves, right hand holds phone paused group dancing video, left empty hand. Alarm is analog with NO digits, minute hand points to two and hour hand slightly after eight. Remove floating !! and ? symbols. Do not depict remedies, late arrival or an activated like.\nAuthoritative story context (do not print): 알람이 울린다. 8시 10분. 머리가 깨질 것 같다. 단톡방엔 어젯밤 내가 팀장님과 춤추는 영상이 올라와 있다.\nUNSELECTED choices: 숙취해소제 두 병을 마시고 출근한다 / 반차를 쓴다 / 영상에 '좋아요'를 누른다\nPrior-state conditions: {\"stats\": {}, \"requiredFlags\": [\"blackout_work\", \"job_employed\"], \"blockedFlags\": []}.\nForbidden future results: No remedies consumed, work arrival, half-day leave taken, like activated or year-end award.\nAll exact story wording stays in the actual app text overlay, not painted into this image.",
+      "requestedAspect": "9:16",
+      "tool": "built-in image_gen",
+      "attempts": [],
+      "selectedPath": null,
+      "outputSha256": null,
+      "reviewStatus": "GENERATION_PENDING",
+      "nativePending": true,
+      "runtimeConnected": false,
+      "approvalChanged": false
+    },
+    {
+      "eventId": "adult_046",
+      "scopeGroup": "CONTENT_CORRECTION_12",
+      "sourcePath": "C:\\HSU\\3-2\\mobile\\main-audit-20261119\\app\\src\\main\\assets\\images\\followup_20261031\\img_adult_scam_call_001.png",
+      "sourceSha256": "fecbf296e46fc2e97c20be96c5f8d25a6fb952d1b8566f81fe35cb88810d6a2b",
+      "referencePath": "C:\\HSU\\3-2\\mobile\\main-audit-20261119\\app\\src\\main\\assets\\images\\followup_20261031\\img_adult_scam_call_001.png",
+      "referenceSha256": "fecbf296e46fc2e97c20be96c5f8d25a6fb952d1b8566f81fe35cb88810d6a2b",
+      "sourceDirectlyViewed": true,
+      "currentConditionsAllChoicesAndOutcomesReviewed": true,
+      "eventSnapshot": {
+        "eventId": "adult_046",
+        "stage": "ADULT",
+        "type": "NORMAL",
+        "isFallback": false,
+        "isMilestone": false,
+        "title": "수상한 전화",
+        "text": "\"고객님 계좌가 범죄에 연루되었습니다.\" 수화기 너머 목소리가 너무 진지하다.",
+        "imageId": "img_adult_scam_call_001",
+        "conditions": {
+          "stats": {},
+          "requiredFlags": [],
+          "blockedFlags": []
+        },
+        "choices": [
+          {
+            "choiceId": "A",
+            "label": "바로 끊고 은행에 확인한다",
+            "statDelta": {
+              "지력": 2,
+              "행복": -1
+            },
+            "resultText": "아무 일도 없었다. 은행 직원이 \"잘하셨어요\"라고 했다.",
+            "addFlags": [],
+            "outcomes": [
+              {
+                "outcomeId": "a_primary",
+                "text": "아무 일도 없었다. 은행 직원이 \"잘하셨어요\"라고 했다.",
+                "chance": 100,
+                "primary": true,
+                "hidden": false,
+                "death": false,
+                "statDelta": {
+                  "지력": 2,
+                  "행복": -1
+                },
+                "addFlags": []
+              }
+            ]
+          },
+          {
+            "choiceId": "B",
+            "label": "대화를 질질 끌어 본다",
+            "statDelta": {
+              "행복": 3,
+              "지력": -1
+            },
+            "resultText": "20분 동안 \"네? 다시 한번요?\"를 반복했다. 상대가 먼저 끊었다.",
+            "addFlags": [],
+            "outcomes": [
+              {
+                "outcomeId": "b_primary",
+                "text": "20분 동안 \"네? 다시 한번요?\"를 반복했다. 상대가 먼저 끊었다.",
+                "chance": 100,
+                "primary": true,
+                "hidden": false,
+                "death": false,
+                "statDelta": {
+                  "행복": 3,
+                  "지력": -1
+                },
+                "addFlags": [],
+                "lifeDelta": 10
+              }
+            ],
+            "requiredStats": {
+              "사회성": 58
+            }
+          },
+          {
+            "choiceId": "C",
+            "label": "부모님께도 바로 알린다",
+            "statDelta": {
+              "사회성": 2,
+              "행복": -1
+            },
+            "resultText": "엄마도 같은 전화를 받았다고 했다. 둘이 같이 신고했다.",
+            "addFlags": [
+              "family_bond"
+            ],
+            "outcomes": [
+              {
+                "outcomeId": "c_primary",
+                "text": "엄마도 같은 전화를 받았다고 했다. 둘이 같이 신고했다.",
+                "chance": 100,
+                "primary": true,
+                "hidden": false,
+                "death": false,
+                "statDelta": {
+                  "사회성": 2,
+                  "행복": -1
+                },
+                "addFlags": [
+                  "family_bond"
+                ]
+              }
+            ]
+          }
+        ],
+        "priority": 0,
+        "kind": "INCIDENT",
+        "periods": [
+          "YOUNG_ADULT",
+          "MIDDLE"
+        ]
+      },
+      "originalReview": {
+        "reviewer": "Codex AI (/root/security_p0)",
+        "reviewerType": "AI",
+        "sourceTextAndAllOutcomesReviewed": true,
+        "sourceImageViewed": true,
+        "observedImage": "The phone-at-sofa setup is correct, but a large floating question-mark thought bubble and radiating marks are painted into the scene.",
+        "editBrief": "Retain first-person phone and sofa; remove the question-mark bubble and comic marks. Keep the caller off-screen and use neutral hand hesitation rather than a bank or police graphic.",
+        "preChoiceConstraints": "No money transferred, bank confirmation, recorded report, parents contacted, caller hanging up or arrest.",
+        "generationDecision": "REPAIR_REQUIRED",
+        "reviewMethod": "All current choices/outcomes and conditions read; original PNG individually viewed with view_image."
+      },
+      "exactPrompt": "Use case: precise-object-edit / narrative correction of an existing Korean life-simulation illustration. Image1 is the original style and object reference; preserve its pixel-art-like blocky shading, palette, era, character designs when retained, and coherent illustrated material. Rebuild only the scene details explicitly required below to match the actual PRE-CHOICE story. Make one opaque full-bleed portrait9:16 (941x1672 preferred). It is not a poster, screenshot, collage, stretched crop or film frame.\nPut essential whole objects, meaningful hands and faces together in central60% width and height where feasible; stagger naturally in depth. All important clues must survive centered9:20 phone crop. Peripheral environment fills margins. Correct human anatomy, exactly the stated people/hands, sleeves continuously connected to body/frame. No detached arms, duplicated props or impossible perspective. No readable letters/numbers/captions, invented UI labels, logos, watermark or border. Abstract document lines and story-required pictograms are allowed. Do not anticipate any future choice result.\nSCENE SPECIFICATION:\nSame sofa first-person, cream sleeves, left hand holds side of phone, right hand hesitates on lap. Remove all floating question thought-bubble and radiating comic marks entirely. No new caller face, bank-transfer screen, police or mother.\nAuthoritative story context (do not print): \"고객님 계좌가 범죄에 연루되었습니다.\" 수화기 너머 목소리가 너무 진지하다.\nUNSELECTED choices: 바로 끊고 은행에 확인한다 / 대화를 질질 끌어 본다 / 부모님께도 바로 알린다\nPrior-state conditions: {\"stats\": {}, \"requiredFlags\": [], \"blockedFlags\": []}.\nForbidden future results: No money transferred, bank confirmation, recorded report, parents contacted, caller hanging up or arrest.\nAll exact story wording stays in the actual app text overlay, not painted into this image.",
+      "requestedAspect": "9:16",
+      "tool": "built-in image_gen",
+      "attempts": [],
+      "selectedPath": null,
+      "outputSha256": null,
+      "reviewStatus": "GENERATION_PENDING",
+      "nativePending": true,
+      "runtimeConnected": false,
+      "approvalChanged": false
+    },
+    {
+      "eventId": "adult_047",
+      "scopeGroup": "CONTENT_CORRECTION_12",
+      "sourcePath": "C:\\HSU\\3-2\\mobile\\main-audit-20261119\\app\\src\\main\\assets\\images\\followup_20261031\\img_adult_wedding_invite_001.png",
+      "sourceSha256": "60cda630b331b64626fdd6aa96c34b0a528e66e4a72e2318f6287d751d95286d",
+      "referencePath": "C:\\HSU\\3-2\\mobile\\main-audit-20261119\\app\\src\\main\\assets\\images\\followup_20261031\\img_adult_wedding_invite_001.png",
+      "referenceSha256": "60cda630b331b64626fdd6aa96c34b0a528e66e4a72e2318f6287d751d95286d",
+      "sourceDirectlyViewed": true,
+      "currentConditionsAllChoicesAndOutcomesReviewed": true,
+      "eventSnapshot": {
+        "eventId": "adult_047",
+        "stage": "ADULT",
+        "type": "NORMAL",
+        "isFallback": false,
+        "isMilestone": false,
+        "title": "애매한 사이의 청첩장",
+        "text": "대학 때 두 번 대화해 본 동기에게서 모바일 청첩장이 왔다. 축의금을 얼마 해야 할까.",
+        "imageId": "img_adult_wedding_invite_001",
+        "conditions": {
+          "stats": {},
+          "requiredFlags": [],
+          "blockedFlags": []
+        },
+        "choices": [
+          {
+            "choiceId": "A",
+            "label": "5만 원",
+            "statDelta": {
+              "사회성": 1,
+              "경제력": -2
+            },
+            "resultText": "무난했다. 식권으로 먹은 갈비탕이 맛있었다.",
+            "addFlags": [],
+            "outcomes": [
+              {
+                "outcomeId": "a_primary",
+                "text": "무난했다. 식권으로 먹은 갈비탕이 맛있었다.",
+                "chance": 100,
+                "primary": true,
+                "hidden": false,
+                "death": false,
+                "statDelta": {
+                  "사회성": 1,
+                  "경제력": -2
+                },
+                "addFlags": []
+              }
+            ]
+          },
+          {
+            "choiceId": "B",
+            "label": "10만 원",
+            "statDelta": {
+              "사회성": 3,
+              "경제력": -4
+            },
+            "resultText": "신랑 신부가 나중에 따로 감사 문자를 보냈다. 그 뒤로 진짜 친구가 됐다.",
+            "addFlags": [],
+            "outcomes": [
+              {
+                "outcomeId": "b_primary",
+                "text": "신랑 신부가 나중에 따로 감사 문자를 보냈다. 그 뒤로 진짜 친구가 됐다.",
+                "chance": 100,
+                "primary": true,
+                "hidden": false,
+                "death": false,
+                "statDelta": {
+                  "사회성": 3,
+                  "경제력": -4
+                },
+                "addFlags": []
+              }
+            ]
+          },
+          {
+            "choiceId": "C",
+            "label": "축하 메시지만 보낸다",
+            "statDelta": {
+              "경제력": 1,
+              "사회성": -2
+            },
+            "resultText": "답장으로 'ㅎㅎ 고마워'가 왔다. 그 'ㅎㅎ'의 의미를 오래 생각했다.",
+            "addFlags": [],
+            "outcomes": [
+              {
+                "outcomeId": "c_primary",
+                "text": "답장으로 'ㅎㅎ 고마워'가 왔다. 그 'ㅎㅎ'의 의미를 오래 생각했다.",
+                "chance": 100,
+                "primary": true,
+                "hidden": false,
+                "death": false,
+                "statDelta": {
+                  "경제력": 1,
+                  "사회성": -2
+                },
+                "addFlags": []
+              }
+            ]
+          }
+        ],
+        "priority": 0,
+        "kind": "INCIDENT",
+        "periods": [
+          "YOUNG_ADULT"
+        ]
+      },
+      "originalReview": {
+        "reviewer": "Codex AI (/root/security_p0)",
+        "reviewerType": "AI",
+        "sourceTextAndAllOutcomesReviewed": true,
+        "sourceImageViewed": true,
+        "observedImage": "A woman in a cafe physically hands over a paper invitation. The current event is a mobile invitation from a distant college acquaintance.",
+        "editBrief": "Replace with adult first-person at home holding a phone showing an anonymous non-text floral wedding invitation motif. An empty envelope may rest nearby, but no cash amount or person handing it over.",
+        "preChoiceConstraints": "No paid gift, wedding attendance/meal, thank-you message or congratulatory reply sent.",
+        "generationDecision": "REPAIR_REQUIRED",
+        "reviewMethod": "All current choices/outcomes and conditions read; original PNG individually viewed with view_image."
+      },
+      "exactPrompt": "Use case: precise-object-edit / narrative correction of an existing Korean life-simulation illustration. Image1 is the original style and object reference; preserve its pixel-art-like blocky shading, palette, era, character designs when retained, and coherent illustrated material. Rebuild only the scene details explicitly required below to match the actual PRE-CHOICE story. Make one opaque full-bleed portrait9:16 (941x1672 preferred). It is not a poster, screenshot, collage, stretched crop or film frame.\nPut essential whole objects, meaningful hands and faces together in central60% width and height where feasible; stagger naturally in depth. All important clues must survive centered9:20 phone crop. Peripheral environment fills margins. Correct human anatomy, exactly the stated people/hands, sleeves continuously connected to body/frame. No detached arms, duplicated props or impossible perspective. No readable letters/numbers/captions, invented UI labels, logos, watermark or border. Abstract document lines and story-required pictograms are allowed. Do not anticipate any future choice result.\nSCENE SPECIFICATION:\nThis requires a corrected scene, not the original cafe invitation handoff. Use original warm pixel-art style but HOME DESK evening. First-person adult left hand empty on desk, right hand holding mobile floral wedding invitation with abstract flower/ribbon/ring symbols only. Empty unsealed envelope nearby. NO person present, no physical invitation handed over, no cash or gift amount, no meal.\nAuthoritative story context (do not print): 대학 때 두 번 대화해 본 동기에게서 모바일 청첩장이 왔다. 축의금을 얼마 해야 할까.\nUNSELECTED choices: 5만 원 / 10만 원 / 축하 메시지만 보낸다\nPrior-state conditions: {\"stats\": {}, \"requiredFlags\": [], \"blockedFlags\": []}.\nForbidden future results: No paid gift, wedding attendance/meal, thank-you message or congratulatory reply sent.\nAll exact story wording stays in the actual app text overlay, not painted into this image.",
+      "requestedAspect": "9:16",
+      "tool": "built-in image_gen",
+      "attempts": [],
+      "selectedPath": null,
+      "outputSha256": null,
+      "reviewStatus": "GENERATION_PENDING",
+      "nativePending": true,
+      "runtimeConnected": false,
+      "approvalChanged": false
+    },
+    {
+      "eventId": "adult_067",
+      "scopeGroup": "CONTENT_CORRECTION_12",
+      "sourcePath": "C:\\HSU\\3-2\\mobile\\main-audit-20261119\\app\\src\\main\\assets\\images\\followup_20261031\\img_adult_sunday_night_001.png",
+      "sourceSha256": "5e44b7b62958b1b3a5985e6a60ccb66f0839ace52b89ba01bc58217f9cd37c18",
+      "referencePath": "C:\\HSU\\3-2\\mobile\\main-audit-20261119\\app\\src\\main\\assets\\images\\followup_20261031\\img_adult_sunday_night_001.png",
+      "referenceSha256": "5e44b7b62958b1b3a5985e6a60ccb66f0839ace52b89ba01bc58217f9cd37c18",
+      "sourceDirectlyViewed": true,
+      "currentConditionsAllChoicesAndOutcomesReviewed": true,
+      "eventSnapshot": {
+        "eventId": "adult_067",
+        "stage": "ADULT",
+        "type": "NORMAL",
+        "isFallback": true,
+        "isMilestone": false,
+        "title": "일요일 밤 11시",
+        "text": "내일이 월요일이라는 사실이 갑자기 선명해진다.",
+        "imageId": "img_adult_sunday_night_001",
+        "conditions": {
+          "stats": {},
+          "requiredFlags": [],
+          "blockedFlags": []
+        },
+        "choices": [
+          {
+            "choiceId": "A",
+            "label": "일찍 잔다",
+            "statDelta": {
+              "건강": 2,
+              "행복": -1
+            },
+            "resultText": "누웠는데 눈이 말똥말똥. 결국 새벽 1시에 잠들었다.",
+            "addFlags": [],
+            "outcomes": [
+              {
+                "outcomeId": "a_primary",
+                "text": "누웠는데 눈이 말똥말똥. 결국 새벽 1시에 잠들었다.",
+                "chance": 100,
+                "primary": true,
+                "hidden": false,
+                "death": false,
+                "statDelta": {
+                  "건강": 2,
+                  "행복": -1
+                },
+                "addFlags": []
+              }
+            ]
+          },
+          {
+            "choiceId": "B",
+            "label": "영상 하나만 더 본다",
+            "statDelta": {
+              "행복": 1,
+              "건강": -3
+            },
+            "resultText": "\"하나만\"이 여섯 개가 됐다.",
+            "addFlags": [],
+            "outcomes": [
+              {
+                "outcomeId": "b_primary",
+                "text": "\"하나만\"이 여섯 개가 됐다.",
+                "chance": 100,
+                "primary": true,
+                "hidden": false,
+                "death": false,
+                "statDelta": {
+                  "행복": 1,
+                  "건강": -3
+                },
+                "addFlags": []
+              }
+            ]
+          },
+          {
+            "choiceId": "C",
+            "label": "내일 입을 옷을 미리 꺼내 둔다",
+            "statDelta": {
+              "지력": 1,
+              "행복": 1,
+              "건강": -1
+            },
+            "resultText": "월요일 아침이 10분 여유로워졌다. 그 10분을 더 잤다.",
+            "addFlags": [],
+            "outcomes": [
+              {
+                "outcomeId": "c_primary",
+                "text": "월요일 아침이 10분 여유로워졌다. 그 10분을 더 잤다.",
+                "chance": 100,
+                "primary": true,
+                "hidden": false,
+                "death": false,
+                "statDelta": {
+                  "지력": 1,
+                  "행복": 1,
+                  "건강": -1
+                },
+                "addFlags": []
+              }
+            ]
+          }
+        ],
+        "priority": 0,
+        "kind": "INCIDENT",
+        "periods": [
+          "YOUNG_ADULT",
+          "MIDDLE"
+        ]
+      },
+      "originalReview": {
+        "reviewer": "Codex AI (/root/security_p0)",
+        "reviewerType": "AI",
+        "sourceTextAndAllOutcomesReviewed": true,
+        "sourceImageViewed": true,
+        "observedImage": "Night room and paused hands are suitable, but the digital clock explicitly reads 11:00.",
+        "editBrief": "Preserve night window, lamp, room and paused first-person hands. Replace digital digits with a non-numeral analog clock indicating eleven; no other text or countdown.",
+        "preChoiceConstraints": "No asleep player, six videos already watched, laid-out outfit or Monday outcome.",
+        "generationDecision": "REPAIR_REQUIRED",
+        "reviewMethod": "All current choices/outcomes and conditions read; original PNG individually viewed with view_image."
+      },
+      "exactPrompt": "Use case: precise-object-edit / narrative correction of an existing Korean life-simulation illustration. Image1 is the original style and object reference; preserve its pixel-art-like blocky shading, palette, era, character designs when retained, and coherent illustrated material. Rebuild only the scene details explicitly required below to match the actual PRE-CHOICE story. Make one opaque full-bleed portrait9:16 (941x1672 preferred). It is not a poster, screenshot, collage, stretched crop or film frame.\nPut essential whole objects, meaningful hands and faces together in central60% width and height where feasible; stagger naturally in depth. All important clues must survive centered9:20 phone crop. Peripheral environment fills margins. Correct human anatomy, exactly the stated people/hands, sleeves continuously connected to body/frame. No detached arms, duplicated props or impossible perspective. No readable letters/numbers/captions, invented UI labels, logos, watermark or border. Abstract document lines and story-required pictograms are allowed. Do not anticipate any future choice result.\nSCENE SPECIFICATION:\nSame night bedroom desk and first-person paused hands with blank notebook. Preserve left desk lamp, moonlit window, bed at right and plant. Replace digital11:00 with an ANALOG desktop clock with NO digits: minute hand straight up, hour hand toward eleven. No readable marks, no videos, no laid-out outfit or sleeping body. Keep lamp glow source, window glass and desk plane distinct for subtle layered depth.\nAuthoritative story context (do not print): 내일이 월요일이라는 사실이 갑자기 선명해진다.\nUNSELECTED choices: 일찍 잔다 / 영상 하나만 더 본다 / 내일 입을 옷을 미리 꺼내 둔다\nPrior-state conditions: {\"stats\": {}, \"requiredFlags\": [], \"blockedFlags\": []}.\nForbidden future results: No asleep player, six videos already watched, laid-out outfit or Monday outcome.\nAll exact story wording stays in the actual app text overlay, not painted into this image.",
+      "requestedAspect": "9:16",
+      "tool": "built-in image_gen",
+      "attempts": [
+        {
+          "attempt": 1,
+          "generatedPath": "C:\\Users\\jk030\\.codex\\generated_images\\01a1f1d8-7a1a-7272-a69a-e82a1453f0fa\\exec-e8c3d472-1c48-457e-95dc-d1b9a5a0ab99.png",
+          "stagedPendingReviewPath": "C:\\HSU\\3-2\\mobile\\main-audit-20261119\\build\\refactor\\content-effects-staging\\adult_067_paused_pending_review.png",
+          "outputSha256": "6cca4b028ccbad37dbe776592ff78c5d11e213a145331b879df48e7ce9a4108d",
+          "width": 960,
+          "height": 1637,
+          "exactPrompt": "Use case: precise-object-edit / narrative correction of an existing Korean life-simulation illustration. Image1 is the original style and object reference; preserve its pixel-art-like blocky shading, palette, era, character designs when retained, and coherent illustrated material. Rebuild only the scene details explicitly required below to match the actual PRE-CHOICE story. Make one opaque full-bleed portrait9:16 (941x1672 preferred). It is not a poster, screenshot, collage, stretched crop or film frame.\nPut essential whole objects, meaningful hands and faces together in central60% width and height where feasible; stagger naturally in depth. All important clues must survive centered9:20 phone crop. Peripheral environment fills margins. Correct human anatomy, exactly the stated people/hands, sleeves continuously connected to body/frame. No detached arms, duplicated props or impossible perspective. No readable letters/numbers/captions, invented UI labels, logos, watermark or border. Abstract document lines and story-required pictograms are allowed. Do not anticipate any future choice result.\nSCENE SPECIFICATION:\nSame night bedroom desk and first-person paused hands with blank notebook. Preserve left desk lamp, moonlit window, bed at right and plant. Replace digital11:00 with an ANALOG desktop clock with NO digits: minute hand straight up, hour hand toward eleven. No readable marks, no videos, no laid-out outfit or sleeping body. Keep lamp glow source, window glass and desk plane distinct for subtle layered depth.\nAuthoritative story context (do not print): 내일이 월요일이라는 사실이 갑자기 선명해진다.\nUNSELECTED choices: 일찍 잔다 / 영상 하나만 더 본다 / 내일 입을 옷을 미리 꺼내 둔다\nPrior-state conditions: {\"stats\": {}, \"requiredFlags\": [], \"blockedFlags\": []}.\nForbidden future results: No asleep player, six videos already watched, laid-out outfit or Monday outcome.\nAll exact story wording stays in the actual app text overlay, not painted into this image.",
+          "referencedImagePaths": [
+            "C:\\HSU\\3-2\\mobile\\main-audit-20261119\\app\\src\\main\\assets\\images\\followup_20261031\\img_adult_sunday_night_001.png"
+          ],
+          "reviewStatus": "GENERATED_PENDING_REVIEW_USER_PAUSED",
+          "review": "생성 출력 보존 직후 사용자 일시중지. 최종 의미·원본대조·native 검수 및 선정은 재개 후 진행.",
+          "directVisualReview": false,
+          "nativePending": true
+        }
+      ],
+      "selectedPath": null,
+      "outputSha256": null,
+      "reviewStatus": "GENERATED_PENDING_REVIEW_USER_PAUSED",
+      "nativePending": true,
+      "runtimeConnected": false,
+      "approvalChanged": false
+    },
+    {
+      "eventId": "adult_074",
+      "scopeGroup": "CONTENT_CORRECTION_12",
+      "sourcePath": "C:\\HSU\\3-2\\mobile\\main-audit-20261119\\app\\src\\main\\assets\\images\\followup_20261031\\img_pov_dating_app_001.png",
+      "sourceSha256": "2c3ca40a3bed4c6f5698f00b2c16b308022ce19fc45aa7b8e3da226f46a6dc30",
+      "referencePath": "C:\\HSU\\3-2\\mobile\\main-audit-20261119\\app\\src\\main\\assets\\images\\followup_20261031\\img_pov_dating_app_001.png",
+      "referenceSha256": "2c3ca40a3bed4c6f5698f00b2c16b308022ce19fc45aa7b8e3da226f46a6dc30",
+      "sourceDirectlyViewed": true,
+      "currentConditionsAllChoicesAndOutcomesReviewed": true,
+      "eventSnapshot": {
+        "eventId": "adult_074",
+        "stage": "ADULT",
+        "type": "NORMAL",
+        "isFallback": false,
+        "isMilestone": false,
+        "title": "첫 매칭",
+        "text": "친구가 몰래 깔아 준 소개팅 앱에서 알림이 울렸다. '매칭되었습니다!' 상대 프로필 첫 줄은 '고양이랑 등산 좋아해요.' 나는 둘 다 무섭다.",
+        "imageId": "img_pov_dating_app_001",
+        "conditions": {
+          "stats": {},
+          "requiredFlags": [],
+          "blockedFlags": [
+            "dating",
+            "married",
+            "engaged"
+          ]
+        },
+        "choices": [
+          {
+            "choiceId": "A",
+            "label": "먼저 인사를 보낸다",
+            "statDelta": {
+              "사회성": 2,
+              "행복": 3,
+              "경제력": -1
+            },
+            "resultText": "'저도 사실 고양이 무서워요.' 답장이 왔다. 세 번째 만남에서 둘 다 등산도 싫어한다는 걸 알았다. 그날부터 만나는 사이가 됐다.",
+            "addFlags": [
+              "dating",
+              "dating__adult_074",
+              "partner_app",
+              "met_app"
+            ],
+            "outcomes": [
+              {
+                "outcomeId": "a_date",
+                "text": "'저도 사실 고양이 무서워요.' 답장이 왔다. 세 번째 만남에서 둘 다 등산도 싫어한다는 걸 알았다. 그날부터 만나는 사이가 됐다.",
+                "chance": 60,
+                "primary": true,
+                "hidden": false,
+                "death": false,
+                "statDelta": {
+                  "사회성": 2,
+                  "행복": 3,
+                  "경제력": -1
+                },
+                "addFlags": [
+                  "dating",
+                  "dating__adult_074",
+                  "partner_app",
+                  "met_app"
+                ],
+                "chanceWeights": {
+                  "사회성": 2,
+                  "운": 1
+                }
+              },
+              {
+                "outcomeId": "a_read",
+                "text": "읽음 표시만 떴다. 사흘 뒤 앱이 알려 줬다. '대화를 이어가 보세요!' 고맙다, 앱아.",
+                "chance": 40,
+                "primary": false,
+                "hidden": false,
+                "death": false,
+                "statDelta": {
+                  "사회성": 1,
+                  "행복": -2
+                },
+                "addFlags": [],
+                "chanceWeights": {
+                  "사회성": -2
+                }
+              }
+            ],
+            "alwaysAvailable": true,
+            "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+            "conditionReview": "soft_incident",
+            "conditionBasis": "week8_romance"
+          },
+          {
+            "choiceId": "B",
+            "label": "프로필 사진만 일곱 번 바꾼다",
+            "statDelta": {
+              "행복": 1,
+              "운": -1
+            },
+            "resultText": "사진을 고르다 보니 새벽 3시였다. 매칭은 그사이 사라졌다. 대신 인생 사진 한 장은 건졌다.",
+            "addFlags": [],
+            "outcomes": [
+              {
+                "outcomeId": "b_photo",
+                "text": "사진을 고르다 보니 새벽 3시였다. 매칭은 그사이 사라졌다. 대신 인생 사진 한 장은 건졌다.",
+                "chance": 100,
+                "primary": true,
+                "hidden": false,
+                "death": false,
+                "statDelta": {
+                  "행복": 1,
+                  "운": -1
+                },
+                "addFlags": []
+              }
+            ],
+            "alwaysAvailable": true,
+            "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+            "conditionReview": "soft_incident",
+            "conditionBasis": "week8_romance"
+          },
+          {
+            "choiceId": "C",
+            "label": "앱을 지우고 동네 독서 모임에 나간다",
+            "statDelta": {
+              "지력": 1,
+              "사회성": 2,
+              "경제력": -1
+            },
+            "resultText": "같은 책 같은 문장에 밑줄을 그은 사람이 있었다. 모임이 끝나고 둘이 남아 두 시간을 더 이야기했다.",
+            "addFlags": [
+              "dating",
+              "dating__adult_074",
+              "partner_book",
+              "met_book_club"
+            ],
+            "outcomes": [
+              {
+                "outcomeId": "c_book",
+                "text": "같은 책 같은 문장에 밑줄을 그은 사람이 있었다. 모임이 끝나고 둘이 남아 두 시간을 더 이야기했다.",
+                "chance": 55,
+                "primary": true,
+                "hidden": false,
+                "death": false,
+                "statDelta": {
+                  "지력": 1,
+                  "사회성": 2,
+                  "경제력": -1
+                },
+                "addFlags": [
+                  "dating",
+                  "dating__adult_074",
+                  "partner_book",
+                  "met_book_club"
+                ],
+                "chanceWeights": {
+                  "지력": 1,
+                  "사회성": 1
+                }
+              },
+              {
+                "outcomeId": "c_quiet",
+                "text": "책은 좋았다. 사람들은 다 나보다 책을 많이 읽었다. 조용히 다음 달 책을 주문했다.",
+                "chance": 45,
+                "primary": false,
+                "hidden": false,
+                "death": false,
+                "statDelta": {
+                  "지력": 2,
+                  "행복": -1
+                },
+                "addFlags": []
+              }
+            ],
+            "alwaysAvailable": true,
+            "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+            "conditionReview": "soft_incident",
+            "conditionBasis": "week8_romance"
+          }
+        ],
+        "priority": 0,
+        "kind": "INCIDENT",
+        "periods": [
+          "YOUNG_ADULT"
+        ],
+        "weight": 15,
+        "view": "FIRST_PERSON",
+        "relatedPaths": [
+          "SOCIAL",
+          "HAPPINESS"
+        ],
+        "pathRole": "연애 입구 — 결혼 이야기 전 연인",
+        "followUps": [
+          "adult_032"
+        ]
+      },
+      "originalReview": {
+        "reviewer": "Codex AI (/root/security_p0)",
+        "reviewerType": "AI",
+        "sourceTextAndAllOutcomesReviewed": true,
+        "sourceImageViewed": true,
+        "observedImage": "The source is an adult cafe date with a woman in person; it precedes a possible successful future outcome instead of initial app matching.",
+        "editBrief": "Rebuild first-person on home sofa with a phone displaying a new anonymous match and small cat/hiking pictograms. No identifiable player photo, readable text or fixed partner gender.",
+        "preChoiceConstraints": "No conversation sent, actual date/relationship, read receipt rejection, profile-photo replacement, deleted app or book-club meeting.",
+        "generationDecision": "REPAIR_REQUIRED",
+        "reviewMethod": "All current choices/outcomes and conditions read; original PNG individually viewed with view_image."
+      },
+      "exactPrompt": "Use case: precise-object-edit / narrative correction of an existing Korean life-simulation illustration. Image1 is the original style and object reference; preserve its pixel-art-like blocky shading, palette, era, character designs when retained, and coherent illustrated material. Rebuild only the scene details explicitly required below to match the actual PRE-CHOICE story. Make one opaque full-bleed portrait9:16 (941x1672 preferred). It is not a poster, screenshot, collage, stretched crop or film frame.\nPut essential whole objects, meaningful hands and faces together in central60% width and height where feasible; stagger naturally in depth. All important clues must survive centered9:20 phone crop. Peripheral environment fills margins. Correct human anatomy, exactly the stated people/hands, sleeves continuously connected to body/frame. No detached arms, duplicated props or impossible perspective. No readable letters/numbers/captions, invented UI labels, logos, watermark or border. Abstract document lines and story-required pictograms are allowed. Do not anticipate any future choice result.\nSCENE SPECIFICATION:\nCorrect the cafe-date into home sofa FIRST-PERSON, only the adult viewer two hands and centrally held phone. Phone shows two anonymous gender-neutral profile silhouettes linked by a small heart, plus tiny cat and mountain/hiking pictograms for the match interests. No actual date/partner in the room, no identifiable protagonist face, no messages sent/read, no fixed partner gender, no text. Preserve warm source pixel-art material.\nAuthoritative story context (do not print): 친구가 몰래 깔아 준 소개팅 앱에서 알림이 울렸다. '매칭되었습니다!' 상대 프로필 첫 줄은 '고양이랑 등산 좋아해요.' 나는 둘 다 무섭다.\nUNSELECTED choices: 먼저 인사를 보낸다 / 프로필 사진만 일곱 번 바꾼다 / 앱을 지우고 동네 독서 모임에 나간다\nPrior-state conditions: {\"stats\": {}, \"requiredFlags\": [], \"blockedFlags\": [\"dating\", \"married\", \"engaged\"]}.\nForbidden future results: No conversation sent, actual date/relationship, read receipt rejection, profile-photo replacement, deleted app or book-club meeting.\nAll exact story wording stays in the actual app text overlay, not painted into this image.",
+      "requestedAspect": "9:16",
+      "tool": "built-in image_gen",
+      "attempts": [],
+      "selectedPath": null,
+      "outputSha256": null,
+      "reviewStatus": "GENERATION_PENDING",
+      "nativePending": true,
+      "runtimeConnected": false,
+      "approvalChanged": false
+    },
+    {
+      "eventId": "adult_079",
+      "scopeGroup": "CONTENT_CORRECTION_12",
+      "sourcePath": "C:\\HSU\\3-2\\mobile\\main-audit-20261119\\app\\src\\main\\assets\\images\\followup_20261031\\img_pov_id_badge_001.png",
+      "sourceSha256": "3b7205a7093a912769bc0fe38b212161e436f216704c5820ff4432f5def1b1a1",
+      "referencePath": "C:\\HSU\\3-2\\mobile\\main-audit-20261119\\app\\src\\main\\assets\\images\\followup_20261031\\img_pov_id_badge_001.png",
+      "referenceSha256": "3b7205a7093a912769bc0fe38b212161e436f216704c5820ff4432f5def1b1a1",
+      "sourceDirectlyViewed": true,
+      "currentConditionsAllChoicesAndOutcomesReviewed": true,
+      "eventSnapshot": {
+        "eventId": "adult_079",
+        "stage": "ADULT",
+        "type": "NORMAL",
+        "isFallback": false,
+        "isMilestone": false,
+        "title": "사원증 사진",
+        "text": "입사 첫날. 인사팀이 사원증을 건넨다. 사진 속 나는 면접 날 긴장한 얼굴 그대로다. 옆자리 선배: \"점심 뭐 먹을지가 오늘 제일 어려운 결정이에요.\"",
+        "imageId": "img_pov_id_badge_001",
+        "conditions": {
+          "stats": {},
+          "requiredFlags": [
+            "level_entry",
+            "job_employed"
+          ],
+          "blockedFlags": [
+            "early_job",
+            "promoted",
+            "promotion_missed",
+            "v4:event:adult_069",
+            "level_mid",
+            "level_senior",
+            "level_executive",
+            "career_athlete",
+            "pro_athlete",
+            "career_coach",
+            "coach_path",
+            "career_caster",
+            "career_trainer",
+            "career_gym_owner",
+            "career_founder",
+            "career_creator",
+            "career_freelancer",
+            "job_self_employed",
+            "early_retire",
+            "job_retired"
+          ]
+        },
+        "choices": [
+          {
+            "choiceId": "A",
+            "label": "선배를 따라 회사 앞 식당에 간다",
+            "statDelta": {
+              "사회성": 3,
+              "지력": 1,
+              "경제력": -1
+            },
+            "resultText": "회사 앞 김치찌개 집이 사내 소식의 중심이었다. 첫날 점심에 팀의 지난 3년 역사를 다 들었다.",
+            "addFlags": [
+              "team_favorite"
+            ],
+            "outcomes": [
+              {
+                "outcomeId": "a_lunch",
+                "text": "회사 앞 김치찌개 집이 사내 소식의 중심이었다. 첫날 점심에 팀의 지난 3년 역사를 다 들었다.",
+                "chance": 60,
+                "primary": true,
+                "hidden": false,
+                "death": false,
+                "statDelta": {
+                  "사회성": 3,
+                  "지력": 1,
+                  "경제력": -1
+                },
+                "addFlags": [
+                  "team_favorite"
+                ],
+                "chanceWeights": {
+                  "사회성": 2
+                }
+              },
+              {
+                "outcomeId": "a_alone",
+                "text": "선배가 회의에 불려 갔다. 혼자 편의점 김밥을 먹으며 사내 메신저 프로필 사진만 열 번 바꿨다.",
+                "chance": 40,
+                "primary": false,
+                "hidden": false,
+                "death": false,
+                "statDelta": {
+                  "지력": 1,
+                  "행복": -2
+                },
+                "addFlags": [],
+                "chanceWeights": {
+                  "사회성": -2
+                }
+              }
+            ],
+            "alwaysAvailable": true,
+            "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+            "conditionReview": "soft_incident",
+            "conditionBasis": "week8_late_newcomer"
+          },
+          {
+            "choiceId": "B",
+            "label": "도시락을 먹으며 업무 매뉴얼을 읽는다",
+            "statDelta": {
+              "지력": 3,
+              "사회성": -1
+            },
+            "resultText": "매뉴얼 세 권을 다 읽었다. 오후 회의에서 아무도 모르던 규정을 내가 찾았다. 팀장님이 내 이름을 처음 불렀다.",
+            "addFlags": [
+              "diligent"
+            ],
+            "outcomes": [
+              {
+                "outcomeId": "b_manual",
+                "text": "매뉴얼 세 권을 다 읽었다. 오후 회의에서 아무도 모르던 규정을 내가 찾았다. 팀장님이 내 이름을 처음 불렀다.",
+                "chance": 100,
+                "primary": true,
+                "hidden": false,
+                "death": false,
+                "statDelta": {
+                  "지력": 3,
+                  "사회성": -1
+                },
+                "addFlags": [
+                  "diligent"
+                ]
+              }
+            ],
+            "alwaysAvailable": true,
+            "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+            "conditionReview": "soft_incident",
+            "conditionBasis": "week8_late_newcomer"
+          },
+          {
+            "choiceId": "C",
+            "label": "사원증 사진을 다시 찍어 달라고 한다",
+            "statDelta": {
+              "사회성": 2,
+              "행복": 1,
+              "운": -1
+            },
+            "resultText": "인사팀이 웃으며 다시 찍어 줬다. 새 사진은 더 어색했다. 결국 원래 사진을 쓰기로 했지만 인사팀 사람들과는 친해졌다.",
+            "addFlags": [],
+            "outcomes": [
+              {
+                "outcomeId": "c_retake",
+                "text": "인사팀이 웃으며 다시 찍어 줬다. 새 사진은 더 어색했다. 결국 원래 사진을 쓰기로 했지만 인사팀 사람들과는 친해졌다.",
+                "chance": 55,
+                "primary": true,
+                "hidden": false,
+                "death": false,
+                "statDelta": {
+                  "사회성": 2,
+                  "행복": 1,
+                  "운": -1
+                },
+                "addFlags": [],
+                "chanceWeights": {
+                  "운": 2
+                }
+              },
+              {
+                "outcomeId": "c_later",
+                "text": "\"다음 갱신 때 바꿔 드릴게요.\" 다음 갱신은 5년 뒤였다. 그 얼굴로 5년을 출근했다.",
+                "chance": 45,
+                "primary": false,
+                "hidden": false,
+                "death": false,
+                "statDelta": {
+                  "행복": -1,
+                  "운": 1
+                },
+                "addFlags": [],
+                "chanceWeights": {
+                  "운": -2
+                }
+              }
+            ],
+            "alwaysAvailable": true,
+            "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+            "conditionReview": "soft_incident",
+            "conditionBasis": "week8_late_newcomer"
+          }
+        ],
+        "priority": 0,
+        "kind": "INCIDENT",
+        "periods": [
+          "YOUNG_ADULT",
+          "MIDDLE"
+        ],
+        "weight": 10,
+        "view": "FIRST_PERSON",
+        "relatedPaths": [
+          "WEALTH",
+          "SOCIAL"
+        ],
+        "pathRole": "늦은 취업 신입",
+        "followUps": [
+          "adult_069"
+        ]
+      },
+      "originalReview": {
+        "reviewer": "Codex AI (/root/security_p0)",
+        "reviewerType": "AI",
+        "sourceTextAndAllOutcomesReviewed": true,
+        "sourceImageViewed": true,
+        "observedImage": "The source depicts a woman having her portrait taken; both the player face and optional retake action are fixed.",
+        "editBrief": "Use first-person at the new employee desk while receiving an ID badge from HR, colleague nearby. The badge face should be obscured by a natural finger edge or an anonymous silhouette; no specific player face/name/text.",
+        "preChoiceConstraints": "No retake session, lunch selected, convenience-store meal, manuals finished or five-year renewal.",
+        "generationDecision": "REPAIR_REQUIRED",
+        "reviewMethod": "All current choices/outcomes and conditions read; original PNG individually viewed with view_image."
+      },
+      "exactPrompt": "Use case: precise-object-edit / narrative correction of an existing Korean life-simulation illustration. Image1 is the original style and object reference; preserve its pixel-art-like blocky shading, palette, era, character designs when retained, and coherent illustrated material. Rebuild only the scene details explicitly required below to match the actual PRE-CHOICE story. Make one opaque full-bleed portrait9:16 (941x1672 preferred). It is not a poster, screenshot, collage, stretched crop or film frame.\nPut essential whole objects, meaningful hands and faces together in central60% width and height where feasible; stagger naturally in depth. All important clues must survive centered9:20 phone crop. Peripheral environment fills margins. Correct human anatomy, exactly the stated people/hands, sleeves continuously connected to body/frame. No detached arms, duplicated props or impossible perspective. No readable letters/numbers/captions, invented UI labels, logos, watermark or border. Abstract document lines and story-required pictograms are allowed. Do not anticipate any future choice result.\nSCENE SPECIFICATION:\nCorrect photo-taking into first-person new-employee desk. HR person offers a lanyard ID badge across desk; one colleague nearby speaking casually. Only a blank anonymous silhouette appears on badge, no identifiable player face, no names or letters. Player two hands receive badge naturally. No camera/photo lights/backdrop, no retake, lunch or completed manual. The player is newly employed; no future promotion.\nAuthoritative story context (do not print): 입사 첫날. 인사팀이 사원증을 건넨다. 사진 속 나는 면접 날 긴장한 얼굴 그대로다. 옆자리 선배: \"점심 뭐 먹을지가 오늘 제일 어려운 결정이에요.\"\nUNSELECTED choices: 선배를 따라 회사 앞 식당에 간다 / 도시락을 먹으며 업무 매뉴얼을 읽는다 / 사원증 사진을 다시 찍어 달라고 한다\nPrior-state conditions: {\"stats\": {}, \"requiredFlags\": [\"level_entry\", \"job_employed\"], \"blockedFlags\": [\"early_job\", \"promoted\", \"promotion_missed\", \"v4:event:adult_069\", \"level_mid\", \"level_senior\", \"level_executive\", \"career_athlete\", \"pro_athlete\", \"career_coach\", \"coach_path\", \"career_caster\", \"career_trainer\", \"career_gym_owner\", \"career_founder\", \"career_creator\", \"career_freelancer\", \"job_self_employed\", \"early_retire\", \"job_retired\"]}.\nForbidden future results: No retake session, lunch selected, convenience-store meal, manuals finished or five-year renewal.\nAll exact story wording stays in the actual app text overlay, not painted into this image.",
+      "requestedAspect": "9:16",
+      "tool": "built-in image_gen",
+      "attempts": [],
+      "selectedPath": null,
+      "outputSha256": null,
+      "reviewStatus": "GENERATION_PENDING",
+      "nativePending": true,
+      "runtimeConnected": false,
+      "approvalChanged": false
+    },
+    {
+      "eventId": "path_fit_07",
+      "scopeGroup": "CONTENT_CORRECTION_12",
+      "sourcePath": "C:\\HSU\\3-2\\mobile\\main-audit-20261119\\app\\src\\main\\assets\\images\\followup_20261031\\img_path_fit_07_001.png",
+      "sourceSha256": "41081f1d0f219d0826d02322321071a63655b63fa829135d67d721479ff8f9b3",
+      "referencePath": "C:\\HSU\\3-2\\mobile\\main-audit-20261119\\app\\src\\main\\assets\\images\\followup_20261031\\img_path_fit_02_001.png",
+      "referenceSha256": "e68304b1bb65a782b1bb1c87221de91ea438a8adeee593ce273e4ec45f653af3",
+      "sourceDirectlyViewed": true,
+      "currentConditionsAllChoicesAndOutcomesReviewed": true,
+      "eventSnapshot": {
+        "eventId": "path_fit_07",
+        "stage": "ADULT",
+        "type": "NORMAL",
+        "isFallback": false,
+        "isMilestone": false,
+        "title": "세 번째 수술 상담",
+        "text": "의사: \"수술하면 복귀는 가능해요. 다만 예전 같진 않을 겁니다.\" 휴대폰에는 해설위원 제안 메일과 유소년팀 감독 제안이 와 있다.",
+        "imageId": "img_path_fit_07_001",
+        "conditions": {
+          "stats": {},
+          "requiredFlags": [
+            "fit_path",
+            "health_injured"
+          ],
+          "blockedFlags": []
+        },
+        "choices": [
+          {
+            "choiceId": "A",
+            "label": "수술하고 복귀를 노린다",
+            "statDelta": {
+              "운동능력": 2,
+              "행복": 3,
+              "건강": -3
+            },
+            "resultText": "1년 재활 끝에 복귀전을 치렀다. 관중석에서 박수가 오래 이어졌다. 그 시즌이 마지막이었다.",
+            "addFlags": [
+              "achv_comeback",
+              "fit_retired"
+            ],
+            "outcomes": [
+              {
+                "outcomeId": "a_return",
+                "text": "1년 재활 끝에 복귀전을 치렀다. 관중석에서 박수가 오래 이어졌다. 그 시즌이 마지막이었다.",
+                "chance": 45,
+                "primary": true,
+                "hidden": false,
+                "death": false,
+                "statDelta": {
+                  "운동능력": 2,
+                  "행복": 3,
+                  "건강": -3
+                },
+                "addFlags": [
+                  "achv_comeback",
+                  "fit_retired"
+                ],
+                "chanceWeights": {
+                  "건강": 2,
+                  "운": 1
+                }
+              },
+              {
+                "outcomeId": "a_limit",
+                "text": "무릎이 예전처럼 굽혀지지 않았다. 은퇴 기자회견에서 세 번 말을 멈췄다.",
+                "chance": 55,
+                "primary": false,
+                "hidden": false,
+                "death": false,
+                "statDelta": {
+                  "건강": -3,
+                  "행복": -3
+                },
+                "addFlags": [
+                  "fit_retired",
+                  "health_limited"
+                ],
+                "chanceWeights": {
+                  "건강": -2
+                }
+              }
+            ],
+            "alwaysAvailable": true,
+            "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+            "conditionReview": "soft_incident",
+            "conditionBasis": "week8_life_path"
+          },
+          {
+            "choiceId": "B",
+            "label": "은퇴하고 유소년 감독이 된다",
+            "statDelta": {
+              "사회성": 3,
+              "경제력": 1,
+              "운동능력": -2
+            },
+            "resultText": "첫 훈련 날, 아이 하나가 신발 끈이 풀린 채 서 있었다. '끈부터 묶자.'",
+            "addFlags": [
+              "career_coach",
+              "coach_path",
+              "fit_retired",
+              "career_coach__path_fit_07",
+              "coach_path__path_fit_07"
+            ],
+            "outcomes": [
+              {
+                "outcomeId": "b_coach",
+                "text": "첫 훈련 날, 아이 하나가 신발 끈이 풀린 채 서 있었다. '끈부터 묶자.'",
+                "chance": 100,
+                "primary": true,
+                "hidden": false,
+                "death": false,
+                "statDelta": {
+                  "사회성": 3,
+                  "경제력": 1,
+                  "운동능력": -2
+                },
+                "addFlags": [
+                  "career_coach",
+                  "coach_path",
+                  "fit_retired",
+                  "career_coach__path_fit_07",
+                  "coach_path__path_fit_07"
+                ]
+              }
+            ],
+            "alwaysAvailable": true,
+            "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+            "conditionReview": "soft_incident",
+            "conditionBasis": "week8_life_path"
+          },
+          {
+            "choiceId": "C",
+            "label": "해설위원 제안을 받는다",
+            "statDelta": {
+              "사회성": 2,
+              "경제력": 2,
+              "운동능력": -2
+            },
+            "resultText": "첫 중계에서 \"아, 저건 제가 다쳤던 동작이네요\"라고 말했다. 그 말이 하루 종일 기사 제목이 됐다.",
+            "addFlags": [
+              "career_caster",
+              "fit_retired",
+              "career_caster__path_fit_07"
+            ],
+            "outcomes": [
+              {
+                "outcomeId": "c_caster",
+                "text": "첫 중계에서 \"아, 저건 제가 다쳤던 동작이네요\"라고 말했다. 그 말이 하루 종일 기사 제목이 됐다.",
+                "chance": 100,
+                "primary": true,
+                "hidden": false,
+                "death": false,
+                "statDelta": {
+                  "사회성": 2,
+                  "경제력": 2,
+                  "운동능력": -2
+                },
+                "addFlags": [
+                  "career_caster",
+                  "fit_retired",
+                  "career_caster__path_fit_07"
+                ]
+              }
+            ],
+            "alwaysAvailable": true,
+            "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+            "conditionReview": "soft_incident",
+            "conditionBasis": "week8_life_path"
+          }
+        ],
+        "priority": 0,
+        "kind": "INCIDENT",
+        "periods": [
+          "YOUNG_ADULT",
+          "MIDDLE"
+        ],
+        "weight": 20,
+        "view": "FIRST_PERSON",
+        "lifePath": "FITNESS",
+        "pathRole": "부상·은퇴 갈림길(실패)",
+        "followUps": [
+          "path_fit_08"
+        ]
+      },
+      "originalReview": {
+        "reviewer": "Codex AI (/root/security_p0)",
+        "reviewerType": "AI",
+        "sourceTextAndAllOutcomesReviewed": true,
+        "sourceImageViewed": true,
+        "observedImage": "달리기 출발선의 선수·풀린 신발끈으로 병원 상담과 완전히 다르다.",
+        "editBrief": "수술 상담실 의사와 무릎 설명 자료, 휴대폰의 서로 다른 두 제안(중계 마이크·유소년 코칭의 작은 비문자 도상)을 중앙 세로 구도에 함께 배치.",
+        "preChoiceConstraints": "수술·재활·복귀전·은퇴 기자회견·아이들 훈련·실제 방송을 선반영하지 않는다.",
+        "generationDecision": "REPAIR_REQUIRED",
+        "reviewMethod": "Complete current event conditions/choices/outcome texts read; original PNG viewed individually using view_image. No native crop or human approval claimed.",
+        "routingAlternative": {
+          "referenceEventId": "path_fit_02",
+          "referenceImagePath": "app/src/main/assets/images/followup_20261031/img_path_fit_02_001.png",
+          "referenceImageSha256": "e68304b1bb65a782b1bb1c87221de91ea438a8adeee593ce273e4ec45f653af3",
+          "reason": "Original scene assignments are reversed: track start belongs to path_fit_02; medical consultation with two offers belongs to path_fit_07. Root must check all imageId consumers, source-event hash contracts and portrait crop before any routing integration. No public imageId mutation performed."
+        }
+      },
+      "exactPrompt": "Use case: precise-object-edit / narrative correction of an existing Korean life-simulation illustration. Image1 is the original style and object reference; preserve its pixel-art-like blocky shading, palette, era, character designs when retained, and coherent illustrated material. Rebuild only the scene details explicitly required below to match the actual PRE-CHOICE story. Make one opaque full-bleed portrait9:16 (941x1672 preferred). It is not a poster, screenshot, collage, stretched crop or film frame.\nPut essential whole objects, meaningful hands and faces together in central60% width and height where feasible; stagger naturally in depth. All important clues must survive centered9:20 phone crop. Peripheral environment fills margins. Correct human anatomy, exactly the stated people/hands, sleeves continuously connected to body/frame. No detached arms, duplicated props or impossible perspective. No readable letters/numbers/captions, invented UI labels, logos, watermark or border. Abstract document lines and story-required pictograms are allowed. Do not anticipate any future choice result.\nSCENE SPECIFICATION:\nImage1 is the CORRECT consultation reference from the swapped fit02 artwork; preserve same doctor, knee model/x-ray and player clasped hands. Recompose as portrait with doctor face top-middle, knee consultation diagrams center-left, and ONE complete phone center-right showing TWO stacked received-offer cards: commentary microphone pictogram and youth soccer coaching pictogram. Replace the old two-phone arrangement with one phone containing both proposals, as the story specifies. No surgery performed, no live commentary, no coaching children in the room, no comeback/retirement scene.\nAuthoritative story context (do not print): 의사: \"수술하면 복귀는 가능해요. 다만 예전 같진 않을 겁니다.\" 휴대폰에는 해설위원 제안 메일과 유소년팀 감독 제안이 와 있다.\nUNSELECTED choices: 수술하고 복귀를 노린다 / 은퇴하고 유소년 감독이 된다 / 해설위원 제안을 받는다\nPrior-state conditions: {\"stats\": {}, \"requiredFlags\": [\"fit_path\", \"health_injured\"], \"blockedFlags\": []}.\nForbidden future results: 수술·재활·복귀전·은퇴 기자회견·아이들 훈련·실제 방송을 선반영하지 않는다.\nAll exact story wording stays in the actual app text overlay, not painted into this image.",
+      "requestedAspect": "9:16",
+      "tool": "built-in image_gen",
+      "attempts": [],
+      "selectedPath": null,
+      "outputSha256": null,
+      "reviewStatus": "GENERATION_PENDING",
+      "nativePending": true,
+      "runtimeConnected": false,
+      "approvalChanged": false
+    },
+    {
+      "eventId": "path_hea_10",
+      "scopeGroup": "CONTENT_CORRECTION_12",
+      "sourcePath": "C:\\HSU\\3-2\\mobile\\main-audit-20261119\\app\\src\\main\\assets\\images\\week10\\scenes\\img_path_hea_10_001.png",
+      "sourceSha256": "0e64d429c30dcd3cd3ccfc6b288a4d0f9726ab1c941e46a5a61464d904eaea7e",
+      "referencePath": "C:\\HSU\\3-2\\mobile\\main-audit-20261119\\app\\src\\main\\assets\\images\\week10\\scenes\\img_path_hea_10_001.png",
+      "referenceSha256": "0e64d429c30dcd3cd3ccfc6b288a4d0f9726ab1c941e46a5a61464d904eaea7e",
+      "sourceDirectlyViewed": true,
+      "currentConditionsAllChoicesAndOutcomesReviewed": true,
+      "eventSnapshot": {
+        "eventId": "path_hea_10",
+        "stage": "ADULT",
+        "type": "NORMAL",
+        "isFallback": false,
+        "isMilestone": false,
+        "title": "입사 첫 주의 야근 문화",
+        "text": "입사 첫 주 금요일 밤 9시. 사무실 불은 다 켜져 있다. 팀장: \"{name} 씨, 먼저 가도 돼. 근데 다들 남긴 하더라.\"",
+        "imageId": "img_path_hea_10_001",
+        "conditions": {
+          "stats": {},
+          "requiredFlags": [
+            "hea_path",
+            "job_employed"
+          ],
+          "blockedFlags": []
+        },
+        "choices": [
+          {
+            "choiceId": "A",
+            "label": "정시에 퇴근하고 헬스장에 간다",
+            "statDelta": {
+              "건강": 3,
+              "사회성": -1
+            },
+            "resultText": "가방을 들고 일어났다. 아무도 뭐라 하지 않았다. 석 달 뒤, 팀에서 체력 검사 1등이 나였다.",
+            "addFlags": [
+              "healthy_routine",
+              "hea_managed"
+            ],
+            "outcomes": [
+              {
+                "outcomeId": "a_leave",
+                "text": "가방을 들고 일어났다. 아무도 뭐라 하지 않았다. 석 달 뒤, 팀에서 체력 검사 1등이 나였다.",
+                "chance": 65,
+                "primary": true,
+                "hidden": false,
+                "death": false,
+                "statDelta": {
+                  "건강": 3,
+                  "사회성": -1
+                },
+                "addFlags": [
+                  "healthy_routine",
+                  "hea_managed"
+                ],
+                "chanceWeights": {
+                  "건강": 2
+                }
+              },
+              {
+                "outcomeId": "a_label",
+                "text": "다음 주 회의에서 내 이름 옆에 '칼퇴'라는 별명이 붙었다. 몸은 가벼웠다.",
+                "chance": 35,
+                "primary": false,
+                "hidden": false,
+                "death": false,
+                "statDelta": {
+                  "건강": 2,
+                  "사회성": -2,
+                  "경제력": -1
+                },
+                "addFlags": [
+                  "healthy_routine"
+                ],
+                "chanceWeights": {
+                  "사회성": -2
+                }
+              }
+            ],
+            "alwaysAvailable": true,
+            "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+            "conditionReview": "soft_incident",
+            "conditionBasis": "week10_path_followup"
+          },
+          {
+            "choiceId": "B",
+            "label": "다들 남으니 같이 남는다",
+            "statDelta": {
+              "경제력": 2,
+              "건강": -3
+            },
+            "resultText": "야근 수당은 쌓였다. 저녁은 편의점 김밥이 됐다.",
+            "addFlags": [
+              "overwork"
+            ],
+            "outcomes": [
+              {
+                "outcomeId": "b_stay",
+                "text": "야근 수당은 쌓였다. 저녁은 편의점 김밥이 됐다.",
+                "chance": 60,
+                "primary": true,
+                "hidden": false,
+                "death": false,
+                "statDelta": {
+                  "경제력": 2,
+                  "건강": -3
+                },
+                "addFlags": [
+                  "overwork"
+                ],
+                "deathCause": "신입 시절의 야근 과로"
+              },
+              {
+                "outcomeId": "b_warn",
+                "text": "반년 뒤 사내 검진표에 빨간 글씨가 세 줄 생겼다.",
+                "chance": 40,
+                "primary": false,
+                "hidden": false,
+                "death": false,
+                "statDelta": {
+                  "경제력": 1,
+                  "건강": -4
+                },
+                "addFlags": [
+                  "overwork",
+                  "health_warning"
+                ],
+                "chanceWeights": {
+                  "건강": -2
+                },
+                "deathCause": "신입 시절의 야근 과로"
+              }
+            ],
+            "alwaysAvailable": true,
+            "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+            "conditionReview": "soft_incident",
+            "conditionBasis": "week10_path_followup"
+          },
+          {
+            "choiceId": "C",
+            "label": "점심시간 걷기 모임을 만든다",
+            "statDelta": {
+              "건강": 2,
+              "사회성": 3,
+              "경제력": -1
+            },
+            "resultText": "점심 먹고 회사 한 바퀴. 처음엔 셋이었는데 여름엔 열두 명이 됐다. 팀장님도 왔다.",
+            "addFlags": [
+              "healthy_routine",
+              "club_joined",
+              "hea_managed"
+            ],
+            "outcomes": [
+              {
+                "outcomeId": "c_club",
+                "text": "점심 먹고 회사 한 바퀴. 처음엔 셋이었는데 여름엔 열두 명이 됐다. 팀장님도 왔다.",
+                "chance": 70,
+                "primary": true,
+                "hidden": false,
+                "death": false,
+                "statDelta": {
+                  "건강": 2,
+                  "사회성": 3,
+                  "경제력": -1
+                },
+                "addFlags": [
+                  "healthy_routine",
+                  "club_joined",
+                  "hea_managed"
+                ],
+                "chanceWeights": {
+                  "사회성": 2
+                }
+              },
+              {
+                "outcomeId": "c_alone",
+                "text": "첫날 신청자는 나 혼자였다. 혼자 걸어도 점심은 맛있었다.",
+                "chance": 30,
+                "primary": false,
+                "hidden": false,
+                "death": false,
+                "statDelta": {
+                  "건강": 2,
+                  "행복": -1
+                },
+                "addFlags": [
+                  "healthy_routine"
+                ]
+              }
+            ],
+            "alwaysAvailable": true,
+            "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+            "conditionReview": "soft_incident",
+            "conditionBasis": "week10_path_followup"
+          }
+        ],
+        "priority": 0,
+        "kind": "INCIDENT",
+        "periods": [
+          "YOUNG_ADULT"
+        ],
+        "weight": 8,
+        "view": "FIRST_PERSON",
+        "lifePath": "HEALTH",
+        "pathRole": "상호작용(일·경제력)",
+        "followUps": [
+          "path_hea_03",
+          "path_hea_04",
+          "path_hea_05"
+        ]
+      },
+      "originalReview": {
+        "reviewer": "Codex AI (/root/security_p0)",
+        "reviewerType": "AI",
+        "sourceTextAndAllOutcomesReviewed": true,
+        "sourceImageViewed": true,
+        "observedImage": "실제 시계는 약 11시를 가리키고 숫자도 있으며 야근 사무실 좌석이 비어 있다. 본문 9시 및 다들 남아 있다는 조건과 다르다.",
+        "editBrief": "숫자 없는 아날로그 시계로 밤 9시, 켜진 천장등과 자리에 남은 동료들, 가까운 팀장 한 명을 첫인칭 책상에서 보이게 수정.",
+        "preChoiceConstraints": "퇴근·헬스장·걷기모임·수당·건강검진 결과를 선반영하지 않는다.",
+        "generationDecision": "REPAIR_REQUIRED",
+        "reviewMethod": "Complete current event conditions/choices/outcome texts read; original PNG viewed individually using view_image. No native crop or human approval claimed."
+      },
+      "exactPrompt": "Use case: precise-object-edit / narrative correction of an existing Korean life-simulation illustration. Image1 is the original style and object reference; preserve its pixel-art-like blocky shading, palette, era, character designs when retained, and coherent illustrated material. Rebuild only the scene details explicitly required below to match the actual PRE-CHOICE story. Make one opaque full-bleed portrait9:16 (941x1672 preferred). It is not a poster, screenshot, collage, stretched crop or film frame.\nPut essential whole objects, meaningful hands and faces together in central60% width and height where feasible; stagger naturally in depth. All important clues must survive centered9:20 phone crop. Peripheral environment fills margins. Correct human anatomy, exactly the stated people/hands, sleeves continuously connected to body/frame. No detached arms, duplicated props or impossible perspective. No readable letters/numbers/captions, invented UI labels, logos, watermark or border. Abstract document lines and story-required pictograms are allowed. Do not anticipate any future choice result.\nSCENE SPECIFICATION:\nCorrect empty late office to bright fully-lit Friday9PM office from first-person new-employee desk. Numeric-free analog clock minute hand at twelve, hour at nine. At least three coworkers visibly remain seated at lit computers; one nearby team leader talks with neutral open hand. No people leaving, exercising, walking club, overtime-pay receipt, medical warning or chosen action. Preserve original navy office pixel palette and papers/laptop.\nAuthoritative story context (do not print): 입사 첫 주 금요일 밤 9시. 사무실 불은 다 켜져 있다. 팀장: \"{name} 씨, 먼저 가도 돼. 근데 다들 남긴 하더라.\"\nUNSELECTED choices: 정시에 퇴근하고 헬스장에 간다 / 다들 남으니 같이 남는다 / 점심시간 걷기 모임을 만든다\nPrior-state conditions: {\"stats\": {}, \"requiredFlags\": [\"hea_path\", \"job_employed\"], \"blockedFlags\": []}.\nForbidden future results: 퇴근·헬스장·걷기모임·수당·건강검진 결과를 선반영하지 않는다.\nAll exact story wording stays in the actual app text overlay, not painted into this image.",
+      "requestedAspect": "9:16",
+      "tool": "built-in image_gen",
+      "attempts": [],
+      "selectedPath": null,
+      "outputSha256": null,
+      "reviewStatus": "GENERATION_PENDING",
+      "nativePending": true,
+      "runtimeConnected": false,
+      "approvalChanged": false
+    },
+    {
+      "eventId": "path_int_04",
+      "scopeGroup": "CONTENT_CORRECTION_12",
+      "sourcePath": "C:\\HSU\\3-2\\mobile\\main-audit-20261119\\app\\src\\main\\assets\\images\\followup_20261031\\img_path_int_04_001.png",
+      "sourceSha256": "436bcded91b0fc53c0f25da44a874d3201587d5be9db0583287208d6fb2681cf",
+      "referencePath": "C:\\HSU\\3-2\\mobile\\main-audit-20261119\\app\\src\\main\\assets\\images\\followup_20261031\\img_path_int_04_001.png",
+      "referenceSha256": "436bcded91b0fc53c0f25da44a874d3201587d5be9db0583287208d6fb2681cf",
+      "sourceDirectlyViewed": true,
+      "currentConditionsAllChoicesAndOutcomesReviewed": true,
+      "eventSnapshot": {
+        "eventId": "path_int_04",
+        "stage": "ADULT",
+        "type": "NORMAL",
+        "isFallback": false,
+        "isMilestone": false,
+        "title": "3.98과 장학금 커트라인",
+        "text": "첫 학기 성적이 나왔다. 장학금 커트라인은 4.0, 내 학점은 3.98. 같은 날 교수님 연구실에서 학부생 인턴을 뽑는다는 공지가 붙었다.",
+        "imageId": "img_path_int_04_001",
+        "conditions": {
+          "stats": {},
+          "requiredFlags": [
+            "int_path",
+            "university"
+          ],
+          "blockedFlags": []
+        },
+        "choices": [
+          {
+            "choiceId": "A",
+            "label": "교수님께 성적 확인 메일을 보낸다",
+            "statDelta": {
+              "경제력": 3,
+              "지력": 1,
+              "사회성": -1
+            },
+            "resultText": "교수님이 채점 실수를 찾았다. 4.02. 장학금이 들어왔다. 등록금 고지서에서 0이 하나 빠졌다.",
+            "addFlags": [
+              "scholarship",
+              "int_major_strong"
+            ],
+            "outcomes": [
+              {
+                "outcomeId": "a_scholar",
+                "text": "교수님이 채점 실수를 찾았다. 4.02. 장학금이 들어왔다. 등록금 고지서에서 0이 하나 빠졌다.",
+                "chance": 50,
+                "primary": true,
+                "hidden": false,
+                "death": false,
+                "statDelta": {
+                  "경제력": 3,
+                  "지력": 1,
+                  "사회성": -1
+                },
+                "addFlags": [
+                  "scholarship",
+                  "int_major_strong"
+                ],
+                "chanceWeights": {
+                  "지력": 2
+                }
+              },
+              {
+                "outcomeId": "a_exact",
+                "text": "답장: '정확히 3.98입니다.' 대신 그 메일 덕분에 교수님이 내 이름을 기억하셨다.",
+                "chance": 50,
+                "primary": false,
+                "hidden": false,
+                "death": false,
+                "statDelta": {
+                  "사회성": 1,
+                  "경제력": -1
+                },
+                "addFlags": [
+                  "int_major_strong"
+                ]
+              }
+            ],
+            "alwaysAvailable": true,
+            "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+            "conditionReview": "soft_incident",
+            "conditionBasis": "week8_life_path"
+          },
+          {
+            "choiceId": "B",
+            "label": "연구실 인턴에 지원한다",
+            "statDelta": {
+              "지력": 3,
+              "건강": -2
+            },
+            "resultText": "밤 11시 연구실 불빛 아래서 처음으로 실험 데이터를 만졌다. 피펫을 쥔 손이 떨렸다.",
+            "addFlags": [
+              "int_lab"
+            ],
+            "outcomes": [
+              {
+                "outcomeId": "b_lab",
+                "text": "밤 11시 연구실 불빛 아래서 처음으로 실험 데이터를 만졌다. 피펫을 쥔 손이 떨렸다.",
+                "chance": 60,
+                "primary": true,
+                "hidden": false,
+                "death": false,
+                "statDelta": {
+                  "지력": 3,
+                  "건강": -2
+                },
+                "addFlags": [
+                  "int_lab"
+                ],
+                "chanceWeights": {
+                  "지력": 2
+                }
+              },
+              {
+                "outcomeId": "b_coffee",
+                "text": "인턴 첫 업무는 커피 머신 청소였다. 석 달 뒤에야 데이터를 만질 수 있었다.",
+                "chance": 40,
+                "primary": false,
+                "hidden": false,
+                "death": false,
+                "statDelta": {
+                  "지력": 1,
+                  "사회성": 1,
+                  "행복": -1
+                },
+                "addFlags": [
+                  "int_lab"
+                ]
+              }
+            ],
+            "alwaysAvailable": true,
+            "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+            "conditionReview": "soft_incident",
+            "conditionBasis": "week8_life_path"
+          },
+          {
+            "choiceId": "C",
+            "label": "과외 세 개로 등록금을 직접 번다",
+            "statDelta": {
+              "경제력": 3,
+              "사회성": 1,
+              "지력": -1
+            },
+            "resultText": "과외비로 등록금을 냈다. 학생 셋 모두 성적이 올랐다. 내 성적은 조금 내려갔다.",
+            "addFlags": [
+              "int_tutor"
+            ],
+            "outcomes": [
+              {
+                "outcomeId": "c_tutor",
+                "text": "과외비로 등록금을 냈다. 학생 셋 모두 성적이 올랐다. 내 성적은 조금 내려갔다.",
+                "chance": 70,
+                "primary": true,
+                "hidden": false,
+                "death": false,
+                "statDelta": {
+                  "경제력": 3,
+                  "사회성": 1,
+                  "지력": -1
+                },
+                "addFlags": [
+                  "int_tutor"
+                ],
+                "chanceWeights": {
+                  "사회성": 2
+                }
+              },
+              {
+                "outcomeId": "c_quit",
+                "text": "과외 학생이 한 명씩 그만뒀다. 남은 건 시간표의 빈칸과 학자금 대출 문자였다.",
+                "chance": 30,
+                "primary": false,
+                "hidden": false,
+                "death": false,
+                "statDelta": {
+                  "경제력": -2,
+                  "행복": -1
+                },
+                "addFlags": [
+                  "int_tutor",
+                  "student_loan"
+                ],
+                "chanceWeights": {
+                  "경제력": -2
+                }
+              }
+            ],
+            "alwaysAvailable": true,
+            "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+            "conditionReview": "soft_incident",
+            "conditionBasis": "week8_life_path"
+          }
+        ],
+        "priority": 0,
+        "kind": "INCIDENT",
+        "periods": [
+          "YOUNG_ADULT"
+        ],
+        "weight": 20,
+        "view": "FIRST_PERSON",
+        "lifePath": "INTELLIGENCE",
+        "pathRole": "진학·장학금·상호작용(경제력)",
+        "followUps": [
+          "path_int_07"
+        ]
+      },
+      "originalReview": {
+        "reviewer": "Codex AI (/root/security_p0)",
+        "reviewerType": "AI",
+        "sourceTextAndAllOutcomesReviewed": true,
+        "sourceImageViewed": true,
+        "observedImage": "손의 성적표에 3.98 숫자가 선명하고 집 책상에는 연구실 인턴 공고 단서가 없다.",
+        "editBrief": "대학 게시판 앞의 손에 추상 칸만 있는 성적표, 같은 중앙 영역에 실험기구 도상 포함한 비문자 인턴 공고. 숫자/등급/서명/봉인 금지.",
+        "preChoiceConstraints": "장학금 수령·4.02 정정·인턴 채용·실험 참여·과외 수입이 선택 전 확정되면 안 된다.",
+        "generationDecision": "REPAIR_REQUIRED",
+        "reviewMethod": "Complete current event conditions/choices/outcome texts read; original PNG viewed individually using view_image. No native crop or human approval claimed."
+      },
+      "exactPrompt": "Use case: precise-object-edit / narrative correction of an existing Korean life-simulation illustration. Image1 is the original style and object reference; preserve its pixel-art-like blocky shading, palette, era, character designs when retained, and coherent illustrated material. Rebuild only the scene details explicitly required below to match the actual PRE-CHOICE story. Make one opaque full-bleed portrait9:16 (941x1672 preferred). It is not a poster, screenshot, collage, stretched crop or film frame.\nPut essential whole objects, meaningful hands and faces together in central60% width and height where feasible; stagger naturally in depth. All important clues must survive centered9:20 phone crop. Peripheral environment fills margins. Correct human anatomy, exactly the stated people/hands, sleeves continuously connected to body/frame. No detached arms, duplicated props or impossible perspective. No readable letters/numbers/captions, invented UI labels, logos, watermark or border. Abstract document lines and story-required pictograms are allowed. Do not anticipate any future choice result.\nSCENE SPECIFICATION:\nCorrect bedroom into UNIVERSITY HALLWAY NOTICEBOARD in daytime. First-person university student holds grade report with plain abstract rows, NO3.98 or4.0/4.02 digits, grades, stamp or scholarship ribbon. Directly behind and above within central width is an internship notice marked only by small flask/microscope symbols and abstract lines. No lab work, internship acceptance, sent email, paid tuition or tutoring. Only two naturally connected hands.\nAuthoritative story context (do not print): 첫 학기 성적이 나왔다. 장학금 커트라인은 4.0, 내 학점은 3.98. 같은 날 교수님 연구실에서 학부생 인턴을 뽑는다는 공지가 붙었다.\nUNSELECTED choices: 교수님께 성적 확인 메일을 보낸다 / 연구실 인턴에 지원한다 / 과외 세 개로 등록금을 직접 번다\nPrior-state conditions: {\"stats\": {}, \"requiredFlags\": [\"int_path\", \"university\"], \"blockedFlags\": []}.\nForbidden future results: 장학금 수령·4.02 정정·인턴 채용·실험 참여·과외 수입이 선택 전 확정되면 안 된다.\nAll exact story wording stays in the actual app text overlay, not painted into this image.",
+      "requestedAspect": "9:16",
+      "tool": "built-in image_gen",
+      "attempts": [],
+      "selectedPath": null,
+      "outputSha256": null,
+      "reviewStatus": "GENERATION_PENDING",
+      "nativePending": true,
+      "runtimeConnected": false,
+      "approvalChanged": false
+    },
+    {
+      "eventId": "path_int_11",
+      "scopeGroup": "CONTENT_CORRECTION_12",
+      "sourcePath": "C:\\HSU\\3-2\\mobile\\main-audit-20261119\\app\\src\\main\\assets\\images\\followup_20261031\\img_path_int_11_001.png",
+      "sourceSha256": "5c93bfb5ee109aaf5a3eb1f6fb8d171c0db402f80a4a4ccfddad9ec294375232",
+      "referencePath": "C:\\HSU\\3-2\\mobile\\main-audit-20261119\\app\\src\\main\\assets\\images\\followup_20261031\\img_path_int_11_001.png",
+      "referenceSha256": "5c93bfb5ee109aaf5a3eb1f6fb8d171c0db402f80a4a4ccfddad9ec294375232",
+      "sourceDirectlyViewed": true,
+      "currentConditionsAllChoicesAndOutcomesReviewed": true,
+      "eventSnapshot": {
+        "eventId": "path_int_11",
+        "stage": "ADULT",
+        "type": "NORMAL",
+        "isFallback": false,
+        "isMilestone": false,
+        "title": "원하지 않던 학과",
+        "text": "점수에 맞춰 들어온 학과. 첫 수업 교수님이 말했다. \"여기 온 걸 후회하는 사람, 손 들어 봐요.\" 손을 들 뻔했다.",
+        "imageId": "img_path_int_11_001",
+        "conditions": {
+          "stats": {},
+          "requiredFlags": [
+            "int_csat_fail",
+            "university"
+          ],
+          "blockedFlags": [
+            "int_retake_success"
+          ]
+        },
+        "choices": [
+          {
+            "choiceId": "A",
+            "label": "전과를 준비한다",
+            "statDelta": {
+              "지력": 3,
+              "행복": 2,
+              "건강": -1
+            },
+            "resultText": "1년 내내 두 학과 수업을 들었다. 전과 합격 문자가 왔다. 처음으로 시간표가 설렜다.",
+            "addFlags": [
+              "field_science",
+              "int_major_strong"
+            ],
+            "outcomes": [
+              {
+                "outcomeId": "a_switch",
+                "text": "1년 내내 두 학과 수업을 들었다. 전과 합격 문자가 왔다. 처음으로 시간표가 설렜다.",
+                "chance": 55,
+                "primary": true,
+                "hidden": false,
+                "death": false,
+                "statDelta": {
+                  "지력": 3,
+                  "행복": 2,
+                  "건강": -1
+                },
+                "addFlags": [
+                  "field_science",
+                  "int_major_strong"
+                ],
+                "chanceWeights": {
+                  "지력": 3
+                }
+              },
+              {
+                "outcomeId": "a_stay",
+                "text": "전과 면접에서 떨어졌다. 대신 원래 학과 수업 중 하나가 생각보다 재미있었다.",
+                "chance": 45,
+                "primary": false,
+                "hidden": false,
+                "death": false,
+                "statDelta": {
+                  "지력": 1,
+                  "행복": -2
+                },
+                "addFlags": []
+              }
+            ],
+            "alwaysAvailable": true,
+            "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+            "conditionReview": "soft_incident",
+            "conditionBasis": "week10_path_followup"
+          },
+          {
+            "choiceId": "B",
+            "label": "지금 학과에서 1등을 해 본다",
+            "statDelta": {
+              "지력": 3,
+              "경제력": 1,
+              "사회성": -1
+            },
+            "resultText": "학과 수석. 장학금 통지서를 받고 깨달았다. 이 학과도 꽤 괜찮았다.",
+            "addFlags": [
+              "scholarship"
+            ],
+            "outcomes": [
+              {
+                "outcomeId": "b_top",
+                "text": "학과 수석. 장학금 통지서를 받고 깨달았다. 이 학과도 꽤 괜찮았다.",
+                "chance": 60,
+                "primary": true,
+                "hidden": false,
+                "death": false,
+                "statDelta": {
+                  "지력": 3,
+                  "경제력": 1,
+                  "사회성": -1
+                },
+                "addFlags": [
+                  "scholarship"
+                ],
+                "chanceWeights": {
+                  "지력": 2
+                }
+              },
+              {
+                "outcomeId": "b_mid",
+                "text": "중간쯤 했다. 학과 친구 셋이 생겼고, 그중 하나와는 평생 갔다.",
+                "chance": 40,
+                "primary": false,
+                "hidden": false,
+                "death": false,
+                "statDelta": {
+                  "지력": 2,
+                  "사회성": 1
+                },
+                "addFlags": [
+                  "lifelong_friend"
+                ]
+              }
+            ],
+            "alwaysAvailable": true,
+            "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+            "conditionReview": "soft_incident",
+            "conditionBasis": "week10_path_followup"
+          },
+          {
+            "choiceId": "C",
+            "label": "휴학하고 다시 수능을 본다",
+            "statDelta": {
+              "지력": 3,
+              "경제력": -2
+            },
+            "resultText": "두 번째 수능에서 원하던 점수가 나왔다. 신입생 환영회에서 나만 한 살 많았다. 아무도 신경 쓰지 않았다.",
+            "addFlags": [
+              "int_retake_success",
+              "field_science"
+            ],
+            "outcomes": [
+              {
+                "outcomeId": "c_retake",
+                "text": "두 번째 수능에서 원하던 점수가 나왔다. 신입생 환영회에서 나만 한 살 많았다. 아무도 신경 쓰지 않았다.",
+                "chance": 50,
+                "primary": true,
+                "hidden": false,
+                "death": false,
+                "statDelta": {
+                  "지력": 3,
+                  "경제력": -2
+                },
+                "addFlags": [
+                  "int_retake_success",
+                  "field_science"
+                ],
+                "chanceWeights": {
+                  "지력": 3
+                }
+              },
+              {
+                "outcomeId": "c_again",
+                "text": "두 번째 수능도 비슷했다. 복학 신청서를 내러 가는 길이 이상하게 가벼웠다.",
+                "chance": 50,
+                "primary": false,
+                "hidden": false,
+                "death": false,
+                "statDelta": {
+                  "지력": 1,
+                  "행복": -3,
+                  "경제력": -2
+                },
+                "addFlags": [
+                  "int_retake_fail"
+                ],
+                "chanceWeights": {
+                  "지력": -2
+                }
+              }
+            ],
+            "alwaysAvailable": true,
+            "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+            "conditionReview": "soft_incident",
+            "conditionBasis": "week10_path_followup"
+          }
+        ],
+        "priority": 0,
+        "kind": "INCIDENT",
+        "periods": [
+          "YOUNG_ADULT"
+        ],
+        "weight": 8,
+        "view": "FIRST_PERSON",
+        "lifePath": "INTELLIGENCE",
+        "pathRole": "수능 실패 후 진로",
+        "followUps": [
+          "path_int_07"
+        ]
+      },
+      "originalReview": {
+        "reviewer": "Codex AI (/root/security_p0)",
+        "reviewerType": "AI",
+        "sourceTextAndAllOutcomesReviewed": true,
+        "sourceImageViewed": true,
+        "observedImage": "집 책상의 학위모·플라스크·수상 리본이 있는 인증서와 생각풍선이다. 실제는 입학 뒤 첫 강의 중 교수의 질문이다.",
+        "editBrief": "강의실 학생 시점에서 앞의 교수와 칠판, 앉은 다른 학생을 배치하고 주인공 손은 책상 가까이 망설이는 상태로 유지. 인증서와 생각풍선 제거.",
+        "preChoiceConstraints": "손을 확실히 들어 답하기·전과 합격·학과 수석·장학금·수능 재도전 결과 금지.",
+        "generationDecision": "REPAIR_REQUIRED",
+        "reviewMethod": "Complete current event conditions/choices/outcome texts read; original PNG viewed individually using view_image. No native crop or human approval claimed."
+      },
+      "exactPrompt": "Use case: precise-object-edit / narrative correction of an existing Korean life-simulation illustration. Image1 is the original style and object reference; preserve its pixel-art-like blocky shading, palette, era, character designs when retained, and coherent illustrated material. Rebuild only the scene details explicitly required below to match the actual PRE-CHOICE story. Make one opaque full-bleed portrait9:16 (941x1672 preferred). It is not a poster, screenshot, collage, stretched crop or film frame.\nPut essential whole objects, meaningful hands and faces together in central60% width and height where feasible; stagger naturally in depth. All important clues must survive centered9:20 phone crop. Peripheral environment fills margins. Correct human anatomy, exactly the stated people/hands, sleeves continuously connected to body/frame. No detached arms, duplicated props or impossible perspective. No readable letters/numbers/captions, invented UI labels, logos, watermark or border. Abstract document lines and story-required pictograms are allowed. Do not anticipate any future choice result.\nSCENE SPECIFICATION:\nCorrect home certificate into UNIVERSITY FIRST LECTURE, seated student first-person. Professor stands ahead by chalkboard and asks the class a question with natural open gesture; seated classmates remain present. Player two hands hover just above desk/notebook, NOT raised to answer. No certificate, graduation cap, medal, thought bubble, major transfer, scholarship or retest outcome. Preserve warm source pixel-art style.\nAuthoritative story context (do not print): 점수에 맞춰 들어온 학과. 첫 수업 교수님이 말했다. \"여기 온 걸 후회하는 사람, 손 들어 봐요.\" 손을 들 뻔했다.\nUNSELECTED choices: 전과를 준비한다 / 지금 학과에서 1등을 해 본다 / 휴학하고 다시 수능을 본다\nPrior-state conditions: {\"stats\": {}, \"requiredFlags\": [\"int_csat_fail\", \"university\"], \"blockedFlags\": [\"int_retake_success\"]}.\nForbidden future results: 손을 확실히 들어 답하기·전과 합격·학과 수석·장학금·수능 재도전 결과 금지.\nAll exact story wording stays in the actual app text overlay, not painted into this image.",
+      "requestedAspect": "9:16",
+      "tool": "built-in image_gen",
+      "attempts": [],
+      "selectedPath": null,
+      "outputSha256": null,
+      "reviewStatus": "GENERATION_PENDING",
+      "nativePending": true,
+      "runtimeConnected": false,
+      "approvalChanged": false
+    },
+    {
+      "eventId": "path_hap_02",
+      "scopeGroup": "MIXED_CROP_CONTENT_4",
+      "sourcePath": "C:\\HSU\\3-2\\mobile\\main-audit-20261119\\app\\src\\main\\assets\\images\\followup_20261031\\img_path_hap_02_001.png",
+      "sourceSha256": "7f09bd34135c43afb3454ec164dd2f85b42a7f06a5393b24e195f9a2c5bd7d14",
+      "referencePath": "C:\\HSU\\3-2\\mobile\\main-audit-20261119\\app\\src\\main\\assets\\images\\followup_20261031\\img_path_hap_02_001.png",
+      "referenceSha256": "7f09bd34135c43afb3454ec164dd2f85b42a7f06a5393b24e195f9a2c5bd7d14",
+      "sourceDirectlyViewed": true,
+      "currentConditionsAllChoicesAndOutcomesReviewed": true,
+      "eventSnapshot": {
+        "eventId": "path_hap_02",
+        "stage": "TEEN",
+        "type": "NORMAL",
+        "isFallback": false,
+        "isMilestone": false,
+        "title": "좋아하는 것과 잘하는 것",
+        "text": "진로 상담 시간. 담임: \"{name}, 성적으로는 경영학과가 딱인데.\" 내 노트 뒷장은 온통 곡 가사와 그림이다.",
+        "imageId": "img_path_hap_02_001",
+        "conditions": {
+          "stats": {},
+          "requiredFlags": [
+            "hap_path",
+            "v4:event:teen_019"
+          ],
+          "blockedFlags": []
+        },
+        "choices": [
+          {
+            "choiceId": "A",
+            "label": "좋아하는 걸 전공하겠다고 말한다",
+            "statDelta": {
+              "행복": 3,
+              "지력": -2
+            },
+            "resultText": "실기 학원에 다니기 시작했다. 성적은 조금 내려갔다. 아침에 일어나는 게 처음으로 즐거웠다.",
+            "addFlags": [
+              "hap_art_major",
+              "arts_track"
+            ],
+            "outcomes": [
+              {
+                "outcomeId": "a_art",
+                "text": "실기 학원에 다니기 시작했다. 성적은 조금 내려갔다. 아침에 일어나는 게 처음으로 즐거웠다.",
+                "chance": 70,
+                "primary": true,
+                "hidden": false,
+                "death": false,
+                "statDelta": {
+                  "행복": 3,
+                  "지력": -2
+                },
+                "addFlags": [
+                  "hap_art_major",
+                  "arts_track"
+                ],
+                "chanceWeights": {
+                  "행복": 2
+                }
+              },
+              {
+                "outcomeId": "a_doubt",
+                "text": "부모님과 크게 싸웠다. 결국 1년만 해 보기로 했다. 그 1년이 짧게 느껴졌다.",
+                "chance": 30,
+                "primary": false,
+                "hidden": false,
+                "death": false,
+                "statDelta": {
+                  "행복": -1,
+                  "사회성": -1
+                },
+                "addFlags": [
+                  "hap_art_major",
+                  "family_conflict"
+                ],
+                "chanceWeights": {
+                  "사회성": -2
+                }
+              }
+            ],
+            "alwaysAvailable": true,
+            "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+            "conditionReview": "soft_incident",
+            "conditionBasis": "week8_life_path"
+          },
+          {
+            "choiceId": "B",
+            "label": "성적에 맞춰 가고 취미는 남겨 둔다",
+            "statDelta": {
+              "지력": 2,
+              "경제력": 1,
+              "행복": -2
+            },
+            "resultText": "경영학과에 원서를 냈다. 취미 노트는 책상 서랍 맨 아래 칸으로 갔다.",
+            "addFlags": [
+              "hap_hobby_side"
+            ],
+            "outcomes": [
+              {
+                "outcomeId": "b_side",
+                "text": "경영학과에 원서를 냈다. 취미 노트는 책상 서랍 맨 아래 칸으로 갔다.",
+                "chance": 100,
+                "primary": true,
+                "hidden": false,
+                "death": false,
+                "statDelta": {
+                  "지력": 2,
+                  "경제력": 1,
+                  "행복": -2
+                },
+                "addFlags": [
+                  "hap_hobby_side"
+                ]
+              }
+            ],
+            "alwaysAvailable": true,
+            "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+            "conditionReview": "soft_incident",
+            "conditionBasis": "week8_life_path"
+          }
+        ],
+        "priority": 0,
+        "kind": "INCIDENT",
+        "periods": [
+          "TEEN"
+        ],
+        "weight": 20,
+        "view": "FIRST_PERSON",
+        "lifePath": "HAPPINESS",
+        "pathRole": "진로 갈등·상호작용(지력)",
+        "followUps": [
+          "path_hap_03"
+        ]
+      },
+      "originalReview": {
+        "sceneCorrection": "Correct bedroom into high-school career COUNSELING ROOM with homeroom teacher sitting opposite first-person teen. Teacher gently gestures toward business-major brochure with neutral chart/briefcase pictograms, while player open notebook shows small lyrical abstract lines, music-note symbols and drawings on its back pages. Exactly two student hands, same cream sleeves as source. All central. No actual music-school enrollment, art career, parent fight, submitted application or business-major result. No readable lyrics/text."
+      },
+      "exactPrompt": "Use case: precise-object-edit / narrative correction of an existing Korean life-simulation illustration. Image1 is the original style and object reference; preserve its pixel-art-like blocky shading, palette, era, character designs when retained, and coherent illustrated material. Rebuild only the scene details explicitly required below to match the actual PRE-CHOICE story. Make one opaque full-bleed portrait9:16 (941x1672 preferred). It is not a poster, screenshot, collage, stretched crop or film frame.\nPut essential whole objects, meaningful hands and faces together in central60% width and height where feasible; stagger naturally in depth. All important clues must survive centered9:20 phone crop. Peripheral environment fills margins. Correct human anatomy, exactly the stated people/hands, sleeves continuously connected to body/frame. No detached arms, duplicated props or impossible perspective. No readable letters/numbers/captions, invented UI labels, logos, watermark or border. Abstract document lines and story-required pictograms are allowed. Do not anticipate any future choice result.\nSCENE SPECIFICATION:\nCorrect bedroom into high-school career COUNSELING ROOM with homeroom teacher sitting opposite first-person teen. Teacher gently gestures toward business-major brochure with neutral chart/briefcase pictograms, while player open notebook shows small lyrical abstract lines, music-note symbols and drawings on its back pages. Exactly two student hands, same cream sleeves as source. All central. No actual music-school enrollment, art career, parent fight, submitted application or business-major result. No readable lyrics/text.\nAuthoritative story context (do not print): 진로 상담 시간. 담임: \"{name}, 성적으로는 경영학과가 딱인데.\" 내 노트 뒷장은 온통 곡 가사와 그림이다.\nUNSELECTED choices: 좋아하는 걸 전공하겠다고 말한다 / 성적에 맞춰 가고 취미는 남겨 둔다\nPrior-state conditions: {\"stats\": {}, \"requiredFlags\": [\"hap_path\", \"v4:event:teen_019\"], \"blockedFlags\": []}.\nAll exact story wording stays in the actual app text overlay, not painted into this image.",
+      "requestedAspect": "9:16",
+      "tool": "built-in image_gen",
+      "attempts": [],
+      "selectedPath": null,
+      "outputSha256": null,
+      "reviewStatus": "GENERATION_PENDING",
+      "nativePending": true,
+      "runtimeConnected": false,
+      "approvalChanged": false
+    },
+    {
+      "eventId": "path_luk_08",
+      "scopeGroup": "MIXED_CROP_CONTENT_4",
+      "sourcePath": "C:\\HSU\\3-2\\mobile\\main-audit-20261119\\app\\src\\main\\assets\\images\\followup_20261031\\img_path_luk_08_001.png",
+      "sourceSha256": "e79bd4a97ca7f25757e3b8008b7158ce2585fcaa8df2100490b009f5cb220999",
+      "referencePath": "C:\\HSU\\3-2\\mobile\\main-audit-20261119\\app\\src\\main\\assets\\images\\followup_20261031\\img_path_luk_08_001.png",
+      "referenceSha256": "e79bd4a97ca7f25757e3b8008b7158ce2585fcaa8df2100490b009f5cb220999",
+      "sourceDirectlyViewed": true,
+      "currentConditionsAllChoicesAndOutcomesReviewed": true,
+      "eventSnapshot": {
+        "eventId": "path_luk_08",
+        "stage": "ADULT",
+        "type": "NORMAL",
+        "isFallback": false,
+        "isMilestone": false,
+        "title": "놓친 비행기",
+        "text": "공항 리무진이 사고 차량 때문에 40분 늦었다. 탑승 게이트는 이미 닫혔다. 항공사 직원: \"다음 비행기는 내일 아침이에요.\"",
+        "imageId": "img_path_luk_08_001",
+        "conditions": {
+          "stats": {},
+          "requiredFlags": [
+            "luk_path",
+            "job_employed"
+          ],
+          "blockedFlags": []
+        },
+        "choices": [
+          {
+            "choiceId": "A",
+            "label": "공항 근처에서 하룻밤 자고 내일 간다",
+            "statDelta": {
+              "사회성": 2,
+              "운": 2,
+              "경제력": -1
+            },
+            "resultText": "공항 호텔 로비에서 같은 비행기를 놓친 사람과 이야기했다. 그 사람이 나중에 내 첫 거래처가 됐다.",
+            "addFlags": [
+              "luk_airport_contact"
+            ],
+            "outcomes": [
+              {
+                "outcomeId": "a_stay",
+                "text": "공항 호텔 로비에서 같은 비행기를 놓친 사람과 이야기했다. 그 사람이 나중에 내 첫 거래처가 됐다.",
+                "chance": 50,
+                "primary": true,
+                "hidden": false,
+                "death": false,
+                "statDelta": {
+                  "사회성": 2,
+                  "운": 2,
+                  "경제력": -1
+                },
+                "addFlags": [
+                  "luk_airport_contact"
+                ],
+                "chanceWeights": {
+                  "운": 3
+                }
+              },
+              {
+                "outcomeId": "a_cold",
+                "text": "호텔 에어컨이 고장이었다. 밤새 떨다가 감기에 걸렸다. 출장지에선 목소리 대신 손짓으로 발표했다.",
+                "chance": 50,
+                "primary": false,
+                "hidden": false,
+                "death": false,
+                "statDelta": {
+                  "건강": -3,
+                  "행복": -1
+                },
+                "addFlags": [],
+                "chanceWeights": {
+                  "건강": -2
+                }
+              }
+            ],
+            "alwaysAvailable": true,
+            "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+            "conditionReview": "soft_incident",
+            "conditionBasis": "week8_life_path"
+          },
+          {
+            "choiceId": "B",
+            "label": "다른 항공사 표를 비싸게 산다",
+            "statDelta": {
+              "경제력": -3,
+              "사회성": 2,
+              "운": 1
+            },
+            "resultText": "통장이 가벼워졌다. 대신 회의엔 늦지 않았다. 옆자리 승객이 내 발표 자료를 보고 명함을 줬다.",
+            "addFlags": [
+              "luk_airport_contact"
+            ],
+            "outcomes": [
+              {
+                "outcomeId": "b_buy",
+                "text": "통장이 가벼워졌다. 대신 회의엔 늦지 않았다. 옆자리 승객이 내 발표 자료를 보고 명함을 줬다.",
+                "chance": 60,
+                "primary": true,
+                "hidden": false,
+                "death": false,
+                "statDelta": {
+                  "경제력": -3,
+                  "사회성": 2,
+                  "운": 1
+                },
+                "addFlags": [
+                  "luk_airport_contact"
+                ],
+                "chanceWeights": {
+                  "운": 2
+                }
+              },
+              {
+                "outcomeId": "b_delay",
+                "text": "그 비행기도 결항이었다. 공항 의자에서 밤을 새웠다. 운이 좋다는 소리를 처음으로 의심했다.",
+                "chance": 40,
+                "primary": false,
+                "hidden": false,
+                "death": false,
+                "statDelta": {
+                  "경제력": -3,
+                  "건강": -2,
+                  "행복": -2
+                },
+                "addFlags": [
+                  "luk_doubt"
+                ],
+                "chanceWeights": {
+                  "운": -2
+                }
+              }
+            ],
+            "alwaysAvailable": true,
+            "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+            "conditionReview": "soft_incident",
+            "conditionBasis": "week8_life_path"
+          },
+          {
+            "choiceId": "C",
+            "label": "출장을 취소하고 집에 간다",
+            "statDelta": {
+              "행복": 2,
+              "운": 2,
+              "경제력": -1
+            },
+            "resultText": "집에 와서 뉴스를 켰다. 탈 뻔한 비행기가 난기류로 회항했다는 소식이 나왔다. 다친 사람은 없었다.",
+            "addFlags": [
+              "luk_avoided",
+              "special_survived"
+            ],
+            "outcomes": [
+              {
+                "outcomeId": "c_home",
+                "text": "집에 와서 뉴스를 켰다. 탈 뻔한 비행기가 난기류로 회항했다는 소식이 나왔다. 다친 사람은 없었다.",
+                "chance": 100,
+                "primary": true,
+                "hidden": false,
+                "death": false,
+                "statDelta": {
+                  "행복": 2,
+                  "운": 2,
+                  "경제력": -1
+                },
+                "addFlags": [
+                  "luk_avoided",
+                  "special_survived"
+                ]
+              }
+            ],
+            "alwaysAvailable": true,
+            "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+            "conditionReview": "soft_incident",
+            "conditionBasis": "week8_life_path"
+          }
+        ],
+        "priority": 0,
+        "kind": "INCIDENT",
+        "periods": [
+          "YOUNG_ADULT",
+          "MIDDLE"
+        ],
+        "weight": 20,
+        "view": "FIRST_PERSON",
+        "lifePath": "LUCK",
+        "pathRole": "위기 회피·상호작용(건강)",
+        "followUps": [
+          "path_luk_05"
+        ]
+      },
+      "originalReview": {
+        "sceneCorrection": "Correct waving at plane into CLOSED AIRPORT BOARDING GATE after missed flight. First-person adult hand holds boarding pass with only abstract bars, other hand rests on suitcase handle. Airline employee stands behind small gate desk with apologetic neutral gesture; rope barrier and closed gate door make boarding unavailable. Plane outside may remain background. No boarding, new ticket purchase, hotel, business deal, canceled flight notice, returning-home scene or news. No readable letters/digits, no waving."
+      },
+      "exactPrompt": "Use case: precise-object-edit / narrative correction of an existing Korean life-simulation illustration. Image1 is the original style and object reference; preserve its pixel-art-like blocky shading, palette, era, character designs when retained, and coherent illustrated material. Rebuild only the scene details explicitly required below to match the actual PRE-CHOICE story. Make one opaque full-bleed portrait9:16 (941x1672 preferred). It is not a poster, screenshot, collage, stretched crop or film frame.\nPut essential whole objects, meaningful hands and faces together in central60% width and height where feasible; stagger naturally in depth. All important clues must survive centered9:20 phone crop. Peripheral environment fills margins. Correct human anatomy, exactly the stated people/hands, sleeves continuously connected to body/frame. No detached arms, duplicated props or impossible perspective. No readable letters/numbers/captions, invented UI labels, logos, watermark or border. Abstract document lines and story-required pictograms are allowed. Do not anticipate any future choice result.\nSCENE SPECIFICATION:\nCorrect waving at plane into CLOSED AIRPORT BOARDING GATE after missed flight. First-person adult hand holds boarding pass with only abstract bars, other hand rests on suitcase handle. Airline employee stands behind small gate desk with apologetic neutral gesture; rope barrier and closed gate door make boarding unavailable. Plane outside may remain background. No boarding, new ticket purchase, hotel, business deal, canceled flight notice, returning-home scene or news. No readable letters/digits, no waving.\nAuthoritative story context (do not print): 공항 리무진이 사고 차량 때문에 40분 늦었다. 탑승 게이트는 이미 닫혔다. 항공사 직원: \"다음 비행기는 내일 아침이에요.\"\nUNSELECTED choices: 공항 근처에서 하룻밤 자고 내일 간다 / 다른 항공사 표를 비싸게 산다 / 출장을 취소하고 집에 간다\nPrior-state conditions: {\"stats\": {}, \"requiredFlags\": [\"luk_path\", \"job_employed\"], \"blockedFlags\": []}.\nAll exact story wording stays in the actual app text overlay, not painted into this image.",
+      "requestedAspect": "9:16",
+      "tool": "built-in image_gen",
+      "attempts": [],
+      "selectedPath": null,
+      "outputSha256": null,
+      "reviewStatus": "GENERATION_PENDING",
+      "nativePending": true,
+      "runtimeConnected": false,
+      "approvalChanged": false
+    },
+    {
+      "eventId": "path_soc_09",
+      "scopeGroup": "MIXED_CROP_CONTENT_4",
+      "sourcePath": "C:\\HSU\\3-2\\mobile\\main-audit-20261119\\app\\src\\main\\assets\\images\\week10\\scenes\\img_path_soc_09_001.png",
+      "sourceSha256": "7502542b42fa2bb39a2e2e890b858909a3736019bd9e25ff457efc87de3c53ed",
+      "referencePath": "C:\\HSU\\3-2\\mobile\\main-audit-20261119\\app\\src\\main\\assets\\images\\week10\\scenes\\img_path_soc_09_001.png",
+      "referenceSha256": "7502542b42fa2bb39a2e2e890b858909a3736019bd9e25ff457efc87de3c53ed",
+      "sourceDirectlyViewed": true,
+      "currentConditionsAllChoicesAndOutcomesReviewed": true,
+      "eventSnapshot": {
+        "eventId": "path_soc_09",
+        "stage": "ADULT",
+        "type": "NORMAL",
+        "isFallback": false,
+        "isMilestone": false,
+        "title": "칠순 잔치의 방명록",
+        "text": "칠순 잔치. 방명록이 두 권째로 넘어갔다. 사회자: \"{name} 님과 인연이 있는 분, 손 들어 주세요!\" 식당 전체가 손을 들었다.",
+        "imageId": "img_path_soc_09_001",
+        "conditions": {
+          "stats": {},
+          "requiredFlags": [
+            "soc_path"
+          ],
+          "blockedFlags": []
+        },
+        "choices": [
+          {
+            "choiceId": "A",
+            "label": "한 사람 한 사람에게 인사하러 돈다",
+            "statDelta": {
+              "사회성": 3,
+              "행복": 2,
+              "건강": -2
+            },
+            "resultText": "테이블 서른 개를 다 돌았다. 국수는 다 불었다. 그래도 인사는 하나도 빠뜨리지 않았다.",
+            "addFlags": [
+              "achv_full_guestbook"
+            ],
+            "outcomes": [
+              {
+                "outcomeId": "a_round",
+                "text": "테이블 서른 개를 다 돌았다. 국수는 다 불었다. 그래도 인사는 하나도 빠뜨리지 않았다.",
+                "chance": 100,
+                "primary": true,
+                "hidden": false,
+                "death": false,
+                "statDelta": {
+                  "사회성": 3,
+                  "행복": 2,
+                  "건강": -2
+                },
+                "addFlags": [
+                  "achv_full_guestbook"
+                ]
+              }
+            ],
+            "alwaysAvailable": true,
+            "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+            "conditionReview": "soft_incident",
+            "conditionBasis": "week8_life_path"
+          },
+          {
+            "choiceId": "B",
+            "label": "가족 테이블에 앉아 손주들과 사진을 찍는다",
+            "statDelta": {
+              "행복": 3,
+              "사회성": 1,
+              "건강": -1
+            },
+            "resultText": "손주들이 내 무릎에 다 올라왔다. 사진 속 내가 제일 크게 웃고 있다.",
+            "addFlags": [
+              "family_bond",
+              "family_memory"
+            ],
+            "outcomes": [
+              {
+                "outcomeId": "b_family",
+                "text": "손주들이 내 무릎에 다 올라왔다. 사진 속 내가 제일 크게 웃고 있다.",
+                "chance": 100,
+                "primary": true,
+                "hidden": false,
+                "death": false,
+                "statDelta": {
+                  "행복": 3,
+                  "사회성": 1,
+                  "건강": -1
+                },
+                "addFlags": [
+                  "family_bond",
+                  "family_memory"
+                ]
+              }
+            ],
+            "requiredFlags": [
+              "v4:event:adult_039"
+            ],
+            "conditionReview": "confirmed",
+            "conditionBasis": "week8_life_path"
+          },
+          {
+            "choiceId": "C",
+            "label": "마이크를 잡고 노래방 18번을 부른다",
+            "statDelta": {
+              "행복": 3,
+              "사회성": 2,
+              "지력": -1
+            },
+            "resultText": "첫 소절에서 음이탈이 났다. 식당 전체가 따라 불러서 아무도 몰랐다.",
+            "addFlags": [],
+            "outcomes": [
+              {
+                "outcomeId": "c_song",
+                "text": "첫 소절에서 음이탈이 났다. 식당 전체가 따라 불러서 아무도 몰랐다.",
+                "chance": 100,
+                "primary": true,
+                "hidden": false,
+                "death": false,
+                "statDelta": {
+                  "행복": 3,
+                  "사회성": 2,
+                  "지력": -1
+                },
+                "addFlags": []
+              }
+            ],
+            "alwaysAvailable": true,
+            "alwaysAvailableReason": "전환점에서 누구나 고를 수 있는 기본 선택지 (전체 잠금 방지)",
+            "conditionReview": "fallback_choice",
+            "conditionBasis": "week8_life_path"
+          }
+        ],
+        "priority": 0,
+        "kind": "INCIDENT",
+        "periods": [
+          "OLD_AGE"
+        ],
+        "weight": 20,
+        "view": "FIRST_PERSON",
+        "lifePath": "SOCIAL",
+        "pathRole": "노년 결과",
+        "followUps": []
+      },
+      "originalReview": {
+        "sceneCorrection": "Correct guest signing somebody else birthday into the PLAYER OWN70TH BIRTHDAY FIRST-PERSON, seated at place of honor. Elderly player two hands rest at lower edge. Two distinct guestbooks centrally on nearby table: first full of abstract signatures and closed/stacked beside the SECOND open book. Across the restaurant a host with microphone asks guests, and many adults at several tables raise their hands toward viewer. No central other elderly celebrant or their portrait. No player face, no grandchildren on lap, no singing, no greeting tour or chosen outcome. Preserve restaurant floral Korean family banquet style; no readable70 or text."
+      },
+      "exactPrompt": "Use case: precise-object-edit / narrative correction of an existing Korean life-simulation illustration. Image1 is the original style and object reference; preserve its pixel-art-like blocky shading, palette, era, character designs when retained, and coherent illustrated material. Rebuild only the scene details explicitly required below to match the actual PRE-CHOICE story. Make one opaque full-bleed portrait9:16 (941x1672 preferred). It is not a poster, screenshot, collage, stretched crop or film frame.\nPut essential whole objects, meaningful hands and faces together in central60% width and height where feasible; stagger naturally in depth. All important clues must survive centered9:20 phone crop. Peripheral environment fills margins. Correct human anatomy, exactly the stated people/hands, sleeves continuously connected to body/frame. No detached arms, duplicated props or impossible perspective. No readable letters/numbers/captions, invented UI labels, logos, watermark or border. Abstract document lines and story-required pictograms are allowed. Do not anticipate any future choice result.\nSCENE SPECIFICATION:\nCorrect guest signing somebody else birthday into the PLAYER OWN70TH BIRTHDAY FIRST-PERSON, seated at place of honor. Elderly player two hands rest at lower edge. Two distinct guestbooks centrally on nearby table: first full of abstract signatures and closed/stacked beside the SECOND open book. Across the restaurant a host with microphone asks guests, and many adults at several tables raise their hands toward viewer. No central other elderly celebrant or their portrait. No player face, no grandchildren on lap, no singing, no greeting tour or chosen outcome. Preserve restaurant floral Korean family banquet style; no readable70 or text.\nAuthoritative story context (do not print): 칠순 잔치. 방명록이 두 권째로 넘어갔다. 사회자: \"{name} 님과 인연이 있는 분, 손 들어 주세요!\" 식당 전체가 손을 들었다.\nUNSELECTED choices: 한 사람 한 사람에게 인사하러 돈다 / 가족 테이블에 앉아 손주들과 사진을 찍는다 / 마이크를 잡고 노래방 18번을 부른다\nPrior-state conditions: {\"stats\": {}, \"requiredFlags\": [\"soc_path\"], \"blockedFlags\": []}.\nAll exact story wording stays in the actual app text overlay, not painted into this image.",
+      "requestedAspect": "9:16",
+      "tool": "built-in image_gen",
+      "attempts": [],
+      "selectedPath": null,
+      "outputSha256": null,
+      "reviewStatus": "GENERATION_PENDING",
+      "nativePending": true,
+      "runtimeConnected": false,
+      "approvalChanged": false
+    },
+    {
+      "eventId": "path_wea_10",
+      "scopeGroup": "MIXED_CROP_CONTENT_4",
+      "sourcePath": "C:\\HSU\\3-2\\mobile\\main-audit-20261119\\app\\src\\main\\assets\\images\\week10\\scenes\\img_path_wea_10_001.png",
+      "sourceSha256": "25b1247d1ebcb47308668ff27ff391a00e528f0f40ed34df4e071a9e542ce621",
+      "referencePath": "C:\\HSU\\3-2\\mobile\\main-audit-20261119\\app\\src\\main\\assets\\images\\week10\\scenes\\img_path_wea_10_001.png",
+      "referenceSha256": "25b1247d1ebcb47308668ff27ff391a00e528f0f40ed34df4e071a9e542ce621",
+      "sourceDirectlyViewed": true,
+      "currentConditionsAllChoicesAndOutcomesReviewed": true,
+      "eventSnapshot": {
+        "eventId": "path_wea_10",
+        "stage": "TEEN",
+        "type": "NORMAL",
+        "isFallback": false,
+        "isMilestone": false,
+        "title": "편의점 야간 알바 제안",
+        "text": "주말 낮 알바를 하던 편의점 사장님이 말했다. \"{name}, 야간 하면 시급이 1.5배야. 대신 새벽 2시까지.\"",
+        "imageId": "img_path_wea_10_001",
+        "conditions": {
+          "stats": {},
+          "requiredFlags": [
+            "wea_path"
+          ],
+          "blockedFlags": []
+        },
+        "choices": [
+          {
+            "choiceId": "A",
+            "label": "야간까지 한다",
+            "statDelta": {
+              "경제력": 4,
+              "건강": -3,
+              "지력": -1
+            },
+            "resultText": "통장 숫자는 빠르게 늘었다. 아침마다 눈 밑이 조금씩 내려왔다.",
+            "addFlags": [
+              "part_time_job",
+              "overwork"
+            ],
+            "outcomes": [
+              {
+                "outcomeId": "a_night",
+                "text": "통장 숫자는 빠르게 늘었다. 아침마다 눈 밑이 조금씩 내려왔다.",
+                "chance": 60,
+                "primary": true,
+                "hidden": false,
+                "death": false,
+                "statDelta": {
+                  "경제력": 4,
+                  "건강": -3,
+                  "지력": -1
+                },
+                "addFlags": [
+                  "part_time_job",
+                  "overwork"
+                ],
+                "deathCause": "새벽 알바의 과로"
+              },
+              {
+                "outcomeId": "a_fall",
+                "text": "한 달 만에 1교시에 쓰러지듯 잤다. 담임이 부모님께 전화했다. 그 주에 야간을 그만뒀다.",
+                "chance": 40,
+                "primary": false,
+                "hidden": false,
+                "death": false,
+                "statDelta": {
+                  "경제력": 3,
+                  "건강": -4,
+                  "지력": -2
+                },
+                "addFlags": [
+                  "part_time_job",
+                  "overwork",
+                  "health_warning"
+                ],
+                "chanceWeights": {
+                  "건강": -2
+                },
+                "deathCause": "새벽 알바의 과로"
+              }
+            ],
+            "alwaysAvailable": true,
+            "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+            "conditionReview": "soft_incident",
+            "conditionBasis": "week10_path_followup"
+          },
+          {
+            "choiceId": "B",
+            "label": "낮 알바만 계속한다",
+            "statDelta": {
+              "경제력": 2,
+              "건강": 1,
+              "행복": -1
+            },
+            "resultText": "시급은 그대로였다. 대신 수업 시간에 깨어 있었고, 1년 뒤 통장 잔고도 꽤 됐다.",
+            "addFlags": [
+              "part_time_job",
+              "saving_habit"
+            ],
+            "outcomes": [
+              {
+                "outcomeId": "b_day",
+                "text": "시급은 그대로였다. 대신 수업 시간에 깨어 있었고, 1년 뒤 통장 잔고도 꽤 됐다.",
+                "chance": 100,
+                "primary": true,
+                "hidden": false,
+                "death": false,
+                "statDelta": {
+                  "경제력": 2,
+                  "건강": 1,
+                  "행복": -1
+                },
+                "addFlags": [
+                  "part_time_job",
+                  "saving_habit"
+                ]
+              }
+            ],
+            "alwaysAvailable": true,
+            "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+            "conditionReview": "soft_incident",
+            "conditionBasis": "week10_path_followup"
+          },
+          {
+            "choiceId": "C",
+            "label": "사장님께 재고 관리 일을 제안한다",
+            "statDelta": {
+              "경제력": 3,
+              "지력": 2,
+              "건강": -1
+            },
+            "resultText": "엑셀로 재고표를 만들었다. 폐기 상품이 반으로 줄었다. 사장님이 시급을 올려 줬다.",
+            "addFlags": [
+              "part_time_job",
+              "money_habit"
+            ],
+            "outcomes": [
+              {
+                "outcomeId": "c_manage",
+                "text": "엑셀로 재고표를 만들었다. 폐기 상품이 반으로 줄었다. 사장님이 시급을 올려 줬다.",
+                "chance": 65,
+                "primary": true,
+                "hidden": false,
+                "death": false,
+                "statDelta": {
+                  "경제력": 3,
+                  "지력": 2,
+                  "건강": -1
+                },
+                "addFlags": [
+                  "part_time_job",
+                  "money_habit"
+                ],
+                "chanceWeights": {
+                  "지력": 2
+                }
+              },
+              {
+                "outcomeId": "c_no",
+                "text": "사장님이 웃었다. \"그건 내가 할게.\" 대신 유통기한 확인을 맡겼다.",
+                "chance": 35,
+                "primary": false,
+                "hidden": false,
+                "death": false,
+                "statDelta": {
+                  "경제력": 1,
+                  "사회성": 1
+                },
+                "addFlags": [
+                  "part_time_job"
+                ]
+              }
+            ],
+            "alwaysAvailable": true,
+            "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+            "conditionReview": "soft_incident",
+            "conditionBasis": "week10_path_followup"
+          }
+        ],
+        "priority": 0,
+        "kind": "INCIDENT",
+        "periods": [
+          "TEEN"
+        ],
+        "weight": 8,
+        "view": "FIRST_PERSON",
+        "lifePath": "WEALTH",
+        "pathRole": "상호작용(돈과 건강)",
+        "followUps": [
+          "path_wea_02"
+        ]
+      },
+      "originalReview": {
+        "sceneCorrection": "Correct already-working night shift into DAYTIME convenience-store COUNTER conversation. Daylight visible through entrance windows. From teen part-time worker eyes, owner opposite counter makes a neutral proposal while pointing to a blank shift-sheet with small moon symbol and wage-stack icon (NO digits1.5 or2). Player empty hands rest on counter, scanner set aside unused. No scanning night goods, late-night sky, accepted shift, raised wages, Excel inventory, sleep collapse or parent call. Preserve original store shelves and pixel palette."
+      },
+      "exactPrompt": "Use case: precise-object-edit / narrative correction of an existing Korean life-simulation illustration. Image1 is the original style and object reference; preserve its pixel-art-like blocky shading, palette, era, character designs when retained, and coherent illustrated material. Rebuild only the scene details explicitly required below to match the actual PRE-CHOICE story. Make one opaque full-bleed portrait9:16 (941x1672 preferred). It is not a poster, screenshot, collage, stretched crop or film frame.\nPut essential whole objects, meaningful hands and faces together in central60% width and height where feasible; stagger naturally in depth. All important clues must survive centered9:20 phone crop. Peripheral environment fills margins. Correct human anatomy, exactly the stated people/hands, sleeves continuously connected to body/frame. No detached arms, duplicated props or impossible perspective. No readable letters/numbers/captions, invented UI labels, logos, watermark or border. Abstract document lines and story-required pictograms are allowed. Do not anticipate any future choice result.\nSCENE SPECIFICATION:\nCorrect already-working night shift into DAYTIME convenience-store COUNTER conversation. Daylight visible through entrance windows. From teen part-time worker eyes, owner opposite counter makes a neutral proposal while pointing to a blank shift-sheet with small moon symbol and wage-stack icon (NO digits1.5 or2). Player empty hands rest on counter, scanner set aside unused. No scanning night goods, late-night sky, accepted shift, raised wages, Excel inventory, sleep collapse or parent call. Preserve original store shelves and pixel palette.\nAuthoritative story context (do not print): 주말 낮 알바를 하던 편의점 사장님이 말했다. \"{name}, 야간 하면 시급이 1.5배야. 대신 새벽 2시까지.\"\nUNSELECTED choices: 야간까지 한다 / 낮 알바만 계속한다 / 사장님께 재고 관리 일을 제안한다\nPrior-state conditions: {\"stats\": {}, \"requiredFlags\": [\"wea_path\"], \"blockedFlags\": []}.\nAll exact story wording stays in the actual app text overlay, not painted into this image.",
+      "requestedAspect": "9:16",
+      "tool": "built-in image_gen",
+      "attempts": [],
+      "selectedPath": null,
+      "outputSha256": null,
+      "reviewStatus": "GENERATION_PENDING",
+      "nativePending": true,
+      "runtimeConnected": false,
+      "approvalChanged": false
+    }
+  ],
+  "pausedByUser": true,
+  "pauseNote": "사용자: 남은거 좀이따 이어서. 새 생성/수정/검수 중지; 완료된 출력만 보존."
+}

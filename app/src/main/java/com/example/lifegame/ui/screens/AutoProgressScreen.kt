@@ -60,6 +60,9 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.min
 import androidx.compose.ui.unit.sp
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.compose.LocalLifecycleOwner
+import androidx.lifecycle.compose.currentStateAsState
 import com.example.lifegame.ui.LogKind
 import com.example.lifegame.ui.LogLineUi
 import com.example.lifegame.ui.PLAY_SPEEDS
@@ -98,14 +101,24 @@ fun AutoProgressScreen(
     var detailsOpen by remember { mutableStateOf(false) }
     val reduceMotion = rememberReduceMotion()
     val advance by rememberUpdatedState(onAdvanceYear)
+    val togglePlaying by rememberUpdatedState(onTogglePlaying)
+    val contentScroll = rememberScrollState()
+    val lifecycleState by LocalLifecycleOwner.current.lifecycle.currentStateAsState()
+    val reading = detailsOpen || contentScroll.isScrollInProgress
+
+    // Reading a long card or opening details pauses playback until the player resumes it.
+    // The presentation never advances years or re-applies an automatic event on resume.
+    LaunchedEffect(reading, state.autoPlaying) {
+        if (reading && state.autoPlaying) togglePlaying()
+    }
 
     val yearProgress = remember { Animatable(0f) }
 
     // 자동 진행 타이머. 해가 바뀌거나 배속 · 일시정지가 바뀌면 다시 센다. 자동 사건 카드는 읽을 시간만큼 더 둔다.
     val stepMillis = state.automaticEvent?.let(::automaticEventHoldMillis) ?: YEAR_MILLIS_AT_1X
-    LaunchedEffect(state.yearKey, state.autoPlaying, state.speed) {
+    LaunchedEffect(state.yearKey, state.autoPlaying, state.speed, reading, lifecycleState) {
         yearProgress.snapTo(0f)
-        if (!state.autoPlaying) return@LaunchedEffect
+        if (!state.autoPlaying || reading || lifecycleState != Lifecycle.State.RESUMED) return@LaunchedEffect
         yearProgress.animateTo(1f, tween((stepMillis / state.speed).toInt(), easing = LinearEasing))
         advance()
     }
@@ -140,7 +153,7 @@ fun AutoProgressScreen(
                 Column(
                     Modifier
                         .fillMaxSize()
-                        .verticalScroll(rememberScrollState())
+                        .verticalScroll(contentScroll)
                         .testTag("auto_progress_content"),
                 ) {
                     // 방금 지나간 자동 사건은 카드로 맨 위에 먼저 보여 주고(작은 화면 · 큰 글자에서도 스크롤 없이 시작이 보이게),
@@ -153,7 +166,7 @@ fun AutoProgressScreen(
                     val recent = state.log.asReversed()
                         .let { lines -> if (autoEvent != null && lines.firstOrNull()?.text == autoEvent.text) lines.drop(1) else lines }
                         .take(if (autoEvent != null) YEAR_LOG_LINES - 2 else YEAR_LOG_LINES)
-                    YearLog(lines = recent)
+                    YearLog(lines = recent, currentPeriodName = state.periodName)
                 }
             }
             PeriodTrack(marks = state.periodMarks, yearLabel = "${state.yearInPeriod}번째 해")
@@ -221,46 +234,44 @@ private fun CharacterStage(state: PeriodPlayUiState, height: Dp, onOpenDetails: 
                     .aspectRatio(0.62f),
             )
         }
-        // 이름과 시기를 한 줄로 줄여 아래 기록 자리를 넓힌다.
-        Row(verticalAlignment = Alignment.Bottom, horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-            Text(state.playerName, color = LifeGameInk, fontSize = 19.sp, fontWeight = FontWeight.Bold, maxLines = 1)
-            Text(
-                text = "${state.periodName} · 다음 사건을 기다리는 중",
-                color = LifeGameInkSecondary,
-                fontFamily = LifeGameSerif,
-                fontSize = 14.sp,
-                maxLines = 1,
-                overflow = androidx.compose.ui.text.style.TextOverflow.Ellipsis,
-            )
-        }
+        // 2026-11-20: "영아기 · 다음 사건을 기다리는 중"은 지웠다. 시기는 아래 생애 시기 바가 보여 준다.
+        Text(
+            state.playerName,
+            color = LifeGameInk,
+            fontSize = 19.sp,
+            fontWeight = FontWeight.Bold,
+            maxLines = 1,
+            modifier = Modifier.testTag("stage_player_name"),
+        )
     }
 }
 
-/** 다음 해까지 남은 시간. 선과 상태 글자를 한 줄에 둬 아래 기록 자리를 넓힌다. */
+/**
+ * 다음 진행까지 남은 시간을 가는 선 하나로만 보여 준다. 2026-11-20: 옆의 "다음 해까지" · "멈춤" 글자는 지웠다
+ * (멈춤 상태는 아래 재생 버튼이 보여 준다).
+ */
 @Composable
 private fun YearTimer(progress: () -> Float, playing: Boolean) {
-    Row(
-        Modifier.fillMaxWidth().padding(start = 20.dp, end = 20.dp, top = 2.dp),
-        verticalAlignment = Alignment.CenterVertically,
-        horizontalArrangement = Arrangement.spacedBy(10.dp),
+    Canvas(
+        Modifier
+            .fillMaxWidth()
+            .padding(start = 20.dp, end = 20.dp, top = 4.dp)
+            .height(2.dp)
+            .testTag("year_timer"),
     ) {
-        Canvas(Modifier.weight(1f).height(2.dp)) {
-            drawRect(LifeGameRule)
-            drawRect(LifeGameInk, size = Size(size.width * progress(), size.height))
-        }
-        Text(
-            text = if (playing) "다음 해까지" else "멈춤",
-            color = LifeGameInkTertiary,
-            fontSize = 12.sp,
-        )
+        drawRect(LifeGameRule)
+        drawRect(if (playing) LifeGameInk else LifeGameInkTertiary, size = Size(size.width * progress(), size.height))
     }
 }
 
 private const val YEAR_LOG_LINES = 5
 
-/** 최신순. 맨 위가 지금이고 아래로 갈수록 지난 기록이라 흐려진다. */
+/**
+ * 최신순. 맨 위가 지금이고 아래로 갈수록 지난 기록이라 흐려진다.
+ * 2026-11-20: 줄마다 붙던 "영아기 · 1번째 해"를 해가 바뀌는 첫 줄에만 붙인다. 지금 시기의 해는 "2번째 해"처럼 시기 이름을 뺀다.
+ */
 @Composable
-private fun YearLog(lines: List<LogLineUi>) {
+private fun YearLog(lines: List<LogLineUi>, currentPeriodName: String) {
     Column(
         modifier = Modifier
             .fillMaxWidth()
@@ -280,14 +291,20 @@ private fun YearLog(lines: List<LogLineUi>) {
                 modifier = Modifier.fillMaxWidth().testTag("year_log_line_$index"),
                 verticalArrangement = Arrangement.spacedBy(2.dp),
             ) {
-                Row(horizontalArrangement = Arrangement.spacedBy(8.dp), verticalAlignment = Alignment.CenterVertically) {
-                    Text(
-                        text = line.label,
-                        color = (if (isNow) LifeGameInk else LifeGameInkTertiary).copy(alpha = fade),
-                        fontSize = 12.5.sp,
-                        fontWeight = if (isNow) FontWeight.Bold else FontWeight.Normal,
-                    )
-                    LogKindTag(line.kind, fade)
+                val header = yearHeader(line.label, lines.getOrNull(index - 1)?.label, currentPeriodName)
+                if (header != null || line.kind == LogKind.CHOICE || line.kind == LogKind.AUTO) {
+                    Row(horizontalArrangement = Arrangement.spacedBy(8.dp), verticalAlignment = Alignment.CenterVertically) {
+                        header?.let {
+                            Text(
+                                text = it,
+                                color = (if (isNow) LifeGameInk else LifeGameInkTertiary).copy(alpha = fade),
+                                fontSize = 12.5.sp,
+                                fontWeight = if (isNow) FontWeight.Bold else FontWeight.Normal,
+                                modifier = Modifier.testTag("year_log_header_$index"),
+                            )
+                        }
+                        LogKindTag(line.kind, fade)
+                    }
                 }
                 Text(
                     text = line.text,
@@ -333,15 +350,6 @@ private fun AutomaticEventCard(event: com.example.lifegame.ui.AutomaticEventUi) 
                 )
             }
         }
-        Text(
-            text = event.text,
-            color = LifeGameInk,
-            fontFamily = LifeGameSerif,
-            fontSize = 16.sp,
-            // 360×640dp · 글자 200%에서 보통 길이(약 40자) 문장이 스크롤 없이 다 보이게 줄 간격을 조금 좁힌다.
-            lineHeight = 23.sp,
-            modifier = Modifier.testTag("auto_event_text"),
-        )
         if (event.recordOnly) {
             Text(
                 text = "능력치 변화 없이 기록에만 남겼어요",
@@ -358,6 +366,15 @@ private fun AutomaticEventCard(event: com.example.lifegame.ui.AutomaticEventUi) 
                 modifier = Modifier.testTag("auto_event_changes"),
             )
         }
+        // Put the consequence before the long prose, including at 200% font scale.
+        Text(
+            text = event.text,
+            color = LifeGameInk,
+            fontFamily = LifeGameSerif,
+            fontSize = 16.sp,
+            lineHeight = 23.sp,
+            modifier = Modifier.testTag("auto_event_text"),
+        )
         event.recall?.let { recall ->
             Text(
                 text = "그때 그 선택 · ${recall.text}",
@@ -381,14 +398,16 @@ private fun AutomaticEventCard(event: com.example.lifegame.ui.AutomaticEventUi) 
     }
 }
 
-/** 선택 결과와 자동 이야기를 글자로 구분한다. 일반 기록(초점 등)은 표시하지 않는다. */
+/**
+ * 선택 결과와 자동 사건만 짧게 구분한다("내 선택" · "자동"). 2026-11-20: 해마다 붙던 "그해 이야기"는 지웠다.
+ * 일반 기록(초점 · 이야기)은 표시하지 않는다.
+ */
 @Composable
 private fun LogKindTag(kind: LogKind, fade: Float) {
     val text = when (kind) {
         LogKind.CHOICE -> "내 선택"
-        LogKind.STORY -> "그해 이야기"
         LogKind.AUTO -> "자동"
-        LogKind.RECORD -> return
+        LogKind.STORY, LogKind.RECORD -> return
     }
     val shape = RoundedCornerShape(6.dp)
     Text(
@@ -525,4 +544,14 @@ private fun SpeedToggle(speed: Int, onSpeedChange: (Int) -> Unit) {
             }
         }
     }
+}
+
+/**
+ * 기록 묶음 머리. 앞(더 최근) 줄과 같은 해면 null(다시 쓰지 않는다). 지금 시기의 해는 "2번째 해", 지난 시기면 "영아기 5번째 해".
+ * [label]은 "영아기 · 2번째 해" 모양이다(기록 모델은 그대로 두고 표시만 줄인다).
+ */
+internal fun yearHeader(label: String, newerLabel: String?, currentPeriodName: String): String? {
+    if (label.isBlank() || label == newerLabel) return null
+    val prefix = "$currentPeriodName · "
+    return if (currentPeriodName.isNotBlank() && label.startsWith(prefix)) label.removePrefix(prefix) else label.replace(" · ", " ")
 }

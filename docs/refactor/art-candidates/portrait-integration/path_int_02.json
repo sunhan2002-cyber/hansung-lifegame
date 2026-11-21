@@ -1,0 +1,29 @@
+{
+  "eventId": "path_int_02",
+  "sourceAssetPath": "followup_20261031/img_path_int_02_001.png",
+  "sourceSha256": "64468871e66a74246da9eea83c12d4d3c4af192de8aa3c605850cfb768643f19",
+  "variant": {
+    "assetPath": "presentation/portraits/img_path_int_02_001_portrait_v1.png",
+    "sha256": "b63d3c7d15e2ac1feff6de14df06dcf46a8ae22178b9f40f52e2307e5d751d58",
+    "width": 941,
+    "height": 1672,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root/security_p0)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/path_int_02.json"
+  },
+  "reviewerType": "AI",
+  "reviewer": "Codex AI (/root/security_p0)",
+  "reviewStatus": "AI_REVIEWED_PRESENTATION",
+  "eventSourceHash": "80c11e9882954abdb1aa879e5fff456f46df42ee66ac5de8f5028a9fdcd35ce6",
+  "semanticReview": "Producer read the current event conditions and every choice/outcome, inspected source and selected output. Full source snapshot and exact prompt are in the referenced production ledger. Native acceptance remains pending.",
+  "visualReview": "Second attempt individually viewed: complete teacher face now near x66 percent, science poster left-center and workbook foreground central. No result or text. First portrait rejected for teacher still at right edge. Original native failure history preserved; native re-review pending.",
+  "cropReview": "Portrait candidate selected for native phone/small-phone scene and gameplay inspection; not final artwork acceptance.",
+  "actualProducer": "OpenAI built-in image_gen",
+  "generationMethod": "Built-in imagegen edit; exact prompts/output SHA/rejected attempts preserved in docs/refactor/art-candidates/content-art-revision-briefs-20261119.json",
+  "productionLedger": "docs/refactor/art-candidates/content-art-revision-briefs-20261119.json",
+  "nativePending": true,
+  "runtimeConnected": true,
+  "approvalChanged": false,
+  "selectedStagingSha256": "b63d3c7d15e2ac1feff6de14df06dcf46a8ae22178b9f40f52e2307e5d751d58"
+}

@@ -1,0 +1,9 @@
+Use-case: edit an existing Korean life-simulation event illustration. Produce one full-bleed vertical 9:16 portrait pixel-art scene for a mobile game. The supplied original is the edit target and style reference. Preserve its warm nostalgic color palette, visible handcrafted pixel clusters, gentle depth and everyday Korean setting, while correcting the scene exactly as specified below. The camera is always the player's own eyes: small hands/partial limbs are allowed, but never show the player's face, rear head, complete body, reflection or portrait. Other people may have natural faces. Keep every necessary story cue in the central 80% of portrait width; no panel border or UI. No readable words, letters, numerals, logos, captions, speech balloons, thought bubbles, decorative comic marks or watermarks. Do not insert text to explain missing visual content. Render a single coherent scene, not a montage. Avoid excessive smooth anime gradients; retain the source pixel-art rendering.
+
+CURRENT EVENT BEFORE ANY CHOICE (source text; do not typeset): 취미로 시작한 강습에 대기 명단이 생겼다. 주말이 강습으로 꽉 찼다. 마지막으로 나를 위해 연주한 게 언제였는지 기억나지 않는다.
+
+REQUIRED EDIT: 첫인칭 강습 공간에 쉬고 있는 악기(비문자 건반 악기)와 빈틈 없이 찬 무문자 일정 칸, 대기 명단의 추상 행을 중앙에 배치. 손은 연주를 멈춘 상태.
+
+UNDECIDED CHOICES / OUTCOMES TO EXCLUDE: 퇴사·새 강습실 개업·독주 휴식·연주회 무대·관객 박수·학생 긴장 결과 금지.
+
+Output an emotionally clear vertical 9:16 composition. All key people, object counts and cues must survive narrow portrait cropping. No extra choice result.

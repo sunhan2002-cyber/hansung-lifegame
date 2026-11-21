@@ -1,0 +1,315 @@
+{
+  "schemaVersion": 1,
+  "eventId": "path_int_07",
+  "status": "PASS",
+  "reviewer": "Codex AI / plan_audit",
+  "reviewerType": "AI",
+  "reviewDate": "2026-11-19",
+  "sourceEventHash": "e4d4855ddb393a321d6f5a251e3ae60014de057bdad4b336e5663f3c51cc998d",
+  "sourceEventSnapshot": {
+    "eventId": "path_int_07",
+    "stage": "ADULT",
+    "type": "NORMAL",
+    "isFallback": false,
+    "isMilestone": true,
+    "title": "졸업 앞의 세 갈래",
+    "text": "졸업 학기. 지도교수: \"대학원 와라.\" 대기업 인사팀: \"최종 합격을 축하드립니다.\" 변리사 시험 접수 마감은 내일이다.",
+    "imageId": "img_path_int_07_001",
+    "conditions": {
+      "stats": {
+        "지력": 82
+      },
+      "requiredFlags": [
+        "int_path",
+        "university"
+      ],
+      "blockedFlags": []
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "대학원에 진학한다",
+        "statDelta": {
+          "지력": 4,
+          "경제력": -2
+        },
+        "resultText": "석사 첫 학기, 논문 한 편을 백 번 읽었다. 백한 번째에 처음으로 반박하고 싶어졌다.",
+        "addFlags": [
+          "edu_graduate",
+          "career_researcher",
+          "job_employed",
+          "job_employed__path_int_07"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "a_grad",
+            "text": "석사 첫 학기, 논문 한 편을 백 번 읽었다. 백한 번째에 처음으로 반박하고 싶어졌다.",
+            "chance": 100,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "지력": 4,
+              "경제력": -2
+            },
+            "addFlags": [
+              "edu_graduate",
+              "career_researcher",
+              "job_employed",
+              "job_employed__path_int_07"
+            ],
+            "removeFlags": [
+              "job_retired",
+              "job_self_employed",
+              "job_unemployed"
+            ]
+          }
+        ],
+        "requiredStats": {
+          "지력": 85
+        },
+        "conditionReview": "confirmed",
+        "conditionBasis": "week8_life_path"
+      },
+      {
+        "choiceId": "B",
+        "label": "대기업 연구소에 입사한다",
+        "statDelta": {
+          "경제력": 3,
+          "지력": 1,
+          "행복": -1
+        },
+        "resultText": "사원증 목걸이가 생겼다. 첫 월급으로 지도교수님께 밥을 샀다. 교수님은 아직 포기하지 않으셨다.",
+        "addFlags": [
+          "career_engineer",
+          "job_employed",
+          "level_entry",
+          "career_engineer__path_int_07",
+          "job_employed__path_int_07",
+          "level_entry__path_int_07"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "b_company",
+            "text": "사원증 목걸이가 생겼다. 첫 월급으로 지도교수님께 밥을 샀다. 교수님은 아직 포기하지 않으셨다.",
+            "chance": 100,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "경제력": 3,
+              "지력": 1,
+              "행복": -1
+            },
+            "addFlags": [
+              "career_engineer",
+              "job_employed",
+              "level_entry",
+              "career_engineer__path_int_07",
+              "job_employed__path_int_07",
+              "level_entry__path_int_07"
+            ],
+            "removeFlags": [
+              "job_retired",
+              "job_self_employed",
+              "job_unemployed"
+            ]
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "전환점에서 누구나 고를 수 있는 기본 선택지 (전체 잠금 방지)",
+        "conditionReview": "fallback_choice",
+        "conditionBasis": "week8_life_path"
+      },
+      {
+        "choiceId": "C",
+        "label": "변리사 시험에 도전한다",
+        "statDelta": {
+          "지력": 3,
+          "경제력": 3,
+          "건강": -3
+        },
+        "resultText": "2년 만에 합격했다. 합격 발표 날, 독서실 총무님이 나보다 먼저 울었다.",
+        "addFlags": [
+          "career_patent_attorney",
+          "job_employed",
+          "achv_license",
+          "level_entry",
+          "career_patent_attorney__path_int_07",
+          "job_employed__path_int_07",
+          "level_entry__path_int_07"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "c_pass",
+            "text": "2년 만에 합격했다. 합격 발표 날, 독서실 총무님이 나보다 먼저 울었다.",
+            "chance": 45,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "지력": 3,
+              "경제력": 3,
+              "건강": -3
+            },
+            "addFlags": [
+              "career_patent_attorney",
+              "job_employed",
+              "achv_license",
+              "level_entry",
+              "career_patent_attorney__path_int_07",
+              "job_employed__path_int_07",
+              "level_entry__path_int_07"
+            ],
+            "chanceWeights": {
+              "지력": 2,
+              "건강": 1
+            },
+            "removeFlags": [
+              "job_retired",
+              "job_self_employed",
+              "job_unemployed"
+            ]
+          },
+          {
+            "outcomeId": "c_fail",
+            "text": "두 번 떨어졌다. 세 번째 시험 대신 연구소 입사를 택했다. 그때 외운 조문은 지금도 술술 나온다.",
+            "chance": 55,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "지력": 2,
+              "행복": -3
+            },
+            "addFlags": [
+              "career_engineer",
+              "job_employed",
+              "int_exam_fail",
+              "level_entry",
+              "career_engineer__path_int_07",
+              "job_employed__path_int_07",
+              "level_entry__path_int_07"
+            ],
+            "chanceWeights": {
+              "건강": -2
+            },
+            "removeFlags": [
+              "job_retired",
+              "job_self_employed",
+              "job_unemployed"
+            ]
+          }
+        ],
+        "requiredStats": {
+          "지력": 90
+        },
+        "conditionReview": "confirmed",
+        "conditionBasis": "week8_life_path"
+      }
+    ],
+    "priority": 0,
+    "kind": "MILESTONE",
+    "periods": [
+      "YOUNG_ADULT"
+    ],
+    "yearInPeriod": 5,
+    "weight": 1,
+    "view": "FIRST_PERSON",
+    "lifePath": "INTELLIGENCE",
+    "pathRole": "전환점",
+    "followUps": [
+      "path_int_08",
+      "path_int_09"
+    ]
+  },
+  "sourceReadScope": "Current complete event, conditions, every choice/outcome and flags/stat deltas/periods/follow-ups directly read before judgement.",
+  "sourceImage": {
+    "path": "app/src/main/assets/images/followup_20261031/img_path_int_07_001.png",
+    "sha256": "1e699b96a3e7fbd9ce7b5bb98aa3365eddbf70ccdfd9cbc960f0c20081821d62",
+    "width": 720,
+    "height": 540
+  },
+  "originalArtworkUnchangedSinceHistoricalReview": true,
+  "historicalReview": {
+    "eventId": "path_int_07",
+    "title": "졸업 앞의 세 갈래",
+    "imageId": "img_path_int_07_001",
+    "assetPath": "followup_20261031/img_path_int_07_001.png",
+    "sha256": "1e699b96a3e7fbd9ce7b5bb98aa3365eddbf70ccdfd9cbc960f0c20081821d62",
+    "eventSourceHash": "e4d4855ddb393a321d6f5a251e3ae60014de057bdad4b336e5663f3c51cc998d",
+    "status": "REVISION_REQUIRED",
+    "reviewer": "김선한 담당 Codex 직접 대행 검수",
+    "reason": "대학원·기업·시험의 세 갈래가 그림에서 두 문서로 축소되고 크롭됨",
+    "expectedAction": "대학원·취업·자격시험 세 선택의 자료를 확인",
+    "requiredObjects": "학술 노트; 채용 제안 단서; 시험 접수 자료",
+    "sheet": "output/art-review-20261119/sheet-15.jpg",
+    "cell": 2,
+    "cropMethod": "ImageOps.fit centre-fill 360:800; simulated crop inspected directly, not an emulator capture",
+    "visualMethod": "원본 도트풍·색감·장면 파손·명백한 신체/사물 오류 직접 확인"
+  },
+  "presentationMetadata": [],
+  "captures": [
+    {
+      "path": "build/refactor/after/semantic-originals-thirteen-native/path_int_07_phone_scene.png",
+      "sha256": "f5a168484139a0e60b3d370d5a7e43626761cba80c8e015571c9981c0fc6fb75",
+      "width": 1080,
+      "height": 2400,
+      "screen": "phone",
+      "mode": "scene",
+      "cropReport": {
+        "eventId": "path_int_07",
+        "imageId": "img_path_int_07_001",
+        "assetPath": "followup_20261031/img_path_int_07_001.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.331..0.669",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/semantic-originals-thirteen-native/path_int_07_phone_play.png",
+      "sha256": "53adf62e6a83981409f6546026932c3dd7980fb15bf54c72fa9dde43031849f6",
+      "width": 1080,
+      "height": 2400,
+      "screen": "phone",
+      "mode": "play",
+      "cropReport": null
+    },
+    {
+      "path": "build/refactor/after/semantic-originals-thirteen-native/path_int_07_360x740_scene.png",
+      "sha256": "a88b0017ceb62cbac7f29baa78cf0a17076f9b1514d49c39c05d66f8a08588c7",
+      "width": 945,
+      "height": 1943,
+      "screen": "360x740",
+      "mode": "scene",
+      "cropReport": {
+        "eventId": "path_int_07",
+        "imageId": "img_path_int_07_001",
+        "assetPath": "followup_20261031/img_path_int_07_001.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.318..0.682",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/semantic-originals-thirteen-native/path_int_07_360x740_play.png",
+      "sha256": "86393f1b87d6c9f64b9a643762e6cdda9e7804f016aa786d16ef713559f309ff",
+      "width": 945,
+      "height": 1943,
+      "screen": "360x740",
+      "mode": "play",
+      "cropReport": null
+    }
+  ],
+  "semanticObservation": "학업 노트, 기업 서류가방 기호 문서, 시험 접수 문서의 세 진로 단서가 있다. 노트까지 세어야 하므로 과거 문서 두 장뿐이라는 지적은 선택지를 누락한 것이 아니다. 대학원 논문·입사 사원증·시험 합격 자격증·불합격 결과는 없다.",
+  "cropObservation": "두 native에서 학업 도해 노트, 서류가방 기호, 체크박스와 연필 기호가 동시에 식별된다. phone 좌측 가방 외곽/우측 연필 끝은 조금 잘리지만 의미가 유지되고 small은 두 기호가 더 넓게 보인다.",
+  "uiObservation": "두 크기 모두 제목·본문·A/B/C를 읽을 수 있다.",
+  "reviewMethod": "Codex AI directly inspected the full unchanged source PNG and all four unmodified native scene/play captures. Prior review is retained as historical evidence; this record is a new AI judgement, not human approval.",
+  "nativeMethod": "Production DecisionScreen, current parsed event/routing/PixelAssetLoader, fixture state in Android Compose instrumentation. Scene grid match >=0.95. Not complete game progression.",
+  "nativeRunLog": "build/refactor/semantic-originals-thirteen-and-choice-reachability.log",
+  "limitations": [
+    "Emulator captures, not physical-device review.",
+    "Only reviewed phone and 360x740 dimensions; not every font scale/aspect ratio.",
+    "Art review does not independently certify scrolling, TalkBack or complete game-flow transitions."
+  ]
+}

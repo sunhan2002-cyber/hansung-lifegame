@@ -1,0 +1,71 @@
+{
+  "eventId": "teen_007",
+  "reviewerType": "AI",
+  "scope": "Portrait phone and small-phone presentation",
+  "sourceEventHash": "e86a1815d175d128842b5f1e0f2a563cfd7a032c8d3420ed3c3d62154dbbaa7d",
+  "sourceReview": "docs/refactor/art-candidates/portrait-integration/teen_007.json",
+  "sourceSha256": "1763ae0fffa28119dafa6a24d52cd5faed98485868ce4ee7a089726c08054f41",
+  "displayedVariant": {
+    "assetPath": "presentation/portraits/img_teen_midterm_001_portrait_v1.png",
+    "sha256": "acc5006364d14a455307ef2f0cce75ec88d6d91cbeb93857a62860447b467f5d",
+    "width": 941,
+    "height": 1672,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/teen_007.json"
+  },
+  "nativeCaptures": [
+    {
+      "path": "build/refactor/resumed/native18/teen_007_phone_scene.png",
+      "sha256": "e5383f37ee91e2ed8253a2ed7960883a8755cf20b71d0d4dbbfe05044042c96d",
+      "crop": {
+        "eventId": "teen_007",
+        "imageId": "img_teen_midterm_001",
+        "assetPath": "presentation/portraits/img_teen_midterm_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/native18/teen_007_phone_play.png",
+      "sha256": "b0f01ec5305570674acd34ae270e472c550018952fd67535032e8ba0a9a944d5",
+      "crop": {
+        "eventId": "teen_007",
+        "imageId": "img_teen_midterm_001",
+        "assetPath": "presentation/portraits/img_teen_midterm_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/native18/teen_007_360x740_scene.png",
+      "sha256": "890d01ff87c9143880e2921f3fd3c59bf0eeb3ae3aa9406c7337c85c8a4a6c03",
+      "crop": {
+        "eventId": "teen_007",
+        "imageId": "img_teen_midterm_001",
+        "assetPath": "presentation/portraits/img_teen_midterm_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/native18/teen_007_360x740_play.png",
+      "sha256": "80cce4ebf0eaabe96522111b318dc32f334d63c36d1607aa11a12760f31350f9",
+      "crop": {
+        "eventId": "teen_007",
+        "imageId": "img_teen_midterm_001",
+        "assetPath": "presentation/portraits/img_teen_midterm_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    }
+  ],
+  "observation": "권유하는 친구와 초대 전화·달력·공부 책을 구분할 수 있다.",
+  "decision": "PASS",
+  "method": "Individual visual inspection of both scene and gameplay frames together with producer semantic/source review and device capture match."
+}

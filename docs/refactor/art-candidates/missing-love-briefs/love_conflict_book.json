@@ -1,0 +1,322 @@
+{
+  "schemaVersion": 1,
+  "eventId": "love_conflict_book",
+  "title": "같은 문장, 다른 생각",
+  "imageId": "img_love_conflict_book_001",
+  "status": "READY_FOR_GENERATION_NOT_ART_APPROVAL",
+  "author": "Codex AI",
+  "date": "2026-11-19",
+  "generationPriority": 15,
+  "currentAcceptanceStatus": "MISSING_PNG",
+  "sourceEventHash": "c5039811b3ae0471bf47dfd7c0441161d0ad88099e0250056f1ef4629f7a1fa7",
+  "sourceEventPath": "app/src/main/assets/events.sample.json",
+  "sourceEventSnapshot": {
+    "eventId": "love_conflict_book",
+    "stage": "ADULT",
+    "type": "NORMAL",
+    "isFallback": false,
+    "isMilestone": false,
+    "title": "같은 문장, 다른 생각",
+    "text": "같은 문장에 밑줄을 그어서 시작된 사이. 오늘은 같은 영화를 보고 정반대 감상을 말하다 언성이 높아졌다.",
+    "imageId": "img_love_conflict_book_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [
+        "dating",
+        "rel_conflict",
+        "partner_book"
+      ],
+      "blockedFlags": [
+        "engaged",
+        "married",
+        "divorced"
+      ]
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "서로의 감상을 편지로 써서 바꿔 읽는다",
+        "statDelta": {
+          "지력": 1,
+          "행복": 3
+        },
+        "resultText": "연인의 편지는 세 장, 내 편지는 반 장이었다. 반 장을 읽은 연인이 울었다. 거기에 다 들어 있었다고 했다.",
+        "addFlags": [
+          "rel_steady"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "a_letter",
+            "text": "연인의 편지는 세 장, 내 편지는 반 장이었다. 반 장을 읽은 연인이 울었다. 거기에 다 들어 있었다고 했다.",
+            "chance": 70,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "지력": 1,
+              "행복": 3
+            },
+            "addFlags": [
+              "rel_steady"
+            ],
+            "removeFlags": [
+              "rel_conflict"
+            ]
+          },
+          {
+            "outcomeId": "a_gap",
+            "text": "편지를 읽을수록 생각이 너무 달랐다. 서로 좋은 독자로 남기로 했다.",
+            "chance": 30,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": -3
+            },
+            "addFlags": [
+              "breakup_once",
+              "ex_book"
+            ],
+            "removeFlags": [
+              "dating",
+              "rel_steady",
+              "rel_conflict",
+              "partner_first_love",
+              "partner_ideal",
+              "partner_music",
+              "partner_book",
+              "partner_app",
+              "partner_closing",
+              "partner_gym",
+              "partner_letter",
+              "partner_blind_date",
+              "dating__adult_073",
+              "dating__adult_074",
+              "dating__adult_075",
+              "dating__adult_076",
+              "dating__adult_077",
+              "dating__adult_078",
+              "dating__path_soc_03",
+              "dating__path_soc_11",
+              "dating__path_hap_05",
+              "dating__love_letter_01"
+            ]
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week13_love_line"
+      },
+      {
+        "choiceId": "B",
+        "label": "다음엔 각자 고른 책을 바꿔 읽자고 한다",
+        "statDelta": {
+          "지력": 2
+        },
+        "resultText": "연인이 고른 책은 어려웠고, 내가 고른 책은 연인이 하루 만에 다 읽었다. 서로가 조금 더 궁금해졌다.",
+        "addFlags": [
+          "rel_steady"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "b_swap",
+            "text": "연인이 고른 책은 어려웠고, 내가 고른 책은 연인이 하루 만에 다 읽었다. 서로가 조금 더 궁금해졌다.",
+            "chance": 65,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "지력": 2
+            },
+            "addFlags": [
+              "rel_steady"
+            ],
+            "removeFlags": [
+              "rel_conflict"
+            ]
+          },
+          {
+            "outcomeId": "b_drift",
+            "text": "각자 책 읽는 시간이 길어졌다. 대화가 줄었다. 마지막에 빌린 책은 돌려주지 못했다.",
+            "chance": 35,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": -3
+            },
+            "addFlags": [
+              "breakup_once",
+              "ex_book"
+            ],
+            "removeFlags": [
+              "dating",
+              "rel_steady",
+              "rel_conflict",
+              "partner_first_love",
+              "partner_ideal",
+              "partner_music",
+              "partner_book",
+              "partner_app",
+              "partner_closing",
+              "partner_gym",
+              "partner_letter",
+              "partner_blind_date",
+              "dating__adult_073",
+              "dating__adult_074",
+              "dating__adult_075",
+              "dating__adult_076",
+              "dating__adult_077",
+              "dating__adult_078",
+              "dating__path_soc_03",
+              "dating__path_soc_11",
+              "dating__path_hap_05",
+              "dating__love_letter_01"
+            ]
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week13_love_line"
+      },
+      {
+        "choiceId": "C",
+        "label": "영화 평점 앱에서 서로의 감상에 별점 한 개를 준다",
+        "statDelta": {
+          "행복": 2
+        },
+        "resultText": "별점 전쟁은 새벽 2시에 끝났다. 승자는 없었고 둘 다 배가 고팠다. 라면을 끓였다.",
+        "addFlags": [
+          "rel_steady"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "c_war",
+            "text": "별점 전쟁은 새벽 2시에 끝났다. 승자는 없었고 둘 다 배가 고팠다. 라면을 끓였다.",
+            "chance": 50,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 2
+            },
+            "addFlags": [
+              "rel_steady"
+            ],
+            "removeFlags": [
+              "rel_conflict"
+            ]
+          },
+          {
+            "outcomeId": "c_block",
+            "text": "연인이 나를 평점 앱에서 차단했다. 다음 날 메신저에서도.",
+            "chance": 50,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": -4
+            },
+            "addFlags": [
+              "breakup_once",
+              "ex_book"
+            ],
+            "removeFlags": [
+              "dating",
+              "rel_steady",
+              "rel_conflict",
+              "partner_first_love",
+              "partner_ideal",
+              "partner_music",
+              "partner_book",
+              "partner_app",
+              "partner_closing",
+              "partner_gym",
+              "partner_letter",
+              "partner_blind_date",
+              "dating__adult_073",
+              "dating__adult_074",
+              "dating__adult_075",
+              "dating__adult_076",
+              "dating__adult_077",
+              "dating__adult_078",
+              "dating__path_soc_03",
+              "dating__path_soc_11",
+              "dating__path_hap_05",
+              "dating__love_letter_01"
+            ]
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week13_love_line"
+      }
+    ],
+    "priority": 0,
+    "kind": "INCIDENT",
+    "periods": [
+      "YOUNG_ADULT",
+      "MIDDLE"
+    ],
+    "weight": 80,
+    "view": "FIRST_PERSON",
+    "pathRole": "러브라인 3단계(책 후보) — 갈등: 화해 또는 결별",
+    "followUps": [
+      "love_reunion_book"
+    ]
+  },
+  "reviewScope": "Current complete event, conditions, every choice including legacy fields, all outcomes, probabilities, deltas and flags read for pre-choice art specification. No new image has been generated or approved by this brief.",
+  "reviewedChoiceIds": [
+    "A",
+    "B",
+    "C"
+  ],
+  "reviewedOutcomeIds": [
+    "a_letter",
+    "a_gap",
+    "b_swap",
+    "b_drift",
+    "c_war",
+    "c_block"
+  ],
+  "existingArtBriefPath": "docs/assignments/20261031/submissions/김선한_분류합본.csv",
+  "existingArtBriefSnapshot": {
+    "place": "거실 탁자",
+    "mainAction": "같은 영화를 보고 정반대 감상을 말한다",
+    "requiredObjects": "밑줄 그은 책과 영화 티켓",
+    "peopleAndAge": "청년 연인 두 사람",
+    "timeOfDay": "밤",
+    "approvedPerspective": "FIRST_PERSON",
+    "reuseOrNewReason": "NEW: 13주차 러브라인 신규 사건. 관계 단계(연인·약혼·배우자·자녀)를 선택 전보다 앞서 보여 주지 않는 전용 장면 필요"
+  },
+  "requestedAssetPath": "app/src/main/assets/images/img_love_conflict_book_001.png",
+  "preChoiceState": "같은 문장에 밑줄을 긋던 성인 연인이 같은 영화의 반대 감상을 말하다 목소리가 높아진 현재. 편지·책 교환·리뷰 싸움은 아직 없다.",
+  "composition": "밤 거실의 탁자. 중앙에 글자를 읽을 수 없는 책 페이지와 밑줄 하나, 무문자 영화 티켓 두 장, 연인의 손·상체와 플레이어 손 일부. 자연스러운 토론 자세.",
+  "ageAndAppearance": "청년~중년 성인. 얼굴·성별 고정 없음. 폭력 동작 없이 긴장된 대화.",
+  "forbiddenOutcomes": [
+    "서로 쓴 편지·눈물",
+    "책 교환·책을 돌려주지 않은 결과",
+    "별점 앱·차단 화면",
+    "새벽 라면·화해",
+    "이별 완료",
+    "읽을 수 있는 영화 제목·책 문장"
+  ],
+  "briefCorrections": [
+    "기존 책과 영화 티켓은 현재 감상 차이를 나타내는 소품으로 사용하되 책 문장·영화 이름·별점 텍스트는 만들지 않는다."
+  ],
+  "generationPrompt": "Create one portrait 9:16 full-bleed game background, warm restrained Korean everyday-life pixel-art illustration. Crisp deliberate pixel clusters, coherent anatomy, softly separated light and shadow, not photorealism and not a UI mockup. Strict first-person player viewpoint: no player face, back of head, full player body, reflection, selfie or framed portrait of the player. Only naturally placed player hands or forearms may enter the frame. The player can be male or female; hands, clothing and visible partner styling must not encode a fixed player gender or a uniquely named past partner. All romantic participants are clearly adults; do not depict school-age children as romantic partners. Use age-flexible adult styling that can fit young adulthood or middle adulthood. If a partner must be visible, show non-identifying partial profile, cropped upper torso or hands rather than an identity-defining portrait. No readable text, letters, digits, logos, subtitles, speech bubbles, interface panels, progress indicators or button graphics. Any phone message cue must be an abstract non-text shape and never legible text. Keep all story-critical objects together inside the central 60% of the portrait width and middle 60% of height; leave the bottom 22% visually quiet for the game overlay, without drawing an overlay. This is the instant before the player chooses. Show the stated present situation only, with no success, failure, marriage, pregnancy, reconciliation, breakup or future achievement unless already established in the source conditions. \nSCENE: A living-room table at night after an adult couple watched the same film and disagreed about it. First-person viewpoint with a book open to abstract unreadable page texture and ONE simple underline, two plain cinema ticket shapes, and the partners tense but nonviolent conversational hand gesture with a cropped torso across the table. A small warm lamp against blue night shadows. No legible book passage, title, ticket digits or star ratings. The disagreement is unresolved: no exchanged letters, tears, swapped books, phones with reviews or block symbols, noodles, embracing or final departure. Keep all story objects together in the central portrait area.",
+  "deliveryAndReview": {
+    "format": "PNG, portrait 9:16",
+    "originalAssets": "Preserve existing artwork and approval history. This is a missing-art candidate, not a replacement approval.",
+    "requiredChecks": [
+      "Read current event hash again before generation; stale briefs must be reread.",
+      "Inspect full image, anatomy, all required objects and absence of choice outcomes.",
+      "Inspect actual native portrait presentation and UI overlay at phone and narrow viewport.",
+      "Record image SHA, exact generation prompt, truthful AI producer/reviewer and per-event rationale before any separate approval action."
+    ],
+    "approvalOrManifestChanged": false
+  }
+}

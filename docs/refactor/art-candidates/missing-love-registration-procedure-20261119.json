@@ -1,0 +1,88 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-19",
+  "status": "IMPLEMENTED_REGISTRATION_CONTRACT_NATIVE_ACCEPTANCE_SEPARATE",
+  "scope": "Register the 20 originally missing event images one at a time after root selects the actual generated PNG. Never mass-approve the 151-item backlog.",
+  "runtime": {
+    "preferredLookup": "ImageRouting.candidates uses routing.assets[imageId], otherwise the existing image_ids fileName. PixelAssetLoader then reads assets/images/<path>.",
+    "existingCatalog": "All 20 event image IDs already exist; do not append duplicate IDs or change event story imageId. Their catalog usage is pov, not scene.",
+    "newPortraitMaster": "The missing source itself may be a portrait; no landscape original is fabricated and no image is stretched to satisfy a validator."
+  },
+  "metadataContract": {
+    "catalogSourceFormat": "portrait_9_16",
+    "usage": "pov",
+    "widthAndHeight": "Required measured positive integers, each <=4096, exactly matching the actual PNG.",
+    "aspectRule": "abs(width*16-height*9)*100 < height*9 (strictly less than 1% relative deviation from 9:16).",
+    "membership": "Must be a current event preferred imageId/povImageId and explicitly routed.",
+    "genericProtection": "requiredImageIds and periodPortraits/statScenes/periodScenes/endingScenes may not opt in; all marker-free legacy sources retain positive 4:3.",
+    "routingFields": [
+      "imageId",
+      "assetPath (relative to assets/images)",
+      "fileName",
+      "usage copied from existing catalog",
+      "fallbackText"
+    ],
+    "noApprovalByRegistration": true
+  },
+  "steps": [
+    "Read each current full event and compare its hash with the individual generation brief before generation or review.",
+    "Preserve generation output path, exact prompt, rejected outputs and selected PNG SHA in the root production manifest. Copy only the selected valid PNG to its existing catalog filename.",
+    "Read PNG dimensions/CRC; add sourceFormat and exact measured width/height to that existing catalog item, and add the matching routing entry. The helper build/audit/register_missing_portrait_sources.py accepts explicitly selected event IDs only and writes catalog/routing only.",
+    "Run validate_content.py and validate_images.py and Python regression tests. Run the root-owned JVM integrity suite with the explicit-format contract; do not weaken original SHA checks.",
+    "Inspect every selected original for current event meaning, hands/objects/text and forbidden future outcomes, then inspect actual native event display including portrait crop and UI overlay. Record actual evidence and truthful AI reviewer.",
+    "Only after the individual native review passes, append an approved group with the exact imageId/path/SHA/eventIds/current eventSourceHashes and separate semantic/visual/crop evidence. Preserve prior review history. Update that event row classificationStatus/approvedGroupId/reviewer fields only; never claim the original missing snapshot was already present.",
+    "Run basic coverage and --acceptance; remaining events stay pending and strict failure is expected until all required items are actually complete."
+  ],
+  "approvalRecordRequiredFields": [
+    "groupId",
+    "imageId",
+    "assetPath",
+    "sha256",
+    "approvalStatus",
+    "eventIds",
+    "eventSourceHashes",
+    "semanticReviewer",
+    "visualReviewer",
+    "cropReviewer",
+    "reviewerType",
+    "reviewEvidence",
+    "resolvedIssueEvidence per event if existingArtVerdict requires revision"
+  ],
+  "classificationCaution": "validate_followup_image_coverage.INPUT_FIELDS are historical baseline inputs; preserve title/text/preferredImageId/resolvedAssetPath/preferredFileExists and other baseline fields unless the baseline snapshot is deliberately versioned. Current file existence belongs in new evidence, not by rewriting old preferredFileExists=NO.",
+  "currentRegistrationSnapshot": {
+    "selectedRegisteredEvents": [
+      "love_date_01",
+      "love_marriage_talk_01",
+      "love_first_child_01",
+      "love_wedding_01",
+      "love_wedding_music",
+      "love_family_meet_01"
+    ],
+    "actualSize": [
+      941,
+      1672
+    ],
+    "approvalState": "unchanged; native acceptance pending"
+  },
+  "implementationFiles": [
+    "scripts/validate_images.py",
+    "scripts/validate_content.py",
+    "scripts/tests/test_portrait_event_sources.py",
+    "app/src/test/java/com/example/lifegame/ui/ApprovedImageIntegrityTest.kt"
+  ],
+  "verificationAtThisSnapshot": {
+    "pythonTests": 76,
+    "pythonFailures": 0,
+    "contentValidator": "PASS",
+    "routingValidator": "PASS",
+    "jvm": "Not run by this agent; root owns Gradle",
+    "approvalOrManifestChanged": false,
+    "strictAcceptance": {
+      "exitCode": 1,
+      "errors": 0,
+      "pendingEvents": 151,
+      "approvedEvents": 221,
+      "reason": "Individual native review and art acceptance intentionally not changed by registration."
+    }
+  }
+}

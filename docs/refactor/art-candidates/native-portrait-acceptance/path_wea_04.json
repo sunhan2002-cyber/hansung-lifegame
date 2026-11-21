@@ -1,0 +1,71 @@
+{
+  "eventId": "path_wea_04",
+  "reviewerType": "AI",
+  "scope": "Portrait phone and small-phone presentation",
+  "sourceEventHash": "e57dbd81a0b2d25b38bdfd485a5b6d1e50d9176892675db207bbb518b3a79cb7",
+  "sourceReview": "docs/refactor/art-candidates/portrait-integration/path_wea_04.json",
+  "sourceSha256": "dfdf892442b1ab14c262cc73c62e74742677a7aadd5472824c4245142d4eec9d",
+  "displayedVariant": {
+    "assetPath": "presentation/portraits/img_path_wea_04_001_portrait_v1.png",
+    "sha256": "e0e897c07a62f60f5a7c94fef430826010b27ef377dc3537080e466f6dc303cd",
+    "width": 941,
+    "height": 1672,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/path_wea_04.json"
+  },
+  "nativeCaptures": [
+    {
+      "path": "build/refactor/resumed/final32/path_wea_04_phone_scene.png",
+      "sha256": "8d2381b05282ccb18e4c851c1b1dcef6138f7498d4f1ef8d521de2db7beb253d",
+      "crop": {
+        "eventId": "path_wea_04",
+        "imageId": "img_path_wea_04_001",
+        "assetPath": "presentation/portraits/img_path_wea_04_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/final32/path_wea_04_phone_play.png",
+      "sha256": "3de7ae06d90dcdd07072b74f37d730fdd80dd41f6062ccd67bff5f6af4df351b",
+      "crop": {
+        "eventId": "path_wea_04",
+        "imageId": "img_path_wea_04_001",
+        "assetPath": "presentation/portraits/img_path_wea_04_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/final32/path_wea_04_360x740_scene.png",
+      "sha256": "57c53533138eaf8f12b9dd89b50a5c4ff414ba03910b53e77eb25f7bb02f0dc7",
+      "crop": {
+        "eventId": "path_wea_04",
+        "imageId": "img_path_wea_04_001",
+        "assetPath": "presentation/portraits/img_path_wea_04_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/final32/path_wea_04_360x740_play.png",
+      "sha256": "0f20c2b386311689a815c2ce0f4dad11a2adc9c4199ea481444a8118ed2deec4",
+      "crop": {
+        "eventId": "path_wea_04",
+        "imageId": "img_path_wea_04_001",
+        "assetPath": "presentation/portraits/img_path_wea_04_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    }
+  ],
+  "observation": "Landlord showing vacant apartment, unsigned offer and clock. Deposit absent.",
+  "decision": "PASS",
+  "method": "Individual visual inspection of both scene and gameplay frames together with producer semantic/source review and device capture match."
+}

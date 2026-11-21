@@ -1,0 +1,71 @@
+{
+  "eventId": "path_int_11",
+  "reviewerType": "AI",
+  "scope": "Portrait phone and small-phone presentation",
+  "sourceEventHash": "bd08cd41a02d54543594ef78d1f837503b3a6d278e705b81fa10962f4a24e016",
+  "sourceReview": "docs/refactor/art-candidates/portrait-integration/path_int_11.json",
+  "sourceSha256": "5c93bfb5ee109aaf5a3eb1f6fb8d171c0db402f80a4a4ccfddad9ec294375232",
+  "displayedVariant": {
+    "assetPath": "presentation/portraits/img_path_int_11_001_portrait_v1.png",
+    "sha256": "20e0187de79231b8eccc0343a5804068a5837c975f7bc1742471308b1b4fd0b2",
+    "width": 941,
+    "height": 1672,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/path_int_11.json"
+  },
+  "nativeCaptures": [
+    {
+      "path": "build/refactor/resumed/final32/path_int_11_phone_scene.png",
+      "sha256": "a63b7b478563bdfb7d9d4ef658626690f55c696a1293fdd6f20d8634d5147ffe",
+      "crop": {
+        "eventId": "path_int_11",
+        "imageId": "img_path_int_11_001",
+        "assetPath": "presentation/portraits/img_path_int_11_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/final32/path_int_11_phone_play.png",
+      "sha256": "607f7104956734e7bb1e0778be9d8ad34ca907ce995b1e93558bfe4ab1150560",
+      "crop": {
+        "eventId": "path_int_11",
+        "imageId": "img_path_int_11_001",
+        "assetPath": "presentation/portraits/img_path_int_11_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/final32/path_int_11_360x740_scene.png",
+      "sha256": "db63aac776691185e9b644ce4333ee1e9853269f06a2c6e568b7571b267c0fda",
+      "crop": {
+        "eventId": "path_int_11",
+        "imageId": "img_path_int_11_001",
+        "assetPath": "presentation/portraits/img_path_int_11_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/final32/path_int_11_360x740_play.png",
+      "sha256": "ce894a58dcfa350d6b7ec50f709c0d0e9ebaa5e0cee06d505887e44a0620d25a",
+      "crop": {
+        "eventId": "path_int_11",
+        "imageId": "img_path_int_11_001",
+        "assetPath": "presentation/portraits/img_path_int_11_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    }
+  ],
+  "observation": "Professor addressing class, viewer has not raised either hand.",
+  "decision": "PASS",
+  "method": "Individual visual inspection of both scene and gameplay frames together with producer semantic/source review and device capture match."
+}

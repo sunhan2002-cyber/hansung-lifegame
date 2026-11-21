@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "Codex AI / plan_audit",
+  "reviewerType": "AI",
+  "approvedEventIds": [
+    "love_date_01",
+    "love_marriage_talk_01",
+    "love_first_child_01",
+    "love_family_meet_01",
+    "love_wedding_01",
+    "love_wedding_music",
+    "love_child_plan_01",
+    "love_holiday_01",
+    "love_date_02",
+    "love_letter_01"
+  ],
+  "approvedCount": 10,
+  "previousGroupCount": 221,
+  "newGroupCount": 231,
+  "prior221GroupObjectsUnchanged": true,
+  "allInputFieldsUnchanged": true,
+  "firstChildInitialCropRejectedThenFocalRetested": true,
+  "secondaryTenNotChanged": true,
+  "scope": "Ten separately inspected current events, 10 source PNGs and 40 final native screenshots; first-child initial four captures reviewed and retained as superseded history. No physical-device or full-game acceptance claim."
+}

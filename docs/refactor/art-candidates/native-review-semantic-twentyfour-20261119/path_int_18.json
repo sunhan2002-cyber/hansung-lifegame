@@ -1,0 +1,276 @@
+{
+  "schemaVersion": 1,
+  "eventId": "path_int_18",
+  "status": "PASS",
+  "reviewer": "Codex AI / plan_audit",
+  "reviewerType": "AI",
+  "reviewDate": "2026-11-19",
+  "sourceEventHash": "a52f0a7d71a2e157c4ed16bf3b7f87121fbcade773f30267b092bb9caef58cdd",
+  "sourceEventSnapshot": {
+    "eventId": "path_int_18",
+    "stage": "ADULT",
+    "type": "NORMAL",
+    "isFallback": false,
+    "isMilestone": false,
+    "title": "독학 개발자의 사이드 프로젝트",
+    "text": "회사 일은 익숙해졌다. 퇴근길에 떠오른 앱 아이디어가 사흘째 머리를 떠나지 않는다. 사수: \"{name} 씨, 요즘 왜 그렇게 웃어요?\"",
+    "imageId": "img_path_int_18_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [
+        "int_self_taught",
+        "job_employed"
+      ],
+      "blockedFlags": []
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "주말마다 만들어 출시한다",
+        "statDelta": {
+          "지력": 3,
+          "경제력": 1,
+          "건강": -1
+        },
+        "resultText": "6개월 만에 앱을 출시했다. 첫 리뷰: '이런 거 찾고 있었어요.' 그 한 줄을 캡처해 배경 화면으로 했다.",
+        "addFlags": [
+          "responsibility",
+          "achv_app_launch"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "a_launch",
+            "text": "6개월 만에 앱을 출시했다. 첫 리뷰: '이런 거 찾고 있었어요.' 그 한 줄을 캡처해 배경 화면으로 했다.",
+            "chance": 55,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "지력": 3,
+              "경제력": 1,
+              "건강": -1
+            },
+            "addFlags": [
+              "responsibility",
+              "achv_app_launch"
+            ],
+            "chanceWeights": {
+              "지력": 2
+            }
+          },
+          {
+            "outcomeId": "a_flop",
+            "text": "출시 첫 달 다운로드 37건. 그중 30건은 가족과 친구였다. 리뷰 하나가 진심이어서 그만두지 않았다.",
+            "chance": 45,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "지력": 2,
+              "행복": -1,
+              "건강": -1
+            },
+            "addFlags": [
+              "responsibility"
+            ]
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week10_path_followup"
+      },
+      {
+        "choiceId": "B",
+        "label": "회사 일에 집중해 승진한다",
+        "statDelta": {
+          "경제력": 3,
+          "지력": 1,
+          "행복": -1
+        },
+        "resultText": "아이디어는 메모장에 남겼다. 2년 뒤 팀장이 됐다. 메모장은 아직 가끔 연다.",
+        "addFlags": [
+          "level_mid",
+          "level_mid__path_int_18"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "b_promo",
+            "text": "아이디어는 메모장에 남겼다. 2년 뒤 팀장이 됐다. 메모장은 아직 가끔 연다.",
+            "chance": 100,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "경제력": 3,
+              "지력": 1,
+              "행복": -1
+            },
+            "addFlags": [
+              "level_mid",
+              "level_mid__path_int_18"
+            ]
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week10_path_followup"
+      },
+      {
+        "choiceId": "C",
+        "label": "주말 코딩 강의를 연다",
+        "statDelta": {
+          "사회성": 3,
+          "경제력": 1,
+          "건강": -1
+        },
+        "resultText": "'비전공자의 코딩 첫걸음' 주말 강의를 열었다. 수강생 대부분이 나처럼 영상으로 혼자 시작한 사람들이었다.",
+        "addFlags": [
+          "helped_friend"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "c_lecture",
+            "text": "'비전공자의 코딩 첫걸음' 주말 강의를 열었다. 수강생 대부분이 나처럼 영상으로 혼자 시작한 사람들이었다.",
+            "chance": 70,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "사회성": 3,
+              "경제력": 1,
+              "건강": -1
+            },
+            "addFlags": [
+              "helped_friend"
+            ],
+            "chanceWeights": {
+              "사회성": 2
+            }
+          },
+          {
+            "outcomeId": "c_few",
+            "text": "수강생 셋. 그중 하나가 1년 뒤 개발자가 됐다고 연락했다. 셋이면 충분했다.",
+            "chance": 30,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "사회성": 1,
+              "행복": 1
+            },
+            "addFlags": []
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week10_path_followup"
+      }
+    ],
+    "priority": 0,
+    "kind": "INCIDENT",
+    "periods": [
+      "YOUNG_ADULT",
+      "MIDDLE"
+    ],
+    "weight": 8,
+    "view": "FIRST_PERSON",
+    "lifePath": "INTELLIGENCE",
+    "pathRole": "독학 진로",
+    "followUps": [
+      "path_int_08",
+      "path_int_09"
+    ]
+  },
+  "sourceReadScope": "Current complete event, conditions, every choice/outcome and flags/stat deltas/periods/follow-ups directly read before judgement.",
+  "sourceImage": {
+    "path": "app/src/main/assets/images/followup_20261031/img_path_int_18_001.png",
+    "sha256": "74a20fa7d8386345862bf167a5a88b08bcc223a488f37375460764d304eb7076",
+    "width": 720,
+    "height": 540
+  },
+  "originalArtworkUnchangedSinceHistoricalReview": true,
+  "historicalReview": {
+    "eventId": "path_int_18",
+    "title": "독학 개발자의 사이드 프로젝트",
+    "imageId": "img_path_int_18_001",
+    "assetPath": "followup_20261031/img_path_int_18_001.png",
+    "sha256": "74a20fa7d8386345862bf167a5a88b08bcc223a488f37375460764d304eb7076",
+    "eventSourceHash": "a52f0a7d71a2e157c4ed16bf3b7f87121fbcade773f30267b092bb9caef58cdd",
+    "status": "REVISION_REQUIRED",
+    "reviewer": "김선한 담당 Codex 직접 대행 검수",
+    "reason": "지하철에서 손이 스마트폰 위에 펜을 대는 부자연스러운 동작",
+    "expectedAction": "휴대폰 메모장에 앱 화면을 그리며 웃음",
+    "requiredObjects": "휴대폰(앱 스케치), 지하철 손잡이와 창",
+    "sheet": "output/art-review-20261119/sheet-20.jpg",
+    "cell": 1,
+    "cropMethod": "ImageOps.fit centre-fill 360:800; simulated crop inspected directly, not an emulator capture",
+    "visualMethod": "원본 도트풍·색감·장면 파손·명백한 신체/사물 오류 직접 확인"
+  },
+  "presentationMetadata": [],
+  "captures": [
+    {
+      "path": "build/refactor/after/originals-twentyfour-and-variants-native/path_int_18_phone_scene.png",
+      "sha256": "268fa4f88027dd6ae9a1afd44e164d4443bff8935553ee58c2769dc06ae41c31",
+      "width": 1080,
+      "height": 2400,
+      "screen": "phone",
+      "mode": "scene",
+      "cropReport": {
+        "eventId": "path_int_18",
+        "imageId": "img_path_int_18_001",
+        "assetPath": "followup_20261031/img_path_int_18_001.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.331..0.669",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/originals-twentyfour-and-variants-native/path_int_18_phone_play.png",
+      "sha256": "a6b17ee18099ef38719c7ad439085189dea78378c2f6d8efdf5722bfe0750d57",
+      "width": 1080,
+      "height": 2400,
+      "screen": "phone",
+      "mode": "play",
+      "cropReport": null
+    },
+    {
+      "path": "build/refactor/after/originals-twentyfour-and-variants-native/path_int_18_360x740_scene.png",
+      "sha256": "fc9aa57a81d66cecf0b17e6986602f202eae0504e43e89c6f0859cd34e00418d",
+      "width": 945,
+      "height": 1943,
+      "screen": "360x740",
+      "mode": "scene",
+      "cropReport": {
+        "eventId": "path_int_18",
+        "imageId": "img_path_int_18_001",
+        "assetPath": "followup_20261031/img_path_int_18_001.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.318..0.682",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/originals-twentyfour-and-variants-native/path_int_18_360x740_play.png",
+      "sha256": "a2a3fdb5c04c3b53fdea397b4ea8192232c8b79c24655c1a4b3b8d07744a0122",
+      "width": 945,
+      "height": 1943,
+      "screen": "360x740",
+      "mode": "play",
+      "cropReport": null
+    }
+  ],
+  "semanticObservation": "독학으로 취업한 현재 통근길 앱 아이디어 단계다. 휴대폰 와이어프레임과 스타일러스는 앱 구상이며 완성 코드나 출시가 아니다. 모든 조건, 출시 성공/37회 다운로드, 본업 팀장, 주말 수업의 두 결과를 직접 읽었다.",
+  "cropObservation": "휴대폰 전체, 앱 스케치, 펜촉과 손가락, 열차 좌석과 창문이 양쪽에서 유지된다. 역사 검토의 펜 사용 지적은 이 휴대폰 스케치 표현에서 물리적 모순이 아니다.",
+  "uiObservation": "폰 크기는 세 선택지가 보인다. 작은 화면은 긴 본문 때문에 C의 시작만 초기 화면에 보인다. 그림 승인과 별도로 root가 실제 C 스크롤·터치 1배/2배 기기 테스트를 추가했다. 이 검수는 접근성 합격을 주장하지 않는다.",
+  "reviewMethod": "Codex AI directly inspected the full unchanged source PNG and all four unmodified native scene/play captures. Prior review is retained as historical evidence; this record is a new AI judgement, not human approval.",
+  "nativeMethod": "Production DecisionScreen, current parsed event/routing/PixelAssetLoader, fixture state in Android Compose instrumentation. Scene grid match >=0.95. Not complete game progression.",
+  "nativeRunLog": "build/refactor/depth-and-originals-twentyfour.log",
+  "limitations": [
+    "Emulator captures, not physical-device review.",
+    "Only reviewed phone and 360x740 dimensions; not every font scale/aspect ratio.",
+    "Art review does not independently certify scrolling, TalkBack or complete game-flow transitions."
+  ]
+}

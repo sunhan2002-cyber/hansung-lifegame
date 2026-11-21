@@ -1,0 +1,260 @@
+{
+  "schemaVersion": 1,
+  "eventId": "love_wedding_music",
+  "status": "PASS",
+  "approvalScope": "Current source event and exact PNG; native phone and 360x740 Compose scene/play visual review",
+  "reviewer": "Codex AI / plan_audit",
+  "reviewerType": "AI",
+  "reviewDate": "2026-11-19",
+  "sourceEventHash": "89b7c330fb92393c36c6ea263a9cd534473182b1b42f81acd729592c028ec5ae",
+  "sourceEventSnapshot": {
+    "eventId": "love_wedding_music",
+    "stage": "ADULT",
+    "type": "NORMAL",
+    "isFallback": false,
+    "isMilestone": true,
+    "title": "연주로 채운 축가",
+    "text": "결혼식 축가 순서. 같이 연주하던 사람들이 악기를 들고 일어섰다. 리더가 마이크를 잡았다. \"이 곡, 두 사람이 처음 같이 연주한 노래입니다.\"",
+    "imageId": "img_love_wedding_music_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [
+        "engaged",
+        "families_met",
+        "partner_music"
+      ],
+      "blockedFlags": [
+        "married",
+        "divorced"
+      ]
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "같이 무대에 올라 한 소절 부른다",
+        "statDelta": {
+          "행복": 5,
+          "사회성": 3,
+          "경제력": -4
+        },
+        "resultText": "축가가 듀엣이 됐다가 합창이 됐다. 하객석까지 따라 불렀다. 그날 결혼식은 공연이 됐다.",
+        "addFlags": [
+          "married",
+          "achv_band_wedding"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "a_sing",
+            "text": "축가가 듀엣이 됐다가 합창이 됐다. 하객석까지 따라 불렀다. 그날 결혼식은 공연이 됐다.",
+            "chance": 100,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 5,
+              "사회성": 3,
+              "경제력": -4
+            },
+            "addFlags": [
+              "married",
+              "achv_band_wedding"
+            ],
+            "removeFlags": [
+              "engaged"
+            ]
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "관계 단계 전환점 — 연애·결혼·자녀는 능력치 자격이 아니라 의사 결정이라 잠그지 않고, 차이는 결과 분기와 후속 사실로 반영",
+        "conditionReview": "open_turning_point",
+        "conditionBasis": "week13_love_line"
+      },
+      {
+        "choiceId": "B",
+        "label": "자리에서 듣기만 한다",
+        "statDelta": {
+          "행복": 4,
+          "경제력": -4
+        },
+        "resultText": "박자가 조금씩 틀렸다. 그래서 더 좋았다. 연인이 내 손을 꼭 잡았다.",
+        "addFlags": [
+          "married",
+          "achv_band_wedding"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "b_listen",
+            "text": "박자가 조금씩 틀렸다. 그래서 더 좋았다. 연인이 내 손을 꼭 잡았다.",
+            "chance": 100,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 4,
+              "경제력": -4
+            },
+            "addFlags": [
+              "married",
+              "achv_band_wedding"
+            ],
+            "removeFlags": [
+              "engaged"
+            ]
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "관계 단계 전환점 — 연애·결혼·자녀는 능력치 자격이 아니라 의사 결정이라 잠그지 않고, 차이는 결과 분기와 후속 사실로 반영",
+        "conditionReview": "open_turning_point",
+        "conditionBasis": "week13_love_line"
+      },
+      {
+        "choiceId": "C",
+        "label": "드럼 스틱을 빌려 직접 친다",
+        "statDelta": {
+          "행복": 4,
+          "사회성": 1,
+          "경제력": -4
+        },
+        "resultText": "결혼식 역사상 가장 시끄러운 축가였다. 식장 직원도 박자를 탔다.",
+        "addFlags": [
+          "married",
+          "achv_band_wedding"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "c_drum",
+            "text": "결혼식 역사상 가장 시끄러운 축가였다. 식장 직원도 박자를 탔다.",
+            "chance": 55,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 4,
+              "사회성": 1,
+              "경제력": -4
+            },
+            "addFlags": [
+              "married",
+              "achv_band_wedding"
+            ],
+            "removeFlags": [
+              "engaged"
+            ]
+          },
+          {
+            "outcomeId": "c_snap",
+            "text": "첫 박자에 스틱이 부러졌다. 나머지는 하객들이 손뼉으로 박자를 맞췄다.",
+            "chance": 45,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 3,
+              "경제력": -4
+            },
+            "addFlags": [
+              "married",
+              "achv_band_wedding"
+            ],
+            "removeFlags": [
+              "engaged"
+            ]
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "관계 단계 전환점 — 연애·결혼·자녀는 능력치 자격이 아니라 의사 결정이라 잠그지 않고, 차이는 결과 분기와 후속 사실로 반영",
+        "conditionReview": "open_turning_point",
+        "conditionBasis": "week13_love_line"
+      }
+    ],
+    "priority": 0,
+    "kind": "MILESTONE",
+    "periods": [
+      "YOUNG_ADULT",
+      "MIDDLE",
+      "OLD_AGE"
+    ],
+    "weight": 1,
+    "view": "FIRST_PERSON",
+    "pathRole": "러브라인 5단계(음악 후보) — 결혼식",
+    "followUps": [
+      "love_holiday_01",
+      "love_child_plan_01"
+    ]
+  },
+  "sourceReadScope": "Title, full text, conditions, all choices, all outcomes including flags/stat deltas, periods and follow-ups directly read before visual judgement.",
+  "sourceImage": {
+    "path": "app/src/main/assets/images/img_love_wedding_music_001.png",
+    "sha256": "c48883bf1e8b4f0cd1fc8c519cac2751cff161c305b935caad3c997f9f559474",
+    "width": 941,
+    "height": 1672
+  },
+  "generationManifest": "docs/refactor/art-candidates/generated-love-20261119.json",
+  "selectedGenerationOutput": "C:\\Users\\jk030\\.codex\\generated_images\\01a1f1bc-6c39-7a10-a591-0d1f4e5cef6b\\exec-b4867ad7-dc86-4d39-bc96-e2b977884b4e.png",
+  "exactGenerationPromptSha256": "6c6b046bd3f3271121207d495f4dcfb67b2a5175d72d049c1ef788093e668593",
+  "presentationMetadata": [],
+  "captures": [
+    {
+      "path": "build/refactor/after/ten-art-native/love_wedding_music_phone_scene.png",
+      "sha256": "2e8b78ec0b233de2d40a7f10374c062ccf6d89457d1f3039ce26eae814bbae5b",
+      "width": 1080,
+      "height": 2400,
+      "screen": "phone",
+      "mode": "scene",
+      "cropReport": {
+        "eventId": "love_wedding_music",
+        "imageId": "img_love_wedding_music_001",
+        "assetPath": "img_love_wedding_music_001.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/ten-art-native/love_wedding_music_phone_play.png",
+      "sha256": "02b418e59f16d3e631915c72718eece619a7279fa4c007d4f3c0dce095f2ed2e",
+      "width": 1080,
+      "height": 2400,
+      "screen": "phone",
+      "mode": "play",
+      "cropReport": null
+    },
+    {
+      "path": "build/refactor/after/ten-art-native/love_wedding_music_360x740_scene.png",
+      "sha256": "244b92388060fa942e21747c226a2192916c9b4f612bed06a70c862ef84e655e",
+      "width": 945,
+      "height": 1943,
+      "screen": "360x740",
+      "mode": "scene",
+      "cropReport": {
+        "eventId": "love_wedding_music",
+        "imageId": "img_love_wedding_music_001",
+        "assetPath": "img_love_wedding_music_001.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/ten-art-native/love_wedding_music_360x740_play.png",
+      "sha256": "c4e43a9c133a56b9b011870d70197e3dd57f2af7dd2d29b4b4d975a8b70fe8fb",
+      "width": 945,
+      "height": 1943,
+      "screen": "360x740",
+      "mode": "play",
+      "cropReport": null
+    }
+  ],
+  "semanticObservation": "결혼 축가 순서에서 밴드 리더가 마이크를 들고 곡을 소개한다. 악기는 준비 상태이며 플레이어가 무대에 오름·듀엣·직접 드럼 연주·망가진 스틱·공연 종료를 먼저 보여주지 않는다.",
+  "cropObservation": "phone/small 모두 리더·마이크·중앙 기타가 온전히 식별된다. 가장자리 보조 연주자의 일부가 잘리지만 사건 핵심 행동/악기는 유지된다.",
+  "uiObservation": "phone에서 세 선택지가 읽힌다. small은 C 문구가 보이나 카드 하단이 footer에 걸리므로 스크롤 상호작용은 별도 검증 범위다.",
+  "reviewMethod": "Codex AI directly inspected full source PNG and each of four unmodified native capture PNGs using view_image. This is an AI review, not a named human approval.",
+  "nativeMethod": "SceneCropReviewTest renders production DecisionScreen with current parsed event and actual routing/PixelAssetLoader in Android Compose instrumentation. Scene captures compare against designated crop >=0.95. The test uses a fixture play state and does not perform a complete game progression.",
+  "testSource": "app/src/androidTest/java/com/example/lifegame/ui/SceneCropReviewTest.kt",
+  "nativeRunLog": "build/refactor/scene-effects-and-ten-art.log",
+  "limitations": [
+    "Android emulator/Compose capture, not a physical device test.",
+    "Fixed reviewed phone and 360x740 sizes; no claim for every aspect ratio or font scale.",
+    "Visual art acceptance does not certify choice scrolling, TalkBack, or game-flow state transitions."
+  ]
+}

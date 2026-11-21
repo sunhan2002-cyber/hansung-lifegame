@@ -1,0 +1,29 @@
+{
+  "eventId": "adult_078",
+  "sourceAssetPath": "followup_20261031/img_pov_treadmill_001.png",
+  "sourceSha256": "f4ddccba50c6171344fed71f0eac867f388a645259b395447276fa64c2de19cc",
+  "variant": {
+    "assetPath": "presentation/portraits/img_pov_treadmill_001_portrait_v1.png",
+    "sha256": "ebc95588788737bd27cb689c8c036e16bd1c8ce0cd232324e0b994cef8446f0c",
+    "width": 841,
+    "height": 1870,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/adult_078.json"
+  },
+  "reviewerType": "AI",
+  "reviewer": "Codex AI (/root)",
+  "reviewStatus": "AI_REVIEWED_PRESENTATION",
+  "eventSourceHash": "fce347016cad78bb142f464c3d88b09f23e6cf74b643dffab6d59cfe0bcd891b",
+  "semanticReview": "Producer read the current event conditions and every choice/outcome, inspected source and selected output. Full source snapshot and exact prompt are in the referenced production ledger. Native acceptance remains pending.",
+  "visualReview": "Adjacent runner's single belt, viewer's own handrail and fallen earbud in gap.",
+  "cropReview": "Portrait candidate selected for native phone/small-phone scene and gameplay inspection; not final artwork acceptance.",
+  "actualProducer": "OpenAI built-in image_gen",
+  "generationMethod": "Built-in imagegen edit; exact prompts/output SHA/rejected attempts preserved in docs/refactor/art-candidates/resumed-production-20261119.json",
+  "productionLedger": "docs/refactor/art-candidates/resumed-production-20261119.json",
+  "nativePending": true,
+  "runtimeConnected": true,
+  "approvalChanged": false,
+  "selectedStagingSha256": "ebc95588788737bd27cb689c8c036e16bd1c8ce0cd232324e0b994cef8446f0c"
+}

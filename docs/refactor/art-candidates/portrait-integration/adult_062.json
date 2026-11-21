@@ -1,0 +1,29 @@
+{
+  "eventId": "adult_062",
+  "sourceAssetPath": "followup_20261031/img_adult_lifelong_friend_001.png",
+  "sourceSha256": "3a9198e0400cd35666909ef223141460b9df49ac52052a8f578ddef63e15f198",
+  "variant": {
+    "assetPath": "presentation/portraits/img_adult_lifelong_friend_001_portrait_v1.png",
+    "sha256": "1de8340cdec9e4ac2bc9f906a6459af99d923dfa2fe5f4c99936e287343db56d",
+    "width": 941,
+    "height": 1672,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root/security_p0)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/adult_062.json"
+  },
+  "reviewerType": "AI",
+  "reviewer": "Codex AI (/root/security_p0)",
+  "reviewStatus": "AI_REVIEWED_PRESENTATION",
+  "eventSourceHash": "c1e102d0758788519ae1fe971dc7a26eb1d2a5f8e5c540bf233c1c0693753a8e",
+  "semanticReview": "Producer read the current event conditions and every choice/outcome, inspected source and selected output. Full source snapshot and exact prompt are in the referenced production ledger. Native acceptance remains pending.",
+  "visualReview": "Completed before pause; output individually viewed: elderly first-person hands hold phone with exactly two non-identifiable babies in old photo, both now hold one red toy shovel. No current in-person reunion, dates, new purchase or later result. First untouched-shovel candidate rejected and retained; native pending.",
+  "cropReview": "Portrait candidate selected for native phone/small-phone scene and gameplay inspection; not final artwork acceptance.",
+  "actualProducer": "OpenAI built-in image_gen",
+  "generationMethod": "Built-in imagegen edit; exact prompts/output SHA/rejected attempts preserved in docs/refactor/art-candidates/content-art-revision-briefs-20261119.json",
+  "productionLedger": "docs/refactor/art-candidates/content-art-revision-briefs-20261119.json",
+  "nativePending": true,
+  "runtimeConnected": true,
+  "approvalChanged": false,
+  "selectedStagingSha256": "1de8340cdec9e4ac2bc9f906a6459af99d923dfa2fe5f4c99936e287343db56d"
+}

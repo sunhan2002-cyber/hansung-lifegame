@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-19",
+  "reviewerType": "AI",
+  "scope": "Source-image review only; this does not approve native crop, UI legibility or release acceptance.",
+  "items": [
+    {
+      "eventId": "love_date_01",
+      "assetPath": "app/src/main/assets/images/img_love_date_01_001.png",
+      "sha256": "e2d92693697d18347ffd30017bb3429c265dc63b895fe11237c9dee8a4da17d6",
+      "briefPath": "docs/refactor/art-candidates/missing-love-briefs/love_date_01.json",
+      "sourceEventHash": "102cb39c6be70d2018a0c3ff2d7524ddf5429d3236b23be88040eaf764de08b1",
+      "exactPromptSha256": "5ddf51274d328b4d0fc9a3992d036b6afbbac846e3b6bf154ca13be242efbc14",
+      "sourceVisualReviewer": "Codex AI (/root/plan_audit)",
+      "sourceVisualReviewMethod": "Direct view_image inspection of the complete selected source PNG; no generated contact sheet and no native app capture in this review.",
+      "observations": [
+        "카페 창가와 성인 상대의 손·부분 상체, 음료 두 잔, 뒷면이 보이는 휴대폰 두 대와 닫힌 책자가 확인된다.",
+        "플레이어는 자기 손만 보이며 여행 예약·사진첩 공개·다툼·약혼 등의 선택 결과가 보이지 않는다."
+      ],
+      "sourceVisualStatus": "READY_FOR_NATIVE_REVIEW",
+      "nativeReviewStatus": "NOT_PERFORMED",
+      "approvalOrManifestChanged": false
+    },
+    {
+      "eventId": "love_marriage_talk_01",
+      "assetPath": "app/src/main/assets/images/img_love_marriage_talk_01_001.png",
+      "sha256": "449a2922d0d18b57ec49d32d93f65c34445993766e78b69d45d443927e839f98",
+      "briefPath": "docs/refactor/art-candidates/missing-love-briefs/love_marriage_talk_01.json",
+      "sourceEventHash": "3506135f5cf20c23260bdad319f96cb0dad6e768c868ca81be241924c6c21beb",
+      "exactPromptSha256": "5c6686bea9f9af6897ceee9d3fa9810951c08a9c082ed9f21f30408b6af0f722",
+      "sourceVisualReviewer": "Codex AI (/root/plan_audit)",
+      "sourceVisualReviewMethod": "Direct view_image inspection of the complete selected source PNG; no generated contact sheet and no native app capture in this review.",
+      "observations": [
+        "밤 버스 창문과 옆자리 성인 연인, 작은 하객 답례품, 서로 분리된 손이 보인다.",
+        "플레이어 얼굴·반사상·약혼반지·본인의 결혼식·직장 소품은 보이지 않는다. 상대의 부분 얼굴과 귀걸이는 보이지만 특정 이름의 인물 정체는 정하지 않는다."
+      ],
+      "sourceVisualStatus": "READY_FOR_NATIVE_REVIEW",
+      "nativeReviewStatus": "NOT_PERFORMED",
+      "approvalOrManifestChanged": false
+    },
+    {
+      "eventId": "love_first_child_01",
+      "assetPath": "app/src/main/assets/images/img_love_first_child_01_001.png",
+      "sha256": "14d16a95f74bd65904b9f4187db5b369c6fc00c276127e596d5a3333933a1300",
+      "briefPath": "docs/refactor/art-candidates/missing-love-briefs/love_first_child_01.json",
+      "sourceEventHash": "c0f4855f4dd932ce8901554e7e898a81fa2bc0dd5438b79b846ac314ba197e59",
+      "exactPromptSha256": "d256fa430b2ee6e663fec2a345eb14c27f0f580929e83b1863efb5301056cc8e",
+      "sourceVisualReviewer": "Codex AI (/root/plan_audit)",
+      "sourceVisualReviewMethod": "Direct view_image inspection of the complete selected source PNG; no generated contact sheet and no native app capture in this review.",
+      "observations": [
+        "어두운 새벽빛, 잠든 영아가 성인 검지를 쥔 중앙 접촉, 뒤편 성인 배우자와 수유등이 확인된다.",
+        "아기는 걷거나 울지 않고 얼굴의 드러난 부분을 천으로 덮지 않는다. 양육 계획표·회사 서류·새 임신 결과는 보이지 않는다. 아기 얼굴 일부는 원본 오른쪽 가장자리여서 native 크롭과 UI 중첩에서 손 접촉·영아 식별을 확인해야 한다."
+      ],
+      "sourceVisualStatus": "READY_FOR_NATIVE_REVIEW",
+      "nativeReviewStatus": "NOT_PERFORMED",
+      "approvalOrManifestChanged": false
+    }
+  ]
+}
