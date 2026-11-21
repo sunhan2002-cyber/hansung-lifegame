@@ -60,16 +60,16 @@ const val DOLJABI_EVENT_ID = "infant_007"
 internal const val CUTSCENE_FADE_MILLIS = 200L
 internal const val CUTSCENE_HOLD_MILLIS = 1_800L
 
-/** 정원률 #75 새 그림: 여러 물건이 놓인 상 위에서 아기 손이 한 물건을 잡는 순간. */
+/** 선택 전에는 어느 물건도 잡지 않은 중립 장면을 보여 준다. */
 private val DoljabiImage = ImageCandidate(
-    imageId = "img_doljabi_grasp_001",
-    path = "cutscenes/week11/img_doljabi_grasp_001.png",
+    imageId = "img_infant_toys_001",
+    path = "followup_20261120/img_infant_toys_001.png",
     usage = "scene",
 )
 
 /** 컷신 그림 낭독 문구. 그림에 보이는 그대로(정원률 manifest의 accessibilityDescription)다. */
 const val DOLJABI_IMAGE_DESCRIPTION =
-    "첫 생일 돌상에 피아노 장난감과 지폐 한 장이 놓여 있고, 아기의 손이 판사봉을 잡는다. 뒤에서 가족들이 지켜본다."
+    "첫 생일 돌상에 피아노 장난감, 판사봉과 받침, 지폐 한 장이 놓여 있다. 아직 아무 물건도 잡지 않았고, 뒤에서 가족들이 지켜본다."
 
 /** 기다리는 결정이 돌잡이이고 컷신이 아직 끝나지 않았으면(재생 중 앱 종료 포함) 컷신을 보여 준다. */
 fun shouldPlayDoljabiCutscene(eventId: String?, hasOutcome: Boolean, status: CutsceneStatus): Boolean =
@@ -153,8 +153,7 @@ fun DoljabiCutsceneScreen(
                     .fillMaxWidth()
                     .aspectRatio(4f / 3f)
                     .semantics {
-                        // 그림과 같은 정보를 읽는다(정원률 manifest accessibilityDescription). 예전 문구("그중 하나로 뻗는다")는
-                        // 승인 전 그림(intro) 기준이라, 판사봉을 잡은 지금 그림과 달라 화면 낭독 사용자만 다른 장면을 들었다.
+                        // 선택 전 중립 그림과 같은 정보를 읽는다.
                         contentDescription = DOLJABI_IMAGE_DESCRIPTION
                     }
                     .testTag("doljabi_cutscene_image"),

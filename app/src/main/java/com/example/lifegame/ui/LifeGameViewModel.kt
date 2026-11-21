@@ -511,7 +511,7 @@ class LifeGameViewModel @JvmOverloads constructor(
                     playContent!!,
                     saved.state.selectedFocusId,
                     snapshot.period ?: saved.state.period,
-                    savedEventImageId = snapshot.eventImageId,
+                    savedEventImageId = doljabiOutcomeImageId(snapshot.eventId, snapshot.choiceId, snapshot.eventImageId),
                 )
             }
         }
@@ -610,7 +610,18 @@ class LifeGameViewModel @JvmOverloads constructor(
             playError = "선택을 반영하지 못했습니다."
             return
         }
-        shownDecision = decision
+        val resultImageId = doljabiOutcomeImageId(decision.eventId, choiceId, decision.imageId).orEmpty()
+        shownDecision = if (resultImageId == decision.imageId) {
+            decision
+        } else {
+            decision.copy(
+                imageId = resultImageId,
+                imageFile = content.imageFiles[resultImageId],
+                images = content.imageRouting.eventCandidates(
+                    decision.eventId, resultImageId, beforeState.selectedFocusId, beforeState.period, content.imageFiles,
+                ),
+            )
+        }
         died = died || resolution.step.state.isDead
         val afterState = resolution.step.state
         val periodName = content.periods.firstOrNull { it.period == beforeState.period }?.displayName
@@ -627,7 +638,7 @@ class LifeGameViewModel @JvmOverloads constructor(
             resultText = resolution.outcome.resultText,
             momentImageId = content.decisions[decision.eventId]?.momentImageId,
             bodyType = bodyTypeFor(afterState.stats),
-            eventImageId = decision.imageId.takeIf(String::isNotBlank),
+            eventImageId = resultImageId.takeIf(String::isNotBlank),
         )
         runChoiceHistory += choiceRecord
         val displayId = "${beforeState.runId}:${decision.eventId}:$choiceId:${resolution.outcome.outcomeId}"
@@ -662,7 +673,7 @@ class LifeGameViewModel @JvmOverloads constructor(
             afterFacts = afterState.lifeFacts,
             endsLife = afterState.isDead,
             openedEvents = openedEvents,
-            eventImageId = decision.imageId.takeIf(String::isNotBlank),
+            eventImageId = resultImageId.takeIf(String::isNotBlank),
             period = beforeState.period,
             yearInPeriod = beforeState.yearInPeriod,
             beforeFlags = beforeState.flags,

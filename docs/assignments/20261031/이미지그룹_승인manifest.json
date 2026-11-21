@@ -8026,48 +8026,6 @@
     }
   },
   {
-    "groupId": "ai_native_20261119_love_wedding_01",
-    "imageId": "img_love_wedding_01_001",
-    "assetPath": "img_love_wedding_01_001.png",
-    "sha256": "21fb68acf28504c0ef18b6fc669a8ea0579f221906b9dcfd90279a3654f16ef4",
-    "approvalStatus": "APPROVED",
-    "eventIds": [
-      "love_wedding_01"
-    ],
-    "eventSourceHashes": {
-      "love_wedding_01": "d99441caa4e1fe80bb26adfbfdef07d3f9f1a39fb6ba4d96e7d1d423212b49a1"
-    },
-    "semanticReviewer": "Codex AI / plan_audit — full current event and outcomes",
-    "visualReviewer": "Codex AI / plan_audit — full PNG and native captures",
-    "cropReviewer": "Codex AI / plan_audit — actual phone and 360x740 scene/play captures",
-    "reviewerType": "AI",
-    "reviewEvidence": "docs/refactor/art-candidates/native-review-first-ten-20261119/love_wedding_01.json",
-    "resolvedIssueEvidence": {
-      "love_wedding_01": "Previously NO_FILE; built-in generated exact source, registered current routing, and individually reviewed native captures: docs/refactor/art-candidates/native-review-first-ten-20261119/love_wedding_01.json"
-    }
-  },
-  {
-    "groupId": "ai_native_20261119_love_wedding_music",
-    "imageId": "img_love_wedding_music_001",
-    "assetPath": "img_love_wedding_music_001.png",
-    "sha256": "c48883bf1e8b4f0cd1fc8c519cac2751cff161c305b935caad3c997f9f559474",
-    "approvalStatus": "APPROVED",
-    "eventIds": [
-      "love_wedding_music"
-    ],
-    "eventSourceHashes": {
-      "love_wedding_music": "89b7c330fb92393c36c6ea263a9cd534473182b1b42f81acd729592c028ec5ae"
-    },
-    "semanticReviewer": "Codex AI / plan_audit — full current event and outcomes",
-    "visualReviewer": "Codex AI / plan_audit — full PNG and native captures",
-    "cropReviewer": "Codex AI / plan_audit — actual phone and 360x740 scene/play captures",
-    "reviewerType": "AI",
-    "reviewEvidence": "docs/refactor/art-candidates/native-review-first-ten-20261119/love_wedding_music.json",
-    "resolvedIssueEvidence": {
-      "love_wedding_music": "Previously NO_FILE; built-in generated exact source, registered current routing, and individually reviewed native captures: docs/refactor/art-candidates/native-review-first-ten-20261119/love_wedding_music.json"
-    }
-  },
-  {
     "groupId": "ai_native_20261119_love_child_plan_01",
     "imageId": "img_love_child_plan_01_001",
     "assetPath": "img_love_child_plan_01_001.png",
@@ -9103,7 +9061,7 @@
     "sha256": "5593c9ea563fdac3b92e6534f4daf2c548d14ec03e1d458f63b7be66a10d020b",
     "approvedPresentation": {
       "assetPath": "presentation/portraits/img_adult_friends_drinks_001_portrait_v1.png",
-      "sha256": "fa535d759628339b22a55b3c99b9ac33f902c56c81be1f1df825fcefaed15caa"
+      "sha256": "f29482f4876e72fc5ede5d9166e19bfc9ec26b65aedebae0f79a411b577df8e1"
     },
     "approvalStatus": "APPROVED",
     "eventIds": [
@@ -9113,10 +9071,10 @@
       "adult_007": "d8a49ff815eaf15c674cb4b4b622efc3acbc2d75dbfdeae078997df908189fa8"
     },
     "semanticReviewer": "Codex AI",
-    "visualReviewer": "Codex AI",
-    "cropReviewer": "Codex AI",
+    "visualReviewer": "Codex AI / user-accepted optimized preview and native route/pixel checks",
+    "cropReviewer": "Codex AI / 2026-11-22 two native viewports, font 100%",
     "reviewerType": "AI",
-    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/adult_007.json",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-optimization-20261122/adult_007.json",
     "resolvedIssueEvidence": {
       "adult_007": "네 명의 친구와 불판, 빈 의자가 두 화면에 함께 보인다."
     }
@@ -9128,7 +9086,7 @@
     "sha256": "8d2a400bfae95281bffc7b8e2ee54fd39a9f88783c2c584e4f39a20da28c1dc3",
     "approvedPresentation": {
       "assetPath": "presentation/portraits/img_adult_campus_001_portrait_v1.png",
-      "sha256": "f1256a01f6cffd916c6409c4934826ae5d61405898d65cd32a82a89e3f8fa0b3"
+      "sha256": "a263b60f33fc1b88d0b512a8b96e0ed3346ffb3b0a4f517f009aeb63aafd6eac"
     },
     "approvalStatus": "APPROVED",
     "eventIds": [
@@ -9138,10 +9096,10 @@
       "adult_012": "c4770a1add499605fb57a77eae46c0ecccab94b7a90e627e36c9020e0e4d211a"
     },
     "semanticReviewer": "Codex AI",
-    "visualReviewer": "Codex AI",
-    "cropReviewer": "Codex AI",
+    "visualReviewer": "Codex AI / user-accepted optimized preview and native route/pixel checks",
+    "cropReviewer": "Codex AI / 2026-11-22 two native viewports, font 100%",
     "reviewerType": "AI",
-    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/adult_012.json",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-optimization-20261122/adult_012.json",
     "resolvedIssueEvidence": {
       "adult_012": "건네는 동아리 안내와 양손의 학업 서류가 모두 남는다."
     }
@@ -9153,7 +9111,7 @@
     "sha256": "3762c74c49b1dd3b7307cf109e3d8ae315afa020307ac04df6b70f768c16a9e9",
     "approvedPresentation": {
       "assetPath": "presentation/portraits/img_adult_gym_001_portrait_v1.png",
-      "sha256": "9a19afe6d33fbab027373e5812edf5f8f001e5b48120e5704a45b9f716741ca8"
+      "sha256": "260b29129f4949049c977db7ad0fde2cc0a02f81f532baf2c539b4acbd944add"
     },
     "approvalStatus": "APPROVED",
     "eventIds": [
@@ -9163,10 +9121,10 @@
       "adult_027": "37596cc18bf93bd24582cd94502ec48119894f0dc71fd8d840442a70e3435b06"
     },
     "semanticReviewer": "Codex AI",
-    "visualReviewer": "Codex AI",
-    "cropReviewer": "Codex AI",
+    "visualReviewer": "Codex AI / user-accepted optimized preview and native route/pixel checks",
+    "cropReviewer": "Codex AI / 2026-11-22 two native viewports, font 100%",
     "reviewerType": "AI",
-    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/adult_027.json",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-optimization-20261122/adult_027.json",
     "resolvedIssueEvidence": {
       "adult_027": "상담자와 건강 결과지 및 운동 안내지가 함께 보인다."
     }
@@ -9178,7 +9136,7 @@
     "sha256": "8193911908ce12934731cab5ebcfddd15c985aa57283c35ae9eb64cb04add8b0",
     "approvedPresentation": {
       "assetPath": "presentation/portraits/img_adult_first_car_001_portrait_v1.png",
-      "sha256": "31029c4d981cfb36dfa6aa594bc89454d89d851591956bd0d6b6c767b14be98d"
+      "sha256": "1e4e848f105507f0d9bd183b31ed8e2b2c87ca470dab66b256a855ce60957bea"
     },
     "approvalStatus": "APPROVED",
     "eventIds": [
@@ -9188,10 +9146,10 @@
       "adult_028": "dde8995d1f06ec3e1ea92251ddbe4d6f6be36d0cac5ef676a0384a2c1ea69b5e"
     },
     "semanticReviewer": "Codex AI",
-    "visualReviewer": "Codex AI",
-    "cropReviewer": "Codex AI",
+    "visualReviewer": "Codex AI / user-accepted optimized preview and native route/pixel checks",
+    "cropReviewer": "Codex AI / 2026-11-22 two native viewports, font 100%",
     "reviewerType": "AI",
-    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/adult_028.json",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-optimization-20261122/adult_028.json",
     "resolvedIssueEvidence": {
       "adult_028": "차 옆의 판매원과 전시 차량이 모두 보이고 구매 전이다."
     }
@@ -9203,7 +9161,7 @@
     "sha256": "31cedd651c65a1d06ed2f0be2ed9720654e17c5a475ee9cab9041e830d66df1e",
     "approvedPresentation": {
       "assetPath": "presentation/portraits/img_infant_remote_001_portrait_v1.png",
-      "sha256": "ca600e68055e4f6d6b712fd8d980a35d992f653232907ee406d36bfd962783b9"
+      "sha256": "8cd9c8a53468db326174039967ce6ae20b1ec9fe00330e03699aa74a7c3a95f9"
     },
     "approvalStatus": "APPROVED",
     "eventIds": [
@@ -9213,10 +9171,10 @@
       "infant_003": "aedeb6dc427424a93e795aad1feed8d05f33e8464c7d085e29bb22d27d3455ef"
     },
     "semanticReviewer": "Codex AI (/root/security_p0)",
-    "visualReviewer": "Codex AI",
-    "cropReviewer": "Codex AI",
+    "visualReviewer": "Codex AI / user-accepted optimized preview and native route/pixel checks",
+    "cropReviewer": "Codex AI / 2026-11-22 two native viewports, font 100%",
     "reviewerType": "AI",
-    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/infant_003.json",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-optimization-20261122/infant_003.json",
     "resolvedIssueEvidence": {
       "infant_003": "분해한 리모컨 부품과 다가올 수 있는 어른, 빈 손이 보인다."
     }
@@ -9228,7 +9186,7 @@
     "sha256": "2719674593fbd0af2a84cb1be57302dd510fe023d373359b857d06cd8f51a896",
     "approvedPresentation": {
       "assetPath": "presentation/portraits/img_infant_vaccine_001_portrait_v1.png",
-      "sha256": "38b97eb275ec8c68456f992207f7c84fa4d0e173db42b611ebf489c6de833960"
+      "sha256": "3fd9f308e39128311815664143bacb2abb62373e17f05ac017f143cd0c920015"
     },
     "approvalStatus": "APPROVED",
     "eventIds": [
@@ -9238,10 +9196,10 @@
       "infant_008": "d417503d87e1907b1781d58a3bf70ae552e59dbffa3e4c0a6bbf79d398cfdb50"
     },
     "semanticReviewer": "Codex AI (/root/security_p0)",
-    "visualReviewer": "Codex AI",
-    "cropReviewer": "Codex AI",
+    "visualReviewer": "Codex AI / user-accepted optimized preview and native route/pixel checks",
+    "cropReviewer": "Codex AI / 2026-11-22 two native viewports, font 100%",
     "reviewerType": "AI",
-    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/infant_008.json",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-optimization-20261122/infant_008.json",
     "resolvedIssueEvidence": {
       "infant_008": "마스크 쓴 간호사와 아기의 발, 손이 보이며 주사를 맞은 결과는 없다."
     }
@@ -9253,7 +9211,7 @@
     "sha256": "2c4f55bd8b5b41c3fefc4e849c12345eab0c42ce1cf10dfd7498bc244066f5e4",
     "approvedPresentation": {
       "assetPath": "presentation/portraits/img_infant_cousin_001_portrait_v1.png",
-      "sha256": "d2788805c5c9b71a72992a57a7a3dd96e643ba2a1b49834ead877e46638c616e"
+      "sha256": "0fc8bed94fe4402395e11b71a6f594a34fb0cde9dd3a47f247dcb6f26beb1bf6"
     },
     "approvalStatus": "APPROVED",
     "eventIds": [
@@ -9263,10 +9221,10 @@
       "infant_018": "9eff4b53a090e0c67ca60ac6590a9dd25fff1824b98c5a9511e7094e0da834a7"
     },
     "semanticReviewer": "Codex AI (/root/security_p0)",
-    "visualReviewer": "Codex AI",
-    "cropReviewer": "Codex AI",
+    "visualReviewer": "Codex AI / user-accepted optimized preview and native route/pixel checks",
+    "cropReviewer": "Codex AI / 2026-11-22 two native viewports, font 100%",
     "reviewerType": "AI",
-    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/infant_018.json",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-optimization-20261122/infant_018.json",
     "resolvedIssueEvidence": {
       "infant_018": "무릎을 굽힌 사촌이 자동차 장난감을 내밀고 아이 손은 비어 있다."
     }
@@ -9278,7 +9236,7 @@
     "sha256": "fe886a469ead746ba8c8dfd600a59f54b835abcb1db775b112c8215f432d4411",
     "approvedPresentation": {
       "assetPath": "presentation/portraits/img_child_dream_001_portrait_v1.png",
-      "sha256": "a3f61a46e23f0b4210abf51c424bb911dcabfdd71d3569978d2d5020a62b66a9"
+      "sha256": "943bf8f2b03db51a3af699977b927d9a3c79cc5aad617e137f59302a2c303096"
     },
     "approvalStatus": "APPROVED",
     "eventIds": [
@@ -9288,10 +9246,10 @@
       "child_007": "f38339109baabe246b71443f6f5cf291c13fc81815623c06343c82aecaa62caa"
     },
     "semanticReviewer": "Codex AI (/root/security_p0)",
-    "visualReviewer": "Codex AI",
-    "cropReviewer": "Codex AI",
+    "visualReviewer": "Codex AI / user-accepted optimized preview and native route/pixel checks",
+    "cropReviewer": "Codex AI / 2026-11-22 two native viewports, font 100%",
     "reviewerType": "AI",
-    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/child_007.json",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-optimization-20261122/child_007.json",
     "resolvedIssueEvidence": {
       "child_007": "빈 발표 카드와 기다리는 반 친구들이 아이 눈높이에 남는다."
     }
@@ -9303,7 +9261,7 @@
     "sha256": "360e55da212b180cc7a8c0e4feb09b7b8199f1f60747228ac11847db0d72595d",
     "approvedPresentation": {
       "assetPath": "presentation/portraits/img_child_culture_pick_001_portrait_v1.png",
-      "sha256": "7eb9358b2b74e915ed89c4122b519855e74e62735b15bae0d448b777686209a0"
+      "sha256": "a0bdf161ac6759c47dffca3adff4c6beeef781950af70890be5c21589fbde41f"
     },
     "approvalStatus": "APPROVED",
     "eventIds": [
@@ -9313,10 +9271,10 @@
       "child_012": "005bd46555ea49f5c1cb9a36b45516f164c4dd61cc3dbcbfea8fd877225fbdbf"
     },
     "semanticReviewer": "Codex AI (/root/security_p0)",
-    "visualReviewer": "Codex AI",
-    "cropReviewer": "Codex AI",
+    "visualReviewer": "Codex AI / user-accepted optimized preview and native route/pixel checks",
+    "cropReviewer": "Codex AI / 2026-11-22 two native viewports, font 100%",
     "reviewerType": "AI",
-    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/child_012.json",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-optimization-20261122/child_012.json",
     "resolvedIssueEvidence": {
       "child_012": "장식 가면 아래 실제 선택 패널은 과학 실험, 독서, 바둑 세 개다."
     }
@@ -9328,7 +9286,7 @@
     "sha256": "f7b2577535b874e4246986d9f0e3821531f61e6a87afdb3182964a7e442edf9a",
     "approvedPresentation": {
       "assetPath": "presentation/portraits/img_child_smartphone_001_portrait_v1.png",
-      "sha256": "d12963768ca2f45fcab080c3a25d0db8fa033b94237d7e5b43f000f62906fc46"
+      "sha256": "89d6cf3833f352b44e7595d6f2c37e6e0ce71e41f15d7c01423d78b1e4063774"
     },
     "approvalStatus": "APPROVED",
     "eventIds": [
@@ -9338,10 +9296,10 @@
       "child_027": "0bd815d2395cd02a9964d5b9d42cb55369d2e70c36d15c25f73cedfd610cf56b"
     },
     "semanticReviewer": "Codex AI (/root/security_p0)",
-    "visualReviewer": "Codex AI",
-    "cropReviewer": "Codex AI",
+    "visualReviewer": "Codex AI / user-accepted optimized preview and native route/pixel checks",
+    "cropReviewer": "Codex AI / 2026-11-22 two native viewports, font 100%",
     "reviewerType": "AI",
-    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/child_027.json",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-optimization-20261122/child_027.json",
     "resolvedIssueEvidence": {
       "child_027": "부모 두 사람, 스마트폰, 서명 전 계약서가 중앙에 남는다."
     }
@@ -9353,7 +9311,7 @@
     "sha256": "add360662c5d1da4842e54f7d2cd63491676b48423904748f5f8932afbfcd400",
     "approvedPresentation": {
       "assetPath": "presentation/portraits/img_child_vacation_001_portrait_v1.png",
-      "sha256": "b4c98ae8293ea1c1d3052dee59aa2db4d6d01a805cd5e39c676c533a808fee08"
+      "sha256": "0a58b80e2c90fdb941c60ead18d3af11e95cd8665cb69d1592960b39fa52202f"
     },
     "approvalStatus": "APPROVED",
     "eventIds": [
@@ -9363,10 +9321,10 @@
       "child_039": "a3d4287e10167c97536557799ee0ff16c629b523f9ca7bb9d40e16849af6164d"
     },
     "semanticReviewer": "Codex AI (/root/effects_tech)",
-    "visualReviewer": "Codex AI",
-    "cropReviewer": "Codex AI",
+    "visualReviewer": "Codex AI / user-accepted optimized preview and native route/pixel checks",
+    "cropReviewer": "Codex AI / 2026-11-22 two native viewports, font 100%",
     "reviewerType": "AI",
-    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/child_039.json",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-optimization-20261122/child_039.json",
     "resolvedIssueEvidence": {
       "child_039": "두 여행 자료와 부모 얼굴이 보이고 아이 소매가 하단까지 이어진다."
     }
@@ -9378,7 +9336,7 @@
     "sha256": "e9dadea02bad787835f77aa5656e344ed7419f540b441be540d33cd27f5919fd",
     "approvedPresentation": {
       "assetPath": "presentation/portraits/img_child_swing_line_001_portrait_v1.png",
-      "sha256": "8b7c20b803bacefcb3e3364ec14ecc0b1ae1ff115be062f52f50c23860f23ae6"
+      "sha256": "7c18feab54104d130832098c545ca0967f0bed8747614d872fc9a99a0a856cc4"
     },
     "approvalStatus": "APPROVED",
     "eventIds": [
@@ -9388,10 +9346,10 @@
       "child_041": "51556ffdb0c1f90ac87eb64f34026a58d84fc8e27b76aab0f79e32b89b4fbfd3"
     },
     "semanticReviewer": "Codex AI (/root/security_p0)",
-    "visualReviewer": "Codex AI",
-    "cropReviewer": "Codex AI",
+    "visualReviewer": "Codex AI / user-accepted optimized preview and native route/pixel checks",
+    "cropReviewer": "Codex AI / 2026-11-22 two native viewports, font 100%",
     "reviewerType": "AI",
-    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/child_041.json",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-optimization-20261122/child_041.json",
     "resolvedIssueEvidence": {
       "child_041": "빈 그네와 주변에 기다리는 아이들이 보이고 누구도 아직 타지 않았다."
     }
@@ -9403,7 +9361,7 @@
     "sha256": "15ff486af504a1e82fa8beffc225960d3f4097e6f92c32e9586037405d255820",
     "approvedPresentation": {
       "assetPath": "presentation/portraits/img_teen_graduation_001_portrait_v1.png",
-      "sha256": "b374a54d7960a1845237bfc30281203a335e46ec8e399169f1886f6362ca4709"
+      "sha256": "5cac2e03ac65cbec93c0af5563c9cc9665e20ba25048fb3dc92f107183cb37c9"
     },
     "approvalStatus": "APPROVED",
     "eventIds": [
@@ -9413,10 +9371,10 @@
       "teen_039": "e804c1af23cd4a8669b8b65a11735b85380167fb5491248fcb9a469357b9a8c6"
     },
     "semanticReviewer": "Codex AI (/root/security_p0)",
-    "visualReviewer": "Codex AI",
-    "cropReviewer": "Codex AI",
+    "visualReviewer": "Codex AI / user-accepted optimized preview and native route/pixel checks",
+    "cropReviewer": "Codex AI / 2026-11-22 two native viewports, font 100%",
     "reviewerType": "AI",
-    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/teen_039.json",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-optimization-20261122/teen_039.json",
     "resolvedIssueEvidence": {
       "teen_039": "졸업식 친구들과 꽃다발 및 연락 화면이 보인다."
     }
@@ -9428,7 +9386,7 @@
     "sha256": "9cfaca7cc5357f82a6589d74ebab2274537a3395296f85e183715463bc068dd0",
     "approvedPresentation": {
       "assetPath": "presentation/portraits/img_adult_driving_test_001_portrait_v1.png",
-      "sha256": "9b428944e1ff61cc1794fba0b73d989a7fa91d51d7e0130a9f6194606dee165a"
+      "sha256": "0df04ff705278211f552536b8900f99e171de0b937f6ec64a2770921531f6880"
     },
     "approvalStatus": "APPROVED",
     "eventIds": [
@@ -9438,10 +9396,10 @@
       "adult_044": "868f6f1acb4ef6948a967ced3978ba01e7c3debe75a91365fdb98f898be355f0"
     },
     "semanticReviewer": "Codex AI (/root/effects_tech)",
-    "visualReviewer": "Codex AI",
-    "cropReviewer": "Codex AI",
+    "visualReviewer": "Codex AI / user-accepted optimized preview and native route/pixel checks",
+    "cropReviewer": "Codex AI / 2026-11-22 two native viewports, font 100%",
     "reviewerType": "AI",
-    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/adult_044.json",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-optimization-20261122/adult_044.json",
     "resolvedIssueEvidence": {
       "adult_044": "운전석의 무릎과 핸들, 옆 좌석 검사자의 손·서류, 도로가 함께 보인다."
     }
@@ -9453,7 +9411,7 @@
     "sha256": "69ef22116c7b7a8744105a44aed982e863baa0b705cba31cfe084f3997e51860",
     "approvedPresentation": {
       "assetPath": "presentation/portraits/img_adult_father_70th_001_portrait_v1.png",
-      "sha256": "48d0e105dfe838ee3e8a3f3e1cbaec095cadbc160d2c36425c38adb6e0686875"
+      "sha256": "42bc2963375156abc49e2b2abf50f47cd4d682d6c1fc5106d48f638d78a257e9"
     },
     "approvalStatus": "APPROVED",
     "eventIds": [
@@ -9463,10 +9421,10 @@
       "adult_051": "0a03258a6f868a88d2fa98705e2fc607fdcb3f15e3c73d5c24108d3ce41b1f61"
     },
     "semanticReviewer": "Codex AI (/root/security_p0)",
-    "visualReviewer": "Codex AI",
-    "cropReviewer": "Codex AI",
+    "visualReviewer": "Codex AI / user-accepted optimized preview and native route/pixel checks",
+    "cropReviewer": "Codex AI / 2026-11-22 two native viewports, font 100%",
     "reviewerType": "AI",
-    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/adult_051.json",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-optimization-20261122/adult_051.json",
     "resolvedIssueEvidence": {
       "adult_051": "휴대폰 가족 채팅과 일정 기호가 중앙에 있다."
     }
@@ -9478,7 +9436,7 @@
     "sha256": "5661800b2dbf92526e2233ba8680877145832710fe43c364ab315c98687b1762",
     "approvedPresentation": {
       "assetPath": "presentation/portraits/img_adult_birthday_001_portrait_v1.png",
-      "sha256": "7e4577e216da66f48297ff68827d39f02985b28280435c6956ab67e65d18e682"
+      "sha256": "f44dce23ce2ad4e89c4c85be3407e01accd5d9ce97208d8725e6ac108f0be4c1"
     },
     "approvalStatus": "APPROVED",
     "eventIds": [
@@ -9488,10 +9446,10 @@
       "adult_052": "6cbdddd04532d3ae9ef433c15dabcee694543575b95c7f2ffbcfd3e4ce696aa2"
     },
     "semanticReviewer": "Codex AI (/root/security_p0)",
-    "visualReviewer": "Codex AI",
-    "cropReviewer": "Codex AI",
+    "visualReviewer": "Codex AI / user-accepted optimized preview and native route/pixel checks",
+    "cropReviewer": "Codex AI / 2026-11-22 two native viewports, font 100%",
     "reviewerType": "AI",
-    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/adult_052.json",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-optimization-20261122/adult_052.json",
     "resolvedIssueEvidence": {
       "adult_052": "가족과 촛불 케이크, 아직 자르지 않은 생일상이 보인다."
     }
@@ -9503,7 +9461,7 @@
     "sha256": "7caf99f29f164d229e575d540ebda05fd38c2b8e420417443eaa9e2b46f67852",
     "approvedPresentation": {
       "assetPath": "presentation/portraits/img_special_dog_carry_001_portrait_v1.png",
-      "sha256": "6ea45624423c809379b5a92b66bb45800d37a81fe737fdd85a7ec47430c7774a"
+      "sha256": "f67e2522eeea0e61e4d598e5f911c86dd906899098871b17ff5bf2f857a20bbe"
     },
     "approvalStatus": "APPROVED",
     "eventIds": [
@@ -9513,10 +9471,10 @@
       "special_002": "686e6e24c9bfed5acdb97eda4e8424057e3977bb1d89e2d9771c2eec28309c46"
     },
     "semanticReviewer": "Codex AI (/root/security_p0)",
-    "visualReviewer": "Codex AI",
-    "cropReviewer": "Codex AI",
+    "visualReviewer": "Codex AI / user-accepted optimized preview and native route/pixel checks",
+    "cropReviewer": "Codex AI / 2026-11-22 two native viewports, font 100%",
     "reviewerType": "AI",
-    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/special_002.json",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-optimization-20261122/special_002.json",
     "resolvedIssueEvidence": {
       "special_002": "개가 아이의 담요를 물고 있고 강아지 침대가 뒤에 보인다."
     }
@@ -9528,7 +9486,7 @@
     "sha256": "8b7caf6fe98a443b4375ac009a7aba0545be9c464f7563243cd4046c6223d86a",
     "approvedPresentation": {
       "assetPath": "presentation/portraits/img_special_hornet_001_portrait_v1.png",
-      "sha256": "b2d7dbe39c0dca5dcbc66ad544faeff164c860e41020580eb063949acd99bc7a"
+      "sha256": "a67c3c1832f3214655fdcc2fa4557152c237790415b8e3caece9a2a57d99632e"
     },
     "approvalStatus": "APPROVED",
     "eventIds": [
@@ -9538,10 +9496,10 @@
       "special_003": "74a14a8a24c533978246e2fcb7d4f9eb910ea75969638d93f138434f07864ed5"
     },
     "semanticReviewer": "Codex AI (/root/security_p0)",
-    "visualReviewer": "Codex AI",
-    "cropReviewer": "Codex AI",
+    "visualReviewer": "Codex AI / user-accepted optimized preview and native route/pixel checks",
+    "cropReviewer": "Codex AI / 2026-11-22 two native viewports, font 100%",
     "reviewerType": "AI",
-    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/special_003.json",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-optimization-20261122/special_003.json",
     "resolvedIssueEvidence": {
       "special_003": "도시락과 내려오는 낙엽, 친구들이 같은 장면에 남는다."
     }
@@ -9553,7 +9511,7 @@
     "sha256": "9e8122c7e4a4ad13701a2594652223223adee65f2251df6fa4e4a5033a4a45c9",
     "approvedPresentation": {
       "assetPath": "presentation/portraits/img_special_water_bottle_001_portrait_v1.png",
-      "sha256": "2bb85889f04e52bf6394d0e0607f31c9ca04f9856d6c3961110edc64c3749e5d"
+      "sha256": "fe581d6096ebf5b1a8244c1ab0f3162945e6a41ee67c3cad96dc73cb8c932fc7"
     },
     "approvalStatus": "APPROVED",
     "eventIds": [
@@ -9563,10 +9521,10 @@
       "special_007": "61ffa6ea7859268eaa5023312a60a872d5322d3d3964fdb9fe20364ed0391e7a"
     },
     "semanticReviewer": "Codex AI (/root/security_p0)",
-    "visualReviewer": "Codex AI",
-    "cropReviewer": "Codex AI",
+    "visualReviewer": "Codex AI / user-accepted optimized preview and native route/pixel checks",
+    "cropReviewer": "Codex AI / 2026-11-22 two native viewports, font 100%",
     "reviewerType": "AI",
-    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/special_007.json",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-optimization-20261122/special_007.json",
     "resolvedIssueEvidence": {
       "special_007": "면접관 세 명과 닫힌 물병, 양손을 모두 식별할 수 있다."
     }
@@ -9578,7 +9536,7 @@
     "sha256": "da9082e698969a933099f112d79c45c63e0e69ecad05f35ab273a3a30a5ff3e6",
     "approvedPresentation": {
       "assetPath": "presentation/portraits/img_special_health_research_001_portrait_v1.png",
-      "sha256": "db7ecbf3039f1b4e15b8049af7d5729c7d9c95ee420615e65a5afea9153ac31e"
+      "sha256": "befd3360f182ad64142d55f1cea3226d0e77dae916a1b211a53b8134d909bc83"
     },
     "approvalStatus": "APPROVED",
     "eventIds": [
@@ -9588,10 +9546,10 @@
       "special_009": "91c97d9dc2ffc8fd75a695a3fe1d178890bb08e25fe1be39112f1e8694ed5812"
     },
     "semanticReviewer": "Codex AI (/root/effects_tech)",
-    "visualReviewer": "Codex AI",
-    "cropReviewer": "Codex AI",
+    "visualReviewer": "Codex AI / user-accepted optimized preview and native route/pixel checks",
+    "cropReviewer": "Codex AI / 2026-11-22 two native viewports, font 100%",
     "reviewerType": "AI",
-    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/special_009.json",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-optimization-20261122/special_009.json",
     "resolvedIssueEvidence": {
       "special_009": "진료진과 검진표가 함께 보이고 왼쪽 인물도 구분된다."
     }
@@ -9603,7 +9561,7 @@
     "sha256": "f07ced21b4ce9bf23545e1073c5d59b9b6f735b9c05b9c1ffccc031e4f5cb5c6",
     "approvedPresentation": {
       "assetPath": "presentation/portraits/img_special_robot_vacuum_001_portrait_v1.png",
-      "sha256": "6f3c6054f94f37ada83ba06b0c9bfa2e9ddfe007afb2e6fb54c5b9b8845bcc55"
+      "sha256": "94518269e1a28ebe6131c1b4ce9069a1d0115ed77a065f92f72b6a14357e0e04"
     },
     "approvalStatus": "APPROVED",
     "eventIds": [
@@ -9613,10 +9571,10 @@
       "special_012": "2ff487983a15a29ee971728d32e49986cbef67ac48045fe682085c24042f116d"
     },
     "semanticReviewer": "Codex AI (/root/security_p0)",
-    "visualReviewer": "Codex AI",
-    "cropReviewer": "Codex AI",
+    "visualReviewer": "Codex AI / user-accepted optimized preview and native route/pixel checks",
+    "cropReviewer": "Codex AI / 2026-11-22 two native viewports, font 100%",
     "reviewerType": "AI",
-    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/special_012.json",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-optimization-20261122/special_012.json",
     "resolvedIssueEvidence": {
       "special_012": "로봇 청소기에 옷자락이 걸린 장면과 손이 남는다."
     }
@@ -9628,7 +9586,7 @@
     "sha256": "2090848e90dd24d366c093c3129da4b9a47c68ad12eb6396e846cb6e9d92bfc5",
     "approvedPresentation": {
       "assetPath": "presentation/portraits/img_special_revolving_door_001_portrait_v1.png",
-      "sha256": "0b1cbbe9e46f7b1c98c9bea39132d1fdd4f48bb6c5ae9f0ec74af744f7d05d7e"
+      "sha256": "c9d86b6be789b92742b5c422a4628d8745d8a49aeb15b4a68373c9774cc26910"
     },
     "approvalStatus": "APPROVED",
     "eventIds": [
@@ -9638,10 +9596,10 @@
       "special_018": "19fa3b51329e3af2a611771cddc22fe70dbbea018f1ae5d4b65698aaff230b3f"
     },
     "semanticReviewer": "Codex AI (/root/security_p0)",
-    "visualReviewer": "Codex AI",
-    "cropReviewer": "Codex AI",
+    "visualReviewer": "Codex AI / user-accepted optimized preview and native route/pixel checks",
+    "cropReviewer": "Codex AI / 2026-11-22 two native viewports, font 100%",
     "reviewerType": "AI",
-    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/special_018.json",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-optimization-20261122/special_018.json",
     "resolvedIssueEvidence": {
       "special_018": "회전문과 사원증, 벽시계가 화면 중앙에 있다."
     }
@@ -9653,7 +9611,7 @@
     "sha256": "d85ddfccbe1b325985e25f7e715d3d14148e3eb3061f74a60b2d72ae5cb85a5b",
     "approvedPresentation": {
       "assetPath": "presentation/portraits/img_path_int_01_001_portrait_v1.png",
-      "sha256": "685132847716a14c2c7b77dc3933e1b512cf78b179c8a95be08a63bdeabdcab9"
+      "sha256": "50a67750f713bcc4c4140fc5417e90ddc850a696d8481f6da947fc210ed694b2"
     },
     "approvalStatus": "APPROVED",
     "eventIds": [
@@ -9663,10 +9621,10 @@
       "path_int_01": "e4d87e6fdcb25966f923bc360b7eea5abf7f89f419fcf27b0121bd16b1761fb2"
     },
     "semanticReviewer": "Codex AI (/root/effects_tech)",
-    "visualReviewer": "Codex AI",
-    "cropReviewer": "Codex AI",
+    "visualReviewer": "Codex AI / user-accepted optimized preview and native route/pixel checks",
+    "cropReviewer": "Codex AI / 2026-11-22 two native viewports, font 100%",
     "reviewerType": "AI",
-    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/path_int_01.json",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-optimization-20261122/path_int_01.json",
     "resolvedIssueEvidence": {
       "path_int_01": "선생님과 경시대회 안내, 양손 자료가 중앙에 남는다."
     }
@@ -9678,7 +9636,7 @@
     "sha256": "64468871e66a74246da9eea83c12d4d3c4af192de8aa3c605850cfb768643f19",
     "approvedPresentation": {
       "assetPath": "presentation/portraits/img_path_int_02_001_portrait_v1.png",
-      "sha256": "b63d3c7d15e2ac1feff6de14df06dcf46a8ae22178b9f40f52e2307e5d751d58"
+      "sha256": "0fb74fd31006c2c4bd3f2512b64cd804a22c0bbdb3f2a23cbd40b59cfc83f7ae"
     },
     "approvalStatus": "APPROVED",
     "eventIds": [
@@ -9688,10 +9646,10 @@
       "path_int_02": "80c11e9882954abdb1aa879e5fff456f46df42ee66ac5de8f5028a9fdcd35ce6"
     },
     "semanticReviewer": "Codex AI (/root/security_p0)",
-    "visualReviewer": "Codex AI",
-    "cropReviewer": "Codex AI",
+    "visualReviewer": "Codex AI / user-accepted optimized preview and native route/pixel checks",
+    "cropReviewer": "Codex AI / 2026-11-22 two native viewports, font 100%",
     "reviewerType": "AI",
-    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/path_int_02.json",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-optimization-20261122/path_int_02.json",
     "resolvedIssueEvidence": {
       "path_int_02": "예전 화면에서 사라졌던 선생님 얼굴이 공고와 문제집 옆에 남는다."
     }
@@ -9703,7 +9661,7 @@
     "sha256": "dbdc6bdb19dab36b0e0635bcb13986b28e83fbd3f5110cef5932e7d254d12ab1",
     "approvedPresentation": {
       "assetPath": "presentation/portraits/img_path_int_08_001_portrait_v1.png",
-      "sha256": "09732b407055928aac51b918c78a17940c462d2bb3c6ecc04c13e3e42e4cbe01"
+      "sha256": "fdb1d65bcc8efc922b8384c10ceded0bb69451f2ace68c1594940811a1cf8625"
     },
     "approvalStatus": "APPROVED",
     "eventIds": [
@@ -9713,10 +9671,10 @@
       "path_int_08": "0ecc9cb62d5d3c34effe161fe5fbe6c82fd8fab7d284b891571037cb1e86c78a"
     },
     "semanticReviewer": "Codex AI (/root/effects_tech)",
-    "visualReviewer": "Codex AI",
-    "cropReviewer": "Codex AI",
+    "visualReviewer": "Codex AI / user-accepted optimized preview and native route/pixel checks",
+    "cropReviewer": "Codex AI / 2026-11-22 two native viewports, font 100%",
     "reviewerType": "AI",
-    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/path_int_08.json",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-optimization-20261122/path_int_08.json",
     "resolvedIssueEvidence": {
       "path_int_08": "마감 노트북과 가족 연락 화면이 책상 위에 함께 있다."
     }
@@ -9728,7 +9686,7 @@
     "sha256": "d2bb4ff368c5619756b13363a8b9532525b2007fbef07cc8d7d83e24bb8136d8",
     "approvedPresentation": {
       "assetPath": "presentation/portraits/img_path_fit_01_001_portrait_v1.png",
-      "sha256": "f0e35758c91c29885a25e1bebca9027b0e1b0d6c4927eb884fbf265fb9f2ed82"
+      "sha256": "e319557c7f020d732d5e624d3807797d8a6709f56e9519fb1d5e370f9cace0ad"
     },
     "approvalStatus": "APPROVED",
     "eventIds": [
@@ -9738,10 +9696,10 @@
       "path_fit_01": "6629f09816186124c0c1d4d063bfd0698059ada559aa1717c7352ed6ae2a1d56"
     },
     "semanticReviewer": "Codex AI (/root/effects_tech)",
-    "visualReviewer": "Codex AI",
-    "cropReviewer": "Codex AI",
+    "visualReviewer": "Codex AI / user-accepted optimized preview and native route/pixel checks",
+    "cropReviewer": "Codex AI / 2026-11-22 two native viewports, font 100%",
     "reviewerType": "AI",
-    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/path_fit_01.json",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-optimization-20261122/path_fit_01.json",
     "resolvedIssueEvidence": {
       "path_fit_01": "명함을 내미는 코치, 운동장, 관찰하는 아이 시점이 남는다."
     }
@@ -9753,7 +9711,7 @@
     "sha256": "e68304b1bb65a782b1bb1c87221de91ea438a8adeee593ce273e4ec45f653af3",
     "approvedPresentation": {
       "assetPath": "presentation/portraits/img_path_fit_02_001_portrait_v1.png",
-      "sha256": "9d8c73004c4fecceb6d2a9d7d73ae8d615ae76ce4212b281ac59923e03053c47"
+      "sha256": "2d19cdf5e54d0fdecb04274d2273af916c04ae7a0e0ce16be722b91eac6f3511"
     },
     "approvalStatus": "APPROVED",
     "eventIds": [
@@ -9763,10 +9721,10 @@
       "path_fit_02": "8e40455931f50d2bf5b965269a551b9bfa59f6049a95f872e609f1e0ddcf654a"
     },
     "semanticReviewer": "Codex AI (/root/security_p0)",
-    "visualReviewer": "Codex AI",
-    "cropReviewer": "Codex AI",
+    "visualReviewer": "Codex AI / user-accepted optimized preview and native route/pixel checks",
+    "cropReviewer": "Codex AI / 2026-11-22 two native viewports, font 100%",
     "reviewerType": "AI",
-    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/path_fit_02.json",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-optimization-20261122/path_fit_02.json",
     "resolvedIssueEvidence": {
       "path_fit_02": "출발선에서 풀린 운동화 끈을 확인할 수 있다."
     }
@@ -9778,7 +9736,7 @@
     "sha256": "f5a03cf613ce4b10597e78e94c2e42d6b448463777bedab6af0478ddde79a7a6",
     "approvedPresentation": {
       "assetPath": "presentation/portraits/img_path_fit_03_001_portrait_v1.png",
-      "sha256": "23075f0d5b40e0b047562796f74ca10ea34a26c137697aa296c0a1d671597e74"
+      "sha256": "dc8677d516a24fba9dbb32cbbf83168689556927b5c907fc3e121378c6b12d77"
     },
     "approvalStatus": "APPROVED",
     "eventIds": [
@@ -9788,10 +9746,10 @@
       "path_fit_03": "8f46de70b134c8ec814fa696657d2e5497ceca1f07c2ca677edd0f438f05f1df"
     },
     "semanticReviewer": "Codex AI (/root/security_p0)",
-    "visualReviewer": "Codex AI",
-    "cropReviewer": "Codex AI",
+    "visualReviewer": "Codex AI / user-accepted optimized preview and native route/pixel checks",
+    "cropReviewer": "Codex AI / 2026-11-22 two native viewports, font 100%",
     "reviewerType": "AI",
-    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/path_fit_03.json",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-optimization-20261122/path_fit_03.json",
     "resolvedIssueEvidence": {
       "path_fit_03": "운동 특기 제안을 건네는 사람과 옆의 서류, 빈 손이 보인다."
     }
@@ -9803,7 +9761,7 @@
     "sha256": "c9a80a64d713b73b428307c84a23d9266a0bddfaadc337c95483968aa1d6699a",
     "approvedPresentation": {
       "assetPath": "presentation/portraits/img_path_soc_02_001_portrait_v1.png",
-      "sha256": "c8dc7b5e8dfa97230d62991fa9b2228842703d4fb2a0843a8d735f49754a6dc8"
+      "sha256": "0b3b70b86e488bee588545491b92cbdcaaac7bcbd43b7f9c9aca0a5263458522"
     },
     "approvalStatus": "APPROVED",
     "eventIds": [
@@ -9813,10 +9771,10 @@
       "path_soc_02": "2ed2c506f8b73581fa5b519dc5998147fd5c9abe9680402e02e1d6c724fea4a7"
     },
     "semanticReviewer": "Codex AI (/root/effects_tech)",
-    "visualReviewer": "Codex AI",
-    "cropReviewer": "Codex AI",
+    "visualReviewer": "Codex AI / user-accepted optimized preview and native route/pixel checks",
+    "cropReviewer": "Codex AI / 2026-11-22 two native viewports, font 100%",
     "reviewerType": "AI",
-    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/path_soc_02.json",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-optimization-20261122/path_soc_02.json",
     "resolvedIssueEvidence": {
       "path_soc_02": "축제 회의의 두 사람과 계획 자료가 한 화면에 남는다."
     }
@@ -9828,7 +9786,7 @@
     "sha256": "a7af4eb457ed03b3d5f7988e64bed8157cbc76bbb77f838b483ff93f079aca50",
     "approvedPresentation": {
       "assetPath": "presentation/portraits/img_path_hap_03_001_portrait_v1.png",
-      "sha256": "0d15c668ad1181fff8884c4e9512b0e3f10f960b9eb505fdf95fdfd6302cfd87"
+      "sha256": "fa130c5944286df31d071fa931b1f5499c6c880095f4379127fd9784030fa229"
     },
     "approvalStatus": "APPROVED",
     "eventIds": [
@@ -9838,10 +9796,10 @@
       "path_hap_03": "6041ad8e5de0cc1011d054e719836c72e8d9e0a49fd3c61bfbfd9e1b46086d95"
     },
     "semanticReviewer": "Codex AI (/root/effects_tech)",
-    "visualReviewer": "Codex AI",
-    "cropReviewer": "Codex AI",
+    "visualReviewer": "Codex AI / user-accepted optimized preview and native route/pixel checks",
+    "cropReviewer": "Codex AI / 2026-11-22 two native viewports, font 100%",
     "reviewerType": "AI",
-    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/path_hap_03.json",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-optimization-20261122/path_hap_03.json",
     "resolvedIssueEvidence": {
       "path_hap_03": "두 제안서와 휴대폰의 상대방이 함께 보인다."
     }
@@ -9853,7 +9811,7 @@
     "sha256": "dd4dd11c460352bdfa470e590d9ae1ab20b2f5f1156a8b92162665b5f2f8e277",
     "approvedPresentation": {
       "assetPath": "presentation/portraits/img_path_luk_01_001_portrait_v1.png",
-      "sha256": "bea5b8a83faf1b0e4dc14837f6b7af5a343499e8175701fb320050e636dbdb5a"
+      "sha256": "ecd5e426eee0ff4d1b874c8c2e2dad67bf191dd0e7dc79a3b8b9f6a4ff3ec1be"
     },
     "approvalStatus": "APPROVED",
     "eventIds": [
@@ -9863,10 +9821,10 @@
       "path_luk_01": "b3e7f1c250eab06b976d118f9749dcf970ec16f0c9f98b216dbd042568bdd19d"
     },
     "semanticReviewer": "Codex AI (/root/security_p0)",
-    "visualReviewer": "Codex AI",
-    "cropReviewer": "Codex AI",
+    "visualReviewer": "Codex AI / user-accepted optimized preview and native route/pixel checks",
+    "cropReviewer": "Codex AI / 2026-11-22 two native viewports, font 100%",
     "reviewerType": "AI",
-    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/path_luk_01.json",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-optimization-20261122/path_luk_01.json",
     "resolvedIssueEvidence": {
       "path_luk_01": "세 별 표식 카드와 사장님 얼굴·손, 추첨기, 뒤의 아이들이 남는다."
     }
@@ -9878,7 +9836,7 @@
     "sha256": "be1183a80910abbbb5f83343c54a6c6e8ee1c696f16cd2b4055865312ac72c95",
     "approvedPresentation": {
       "assetPath": "presentation/portraits/img_path_hea_02_001_portrait_v1.png",
-      "sha256": "d40a1a7f212fa14a23f3b4f8e468147703845d9260dd02183728457db7d54e4e"
+      "sha256": "165ffc911aa1905a943cfdfe82435c22e1f81ad7324df990939b68989134634f"
     },
     "approvalStatus": "APPROVED",
     "eventIds": [
@@ -9888,10 +9846,10 @@
       "path_hea_02": "5b667b6961ef8ef2777f6b5b44ac4ad08c4bdd4204ea37b7dfbf260b9aacdcb3"
     },
     "semanticReviewer": "Codex AI (/root/security_p0)",
-    "visualReviewer": "Codex AI",
-    "cropReviewer": "Codex AI",
+    "visualReviewer": "Codex AI / user-accepted optimized preview and native route/pixel checks",
+    "cropReviewer": "Codex AI / 2026-11-22 two native viewports, font 100%",
     "reviewerType": "AI",
-    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/path_hea_02.json",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-optimization-20261122/path_hea_02.json",
     "resolvedIssueEvidence": {
       "path_hea_02": "새벽 시계와 휴대폰, 펼친 공부 자료가 놓여 있다."
     }
@@ -9903,7 +9861,7 @@
     "sha256": "be3e4d1d9ce4b43776dba7b3c93862cb7d069a02fc42fb4c02947fdc422c7455",
     "approvedPresentation": {
       "assetPath": "presentation/portraits/img_path_hea_05_001_portrait_v1.png",
-      "sha256": "300e0155d72702be5d5f73d12e00c6d5450e054ff2b2b8ab88285c8abc3984ef"
+      "sha256": "3835fa861741b76d40f4e77bef071262d46602bf9d02a18ba53afc84ae3a3419"
     },
     "approvalStatus": "APPROVED",
     "eventIds": [
@@ -9913,10 +9871,10 @@
       "path_hea_05": "a4df3d1978f6501cd2ace5981197e25fdeec87aca1d60d2511ea4ded19df5127"
     },
     "semanticReviewer": "Codex AI (/root/effects_tech)",
-    "visualReviewer": "Codex AI",
-    "cropReviewer": "Codex AI",
+    "visualReviewer": "Codex AI / user-accepted optimized preview and native route/pixel checks",
+    "cropReviewer": "Codex AI / 2026-11-22 two native viewports, font 100%",
     "reviewerType": "AI",
-    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/path_hea_05.json",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-optimization-20261122/path_hea_05.json",
     "resolvedIssueEvidence": {
       "path_hea_05": "의사와 진단서 및 검사표가 함께 보인다."
     }
@@ -9928,7 +9886,7 @@
     "sha256": "769b1132789267cc1aa9026a16614fba535e03b56a94c8ea79f215292a17de08",
     "approvedPresentation": {
       "assetPath": "presentation/portraits/img_path_hea_11_001_portrait_v1.png",
-      "sha256": "d7c3d2e2294b0860a75e86b745e6d58a7b31e2dc3ab1fad7c77278669dafb93d"
+      "sha256": "9fa5746733065a71ced4aa2fa91f83c48e229ec0cb6c7b319dd4232d0bc34e66"
     },
     "approvalStatus": "APPROVED",
     "eventIds": [
@@ -9938,10 +9896,10 @@
       "path_hea_11": "af78000dea0b908c956b3c9e2180714820edeaabef31a22c30837d9ea1dccac0"
     },
     "semanticReviewer": "Codex AI (/root/effects_tech)",
-    "visualReviewer": "Codex AI",
-    "cropReviewer": "Codex AI",
+    "visualReviewer": "Codex AI / user-accepted optimized preview and native route/pixel checks",
+    "cropReviewer": "Codex AI / 2026-11-22 two native viewports, font 100%",
     "reviewerType": "AI",
-    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/path_hea_11.json",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-optimization-20261122/path_hea_11.json",
     "resolvedIssueEvidence": {
       "path_hea_11": "아버지와 저녁 식사, 식탁의 진단 자료 모두 보인다."
     }
@@ -9953,7 +9911,7 @@
     "sha256": "c2bd740ba752c5f01c498943493c5b5c0f5aa911d2452c2de987e6197cf30ad1",
     "approvedPresentation": {
       "assetPath": "presentation/portraits/img_path_fit_12_001_portrait_v1.png",
-      "sha256": "770b80ad68172f7ec47374aa2d89e09aaa8bd627b4888bc4653ccda44f0ce5d9"
+      "sha256": "ea215996df6401cb5ae9aebdd07b9082846ca5a5c118611c3a16f9b75b8e10d6"
     },
     "approvalStatus": "APPROVED",
     "eventIds": [
@@ -9963,10 +9921,10 @@
       "path_fit_12": "81547b064316cd404e67122d20e934d59c9ea40fc49e84038db7cb2be012f4b0"
     },
     "semanticReviewer": "Codex AI (/root/effects_tech)",
-    "visualReviewer": "Codex AI",
-    "cropReviewer": "Codex AI",
+    "visualReviewer": "Codex AI / user-accepted optimized preview and native route/pixel checks",
+    "cropReviewer": "Codex AI / 2026-11-22 two native viewports, font 100%",
     "reviewerType": "AI",
-    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/path_fit_12.json",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-optimization-20261122/path_fit_12.json",
     "resolvedIssueEvidence": {
       "path_fit_12": "탈락 통보를 확인하는 휴대폰과 운동화·무릎이 보인다."
     }
@@ -9978,7 +9936,7 @@
     "sha256": "47d03d73c6dcc3c004b32d9cd9abd725e7fe80bfb2f51a9e83a11db1a74ef095",
     "approvedPresentation": {
       "assetPath": "presentation/portraits/img_path_fit_14_001_portrait_v1.png",
-      "sha256": "4cecc2e5cebb17676cc216dec180623b9eeafbd46332353e0ce7377563e53a40"
+      "sha256": "fe5968303dbb484785a98272dcec3d50417c60e8dbf24baae2dd3fba7c920b14"
     },
     "approvalStatus": "APPROVED",
     "eventIds": [
@@ -9988,10 +9946,10 @@
       "path_fit_14": "39e07c0c77c45fae41b37fe19d3cf0798f10ece46118a2bdfc8baec55c68e4ea"
     },
     "semanticReviewer": "Codex AI (/root/effects_tech)",
-    "visualReviewer": "Codex AI",
-    "cropReviewer": "Codex AI",
+    "visualReviewer": "Codex AI / user-accepted optimized preview and native route/pixel checks",
+    "cropReviewer": "Codex AI / 2026-11-22 two native viewports, font 100%",
     "reviewerType": "AI",
-    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/path_fit_14.json",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-optimization-20261122/path_fit_14.json",
     "resolvedIssueEvidence": {
       "path_fit_14": "탈의실과 두 제안 자료, 무릎을 짚은 손이 남는다."
     }
@@ -10003,7 +9961,7 @@
     "sha256": "2dd589f3125779f7b005fc6f256386f41c9dcc9dde84d4cfee63ab95c0fa262b",
     "approvedPresentation": {
       "assetPath": "presentation/portraits/img_path_soc_15_001_portrait_v1.png",
-      "sha256": "68563fe7e6bd4b9ef464918e5388b5abdd31335db08645f6caca508d4c0ae7cb"
+      "sha256": "7840bac47587a813c08c7be9d6083ce19e24709648b07ab065c0021fe45ee6e7"
     },
     "approvalStatus": "APPROVED",
     "eventIds": [
@@ -10013,10 +9971,10 @@
       "path_soc_15": "aea67b9f3aa0bf2ab213f05a1ed37dd9d8b4bb49ec04d8202b97fd2e929292e9"
     },
     "semanticReviewer": "Codex AI (/root/effects_tech)",
-    "visualReviewer": "Codex AI",
-    "cropReviewer": "Codex AI",
+    "visualReviewer": "Codex AI / user-accepted optimized preview and native route/pixel checks",
+    "cropReviewer": "Codex AI / 2026-11-22 two native viewports, font 100%",
     "reviewerType": "AI",
-    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/path_soc_15.json",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-optimization-20261122/path_soc_15.json",
     "resolvedIssueEvidence": {
       "path_soc_15": "육아 동료와 아이들, 단체 채팅 화면이 함께 보인다."
     }
@@ -10028,7 +9986,7 @@
     "sha256": "019fc04ee1d055c626f5cc18ecc6b4b43b8dbcf4495046aee1bca7cbba110be4",
     "approvedPresentation": {
       "assetPath": "presentation/portraits/img_path_wea_13_001_portrait_v1.png",
-      "sha256": "28878ddd18f871cf461218f893cf151a3c9b47b8554e1b8ae07b10246b87a510"
+      "sha256": "9a65d1d75ef19443b8ba92b7d015892ae1517fa6ccdfd65d8741bb563c223211"
     },
     "approvalStatus": "APPROVED",
     "eventIds": [
@@ -10038,10 +9996,10 @@
       "path_wea_13": "c426d5cdc0ebc9afc8395510077a61a7d8e417f02d0d158a0283ae7e71a9c1eb"
     },
     "semanticReviewer": "Codex AI (/root/effects_tech)",
-    "visualReviewer": "Codex AI",
-    "cropReviewer": "Codex AI",
+    "visualReviewer": "Codex AI / user-accepted optimized preview and native route/pixel checks",
+    "cropReviewer": "Codex AI / 2026-11-22 two native viewports, font 100%",
     "reviewerType": "AI",
-    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/path_wea_13.json",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-optimization-20261122/path_wea_13.json",
     "resolvedIssueEvidence": {
       "path_wea_13": "집 관련 서류와 휴대폰 및 상의하는 가족이 보인다."
     }
@@ -10053,7 +10011,7 @@
     "sha256": "e7362e6bd02a58be22ad8f818e9d0bc5291d4c8791d457dbafb656c02a50933d",
     "approvedPresentation": {
       "assetPath": "presentation/portraits/img_path_hap_13_001_portrait_v1.png",
-      "sha256": "112e176a374df655004a3149e5e48fcae414e25e322b89b67ceaf359234155eb"
+      "sha256": "814ca197a5d4cca5fe2eae23a7e67bb464585e651d7f94694eeda1f70e0f91e2"
     },
     "approvalStatus": "APPROVED",
     "eventIds": [
@@ -10063,10 +10021,10 @@
       "path_hap_13": "5c081596928336d4ada61d705f393f462f400f25565700923083cc63cacf9380"
     },
     "semanticReviewer": "Codex AI (/root/effects_tech)",
-    "visualReviewer": "Codex AI",
-    "cropReviewer": "Codex AI",
+    "visualReviewer": "Codex AI / user-accepted optimized preview and native route/pixel checks",
+    "cropReviewer": "Codex AI / 2026-11-22 two native viewports, font 100%",
     "reviewerType": "AI",
-    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/path_hap_13.json",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-optimization-20261122/path_hap_13.json",
     "resolvedIssueEvidence": {
       "path_hap_13": "달력과 배우자, 부모의 사진이 담긴 화면이 중앙에 남는다."
     }
@@ -10078,7 +10036,7 @@
     "sha256": "bf603ab3795b9b58c5f8d09b7e50d6ec9e55f425661d41ea9d62cfbc207928ed",
     "approvedPresentation": {
       "assetPath": "presentation/portraits/img_path_luk_11_001_portrait_v1.png",
-      "sha256": "189dbb086ffced66efe77847300b3b0c6ee45a189b47c0642190bcda037e4975"
+      "sha256": "301d9de26498783461c0de6865d1fc497497c05f9c3149174c3645ca3363d4dd"
     },
     "approvalStatus": "APPROVED",
     "eventIds": [
@@ -10088,10 +10046,10 @@
       "path_luk_11": "28ec85ba19c098226dbdd5a9685fbc50d7b638c92f8360256eabaddaf11dfcba"
     },
     "semanticReviewer": "Codex AI (/root/security_p0)",
-    "visualReviewer": "Codex AI",
-    "cropReviewer": "Codex AI",
+    "visualReviewer": "Codex AI / user-accepted optimized preview and native route/pixel checks",
+    "cropReviewer": "Codex AI / 2026-11-22 two native viewports, font 100%",
     "reviewerType": "AI",
-    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/path_luk_11.json",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-optimization-20261122/path_luk_11.json",
     "resolvedIssueEvidence": {
       "path_luk_11": "젖은 바지와 세탁기 앞에서 발견한 표가 보인다."
     }
@@ -10103,7 +10061,7 @@
     "sha256": "06cb338801d00a27ac8232ecf00c88c8779008633538f8707ae776787ec25737",
     "approvedPresentation": {
       "assetPath": "presentation/portraits/img_path_luk_12_001_portrait_v1.png",
-      "sha256": "079b54a126da7d07ca840772fc86815bb008c75bead17f3504999cf5571607ff"
+      "sha256": "21d7db7a316fb2238b26844bbbbf2b384f953d871c4eca4cb48c1daa6f687d71"
     },
     "approvalStatus": "APPROVED",
     "eventIds": [
@@ -10113,10 +10071,10 @@
       "path_luk_12": "ef15d7517a9bf1c8cc2b3c5c5ed8f194deabf622b0af56155fd45bd6508458ed"
     },
     "semanticReviewer": "Codex AI (/root/effects_tech)",
-    "visualReviewer": "Codex AI",
-    "cropReviewer": "Codex AI",
+    "visualReviewer": "Codex AI / user-accepted optimized preview and native route/pixel checks",
+    "cropReviewer": "Codex AI / 2026-11-22 two native viewports, font 100%",
     "reviewerType": "AI",
-    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/path_luk_12.json",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-optimization-20261122/path_luk_12.json",
     "resolvedIssueEvidence": {
       "path_luk_12": "수상한 재연락을 받은 휴대폰과 기존 서류가 보인다."
     }
@@ -10128,7 +10086,7 @@
     "sha256": "1ef454ccb0eba362aae7659c1b054629fe6c1ad21136af5d7c1927e369697d1f",
     "approvedPresentation": {
       "assetPath": "presentation/portraits/img_cross_01_001_portrait_v1.png",
-      "sha256": "0ea2e601ff1795cab99c698f53b1774585b1975a673b5199ac7ecb8e55e55e92"
+      "sha256": "608966febaec4a3a34058b85c0a4c33f24dab1a118f07329f99f03617b67b073"
     },
     "approvalStatus": "APPROVED",
     "eventIds": [
@@ -10138,10 +10096,10 @@
       "cross_01": "be7d2d70255d28ed9fa2cce6c3a70e67affe3a6ff4946aa343d527caa829ec80"
     },
     "semanticReviewer": "Codex AI (/root/effects_tech)",
-    "visualReviewer": "Codex AI",
-    "cropReviewer": "Codex AI",
+    "visualReviewer": "Codex AI / user-accepted optimized preview and native route/pixel checks",
+    "cropReviewer": "Codex AI / 2026-11-22 two native viewports, font 100%",
     "reviewerType": "AI",
-    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/cross_01.json",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-optimization-20261122/cross_01.json",
     "resolvedIssueEvidence": {
       "cross_01": "집 세 채의 안내와 두 사람의 손, 설명하는 중개인이 보인다."
     }
@@ -10153,7 +10111,7 @@
     "sha256": "06381995592f3e8e01361449fe568d930c9bc9fceb485c0c9d4a5491bd86fd73",
     "approvedPresentation": {
       "assetPath": "presentation/portraits/img_cross_06_001_portrait_v1.png",
-      "sha256": "049d1385289cc5806ed7e8653d385e6491c233caa4c6a1044d103f9471a62ecb"
+      "sha256": "ba0676307d7ad6fad3b8c8163597e0bf34bb3d937acd68d175c8bf1317bdd12f"
     },
     "approvalStatus": "APPROVED",
     "eventIds": [
@@ -10163,10 +10121,10 @@
       "cross_06": "e7aea73d779c960fe635c69f3302335e41ebf6385529bca9ddf273a12f221b2f"
     },
     "semanticReviewer": "Codex AI (/root/effects_tech)",
-    "visualReviewer": "Codex AI",
-    "cropReviewer": "Codex AI",
+    "visualReviewer": "Codex AI / user-accepted optimized preview and native route/pixel checks",
+    "cropReviewer": "Codex AI / 2026-11-22 two native viewports, font 100%",
     "reviewerType": "AI",
-    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/cross_06.json",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-optimization-20261122/cross_06.json",
     "resolvedIssueEvidence": {
       "cross_06": "사업 종료 메일을 읽는 휴대폰과 회의하는 사람들이 남는다."
     }
@@ -10178,7 +10136,7 @@
     "sha256": "a0e37f53d51ab28901e03f33e13c3c1cf08be3959caf0a51e4d0bee81969551e",
     "approvedPresentation": {
       "assetPath": "presentation/portraits/img_cross_08_001_portrait_v1.png",
-      "sha256": "098784587d250c8c861e8f3436e25bc6ec84850d80b5c56e0ca061bd92c90c03"
+      "sha256": "327928b487c7654e62ac08effb135a4dcbe4872d9ba6ea39e49ce234475e34f1"
     },
     "approvalStatus": "APPROVED",
     "eventIds": [
@@ -10188,10 +10146,10 @@
       "cross_08": "61811b90ec9b7c47a6e64c359d5ee10c884cdc04dcc89c1ef92a0affd1a2e307"
     },
     "semanticReviewer": "Codex AI (/root/effects_tech)",
-    "visualReviewer": "Codex AI",
-    "cropReviewer": "Codex AI",
+    "visualReviewer": "Codex AI / user-accepted optimized preview and native route/pixel checks",
+    "cropReviewer": "Codex AI / 2026-11-22 two native viewports, font 100%",
     "reviewerType": "AI",
-    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/cross_08.json",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-optimization-20261122/cross_08.json",
     "resolvedIssueEvidence": {
       "cross_08": "검진 일정과 발표 자료, 휴대폰을 각기 구분할 수 있다."
     }
@@ -10203,7 +10161,7 @@
     "sha256": "373c9c7a211e6426093b37d59d4502704140754176140051bc37e80327fd796b",
     "approvedPresentation": {
       "assetPath": "presentation/portraits/img_cross_09_001_portrait_v1.png",
-      "sha256": "8c9b8384182b9f8062132e61985799c7fd70d7bc4b373eb1337be4cc0f1f03ad"
+      "sha256": "fa5f781301239317744bbaf01149b179f6ebe89631e00e4abaec25a65b1476ad"
     },
     "approvalStatus": "APPROVED",
     "eventIds": [
@@ -10213,10 +10171,10 @@
       "cross_09": "435f0c1e9973c82c7b2588e454ac1d07e307742720bd92a616a5e0ffb7fe0fa9"
     },
     "semanticReviewer": "Codex AI (/root/effects_tech)",
-    "visualReviewer": "Codex AI",
-    "cropReviewer": "Codex AI",
+    "visualReviewer": "Codex AI / user-accepted optimized preview and native route/pixel checks",
+    "cropReviewer": "Codex AI / 2026-11-22 two native viewports, font 100%",
     "reviewerType": "AI",
-    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/cross_09.json",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-optimization-20261122/cross_09.json",
     "resolvedIssueEvidence": {
       "cross_09": "학교 운동회 안내와 주말 근무 서류, 달력이 함께 남는다."
     }
@@ -10228,7 +10186,7 @@
     "sha256": "b94a2324dca03e5a79577a9a7473ff65047773ceae337259da58271c060a5a5a",
     "approvedPresentation": {
       "assetPath": "presentation/portraits/img_teen_club_001_portrait_v1.png",
-      "sha256": "3f536f903ecf828925c6643e799d377128fb90e05c580910f35bc7edc651f90d"
+      "sha256": "35b019358bc34f68af91dffaf14c7f404b1e84f2ab09a0d423c7ce8740fd5dee"
     },
     "approvalStatus": "APPROVED",
     "eventIds": [
@@ -10238,10 +10196,10 @@
       "teen_003": "7dac53e0364b604511849feac54c3c2eb4b072ebc40bb89cba4018083616b60d"
     },
     "semanticReviewer": "Codex AI (/root)",
-    "visualReviewer": "Codex AI",
-    "cropReviewer": "Codex AI",
+    "visualReviewer": "Codex AI / user-accepted optimized preview and native route/pixel checks",
+    "cropReviewer": "Codex AI / 2026-11-22 two native viewports, font 100%",
     "reviewerType": "AI",
-    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/teen_003.json",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-optimization-20261122/teen_003.json",
     "resolvedIssueEvidence": {
       "teen_003": "농구공·노트북·베이스와 세 동아리 선배가 보인다."
     }
@@ -10253,7 +10211,7 @@
     "sha256": "1763ae0fffa28119dafa6a24d52cd5faed98485868ce4ee7a089726c08054f41",
     "approvedPresentation": {
       "assetPath": "presentation/portraits/img_teen_midterm_001_portrait_v1.png",
-      "sha256": "acc5006364d14a455307ef2f0cce75ec88d6d91cbeb93857a62860447b467f5d"
+      "sha256": "b07c6de5aec6428270d1673259c7bffb6c9490a451043ab35f2e4a381da6cb40"
     },
     "approvalStatus": "APPROVED",
     "eventIds": [
@@ -10263,10 +10221,10 @@
       "teen_007": "e86a1815d175d128842b5f1e0f2a563cfd7a032c8d3420ed3c3d62154dbbaa7d"
     },
     "semanticReviewer": "Codex AI (/root)",
-    "visualReviewer": "Codex AI",
-    "cropReviewer": "Codex AI",
+    "visualReviewer": "Codex AI / user-accepted optimized preview and native route/pixel checks",
+    "cropReviewer": "Codex AI / 2026-11-22 two native viewports, font 100%",
     "reviewerType": "AI",
-    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/teen_007.json",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-optimization-20261122/teen_007.json",
     "resolvedIssueEvidence": {
       "teen_007": "권유하는 친구와 초대 전화·달력·공부 책을 구분할 수 있다."
     }
@@ -10278,7 +10236,7 @@
     "sha256": "b7ab0929cd115b6564f8ff581459f6049306c0e9b683981e73e1b80585e20f2b",
     "approvedPresentation": {
       "assetPath": "presentation/portraits/img_teen_band_stage_001_portrait_v1.png",
-      "sha256": "062a9e85a6716ca4ccf12df254716a6bfed6c12d4ebeaab09610931fdf667e22"
+      "sha256": "0ba7345e0a70e938926f8e63f07f8e86d067e72ba10ce896a78da15b27e5fc81"
     },
     "approvalStatus": "APPROVED",
     "eventIds": [
@@ -10288,10 +10246,10 @@
       "teen_012": "efa4f5392697385703633278030b22708cd894c9829605d8e56fd6ce1d1316e1"
     },
     "semanticReviewer": "Codex AI (/root)",
-    "visualReviewer": "Codex AI",
-    "cropReviewer": "Codex AI",
+    "visualReviewer": "Codex AI / user-accepted optimized preview and native route/pixel checks",
+    "cropReviewer": "Codex AI / 2026-11-22 two native viewports, font 100%",
     "reviewerType": "AI",
-    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/teen_012.json",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-optimization-20261122/teen_012.json",
     "resolvedIssueEvidence": {
       "teen_012": "목을 짚은 보컬과 손대지 않은 마이크 및 베이스가 보인다."
     }
@@ -10303,7 +10261,7 @@
     "sha256": "80bddefb8bad6869994e1489cd5beeb250a71764d5d68d055a4258a338f28a0a",
     "approvedPresentation": {
       "assetPath": "presentation/portraits/img_teen_screen_time_001_portrait_v1.png",
-      "sha256": "fe29f16d3a5d8c9c1f6923df1ee650467e4324182590be8a2233b8b76c3cc8a8"
+      "sha256": "2cb6cd4caba9cf27404efaace550e22f4afccc89e9a100b3498e03dc1cbe0aa7"
     },
     "approvalStatus": "APPROVED",
     "eventIds": [
@@ -10313,10 +10271,10 @@
       "teen_017": "294e3550893965cb2f063559e9d124b4910c6991a5ef88f678135d167c048ebf"
     },
     "semanticReviewer": "Codex AI (/root)",
-    "visualReviewer": "Codex AI",
-    "cropReviewer": "Codex AI",
+    "visualReviewer": "Codex AI / user-accepted optimized preview and native route/pixel checks",
+    "cropReviewer": "Codex AI / 2026-11-22 two native viewports, font 100%",
     "reviewerType": "AI",
-    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/teen_017.json",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-optimization-20261122/teen_017.json",
     "resolvedIssueEvidence": {
       "teen_017": "엄마와 문자 등급 없는 성적표, 스크린 타임 경고가 남는다."
     }
@@ -10328,7 +10286,7 @@
     "sha256": "e2ccf5cf612a03148f59dccd2d1d3b4a962f1ed90bd47625231fdf0959697df8",
     "approvedPresentation": {
       "assetPath": "presentation/portraits/img_teen_high_school_001_portrait_v1.png",
-      "sha256": "cdd4a9f396246f377a8da794b3cc6a1974487bec5a22ec41486714402d02e4b7"
+      "sha256": "088b7654cb2b2b5e442523dff8c0e074e42a5a3448427e00c1ca8b0401cfc79c"
     },
     "approvalStatus": "APPROVED",
     "eventIds": [
@@ -10338,10 +10296,10 @@
       "teen_019": "1cc636640476afa04f9d8a58bae88a0bd3cbe854563049233bb7cfd59744c7e1"
     },
     "semanticReviewer": "Codex AI (/root/effects_tech)",
-    "visualReviewer": "Codex AI",
-    "cropReviewer": "Codex AI",
+    "visualReviewer": "Codex AI / user-accepted optimized preview and native route/pixel checks",
+    "cropReviewer": "Codex AI / 2026-11-22 two native viewports, font 100%",
     "reviewerType": "AI",
-    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/teen_019.json",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-optimization-20261122/teen_019.json",
     "resolvedIssueEvidence": {
       "teen_019": "부모 두 명과 입학 자료, 비어 있는 원서가 중앙에 있다."
     }
@@ -10353,7 +10311,7 @@
     "sha256": "da0c649ab05fac460d18058ead0a99f306dac594366e86600bbe61558caaaa2b",
     "approvedPresentation": {
       "assetPath": "presentation/portraits/img_teen_school_trip_001_portrait_v1.png",
-      "sha256": "9c129bd21e411f53af58ae178831e6f9f5e875f4b01eed1fee6cc060939c05c8"
+      "sha256": "9cd87e238baa30bf08554431acb2ad97f9985da36e6781a81576bf8a5eb2c46b"
     },
     "approvalStatus": "APPROVED",
     "eventIds": [
@@ -10363,10 +10321,10 @@
       "teen_022": "1fdc796299a90e50d46eba22ba18b11c78333b38b67dc25815924ca9e1d8beb3"
     },
     "semanticReviewer": "Codex AI (/root)",
-    "visualReviewer": "Codex AI",
-    "cropReviewer": "Codex AI",
+    "visualReviewer": "Codex AI / user-accepted optimized preview and native route/pixel checks",
+    "cropReviewer": "Codex AI / 2026-11-22 two native viewports, font 100%",
     "reviewerType": "AI",
-    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/teen_022.json",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-optimization-20261122/teen_022.json",
     "resolvedIssueEvidence": {
       "teen_022": "권유하는 친구들 너머 의자에 앉은 선생님을 식별할 수 있다."
     }
@@ -10378,7 +10336,7 @@
     "sha256": "602e7411cac09c1bec54cce7f3c85e7da30a011e5f0ff62bb355f1a629b44b0c",
     "approvedPresentation": {
       "assetPath": "presentation/portraits/img_teen_father_car_001_portrait_v1.png",
-      "sha256": "d08de92fd936df85fb958f42d7286d225522f136f798e0c13328ab97ea5bf820"
+      "sha256": "e9c47e204be363d1448f350e278ade49fc93a5dfc35b54b93068da32f54e32f0"
     },
     "approvalStatus": "APPROVED",
     "eventIds": [
@@ -10388,10 +10346,10 @@
       "teen_027": "8e97b818878d56086aca850070437bc0c5c74965e46e6bdf5001a58267e37d43"
     },
     "semanticReviewer": "Codex AI (/root)",
-    "visualReviewer": "Codex AI",
-    "cropReviewer": "Codex AI",
+    "visualReviewer": "Codex AI / user-accepted optimized preview and native route/pixel checks",
+    "cropReviewer": "Codex AI / 2026-11-22 two native viewports, font 100%",
     "reviewerType": "AI",
-    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/teen_027.json",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-optimization-20261122/teen_027.json",
     "resolvedIssueEvidence": {
       "teen_027": "창밖 주차된 차 안에 아버지 실루엣이 보이고 헤드라이트는 꺼져 있다."
     }
@@ -10403,7 +10361,7 @@
     "sha256": "3a9198e0400cd35666909ef223141460b9df49ac52052a8f578ddef63e15f198",
     "approvedPresentation": {
       "assetPath": "presentation/portraits/img_adult_lifelong_friend_001_portrait_v1.png",
-      "sha256": "1de8340cdec9e4ac2bc9f906a6459af99d923dfa2fe5f4c99936e287343db56d"
+      "sha256": "be27bfb769f3d64677386af1f1e79eeb5178298d24816a9dcd2b4572d2abd59f"
     },
     "approvalStatus": "APPROVED",
     "eventIds": [
@@ -10413,10 +10371,10 @@
       "adult_062": "c1e102d0758788519ae1fe971dc7a26eb1d2a5f8e5c540bf233c1c0693753a8e"
     },
     "semanticReviewer": "Codex AI (/root/security_p0)",
-    "visualReviewer": "Codex AI",
-    "cropReviewer": "Codex AI",
+    "visualReviewer": "Codex AI / user-accepted optimized preview and native route/pixel checks",
+    "cropReviewer": "Codex AI / 2026-11-22 two native viewports, font 100%",
     "reviewerType": "AI",
-    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/adult_062.json",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-optimization-20261122/adult_062.json",
     "resolvedIssueEvidence": {
       "adult_062": "추억의 사진을 보여주는 휴대폰이 중앙에 남는다."
     }
@@ -10428,7 +10386,7 @@
     "sha256": "3cad0d77bfdd7df077493145f652ec2d51ad77a05b46f88e0545a50d8ffc9db5",
     "approvedPresentation": {
       "assetPath": "presentation/portraits/img_special_auto_door_001_portrait_v1.png",
-      "sha256": "65b79af3ca6e9f4db02d3d2245e1086bfdd853b993dd20c141478cd590183da7"
+      "sha256": "378def58eeedca7033471ad13742a562bf57a6628f022eb50ec88756c5af1f7e"
     },
     "approvalStatus": "APPROVED",
     "eventIds": [
@@ -10438,10 +10396,10 @@
       "special_005": "c6942e067d9ffe5aaf95d7a70f638be8622757a0ee109d09bed9a60251e9ce1b"
     },
     "semanticReviewer": "Codex AI (/root)",
-    "visualReviewer": "Codex AI",
-    "cropReviewer": "Codex AI",
+    "visualReviewer": "Codex AI / user-accepted optimized preview and native route/pixel checks",
+    "cropReviewer": "Codex AI / 2026-11-22 two native viewports, font 100%",
     "reviewerType": "AI",
-    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/special_005.json",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-optimization-20261122/special_005.json",
     "resolvedIssueEvidence": {
       "special_005": "닫힌 자동문과 센서, 양옆의 박수치는 손들이 보인다."
     }
@@ -10453,7 +10411,7 @@
     "sha256": "5c1977696335161e465f1d11c94670d3802fbad9a065cf2eef6b1bdfd0a96536",
     "approvedPresentation": {
       "assetPath": "presentation/portraits/img_special_stuck_elevator_001_portrait_v1.png",
-      "sha256": "a34b77fca2d39a3ce14ce19d22908e97dc74e00793fbfa52ad36664dee6f9c14"
+      "sha256": "89baa4de96e535dd5c5106133543aefbeabfe92e4851593ce77155e1fbf2c35b"
     },
     "approvalStatus": "APPROVED",
     "eventIds": [
@@ -10463,10 +10421,10 @@
       "special_017": "5f3bc51a977f3dca36e5ab14b23240eb5bb866e6915af29ec25cf18bc4df69ce"
     },
     "semanticReviewer": "Codex AI (/root)",
-    "visualReviewer": "Codex AI",
-    "cropReviewer": "Codex AI",
+    "visualReviewer": "Codex AI / user-accepted optimized preview and native route/pixel checks",
+    "cropReviewer": "Codex AI / 2026-11-22 two native viewports, font 100%",
     "reviewerType": "AI",
-    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/special_017.json",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-optimization-20261122/special_017.json",
     "resolvedIssueEvidence": {
       "special_017": "닫힌 승강기 안에서 기다리는 상대방의 얼굴과 비상 패널이 남는다."
     }
@@ -10478,7 +10436,7 @@
     "sha256": "9cc885b7df64858d8dd3b7e47b8ab1ef1b173abe2a1affeeef6b9d134cb0aebd",
     "approvedPresentation": {
       "assetPath": "presentation/portraits/img_path_soc_03_001_portrait_v1.png",
-      "sha256": "1d4619d8eadcae044537a4a4dd91cc41eb03a6f308457f7d23921875bbe1c27f"
+      "sha256": "6360184705bd0a85b5ef18bb7aab874efc6d8c68f6a268c56f7a6e590f64c5b8"
     },
     "approvalStatus": "APPROVED",
     "eventIds": [
@@ -10488,10 +10446,10 @@
       "path_soc_03": "cc2d9da1909b2283b3b720e0678888d48a1b7baa393f961015333e40d224eff0"
     },
     "semanticReviewer": "Codex AI (/root)",
-    "visualReviewer": "Codex AI",
-    "cropReviewer": "Codex AI",
+    "visualReviewer": "Codex AI / user-accepted optimized preview and native route/pixel checks",
+    "cropReviewer": "Codex AI / 2026-11-22 two native viewports, font 100%",
     "reviewerType": "AI",
-    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/path_soc_03.json",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-optimization-20261122/path_soc_03.json",
     "resolvedIssueEvidence": {
       "path_soc_03": "빈 버스와 앞에 앉은 동아리 친구 한 명이 있다."
     }
@@ -10503,7 +10461,7 @@
     "sha256": "92a99e88ce83fd04acd63b51de5577309c54a5be0936c0c7bde08b6694232eef",
     "approvedPresentation": {
       "assetPath": "presentation/portraits/img_path_wea_06_001_portrait_v1.png",
-      "sha256": "ef3fb719c63047a4742262d5da419b50aa90b9a759e95c3bc13b9d0e88acdf35"
+      "sha256": "68a6b8fba20c9076b11772fbc80418fc2bea26d9fd5f2be39cc084dac260ea6b"
     },
     "approvalStatus": "APPROVED",
     "eventIds": [
@@ -10513,10 +10471,10 @@
       "path_wea_06": "f47d391bcbbf9377ca1f009e94879232621e660cedbe9e1363d86ec37627e511"
     },
     "semanticReviewer": "Codex AI (/root/effects_tech)",
-    "visualReviewer": "Codex AI",
-    "cropReviewer": "Codex AI",
+    "visualReviewer": "Codex AI / user-accepted optimized preview and native route/pixel checks",
+    "cropReviewer": "Codex AI / 2026-11-22 two native viewports, font 100%",
     "reviewerType": "AI",
-    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/path_wea_06.json",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-optimization-20261122/path_wea_06.json",
     "resolvedIssueEvidence": {
       "path_wea_06": "지출 자료들과 가족 메시지가 책상 주변에 남는다."
     }
@@ -10528,7 +10486,7 @@
     "sha256": "120563260f1d1f58912f6fd8093e1e6ab2f8d5d3d4810cb3466070aaa3af2afc",
     "approvedPresentation": {
       "assetPath": "presentation/portraits/img_path_hea_03_001_portrait_v1.png",
-      "sha256": "cb2a2d8860468718b20d25bbcb26c81af1f4bee8e9d11d74e6d0cc6ea394ecc9"
+      "sha256": "a3d85d3aafa61756610b2a6341a7d20ef1b69f3d0954737315e12e0327cebbab"
     },
     "approvalStatus": "APPROVED",
     "eventIds": [
@@ -10538,10 +10496,10 @@
       "path_hea_03": "4f3548293ae22092a439f285ae59c085bffa4650112ef3cba9b4f2a93506a8ec"
     },
     "semanticReviewer": "Codex AI (/root/effects_tech)",
-    "visualReviewer": "Codex AI",
-    "cropReviewer": "Codex AI",
+    "visualReviewer": "Codex AI / user-accepted optimized preview and native route/pixel checks",
+    "cropReviewer": "Codex AI / 2026-11-22 two native viewports, font 100%",
     "reviewerType": "AI",
-    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/path_hea_03.json",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-optimization-20261122/path_hea_03.json",
     "resolvedIssueEvidence": {
       "path_hea_03": "의사와 검진표, 유일한 노란 줄이 맨 아래에 보인다."
     }
@@ -10553,7 +10511,7 @@
     "sha256": "613cecccc872370860037dae388f99acd768030656b08de977e4db7c2e0e95d2",
     "approvedPresentation": {
       "assetPath": "presentation/portraits/img_path_fit_15_001_portrait_v1.png",
-      "sha256": "d632914d3c4a4ecb34ebc7b90b457fbafe2f49345fa9ba9715215ab93d4c44d9"
+      "sha256": "34b91d59e22c6ec2e2d404146fac973ad1cc9d6376c557c4e7df297bdde3c181"
     },
     "approvalStatus": "APPROVED",
     "eventIds": [
@@ -10563,10 +10521,10 @@
       "path_fit_15": "01a5c70496689d094f1b20d68b48865ca766145002ba1992c2e5999070eff6df"
     },
     "semanticReviewer": "Codex AI (/root/security_p0)",
-    "visualReviewer": "Codex AI",
-    "cropReviewer": "Codex AI",
+    "visualReviewer": "Codex AI / user-accepted optimized preview and native route/pixel checks",
+    "cropReviewer": "Codex AI / 2026-11-22 two native viewports, font 100%",
     "reviewerType": "AI",
-    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/path_fit_15.json",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-optimization-20261122/path_fit_15.json",
     "resolvedIssueEvidence": {
       "path_fit_15": "운동하는 학생들과 제안을 건네는 교직원을 함께 볼 수 있다."
     }
@@ -10578,7 +10536,7 @@
     "sha256": "64c9be8c48e154527e24d9b71960fe518ff795eafc002b272f0135b3a00a1b2b",
     "approvedPresentation": {
       "assetPath": "presentation/portraits/img_path_soc_10_001_portrait_v1.png",
-      "sha256": "964f52517800a19f992998f37372c2297102e92e536e84d0c8e686ff481d03c0"
+      "sha256": "ddb6082b00d2a557d85359f50b60eadf18ca1b28947950ab3005702f2a4958b2"
     },
     "approvalStatus": "APPROVED",
     "eventIds": [
@@ -10588,10 +10546,10 @@
       "path_soc_10": "41696dab965854a9d87c93500d2cd7ae1ddd9b270e004d940c7dd0082b74b56e"
     },
     "semanticReviewer": "Codex AI (/root)",
-    "visualReviewer": "Codex AI",
-    "cropReviewer": "Codex AI",
+    "visualReviewer": "Codex AI / user-accepted optimized preview and native route/pixel checks",
+    "cropReviewer": "Codex AI / 2026-11-22 two native viewports, font 100%",
     "reviewerType": "AI",
-    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/path_soc_10.json",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-optimization-20261122/path_soc_10.json",
     "resolvedIssueEvidence": {
       "path_soc_10": "축제 후 두 무리와 두 채팅 알림이 함께 나타난다."
     }
@@ -10603,7 +10561,7 @@
     "sha256": "260da2f5dce0a0dd7e7b7af56bf0e7a36d197fc0107947951b674bef067d2077",
     "approvedPresentation": {
       "assetPath": "presentation/portraits/img_path_wea_14_001_portrait_v1.png",
-      "sha256": "6f0c18b3c40d8b9f1b792b018f36a29963647df3eacfc05629e1425cf9e80589"
+      "sha256": "85af43e6b59846ea4368627efad77f30dc1b1a4f6744c39001899e0c17d13e56"
     },
     "approvalStatus": "APPROVED",
     "eventIds": [
@@ -10613,10 +10571,10 @@
       "path_wea_14": "be5ab24bd71295d667c38b9b8a69321cec39e10e3d873a20f950a8b96dac22f5"
     },
     "semanticReviewer": "Codex AI (/root/security_p0)",
-    "visualReviewer": "Codex AI",
-    "cropReviewer": "Codex AI",
+    "visualReviewer": "Codex AI / user-accepted optimized preview and native route/pixel checks",
+    "cropReviewer": "Codex AI / 2026-11-22 two native viewports, font 100%",
     "reviewerType": "AI",
-    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/path_wea_14.json",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-optimization-20261122/path_wea_14.json",
     "resolvedIssueEvidence": {
       "path_wea_14": "아이와 계산기, 여러 학원비 자료가 보인다."
     }
@@ -10628,7 +10586,7 @@
     "sha256": "babbeebeeae1b2b3aebebfbc0bc67ce90e9d52f9ef1d2d347d439afce5c0fa8e",
     "approvedPresentation": {
       "assetPath": "presentation/portraits/img_path_hap_14_001_portrait_v1.png",
-      "sha256": "077dd86ac91f4b0d9cf5c3fc57bbae0f7097aa81bee5af446f2d3c167a7c73e3"
+      "sha256": "86e6e2c0afaa6e5d3c77d6250c0d440effc36718776db53dcbedee61958403e5"
     },
     "approvalStatus": "APPROVED",
     "eventIds": [
@@ -10638,10 +10596,10 @@
       "path_hap_14": "388d32cca431fc39b208dec5ca1efaafb0a711815a8777c00ae9980dfa695714"
     },
     "semanticReviewer": "Codex AI (/root/security_p0)",
-    "visualReviewer": "Codex AI",
-    "cropReviewer": "Codex AI",
+    "visualReviewer": "Codex AI / user-accepted optimized preview and native route/pixel checks",
+    "cropReviewer": "Codex AI / 2026-11-22 two native viewports, font 100%",
     "reviewerType": "AI",
-    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/path_hap_14.json",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-optimization-20261122/path_hap_14.json",
     "resolvedIssueEvidence": {
       "path_hap_14": "피아노와 꽉 찬 일정표를 한 장면에서 본다."
     }
@@ -10653,7 +10611,7 @@
     "sha256": "3855a9675dec30e42cc809a9c4a392a09d3b386d20a8526c3306c56fc4917a17",
     "approvedPresentation": {
       "assetPath": "presentation/portraits/img_cross_10_001_portrait_v1.png",
-      "sha256": "7e77cbccf9d7ccb9186f1c628d34e4521b960e50c5dd2531d36dbcc3ab2ff306"
+      "sha256": "666b6496a77d09a2c01e74725327f6cab31470e3e8a6027e3b82bc7c3b9987c7"
     },
     "approvalStatus": "APPROVED",
     "eventIds": [
@@ -10663,10 +10621,10 @@
       "cross_10": "6bc6e7c1823ef48114add004dab28ecbfed2ef50b3249610000094278d7d435b"
     },
     "semanticReviewer": "Codex AI (/root/security_p0)",
-    "visualReviewer": "Codex AI",
-    "cropReviewer": "Codex AI",
+    "visualReviewer": "Codex AI / user-accepted optimized preview and native route/pixel checks",
+    "cropReviewer": "Codex AI / 2026-11-22 two native viewports, font 100%",
     "reviewerType": "AI",
-    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/cross_10.json",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-optimization-20261122/cross_10.json",
     "resolvedIssueEvidence": {
       "cross_10": "명절의 빈 식탁과 두 연락을 보여주는 전화가 남는다."
     }
@@ -10678,7 +10636,7 @@
     "sha256": "7a71a5af4d7a1aa4772aa0a571f0864b535e6d960e4e58bab4b6999e1eaa4e39",
     "approvedPresentation": {
       "assetPath": "presentation/portraits/img_teen_bus_terminal_001_portrait_v1.png",
-      "sha256": "1dbfc0331d9881777a4d7add7d97af7114bdc84a15a006d6de19290cc2ef6867"
+      "sha256": "f7f8b7baf55dec82b0e7f55bf03f8273b5534488f5208279e04989d4d5655fa5"
     },
     "approvalStatus": "APPROVED",
     "eventIds": [
@@ -10688,10 +10646,10 @@
       "teen_035": "b09abace763b657b6f0b420b432219ff97f345b7c062ee0b482a56b271662c82"
     },
     "semanticReviewer": "Codex AI (/root)",
-    "visualReviewer": "Codex AI",
-    "cropReviewer": "Codex AI",
+    "visualReviewer": "Codex AI / user-accepted optimized preview and native route/pixel checks",
+    "cropReviewer": "Codex AI / 2026-11-22 two native viewports, font 100%",
     "reviewerType": "AI",
-    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/teen_035.json",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-optimization-20261122/teen_035.json",
     "resolvedIssueEvidence": {
       "teen_035": "Empty night bus, seated viewer, late hour on phone."
     }
@@ -10703,7 +10661,7 @@
     "sha256": "9b61d120e0f5197de7edb01743078d122f75a67e30bfe807da4428e2b13f57b5",
     "approvedPresentation": {
       "assetPath": "presentation/portraits/img_teen_d100_001_portrait_v1.png",
-      "sha256": "689fb4b975e647a659077725e880447500b30ceafaf5dd287071ec7d753268e1"
+      "sha256": "6bf32ef2092c33cad41bc9d9e3b6c333944f98856c71d18e3c83098556cfc6cc"
     },
     "approvalStatus": "APPROVED",
     "eventIds": [
@@ -10713,10 +10671,10 @@
       "teen_037": "7a943e7e0e20483d1a937d06a263c3574ea00b8b12bca3e5ba93e7e6cd3aa2cb"
     },
     "semanticReviewer": "Codex AI (/root)",
-    "visualReviewer": "Codex AI",
-    "cropReviewer": "Codex AI",
+    "visualReviewer": "Codex AI / user-accepted optimized preview and native route/pixel checks",
+    "cropReviewer": "Codex AI / 2026-11-22 two native viewports, font 100%",
     "reviewerType": "AI",
-    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/teen_037.json",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-optimization-20261122/teen_037.json",
     "resolvedIssueEvidence": {
       "teen_037": "Revised board clearly reads D-365, classroom still in session."
     }
@@ -10728,7 +10686,7 @@
     "sha256": "8eaa2261b98f615fa42e93968cb7ead24fda4cca415bb60fee96459046801ce3",
     "approvedPresentation": {
       "assetPath": "presentation/portraits/img_adult_hangover_001_portrait_v1.png",
-      "sha256": "aca623262189702146a0e39992c28ad577a7f6d1b2982e2575acd988673611cd"
+      "sha256": "6fd63cbda3700d106db970d340ee7b90e90736a2b2586199c75356e2380657b2"
     },
     "approvalStatus": "APPROVED",
     "eventIds": [
@@ -10738,10 +10696,10 @@
       "adult_021": "213e767900213733017a9e1c7d2dd56f0bec34e95d10db2b19b0dd870ba09290"
     },
     "semanticReviewer": "Codex AI (/root)",
-    "visualReviewer": "Codex AI",
-    "cropReviewer": "Codex AI",
+    "visualReviewer": "Codex AI / user-accepted optimized preview and native route/pixel checks",
+    "cropReviewer": "Codex AI / 2026-11-22 two native viewports, font 100%",
     "reviewerType": "AI",
-    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/adult_021.json",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-optimization-20261122/adult_021.json",
     "resolvedIssueEvidence": {
       "adult_021": "Alarm, morning bed and group video appear together."
     }
@@ -10753,7 +10711,7 @@
     "sha256": "fecbf296e46fc2e97c20be96c5f8d25a6fb952d1b8566f81fe35cb88810d6a2b",
     "approvedPresentation": {
       "assetPath": "presentation/portraits/img_adult_scam_call_001_portrait_v1.png",
-      "sha256": "fa46dbe6ea6e01fc3f786c087b48b9128ec52f45c50a7065c8ca7cb0edd59434"
+      "sha256": "6b2c8b8c706504ac44ed8069cc19ccafbf3e9d686ac4b8ca77947d14dc55d6c9"
     },
     "approvalStatus": "APPROVED",
     "eventIds": [
@@ -10763,10 +10721,10 @@
       "adult_046": "73ae729a4d0c186ff0d6cbdf796a2969512128399944df844950f9c770d3e665"
     },
     "semanticReviewer": "Codex AI (/root)",
-    "visualReviewer": "Codex AI",
-    "cropReviewer": "Codex AI",
+    "visualReviewer": "Codex AI / user-accepted optimized preview and native route/pixel checks",
+    "cropReviewer": "Codex AI / 2026-11-22 two native viewports, font 100%",
     "reviewerType": "AI",
-    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/adult_046.json",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-optimization-20261122/adult_046.json",
     "resolvedIssueEvidence": {
       "adult_046": "Caller on handset at home; no payment, reply or later outcome."
     }
@@ -10778,7 +10736,7 @@
     "sha256": "60cda630b331b64626fdd6aa96c34b0a528e66e4a72e2318f6287d751d95286d",
     "approvedPresentation": {
       "assetPath": "presentation/portraits/img_adult_wedding_invite_001_portrait_v1.png",
-      "sha256": "e9aff2e660df720e0b9d58b7e2f1b7c7354ebc92894e89d144b83a14bedde746"
+      "sha256": "3afee66a856d510e52a4b1b1303dc0c93e8d30958ddda96d15a89646de015233"
     },
     "approvalStatus": "APPROVED",
     "eventIds": [
@@ -10788,10 +10746,10 @@
       "adult_047": "e9d007713e566ef9056f0e13e42689a79743a3a1d643598c57778202ba0c5bbb"
     },
     "semanticReviewer": "Codex AI (/root)",
-    "visualReviewer": "Codex AI",
-    "cropReviewer": "Codex AI",
+    "visualReviewer": "Codex AI / user-accepted optimized preview and native route/pixel checks",
+    "cropReviewer": "Codex AI / 2026-11-22 two native viewports, font 100%",
     "reviewerType": "AI",
-    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/adult_047.json",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-optimization-20261122/adult_047.json",
     "resolvedIssueEvidence": {
       "adult_047": "Mobile wedding invitation with rings and a nearby envelope."
     }
@@ -10803,7 +10761,7 @@
     "sha256": "2c3ca40a3bed4c6f5698f00b2c16b308022ce19fc45aa7b8e3da226f46a6dc30",
     "approvedPresentation": {
       "assetPath": "presentation/portraits/img_pov_dating_app_001_portrait_v1.png",
-      "sha256": "9048ce94b61ee650a6c2177de1ed065319868923ec90bc85385a73276d5e4641"
+      "sha256": "aa2933c638e80c6ed8cf606b0168b88944c43f0ec7b3768bcf07f3da58473c28"
     },
     "approvalStatus": "APPROVED",
     "eventIds": [
@@ -10813,10 +10771,10 @@
       "adult_074": "61227218ed2902074c77d115616d59d566ef66a9ded8a52d621d36e90560347b"
     },
     "semanticReviewer": "Codex AI (/root)",
-    "visualReviewer": "Codex AI",
-    "cropReviewer": "Codex AI",
+    "visualReviewer": "Codex AI / user-accepted optimized preview and native route/pixel checks",
+    "cropReviewer": "Codex AI / 2026-11-22 two native viewports, font 100%",
     "reviewerType": "AI",
-    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/adult_074.json",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-optimization-20261122/adult_074.json",
     "resolvedIssueEvidence": {
       "adult_074": "Match notification depicts both cat and hiking symbols on screen."
     }
@@ -10828,7 +10786,7 @@
     "sha256": "3b7205a7093a912769bc0fe38b212161e436f216704c5820ff4432f5def1b1a1",
     "approvedPresentation": {
       "assetPath": "presentation/portraits/img_pov_id_badge_001_portrait_v1.png",
-      "sha256": "3f8605be2cd49c023f088a7b4c58e184298e7aade2f16021d7510893ceef8c49"
+      "sha256": "3e2d312808616939e42ddde284ea3f41d0b0d5f6f13814dc5bce461ad15553b9"
     },
     "approvalStatus": "APPROVED",
     "eventIds": [
@@ -10838,10 +10796,10 @@
       "adult_079": "56e327a2d1df1733737ac563701ec0222438b10796d1e4c6cd73892b1a87bf1a"
     },
     "semanticReviewer": "Codex AI (/root)",
-    "visualReviewer": "Codex AI",
-    "cropReviewer": "Codex AI",
+    "visualReviewer": "Codex AI / user-accepted optimized preview and native route/pixel checks",
+    "cropReviewer": "Codex AI / 2026-11-22 two native viewports, font 100%",
     "reviewerType": "AI",
-    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/adult_079.json",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-optimization-20261122/adult_079.json",
     "resolvedIssueEvidence": {
       "adult_079": "HR presents photo badge with nervous portrait, colleague waiting nearby."
     }
@@ -10853,7 +10811,7 @@
     "sha256": "41081f1d0f219d0826d02322321071a63655b63fa829135d67d721479ff8f9b3",
     "approvedPresentation": {
       "assetPath": "presentation/portraits/img_path_fit_07_001_portrait_v1.png",
-      "sha256": "62e08131ff2582463cfe8b23a4f5783b93b207d9d9d8375c81774a7bf2fb11fe"
+      "sha256": "7cd0ba053e3161770d989f3fc136c8fe96b2112a6af71cb4260273b721972b37"
     },
     "approvalStatus": "APPROVED",
     "eventIds": [
@@ -10863,10 +10821,10 @@
       "path_fit_07": "c6a4bbe97925a131124c143fda3778bbf0d94e22e711fdf869beb0987f0727e7"
     },
     "semanticReviewer": "Codex AI (/root)",
-    "visualReviewer": "Codex AI",
-    "cropReviewer": "Codex AI",
+    "visualReviewer": "Codex AI / user-accepted optimized preview and native route/pixel checks",
+    "cropReviewer": "Codex AI / 2026-11-22 two native viewports, font 100%",
     "reviewerType": "AI",
-    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/path_fit_07.json",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-optimization-20261122/path_fit_07.json",
     "resolvedIssueEvidence": {
       "path_fit_07": "Physician and knee images with two phone offers for commentary and coaching."
     }
@@ -10878,7 +10836,7 @@
     "sha256": "0e64d429c30dcd3cd3ccfc6b288a4d0f9726ab1c941e46a5a61464d904eaea7e",
     "approvedPresentation": {
       "assetPath": "presentation/portraits/img_path_hea_10_001_portrait_v1.png",
-      "sha256": "2830fe519a358fc85cddf6aa00726dd5ae7dd7bf8960d928eee1598f725471f6"
+      "sha256": "034e28d3f09a46f9e0a346df84ab2bc62f5ca63deb0b93c993f904d4be1f6118"
     },
     "approvalStatus": "APPROVED",
     "eventIds": [
@@ -10888,10 +10846,10 @@
       "path_hea_10": "830d9b90e150f3610b456aaec447c7ae76e82d25df010af2306bdfa4783776d8"
     },
     "semanticReviewer": "Codex AI (/root)",
-    "visualReviewer": "Codex AI",
-    "cropReviewer": "Codex AI",
+    "visualReviewer": "Codex AI / user-accepted optimized preview and native route/pixel checks",
+    "cropReviewer": "Codex AI / 2026-11-22 two native viewports, font 100%",
     "reviewerType": "AI",
-    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/path_hea_10.json",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-optimization-20261122/path_hea_10.json",
     "resolvedIssueEvidence": {
       "path_hea_10": "Supervisor speaking, lit office with colleagues at night and wall clock."
     }
@@ -10903,7 +10861,7 @@
     "sha256": "436bcded91b0fc53c0f25da44a874d3201587d5be9db0583287208d6fb2681cf",
     "approvedPresentation": {
       "assetPath": "presentation/portraits/img_path_int_04_001_portrait_v1.png",
-      "sha256": "6cd90000621c42048830e4f54578242a2d3f07a1f744e9b286b7659f976611f5"
+      "sha256": "2d6063c2357df0b0709e790278e1604a991d9d7b559f7cc23cf273534d38403e"
     },
     "approvalStatus": "APPROVED",
     "eventIds": [
@@ -10913,10 +10871,10 @@
       "path_int_04": "7dfd8b4281e71eccc77d466fd571b3a4bc394234eba829871931d3aeeb6fefbb"
     },
     "semanticReviewer": "Codex AI (/root)",
-    "visualReviewer": "Codex AI",
-    "cropReviewer": "Codex AI",
+    "visualReviewer": "Codex AI / user-accepted optimized preview and native route/pixel checks",
+    "cropReviewer": "Codex AI / 2026-11-22 two native viewports, font 100%",
     "reviewerType": "AI",
-    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/path_int_04.json",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-optimization-20261122/path_int_04.json",
     "resolvedIssueEvidence": {
       "path_int_04": "3.98 transcript and research lab notice are simultaneously visible."
     }
@@ -10928,7 +10886,7 @@
     "sha256": "5c93bfb5ee109aaf5a3eb1f6fb8d171c0db402f80a4a4ccfddad9ec294375232",
     "approvedPresentation": {
       "assetPath": "presentation/portraits/img_path_int_11_001_portrait_v1.png",
-      "sha256": "20e0187de79231b8eccc0343a5804068a5837c975f7bc1742471308b1b4fd0b2"
+      "sha256": "576ecc4f0073ccbdb69ef6d1e88854a38f864324d16859f8fab5d38fa5f05723"
     },
     "approvalStatus": "APPROVED",
     "eventIds": [
@@ -10938,10 +10896,10 @@
       "path_int_11": "bd08cd41a02d54543594ef78d1f837503b3a6d278e705b81fa10962f4a24e016"
     },
     "semanticReviewer": "Codex AI (/root)",
-    "visualReviewer": "Codex AI",
-    "cropReviewer": "Codex AI",
+    "visualReviewer": "Codex AI / user-accepted optimized preview and native route/pixel checks",
+    "cropReviewer": "Codex AI / 2026-11-22 two native viewports, font 100%",
     "reviewerType": "AI",
-    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/path_int_11.json",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-optimization-20261122/path_int_11.json",
     "resolvedIssueEvidence": {
       "path_int_11": "Professor addressing class, viewer has not raised either hand."
     }
@@ -10953,7 +10911,7 @@
     "sha256": "7f09bd34135c43afb3454ec164dd2f85b42a7f06a5393b24e195f9a2c5bd7d14",
     "approvedPresentation": {
       "assetPath": "presentation/portraits/img_path_hap_02_001_portrait_v1.png",
-      "sha256": "4df6fc2eeaed6a477c66ae4979088b9df786e9bc6051f36de74ac465b9e098a4"
+      "sha256": "4552be825cd577ed8248bcb6c799a469e7f70c664dc68a67f8c5de5f3474735f"
     },
     "approvalStatus": "APPROVED",
     "eventIds": [
@@ -10963,10 +10921,10 @@
       "path_hap_02": "fe45d9801ff894721ef3fe786462f4aed23dad2f08ea0d34b9d650f7c90cb858"
     },
     "semanticReviewer": "Codex AI (/root)",
-    "visualReviewer": "Codex AI",
-    "cropReviewer": "Codex AI",
+    "visualReviewer": "Codex AI / user-accepted optimized preview and native route/pixel checks",
+    "cropReviewer": "Codex AI / 2026-11-22 two native viewports, font 100%",
     "reviewerType": "AI",
-    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/path_hap_02.json",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-optimization-20261122/path_hap_02.json",
     "resolvedIssueEvidence": {
       "path_hap_02": "Counsellor offers business program; player's notebook has music and sketch."
     }
@@ -10978,7 +10936,7 @@
     "sha256": "e79bd4a97ca7f25757e3b8008b7158ce2585fcaa8df2100490b009f5cb220999",
     "approvedPresentation": {
       "assetPath": "presentation/portraits/img_path_luk_08_001_portrait_v1.png",
-      "sha256": "428b54e5ed1690c9a22d41e4e8c4f4a63eee96c15f839feef1c5b806daf72274"
+      "sha256": "2afa6716df6208a0c91637982459e30d169db804221f1b110c5006d37668a91e"
     },
     "approvalStatus": "APPROVED",
     "eventIds": [
@@ -10988,10 +10946,10 @@
       "path_luk_08": "dc21b967e33be0f19fbdefa4ac68aa0dcd8a845ec43fe234f975cac506d7885d"
     },
     "semanticReviewer": "Codex AI (/root)",
-    "visualReviewer": "Codex AI",
-    "cropReviewer": "Codex AI",
+    "visualReviewer": "Codex AI / user-accepted optimized preview and native route/pixel checks",
+    "cropReviewer": "Codex AI / 2026-11-22 two native viewports, font 100%",
     "reviewerType": "AI",
-    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/path_luk_08.json",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-optimization-20261122/path_luk_08.json",
     "resolvedIssueEvidence": {
       "path_luk_08": "Airline employee gestures at closed gate, ticket and baggage visible."
     }
@@ -11003,7 +10961,7 @@
     "sha256": "7502542b42fa2bb39a2e2e890b858909a3736019bd9e25ff457efc87de3c53ed",
     "approvedPresentation": {
       "assetPath": "presentation/portraits/img_path_soc_09_001_portrait_v1.png",
-      "sha256": "d632daddefceb20075e9b2e345eb1d7e73af10805f79cb6353860359daee7db1"
+      "sha256": "d95e20f291c29b44bdd3b2124b419ced028acc2072e06403b97d89d4947b0908"
     },
     "approvalStatus": "APPROVED",
     "eventIds": [
@@ -11013,10 +10971,10 @@
       "path_soc_09": "f9b556fda72ae51046cedeecdc4ebdd86d0e472778c059593124b7cf14235129"
     },
     "semanticReviewer": "Codex AI (/root)",
-    "visualReviewer": "Codex AI",
-    "cropReviewer": "Codex AI",
+    "visualReviewer": "Codex AI / user-accepted optimized preview and native route/pixel checks",
+    "cropReviewer": "Codex AI / 2026-11-22 two native viewports, font 100%",
     "reviewerType": "AI",
-    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/path_soc_09.json",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-optimization-20261122/path_soc_09.json",
     "resolvedIssueEvidence": {
       "path_soc_09": "Two guest books and party guests with raised hands before decision."
     }
@@ -11028,7 +10986,7 @@
     "sha256": "25b1247d1ebcb47308668ff27ff391a00e528f0f40ed34df4e071a9e542ce621",
     "approvedPresentation": {
       "assetPath": "presentation/portraits/img_path_wea_10_001_portrait_v1.png",
-      "sha256": "68c66825260a2e1dec1575620a6dd5c9db90c2b062871f912dbdd7b62c6db20b"
+      "sha256": "77a08cb662ea6b05edc1f9b777347de363f270a6d78308019d66b559ab9c1fc4"
     },
     "approvalStatus": "APPROVED",
     "eventIds": [
@@ -11038,10 +10996,10 @@
       "path_wea_10": "6a052b5f3f5890ddaff4669c8d3e8eb17f62a55e39464fa8515d0ee270b592f1"
     },
     "semanticReviewer": "Codex AI (/root)",
-    "visualReviewer": "Codex AI",
-    "cropReviewer": "Codex AI",
+    "visualReviewer": "Codex AI / user-accepted optimized preview and native route/pixel checks",
+    "cropReviewer": "Codex AI / 2026-11-22 two native viewports, font 100%",
     "reviewerType": "AI",
-    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/path_wea_10.json",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-optimization-20261122/path_wea_10.json",
     "resolvedIssueEvidence": {
       "path_wea_10": "Daytime convenience store manager offers night work via moon and pay symbols."
     }
@@ -11053,7 +11011,7 @@
     "sha256": "ccbeb5a6ffaaedaa22f0a1d8ed50e958208dbb78c4a865b7178b0027d7720959",
     "approvedPresentation": {
       "assetPath": "presentation/portraits/img_path_fit_09_001_portrait_v1.png",
-      "sha256": "f7fff6397eb29ce3acc951e41fa8bfe1288cfaba813c2d8eb322ab1f90eb30c2"
+      "sha256": "5c8e343786b9f3bf4e0cc75446031b0b7c51c912ec873bfa76d2223d79f8dad4"
     },
     "approvalStatus": "APPROVED",
     "eventIds": [
@@ -11063,10 +11021,10 @@
       "path_fit_09": "012e49bed01e548a01628f548d54359c23f5f7625cb6670a7fac180ace68ae42"
     },
     "semanticReviewer": "Codex AI (/root)",
-    "visualReviewer": "Codex AI",
-    "cropReviewer": "Codex AI",
+    "visualReviewer": "Codex AI / user-accepted optimized preview and native route/pixel checks",
+    "cropReviewer": "Codex AI / 2026-11-22 two native viewports, font 100%",
     "reviewerType": "AI",
-    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/path_fit_09.json",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-optimization-20261122/path_fit_09.json",
     "resolvedIssueEvidence": {
       "path_fit_09": "Registration worker looks up at senior runner seated at the desk."
     }
@@ -11078,7 +11036,7 @@
     "sha256": "d36a5a47cb826b396d66b8277d7e975ed81fac08cb28d2f148b8dede8f64407d",
     "approvedPresentation": {
       "assetPath": "presentation/portraits/img_path_luk_15_001_portrait_v1.png",
-      "sha256": "2e4d22f91cbf6f756a10c27f955e2f35290ae243b98d47e01b6cecca81657795"
+      "sha256": "f7cbad754a7e7e0d65571b425ce29ed34cd43e3243ad5bd3cac1f23ab534ac0a"
     },
     "approvalStatus": "APPROVED",
     "eventIds": [
@@ -11088,10 +11046,10 @@
       "path_luk_15": "b21baf8250328bb823797aab7ea1ee72655412a9ddf46d0e07d6bfa1a7b77af1"
     },
     "semanticReviewer": "Codex AI (/root)",
-    "visualReviewer": "Codex AI",
-    "cropReviewer": "Codex AI",
+    "visualReviewer": "Codex AI / user-accepted optimized preview and native route/pixel checks",
+    "cropReviewer": "Codex AI / 2026-11-22 two native viewports, font 100%",
     "reviewerType": "AI",
-    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/path_luk_15.json",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-optimization-20261122/path_luk_15.json",
     "resolvedIssueEvidence": {
       "path_luk_15": "Grandchild handling coin by stationary capsule machine, viewer's hands empty."
     }
@@ -11103,7 +11061,7 @@
     "sha256": "6b1d0bc07e9b421a390721271e13f9e4081df8af1e8f488f10b2f9836b40fc39",
     "approvedPresentation": {
       "assetPath": "presentation/portraits/img_teen_class_shirt_001_portrait_v1.png",
-      "sha256": "0013e882f7dac256c2673b3d4adc45f62ade4ed0455619f578cc52480cc87fe0"
+      "sha256": "c237c7761d0100098680eb1d8da28a6f5674380b41899fd80c900f5b53f12efe"
     },
     "approvalStatus": "APPROVED",
     "eventIds": [
@@ -11113,10 +11071,10 @@
       "teen_030": "0a9968ac1863acbb325b4ebba5df325c1b2abfabd1c96b588d319d97b9f27800"
     },
     "semanticReviewer": "Codex AI (/root)",
-    "visualReviewer": "Codex AI",
-    "cropReviewer": "Codex AI",
+    "visualReviewer": "Codex AI / user-accepted optimized preview and native route/pixel checks",
+    "cropReviewer": "Codex AI / 2026-11-22 two native viewports, font 100%",
     "reviewerType": "AI",
-    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/teen_030.json",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-optimization-20261122/teen_030.json",
     "resolvedIssueEvidence": {
       "teen_030": "Three clothing options hanging over ballot box, paper still unmarked."
     }
@@ -11128,7 +11086,7 @@
     "sha256": "5915e1d9ac9cb953990d8cd56a88515c2b0a36083ba67642f2312e31cb0c13d8",
     "approvedPresentation": {
       "assetPath": "presentation/portraits/img_teen_yearbook_photo_001_portrait_v1.png",
-      "sha256": "9498d4f3a9ecdc991b98783516767f7d2e5323db1c1b5381ea7c0fbfffe26ab3"
+      "sha256": "29c39f04b2229973fd3839d4b75ab3c1b1bc5bce9045dced751dfa54defd7cf9"
     },
     "approvalStatus": "APPROVED",
     "eventIds": [
@@ -11138,10 +11096,10 @@
       "teen_033": "3f2f733b4bb277f59c4347cb34428c3bebfaef17ec89a3f901d42f66cfeeff80"
     },
     "semanticReviewer": "Codex AI (/root)",
-    "visualReviewer": "Codex AI",
-    "cropReviewer": "Codex AI",
+    "visualReviewer": "Codex AI / user-accepted optimized preview and native route/pixel checks",
+    "cropReviewer": "Codex AI / 2026-11-22 two native viewports, font 100%",
     "reviewerType": "AI",
-    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/teen_033.json",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-optimization-20261122/teen_033.json",
     "resolvedIssueEvidence": {
       "teen_033": "Uneven fringe in first-person frame above waiting yearbook camera."
     }
@@ -11153,7 +11111,7 @@
     "sha256": "9369be89f20c4e00641a9b20cd1de6c37b466f52bcff68a0915b5d9c9811ad4a",
     "approvedPresentation": {
       "assetPath": "presentation/portraits/img_adult_drinks_toast_001_portrait_v1.png",
-      "sha256": "f096c02c615d604259a5dcf9c745548aaa9500289143230bbe48bc1fb562c3f1"
+      "sha256": "519b2b5fe4bcbbc27d660395ccf82a136f01410528decb7ff69d3d65834327e9"
     },
     "approvalStatus": "APPROVED",
     "eventIds": [
@@ -11163,10 +11121,10 @@
       "adult_009": "51bb7ea1f5cf44e1bb5c854bbca41723076cada5ac62a1b5765783598af66cce"
     },
     "semanticReviewer": "Codex AI (/root)",
-    "visualReviewer": "Codex AI",
-    "cropReviewer": "Codex AI",
+    "visualReviewer": "Codex AI / user-accepted optimized preview and native route/pixel checks",
+    "cropReviewer": "Codex AI / 2026-11-22 two native viewports, font 100%",
     "reviewerType": "AI",
-    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/adult_009.json",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-optimization-20261122/adult_009.json",
     "resolvedIssueEvidence": {
       "adult_009": "Three faces and three raised glasses addressing viewer before toast."
     }
@@ -11178,7 +11136,7 @@
     "sha256": "19fe038c02a418d219c16a69516a59e0c581e23c62a03ffd74f74ac83fb66665",
     "approvedPresentation": {
       "assetPath": "presentation/portraits/img_adult_dinner_seats_001_portrait_v1.png",
-      "sha256": "999dfaac6ec9ea90ad7c550d30df0b700b2282c5aebd0ca441938d355b0b72d1"
+      "sha256": "24519538bc06c4ca6c1b124c0006aab5070178856bb294cce4a24817ccb713aa"
     },
     "approvalStatus": "APPROVED",
     "eventIds": [
@@ -11188,10 +11146,10 @@
       "adult_016": "1ff6b96f8e518ee2a26e82c84fc791da7e962d7ff974116041ba58d87afc345c"
     },
     "semanticReviewer": "Codex AI (/root)",
-    "visualReviewer": "Codex AI",
-    "cropReviewer": "Codex AI",
+    "visualReviewer": "Codex AI / user-accepted optimized preview and native route/pixel checks",
+    "cropReviewer": "Codex AI / 2026-11-22 two native viewports, font 100%",
     "reviewerType": "AI",
-    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/adult_016.json",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-optimization-20261122/adult_016.json",
     "resolvedIssueEvidence": {
       "adult_016": "Three empty places visible at barbecue gathering before choosing a seat."
     }
@@ -11203,7 +11161,7 @@
     "sha256": "0404e42c695f115720b90f54533ecaec35ba896a8f5b72722c4d59c769734adb",
     "approvedPresentation": {
       "assetPath": "presentation/portraits/img_adult_childhood_box_001_portrait_v1.png",
-      "sha256": "91182251c862c60c82ca792cdae5d712e92c5befb2456bbcc8f38c70f37e4b38"
+      "sha256": "f48fb28ba87e671ade5a564fd9d202acb5496f65761015aabd49713d5da8b5fd"
     },
     "approvalStatus": "APPROVED",
     "eventIds": [
@@ -11213,10 +11171,10 @@
       "adult_042": "32633849cfead1240ebdd231c6535e165c1f665eabd53a95a69242da33fade62"
     },
     "semanticReviewer": "Codex AI (/root)",
-    "visualReviewer": "Codex AI",
-    "cropReviewer": "Codex AI",
+    "visualReviewer": "Codex AI / user-accepted optimized preview and native route/pixel checks",
+    "cropReviewer": "Codex AI / 2026-11-22 two native viewports, font 100%",
     "reviewerType": "AI",
-    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/adult_042.json",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-optimization-20261122/adult_042.json",
     "resolvedIssueEvidence": {
       "adult_042": "Closed dusty keepsake box with handwritten childhood label, no template placeholder."
     }
@@ -11228,7 +11186,7 @@
     "sha256": "2baeca5662342c514f41f251f800542f5bcb2d873ea1eeb05a0655013b63e874",
     "approvedPresentation": {
       "assetPath": "presentation/portraits/img_adult_parents_spring_001_portrait_v1.png",
-      "sha256": "f61bbd72eba33aa8d91f85c11931e3fdcc5e419d588043a373a5ce42539ee5c4"
+      "sha256": "20e139f1ce862ad6be863b52b9a94fd2f5440ebfa7889b8a1a26b456b2089c44"
     },
     "approvalStatus": "APPROVED",
     "eventIds": [
@@ -11238,10 +11196,10 @@
       "adult_064": "a94af8a2f9d99ec6813d768127a3769dc64c2dfe5ebee5cc536a6c502e4aca6a"
     },
     "semanticReviewer": "Codex AI (/root)",
-    "visualReviewer": "Codex AI",
-    "cropReviewer": "Codex AI",
+    "visualReviewer": "Codex AI / user-accepted optimized preview and native route/pixel checks",
+    "cropReviewer": "Codex AI / 2026-11-22 two native viewports, font 100%",
     "reviewerType": "AI",
-    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/adult_064.json",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-optimization-20261122/adult_064.json",
     "resolvedIssueEvidence": {
       "adult_064": "Father in profile beside doctor, spring visible out window."
     }
@@ -11253,7 +11211,7 @@
     "sha256": "488f48996d0ce2c6f7cf894f35f1a7a4fddc6c7b09653bce9bd435a80a97d9b1",
     "approvedPresentation": {
       "assetPath": "presentation/portraits/img_pov_welcome_party_001_portrait_v1.png",
-      "sha256": "85154c755dd2241ba442998b11c026a443fc916b8d115c38fd12c0ed208ae9ea"
+      "sha256": "d130a190476aa9b6bb42148242620904aee9210df8d7add048bbafb8880c76dd"
     },
     "approvalStatus": "APPROVED",
     "eventIds": [
@@ -11263,10 +11221,10 @@
       "adult_081": "a5c050135f1cc60eef340cef0cb597574638b7c3128575f7bb206ace45aa9f6a"
     },
     "semanticReviewer": "Codex AI (/root)",
-    "visualReviewer": "Codex AI",
-    "cropReviewer": "Codex AI",
+    "visualReviewer": "Codex AI / user-accepted optimized preview and native route/pixel checks",
+    "cropReviewer": "Codex AI / 2026-11-22 two native viewports, font 100%",
     "reviewerType": "AI",
-    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/adult_081.json",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-optimization-20261122/adult_081.json",
     "resolvedIssueEvidence": {
       "adult_081": "Team leader listening behind expectant colleagues, no thought bubbles."
     }
@@ -11278,7 +11236,7 @@
     "sha256": "bb7316511c7e2194b6f4b2d5a4094d375c7c6c76360cf4ea8e077cc3aca67152",
     "approvedPresentation": {
       "assetPath": "presentation/portraits/img_special_dream_answer_001_portrait_v1.png",
-      "sha256": "fff7f7e0783842bac9fa9a7c835bedf601c5ff9213326a31724950f1a23ea3c3"
+      "sha256": "3ca1fcb20fc0faf8260c5d80bf4a0d83c0dd094a49a91d42722aa7b12663d808"
     },
     "approvalStatus": "APPROVED",
     "eventIds": [
@@ -11288,10 +11246,10 @@
       "special_006": "d1e1a63457a5f08d7aeaf7ba25ec027f3d1affbca450aed00b87a632b1e7a7f4"
     },
     "semanticReviewer": "Codex AI (/root)",
-    "visualReviewer": "Codex AI",
-    "cropReviewer": "Codex AI",
+    "visualReviewer": "Codex AI / user-accepted optimized preview and native route/pixel checks",
+    "cropReviewer": "Codex AI / 2026-11-22 two native viewports, font 100%",
     "reviewerType": "AI",
-    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/special_006.json",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-optimization-20261122/special_006.json",
     "resolvedIssueEvidence": {
       "special_006": "Exam questions, visible blood-marked tissues and tissue box."
     }
@@ -11303,7 +11261,7 @@
     "sha256": "dfdf892442b1ab14c262cc73c62e74742677a7aadd5472824c4245142d4eec9d",
     "approvedPresentation": {
       "assetPath": "presentation/portraits/img_path_wea_04_001_portrait_v1.png",
-      "sha256": "e0e897c07a62f60f5a7c94fef430826010b27ef377dc3537080e466f6dc303cd"
+      "sha256": "e3ef191f4ab95ac592247d960f9d7a0a4abed7691cbf6cb192c3676fd7e23d89"
     },
     "approvalStatus": "APPROVED",
     "eventIds": [
@@ -11313,10 +11271,10 @@
       "path_wea_04": "e57dbd81a0b2d25b38bdfd485a5b6d1e50d9176892675db207bbb518b3a79cb7"
     },
     "semanticReviewer": "Codex AI (/root)",
-    "visualReviewer": "Codex AI",
-    "cropReviewer": "Codex AI",
+    "visualReviewer": "Codex AI / user-accepted optimized preview and native route/pixel checks",
+    "cropReviewer": "Codex AI / 2026-11-22 two native viewports, font 100%",
     "reviewerType": "AI",
-    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/path_wea_04.json",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-optimization-20261122/path_wea_04.json",
     "resolvedIssueEvidence": {
       "path_wea_04": "Landlord showing vacant apartment, unsigned offer and clock. Deposit absent."
     }
@@ -11328,7 +11286,7 @@
     "sha256": "f4ddccba50c6171344fed71f0eac867f388a645259b395447276fa64c2de19cc",
     "approvedPresentation": {
       "assetPath": "presentation/portraits/img_pov_treadmill_001_portrait_v1.png",
-      "sha256": "ebc95588788737bd27cb689c8c036e16bd1c8ce0cd232324e0b994cef8446f0c"
+      "sha256": "5310a5253eb427f96cf6e4ef13318b722b7d989e0a88baa1fa4d928e0b587844"
     },
     "approvalStatus": "APPROVED",
     "eventIds": [
@@ -11338,10 +11296,10 @@
       "adult_078": "fce347016cad78bb142f464c3d88b09f23e6cf74b643dffab6d59cfe0bcd891b"
     },
     "semanticReviewer": "Codex AI (/root)",
-    "visualReviewer": "Codex AI",
-    "cropReviewer": "Codex AI",
+    "visualReviewer": "Codex AI / user-accepted optimized preview and native route/pixel checks",
+    "cropReviewer": "Codex AI / 2026-11-22 two native viewports, font 100%",
     "reviewerType": "AI",
-    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/adult_078.json",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-optimization-20261122/adult_078.json",
     "resolvedIssueEvidence": {
       "adult_078": "Adjacent runner's single belt, viewer's own handrail and fallen earbud in gap."
     }
@@ -11353,7 +11311,7 @@
     "sha256": "5e44b7b62958b1b3a5985e6a60ccb66f0839ace52b89ba01bc58217f9cd37c18",
     "approvedPresentation": {
       "assetPath": "presentation/portraits/img_adult_sunday_night_001_portrait_v1.png",
-      "sha256": "6cca4b028ccbad37dbe776592ff78c5d11e213a145331b879df48e7ce9a4108d"
+      "sha256": "3b39b07b06269f2da0ef0b971896873fb578045830495b0080595d87625dac5e"
     },
     "approvalStatus": "APPROVED",
     "eventIds": [
@@ -11363,10 +11321,10 @@
       "adult_067": "7e269d9a1aae3d5d2d742a983684ea04723bf246bd078768ab75ccfea2fa989b"
     },
     "semanticReviewer": "Codex AI (/root)",
-    "visualReviewer": "Codex AI",
-    "cropReviewer": "Codex AI",
+    "visualReviewer": "Codex AI / user-accepted optimized preview and native route/pixel checks",
+    "cropReviewer": "Codex AI / 2026-11-22 two native viewports, font 100%",
     "reviewerType": "AI",
-    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/adult_067.json",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-optimization-20261122/adult_067.json",
     "resolvedIssueEvidence": {
       "adult_067": "Night bedroom desk, shut-off work activity, eleven on analogue clock, moonlit window and still-blank notebook."
     }
@@ -11378,7 +11336,7 @@
     "sha256": "5d31de411e494ce85686f8f5bc2910c30cecd9a1206aee5ae6d01542d6919622",
     "approvedPresentation": {
       "assetPath": "presentation/portraits/img_teen_wrong_answer_001_portrait_v1.png",
-      "sha256": "41aa35cf0f5730479772071601f7eb1d75c7157302cec7e777ef54893f444349"
+      "sha256": "e8f0bd2945c71e0323f8ec04737359d1bbe419aff62239aaa40a2c56ce5f7b45"
     },
     "approvalStatus": "APPROVED",
     "eventIds": [
@@ -11388,10 +11346,10 @@
       "teen_024": "beda4e5c4c3f75ffcd3fa3e9378681a1bf2b4d1a6b15644f27d558f6e9f438f9"
     },
     "semanticReviewer": "Codex AI (/root)",
-    "visualReviewer": "Codex AI",
-    "cropReviewer": "Codex AI",
+    "visualReviewer": "Codex AI / user-accepted optimized preview and native route/pixel checks",
+    "cropReviewer": "Codex AI / 2026-11-22 two native viewports, font 100%",
     "reviewerType": "AI",
-    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/teen_024.json",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-optimization-20261122/teen_024.json",
     "resolvedIssueEvidence": {
       "teen_024": "Teacher pointing to third line, board and student's notebook in a single vertical view."
     }
@@ -11403,7 +11361,7 @@
     "sha256": "3c37868794fbed03f80c01f77b3c31ba8885a4ed88c0215333164165823e5c95",
     "approvedPresentation": {
       "assetPath": "presentation/portraits/img_infant_first_tooth_001_portrait_v1.png",
-      "sha256": "a8e86003c3a1fe10cab0d0d47e39f3db5ae575cf574e059ac086284f42494318"
+      "sha256": "96c730a0a5338d9c7d27037430c8af8d458e57672ae1597dbcfb13aa8bd26dac"
     },
     "approvalStatus": "APPROVED",
     "eventIds": [
@@ -11413,10 +11371,10 @@
       "infant_002": "4db47762b935140fc1746b9768862a97de3cf975b648e0f739b260872a842d4f"
     },
     "semanticReviewer": "Codex AI (/root)",
-    "visualReviewer": "Codex AI",
-    "cropReviewer": "Codex AI",
+    "visualReviewer": "Codex AI / user-accepted optimized preview and native route/pixel checks",
+    "cropReviewer": "Codex AI / 2026-11-22 two native viewports, font 100%",
     "reviewerType": "AI",
-    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/infant_002.json",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-optimization-20261122/infant_002.json",
     "resolvedIssueEvidence": {
       "infant_002": "Mother offers ring teether; infant's small open hands await a choice."
     }
@@ -11428,7 +11386,7 @@
     "sha256": "e8b321c9fffff153bf5a4a47eef2c67a67097db7acf14f218013ad79b33a2121",
     "approvedPresentation": {
       "assetPath": "presentation/portraits/img_pov_first_card_001_portrait_v1.png",
-      "sha256": "91490db70d899eae008069ff82dded8cc100ba89d654cb02c599b2f90e6cf011"
+      "sha256": "e05707fd232a36b013f3f16f1eba08234892f0655bdcfed73fcc9099b47b2397"
     },
     "approvalStatus": "APPROVED",
     "eventIds": [
@@ -11438,10 +11396,10 @@
       "adult_072": "295aa3bbc0bd22d2f4716f4b3f5c8613062ec6c5e8de08cbb3702e61132aec5e"
     },
     "semanticReviewer": "Codex AI",
-    "visualReviewer": "Codex AI",
-    "cropReviewer": "Codex AI",
+    "visualReviewer": "Codex AI / user-accepted optimized preview and native route/pixel checks",
+    "cropReviewer": "Codex AI / 2026-11-22 two native viewports, font 100%",
     "reviewerType": "AI",
-    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/adult_072.json",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-optimization-20261122/adult_072.json",
     "resolvedIssueEvidence": {
       "adult_072": "서로 다른 진로를 나타내는 두 서류와 빈칸, 책상 앞의 두 손이 두 화면에서 모두 보인다. 본문에서는 세 진로 선택지가 같은 장면과 연결된다."
     }
@@ -11453,7 +11411,7 @@
     "sha256": "08623c4e23e6a577b23b3b97b50c33258e681ba17c60e13213304a0f8b3574f1",
     "approvedPresentation": {
       "assetPath": "presentation/portraits/img_path_int_03_001_portrait_v1.png",
-      "sha256": "86f0a48360cb9f768e14d26c437c891d5ab159b6e9efae65a47d8f0de3ce2551"
+      "sha256": "fd166936460da57722fba453bdb083c29d171b16e30c0c0ac1328b2bc8f8e503"
     },
     "approvalStatus": "APPROVED",
     "eventIds": [
@@ -11463,12 +11421,264 @@
       "path_int_03": "ac6bd16b3ce56b5a08af2ddea45b467ab48e6215c54ec82651cb46ad7bfccd03"
     },
     "semanticReviewer": "Codex AI (/root/security_p0)",
-    "visualReviewer": "Codex AI",
-    "cropReviewer": "Codex AI",
+    "visualReviewer": "Codex AI / user-accepted optimized preview and native route/pixel checks",
+    "cropReviewer": "Codex AI / 2026-11-22 two native viewports, font 100%",
     "reviewerType": "AI",
-    "reviewEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/path_int_03.json",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-optimization-20261122/path_int_03.json",
     "resolvedIssueEvidence": {
       "path_int_03": "보라색부터 주황색까지 겹친 책 다섯 권과 파란 캔 세 개의 윗면·몸통이 두 화면에서 확인된다. 보통 폭 확대 캡처로 오른쪽 캔의 바깥 윤곽까지 확인했다."
+    }
+  },
+  {
+    "groupId": "ai_wonryul_20261122_love_wedding_01",
+    "imageId": "img_love_wedding_01_001",
+    "assetPath": "followup_20261120/img_love_wedding_01_001.png",
+    "sha256": "ed8432961f05ce31dd132ac406556d479dca50491abe36c8fac5920c644be612",
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "love_wedding_01"
+    ],
+    "eventSourceHashes": {
+      "love_wedding_01": "5a8c108639cda975c1399ce485355d514d0328742c7445a1566126bc897b6072"
+    },
+    "semanticReviewer": "Codex AI / 2026-11-22 current-event semantic and native-image review",
+    "visualReviewer": "Codex AI / 2026-11-22 current-event semantic and native-image review",
+    "cropReviewer": "Codex AI / 2026-11-22 current-event semantic and native-image review",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/wonryul-final-20261122/love_wedding_01.json",
+    "resolvedIssueEvidence": {
+      "love_wedding_01": "열린 양문·손잡이·버진로드와 맞잡은 손이 입장 직전 장면을 나타낸다. 서약 낭독·춤·혼인 결과를 완료 장면으로 그리지 않는다. Native/source evidence: docs/refactor/art-candidates/wonryul-final-20261122/love_wedding_01.json"
+    }
+  },
+  {
+    "groupId": "ai_wonryul_20261122_love_wedding_first_love",
+    "imageId": "img_love_wedding_first_love_001",
+    "assetPath": "followup_20261120/img_love_wedding_first_love_001.png",
+    "sha256": "013a5b504c960e23be2ff9e89e66fb5e0ab672eac72efb072c7a5eb5f466197b",
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "love_wedding_first_love"
+    ],
+    "eventSourceHashes": {
+      "love_wedding_first_love": "d85b4025731aefe84003cd98b90ed8a4129c7e21a35e1ac42e9bcd244a27cd09"
+    },
+    "semanticReviewer": "Codex AI / 2026-11-22 current-event semantic and native-image review",
+    "visualReviewer": "Codex AI / 2026-11-22 current-event semantic and native-image review",
+    "cropReviewer": "Codex AI / 2026-11-22 current-event semantic and native-image review",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/wonryul-final-20261122/love_wedding_first_love.json",
+    "resolvedIssueEvidence": {
+      "love_wedding_first_love": "학창 시절 단체 사진 액자, 하객과 입장로가 첫사랑 경로의 본식을 구분한다. 선택 후 단체 사진 재촬영 결과는 미리 보여 주지 않는다. Native/source evidence: docs/refactor/art-candidates/wonryul-final-20261122/love_wedding_first_love.json"
+    }
+  },
+  {
+    "groupId": "ai_wonryul_20261122_love_wedding_music",
+    "imageId": "img_love_wedding_music_001",
+    "assetPath": "followup_20261120/img_love_wedding_music_001.png",
+    "sha256": "82e91788b39d8fcc9723b4ff136f3484464510d7ce16e7fd00e02903ca1a06db",
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "love_wedding_music"
+    ],
+    "eventSourceHashes": {
+      "love_wedding_music": "568a56788bc7868d22cced9c51624b89b3b64b4a909cd7feaa629d2a73935a0c"
+    },
+    "semanticReviewer": "Codex AI / 2026-11-22 current-event semantic and native-image review",
+    "visualReviewer": "Codex AI / 2026-11-22 current-event semantic and native-image review",
+    "cropReviewer": "Codex AI / 2026-11-22 current-event semantic and native-image review",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/wonryul-final-20261122/love_wedding_music.json",
+    "resolvedIssueEvidence": {
+      "love_wedding_music": "밴드·마이크·버진로드가 이미 시작된 입장곡을 나타낸다. 주인공은 전경의 손으로만 표현하고 선택 후 노래·드럼 연주나 성공 결과는 그리지 않는다. Native/source evidence: docs/refactor/art-candidates/wonryul-final-20261122/love_wedding_music.json"
+    }
+  },
+  {
+    "groupId": "ai_wonryul_20261122_love_wedding_book",
+    "imageId": "img_love_wedding_book_001",
+    "assetPath": "followup_20261120/img_love_wedding_book_001.png",
+    "sha256": "4e89035fc6dfe14a4dabc8d4546bb474ef0b11b167251b25110a0133fd80d7d4",
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "love_wedding_book"
+    ],
+    "eventSourceHashes": {
+      "love_wedding_book": "60189b39ad339c78fd3146603904bc0ddad82da3fb7388e53ab356da3263c119"
+    },
+    "semanticReviewer": "Codex AI / 2026-11-22 current-event semantic and native-image review",
+    "visualReviewer": "Codex AI / 2026-11-22 current-event semantic and native-image review",
+    "cropReviewer": "Codex AI / 2026-11-22 current-event semantic and native-image review",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/wonryul-final-20261122/love_wedding_book.json",
+    "resolvedIssueEvidence": {
+      "love_wedding_book": "도서관 정원·책갈피·책·하객석이 책 인연 본식의 장소와 상징을 나타낸다. 선택 후 서약 문구나 답례품 전달 결과를 확정하지 않는다. Native/source evidence: docs/refactor/art-candidates/wonryul-final-20261122/love_wedding_book.json"
+    }
+  },
+  {
+    "groupId": "ai_wonryul_20261122_love_date_first_love",
+    "imageId": "img_love_date_first_love_001",
+    "assetPath": "followup_20261120/img_love_date_first_love_001.png",
+    "sha256": "aa27fb611e2e7e609597a5d0e4cce5507af462d879404919e1ebdedd880d672c",
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "love_date_first_love"
+    ],
+    "eventSourceHashes": {
+      "love_date_first_love": "c3dce964cbfa3eaed522abdd97abf6a6119d3933745962f47fda18f73a2d780f"
+    },
+    "semanticReviewer": "Codex AI / 2026-11-22 current-event semantic and native-image review",
+    "visualReviewer": "Codex AI / 2026-11-22 current-event semantic and native-image review",
+    "cropReviewer": "Codex AI / 2026-11-22 current-event semantic and native-image review",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/wonryul-final-20261122/love_date_first_love.json",
+    "resolvedIssueEvidence": {
+      "love_date_first_love": "음식 그림 간판·골목·문 손잡이가 분식집 거리의 재회 산책을 나타낸다. 특정 옛 점포의 이름이나 성공 문구는 없고 어느 관계 결과도 확정하지 않는다. Native/source evidence: docs/refactor/art-candidates/wonryul-final-20261122/love_date_first_love.json"
+    }
+  },
+  {
+    "groupId": "ai_wonryul_20261122_love_date_music",
+    "imageId": "img_love_date_music_001",
+    "assetPath": "followup_20261120/img_love_date_music_001.png",
+    "sha256": "7d1bb60e94ae948972b176153b8fc50b17a0790613f412f6fd4dd2e78b933a32",
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "love_date_music"
+    ],
+    "eventSourceHashes": {
+      "love_date_music": "72af95940e4842a4b2dfd50c37760b5612b7585ca3ec3f7eab2764e2c58ca535"
+    },
+    "semanticReviewer": "Codex AI / 2026-11-22 current-event semantic and native-image review",
+    "visualReviewer": "Codex AI / 2026-11-22 current-event semantic and native-image review",
+    "cropReviewer": "Codex AI / 2026-11-22 current-event semantic and native-image review",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/wonryul-final-20261122/love_date_music.json",
+    "resolvedIssueEvidence": {
+      "love_date_music": "카페의 두 마이크·기타·신청서가 둘만의 오픈 마이크 준비를 나타낸다. 공연 성공·말다툼·관객의 박수 등 선택 결과는 없다. Native/source evidence: docs/refactor/art-candidates/wonryul-final-20261122/love_date_music.json"
+    }
+  },
+  {
+    "groupId": "ai_wonryul_20261122_love_date_book",
+    "imageId": "img_love_date_book_001",
+    "assetPath": "followup_20261120/img_love_date_book_001.png",
+    "sha256": "70cefb3ef53cc73c6c32658cdb314784b32751340a90f4225e5fc273d478e008",
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "love_date_book"
+    ],
+    "eventSourceHashes": {
+      "love_date_book": "88ae309c72d7c7c4ea794c132aea0dd33016402bff82a5a398f70e74f6ccab75"
+    },
+    "semanticReviewer": "Codex AI / 2026-11-22 current-event semantic and native-image review",
+    "visualReviewer": "Codex AI / 2026-11-22 current-event semantic and native-image review",
+    "cropReviewer": "Codex AI / 2026-11-22 current-event semantic and native-image review",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/wonryul-final-20261122/love_date_book.json",
+    "resolvedIssueEvidence": {
+      "love_date_book": "헌책방·서로 든 책 두 권·고양이가 세 선택의 공통 장소와 사물을 보여 준다. 특정 책 선택·결제·고양이 무릎잠 결과를 미리 확정하지 않는다. Native/source evidence: docs/refactor/art-candidates/wonryul-final-20261122/love_date_book.json"
+    }
+  },
+  {
+    "groupId": "ai_wonryul_20261122_love_episode_first_love",
+    "imageId": "img_love_episode_first_love_001",
+    "assetPath": "followup_20261120/img_love_episode_first_love_001.png",
+    "sha256": "0225e56522f45ae918816c64b142523dc2ed4bb2e02630f77fd25b8ed620ebc7",
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "love_episode_first_love"
+    ],
+    "eventSourceHashes": {
+      "love_episode_first_love": "ddad913c59d876d04889466ec76a9cbada5e4937475e50ed2291b435995424db"
+    },
+    "semanticReviewer": "Codex AI / 2026-11-22 current-event semantic and native-image review",
+    "visualReviewer": "Codex AI / 2026-11-22 current-event semantic and native-image review",
+    "cropReviewer": "Codex AI / 2026-11-22 current-event semantic and native-image review",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/wonryul-final-20261122/love_episode_first_love.json",
+    "resolvedIssueEvidence": {
+      "love_episode_first_love": "학교 운동장·축제 장식·사진 촬영 전 휴대폰 화면이 모교 재방문과 다시 찍기 제안을 표현한다. 사진 완성·담임 만남 결과는 없다. Native/source evidence: docs/refactor/art-candidates/wonryul-final-20261122/love_episode_first_love.json"
+    }
+  },
+  {
+    "groupId": "ai_wonryul_20261122_love_episode_music",
+    "imageId": "img_love_episode_music_001",
+    "assetPath": "followup_20261120/img_love_episode_music_001.png",
+    "sha256": "85c8a9329b500c295fb939fb3c039e4f12379a0ac02e8f979a4f69f61cfc52ce",
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "love_episode_music"
+    ],
+    "eventSourceHashes": {
+      "love_episode_music": "f38b2465ddbcafe952e5de1175fafb388f795384fd541b3e1ce9a23ffd0039a6"
+    },
+    "semanticReviewer": "Codex AI / 2026-11-22 current-event semantic and native-image review",
+    "visualReviewer": "Codex AI / 2026-11-22 current-event semantic and native-image review",
+    "cropReviewer": "Codex AI / 2026-11-22 current-event semantic and native-image review",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/wonryul-final-20261122/love_episode_music.json",
+    "resolvedIssueEvidence": {
+      "love_episode_music": "문에 걸린 열쇠와 내미는 열쇠, 방음 연습실과 악기가 열쇠 두 개의 제안을 보여 준다. 열쇠를 받은 뒤 연주·규칙·이름표 결과는 없다. Native/source evidence: docs/refactor/art-candidates/wonryul-final-20261122/love_episode_music.json"
+    }
+  },
+  {
+    "groupId": "ai_wonryul_20261122_love_episode_book",
+    "imageId": "img_love_episode_book_001",
+    "assetPath": "followup_20261120/img_love_episode_book_001.png",
+    "sha256": "7c7ffc91ad0c4c868ee93cf046a52b8da5bec3c8027673c3610fc781a606029f",
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "love_episode_book"
+    ],
+    "eventSourceHashes": {
+      "love_episode_book": "df1f85b3fc362ad451acd8ad0e605b2419fe95252123eec7cd267397bf20cb07"
+    },
+    "semanticReviewer": "Codex AI / 2026-11-22 current-event semantic and native-image review",
+    "visualReviewer": "Codex AI / 2026-11-22 current-event semantic and native-image review",
+    "cropReviewer": "Codex AI / 2026-11-22 current-event semantic and native-image review",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/wonryul-final-20261122/love_episode_book.json",
+    "resolvedIssueEvidence": {
+      "love_episode_book": "책장 빈 칸과 두 손이 든 한 권이 함께 책장을 채우기 전을 나타낸다. 이미 가득 찬 책장이나 이름표 등 선택 후 결과는 없다. Native/source evidence: docs/refactor/art-candidates/wonryul-final-20261122/love_episode_book.json"
+    }
+  },
+  {
+    "groupId": "ai_wonryul_20261122_love_wedding_prep_01",
+    "imageId": "img_love_wedding_prep_01_001",
+    "assetPath": "followup_20261120/img_love_wedding_prep_01_001.png",
+    "sha256": "9aff39cd2a310ba4c619241fe872a5c0b8ac15b2eb08880292e66d5a7ddb7f49",
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "love_wedding_prep_01"
+    ],
+    "eventSourceHashes": {
+      "love_wedding_prep_01": "ffdcca0f9fd80b5232873a13d96704bf75f5750c8581e81a9db85e53b4ba1abd"
+    },
+    "semanticReviewer": "Codex AI / 2026-11-22 current-event semantic and native-image review",
+    "visualReviewer": "Codex AI / 2026-11-22 current-event semantic and native-image review",
+    "cropReviewer": "Codex AI / 2026-11-22 current-event semantic and native-image review",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/wonryul-final-20261122/love_wedding_prep_01.json",
+    "resolvedIssueEvidence": {
+      "love_wedding_prep_01": "거실 바닥·청첩장 시안·견적서·예산표·반지 상자가 결혼 준비를 나타낸다. 계약 서명·날짜 확정·인쇄 완료 결과는 없다. Native/source evidence: docs/refactor/art-candidates/wonryul-final-20261122/love_wedding_prep_01.json"
+    }
+  },
+  {
+    "groupId": "ai_wonryul_20261122_infant_007",
+    "imageId": "img_infant_toys_001",
+    "assetPath": "followup_20261120/img_infant_toys_001.png",
+    "sha256": "7e5a20c94d61004ceca9d1d2c785215942e47a782d5eb0d4a735874bd10b8710",
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "infant_007"
+    ],
+    "eventSourceHashes": {
+      "infant_007": "a72e45159d2b7581c27b3405cba07987ad6310c5ed0a05aa15fa12d2eea7a77a"
+    },
+    "semanticReviewer": "Codex AI / 2026-11-22 current-event semantic and native-image review",
+    "visualReviewer": "Codex AI / 2026-11-22 current-event semantic and native-image review",
+    "cropReviewer": "Codex AI / 2026-11-22 current-event semantic and native-image review",
+    "reviewerType": "AI",
+    "reviewEvidence": "docs/refactor/art-candidates/wonryul-final-20261122/infant_007.json",
+    "resolvedIssueEvidence": {
+      "infant_007": "피아노 장난감·판사봉과 받침·지폐가 중립적으로 놓여 있고 아기 손은 어느 것도 잡지 않는다. 판사봉 잡기 그림은 실제 B 결과에만 연결하며 A/C·이어하기·옛 저장 복원을 실제 검사했다. Native/source evidence: docs/refactor/art-candidates/wonryul-final-20261122/infant_007.json"
     }
   }
 ]

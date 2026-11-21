@@ -1,0 +1,1413 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-22",
+  "branch": "codex/week14-wonryul-images",
+  "baseCommit": "a0096529dab37f45b9038987f01b2d55201d4a72",
+  "dependencyPullRequest": 83,
+  "userApprovalScope": "연애·결혼 시안 11장과 최종 실제 장면 보기 11장, 중립 돌잡이 시안, 세로 파생본 95장 시안과 대표 실제 앱 화면",
+  "generatedWith": "built-in image_gen",
+  "deploymentReview": "연애·결혼 11개 실제 장면 보기 사용자 승인 및 최적화 대표 실제 화면 수용 완료. 팀 최종 통합·성능 인수 별도.",
+  "previousApprovals": [
+    {
+      "groupId": "ai_native_20261119_love_wedding_01",
+      "imageId": "img_love_wedding_01_001",
+      "assetPath": "img_love_wedding_01_001.png",
+      "sha256": "21fb68acf28504c0ef18b6fc669a8ea0579f221906b9dcfd90279a3654f16ef4",
+      "approvalStatus": "APPROVED",
+      "eventIds": [
+        "love_wedding_01"
+      ],
+      "eventSourceHashes": {
+        "love_wedding_01": "d99441caa4e1fe80bb26adfbfdef07d3f9f1a39fb6ba4d96e7d1d423212b49a1"
+      },
+      "semanticReviewer": "Codex AI / plan_audit — full current event and outcomes",
+      "visualReviewer": "Codex AI / plan_audit — full PNG and native captures",
+      "cropReviewer": "Codex AI / plan_audit — actual phone and 360x740 scene/play captures",
+      "reviewerType": "AI",
+      "reviewEvidence": "docs/refactor/art-candidates/native-review-first-ten-20261119/love_wedding_01.json",
+      "resolvedIssueEvidence": {
+        "love_wedding_01": "Previously NO_FILE; built-in generated exact source, registered current routing, and individually reviewed native captures: docs/refactor/art-candidates/native-review-first-ten-20261119/love_wedding_01.json"
+      }
+    },
+    {
+      "groupId": "ai_native_20261119_love_wedding_music",
+      "imageId": "img_love_wedding_music_001",
+      "assetPath": "img_love_wedding_music_001.png",
+      "sha256": "c48883bf1e8b4f0cd1fc8c519cac2751cff161c305b935caad3c997f9f559474",
+      "approvalStatus": "APPROVED",
+      "eventIds": [
+        "love_wedding_music"
+      ],
+      "eventSourceHashes": {
+        "love_wedding_music": "89b7c330fb92393c36c6ea263a9cd534473182b1b42f81acd729592c028ec5ae"
+      },
+      "semanticReviewer": "Codex AI / plan_audit — full current event and outcomes",
+      "visualReviewer": "Codex AI / plan_audit — full PNG and native captures",
+      "cropReviewer": "Codex AI / plan_audit — actual phone and 360x740 scene/play captures",
+      "reviewerType": "AI",
+      "reviewEvidence": "docs/refactor/art-candidates/native-review-first-ten-20261119/love_wedding_music.json",
+      "resolvedIssueEvidence": {
+        "love_wedding_music": "Previously NO_FILE; built-in generated exact source, registered current routing, and individually reviewed native captures: docs/refactor/art-candidates/native-review-first-ten-20261119/love_wedding_music.json"
+      }
+    }
+  ],
+  "selectedImages": [
+    {
+      "eventId": "love_wedding_first_love",
+      "imageId": "img_love_wedding_first_love_001",
+      "title": "단체 사진 앞의 결혼식",
+      "reviewedMaster": {
+        "localFile": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\wedding-p0-review-20261121\\01-first-love-v2.png",
+        "sha256": "013a5b504c960e23be2ff9e89e66fb5e0ab672eac72efb072c7a5eb5f466197b",
+        "width": 941,
+        "height": 1672,
+        "userReview": "APPROVED_PREVIEW",
+        "reviewedOn": "2026-11-22"
+      },
+      "deployment": {
+        "assetPath": "followup_20261120/img_love_wedding_first_love_001.png",
+        "sha256": "013a5b504c960e23be2ff9e89e66fb5e0ab672eac72efb072c7a5eb5f466197b",
+        "width": 941,
+        "height": 1672,
+        "crop": [
+          0,
+          0,
+          941,
+          1672
+        ],
+        "resized": false
+      },
+      "nativeReview": {
+        "status": "AI_CHECKED",
+        "method": "현재 사건 JSON과 실제 라우팅을 읽어 production DecisionScreen에서 복원 화면을 표시",
+        "screens": [
+          {
+            "screen": "720x1480",
+            "densityDpi": 320,
+            "fontScale": 1,
+            "sampledPixelSimilarity": 1.0,
+            "visibleSourceX": "0.068..0.932",
+            "captures": {
+              "scene": {
+                "localFile": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\images-native-review-20261122\\720x1480\\love_wedding_first_love_phone_scene.png",
+                "sha256": "a1f5d74efa18b6795f8ba0d4ba0b4b53c992e01c6c27a6918e7292ec4b087c61"
+              },
+              "play": {
+                "localFile": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\images-native-review-20261122\\720x1480\\love_wedding_first_love_phone_play.png",
+                "sha256": "22ed3458d3e388495c1377affa6496f81c20c363eaffb640f33e0725798d64ae"
+              }
+            }
+          },
+          {
+            "screen": "1080x2400",
+            "densityDpi": 420,
+            "fontScale": 1,
+            "sampledPixelSimilarity": 1.0,
+            "visibleSourceX": "0.100..0.900",
+            "captures": {
+              "scene": {
+                "localFile": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\images-native-review-20261122\\1080x2400\\love_wedding_first_love_phone_scene.png",
+                "sha256": "256ca5317e5b6e4d0f889604588780882ddbe92478dc698464946744794e37ff"
+              },
+              "play": {
+                "localFile": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\images-native-review-20261122\\1080x2400\\love_wedding_first_love_phone_play.png",
+                "sha256": "df6f595c3a89029562ecac9ff4e928b2751da8af785b290a2c84f6376bd69083"
+              }
+            }
+          }
+        ],
+        "userReview": "APPROVED_FINAL_SCENE_REVIEW",
+        "finalUserReviewPresentation": {
+          "status": "APPROVED_FINAL_SCENE_REVIEW",
+          "date": "2026-11-22",
+          "reviewRecord": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\romance-final-review-20261122\\review.json",
+          "contactSheet": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\romance-final-review-20261122\\scene-review-1.png",
+          "currentAssetEventRoutingAndCaptureHashesVerified": true,
+          "userApproval": "2026-11-22 사용자: ㅇㅇ좋아. 그대로 가자. 다음은?"
+        }
+      },
+      "eventSourceHash": "d85b4025731aefe84003cd98b90ed8a4129c7e21a35e1ac42e9bcd244a27cd09"
+    },
+    {
+      "eventId": "love_wedding_music",
+      "imageId": "img_love_wedding_music_001",
+      "title": "연주로 채운 결혼식",
+      "reviewedMaster": {
+        "localFile": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\wedding-p0-review-20261121\\02-music-hands-v5.png",
+        "sha256": "82e91788b39d8fcc9723b4ff136f3484464510d7ce16e7fd00e02903ca1a06db",
+        "width": 941,
+        "height": 1672,
+        "userReview": "APPROVED_PREVIEW",
+        "reviewedOn": "2026-11-22"
+      },
+      "deployment": {
+        "assetPath": "followup_20261120/img_love_wedding_music_001.png",
+        "sha256": "82e91788b39d8fcc9723b4ff136f3484464510d7ce16e7fd00e02903ca1a06db",
+        "width": 941,
+        "height": 1672,
+        "crop": [
+          0,
+          0,
+          941,
+          1672
+        ],
+        "resized": false
+      },
+      "nativeReview": {
+        "status": "AI_CHECKED",
+        "method": "현재 사건 JSON과 실제 라우팅을 읽어 production DecisionScreen에서 복원 화면을 표시",
+        "screens": [
+          {
+            "screen": "720x1480",
+            "densityDpi": 320,
+            "fontScale": 1,
+            "sampledPixelSimilarity": 1.0,
+            "visibleSourceX": "0.068..0.932",
+            "captures": {
+              "scene": {
+                "localFile": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\images-native-review-20261122\\720x1480\\love_wedding_music_phone_scene.png",
+                "sha256": "f78e16a67acb194df0864be4f9eea369ca9a3362fa6f36077344c41a2f7696b0"
+              },
+              "play": {
+                "localFile": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\images-native-review-20261122\\720x1480\\love_wedding_music_phone_play.png",
+                "sha256": "63679781c12d304b1fdbb59c787ba190fba4d906cc2301f3009ce41a5b32f461"
+              }
+            }
+          },
+          {
+            "screen": "1080x2400",
+            "densityDpi": 420,
+            "fontScale": 1,
+            "sampledPixelSimilarity": 1.0,
+            "visibleSourceX": "0.100..0.900",
+            "captures": {
+              "scene": {
+                "localFile": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\images-native-review-20261122\\1080x2400\\love_wedding_music_phone_scene.png",
+                "sha256": "3e4bc0e9780516f28d69fc83d247f41282061c651b807dec3624826b03a8245e"
+              },
+              "play": {
+                "localFile": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\images-native-review-20261122\\1080x2400\\love_wedding_music_phone_play.png",
+                "sha256": "66d913c6d79c2733fa16ae57b4eab8f82d498737dd07fab9653ca95a464f4761"
+              }
+            }
+          }
+        ],
+        "userReview": "APPROVED_FINAL_SCENE_REVIEW",
+        "finalUserReviewPresentation": {
+          "status": "APPROVED_FINAL_SCENE_REVIEW",
+          "date": "2026-11-22",
+          "reviewRecord": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\romance-final-review-20261122\\review.json",
+          "contactSheet": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\romance-final-review-20261122\\scene-review-1.png",
+          "currentAssetEventRoutingAndCaptureHashesVerified": true,
+          "userApproval": "2026-11-22 사용자: ㅇㅇ좋아. 그대로 가자. 다음은?"
+        }
+      },
+      "eventSourceHash": "568a56788bc7868d22cced9c51624b89b3b64b4a909cd7feaa629d2a73935a0c"
+    },
+    {
+      "eventId": "love_wedding_book",
+      "imageId": "img_love_wedding_book_001",
+      "title": "책갈피 길 결혼식",
+      "reviewedMaster": {
+        "localFile": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\wedding-p0-review-20261121\\03-book-v2.png",
+        "sha256": "4e89035fc6dfe14a4dabc8d4546bb474ef0b11b167251b25110a0133fd80d7d4",
+        "width": 941,
+        "height": 1672,
+        "userReview": "APPROVED_PREVIEW",
+        "reviewedOn": "2026-11-22"
+      },
+      "deployment": {
+        "assetPath": "followup_20261120/img_love_wedding_book_001.png",
+        "sha256": "4e89035fc6dfe14a4dabc8d4546bb474ef0b11b167251b25110a0133fd80d7d4",
+        "width": 941,
+        "height": 1672,
+        "crop": [
+          0,
+          0,
+          941,
+          1672
+        ],
+        "resized": false
+      },
+      "nativeReview": {
+        "status": "AI_CHECKED",
+        "method": "현재 사건 JSON과 실제 라우팅을 읽어 production DecisionScreen에서 복원 화면을 표시",
+        "screens": [
+          {
+            "screen": "720x1480",
+            "densityDpi": 320,
+            "fontScale": 1,
+            "sampledPixelSimilarity": 1.0,
+            "visibleSourceX": "0.068..0.932",
+            "captures": {
+              "scene": {
+                "localFile": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\images-native-review-20261122\\720x1480\\love_wedding_book_phone_scene.png",
+                "sha256": "bef10aefb433d5a986e132f9f077b84c1c9fc304d7407bd3d7d8e9a6e7230154"
+              },
+              "play": {
+                "localFile": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\images-native-review-20261122\\720x1480\\love_wedding_book_phone_play.png",
+                "sha256": "9b88b8ee31f819872edd59870f77da50e8031334c461ce02369ab634450640a3"
+              }
+            }
+          },
+          {
+            "screen": "1080x2400",
+            "densityDpi": 420,
+            "fontScale": 1,
+            "sampledPixelSimilarity": 1.0,
+            "visibleSourceX": "0.100..0.900",
+            "captures": {
+              "scene": {
+                "localFile": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\images-native-review-20261122\\1080x2400\\love_wedding_book_phone_scene.png",
+                "sha256": "452871b1d044fc49dabeedef7c602bb6c50cb9584fdb1c4469cdd1b647134a5c"
+              },
+              "play": {
+                "localFile": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\images-native-review-20261122\\1080x2400\\love_wedding_book_phone_play.png",
+                "sha256": "0ad8784edec3bc9a1a70fc33d8886c51854b43a9498e4d1a373467af069599ea"
+              }
+            }
+          }
+        ],
+        "userReview": "APPROVED_FINAL_SCENE_REVIEW",
+        "finalUserReviewPresentation": {
+          "status": "APPROVED_FINAL_SCENE_REVIEW",
+          "date": "2026-11-22",
+          "reviewRecord": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\romance-final-review-20261122\\review.json",
+          "contactSheet": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\romance-final-review-20261122\\scene-review-1.png",
+          "currentAssetEventRoutingAndCaptureHashesVerified": true,
+          "userApproval": "2026-11-22 사용자: ㅇㅇ좋아. 그대로 가자. 다음은?"
+        }
+      },
+      "eventSourceHash": "60189b39ad339c78fd3146603904bc0ddad82da3fb7388e53ab356da3263c119"
+    },
+    {
+      "eventId": "love_wedding_01",
+      "imageId": "img_love_wedding_01_001",
+      "title": "결혼식",
+      "reviewedMaster": {
+        "localFile": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\images-native-review-20261122\\common-wedding-portrait-candidate.png",
+        "sha256": "17267629bfd7ea39bf48f7ec0ce96473a60ee2bf26b22ff832902330aba89732",
+        "width": 968,
+        "height": 1625,
+        "userReview": "APPROVED_PREVIEW",
+        "reviewedOn": "2026-11-22"
+      },
+      "deployment": {
+        "assetPath": "followup_20261120/img_love_wedding_01_001.png",
+        "sha256": "ed8432961f05ce31dd132ac406556d479dca50491abe36c8fac5920c644be612",
+        "width": 909,
+        "height": 1616,
+        "crop": [
+          29,
+          4,
+          909,
+          1616
+        ],
+        "resized": false
+      },
+      "nativeReview": {
+        "status": "AI_CHECKED",
+        "method": "현재 사건 JSON과 실제 라우팅을 읽어 production DecisionScreen에서 복원 화면을 표시",
+        "screens": [
+          {
+            "screen": "720x1480",
+            "densityDpi": 320,
+            "fontScale": 1,
+            "sampledPixelSimilarity": 1.0,
+            "visibleSourceX": "0.068..0.932",
+            "captures": {
+              "scene": {
+                "localFile": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\images-native-review-20261122\\common-portrait-final\\720x1480\\love_wedding_01_phone_scene.png",
+                "sha256": "1e731ac47d5cdaf8943aae9fb3c4572e13d9c7e250bc965882b2dd02a1657285"
+              },
+              "play": {
+                "localFile": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\images-native-review-20261122\\common-portrait-final\\720x1480\\love_wedding_01_phone_play.png",
+                "sha256": "d037c55903ef9df4a0bea7d21735395078ba695a97e2e27b1c87c0bb0b525df0"
+              }
+            }
+          },
+          {
+            "screen": "1080x2400",
+            "densityDpi": 420,
+            "fontScale": 1,
+            "sampledPixelSimilarity": 1.0,
+            "visibleSourceX": "0.100..0.900",
+            "captures": {
+              "scene": {
+                "localFile": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\images-native-review-20261122\\common-portrait-final\\1080x2400\\love_wedding_01_phone_scene.png",
+                "sha256": "d1bbfda82e526559d3d0072fccd05bada91ff97e607b1a11dfd8f15162f10c3d"
+              },
+              "play": {
+                "localFile": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\images-native-review-20261122\\common-portrait-final\\1080x2400\\love_wedding_01_phone_play.png",
+                "sha256": "c946ebb8e9446dbd82cd57821807af230a084315189ad6312b6e0bc77e56769a"
+              }
+            }
+          }
+        ],
+        "userReview": "APPROVED_FINAL_SCENE_REVIEW",
+        "observation": "양쪽 열린 문짝과 금색 손잡이, 연인과 맞잡은 손이 두 화면 안에 보임",
+        "finalUserReviewPresentation": {
+          "status": "APPROVED_FINAL_SCENE_REVIEW",
+          "date": "2026-11-22",
+          "reviewRecord": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\romance-final-review-20261122\\review.json",
+          "contactSheet": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\romance-final-review-20261122\\scene-review-1.png",
+          "currentAssetEventRoutingAndCaptureHashesVerified": true,
+          "userApproval": "2026-11-22 사용자: ㅇㅇ좋아. 그대로 가자. 다음은?"
+        }
+      },
+      "eventSourceHash": "5a8c108639cda975c1399ce485355d514d0328742c7445a1566126bc897b6072",
+      "previousReviewedArt": [
+        {
+          "reviewedMaster": {
+            "localFile": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\wedding-p0-review-20261121\\04-common-hands-v4.png",
+            "sha256": "868fb2ca079b0f4abbed377a411293da692d25957a3f6a19c9cb3b12e635b440",
+            "width": 1448,
+            "height": 1086,
+            "userReview": "APPROVED_PREVIEW",
+            "reviewedOn": "2026-11-22"
+          },
+          "deployment": {
+            "assetPath": "followup_20261120/img_love_wedding_01_001.png",
+            "sha256": "ed8432961f05ce31dd132ac406556d479dca50491abe36c8fac5920c644be612",
+            "width": 909,
+            "height": 1616,
+            "crop": [
+              29,
+              4,
+              909,
+              1616
+            ],
+            "resized": false
+          },
+          "nativeReview": {
+            "status": "AI_CHECKED_WITH_CROP_LIMITATION",
+            "method": "현재 사건 JSON과 실제 라우팅을 읽어 production DecisionScreen에서 복원 화면을 표시",
+            "screens": [
+              {
+                "screen": "720x1480",
+                "densityDpi": 320,
+                "fontScale": 1,
+                "sampledPixelSimilarity": 1.0,
+                "visibleSourceX": "0.318..0.682",
+                "captures": {
+                  "scene": {
+                    "localFile": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\images-native-review-20261122\\720x1480\\love_wedding_01_phone_scene.png",
+                    "sha256": "2df6d30b130f8270d7d52b9420937544eb2e3988292308402d92ce9cabe16e5f"
+                  },
+                  "play": {
+                    "localFile": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\images-native-review-20261122\\720x1480\\love_wedding_01_phone_play.png",
+                    "sha256": "e6f66f1d4950aa9ff30aa42fd417bd7905644892a60d72228249b573ba63c95a"
+                  }
+                }
+              },
+              {
+                "screen": "1080x2400",
+                "densityDpi": 420,
+                "fontScale": 1,
+                "sampledPixelSimilarity": 1.0,
+                "visibleSourceX": "0.331..0.669",
+                "captures": {
+                  "scene": {
+                    "localFile": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\images-native-review-20261122\\1080x2400\\love_wedding_01_phone_scene.png",
+                    "sha256": "41418d7e3eb2a888815befaf2a003a770d707030d587d54084cbe9be0a8bd030"
+                  },
+                  "play": {
+                    "localFile": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\images-native-review-20261122\\1080x2400\\love_wedding_01_phone_play.png",
+                    "sha256": "b3393d27ef022ef6ee081dd8b44fe0107df844ccb5e27a15fd996b626c0380aa"
+                  }
+                }
+              }
+            ],
+            "userReview": "PENDING",
+            "limitation": "가로 원화의 양쪽 열린 문짝은 세로 중앙 크롭에서 제외됨. 별도 세로 수정 시안 사용자 검수 대기."
+          }
+        }
+      ]
+    },
+    {
+      "eventId": "love_date_first_love",
+      "imageId": "img_love_date_first_love_001",
+      "title": "다시 걷는 그 길",
+      "reviewedMaster": {
+        "localFile": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\first-date-review-20261121\\05-date-first-love-handle-v2.png",
+        "sha256": "ec26ff835d39e8f8fa9edcb144037f653403c7c304473efe7a470c95c5164594",
+        "width": 981,
+        "height": 1602,
+        "userReview": "APPROVED_PREVIEW",
+        "reviewedOn": "2026-11-22"
+      },
+      "deployment": {
+        "assetPath": "followup_20261120/img_love_date_first_love_001.png",
+        "sha256": "aa27fb611e2e7e609597a5d0e4cce5507af462d879404919e1ebdedd880d672c",
+        "width": 901,
+        "height": 1602,
+        "crop": [
+          40,
+          0,
+          901,
+          1602
+        ],
+        "resized": false
+      },
+      "nativeReview": {
+        "status": "AI_CHECKED",
+        "method": "현재 사건 JSON과 실제 라우팅을 읽어 production DecisionScreen에서 복원 화면을 표시",
+        "screens": [
+          {
+            "screen": "720x1480",
+            "densityDpi": 320,
+            "fontScale": 1,
+            "sampledPixelSimilarity": 1.0,
+            "visibleSourceX": "0.068..0.932",
+            "captures": {
+              "scene": {
+                "localFile": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\images-native-review-20261122\\720x1480\\love_date_first_love_phone_scene.png",
+                "sha256": "1a4135ab31e09509a27bcbc1c11ac548226f7bcca88a13536b755bea308b4229"
+              },
+              "play": {
+                "localFile": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\images-native-review-20261122\\720x1480\\love_date_first_love_phone_play.png",
+                "sha256": "ad1954ce69aa6a04395eb3c298af79255b5e47a10f17d3b8e431dbd119b0cb8a"
+              }
+            }
+          },
+          {
+            "screen": "1080x2400",
+            "densityDpi": 420,
+            "fontScale": 1,
+            "sampledPixelSimilarity": 1.0,
+            "visibleSourceX": "0.100..0.900",
+            "captures": {
+              "scene": {
+                "localFile": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\images-native-review-20261122\\1080x2400\\love_date_first_love_phone_scene.png",
+                "sha256": "ed5b989261c8cf83449533b818dec0fc317dc17b69455f3e076d2b8acf1ccde7"
+              },
+              "play": {
+                "localFile": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\images-native-review-20261122\\1080x2400\\love_date_first_love_phone_play.png",
+                "sha256": "da48ba631df2dade3e493f938e5277e99e51fa3ca297a76cc7aa07c20e4f00e7"
+              }
+            }
+          }
+        ],
+        "userReview": "APPROVED_FINAL_SCENE_REVIEW",
+        "finalUserReviewPresentation": {
+          "status": "APPROVED_FINAL_SCENE_REVIEW",
+          "date": "2026-11-22",
+          "reviewRecord": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\romance-final-review-20261122\\review.json",
+          "contactSheet": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\romance-final-review-20261122\\scene-review-2.png",
+          "currentAssetEventRoutingAndCaptureHashesVerified": true,
+          "userApproval": "2026-11-22 사용자: ㅇㅇ좋아. 그대로 가자. 다음은?"
+        }
+      },
+      "eventSourceHash": "c3dce964cbfa3eaed522abdd97abf6a6119d3933745962f47fda18f73a2d780f"
+    },
+    {
+      "eventId": "love_date_music",
+      "imageId": "img_love_date_music_001",
+      "title": "둘만의 첫 무대",
+      "reviewedMaster": {
+        "localFile": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\first-date-review-20261121\\06-date-music.png",
+        "sha256": "c7782809367cd755080b8412d6a4fbc829e4e852d6ff1f997a1d8aa17018bb4e",
+        "width": 981,
+        "height": 1602,
+        "userReview": "APPROVED_PREVIEW",
+        "reviewedOn": "2026-11-22"
+      },
+      "deployment": {
+        "assetPath": "followup_20261120/img_love_date_music_001.png",
+        "sha256": "7d1bb60e94ae948972b176153b8fc50b17a0790613f412f6fd4dd2e78b933a32",
+        "width": 901,
+        "height": 1602,
+        "crop": [
+          40,
+          0,
+          901,
+          1602
+        ],
+        "resized": false
+      },
+      "nativeReview": {
+        "status": "AI_CHECKED",
+        "method": "현재 사건 JSON과 실제 라우팅을 읽어 production DecisionScreen에서 복원 화면을 표시",
+        "screens": [
+          {
+            "screen": "720x1480",
+            "densityDpi": 320,
+            "fontScale": 1,
+            "sampledPixelSimilarity": 1.0,
+            "visibleSourceX": "0.068..0.932",
+            "captures": {
+              "scene": {
+                "localFile": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\images-native-review-20261122\\720x1480\\love_date_music_phone_scene.png",
+                "sha256": "a72898d167b27d1d536619f08121f4fb3e9f0562f62fe16045859c9b909063da"
+              },
+              "play": {
+                "localFile": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\images-native-review-20261122\\720x1480\\love_date_music_phone_play.png",
+                "sha256": "1590320be2e04f9db1f477a842a764f73583b391fdd79c9f159db016e51eb4c7"
+              }
+            }
+          },
+          {
+            "screen": "1080x2400",
+            "densityDpi": 420,
+            "fontScale": 1,
+            "sampledPixelSimilarity": 1.0,
+            "visibleSourceX": "0.100..0.900",
+            "captures": {
+              "scene": {
+                "localFile": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\images-native-review-20261122\\1080x2400\\love_date_music_phone_scene.png",
+                "sha256": "d75862ea44047e69ba5581698805a7662c713bcee42bf43577d3c028b04082db"
+              },
+              "play": {
+                "localFile": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\images-native-review-20261122\\1080x2400\\love_date_music_phone_play.png",
+                "sha256": "7782ac65def917631547d12511994283ae6bc8a18e7118c31909b1fa48c016ff"
+              }
+            }
+          }
+        ],
+        "userReview": "APPROVED_FINAL_SCENE_REVIEW",
+        "finalUserReviewPresentation": {
+          "status": "APPROVED_FINAL_SCENE_REVIEW",
+          "date": "2026-11-22",
+          "reviewRecord": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\romance-final-review-20261122\\review.json",
+          "contactSheet": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\romance-final-review-20261122\\scene-review-2.png",
+          "currentAssetEventRoutingAndCaptureHashesVerified": true,
+          "userApproval": "2026-11-22 사용자: ㅇㅇ좋아. 그대로 가자. 다음은?"
+        }
+      },
+      "eventSourceHash": "72af95940e4842a4b2dfd50c37760b5612b7585ca3ec3f7eab2764e2c58ca535"
+    },
+    {
+      "eventId": "love_date_book",
+      "imageId": "img_love_date_book_001",
+      "title": "헌책방 첫 데이트",
+      "reviewedMaster": {
+        "localFile": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\first-date-review-20261121\\07-date-book.png",
+        "sha256": "d5f6ef93facf8ff4f8dcc9590fa8bf43d65847591fb21fceeb570cae3c635d30",
+        "width": 981,
+        "height": 1602,
+        "userReview": "APPROVED_PREVIEW",
+        "reviewedOn": "2026-11-22"
+      },
+      "deployment": {
+        "assetPath": "followup_20261120/img_love_date_book_001.png",
+        "sha256": "70cefb3ef53cc73c6c32658cdb314784b32751340a90f4225e5fc273d478e008",
+        "width": 901,
+        "height": 1602,
+        "crop": [
+          40,
+          0,
+          901,
+          1602
+        ],
+        "resized": false
+      },
+      "nativeReview": {
+        "status": "AI_CHECKED",
+        "method": "현재 사건 JSON과 실제 라우팅을 읽어 production DecisionScreen에서 복원 화면을 표시",
+        "screens": [
+          {
+            "screen": "720x1480",
+            "densityDpi": 320,
+            "fontScale": 1,
+            "sampledPixelSimilarity": 1.0,
+            "visibleSourceX": "0.068..0.932",
+            "captures": {
+              "scene": {
+                "localFile": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\images-native-review-20261122\\720x1480\\love_date_book_phone_scene.png",
+                "sha256": "6bc5db5459201b8eb186e0ed2675f198e83b994bdd7aaf617ecf5f82c326011c"
+              },
+              "play": {
+                "localFile": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\images-native-review-20261122\\720x1480\\love_date_book_phone_play.png",
+                "sha256": "1e1f36d984690e82f13422392b1f8c9064b39d1ca704aa746b2107277b464b45"
+              }
+            }
+          },
+          {
+            "screen": "1080x2400",
+            "densityDpi": 420,
+            "fontScale": 1,
+            "sampledPixelSimilarity": 1.0,
+            "visibleSourceX": "0.100..0.900",
+            "captures": {
+              "scene": {
+                "localFile": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\images-native-review-20261122\\1080x2400\\love_date_book_phone_scene.png",
+                "sha256": "6ef068bf6253539f9be297311bfa19ac466dd2a8c164ad61f5447172d5e4cba8"
+              },
+              "play": {
+                "localFile": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\images-native-review-20261122\\1080x2400\\love_date_book_phone_play.png",
+                "sha256": "67b7151b173d84a4b793a4e9a47dca20570f95a15bc4583bfffcb48a7667ad64"
+              }
+            }
+          }
+        ],
+        "userReview": "APPROVED_FINAL_SCENE_REVIEW",
+        "finalUserReviewPresentation": {
+          "status": "APPROVED_FINAL_SCENE_REVIEW",
+          "date": "2026-11-22",
+          "reviewRecord": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\romance-final-review-20261122\\review.json",
+          "contactSheet": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\romance-final-review-20261122\\scene-review-2.png",
+          "currentAssetEventRoutingAndCaptureHashesVerified": true,
+          "userApproval": "2026-11-22 사용자: ㅇㅇ좋아. 그대로 가자. 다음은?"
+        }
+      },
+      "eventSourceHash": "88ae309c72d7c7c4ea794c132aea0dd33016402bff82a5a398f70e74f6ccab75"
+    },
+    {
+      "eventId": "love_episode_first_love",
+      "imageId": "img_love_episode_first_love_001",
+      "title": "모교 운동장",
+      "reviewedMaster": {
+        "localFile": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\episodes-prep-review-20261122\\08-episode-first-love.png",
+        "sha256": "bac6ebffd74fb28881639dfc56f26680b2b00276d34d843561f4d6a69a495c6e",
+        "width": 981,
+        "height": 1602,
+        "userReview": "APPROVED_PREVIEW",
+        "reviewedOn": "2026-11-22"
+      },
+      "deployment": {
+        "assetPath": "followup_20261120/img_love_episode_first_love_001.png",
+        "sha256": "0225e56522f45ae918816c64b142523dc2ed4bb2e02630f77fd25b8ed620ebc7",
+        "width": 901,
+        "height": 1602,
+        "crop": [
+          40,
+          0,
+          901,
+          1602
+        ],
+        "resized": false
+      },
+      "nativeReview": {
+        "status": "AI_CHECKED",
+        "method": "현재 사건 JSON과 실제 라우팅을 읽어 production DecisionScreen에서 복원 화면을 표시",
+        "screens": [
+          {
+            "screen": "720x1480",
+            "densityDpi": 320,
+            "fontScale": 1,
+            "sampledPixelSimilarity": 1.0,
+            "visibleSourceX": "0.068..0.932",
+            "captures": {
+              "scene": {
+                "localFile": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\images-native-review-20261122\\720x1480\\love_episode_first_love_phone_scene.png",
+                "sha256": "09c785282b202a957b657f6656e5e6a8afaf726ab2613a8c76ff0e097bd5df44"
+              },
+              "play": {
+                "localFile": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\images-native-review-20261122\\720x1480\\love_episode_first_love_phone_play.png",
+                "sha256": "e96bc46b5b5a0cd99b4cc7fd6ff9be916713042f4dbd5d021e91017a17574362"
+              }
+            }
+          },
+          {
+            "screen": "1080x2400",
+            "densityDpi": 420,
+            "fontScale": 1,
+            "sampledPixelSimilarity": 1.0,
+            "visibleSourceX": "0.100..0.900",
+            "captures": {
+              "scene": {
+                "localFile": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\images-native-review-20261122\\1080x2400\\love_episode_first_love_phone_scene.png",
+                "sha256": "bb46c475bbf03e986475e140385ba349bf166a32317dbe986d0373b2a5b08b15"
+              },
+              "play": {
+                "localFile": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\images-native-review-20261122\\1080x2400\\love_episode_first_love_phone_play.png",
+                "sha256": "9663766616703b9915081209b78c14684ce45c524031c2e9d21597ff54f5ee81"
+              }
+            }
+          }
+        ],
+        "userReview": "APPROVED_FINAL_SCENE_REVIEW",
+        "finalUserReviewPresentation": {
+          "status": "APPROVED_FINAL_SCENE_REVIEW",
+          "date": "2026-11-22",
+          "reviewRecord": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\romance-final-review-20261122\\review.json",
+          "contactSheet": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\romance-final-review-20261122\\scene-review-3.png",
+          "currentAssetEventRoutingAndCaptureHashesVerified": true,
+          "userApproval": "2026-11-22 사용자: ㅇㅇ좋아. 그대로 가자. 다음은?"
+        }
+      },
+      "eventSourceHash": "ddad913c59d876d04889466ec76a9cbada5e4937475e50ed2291b435995424db"
+    },
+    {
+      "eventId": "love_episode_music",
+      "imageId": "img_love_episode_music_001",
+      "title": "연습실 열쇠 두 개",
+      "reviewedMaster": {
+        "localFile": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\episodes-prep-review-20261122\\09-episode-music.png",
+        "sha256": "85c8a9329b500c295fb939fb3c039e4f12379a0ac02e8f979a4f69f61cfc52ce",
+        "width": 941,
+        "height": 1672,
+        "userReview": "APPROVED_PREVIEW",
+        "reviewedOn": "2026-11-22"
+      },
+      "deployment": {
+        "assetPath": "followup_20261120/img_love_episode_music_001.png",
+        "sha256": "85c8a9329b500c295fb939fb3c039e4f12379a0ac02e8f979a4f69f61cfc52ce",
+        "width": 941,
+        "height": 1672,
+        "crop": [
+          0,
+          0,
+          941,
+          1672
+        ],
+        "resized": false
+      },
+      "nativeReview": {
+        "status": "AI_CHECKED",
+        "method": "현재 사건 JSON과 실제 라우팅을 읽어 production DecisionScreen에서 복원 화면을 표시",
+        "screens": [
+          {
+            "screen": "720x1480",
+            "densityDpi": 320,
+            "fontScale": 1,
+            "sampledPixelSimilarity": 1.0,
+            "visibleSourceX": "0.068..0.932",
+            "captures": {
+              "scene": {
+                "localFile": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\images-native-review-20261122\\720x1480\\love_episode_music_phone_scene.png",
+                "sha256": "83c7d3236d2afc7b532ecf938af312ffb3bb99910969517ad23352b2797823c3"
+              },
+              "play": {
+                "localFile": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\images-native-review-20261122\\720x1480\\love_episode_music_phone_play.png",
+                "sha256": "61da10eb2a25c2a29bf177a1ff28f49f28df406c7c61f3877f0c0f4cc53069ca"
+              }
+            }
+          },
+          {
+            "screen": "1080x2400",
+            "densityDpi": 420,
+            "fontScale": 1,
+            "sampledPixelSimilarity": 1.0,
+            "visibleSourceX": "0.100..0.900",
+            "captures": {
+              "scene": {
+                "localFile": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\images-native-review-20261122\\1080x2400\\love_episode_music_phone_scene.png",
+                "sha256": "46db8607db107c07cedeca13ef9257c39adfd5ea926c107cf454e00a550ac770"
+              },
+              "play": {
+                "localFile": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\images-native-review-20261122\\1080x2400\\love_episode_music_phone_play.png",
+                "sha256": "2db7bb14d12e34207935115f582f2d391d4387a0ba4154d01fca862d3753a785"
+              }
+            }
+          }
+        ],
+        "userReview": "APPROVED_FINAL_SCENE_REVIEW",
+        "finalUserReviewPresentation": {
+          "status": "APPROVED_FINAL_SCENE_REVIEW",
+          "date": "2026-11-22",
+          "reviewRecord": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\romance-final-review-20261122\\review.json",
+          "contactSheet": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\romance-final-review-20261122\\scene-review-3.png",
+          "currentAssetEventRoutingAndCaptureHashesVerified": true,
+          "userApproval": "2026-11-22 사용자: ㅇㅇ좋아. 그대로 가자. 다음은?"
+        }
+      },
+      "eventSourceHash": "f38b2465ddbcafe952e5de1175fafb388f795384fd541b3e1ce9a23ffd0039a6"
+    },
+    {
+      "eventId": "love_episode_book",
+      "imageId": "img_love_episode_book_001",
+      "title": "둘만의 책장",
+      "reviewedMaster": {
+        "localFile": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\episodes-prep-review-20261122\\10-episode-book.png",
+        "sha256": "de7d9c1078d2c1a0a521f0f35d987b69bdcd502ae5433d2a3c3f1f2c4b468ed8",
+        "width": 967,
+        "height": 1626,
+        "userReview": "APPROVED_PREVIEW",
+        "reviewedOn": "2026-11-22"
+      },
+      "deployment": {
+        "assetPath": "followup_20261120/img_love_episode_book_001.png",
+        "sha256": "7c7ffc91ad0c4c868ee93cf046a52b8da5bec3c8027673c3610fc781a606029f",
+        "width": 915,
+        "height": 1626,
+        "crop": [
+          26,
+          0,
+          915,
+          1626
+        ],
+        "resized": false
+      },
+      "nativeReview": {
+        "status": "AI_CHECKED",
+        "method": "현재 사건 JSON과 실제 라우팅을 읽어 production DecisionScreen에서 복원 화면을 표시",
+        "screens": [
+          {
+            "screen": "720x1480",
+            "densityDpi": 320,
+            "fontScale": 1,
+            "sampledPixelSimilarity": 1.0,
+            "visibleSourceX": "0.068..0.932",
+            "captures": {
+              "scene": {
+                "localFile": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\images-native-review-20261122\\720x1480\\love_episode_book_phone_scene.png",
+                "sha256": "aea1e39f3b2216d5dc41a1af437787ad1edbf10df976b9a78a78e292840408ef"
+              },
+              "play": {
+                "localFile": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\images-native-review-20261122\\720x1480\\love_episode_book_phone_play.png",
+                "sha256": "8bf88ff97c94d8d529a84fcb281d116e46d102e17fa814f008deb498bf0400a6"
+              }
+            }
+          },
+          {
+            "screen": "1080x2400",
+            "densityDpi": 420,
+            "fontScale": 1,
+            "sampledPixelSimilarity": 1.0,
+            "visibleSourceX": "0.100..0.900",
+            "captures": {
+              "scene": {
+                "localFile": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\images-native-review-20261122\\1080x2400\\love_episode_book_phone_scene.png",
+                "sha256": "ffe25929fe7c534d77d29cff11e0528790079b25e76b889b2ba305e4589c8ed4"
+              },
+              "play": {
+                "localFile": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\images-native-review-20261122\\1080x2400\\love_episode_book_phone_play.png",
+                "sha256": "0e45a9a0b7f70691e6dad5a245fe524613b74880ea81f1e23833104c54ecff75"
+              }
+            }
+          }
+        ],
+        "userReview": "APPROVED_FINAL_SCENE_REVIEW",
+        "finalUserReviewPresentation": {
+          "status": "APPROVED_FINAL_SCENE_REVIEW",
+          "date": "2026-11-22",
+          "reviewRecord": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\romance-final-review-20261122\\review.json",
+          "contactSheet": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\romance-final-review-20261122\\scene-review-3.png",
+          "currentAssetEventRoutingAndCaptureHashesVerified": true,
+          "userApproval": "2026-11-22 사용자: ㅇㅇ좋아. 그대로 가자. 다음은?"
+        }
+      },
+      "eventSourceHash": "df1f85b3fc362ad451acd8ad0e605b2419fe95252123eec7cd267397bf20cb07"
+    },
+    {
+      "eventId": "love_wedding_prep_01",
+      "imageId": "img_love_wedding_prep_01_001",
+      "title": "결혼 준비",
+      "reviewedMaster": {
+        "localFile": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\episodes-prep-review-20261122\\11-wedding-prep.png",
+        "sha256": "9aff39cd2a310ba4c619241fe872a5c0b8ac15b2eb08880292e66d5a7ddb7f49",
+        "width": 941,
+        "height": 1672,
+        "userReview": "APPROVED_PREVIEW",
+        "reviewedOn": "2026-11-22"
+      },
+      "deployment": {
+        "assetPath": "followup_20261120/img_love_wedding_prep_01_001.png",
+        "sha256": "9aff39cd2a310ba4c619241fe872a5c0b8ac15b2eb08880292e66d5a7ddb7f49",
+        "width": 941,
+        "height": 1672,
+        "crop": [
+          0,
+          0,
+          941,
+          1672
+        ],
+        "resized": false
+      },
+      "nativeReview": {
+        "status": "AI_CHECKED",
+        "method": "현재 사건 JSON과 실제 라우팅을 읽어 production DecisionScreen에서 복원 화면을 표시",
+        "screens": [
+          {
+            "screen": "720x1480",
+            "densityDpi": 320,
+            "fontScale": 1,
+            "sampledPixelSimilarity": 1.0,
+            "visibleSourceX": "0.068..0.932",
+            "captures": {
+              "scene": {
+                "localFile": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\images-native-review-20261122\\720x1480\\love_wedding_prep_01_phone_scene.png",
+                "sha256": "b1667eb3056354eb5f268bb74af9a942702db87fce4160f8708a9c81300070ca"
+              },
+              "play": {
+                "localFile": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\images-native-review-20261122\\720x1480\\love_wedding_prep_01_phone_play.png",
+                "sha256": "b253cb21ab1475030eb62add322700de86fa351e68567d1b4e356ea00c09b107"
+              }
+            }
+          },
+          {
+            "screen": "1080x2400",
+            "densityDpi": 420,
+            "fontScale": 1,
+            "sampledPixelSimilarity": 1.0,
+            "visibleSourceX": "0.100..0.900",
+            "captures": {
+              "scene": {
+                "localFile": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\images-native-review-20261122\\1080x2400\\love_wedding_prep_01_phone_scene.png",
+                "sha256": "da4eefe3ca010273c3a4901098fa803c41ac476a87a6e78ca1c54b126598993b"
+              },
+              "play": {
+                "localFile": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\images-native-review-20261122\\1080x2400\\love_wedding_prep_01_phone_play.png",
+                "sha256": "ab674cc25e761c1e424f702365a17ee8c18cd1e4c3f2eec509fde31f31c7184e"
+              }
+            }
+          }
+        ],
+        "userReview": "APPROVED_FINAL_SCENE_REVIEW",
+        "finalUserReviewPresentation": {
+          "status": "APPROVED_FINAL_SCENE_REVIEW",
+          "date": "2026-11-22",
+          "reviewRecord": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\romance-final-review-20261122\\review.json",
+          "contactSheet": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\romance-final-review-20261122\\scene-review-3.png",
+          "currentAssetEventRoutingAndCaptureHashesVerified": true,
+          "userApproval": "2026-11-22 사용자: ㅇㅇ좋아. 그대로 가자. 다음은?"
+        }
+      },
+      "eventSourceHash": "ffdcca0f9fd80b5232873a13d96704bf75f5750c8581e81a9db85e53b4ba1abd"
+    }
+  ],
+  "cropFormat": "x, y, width, height in reviewedMaster pixels; no resizing",
+  "checks": {
+    "content": "PASS",
+    "images": "PASS",
+    "portraitVariants": "PASS",
+    "basicCoverage": {
+      "status": "PASS",
+      "pendingEvents": 19
+    },
+    "pythonTests": {
+      "passed": 83,
+      "failed": 0
+    },
+    "imageJvmTests": {
+      "passed": 23,
+      "failed": 0
+    },
+    "debugBuild": "PASS",
+    "androidTestBuild": "PASS",
+    "nativeRouting": {
+      "screens": 2,
+      "eventsPerScreen": 11,
+      "status": "PASS"
+    },
+    "smallScreenChoices": {
+      "events": 11,
+      "fontScales": [
+        1,
+        2
+      ],
+      "viewportDp": "360x640",
+      "status": "PASS",
+      "checked": "C 카드 전체를 스크롤해 읽고 연속 터치에서도 선택 1회"
+    },
+    "commonPortraitRevision": {
+      "content": "PASS",
+      "images": "PASS",
+      "imageJvmTests": {
+        "passed": 18,
+        "failed": 0
+      },
+      "debugBuild": "PASS",
+      "nativeScreens": 2
+    }
+  },
+  "doljabiPreview": {
+    "status": "APPROVED_PREVIEW",
+    "localFile": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\doljabi-neutral-review-20261122\\img_doljabi_neutral_candidate.png",
+    "sha256": "7e5a20c94d61004ceca9d1d2c785215942e47a782d5eb0d4a735874bd10b8710",
+    "deployed": true,
+    "reviewedOn": "2026-11-22",
+    "assetPath": "followup_20261120/img_infant_toys_001.png"
+  },
+  "doljabiIntegration": {
+    "eventId": "infant_007",
+    "preChoiceImageId": "img_infant_toys_001",
+    "resultImages": {
+      "A": "img_infant_toys_001",
+      "B": "img_doljabi_grasp_001",
+      "C": "img_infant_toys_001"
+    },
+    "confirmedBAssetPath": "cutscenes/week11/img_doljabi_grasp_001.png",
+    "confirmedBSha256": "7f1f4cc4e35f8a8fb285b8e4168782c58e9dae1600c8b7331986a4e4a13fd0ac",
+    "accessibilityDescription": "첫 생일 돌상에 피아노 장난감, 판사봉과 받침, 지폐 한 장이 놓여 있다. 아직 아무 물건도 잡지 않았고, 뒤에서 가족들이 지켜본다.",
+    "saveBehavior": "결과 이미지 ID를 선택 기록과 pendingOutcome에 저장. 이전 저장은 infant_007 choiceId로 복원하고 주마등에도 같은 분기를 적용한다.",
+    "nativeReview": {
+      "status": "AI_CHECKED",
+      "date": "2026-11-22",
+      "screens": [
+        {
+          "size": "720x1480",
+          "densityDpi": 320,
+          "fontScale": 1,
+          "testsPassed": 3,
+          "captures": [
+            {
+              "file": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\doljabi-native-review-20261122\\720x1480\\doljabi_A_choice.png",
+              "sha256": "5ab25df9aa3daa5e3c54d7034d7c1d7a28fdd75a1763961ad1aae7f9da6e1626"
+            },
+            {
+              "file": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\doljabi-native-review-20261122\\720x1480\\doljabi_A_cutscene.png",
+              "sha256": "f6d1edd1c8086dca8449c26c1f14207b9bd181adc8016890a5ccd2bf99bbb2de"
+            },
+            {
+              "file": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\doljabi-native-review-20261122\\720x1480\\doljabi_A_result.png",
+              "sha256": "35e387cd322087aeff8add2bc516e213d2422a5e97d212bfdff0714eba5869b3"
+            },
+            {
+              "file": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\doljabi-native-review-20261122\\720x1480\\doljabi_A_resumed.png",
+              "sha256": "146a81ef5fd91e13fde6895fe23fac011f35274e6a79b5b2f7a89b11970992f9"
+            },
+            {
+              "file": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\doljabi-native-review-20261122\\720x1480\\doljabi_A_scene.png",
+              "sha256": "146a81ef5fd91e13fde6895fe23fac011f35274e6a79b5b2f7a89b11970992f9"
+            },
+            {
+              "file": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\doljabi-native-review-20261122\\720x1480\\doljabi_B_choice.png",
+              "sha256": "5ab25df9aa3daa5e3c54d7034d7c1d7a28fdd75a1763961ad1aae7f9da6e1626"
+            },
+            {
+              "file": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\doljabi-native-review-20261122\\720x1480\\doljabi_B_cutscene.png",
+              "sha256": "f6d1edd1c8086dca8449c26c1f14207b9bd181adc8016890a5ccd2bf99bbb2de"
+            },
+            {
+              "file": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\doljabi-native-review-20261122\\720x1480\\doljabi_B_result.png",
+              "sha256": "1111071ec073348b206aef32a8db788256343a94497c4636876f31e425ed06de"
+            },
+            {
+              "file": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\doljabi-native-review-20261122\\720x1480\\doljabi_B_resumed.png",
+              "sha256": "ee8a53b98805b453e2d8a2c63a5597467f1ba7926b29953014507a5210d60729"
+            },
+            {
+              "file": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\doljabi-native-review-20261122\\720x1480\\doljabi_B_scene.png",
+              "sha256": "ee8a53b98805b453e2d8a2c63a5597467f1ba7926b29953014507a5210d60729"
+            },
+            {
+              "file": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\doljabi-native-review-20261122\\720x1480\\doljabi_C_choice.png",
+              "sha256": "5ab25df9aa3daa5e3c54d7034d7c1d7a28fdd75a1763961ad1aae7f9da6e1626"
+            },
+            {
+              "file": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\doljabi-native-review-20261122\\720x1480\\doljabi_C_cutscene.png",
+              "sha256": "f6d1edd1c8086dca8449c26c1f14207b9bd181adc8016890a5ccd2bf99bbb2de"
+            },
+            {
+              "file": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\doljabi-native-review-20261122\\720x1480\\doljabi_C_result.png",
+              "sha256": "9a71ba2bf50b65053dcdd26aa8322ff286479c91ee55a505c6c0cbec23b4eed7"
+            },
+            {
+              "file": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\doljabi-native-review-20261122\\720x1480\\doljabi_C_resumed.png",
+              "sha256": "146a81ef5fd91e13fde6895fe23fac011f35274e6a79b5b2f7a89b11970992f9"
+            },
+            {
+              "file": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\doljabi-native-review-20261122\\720x1480\\doljabi_C_scene.png",
+              "sha256": "146a81ef5fd91e13fde6895fe23fac011f35274e6a79b5b2f7a89b11970992f9"
+            }
+          ]
+        },
+        {
+          "size": "1080x2400",
+          "densityDpi": 420,
+          "fontScale": 1,
+          "testsPassed": 6,
+          "captures": [
+            {
+              "file": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\doljabi-native-review-20261122\\1080x2400\\doljabi_A_choice.png",
+              "sha256": "4935247f21af13f0b1e0a8027f0c402fce924a579af6a957bdcf9b902b2af686"
+            },
+            {
+              "file": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\doljabi-native-review-20261122\\1080x2400\\doljabi_A_cutscene.png",
+              "sha256": "919fd3986c1a08226f3aed1aa88751265ba93cfced39c77d2a519aaf2aa7aa14"
+            },
+            {
+              "file": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\doljabi-native-review-20261122\\1080x2400\\doljabi_A_result.png",
+              "sha256": "0caa166bf4df2202fd186a510e9aa391cb92f31ec0c961e50e376d757a465f2b"
+            },
+            {
+              "file": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\doljabi-native-review-20261122\\1080x2400\\doljabi_A_resumed.png",
+              "sha256": "90c47c6f3bfd64fb58566cb03933cae107441dbbede174462f8f7d1f08a97b76"
+            },
+            {
+              "file": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\doljabi-native-review-20261122\\1080x2400\\doljabi_A_scene.png",
+              "sha256": "90c47c6f3bfd64fb58566cb03933cae107441dbbede174462f8f7d1f08a97b76"
+            },
+            {
+              "file": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\doljabi-native-review-20261122\\1080x2400\\doljabi_B_choice.png",
+              "sha256": "4935247f21af13f0b1e0a8027f0c402fce924a579af6a957bdcf9b902b2af686"
+            },
+            {
+              "file": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\doljabi-native-review-20261122\\1080x2400\\doljabi_B_cutscene.png",
+              "sha256": "919fd3986c1a08226f3aed1aa88751265ba93cfced39c77d2a519aaf2aa7aa14"
+            },
+            {
+              "file": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\doljabi-native-review-20261122\\1080x2400\\doljabi_B_result.png",
+              "sha256": "6bb223e4836c27ab56d9d9cf617c61650b4fcd7e5c8a21bebbc522ae62e94305"
+            },
+            {
+              "file": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\doljabi-native-review-20261122\\1080x2400\\doljabi_B_resumed.png",
+              "sha256": "a826a00e60d069ba409a75991f11ce37afe80ca0bc2bb2f2ed792a7a6d4f5d74"
+            },
+            {
+              "file": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\doljabi-native-review-20261122\\1080x2400\\doljabi_B_scene.png",
+              "sha256": "a826a00e60d069ba409a75991f11ce37afe80ca0bc2bb2f2ed792a7a6d4f5d74"
+            },
+            {
+              "file": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\doljabi-native-review-20261122\\1080x2400\\doljabi_C_choice.png",
+              "sha256": "4935247f21af13f0b1e0a8027f0c402fce924a579af6a957bdcf9b902b2af686"
+            },
+            {
+              "file": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\doljabi-native-review-20261122\\1080x2400\\doljabi_C_cutscene.png",
+              "sha256": "919fd3986c1a08226f3aed1aa88751265ba93cfced39c77d2a519aaf2aa7aa14"
+            },
+            {
+              "file": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\doljabi-native-review-20261122\\1080x2400\\doljabi_C_result.png",
+              "sha256": "b46da415f5dba5477c9b4c8fa59ead3a9f28787668ebf683155da23686966913"
+            },
+            {
+              "file": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\doljabi-native-review-20261122\\1080x2400\\doljabi_C_resumed.png",
+              "sha256": "90c47c6f3bfd64fb58566cb03933cae107441dbbede174462f8f7d1f08a97b76"
+            },
+            {
+              "file": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\doljabi-native-review-20261122\\1080x2400\\doljabi_C_scene.png",
+              "sha256": "90c47c6f3bfd64fb58566cb03933cae107441dbbede174462f8f7d1f08a97b76"
+            }
+          ]
+        }
+      ],
+      "literalAssetPixelComparisonThreshold": 0.95,
+      "testedChoices": [
+        "A",
+        "B",
+        "C"
+      ],
+      "savedImageVariants": [
+        null,
+        "img_infant_toys_001",
+        "img_doljabi_grasp_001"
+      ],
+      "newLifeAndSkipRestore": "PASS",
+      "statsAndChoiceCountUnchangedOnResume": true,
+      "evidenceDirectory": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\doljabi-native-review-20261122",
+      "userFinalScreenReview": "NO_SEPARATE_WHOLE_FLOW_HUMAN_REVIEW_CLAIM; neutral preview approved and native A/B/C-save flows AI verified",
+      "teamApproval": "PENDING"
+    },
+    "previousFiles": "기존 intro, grasp, events/img_infant_toys_001.png 파일은 변경하지 않음",
+    "teamApproval": "PENDING",
+    "validation": {
+      "content": "PASS",
+      "images": "PASS",
+      "jvmPassed": 32,
+      "nativePassed": 9,
+      "debugBuild": "PASS",
+      "androidTestBuild": "PASS"
+    }
+  },
+  "portraitOptimizationBatches": {
+    "planFile": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\portrait-optimization-batches-20261122\\plan.json",
+    "totalPortraits": 95,
+    "previousFive": "User accepted preview; app not modified",
+    "batchSize": 20,
+    "batchesPlanned": 5,
+    "firstBatch": {
+      "status": "USER_APPROVED_PREVIEW",
+      "files": 10,
+      "beforeBytes": 20366720,
+      "afterBytes": 13037176,
+      "savedPercent": 35.99,
+      "independentDecodeVerified": true,
+      "report": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\portrait-optimization-batches-20261122\\batch-01\\report.json"
+    },
+    "notStartedInRemainingScope": 0,
+    "appApplied": true,
+    "teamApproval": "PENDING",
+    "userAcceptedPreviewCount": 95,
+    "currentBatch": {
+      "number": 5,
+      "status": "USER_APPROVED_PREVIEW",
+      "files": 20,
+      "beforeBytes": 47424093,
+      "afterBytes": 31325604,
+      "savedPercent": 33.95,
+      "report": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\portrait-optimization-batches-20261122\\batch-05\\report.json",
+      "independentDecodeVerified": true
+    },
+    "approvedBatchNumbers": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "pendingUserReviewCount": 0,
+    "candidateCount": 95,
+    "totalTwentyImageBatches": 4,
+    "initialBatchedScope": 90,
+    "all95Summary": {
+      "scope": "All 95 currently registered portrait derivatives; candidates only",
+      "count": 95,
+      "beforeBytes": 218632316,
+      "afterBytes": 143849533,
+      "savedBytes": 74782783,
+      "savedPercent": 34.2,
+      "userAcceptedPreviewCount": 95,
+      "pendingUserReviewCount": 0,
+      "notStarted": 0,
+      "appApplied": true,
+      "actualApkChangeMeasured": true,
+      "allSourceAndCandidateHashesVerified": true,
+      "allIndependentlyDecoded": true,
+      "report": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\portrait-optimization-batches-20261122\\all-95-summary.json"
+    },
+    "deployment": {
+      "status": "APPLIED_AND_NATIVE_CHECKED",
+      "beforeApkBytes": 539150770,
+      "afterApkBytes": 463674909,
+      "apkSavedBytes": 75475861,
+      "apkSavedPercent": 14.0,
+      "nativeScreens": [
+        {
+          "deviceSize": "720x1480",
+          "densityDpi": 320,
+          "fontScale": 1,
+          "eventCount": 95,
+          "minimumPixelMatch": 1.0
+        },
+        {
+          "deviceSize": "1080x2400",
+          "densityDpi": 420,
+          "fontScale": 1,
+          "eventCount": 95,
+          "minimumPixelMatch": 1.0
+        }
+      ],
+      "legacyMasterApprovalUnchanged": true,
+      "userNativeScreenReview": "APPROVED_REPRESENTATIVE_NATIVE_SCREEN_REVIEW",
+      "teamFinalApproval": "PENDING",
+      "checks": {
+        "content": "PASS",
+        "images": "PASS",
+        "portraitVariants": {
+          "status": "PASS",
+          "count": 95
+        },
+        "followupCoverage": {
+          "status": "PASS",
+          "errors": 0,
+          "preExistingPendingEvents": 19
+        },
+        "jvm": [
+          {
+            "name": "com.example.lifegame.ui.ApprovedImageIntegrityTest",
+            "tests": 4,
+            "failures": 0
+          },
+          {
+            "name": "com.example.lifegame.ui.images.ImageRoutingTest",
+            "tests": 17,
+            "failures": 0
+          },
+          {
+            "name": "com.example.lifegame.ui.ScenePresentationTest",
+            "tests": 5,
+            "failures": 0
+          }
+        ],
+        "pythonTests": {
+          "portraitVariants": 6,
+          "portraitEventSources": 8,
+          "followupCoverage": 13,
+          "failed": 0
+        },
+        "nativeTests": {
+          "baselineSceneTest": 1,
+          "optimizedSceneTests": 2,
+          "eventsPerOptimizedScreen": 95,
+          "variantFallbackTests": 2,
+          "failed": 0
+        },
+        "debugAndAndroidTestBuild": "PASS"
+      },
+      "evidence": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\portrait-integration-20261122\\integration.json",
+      "previousVariantsPreservedAt": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\portrait-integration-20261122\\previous-variants",
+      "renewedPresentationApprovalGroupCount": 95,
+      "userNativeReviewScope": "2026-11-22 사용자: 충분히 좋네. 다음 내가 할 일? — 대표 실제 장면 보기 전후 비교를 통한 95장 최적화 앱 반영 결과 수용. 95개 실제 화면을 사람이 각각 재검수했다는 뜻은 아님."
+    }
+  },
+  "romanceFinalReview": {
+    "status": "APPROVED_FINAL_SCENE_REVIEW",
+    "count": 11,
+    "reviewRecord": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\romance-final-review-20261122\\review.json",
+    "nativeCaptureCountVerified": 44,
+    "newArtworkGenerated": false,
+    "repeatedDeviceTest": false,
+    "teamFinalApproval": "PENDING",
+    "userApproval": "2026-11-22 사용자: ㅇㅇ좋아. 그대로 가자. 다음은?",
+    "reviewScope": "Eleven displayed native scene-view crops accepted; team final approval separate."
+  },
+  "currentWeekImageAcceptance": {
+    "status": "AI_REVIEWED_WITH_CURRENT_PNG_AND_NATIVE_EVIDENCE",
+    "eventIds": [
+      "love_wedding_01",
+      "love_wedding_first_love",
+      "love_wedding_music",
+      "love_wedding_book",
+      "love_date_first_love",
+      "love_date_music",
+      "love_date_book",
+      "love_episode_first_love",
+      "love_episode_music",
+      "love_episode_book",
+      "love_wedding_prep_01",
+      "infant_007"
+    ],
+    "renewedGroupIds": [
+      "ai_wonryul_20261122_love_wedding_01",
+      "ai_wonryul_20261122_love_wedding_first_love",
+      "ai_wonryul_20261122_love_wedding_music",
+      "ai_wonryul_20261122_love_wedding_book",
+      "ai_wonryul_20261122_love_date_first_love",
+      "ai_wonryul_20261122_love_date_music",
+      "ai_wonryul_20261122_love_date_book",
+      "ai_wonryul_20261122_love_episode_first_love",
+      "ai_wonryul_20261122_love_episode_music",
+      "ai_wonryul_20261122_love_episode_book",
+      "ai_wonryul_20261122_love_wedding_prep_01",
+      "ai_wonryul_20261122_infant_007"
+    ],
+    "reviewerType": "AI",
+    "scope": "Only the eleven assigned romance/wedding images and neutral doljabi. Scenario/input fields and other classification records unchanged.",
+    "teamFinalApproval": "PENDING",
+    "validation": {
+      "errors": 0,
+      "assignedEventCount": 12,
+      "assignedEventsPending": 0,
+      "remainingProjectEvents": [
+        "adult_032",
+        "love_conflict_book",
+        "love_conflict_first_love",
+        "love_conflict_music",
+        "love_date_01",
+        "love_family_meet_01",
+        "path_soc_05"
+      ],
+      "approvalRecordReviewerType": "AI",
+      "masterIntegrityJvmTests": {
+        "passed": 4,
+        "failed": 0
+      }
+    }
+  },
+  "submissionState": "SUBMITTED_PR_OPEN_UNMERGED",
+  "prSubmission": {
+    "status": "SUBMITTED_OPEN_UNMERGED",
+    "headBranch": "codex/week14-wonryul-images",
+    "baseBranch": "feat/week14-kihoon-wedding-routes",
+    "dependencyPullRequest": 83,
+    "baseCommit": "a0096529dab37f45b9038987f01b2d55201d4a72",
+    "preflight": {
+      "jvmTests": 304,
+      "jvmFailures": 0,
+      "pythonTests": 83,
+      "pythonFailures": 0,
+      "lint": "PASS",
+      "authoredDataChecks": "PASS",
+      "baseBranch": "feat/week14-kihoon-wedding-routes",
+      "baseCommit": "a0096529dab37f45b9038987f01b2d55201d4a72",
+      "localBranch": "codex/week14-wonryul-images"
+    },
+    "mergeAuthorized": false,
+    "number": 86,
+    "url": "https://github.com/sunhan2002-cyber/hansung-lifegame/pull/86",
+    "workCommit": "f23faded796b55460ea9b09d888919e06805d9a8",
+    "mergePerformed": false
+  }
+}
