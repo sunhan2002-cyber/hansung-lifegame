@@ -1,0 +1,71 @@
+{
+  "eventId": "teen_017",
+  "reviewerType": "AI",
+  "scope": "Portrait phone and small-phone presentation",
+  "sourceEventHash": "294e3550893965cb2f063559e9d124b4910c6991a5ef88f678135d167c048ebf",
+  "sourceReview": "docs/refactor/art-candidates/portrait-integration/teen_017.json",
+  "sourceSha256": "80bddefb8bad6869994e1489cd5beeb250a71764d5d68d055a4258a338f28a0a",
+  "displayedVariant": {
+    "assetPath": "presentation/portraits/img_teen_screen_time_001_portrait_v1.png",
+    "sha256": "fe29f16d3a5d8c9c1f6923df1ee650467e4324182590be8a2233b8b76c3cc8a8",
+    "width": 941,
+    "height": 1672,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/teen_017.json"
+  },
+  "nativeCaptures": [
+    {
+      "path": "build/refactor/resumed/native18/teen_017_phone_scene.png",
+      "sha256": "d5a65480326c1b5a7a627a9cbbb3a9d3d885d1ba635d0c0970f15e847193780f",
+      "crop": {
+        "eventId": "teen_017",
+        "imageId": "img_teen_screen_time_001",
+        "assetPath": "presentation/portraits/img_teen_screen_time_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/native18/teen_017_phone_play.png",
+      "sha256": "ec5ebce4f593ac7261bebbecb03e3b0bbf96df6f8e57b9d53ef0188c5849ac02",
+      "crop": {
+        "eventId": "teen_017",
+        "imageId": "img_teen_screen_time_001",
+        "assetPath": "presentation/portraits/img_teen_screen_time_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/native18/teen_017_360x740_scene.png",
+      "sha256": "96c9332595f7cfe16115f3f95a715539f7d22cb0b1473e6e655dae3989c3603b",
+      "crop": {
+        "eventId": "teen_017",
+        "imageId": "img_teen_screen_time_001",
+        "assetPath": "presentation/portraits/img_teen_screen_time_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/native18/teen_017_360x740_play.png",
+      "sha256": "889c9bb1f4eb08cd40519223c45c517a33e81c2eb5ee3c196b04f51d1386a9f6",
+      "crop": {
+        "eventId": "teen_017",
+        "imageId": "img_teen_screen_time_001",
+        "assetPath": "presentation/portraits/img_teen_screen_time_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    }
+  ],
+  "observation": "엄마와 문자 등급 없는 성적표, 스크린 타임 경고가 남는다.",
+  "decision": "PASS",
+  "method": "Individual visual inspection of both scene and gameplay frames together with producer semantic/source review and device capture match."
+}

@@ -1,0 +1,29 @@
+{
+  "eventId": "teen_003",
+  "sourceAssetPath": "followup_20261031/img_teen_club_001.png",
+  "sourceSha256": "b94a2324dca03e5a79577a9a7473ff65047773ceae337259da58271c060a5a5a",
+  "variant": {
+    "assetPath": "presentation/portraits/img_teen_club_001_portrait_v1.png",
+    "sha256": "3f536f903ecf828925c6643e799d377128fb90e05c580910f35bc7edc651f90d",
+    "width": 941,
+    "height": 1672,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/teen_003.json"
+  },
+  "reviewerType": "AI",
+  "reviewer": "Codex AI (/root)",
+  "reviewStatus": "AI_REVIEWED_PRESENTATION",
+  "eventSourceHash": "7dac53e0364b604511849feac54c3c2eb4b072ebc40bb89cba4018083616b60d",
+  "semanticReview": "Producer read the current event conditions and every choice/outcome, inspected source and selected output. Full source snapshot and exact prompt are in the referenced production ledger. Native acceptance remains pending.",
+  "visualReview": "Three inviting seniors with ball, abstract-code laptop and unplayed bass; no chosen club, painting or performed outcome. First-person empty hands with connected sleeves, centered faces. Native crop must retain ball/bass as distinct cues.",
+  "cropReview": "Portrait candidate selected for native phone/small-phone scene and gameplay inspection; not final artwork acceptance.",
+  "actualProducer": "OpenAI built-in image_gen",
+  "generationMethod": "Built-in imagegen edit; exact prompts/output SHA/rejected attempts preserved in docs/refactor/art-candidates/content-root-production-20261119.json",
+  "productionLedger": "docs/refactor/art-candidates/content-root-production-20261119.json",
+  "nativePending": true,
+  "runtimeConnected": true,
+  "approvalChanged": false,
+  "selectedStagingSha256": "3f536f903ecf828925c6643e799d377128fb90e05c580910f35bc7edc651f90d"
+}

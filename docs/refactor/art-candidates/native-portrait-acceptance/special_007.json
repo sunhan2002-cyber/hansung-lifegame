@@ -1,0 +1,71 @@
+{
+  "eventId": "special_007",
+  "reviewerType": "AI",
+  "scope": "Portrait phone and small-phone presentation",
+  "sourceEventHash": "61ffa6ea7859268eaa5023312a60a872d5322d3d3964fdb9fe20364ed0391e7a",
+  "sourceReview": "docs/refactor/art-candidates/portrait-integration/special_007.json",
+  "sourceSha256": "9e8122c7e4a4ad13701a2594652223223adee65f2251df6fa4e4a5033a4a45c9",
+  "displayedVariant": {
+    "assetPath": "presentation/portraits/img_special_water_bottle_001_portrait_v1.png",
+    "sha256": "2bb85889f04e52bf6394d0e0607f31c9ca04f9856d6c3961110edc64c3749e5d",
+    "width": 941,
+    "height": 1672,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root/security_p0)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/special_007.json"
+  },
+  "nativeCaptures": [
+    {
+      "path": "build/refactor/after/portrait-fortythree-native/special_007_phone_scene.png",
+      "sha256": "e8c3b4cfcb5582f1a06c301a55d0ab38029611b5a1234ca845755c5721267b2e",
+      "crop": {
+        "eventId": "special_007",
+        "imageId": "img_special_water_bottle_001",
+        "assetPath": "presentation/portraits/img_special_water_bottle_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/portrait-fortythree-native/special_007_phone_play.png",
+      "sha256": "d8ed9e4c832df2f95eb2e225c3f9bbaa9be05e3196b3aeeca3fd60d23eab638c",
+      "crop": {
+        "eventId": "special_007",
+        "imageId": "img_special_water_bottle_001",
+        "assetPath": "presentation/portraits/img_special_water_bottle_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/portrait-fortythree-native/special_007_360x740_scene.png",
+      "sha256": "1653b8a0e30ca6ae7ce2a7d8650ff971c75ea7e21e5234df73974be176849f5f",
+      "crop": {
+        "eventId": "special_007",
+        "imageId": "img_special_water_bottle_001",
+        "assetPath": "presentation/portraits/img_special_water_bottle_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/portrait-fortythree-native/special_007_360x740_play.png",
+      "sha256": "c52c84331c0fb5f92f5d30c6011c20633e370b247f01ffe1f05702afb2093ea3",
+      "crop": {
+        "eventId": "special_007",
+        "imageId": "img_special_water_bottle_001",
+        "assetPath": "presentation/portraits/img_special_water_bottle_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    }
+  ],
+  "observation": "면접관 세 명과 닫힌 물병, 양손을 모두 식별할 수 있다.",
+  "decision": "PASS",
+  "method": "Individual visual inspection of both scene and gameplay frames together with producer semantic/source review and device capture match."
+}

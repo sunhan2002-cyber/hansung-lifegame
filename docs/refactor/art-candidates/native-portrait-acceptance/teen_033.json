@@ -1,0 +1,71 @@
+{
+  "eventId": "teen_033",
+  "reviewerType": "AI",
+  "scope": "Portrait phone and small-phone presentation",
+  "sourceEventHash": "3f2f733b4bb277f59c4347cb34428c3bebfaef17ec89a3f901d42f66cfeeff80",
+  "sourceReview": "docs/refactor/art-candidates/portrait-integration/teen_033.json",
+  "sourceSha256": "5915e1d9ac9cb953990d8cd56a88515c2b0a36083ba67642f2312e31cb0c13d8",
+  "displayedVariant": {
+    "assetPath": "presentation/portraits/img_teen_yearbook_photo_001_portrait_v1.png",
+    "sha256": "9498d4f3a9ecdc991b98783516767f7d2e5323db1c1b5381ea7c0fbfffe26ab3",
+    "width": 941,
+    "height": 1672,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/teen_033.json"
+  },
+  "nativeCaptures": [
+    {
+      "path": "build/refactor/resumed/final32/teen_033_phone_scene.png",
+      "sha256": "0d23e0585a5638e059c40106f71a04509fdb3ae71e600db42608dedea65474f2",
+      "crop": {
+        "eventId": "teen_033",
+        "imageId": "img_teen_yearbook_photo_001",
+        "assetPath": "presentation/portraits/img_teen_yearbook_photo_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/final32/teen_033_phone_play.png",
+      "sha256": "4c13f91802d1cb0886a7b825ac66ab9c7c23ec5f27b87a161db6b52262a0c8bd",
+      "crop": {
+        "eventId": "teen_033",
+        "imageId": "img_teen_yearbook_photo_001",
+        "assetPath": "presentation/portraits/img_teen_yearbook_photo_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/final32/teen_033_360x740_scene.png",
+      "sha256": "fa8b73eed7a04d5f231ba3885b7fd5d141ca70fc38f2bbeb1ad30dd7933f83b3",
+      "crop": {
+        "eventId": "teen_033",
+        "imageId": "img_teen_yearbook_photo_001",
+        "assetPath": "presentation/portraits/img_teen_yearbook_photo_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/final32/teen_033_360x740_play.png",
+      "sha256": "3928aa65964dea06ac7076c99d563bfdb871f5842a2b6e8740d285a007ab916a",
+      "crop": {
+        "eventId": "teen_033",
+        "imageId": "img_teen_yearbook_photo_001",
+        "assetPath": "presentation/portraits/img_teen_yearbook_photo_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    }
+  ],
+  "observation": "Uneven fringe in first-person frame above waiting yearbook camera.",
+  "decision": "PASS",
+  "method": "Individual visual inspection of both scene and gameplay frames together with producer semantic/source review and device capture match."
+}

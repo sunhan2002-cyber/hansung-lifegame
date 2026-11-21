@@ -1,0 +1,29 @@
+{
+  "eventId": "cross_06",
+  "sourceAssetPath": "followup_20261031/img_cross_06_001.png",
+  "sourceSha256": "06381995592f3e8e01361449fe568d930c9bc9fceb485c0c9d4a5491bd86fd73",
+  "variant": {
+    "assetPath": "presentation/portraits/img_cross_06_001_portrait_v1.png",
+    "sha256": "049d1385289cc5806ed7e8653d385e6491c233caa4c6a1044d103f9471a62ecb",
+    "width": 941,
+    "height": 1672,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root/effects_tech)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/cross_06.json"
+  },
+  "reviewerType": "AI",
+  "reviewer": "Codex AI (/root/effects_tech)",
+  "reviewStatus": "AI_REVIEWED_PRESENTATION",
+  "eventSourceHash": "e7aea73d779c960fe635c69f3302335e41ebf6385529bca9ddf273a12f221b2f",
+  "semanticReview": "Producer read the current event conditions and every choice/outcome, inspected source and selected output. Full source snapshot and exact prompt are in the referenced production ledger. Native acceptance remains pending.",
+  "visualReview": "정확한9:16근사941x1672출력으로변경, 하단녹색등받이제거로본인무릎이보이는1인칭복원. 원본3동료얼굴·메일폰전체·두팔이중앙에남고새고용상태결과없음. native pending.",
+  "cropReview": "Portrait candidate selected for native phone/small-phone scene and gameplay inspection; not final artwork acceptance.",
+  "actualProducer": "OpenAI built-in image_gen",
+  "generationMethod": "Built-in imagegen edit; exact prompts/output SHA/rejected attempts preserved in docs/refactor/art-candidates/crop-variant-production-20261119.json",
+  "productionLedger": "docs/refactor/art-candidates/crop-variant-production-20261119.json",
+  "nativePending": true,
+  "runtimeConnected": true,
+  "approvalChanged": false,
+  "selectedStagingSha256": "049d1385289cc5806ed7e8653d385e6491c233caa4c6a1044d103f9471a62ecb"
+}

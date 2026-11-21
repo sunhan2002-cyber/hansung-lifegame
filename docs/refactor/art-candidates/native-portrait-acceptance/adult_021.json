@@ -1,0 +1,71 @@
+{
+  "eventId": "adult_021",
+  "reviewerType": "AI",
+  "scope": "Portrait phone and small-phone presentation",
+  "sourceEventHash": "213e767900213733017a9e1c7d2dd56f0bec34e95d10db2b19b0dd870ba09290",
+  "sourceReview": "docs/refactor/art-candidates/portrait-integration/adult_021.json",
+  "sourceSha256": "8eaa2261b98f615fa42e93968cb7ead24fda4cca415bb60fee96459046801ce3",
+  "displayedVariant": {
+    "assetPath": "presentation/portraits/img_adult_hangover_001_portrait_v1.png",
+    "sha256": "aca623262189702146a0e39992c28ad577a7f6d1b2982e2575acd988673611cd",
+    "width": 941,
+    "height": 1672,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/adult_021.json"
+  },
+  "nativeCaptures": [
+    {
+      "path": "build/refactor/resumed/final32/adult_021_phone_scene.png",
+      "sha256": "6fd8ecde14e069b457bb9ca066201eab1bfd554bb7b67743392ebd4584968740",
+      "crop": {
+        "eventId": "adult_021",
+        "imageId": "img_adult_hangover_001",
+        "assetPath": "presentation/portraits/img_adult_hangover_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/final32/adult_021_phone_play.png",
+      "sha256": "ea4c7085a8d5b178a5f720a71c2ec7d71148202ef7eac64b8fe59c81f434f72b",
+      "crop": {
+        "eventId": "adult_021",
+        "imageId": "img_adult_hangover_001",
+        "assetPath": "presentation/portraits/img_adult_hangover_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/final32/adult_021_360x740_scene.png",
+      "sha256": "802e644b45777198a668623025f3794510d04520e453e6bc309cf22801701ff3",
+      "crop": {
+        "eventId": "adult_021",
+        "imageId": "img_adult_hangover_001",
+        "assetPath": "presentation/portraits/img_adult_hangover_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/final32/adult_021_360x740_play.png",
+      "sha256": "3a4f46eca7c17e7ed6f94d164e41a733722e07c114a5b2fbcc0ce7cfe9bff7e1",
+      "crop": {
+        "eventId": "adult_021",
+        "imageId": "img_adult_hangover_001",
+        "assetPath": "presentation/portraits/img_adult_hangover_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    }
+  ],
+  "observation": "Alarm, morning bed and group video appear together.",
+  "decision": "PASS",
+  "method": "Individual visual inspection of both scene and gameplay frames together with producer semantic/source review and device capture match."
+}

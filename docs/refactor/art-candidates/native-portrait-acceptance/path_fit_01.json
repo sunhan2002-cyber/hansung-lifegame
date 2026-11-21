@@ -1,0 +1,71 @@
+{
+  "eventId": "path_fit_01",
+  "reviewerType": "AI",
+  "scope": "Portrait phone and small-phone presentation",
+  "sourceEventHash": "6629f09816186124c0c1d4d063bfd0698059ada559aa1717c7352ed6ae2a1d56",
+  "sourceReview": "docs/refactor/art-candidates/portrait-integration/path_fit_01.json",
+  "sourceSha256": "d2bb4ff368c5619756b13363a8b9532525b2007fbef07cc8d7d83e24bb8136d8",
+  "displayedVariant": {
+    "assetPath": "presentation/portraits/img_path_fit_01_001_portrait_v1.png",
+    "sha256": "f0e35758c91c29885a25e1bebca9027b0e1b0d6c4927eb884fbf265fb9f2ed82",
+    "width": 941,
+    "height": 1672,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root/effects_tech)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/path_fit_01.json"
+  },
+  "nativeCaptures": [
+    {
+      "path": "build/refactor/after/portrait-fortythree-native/path_fit_01_phone_scene.png",
+      "sha256": "1c5ea2008b85d28b41250e58241123c31534efe5f123b72df6d0a31cb62c6f0c",
+      "crop": {
+        "eventId": "path_fit_01",
+        "imageId": "img_path_fit_01_001",
+        "assetPath": "presentation/portraits/img_path_fit_01_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/portrait-fortythree-native/path_fit_01_phone_play.png",
+      "sha256": "68236d784d2ab48208aed93b6a6bfbff18a410c9852c568ebbde0e0254735728",
+      "crop": {
+        "eventId": "path_fit_01",
+        "imageId": "img_path_fit_01_001",
+        "assetPath": "presentation/portraits/img_path_fit_01_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/portrait-fortythree-native/path_fit_01_360x740_scene.png",
+      "sha256": "28c45a0e47c0a63fb9d35db54025cfd8b09810b37e82bd4cfebd6622e18f42a2",
+      "crop": {
+        "eventId": "path_fit_01",
+        "imageId": "img_path_fit_01_001",
+        "assetPath": "presentation/portraits/img_path_fit_01_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/portrait-fortythree-native/path_fit_01_360x740_play.png",
+      "sha256": "8dc5a448da09964a4b0de96d44a85336cf2f312c392094490b5d9d20161cd516",
+      "crop": {
+        "eventId": "path_fit_01",
+        "imageId": "img_path_fit_01_001",
+        "assetPath": "presentation/portraits/img_path_fit_01_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    }
+  ],
+  "observation": "명함을 내미는 코치, 운동장, 관찰하는 아이 시점이 남는다.",
+  "decision": "PASS",
+  "method": "Individual visual inspection of both scene and gameplay frames together with producer semantic/source review and device capture match."
+}

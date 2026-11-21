@@ -1,0 +1,71 @@
+{
+  "eventId": "teen_035",
+  "reviewerType": "AI",
+  "scope": "Portrait phone and small-phone presentation",
+  "sourceEventHash": "b09abace763b657b6f0b420b432219ff97f345b7c062ee0b482a56b271662c82",
+  "sourceReview": "docs/refactor/art-candidates/portrait-integration/teen_035.json",
+  "sourceSha256": "7a71a5af4d7a1aa4772aa0a571f0864b535e6d960e4e58bab4b6999e1eaa4e39",
+  "displayedVariant": {
+    "assetPath": "presentation/portraits/img_teen_bus_terminal_001_portrait_v1.png",
+    "sha256": "1dbfc0331d9881777a4d7add7d97af7114bdc84a15a006d6de19290cc2ef6867",
+    "width": 962,
+    "height": 1635,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/teen_035.json"
+  },
+  "nativeCaptures": [
+    {
+      "path": "build/refactor/resumed/final32/teen_035_phone_scene.png",
+      "sha256": "a9a7d5929d534e3de3eb5894c7c88f8b9fee957c3534db2b7a7667ca11070ecc",
+      "crop": {
+        "eventId": "teen_035",
+        "imageId": "img_teen_bus_terminal_001",
+        "assetPath": "presentation/portraits/img_teen_bus_terminal_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.118..0.882",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/final32/teen_035_phone_play.png",
+      "sha256": "9027762ed9ced41bf69dcbb549921b034da4f53730e0a66fc8825dac09bbc617",
+      "crop": {
+        "eventId": "teen_035",
+        "imageId": "img_teen_bus_terminal_001",
+        "assetPath": "presentation/portraits/img_teen_bus_terminal_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.118..0.882",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/final32/teen_035_360x740_scene.png",
+      "sha256": "dfc138df7b436c88827790b8dd6088635de2f830a2cb19f265b52ef2f6a09c3e",
+      "crop": {
+        "eventId": "teen_035",
+        "imageId": "img_teen_bus_terminal_001",
+        "assetPath": "presentation/portraits/img_teen_bus_terminal_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.087..0.913",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/final32/teen_035_360x740_play.png",
+      "sha256": "50f7a1230e1bd412027a38c5178191b3923b0826e4f9649167934503081a4869",
+      "crop": {
+        "eventId": "teen_035",
+        "imageId": "img_teen_bus_terminal_001",
+        "assetPath": "presentation/portraits/img_teen_bus_terminal_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.087..0.913",
+        "match": "1.000"
+      }
+    }
+  ],
+  "observation": "Empty night bus, seated viewer, late hour on phone.",
+  "decision": "PASS",
+  "method": "Individual visual inspection of both scene and gameplay frames together with producer semantic/source review and device capture match."
+}

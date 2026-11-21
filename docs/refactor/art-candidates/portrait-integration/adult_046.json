@@ -1,0 +1,29 @@
+{
+  "eventId": "adult_046",
+  "sourceAssetPath": "followup_20261031/img_adult_scam_call_001.png",
+  "sourceSha256": "fecbf296e46fc2e97c20be96c5f8d25a6fb952d1b8566f81fe35cb88810d6a2b",
+  "variant": {
+    "assetPath": "presentation/portraits/img_adult_scam_call_001_portrait_v1.png",
+    "sha256": "fa46dbe6ea6e01fc3f786c087b48b9128ec52f45c50a7065c8ca7cb0edd59434",
+    "width": 967,
+    "height": 1626,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/adult_046.json"
+  },
+  "reviewerType": "AI",
+  "reviewer": "Codex AI (/root)",
+  "reviewStatus": "AI_REVIEWED_PRESENTATION",
+  "eventSourceHash": "73ae729a4d0c186ff0d6cbdf796a2969512128399944df844950f9c770d3e665",
+  "semanticReview": "Producer read the current event conditions and every choice/outcome, inspected source and selected output. Full source snapshot and exact prompt are in the referenced production ledger. Native acceptance remains pending.",
+  "visualReview": "Caller on handset at home; no payment, reply or later outcome.",
+  "cropReview": "Portrait candidate selected for native phone/small-phone scene and gameplay inspection; not final artwork acceptance.",
+  "actualProducer": "OpenAI built-in image_gen",
+  "generationMethod": "Built-in imagegen edit; exact prompts/output SHA/rejected attempts preserved in docs/refactor/art-candidates/resumed-production-20261119.json",
+  "productionLedger": "docs/refactor/art-candidates/resumed-production-20261119.json",
+  "nativePending": true,
+  "runtimeConnected": true,
+  "approvalChanged": false,
+  "selectedStagingSha256": "fa46dbe6ea6e01fc3f786c087b48b9128ec52f45c50a7065c8ca7cb0edd59434"
+}

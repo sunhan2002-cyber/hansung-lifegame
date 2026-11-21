@@ -1,0 +1,179 @@
+{
+  "schemaVersion": 1,
+  "eventId": "adult_036",
+  "status": "PASS",
+  "reviewer": "Codex AI / plan_audit",
+  "reviewerType": "AI",
+  "reviewDate": "2026-11-19",
+  "sourceEventHash": "0e53d9288d5e6674e9b54817fa1be6efeb8686595fd8090e10e50fa6f5973fd0",
+  "sourceEventSnapshot": {
+    "eventId": "adult_036",
+    "stage": "ADULT",
+    "type": "NORMAL",
+    "isFallback": false,
+    "isMilestone": false,
+    "title": "20년 만의 타임캡슐",
+    "text": "모르는 번호로 문자가 왔다. '{nameCall}, 나 지호야. 우리 놀이터 기억나? 이번 주말이 딱 20년이야.'",
+    "imageId": "img_adult_time_capsule_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [
+        "time_capsule"
+      ],
+      "blockedFlags": []
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "주말에 놀이터로 간다",
+        "statDelta": {
+          "사회성": 4,
+          "행복": 3,
+          "운": -1
+        },
+        "resultText": "놀이터는 주차장이 되어 있었다. 상자는 못 찾았다. 대신 지호가 사진 한 장을 내밀었다. 빨간 삽을 들고 서로 노려보는 두 아기.",
+        "addFlags": [
+          "jiho_reunion"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "a_primary",
+            "text": "놀이터는 주차장이 되어 있었다. 상자는 못 찾았다. 대신 지호가 사진 한 장을 내밀었다. 빨간 삽을 들고 서로 노려보는 두 아기.",
+            "chance": 100,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "사회성": 4,
+              "행복": 3,
+              "운": -1
+            },
+            "addFlags": [
+              "jiho_reunion"
+            ],
+            "lifeDelta": 10
+          }
+        ]
+      },
+      {
+        "choiceId": "B",
+        "label": "\"요즘 바빠서… 다음에 보자\"",
+        "statDelta": {
+          "경제력": 1,
+          "행복": -4
+        },
+        "resultText": "\"그래, 다음에.\" 다음은 오지 않았다. 가끔 그 문자를 다시 읽는다.",
+        "addFlags": [],
+        "outcomes": [
+          {
+            "outcomeId": "b_primary",
+            "text": "\"그래, 다음에.\" 다음은 오지 않았다. 가끔 그 문자를 다시 읽는다.",
+            "chance": 100,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "경제력": 1,
+              "행복": -4
+            },
+            "addFlags": []
+          }
+        ]
+      }
+    ],
+    "priority": 0,
+    "kind": "INCIDENT",
+    "periods": [
+      "YOUNG_ADULT"
+    ]
+  },
+  "sourceReadScope": "Current complete event, conditions, every choice/outcome and flags/stat deltas/periods/follow-ups directly read before judgement.",
+  "sourceImage": {
+    "path": "app/src/main/assets/images/followup_20261031/img_adult_time_capsule_001.png",
+    "sha256": "6786c787cb062a394d1e3575b64c839b7f03887bba7432096327b2879d0721a1",
+    "width": 720,
+    "height": 540
+  },
+  "originalArtworkUnchangedSinceHistoricalReview": true,
+  "historicalReview": {
+    "eventId": "adult_036",
+    "title": "20년 만의 타임캡슐",
+    "imageId": "img_adult_time_capsule_001",
+    "assetPath": "followup_20261031/img_adult_time_capsule_001.png",
+    "sha256": "6786c787cb062a394d1e3575b64c839b7f03887bba7432096327b2879d0721a1",
+    "eventSourceHash": "0e53d9288d5e6674e9b54817fa1be6efeb8686595fd8090e10e50fa6f5973fd0",
+    "status": "REVISION_REQUIRED",
+    "reviewer": "김선한 담당 Codex 직접 대행 검수",
+    "reason": "20년 만의 지호·타임캡슐 약속 단서 없이 일반 문자 그림만 사용",
+    "expectedAction": "옛 친구 지호의 주말 약속 문자를 읽음",
+    "requiredObjects": "지호에게서 온 연락 알림의 휴대폰, 책상; 놀이터 회상 없음",
+    "sheet": "output/art-review-20261119/sheet-10.jpg",
+    "cell": 10,
+    "cropMethod": "ImageOps.fit centre-fill 360:800; simulated crop inspected directly, not an emulator capture",
+    "visualMethod": "원본 도트풍·색감·장면 파손·명백한 신체/사물 오류 직접 확인"
+  },
+  "presentationMetadata": [],
+  "captures": [
+    {
+      "path": "build/refactor/after/originals-twentyfour-and-variants-native/adult_036_phone_scene.png",
+      "sha256": "21f1a524ebe2fe30632a00ecf1f52a61270d9c841bcbbcabdfa129906e339863",
+      "width": 1080,
+      "height": 2400,
+      "screen": "phone",
+      "mode": "scene",
+      "cropReport": {
+        "eventId": "adult_036",
+        "imageId": "img_adult_time_capsule_001",
+        "assetPath": "followup_20261031/img_adult_time_capsule_001.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.331..0.669",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/originals-twentyfour-and-variants-native/adult_036_phone_play.png",
+      "sha256": "1ead1a50e6099bb2199ffce65cb5ff826cd14c7ce4354b332e082eeead08cde4",
+      "width": 1080,
+      "height": 2400,
+      "screen": "phone",
+      "mode": "play",
+      "cropReport": null
+    },
+    {
+      "path": "build/refactor/after/originals-twentyfour-and-variants-native/adult_036_360x740_scene.png",
+      "sha256": "f43ad8e94fc28209fce77881a6eb8dab04a3fd5fd44f6407e1e710f428764385",
+      "width": 945,
+      "height": 1943,
+      "screen": "360x740",
+      "mode": "scene",
+      "cropReport": {
+        "eventId": "adult_036",
+        "imageId": "img_adult_time_capsule_001",
+        "assetPath": "followup_20261031/img_adult_time_capsule_001.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.318..0.682",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/originals-twentyfour-and-variants-native/adult_036_360x740_play.png",
+      "sha256": "585ea882780b0230c991b895d049ff2d4cc045d685dc59ad7f17a3dd8a057206",
+      "width": 945,
+      "height": 1943,
+      "screen": "360x740",
+      "mode": "play",
+      "cropReport": null
+    }
+  ],
+  "semanticObservation": "책상에서 옛 친구의 새 연락을 휴대전화로 읽는 현재 상태다. 상대 프로필과 받은 말풍선 하나뿐이며 이름/번호/문구는 읽히지 않는다. 놀이터 방문·주차장·타임캡슐 상자 발견·옛 아기 사진·답장 완료 결과는 없다.",
+  "cropObservation": "두 native에서 휴대전화 전체, 양손과 상대 프로필/메시지가 온전히 남는다. 과거 약속 단서 부족 지적은 선택 전 수신 상태에 회상이나 결과 이미지를 추가할 이유가 되지 않으며 현재 본문과 UI가 구체 내용을 전달한다.",
+  "uiObservation": "두 화면에서 제목·본문·두 선택지 전체가 읽힌다.",
+  "reviewMethod": "Codex AI directly inspected the full unchanged source PNG and all four unmodified native scene/play captures. Prior review is retained as historical evidence; this record is a new AI judgement, not human approval.",
+  "nativeMethod": "Production DecisionScreen, current parsed event/routing/PixelAssetLoader, fixture state in Android Compose instrumentation. Scene grid match >=0.95. Not complete game progression.",
+  "nativeRunLog": "build/refactor/depth-and-originals-twentyfour.log",
+  "limitations": [
+    "Emulator captures, not physical-device review.",
+    "Only reviewed phone and 360x740 dimensions; not every font scale/aspect ratio.",
+    "Art review does not independently certify scrolling, TalkBack or complete game-flow transitions."
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "eventId": "path_wea_06",
+  "reviewerType": "AI",
+  "scope": "Portrait phone and small-phone presentation",
+  "sourceEventHash": "f47d391bcbbf9377ca1f009e94879232621e660cedbe9e1363d86ec37627e511",
+  "sourceReview": "docs/refactor/art-candidates/portrait-integration/path_wea_06.json",
+  "sourceSha256": "92a99e88ce83fd04acd63b51de5577309c54a5be0936c0c7bde08b6694232eef",
+  "displayedVariant": {
+    "assetPath": "presentation/portraits/img_path_wea_06_001_portrait_v1.png",
+    "sha256": "ef3fb719c63047a4742262d5da419b50aa90b9a759e95c3bc13b9d0e88acdf35",
+    "width": 981,
+    "height": 1602,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root/effects_tech)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/path_wea_06.json"
+  },
+  "nativeCaptures": [
+    {
+      "path": "build/refactor/resumed/native18/path_wea_06_phone_scene.png",
+      "sha256": "c0d8dc9071920cbb585edaf8f9ebdc23de398f785f9f95b3ecd795e6d33c80fa",
+      "crop": {
+        "eventId": "path_wea_06",
+        "imageId": "img_path_wea_06_001",
+        "assetPath": "presentation/portraits/img_path_wea_06_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.133..0.867",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/native18/path_wea_06_phone_play.png",
+      "sha256": "6eb1d2de95e7ed70cbe85d7b6122c2abc063f1a1b86cce7f64c55bceb7750662",
+      "crop": {
+        "eventId": "path_wea_06",
+        "imageId": "img_path_wea_06_001",
+        "assetPath": "presentation/portraits/img_path_wea_06_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.133..0.867",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/native18/path_wea_06_360x740_scene.png",
+      "sha256": "fb7726b7ae26c5b61ee8672c44f9058e3520fe761e2f0899198c626e576378ba",
+      "crop": {
+        "eventId": "path_wea_06",
+        "imageId": "img_path_wea_06_001",
+        "assetPath": "presentation/portraits/img_path_wea_06_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.103..0.897",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/native18/path_wea_06_360x740_play.png",
+      "sha256": "2922143330444406afa7a6b743f57373713c27ecc8eda5f0f6aa6a6b48564de3",
+      "crop": {
+        "eventId": "path_wea_06",
+        "imageId": "img_path_wea_06_001",
+        "assetPath": "presentation/portraits/img_path_wea_06_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.103..0.897",
+        "match": "1.000"
+      }
+    }
+  ],
+  "observation": "지출 자료들과 가족 메시지가 책상 주변에 남는다.",
+  "decision": "PASS",
+  "method": "Individual visual inspection of both scene and gameplay frames together with producer semantic/source review and device capture match."
+}

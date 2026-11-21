@@ -1,0 +1,28 @@
+{
+  "eventId": "adult_012",
+  "sourceAssetPath": "followup_20261031/img_adult_campus_001.png",
+  "sourceSha256": "8d2a400bfae95281bffc7b8e2ee54fd39a9f88783c2c584e4f39a20da28c1dc3",
+  "variant": {
+    "assetPath": "presentation/portraits/img_adult_campus_001_portrait_v1.png",
+    "sha256": "f1256a01f6cffd916c6409c4934826ae5d61405898d65cd32a82a89e3f8fa0b3",
+    "width": 941,
+    "height": 1672,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI",
+    "reviewEvidence": "docs/refactor/art-candidates/crop-variant-integration/adult_012.json"
+  },
+  "reviewerType": "AI",
+  "reviewer": "Codex AI",
+  "reviewStatus": "AI_REVIEWED_PRESENTATION",
+  "eventSourceHash": "c4770a1add499605fb57a77eae46c0ecccab94b7a90e627e36c9020e0e4d211a",
+  "semanticReview": "Producer reviewed current conditions and every choice/outcome. Root independently inspected the selected full-resolution output. Selection remains pre-choice; no outcome is forced. See production ledger full snapshot.",
+  "visualReview": "원본 선배와 3개 문서·주인공 두 손 유지, 미래 장학금/회장 수락 결과 없음. 재생성에서 문서 폭을 줄여 9:20 crop에도 전체 문서가 남는 배치. 문서 바깥 테두리는 중앙 60% 폭 밖이므로 엄격한 safe-area 목표는 부분 충족; 실제 기기 확인 필요. 명백한 손 결함 없음.",
+  "cropReview": "Portrait recomposition selected after source review; native phone and small phone verification pending. This is not final artwork acceptance.",
+  "actualProducer": "OpenAI built-in image_gen",
+  "generationMethod": "Built-in imagegen edit; exact prompts and rejected attempts preserved in crop-variant-production-20261119.json",
+  "nativePending": true,
+  "runtimeConnected": true,
+  "approvalChanged": false,
+  "selectedStagingSha256": "f1256a01f6cffd916c6409c4934826ae5d61405898d65cd32a82a89e3f8fa0b3"
+}

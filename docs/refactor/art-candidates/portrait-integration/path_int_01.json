@@ -1,0 +1,29 @@
+{
+  "eventId": "path_int_01",
+  "sourceAssetPath": "followup_20261031/img_path_int_01_001.png",
+  "sourceSha256": "d85ddfccbe1b325985e25f7e715d3d14148e3eb3061f74a60b2d72ae5cb85a5b",
+  "variant": {
+    "assetPath": "presentation/portraits/img_path_int_01_001_portrait_v1.png",
+    "sha256": "685132847716a14c2c7b77dc3933e1b512cf78b179c8a95be08a63bdeabdcab9",
+    "width": 941,
+    "height": 1672,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root/effects_tech)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/path_int_01.json"
+  },
+  "reviewerType": "AI",
+  "reviewer": "Codex AI (/root/effects_tech)",
+  "reviewStatus": "AI_REVIEWED_PRESENTATION",
+  "eventSourceHash": "e4d87e6fdcb25966f923bc360b7eea5abf7f89f419fcf27b0121bd16b1761fb2",
+  "semanticReview": "Producer read the current event conditions and every choice/outcome, inspected source and selected output. Full source snapshot and exact prompt are in the referenced production ledger. Native acceptance remains pending.",
+  "visualReview": "담임 얼굴과 두 문서(수학대회/생일초대), 아이 손2개를 보존. 모든 핵심은9:20 안이며 두 팔이 하단까지 연결. 종이 속 트로피는 원본 안내문 상징이고 새 수상 결과가 아니다. native pending.",
+  "cropReview": "Portrait candidate selected for native phone/small-phone scene and gameplay inspection; not final artwork acceptance.",
+  "actualProducer": "OpenAI built-in image_gen",
+  "generationMethod": "Built-in imagegen edit; exact prompts/output SHA/rejected attempts preserved in docs/refactor/art-candidates/crop-variant-production-20261119.json",
+  "productionLedger": "docs/refactor/art-candidates/crop-variant-production-20261119.json",
+  "nativePending": true,
+  "runtimeConnected": true,
+  "approvalChanged": false,
+  "selectedStagingSha256": "685132847716a14c2c7b77dc3933e1b512cf78b179c8a95be08a63bdeabdcab9"
+}

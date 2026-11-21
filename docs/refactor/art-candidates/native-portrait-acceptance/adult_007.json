@@ -1,0 +1,71 @@
+{
+  "eventId": "adult_007",
+  "reviewerType": "AI",
+  "scope": "Portrait phone and small-phone presentation",
+  "sourceEventHash": "d8a49ff815eaf15c674cb4b4b622efc3acbc2d75dbfdeae078997df908189fa8",
+  "sourceReview": "docs/refactor/art-candidates/crop-variant-integration/adult_007.json",
+  "sourceSha256": "5593c9ea563fdac3b92e6534f4daf2c548d14ec03e1d458f63b7be66a10d020b",
+  "displayedVariant": {
+    "assetPath": "presentation/portraits/img_adult_friends_drinks_001_portrait_v1.png",
+    "sha256": "fa535d759628339b22a55b3c99b9ac33f902c56c81be1f1df825fcefaed15caa",
+    "width": 941,
+    "height": 1672,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI",
+    "reviewEvidence": "docs/refactor/art-candidates/crop-variant-integration/adult_007.json"
+  },
+  "nativeCaptures": [
+    {
+      "path": "build/refactor/after/originals-twentyfour-and-variants-native/adult_007_phone_scene.png",
+      "sha256": "c3af08e6ddd8cb8ceb72d6bf2aad3ecf8463c6b0c0e76d800ce2e8e3d9dea138",
+      "crop": {
+        "eventId": "adult_007",
+        "imageId": "img_adult_friends_drinks_001",
+        "assetPath": "presentation/portraits/img_adult_friends_drinks_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/originals-twentyfour-and-variants-native/adult_007_phone_play.png",
+      "sha256": "00d0233f7b4582e8b3c6b39073116f66217f946bbc9604e7dc9af9bbd7df8f77",
+      "crop": {
+        "eventId": "adult_007",
+        "imageId": "img_adult_friends_drinks_001",
+        "assetPath": "presentation/portraits/img_adult_friends_drinks_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/originals-twentyfour-and-variants-native/adult_007_360x740_scene.png",
+      "sha256": "8a579a02933c7a23ff0ecf9e54583a244e715d11c9ce5c28babe674c1c6ad11c",
+      "crop": {
+        "eventId": "adult_007",
+        "imageId": "img_adult_friends_drinks_001",
+        "assetPath": "presentation/portraits/img_adult_friends_drinks_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/originals-twentyfour-and-variants-native/adult_007_360x740_play.png",
+      "sha256": "7aa5470b66d67e35160b37fa0081f83770fc509a661df12c452d3789c59ea9ce",
+      "crop": {
+        "eventId": "adult_007",
+        "imageId": "img_adult_friends_drinks_001",
+        "assetPath": "presentation/portraits/img_adult_friends_drinks_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    }
+  ],
+  "observation": "네 명의 친구와 불판, 빈 의자가 두 화면에 함께 보인다.",
+  "decision": "PASS",
+  "method": "Individual visual inspection of both scene and gameplay frames together with producer semantic/source review and device capture match."
+}

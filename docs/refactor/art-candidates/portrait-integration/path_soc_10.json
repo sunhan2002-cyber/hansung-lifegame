@@ -1,0 +1,29 @@
+{
+  "eventId": "path_soc_10",
+  "sourceAssetPath": "week10/scenes/img_path_soc_10_001.png",
+  "sourceSha256": "64c9be8c48e154527e24d9b71960fe518ff795eafc002b272f0135b3a00a1b2b",
+  "variant": {
+    "assetPath": "presentation/portraits/img_path_soc_10_001_portrait_v1.png",
+    "sha256": "964f52517800a19f992998f37372c2297102e92e536e84d0c8e686ff481d03c0",
+    "width": 971,
+    "height": 1619,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/path_soc_10.json"
+  },
+  "reviewerType": "AI",
+  "reviewer": "Codex AI (/root)",
+  "reviewStatus": "AI_REVIEWED_PRESENTATION",
+  "eventSourceHash": "41696dab965854a9d87c93500d2cd7ae1ddd9b270e004d940c7dd0082b74b56e",
+  "semanticReview": "Producer read the current event conditions and every choice/outcome, inspected source and selected output. Full source snapshot and exact prompt are in the referenced production ledger. Native acceptance remains pending.",
+  "visualReview": "Exactly two group chat cards on one phone, two separated friend groups and festival remnants; two player hands originate at lower frame; no sent reply or reconciliation. Native narrow crop review pending.",
+  "cropReview": "Portrait candidate selected for native phone/small-phone scene and gameplay inspection; not final artwork acceptance.",
+  "actualProducer": "OpenAI built-in image_gen",
+  "generationMethod": "Built-in imagegen edit; exact prompts/output SHA/rejected attempts preserved in docs/refactor/art-candidates/content-root-production-20261119.json",
+  "productionLedger": "docs/refactor/art-candidates/content-root-production-20261119.json",
+  "nativePending": true,
+  "runtimeConnected": true,
+  "approvalChanged": false,
+  "selectedStagingSha256": "964f52517800a19f992998f37372c2297102e92e536e84d0c8e686ff481d03c0"
+}

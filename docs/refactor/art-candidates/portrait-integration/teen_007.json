@@ -1,0 +1,29 @@
+{
+  "eventId": "teen_007",
+  "sourceAssetPath": "followup_20261031/img_teen_midterm_001.png",
+  "sourceSha256": "1763ae0fffa28119dafa6a24d52cd5faed98485868ce4ee7a089726c08054f41",
+  "variant": {
+    "assetPath": "presentation/portraits/img_teen_midterm_001_portrait_v1.png",
+    "sha256": "acc5006364d14a455307ef2f0cce75ec88d6d91cbeb93857a62860447b467f5d",
+    "width": 941,
+    "height": 1672,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/teen_007.json"
+  },
+  "reviewerType": "AI",
+  "reviewer": "Codex AI (/root)",
+  "reviewStatus": "AI_REVIEWED_PRESENTATION",
+  "eventSourceHash": "e86a1815d175d128842b5f1e0f2a563cfd7a032c8d3420ed3c3d62154dbbaa7d",
+  "semanticReview": "Producer read the current event conditions and every choice/outcome, inspected source and selected output. Full source snapshot and exact prompt are in the referenced production ledger. Native acceptance remains pending.",
+  "visualReview": "Inviting friend, game invite on phone, anonymous calendar grid and study book remain in school; removed visible player head/shoulder, now first-person hands only. No exam grade or chosen PC cafe visit.",
+  "cropReview": "Portrait candidate selected for native phone/small-phone scene and gameplay inspection; not final artwork acceptance.",
+  "actualProducer": "OpenAI built-in image_gen",
+  "generationMethod": "Built-in imagegen edit; exact prompts/output SHA/rejected attempts preserved in docs/refactor/art-candidates/content-root-production-20261119.json",
+  "productionLedger": "docs/refactor/art-candidates/content-root-production-20261119.json",
+  "nativePending": true,
+  "runtimeConnected": true,
+  "approvalChanged": false,
+  "selectedStagingSha256": "acc5006364d14a455307ef2f0cce75ec88d6d91cbeb93857a62860447b467f5d"
+}

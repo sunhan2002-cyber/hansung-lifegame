@@ -1,0 +1,29 @@
+{
+  "eventId": "infant_003",
+  "sourceAssetPath": "followup_20261031/img_infant_remote_001.png",
+  "sourceSha256": "31cedd651c65a1d06ed2f0be2ed9720654e17c5a475ee9cab9041e830d66df1e",
+  "variant": {
+    "assetPath": "presentation/portraits/img_infant_remote_001_portrait_v1.png",
+    "sha256": "ca600e68055e4f6d6b712fd8d980a35d992f653232907ee406d36bfd962783b9",
+    "width": 941,
+    "height": 1672,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root/security_p0)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/infant_003.json"
+  },
+  "reviewerType": "AI",
+  "reviewer": "Codex AI (/root/security_p0)",
+  "reviewStatus": "AI_REVIEWED_PRESENTATION",
+  "eventSourceHash": "aedeb6dc427424a93e795aad1feed8d05f33e8464c7d085e29bb22d27d3455ef",
+  "semanticReview": "Producer read the current event conditions and every choice/outcome, inspected source and selected output. Full source snapshot and exact prompt are in the referenced production ledger. Native acceptance remains pending.",
+  "visualReview": "Generated output individually viewed: exactly six separated major remote pieces, infant hands at floor height, father searching beyond them, no repair/hiding/phone outcome. No readable words or numerals. Native crop pending.",
+  "cropReview": "Portrait candidate selected for native phone/small-phone scene and gameplay inspection; not final artwork acceptance.",
+  "actualProducer": "OpenAI built-in image_gen",
+  "generationMethod": "Built-in imagegen edit; exact prompts/output SHA/rejected attempts preserved in docs/refactor/art-candidates/content-art-revision-briefs-20261119.json",
+  "productionLedger": "docs/refactor/art-candidates/content-art-revision-briefs-20261119.json",
+  "nativePending": true,
+  "runtimeConnected": true,
+  "approvalChanged": false,
+  "selectedStagingSha256": "ca600e68055e4f6d6b712fd8d980a35d992f653232907ee406d36bfd962783b9"
+}

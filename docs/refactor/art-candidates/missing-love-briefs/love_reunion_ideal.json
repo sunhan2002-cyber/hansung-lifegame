@@ -1,0 +1,249 @@
+{
+  "schemaVersion": 1,
+  "eventId": "love_reunion_ideal",
+  "title": "다시 마주친 그 길",
+  "imageId": "img_love_reunion_ideal_001",
+  "status": "READY_FOR_GENERATION_NOT_ART_APPROVAL",
+  "author": "Codex AI",
+  "date": "2026-11-19",
+  "generationPriority": 18,
+  "currentAcceptanceStatus": "MISSING_PNG",
+  "sourceEventHash": "7fe95668bac338e9765e97b35bab05924948a4e5a2d54bfca1c0304f8bdc1924",
+  "sourceEventPath": "app/src/main/assets/events.sample.json",
+  "sourceEventSnapshot": {
+    "eventId": "love_reunion_ideal",
+    "stage": "ADULT",
+    "type": "NORMAL",
+    "isFallback": false,
+    "isMilestone": false,
+    "title": "다시 마주친 그 길",
+    "text": "처음 반했던 그 길, 그 자리. 헤어진 그 사람이 또 거기 서 있었다. 이번엔 시계를 보고 있지 않았다.",
+    "imageId": "img_love_reunion_ideal_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [
+        "breakup_once",
+        "ex_ideal"
+      ],
+      "blockedFlags": [
+        "dating",
+        "engaged",
+        "married"
+      ]
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "먼저 인사한다",
+        "statDelta": {
+          "행복": 3
+        },
+        "resultText": "\"요즘은 안 늦어.\" 그 사람이 시계를 보여 줬다. 10분 빠르게 맞춰져 있었다.",
+        "addFlags": [
+          "dating",
+          "rel_steady",
+          "partner_ideal",
+          "reunited"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "a_again",
+            "text": "\"요즘은 안 늦어.\" 그 사람이 시계를 보여 줬다. 10분 빠르게 맞춰져 있었다.",
+            "chance": 55,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 3
+            },
+            "addFlags": [
+              "dating",
+              "rel_steady",
+              "partner_ideal",
+              "reunited"
+            ],
+            "removeFlags": [
+              "ex_ideal"
+            ]
+          },
+          {
+            "outcomeId": "a_hello",
+            "text": "인사만 하고 각자 갈 길을 갔다. 세 걸음 가다 돌아봤다. 이번엔 그 사람이 먼저 손을 흔들었다.",
+            "chance": 45,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 1
+            },
+            "addFlags": [
+              "closure"
+            ],
+            "removeFlags": [
+              "ex_ideal"
+            ]
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week13_love_line"
+      },
+      {
+        "choiceId": "B",
+        "label": "모른 척 지나간다",
+        "statDelta": {
+          "지력": 1
+        },
+        "resultText": "지나치고 나서야 심장이 조용하다는 걸 알았다. 이제 정말 괜찮았다.",
+        "addFlags": [
+          "closure"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "b_pass",
+            "text": "지나치고 나서야 심장이 조용하다는 걸 알았다. 이제 정말 괜찮았다.",
+            "chance": 100,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "지력": 1
+            },
+            "addFlags": [
+              "closure"
+            ],
+            "removeFlags": [
+              "ex_ideal"
+            ]
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week13_love_line"
+      },
+      {
+        "choiceId": "C",
+        "label": "이번엔 내가 40분 뒤에 다시 와 본다",
+        "statDelta": {
+          "행복": 3,
+          "운": 1
+        },
+        "resultText": "40분 뒤 돌아와 보니 그 사람이 아직 기다리고 있었다. '이제 내 마음 알겠지?'",
+        "addFlags": [
+          "dating",
+          "rel_steady",
+          "partner_ideal",
+          "reunited"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "c_wait",
+            "text": "40분 뒤 돌아와 보니 그 사람이 아직 기다리고 있었다. '이제 내 마음 알겠지?'",
+            "chance": 50,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 3,
+              "운": 1
+            },
+            "addFlags": [
+              "dating",
+              "rel_steady",
+              "partner_ideal",
+              "reunited"
+            ],
+            "removeFlags": [
+              "ex_ideal"
+            ]
+          },
+          {
+            "outcomeId": "c_gone",
+            "text": "40분 뒤엔 아무도 없었다. 당연했다.",
+            "chance": 50,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": -1
+            },
+            "addFlags": [
+              "closure"
+            ],
+            "removeFlags": [
+              "ex_ideal"
+            ]
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week13_love_line"
+      }
+    ],
+    "priority": 0,
+    "kind": "INCIDENT",
+    "periods": [
+      "YOUNG_ADULT",
+      "MIDDLE"
+    ],
+    "weight": 30,
+    "view": "FIRST_PERSON",
+    "pathRole": "러브라인 재회(이상형 후보)",
+    "followUps": [
+      "love_marriage_talk_01"
+    ]
+  },
+  "reviewScope": "Current complete event, conditions, every choice including legacy fields, all outcomes, probabilities, deltas and flags read for pre-choice art specification. No new image has been generated or approved by this brief.",
+  "reviewedChoiceIds": [
+    "A",
+    "B",
+    "C"
+  ],
+  "reviewedOutcomeIds": [
+    "a_again",
+    "a_hello",
+    "b_pass",
+    "c_wait",
+    "c_gone"
+  ],
+  "existingArtBriefPath": "docs/assignments/20261031/submissions/김선한_분류합본.csv",
+  "existingArtBriefSnapshot": {
+    "place": "처음 마주친 횡단보도",
+    "mainAction": "헤어진 그 사람과 다시 마주친다",
+    "requiredObjects": "횡단보도와 건너편 사람",
+    "peopleAndAge": "청년·중년 두 사람",
+    "timeOfDay": "오후",
+    "approvedPerspective": "FIRST_PERSON",
+    "reuseOrNewReason": "NEW: 13주차 러브라인 신규 사건. 관계 단계(연인·약혼·배우자·자녀)를 선택 전보다 앞서 보여 주지 않는 전용 장면 필요"
+  },
+  "requestedAssetPath": "app/src/main/assets/images/img_love_reunion_ideal_001.png",
+  "preChoiceState": "처음 반했던 거리의 같은 자리에 전 연인이 서 있다. 그 사람은 이번에는 시계를 보지 않는다. 플레이어는 아직 인사하거나 지나가지 않았다.",
+  "composition": "오후 횡단보도 가까이 플레이어의 1인칭. 중앙 건너편의 성인 전 연인은 조용히 서 있고 양손은 내려놓는다. 읽을 수 없는 거리 표지, 부드러운 햇빛.",
+  "ageAndAppearance": "청년~중년 성인 두 사람 중 플레이어는 카메라 시점, 상대는 거리를 둔 비식별 부분 모습. 과도한 얼굴 특징·고정 성별 없음.",
+  "forbiddenOutcomes": [
+    "상대가 시계를 확인/보여 줌",
+    "손 흔들며 인사한 결과",
+    "40분 후 계속 기다리는/떠난 장면",
+    "재결합 포옹",
+    "플레이어가 지나쳐 등 보임",
+    "시계 숫자"
+  ],
+  "briefCorrections": [
+    "현재의 시계를 보지 않는다는 부정 조건을 명시했다. 시계를 보여 주는 것은 선택 A 결과이므로 팔을 들거나 시계를 강조하지 않는다."
+  ],
+  "generationPrompt": "Create one portrait 9:16 full-bleed game background, warm restrained Korean everyday-life pixel-art illustration. Crisp deliberate pixel clusters, coherent anatomy, softly separated light and shadow, not photorealism and not a UI mockup. Strict first-person player viewpoint: no player face, back of head, full player body, reflection, selfie or framed portrait of the player. Only naturally placed player hands or forearms may enter the frame. The player can be male or female; hands, clothing and visible partner styling must not encode a fixed player gender or a uniquely named past partner. All romantic participants are clearly adults; do not depict school-age children as romantic partners. Use age-flexible adult styling that can fit young adulthood or middle adulthood. If a partner must be visible, show non-identifying partial profile, cropped upper torso or hands rather than an identity-defining portrait. No readable text, letters, digits, logos, subtitles, speech bubbles, interface panels, progress indicators or button graphics. Any phone message cue must be an abstract non-text shape and never legible text. Keep all story-critical objects together inside the central 60% of the portrait width and middle 60% of height; leave the bottom 22% visually quiet for the game overlay, without drawing an overlay. This is the instant before the player chooses. Show the stated present situation only, with no success, failure, marriage, pregnancy, reconciliation, breakup or future achievement unless already established in the source conditions. \nSCENE: The familiar crossing of an ordinary Korean street in gentle afternoon light, seen from the players first-person viewpoint. Across the narrow crossing stands the adult former partner in a quiet unhurried pose, hands lowered, NOT looking at or showing a watch. Keep the figure non-identifying by distance and soft detail, with the crossing and shared patch of pavement central. They have just noticed each other, before any greeting. No waving, embrace, apology, leaving silhouette, empty-after-waiting scene, raised wrist, readable clock, street text or romantic destiny symbols. Preserve open-ended recognition without deciding reconciliation.",
+  "deliveryAndReview": {
+    "format": "PNG, portrait 9:16",
+    "originalAssets": "Preserve existing artwork and approval history. This is a missing-art candidate, not a replacement approval.",
+    "requiredChecks": [
+      "Read current event hash again before generation; stale briefs must be reread.",
+      "Inspect full image, anatomy, all required objects and absence of choice outcomes.",
+      "Inspect actual native portrait presentation and UI overlay at phone and narrow viewport.",
+      "Record image SHA, exact generation prompt, truthful AI producer/reviewer and per-event rationale before any separate approval action."
+    ],
+    "approvalOrManifestChanged": false
+  }
+}

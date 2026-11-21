@@ -1,0 +1,68 @@
+{
+  "date": "2026-11-19",
+  "reason": "Preserve the previous individual approval and classification before a fresh AI review of the current complete event. Source PNG is unchanged.",
+  "previousApproval": {
+    "groupId": "direct_20261119_path_soc_05",
+    "imageId": "img_path_soc_05_001",
+    "assetPath": "followup_20261031/img_path_soc_05_001.png",
+    "sha256": "35bd49a77c3df8dbc7df3f16847c4cc799a786f085ba508f1d47b90f221d692b",
+    "approvalStatus": "APPROVED",
+    "eventIds": [
+      "path_soc_05"
+    ],
+    "eventSourceHashes": {
+      "path_soc_05": "96776b829593e13e5bdc8fef7a9cdd1b27a1a1e601ea2a4b5199bd682740cb4d"
+    },
+    "semanticReviewer": "김선한 담당 Codex 직접 대행 검수",
+    "visualReviewer": "김선한 담당 Codex 직접 대행 검수",
+    "cropReviewer": "김선한 담당 Codex 직접 대행 검수 (중앙 크롭 계산 재현 검수)",
+    "reviewEvidence": {
+      "eventId": "path_soc_05",
+      "title": "상견례 대참사",
+      "imageId": "img_path_soc_05_001",
+      "assetPath": "followup_20261031/img_path_soc_05_001.png",
+      "sha256": "35bd49a77c3df8dbc7df3f16847c4cc799a786f085ba508f1d47b90f221d692b",
+      "eventSourceHash": "96776b829593e13e5bdc8fef7a9cdd1b27a1a1e601ea2a4b5199bd682740cb4d",
+      "status": "PASS",
+      "reviewer": "김선한 담당 Codex 직접 대행 검수",
+      "reason": "본문의 장소·인물·행동을 원본과 대조하고 360×800 중앙 크롭의 상황 식별 가능성을 직접 확인",
+      "expectedAction": "두 아버지가 상을 사이에 두고 손짓하며 축구 결승 이야기를 함",
+      "requiredObjects": "한정식 상, 두 아버지의 손짓, 곁의 어머니들",
+      "sheet": "output/art-review-20261119/sheet-16.jpg",
+      "cell": 3,
+      "cropMethod": "ImageOps.fit centre-fill 360:800; simulated crop inspected directly, not an emulator capture",
+      "visualMethod": "원본 도트풍·색감·장면 파손·명백한 신체/사물 오류 직접 확인"
+    },
+    "resolvedIssueEvidence": {
+      "path_soc_05": "본문의 장소·인물·행동을 원본과 대조하고 360×800 중앙 크롭의 상황 식별 가능성을 직접 확인"
+    }
+  },
+  "previousClassification": {
+    "eventId": "path_soc_05",
+    "title": "상견례 대참사",
+    "text": "상견례 자리. 양가 아버지가 같은 고등학교 라이벌이었다는 게 밝혀졌다. 고등학교 때 축구 결승 이야기가 다시 시작됐다.",
+    "periods": "YOUNG_ADULT|MIDDLE|OLD_AGE",
+    "kind": "MILESTONE",
+    "lifePath": "SOCIAL",
+    "perspective": "FIRST_PERSON",
+    "preferredImageId": "img_path_soc_05_001",
+    "resolvedAssetPath": "img_path_soc_05_001.png",
+    "preferredFileExists": "NO",
+    "classificationOwner": "신기훈",
+    "place": "한정식집 별실",
+    "mainAction": "두 아버지가 상을 사이에 두고 손짓하며 축구 결승 이야기를 함",
+    "requiredObjects": "한정식 상, 두 아버지의 손짓, 곁의 어머니들",
+    "peopleAndAge": "나(청년~중년, 손), 양가 아버지(중년~노년), 양가 어머니, 연인",
+    "timeOfDay": "낮",
+    "approvedPerspective": "FIRST_PERSON",
+    "proposedGroupId": "grp_adult_sangyeon_fathers_rivals",
+    "existingArtVerdict": "NO_FILE",
+    "reuseOrNewReason": "NEW: 상견례 고유. 금지: 함께 영상을 보는 모습. 시나리오 확인 필요: 사건 조건은 married인데 본문은 상견례",
+    "approvedGroupId": "direct_20261119_path_soc_05",
+    "semanticReviewer": "김선한 담당 Codex 직접 대행 검수",
+    "visualReviewer": "김선한 담당 Codex 직접 대행 검수",
+    "classificationStatus": "REVIEW_REQUIRED_CONTENT_CHANGED",
+    "productionOwner": "신기훈",
+    "productionStatus": "ASSIGNED_AFTER_SAMPLE_APPROVAL"
+  }
+}

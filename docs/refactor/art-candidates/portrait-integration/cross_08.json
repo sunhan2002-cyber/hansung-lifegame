@@ -1,0 +1,29 @@
+{
+  "eventId": "cross_08",
+  "sourceAssetPath": "followup_20261031/img_cross_08_001.png",
+  "sourceSha256": "a0e37f53d51ab28901e03f33e13c3c1cf08be3959caf0a51e4d0bee81969551e",
+  "variant": {
+    "assetPath": "presentation/portraits/img_cross_08_001_portrait_v1.png",
+    "sha256": "098784587d250c8c861e8f3436e25bc6ec84850d80b5c56e0ca061bd92c90c03",
+    "width": 941,
+    "height": 1672,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root/effects_tech)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/cross_08.json"
+  },
+  "reviewerType": "AI",
+  "reviewer": "Codex AI (/root/effects_tech)",
+  "reviewStatus": "AI_REVIEWED_PRESENTATION",
+  "eventSourceHash": "61811b90ec9b7c47a6e64c359d5ee10c884cdc04dcc89c1ef92a0affd1a2e307",
+  "semanticReview": "Producer read the current event conditions and every choice/outcome, inspected source and selected output. Full source snapshot and exact prompt are in the referenced production ledger. Native acceptance remains pending.",
+  "visualReview": "두 문서를 실제로 세로 엇갈림 재배치해 병원 재검과 발표 자료 전체, 전화가9:20 중앙 crop에 남는다. 원본처럼 손/인물 추가 없음. 일정 해결이나 건강 결과를 추가하지 않았다. 중앙60%폭은 문서 좌측 끝만 일부 이탈; native pending.",
+  "cropReview": "Portrait candidate selected for native phone/small-phone scene and gameplay inspection; not final artwork acceptance.",
+  "actualProducer": "OpenAI built-in image_gen",
+  "generationMethod": "Built-in imagegen edit; exact prompts/output SHA/rejected attempts preserved in docs/refactor/art-candidates/crop-variant-production-20261119.json",
+  "productionLedger": "docs/refactor/art-candidates/crop-variant-production-20261119.json",
+  "nativePending": true,
+  "runtimeConnected": true,
+  "approvalChanged": false,
+  "selectedStagingSha256": "098784587d250c8c861e8f3436e25bc6ec84850d80b5c56e0ca061bd92c90c03"
+}

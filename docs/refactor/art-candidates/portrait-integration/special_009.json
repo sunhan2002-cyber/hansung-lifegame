@@ -1,0 +1,29 @@
+{
+  "eventId": "special_009",
+  "sourceAssetPath": "followup_20261031/img_special_health_research_001.png",
+  "sourceSha256": "da9082e698969a933099f112d79c45c63e0e69ecad05f35ab273a3a30a5ff3e6",
+  "variant": {
+    "assetPath": "presentation/portraits/img_special_health_research_001_portrait_v1.png",
+    "sha256": "db7ecbf3039f1b4e15b8049af7d5729c7d9c95ee420615e65a5afea9153ac31e",
+    "width": 941,
+    "height": 1672,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root/effects_tech)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/special_009.json"
+  },
+  "reviewerType": "AI",
+  "reviewer": "Codex AI (/root/effects_tech)",
+  "reviewStatus": "AI_REVIEWED_PRESENTATION",
+  "eventSourceHash": "91c97d9dc2ffc8fd75a695a3fe1d178890bb08e25fe1be39112f1e8694ed5812",
+  "semanticReview": "Producer read the current event conditions and every choice/outcome, inspected source and selected output. Full source snapshot and exact prompt are in the referenced production ledger. Native acceptance remains pending.",
+  "visualReview": "앞 의사+뒤연구팀3명 총4얼굴과 평균값 그래프 결과지전체가9:20 중앙에 남음. 원본표정·복장·환자두손 유지. 채혈/연구참여동의/이상값결과를 추가하지 않았다. native pending.",
+  "cropReview": "Portrait candidate selected for native phone/small-phone scene and gameplay inspection; not final artwork acceptance.",
+  "actualProducer": "OpenAI built-in image_gen",
+  "generationMethod": "Built-in imagegen edit; exact prompts/output SHA/rejected attempts preserved in docs/refactor/art-candidates/crop-variant-production-20261119.json",
+  "productionLedger": "docs/refactor/art-candidates/crop-variant-production-20261119.json",
+  "nativePending": true,
+  "runtimeConnected": true,
+  "approvalChanged": false,
+  "selectedStagingSha256": "db7ecbf3039f1b4e15b8049af7d5729c7d9c95ee420615e65a5afea9153ac31e"
+}

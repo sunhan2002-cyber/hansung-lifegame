@@ -1,0 +1,71 @@
+{
+  "eventId": "adult_081",
+  "reviewerType": "AI",
+  "scope": "Portrait phone and small-phone presentation",
+  "sourceEventHash": "a5c050135f1cc60eef340cef0cb597574638b7c3128575f7bb206ace45aa9f6a",
+  "sourceReview": "docs/refactor/art-candidates/portrait-integration/adult_081.json",
+  "sourceSha256": "488f48996d0ce2c6f7cf894f35f1a7a4fddc6c7b09653bce9bd435a80a97d9b1",
+  "displayedVariant": {
+    "assetPath": "presentation/portraits/img_pov_welcome_party_001_portrait_v1.png",
+    "sha256": "85154c755dd2241ba442998b11c026a443fc916b8d115c38fd12c0ed208ae9ea",
+    "width": 941,
+    "height": 1672,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/adult_081.json"
+  },
+  "nativeCaptures": [
+    {
+      "path": "build/refactor/resumed/final32/adult_081_phone_scene.png",
+      "sha256": "3d643b7b6e00ef0c44439fd944bdca8c1c7888f83103d70f3b411eb65e7930b1",
+      "crop": {
+        "eventId": "adult_081",
+        "imageId": "img_pov_welcome_party_001",
+        "assetPath": "presentation/portraits/img_pov_welcome_party_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/final32/adult_081_phone_play.png",
+      "sha256": "b9afe18683bc18138c5fae1a64f5578d0f5fd326db562c5b991c76b03f5322ea",
+      "crop": {
+        "eventId": "adult_081",
+        "imageId": "img_pov_welcome_party_001",
+        "assetPath": "presentation/portraits/img_pov_welcome_party_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/final32/adult_081_360x740_scene.png",
+      "sha256": "19b06e1373c8af4f017da1bc3637938161a116a13b1df36cae5f9361ae191cbd",
+      "crop": {
+        "eventId": "adult_081",
+        "imageId": "img_pov_welcome_party_001",
+        "assetPath": "presentation/portraits/img_pov_welcome_party_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/final32/adult_081_360x740_play.png",
+      "sha256": "f958a70427111e46261c76415928ed636b00a61d1c1b203a3523cca0472f97ea",
+      "crop": {
+        "eventId": "adult_081",
+        "imageId": "img_pov_welcome_party_001",
+        "assetPath": "presentation/portraits/img_pov_welcome_party_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    }
+  ],
+  "observation": "Team leader listening behind expectant colleagues, no thought bubbles.",
+  "decision": "PASS",
+  "method": "Individual visual inspection of both scene and gameplay frames together with producer semantic/source review and device capture match."
+}

@@ -1,0 +1,71 @@
+{
+  "eventId": "teen_022",
+  "reviewerType": "AI",
+  "scope": "Portrait phone and small-phone presentation",
+  "sourceEventHash": "1fdc796299a90e50d46eba22ba18b11c78333b38b67dc25815924ca9e1d8beb3",
+  "sourceReview": "docs/refactor/art-candidates/portrait-integration/teen_022.json",
+  "sourceSha256": "da0c649ab05fac460d18058ead0a99f306dac594366e86600bbe61558caaaa2b",
+  "displayedVariant": {
+    "assetPath": "presentation/portraits/img_teen_school_trip_001_portrait_v1.png",
+    "sha256": "9c129bd21e411f53af58ae178831e6f9f5e875f4b01eed1fee6cc060939c05c8",
+    "width": 941,
+    "height": 1672,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/teen_022.json"
+  },
+  "nativeCaptures": [
+    {
+      "path": "build/refactor/resumed/native18/teen_022_phone_scene.png",
+      "sha256": "d7e264ecceb5be3ec3feff31f06b7172f63534eddc533b67dd59ec4d03024414",
+      "crop": {
+        "eventId": "teen_022",
+        "imageId": "img_teen_school_trip_001",
+        "assetPath": "presentation/portraits/img_teen_school_trip_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/native18/teen_022_phone_play.png",
+      "sha256": "4482576f7c23633523f6b64c00e2472f24a264b005b1088cbca34644b7b5f039",
+      "crop": {
+        "eventId": "teen_022",
+        "imageId": "img_teen_school_trip_001",
+        "assetPath": "presentation/portraits/img_teen_school_trip_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/native18/teen_022_360x740_scene.png",
+      "sha256": "33a3cd2ae1d5cc5b55a5c2ab55711a6b766b6f1ee9b9610981c670e74df86d78",
+      "crop": {
+        "eventId": "teen_022",
+        "imageId": "img_teen_school_trip_001",
+        "assetPath": "presentation/portraits/img_teen_school_trip_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/native18/teen_022_360x740_play.png",
+      "sha256": "51e47442d5509d8a192ad2506d0480ce03131a5bc8769af016d809ee1b2f417a",
+      "crop": {
+        "eventId": "teen_022",
+        "imageId": "img_teen_school_trip_001",
+        "assetPath": "presentation/portraits/img_teen_school_trip_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    }
+  ],
+  "observation": "권유하는 친구들 너머 의자에 앉은 선생님을 식별할 수 있다.",
+  "decision": "PASS",
+  "method": "Individual visual inspection of both scene and gameplay frames together with producer semantic/source review and device capture match."
+}

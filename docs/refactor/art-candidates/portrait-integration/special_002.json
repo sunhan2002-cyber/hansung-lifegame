@@ -1,0 +1,29 @@
+{
+  "eventId": "special_002",
+  "sourceAssetPath": "followup_20261031/img_special_dog_carry_001.png",
+  "sourceSha256": "7caf99f29f164d229e575d540ebda05fd38c2b8e420417443eaa9e2b46f67852",
+  "variant": {
+    "assetPath": "presentation/portraits/img_special_dog_carry_001_portrait_v1.png",
+    "sha256": "6ea45624423c809379b5a92b66bb45800d37a81fe737fdd85a7ec47430c7774a",
+    "width": 941,
+    "height": 1672,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root/security_p0)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/special_002.json"
+  },
+  "reviewerType": "AI",
+  "reviewer": "Codex AI (/root/security_p0)",
+  "reviewStatus": "AI_REVIEWED_PRESENTATION",
+  "eventSourceHash": "686e6e24c9bfed5acdb97eda4e8424057e3977bb1d89e2d9771c2eec28309c46",
+  "semanticReview": "Producer read the current event conditions and every choice/outcome, inspected source and selected output. Full source snapshot and exact prompt are in the referenced production ledger. Native acceptance remains pending.",
+  "visualReview": "Individually viewed: elevated infant POV approaching dog bed with puppies still ahead; dog holds only garment fabric at peripheral right; two empty infant hands, no face/full body, rescue or chosen action. No injury. Native pending.",
+  "cropReview": "Portrait candidate selected for native phone/small-phone scene and gameplay inspection; not final artwork acceptance.",
+  "actualProducer": "OpenAI built-in image_gen",
+  "generationMethod": "Built-in imagegen edit; exact prompts/output SHA/rejected attempts preserved in docs/refactor/art-candidates/content-art-revision-briefs-20261119.json",
+  "productionLedger": "docs/refactor/art-candidates/content-art-revision-briefs-20261119.json",
+  "nativePending": true,
+  "runtimeConnected": true,
+  "approvalChanged": false,
+  "selectedStagingSha256": "6ea45624423c809379b5a92b66bb45800d37a81fe737fdd85a7ec47430c7774a"
+}

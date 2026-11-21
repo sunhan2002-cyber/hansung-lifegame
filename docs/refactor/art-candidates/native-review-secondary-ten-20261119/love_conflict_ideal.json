@@ -1,0 +1,361 @@
+{
+  "schemaVersion": 1,
+  "eventId": "love_conflict_ideal",
+  "status": "PASS",
+  "reviewer": "Codex AI / plan_audit",
+  "reviewerType": "AI",
+  "reviewDate": "2026-11-19",
+  "approvalScope": "Current complete event and exact PNG; phone and 360x740 native Compose scene/play visual review",
+  "sourceEventHash": "78d42a8a39f9a20ea43b21abef36d3b8c774bb0835c2393927403741a6a5ca5c",
+  "sourceEventSnapshot": {
+    "eventId": "love_conflict_ideal",
+    "stage": "ADULT",
+    "type": "NORMAL",
+    "isFallback": false,
+    "isMilestone": false,
+    "title": "이상형의 단점",
+    "text": "길에서 첫눈에 반했던 그 사람. 사귀어 보니 약속 시간에 늘 20분씩 늦는다. 오늘은 40분째다.",
+    "imageId": "img_love_conflict_ideal_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [
+        "dating",
+        "rel_conflict",
+        "partner_ideal"
+      ],
+      "blockedFlags": [
+        "engaged",
+        "married",
+        "divorced"
+      ]
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "기다렸다가 웃으며 맞아 준다",
+        "statDelta": {
+          "행복": 2,
+          "사회성": 1
+        },
+        "resultText": "연인이 숨을 헐떡이며 뛰어왔다. 그다음 주부터는 10분 일찍 와서 나를 기다렸다.",
+        "addFlags": [
+          "rel_steady"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "a_sorry",
+            "text": "연인이 숨을 헐떡이며 뛰어왔다. 그다음 주부터는 10분 일찍 와서 나를 기다렸다.",
+            "chance": 60,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 2,
+              "사회성": 1
+            },
+            "addFlags": [
+              "rel_steady"
+            ],
+            "removeFlags": [
+              "rel_conflict"
+            ]
+          },
+          {
+            "outcomeId": "a_again",
+            "text": "다음 주에도 40분, 그다음 주엔 한 시간. 결국 내가 먼저 헤어지자고 했다.",
+            "chance": 40,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": -3
+            },
+            "addFlags": [
+              "breakup_once",
+              "ex_ideal"
+            ],
+            "removeFlags": [
+              "dating",
+              "rel_steady",
+              "rel_conflict",
+              "partner_first_love",
+              "partner_ideal",
+              "partner_music",
+              "partner_book",
+              "partner_app",
+              "partner_closing",
+              "partner_gym",
+              "partner_letter",
+              "partner_blind_date",
+              "dating__adult_073",
+              "dating__adult_074",
+              "dating__adult_075",
+              "dating__adult_076",
+              "dating__adult_077",
+              "dating__adult_078",
+              "dating__path_soc_03",
+              "dating__path_soc_11",
+              "dating__path_hap_05",
+              "dating__love_letter_01"
+            ]
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week13_love_line"
+      },
+      {
+        "choiceId": "B",
+        "label": "솔직하게 서운하다고 말한다",
+        "statDelta": {
+          "사회성": 2,
+          "행복": 2
+        },
+        "resultText": "연인이 처음으로 이유를 말했다. 나를 만나기 전마다 옷을 세 번씩 갈아입는다고 했다.",
+        "addFlags": [
+          "rel_steady"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "b_talk",
+            "text": "연인이 처음으로 이유를 말했다. 나를 만나기 전마다 옷을 세 번씩 갈아입는다고 했다.",
+            "chance": 70,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "사회성": 2,
+              "행복": 2
+            },
+            "addFlags": [
+              "rel_steady"
+            ],
+            "removeFlags": [
+              "rel_conflict"
+            ]
+          },
+          {
+            "outcomeId": "b_end",
+            "text": "\"그럼 우리 안 맞는 거네.\" 첫눈에 반한 사람은 생각보다 빨리 남이 됐다.",
+            "chance": 30,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": -4
+            },
+            "addFlags": [
+              "breakup_once",
+              "ex_ideal"
+            ],
+            "removeFlags": [
+              "dating",
+              "rel_steady",
+              "rel_conflict",
+              "partner_first_love",
+              "partner_ideal",
+              "partner_music",
+              "partner_book",
+              "partner_app",
+              "partner_closing",
+              "partner_gym",
+              "partner_letter",
+              "partner_blind_date",
+              "dating__adult_073",
+              "dating__adult_074",
+              "dating__adult_075",
+              "dating__adult_076",
+              "dating__adult_077",
+              "dating__adult_078",
+              "dating__path_soc_03",
+              "dating__path_soc_11",
+              "dating__path_hap_05",
+              "dating__love_letter_01"
+            ]
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week13_love_line"
+      },
+      {
+        "choiceId": "C",
+        "label": "나도 다음엔 40분 늦게 나간다",
+        "statDelta": {
+          "행복": 2,
+          "운": 1
+        },
+        "resultText": "둘 다 40분 늦게 나왔다. 약속 장소에 동시에 도착했다. 그날은 늦은 사람이 없었다.",
+        "addFlags": [
+          "rel_steady"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "c_both",
+            "text": "둘 다 40분 늦게 나왔다. 약속 장소에 동시에 도착했다. 그날은 늦은 사람이 없었다.",
+            "chance": 50,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 2,
+              "운": 1
+            },
+            "addFlags": [
+              "rel_steady"
+            ],
+            "removeFlags": [
+              "rel_conflict"
+            ]
+          },
+          {
+            "outcomeId": "c_none",
+            "text": "연인은 그날따라 정시에 나와 40분을 기다렸다. 처음으로 내가 늦었고, 그게 마지막이었다.",
+            "chance": 50,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": -4
+            },
+            "addFlags": [
+              "breakup_once",
+              "ex_ideal"
+            ],
+            "removeFlags": [
+              "dating",
+              "rel_steady",
+              "rel_conflict",
+              "partner_first_love",
+              "partner_ideal",
+              "partner_music",
+              "partner_book",
+              "partner_app",
+              "partner_closing",
+              "partner_gym",
+              "partner_letter",
+              "partner_blind_date",
+              "dating__adult_073",
+              "dating__adult_074",
+              "dating__adult_075",
+              "dating__adult_076",
+              "dating__adult_077",
+              "dating__adult_078",
+              "dating__path_soc_03",
+              "dating__path_soc_11",
+              "dating__path_hap_05",
+              "dating__love_letter_01"
+            ]
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week13_love_line"
+      }
+    ],
+    "priority": 0,
+    "kind": "INCIDENT",
+    "periods": [
+      "YOUNG_ADULT",
+      "MIDDLE"
+    ],
+    "weight": 80,
+    "view": "FIRST_PERSON",
+    "pathRole": "러브라인 3단계(이상형 후보) — 갈등: 화해 또는 결별",
+    "followUps": [
+      "love_reunion_ideal"
+    ]
+  },
+  "sourceReadScope": "Title, full text, conditions, every choice and outcome including flags/stat deltas, periods and follow-ups directly read.",
+  "sourceImage": {
+    "path": "app/src/main/assets/images/img_love_conflict_ideal_001.png",
+    "sha256": "28362feadf355272d5b41e6f832f69f792729203da6df9b940e7eccf34917827",
+    "width": 941,
+    "height": 1672
+  },
+  "generationManifest": "docs/refactor/art-candidates/generated-love-secondary-20261119.json",
+  "selectedGenerationOutput": "C:\\Users\\jk030\\.codex\\generated_images\\01a1f1e9-d1e7-7610-888a-7aff56bbb301\\exec-05a4b64e-02fe-484d-a579-8270f3d46265.png",
+  "exactGenerationPromptSha256": "3ee322513b82b46c68ba963fd65b7a0c104323e3f365ee7dfc55328a38b2d12b",
+  "sourceGenerationReview": {
+    "reviewer": "Codex AI (/root/plan_audit)",
+    "reviewerType": "AI",
+    "method": "Direct visual inspection of the complete built-in generated image displayed by the tool; source-only, not an emulator capture.",
+    "status": "SELECTED_SOURCE_NATIVE_PENDING",
+    "observations": [
+      "Empty evening meeting place with recognisable tower silhouette; the corrected opaque dial contains no readable hands, digits or time.",
+      "One plausible hand holds a dark phone; no partner has arrived and no apology or breakup has happened.",
+      "Waiting space, tower and phone form a central vertical composition."
+    ],
+    "concerns": [
+      "Native crop and UI-overlay inspection remains required."
+    ]
+  },
+  "presentationMetadata": [],
+  "captures": [
+    {
+      "path": "build/refactor/after/secondary-art-focals-native/love_conflict_ideal_phone_scene.png",
+      "sha256": "e8b168d83a72a01dc6cb53e1a232bd0235db310239fe615a6eb9697f2e71eb5b",
+      "width": 1080,
+      "height": 2400,
+      "screen": "phone",
+      "mode": "scene",
+      "cropReport": {
+        "eventId": "love_conflict_ideal",
+        "imageId": "img_love_conflict_ideal_001",
+        "assetPath": "img_love_conflict_ideal_001.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/secondary-art-focals-native/love_conflict_ideal_phone_play.png",
+      "sha256": "56b7eb84b74df953b74a598512618dc051e68823806f45d9684208f6686a7124",
+      "width": 1080,
+      "height": 2400,
+      "screen": "phone",
+      "mode": "play",
+      "cropReport": null
+    },
+    {
+      "path": "build/refactor/after/secondary-art-focals-native/love_conflict_ideal_360x740_scene.png",
+      "sha256": "09b7e587ac604873394b8e15a579e5b0cf6dd59c0eea155ec9325e2c7f6e197e",
+      "width": 945,
+      "height": 1943,
+      "screen": "360x740",
+      "mode": "scene",
+      "cropReport": {
+        "eventId": "love_conflict_ideal",
+        "imageId": "img_love_conflict_ideal_001",
+        "assetPath": "img_love_conflict_ideal_001.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/secondary-art-focals-native/love_conflict_ideal_360x740_play.png",
+      "sha256": "1608f0cad1ea7215bf65a4799f2430b63df7e806914c716a65b98f179cae6cb0",
+      "width": 945,
+      "height": 1943,
+      "screen": "360x740",
+      "mode": "play",
+      "cropReport": null
+    }
+  ],
+  "semanticObservation": "6개 결과를 읽었다. 빈 약속 장소에서 검은 휴대폰을 든 기다림 장면이다. 수정된 불투명 시계 면은 바늘·숫자·시간을 읽을 수 없고 상대 도착·인사·복장 변경 결과가 없다.",
+  "cropObservation": "두 화면에 빈 만남 장소와 휴대폰이 중앙에 남는다.",
+  "uiObservation": "두 화면에서 제목·본문·세 선택지가 잘림 없이 읽힌다.",
+  "reviewMethod": "The same Codex AI agent generated and directly inspected the full selected source during production, verified exact current runtime SHA equality, then directly inspected all four unmodified native captures. This is not an independent human approval.",
+  "nativeMethod": "SceneCropReviewTest renders production DecisionScreen with current parsed event and actual routing/PixelAssetLoader in Compose instrumentation. Scene captures match designated crop >=0.95; fixture play state does not constitute a complete game progression.",
+  "testSource": "app/src/androidTest/java/com/example/lifegame/ui/SceneCropReviewTest.kt",
+  "nativeRunLog": "build/refactor/secondary-art-focals-completion.log",
+  "limitations": [
+    "Android emulator/Compose capture, not physical-device testing.",
+    "Only reviewed phone and 360x740 dimensions; not all font scales/aspect ratios.",
+    "Art approval does not independently certify choice scrolling, TalkBack or complete game state transitions."
+  ]
+}

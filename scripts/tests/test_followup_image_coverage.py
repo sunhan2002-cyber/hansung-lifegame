@@ -45,6 +45,13 @@ class CoverageGateTest(unittest.TestCase):
         group=self.approved();group['assetPath']='absent.png'
         self.assertTrue(self.run_audit(groups=[group])['errors'])
 
+    def test_original_fingerprint_cannot_approve_an_unregistered_portrait(self):
+        group = self.approved()
+        group['approvedPresentation'] = {'assetPath': self.path, 'sha256': group['sha256']}
+        report = self.run_audit(groups=[group])
+        self.assertIn('approved presentation changed: g', report['errors'])
+        self.assertEqual(0, report['metrics']['approvedSemanticEvents'])
+
     def test_duplicate_rows_are_rejected(self):
         self.assertTrue(self.run_audit(rows=[self.row,self.row])['errors'])
 

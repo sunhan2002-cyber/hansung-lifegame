@@ -7,6 +7,8 @@ import androidx.compose.ui.semantics.Role
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -17,6 +19,7 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.semantics.heading
@@ -28,6 +31,7 @@ import androidx.compose.ui.unit.sp
 import com.example.lifegame.ui.TitleCollectionUi
 import com.example.lifegame.ui.TitleEntryUi
 import com.example.lifegame.ui.components.LineButton
+import com.example.lifegame.ui.components.TitleMedallion
 import com.example.lifegame.ui.theme.LifeGameCard
 import com.example.lifegame.ui.theme.LifeGameInk
 import com.example.lifegame.ui.theme.LifeGameInkSecondary
@@ -133,7 +137,12 @@ private fun TitleRow(entry: TitleEntryUi, targeted: Boolean = false, onToggleTar
                 .testTag("title_entry_${entry.titleId}"),
             verticalArrangement = Arrangement.spacedBy(3.dp),
         ) {
-            TitleRowText(entry, targeted)
+            Row(horizontalArrangement = Arrangement.spacedBy(10.dp), verticalAlignment = Alignment.Top) {
+                if (entry.earned) TitleMedallion(Modifier.size(36.dp).testTag("earned_badge_${entry.titleId}"))
+                Column(Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(3.dp)) {
+                    TitleRowText(entry, targeted)
+                }
+            }
         }
         if (!entry.earned && entry.goal != null) {
             Text(

@@ -19,7 +19,6 @@ import java.net.HttpURLConnection
 import java.net.SocketTimeoutException
 import java.net.URL
 import java.util.concurrent.ConcurrentHashMap
-import org.json.JSONObject
 
 /**
  * 사진 → 얼굴 시트를 OpenAI 이미지 편집 API(POST /v1/images/edits)로 만든다 (2026-11-05 피드백 2번).
@@ -29,8 +28,8 @@ import org.json.JSONObject
  * - 받은 PNG는 앱 내부 저장소(files/face_sheets)에만 저장하고 file:// 경로를 돌려준다. 원본 사진은 복사하지 않는다.
  * - 미래 모습 · 회고는 이 클라이언트가 만들지 않는다(기존 Fake 경로 유지).
  *
- * 키는 local.properties → BuildConfig로만 들어온다. 앱 안에 키가 들어가는 구조라 시연용이며,
- * 실제 배포라면 서버에서 키를 들고 대신 요청해야 한다.
+ * 개발용 직접 호출 실험에만 쓰며 src/debug에 격리되어 release에 포함되지 않는다.
+ * 앱의 기본 클라이언트 선택에서는 사용하지 않는다. 제공자 키는 빌드 설정에서 읽지 않는다.
  */
 class OpenAiFaceSheetClient(
     context: Context,
@@ -170,62 +169,3 @@ class OpenAiFaceSheetClient(
     }
 }
 
-/** multipart/form-data 본문. 테스트하기 쉽게 Android 의존 없이 만든다. */
-sealed interface MultipartPart {
-    data class Field(val name: String, val value: String) : MultipartPart
-    class File(val name: String, val fileName: String, val contentType: String, val bytes: ByteArray) : MultipartPart
-}
-
-object Multipart {
-    fun encode(boundary: String, parts: List<MultipartPart>): ByteArray {
-        val out = ByteArrayOutputStream()
-        fun line(text: String = "") = out.write("$text\r\n".toByteArray(Charsets.UTF_8))
-        parts.forEach { part ->
-            line("--$boundary")
-            when (part) {
-                is MultipartPart.Field -> {
-                    line("Content-Disposition: form-data; name=\"${part.name}\"")
-                    line()
-                    line(part.value)
-                }
-                is MultipartPart.File -> {
-                    line("Content-Disposition: form-data; name=\"${part.name}\"; filename=\"${part.fileName}\"")
-                    line("Content-Type: ${part.contentType}")
-                    line()
-                    out.write(part.bytes)
-                    line()
-                }
-            }
-        }
-        line("--$boundary--")
-        return out.toByteArray()
-    }
-}
-
-/** 이미지 편집 API 응답: data[0].b64_json 또는 error.message. */
-sealed interface FaceSheetResponse {
-    data class Image(val base64: String) : FaceSheetResponse
-    data class Error(val message: String, val retryable: Boolean) : FaceSheetResponse
-
-    companion object {
-        fun parse(code: Int, body: String): FaceSheetResponse {
-            val json = runCatching { JSONObject(body) }.getOrNull()
-            if (code in 200..299) {
-                val b64 = json?.optJSONArray("data")?.optJSONObject(0)?.optString("b64_json").orEmpty()
-                return if (b64.isNotBlank()) Image(b64) else Error("생성 결과에 그림이 없습니다.", retryable = true)
-            }
-            val detail = json?.optJSONObject("error")?.optString("message").orEmpty()
-            val message = when (code) {
-                401 -> "생성 서버 키가 올바르지 않습니다."
-                429 -> "요청이 많거나 사용 한도를 넘었습니다. 잠시 뒤 다시 시도해 주세요."
-                400 -> if (detail.contains("safety", ignoreCase = true) || detail.contains("moderation", ignoreCase = true)) {
-                    "이 사진으로는 얼굴을 만들 수 없습니다. 다른 사진을 골라 주세요."
-                } else {
-                    "생성 요청이 거절되었습니다."
-                }
-                else -> "생성 서버 오류($code)."
-            }
-            return Error(message, retryable = code == 429 || code >= 500)
-        }
-    }
-}

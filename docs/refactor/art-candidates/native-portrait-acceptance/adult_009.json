@@ -1,0 +1,71 @@
+{
+  "eventId": "adult_009",
+  "reviewerType": "AI",
+  "scope": "Portrait phone and small-phone presentation",
+  "sourceEventHash": "51bb7ea1f5cf44e1bb5c854bbca41723076cada5ac62a1b5765783598af66cce",
+  "sourceReview": "docs/refactor/art-candidates/portrait-integration/adult_009.json",
+  "sourceSha256": "9369be89f20c4e00641a9b20cd1de6c37b466f52bcff68a0915b5d9c9811ad4a",
+  "displayedVariant": {
+    "assetPath": "presentation/portraits/img_adult_drinks_toast_001_portrait_v1.png",
+    "sha256": "f096c02c615d604259a5dcf9c745548aaa9500289143230bbe48bc1fb562c3f1",
+    "width": 941,
+    "height": 1672,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/adult_009.json"
+  },
+  "nativeCaptures": [
+    {
+      "path": "build/refactor/resumed/final32/adult_009_phone_scene.png",
+      "sha256": "bb91eaedce8eb00fc322bdbbecf50471206e4785def1ce63b3e0b5d7d24ad5b0",
+      "crop": {
+        "eventId": "adult_009",
+        "imageId": "img_adult_drinks_toast_001",
+        "assetPath": "presentation/portraits/img_adult_drinks_toast_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/final32/adult_009_phone_play.png",
+      "sha256": "986757a80967ed359de4e7c6a2209f49785e4959688e43db7b13607f23879ae5",
+      "crop": {
+        "eventId": "adult_009",
+        "imageId": "img_adult_drinks_toast_001",
+        "assetPath": "presentation/portraits/img_adult_drinks_toast_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/final32/adult_009_360x740_scene.png",
+      "sha256": "0244df4d347e6bee874b70a6df1be274faabfb3384346b56dc0104c426852523",
+      "crop": {
+        "eventId": "adult_009",
+        "imageId": "img_adult_drinks_toast_001",
+        "assetPath": "presentation/portraits/img_adult_drinks_toast_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/final32/adult_009_360x740_play.png",
+      "sha256": "25e45f3cea76e251db178cf296d709d93fdc1c66c76aff22916bf6e57a596438",
+      "crop": {
+        "eventId": "adult_009",
+        "imageId": "img_adult_drinks_toast_001",
+        "assetPath": "presentation/portraits/img_adult_drinks_toast_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    }
+  ],
+  "observation": "Three faces and three raised glasses addressing viewer before toast.",
+  "decision": "PASS",
+  "method": "Individual visual inspection of both scene and gameplay frames together with producer semantic/source review and device capture match."
+}

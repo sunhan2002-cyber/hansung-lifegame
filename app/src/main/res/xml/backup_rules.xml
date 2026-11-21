@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<full-backup-content>
+    <!-- Allowlist: settings only. Saves contain personal photo references; face sheets stay on-device. -->
+    <include domain="sharedpref" path="lifegame_ui_prefs.xml" />
+</full-backup-content>

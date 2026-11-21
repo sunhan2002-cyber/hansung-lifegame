@@ -89,11 +89,109 @@ class Week10AuditTest(unittest.TestCase):
                                   "sourceHash": "outdated", "verdict": "KEEP_OPEN", "reason": "old"}]}
         apply_semantic_review(result, document)
         self.assertEqual("UNREVIEWED_OR_CHANGED", row["semanticReview"])
+        self.assertEqual("SOURCE_CHANGED", row["semanticPendingReason"])
+        self.assertEqual("KEEP_OPEN", row["previousSemanticVerdict"])
         self.assertTrue(any(g["code"] == "CHOICE_MEANING_REVIEW_OPEN" for g in result["acceptanceFailures"]))
+
+    def test_missing_review_is_distinct_from_changed_review_but_remains_blocking(self):
+        result = audit(self.data, self.parser)
+        apply_semantic_review(result, {"entries": []})
+        hard_rows = [r for r in result["choiceReview"] if r["hardScope"]]
+        self.assertTrue(hard_rows)
+        self.assertTrue(all(r["semanticPendingReason"] == "MISSING_REVIEW" for r in hard_rows))
+        self.assertEqual(len(hard_rows), result["semanticPendingReasonCounts"]["MISSING_REVIEW"])
+        self.assertTrue(all(r["semanticReview"] == "UNREVIEWED_OR_CHANGED" for r in hard_rows))
+
+    def test_current_review_keeps_its_verdict_without_new_certification(self):
+        result = audit(self.data, self.parser)
+        row = next(r for r in result["choiceReview"] if r["hardScope"])
+        key = row["eventId"] + ":" + row["choiceId"]
+        document = {"entries": [{"id": key, "sourceHash": row["sourceHash"],
+                                  "verdict": "KEEP_CONDITION", "reason": "recorded review"}]}
+        apply_semantic_review(result, document)
+        self.assertEqual("KEEP_CONDITION", row["semanticReview"])
+        self.assertNotIn("semanticPendingReason", row)
+        self.assertFalse(any(g.get("location") == key for g in result["acceptanceFailures"]))
+
+    def test_a_matching_review_that_requested_changes_still_blocks_acceptance(self):
+        result = audit(self.data, self.parser)
+        row = next(r for r in result["choiceReview"] if r["hardScope"])
+        document = {"entries": [{"id": row["eventId"] + ":" + row["choiceId"],
+                                  "sourceHash": row["sourceHash"], "verdict": "CHANGE", "reason": "needs correction"}]}
+        apply_semantic_review(result, document)
+        self.assertEqual("CHANGE", row["semanticReview"])
+        self.assertEqual("REVIEW_ACTION_REQUIRED", row["semanticPendingReason"])
 
     def test_unread_fact_type_cannot_silently_pass(self):
         self.data["life_facts"][0]["fact"] = "careerTrak"
         self.assertIn("unread fact type", self.errors())
+
+    def v2_review(self, event_id="love_child_plan_01", choice_id="C"):
+        result = audit(self.data, self.parser)
+        row = next(r for r in result["choiceReview"] if r["eventId"] == event_id and r["choiceId"] == choice_id)
+        entry = {"id": event_id + ":" + choice_id, "sourceHash": row["sourceHash"],
+                 "fullSourceHash": row["fullSourceHash"], "reviewVersion": 2,
+                 "verdict": "KEEP_OPEN", "reason": "reviewed conditions and all outcomes"}
+        return row, {"entries": [entry]}
+
+    def test_v2_review_is_invalidated_when_only_an_outcome_changes(self):
+        for field, value in [("text", "다른 결과"), ("statDelta", {"행복": -5}),
+                             ("addFlags", ["no_child_plan"])]:
+            with self.subTest(field=field):
+                self.data = copy.deepcopy(self.baseline)
+                original, document = self.v2_review()
+                event = next(e for e in self.data["events"] if e["eventId"] == "love_child_plan_01")
+                next(c for c in event["choices"] if c["choiceId"] == "C")["outcomes"][0][field] = value
+                result = audit(self.data, self.parser)
+                apply_semantic_review(result, document)
+                row = next(r for r in result["choiceReview"] if r["eventId"] == "love_child_plan_01" and r["choiceId"] == "C")
+                self.assertEqual(original["sourceHash"], row["sourceHash"], "V1 did not cover outcomes")
+                self.assertEqual("UNREVIEWED_OR_CHANGED", row["semanticReview"])
+                self.assertEqual("EVENT_CONDITIONS_OR_CHOICE_OUTCOMES", row["semanticChangedScope"])
+
+    def test_v2_review_is_invalidated_when_event_eligibility_changes(self):
+        original, document = self.v2_review()
+        event = next(e for e in self.data["events"] if e["eventId"] == "love_child_plan_01")
+        event["conditions"]["requiredFlags"].append("job_employed")
+        result = audit(self.data, self.parser)
+        apply_semantic_review(result, document)
+        row = next(r for r in result["choiceReview"] if r["eventId"] == "love_child_plan_01" and r["choiceId"] == "C")
+        self.assertEqual(original["sourceHash"], row["sourceHash"])
+        self.assertEqual("SOURCE_CHANGED", row["semanticPendingReason"])
+
+    def test_v2_requires_a_matching_full_hash_and_supported_version(self):
+        for change in ("missing_hash", "future_version"):
+            with self.subTest(change=change):
+                _, document = self.v2_review()
+                entry = document["entries"][0]
+                if change == "missing_hash":
+                    entry.pop("fullSourceHash")
+                else:
+                    entry["reviewVersion"] = 3
+                result = audit(self.data, self.parser)
+                apply_semantic_review(result, document)
+                row = next(r for r in result["choiceReview"] if r["eventId"] == "love_child_plan_01" and r["choiceId"] == "C")
+                self.assertEqual("UNREVIEWED_OR_CHANGED", row["semanticReview"])
+
+    def test_art_changes_do_not_claim_or_invalidate_a_textual_v2_review(self):
+        original, document = self.v2_review()
+        event = next(e for e in self.data["events"] if e["eventId"] == "love_child_plan_01")
+        event["imageId"] = self.data["events"][0]["imageId"]
+        result = audit(self.data, self.parser)
+        apply_semantic_review(result, document)
+        row = next(r for r in result["choiceReview"] if r["eventId"] == "love_child_plan_01" and r["choiceId"] == "C")
+        self.assertEqual(original["fullSourceHash"], row["fullSourceHash"])
+        self.assertEqual("KEEP_OPEN", row["semanticReview"])
+        self.assertEqual(1, result["acceptedSemanticReviewScopeCounts"]["CHOICE_AVAILABILITY_AND_OUTCOME_CAUSALITY_V2"])
+
+    def test_legacy_review_remains_explicitly_limited_to_choice_availability(self):
+        _, document = self.v2_review()
+        document["entries"][0].pop("fullSourceHash")
+        document["entries"][0].pop("reviewVersion")
+        result = audit(self.data, self.parser)
+        apply_semantic_review(result, document)
+        self.assertEqual(1, result["acceptedSemanticReviewScopeCounts"]["CHOICE_AVAILABILITY_V1"])
+        self.assertNotIn("CHOICE_AVAILABILITY_AND_OUTCOME_CAUSALITY_V2", result["acceptedSemanticReviewScopeCounts"])
 
 
 if __name__ == "__main__":

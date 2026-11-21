@@ -1,0 +1,36 @@
+{
+  "eventId": "path_hea_03",
+  "sourceAssetPath": "followup_20261031/img_path_hea_03_001.png",
+  "sourceSha256": "120563260f1d1f58912f6fd8093e1e6ab2f8d5d3d4810cb3466070aaa3af2afc",
+  "variant": {
+    "assetPath": "presentation/portraits/img_path_hea_03_001_portrait_v1.png",
+    "sha256": "cb2a2d8860468718b20d25bbcb26c81af1f4bee8e9d11d74e6d0cc6ea394ecc9",
+    "width": 941,
+    "height": 1672,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root/effects_tech)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/path_hea_03.json"
+  },
+  "reviewerType": "AI",
+  "reviewer": "Codex AI (/root/effects_tech)",
+  "reviewStatus": "AI_REVIEWED_PRESENTATION",
+  "eventSourceHash": "4f3548293ae22092a439f285ae59c085bffa4650112ef3cba9b4f2a93506a8ec",
+  "semanticReview": "Producer read the current event conditions and every choice/outcome, inspected source and selected output. Full source snapshot and exact prompt are in the referenced production ledger. Native acceptance remains pending.",
+  "visualReview": "보고서 위6행중립녹색·마지막1행만노란경계로본문정합. 원본의사·진료실·2손·보고서유지.9:20에서도보고서전체폭과의사얼굴안전,손외곽일부만경계밖. 실제본문overlay검수대기,승인아님.",
+  "cropReview": "Portrait candidate selected for native phone/small-phone scene and gameplay inspection; not final artwork acceptance.",
+  "actualProducer": "OpenAI built-in image_gen",
+  "generationMethod": "Built-in imagegen edit; exact prompts/output SHA/rejected attempts preserved in docs/refactor/art-candidates/crop-variant-production-20261119.json",
+  "productionLedger": "docs/refactor/art-candidates/crop-variant-production-20261119.json",
+  "nativePending": true,
+  "runtimeConnected": true,
+  "approvalChanged": false,
+  "selectedStagingSha256": "cb2a2d8860468718b20d25bbcb26c81af1f4bee8e9d11d74e6d0cc6ea394ecc9",
+  "previousPresentation": {
+    "assetPath": "followup_20261031/img_path_hea_03_001.png",
+    "sourceSha256": "120563260f1d1f58912f6fd8093e1e6ab2f8d5d3d4810cb3466070aaa3af2afc",
+    "focalX": 0.47,
+    "focalY": 0.5,
+    "note": "Original PNG retained. Individual core-visibility improvement for path_hea_03; simulated 360x800 and 360x740 crops reviewed. Native review pending; no legacy artwork approval. See docs/refactor/art-candidates/crop-review-20261119.json."
+  }
+}

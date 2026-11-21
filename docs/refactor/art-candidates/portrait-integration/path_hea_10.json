@@ -1,0 +1,29 @@
+{
+  "eventId": "path_hea_10",
+  "sourceAssetPath": "week10/scenes/img_path_hea_10_001.png",
+  "sourceSha256": "0e64d429c30dcd3cd3ccfc6b288a4d0f9726ab1c941e46a5a61464d904eaea7e",
+  "variant": {
+    "assetPath": "presentation/portraits/img_path_hea_10_001_portrait_v1.png",
+    "sha256": "2830fe519a358fc85cddf6aa00726dd5ae7dd7bf8960d928eee1598f725471f6",
+    "width": 967,
+    "height": 1626,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/path_hea_10.json"
+  },
+  "reviewerType": "AI",
+  "reviewer": "Codex AI (/root)",
+  "reviewStatus": "AI_REVIEWED_PRESENTATION",
+  "eventSourceHash": "830d9b90e150f3610b456aaec447c7ae76e82d25df010af2306bdfa4783776d8",
+  "semanticReview": "Producer read the current event conditions and every choice/outcome, inspected source and selected output. Full source snapshot and exact prompt are in the referenced production ledger. Native acceptance remains pending.",
+  "visualReview": "Supervisor speaking, lit office with colleagues at night and wall clock.",
+  "cropReview": "Portrait candidate selected for native phone/small-phone scene and gameplay inspection; not final artwork acceptance.",
+  "actualProducer": "OpenAI built-in image_gen",
+  "generationMethod": "Built-in imagegen edit; exact prompts/output SHA/rejected attempts preserved in docs/refactor/art-candidates/resumed-production-20261119.json",
+  "productionLedger": "docs/refactor/art-candidates/resumed-production-20261119.json",
+  "nativePending": true,
+  "runtimeConnected": true,
+  "approvalChanged": false,
+  "selectedStagingSha256": "2830fe519a358fc85cddf6aa00726dd5ae7dd7bf8960d928eee1598f725471f6"
+}

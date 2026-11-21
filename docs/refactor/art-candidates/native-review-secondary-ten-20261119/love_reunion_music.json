@@ -1,0 +1,285 @@
+{
+  "schemaVersion": 1,
+  "eventId": "love_reunion_music",
+  "status": "PASS",
+  "reviewer": "Codex AI / plan_audit",
+  "reviewerType": "AI",
+  "reviewDate": "2026-11-19",
+  "approvalScope": "Current complete event and exact PNG; phone and 360x740 native Compose scene/play visual review",
+  "sourceEventHash": "d2f23238a827a7f97d3a8a28c43f1d4aaea29075fb1cfef7e6e462026246c03c",
+  "sourceEventSnapshot": {
+    "eventId": "love_reunion_music",
+    "stage": "ADULT",
+    "type": "NORMAL",
+    "isFallback": false,
+    "isMilestone": false,
+    "title": "연말 공연 포스터",
+    "text": "연말 공연 포스터에 헤어진 그 사람 이름이 있었다. 첫 곡은 우리가 같이 연습하던 노래였다.",
+    "imageId": "img_love_reunion_music_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [
+        "breakup_once",
+        "ex_music"
+      ],
+      "blockedFlags": [
+        "dating",
+        "engaged",
+        "married"
+      ]
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "무대에 올라가 반주를 맞춘다",
+        "statDelta": {
+          "행복": 3,
+          "사회성": 1
+        },
+        "resultText": "박자가 딱 맞았다. 공연이 끝나고 그 사람이 말했다. '역시 너랑 해야 맞아.'",
+        "addFlags": [
+          "dating",
+          "rel_steady",
+          "partner_music",
+          "reunited"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "a_again",
+            "text": "박자가 딱 맞았다. 공연이 끝나고 그 사람이 말했다. '역시 너랑 해야 맞아.'",
+            "chance": 60,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 3,
+              "사회성": 1
+            },
+            "addFlags": [
+              "dating",
+              "rel_steady",
+              "partner_music",
+              "reunited"
+            ],
+            "removeFlags": [
+              "ex_music"
+            ]
+          },
+          {
+            "outcomeId": "a_bandmate",
+            "text": "마지막 소절까지 맞췄다. 무대 뒤에서 서로 수고했다고만 했다. 좋은 연주 동료로 남았다.",
+            "chance": 40,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "사회성": 2
+            },
+            "addFlags": [
+              "closure"
+            ],
+            "removeFlags": [
+              "ex_music"
+            ]
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week13_love_line"
+      },
+      {
+        "choiceId": "B",
+        "label": "객석에서 박수만 친다",
+        "statDelta": {
+          "행복": 1
+        },
+        "resultText": "제일 크게 박수를 쳤다. 그 사람이 객석을 보고 고개를 숙였다.",
+        "addFlags": [
+          "closure"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "b_clap",
+            "text": "제일 크게 박수를 쳤다. 그 사람이 객석을 보고 고개를 숙였다.",
+            "chance": 100,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 1
+            },
+            "addFlags": [
+              "closure"
+            ],
+            "removeFlags": [
+              "ex_music"
+            ]
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week13_love_line"
+      },
+      {
+        "choiceId": "C",
+        "label": "앙코르를 혼자 외친다",
+        "statDelta": {
+          "행복": 3
+        },
+        "resultText": "앙코르 곡에는 내 반주가 필요했다. 무대 위에서 둘이 다시 웃었다.",
+        "addFlags": [
+          "dating",
+          "rel_steady",
+          "partner_music",
+          "reunited"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "c_encore",
+            "text": "앙코르 곡에는 내 반주가 필요했다. 무대 위에서 둘이 다시 웃었다.",
+            "chance": 50,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 3
+            },
+            "addFlags": [
+              "dating",
+              "rel_steady",
+              "partner_music",
+              "reunited"
+            ],
+            "removeFlags": [
+              "ex_music"
+            ]
+          },
+          {
+            "outcomeId": "c_alone",
+            "text": "아무도 따라 외치지 않았다. 혼자 외친 앙코르가 공연장에 울렸다.",
+            "chance": 50,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": -1
+            },
+            "addFlags": [
+              "closure"
+            ],
+            "removeFlags": [
+              "ex_music"
+            ]
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week13_love_line"
+      }
+    ],
+    "priority": 0,
+    "kind": "INCIDENT",
+    "periods": [
+      "YOUNG_ADULT",
+      "MIDDLE"
+    ],
+    "weight": 30,
+    "view": "FIRST_PERSON",
+    "pathRole": "러브라인 재회(음악 후보)",
+    "followUps": [
+      "love_wedding_music"
+    ]
+  },
+  "sourceReadScope": "Title, full text, conditions, every choice and outcome including flags/stat deltas, periods and follow-ups directly read.",
+  "sourceImage": {
+    "path": "app/src/main/assets/images/img_love_reunion_music_001.png",
+    "sha256": "cccb6f33e89975a06970bfb95d5a1998c42657e3d66226bdf6bed66dc1076597",
+    "width": 941,
+    "height": 1672
+  },
+  "generationManifest": "docs/refactor/art-candidates/generated-love-secondary-20261119.json",
+  "selectedGenerationOutput": "C:\\Users\\jk030\\.codex\\generated_images\\01a1f1e9-d1e7-7610-888a-7aff56bbb301\\exec-7ed16a79-96e3-4f0a-8c60-3b750d7307e4.png",
+  "exactGenerationPromptSha256": "c16ce7dabca1e862879aea4ca15607cb17d668ec36ce4b0d46d670e6a60ff876",
+  "sourceGenerationReview": {
+    "reviewer": "Codex AI (/root/plan_audit)",
+    "reviewerType": "AI",
+    "method": "Direct visual inspection of the complete built-in generated image displayed by the tool; source-only, not an emulator capture.",
+    "status": "SELECTED_SOURCE_NATIVE_PENDING",
+    "observations": [
+      "A small central adult musician plays guitar at a microphone; the view is from seated audience level.",
+      "Audience figures remain quiet with no clapping or encore gesture; the player is not visible or on stage.",
+      "No readable song title, poster or artist name; no backstage reunion, stage duet or finished-show bow."
+    ],
+    "concerns": [
+      "Native crop and UI-overlay inspection remains required."
+    ]
+  },
+  "presentationMetadata": [],
+  "captures": [
+    {
+      "path": "build/refactor/after/secondary-art-focals-native/love_reunion_music_phone_scene.png",
+      "sha256": "ad645b2ad15349f6908e1001cd06fc417f50b1116194ee2e232d9d8de681aa70",
+      "width": 1080,
+      "height": 2400,
+      "screen": "phone",
+      "mode": "scene",
+      "cropReport": {
+        "eventId": "love_reunion_music",
+        "imageId": "img_love_reunion_music_001",
+        "assetPath": "img_love_reunion_music_001.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/secondary-art-focals-native/love_reunion_music_phone_play.png",
+      "sha256": "b670a00b15bc9621be8682c5ff430bd129d25208595b39247b9e4959735d8ae7",
+      "width": 1080,
+      "height": 2400,
+      "screen": "phone",
+      "mode": "play",
+      "cropReport": null
+    },
+    {
+      "path": "build/refactor/after/secondary-art-focals-native/love_reunion_music_360x740_scene.png",
+      "sha256": "5e9c8aca32cf15e77c21453836cebb9da6c66e114064ed73d6291499e07a2026",
+      "width": 945,
+      "height": 1943,
+      "screen": "360x740",
+      "mode": "scene",
+      "cropReport": {
+        "eventId": "love_reunion_music",
+        "imageId": "img_love_reunion_music_001",
+        "assetPath": "img_love_reunion_music_001.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/secondary-art-focals-native/love_reunion_music_360x740_play.png",
+      "sha256": "48721d32086285cb23116827c106d7fb7271cf523a21148989e08a9c0caa3d54",
+      "width": 945,
+      "height": 1943,
+      "screen": "360x740",
+      "mode": "play",
+      "cropReport": null
+    }
+  ],
+  "semanticObservation": "5개 결과를 읽었다. 객석 시점에서 첫 곡을 연주하는 기타 연주자와 마이크를 본다. 객석은 조용하고 플레이어 무대 합류·박수·앙코르·공연 종료 인사·공연 후 재회 결과가 없다.",
+  "cropObservation": "두 화면에 연주자 전신·기타·마이크가 유지된다.",
+  "uiObservation": "두 화면에서 제목·본문·세 선택지가 모두 읽힌다.",
+  "reviewMethod": "The same Codex AI agent generated and directly inspected the full selected source during production, verified exact current runtime SHA equality, then directly inspected all four unmodified native captures. This is not an independent human approval.",
+  "nativeMethod": "SceneCropReviewTest renders production DecisionScreen with current parsed event and actual routing/PixelAssetLoader in Compose instrumentation. Scene captures match designated crop >=0.95; fixture play state does not constitute a complete game progression.",
+  "testSource": "app/src/androidTest/java/com/example/lifegame/ui/SceneCropReviewTest.kt",
+  "nativeRunLog": "build/refactor/secondary-art-focals-completion.log",
+  "limitations": [
+    "Android emulator/Compose capture, not physical-device testing.",
+    "Only reviewed phone and 360x740 dimensions; not all font scales/aspect ratios.",
+    "Art approval does not independently certify choice scrolling, TalkBack or complete game state transitions."
+  ]
+}

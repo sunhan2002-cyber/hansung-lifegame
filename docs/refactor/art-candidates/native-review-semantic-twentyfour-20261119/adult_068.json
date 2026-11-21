@@ -1,0 +1,318 @@
+{
+  "schemaVersion": 1,
+  "eventId": "adult_068",
+  "status": "PASS",
+  "reviewer": "Codex AI / plan_audit",
+  "reviewerType": "AI",
+  "reviewDate": "2026-11-19",
+  "sourceEventHash": "8733ee6a0fbb2d727a572e16cb1c63b6118ed765ef4ddd6727891af7b5d8d1f9",
+  "sourceEventSnapshot": {
+    "eventId": "adult_068",
+    "stage": "ADULT",
+    "type": "NORMAL",
+    "isFallback": false,
+    "isMilestone": false,
+    "title": "온몸이 두들겨 맞은 아침",
+    "text": "눈을 떴는데 온몸이 두들겨 맞은 것 같다. 하필 오늘은 내가 발표하는 날이다. 엄마(톡): \"{nameCall}, 몸살엔 무조건 땀이야.\"",
+    "imageId": "img_pov_flu_morning_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [],
+      "blockedFlags": []
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "약 먹고 버티면서 나간다",
+        "statDelta": {
+          "경제력": 2,
+          "사회성": 1,
+          "건강": -3
+        },
+        "resultText": "발표는 무사히 끝났다. 쉰 목소리 덕에 카리스마 있다는 말까지 들었다. 그날 밤은 기절하듯 잤다.",
+        "addFlags": [
+          "overwork"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "a_endured",
+            "text": "발표는 무사히 끝났다. 쉰 목소리 덕에 카리스마 있다는 말까지 들었다. 그날 밤은 기절하듯 잤다.",
+            "chance": 55,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "경제력": 2,
+              "사회성": 1,
+              "건강": -3
+            },
+            "addFlags": [
+              "overwork"
+            ],
+            "chanceWeights": {
+              "건강": 2
+            }
+          },
+          {
+            "outcomeId": "a_sneeze",
+            "text": "발표 도중 재채기가 마이크를 타고 층 전체에 울렸다. 그 주 내내 앓아누웠다.",
+            "chance": 35,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "사회성": -1,
+              "행복": -2,
+              "건강": -5
+            },
+            "addFlags": [
+              "overwork"
+            ],
+            "chanceWeights": {
+              "건강": -1
+            },
+            "deathCause": "참고 나간 몸살"
+          },
+          {
+            "outcomeId": "a_worse",
+            "text": "괜찮은 줄 알았다. 사흘 뒤 몸살이 폐렴으로 번져 2주를 병원에서 보냈다. 몸이 보내는 신호는 무시하면 안 됐다.",
+            "chance": 10,
+            "primary": false,
+            "hidden": true,
+            "death": false,
+            "statDelta": {
+              "건강": -8,
+              "경제력": -2,
+              "행복": -2
+            },
+            "addFlags": [
+              "overwork",
+              "health_warning"
+            ],
+            "chanceWeights": {
+              "건강": -2
+            },
+            "deathCause": "폐렴으로 번진 몸살"
+          }
+        ]
+      },
+      {
+        "choiceId": "B",
+        "label": "연락해서 하루 푹 쉰다",
+        "statDelta": {
+          "건강": 3,
+          "행복": 1,
+          "경제력": -1
+        },
+        "resultText": "하루 종일 잤다. 다음 날 거짓말처럼 개운했다. 발표는 다른 사람이 대신했는데, 생각보다 잘해서 조금 서운했다.",
+        "addFlags": [
+          "healthy_routine"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "b_rested",
+            "text": "하루 종일 잤다. 다음 날 거짓말처럼 개운했다. 발표는 다른 사람이 대신했는데, 생각보다 잘해서 조금 서운했다.",
+            "chance": 75,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "건강": 3,
+              "행복": 1,
+              "경제력": -1
+            },
+            "addFlags": [
+              "healthy_routine"
+            ],
+            "chanceWeights": {
+              "건강": 2
+            },
+            "lifeDelta": 10
+          },
+          {
+            "outcomeId": "b_week",
+            "text": "하루로는 모자랐다. 일주일을 앓으면서 드라마 한 시즌을 다 봤다. 결말은 열이 펄펄 끓을 때 봐서 기억나지 않는다.",
+            "chance": 25,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "건강": 1,
+              "행복": 1,
+              "경제력": -2
+            },
+            "addFlags": [],
+            "chanceWeights": {
+              "건강": -2
+            }
+          }
+        ]
+      },
+      {
+        "choiceId": "C",
+        "label": "엄마 말대로 사우나에서 땀을 쫙 뺀다",
+        "statDelta": {
+          "건강": 2,
+          "행복": 1,
+          "경제력": -1
+        },
+        "resultText": "땀을 한 바가지 흘렸더니 신기하게 열이 내렸다. 그 뒤로 엄마는 모든 병을 사우나로 고치려 한다.",
+        "addFlags": [],
+        "outcomes": [
+          {
+            "outcomeId": "c_sweat",
+            "text": "땀을 한 바가지 흘렸더니 신기하게 열이 내렸다. 그 뒤로 엄마는 모든 병을 사우나로 고치려 한다.",
+            "chance": 60,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "건강": 2,
+              "행복": 1,
+              "경제력": -1
+            },
+            "addFlags": [],
+            "chanceWeights": {
+              "건강": 2
+            },
+            "lifeDelta": 10
+          },
+          {
+            "outcomeId": "c_dizzy",
+            "text": "땀과 함께 정신도 빠져나갔다. 눈을 떠 보니 매점 사장님이 부채질을 해 주고 있었다.",
+            "chance": 37,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "건강": -3,
+              "사회성": 1,
+              "행복": -1
+            },
+            "addFlags": [
+              "health_warning"
+            ],
+            "chanceWeights": {
+              "건강": -2
+            }
+          },
+          {
+            "outcomeId": "c_fatal",
+            "text": "몸살엔 땀이라며 가장 뜨거운 방에서 끝까지 버텼다. 땀은 전부 뺐다. 인생도 같이 빠져나갔다.",
+            "chance": 3,
+            "primary": false,
+            "hidden": true,
+            "death": true,
+            "statDelta": {
+              "건강": -10
+            },
+            "addFlags": [
+              "fatal_risk"
+            ],
+            "chanceWeights": {
+              "건강": -1
+            },
+            "deathCause": "사우나 끝장 버티기"
+          }
+        ]
+      }
+    ],
+    "priority": 0,
+    "kind": "INCIDENT",
+    "periods": [
+      "YOUNG_ADULT"
+    ],
+    "weight": 3,
+    "view": "FIRST_PERSON",
+    "momentImageId": "img_moment_flu_morning_001"
+  },
+  "sourceReadScope": "Current complete event, conditions, every choice/outcome and flags/stat deltas/periods/follow-ups directly read before judgement.",
+  "sourceImage": {
+    "path": "app/src/main/assets/images/design_preview/week7/img_pov_flu_morning_001.png",
+    "sha256": "faeb5151de8c89893624a09475f0608207d774ff113e603d2f30d5d516dce328",
+    "width": 1448,
+    "height": 1086
+  },
+  "originalArtworkUnchangedSinceHistoricalReview": true,
+  "historicalReview": {
+    "eventId": "adult_068",
+    "title": "온몸이 두들겨 맞은 아침",
+    "imageId": "img_pov_flu_morning_001",
+    "assetPath": "design_preview/week7/img_pov_flu_morning_001.png",
+    "sha256": "faeb5151de8c89893624a09475f0608207d774ff113e603d2f30d5d516dce328",
+    "eventSourceHash": "8733ee6a0fbb2d727a572e16cb1c63b6118ed765ef4ddd6727891af7b5d8d1f9",
+    "status": "REVISION_REQUIRED",
+    "reviewer": "김선한 담당 Codex 직접 대행 검수",
+    "reason": "몸살 사건에 물컵·휴대폰만 있고 컨디션 악화의 사물 단서가 부족함",
+    "expectedAction": "몸살 기운으로 눈을 뜨고 엄마 연락 확인",
+    "requiredObjects": "체온계를 든 손·휴대폰·물컵을 중앙 세로 크롭 안에 함께 배치",
+    "sheet": "output/art-review-20261119/sheet-12.jpg",
+    "cell": 10,
+    "cropMethod": "ImageOps.fit centre-fill 360:800; simulated crop inspected directly, not an emulator capture",
+    "visualMethod": "원본 도트풍·색감·장면 파손·명백한 신체/사물 오류 직접 확인"
+  },
+  "presentationMetadata": [],
+  "captures": [
+    {
+      "path": "build/refactor/after/originals-twentyfour-and-variants-native/adult_068_phone_scene.png",
+      "sha256": "c449e5d9f0ed809017e17bf1e028eecaa5ba93d6a1832b0cbc12932cf865963b",
+      "width": 1080,
+      "height": 2400,
+      "screen": "phone",
+      "mode": "scene",
+      "cropReport": {
+        "eventId": "adult_068",
+        "imageId": "img_pov_flu_morning_001",
+        "assetPath": "design_preview/week7/img_pov_flu_morning_001.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.331..0.669",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/originals-twentyfour-and-variants-native/adult_068_phone_play.png",
+      "sha256": "40f453eacef4bd7d71fdcc4e834ee27119332508e6ed9bb9bdff799e1ae856da",
+      "width": 1080,
+      "height": 2400,
+      "screen": "phone",
+      "mode": "play",
+      "cropReport": null
+    },
+    {
+      "path": "build/refactor/after/originals-twentyfour-and-variants-native/adult_068_360x740_scene.png",
+      "sha256": "1943d7c47bece9c0f159076eab01be8d893bea672873f70f8843a45c2a529181",
+      "width": 945,
+      "height": 1943,
+      "screen": "360x740",
+      "mode": "scene",
+      "cropReport": {
+        "eventId": "adult_068",
+        "imageId": "img_pov_flu_morning_001",
+        "assetPath": "design_preview/week7/img_pov_flu_morning_001.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.318..0.682",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/originals-twentyfour-and-variants-native/adult_068_360x740_play.png",
+      "sha256": "b533beee2dd131b5c2392d2dd02935481dc5c323cb109f9f6019b5b55263b0de",
+      "width": 945,
+      "height": 1943,
+      "screen": "360x740",
+      "mode": "play",
+      "cropReport": null
+    }
+  ],
+  "semanticObservation": "몸살로 아침 침대에서 체온계를 들고 메시지를 받은 휴대전화를 보는 현재 상황이다. 약 복용·발표·다른 발표자·사우나·폐렴 입원 등 어떤 선택 결과도 없다.",
+  "cropObservation": "두 native에서 체온계 전체와 손, 메시지 휴대전화, 물컵과 이불이 유지된다. 원본의 아침 창문 일부는 잘리지만 체온 확인과 메시지 수신이라는 현재 행동은 명확하다.",
+  "uiObservation": "두 크기에서 제목·본문·세 선택지를 읽을 수 있고 small C 두 줄도 카드 내부에 남는다.",
+  "reviewMethod": "Codex AI directly inspected the full unchanged source PNG and all four unmodified native scene/play captures. Prior review is retained as historical evidence; this record is a new AI judgement, not human approval.",
+  "nativeMethod": "Production DecisionScreen, current parsed event/routing/PixelAssetLoader, fixture state in Android Compose instrumentation. Scene grid match >=0.95. Not complete game progression.",
+  "nativeRunLog": "build/refactor/depth-and-originals-twentyfour.log",
+  "limitations": [
+    "Emulator captures, not physical-device review.",
+    "Only reviewed phone and 360x740 dimensions; not every font scale/aspect ratio.",
+    "Art review does not independently certify scrolling, TalkBack or complete game-flow transitions."
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "eventId": "adult_016",
+  "reviewerType": "AI",
+  "scope": "Portrait phone and small-phone presentation",
+  "sourceEventHash": "1ff6b96f8e518ee2a26e82c84fc791da7e962d7ff974116041ba58d87afc345c",
+  "sourceReview": "docs/refactor/art-candidates/portrait-integration/adult_016.json",
+  "sourceSha256": "19fe038c02a418d219c16a69516a59e0c581e23c62a03ffd74f74ac83fb66665",
+  "displayedVariant": {
+    "assetPath": "presentation/portraits/img_adult_dinner_seats_001_portrait_v1.png",
+    "sha256": "999dfaac6ec9ea90ad7c550d30df0b700b2282c5aebd0ca441938d355b0b72d1",
+    "width": 941,
+    "height": 1672,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/adult_016.json"
+  },
+  "nativeCaptures": [
+    {
+      "path": "build/refactor/resumed/final32/adult_016_phone_scene.png",
+      "sha256": "b2ff69f904bb805ff71d812abdc79a3d6be51b60ce79d13c29b0b5c54adcce21",
+      "crop": {
+        "eventId": "adult_016",
+        "imageId": "img_adult_dinner_seats_001",
+        "assetPath": "presentation/portraits/img_adult_dinner_seats_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/final32/adult_016_phone_play.png",
+      "sha256": "1344e5204008cb89133699b4518faf0c1c1ab6fc2e7a2c3bc7376aba534fa685",
+      "crop": {
+        "eventId": "adult_016",
+        "imageId": "img_adult_dinner_seats_001",
+        "assetPath": "presentation/portraits/img_adult_dinner_seats_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/final32/adult_016_360x740_scene.png",
+      "sha256": "a76ee797deb99a16aaaed438042c43f8f41bd2e8b820effb517ac5e5067c965f",
+      "crop": {
+        "eventId": "adult_016",
+        "imageId": "img_adult_dinner_seats_001",
+        "assetPath": "presentation/portraits/img_adult_dinner_seats_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/final32/adult_016_360x740_play.png",
+      "sha256": "ed02b563b4852ec60eb32ae0a35df7b61ba39cbfb08586438e0779557ce3bf03",
+      "crop": {
+        "eventId": "adult_016",
+        "imageId": "img_adult_dinner_seats_001",
+        "assetPath": "presentation/portraits/img_adult_dinner_seats_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    }
+  ],
+  "observation": "Three empty places visible at barbecue gathering before choosing a seat.",
+  "decision": "PASS",
+  "method": "Individual visual inspection of both scene and gameplay frames together with producer semantic/source review and device capture match."
+}

@@ -1,0 +1,183 @@
+{
+  "schemaVersion": 1,
+  "eventId": "adult_040",
+  "status": "PASS",
+  "reviewer": "Codex AI / plan_audit",
+  "reviewerType": "AI",
+  "reviewDate": "2026-11-19",
+  "sourceEventHash": "d3068dc230f063894a2e39380c2e33ba9be6fef684c8536272b9954c35763e5d",
+  "sourceEventSnapshot": {
+    "eventId": "adult_040",
+    "stage": "ADULT",
+    "type": "NORMAL",
+    "isFallback": false,
+    "isMilestone": false,
+    "title": "30년 만의 의뢰",
+    "text": "아빠: \"{nameCall}, 구청에서 벽화 작가 뽑는단다. 이거 내 봐라.\" 첨부 파일: 30년 전 거실 벽 낙서 사진.",
+    "imageId": "img_adult_mural_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [
+        "wall_artist"
+      ],
+      "blockedFlags": []
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "그 사진으로 지원한다",
+        "statDelta": {
+          "행복": 4,
+          "사회성": 2,
+          "경제력": 1,
+          "건강": -1
+        },
+        "resultText": "심사평: '거칠지만 순수한 에너지.' 만장일치 선정. 30년 만에 벽에 그리는데 아무도 안 혼낸다.",
+        "addFlags": [
+          "mural_artist"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "a_primary",
+            "text": "심사평: '거칠지만 순수한 에너지.' 만장일치 선정. 30년 만에 벽에 그리는데 아무도 안 혼낸다.",
+            "chance": 100,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 4,
+              "사회성": 2,
+              "경제력": 1,
+              "건강": -1
+            },
+            "addFlags": [
+              "mural_artist"
+            ],
+            "lifeDelta": 4
+          }
+        ]
+      },
+      {
+        "choiceId": "B",
+        "label": "사진을 삭제한다",
+        "statDelta": {
+          "행복": -2,
+          "사회성": 1,
+          "운": -1
+        },
+        "resultText": "아빠는 이미 가족방, 친척방, 동창방에 올린 뒤였다.",
+        "addFlags": [],
+        "outcomes": [
+          {
+            "outcomeId": "b_primary",
+            "text": "아빠는 이미 가족방, 친척방, 동창방에 올린 뒤였다.",
+            "chance": 100,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": -2,
+              "사회성": 1,
+              "운": -1
+            },
+            "addFlags": []
+          }
+        ]
+      }
+    ],
+    "priority": 0,
+    "kind": "INCIDENT",
+    "periods": [
+      "MIDDLE"
+    ]
+  },
+  "sourceReadScope": "Current complete event, conditions, every choice/outcome and flags/stat deltas/periods/follow-ups directly read before judgement.",
+  "sourceImage": {
+    "path": "app/src/main/assets/images/followup_20261031/img_adult_mural_001.png",
+    "sha256": "ec05970ccdefe45e3f0c4a20ec9fcd43834d39d04489f0c4f140eae3d15daff4",
+    "width": 720,
+    "height": 540
+  },
+  "originalArtworkUnchangedSinceHistoricalReview": true,
+  "historicalReview": {
+    "eventId": "adult_040",
+    "title": "30년 만의 의뢰",
+    "imageId": "img_adult_mural_001",
+    "assetPath": "followup_20261031/img_adult_mural_001.png",
+    "sha256": "ec05970ccdefe45e3f0c4a20ec9fcd43834d39d04489f0c4f140eae3d15daff4",
+    "eventSourceHash": "d3068dc230f063894a2e39380c2e33ba9be6fef684c8536272b9954c35763e5d",
+    "status": "REVISION_REQUIRED",
+    "reviewer": "김선한 담당 Codex 직접 대행 검수",
+    "reason": "벽화 작가 모집과 어릴 적 벽 낙서 사진을 실제로 구분할 단서가 부족함",
+    "expectedAction": "아빠가 건넨 벽화 공모 소식과 옛 거실 낙서 사진을 확인",
+    "requiredObjects": "옛 거실 벽 낙서 사진; 공모 자료",
+    "sheet": "output/art-review-20261119/sheet-10.jpg",
+    "cell": 14,
+    "cropMethod": "ImageOps.fit centre-fill 360:800; simulated crop inspected directly, not an emulator capture",
+    "visualMethod": "원본 도트풍·색감·장면 파손·명백한 신체/사물 오류 직접 확인"
+  },
+  "presentationMetadata": [],
+  "captures": [
+    {
+      "path": "build/refactor/after/originals-twentyfour-and-variants-native/adult_040_phone_scene.png",
+      "sha256": "8387cfa5a969f137591beb69af75b167078b205204b7f94c97c18f4c305e20f6",
+      "width": 1080,
+      "height": 2400,
+      "screen": "phone",
+      "mode": "scene",
+      "cropReport": {
+        "eventId": "adult_040",
+        "imageId": "img_adult_mural_001",
+        "assetPath": "followup_20261031/img_adult_mural_001.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.331..0.669",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/originals-twentyfour-and-variants-native/adult_040_phone_play.png",
+      "sha256": "6b6c518d638b2b22f0cda592303e0e792b0a2d74bb017b0a047d8e7d559264f3",
+      "width": 1080,
+      "height": 2400,
+      "screen": "phone",
+      "mode": "play",
+      "cropReport": null
+    },
+    {
+      "path": "build/refactor/after/originals-twentyfour-and-variants-native/adult_040_360x740_scene.png",
+      "sha256": "bd4146062cf3fb7bb222d0cf198f152f6c163bf8805136e25168a25d9f1b0f94",
+      "width": 945,
+      "height": 1943,
+      "screen": "360x740",
+      "mode": "scene",
+      "cropReport": {
+        "eventId": "adult_040",
+        "imageId": "img_adult_mural_001",
+        "assetPath": "followup_20261031/img_adult_mural_001.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.318..0.682",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/originals-twentyfour-and-variants-native/adult_040_360x740_play.png",
+      "sha256": "3bf582668973c916e5e9a2a02ae075a5f28a9fe10c7b8c9c6e1c30b617f21732",
+      "width": 945,
+      "height": 1943,
+      "screen": "360x740",
+      "mode": "play",
+      "cropReport": null
+    }
+  ],
+  "semanticObservation": "아빠의 메시지에서 벽화 모집을 뜻하는 롤러 기호 문서와 과거 거실의 벽 낙서 사진 두 첨부를 보는 상태다. 사진 안 소파와 벽 낙서가 별도 액자 영역에 있고 현재 실제 벽화 작업이 아니다. 지원 합격·새 벽화·삭제·친척방 공유 결과는 없다.",
+  "cropObservation": "두 native에서 휴대전화 전체와 롤러 문서/벽 낙서 사진이 모두 유지된다. 과거 모집과 옛 사진의 구별이 부족하다는 우려는 두 개 독립 첨부와 그림 소품을 직접 확인해 해소했다.",
+  "uiObservation": "두 크기에서 제목·본문·두 선택지 전체가 읽힌다.",
+  "reviewMethod": "Codex AI directly inspected the full unchanged source PNG and all four unmodified native scene/play captures. Prior review is retained as historical evidence; this record is a new AI judgement, not human approval.",
+  "nativeMethod": "Production DecisionScreen, current parsed event/routing/PixelAssetLoader, fixture state in Android Compose instrumentation. Scene grid match >=0.95. Not complete game progression.",
+  "nativeRunLog": "build/refactor/depth-and-originals-twentyfour.log",
+  "limitations": [
+    "Emulator captures, not physical-device review.",
+    "Only reviewed phone and 360x740 dimensions; not every font scale/aspect ratio.",
+    "Art review does not independently certify scrolling, TalkBack or complete game-flow transitions."
+  ]
+}

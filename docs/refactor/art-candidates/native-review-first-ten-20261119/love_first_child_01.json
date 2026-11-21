@@ -1,0 +1,232 @@
+{
+  "schemaVersion": 1,
+  "eventId": "love_first_child_01",
+  "status": "PASS",
+  "approvalScope": "Current source event and exact PNG; native phone and 360x740 Compose scene/play visual review",
+  "reviewer": "Codex AI / plan_audit",
+  "reviewerType": "AI",
+  "reviewDate": "2026-11-19",
+  "sourceEventHash": "c0f4855f4dd932ce8901554e7e898a81fa2bc0dd5438b79b846ac314ba197e59",
+  "sourceEventSnapshot": {
+    "eventId": "love_first_child_01",
+    "stage": "ADULT",
+    "type": "NORMAL",
+    "isFallback": false,
+    "isMilestone": true,
+    "title": "새벽 4시의 첫 아이",
+    "text": "새벽 4시. 아기가 내 손가락을 꼭 쥐고 잠들었다. 배우자가 속삭였다. \"{nameCall}, 오늘 밤은 누가 먼저 잘까?\"",
+    "imageId": "img_love_first_child_01_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [
+        "married",
+        "has_child"
+      ],
+      "blockedFlags": [
+        "divorced",
+        "job_employed",
+        "v4:event:adult_039"
+      ]
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "내가 밤을 맡는다",
+        "statDelta": {
+          "행복": 4,
+          "건강": -2
+        },
+        "resultText": "아이의 첫 걸음마를 봤다. 세 걸음 만에 엉덩방아. 어디서 많이 본 장면이다.",
+        "addFlags": [
+          "devoted_parent"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "a_night",
+            "text": "아이의 첫 걸음마를 봤다. 세 걸음 만에 엉덩방아. 어디서 많이 본 장면이다.",
+            "chance": 100,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 4,
+              "건강": -2
+            },
+            "addFlags": [
+              "devoted_parent"
+            ]
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "관계 단계 전환점 — 연애·결혼·자녀는 능력치 자격이 아니라 의사 결정이라 잠그지 않고, 차이는 결과 분기와 후속 사실로 반영",
+        "conditionReview": "open_turning_point",
+        "conditionBasis": "week13_love_line"
+      },
+      {
+        "choiceId": "B",
+        "label": "두 시간씩 번갈아 잔다",
+        "statDelta": {
+          "행복": 3,
+          "건강": -1,
+          "사회성": 1
+        },
+        "resultText": "알람을 맞춘 육아표가 냉장고에 붙었다. 1년 뒤 둘 다 두 시간 단위로 잠드는 법을 익혔다.",
+        "addFlags": [
+          "family_bond"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "b_shift",
+            "text": "알람을 맞춘 육아표가 냉장고에 붙었다. 1년 뒤 둘 다 두 시간 단위로 잠드는 법을 익혔다.",
+            "chance": 100,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 3,
+              "건강": -1,
+              "사회성": 1
+            },
+            "addFlags": [
+              "family_bond"
+            ]
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "관계 단계 전환점 — 연애·결혼·자녀는 능력치 자격이 아니라 의사 결정이라 잠그지 않고, 차이는 결과 분기와 후속 사실로 반영",
+        "conditionReview": "open_turning_point",
+        "conditionBasis": "week13_love_line"
+      },
+      {
+        "choiceId": "C",
+        "label": "아기한테 누가 먼저 잘지 물어본다",
+        "statDelta": {
+          "행복": 3,
+          "건강": -2
+        },
+        "resultText": "아기는 대답 대신 울었다. 셋 다 그 자리에서 해 뜰 때까지 깨어 있었다.",
+        "addFlags": [
+          "family_memory"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "c_ask",
+            "text": "아기는 대답 대신 울었다. 셋 다 그 자리에서 해 뜰 때까지 깨어 있었다.",
+            "chance": 100,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 3,
+              "건강": -2
+            },
+            "addFlags": [
+              "family_memory"
+            ]
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "관계 단계 전환점 — 연애·결혼·자녀는 능력치 자격이 아니라 의사 결정이라 잠그지 않고, 차이는 결과 분기와 후속 사실로 반영",
+        "conditionReview": "open_turning_point",
+        "conditionBasis": "week13_love_line"
+      }
+    ],
+    "priority": 0,
+    "kind": "MILESTONE",
+    "periods": [
+      "YOUNG_ADULT",
+      "MIDDLE"
+    ],
+    "weight": 1,
+    "view": "FIRST_PERSON",
+    "pathRole": "러브라인 6-2단계 — 첫 아이와 보내는 첫해(직장이 없거나 자영업인 부모)",
+    "followUps": [
+      "path_wea_14",
+      "cross_05"
+    ]
+  },
+  "sourceReadScope": "Title, full text, conditions, all choices, all outcomes including flags/stat deltas, periods and follow-ups directly read before visual judgement.",
+  "sourceImage": {
+    "path": "app/src/main/assets/images/img_love_first_child_01_001.png",
+    "sha256": "14d16a95f74bd65904b9f4187db5b369c6fc00c276127e596d5a3333933a1300",
+    "width": 941,
+    "height": 1672
+  },
+  "generationManifest": "docs/refactor/art-candidates/generated-love-20261119.json",
+  "selectedGenerationOutput": "C:\\Users\\jk030\\.codex\\generated_images\\01a1f1bc-6c39-7a10-a591-0d1f4e5cef6b\\exec-cd42a8af-6670-4dfc-8273-9837feb722ab.png",
+  "exactGenerationPromptSha256": "d256fa430b2ee6e663fec2a345eb14c27f0f580929e83b1863efb5301056cc8e",
+  "presentationMetadata": [
+    {
+      "assetPath": "img_love_first_child_01_001.png",
+      "sourceSha256": "14d16a95f74bd65904b9f4187db5b369c6fc00c276127e596d5a3333933a1300",
+      "focalX": 0.62,
+      "focalY": 0.5,
+      "note": "Keep the baby's closed eye and the finger-holding contact together after native review found the central phone crop hid the sleeping expression. Original generated PNG retained; follow-up native verification pending."
+    }
+  ],
+  "captures": [
+    {
+      "path": "build/refactor/after/secondary-art-focals-native/love_first_child_01_phone_scene.png",
+      "sha256": "bd0e2b741661c5abbbf9120424494183ad88c0cd2187c83300f6ede95306f42b",
+      "width": 1080,
+      "height": 2400,
+      "screen": "phone",
+      "mode": "scene",
+      "cropReport": {
+        "eventId": "love_first_child_01",
+        "imageId": "img_love_first_child_01_001",
+        "assetPath": "img_love_first_child_01_001.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.200..1.000",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/secondary-art-focals-native/love_first_child_01_phone_play.png",
+      "sha256": "ab57708d95316450f1d1807c4295d066f750329d5392e14e751c48df78b20c9e",
+      "width": 1080,
+      "height": 2400,
+      "screen": "phone",
+      "mode": "play",
+      "cropReport": null
+    },
+    {
+      "path": "build/refactor/after/secondary-art-focals-native/love_first_child_01_360x740_scene.png",
+      "sha256": "97de42fcd99d00fa02fc3936e8dadf5e234461009505d07884a1d9320adbfe17",
+      "width": 945,
+      "height": 1943,
+      "screen": "360x740",
+      "mode": "scene",
+      "cropReport": {
+        "eventId": "love_first_child_01",
+        "imageId": "img_love_first_child_01_001",
+        "assetPath": "img_love_first_child_01_001.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.136..1.000",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/secondary-art-focals-native/love_first_child_01_360x740_play.png",
+      "sha256": "d9d82b27a67bd27338ebdb60303451e34937297f1f87feecbbca76959007f803",
+      "width": 945,
+      "height": 1943,
+      "screen": "360x740",
+      "mode": "play",
+      "cropReport": null
+    }
+  ],
+  "semanticObservation": "has_child가 이미 성립한 새벽 수면 장면이다. 잠든 아기가 플레이어 검지를 쥐고 배우자가 곁에 있으며 수유등/젖병이 보인다. 다음 선택의 교대 취침·직접 밤 돌봄·아기의 반응을 먼저 확정하지 않는다.",
+  "cropObservation": "초기 중앙 크롭은 감긴 눈을 제외하여 보류했다. 원본 SHA를 유지한 focalX=0.62의 새 phone/small 캡처를 다시 보았고 손 접촉과 감긴 눈 곡선이 함께 남는다. 원본부터 얼굴 일부만 등장하는 구도이며 얼굴 전체 보존을 주장하지 않는다.",
+  "uiObservation": "보정 후 두 크기에서 제목·본문·A/B/C가 읽힌다. small C는 마지막 한 글자가 다음 줄로 내려가지만 가려지지 않는다.",
+  "reviewMethod": "Codex AI directly inspected full source PNG and each of four unmodified native capture PNGs using view_image. This is an AI review, not a named human approval.",
+  "nativeMethod": "SceneCropReviewTest renders production DecisionScreen with current parsed event and actual routing/PixelAssetLoader in Android Compose instrumentation. Scene captures compare against designated crop >=0.95. The test uses a fixture play state and does not perform a complete game progression.",
+  "testSource": "app/src/androidTest/java/com/example/lifegame/ui/SceneCropReviewTest.kt",
+  "nativeRunLog": "build/refactor/secondary-art-focals-completion.log",
+  "limitations": [
+    "Android emulator/Compose capture, not a physical device test.",
+    "Fixed reviewed phone and 360x740 sizes; no claim for every aspect ratio or font scale.",
+    "Visual art acceptance does not certify choice scrolling, TalkBack, or game-flow state transitions."
+  ],
+  "previousRejectedCropObservation": "build/refactor/after/ten-art-native/love_first_child_01_phone_scene.png: 중앙 크롭에서 감긴 눈이 사라짐; 승인하지 않고 focal 재검수 요청."
+}

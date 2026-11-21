@@ -1,0 +1,71 @@
+{
+  "eventId": "adult_072",
+  "reviewerType": "AI",
+  "scope": "Portrait phone and small-phone presentation",
+  "sourceEventHash": "295aa3bbc0bd22d2f4716f4b3f5c8613062ec6c5e8de08cbb3702e61132aec5e",
+  "sourceReview": "docs/refactor/art-candidates/portrait-review-20261119.json",
+  "sourceSha256": "e8b321c9fffff153bf5a4a47eef2c67a67097db7acf14f218013ad79b33a2121",
+  "displayedVariant": {
+    "assetPath": "presentation/portraits/img_pov_first_card_001_portrait_v1.png",
+    "sha256": "91490db70d899eae008069ff82dded8cc100ba89d654cb02c599b2f90e6cf011",
+    "width": 941,
+    "height": 1672,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-review-20261119.json"
+  },
+  "nativeCaptures": [
+    {
+      "path": "build/refactor/resumed/final32/adult_072_phone_scene.png",
+      "sha256": "aaab524110edbcea0f046213c07fc50f7a65d6733525051ee0a24d4901175c5d",
+      "crop": {
+        "eventId": "adult_072",
+        "imageId": "img_pov_first_card_001",
+        "assetPath": "presentation/portraits/img_pov_first_card_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/final32/adult_072_phone_play.png",
+      "sha256": "dd0a0f5a06c9ff090922b99452c47b214dad93669e64b2f513df1ae0f3a682f4",
+      "crop": {
+        "eventId": "adult_072",
+        "imageId": "img_pov_first_card_001",
+        "assetPath": "presentation/portraits/img_pov_first_card_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/final32/adult_072_360x740_scene.png",
+      "sha256": "c9da84fce0cd7823242d90de9210e1d47b3c0406e3c5cdc7778a57ca355775e8",
+      "crop": {
+        "eventId": "adult_072",
+        "imageId": "img_pov_first_card_001",
+        "assetPath": "presentation/portraits/img_pov_first_card_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/final32/adult_072_360x740_play.png",
+      "sha256": "6379d4fa7ebe03dfc6ed29228e40983948a1e32f6d7d6cd161e1c4eccd181102",
+      "crop": {
+        "eventId": "adult_072",
+        "imageId": "img_pov_first_card_001",
+        "assetPath": "presentation/portraits/img_pov_first_card_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    }
+  ],
+  "observation": "서로 다른 진로를 나타내는 두 서류와 빈칸, 책상 앞의 두 손이 두 화면에서 모두 보인다. 본문에서는 세 진로 선택지가 같은 장면과 연결된다.",
+  "decision": "PASS",
+  "method": "Individual visual inspection of both scene and gameplay frames together with producer semantic/source review and device capture match."
+}

@@ -1,0 +1,199 @@
+{
+  "schemaVersion": 1,
+  "eventId": "love_first_child_01",
+  "title": "새벽 4시의 첫 아이",
+  "imageId": "img_love_first_child_01_001",
+  "status": "READY_FOR_GENERATION_NOT_ART_APPROVAL",
+  "author": "Codex AI",
+  "date": "2026-11-19",
+  "generationPriority": 3,
+  "currentAcceptanceStatus": "MISSING_PNG",
+  "sourceEventHash": "c0f4855f4dd932ce8901554e7e898a81fa2bc0dd5438b79b846ac314ba197e59",
+  "sourceEventPath": "app/src/main/assets/events.sample.json",
+  "sourceEventSnapshot": {
+    "eventId": "love_first_child_01",
+    "stage": "ADULT",
+    "type": "NORMAL",
+    "isFallback": false,
+    "isMilestone": true,
+    "title": "새벽 4시의 첫 아이",
+    "text": "새벽 4시. 아기가 내 손가락을 꼭 쥐고 잠들었다. 배우자가 속삭였다. \"{nameCall}, 오늘 밤은 누가 먼저 잘까?\"",
+    "imageId": "img_love_first_child_01_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [
+        "married",
+        "has_child"
+      ],
+      "blockedFlags": [
+        "divorced",
+        "job_employed",
+        "v4:event:adult_039"
+      ]
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "내가 밤을 맡는다",
+        "statDelta": {
+          "행복": 4,
+          "건강": -2
+        },
+        "resultText": "아이의 첫 걸음마를 봤다. 세 걸음 만에 엉덩방아. 어디서 많이 본 장면이다.",
+        "addFlags": [
+          "devoted_parent"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "a_night",
+            "text": "아이의 첫 걸음마를 봤다. 세 걸음 만에 엉덩방아. 어디서 많이 본 장면이다.",
+            "chance": 100,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 4,
+              "건강": -2
+            },
+            "addFlags": [
+              "devoted_parent"
+            ]
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "관계 단계 전환점 — 연애·결혼·자녀는 능력치 자격이 아니라 의사 결정이라 잠그지 않고, 차이는 결과 분기와 후속 사실로 반영",
+        "conditionReview": "open_turning_point",
+        "conditionBasis": "week13_love_line"
+      },
+      {
+        "choiceId": "B",
+        "label": "두 시간씩 번갈아 잔다",
+        "statDelta": {
+          "행복": 3,
+          "건강": -1,
+          "사회성": 1
+        },
+        "resultText": "알람을 맞춘 육아표가 냉장고에 붙었다. 1년 뒤 둘 다 두 시간 단위로 잠드는 법을 익혔다.",
+        "addFlags": [
+          "family_bond"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "b_shift",
+            "text": "알람을 맞춘 육아표가 냉장고에 붙었다. 1년 뒤 둘 다 두 시간 단위로 잠드는 법을 익혔다.",
+            "chance": 100,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 3,
+              "건강": -1,
+              "사회성": 1
+            },
+            "addFlags": [
+              "family_bond"
+            ]
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "관계 단계 전환점 — 연애·결혼·자녀는 능력치 자격이 아니라 의사 결정이라 잠그지 않고, 차이는 결과 분기와 후속 사실로 반영",
+        "conditionReview": "open_turning_point",
+        "conditionBasis": "week13_love_line"
+      },
+      {
+        "choiceId": "C",
+        "label": "아기한테 누가 먼저 잘지 물어본다",
+        "statDelta": {
+          "행복": 3,
+          "건강": -2
+        },
+        "resultText": "아기는 대답 대신 울었다. 셋 다 그 자리에서 해 뜰 때까지 깨어 있었다.",
+        "addFlags": [
+          "family_memory"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "c_ask",
+            "text": "아기는 대답 대신 울었다. 셋 다 그 자리에서 해 뜰 때까지 깨어 있었다.",
+            "chance": 100,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 3,
+              "건강": -2
+            },
+            "addFlags": [
+              "family_memory"
+            ]
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "관계 단계 전환점 — 연애·결혼·자녀는 능력치 자격이 아니라 의사 결정이라 잠그지 않고, 차이는 결과 분기와 후속 사실로 반영",
+        "conditionReview": "open_turning_point",
+        "conditionBasis": "week13_love_line"
+      }
+    ],
+    "priority": 0,
+    "kind": "MILESTONE",
+    "periods": [
+      "YOUNG_ADULT",
+      "MIDDLE"
+    ],
+    "weight": 1,
+    "view": "FIRST_PERSON",
+    "pathRole": "러브라인 6-2단계 — 첫 아이와 보내는 첫해(직장이 없거나 자영업인 부모)",
+    "followUps": [
+      "path_wea_14",
+      "cross_05"
+    ]
+  },
+  "reviewScope": "Current complete event, conditions, every choice including legacy fields, all outcomes, probabilities, deltas and flags read for pre-choice art specification. No new image has been generated or approved by this brief.",
+  "reviewedChoiceIds": [
+    "A",
+    "B",
+    "C"
+  ],
+  "reviewedOutcomeIds": [
+    "a_night",
+    "b_shift",
+    "c_ask"
+  ],
+  "existingArtBriefPath": "docs/assignments/20261031/submissions/김선한_분류합본.csv",
+  "existingArtBriefSnapshot": {
+    "place": "새벽 침실",
+    "mainAction": "아기가 손가락을 쥐고 잠든 모습을 본다",
+    "requiredObjects": "아기 손과 내 손가락",
+    "peopleAndAge": "주인공·배우자·신생아",
+    "timeOfDay": "새벽",
+    "approvedPerspective": "FIRST_PERSON",
+    "reuseOrNewReason": "NEW: 13주차 러브라인 신규 사건. 관계 단계(연인·약혼·배우자·자녀)를 선택 전보다 앞서 보여 주지 않는 전용 장면 필요"
+  },
+  "requestedAssetPath": "app/src/main/assets/images/img_love_first_child_01_001.png",
+  "preChoiceState": "이미 결혼했고 첫 아이가 있는 부모의 새벽 침실. 잠든 작은 아기가 플레이어 손가락을 쥐고 있으며 배우자가 누가 먼저 잘지 묻는 순간. 직장에 다니는 부모의 육아휴직 사건과 구분한다.",
+  "composition": "안전한 아기 침대 옆 플레이어의 1인칭 시점. 중앙에 아주 작은 아기 손과 성인 손가락의 자연스러운 접촉을 크게 두고, 잠든 아기 얼굴 일부와 뒤편 배우자의 손·어깨를 보조로 둔다. 어두운 새벽과 따뜻한 수유등.",
+  "ageAndAppearance": "아기는 작고 잠든 영아이며 서 있거나 걷는 유아가 아니다. 부모는 청년~중년 성인으로 성별을 고정하지 않는다. 아기는 안전하게 눕고 성인 손가락만 손으로 잡는다.",
+  "forbiddenOutcomes": [
+    "첫 걸음마 또는 엉덩방아",
+    "이미 완성된 냉장고 육아표·알람·교대 계획",
+    "울기 시작한 아기와 해 뜬 뒤의 밤샘 결과",
+    "회사·상사·인사팀·육아휴직 서류",
+    "두 번째 아이·새 임신·성장한 아이",
+    "아기 목·얼굴을 덮는 소품, 위험한 수면 자세"
+  ],
+  "briefCorrections": [
+    "선택 A의 결과는 이후 첫 걸음마이지만 현재 장면은 잠든 영아다. 시각 4시를 숫자 시계로 그리지 않고 새벽 조명으로 표현한다."
+  ],
+  "generationPrompt": "Create one portrait 9:16 full-bleed game background, warm restrained Korean everyday-life pixel-art illustration. Crisp deliberate pixel clusters, coherent anatomy, softly separated light and shadow, not photorealism and not a UI mockup. Strict first-person player viewpoint: no player face, back of head, full player body, reflection, selfie or framed portrait of the player. Only naturally placed player hands or forearms may enter the frame. The player can be male or female; hands, clothing and visible partner styling must not encode a fixed player gender or a uniquely named past partner. All romantic participants are clearly adults; do not depict school-age children as romantic partners. Use age-flexible adult styling that can fit young adulthood or middle adulthood. If a partner must be visible, show non-identifying partial profile, cropped upper torso or hands rather than an identity-defining portrait. No readable text, letters, digits, logos, subtitles, speech bubbles, interface panels, progress indicators or button graphics. Any phone message cue must be an abstract non-text shape and never legible text. Keep all story-critical objects together inside the central 60% of the portrait width and middle 60% of height; leave the bottom 22% visually quiet for the game overlay, without drawing an overlay. This is the instant before the player chooses. Show the stated present situation only, with no success, failure, marriage, pregnancy, reconciliation, breakup or future achievement unless already established in the source conditions. \nSCENE: A quiet pre-dawn bedroom beside a safe infant cot, seen from the adult players own eyes. The central close-up is a tiny SLEEPING infants naturally proportioned hand gently curling around one adult index finger; the infant is lying safely on their back, face clear of fabric, with only a little of the sleeping face visible. In the softer middle background show the spouses relaxed hand and cropped shoulder as they quietly ask whose turn it is to sleep. Deep blue pre-dawn light with a soft warm feeding lamp. No visible player face or gender-coded parent role. This baby is already born, very small, asleep, and not yet a walking toddler. No crying, sunrise, walking, work documents, parental-leave form, completed care rota, alarm display, readable clock, new pregnancy or additional child.",
+  "deliveryAndReview": {
+    "format": "PNG, portrait 9:16",
+    "originalAssets": "Preserve existing artwork and approval history. This is a missing-art candidate, not a replacement approval.",
+    "requiredChecks": [
+      "Read current event hash again before generation; stale briefs must be reread.",
+      "Inspect full image, anatomy, all required objects and absence of choice outcomes.",
+      "Inspect actual native portrait presentation and UI overlay at phone and narrow viewport.",
+      "Record image SHA, exact generation prompt, truthful AI producer/reviewer and per-event rationale before any separate approval action."
+    ],
+    "approvalOrManifestChanged": false
+  }
+}

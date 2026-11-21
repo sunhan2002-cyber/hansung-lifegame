@@ -1,0 +1,71 @@
+{
+  "eventId": "path_hap_14",
+  "reviewerType": "AI",
+  "scope": "Portrait phone and small-phone presentation",
+  "sourceEventHash": "388d32cca431fc39b208dec5ca1efaafb0a711815a8777c00ae9980dfa695714",
+  "sourceReview": "docs/refactor/art-candidates/portrait-integration/path_hap_14.json",
+  "sourceSha256": "babbeebeeae1b2b3aebebfbc0bc67ce90e9d52f9ef1d2d347d439afce5c0fa8e",
+  "displayedVariant": {
+    "assetPath": "presentation/portraits/img_path_hap_14_001_portrait_v1.png",
+    "sha256": "077dd86ac91f4b0d9cf5c3fc57bbae0f7097aa81bee5af446f2d3c167a7c73e3",
+    "width": 941,
+    "height": 1672,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root/security_p0)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/path_hap_14.json"
+  },
+  "nativeCaptures": [
+    {
+      "path": "build/refactor/resumed/native18/path_hap_14_phone_scene.png",
+      "sha256": "a861c8b4d326defad54cd5bdb7d6dc0c1a4eeb46d424485bc30c879bb5464a20",
+      "crop": {
+        "eventId": "path_hap_14",
+        "imageId": "img_path_hap_14_001",
+        "assetPath": "presentation/portraits/img_path_hap_14_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/native18/path_hap_14_phone_play.png",
+      "sha256": "d5f0a861f6e438b1951198efeeb409f3a8b055694f3d8ad73943113c29c2bb96",
+      "crop": {
+        "eventId": "path_hap_14",
+        "imageId": "img_path_hap_14_001",
+        "assetPath": "presentation/portraits/img_path_hap_14_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/native18/path_hap_14_360x740_scene.png",
+      "sha256": "f4f6938acf87d5b200dd7c603d9d164f5d741db89ba915751406caef8b754b7d",
+      "crop": {
+        "eventId": "path_hap_14",
+        "imageId": "img_path_hap_14_001",
+        "assetPath": "presentation/portraits/img_path_hap_14_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/native18/path_hap_14_360x740_play.png",
+      "sha256": "7dcf7550a9476c906463d3589dae16db88966d03e233a3f14c7d520901df27c2",
+      "crop": {
+        "eventId": "path_hap_14",
+        "imageId": "img_path_hap_14_001",
+        "assetPath": "presentation/portraits/img_path_hap_14_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    }
+  ],
+  "observation": "피아노와 꽉 찬 일정표를 한 장면에서 본다.",
+  "decision": "PASS",
+  "method": "Individual visual inspection of both scene and gameplay frames together with producer semantic/source review and device capture match."
+}

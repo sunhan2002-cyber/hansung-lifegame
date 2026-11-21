@@ -1,0 +1,71 @@
+{
+  "eventId": "path_int_04",
+  "reviewerType": "AI",
+  "scope": "Portrait phone and small-phone presentation",
+  "sourceEventHash": "7dfd8b4281e71eccc77d466fd571b3a4bc394234eba829871931d3aeeb6fefbb",
+  "sourceReview": "docs/refactor/art-candidates/portrait-integration/path_int_04.json",
+  "sourceSha256": "436bcded91b0fc53c0f25da44a874d3201587d5be9db0583287208d6fb2681cf",
+  "displayedVariant": {
+    "assetPath": "presentation/portraits/img_path_int_04_001_portrait_v1.png",
+    "sha256": "6cd90000621c42048830e4f54578242a2d3f07a1f744e9b286b7659f976611f5",
+    "width": 968,
+    "height": 1625,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/path_int_04.json"
+  },
+  "nativeCaptures": [
+    {
+      "path": "build/refactor/resumed/final32/path_int_04_phone_scene.png",
+      "sha256": "4c21f888f4648f61a8794f27f9c6fed10f9721e5700b1a791ee7fe466993289a",
+      "crop": {
+        "eventId": "path_int_04",
+        "imageId": "img_path_int_04_001",
+        "assetPath": "presentation/portraits/img_path_int_04_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.122..0.878",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/final32/path_int_04_phone_play.png",
+      "sha256": "8dafab1dea1c7b9f77349fe4315681be4ef2ab648c2e01c52358d5de5d865a84",
+      "crop": {
+        "eventId": "path_int_04",
+        "imageId": "img_path_int_04_001",
+        "assetPath": "presentation/portraits/img_path_int_04_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.122..0.878",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/final32/path_int_04_360x740_scene.png",
+      "sha256": "88387a35901af3fcca15b9d65523a68c90e9a7cfe3ab8c0624ddcc0e6e2b5e1c",
+      "crop": {
+        "eventId": "path_int_04",
+        "imageId": "img_path_int_04_001",
+        "assetPath": "presentation/portraits/img_path_int_04_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.092..0.908",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/final32/path_int_04_360x740_play.png",
+      "sha256": "8d84809c784ab3e4bd6c422f30876f4108b8a1f6137ed4486e9afca0a2ebeb67",
+      "crop": {
+        "eventId": "path_int_04",
+        "imageId": "img_path_int_04_001",
+        "assetPath": "presentation/portraits/img_path_int_04_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.092..0.908",
+        "match": "1.000"
+      }
+    }
+  ],
+  "observation": "3.98 transcript and research lab notice are simultaneously visible.",
+  "decision": "PASS",
+  "method": "Individual visual inspection of both scene and gameplay frames together with producer semantic/source review and device capture match."
+}

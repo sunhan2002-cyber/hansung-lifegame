@@ -1,0 +1,234 @@
+{
+  "schemaVersion": 1,
+  "eventId": "path_wea_09",
+  "status": "PASS",
+  "reviewer": "Codex AI / plan_audit",
+  "reviewerType": "AI",
+  "reviewDate": "2026-11-19",
+  "sourceEventHash": "0684b6c6b003fdd2d5589efd3aea5f7f4ef96d894a166d88eaff88807ba381a2",
+  "sourceEventSnapshot": {
+    "eventId": "path_wea_09",
+    "stage": "ADULT",
+    "type": "NORMAL",
+    "isFallback": false,
+    "isMilestone": false,
+    "title": "통장 정리하는 날",
+    "text": "변호사 사무실. 서류 맨 위에 내 이름과 재산 목록이 있다. 변호사: \"어떻게 나누실지 정하셔야 합니다.\"",
+    "imageId": "img_path_wea_09_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [
+        "wea_path"
+      ],
+      "blockedFlags": []
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "장학 재단에 일부를 기부한다",
+        "statDelta": {
+          "행복": 4,
+          "사회성": 2,
+          "경제력": -4
+        },
+        "resultText": "내 이름이 붙은 장학금이 생겼다. 첫 장학생이 편지를 보냈다. \"편의점 알바 하다가 받았어요.\"",
+        "addFlags": [
+          "achv_donation"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "a_donate",
+            "text": "내 이름이 붙은 장학금이 생겼다. 첫 장학생이 편지를 보냈다. \"편의점 알바 하다가 받았어요.\"",
+            "chance": 100,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 4,
+              "사회성": 2,
+              "경제력": -4
+            },
+            "addFlags": [
+              "achv_donation"
+            ]
+          }
+        ],
+        "requiredFlags": [
+          "achv_exit"
+        ],
+        "conditionReview": "confirmed",
+        "conditionBasis": "week8_life_path"
+      },
+      {
+        "choiceId": "B",
+        "label": "남은 빚부터 정리한다",
+        "statDelta": {
+          "행복": 3,
+          "경제력": -2
+        },
+        "resultText": "마지막 대출 상환 문자가 왔다. 30년 만에 처음으로 빚이 0원이었다.",
+        "addFlags": [
+          "debt_free"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "b_clear",
+            "text": "마지막 대출 상환 문자가 왔다. 30년 만에 처음으로 빚이 0원이었다.",
+            "chance": 100,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 3,
+              "경제력": -2
+            },
+            "addFlags": [
+              "debt_free"
+            ]
+          }
+        ],
+        "requiredFlags": [
+          "in_debt"
+        ],
+        "conditionReview": "confirmed",
+        "conditionBasis": "week8_life_path"
+      },
+      {
+        "choiceId": "C",
+        "label": "가족에게 나누고 남은 돈으로 여행을 간다",
+        "statDelta": {
+          "행복": 3,
+          "사회성": 1,
+          "경제력": -2
+        },
+        "resultText": "첫 알바 때 적금 통장을 아직 갖고 있었다. 그 통장 이자로 기차표를 샀다.",
+        "addFlags": [
+          "family_bond",
+          "family_memory"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "c_trip",
+            "text": "첫 알바 때 적금 통장을 아직 갖고 있었다. 그 통장 이자로 기차표를 샀다.",
+            "chance": 100,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 3,
+              "사회성": 1,
+              "경제력": -2
+            },
+            "addFlags": [
+              "family_bond",
+              "family_memory"
+            ]
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "전환점에서 누구나 고를 수 있는 기본 선택지 (전체 잠금 방지)",
+        "conditionReview": "fallback_choice",
+        "conditionBasis": "week8_life_path"
+      }
+    ],
+    "priority": 0,
+    "kind": "INCIDENT",
+    "periods": [
+      "OLD_AGE"
+    ],
+    "weight": 20,
+    "view": "FIRST_PERSON",
+    "lifePath": "WEALTH",
+    "pathRole": "노년 결과",
+    "followUps": []
+  },
+  "sourceReadScope": "Current complete event, conditions, every choice/outcome and flags/stat deltas/periods/follow-ups directly read before judgement.",
+  "sourceImage": {
+    "path": "app/src/main/assets/images/week10/scenes/img_path_wea_09_001.png",
+    "sha256": "ca2f641b36d0aa698c3666a3364327d98f79582d3a7ee38955c426350f53e282",
+    "width": 300,
+    "height": 225
+  },
+  "originalArtworkUnchangedSinceHistoricalReview": true,
+  "historicalReview": {
+    "eventId": "path_wea_09",
+    "title": "통장 정리하는 날",
+    "imageId": "img_path_wea_09_001",
+    "assetPath": "week10/scenes/img_path_wea_09_001.png",
+    "sha256": "ca2f641b36d0aa698c3666a3364327d98f79582d3a7ee38955c426350f53e282",
+    "eventSourceHash": "0684b6c6b003fdd2d5589efd3aea5f7f4ef96d894a166d88eaff88807ba381a2",
+    "status": "REVISION_REQUIRED",
+    "reviewer": "김선한 담당 Codex 직접 대행 검수",
+    "reason": "통장 정리 본문에 유산 분배 상담을 표시; 본문 내용과의 개연성 재검토 필요",
+    "expectedAction": "재산 분배 방법을 정하기 전 서류를 마주함",
+    "requiredObjects": "재산 관련 서류 묶음; 상담하는 변호사의 손",
+    "sheet": "output/art-review-20261119/sheet-17.jpg",
+    "cell": 0,
+    "cropMethod": "ImageOps.fit centre-fill 360:800; simulated crop inspected directly, not an emulator capture",
+    "visualMethod": "원본 도트풍·색감·장면 파손·명백한 신체/사물 오류 직접 확인"
+  },
+  "presentationMetadata": [],
+  "captures": [
+    {
+      "path": "build/refactor/after/originals-twentyfour-and-variants-native/path_wea_09_phone_scene.png",
+      "sha256": "2a872abd17e4e0fbd880ee8930d39e681fd1d0cf3cc244649ee6f27d29693d80",
+      "width": 1080,
+      "height": 2400,
+      "screen": "phone",
+      "mode": "scene",
+      "cropReport": {
+        "eventId": "path_wea_09",
+        "imageId": "img_path_wea_09_001",
+        "assetPath": "week10/scenes/img_path_wea_09_001.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.331..0.669",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/originals-twentyfour-and-variants-native/path_wea_09_phone_play.png",
+      "sha256": "858381bbd8be88380d60f2e2503cddcad86dcf4c916f8a658772d2acbd532080",
+      "width": 1080,
+      "height": 2400,
+      "screen": "phone",
+      "mode": "play",
+      "cropReport": null
+    },
+    {
+      "path": "build/refactor/after/originals-twentyfour-and-variants-native/path_wea_09_360x740_scene.png",
+      "sha256": "fb418ead6eaa71f89725ead94495c2fa74d21663f8e662c088b6a97b7939fcff",
+      "width": 945,
+      "height": 1943,
+      "screen": "360x740",
+      "mode": "scene",
+      "cropReport": {
+        "eventId": "path_wea_09",
+        "imageId": "img_path_wea_09_001",
+        "assetPath": "week10/scenes/img_path_wea_09_001.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.318..0.682",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/originals-twentyfour-and-variants-native/path_wea_09_360x740_play.png",
+      "sha256": "68f93f2589fd5eb6ab3c4ff8fc8970ee497cf5a3231f62a609a0610610a4fa23",
+      "width": 945,
+      "height": 1943,
+      "screen": "360x740",
+      "mode": "play",
+      "cropReport": null
+    }
+  ],
+  "semanticObservation": "변호사 사무실에서 아직 결정하지 않은 재산 분배 서류를 상담하는 1인칭이다. 비문자 분기 도표와 설명 손, 대기하는 플레이어 양손이 선택 전 상태를 나타낸다. 장학금 편지·대출 상환 문자·가족 송금·기차표 결과는 없다.",
+  "cropObservation": "두 native에서 핵심 분배 도표 전체와 변호사의 설명 손/정장, 플레이어 양손이 남는다. 원본부터 문서 중심으로 얼굴을 프레임 밖에 둔 구도이며 native가 새로 얼굴을 절단한 사례는 아니다. 낮은 원본 해상도 픽셀 표현은 남지만 도표 의미는 식별된다.",
+  "uiObservation": "두 크기에서 제목·본문·세 선택지를 읽을 수 있고 C 문구가 카드 내부 두 줄로 남는다.",
+  "reviewMethod": "Codex AI directly inspected the full unchanged source PNG and all four unmodified native scene/play captures. Prior review is retained as historical evidence; this record is a new AI judgement, not human approval.",
+  "nativeMethod": "Production DecisionScreen, current parsed event/routing/PixelAssetLoader, fixture state in Android Compose instrumentation. Scene grid match >=0.95. Not complete game progression.",
+  "nativeRunLog": "build/refactor/depth-and-originals-twentyfour.log",
+  "limitations": [
+    "Emulator captures, not physical-device review.",
+    "Only reviewed phone and 360x740 dimensions; not every font scale/aspect ratio.",
+    "Art review does not independently certify scrolling, TalkBack or complete game-flow transitions."
+  ]
+}

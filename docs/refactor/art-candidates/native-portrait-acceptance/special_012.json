@@ -1,0 +1,71 @@
+{
+  "eventId": "special_012",
+  "reviewerType": "AI",
+  "scope": "Portrait phone and small-phone presentation",
+  "sourceEventHash": "2ff487983a15a29ee971728d32e49986cbef67ac48045fe682085c24042f116d",
+  "sourceReview": "docs/refactor/art-candidates/portrait-integration/special_012.json",
+  "sourceSha256": "f07ced21b4ce9bf23545e1073c5d59b9b6f735b9c05b9c1ffccc031e4f5cb5c6",
+  "displayedVariant": {
+    "assetPath": "presentation/portraits/img_special_robot_vacuum_001_portrait_v1.png",
+    "sha256": "6f3c6054f94f37ada83ba06b0c9bfa2e9ddfe007afb2e6fb54c5b9b8845bcc55",
+    "width": 941,
+    "height": 1672,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root/security_p0)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/special_012.json"
+  },
+  "nativeCaptures": [
+    {
+      "path": "build/refactor/after/portrait-fortythree-native/special_012_phone_scene.png",
+      "sha256": "8e2fd3ae86cd611aaba1f7e350698a574ad5abca4fc7ac835c034650c7bb9cbe",
+      "crop": {
+        "eventId": "special_012",
+        "imageId": "img_special_robot_vacuum_001",
+        "assetPath": "presentation/portraits/img_special_robot_vacuum_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/portrait-fortythree-native/special_012_phone_play.png",
+      "sha256": "67947d54a4424461cf5eb8360e8752491fe960800e5f1367b6c6c6a00c8e0fc8",
+      "crop": {
+        "eventId": "special_012",
+        "imageId": "img_special_robot_vacuum_001",
+        "assetPath": "presentation/portraits/img_special_robot_vacuum_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/portrait-fortythree-native/special_012_360x740_scene.png",
+      "sha256": "d53c15afcaca550471c4eebbd80645f251328583638e5a4e6940887624659290",
+      "crop": {
+        "eventId": "special_012",
+        "imageId": "img_special_robot_vacuum_001",
+        "assetPath": "presentation/portraits/img_special_robot_vacuum_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/portrait-fortythree-native/special_012_360x740_play.png",
+      "sha256": "6420f6f5fe930741b27c64cf296931b3e4ea261d6777963472c86d65cacccadf",
+      "crop": {
+        "eventId": "special_012",
+        "imageId": "img_special_robot_vacuum_001",
+        "assetPath": "presentation/portraits/img_special_robot_vacuum_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    }
+  ],
+  "observation": "로봇 청소기에 옷자락이 걸린 장면과 손이 남는다.",
+  "decision": "PASS",
+  "method": "Individual visual inspection of both scene and gameplay frames together with producer semantic/source review and device capture match."
+}

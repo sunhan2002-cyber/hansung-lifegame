@@ -35,7 +35,6 @@ import androidx.compose.foundation.gestures.detectTapGestures
 import androidx.compose.foundation.gestures.waitForUpOrCancellation
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -121,10 +120,18 @@ import com.example.lifegame.ui.components.PeriodTrack
 import com.example.lifegame.ui.components.PlayTopBar
 import com.example.lifegame.ui.components.SceneImage
 import com.example.lifegame.ui.components.SceneImageStatus
+import com.example.lifegame.ui.components.SceneAtmosphere
+import com.example.lifegame.ui.components.SceneImageSource
+import com.example.lifegame.ui.components.sceneAtmosphereFor
+import com.example.lifegame.ui.components.sceneCamera
+import com.example.lifegame.ui.components.rememberAmbientPhase
+import com.example.lifegame.ui.components.LocalExperiencePreferences
 import com.example.lifegame.ui.components.SceneViewButton
 import com.example.lifegame.ui.components.distortEnvelope
 import com.example.lifegame.ui.components.markLabel
 import com.example.lifegame.ui.components.rememberReduceMotion
+import com.example.lifegame.ui.components.experiencePress
+import com.example.lifegame.ui.components.rememberExperienceClick
 import com.example.lifegame.ui.teaser
 import com.example.lifegame.ui.theme.LifeGameBodyInk
 import com.example.lifegame.ui.theme.LifeGameInk
@@ -216,9 +223,11 @@ fun DecisionScreen(
     // 그림 선노출은 사건마다 한 번. 복원돼도 다시 보여 주지 않는다.
     var previewDone by rememberSaveable(introKey) { mutableStateOf(outcome != null || previewShownBefore || skipImagePreview) }
     var previewing by rememberSaveable(introKey) { mutableStateOf(false) }
+    var markPlayed by rememberSaveable(introKey) { mutableStateOf(previewShownBefore || outcome != null) }
     // 그림을 실제로 선명하게 보여 줬는지. 읽지 못해 건너뛴 경우에는 "선노출 완료"로 저장하지 않는다.
     var imageShown by rememberSaveable(introKey) { mutableStateOf(false) }
     var imageStatus by remember(introKey) { mutableStateOf(SceneImageStatus.LOADING) }
+    var imageSource by remember(introKey) { mutableStateOf<SceneImageSource?>(null) }
     var showChoiceDetails by rememberSaveable { mutableStateOf(false) }
     var chosenId by remember(introKey) { mutableStateOf<String?>(null) }
     var typedChars by rememberSaveable(introKey) {
@@ -231,6 +240,10 @@ fun DecisionScreen(
     val popupClosed = remember { Channel<Unit>(Channel.CONFLATED) }
     val haptic = LocalHapticFeedback.current
     val reduceMotion = rememberReduceMotion()
+    val experience = LocalExperiencePreferences.current
+    val sceneAtmosphere = remember(decision.eventId, imageSource) { sceneAtmosphereFor(decision.eventId, imageSource) }
+    val sceneMotionEnabled = sceneAtmosphere != null && !sceneOnly && !reduceMotion && imageStatus == SceneImageStatus.READY
+    val scenePhase = rememberAmbientPhase(enabled = sceneMotionEnabled)
     val resultDisplayId = state.presentation.resultDisplayId
     val textLength = decision.text.length
     // 완성 터치 직후 아주 짧게 이어지는 연타도 삼켜, 본문을 보려던 손가락이 선택을 확정하지 않게 한다.
@@ -280,7 +293,7 @@ fun DecisionScreen(
         if (introDone) return@LaunchedEffect
         if (decision.isIncident) {
             if (!reduceMotion) {
-                haptic.performHapticFeedback(HapticFeedbackType.LongPress)
+                if (experience.hapticsEnabled) haptic.performHapticFeedback(HapticFeedbackType.LongPress)
                 val jitter = Random(5)
                 animate(0f, 1f, animationSpec = tween(DISTORT_MILLIS, easing = LinearEasing)) { p, _ ->
                     val envelope = distortEnvelope(p)
@@ -376,7 +389,7 @@ fun DecisionScreen(
         label = "sceneBlur",
     )
 
-    BoxWithConstraints(
+    Box(
         modifier
             .fillMaxSize()
             .background(LifeGameInk)
@@ -393,13 +406,21 @@ fun DecisionScreen(
             ),
             modifier = Modifier
                 .fillMaxSize()
+                .sceneCamera(sceneAtmosphere, scenePhase, sceneMotionEnabled)
                 // 배경만 흐리게 한다. 사건 글자와 선택지는 그 위에 선명하게 얹힌다.
                 .blur(blur)
                 .testTag(if (sceneClear) "scene_clear" else "scene_blurred"),
             // 장면 보기에서도 화면 전체를 채운다(위아래 여백 없음). 블러만 풀린다.
             fitWholeImage = false,
             onStatus = { imageStatus = it },
+            onSource = { imageSource = it },
+            // A changing mesh invalidates the full-screen blur's cached content. Keep depth
+            // in the clear, bounded image introduction; reading uses the cached picture
+            // with the inexpensive camera/light layers. Also wait for blur to reach zero.
+            depthProfile = sceneAtmosphere.takeIf { sceneMotionEnabled && previewing && blur == 0.dp },
+            depthPhase = scenePhase,
         )
+        if (sceneMotionEnabled) SceneAtmosphere(requireNotNull(sceneAtmosphere), scenePhase, Modifier.fillMaxSize())
         if (previewing) {
             ScenePreview(title = decision.title, onDone = endPreview)
         } else if (sceneOnly) {
@@ -444,11 +465,13 @@ fun DecisionScreen(
                     if (outcome == null) {
                         // 제목 · 본문은 그림 선노출이 끝난 뒤에 나온다.
                         if (previewDone) {
+                            val revealMark = remember(introKey) { !markPlayed }
+                            LaunchedEffect(introKey) { markPlayed = true }
                             NarrativeReveal(
                                 decision = decision,
                                 typedText = decision.text.take(typedChars),
                                 ready = textComplete,
-                                animateMark = !reduceMotion,
+                                animateMark = revealMark && !reduceMotion,
                                 onReveal = { sceneOnly = true },
                                 onCompleteText = completeText.takeIf { typing },
                             )
@@ -740,6 +763,8 @@ private fun DecisionSheet(
 /** 능력치 영향(사회성 · 행복 같은 보조 태그)은 기본으로 접어 두고 필요할 때만 펼친다 (2026-11-06 요구 7). */
 @Composable
 private fun ColumnScope.ChoiceDetailsToggle(expanded: Boolean, onToggle: () -> Unit) {
+    val interactions = remember { MutableInteractionSource() }
+    val click = rememberExperienceClick(onToggle)
     Text(
         text = if (expanded) "능력치 영향 접기" else "능력치 영향 보기",
         color = LifeGamePaper.copy(alpha = 0.78f),
@@ -747,9 +772,11 @@ private fun ColumnScope.ChoiceDetailsToggle(expanded: Boolean, onToggle: () -> U
         fontWeight = FontWeight.Medium,
         modifier = Modifier
             .align(Alignment.End)
+            .experiencePress(interactions)
             .clip(RoundedCornerShape(8.dp))
-            .clickable(role = Role.Button, onClickLabel = if (expanded) "능력치 영향 접기" else "능력치 영향 펼치기", onClick = onToggle)
-            .heightIn(min = 40.dp)
+            .clickable(interactionSource = interactions, indication = androidx.compose.foundation.LocalIndication.current,
+                role = Role.Button, onClickLabel = if (expanded) "능력치 영향 접기" else "능력치 영향 펼치기", onClick = click)
+            .heightIn(min = 44.dp)
             .padding(horizontal = 8.dp, vertical = 10.dp)
             .testTag("choice_details_toggle"),
     )
@@ -774,6 +801,7 @@ private fun DecisionChoiceCard(
     val shape = RoundedCornerShape(12.dp)
     val interaction = remember { MutableInteractionSource() }
     val pressed by interaction.collectIsPressedAsState()
+    val click = rememberExperienceClick(onClick)
     val textAlpha = when {
         !choice.available -> 0.72f
         dimmed -> 0.55f
@@ -791,11 +819,7 @@ private fun DecisionChoiceCard(
         modifier = modifier
             .fillMaxWidth()
             .heightIn(min = 72.dp)
-            .graphicsLayer {
-                val scale = if (pressed && enabled) 0.985f else 1f
-                scaleX = scale
-                scaleY = scale
-            }
+            .experiencePress(interaction, enabled, pressedScale = 0.985f)
             .clip(shape)
             .background(if (pressed && enabled) ChoiceGlassPressed else ChoiceGlass)
             .border(
@@ -809,7 +833,7 @@ private fun DecisionChoiceCard(
                 enabled = enabled,
                 role = Role.Button,
                 onClickLabel = "이 선택지로 결정",
-                onClick = onClick,
+                onClick = click,
             )
             .semantics(mergeDescendants = true) {
                 contentDescription = fullDescription

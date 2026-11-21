@@ -1,0 +1,36 @@
+{
+  "eventId": "teen_024",
+  "sourceAssetPath": "followup_20261031/img_teen_wrong_answer_001.png",
+  "sourceSha256": "5d31de411e494ce85686f8f5bc2910c30cecd9a1206aee5ae6d01542d6919622",
+  "variant": {
+    "assetPath": "presentation/portraits/img_teen_wrong_answer_001_portrait_v1.png",
+    "sha256": "41aa35cf0f5730479772071601f7eb1d75c7157302cec7e777ef54893f444349",
+    "width": 941,
+    "height": 1672,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/teen_024.json"
+  },
+  "reviewerType": "AI",
+  "reviewer": "Codex AI (/root)",
+  "reviewStatus": "AI_REVIEWED_PRESENTATION",
+  "eventSourceHash": "beda4e5c4c3f75ffcd3fa3e9378681a1bf2b4d1a6b15644f27d558f6e9f438f9",
+  "semanticReview": "Producer read the current event conditions and every choice/outcome, inspected source and selected output. Full source snapshot and exact prompt are in the referenced production ledger. Native acceptance remains pending.",
+  "visualReview": "Teacher pointing to third line, board and student's notebook in a single vertical view.",
+  "cropReview": "Portrait candidate selected for native phone/small-phone scene and gameplay inspection; not final artwork acceptance.",
+  "actualProducer": "OpenAI built-in image_gen",
+  "generationMethod": "Built-in imagegen edit; exact prompts/output SHA/rejected attempts preserved in docs/refactor/art-candidates/resumed-production-20261119.json",
+  "productionLedger": "docs/refactor/art-candidates/resumed-production-20261119.json",
+  "nativePending": true,
+  "runtimeConnected": true,
+  "approvalChanged": false,
+  "selectedStagingSha256": "41aa35cf0f5730479772071601f7eb1d75c7157302cec7e777ef54893f444349",
+  "previousPresentation": {
+    "assetPath": "followup_20261031/img_teen_wrong_answer_001.png",
+    "sourceSha256": "5d31de411e494ce85686f8f5bc2910c30cecd9a1206aee5ae6d01542d6919622",
+    "focalX": 0.62,
+    "focalY": 0.5,
+    "note": "Original artwork retained; move the portrait viewport toward the teacher. This does not approve unresolved artwork review items."
+  }
+}

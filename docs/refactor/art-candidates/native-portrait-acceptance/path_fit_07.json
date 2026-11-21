@@ -1,0 +1,71 @@
+{
+  "eventId": "path_fit_07",
+  "reviewerType": "AI",
+  "scope": "Portrait phone and small-phone presentation",
+  "sourceEventHash": "c6a4bbe97925a131124c143fda3778bbf0d94e22e711fdf869beb0987f0727e7",
+  "sourceReview": "docs/refactor/art-candidates/portrait-integration/path_fit_07.json",
+  "sourceSha256": "41081f1d0f219d0826d02322321071a63655b63fa829135d67d721479ff8f9b3",
+  "displayedVariant": {
+    "assetPath": "presentation/portraits/img_path_fit_07_001_portrait_v1.png",
+    "sha256": "62e08131ff2582463cfe8b23a4f5783b93b207d9d9d8375c81774a7bf2fb11fe",
+    "width": 967,
+    "height": 1627,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/path_fit_07.json"
+  },
+  "nativeCaptures": [
+    {
+      "path": "build/refactor/resumed/final32/path_fit_07_phone_scene.png",
+      "sha256": "e7c5f10acea69198a03a8196a898b00eed760de8f3a50782e102e89c870cbee4",
+      "crop": {
+        "eventId": "path_fit_07",
+        "imageId": "img_path_fit_07_001",
+        "assetPath": "presentation/portraits/img_path_fit_07_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.121..0.879",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/final32/path_fit_07_phone_play.png",
+      "sha256": "218146bf1de3c366f0dda231274cedf6a5df65708b40b4f55cc448f4e85a70a8",
+      "crop": {
+        "eventId": "path_fit_07",
+        "imageId": "img_path_fit_07_001",
+        "assetPath": "presentation/portraits/img_path_fit_07_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.121..0.879",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/final32/path_fit_07_360x740_scene.png",
+      "sha256": "d4bd4219bbbe7952fe55855b5dda02c0318a18a4ca43ab3781f998722e627d5d",
+      "crop": {
+        "eventId": "path_fit_07",
+        "imageId": "img_path_fit_07_001",
+        "assetPath": "presentation/portraits/img_path_fit_07_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.091..0.909",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/final32/path_fit_07_360x740_play.png",
+      "sha256": "f52a6aa6e03bff936eb49e39c897d34f2d93946dcc0d31cf9c905a95a6bc855a",
+      "crop": {
+        "eventId": "path_fit_07",
+        "imageId": "img_path_fit_07_001",
+        "assetPath": "presentation/portraits/img_path_fit_07_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.091..0.909",
+        "match": "1.000"
+      }
+    }
+  ],
+  "observation": "Physician and knee images with two phone offers for commentary and coaching.",
+  "decision": "PASS",
+  "method": "Individual visual inspection of both scene and gameplay frames together with producer semantic/source review and device capture match."
+}

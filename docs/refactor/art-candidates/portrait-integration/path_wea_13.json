@@ -1,0 +1,29 @@
+{
+  "eventId": "path_wea_13",
+  "sourceAssetPath": "followup_20261031/img_path_wea_13_001.png",
+  "sourceSha256": "019fc04ee1d055c626f5cc18ecc6b4b43b8dbcf4495046aee1bca7cbba110be4",
+  "variant": {
+    "assetPath": "presentation/portraits/img_path_wea_13_001_portrait_v1.png",
+    "sha256": "28878ddd18f871cf461218f893cf151a3c9b47b8554e1b8ae07b10246b87a510",
+    "width": 941,
+    "height": 1672,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root/effects_tech)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/path_wea_13.json"
+  },
+  "reviewerType": "AI",
+  "reviewer": "Codex AI (/root/effects_tech)",
+  "reviewStatus": "AI_REVIEWED_PRESENTATION",
+  "eventSourceHash": "c426d5cdc0ebc9afc8395510077a61a7d8e417f02d0d158a0283ae7e71a9c1eb",
+  "semanticReview": "Producer read the current event conditions and every choice/outcome, inspected source and selected output. Full source snapshot and exact prompt are in the referenced production ledger. Native acceptance remains pending.",
+  "visualReview": "집주인 얼굴·계약서전체·은행폰전체가9:20중앙범위에함께남음. 원본 손2개·집주인제안·방을유지, 새대출승인/계약/이사결과없음. 손연속정상. native pending.",
+  "cropReview": "Portrait candidate selected for native phone/small-phone scene and gameplay inspection; not final artwork acceptance.",
+  "actualProducer": "OpenAI built-in image_gen",
+  "generationMethod": "Built-in imagegen edit; exact prompts/output SHA/rejected attempts preserved in docs/refactor/art-candidates/crop-variant-production-20261119.json",
+  "productionLedger": "docs/refactor/art-candidates/crop-variant-production-20261119.json",
+  "nativePending": true,
+  "runtimeConnected": true,
+  "approvalChanged": false,
+  "selectedStagingSha256": "28878ddd18f871cf461218f893cf151a3c9b47b8554e1b8ae07b10246b87a510"
+}

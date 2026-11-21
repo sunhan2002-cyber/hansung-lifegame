@@ -1,0 +1,29 @@
+{
+  "eventId": "adult_021",
+  "sourceAssetPath": "followup_20261031/img_adult_hangover_001.png",
+  "sourceSha256": "8eaa2261b98f615fa42e93968cb7ead24fda4cca415bb60fee96459046801ce3",
+  "variant": {
+    "assetPath": "presentation/portraits/img_adult_hangover_001_portrait_v1.png",
+    "sha256": "aca623262189702146a0e39992c28ad577a7f6d1b2982e2575acd988673611cd",
+    "width": 941,
+    "height": 1672,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/adult_021.json"
+  },
+  "reviewerType": "AI",
+  "reviewer": "Codex AI (/root)",
+  "reviewStatus": "AI_REVIEWED_PRESENTATION",
+  "eventSourceHash": "213e767900213733017a9e1c7d2dd56f0bec34e95d10db2b19b0dd870ba09290",
+  "semanticReview": "Producer read the current event conditions and every choice/outcome, inspected source and selected output. Full source snapshot and exact prompt are in the referenced production ledger. Native acceptance remains pending.",
+  "visualReview": "Alarm, morning bed and group video appear together.",
+  "cropReview": "Portrait candidate selected for native phone/small-phone scene and gameplay inspection; not final artwork acceptance.",
+  "actualProducer": "OpenAI built-in image_gen",
+  "generationMethod": "Built-in imagegen edit; exact prompts/output SHA/rejected attempts preserved in docs/refactor/art-candidates/resumed-production-20261119.json",
+  "productionLedger": "docs/refactor/art-candidates/resumed-production-20261119.json",
+  "nativePending": true,
+  "runtimeConnected": true,
+  "approvalChanged": false,
+  "selectedStagingSha256": "aca623262189702146a0e39992c28ad577a7f6d1b2982e2575acd988673611cd"
+}

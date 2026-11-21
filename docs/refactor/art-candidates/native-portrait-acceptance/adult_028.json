@@ -1,0 +1,71 @@
+{
+  "eventId": "adult_028",
+  "reviewerType": "AI",
+  "scope": "Portrait phone and small-phone presentation",
+  "sourceEventHash": "dde8995d1f06ec3e1ea92251ddbe4d6f6be36d0cac5ef676a0384a2c1ea69b5e",
+  "sourceReview": "docs/refactor/art-candidates/crop-variant-integration/adult_028.json",
+  "sourceSha256": "8193911908ce12934731cab5ebcfddd15c985aa57283c35ae9eb64cb04add8b0",
+  "displayedVariant": {
+    "assetPath": "presentation/portraits/img_adult_first_car_001_portrait_v1.png",
+    "sha256": "31029c4d981cfb36dfa6aa594bc89454d89d851591956bd0d6b6c767b14be98d",
+    "width": 941,
+    "height": 1672,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI",
+    "reviewEvidence": "docs/refactor/art-candidates/crop-variant-integration/adult_028.json"
+  },
+  "nativeCaptures": [
+    {
+      "path": "build/refactor/after/originals-twentyfour-and-variants-native/adult_028_phone_scene.png",
+      "sha256": "bf4b2f3f82641ed2093121cf12f93510c356f68f62f5e6069ac0c68055dca4b3",
+      "crop": {
+        "eventId": "adult_028",
+        "imageId": "img_adult_first_car_001",
+        "assetPath": "presentation/portraits/img_adult_first_car_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/originals-twentyfour-and-variants-native/adult_028_phone_play.png",
+      "sha256": "325b43f04a71122e118b88ea702346babc60e74fbce2e51d9098cae4c13a0f4c",
+      "crop": {
+        "eventId": "adult_028",
+        "imageId": "img_adult_first_car_001",
+        "assetPath": "presentation/portraits/img_adult_first_car_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/originals-twentyfour-and-variants-native/adult_028_360x740_scene.png",
+      "sha256": "a95cc78f4eb07769bf44854390bd54d8d53ffb7e0ee738577a7de4122c7f33ea",
+      "crop": {
+        "eventId": "adult_028",
+        "imageId": "img_adult_first_car_001",
+        "assetPath": "presentation/portraits/img_adult_first_car_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/originals-twentyfour-and-variants-native/adult_028_360x740_play.png",
+      "sha256": "6eb50a1d8960646f1120bb905eed63c3a4d9d487787afcee3c6f1307ae2b85c5",
+      "crop": {
+        "eventId": "adult_028",
+        "imageId": "img_adult_first_car_001",
+        "assetPath": "presentation/portraits/img_adult_first_car_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    }
+  ],
+  "observation": "차 옆의 판매원과 전시 차량이 모두 보이고 구매 전이다.",
+  "decision": "PASS",
+  "method": "Individual visual inspection of both scene and gameplay frames together with producer semantic/source review and device capture match."
+}

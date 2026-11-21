@@ -1,0 +1,71 @@
+{
+  "eventId": "path_int_01",
+  "reviewerType": "AI",
+  "scope": "Portrait phone and small-phone presentation",
+  "sourceEventHash": "e4d87e6fdcb25966f923bc360b7eea5abf7f89f419fcf27b0121bd16b1761fb2",
+  "sourceReview": "docs/refactor/art-candidates/portrait-integration/path_int_01.json",
+  "sourceSha256": "d85ddfccbe1b325985e25f7e715d3d14148e3eb3061f74a60b2d72ae5cb85a5b",
+  "displayedVariant": {
+    "assetPath": "presentation/portraits/img_path_int_01_001_portrait_v1.png",
+    "sha256": "685132847716a14c2c7b77dc3933e1b512cf78b179c8a95be08a63bdeabdcab9",
+    "width": 941,
+    "height": 1672,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root/effects_tech)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/path_int_01.json"
+  },
+  "nativeCaptures": [
+    {
+      "path": "build/refactor/after/portrait-fortythree-native/path_int_01_phone_scene.png",
+      "sha256": "620c85c168dadd099ffaf99384d177fc30c1e3f4f4522388f625de3eeac1ba3b",
+      "crop": {
+        "eventId": "path_int_01",
+        "imageId": "img_path_int_01_001",
+        "assetPath": "presentation/portraits/img_path_int_01_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/portrait-fortythree-native/path_int_01_phone_play.png",
+      "sha256": "f20a7ddabe34955b9fc56b18abc0bc14e8958ca8318c0dbe2c4009313c559020",
+      "crop": {
+        "eventId": "path_int_01",
+        "imageId": "img_path_int_01_001",
+        "assetPath": "presentation/portraits/img_path_int_01_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/portrait-fortythree-native/path_int_01_360x740_scene.png",
+      "sha256": "8796808262fc56a87f55462fbaa67af74a6fbdba0ed456f149e30cbc8e696930",
+      "crop": {
+        "eventId": "path_int_01",
+        "imageId": "img_path_int_01_001",
+        "assetPath": "presentation/portraits/img_path_int_01_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/portrait-fortythree-native/path_int_01_360x740_play.png",
+      "sha256": "54131298420050e635baf3042737731bdfaf31990a58e748c2aae955d96ce04d",
+      "crop": {
+        "eventId": "path_int_01",
+        "imageId": "img_path_int_01_001",
+        "assetPath": "presentation/portraits/img_path_int_01_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    }
+  ],
+  "observation": "선생님과 경시대회 안내, 양손 자료가 중앙에 남는다.",
+  "decision": "PASS",
+  "method": "Individual visual inspection of both scene and gameplay frames together with producer semantic/source review and device capture match."
+}

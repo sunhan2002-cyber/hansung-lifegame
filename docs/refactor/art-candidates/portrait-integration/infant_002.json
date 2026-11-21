@@ -1,0 +1,29 @@
+{
+  "eventId": "infant_002",
+  "sourceAssetPath": "followup_20261031/img_infant_first_tooth_001.png",
+  "sourceSha256": "3c37868794fbed03f80c01f77b3c31ba8885a4ed88c0215333164165823e5c95",
+  "variant": {
+    "assetPath": "presentation/portraits/img_infant_first_tooth_001_portrait_v1.png",
+    "sha256": "a8e86003c3a1fe10cab0d0d47e39f3db5ae575cf574e059ac086284f42494318",
+    "width": 941,
+    "height": 1672,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/infant_002.json"
+  },
+  "reviewerType": "AI",
+  "reviewer": "Codex AI (/root)",
+  "reviewStatus": "AI_REVIEWED_PRESENTATION",
+  "eventSourceHash": "4db47762b935140fc1746b9768862a97de3cf975b648e0f739b260872a842d4f",
+  "semanticReview": "Producer read the current event conditions and every choice/outcome, inspected source and selected output. Full source snapshot and exact prompt are in the referenced production ledger. Native acceptance remains pending.",
+  "visualReview": "Mother offers ring teether; infant's small open hands await a choice.",
+  "cropReview": "Portrait candidate selected for native phone/small-phone scene and gameplay inspection; not final artwork acceptance.",
+  "actualProducer": "OpenAI built-in image_gen",
+  "generationMethod": "Built-in imagegen edit; exact prompts/output SHA/rejected attempts preserved in docs/refactor/art-candidates/resumed-production-20261119.json",
+  "productionLedger": "docs/refactor/art-candidates/resumed-production-20261119.json",
+  "nativePending": true,
+  "runtimeConnected": true,
+  "approvalChanged": false,
+  "selectedStagingSha256": "a8e86003c3a1fe10cab0d0d47e39f3db5ae575cf574e059ac086284f42494318"
+}

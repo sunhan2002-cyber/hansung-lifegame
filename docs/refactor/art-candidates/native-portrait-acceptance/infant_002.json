@@ -1,0 +1,71 @@
+{
+  "eventId": "infant_002",
+  "reviewerType": "AI",
+  "scope": "Portrait phone and small-phone presentation",
+  "sourceEventHash": "4db47762b935140fc1746b9768862a97de3cf975b648e0f739b260872a842d4f",
+  "sourceReview": "docs/refactor/art-candidates/portrait-integration/infant_002.json",
+  "sourceSha256": "3c37868794fbed03f80c01f77b3c31ba8885a4ed88c0215333164165823e5c95",
+  "displayedVariant": {
+    "assetPath": "presentation/portraits/img_infant_first_tooth_001_portrait_v1.png",
+    "sha256": "a8e86003c3a1fe10cab0d0d47e39f3db5ae575cf574e059ac086284f42494318",
+    "width": 941,
+    "height": 1672,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/infant_002.json"
+  },
+  "nativeCaptures": [
+    {
+      "path": "build/refactor/resumed/final32/infant_002_phone_scene.png",
+      "sha256": "a72cfd292ad2f70f40ed1099f3f217649a213d68c8ce97170d9693fd0784e458",
+      "crop": {
+        "eventId": "infant_002",
+        "imageId": "img_infant_first_tooth_001",
+        "assetPath": "presentation/portraits/img_infant_first_tooth_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/final32/infant_002_phone_play.png",
+      "sha256": "4d154180f4abf410e2c5adf394708ee4e3372365ecf88903ae663e4cbbc6bfe3",
+      "crop": {
+        "eventId": "infant_002",
+        "imageId": "img_infant_first_tooth_001",
+        "assetPath": "presentation/portraits/img_infant_first_tooth_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/final32/infant_002_360x740_scene.png",
+      "sha256": "5454add4adb4ca2260ce32709dee6a07ddf973f4c837c0e669fb3688923f0763",
+      "crop": {
+        "eventId": "infant_002",
+        "imageId": "img_infant_first_tooth_001",
+        "assetPath": "presentation/portraits/img_infant_first_tooth_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/final32/infant_002_360x740_play.png",
+      "sha256": "7356e9a076b59efb4a0f9b38b5c8aba69417036de415b8feaf5d6f7ebd12e601",
+      "crop": {
+        "eventId": "infant_002",
+        "imageId": "img_infant_first_tooth_001",
+        "assetPath": "presentation/portraits/img_infant_first_tooth_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    }
+  ],
+  "observation": "Mother offers ring teether; infant's small open hands await a choice.",
+  "decision": "PASS",
+  "method": "Individual visual inspection of both scene and gameplay frames together with producer semantic/source review and device capture match."
+}

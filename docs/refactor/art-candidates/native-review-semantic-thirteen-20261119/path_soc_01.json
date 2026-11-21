@@ -1,0 +1,226 @@
+{
+  "schemaVersion": 1,
+  "eventId": "path_soc_01",
+  "status": "PASS",
+  "reviewer": "Codex AI / plan_audit",
+  "reviewerType": "AI",
+  "reviewDate": "2026-11-19",
+  "sourceEventHash": "654cd606bf7e16769f9587a286af651dbf323d8393cbe6c4341a289a378f4b1d",
+  "sourceEventSnapshot": {
+    "eventId": "path_soc_01",
+    "stage": "CHILD",
+    "type": "NORMAL",
+    "isFallback": false,
+    "isMilestone": false,
+    "title": "반장 선거 연설",
+    "text": "반장 선거 날. 후보는 셋. 내 차례가 왔는데 연설문을 집에 두고 왔다. 친구들이 나를 보고 있다.",
+    "imageId": "img_path_soc_01_001",
+    "conditions": {
+      "stats": {
+        "사회성": 64
+      },
+      "requiredFlags": [],
+      "blockedFlags": [
+        "v4:event:child_003"
+      ]
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "친구들 이름을 하나씩 부르며 즉석 연설을 한다",
+        "statDelta": {
+          "사회성": 3,
+          "행복": 1,
+          "지력": -1
+        },
+        "resultText": "서른 명 이름을 다 불렀다. 표도 서른 표가 나왔다. 반장 배지가 생각보다 반짝였다.",
+        "addFlags": [
+          "soc_path",
+          "class_leader",
+          "achv_class_president"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "a_win",
+            "text": "서른 명 이름을 다 불렀다. 표도 서른 표가 나왔다. 반장 배지가 생각보다 반짝였다.",
+            "chance": 60,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "사회성": 3,
+              "행복": 1,
+              "지력": -1
+            },
+            "addFlags": [
+              "soc_path",
+              "class_leader",
+              "achv_class_president"
+            ],
+            "chanceWeights": {
+              "사회성": 3
+            }
+          },
+          {
+            "outcomeId": "a_lose",
+            "text": "스물아홉 명 이름까지 불렀다. 한 명을 까먹었다. 그 한 명이 반장이 됐다.",
+            "chance": 40,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "사회성": 2,
+              "행복": -2
+            },
+            "addFlags": [
+              "soc_path"
+            ],
+            "chanceWeights": {
+              "운": -2
+            }
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week8_life_path"
+      },
+      {
+        "choiceId": "B",
+        "label": "다른 후보를 지지한다고 말하고 내려온다",
+        "statDelta": {
+          "사회성": 2,
+          "지력": -1
+        },
+        "resultText": "내가 지지한 친구가 반장이 됐다. 그 친구가 나를 부반장으로 지명했다.",
+        "addFlags": [
+          "soc_path",
+          "leader_experience"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "b_support",
+            "text": "내가 지지한 친구가 반장이 됐다. 그 친구가 나를 부반장으로 지명했다.",
+            "chance": 100,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "사회성": 2,
+              "지력": -1
+            },
+            "addFlags": [
+              "soc_path",
+              "leader_experience"
+            ]
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week8_life_path"
+      }
+    ],
+    "priority": 0,
+    "kind": "INCIDENT",
+    "periods": [
+      "CHILD"
+    ],
+    "weight": 20,
+    "view": "FIRST_PERSON",
+    "lifePath": "SOCIAL",
+    "pathRole": "입구",
+    "followUps": [
+      "path_soc_02"
+    ]
+  },
+  "sourceReadScope": "Current complete event, conditions, every choice/outcome and flags/stat deltas/periods/follow-ups directly read before judgement.",
+  "sourceImage": {
+    "path": "app/src/main/assets/images/followup_20261031/img_path_soc_01_001.png",
+    "sha256": "0adda98bcb377f9657b6663f69b9d1ab96d3bc34402c8473ce3f891273635e3b",
+    "width": 720,
+    "height": 540
+  },
+  "originalArtworkUnchangedSinceHistoricalReview": true,
+  "historicalReview": {
+    "eventId": "path_soc_01",
+    "title": "반장 선거 연설",
+    "imageId": "img_path_soc_01_001",
+    "assetPath": "followup_20261031/img_path_soc_01_001.png",
+    "sha256": "0adda98bcb377f9657b6663f69b9d1ab96d3bc34402c8473ce3f891273635e3b",
+    "eventSourceHash": "654cd606bf7e16769f9587a286af651dbf323d8393cbe6c4341a289a378f4b1d",
+    "status": "REVISION_REQUIRED",
+    "reviewer": "김선한 담당 Codex 직접 대행 검수",
+    "reason": "반장 선거 연설자의 1인칭 시점에 손은 맞지만 앞 칠판 대신 학생들만 있어 구성 보완 필요",
+    "expectedAction": "빈손으로 친구들을 마주한 차례",
+    "requiredObjects": "바라보는 학급 친구들; 비어 있는 손 또는 책상",
+    "sheet": "output/art-review-20261119/sheet-15.jpg",
+    "cell": 15,
+    "cropMethod": "ImageOps.fit centre-fill 360:800; simulated crop inspected directly, not an emulator capture",
+    "visualMethod": "원본 도트풍·색감·장면 파손·명백한 신체/사물 오류 직접 확인"
+  },
+  "presentationMetadata": [],
+  "captures": [
+    {
+      "path": "build/refactor/after/semantic-originals-thirteen-native/path_soc_01_phone_scene.png",
+      "sha256": "9ef96f01214dd0a4c08021e6d07201078ca24d79051f601c998507d2d5afca22",
+      "width": 1080,
+      "height": 2400,
+      "screen": "phone",
+      "mode": "scene",
+      "cropReport": {
+        "eventId": "path_soc_01",
+        "imageId": "img_path_soc_01_001",
+        "assetPath": "followup_20261031/img_path_soc_01_001.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.331..0.669",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/semantic-originals-thirteen-native/path_soc_01_phone_play.png",
+      "sha256": "7f3bb7e0eb4c8c237305b4538c005142116dc3ed93b0adf7e98cc23a7b850ead",
+      "width": 1080,
+      "height": 2400,
+      "screen": "phone",
+      "mode": "play",
+      "cropReport": null
+    },
+    {
+      "path": "build/refactor/after/semantic-originals-thirteen-native/path_soc_01_360x740_scene.png",
+      "sha256": "221de718923164be2d4dd2893ab108a34251e372db4cedbedbae86a0f9fc7c32",
+      "width": 945,
+      "height": 1943,
+      "screen": "360x740",
+      "mode": "scene",
+      "cropReport": {
+        "eventId": "path_soc_01",
+        "imageId": "img_path_soc_01_001",
+        "assetPath": "followup_20261031/img_path_soc_01_001.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.318..0.682",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/semantic-originals-thirteen-native/path_soc_01_360x740_play.png",
+      "sha256": "0325aa61cb801bfa778942e1f94ba68fe49be17edfc0889733113c9ecc5eae71",
+      "width": 945,
+      "height": 1943,
+      "screen": "360x740",
+      "mode": "play",
+      "cropReport": null
+    }
+  ],
+  "semanticObservation": "연설문 없는 빈 교탁 앞에서 반 친구들이 플레이어를 바라본다. 칠판은 연설하는 플레이어 뒤에 있어 보이지 않는 것이 1인칭 시점과 맞다. 당선 배지·낙선 발표·다른 후보 지지·부반장 결과가 없다.",
+  "cropObservation": "두 native에서 빈 교탁, 하단 양손 일부, 정면 친구와 양옆 친구들의 얼굴 일부가 함께 남아 청중을 바라보는 연설자의 시점이 유지된다. 중앙 친구 얼굴은 온전하고 종이가 없는 면적도 충분하다.",
+  "uiObservation": "두 화면에서 제목·본문·두 긴 선택지가 카드 안에서 읽힌다.",
+  "reviewMethod": "Codex AI directly inspected the full unchanged source PNG and all four unmodified native scene/play captures. Prior review is retained as historical evidence; this record is a new AI judgement, not human approval.",
+  "nativeMethod": "Production DecisionScreen, current parsed event/routing/PixelAssetLoader, fixture state in Android Compose instrumentation. Scene grid match >=0.95. Not complete game progression.",
+  "nativeRunLog": "build/refactor/semantic-originals-thirteen-and-choice-reachability.log",
+  "limitations": [
+    "Emulator captures, not physical-device review.",
+    "Only reviewed phone and 360x740 dimensions; not every font scale/aspect ratio.",
+    "Art review does not independently certify scrolling, TalkBack or complete game-flow transitions."
+  ]
+}

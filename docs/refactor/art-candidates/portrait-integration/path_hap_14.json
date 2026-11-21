@@ -1,0 +1,29 @@
+{
+  "eventId": "path_hap_14",
+  "sourceAssetPath": "followup_20261031/img_path_hap_14_001.png",
+  "sourceSha256": "babbeebeeae1b2b3aebebfbc0bc67ce90e9d52f9ef1d2d347d439afce5c0fa8e",
+  "variant": {
+    "assetPath": "presentation/portraits/img_path_hap_14_001_portrait_v1.png",
+    "sha256": "077dd86ac91f4b0d9cf5c3fc57bbae0f7097aa81bee5af446f2d3c167a7c73e3",
+    "width": 941,
+    "height": 1672,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root/security_p0)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/path_hap_14.json"
+  },
+  "reviewerType": "AI",
+  "reviewer": "Codex AI (/root/security_p0)",
+  "reviewStatus": "AI_REVIEWED_PRESENTATION",
+  "eventSourceHash": "388d32cca431fc39b208dec5ca1efaafb0a711815a8777c00ae9980dfa695714",
+  "semanticReview": "Producer read the current event conditions and every choice/outcome, inspected source and selected output. Full source snapshot and exact prompt are in the referenced production ledger. Native acceptance remains pending.",
+  "visualReview": "Second attempt individually viewed: one unused keyboard in modest lesson room, packed blank-header schedule and anonymous waiting list, idle hands. Extra instructors/expanded academy removed and first candidate retained as rejected. No performance or business-choice result. Native pending.",
+  "cropReview": "Portrait candidate selected for native phone/small-phone scene and gameplay inspection; not final artwork acceptance.",
+  "actualProducer": "OpenAI built-in image_gen",
+  "generationMethod": "Built-in imagegen edit; exact prompts/output SHA/rejected attempts preserved in docs/refactor/art-candidates/content-art-revision-briefs-20261119.json",
+  "productionLedger": "docs/refactor/art-candidates/content-art-revision-briefs-20261119.json",
+  "nativePending": true,
+  "runtimeConnected": true,
+  "approvalChanged": false,
+  "selectedStagingSha256": "077dd86ac91f4b0d9cf5c3fc57bbae0f7097aa81bee5af446f2d3c167a7c73e3"
+}

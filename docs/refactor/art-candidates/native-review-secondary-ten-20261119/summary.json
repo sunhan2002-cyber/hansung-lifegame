@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "Codex AI / plan_audit",
+  "reviewerType": "AI",
+  "approvedEventIds": [
+    "love_conflict_01",
+    "love_conflict_first_love",
+    "love_conflict_ideal",
+    "love_conflict_music",
+    "love_conflict_book",
+    "love_reunion_01",
+    "love_reunion_first_love",
+    "love_reunion_ideal",
+    "love_reunion_music",
+    "love_reunion_book"
+  ],
+  "approvedCount": 10,
+  "previousGroupCount": 231,
+  "newGroupCount": 241,
+  "prior231GroupObjectsUnchanged": true,
+  "allInputFieldsUnchanged": true,
+  "scope": "Ten current complete events, ten exact source PNGs and forty native scene/play captures individually reviewed. Earlier generation manifest retained as source-only history, including rejected clock first attempt. No physical-device or full-game certification."
+}

@@ -1,0 +1,29 @@
+{
+  "eventId": "path_hap_03",
+  "sourceAssetPath": "followup_20261031/img_path_hap_03_001.png",
+  "sourceSha256": "a7af4eb457ed03b3d5f7988e64bed8157cbc76bbb77f838b483ff93f079aca50",
+  "variant": {
+    "assetPath": "presentation/portraits/img_path_hap_03_001_portrait_v1.png",
+    "sha256": "0d15c668ad1181fff8884c4e9512b0e3f10f960b9eb505fdf95fdfd6302cfd87",
+    "width": 941,
+    "height": 1672,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root/effects_tech)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/path_hap_03.json"
+  },
+  "reviewerType": "AI",
+  "reviewer": "Codex AI (/root/effects_tech)",
+  "reviewStatus": "AI_REVIEWED_PRESENTATION",
+  "eventSourceHash": "6041ad8e5de0cc1011d054e719836c72e8d9e0a49fd3c61bfbfd9e1b46086d95",
+  "semanticReview": "Producer read the current event conditions and every choice/outcome, inspected source and selected output. Full source snapshot and exact prompt are in the referenced production ledger. Native acceptance remains pending.",
+  "visualReview": "두 회사 제안서·작업실 도면/열쇠·친구 메시지폰을 중앙 세로 그룹으로 축소 배치. 전체 핵심이9:20 안에 남고 이미 취업/작업실 개업한 결과는 없음. 원본 소품 상징·방·조명 유지, 두 팔 자연스럽게 연결됨. native pending.",
+  "cropReview": "Portrait candidate selected for native phone/small-phone scene and gameplay inspection; not final artwork acceptance.",
+  "actualProducer": "OpenAI built-in image_gen",
+  "generationMethod": "Built-in imagegen edit; exact prompts/output SHA/rejected attempts preserved in docs/refactor/art-candidates/crop-variant-production-20261119.json",
+  "productionLedger": "docs/refactor/art-candidates/crop-variant-production-20261119.json",
+  "nativePending": true,
+  "runtimeConnected": true,
+  "approvalChanged": false,
+  "selectedStagingSha256": "0d15c668ad1181fff8884c4e9512b0e3f10f960b9eb505fdf95fdfd6302cfd87"
+}

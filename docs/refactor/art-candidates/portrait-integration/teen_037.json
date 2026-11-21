@@ -1,0 +1,29 @@
+{
+  "eventId": "teen_037",
+  "sourceAssetPath": "followup_20261031/img_teen_d100_001.png",
+  "sourceSha256": "9b61d120e0f5197de7edb01743078d122f75a67e30bfe807da4428e2b13f57b5",
+  "variant": {
+    "assetPath": "presentation/portraits/img_teen_d100_001_portrait_v1.png",
+    "sha256": "689fb4b975e647a659077725e880447500b30ceafaf5dd287071ec7d753268e1",
+    "width": 941,
+    "height": 1672,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/teen_037.json"
+  },
+  "reviewerType": "AI",
+  "reviewer": "Codex AI (/root)",
+  "reviewStatus": "AI_REVIEWED_PRESENTATION",
+  "eventSourceHash": "7a943e7e0e20483d1a937d06a263c3574ea00b8b12bca3e5ba93e7e6cd3aa2cb",
+  "semanticReview": "Producer read the current event conditions and every choice/outcome, inspected source and selected output. Full source snapshot and exact prompt are in the referenced production ledger. Native acceptance remains pending.",
+  "visualReview": "Revised board clearly reads D-365, classroom still in session.",
+  "cropReview": "Portrait candidate selected for native phone/small-phone scene and gameplay inspection; not final artwork acceptance.",
+  "actualProducer": "OpenAI built-in image_gen",
+  "generationMethod": "Built-in imagegen edit; exact prompts/output SHA/rejected attempts preserved in docs/refactor/art-candidates/resumed-production-20261119.json",
+  "productionLedger": "docs/refactor/art-candidates/resumed-production-20261119.json",
+  "nativePending": true,
+  "runtimeConnected": true,
+  "approvalChanged": false,
+  "selectedStagingSha256": "689fb4b975e647a659077725e880447500b30ceafaf5dd287071ec7d753268e1"
+}

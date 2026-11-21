@@ -1,0 +1,29 @@
+{
+  "eventId": "cross_10",
+  "sourceAssetPath": "followup_20261031/img_cross_10_001.png",
+  "sourceSha256": "3855a9675dec30e42cc809a9c4a392a09d3b386d20a8526c3306c56fc4917a17",
+  "variant": {
+    "assetPath": "presentation/portraits/img_cross_10_001_portrait_v1.png",
+    "sha256": "7e77cbccf9d7ccb9186f1c628d34e4521b960e50c5dd2531d36dbcc3ab2ff306",
+    "width": 941,
+    "height": 1672,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root/security_p0)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/cross_10.json"
+  },
+  "reviewerType": "AI",
+  "reviewer": "Codex AI (/root/security_p0)",
+  "reviewStatus": "AI_REVIEWED_PRESENTATION",
+  "eventSourceHash": "6bc6e7c1823ef48114add004dab28ecbfed2ef50b3249610000094278d7d435b",
+  "semanticReview": "Producer read the current event conditions and every choice/outcome, inspected source and selected output. Full source snapshot and exact prompt are in the referenced production ledger. Native acceptance remains pending.",
+  "visualReview": "Individually viewed: player alone at empty home table, two separate anonymous phone invitation cards (pair/group icons), no visible player face, family gathering, food table, travel or reply. Original third-person family meal removed. Native pending.",
+  "cropReview": "Portrait candidate selected for native phone/small-phone scene and gameplay inspection; not final artwork acceptance.",
+  "actualProducer": "OpenAI built-in image_gen",
+  "generationMethod": "Built-in imagegen edit; exact prompts/output SHA/rejected attempts preserved in docs/refactor/art-candidates/content-art-revision-briefs-20261119.json",
+  "productionLedger": "docs/refactor/art-candidates/content-art-revision-briefs-20261119.json",
+  "nativePending": true,
+  "runtimeConnected": true,
+  "approvalChanged": false,
+  "selectedStagingSha256": "7e77cbccf9d7ccb9186f1c628d34e4521b960e50c5dd2531d36dbcc3ab2ff306"
+}

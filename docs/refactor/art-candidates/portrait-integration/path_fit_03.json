@@ -1,0 +1,29 @@
+{
+  "eventId": "path_fit_03",
+  "sourceAssetPath": "followup_20261031/img_path_fit_03_001.png",
+  "sourceSha256": "f5a03cf613ce4b10597e78e94c2e42d6b448463777bedab6af0478ddde79a7a6",
+  "variant": {
+    "assetPath": "presentation/portraits/img_path_fit_03_001_portrait_v1.png",
+    "sha256": "23075f0d5b40e0b047562796f74ca10ea34a26c137697aa296c0a1d671597e74",
+    "width": 941,
+    "height": 1672,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root/security_p0)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/path_fit_03.json"
+  },
+  "reviewerType": "AI",
+  "reviewer": "Codex AI (/root/security_p0)",
+  "reviewStatus": "AI_REVIEWED_PRESENTATION",
+  "eventSourceHash": "8f46de70b134c8ec814fa696657d2e5497ceca1f07c2ca677edd0f438f05f1df",
+  "semanticReview": "Producer read the current event conditions and every choice/outcome, inspected source and selected output. Full source snapshot and exact prompt are in the referenced production ledger. Native acceptance remains pending.",
+  "visualReview": "Individually viewed: ordinary classroom doorway, separate visiting sports coach and homeroom teacher holding a tabular report sheet; student hands only, no signature/training/admission result. Native must verify right-side sheet remains visible.",
+  "cropReview": "Portrait candidate selected for native phone/small-phone scene and gameplay inspection; not final artwork acceptance.",
+  "actualProducer": "OpenAI built-in image_gen",
+  "generationMethod": "Built-in imagegen edit; exact prompts/output SHA/rejected attempts preserved in docs/refactor/art-candidates/content-art-revision-briefs-20261119.json",
+  "productionLedger": "docs/refactor/art-candidates/content-art-revision-briefs-20261119.json",
+  "nativePending": true,
+  "runtimeConnected": true,
+  "approvalChanged": false,
+  "selectedStagingSha256": "23075f0d5b40e0b047562796f74ca10ea34a26c137697aa296c0a1d671597e74"
+}

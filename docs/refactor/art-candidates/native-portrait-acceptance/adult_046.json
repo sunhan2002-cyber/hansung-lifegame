@@ -1,0 +1,71 @@
+{
+  "eventId": "adult_046",
+  "reviewerType": "AI",
+  "scope": "Portrait phone and small-phone presentation",
+  "sourceEventHash": "73ae729a4d0c186ff0d6cbdf796a2969512128399944df844950f9c770d3e665",
+  "sourceReview": "docs/refactor/art-candidates/portrait-integration/adult_046.json",
+  "sourceSha256": "fecbf296e46fc2e97c20be96c5f8d25a6fb952d1b8566f81fe35cb88810d6a2b",
+  "displayedVariant": {
+    "assetPath": "presentation/portraits/img_adult_scam_call_001_portrait_v1.png",
+    "sha256": "fa46dbe6ea6e01fc3f786c087b48b9128ec52f45c50a7065c8ca7cb0edd59434",
+    "width": 967,
+    "height": 1626,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/adult_046.json"
+  },
+  "nativeCaptures": [
+    {
+      "path": "build/refactor/resumed/final32/adult_046_phone_scene.png",
+      "sha256": "a35d5ec658a304654aafb48139880d2d3e9051a2eca38ec3896722aace7b7461",
+      "crop": {
+        "eventId": "adult_046",
+        "imageId": "img_adult_scam_call_001",
+        "assetPath": "presentation/portraits/img_adult_scam_call_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.122..0.878",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/final32/adult_046_phone_play.png",
+      "sha256": "a439a42a1109d9bcbb5c7b383b34e3cd46a27a2c827c3b0c8c14c993af296831",
+      "crop": {
+        "eventId": "adult_046",
+        "imageId": "img_adult_scam_call_001",
+        "assetPath": "presentation/portraits/img_adult_scam_call_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.122..0.878",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/final32/adult_046_360x740_scene.png",
+      "sha256": "f351466a8782897bbb3bc089da253efd9c5513d4aa815bd76eba34a19e810891",
+      "crop": {
+        "eventId": "adult_046",
+        "imageId": "img_adult_scam_call_001",
+        "assetPath": "presentation/portraits/img_adult_scam_call_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.091..0.909",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/final32/adult_046_360x740_play.png",
+      "sha256": "3391c7296d8f1e61ee89f8696e69e35fb956c9fd0926f540ec709f8a4ea46264",
+      "crop": {
+        "eventId": "adult_046",
+        "imageId": "img_adult_scam_call_001",
+        "assetPath": "presentation/portraits/img_adult_scam_call_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.091..0.909",
+        "match": "1.000"
+      }
+    }
+  ],
+  "observation": "Caller on handset at home; no payment, reply or later outcome.",
+  "decision": "PASS",
+  "method": "Individual visual inspection of both scene and gameplay frames together with producer semantic/source review and device capture match."
+}

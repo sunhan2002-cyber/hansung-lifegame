@@ -1,0 +1,29 @@
+{
+  "eventId": "path_wea_06",
+  "sourceAssetPath": "followup_20261031/img_path_wea_06_001.png",
+  "sourceSha256": "92a99e88ce83fd04acd63b51de5577309c54a5be0936c0c7bde08b6694232eef",
+  "variant": {
+    "assetPath": "presentation/portraits/img_path_wea_06_001_portrait_v1.png",
+    "sha256": "ef3fb719c63047a4742262d5da419b50aa90b9a759e95c3bc13b9d0e88acdf35",
+    "width": 981,
+    "height": 1602,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root/effects_tech)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/path_wea_06.json"
+  },
+  "reviewerType": "AI",
+  "reviewer": "Codex AI (/root/effects_tech)",
+  "reviewStatus": "AI_REVIEWED_PRESENTATION",
+  "eventSourceHash": "f47d391bcbbf9377ca1f009e94879232621e660cedbe9e1363d86ec37627e511",
+  "semanticReview": "Producer read the current event conditions and every choice/outcome, inspected source and selected output. Full source snapshot and exact prompt are in the referenced production ledger. Native acceptance remains pending.",
+  "visualReview": "은행폰·오른손을 중앙으로 옮겨 주요 화면과 세 지출 상징을 보존. 왼손 외곽은9:20에서 일부 잘릴 수 있으나 명세서와 병원/돌반지/대출 청구서가 남음. 생성비율은요청9:16과달라 native에서 전체구도확인필요; 승인아님.",
+  "cropReview": "Portrait candidate selected for native phone/small-phone scene and gameplay inspection; not final artwork acceptance.",
+  "actualProducer": "OpenAI built-in image_gen",
+  "generationMethod": "Built-in imagegen edit; exact prompts/output SHA/rejected attempts preserved in docs/refactor/art-candidates/crop-variant-production-20261119.json",
+  "productionLedger": "docs/refactor/art-candidates/crop-variant-production-20261119.json",
+  "nativePending": true,
+  "runtimeConnected": true,
+  "approvalChanged": false,
+  "selectedStagingSha256": "ef3fb719c63047a4742262d5da419b50aa90b9a759e95c3bc13b9d0e88acdf35"
+}

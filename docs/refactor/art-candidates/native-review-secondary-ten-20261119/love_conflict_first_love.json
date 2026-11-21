@@ -1,0 +1,359 @@
+{
+  "schemaVersion": 1,
+  "eventId": "love_conflict_first_love",
+  "status": "PASS",
+  "reviewer": "Codex AI / plan_audit",
+  "reviewerType": "AI",
+  "reviewDate": "2026-11-19",
+  "approvalScope": "Current complete event and exact PNG; phone and 360x740 native Compose scene/play visual review",
+  "sourceEventHash": "6e42edd2377dcd37934fe80384cfb84963c7f959b9eb6eb19c3098f121c05e49",
+  "sourceEventSnapshot": {
+    "eventId": "love_conflict_first_love",
+    "stage": "ADULT",
+    "type": "NORMAL",
+    "isFallback": false,
+    "isMilestone": false,
+    "title": "오래 알아서 더 서운한 날",
+    "text": "학창 시절부터 알던 사람이라 더 서운하다. 연인: \"{nameCall}, 너는 아직도 그때처럼 내 마음을 다 안다고 생각하지?\"",
+    "imageId": "img_love_conflict_first_love_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [
+        "dating",
+        "rel_conflict",
+        "partner_first_love"
+      ],
+      "blockedFlags": [
+        "engaged",
+        "married",
+        "divorced"
+      ]
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "그때 사진을 꺼내 와 이야기를 다시 시작한다",
+        "statDelta": {
+          "사회성": 2,
+          "행복": 3
+        },
+        "resultText": "사진 속 우리는 단체 사진 끝에 나란히 서 있었다. '그때도 네가 먼저 말 걸었잖아.' 둘 다 웃음이 터졌다.",
+        "addFlags": [
+          "rel_steady"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "a_memory",
+            "text": "사진 속 우리는 단체 사진 끝에 나란히 서 있었다. '그때도 네가 먼저 말 걸었잖아.' 둘 다 웃음이 터졌다.",
+            "chance": 65,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "사회성": 2,
+              "행복": 3
+            },
+            "addFlags": [
+              "rel_steady"
+            ],
+            "removeFlags": [
+              "rel_conflict"
+            ]
+          },
+          {
+            "outcomeId": "a_past",
+            "text": "연인이 사진을 내려놨다. '나는 그때 말고 지금 이야기를 하고 싶어.' 그날 우리는 헤어졌다.",
+            "chance": 35,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": -4
+            },
+            "addFlags": [
+              "breakup_once",
+              "ex_first_love"
+            ],
+            "removeFlags": [
+              "dating",
+              "rel_steady",
+              "rel_conflict",
+              "partner_first_love",
+              "partner_ideal",
+              "partner_music",
+              "partner_book",
+              "partner_app",
+              "partner_closing",
+              "partner_gym",
+              "partner_letter",
+              "partner_blind_date",
+              "dating__adult_073",
+              "dating__adult_074",
+              "dating__adult_075",
+              "dating__adult_076",
+              "dating__adult_077",
+              "dating__adult_078",
+              "dating__path_soc_03",
+              "dating__path_soc_11",
+              "dating__path_hap_05",
+              "dating__love_letter_01"
+            ]
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week13_love_line"
+      },
+      {
+        "choiceId": "B",
+        "label": "지금의 서로를 다시 알아가자고 한다",
+        "statDelta": {
+          "지력": 1,
+          "행복": 2
+        },
+        "resultText": "첫 데이트를 다시 하기로 했다. 처음 가 보는 동네, 처음 먹어 보는 음식. 서로 몰랐던 게 꽤 많았다.",
+        "addFlags": [
+          "rel_steady"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "b_new",
+            "text": "첫 데이트를 다시 하기로 했다. 처음 가 보는 동네, 처음 먹어 보는 음식. 서로 몰랐던 게 꽤 많았다.",
+            "chance": 75,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "지력": 1,
+              "행복": 2
+            },
+            "addFlags": [
+              "rel_steady"
+            ],
+            "removeFlags": [
+              "rel_conflict"
+            ]
+          },
+          {
+            "outcomeId": "b_tired",
+            "text": "다시 알아가는 일에 둘 다 지쳤다. 서로 좋은 기억으로 남기자고 했다.",
+            "chance": 25,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": -3
+            },
+            "addFlags": [
+              "breakup_once",
+              "ex_first_love"
+            ],
+            "removeFlags": [
+              "dating",
+              "rel_steady",
+              "rel_conflict",
+              "partner_first_love",
+              "partner_ideal",
+              "partner_music",
+              "partner_book",
+              "partner_app",
+              "partner_closing",
+              "partner_gym",
+              "partner_letter",
+              "partner_blind_date",
+              "dating__adult_073",
+              "dating__adult_074",
+              "dating__adult_075",
+              "dating__adult_076",
+              "dating__adult_077",
+              "dating__adult_078",
+              "dating__path_soc_03",
+              "dating__path_soc_11",
+              "dating__path_hap_05",
+              "dating__love_letter_01"
+            ]
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week13_love_line"
+      },
+      {
+        "choiceId": "C",
+        "label": "학창 시절 별명으로 부르며 애교를 부린다",
+        "statDelta": {
+          "행복": 2
+        },
+        "resultText": "연인이 '그 별명 아직도 기억해?' 하며 등을 때렸다. 화가 풀린 건지 맞은 건지 모르겠다.",
+        "addFlags": [
+          "rel_steady"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "c_laugh",
+            "text": "연인이 '그 별명 아직도 기억해?' 하며 등을 때렸다. 화가 풀린 건지 맞은 건지 모르겠다.",
+            "chance": 50,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 2
+            },
+            "addFlags": [
+              "rel_steady"
+            ],
+            "removeFlags": [
+              "rel_conflict"
+            ]
+          },
+          {
+            "outcomeId": "c_cringe",
+            "text": "분위기가 더 싸해졌다. 그 별명은 연인이 제일 싫어하던 별명이었다.",
+            "chance": 50,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": -3
+            },
+            "addFlags": [
+              "breakup_once",
+              "ex_first_love"
+            ],
+            "removeFlags": [
+              "dating",
+              "rel_steady",
+              "rel_conflict",
+              "partner_first_love",
+              "partner_ideal",
+              "partner_music",
+              "partner_book",
+              "partner_app",
+              "partner_closing",
+              "partner_gym",
+              "partner_letter",
+              "partner_blind_date",
+              "dating__adult_073",
+              "dating__adult_074",
+              "dating__adult_075",
+              "dating__adult_076",
+              "dating__adult_077",
+              "dating__adult_078",
+              "dating__path_soc_03",
+              "dating__path_soc_11",
+              "dating__path_hap_05",
+              "dating__love_letter_01"
+            ]
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week13_love_line"
+      }
+    ],
+    "priority": 0,
+    "kind": "INCIDENT",
+    "periods": [
+      "YOUNG_ADULT",
+      "MIDDLE"
+    ],
+    "weight": 80,
+    "view": "FIRST_PERSON",
+    "pathRole": "러브라인 3단계(첫사랑 후보) — 갈등: 화해 또는 결별",
+    "followUps": [
+      "love_reunion_first_love"
+    ]
+  },
+  "sourceReadScope": "Title, full text, conditions, every choice and outcome including flags/stat deltas, periods and follow-ups directly read.",
+  "sourceImage": {
+    "path": "app/src/main/assets/images/img_love_conflict_first_love_001.png",
+    "sha256": "63a300b1283e3398f4b61f8cb07ceb6d824b0693094519ce67f454fe1cdd4e35",
+    "width": 941,
+    "height": 1672
+  },
+  "generationManifest": "docs/refactor/art-candidates/generated-love-secondary-20261119.json",
+  "selectedGenerationOutput": "C:\\Users\\jk030\\.codex\\generated_images\\01a1f1e9-d1e7-7610-888a-7aff56bbb301\\exec-28313d27-e597-4e85-ba5c-b889234709a2.png",
+  "exactGenerationPromptSha256": "43ff0f8efa0dd17a1db8501a36b2d7eda1a15463abe738e716e05519a86a5bbe",
+  "sourceGenerationReview": {
+    "reviewer": "Codex AI (/root/plan_audit)",
+    "reviewerType": "AI",
+    "method": "Direct visual inspection of the complete built-in generated image displayed by the tool; source-only, not an emulator capture.",
+    "status": "SELECTED_SOURCE_NATIVE_PENDING",
+    "observations": [
+      "Adult partner upper torso and tense clasped hands across a cafe table; two drinks and the player own hand are visible.",
+      "No school photo, album, school uniform, shared laughter, renewed date or breakup outcome.",
+      "The cropped partner face does not identify the player; hands remain separate with a plausible table perspective."
+    ],
+    "concerns": [
+      "Native crop and UI-overlay inspection remains required."
+    ]
+  },
+  "presentationMetadata": [],
+  "captures": [
+    {
+      "path": "build/refactor/after/secondary-art-focals-native/love_conflict_first_love_phone_scene.png",
+      "sha256": "87eb9b25b54e9b37d990575f59abcec3d9e922ee03b7b926ce23997f04ffc86c",
+      "width": 1080,
+      "height": 2400,
+      "screen": "phone",
+      "mode": "scene",
+      "cropReport": {
+        "eventId": "love_conflict_first_love",
+        "imageId": "img_love_conflict_first_love_001",
+        "assetPath": "img_love_conflict_first_love_001.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/secondary-art-focals-native/love_conflict_first_love_phone_play.png",
+      "sha256": "c75ef728c2a7583cb57ce4c56935fd6cb5441fcb9c1eee57bf81a86b00b90cef",
+      "width": 1080,
+      "height": 2400,
+      "screen": "phone",
+      "mode": "play",
+      "cropReport": null
+    },
+    {
+      "path": "build/refactor/after/secondary-art-focals-native/love_conflict_first_love_360x740_scene.png",
+      "sha256": "e5a108b792c38037c2a377f0818b996598e7bd90183e99277c0d3c50d4eba626",
+      "width": 945,
+      "height": 1943,
+      "screen": "360x740",
+      "mode": "scene",
+      "cropReport": {
+        "eventId": "love_conflict_first_love",
+        "imageId": "img_love_conflict_first_love_001",
+        "assetPath": "img_love_conflict_first_love_001.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/secondary-art-focals-native/love_conflict_first_love_360x740_play.png",
+      "sha256": "8ab00cdb0684b14e56046a673d51847571b55d026ded301bec0b04633830e20b",
+      "width": 945,
+      "height": 1943,
+      "screen": "360x740",
+      "mode": "play",
+      "cropReport": null
+    }
+  ],
+  "semanticObservation": "6개 결과를 읽었다. 성인 상대의 긴장한 모은 손과 카페 음료 두 잔이 현재 대화를 나타낸다. A 선택 후에만 등장하는 학교 사진을 미리 그리지 않았고 미성년자·학교복·화해/결별 결과가 없다.",
+  "cropObservation": "두 화면에 분리된 손과 음료 두 잔이 유지된다. 상대 일부 상반신은 플레이어 얼굴을 특정하지 않는다.",
+  "uiObservation": "phone 세 선택지가 읽힌다. small C 문구는 읽히지만 카드 하단이 footer에 걸린다. 이 정지 캡처로 스크롤 도달성을 인증하지 않는다.",
+  "reviewMethod": "The same Codex AI agent generated and directly inspected the full selected source during production, verified exact current runtime SHA equality, then directly inspected all four unmodified native captures. This is not an independent human approval.",
+  "nativeMethod": "SceneCropReviewTest renders production DecisionScreen with current parsed event and actual routing/PixelAssetLoader in Compose instrumentation. Scene captures match designated crop >=0.95; fixture play state does not constitute a complete game progression.",
+  "testSource": "app/src/androidTest/java/com/example/lifegame/ui/SceneCropReviewTest.kt",
+  "nativeRunLog": "build/refactor/secondary-art-focals-completion.log",
+  "limitations": [
+    "Android emulator/Compose capture, not physical-device testing.",
+    "Only reviewed phone and 360x740 dimensions; not all font scales/aspect ratios.",
+    "Art approval does not independently certify choice scrolling, TalkBack or complete game state transitions."
+  ]
+}

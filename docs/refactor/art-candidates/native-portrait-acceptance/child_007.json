@@ -1,0 +1,71 @@
+{
+  "eventId": "child_007",
+  "reviewerType": "AI",
+  "scope": "Portrait phone and small-phone presentation",
+  "sourceEventHash": "f38339109baabe246b71443f6f5cf291c13fc81815623c06343c82aecaa62caa",
+  "sourceReview": "docs/refactor/art-candidates/portrait-integration/child_007.json",
+  "sourceSha256": "fe886a469ead746ba8c8dfd600a59f54b835abcb1db775b112c8215f432d4411",
+  "displayedVariant": {
+    "assetPath": "presentation/portraits/img_child_dream_001_portrait_v1.png",
+    "sha256": "a3f61a46e23f0b4210abf51c424bb911dcabfdd71d3569978d2d5020a62b66a9",
+    "width": 941,
+    "height": 1672,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root/security_p0)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/child_007.json"
+  },
+  "nativeCaptures": [
+    {
+      "path": "build/refactor/after/portrait-fortythree-native/child_007_phone_scene.png",
+      "sha256": "5df4e7eeaf995650ba93eb4d7205cfe9ce91673648c274023f6c2437fc082c91",
+      "crop": {
+        "eventId": "child_007",
+        "imageId": "img_child_dream_001",
+        "assetPath": "presentation/portraits/img_child_dream_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/portrait-fortythree-native/child_007_phone_play.png",
+      "sha256": "f610a54c18b383f26a088085391ec8e2755694f021464a1fe03c76a078e333a9",
+      "crop": {
+        "eventId": "child_007",
+        "imageId": "img_child_dream_001",
+        "assetPath": "presentation/portraits/img_child_dream_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/portrait-fortythree-native/child_007_360x740_scene.png",
+      "sha256": "b33ef9080f567039e90949a0a6962438ccd0c9fb1e2d59d49da00aa7aaee60d8",
+      "crop": {
+        "eventId": "child_007",
+        "imageId": "img_child_dream_001",
+        "assetPath": "presentation/portraits/img_child_dream_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/portrait-fortythree-native/child_007_360x740_play.png",
+      "sha256": "b83cbc73b5d227dd0f437b0f22770128d142d0e063de74c276d6302eaed46b92",
+      "crop": {
+        "eventId": "child_007",
+        "imageId": "img_child_dream_001",
+        "assetPath": "presentation/portraits/img_child_dream_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    }
+  ],
+  "observation": "빈 발표 카드와 기다리는 반 친구들이 아이 눈높이에 남는다.",
+  "decision": "PASS",
+  "method": "Individual visual inspection of both scene and gameplay frames together with producer semantic/source review and device capture match."
+}

@@ -1,0 +1,71 @@
+{
+  "eventId": "special_006",
+  "reviewerType": "AI",
+  "scope": "Portrait phone and small-phone presentation",
+  "sourceEventHash": "d1e1a63457a5f08d7aeaf7ba25ec027f3d1affbca450aed00b87a632b1e7a7f4",
+  "sourceReview": "docs/refactor/art-candidates/portrait-integration/special_006.json",
+  "sourceSha256": "bb7316511c7e2194b6f4b2d5a4094d375c7c6c76360cf4ea8e077cc3aca67152",
+  "displayedVariant": {
+    "assetPath": "presentation/portraits/img_special_dream_answer_001_portrait_v1.png",
+    "sha256": "fff7f7e0783842bac9fa9a7c835bedf601c5ff9213326a31724950f1a23ea3c3",
+    "width": 941,
+    "height": 1672,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/special_006.json"
+  },
+  "nativeCaptures": [
+    {
+      "path": "build/refactor/resumed/final32/special_006_phone_scene.png",
+      "sha256": "0f5093624635ee3595ee377d0fe0783fe49d34ce8597810b152d82e86ce3b501",
+      "crop": {
+        "eventId": "special_006",
+        "imageId": "img_special_dream_answer_001",
+        "assetPath": "presentation/portraits/img_special_dream_answer_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/final32/special_006_phone_play.png",
+      "sha256": "6c935e98e426c21b4c6964b2562c4853107268139ff6bc6a49f2a33ffd590a96",
+      "crop": {
+        "eventId": "special_006",
+        "imageId": "img_special_dream_answer_001",
+        "assetPath": "presentation/portraits/img_special_dream_answer_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/final32/special_006_360x740_scene.png",
+      "sha256": "4076b28bc3bfbcc2c04557662275d8fbfb72ca457ca46ce180b79e037bf34c0e",
+      "crop": {
+        "eventId": "special_006",
+        "imageId": "img_special_dream_answer_001",
+        "assetPath": "presentation/portraits/img_special_dream_answer_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/final32/special_006_360x740_play.png",
+      "sha256": "805e0492269a738e47c76e68844cd73dead29311e8c221f12b5682ccac2498f9",
+      "crop": {
+        "eventId": "special_006",
+        "imageId": "img_special_dream_answer_001",
+        "assetPath": "presentation/portraits/img_special_dream_answer_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    }
+  ],
+  "observation": "Exam questions, visible blood-marked tissues and tissue box.",
+  "decision": "PASS",
+  "method": "Individual visual inspection of both scene and gameplay frames together with producer semantic/source review and device capture match."
+}

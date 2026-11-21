@@ -1,5 +1,7 @@
 package com.example.lifegame.ui
 
+import com.example.lifegame.ui.avatar.koreanName
+
 import com.example.lifegame.domain.model.DecisionEvent
 import com.example.lifegame.domain.model.DecisionOption
 import com.example.lifegame.domain.model.LifePeriod
@@ -394,7 +396,7 @@ private const val SUDDEN_HEALTH_DEATH_TEXT = "건강이 급격히 나빠져"
 fun buildDeathInfo(state: PeriodRunState, periods: List<PeriodDefinition>): DeathInfoUi? {
     if (!state.isDead) return null
     val period = state.lifeFacts.deathPeriod ?: state.endingPeriod ?: state.moments.lastOrNull()?.period ?: state.period
-    val periodName = periods.firstOrNull { it.period == period }?.displayName ?: period.name
+    val periodName = periods.firstOrNull { it.period == period }?.displayName ?: period.koreanName()
     val last = state.moments.lastOrNull { it.period == period } ?: state.moments.lastOrNull()
     val text = last?.text
     val cause = when {
@@ -432,7 +434,7 @@ fun buildEndingSummary(
     val path = lifePathOf(endingId, state.flags, state.stats)
     val top = state.stats.topStat()
     val endPeriod = state.endingPeriod ?: state.moments.lastOrNull()?.period ?: state.period
-    val endedAt = periods.firstOrNull { it.period == endPeriod }?.displayName ?: endPeriod.name
+    val endedAt = periods.firstOrNull { it.period == endPeriod }?.displayName ?: endPeriod.koreanName()
     val headline = when {
         death != null && death.early -> "${death.periodName} ${death.yearInPeriod}번째 해에 생을 마쳤다"
         endingTitle != null -> endingTitle

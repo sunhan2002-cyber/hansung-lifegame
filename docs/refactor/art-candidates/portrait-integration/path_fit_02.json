@@ -1,0 +1,29 @@
+{
+  "eventId": "path_fit_02",
+  "sourceAssetPath": "followup_20261031/img_path_fit_02_001.png",
+  "sourceSha256": "e68304b1bb65a782b1bb1c87221de91ea438a8adeee593ce273e4ec45f653af3",
+  "variant": {
+    "assetPath": "presentation/portraits/img_path_fit_02_001_portrait_v1.png",
+    "sha256": "9d8c73004c4fecceb6d2a9d7d73ae8d615ae76ce4212b281ac59923e03053c47",
+    "width": 941,
+    "height": 1672,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root/security_p0)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/path_fit_02.json"
+  },
+  "reviewerType": "AI",
+  "reviewer": "Codex AI (/root/security_p0)",
+  "reviewStatus": "AI_REVIEWED_PRESENTATION",
+  "eventSourceHash": "8e40455931f50d2bf5b965269a551b9bfa59f6049a95f872e609f1e0ddcf654a",
+  "semanticReview": "Producer read the current event conditions and every choice/outcome, inspected source and selected output. Full source snapshot and exact prompt are in the referenced production ledger. Native acceptance remains pending.",
+  "visualReview": "Individually viewed: pre-start track, larger adjacent competitor, player shoe with two loose untied lace ends centrally visible, no running or finish/result. Correct racing original from swapped path_fit_07 asset used as edit reference, not medical scene. Player is paused low at starting block; native reviewer should verify competitor and shoe survive.",
+  "cropReview": "Portrait candidate selected for native phone/small-phone scene and gameplay inspection; not final artwork acceptance.",
+  "actualProducer": "OpenAI built-in image_gen",
+  "generationMethod": "Built-in imagegen edit; exact prompts/output SHA/rejected attempts preserved in docs/refactor/art-candidates/content-art-revision-briefs-20261119.json",
+  "productionLedger": "docs/refactor/art-candidates/content-art-revision-briefs-20261119.json",
+  "nativePending": true,
+  "runtimeConnected": true,
+  "approvalChanged": false,
+  "selectedStagingSha256": "9d8c73004c4fecceb6d2a9d7d73ae8d615ae76ce4212b281ac59923e03053c47"
+}

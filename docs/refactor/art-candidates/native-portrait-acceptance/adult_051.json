@@ -1,0 +1,71 @@
+{
+  "eventId": "adult_051",
+  "reviewerType": "AI",
+  "scope": "Portrait phone and small-phone presentation",
+  "sourceEventHash": "0a03258a6f868a88d2fa98705e2fc607fdcb3f15e3c73d5c24108d3ce41b1f61",
+  "sourceReview": "docs/refactor/art-candidates/portrait-integration/adult_051.json",
+  "sourceSha256": "69ef22116c7b7a8744105a44aed982e863baa0b705cba31cfe084f3997e51860",
+  "displayedVariant": {
+    "assetPath": "presentation/portraits/img_adult_father_70th_001_portrait_v1.png",
+    "sha256": "48d0e105dfe838ee3e8a3f3e1cbaec095cadbc160d2c36425c38adb6e0686875",
+    "width": 941,
+    "height": 1672,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root/security_p0)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/adult_051.json"
+  },
+  "nativeCaptures": [
+    {
+      "path": "build/refactor/after/portrait-fortythree-native/adult_051_phone_scene.png",
+      "sha256": "31a6c49074eb753febf034f2a090d80146e22f79f65f44d1e5d7c8f7c2410736",
+      "crop": {
+        "eventId": "adult_051",
+        "imageId": "img_adult_father_70th_001",
+        "assetPath": "presentation/portraits/img_adult_father_70th_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/portrait-fortythree-native/adult_051_phone_play.png",
+      "sha256": "5d3f4cff1c81e8226e30b925856fffc3879817e64cc60444b9802ed00cadfc32",
+      "crop": {
+        "eventId": "adult_051",
+        "imageId": "img_adult_father_70th_001",
+        "assetPath": "presentation/portraits/img_adult_father_70th_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/portrait-fortythree-native/adult_051_360x740_scene.png",
+      "sha256": "242acb4c55559b625decebb9742df3925d3fbaa2922e141f15b38d855d84f207",
+      "crop": {
+        "eventId": "adult_051",
+        "imageId": "img_adult_father_70th_001",
+        "assetPath": "presentation/portraits/img_adult_father_70th_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/portrait-fortythree-native/adult_051_360x740_play.png",
+      "sha256": "147417c2635d93348c1ad08998266395c7d796453437fee08c35149bc08768ec",
+      "crop": {
+        "eventId": "adult_051",
+        "imageId": "img_adult_father_70th_001",
+        "assetPath": "presentation/portraits/img_adult_father_70th_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    }
+  ],
+  "observation": "휴대폰 가족 채팅과 일정 기호가 중앙에 있다.",
+  "decision": "PASS",
+  "method": "Individual visual inspection of both scene and gameplay frames together with producer semantic/source review and device capture match."
+}

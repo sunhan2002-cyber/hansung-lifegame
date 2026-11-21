@@ -3,18 +3,22 @@ package com.example.lifegame.ui.components
 import androidx.compose.animation.core.Animatable
 import androidx.compose.animation.core.tween
 import androidx.compose.foundation.Canvas
-import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.ui.graphics.FilterQuality
 import androidx.compose.ui.graphics.asImageBitmap
-import androidx.compose.ui.graphics.painter.BitmapPainter
-import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalDensity
 import com.example.lifegame.ui.images.ImageCandidate
 import com.example.lifegame.ui.images.rememberPixelAsset
+import com.example.lifegame.ui.images.coverPlacement
+import androidx.compose.ui.draw.clipToBounds
+import androidx.compose.ui.unit.IntOffset
+import androidx.compose.ui.unit.IntSize
+import kotlin.math.roundToInt
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.LocalIndication
+import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -161,6 +165,8 @@ fun PlayTopBar(
     onDark: Boolean = true,
     avatar: @Composable (Modifier) -> Unit,
 ) {
+    val interactions = remember { MutableInteractionSource() }
+    val click = rememberExperienceClick(onOpenDetails)
     Row(
         modifier
             .fillMaxWidth()
@@ -172,8 +178,9 @@ fun PlayTopBar(
         Box(
             Modifier
                 .size(width = 60.dp, height = 68.dp)
+                .experiencePress(interactions)
                 .clip(RoundedCornerShape(10.dp))
-                .clickable(role = Role.Button, onClick = onOpenDetails)
+                .clickable(interactionSource = interactions, indication = LocalIndication.current, role = Role.Button, onClick = click)
                 .semantics(mergeDescendants = true) { contentDescription = "플레이어 현재 모습, 능력치와 이번 시기 초점 보기" }
                 .testTag("player_avatar_button"),
             contentAlignment = Alignment.BottomCenter,
@@ -324,8 +331,17 @@ fun DecisionKindMark(
             },
         )
         // 짧은 밑줄이 양옆으로 펼쳐진다. 정지 상태에서도 같은 길이로 남는다.
-        Canvas(Modifier.size(width = 64.dp, height = 3.dp).padding(top = 1.dp)) {
+        Canvas(Modifier.size(width = 64.dp, height = if (isIncident) 3.dp else 9.dp).padding(top = 1.dp)) {
             val half = size.width / 2f * progress.value
+            if (!isIncident) {
+                // A fork opens from one point as the important choice appears.
+                val centre = Offset(size.width / 2f, size.height * .8f)
+                for (direction in listOf(-1f, 1f)) {
+                    drawLine(color, centre, Offset(centre.x + direction * half, centre.y - size.height * .6f * progress.value), 1.dp.toPx())
+                }
+                drawCircle(color, 1.5.dp.toPx(), centre)
+                return@Canvas
+            }
             drawLine(
                 color = color.copy(alpha = 0.85f),
                 start = Offset(size.width / 2f - half, size.height / 2f),
@@ -343,17 +359,17 @@ fun DecisionKindMark(
 @Composable
 fun SceneBackdrop(candidates: List<ImageCandidate>, modifier: Modifier = Modifier) {
     val density = LocalDensity.current
-    BoxWithConstraints(modifier.background(StageEmpty).testTag("scene_backdrop")) {
+    BoxWithConstraints(modifier.clipToBounds().background(StageEmpty).testTag("scene_backdrop")) {
         val width = with(density) { maxWidth.roundToPx() }.coerceAtLeast(1)
         val height = with(density) { maxHeight.roundToPx() }.coerceAtLeast(1)
         val loaded = if (candidates.isEmpty()) null else rememberPixelAsset(candidates, width, height)
         if (loaded != null) {
-            Image(
-                painter = BitmapPainter(loaded.bitmap.asImageBitmap(), filterQuality = FilterQuality.None),
-                contentDescription = null,
-                modifier = Modifier.fillMaxSize(),
-                contentScale = ContentScale.Crop,
-            )
+            val image = remember(loaded.bitmap) { loaded.bitmap.asImageBitmap() }
+            Canvas(Modifier.fillMaxSize()) {
+                val crop = coverPlacement(image.width, image.height, size.width.roundToInt().coerceAtLeast(1), size.height.roundToInt().coerceAtLeast(1), loaded.focal)
+                drawImage(image, dstOffset = IntOffset(crop.left.roundToInt(), crop.top.roundToInt()),
+                    dstSize = IntSize(crop.width.roundToInt(), crop.height.roundToInt()), filterQuality = FilterQuality.None)
+            }
         } else {
             Canvas(Modifier.fillMaxSize()) {
                 val floor = size.height * 0.86f
@@ -374,12 +390,15 @@ fun SceneViewButton(
     enabled: Boolean = true,
 ) {
     val shape = RoundedCornerShape(22.dp)
+    val interactions = remember { MutableInteractionSource() }
+    val click = rememberExperienceClick(onClick)
     Box(
         modifier
             .heightIn(min = 44.dp)
+            .experiencePress(interactions, enabled)
             .clip(shape)
             .background(Color.Black.copy(alpha = if (enabled) 0.34f else 0.18f))
-            .clickable(enabled = enabled, role = Role.Button, onClick = onClick)
+            .clickable(interactionSource = interactions, indication = LocalIndication.current, enabled = enabled, role = Role.Button, onClick = click)
             .padding(horizontal = 22.dp, vertical = 11.dp)
             .testTag("scene_view_button"),
         contentAlignment = Alignment.Center,

@@ -1,0 +1,29 @@
+{
+  "eventId": "path_hap_02",
+  "sourceAssetPath": "followup_20261031/img_path_hap_02_001.png",
+  "sourceSha256": "7f09bd34135c43afb3454ec164dd2f85b42a7f06a5393b24e195f9a2c5bd7d14",
+  "variant": {
+    "assetPath": "presentation/portraits/img_path_hap_02_001_portrait_v1.png",
+    "sha256": "4df6fc2eeaed6a477c66ae4979088b9df786e9bc6051f36de74ac465b9e098a4",
+    "width": 941,
+    "height": 1672,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/path_hap_02.json"
+  },
+  "reviewerType": "AI",
+  "reviewer": "Codex AI (/root)",
+  "reviewStatus": "AI_REVIEWED_PRESENTATION",
+  "eventSourceHash": "fe45d9801ff894721ef3fe786462f4aed23dad2f08ea0d34b9d650f7c90cb858",
+  "semanticReview": "Producer read the current event conditions and every choice/outcome, inspected source and selected output. Full source snapshot and exact prompt are in the referenced production ledger. Native acceptance remains pending.",
+  "visualReview": "Counsellor offers business program; player's notebook has music and sketch.",
+  "cropReview": "Portrait candidate selected for native phone/small-phone scene and gameplay inspection; not final artwork acceptance.",
+  "actualProducer": "OpenAI built-in image_gen",
+  "generationMethod": "Built-in imagegen edit; exact prompts/output SHA/rejected attempts preserved in docs/refactor/art-candidates/resumed-production-20261119.json",
+  "productionLedger": "docs/refactor/art-candidates/resumed-production-20261119.json",
+  "nativePending": true,
+  "runtimeConnected": true,
+  "approvalChanged": false,
+  "selectedStagingSha256": "4df6fc2eeaed6a477c66ae4979088b9df786e9bc6051f36de74ac465b9e098a4"
+}

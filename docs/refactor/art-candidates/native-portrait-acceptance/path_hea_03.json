@@ -1,0 +1,71 @@
+{
+  "eventId": "path_hea_03",
+  "reviewerType": "AI",
+  "scope": "Portrait phone and small-phone presentation",
+  "sourceEventHash": "4f3548293ae22092a439f285ae59c085bffa4650112ef3cba9b4f2a93506a8ec",
+  "sourceReview": "docs/refactor/art-candidates/portrait-integration/path_hea_03.json",
+  "sourceSha256": "120563260f1d1f58912f6fd8093e1e6ab2f8d5d3d4810cb3466070aaa3af2afc",
+  "displayedVariant": {
+    "assetPath": "presentation/portraits/img_path_hea_03_001_portrait_v1.png",
+    "sha256": "cb2a2d8860468718b20d25bbcb26c81af1f4bee8e9d11d74e6d0cc6ea394ecc9",
+    "width": 941,
+    "height": 1672,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root/effects_tech)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/path_hea_03.json"
+  },
+  "nativeCaptures": [
+    {
+      "path": "build/refactor/resumed/native18/path_hea_03_phone_scene.png",
+      "sha256": "9827e13ccc8ba57d934935f3d3bad66b417006c898682bea2e237cb893f1b77b",
+      "crop": {
+        "eventId": "path_hea_03",
+        "imageId": "img_path_hea_03_001",
+        "assetPath": "presentation/portraits/img_path_hea_03_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/native18/path_hea_03_phone_play.png",
+      "sha256": "60ce93762d336efef969c51032e19baddce8a7076a46636574820f0c181759fb",
+      "crop": {
+        "eventId": "path_hea_03",
+        "imageId": "img_path_hea_03_001",
+        "assetPath": "presentation/portraits/img_path_hea_03_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/native18/path_hea_03_360x740_scene.png",
+      "sha256": "489d299f458828ead5c147db055edf30cc35718971476553715034f6091420e5",
+      "crop": {
+        "eventId": "path_hea_03",
+        "imageId": "img_path_hea_03_001",
+        "assetPath": "presentation/portraits/img_path_hea_03_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/native18/path_hea_03_360x740_play.png",
+      "sha256": "d419ce1c6cb53fd35d00bda00a0bd0d40561f5edfb417ba9c79ed7c26f892a9a",
+      "crop": {
+        "eventId": "path_hea_03",
+        "imageId": "img_path_hea_03_001",
+        "assetPath": "presentation/portraits/img_path_hea_03_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    }
+  ],
+  "observation": "의사와 검진표, 유일한 노란 줄이 맨 아래에 보인다.",
+  "decision": "PASS",
+  "method": "Individual visual inspection of both scene and gameplay frames together with producer semantic/source review and device capture match."
+}

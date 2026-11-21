@@ -19,6 +19,7 @@ import com.example.lifegame.ui.screens.DOLJABI_EVENT_ID
 import com.example.lifegame.ui.screens.doljabiCaption
 import com.example.lifegame.ui.screens.doljabiPreviewAlreadyShown
 import com.example.lifegame.ui.screens.shouldPlayDoljabiCutscene
+import com.example.lifegame.ui.screens.startingStatSpeech
 import java.io.File
 import org.json.JSONObject
 import org.junit.Assert.assertEquals
@@ -57,6 +58,28 @@ class Week13JaegyeomUiTest {
     // ---- 확장 기능 4: 같은 출발선 도전 코드 ----
 
     private val start = ChallengeStart(Gender.MALE, "1,3,6,6,2,2,5,1,4,4,3,3", seed = 1_731_500_000_123L)
+
+    // ---- 2026-11-20: 시작 능력치 줄은 최종값 · 증감만(규칙은 그대로) ----
+
+    @Test
+    fun `starting stat rows keep the dice rule but read only the value and the change`() {
+        // 규칙은 그대로: 능력치마다 두 눈, (합 - 7) × 2, 40~60.
+        assertEquals(44, StatRoll("운동능력", 1, 3).finalValue)
+        assertEquals(40, StatRoll("지력", 1, 1).finalValue)
+        assertEquals(60, StatRoll("운", 6, 6).finalValue)
+        (2..12).forEach { sum ->
+            val first = maxOf(1, sum - 6)
+            assertEquals(50 + (sum - 7) * 2, StatRoll("행복", first, sum - first).finalValue)
+        }
+        // 낭독은 주사위 눈 · 계산식 없이 값과 증감만.
+        assertEquals("운동능력 44, 보통보다 6 낮음", startingStatSpeech(StatRoll("운동능력", 1, 3)))
+        assertEquals("운 56, 보통보다 6 높음", startingStatSpeech(StatRoll("운", 5, 5)))
+        assertEquals("행복 50, 보통", startingStatSpeech(StatRoll("행복", 3, 4)))
+        listOf(StatRoll("지력", 4, 1), StatRoll("경제력", 2, 6)).forEach { roll ->
+            val speech = startingStatSpeech(roll)
+            assertFalse(speech, speech.contains("눈") || speech.contains("합계") || speech.contains("주사위"))
+        }
+    }
 
     @Test
     fun `challenge code round trips gender dice and seed`() {

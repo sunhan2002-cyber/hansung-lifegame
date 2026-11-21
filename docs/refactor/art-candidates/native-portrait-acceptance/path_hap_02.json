@@ -1,0 +1,71 @@
+{
+  "eventId": "path_hap_02",
+  "reviewerType": "AI",
+  "scope": "Portrait phone and small-phone presentation",
+  "sourceEventHash": "fe45d9801ff894721ef3fe786462f4aed23dad2f08ea0d34b9d650f7c90cb858",
+  "sourceReview": "docs/refactor/art-candidates/portrait-integration/path_hap_02.json",
+  "sourceSha256": "7f09bd34135c43afb3454ec164dd2f85b42a7f06a5393b24e195f9a2c5bd7d14",
+  "displayedVariant": {
+    "assetPath": "presentation/portraits/img_path_hap_02_001_portrait_v1.png",
+    "sha256": "4df6fc2eeaed6a477c66ae4979088b9df786e9bc6051f36de74ac465b9e098a4",
+    "width": 941,
+    "height": 1672,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/path_hap_02.json"
+  },
+  "nativeCaptures": [
+    {
+      "path": "build/refactor/resumed/final32/path_hap_02_phone_scene.png",
+      "sha256": "a26d6c4180e21babb0ce4bd0d02320d6d3610a75d996b0359318b7f439fc4731",
+      "crop": {
+        "eventId": "path_hap_02",
+        "imageId": "img_path_hap_02_001",
+        "assetPath": "presentation/portraits/img_path_hap_02_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/final32/path_hap_02_phone_play.png",
+      "sha256": "e6eca8ab650e02c490fcb7e4ac6303f5fc76bce4005a5e07dae77ed24ab71f1f",
+      "crop": {
+        "eventId": "path_hap_02",
+        "imageId": "img_path_hap_02_001",
+        "assetPath": "presentation/portraits/img_path_hap_02_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/final32/path_hap_02_360x740_scene.png",
+      "sha256": "6191df6f8f33811fd0322241f7b4eee646cb663a3287f826ea1bdcd5d996b8e9",
+      "crop": {
+        "eventId": "path_hap_02",
+        "imageId": "img_path_hap_02_001",
+        "assetPath": "presentation/portraits/img_path_hap_02_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/final32/path_hap_02_360x740_play.png",
+      "sha256": "240aaa27224b83d183f2aade94e20f17a9043456493c5b910815200a8a03efa5",
+      "crop": {
+        "eventId": "path_hap_02",
+        "imageId": "img_path_hap_02_001",
+        "assetPath": "presentation/portraits/img_path_hap_02_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    }
+  ],
+  "observation": "Counsellor offers business program; player's notebook has music and sketch.",
+  "decision": "PASS",
+  "method": "Individual visual inspection of both scene and gameplay frames together with producer semantic/source review and device capture match."
+}

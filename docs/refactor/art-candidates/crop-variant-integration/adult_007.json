@@ -1,0 +1,28 @@
+{
+  "eventId": "adult_007",
+  "sourceAssetPath": "followup_20261031/img_adult_friends_drinks_001.png",
+  "sourceSha256": "5593c9ea563fdac3b92e6534f4daf2c548d14ec03e1d458f63b7be66a10d020b",
+  "variant": {
+    "assetPath": "presentation/portraits/img_adult_friends_drinks_001_portrait_v1.png",
+    "sha256": "fa535d759628339b22a55b3c99b9ac33f902c56c81be1f1df825fcefaed15caa",
+    "width": 941,
+    "height": 1672,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI",
+    "reviewEvidence": "docs/refactor/art-candidates/crop-variant-integration/adult_007.json"
+  },
+  "reviewerType": "AI",
+  "reviewer": "Codex AI",
+  "reviewStatus": "AI_REVIEWED_PRESENTATION",
+  "eventSourceHash": "d8a49ff815eaf15c674cb4b4b622efc3acbc2d75dbfdeae078997df908189fa8",
+  "semanticReview": "Producer reviewed current conditions and every choice/outcome. Root independently inspected the selected full-resolution output. Selection remains pre-choice; no outcome is forced. See production ledger full snapshot.",
+  "visualReview": "원본의 4명, 불판, 3개 빈자리를 유지. 재생성에서 주요 얼굴과 빈자리를 중앙으로 모았고 선택 전 입구 시점 유지. 바깥 팔·머리카락은 중앙 60% 밖이지만 얼굴·의자·불판은 9:20 crop 안에 남는다. 명백한 해부 결함 없음; native 미검증.",
+  "cropReview": "Portrait recomposition selected after source review; native phone and small phone verification pending. This is not final artwork acceptance.",
+  "actualProducer": "OpenAI built-in image_gen",
+  "generationMethod": "Built-in imagegen edit; exact prompts and rejected attempts preserved in crop-variant-production-20261119.json",
+  "nativePending": true,
+  "runtimeConnected": true,
+  "approvalChanged": false,
+  "selectedStagingSha256": "fa535d759628339b22a55b3c99b9ac33f902c56c81be1f1df825fcefaed15caa"
+}

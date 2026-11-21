@@ -1,0 +1,71 @@
+{
+  "eventId": "child_027",
+  "reviewerType": "AI",
+  "scope": "Portrait phone and small-phone presentation",
+  "sourceEventHash": "0bd815d2395cd02a9964d5b9d42cb55369d2e70c36d15c25f73cedfd610cf56b",
+  "sourceReview": "docs/refactor/art-candidates/portrait-integration/child_027.json",
+  "sourceSha256": "f7b2577535b874e4246986d9f0e3821531f61e6a87afdb3182964a7e442edf9a",
+  "displayedVariant": {
+    "assetPath": "presentation/portraits/img_child_smartphone_001_portrait_v1.png",
+    "sha256": "d12963768ca2f45fcab080c3a25d0db8fa033b94237d7e5b43f000f62906fc46",
+    "width": 941,
+    "height": 1672,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root/security_p0)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/child_027.json"
+  },
+  "nativeCaptures": [
+    {
+      "path": "build/refactor/after/portrait-fortythree-native/child_027_phone_scene.png",
+      "sha256": "2943bf7f9a17598fa09211c33d64b097f4ee62a6a06f833e89ecabc96740b8d3",
+      "crop": {
+        "eventId": "child_027",
+        "imageId": "img_child_smartphone_001",
+        "assetPath": "presentation/portraits/img_child_smartphone_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/portrait-fortythree-native/child_027_phone_play.png",
+      "sha256": "e1515bcafdc98f466daa5ea10c989571303477683f198a1a1d68311ea4141b4e",
+      "crop": {
+        "eventId": "child_027",
+        "imageId": "img_child_smartphone_001",
+        "assetPath": "presentation/portraits/img_child_smartphone_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/portrait-fortythree-native/child_027_360x740_scene.png",
+      "sha256": "b790772684e985fb36be6489cbd63d3fbc308bdeaa7e3d08e1fa599e3605484a",
+      "crop": {
+        "eventId": "child_027",
+        "imageId": "img_child_smartphone_001",
+        "assetPath": "presentation/portraits/img_child_smartphone_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/portrait-fortythree-native/child_027_360x740_play.png",
+      "sha256": "1be898233c994ead0adc0da134b9c2cf632e32a2d6956e763ed8c714d5ca3e18",
+      "crop": {
+        "eventId": "child_027",
+        "imageId": "img_child_smartphone_001",
+        "assetPath": "presentation/portraits/img_child_smartphone_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    }
+  ],
+  "observation": "부모 두 사람, 스마트폰, 서명 전 계약서가 중앙에 남는다.",
+  "decision": "PASS",
+  "method": "Individual visual inspection of both scene and gameplay frames together with producer semantic/source review and device capture match."
+}

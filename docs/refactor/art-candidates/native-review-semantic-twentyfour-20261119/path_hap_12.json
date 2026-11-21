@@ -1,0 +1,277 @@
+{
+  "schemaVersion": 1,
+  "eventId": "path_hap_12",
+  "status": "PASS",
+  "reviewer": "Codex AI / plan_audit",
+  "reviewerType": "AI",
+  "reviewDate": "2026-11-19",
+  "sourceEventHash": "38fa0cbecb54bc3dab75cea4fd156b8131bbe72abb2e198b7cc4360c4e14dfdb",
+  "sourceEventSnapshot": {
+    "eventId": "path_hap_12",
+    "stage": "ADULT",
+    "type": "NORMAL",
+    "isFallback": false,
+    "isMilestone": false,
+    "title": "좋았던 일 하나 적기",
+    "text": "상담 선생님이 숙제를 냈다. '매일 좋았던 일 하나 적기.' 첫날 수첩에 적은 건 '편의점 삼각김밥 1+1'이었다.",
+    "imageId": "img_path_hap_12_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [
+        "hap_path",
+        "burnout_recovered"
+      ],
+      "blockedFlags": []
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "하루 하나씩 1년을 채운다",
+        "statDelta": {
+          "행복": 4,
+          "건강": 1,
+          "경제력": -1
+        },
+        "resultText": "365개를 채웠다. 그중 제일 많이 나온 단어는 '산책'이었다. 다음 해에도 수첩을 샀다.",
+        "addFlags": [
+          "content_life"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "a_year",
+            "text": "365개를 채웠다. 그중 제일 많이 나온 단어는 '산책'이었다. 다음 해에도 수첩을 샀다.",
+            "chance": 100,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 4,
+              "건강": 1,
+              "경제력": -1
+            },
+            "addFlags": [
+              "content_life"
+            ]
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week10_path_followup"
+      },
+      {
+        "choiceId": "B",
+        "label": "다시 일에 전부를 건다",
+        "statDelta": {
+          "경제력": 3,
+          "행복": -2
+        },
+        "resultText": "성과는 다시 올랐다. 수첩은 서랍에 들어갔다.",
+        "addFlags": [
+          "overwork"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "b_back",
+            "text": "성과는 다시 올랐다. 수첩은 서랍에 들어갔다.",
+            "chance": 55,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "경제력": 3,
+              "행복": -2
+            },
+            "addFlags": [
+              "overwork"
+            ]
+          },
+          {
+            "outcomeId": "b_again",
+            "text": "석 달 만에 수첩이 비기 시작했다. 다시 아무것도 재미없는 일요일이 왔다.",
+            "chance": 45,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "경제력": 2,
+              "행복": -3,
+              "건강": -3
+            },
+            "addFlags": [
+              "overwork",
+              "hap_lost_joy"
+            ],
+            "chanceWeights": {
+              "건강": -2,
+              "행복": -2
+            },
+            "deathCause": "번아웃 재발"
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week10_path_followup"
+      },
+      {
+        "choiceId": "C",
+        "label": "같은 경험을 한 사람들과 모임을 연다",
+        "statDelta": {
+          "사회성": 3,
+          "행복": 2,
+          "경제력": -1
+        },
+        "resultText": "'쉬어 가도 괜찮아' 모임을 열었다. 한 달에 한 번, 일 이야기는 금지. 2년째 이어지고 있다.",
+        "addFlags": [
+          "helped_friend",
+          "achv_rest_club"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "c_group",
+            "text": "'쉬어 가도 괜찮아' 모임을 열었다. 한 달에 한 번, 일 이야기는 금지. 2년째 이어지고 있다.",
+            "chance": 70,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "사회성": 3,
+              "행복": 2,
+              "경제력": -1
+            },
+            "addFlags": [
+              "helped_friend",
+              "achv_rest_club"
+            ],
+            "chanceWeights": {
+              "사회성": 2
+            }
+          },
+          {
+            "outcomeId": "c_tiny",
+            "text": "모임은 셋이 전부였다. 셋이 돌아가며 '오늘 좋았던 일'을 말했다.",
+            "chance": 30,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "사회성": 1,
+              "행복": 1
+            },
+            "addFlags": [
+              "helped_friend"
+            ]
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week10_path_followup"
+      }
+    ],
+    "priority": 0,
+    "kind": "INCIDENT",
+    "periods": [
+      "YOUNG_ADULT",
+      "MIDDLE"
+    ],
+    "weight": 8,
+    "view": "FIRST_PERSON",
+    "lifePath": "HAPPINESS",
+    "pathRole": "번아웃 회복 후",
+    "followUps": [
+      "path_hap_06",
+      "path_hap_07"
+    ]
+  },
+  "sourceReadScope": "Current complete event, conditions, every choice/outcome and flags/stat deltas/periods/follow-ups directly read before judgement.",
+  "sourceImage": {
+    "path": "app/src/main/assets/images/followup_20261031/img_path_hap_12_001.png",
+    "sha256": "8173fd83ac1dcb267a6eecf4845a54d958add5d8133e6c5b90744f1174655dc8",
+    "width": 720,
+    "height": 540
+  },
+  "originalArtworkUnchangedSinceHistoricalReview": true,
+  "historicalReview": {
+    "eventId": "path_hap_12",
+    "title": "좋았던 일 하나 적기",
+    "imageId": "img_path_hap_12_001",
+    "assetPath": "followup_20261031/img_path_hap_12_001.png",
+    "sha256": "8173fd83ac1dcb267a6eecf4845a54d958add5d8133e6c5b90744f1174655dc8",
+    "eventSourceHash": "38fa0cbecb54bc3dab75cea4fd156b8131bbe72abb2e198b7cc4360c4e14dfdb",
+    "status": "REVISION_REQUIRED",
+    "reviewer": "김선한 담당 Codex 직접 대행 검수",
+    "reason": "좋은 일 한 가지를 적는 일기 본문에 삼각김밥 두 개가 크게 배치되어 +1개와 충돌",
+    "expectedAction": "수첩에 오늘 좋았던 일을 적는 첫날",
+    "requiredObjects": "수첩; 펜; 삼각김밥 포장은 연출 제안",
+    "sheet": "output/art-review-20261119/sheet-21.jpg",
+    "cell": 6,
+    "cropMethod": "ImageOps.fit centre-fill 360:800; simulated crop inspected directly, not an emulator capture",
+    "visualMethod": "원본 도트풍·색감·장면 파손·명백한 신체/사물 오류 직접 확인"
+  },
+  "presentationMetadata": [],
+  "captures": [
+    {
+      "path": "build/refactor/after/originals-twentyfour-and-variants-native/path_hap_12_phone_scene.png",
+      "sha256": "c3d7cd8f82de11243ca67d89ef80e4f1ce7efd972a22e52fedf75d5acc8807b3",
+      "width": 1080,
+      "height": 2400,
+      "screen": "phone",
+      "mode": "scene",
+      "cropReport": {
+        "eventId": "path_hap_12",
+        "imageId": "img_path_hap_12_001",
+        "assetPath": "followup_20261031/img_path_hap_12_001.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.331..0.669",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/originals-twentyfour-and-variants-native/path_hap_12_phone_play.png",
+      "sha256": "b3890eae13948ca48759ca1f74cfca5a1459f814e60be72eb8d0fd51e3ebda87",
+      "width": 1080,
+      "height": 2400,
+      "screen": "phone",
+      "mode": "play",
+      "cropReport": null
+    },
+    {
+      "path": "build/refactor/after/originals-twentyfour-and-variants-native/path_hap_12_360x740_scene.png",
+      "sha256": "eb3f03d8e54c824168619bc74b8c7f2d2d12cd8a36419140699f29fb5c2c33d6",
+      "width": 945,
+      "height": 1943,
+      "screen": "360x740",
+      "mode": "scene",
+      "cropReport": {
+        "eventId": "path_hap_12",
+        "imageId": "img_path_hap_12_001",
+        "assetPath": "followup_20261031/img_path_hap_12_001.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.318..0.682",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/originals-twentyfour-and-variants-native/path_hap_12_360x740_play.png",
+      "sha256": "eb51e296d5c6a8100b28c4c300128d07c102b896415ddc7277077739c2e4ede8",
+      "width": 945,
+      "height": 1943,
+      "screen": "360x740",
+      "mode": "play",
+      "cropReport": null
+    }
+  ],
+  "semanticObservation": "번아웃 회복 뒤 첫 감사 기록인 삼각김밥 1+1을 쓰는 시점이다. 두 개의 삼각김밥은 1+1과 일치한다. 365일 기록, 본업 성공/번아웃, 모임의 두 결과와 모든 조건을 읽었으며 아직 빈 노트에 첫 기록만 있다.",
+  "cropObservation": "두 크기에서 삼각김밥 두 개, 펜촉과 첫 기록 영역이 온전하다. 365일 완성 노트나 결과 인물은 없다.",
+  "uiObservation": "A/B/C 모두 두 화면에서 읽히며 작은 화면 C는 두 줄이다.",
+  "reviewMethod": "Codex AI directly inspected the full unchanged source PNG and all four unmodified native scene/play captures. Prior review is retained as historical evidence; this record is a new AI judgement, not human approval.",
+  "nativeMethod": "Production DecisionScreen, current parsed event/routing/PixelAssetLoader, fixture state in Android Compose instrumentation. Scene grid match >=0.95. Not complete game progression.",
+  "nativeRunLog": "build/refactor/depth-and-originals-twentyfour.log",
+  "limitations": [
+    "Emulator captures, not physical-device review.",
+    "Only reviewed phone and 360x740 dimensions; not every font scale/aspect ratio.",
+    "Art review does not independently certify scrolling, TalkBack or complete game-flow transitions."
+  ]
+}

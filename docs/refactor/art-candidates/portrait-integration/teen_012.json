@@ -1,0 +1,29 @@
+{
+  "eventId": "teen_012",
+  "sourceAssetPath": "followup_20261031/img_teen_band_stage_001.png",
+  "sourceSha256": "b7ab0929cd115b6564f8ff581459f6049306c0e9b683981e73e1b80585e20f2b",
+  "variant": {
+    "assetPath": "presentation/portraits/img_teen_band_stage_001_portrait_v1.png",
+    "sha256": "062a9e85a6716ca4ccf12df254716a6bfed6c12d4ebeaab09610931fdf667e22",
+    "width": 941,
+    "height": 1672,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/teen_012.json"
+  },
+  "reviewerType": "AI",
+  "reviewer": "Codex AI (/root)",
+  "reviewStatus": "AI_REVIEWED_PRESENTATION",
+  "eventSourceHash": "efa4f5392697385703633278030b22708cd894c9829605d8e56fd6ce1d1316e1",
+  "semanticReview": "Producer read the current event conditions and every choice/outcome, inspected source and selected output. Full source snapshot and exact prompt are in the referenced production ledger. Native acceptance remains pending.",
+  "visualReview": "First-person viewpoint, one hoarse vocalist touches throat and asks for help; microphone unclaimed, bass on stand, waiting stage. No player head/back or chosen performance. Native crop must retain bass at right and microphone at left.",
+  "cropReview": "Portrait candidate selected for native phone/small-phone scene and gameplay inspection; not final artwork acceptance.",
+  "actualProducer": "OpenAI built-in image_gen",
+  "generationMethod": "Built-in imagegen edit; exact prompts/output SHA/rejected attempts preserved in docs/refactor/art-candidates/content-root-production-20261119.json",
+  "productionLedger": "docs/refactor/art-candidates/content-root-production-20261119.json",
+  "nativePending": true,
+  "runtimeConnected": true,
+  "approvalChanged": false,
+  "selectedStagingSha256": "062a9e85a6716ca4ccf12df254716a6bfed6c12d4ebeaab09610931fdf667e22"
+}

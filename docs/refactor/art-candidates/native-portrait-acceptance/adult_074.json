@@ -1,0 +1,71 @@
+{
+  "eventId": "adult_074",
+  "reviewerType": "AI",
+  "scope": "Portrait phone and small-phone presentation",
+  "sourceEventHash": "61227218ed2902074c77d115616d59d566ef66a9ded8a52d621d36e90560347b",
+  "sourceReview": "docs/refactor/art-candidates/portrait-integration/adult_074.json",
+  "sourceSha256": "2c3ca40a3bed4c6f5698f00b2c16b308022ce19fc45aa7b8e3da226f46a6dc30",
+  "displayedVariant": {
+    "assetPath": "presentation/portraits/img_pov_dating_app_001_portrait_v1.png",
+    "sha256": "9048ce94b61ee650a6c2177de1ed065319868923ec90bc85385a73276d5e4641",
+    "width": 941,
+    "height": 1672,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/adult_074.json"
+  },
+  "nativeCaptures": [
+    {
+      "path": "build/refactor/resumed/final32/adult_074_phone_scene.png",
+      "sha256": "c7607dbcd512d42a7791f036d7bef1fe4fa97f7f981f7cf269cbcf123822380d",
+      "crop": {
+        "eventId": "adult_074",
+        "imageId": "img_pov_dating_app_001",
+        "assetPath": "presentation/portraits/img_pov_dating_app_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/final32/adult_074_phone_play.png",
+      "sha256": "5bd620c81d845103edcffbaa2189f18334c1fa54e49a7e5dc4434397a80f9fa4",
+      "crop": {
+        "eventId": "adult_074",
+        "imageId": "img_pov_dating_app_001",
+        "assetPath": "presentation/portraits/img_pov_dating_app_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/final32/adult_074_360x740_scene.png",
+      "sha256": "4ad5672476cc5ca972c5864618b8e6cd495306eaf0ab25994a867911b35a46e5",
+      "crop": {
+        "eventId": "adult_074",
+        "imageId": "img_pov_dating_app_001",
+        "assetPath": "presentation/portraits/img_pov_dating_app_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/final32/adult_074_360x740_play.png",
+      "sha256": "1721d3669a021034fd8a16294867dd8d2ff0a4a25596e43ad85570d3a169a0d0",
+      "crop": {
+        "eventId": "adult_074",
+        "imageId": "img_pov_dating_app_001",
+        "assetPath": "presentation/portraits/img_pov_dating_app_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    }
+  ],
+  "observation": "Match notification depicts both cat and hiking symbols on screen.",
+  "decision": "PASS",
+  "method": "Individual visual inspection of both scene and gameplay frames together with producer semantic/source review and device capture match."
+}

@@ -1,0 +1,29 @@
+{
+  "eventId": "path_int_04",
+  "sourceAssetPath": "followup_20261031/img_path_int_04_001.png",
+  "sourceSha256": "436bcded91b0fc53c0f25da44a874d3201587d5be9db0583287208d6fb2681cf",
+  "variant": {
+    "assetPath": "presentation/portraits/img_path_int_04_001_portrait_v1.png",
+    "sha256": "6cd90000621c42048830e4f54578242a2d3f07a1f744e9b286b7659f976611f5",
+    "width": 968,
+    "height": 1625,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/path_int_04.json"
+  },
+  "reviewerType": "AI",
+  "reviewer": "Codex AI (/root)",
+  "reviewStatus": "AI_REVIEWED_PRESENTATION",
+  "eventSourceHash": "7dfd8b4281e71eccc77d466fd571b3a4bc394234eba829871931d3aeeb6fefbb",
+  "semanticReview": "Producer read the current event conditions and every choice/outcome, inspected source and selected output. Full source snapshot and exact prompt are in the referenced production ledger. Native acceptance remains pending.",
+  "visualReview": "3.98 transcript and research lab notice are simultaneously visible.",
+  "cropReview": "Portrait candidate selected for native phone/small-phone scene and gameplay inspection; not final artwork acceptance.",
+  "actualProducer": "OpenAI built-in image_gen",
+  "generationMethod": "Built-in imagegen edit; exact prompts/output SHA/rejected attempts preserved in docs/refactor/art-candidates/resumed-production-20261119.json",
+  "productionLedger": "docs/refactor/art-candidates/resumed-production-20261119.json",
+  "nativePending": true,
+  "runtimeConnected": true,
+  "approvalChanged": false,
+  "selectedStagingSha256": "6cd90000621c42048830e4f54578242a2d3f07a1f744e9b286b7659f976611f5"
+}

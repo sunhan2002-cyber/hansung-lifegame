@@ -57,6 +57,7 @@ import com.example.lifegame.ui.avatar.PlayerAvatar
 import com.example.lifegame.ui.images.rememberPixelAsset
 import androidx.compose.ui.platform.LocalDensity
 import com.example.lifegame.ui.components.InkButton
+import com.example.lifegame.ui.components.CompletionSealHeader
 import com.example.lifegame.ui.components.LifeMutedOnDark
 import com.example.lifegame.ui.components.LifePaperOnDark
 import com.example.lifegame.ui.components.LineButton
@@ -103,6 +104,8 @@ fun EndingFlowScreen(
     initialStep: EndingStep = EndingStep.RECAP,
 ) {
     var step by rememberSaveable(record.runId) { mutableStateOf(initialStep) }
+    // Presentation-only consumption survives replay and Activity recreation. Archived records open quietly.
+    var completionPresented by rememberSaveable(record.runId) { mutableStateOf(initialStep == EndingStep.CERTIFICATE) }
     val look = futureLook?.takeIf { it.key == record.runId }
 
     BackHandler(enabled = step != initialStep) {
@@ -132,6 +135,8 @@ fun EndingFlowScreen(
             onReplay = { step = EndingStep.RECAP },
             onDone = onDone,
             doneLabel = doneLabel,
+            celebrate = !completionPresented,
+            onCelebrationConsumed = { completionPresented = true },
             modifier = modifier,
         )
     }
@@ -386,6 +391,8 @@ private fun CertificateView(
     onReplay: () -> Unit,
     onDone: () -> Unit,
     doneLabel: String,
+    celebrate: Boolean,
+    onCelebrationConsumed: () -> Unit,
     modifier: Modifier = Modifier,
 ) {
     Column(
@@ -402,13 +409,11 @@ private fun CertificateView(
                 .testTag("certificate"),
             verticalArrangement = Arrangement.spacedBy(14.dp),
         ) {
-            Text(
-                text = "인생기록증",
-                color = LifeGameInkSecondary,
-                fontSize = 14.sp,
-                fontWeight = FontWeight.Bold,
-                letterSpacing = 2.sp,
-                modifier = Modifier.semantics { heading() },
+            CompletionSealHeader(
+                runId = record.runId,
+                titleEarned = record.title != null,
+                celebrate = celebrate,
+                onConsumed = onCelebrationConsumed,
             )
             val shape = RoundedCornerShape(12.dp)
             Row(

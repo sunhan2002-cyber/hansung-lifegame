@@ -4,6 +4,8 @@ import android.content.Context
 import android.graphics.Bitmap
 import com.example.lifegame.ui.images.ImageCandidate
 import com.example.lifegame.ui.images.PixelAssetLoader
+import com.example.lifegame.ui.images.SceneFocalPoint
+import com.example.lifegame.ui.images.coverPlacement
 import android.graphics.Paint
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.layout.BoxWithConstraints
@@ -23,6 +25,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberUpdatedState
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.draw.clipToBounds
 import androidx.compose.ui.geometry.CornerRadius
 import androidx.compose.ui.geometry.Offset
@@ -146,26 +149,42 @@ fun FilmStrip(
 
 /** 사건 화면 전체를 채우는 배경 이미지. 실제 그림이 없으면 기존 자리 표시 그림을 사용한다. */
 @Composable
-fun SceneImage(
+internal fun SceneImage(
     shot: FilmShot,
     modifier: Modifier = Modifier,
     fitWholeImage: Boolean = false,
     /** 그림을 읽는 중 · 읽음 · 실패를 알린다. 실패(파일 없음 포함)면 사건 화면이 선노출을 건너뛴다. */
     onStatus: ((SceneImageStatus) -> Unit)? = null,
+    /** Actual decoded artwork, including portrait variants/fallbacks, for aligned decoration. */
+    onSource: ((SceneImageSource?) -> Unit)? = null,
+    /** Optional inspected depth map. Disabling motion uses the exact original raster path. */
+    depthProfile: SceneAtmosphereProfile? = null,
+    depthPhase: androidx.compose.runtime.State<Float>? = null,
 ) {
     val density = LocalDensity.current
     val currentOnStatus by rememberUpdatedState(onStatus)
+    val currentOnSource by rememberUpdatedState(onSource)
     BoxWithConstraints(modifier.clipToBounds()) {
         val width = with(density) { maxWidth.roundToPx() }.coerceAtLeast(1)
         val height = with(density) { maxHeight.roundToPx() }.coerceAtLeast(1)
-        val picture = rememberPicture(shot, width, height, cropToFill = !fitWholeImage)
-        LaunchedEffect(picture.status) { currentOnStatus?.invoke(picture.status) }
-        Canvas(Modifier.fillMaxSize()) {
+        val picture = rememberPicture(shot, width, height, cropToFill = !fitWholeImage, compactPlaceholder = true)
+        val depthMesh = remember(width, height, depthProfile) {
+            depthProfile?.let { SceneDepthMesh(width, height, it) }
+        }
+        LaunchedEffect(picture.status, picture.source) {
+            currentOnStatus?.invoke(picture.status)
+            currentOnSource?.invoke(picture.source)
+        }
+        Canvas(Modifier.fillMaxSize().then(if (depthMesh != null) Modifier.testTag("scene_depth") else Modifier)) {
+            if (depthMesh != null && depthPhase != null && picture.status == SceneImageStatus.READY) {
+                depthMesh.draw(this, picture.bitmap, depthPhase.value)
+            } else {
             drawImage(
                 image = picture.bitmap,
                 dstSize = IntSize(size.width.roundToInt(), size.height.roundToInt()),
                 filterQuality = FilterQuality.None,
             )
+            }
         }
     }
 }
@@ -199,17 +218,24 @@ fun PerforationBand(
 /** 사건 그림을 실제로 읽었는지. 실패와 읽는 중을 구분해야 선노출을 건너뛰고 "본 그림"으로 저장하지 않을 수 있다. */
 enum class SceneImageStatus { LOADING, READY, FAILED }
 
-private data class FilmPicture(val bitmap: ImageBitmap, val isPlaceholder: Boolean, val status: SceneImageStatus)
+data class SceneImageSource(val candidate: ImageCandidate, val width: Int, val height: Int, val focal: SceneFocalPoint)
+
+private data class LoadedScenePicture(val bitmap: ImageBitmap, val source: SceneImageSource)
+private data class FilmPicture(val bitmap: ImageBitmap, val isPlaceholder: Boolean, val status: SceneImageStatus, val source: SceneImageSource? = null)
 
 /** Missing files never select an unrelated sample. */
 @Composable
-private fun rememberPicture(shot: FilmShot, width: Int, height: Int, cropToFill: Boolean = false): FilmPicture {
+private fun rememberPicture(shot: FilmShot, width: Int, height: Int, cropToFill: Boolean = false, compactPlaceholder: Boolean = false): FilmPicture {
     val context = LocalContext.current
     val candidates = shot.candidates.ifEmpty {
         listOfNotNull(shot.imageFile?.let { ImageCandidate(shot.imageId, it) })
     }
-    val placeholder = remember(shot.isSpecial, width, height) { placeholderPicture(shot, width, height) }
-    var loaded by remember(candidates, width, height, cropToFill) { mutableStateOf<ImageBitmap?>(null) }
+    // SceneImage scales this two-colour placeholder itself. Keeping a second full-screen bitmap
+    // alive after the artwork loads would waste ~10 MiB on a 1080x2400 display.
+    val placeholder = remember(shot.isSpecial, width, height, compactPlaceholder) {
+        if (compactPlaceholder) placeholderPicture(shot, 2, 100) else placeholderPicture(shot, width, height)
+    }
+    var loaded by remember(candidates, width, height, cropToFill) { mutableStateOf<LoadedScenePicture?>(null) }
     var settled by remember(candidates, width, height, cropToFill) { mutableStateOf(false) }
     LaunchedEffect(candidates, width, height, cropToFill) {
         loaded = withContext(Dispatchers.IO) { loadAssetPicture(context, candidates, width, height, cropToFill) }
@@ -220,7 +246,7 @@ private fun rememberPicture(shot: FilmShot, width: Int, height: Int, cropToFill:
         settled -> SceneImageStatus.FAILED
         else -> SceneImageStatus.LOADING
     }
-    return FilmPicture(loaded ?: placeholder, isPlaceholder = loaded == null, status = status)
+    return FilmPicture(loaded?.bitmap ?: placeholder, isPlaceholder = loaded == null, status = status, source = loaded?.source)
 }
 
 /** 그림이 준비되기 전 자리: 단색 바탕과 아래쪽 바닥 면. 이미지 ID는 플레이 화면에 노출하지 않는다. */
@@ -247,24 +273,25 @@ private fun loadAssetPicture(
     width: Int,
     height: Int,
     cropToFill: Boolean = false,
-): ImageBitmap? = runCatching {
+): LoadedScenePicture? = runCatching {
     val loaded = PixelAssetLoader.load(context, candidates, width, height) ?: return@runCatching null
     val source = loaded.bitmap
     val crop = cropToFill && loaded.candidate.usage != "character"
     val scale = if (crop) max(width / source.width.toFloat(), height / source.height.toFloat())
         else min(width / source.width.toFloat(), height / source.height.toFloat())
-    val scaled = Bitmap.createScaledBitmap(
-        source, (source.width * scale).roundToInt().coerceAtLeast(1),
-        (source.height * scale).roundToInt().coerceAtLeast(1), false,
-    )
+    val placement = if (crop) coverPlacement(source.width, source.height, width, height, loaded.focal) else null
+    val drawnWidth = placement?.width ?: source.width * scale
+    val drawnHeight = placement?.height ?: source.height * scale
+    val left = placement?.left ?: (width - drawnWidth) / 2f
+    val top = placement?.top ?: (height - drawnHeight) / 2f
     val fitted = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888)
     android.graphics.Canvas(fitted).apply {
         drawColor(LifeGamePicture.toArgb())
-        drawBitmap(scaled, (width - scaled.width) / 2f, (height - scaled.height) / 2f,
+        // Draw directly into the viewport: no oversized intermediate scaled bitmap.
+        drawBitmap(source, null, android.graphics.RectF(left, top, left + drawnWidth, top + drawnHeight),
             Paint().apply { isFilterBitmap = false; isDither = false })
     }
-    if (scaled !== source) scaled.recycle()
-    fitted.asImageBitmap()
+    LoadedScenePicture(fitted.asImageBitmap(), SceneImageSource(loaded.candidate, source.width, source.height, loaded.focal))
 }.getOrNull()
 
 private fun DrawScope.drawFilm(m: FilmMotion, current: ImageBitmap, incoming: ImageBitmap?) {

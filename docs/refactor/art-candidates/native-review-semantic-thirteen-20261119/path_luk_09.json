@@ -1,0 +1,260 @@
+{
+  "schemaVersion": 1,
+  "eventId": "path_luk_09",
+  "status": "PASS",
+  "reviewer": "Codex AI / plan_audit",
+  "reviewerType": "AI",
+  "reviewDate": "2026-11-19",
+  "sourceEventHash": "044f476cda2c5fd0c702285ce1c9b4af53b715443897422d055e3652183207d5",
+  "sourceEventSnapshot": {
+    "eventId": "path_luk_09",
+    "stage": "TEEN",
+    "type": "NORMAL",
+    "isFallback": false,
+    "isMilestone": false,
+    "title": "자판기에서 두 캔",
+    "text": "천 원을 넣고 콜라를 눌렀다. 덜컹, 덜컹. 두 캔이 나왔다. 돌잡이 때 5만 원을 끝까지 안 놨다던 엄마 말이 떠오른다.",
+    "imageId": "img_path_luk_09_001",
+    "conditions": {
+      "stats": {
+        "운": 54
+      },
+      "requiredFlags": [
+        "cash_grabber"
+      ],
+      "blockedFlags": [
+        "luk_path",
+        "hap_path",
+        "fit_path",
+        "int_path",
+        "soc_path",
+        "wea_path"
+      ]
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "한 캔은 뒤에 선 친구에게 준다",
+        "statDelta": {
+          "사회성": 2,
+          "운": 2,
+          "경제력": -1
+        },
+        "resultText": "친구가 다음 날 빵을 사 왔다. 그 빵이 1+1이었다. 운이 운을 불렀다.",
+        "addFlags": [
+          "luk_path",
+          "sharing_habit"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "a_share",
+            "text": "친구가 다음 날 빵을 사 왔다. 그 빵이 1+1이었다. 운이 운을 불렀다.",
+            "chance": 100,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "사회성": 2,
+              "운": 2,
+              "경제력": -1
+            },
+            "addFlags": [
+              "luk_path",
+              "sharing_habit"
+            ]
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week10_path_followup"
+      },
+      {
+        "choiceId": "B",
+        "label": "두 캔 다 마신다",
+        "statDelta": {
+          "운": 2,
+          "행복": 1,
+          "건강": -1
+        },
+        "resultText": "두 캔을 연달아 마셨다. 그 주에 자판기는 나한테만 두 번 더 두 캔을 줬다.",
+        "addFlags": [
+          "luk_path"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "b_both",
+            "text": "두 캔을 연달아 마셨다. 그 주에 자판기는 나한테만 두 번 더 두 캔을 줬다.",
+            "chance": 60,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "운": 2,
+              "행복": 1,
+              "건강": -1
+            },
+            "addFlags": [
+              "luk_path"
+            ],
+            "chanceWeights": {
+              "운": 2
+            }
+          },
+          {
+            "outcomeId": "b_burp",
+            "text": "두 번째 캔을 따자마자 수업 종이 울렸다. 수업 내내 트림을 참았다.",
+            "chance": 40,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "운": 1,
+              "사회성": -1
+            },
+            "addFlags": [
+              "luk_path"
+            ]
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week10_path_followup"
+      },
+      {
+        "choiceId": "C",
+        "label": "관리실에 고장 신고를 한다",
+        "statDelta": {
+          "사회성": 1,
+          "지력": 1,
+          "운": -1
+        },
+        "resultText": "관리 아저씨가 자판기를 고쳤다. 고맙다며 콜라 한 캔을 줬다. 결국 두 캔이었다.",
+        "addFlags": [],
+        "outcomes": [
+          {
+            "outcomeId": "c_report",
+            "text": "관리 아저씨가 자판기를 고쳤다. 고맙다며 콜라 한 캔을 줬다. 결국 두 캔이었다.",
+            "chance": 100,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "사회성": 1,
+              "지력": 1,
+              "운": -1
+            },
+            "addFlags": []
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week10_path_followup"
+      }
+    ],
+    "priority": 0,
+    "kind": "INCIDENT",
+    "periods": [
+      "TEEN"
+    ],
+    "weight": 12,
+    "view": "FIRST_PERSON",
+    "lifePath": "LUCK",
+    "pathRole": "입구(돌잡이 5만 원 → 운)",
+    "followUps": [
+      "path_luk_02",
+      "path_luk_03"
+    ]
+  },
+  "sourceReadScope": "Current complete event, conditions, every choice/outcome and flags/stat deltas/periods/follow-ups directly read before judgement.",
+  "sourceImage": {
+    "path": "app/src/main/assets/images/week10/scenes/img_path_luk_09_001.png",
+    "sha256": "2c49a65a54344fa134df732fe69ff3445f6d2f7e7430d27d34dc865e8fab46c5",
+    "width": 1448,
+    "height": 1086
+  },
+  "originalArtworkUnchangedSinceHistoricalReview": true,
+  "historicalReview": {
+    "eventId": "path_luk_09",
+    "title": "자판기에서 두 캔",
+    "imageId": "img_path_luk_09_001",
+    "assetPath": "week10/scenes/img_path_luk_09_001.png",
+    "sha256": "2c49a65a54344fa134df732fe69ff3445f6d2f7e7430d27d34dc865e8fab46c5",
+    "eventSourceHash": "044f476cda2c5fd0c702285ce1c9b4af53b715443897422d055e3652183207d5",
+    "status": "REVISION_REQUIRED",
+    "reviewer": "김선한 담당 Codex 직접 대행 검수",
+    "reason": "두 캔의 행운은 표현하나 금액·문자 로고 유사 무늬 확인 필요",
+    "expectedAction": "취출구에서 두 캔이 나온 것을 확인",
+    "requiredObjects": "자판기 취출구의 콜라 두 캔, 동일한 콜라 색의 포장",
+    "sheet": "output/art-review-20261119/sheet-21.jpg",
+    "cell": 11,
+    "cropMethod": "ImageOps.fit centre-fill 360:800; simulated crop inspected directly, not an emulator capture",
+    "visualMethod": "원본 도트풍·색감·장면 파손·명백한 신체/사물 오류 직접 확인"
+  },
+  "presentationMetadata": [],
+  "captures": [
+    {
+      "path": "build/refactor/after/semantic-originals-thirteen-native/path_luk_09_phone_scene.png",
+      "sha256": "fd07bae61cc24e868930d50f5aa9a5e5e45e997ba5ebf809f7fdd9f2825dc40e",
+      "width": 1080,
+      "height": 2400,
+      "screen": "phone",
+      "mode": "scene",
+      "cropReport": {
+        "eventId": "path_luk_09",
+        "imageId": "img_path_luk_09_001",
+        "assetPath": "week10/scenes/img_path_luk_09_001.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.331..0.669",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/semantic-originals-thirteen-native/path_luk_09_phone_play.png",
+      "sha256": "6e687071abd3a411e7f81e4251d7be7e5146d00cf5e44eb675c5b273b5dff048",
+      "width": 1080,
+      "height": 2400,
+      "screen": "phone",
+      "mode": "play",
+      "cropReport": null
+    },
+    {
+      "path": "build/refactor/after/semantic-originals-thirteen-native/path_luk_09_360x740_scene.png",
+      "sha256": "86d5043dcfa32717f7a27083ae2db3c766a7f6815c6128e31f19bcb765067f34",
+      "width": 945,
+      "height": 1943,
+      "screen": "360x740",
+      "mode": "scene",
+      "cropReport": {
+        "eventId": "path_luk_09",
+        "imageId": "img_path_luk_09_001",
+        "assetPath": "week10/scenes/img_path_luk_09_001.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.318..0.682",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/semantic-originals-thirteen-native/path_luk_09_360x740_play.png",
+      "sha256": "3487a343ca9660e771162c12556e5a6ba71f6d653feab397757e3014c971eb1b",
+      "width": 945,
+      "height": 1943,
+      "screen": "360x740",
+      "mode": "play",
+      "cropReport": null
+    }
+  ],
+  "semanticObservation": "자판기 배출구에 같은 빨간 무상표 콜라 두 캔이 이미 나온 현재 상태다. 캔은 열리지 않았고 친구에게 주기·마시기·수리기사·보상 세 번째 캔 결과는 없다. 가격판은 추상 색 면이며 실제 금액을 검증했다고 주장하지 않는다.",
+  "cropObservation": "두 native에서 배출구 안 정확히 두 캔의 몸체와 닫힌 탭이 유지된다. 손 일부는 왼쪽 가장자리에 남고 오른손/반환구는 잘리지만 핵심 두 캔 상황은 온전히 보인다. 과거 가격 글자 문제는 현 원본에 판독 가능한 가격 글자가 없어 재현되지 않았다.",
+  "uiObservation": "두 크기에서 제목·본문·세 선택지 전체가 읽힌다.",
+  "reviewMethod": "Codex AI directly inspected the full unchanged source PNG and all four unmodified native scene/play captures. Prior review is retained as historical evidence; this record is a new AI judgement, not human approval.",
+  "nativeMethod": "Production DecisionScreen, current parsed event/routing/PixelAssetLoader, fixture state in Android Compose instrumentation. Scene grid match >=0.95. Not complete game progression.",
+  "nativeRunLog": "build/refactor/semantic-originals-thirteen-and-choice-reachability.log",
+  "limitations": [
+    "Emulator captures, not physical-device review.",
+    "Only reviewed phone and 360x740 dimensions; not every font scale/aspect ratio.",
+    "Art review does not independently certify scrolling, TalkBack or complete game-flow transitions."
+  ]
+}

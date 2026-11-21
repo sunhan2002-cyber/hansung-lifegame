@@ -1,0 +1,71 @@
+{
+  "eventId": "infant_007",
+  "reviewerType": "AI",
+  "scope": "Portrait phone and small-phone presentation",
+  "sourceEventHash": "a72e45159d2b7581c27b3405cba07987ad6310c5ed0a05aa15fa12d2eea7a77a",
+  "sourceReview": "docs/refactor/art-candidates/portrait-integration/infant_007.json",
+  "sourceSha256": "be47f735bafcc153ea6e02ecc20e66e7b62f4ccb101e559c87a82d0d907be86c",
+  "displayedVariant": {
+    "assetPath": "presentation/portraits/img_infant_toys_001_portrait_v1.png",
+    "sha256": "7908541fe39354738515bb54efa2c0519377d16a634240e955290661c007304e",
+    "width": 941,
+    "height": 1672,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root/security_p0)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/infant_007.json"
+  },
+  "nativeCaptures": [
+    {
+      "path": "build/refactor/after/portrait-fortythree-native/infant_007_phone_scene.png",
+      "sha256": "2a49aa74af513753fc849f2745572dd274806ae7dc75d9ed0e117258512638ac",
+      "crop": {
+        "eventId": "infant_007",
+        "imageId": "img_infant_toys_001",
+        "assetPath": "presentation/portraits/img_infant_toys_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/portrait-fortythree-native/infant_007_phone_play.png",
+      "sha256": "ad98fa628322dad93b18434439db988dd11956712a0f690d093a76f0e6b9f917",
+      "crop": {
+        "eventId": "infant_007",
+        "imageId": "img_infant_toys_001",
+        "assetPath": "presentation/portraits/img_infant_toys_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/portrait-fortythree-native/infant_007_360x740_scene.png",
+      "sha256": "cd032a73ff3c9e0ca3a77f3abd15678bc6371adeb91218e776b2053c67c58ddf",
+      "crop": {
+        "eventId": "infant_007",
+        "imageId": "img_infant_toys_001",
+        "assetPath": "presentation/portraits/img_infant_toys_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/portrait-fortythree-native/infant_007_360x740_play.png",
+      "sha256": "3ee5a5343ebad889f570684423d40bc7edc97823b4749bd51b4ad3e7bf9a4c91",
+      "crop": {
+        "eventId": "infant_007",
+        "imageId": "img_infant_toys_001",
+        "assetPath": "presentation/portraits/img_infant_toys_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    }
+  ],
+  "observation": "피아노·판사봉·지폐 세 물건과 아직 잡지 않은 아기 손이 함께 보인다.",
+  "decision": "PASS",
+  "method": "Individual visual inspection of both scene and gameplay frames together with producer semantic/source review and device capture match."
+}

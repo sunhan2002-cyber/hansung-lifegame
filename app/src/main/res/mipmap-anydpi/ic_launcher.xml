@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Static fallback. Supported API26+ launchers select the adaptive resource above this default. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp" android:height="48dp"
+    android:viewportWidth="108" android:viewportHeight="108">
+    <path android:fillColor="@color/ic_launcher_background" android:pathData="M0,0 H108 V108 H0 Z" />
+    <group android:pivotX="54" android:pivotY="54" android:scaleX="0.9" android:scaleY="0.9">
+    <path android:fillColor="@android:color/transparent" android:strokeColor="#F4E4BB"
+        android:strokeWidth="5" android:strokeLineCap="round" android:strokeLineJoin="round"
+        android:pathData="M54,72 L54,56 M54,56 C54,47 34,47 34,37 M54,56 L54,30 M54,56 C54,47 74,47 74,37" />
+    <path android:fillColor="#F4E4BB"
+        android:pathData="M28,31 a6,6 0,1 0,12 0 a6,6 0,1 0,-12 0 M68,31 a6,6 0,1 0,12 0 a6,6 0,1 0,-12 0" />
+    <path android:fillColor="#CDA15C"
+        android:pathData="M49,26 a5,5 0,1 0,10 0 a5,5 0,1 0,-10 0" />
+    <path android:fillColor="#F4E4BB" android:fillType="evenOdd"
+        android:pathData="M49,70 L59,70 Q62,70 62,73 L62,83 Q62,86 59,86 L49,86 Q46,86 46,83 L46,73 Q46,70 49,70 Z M48.7,74 a1.3,1.3 0,1 0,2.6 0 a1.3,1.3 0,1 0,-2.6 0 M52.7,78 a1.3,1.3 0,1 0,2.6 0 a1.3,1.3 0,1 0,-2.6 0 M56.7,82 a1.3,1.3 0,1 0,2.6 0 a1.3,1.3 0,1 0,-2.6 0" />
+    </group>
+</vector>

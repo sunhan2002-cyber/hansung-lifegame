@@ -1,0 +1,29 @@
+{
+  "eventId": "path_hap_13",
+  "sourceAssetPath": "followup_20261031/img_path_hap_13_001.png",
+  "sourceSha256": "e7362e6bd02a58be22ad8f818e9d0bc5291d4c8791d457dbafb656c02a50933d",
+  "variant": {
+    "assetPath": "presentation/portraits/img_path_hap_13_001_portrait_v1.png",
+    "sha256": "112e176a374df655004a3149e5e48fcae414e25e322b89b67ceaf359234155eb",
+    "width": 941,
+    "height": 1672,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root/effects_tech)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/path_hap_13.json"
+  },
+  "reviewerType": "AI",
+  "reviewer": "Codex AI (/root/effects_tech)",
+  "reviewStatus": "AI_REVIEWED_PRESENTATION",
+  "eventSourceHash": "5c081596928336d4ada61d705f393f462f400f25565700923083cc63cacf9380",
+  "semanticReview": "Producer read the current event conditions and every choice/outcome, inspected source and selected output. Full source snapshot and exact prompt are in the referenced production ledger. Native acceptance remains pending.",
+  "visualReview": "배우자 얼굴·달력의 합주/부모님 방문 메모·기타가방·전화와 두 손을 원본대로 보존. 핵심들이9:20 crop에 함께 들어오고 부모님을 실제로 방에 추가하지 않았으며 합주/방문 선택 결과 없음. 팔 연결 정상, native pending.",
+  "cropReview": "Portrait candidate selected for native phone/small-phone scene and gameplay inspection; not final artwork acceptance.",
+  "actualProducer": "OpenAI built-in image_gen",
+  "generationMethod": "Built-in imagegen edit; exact prompts/output SHA/rejected attempts preserved in docs/refactor/art-candidates/crop-variant-production-20261119.json",
+  "productionLedger": "docs/refactor/art-candidates/crop-variant-production-20261119.json",
+  "nativePending": true,
+  "runtimeConnected": true,
+  "approvalChanged": false,
+  "selectedStagingSha256": "112e176a374df655004a3149e5e48fcae414e25e322b89b67ceaf359234155eb"
+}

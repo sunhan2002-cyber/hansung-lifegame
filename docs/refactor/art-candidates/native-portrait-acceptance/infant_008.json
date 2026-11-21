@@ -1,0 +1,71 @@
+{
+  "eventId": "infant_008",
+  "reviewerType": "AI",
+  "scope": "Portrait phone and small-phone presentation",
+  "sourceEventHash": "d417503d87e1907b1781d58a3bf70ae552e59dbffa3e4c0a6bbf79d398cfdb50",
+  "sourceReview": "docs/refactor/art-candidates/portrait-integration/infant_008.json",
+  "sourceSha256": "2719674593fbd0af2a84cb1be57302dd510fe023d373359b857d06cd8f51a896",
+  "displayedVariant": {
+    "assetPath": "presentation/portraits/img_infant_vaccine_001_portrait_v1.png",
+    "sha256": "38b97eb275ec8c68456f992207f7c84fa4d0e173db42b611ebf489c6de833960",
+    "width": 941,
+    "height": 1672,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root/security_p0)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/infant_008.json"
+  },
+  "nativeCaptures": [
+    {
+      "path": "build/refactor/after/portrait-fortythree-native/infant_008_phone_scene.png",
+      "sha256": "141e8d5babdeefb0c09d37be449bada3b611c9b54b501ab461f1e333b982f60d",
+      "crop": {
+        "eventId": "infant_008",
+        "imageId": "img_infant_vaccine_001",
+        "assetPath": "presentation/portraits/img_infant_vaccine_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/portrait-fortythree-native/infant_008_phone_play.png",
+      "sha256": "2f0912a6b0dc408f0c0821d069775d8a5774d2a910c97d0ca347a1af714374bd",
+      "crop": {
+        "eventId": "infant_008",
+        "imageId": "img_infant_vaccine_001",
+        "assetPath": "presentation/portraits/img_infant_vaccine_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/portrait-fortythree-native/infant_008_360x740_scene.png",
+      "sha256": "70fbb7fcd4a5bf416f058a32a2fb04d65ee6f913f16197bbe4be6492bc38b6de",
+      "crop": {
+        "eventId": "infant_008",
+        "imageId": "img_infant_vaccine_001",
+        "assetPath": "presentation/portraits/img_infant_vaccine_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/portrait-fortythree-native/infant_008_360x740_play.png",
+      "sha256": "446fe30f7fc93cdd993a6767d63effc578829b39613db944cf01d58365fe0586",
+      "crop": {
+        "eventId": "infant_008",
+        "imageId": "img_infant_vaccine_001",
+        "assetPath": "presentation/portraits/img_infant_vaccine_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    }
+  ],
+  "observation": "마스크 쓴 간호사와 아기의 발, 손이 보이며 주사를 맞은 결과는 없다.",
+  "decision": "PASS",
+  "method": "Individual visual inspection of both scene and gameplay frames together with producer semantic/source review and device capture match."
+}

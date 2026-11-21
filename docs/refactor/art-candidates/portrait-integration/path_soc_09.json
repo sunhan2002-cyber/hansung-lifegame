@@ -1,0 +1,29 @@
+{
+  "eventId": "path_soc_09",
+  "sourceAssetPath": "week10/scenes/img_path_soc_09_001.png",
+  "sourceSha256": "7502542b42fa2bb39a2e2e890b858909a3736019bd9e25ff457efc87de3c53ed",
+  "variant": {
+    "assetPath": "presentation/portraits/img_path_soc_09_001_portrait_v1.png",
+    "sha256": "d632daddefceb20075e9b2e345eb1d7e73af10805f79cb6353860359daee7db1",
+    "width": 962,
+    "height": 1635,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/path_soc_09.json"
+  },
+  "reviewerType": "AI",
+  "reviewer": "Codex AI (/root)",
+  "reviewStatus": "AI_REVIEWED_PRESENTATION",
+  "eventSourceHash": "f9b556fda72ae51046cedeecdc4ebdd86d0e472778c059593124b7cf14235129",
+  "semanticReview": "Producer read the current event conditions and every choice/outcome, inspected source and selected output. Full source snapshot and exact prompt are in the referenced production ledger. Native acceptance remains pending.",
+  "visualReview": "Two guest books and party guests with raised hands before decision.",
+  "cropReview": "Portrait candidate selected for native phone/small-phone scene and gameplay inspection; not final artwork acceptance.",
+  "actualProducer": "OpenAI built-in image_gen",
+  "generationMethod": "Built-in imagegen edit; exact prompts/output SHA/rejected attempts preserved in docs/refactor/art-candidates/resumed-production-20261119.json",
+  "productionLedger": "docs/refactor/art-candidates/resumed-production-20261119.json",
+  "nativePending": true,
+  "runtimeConnected": true,
+  "approvalChanged": false,
+  "selectedStagingSha256": "d632daddefceb20075e9b2e345eb1d7e73af10805f79cb6353860359daee7db1"
+}

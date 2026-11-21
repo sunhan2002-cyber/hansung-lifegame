@@ -1,0 +1,29 @@
+{
+  "eventId": "path_hea_02",
+  "sourceAssetPath": "followup_20261031/img_path_hea_02_001.png",
+  "sourceSha256": "be1183a80910abbbb5f83343c54a6c6e8ee1c696f16cd2b4055865312ac72c95",
+  "variant": {
+    "assetPath": "presentation/portraits/img_path_hea_02_001_portrait_v1.png",
+    "sha256": "d40a1a7f212fa14a23f3b4f8e468147703845d9260dd02183728457db7d54e4e",
+    "width": 941,
+    "height": 1672,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root/security_p0)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/path_hea_02.json"
+  },
+  "reviewerType": "AI",
+  "reviewer": "Codex AI (/root/security_p0)",
+  "reviewStatus": "AI_REVIEWED_PRESENTATION",
+  "eventSourceHash": "5b667b6961ef8ef2777f6b5b44ac4ad08c4bdd4204ea37b7dfbf260b9aacdcb3",
+  "semanticReview": "Producer read the current event conditions and every choice/outcome, inspected source and selected output. Full source snapshot and exact prompt are in the referenced production ledger. Native acceptance remains pending.",
+  "visualReview": "Individually viewed: analog clock has no numerals and reads 2:00, dark night window, anonymous active group chat and open study book central. No energy drink/sleep/exam outcome or readable message/equation. Native pending.",
+  "cropReview": "Portrait candidate selected for native phone/small-phone scene and gameplay inspection; not final artwork acceptance.",
+  "actualProducer": "OpenAI built-in image_gen",
+  "generationMethod": "Built-in imagegen edit; exact prompts/output SHA/rejected attempts preserved in docs/refactor/art-candidates/content-art-revision-briefs-20261119.json",
+  "productionLedger": "docs/refactor/art-candidates/content-art-revision-briefs-20261119.json",
+  "nativePending": true,
+  "runtimeConnected": true,
+  "approvalChanged": false,
+  "selectedStagingSha256": "d40a1a7f212fa14a23f3b4f8e468147703845d9260dd02183728457db7d54e4e"
+}

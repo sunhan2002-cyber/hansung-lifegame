@@ -1,0 +1,29 @@
+{
+  "eventId": "path_soc_15",
+  "sourceAssetPath": "followup_20261031/img_path_soc_15_001.png",
+  "sourceSha256": "2dd589f3125779f7b005fc6f256386f41c9dcc9dde84d4cfee63ab95c0fa262b",
+  "variant": {
+    "assetPath": "presentation/portraits/img_path_soc_15_001_portrait_v1.png",
+    "sha256": "68563fe7e6bd4b9ef464918e5388b5abdd31335db08645f6caca508d4c0ae7cb",
+    "width": 941,
+    "height": 1672,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root/effects_tech)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/path_soc_15.json"
+  },
+  "reviewerType": "AI",
+  "reviewer": "Codex AI (/root/effects_tech)",
+  "reviewStatus": "AI_REVIEWED_PRESENTATION",
+  "eventSourceHash": "aea67b9f3aa0bf2ab213f05a1ed37dd9d8b4bb49ec04d8202b97fd2e929292e9",
+  "semanticReview": "Producer read the current event conditions and every choice/outcome, inspected source and selected output. Full source snapshot and exact prompt are in the referenced production ledger. Native acceptance remains pending.",
+  "visualReview": "원본 네 부모·네 아이·중앙단톡폰·두손을 유지. 앞뒤2열로 모여8명 얼굴과 중앙전화가9:20범위에 남는다. 부모몸/머리카락 외곽은60%폭밖 일부이며 실제crop필요. 대표취임/당번표완료/간식분쟁결과추가없음. native pending.",
+  "cropReview": "Portrait candidate selected for native phone/small-phone scene and gameplay inspection; not final artwork acceptance.",
+  "actualProducer": "OpenAI built-in image_gen",
+  "generationMethod": "Built-in imagegen edit; exact prompts/output SHA/rejected attempts preserved in docs/refactor/art-candidates/crop-variant-production-20261119.json",
+  "productionLedger": "docs/refactor/art-candidates/crop-variant-production-20261119.json",
+  "nativePending": true,
+  "runtimeConnected": true,
+  "approvalChanged": false,
+  "selectedStagingSha256": "68563fe7e6bd4b9ef464918e5388b5abdd31335db08645f6caca508d4c0ae7cb"
+}

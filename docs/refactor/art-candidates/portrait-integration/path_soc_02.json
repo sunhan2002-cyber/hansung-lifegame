@@ -1,0 +1,29 @@
+{
+  "eventId": "path_soc_02",
+  "sourceAssetPath": "followup_20261031/img_path_soc_02_001.png",
+  "sourceSha256": "c9a80a64d713b73b428307c84a23d9266a0bddfaadc337c95483968aa1d6699a",
+  "variant": {
+    "assetPath": "presentation/portraits/img_path_soc_02_001_portrait_v1.png",
+    "sha256": "c8dc7b5e8dfa97230d62991fa9b2228842703d4fb2a0843a8d735f49754a6dc8",
+    "width": 941,
+    "height": 1672,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root/effects_tech)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/path_soc_02.json"
+  },
+  "reviewerType": "AI",
+  "reviewer": "Codex AI (/root/effects_tech)",
+  "reviewStatus": "AI_REVIEWED_PRESENTATION",
+  "eventSourceHash": "2ed2c506f8b73581fa5b519dc5998147fd5c9abe9680402e02e1d6c724fea4a7",
+  "semanticReview": "Producer read the current event conditions and every choice/outcome, inspected source and selected output. Full source snapshot and exact prompt are in the referenced production ledger. Native acceptance remains pending.",
+  "visualReview": "갈등중인 두 팀원 얼굴·예산표·탁상알림폰·주인공 맞잡은 손을 유지. 두 얼굴과 예산표/폰이9:20에 함께 보이고 화해·투표·축제개최 결과 없음. 작은 무대모형/음식소품 외곽 일부 잘림은 남음. native pending.",
+  "cropReview": "Portrait candidate selected for native phone/small-phone scene and gameplay inspection; not final artwork acceptance.",
+  "actualProducer": "OpenAI built-in image_gen",
+  "generationMethod": "Built-in imagegen edit; exact prompts/output SHA/rejected attempts preserved in docs/refactor/art-candidates/crop-variant-production-20261119.json",
+  "productionLedger": "docs/refactor/art-candidates/crop-variant-production-20261119.json",
+  "nativePending": true,
+  "runtimeConnected": true,
+  "approvalChanged": false,
+  "selectedStagingSha256": "c8dc7b5e8dfa97230d62991fa9b2228842703d4fb2a0843a8d735f49754a6dc8"
+}

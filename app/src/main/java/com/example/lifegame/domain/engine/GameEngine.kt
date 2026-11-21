@@ -258,11 +258,16 @@ class GameEngine(
     fun synchronizeLifeFacts(
         state: PeriodRunState,
         lifeFactRules: List<LifeFactRule>,
-    ): PeriodRunState = state.copy(
-        lifeFacts = state.lifeFacts
-            .applyRules(state.flags, lifeFactRules)
-            .copy(wealthBand = wealthBand(state.stats.wealth)),
-    )
+    ): PeriodRunState {
+        // Older saves may contain only a provenance alias (job_employed__event), after the
+        // canonical job_employed flag was incorrectly discarded. Restore the same status.
+        val flags = employmentFlagUpdate(state.flags, lifeFactRules).additions
+        return state.copy(
+            flags = flags,
+            lifeFacts = state.lifeFacts.applyRules(flags, lifeFactRules)
+                .copy(wealthBand = wealthBand(state.stats.wealth)),
+        )
+    }
 
     internal fun requiresFocusSelection(state: PeriodRunState): Boolean =
         state.selectedFocusId == null &&
@@ -408,10 +413,9 @@ class GameEngine(
         val afterStats = state.stats.apply(combinedDelta)
         val healthDepleted = afterStats.health <= 0
         // Reacquired facts must replay after older facts when restoring a saved run.
-        val employmentFlags = lifeFactRules.filter { it.fact == "employmentStatus" }.map { it.flag }.toSet()
-        val selectedEmploymentFlag = outcome.addFlags.lastOrNull { it in employmentFlags }
-        val replacedEmploymentFlags = if (selectedEmploymentFlag != null) employmentFlags else emptySet()
-        val normalizedAdds = (outcome.addFlags - employmentFlags) + listOfNotNull(selectedEmploymentFlag)
+        val employment = employmentFlagUpdate(outcome.addFlags, lifeFactRules)
+        val replacedEmploymentFlags = employment.replaced
+        val normalizedAdds = employment.additions
         val nextFlags = (state.flags - outcome.removeFlags - replacedEmploymentFlags - normalizedAdds) +
             normalizedAdds + completedEventFlag(event.eventId)
         val nextFacts = state.lifeFacts
@@ -515,10 +519,9 @@ class GameEngine(
         ) ?: return null
         val key = "${event.eventId}:$triggerToken"
         val afterStats = state.stats.apply(event.statDelta)
-        val employmentFlags = lifeFactRules.filter { it.fact == "employmentStatus" }.map { it.flag }.toSet()
-        val selectedEmploymentFlag = event.addFlags.lastOrNull { it in employmentFlags }
-        val replacedEmploymentFlags = if (selectedEmploymentFlag != null) employmentFlags else emptySet()
-        val normalizedAdds = (event.addFlags - employmentFlags) + listOfNotNull(selectedEmploymentFlag)
+        val employment = employmentFlagUpdate(event.addFlags, lifeFactRules)
+        val replacedEmploymentFlags = employment.replaced
+        val normalizedAdds = employment.additions
         val nextFlags = (state.flags - event.removeFlags - replacedEmploymentFlags - normalizedAdds) + normalizedAdds
         val nextFacts = state.lifeFacts
             .removeRules(event.removeFlags + replacedEmploymentFlags, lifeFactRules)
@@ -1104,6 +1107,27 @@ class GameEngine(
         StatKey.HAPPINESS to happiness,
         StatKey.LUCK to luck,
     ).filter { it.second > 0 }.maxByOrNull { it.second }?.first
+
+    private data class EmploymentFlagUpdate(val additions: Set<String>, val replaced: Set<String>)
+
+    private fun employmentFlagUpdate(additions: Set<String>, rules: List<LifeFactRule>): EmploymentFlagUpdate {
+        val employmentRules = rules.filter { it.fact == "employmentStatus" }.associateBy { it.flag }
+        val selected = additions.lastOrNull { it in employmentRules }?.let { employmentRules.getValue(it).value }
+            ?: return EmploymentFlagUpdate(additions, emptySet())
+        // Exclusivity is between values (EMPLOYED / RETIRED / ...), not between aliases
+        // representing the same value. Path conditions still need the canonical job_* flag.
+        val conflicting = employmentRules.filterValues { it.value != selected }.keys
+        // Other unsuffixed flags (comeback, laid_off, early_retire) describe events, not
+        // generic status. Never invent those histories while repairing a canonical flag.
+        val canonical = when (selected) {
+            "EMPLOYED" -> "job_employed"
+            "SELF_EMPLOYED" -> "job_self_employed"
+            "UNEMPLOYED" -> "job_unemployed"
+            "RETIRED" -> "job_retired"
+            else -> null
+        }?.takeIf { employmentRules[it]?.value == selected }
+        return EmploymentFlagUpdate((additions - conflicting) + listOfNotNull(canonical), conflicting)
+    }
 
     private fun LifeFacts.applyRules(flags: Set<String>, rules: List<LifeFactRule>): LifeFacts {
         var current = this

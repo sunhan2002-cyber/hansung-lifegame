@@ -1,0 +1,275 @@
+{
+  "schemaVersion": 1,
+  "eventId": "path_hea_14",
+  "status": "PASS",
+  "reviewer": "Codex AI / plan_audit",
+  "reviewerType": "AI",
+  "reviewDate": "2026-11-19",
+  "sourceEventHash": "63b92233bf828444763a4ad3a620d4faf0c4e284f79552faa777b88c53d06635",
+  "sourceEventSnapshot": {
+    "eventId": "path_hea_14",
+    "stage": "ADULT",
+    "type": "NORMAL",
+    "isFallback": false,
+    "isMilestone": false,
+    "title": "동네 건강 체조 강사",
+    "text": "주민센터 게시판에 '어르신 건강 체조 강사 모집 — 경력 무관'. 아침마다 공원에서 맨손 체조를 하던 걸 동장님이 봤다고 한다.",
+    "imageId": "img_path_hea_14_001",
+    "conditions": {
+      "stats": {
+        "건강": 60
+      },
+      "requiredFlags": [
+        "healthy_routine"
+      ],
+      "blockedFlags": []
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "강사를 맡는다",
+        "statDelta": {
+          "사회성": 3,
+          "건강": 2,
+          "행복": 2,
+          "경제력": -1
+        },
+        "resultText": "화요일 아침 7시, 공원 정자 앞. 첫날 다섯 명, 겨울엔 마흔 명. 구령 소리에 옆 아파트 창문이 열렸다.",
+        "addFlags": [
+          "achv_health_teacher",
+          "volunteer"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "a_teach",
+            "text": "화요일 아침 7시, 공원 정자 앞. 첫날 다섯 명, 겨울엔 마흔 명. 구령 소리에 옆 아파트 창문이 열렸다.",
+            "chance": 70,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "사회성": 3,
+              "건강": 2,
+              "행복": 2,
+              "경제력": -1
+            },
+            "addFlags": [
+              "achv_health_teacher",
+              "volunteer"
+            ],
+            "chanceWeights": {
+              "사회성": 2
+            }
+          },
+          {
+            "outcomeId": "a_shy",
+            "text": "첫 수업에서 순서를 까먹었다. 할머니들이 대신 구령을 붙여 줬다.",
+            "chance": 30,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "사회성": 1,
+              "건강": 1
+            },
+            "addFlags": [
+              "volunteer"
+            ]
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week10_path_followup"
+      },
+      {
+        "choiceId": "B",
+        "label": "혼자 하는 매일 만 보를 지킨다",
+        "statDelta": {
+          "건강": 3,
+          "행복": 1,
+          "사회성": -1
+        },
+        "resultText": "만 보 기록이 3년째 이어졌다. 휴대폰이 '연속 1,000일' 배지를 줬다.",
+        "addFlags": [
+          "healthy_routine"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "b_walk",
+            "text": "만 보 기록이 3년째 이어졌다. 휴대폰이 '연속 1,000일' 배지를 줬다.",
+            "chance": 100,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "건강": 3,
+              "행복": 1,
+              "사회성": -1
+            },
+            "addFlags": [
+              "healthy_routine"
+            ]
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week10_path_followup"
+      },
+      {
+        "choiceId": "C",
+        "label": "텃밭을 분양받아 몸을 쓴다",
+        "statDelta": {
+          "건강": 2,
+          "행복": 3,
+          "경제력": 1,
+          "운동능력": -1
+        },
+        "resultText": "상추, 고추, 방울토마토. 수확한 걸 이웃에 나눴더니 반찬이 세 배로 돌아왔다.",
+        "addFlags": [],
+        "outcomes": [
+          {
+            "outcomeId": "c_farm",
+            "text": "상추, 고추, 방울토마토. 수확한 걸 이웃에 나눴더니 반찬이 세 배로 돌아왔다.",
+            "chance": 70,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "건강": 2,
+              "행복": 3,
+              "경제력": 1,
+              "운동능력": -1
+            },
+            "addFlags": []
+          },
+          {
+            "outcomeId": "c_bugs",
+            "text": "상추 반은 벌레가 먹었다. 벌레가 먹을 만큼 깨끗한 상추였다.",
+            "chance": 30,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "건강": 1,
+              "행복": -1
+            },
+            "addFlags": []
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week10_path_followup"
+      }
+    ],
+    "priority": 0,
+    "kind": "INCIDENT",
+    "periods": [
+      "OLD_AGE"
+    ],
+    "weight": 8,
+    "view": "FIRST_PERSON",
+    "lifePath": "HEALTH",
+    "pathRole": "노년·공동체",
+    "followUps": []
+  },
+  "sourceReadScope": "Current complete event, conditions, every choice/outcome and flags/stat deltas/periods/follow-ups directly read before judgement.",
+  "sourceImage": {
+    "path": "app/src/main/assets/images/followup_20261031/img_path_hea_14_001.png",
+    "sha256": "6822d03393958875970ec46a49aeb299893be5fd8294e97a0ae9fb3f97955c0e",
+    "width": 720,
+    "height": 540
+  },
+  "originalArtworkUnchangedSinceHistoricalReview": true,
+  "historicalReview": {
+    "eventId": "path_hea_14",
+    "title": "동네 건강 체조 강사",
+    "imageId": "img_path_hea_14_001",
+    "assetPath": "followup_20261031/img_path_hea_14_001.png",
+    "sha256": "6822d03393958875970ec46a49aeb299893be5fd8294e97a0ae9fb3f97955c0e",
+    "eventSourceHash": "63b92233bf828444763a4ad3a620d4faf0c4e284f79552faa777b88c53d06635",
+    "status": "REVISION_REQUIRED",
+    "reviewer": "김선한 담당 Codex 직접 대행 검수",
+    "reason": "중앙 크롭에서 주민센터 경력 강사와 게시물 조합이 잘림",
+    "expectedAction": "건강 체조 강사 모집 공고를 봄",
+    "requiredObjects": "체조 모집 공고, 게시판",
+    "sheet": "output/art-review-20261119/sheet-18.jpg",
+    "cell": 14,
+    "cropMethod": "ImageOps.fit centre-fill 360:800; simulated crop inspected directly, not an emulator capture",
+    "visualMethod": "원본 도트풍·색감·장면 파손·명백한 신체/사물 오류 직접 확인"
+  },
+  "presentationMetadata": [
+    {
+      "assetPath": "followup_20261031/img_path_hea_14_001.png",
+      "sourceSha256": "6822d03393958875970ec46a49aeb299893be5fd8294e97a0ae9fb3f97955c0e",
+      "focalX": 0.56,
+      "focalY": 0.5,
+      "note": "Original PNG retained. Individual core-visibility improvement for path_hea_14; simulated 360x800 and 360x740 crops reviewed. Native review pending; no legacy artwork approval. See docs/refactor/art-candidates/crop-review-20261119.json."
+    }
+  ],
+  "captures": [
+    {
+      "path": "build/refactor/after/secondary-art-focals-native/path_hea_14_phone_scene.png",
+      "sha256": "a580b98c50f9bb9a8c8605afc9c675aea8587b76fa6bc878e0fad33f8b9eda99",
+      "width": 1080,
+      "height": 2400,
+      "screen": "phone",
+      "mode": "scene",
+      "cropReport": {
+        "eventId": "path_hea_14",
+        "imageId": "img_path_hea_14_001",
+        "assetPath": "followup_20261031/img_path_hea_14_001.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.391..0.729",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/secondary-art-focals-native/path_hea_14_phone_play.png",
+      "sha256": "71de377b2237668fc15950e9543a68c5a77ae9f04f619482a7c1faee6b8ff1e6",
+      "width": 1080,
+      "height": 2400,
+      "screen": "phone",
+      "mode": "play",
+      "cropReport": null
+    },
+    {
+      "path": "build/refactor/after/secondary-art-focals-native/path_hea_14_360x740_scene.png",
+      "sha256": "d3fdb2daa805f1d9c7b83ce7a0c23d25abb41da9ac6b2b45d09cf84a6552402e",
+      "width": 945,
+      "height": 1943,
+      "screen": "360x740",
+      "mode": "scene",
+      "cropReport": {
+        "eventId": "path_hea_14",
+        "imageId": "img_path_hea_14_001",
+        "assetPath": "followup_20261031/img_path_hea_14_001.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.378..0.742",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/secondary-art-focals-native/path_hea_14_360x740_play.png",
+      "sha256": "e07fc2a675815aa39a1b11897c1e1b8ae4fe9c7849cdeaec262c3dd08f9c08a8",
+      "width": 945,
+      "height": 1943,
+      "screen": "360x740",
+      "mode": "play",
+      "cropReport": null
+    }
+  ],
+  "semanticObservation": "게시판에 붙은 체조 모집 포스터를 보는 상태다. 체조 중인 사람은 실제 수업이 아니라 포스터 속 삽화이며 채용·실제 강의·만 보 배지·텃밭 수확 결과가 없다. 과거 검수의 경력 강사 인물 전체 보존 요구는 현재 원문의 필수 조건이 아니다.",
+  "cropObservation": "focalX 0.56에서 두 화면 모두 모집 포스터 네 모서리와 체조 삽화·메가폰·달력·연락 기호가 유지된다. 옆 직원은 손 일부만 남지만 핵심 게시물과 플레이어 시점은 명확하다.",
+  "uiObservation": "phone 제목·본문·세 선택지가 읽힌다. small C 문구는 읽히지만 카드 하단이 footer에 걸리므로 정지 캡처만으로 스크롤을 인증하지 않는다.",
+  "reviewMethod": "Codex AI directly inspected the full unchanged source PNG and all four unmodified native scene/play captures. Prior review is retained as historical evidence; this record is a new AI judgement, not human approval.",
+  "nativeMethod": "Production DecisionScreen, current parsed event/routing/PixelAssetLoader, fixture state in Android Compose instrumentation. Scene grid match >=0.95. Not complete game progression.",
+  "nativeRunLog": "build/refactor/secondary-art-focals-completion.log",
+  "limitations": [
+    "Emulator captures, not physical-device review.",
+    "Only reviewed phone and 360x740 dimensions; not every font scale/aspect ratio.",
+    "Art review does not independently certify scrolling, TalkBack or complete game-flow transitions."
+  ]
+}

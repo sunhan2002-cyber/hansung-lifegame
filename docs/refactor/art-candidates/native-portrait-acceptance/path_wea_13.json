@@ -1,0 +1,71 @@
+{
+  "eventId": "path_wea_13",
+  "reviewerType": "AI",
+  "scope": "Portrait phone and small-phone presentation",
+  "sourceEventHash": "c426d5cdc0ebc9afc8395510077a61a7d8e417f02d0d158a0283ae7e71a9c1eb",
+  "sourceReview": "docs/refactor/art-candidates/portrait-integration/path_wea_13.json",
+  "sourceSha256": "019fc04ee1d055c626f5cc18ecc6b4b43b8dbcf4495046aee1bca7cbba110be4",
+  "displayedVariant": {
+    "assetPath": "presentation/portraits/img_path_wea_13_001_portrait_v1.png",
+    "sha256": "28878ddd18f871cf461218f893cf151a3c9b47b8554e1b8ae07b10246b87a510",
+    "width": 941,
+    "height": 1672,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root/effects_tech)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/path_wea_13.json"
+  },
+  "nativeCaptures": [
+    {
+      "path": "build/refactor/after/portrait-fortythree-native/path_wea_13_phone_scene.png",
+      "sha256": "6fb73a6f4109055f66441455739cda0afd2ef235088b52dbb891584de8891ab8",
+      "crop": {
+        "eventId": "path_wea_13",
+        "imageId": "img_path_wea_13_001",
+        "assetPath": "presentation/portraits/img_path_wea_13_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/portrait-fortythree-native/path_wea_13_phone_play.png",
+      "sha256": "e0ae3e3486f9f040bc90257be515071db876b207b8f2169cb4f57369e030be5b",
+      "crop": {
+        "eventId": "path_wea_13",
+        "imageId": "img_path_wea_13_001",
+        "assetPath": "presentation/portraits/img_path_wea_13_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/portrait-fortythree-native/path_wea_13_360x740_scene.png",
+      "sha256": "96d9a8a2b223b611903e95b07a273aeadaed4583057bb093e1eb2d486441fed5",
+      "crop": {
+        "eventId": "path_wea_13",
+        "imageId": "img_path_wea_13_001",
+        "assetPath": "presentation/portraits/img_path_wea_13_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/after/portrait-fortythree-native/path_wea_13_360x740_play.png",
+      "sha256": "46513a9b0152e17f8b48c2d6801357fed7c5ff9d258e70662bf9744d58bf66a5",
+      "crop": {
+        "eventId": "path_wea_13",
+        "imageId": "img_path_wea_13_001",
+        "assetPath": "presentation/portraits/img_path_wea_13_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    }
+  ],
+  "observation": "집 관련 서류와 휴대폰 및 상의하는 가족이 보인다.",
+  "decision": "PASS",
+  "method": "Individual visual inspection of both scene and gameplay frames together with producer semantic/source review and device capture match."
+}

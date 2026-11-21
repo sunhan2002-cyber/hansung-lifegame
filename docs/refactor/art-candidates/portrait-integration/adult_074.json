@@ -1,0 +1,29 @@
+{
+  "eventId": "adult_074",
+  "sourceAssetPath": "followup_20261031/img_pov_dating_app_001.png",
+  "sourceSha256": "2c3ca40a3bed4c6f5698f00b2c16b308022ce19fc45aa7b8e3da226f46a6dc30",
+  "variant": {
+    "assetPath": "presentation/portraits/img_pov_dating_app_001_portrait_v1.png",
+    "sha256": "9048ce94b61ee650a6c2177de1ed065319868923ec90bc85385a73276d5e4641",
+    "width": 941,
+    "height": 1672,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/adult_074.json"
+  },
+  "reviewerType": "AI",
+  "reviewer": "Codex AI (/root)",
+  "reviewStatus": "AI_REVIEWED_PRESENTATION",
+  "eventSourceHash": "61227218ed2902074c77d115616d59d566ef66a9ded8a52d621d36e90560347b",
+  "semanticReview": "Producer read the current event conditions and every choice/outcome, inspected source and selected output. Full source snapshot and exact prompt are in the referenced production ledger. Native acceptance remains pending.",
+  "visualReview": "Match notification depicts both cat and hiking symbols on screen.",
+  "cropReview": "Portrait candidate selected for native phone/small-phone scene and gameplay inspection; not final artwork acceptance.",
+  "actualProducer": "OpenAI built-in image_gen",
+  "generationMethod": "Built-in imagegen edit; exact prompts/output SHA/rejected attempts preserved in docs/refactor/art-candidates/resumed-production-20261119.json",
+  "productionLedger": "docs/refactor/art-candidates/resumed-production-20261119.json",
+  "nativePending": true,
+  "runtimeConnected": true,
+  "approvalChanged": false,
+  "selectedStagingSha256": "9048ce94b61ee650a6c2177de1ed065319868923ec90bc85385a73276d5e4641"
+}

@@ -1,0 +1,71 @@
+{
+  "eventId": "path_fit_09",
+  "reviewerType": "AI",
+  "scope": "Portrait phone and small-phone presentation",
+  "sourceEventHash": "012e49bed01e548a01628f548d54359c23f5f7625cb6670a7fac180ace68ae42",
+  "sourceReview": "docs/refactor/art-candidates/portrait-integration/path_fit_09.json",
+  "sourceSha256": "ccbeb5a6ffaaedaa22f0a1d8ed50e958208dbb78c4a865b7178b0027d7720959",
+  "displayedVariant": {
+    "assetPath": "presentation/portraits/img_path_fit_09_001_portrait_v1.png",
+    "sha256": "f7fff6397eb29ce3acc951e41fa8bfe1288cfaba813c2d8eb322ab1f90eb30c2",
+    "width": 941,
+    "height": 1672,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/path_fit_09.json"
+  },
+  "nativeCaptures": [
+    {
+      "path": "build/refactor/resumed/final32/path_fit_09_phone_scene.png",
+      "sha256": "c9e1fd35cdae9cf24b45edb30053412ab342ce512bd1d8529935b4ea9f38e4d4",
+      "crop": {
+        "eventId": "path_fit_09",
+        "imageId": "img_path_fit_09_001",
+        "assetPath": "presentation/portraits/img_path_fit_09_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/final32/path_fit_09_phone_play.png",
+      "sha256": "d317ba5ca86312a2e2821e6d59fdfb79416ab94386c0d77affb838163e09f397",
+      "crop": {
+        "eventId": "path_fit_09",
+        "imageId": "img_path_fit_09_001",
+        "assetPath": "presentation/portraits/img_path_fit_09_001_portrait_v1.png",
+        "screen": "1080x2400",
+        "visibleSourceX": "0.100..0.900",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/final32/path_fit_09_360x740_scene.png",
+      "sha256": "3360837d1c76f5f4f376e2d5bf3d7327f7636f4c0e5551a75c64d501030b75f3",
+      "crop": {
+        "eventId": "path_fit_09",
+        "imageId": "img_path_fit_09_001",
+        "assetPath": "presentation/portraits/img_path_fit_09_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    },
+    {
+      "path": "build/refactor/resumed/final32/path_fit_09_360x740_play.png",
+      "sha256": "3e97b40e0f7a346214ceae3c0ff56abe25419ebf5a8d02c536938bda489b2d8b",
+      "crop": {
+        "eventId": "path_fit_09",
+        "imageId": "img_path_fit_09_001",
+        "assetPath": "presentation/portraits/img_path_fit_09_001_portrait_v1.png",
+        "screen": "945x1943",
+        "visibleSourceX": "0.068..0.932",
+        "match": "1.000"
+      }
+    }
+  ],
+  "observation": "Registration worker looks up at senior runner seated at the desk.",
+  "decision": "PASS",
+  "method": "Individual visual inspection of both scene and gameplay frames together with producer semantic/source review and device capture match."
+}

@@ -60,6 +60,9 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.min
 import androidx.compose.ui.unit.sp
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.compose.LocalLifecycleOwner
+import androidx.lifecycle.compose.currentStateAsState
 import com.example.lifegame.ui.LogKind
 import com.example.lifegame.ui.LogLineUi
 import com.example.lifegame.ui.PLAY_SPEEDS
@@ -98,14 +101,24 @@ fun AutoProgressScreen(
     var detailsOpen by remember { mutableStateOf(false) }
     val reduceMotion = rememberReduceMotion()
     val advance by rememberUpdatedState(onAdvanceYear)
+    val togglePlaying by rememberUpdatedState(onTogglePlaying)
+    val contentScroll = rememberScrollState()
+    val lifecycleState by LocalLifecycleOwner.current.lifecycle.currentStateAsState()
+    val reading = detailsOpen || contentScroll.isScrollInProgress
+
+    // Reading a long card or opening details pauses playback until the player resumes it.
+    // The presentation never advances years or re-applies an automatic event on resume.
+    LaunchedEffect(reading, state.autoPlaying) {
+        if (reading && state.autoPlaying) togglePlaying()
+    }
 
     val yearProgress = remember { Animatable(0f) }
 
     // 자동 진행 타이머. 해가 바뀌거나 배속 · 일시정지가 바뀌면 다시 센다. 자동 사건 카드는 읽을 시간만큼 더 둔다.
     val stepMillis = state.automaticEvent?.let(::automaticEventHoldMillis) ?: YEAR_MILLIS_AT_1X
-    LaunchedEffect(state.yearKey, state.autoPlaying, state.speed) {
+    LaunchedEffect(state.yearKey, state.autoPlaying, state.speed, reading, lifecycleState) {
         yearProgress.snapTo(0f)
-        if (!state.autoPlaying) return@LaunchedEffect
+        if (!state.autoPlaying || reading || lifecycleState != Lifecycle.State.RESUMED) return@LaunchedEffect
         yearProgress.animateTo(1f, tween((stepMillis / state.speed).toInt(), easing = LinearEasing))
         advance()
     }
@@ -140,7 +153,7 @@ fun AutoProgressScreen(
                 Column(
                     Modifier
                         .fillMaxSize()
-                        .verticalScroll(rememberScrollState())
+                        .verticalScroll(contentScroll)
                         .testTag("auto_progress_content"),
                 ) {
                     // 방금 지나간 자동 사건은 카드로 맨 위에 먼저 보여 주고(작은 화면 · 큰 글자에서도 스크롤 없이 시작이 보이게),
@@ -333,15 +346,6 @@ private fun AutomaticEventCard(event: com.example.lifegame.ui.AutomaticEventUi) 
                 )
             }
         }
-        Text(
-            text = event.text,
-            color = LifeGameInk,
-            fontFamily = LifeGameSerif,
-            fontSize = 16.sp,
-            // 360×640dp · 글자 200%에서 보통 길이(약 40자) 문장이 스크롤 없이 다 보이게 줄 간격을 조금 좁힌다.
-            lineHeight = 23.sp,
-            modifier = Modifier.testTag("auto_event_text"),
-        )
         if (event.recordOnly) {
             Text(
                 text = "능력치 변화 없이 기록에만 남겼어요",
@@ -358,6 +362,15 @@ private fun AutomaticEventCard(event: com.example.lifegame.ui.AutomaticEventUi) 
                 modifier = Modifier.testTag("auto_event_changes"),
             )
         }
+        // Put the consequence before the long prose, including at 200% font scale.
+        Text(
+            text = event.text,
+            color = LifeGameInk,
+            fontFamily = LifeGameSerif,
+            fontSize = 16.sp,
+            lineHeight = 23.sp,
+            modifier = Modifier.testTag("auto_event_text"),
+        )
         event.recall?.let { recall ->
             Text(
                 text = "그때 그 선택 · ${recall.text}",

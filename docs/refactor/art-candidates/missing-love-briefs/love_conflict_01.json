@@ -1,0 +1,330 @@
+{
+  "schemaVersion": 1,
+  "eventId": "love_conflict_01",
+  "title": "말다툼 다음 날",
+  "imageId": "img_love_conflict_01_001",
+  "status": "READY_FOR_GENERATION_NOT_ART_APPROVAL",
+  "author": "Codex AI",
+  "date": "2026-11-19",
+  "generationPriority": 11,
+  "currentAcceptanceStatus": "MISSING_PNG",
+  "sourceEventHash": "ed6624036a1307824e3bd4af722bb6e5f0a6112386f144c3374cbddb9f1676bd",
+  "sourceEventPath": "app/src/main/assets/events.sample.json",
+  "sourceEventSnapshot": {
+    "eventId": "love_conflict_01",
+    "stage": "ADULT",
+    "type": "NORMAL",
+    "isFallback": false,
+    "isMilestone": false,
+    "title": "말다툼 다음 날",
+    "text": "어젯밤 말다툼 뒤로 메시지 창이 조용하다. '입력 중…' 표시가 떴다가 사라지기를 세 번째.",
+    "imageId": "img_love_conflict_01_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [
+        "dating",
+        "rel_conflict"
+      ],
+      "blockedFlags": [
+        "partner_first_love",
+        "partner_ideal",
+        "partner_music",
+        "partner_book",
+        "engaged",
+        "married",
+        "divorced"
+      ]
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "먼저 전화해서 사과한다",
+        "statDelta": {
+          "사회성": 2,
+          "행복": 2
+        },
+        "resultText": "통화는 한 시간. 사과는 1분, 나머지는 어제 못 한 이야기였다. 다음 날 만나서 떡볶이를 먹었다.",
+        "addFlags": [
+          "rel_steady"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "a_makeup",
+            "text": "통화는 한 시간. 사과는 1분, 나머지는 어제 못 한 이야기였다. 다음 날 만나서 떡볶이를 먹었다.",
+            "chance": 70,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "사회성": 2,
+              "행복": 2
+            },
+            "addFlags": [
+              "rel_steady"
+            ],
+            "removeFlags": [
+              "rel_conflict"
+            ]
+          },
+          {
+            "outcomeId": "a_late",
+            "text": "연인은 전화를 받지 않았다. 다음 날 짧은 메시지가 왔다. '우리 잠깐 시간을 갖자.' 그 시간이 길어졌다.",
+            "chance": 30,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": -4
+            },
+            "addFlags": [
+              "breakup_once",
+              "ex_partner"
+            ],
+            "removeFlags": [
+              "dating",
+              "rel_steady",
+              "rel_conflict",
+              "partner_first_love",
+              "partner_ideal",
+              "partner_music",
+              "partner_book",
+              "partner_app",
+              "partner_closing",
+              "partner_gym",
+              "partner_letter",
+              "partner_blind_date",
+              "dating__adult_073",
+              "dating__adult_074",
+              "dating__adult_075",
+              "dating__adult_076",
+              "dating__adult_077",
+              "dating__adult_078",
+              "dating__path_soc_03",
+              "dating__path_soc_11",
+              "dating__path_hap_05",
+              "dating__love_letter_01"
+            ]
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week13_love_line"
+      },
+      {
+        "choiceId": "B",
+        "label": "서로 생각할 시간을 갖자고 한다",
+        "statDelta": {
+          "행복": -3,
+          "지력": 1
+        },
+        "resultText": "한 달 뒤 둘 다 같은 결론을 냈다. 헤어지던 날 카페에서 마지막 커피값은 반씩 냈다.",
+        "addFlags": [
+          "breakup_once",
+          "ex_partner"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "b_break",
+            "text": "한 달 뒤 둘 다 같은 결론을 냈다. 헤어지던 날 카페에서 마지막 커피값은 반씩 냈다.",
+            "chance": 60,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": -3,
+              "지력": 1
+            },
+            "addFlags": [
+              "breakup_once",
+              "ex_partner"
+            ],
+            "removeFlags": [
+              "dating",
+              "rel_steady",
+              "rel_conflict",
+              "partner_first_love",
+              "partner_ideal",
+              "partner_music",
+              "partner_book",
+              "partner_app",
+              "partner_closing",
+              "partner_gym",
+              "partner_letter",
+              "partner_blind_date",
+              "dating__adult_073",
+              "dating__adult_074",
+              "dating__adult_075",
+              "dating__adult_076",
+              "dating__adult_077",
+              "dating__adult_078",
+              "dating__path_soc_03",
+              "dating__path_soc_11",
+              "dating__path_hap_05",
+              "dating__love_letter_01"
+            ]
+          },
+          {
+            "outcomeId": "b_back",
+            "text": "일주일 만에 연인이 먼저 문 앞에 왔다. 손에 내가 좋아하는 빵이 들려 있었다.",
+            "chance": 40,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 2,
+              "사회성": 1
+            },
+            "addFlags": [
+              "rel_steady"
+            ],
+            "removeFlags": [
+              "rel_conflict"
+            ]
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week13_love_line"
+      },
+      {
+        "choiceId": "C",
+        "label": "이모티콘 하나만 보낸다",
+        "statDelta": {
+          "행복": 2
+        },
+        "resultText": "고양이가 무릎 꿇은 이모티콘. 3초 만에 답장이 왔다. 똑같은 고양이였다.",
+        "addFlags": [
+          "rel_steady"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "c_cute",
+            "text": "고양이가 무릎 꿇은 이모티콘. 3초 만에 답장이 왔다. 똑같은 고양이였다.",
+            "chance": 55,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 2
+            },
+            "addFlags": [
+              "rel_steady"
+            ],
+            "removeFlags": [
+              "rel_conflict"
+            ]
+          },
+          {
+            "outcomeId": "c_worse",
+            "text": "보낸 건 고양이가 아니라 '하하하' 웃는 이모티콘이었다. 그날 이후 연락이 끊겼다.",
+            "chance": 45,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": -4
+            },
+            "addFlags": [
+              "breakup_once",
+              "ex_partner"
+            ],
+            "removeFlags": [
+              "dating",
+              "rel_steady",
+              "rel_conflict",
+              "partner_first_love",
+              "partner_ideal",
+              "partner_music",
+              "partner_book",
+              "partner_app",
+              "partner_closing",
+              "partner_gym",
+              "partner_letter",
+              "partner_blind_date",
+              "dating__adult_073",
+              "dating__adult_074",
+              "dating__adult_075",
+              "dating__adult_076",
+              "dating__adult_077",
+              "dating__adult_078",
+              "dating__path_soc_03",
+              "dating__path_soc_11",
+              "dating__path_hap_05",
+              "dating__love_letter_01"
+            ]
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "일반 사건 — 능력치로 잠그지 않고 결과 가능성(chanceWeights)으로만 반영",
+        "conditionReview": "soft_incident",
+        "conditionBasis": "week13_love_line"
+      }
+    ],
+    "priority": 0,
+    "kind": "INCIDENT",
+    "periods": [
+      "YOUNG_ADULT",
+      "MIDDLE"
+    ],
+    "weight": 80,
+    "view": "FIRST_PERSON",
+    "pathRole": "러브라인 3단계 — 갈등: 화해 또는 결별",
+    "followUps": [
+      "love_reunion_01",
+      "love_marriage_talk_01"
+    ]
+  },
+  "reviewScope": "Current complete event, conditions, every choice including legacy fields, all outcomes, probabilities, deltas and flags read for pre-choice art specification. No new image has been generated or approved by this brief.",
+  "reviewedChoiceIds": [
+    "A",
+    "B",
+    "C"
+  ],
+  "reviewedOutcomeIds": [
+    "a_makeup",
+    "a_late",
+    "b_break",
+    "b_back",
+    "c_cute",
+    "c_worse"
+  ],
+  "existingArtBriefPath": "docs/assignments/20261031/submissions/김선한_분류합본.csv",
+  "existingArtBriefSnapshot": {
+    "place": "밤 침실",
+    "mainAction": "말다툼 다음 날 조용한 메시지 창을 본다",
+    "requiredObjects": "휴대폰 메시지 창의 입력 중 표시",
+    "peopleAndAge": "주인공 혼자",
+    "timeOfDay": "밤",
+    "approvedPerspective": "FIRST_PERSON",
+    "reuseOrNewReason": "NEW: 13주차 러브라인 신규 사건. 관계 단계(연인·약혼·배우자·자녀)를 선택 전보다 앞서 보여 주지 않는 전용 장면 필요"
+  },
+  "requestedAssetPath": "app/src/main/assets/images/img_love_conflict_01_001.png",
+  "preChoiceState": "전날 연인과 말다툼 후 메시지 창이 조용하다. 상대의 입력 중 표시가 나타났다 사라지는 동안 플레이어가 답할 방법을 정하지 않았다.",
+  "composition": "밤 침실의 1인칭. 화면 중앙 위에 자연스럽게 쥔 휴대폰과 침대 옆 조명이 보인다. 휴대폰에는 글자 없이 작은 점 세 개의 입력 중 모양만 표시.",
+  "ageAndAppearance": "청년~중년 성인 혼자. 플레이어/상대 사진·프로필 얼굴 없음.",
+  "forbiddenOutcomes": [
+    "통화 연결·다음 날 떡볶이",
+    "마지막 커피·이별 확정",
+    "문 앞 연인과 빵",
+    "고양이/웃는 이모티콘 전송",
+    "차단 표시·계정 상태 문구",
+    "상대가 같은 방에 있는 장면"
+  ],
+  "briefCorrections": [
+    "입력 중 표시만 의미를 전달하며 실제 대화 문장을 이미지에 합성하지 않는다. 성공·실패 분기에서만 나오는 음식과 이모티콘은 제거한다."
+  ],
+  "generationPrompt": "Create one portrait 9:16 full-bleed game background, warm restrained Korean everyday-life pixel-art illustration. Crisp deliberate pixel clusters, coherent anatomy, softly separated light and shadow, not photorealism and not a UI mockup. Strict first-person player viewpoint: no player face, back of head, full player body, reflection, selfie or framed portrait of the player. Only naturally placed player hands or forearms may enter the frame. The player can be male or female; hands, clothing and visible partner styling must not encode a fixed player gender or a uniquely named past partner. All romantic participants are clearly adults; do not depict school-age children as romantic partners. Use age-flexible adult styling that can fit young adulthood or middle adulthood. If a partner must be visible, show non-identifying partial profile, cropped upper torso or hands rather than an identity-defining portrait. No readable text, letters, digits, logos, subtitles, speech bubbles, interface panels, progress indicators or button graphics. Any phone message cue must be an abstract non-text shape and never legible text. Keep all story-critical objects together inside the central 60% of the portrait width and middle 60% of height; leave the bottom 22% visually quiet for the game overlay, without drawing an overlay. This is the instant before the player chooses. Show the stated present situation only, with no success, failure, marriage, pregnancy, reconciliation, breakup or future achievement unless already established in the source conditions. \nSCENE: A quiet bedroom at night after an argument with an adult partner the previous night. First-person close view of a phone held naturally in one hand, with a soft bedside lamp and dark bed fabrics behind it. The phone screen is deliberately minimal: a single small abstract three-dot typing cue on a blank subdued surface, no readable words, numerals, avatars, keyboard or decorative UI panels. The player waits, undecided. No other person in the room, active voice call, emoji, laughing cat, blocked symbol, cafe, tteokbokki, bread at the door, tears announcing a breakup or reconciliation embrace.",
+  "deliveryAndReview": {
+    "format": "PNG, portrait 9:16",
+    "originalAssets": "Preserve existing artwork and approval history. This is a missing-art candidate, not a replacement approval.",
+    "requiredChecks": [
+      "Read current event hash again before generation; stale briefs must be reread.",
+      "Inspect full image, anatomy, all required objects and absence of choice outcomes.",
+      "Inspect actual native portrait presentation and UI overlay at phone and narrow viewport.",
+      "Record image SHA, exact generation prompt, truthful AI producer/reviewer and per-event rationale before any separate approval action."
+    ],
+    "approvalOrManifestChanged": false
+  }
+}

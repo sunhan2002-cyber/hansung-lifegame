@@ -1,0 +1,29 @@
+{
+  "eventId": "path_fit_01",
+  "sourceAssetPath": "followup_20261031/img_path_fit_01_001.png",
+  "sourceSha256": "d2bb4ff368c5619756b13363a8b9532525b2007fbef07cc8d7d83e24bb8136d8",
+  "variant": {
+    "assetPath": "presentation/portraits/img_path_fit_01_001_portrait_v1.png",
+    "sha256": "f0e35758c91c29885a25e1bebca9027b0e1b0d6c4927eb884fbf265fb9f2ed82",
+    "width": 941,
+    "height": 1672,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root/effects_tech)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/path_fit_01.json"
+  },
+  "reviewerType": "AI",
+  "reviewer": "Codex AI (/root/effects_tech)",
+  "reviewStatus": "AI_REVIEWED_PRESENTATION",
+  "eventSourceHash": "6629f09816186124c0c1d4d063bfd0698059ada559aa1717c7352ed6ae2a1d56",
+  "semanticReview": "Producer read the current event conditions and every choice/outcome, inspected source and selected output. Full source snapshot and exact prompt are in the referenced production ledger. Native acceptance remains pending.",
+  "visualReview": "코치 운동복·호루라기·엄마 옆/뒷모습·두 성인의 손·명함·결승선과 아이 무릎 유지. 명함과 두 손, 코치 얼굴·엄마 옆얼굴이9:20 안에 함께 남는다. 엄마 머리카락/몸 바깥은 crop될 수 있어60%완전충족 아님. 입단/추가달리기 결과 없음. native pending.",
+  "cropReview": "Portrait candidate selected for native phone/small-phone scene and gameplay inspection; not final artwork acceptance.",
+  "actualProducer": "OpenAI built-in image_gen",
+  "generationMethod": "Built-in imagegen edit; exact prompts/output SHA/rejected attempts preserved in docs/refactor/art-candidates/crop-variant-production-20261119.json",
+  "productionLedger": "docs/refactor/art-candidates/crop-variant-production-20261119.json",
+  "nativePending": true,
+  "runtimeConnected": true,
+  "approvalChanged": false,
+  "selectedStagingSha256": "f0e35758c91c29885a25e1bebca9027b0e1b0d6c4927eb884fbf265fb9f2ed82"
+}
