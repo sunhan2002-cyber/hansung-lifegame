@@ -60,7 +60,9 @@ class CachedContentLoaderTest {
         val reads = mutableMapOf<String, Int>()
         val repository = repository(reads = reads)
         val first = repository.loadPlayableContent() as ContentLoadResult.Ready
-        assertEquals(372, first.value.content.decisions.size)
+        // 사건 수는 시나리오가 늘면 바뀌므로 실제 자산 파일의 사건 수와 대조한다(2026-11-20: 372 → 381).
+        val authoredEvents = org.json.JSONArray(File("src/main/assets/events.sample.json").readText()).length()
+        assertEquals(authoredEvents, first.value.content.decisions.size)
         assertEquals(66, first.value.endings.size)
         assertTrue(first.value.automaticEventRules.isNotEmpty())
         repeat(5) {

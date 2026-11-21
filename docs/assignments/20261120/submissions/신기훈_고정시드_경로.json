@@ -1,0 +1,91 @@
+{
+  "route_book": {
+    "seed": 20261134,
+    "seedsTried": 15,
+    "steps": [
+      "TEEN:1 teen_021:B:b_primary +[missed_chance]",
+      "YOUNG_ADULT:2 adult_074:C:c_book +[dating, dating__adult_074, met_book_club, partner_book]",
+      "YOUNG_ADULT:3 love_date_book:A:a_miss +[rel_conflict]",
+      "YOUNG_ADULT:4 love_conflict_book:A:a_letter +[rel_warm]",
+      "YOUNG_ADULT:5 love_episode_book:A:a_first +[rel_steady]",
+      "MIDDLE:2 adult_032:A:a_primary +[engaged]",
+      "MIDDLE:3 love_family_meet_01:B:b_team +[families_met]",
+      "MIDDLE:4 love_wedding_prep_01:A:a_small +[wedding_ready, wedding_small]",
+      "OLD_AGE:2 love_wedding_book:A:a_walk +[married, spouse_book]"
+    ]
+  },
+  "breakup": {
+    "seed": 20261173,
+    "seedsTried": 54,
+    "steps": [
+      "YOUNG_ADULT:2 path_soc_03:A:a_date +[dating, dating__path_soc_03, first_love, met_bus, partner_first_love]",
+      "YOUNG_ADULT:3 love_date_first_love:C:c_cringe +[rel_conflict]",
+      "YOUNG_ADULT:4 love_conflict_first_love:C:c_cringe +[breakup_once, ex_first_love]"
+    ]
+  },
+  "postpone_talk": {
+    "seed": 20261134,
+    "seedsTried": 15,
+    "steps": [
+      "TEEN:1 teen_021:B:b_primary +[missed_chance]",
+      "YOUNG_ADULT:2 adult_074:C:c_book +[dating, dating__adult_074, met_book_club, partner_book]",
+      "YOUNG_ADULT:3 love_date_book:A:a_miss +[rel_conflict]",
+      "YOUNG_ADULT:4 love_conflict_book:A:a_letter +[rel_warm]",
+      "YOUNG_ADULT:5 love_episode_book:A:a_first +[rel_steady]",
+      "MIDDLE:2 adult_032:B:b_primary +[career_first, long_term_dating]"
+    ]
+  },
+  "decline_meeting": {
+    "seed": 20261123,
+    "seedsTried": 4,
+    "steps": [
+      "YOUNG_ADULT:2 path_soc_03:B:b_miss +[missed_chance]",
+      "YOUNG_ADULT:3 path_soc_11:B:b_solo +[housing_monthly_rent, housing_monthly_rent__path_soc_11, single_life, single_life__path_soc_11]",
+      "YOUNG_ADULT:4 adult_073:B:b_solo +[single_life__adult_073]"
+    ]
+  },
+  "single_life": {
+    "seed": 20261120,
+    "seedsTried": 1,
+    "steps": ["YOUNG_ADULT:4 adult_073:B:b_solo +[single_life, single_life__adult_073]"]
+  },
+  "route_first_love": {
+    "seed": 20261125,
+    "seedsTried": 6,
+    "steps": [
+      "TEEN:1 path_soc_03:A:a_date +[dating, dating__path_soc_03, first_love, met_bus, partner_first_love]",
+      "YOUNG_ADULT:2 love_date_first_love:A:a_found +[rel_warm]",
+      "YOUNG_ADULT:3 love_episode_first_love:A:a_photo +[rel_steady]",
+      "YOUNG_ADULT:4 adult_032:A:a_primary +[engaged]",
+      "MIDDLE:1 path_soc_05:A:a_video +[achv_family_peace, families_met, family_memory]",
+      "MIDDLE:2 love_wedding_prep_01:A:a_small +[wedding_ready, wedding_small]",
+      "MIDDLE:3 love_wedding_first_love:A:a_walk +[married, spouse_first_love]",
+      "MIDDLE:4 love_child_plan_01:C:c_dry +[no_child_plan]"
+    ]
+  },
+  "route_music": {
+    "seed": 20261120,
+    "seedsTried": 1,
+    "steps": [
+      "YOUNG_ADULT:2 path_hap_05:A:a_couple +[dating, dating__path_hap_05, met_music_band, partner_music]",
+      "YOUNG_ADULT:3 love_date_music:A:a_clean +[rel_warm]",
+      "YOUNG_ADULT:4 love_episode_music:A:a_play +[rel_steady]",
+      "MIDDLE:1 adult_032:A:a_primary +[engaged]",
+      "MIDDLE:2 love_family_meet_01:B:b_team +[families_met]",
+      "MIDDLE:3 love_wedding_prep_01:A:a_small +[wedding_ready, wedding_small]",
+      "MIDDLE:4 love_wedding_music:A:a_walk +[achv_band_wedding, married, spouse_music]"
+    ]
+  },
+  "postpone_wedding": {
+    "seed": 20261120,
+    "seedsTried": 1,
+    "steps": [
+      "YOUNG_ADULT:2 path_hap_05:A:a_couple +[dating, dating__path_hap_05, met_music_band, partner_music]",
+      "YOUNG_ADULT:3 love_date_music:A:a_clean +[rel_warm]",
+      "YOUNG_ADULT:4 love_episode_music:A:a_play +[rel_steady]",
+      "MIDDLE:1 adult_032:A:a_primary +[engaged]",
+      "MIDDLE:2 love_family_meet_01:B:b_team +[families_met]",
+      "MIDDLE:3 love_wedding_prep_01:B:b_wait +[long_term_dating, wedding_postponed]"
+    ]
+  }
+}

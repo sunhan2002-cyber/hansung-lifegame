@@ -1,0 +1,55 @@
+{
+  "runs": 10000,
+  "violations": {},
+  "violationExamples": {},
+  "rates": {
+    "dating": "52.2%",
+    "rel_steady": "43.3%",
+    "engaged": "34.5%",
+    "families_met": "33.9%",
+    "wedding_ready": "27.6%",
+    "married": "26.8%",
+    "single_life": "25.1%",
+    "rel_conflict": "19.6%",
+    "long_term_dating": "12.0%",
+    "rel_warm": "9.5%",
+    "wedding_postponed": "5.8%",
+    "breakup_once": "5.5%",
+    "has_child": "2.6%",
+    "reunited": "0.9%"
+  },
+  "autoLoveStart": 98,
+  "declinedMeetingChoices": 4156,
+  "ceremonies": {
+    "love_wedding_01": 2118,
+    "love_wedding_music": 150,
+    "love_wedding_first_love": 315,
+    "love_wedding_book": 97
+  },
+  "spouseRoute": {
+    "spouse_other": 2118,
+    "spouse_music": 150,
+    "spouse_first_love": 315,
+    "spouse_book": 97
+  },
+  "marriagePeriod": {
+    "MIDDLE": 1383,
+    "OLD_AGE": 1297
+  },
+  "routeSteps": {
+    "book:conflict": 66,
+    "book:date": 257,
+    "book:episode": 210,
+    "book:reunion": 16,
+    "first_love:conflict": 140,
+    "first_love:date": 438,
+    "first_love:episode": 373,
+    "first_love:reunion": 24,
+    "music:conflict": 67,
+    "music:date": 404,
+    "music:episode": 311,
+    "music:reunion": 8
+  },
+  "invariantFailureRuns": 0,
+  "invariantKinds": {}
+}

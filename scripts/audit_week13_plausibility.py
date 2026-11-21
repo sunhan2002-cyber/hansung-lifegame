@@ -128,6 +128,65 @@ def audit(bundle: dict) -> dict:
         if "married" in req and "상견례" in e["title"] + e["text"]:
             err(eid, "post-marriage event mentions 상견례")
 
+    # 2-2. wedding routes (2026-11-20) ----------------------------------------
+    ceremonies = [e for e in events if any("married" in o.get("addFlags", []) for c in e["choices"] for o in c["outcomes"])]
+    for e in ceremonies:
+        eid = e["eventId"]
+        req = set(e["conditions"].get("requiredFlags", []))
+        if not {"engaged", "families_met", "wedding_ready"} <= req or "married" not in e["conditions"].get("blockedFlags", []):
+            err(eid, "ceremony must require engaged+families_met+wedding_ready and block married")
+        if e.get("kind") != "MILESTONE" or len(e["choices"]) < 3:
+            err(eid, "ceremony must be a MILESTONE with entrance/vow/celebration choices")
+        labels = " ".join(c["label"] for c in e["choices"])
+        if "입장" not in labels or not re.search(r"서약|노래", labels):
+            err(eid, "ceremony choices must include an entrance and a vow")
+        for c in e["choices"]:
+            for o in c["outcomes"]:
+                spouse = [f for f in o.get("addFlags", []) if f.startswith("spouse_")]
+                if "married" not in o.get("addFlags", []) or len(spouse) != 1:
+                    err(f"{eid}:{c['choiceId']}:{o['outcomeId']}", "every ceremony outcome confirms marriage once with one spouse_* flag")
+    ceremony_ids = {e["eventId"] for e in ceremonies}
+    for e in events:
+        for c in e["choices"]:
+            adds_married = any("married" in o.get("addFlags", []) for o in c["outcomes"])
+            if re.search(r"결혼한다|결혼하자|결혼식을 올린다", c["label"]) and not adds_married:
+                err(f"{e['eventId']}:{c['choiceId']}", f"label promises marriage but only stores another stage: {c['label']}")
+    for route in ("first_love", "music", "book"):
+        partner = f"partner_{route}"
+        steps = {k: by_id.get(f"love_{k}_{route}") for k in ("date", "episode", "conflict", "wedding")}
+        if any(v is None for v in steps.values()):
+            err(f"route:{route}", "route needs love_date_/love_episode_/love_conflict_/love_wedding_ events")
+            continue
+        if partner not in steps["date"]["conditions"]["requiredFlags"] or steps["date"].get("kind") != "MILESTONE":
+            err(f"route:{route}", "route first date must be a MILESTONE requiring the partner flag")
+        if not {"rel_warm", partner} <= set(steps["episode"]["conditions"]["requiredFlags"]):
+            err(f"route:{route}", "route episode must follow the first date (rel_warm)")
+        if not any("rel_steady" in o.get("addFlags", []) for c in steps["episode"]["choices"] for o in c["outcomes"]):
+            err(f"route:{route}", "route episode must deepen the relationship (rel_steady)")
+        if any("rel_steady" in o.get("addFlags", []) for c in steps["conflict"]["choices"] for o in c["outcomes"]):
+            err(f"route:{route}", "route conflict must reconcile to rel_warm so the episode is not skipped")
+        if not any("breakup_once" in o.get("addFlags", []) for c in steps["conflict"]["choices"] for o in c["outcomes"]):
+            err(f"route:{route}", "route needs a breakup branch")
+        if steps["wedding"]["eventId"] not in ceremony_ids or partner not in steps["wedding"]["conditions"]["requiredFlags"]:
+            err(f"route:{route}", "route ceremony must confirm marriage for this partner")
+        meets = [e for e in events if any(partner in o.get("addFlags", []) for c in e["choices"] for o in c["outcomes"])
+                 and not e["eventId"].startswith("love_")]
+        if not meets or not all(any(not any("dating" in o.get("addFlags", []) for o in c["outcomes"]) for c in m["choices"]) for m in meets):
+            err(f"route:{route}", "every meeting event needs a choice that declines the relationship")
+        if f"partner_{route}" not in by_id["love_date_01"]["conditions"].get("blockedFlags", []):
+            err(f"route:{route}", "generic first date must not run for route partners")
+        if f"partner_{route}" not in by_id["love_wedding_01"]["conditions"].get("blockedFlags", []):
+            err(f"route:{route}", "generic ceremony must not run for route partners")
+    prep = by_id.get("love_wedding_prep_01")
+    if prep is None:
+        err("love_wedding_prep_01", "wedding preparation event missing")
+    else:
+        outs = [o for c in prep["choices"] for o in c["outcomes"]]
+        if not any("wedding_ready" in o.get("addFlags", []) for o in outs):
+            err("love_wedding_prep_01", "preparation must be able to set wedding_ready")
+        if not any("wedding_postponed" in o.get("addFlags", []) and "engaged" in o.get("removeFlags", []) for o in outs):
+            err("love_wedding_prep_01", "preparation must allow postponing the wedding")
+
     # 3. employment ----------------------------------------------------------
     for e in events:
         eid = e["eventId"]
