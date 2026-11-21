@@ -1,0 +1,309 @@
+{
+  "schemaVersion": 1,
+  "eventId": "love_wedding_first_love",
+  "sourceAssetPath": "followup_20261120/img_love_wedding_first_love_001.png",
+  "sha256": "013a5b504c960e23be2ff9e89e66fb5e0ab672eac72efb072c7a5eb5f466197b",
+  "eventSourceHash": "d85b4025731aefe84003cd98b90ed8a4129c7e21a35e1ac42e9bcd244a27cd09",
+  "currentEventSnapshot": {
+    "eventId": "love_wedding_first_love",
+    "stage": "ADULT",
+    "type": "NORMAL",
+    "isFallback": false,
+    "isMilestone": true,
+    "title": "단체 사진 앞의 결혼식",
+    "text": "결혼식장 입구에 학창 시절 단체 사진이 크게 걸려 있다. 끝자리에 나란히 선 두 사람. 사회자: \"그때 그 자리에서 여기까지 오셨습니다. 두 사람 입장!\"",
+    "imageId": "img_love_wedding_first_love_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [
+        "engaged",
+        "families_met",
+        "wedding_ready",
+        "partner_first_love"
+      ],
+      "blockedFlags": [
+        "married",
+        "divorced"
+      ]
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "그때처럼 나란히 서서 입장한다",
+        "statDelta": {
+          "행복": 5,
+          "사회성": 2,
+          "경제력": -4
+        },
+        "resultText": "교복 대신 예복을 입었을 뿐, 걸음은 그때 운동장을 걷던 박자 그대로였다. 하객석의 동창들이 휴대폰을 일제히 들었다.",
+        "addFlags": [
+          "married",
+          "spouse_first_love"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "a_walk",
+            "text": "교복 대신 예복을 입었을 뿐, 걸음은 그때 운동장을 걷던 박자 그대로였다. 하객석의 동창들이 휴대폰을 일제히 들었다.",
+            "chance": 100,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 5,
+              "사회성": 2,
+              "경제력": -4
+            },
+            "addFlags": [
+              "married",
+              "spouse_first_love"
+            ],
+            "removeFlags": [
+              "engaged",
+              "wedding_ready"
+            ]
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "관계 단계 전환점 — 연애·결혼은 능력치 자격이 아니라 의사 결정이라 잠그지 않고, 차이는 결과 분기와 후속 사실로 반영",
+        "conditionReview": "open_turning_point",
+        "conditionBasis": "week14_wedding_routes"
+      },
+      {
+        "choiceId": "B",
+        "label": "처음 같이 걷던 날을 넣어 서약한다",
+        "statDelta": {
+          "행복": 5,
+          "사회성": 1,
+          "경제력": -4
+        },
+        "resultText": "'처음 같이 걷던 그날부터 고마웠어.' 첫 줄을 읽자마자 목이 메었다. 연인이 다음 줄을 대신 읽었다.",
+        "addFlags": [
+          "married",
+          "spouse_first_love"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "b_vow",
+            "text": "'처음 같이 걷던 그날부터 고마웠어.' 첫 줄을 읽자마자 목이 메었다. 연인이 다음 줄을 대신 읽었다.",
+            "chance": 100,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 5,
+              "사회성": 1,
+              "경제력": -4
+            },
+            "addFlags": [
+              "married",
+              "spouse_first_love"
+            ],
+            "removeFlags": [
+              "engaged",
+              "wedding_ready"
+            ]
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "관계 단계 전환점 — 연애·결혼은 능력치 자격이 아니라 의사 결정이라 잠그지 않고, 차이는 결과 분기와 후속 사실로 반영",
+        "conditionReview": "open_turning_point",
+        "conditionBasis": "week14_wedding_routes"
+      },
+      {
+        "choiceId": "C",
+        "label": "동창들과 단체 사진을 다시 찍는다",
+        "statDelta": {
+          "행복": 4,
+          "사회성": 2,
+          "경제력": -4
+        },
+        "resultText": "동창 서른 명이 그때 포즈 그대로 섰다. 이번 사진 한가운데에는 우리 둘이 있었다.",
+        "addFlags": [
+          "married",
+          "spouse_first_love"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "c_photo",
+            "text": "동창 서른 명이 그때 포즈 그대로 섰다. 이번 사진 한가운데에는 우리 둘이 있었다.",
+            "chance": 70,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 4,
+              "사회성": 2,
+              "경제력": -4
+            },
+            "addFlags": [
+              "married",
+              "spouse_first_love"
+            ],
+            "removeFlags": [
+              "engaged",
+              "wedding_ready"
+            ]
+          },
+          {
+            "outcomeId": "c_blink",
+            "text": "단체 사진 열두 장 모두에서 누군가 눈을 감았다. 열세 번째 장에서는 둘 다 웃느라 눈을 감았다. 그 사진이 거실에 걸렸다.",
+            "chance": 30,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 4,
+              "경제력": -4
+            },
+            "addFlags": [
+              "married",
+              "spouse_first_love"
+            ],
+            "removeFlags": [
+              "engaged",
+              "wedding_ready"
+            ]
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "관계 단계 전환점 — 연애·결혼은 능력치 자격이 아니라 의사 결정이라 잠그지 않고, 차이는 결과 분기와 후속 사실로 반영",
+        "conditionReview": "open_turning_point",
+        "conditionBasis": "week14_wedding_routes"
+      }
+    ],
+    "priority": 0,
+    "kind": "MILESTONE",
+    "periods": [
+      "YOUNG_ADULT",
+      "MIDDLE",
+      "OLD_AGE"
+    ],
+    "weight": 1,
+    "view": "FIRST_PERSON",
+    "pathRole": "첫사랑 경로 6단계 — 플레이어 본인의 본식(입장·서약·축하)",
+    "followUps": [
+      "love_holiday_01",
+      "love_child_plan_01"
+    ]
+  },
+  "semanticReview": "학창 시절 단체 사진 액자, 하객과 입장로가 첫사랑 경로의 본식을 구분한다. 선택 후 단체 사진 재촬영 결과는 미리 보여 주지 않는다.",
+  "semanticReviewer": "Codex AI / 2026-11-22 current-event semantic and native-image review",
+  "visualReviewer": "Codex AI / 2026-11-22 current-event semantic and native-image review",
+  "reviewerType": "AI",
+  "assignmentOwner": "정원률",
+  "teamFinalApproval": "PENDING",
+  "nativeCaptures": [
+    {
+      "localFile": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\images-native-review-20261122\\720x1480\\love_wedding_first_love_phone_scene.png",
+      "sha256": "a1f5d74efa18b6795f8ba0d4ba0b4b53c992e01c6c27a6918e7292ec4b087c61",
+      "kind": "scene",
+      "deviceSize": "720x1480",
+      "fontScale": 1,
+      "sampledPixelSimilarity": 1.0
+    },
+    {
+      "localFile": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\images-native-review-20261122\\720x1480\\love_wedding_first_love_phone_play.png",
+      "sha256": "22ed3458d3e388495c1377affa6496f81c20c363eaffb640f33e0725798d64ae",
+      "kind": "play",
+      "deviceSize": "720x1480",
+      "fontScale": 1,
+      "sampledPixelSimilarity": 1.0
+    },
+    {
+      "localFile": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\images-native-review-20261122\\1080x2400\\love_wedding_first_love_phone_scene.png",
+      "sha256": "256ca5317e5b6e4d0f889604588780882ddbe92478dc698464946744794e37ff",
+      "kind": "scene",
+      "deviceSize": "1080x2400",
+      "fontScale": 1,
+      "sampledPixelSimilarity": 1.0
+    },
+    {
+      "localFile": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\images-native-review-20261122\\1080x2400\\love_wedding_first_love_phone_play.png",
+      "sha256": "df6f595c3a89029562ecac9ff4e928b2751da8af785b290a2c84f6376bd69083",
+      "kind": "play",
+      "deviceSize": "1080x2400",
+      "fontScale": 1,
+      "sampledPixelSimilarity": 1.0
+    }
+  ],
+  "visualReview": "AI reviewed artwork and current matching native scene/play captures. User accepted the eleven native scene-view crops shown in three contact sheets, font 100%.",
+  "userImageReview": "APPROVED_FINAL_SCENE_REVIEW",
+  "userApproval": "2026-11-22 사용자: ㅇㅇ좋아. 그대로 가자. 다음은?",
+  "userApprovalScope": "Eleven displayed native scene-view crops; not full story E2E or team final acceptance.",
+  "productionReview": {
+    "eventId": "love_wedding_first_love",
+    "imageId": "img_love_wedding_first_love_001",
+    "title": "단체 사진 앞의 결혼식",
+    "reviewedMaster": {
+      "localFile": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\wedding-p0-review-20261121\\01-first-love-v2.png",
+      "sha256": "013a5b504c960e23be2ff9e89e66fb5e0ab672eac72efb072c7a5eb5f466197b",
+      "width": 941,
+      "height": 1672,
+      "userReview": "APPROVED_PREVIEW",
+      "reviewedOn": "2026-11-22"
+    },
+    "deployment": {
+      "assetPath": "followup_20261120/img_love_wedding_first_love_001.png",
+      "sha256": "013a5b504c960e23be2ff9e89e66fb5e0ab672eac72efb072c7a5eb5f466197b",
+      "width": 941,
+      "height": 1672,
+      "crop": [
+        0,
+        0,
+        941,
+        1672
+      ],
+      "resized": false
+    },
+    "nativeReview": {
+      "status": "AI_CHECKED",
+      "method": "현재 사건 JSON과 실제 라우팅을 읽어 production DecisionScreen에서 복원 화면을 표시",
+      "screens": [
+        {
+          "screen": "720x1480",
+          "densityDpi": 320,
+          "fontScale": 1,
+          "sampledPixelSimilarity": 1.0,
+          "visibleSourceX": "0.068..0.932",
+          "captures": {
+            "scene": {
+              "localFile": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\images-native-review-20261122\\720x1480\\love_wedding_first_love_phone_scene.png",
+              "sha256": "a1f5d74efa18b6795f8ba0d4ba0b4b53c992e01c6c27a6918e7292ec4b087c61"
+            },
+            "play": {
+              "localFile": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\images-native-review-20261122\\720x1480\\love_wedding_first_love_phone_play.png",
+              "sha256": "22ed3458d3e388495c1377affa6496f81c20c363eaffb640f33e0725798d64ae"
+            }
+          }
+        },
+        {
+          "screen": "1080x2400",
+          "densityDpi": 420,
+          "fontScale": 1,
+          "sampledPixelSimilarity": 1.0,
+          "visibleSourceX": "0.100..0.900",
+          "captures": {
+            "scene": {
+              "localFile": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\images-native-review-20261122\\1080x2400\\love_wedding_first_love_phone_scene.png",
+              "sha256": "256ca5317e5b6e4d0f889604588780882ddbe92478dc698464946744794e37ff"
+            },
+            "play": {
+              "localFile": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\images-native-review-20261122\\1080x2400\\love_wedding_first_love_phone_play.png",
+              "sha256": "df6f595c3a89029562ecac9ff4e928b2751da8af785b290a2c84f6376bd69083"
+            }
+          }
+        }
+      ],
+      "userReview": "APPROVED_FINAL_SCENE_REVIEW",
+      "finalUserReviewPresentation": {
+        "status": "APPROVED_FINAL_SCENE_REVIEW",
+        "date": "2026-11-22",
+        "reviewRecord": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\romance-final-review-20261122\\review.json",
+        "contactSheet": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\romance-final-review-20261122\\scene-review-1.png",
+        "currentAssetEventRoutingAndCaptureHashesVerified": true,
+        "userApproval": "2026-11-22 사용자: ㅇㅇ좋아. 그대로 가자. 다음은?"
+      }
+    },
+    "eventSourceHash": "d85b4025731aefe84003cd98b90ed8a4129c7e21a35e1ac42e9bcd244a27cd09"
+  }
+}

@@ -6,6 +6,7 @@ import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.example.lifegame.ui.images.ImageCandidate
 import com.example.lifegame.ui.images.PixelAssetLoader
 import com.example.lifegame.ui.images.ScenePresentation
+import org.json.JSONObject
 import org.junit.Assert.*
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -17,6 +18,15 @@ class PortraitVariantTest {
     private val portrait = "presentation/portraits/img_pov_first_card_001_portrait_v1.png"
     private val candidate = ImageCandidate("img_pov_first_card_001", original)
     private fun metadata() = context.assets.open("image_presentation.json").bufferedReader().use { it.readText() }
+
+    private fun invalidMetadata(change: (JSONObject) -> Unit): String {
+        val root = JSONObject(metadata())
+        val entries = root.getJSONArray("images")
+        val source = (0 until entries.length()).map(entries::getJSONObject)
+            .first { it.getString("assetPath") == original }
+        change(source)
+        return root.toString()
+    }
 
     @Test fun portraitUsesActualDerivedPathButLandscapeAndIdentityKeepOriginalContract() {
         val tall = PixelAssetLoader.load(context, listOf(candidate), 360, 800)!!
@@ -30,15 +40,15 @@ class PortraitVariantTest {
     }
 
     @Test fun staleMissingAndIncompatibleVariantsReturnOriginalBeforeOtherCandidates() {
-        val sourceHash = "e8b321c9fffff153bf5a4a47eef2c67a67097db7acf14f218013ad79b33a2121"
-        val variantHash = "91490db70d899eae008069ff82dded8cc100ba89d654cb02c599b2f90e6cf011"
-        val json = metadata()
         for (invalid in listOf(
-            json.replace(sourceHash, "a".repeat(64)),
-            json.replace(variantHash, "b".repeat(64)),
-            json.replace(portrait, "presentation/portraits/missing.png"),
-            json.replace("\"width\": 941", "\"width\": 942"),
-            json.replace("AI_REVIEWED_PRESENTATION", "PENDING"),
+            invalidMetadata { it.put("sourceSha256", "a".repeat(64)) },
+            invalidMetadata { it.getJSONObject("portraitVariant").put("sha256", "b".repeat(64)) },
+            invalidMetadata { it.getJSONObject("portraitVariant").put("assetPath", "presentation/portraits/missing.png") },
+            invalidMetadata {
+                val variant = it.getJSONObject("portraitVariant")
+                variant.put("width", variant.getInt("width") + 1)
+            },
+            invalidMetadata { it.getJSONObject("portraitVariant").put("reviewStatus", "PENDING") },
             "malformed",
         )) {
             val loaded = PixelAssetLoader.load(context, listOf(candidate), 360, 800, ScenePresentation.parse(invalid))!!

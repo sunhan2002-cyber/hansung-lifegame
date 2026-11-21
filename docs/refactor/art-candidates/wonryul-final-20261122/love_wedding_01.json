@@ -1,0 +1,379 @@
+{
+  "schemaVersion": 1,
+  "eventId": "love_wedding_01",
+  "sourceAssetPath": "followup_20261120/img_love_wedding_01_001.png",
+  "sha256": "ed8432961f05ce31dd132ac406556d479dca50491abe36c8fac5920c644be612",
+  "eventSourceHash": "5a8c108639cda975c1399ce485355d514d0328742c7445a1566126bc897b6072",
+  "currentEventSnapshot": {
+    "eventId": "love_wedding_01",
+    "stage": "ADULT",
+    "type": "NORMAL",
+    "isFallback": false,
+    "isMilestone": true,
+    "title": "결혼식",
+    "text": "결혼식 10분 전, 대기실 거울 앞에서 옷매무새를 세 번 고쳤다. 이제 문이 열린다. 사회자: \"두 사람, 입장하겠습니다!\"",
+    "imageId": "img_love_wedding_01_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [
+        "engaged",
+        "families_met",
+        "wedding_ready"
+      ],
+      "blockedFlags": [
+        "married",
+        "divorced",
+        "partner_first_love",
+        "partner_music",
+        "partner_book"
+      ]
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "둘이 손을 잡고 함께 입장한다",
+        "statDelta": {
+          "행복": 5,
+          "사회성": 2,
+          "경제력": -4
+        },
+        "resultText": "둘이 같은 발부터 내디뎠다. 하객석에서 웃음과 박수가 동시에 터졌다. 끝에 도착해 서로 '다 왔다'고 속삭였다.",
+        "addFlags": [
+          "married",
+          "spouse_other"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "a_walk",
+            "text": "둘이 같은 발부터 내디뎠다. 하객석에서 웃음과 박수가 동시에 터졌다. 끝에 도착해 서로 '다 왔다'고 속삭였다.",
+            "chance": 100,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 5,
+              "사회성": 2,
+              "경제력": -4
+            },
+            "addFlags": [
+              "married",
+              "spouse_other"
+            ],
+            "removeFlags": [
+              "engaged",
+              "wedding_ready"
+            ]
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "관계 단계 전환점 — 연애·결혼은 능력치 자격이 아니라 의사 결정이라 잠그지 않고, 차이는 결과 분기와 후속 사실로 반영",
+        "conditionReview": "open_turning_point",
+        "conditionBasis": "week14_wedding_routes"
+      },
+      {
+        "choiceId": "B",
+        "label": "직접 쓴 서약서를 읽는다",
+        "statDelta": {
+          "행복": 5,
+          "사회성": 2,
+          "경제력": -4
+        },
+        "resultText": "서약서를 읽다가 둘 다 울어서 사회자가 대신 마지막 줄을 읽었다. 하객들은 웃었고, 사진에는 우는 얼굴만 남았다.",
+        "addFlags": [
+          "married",
+          "spouse_other"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "b_vow",
+            "text": "서약서를 읽다가 둘 다 울어서 사회자가 대신 마지막 줄을 읽었다. 하객들은 웃었고, 사진에는 우는 얼굴만 남았다.",
+            "chance": 100,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 5,
+              "사회성": 2,
+              "경제력": -4
+            },
+            "addFlags": [
+              "married",
+              "spouse_other"
+            ],
+            "removeFlags": [
+              "engaged",
+              "wedding_ready"
+            ]
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "관계 단계 전환점 — 연애·결혼은 능력치 자격이 아니라 의사 결정이라 잠그지 않고, 차이는 결과 분기와 후속 사실로 반영",
+        "conditionReview": "open_turning_point",
+        "conditionBasis": "week14_wedding_routes"
+      },
+      {
+        "choiceId": "C",
+        "label": "축하 순서에 하객들과 춤을 춘다",
+        "statDelta": {
+          "행복": 4,
+          "사회성": 1,
+          "경제력": -4
+        },
+        "resultText": "준비한 춤은 30초였다. 하객들은 1분 동안 박수를 쳤다. 그 영상은 양가 단톡방 공지에 올라갔다.",
+        "addFlags": [
+          "married",
+          "spouse_other"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "c_dance",
+            "text": "준비한 춤은 30초였다. 하객들은 1분 동안 박수를 쳤다. 그 영상은 양가 단톡방 공지에 올라갔다.",
+            "chance": 60,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 4,
+              "사회성": 1,
+              "경제력": -4
+            },
+            "addFlags": [
+              "married",
+              "spouse_other"
+            ],
+            "removeFlags": [
+              "engaged",
+              "wedding_ready"
+            ]
+          },
+          {
+            "outcomeId": "c_slip",
+            "text": "두 번째 동작에서 미끄러졌다. 연인이 손을 잡아 일으켜 줬다. 그게 그날 제일 큰 박수였다.",
+            "chance": 40,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 3,
+              "경제력": -4
+            },
+            "addFlags": [
+              "married",
+              "spouse_other"
+            ],
+            "removeFlags": [
+              "engaged",
+              "wedding_ready"
+            ]
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "관계 단계 전환점 — 연애·결혼은 능력치 자격이 아니라 의사 결정이라 잠그지 않고, 차이는 결과 분기와 후속 사실로 반영",
+        "conditionReview": "open_turning_point",
+        "conditionBasis": "week14_wedding_routes"
+      }
+    ],
+    "priority": 0,
+    "kind": "MILESTONE",
+    "periods": [
+      "YOUNG_ADULT",
+      "MIDDLE",
+      "OLD_AGE"
+    ],
+    "weight": 1,
+    "view": "FIRST_PERSON",
+    "pathRole": "결혼 6단계 — 플레이어 본인의 본식(공통: 입장·서약·축하). 대기실 장면은 첫 문장으로만 남김",
+    "followUps": [
+      "love_holiday_01",
+      "love_child_plan_01"
+    ]
+  },
+  "semanticReview": "열린 양문·손잡이·버진로드와 맞잡은 손이 입장 직전 장면을 나타낸다. 서약 낭독·춤·혼인 결과를 완료 장면으로 그리지 않는다.",
+  "semanticReviewer": "Codex AI / 2026-11-22 current-event semantic and native-image review",
+  "visualReviewer": "Codex AI / 2026-11-22 current-event semantic and native-image review",
+  "reviewerType": "AI",
+  "assignmentOwner": "정원률",
+  "teamFinalApproval": "PENDING",
+  "nativeCaptures": [
+    {
+      "localFile": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\images-native-review-20261122\\common-portrait-final\\720x1480\\love_wedding_01_phone_scene.png",
+      "sha256": "1e731ac47d5cdaf8943aae9fb3c4572e13d9c7e250bc965882b2dd02a1657285",
+      "kind": "scene",
+      "deviceSize": "720x1480",
+      "fontScale": 1,
+      "sampledPixelSimilarity": 1.0
+    },
+    {
+      "localFile": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\images-native-review-20261122\\common-portrait-final\\720x1480\\love_wedding_01_phone_play.png",
+      "sha256": "d037c55903ef9df4a0bea7d21735395078ba695a97e2e27b1c87c0bb0b525df0",
+      "kind": "play",
+      "deviceSize": "720x1480",
+      "fontScale": 1,
+      "sampledPixelSimilarity": 1.0
+    },
+    {
+      "localFile": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\images-native-review-20261122\\common-portrait-final\\1080x2400\\love_wedding_01_phone_scene.png",
+      "sha256": "d1bbfda82e526559d3d0072fccd05bada91ff97e607b1a11dfd8f15162f10c3d",
+      "kind": "scene",
+      "deviceSize": "1080x2400",
+      "fontScale": 1,
+      "sampledPixelSimilarity": 1.0
+    },
+    {
+      "localFile": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\images-native-review-20261122\\common-portrait-final\\1080x2400\\love_wedding_01_phone_play.png",
+      "sha256": "c946ebb8e9446dbd82cd57821807af230a084315189ad6312b6e0bc77e56769a",
+      "kind": "play",
+      "deviceSize": "1080x2400",
+      "fontScale": 1,
+      "sampledPixelSimilarity": 1.0
+    }
+  ],
+  "visualReview": "AI reviewed artwork and current matching native scene/play captures. User accepted the eleven native scene-view crops shown in three contact sheets, font 100%.",
+  "userImageReview": "APPROVED_FINAL_SCENE_REVIEW",
+  "userApproval": "2026-11-22 사용자: ㅇㅇ좋아. 그대로 가자. 다음은?",
+  "userApprovalScope": "Eleven displayed native scene-view crops; not full story E2E or team final acceptance.",
+  "productionReview": {
+    "eventId": "love_wedding_01",
+    "imageId": "img_love_wedding_01_001",
+    "title": "결혼식",
+    "reviewedMaster": {
+      "localFile": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\images-native-review-20261122\\common-wedding-portrait-candidate.png",
+      "sha256": "17267629bfd7ea39bf48f7ec0ce96473a60ee2bf26b22ff832902330aba89732",
+      "width": 968,
+      "height": 1625,
+      "userReview": "APPROVED_PREVIEW",
+      "reviewedOn": "2026-11-22"
+    },
+    "deployment": {
+      "assetPath": "followup_20261120/img_love_wedding_01_001.png",
+      "sha256": "ed8432961f05ce31dd132ac406556d479dca50491abe36c8fac5920c644be612",
+      "width": 909,
+      "height": 1616,
+      "crop": [
+        29,
+        4,
+        909,
+        1616
+      ],
+      "resized": false
+    },
+    "nativeReview": {
+      "status": "AI_CHECKED",
+      "method": "현재 사건 JSON과 실제 라우팅을 읽어 production DecisionScreen에서 복원 화면을 표시",
+      "screens": [
+        {
+          "screen": "720x1480",
+          "densityDpi": 320,
+          "fontScale": 1,
+          "sampledPixelSimilarity": 1.0,
+          "visibleSourceX": "0.068..0.932",
+          "captures": {
+            "scene": {
+              "localFile": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\images-native-review-20261122\\common-portrait-final\\720x1480\\love_wedding_01_phone_scene.png",
+              "sha256": "1e731ac47d5cdaf8943aae9fb3c4572e13d9c7e250bc965882b2dd02a1657285"
+            },
+            "play": {
+              "localFile": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\images-native-review-20261122\\common-portrait-final\\720x1480\\love_wedding_01_phone_play.png",
+              "sha256": "d037c55903ef9df4a0bea7d21735395078ba695a97e2e27b1c87c0bb0b525df0"
+            }
+          }
+        },
+        {
+          "screen": "1080x2400",
+          "densityDpi": 420,
+          "fontScale": 1,
+          "sampledPixelSimilarity": 1.0,
+          "visibleSourceX": "0.100..0.900",
+          "captures": {
+            "scene": {
+              "localFile": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\images-native-review-20261122\\common-portrait-final\\1080x2400\\love_wedding_01_phone_scene.png",
+              "sha256": "d1bbfda82e526559d3d0072fccd05bada91ff97e607b1a11dfd8f15162f10c3d"
+            },
+            "play": {
+              "localFile": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\images-native-review-20261122\\common-portrait-final\\1080x2400\\love_wedding_01_phone_play.png",
+              "sha256": "c946ebb8e9446dbd82cd57821807af230a084315189ad6312b6e0bc77e56769a"
+            }
+          }
+        }
+      ],
+      "userReview": "APPROVED_FINAL_SCENE_REVIEW",
+      "observation": "양쪽 열린 문짝과 금색 손잡이, 연인과 맞잡은 손이 두 화면 안에 보임",
+      "finalUserReviewPresentation": {
+        "status": "APPROVED_FINAL_SCENE_REVIEW",
+        "date": "2026-11-22",
+        "reviewRecord": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\romance-final-review-20261122\\review.json",
+        "contactSheet": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\romance-final-review-20261122\\scene-review-1.png",
+        "currentAssetEventRoutingAndCaptureHashesVerified": true,
+        "userApproval": "2026-11-22 사용자: ㅇㅇ좋아. 그대로 가자. 다음은?"
+      }
+    },
+    "eventSourceHash": "5a8c108639cda975c1399ce485355d514d0328742c7445a1566126bc897b6072",
+    "previousReviewedArt": [
+      {
+        "reviewedMaster": {
+          "localFile": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\wedding-p0-review-20261121\\04-common-hands-v4.png",
+          "sha256": "868fb2ca079b0f4abbed377a411293da692d25957a3f6a19c9cb3b12e635b440",
+          "width": 1448,
+          "height": 1086,
+          "userReview": "APPROVED_PREVIEW",
+          "reviewedOn": "2026-11-22"
+        },
+        "deployment": {
+          "assetPath": "followup_20261120/img_love_wedding_01_001.png",
+          "sha256": "ed8432961f05ce31dd132ac406556d479dca50491abe36c8fac5920c644be612",
+          "width": 909,
+          "height": 1616,
+          "crop": [
+            29,
+            4,
+            909,
+            1616
+          ],
+          "resized": false
+        },
+        "nativeReview": {
+          "status": "AI_CHECKED_WITH_CROP_LIMITATION",
+          "method": "현재 사건 JSON과 실제 라우팅을 읽어 production DecisionScreen에서 복원 화면을 표시",
+          "screens": [
+            {
+              "screen": "720x1480",
+              "densityDpi": 320,
+              "fontScale": 1,
+              "sampledPixelSimilarity": 1.0,
+              "visibleSourceX": "0.318..0.682",
+              "captures": {
+                "scene": {
+                  "localFile": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\images-native-review-20261122\\720x1480\\love_wedding_01_phone_scene.png",
+                  "sha256": "2df6d30b130f8270d7d52b9420937544eb2e3988292308402d92ce9cabe16e5f"
+                },
+                "play": {
+                  "localFile": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\images-native-review-20261122\\720x1480\\love_wedding_01_phone_play.png",
+                  "sha256": "e6f66f1d4950aa9ff30aa42fd417bd7905644892a60d72228249b573ba63c95a"
+                }
+              }
+            },
+            {
+              "screen": "1080x2400",
+              "densityDpi": 420,
+              "fontScale": 1,
+              "sampledPixelSimilarity": 1.0,
+              "visibleSourceX": "0.331..0.669",
+              "captures": {
+                "scene": {
+                  "localFile": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\images-native-review-20261122\\1080x2400\\love_wedding_01_phone_scene.png",
+                  "sha256": "41418d7e3eb2a888815befaf2a003a770d707030d587d54084cbe9be0a8bd030"
+                },
+                "play": {
+                  "localFile": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\images-native-review-20261122\\1080x2400\\love_wedding_01_phone_play.png",
+                  "sha256": "b3393d27ef022ef6ee081dd8b44fe0107df844ccb5e27a15fd996b626c0380aa"
+                }
+              }
+            }
+          ],
+          "userReview": "PENDING",
+          "limitation": "가로 원화의 양쪽 열린 문짝은 세로 중앙 크롭에서 제외됨. 별도 세로 수정 시안 사용자 검수 대기."
+        }
+      }
+    ]
+  }
+}
