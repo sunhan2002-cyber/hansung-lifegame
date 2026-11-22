@@ -75,10 +75,13 @@ class Week14WooyoungGameLogicTest {
     }
 
     @Test fun `wedding requires one partner and every prior stage`() {
-        val ready = setOf("dating", "engaged", "families_met", "wedding_ready", "partner_music")
+        val ready = setOf(
+            "dating", "engaged", "families_met", "wedding_ready", "partner_music",
+            "met_music_band", "dating__path_hap_05", "partner_id_music_band",
+        )
         MarriageContract.requireFirstWedding("love_wedding_music", ready, setOf("married"))
         assertTrue(runCatching {
-            MarriageContract.requireFirstWedding("love_wedding_music", ready + "partner_book", setOf("married"))
+            MarriageContract.requireFirstWedding("love_wedding_book", ready, setOf("married"))
         }.isFailure)
         assertTrue(runCatching {
             MarriageContract.requireFirstWedding("love_wedding_music", ready - "families_met", setOf("married"))
@@ -92,6 +95,31 @@ class Week14WooyoungGameLogicTest {
         assertTrue(runCatching {
             MarriageContract.requireFirstWedding("love_wedding_prep_01", ready, setOf("married"))
         }.isFailure)
+    }
+
+    @Test fun `partner id starts from the actual dating choice and becomes spouse only at wedding`() {
+        val dating = MarriageContract.synchronizeIdentity(
+            "path_hap_05",
+            "A",
+            setOf("dating", "partner_music", "met_music_band", "dating__path_hap_05"),
+        )
+        assertEquals("music_band", MarriageContract.currentPartnerId(dating))
+        assertEquals(null, MarriageContract.spouseId(dating))
+
+        val married = MarriageContract.synchronizeIdentity(
+            "love_wedding_music",
+            "A",
+            dating + setOf("engaged", "families_met", "wedding_ready", "married"),
+        )
+        assertEquals("music_band", MarriageContract.spouseId(married))
+
+        val brokenUp = MarriageContract.synchronizeIdentity(
+            "love_conflict_music",
+            "B",
+            married - setOf("dating", "partner_music", "married"),
+        )
+        assertEquals(null, MarriageContract.currentPartnerId(brokenUp))
+        assertEquals(null, MarriageContract.spouseId(brokenUp))
     }
 
     @Test fun `non wedding outcomes and already married saves remain untouched`() {

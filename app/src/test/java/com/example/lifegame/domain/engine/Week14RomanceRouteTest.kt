@@ -139,7 +139,7 @@ class Week14RomanceRouteTest {
             period = LifePeriod.MIDDLE,
             yearInPeriod = 2,
             pendingDecisionId = "love_wedding_01",
-            flags = setOf("dating", "engaged", "families_met", "partner_ideal"),
+            flags = setOf("dating", "engaged", "families_met", "partner_ideal", "met_ideal_street"),
         )
         val waiting = session(saved.runSeed).restoreSaved(saved)
         assertEquals(TurnPhase.DECISION, waiting.phase)
