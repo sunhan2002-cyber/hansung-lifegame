@@ -1,0 +1,289 @@
+{
+  "schemaVersion": 1,
+  "eventId": "love_wedding_book",
+  "sourceAssetPath": "followup_20261120/img_love_wedding_book_001.png",
+  "sha256": "4e89035fc6dfe14a4dabc8d4546bb474ef0b11b167251b25110a0133fd80d7d4",
+  "eventSourceHash": "60189b39ad339c78fd3146603904bc0ddad82da3fb7388e53ab356da3263c119",
+  "currentEventSnapshot": {
+    "eventId": "love_wedding_book",
+    "stage": "ADULT",
+    "type": "NORMAL",
+    "isFallback": false,
+    "isMilestone": true,
+    "title": "책갈피 길 결혼식",
+    "text": "작은 도서관 정원에서 하는 결혼식. 하객 의자마다 책갈피가 하나씩 놓여 있다. 사회자: \"두 사람의 첫 장은 같은 문장이었다고 합니다. 입장!\"",
+    "imageId": "img_love_wedding_book_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [
+        "engaged",
+        "families_met",
+        "wedding_ready",
+        "partner_book"
+      ],
+      "blockedFlags": [
+        "married",
+        "divorced"
+      ]
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "하객들이 흔드는 책갈피 길을 따라 입장한다",
+        "statDelta": {
+          "행복": 5,
+          "사회성": 2,
+          "경제력": -3
+        },
+        "resultText": "하객들이 책갈피를 흔들어 길을 만들었다. 길 끝에서 연인이 그 책을 펼쳐 들고 기다리고 있었다.",
+        "addFlags": [
+          "married",
+          "spouse_book"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "a_walk",
+            "text": "하객들이 책갈피를 흔들어 길을 만들었다. 길 끝에서 연인이 그 책을 펼쳐 들고 기다리고 있었다.",
+            "chance": 100,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 5,
+              "사회성": 2,
+              "경제력": -3
+            },
+            "addFlags": [
+              "married",
+              "spouse_book"
+            ],
+            "removeFlags": [
+              "engaged",
+              "wedding_ready"
+            ]
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "관계 단계 전환점 — 연애·결혼은 능력치 자격이 아니라 의사 결정이라 잠그지 않고, 차이는 결과 분기와 후속 사실로 반영",
+        "conditionReview": "open_turning_point",
+        "conditionBasis": "week14_wedding_routes"
+      },
+      {
+        "choiceId": "B",
+        "label": "처음 밑줄 그은 문장으로 서약한다",
+        "statDelta": {
+          "행복": 5,
+          "지력": 1,
+          "경제력": -3
+        },
+        "resultText": "같은 문장을 둘이 한 줄씩 나눠 읽었다. 하객 몇 명이 그 책 제목을 몰래 검색했다.",
+        "addFlags": [
+          "married",
+          "spouse_book"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "b_vow",
+            "text": "같은 문장을 둘이 한 줄씩 나눠 읽었다. 하객 몇 명이 그 책 제목을 몰래 검색했다.",
+            "chance": 100,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 5,
+              "지력": 1,
+              "경제력": -3
+            },
+            "addFlags": [
+              "married",
+              "spouse_book"
+            ],
+            "removeFlags": [
+              "engaged",
+              "wedding_ready"
+            ]
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "관계 단계 전환점 — 연애·결혼은 능력치 자격이 아니라 의사 결정이라 잠그지 않고, 차이는 결과 분기와 후속 사실로 반영",
+        "conditionReview": "open_turning_point",
+        "conditionBasis": "week14_wedding_routes"
+      },
+      {
+        "choiceId": "C",
+        "label": "답례품으로 하객에게 책을 한 권씩 나눠 준다",
+        "statDelta": {
+          "행복": 4,
+          "사회성": 2,
+          "경제력": -4
+        },
+        "resultText": "답례품이 책이라 처음엔 다들 놀랐다. 일주일 뒤 단톡방에 독후감이 하나씩 올라왔다.",
+        "addFlags": [
+          "married",
+          "spouse_book"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "c_gift",
+            "text": "답례품이 책이라 처음엔 다들 놀랐다. 일주일 뒤 단톡방에 독후감이 하나씩 올라왔다.",
+            "chance": 100,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 4,
+              "사회성": 2,
+              "경제력": -4
+            },
+            "addFlags": [
+              "married",
+              "spouse_book"
+            ],
+            "removeFlags": [
+              "engaged",
+              "wedding_ready"
+            ]
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "관계 단계 전환점 — 연애·결혼은 능력치 자격이 아니라 의사 결정이라 잠그지 않고, 차이는 결과 분기와 후속 사실로 반영",
+        "conditionReview": "open_turning_point",
+        "conditionBasis": "week14_wedding_routes"
+      }
+    ],
+    "priority": 0,
+    "kind": "MILESTONE",
+    "periods": [
+      "YOUNG_ADULT",
+      "MIDDLE",
+      "OLD_AGE"
+    ],
+    "weight": 1,
+    "view": "FIRST_PERSON",
+    "pathRole": "독서 경로 6단계 — 플레이어 본인의 본식(입장·서약·축하)",
+    "followUps": [
+      "love_holiday_01",
+      "love_child_plan_01"
+    ]
+  },
+  "semanticReview": "도서관 정원·책갈피·책·하객석이 책 인연 본식의 장소와 상징을 나타낸다. 선택 후 서약 문구나 답례품 전달 결과를 확정하지 않는다.",
+  "semanticReviewer": "Codex AI / 2026-11-22 current-event semantic and native-image review",
+  "visualReviewer": "Codex AI / 2026-11-22 current-event semantic and native-image review",
+  "reviewerType": "AI",
+  "assignmentOwner": "정원률",
+  "teamFinalApproval": "PENDING",
+  "nativeCaptures": [
+    {
+      "localFile": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\images-native-review-20261122\\720x1480\\love_wedding_book_phone_scene.png",
+      "sha256": "bef10aefb433d5a986e132f9f077b84c1c9fc304d7407bd3d7d8e9a6e7230154",
+      "kind": "scene",
+      "deviceSize": "720x1480",
+      "fontScale": 1,
+      "sampledPixelSimilarity": 1.0
+    },
+    {
+      "localFile": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\images-native-review-20261122\\720x1480\\love_wedding_book_phone_play.png",
+      "sha256": "9b88b8ee31f819872edd59870f77da50e8031334c461ce02369ab634450640a3",
+      "kind": "play",
+      "deviceSize": "720x1480",
+      "fontScale": 1,
+      "sampledPixelSimilarity": 1.0
+    },
+    {
+      "localFile": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\images-native-review-20261122\\1080x2400\\love_wedding_book_phone_scene.png",
+      "sha256": "452871b1d044fc49dabeedef7c602bb6c50cb9584fdb1c4469cdd1b647134a5c",
+      "kind": "scene",
+      "deviceSize": "1080x2400",
+      "fontScale": 1,
+      "sampledPixelSimilarity": 1.0
+    },
+    {
+      "localFile": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\images-native-review-20261122\\1080x2400\\love_wedding_book_phone_play.png",
+      "sha256": "0ad8784edec3bc9a1a70fc33d8886c51854b43a9498e4d1a373467af069599ea",
+      "kind": "play",
+      "deviceSize": "1080x2400",
+      "fontScale": 1,
+      "sampledPixelSimilarity": 1.0
+    }
+  ],
+  "visualReview": "AI reviewed artwork and current matching native scene/play captures. User accepted the eleven native scene-view crops shown in three contact sheets, font 100%.",
+  "userImageReview": "APPROVED_FINAL_SCENE_REVIEW",
+  "userApproval": "2026-11-22 사용자: ㅇㅇ좋아. 그대로 가자. 다음은?",
+  "userApprovalScope": "Eleven displayed native scene-view crops; not full story E2E or team final acceptance.",
+  "productionReview": {
+    "eventId": "love_wedding_book",
+    "imageId": "img_love_wedding_book_001",
+    "title": "책갈피 길 결혼식",
+    "reviewedMaster": {
+      "localFile": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\wedding-p0-review-20261121\\03-book-v2.png",
+      "sha256": "4e89035fc6dfe14a4dabc8d4546bb474ef0b11b167251b25110a0133fd80d7d4",
+      "width": 941,
+      "height": 1672,
+      "userReview": "APPROVED_PREVIEW",
+      "reviewedOn": "2026-11-22"
+    },
+    "deployment": {
+      "assetPath": "followup_20261120/img_love_wedding_book_001.png",
+      "sha256": "4e89035fc6dfe14a4dabc8d4546bb474ef0b11b167251b25110a0133fd80d7d4",
+      "width": 941,
+      "height": 1672,
+      "crop": [
+        0,
+        0,
+        941,
+        1672
+      ],
+      "resized": false
+    },
+    "nativeReview": {
+      "status": "AI_CHECKED",
+      "method": "현재 사건 JSON과 실제 라우팅을 읽어 production DecisionScreen에서 복원 화면을 표시",
+      "screens": [
+        {
+          "screen": "720x1480",
+          "densityDpi": 320,
+          "fontScale": 1,
+          "sampledPixelSimilarity": 1.0,
+          "visibleSourceX": "0.068..0.932",
+          "captures": {
+            "scene": {
+              "localFile": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\images-native-review-20261122\\720x1480\\love_wedding_book_phone_scene.png",
+              "sha256": "bef10aefb433d5a986e132f9f077b84c1c9fc304d7407bd3d7d8e9a6e7230154"
+            },
+            "play": {
+              "localFile": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\images-native-review-20261122\\720x1480\\love_wedding_book_phone_play.png",
+              "sha256": "9b88b8ee31f819872edd59870f77da50e8031334c461ce02369ab634450640a3"
+            }
+          }
+        },
+        {
+          "screen": "1080x2400",
+          "densityDpi": 420,
+          "fontScale": 1,
+          "sampledPixelSimilarity": 1.0,
+          "visibleSourceX": "0.100..0.900",
+          "captures": {
+            "scene": {
+              "localFile": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\images-native-review-20261122\\1080x2400\\love_wedding_book_phone_scene.png",
+              "sha256": "452871b1d044fc49dabeedef7c602bb6c50cb9584fdb1c4469cdd1b647134a5c"
+            },
+            "play": {
+              "localFile": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\images-native-review-20261122\\1080x2400\\love_wedding_book_phone_play.png",
+              "sha256": "0ad8784edec3bc9a1a70fc33d8886c51854b43a9498e4d1a373467af069599ea"
+            }
+          }
+        }
+      ],
+      "userReview": "APPROVED_FINAL_SCENE_REVIEW",
+      "finalUserReviewPresentation": {
+        "status": "APPROVED_FINAL_SCENE_REVIEW",
+        "date": "2026-11-22",
+        "reviewRecord": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\romance-final-review-20261122\\review.json",
+        "contactSheet": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\romance-final-review-20261122\\scene-review-1.png",
+        "currentAssetEventRoutingAndCaptureHashesVerified": true,
+        "userApproval": "2026-11-22 사용자: ㅇㅇ좋아. 그대로 가자. 다음은?"
+      }
+    },
+    "eventSourceHash": "60189b39ad339c78fd3146603904bc0ddad82da3fb7388e53ab356da3263c119"
+  }
+}

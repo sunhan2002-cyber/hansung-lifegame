@@ -1,0 +1,284 @@
+{
+  "schemaVersion": 1,
+  "eventId": "love_wedding_prep_01",
+  "sourceAssetPath": "followup_20261120/img_love_wedding_prep_01_001.png",
+  "sha256": "9aff39cd2a310ba4c619241fe872a5c0b8ac15b2eb08880292e66d5a7ddb7f49",
+  "eventSourceHash": "ffdcca0f9fd80b5232873a13d96704bf75f5750c8581e81a9db85e53b4ba1abd",
+  "currentEventSnapshot": {
+    "eventId": "love_wedding_prep_01",
+    "stage": "ADULT",
+    "type": "NORMAL",
+    "isFallback": false,
+    "isMilestone": true,
+    "title": "결혼 준비",
+    "text": "결혼식까지 석 달. 거실 바닥에 청첩장 시안과 식장 견적서, 예산표가 펼쳐져 있다. 연인: \"{nameCall}, 우리 어떤 결혼식 하고 싶어?\"",
+    "imageId": "img_love_wedding_prep_01_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [
+        "engaged",
+        "families_met"
+      ],
+      "blockedFlags": [
+        "married",
+        "divorced",
+        "wedding_ready",
+        "wedding_postponed"
+      ]
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "가까운 사람만 부르는 작은 결혼식으로 정한다",
+        "statDelta": {
+          "행복": 2,
+          "경제력": -1
+        },
+        "resultText": "하객 명단을 세 번 줄였다. 남은 이름 하나하나가 다 소중했다. 식장 계약서에 둘이 나란히 서명했다.",
+        "addFlags": [
+          "wedding_ready",
+          "wedding_small"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "a_small",
+            "text": "하객 명단을 세 번 줄였다. 남은 이름 하나하나가 다 소중했다. 식장 계약서에 둘이 나란히 서명했다.",
+            "chance": 100,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 2,
+              "경제력": -1
+            },
+            "addFlags": [
+              "wedding_ready",
+              "wedding_small"
+            ]
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "관계 단계 전환점 — 연애·결혼은 능력치 자격이 아니라 의사 결정이라 잠그지 않고, 차이는 결과 분기와 후속 사실로 반영",
+        "conditionReview": "open_turning_point",
+        "conditionBasis": "week14_wedding_routes"
+      },
+      {
+        "choiceId": "B",
+        "label": "식은 조금 미루자고 한다",
+        "statDelta": {
+          "행복": -2
+        },
+        "resultText": "날짜를 비워 두기로 했다. 연인은 서운해했지만 고개를 끄덕였다. '반지는 계속 낄게.'",
+        "addFlags": [
+          "wedding_postponed",
+          "long_term_dating"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "b_wait",
+            "text": "날짜를 비워 두기로 했다. 연인은 서운해했지만 고개를 끄덕였다. '반지는 계속 낄게.'",
+            "chance": 100,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": -2
+            },
+            "addFlags": [
+              "wedding_postponed",
+              "long_term_dating"
+            ],
+            "removeFlags": [
+              "engaged"
+            ]
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "관계 단계 전환점 — 연애·결혼은 능력치 자격이 아니라 의사 결정이라 잠그지 않고, 차이는 결과 분기와 후속 사실로 반영",
+        "conditionReview": "open_turning_point",
+        "conditionBasis": "week14_wedding_routes"
+      },
+      {
+        "choiceId": "C",
+        "label": "청첩장 문구만 일주일째 고친다",
+        "statDelta": {
+          "행복": 1
+        },
+        "resultText": "청첩장 문구가 열일곱 번째 버전에서 겨우 확정됐다. 인쇄소 사장님이 박수를 쳤다.",
+        "addFlags": [
+          "wedding_ready"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "c_card",
+            "text": "청첩장 문구가 열일곱 번째 버전에서 겨우 확정됐다. 인쇄소 사장님이 박수를 쳤다.",
+            "chance": 60,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 1
+            },
+            "addFlags": [
+              "wedding_ready"
+            ]
+          },
+          {
+            "outcomeId": "c_late",
+            "text": "청첩장 인쇄가 밀려 날짜를 한 번 미뤘다. 그래도 둘 다 웃으며 새 날짜를 달력에 적었다.",
+            "chance": 40,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 1
+            },
+            "addFlags": [
+              "wedding_ready"
+            ]
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "관계 단계 전환점 — 연애·결혼은 능력치 자격이 아니라 의사 결정이라 잠그지 않고, 차이는 결과 분기와 후속 사실로 반영",
+        "conditionReview": "open_turning_point",
+        "conditionBasis": "week14_wedding_routes"
+      }
+    ],
+    "priority": 0,
+    "kind": "MILESTONE",
+    "periods": [
+      "YOUNG_ADULT",
+      "MIDDLE",
+      "OLD_AGE"
+    ],
+    "weight": 1,
+    "view": "FIRST_PERSON",
+    "pathRole": "결혼 5단계 — 결혼 준비(보류 가능)",
+    "followUps": [
+      "love_wedding_01",
+      "love_wedding_first_love",
+      "love_wedding_music",
+      "love_wedding_book"
+    ]
+  },
+  "semanticReview": "거실 바닥·청첩장 시안·견적서·예산표·반지 상자가 결혼 준비를 나타낸다. 계약 서명·날짜 확정·인쇄 완료 결과는 없다.",
+  "semanticReviewer": "Codex AI / 2026-11-22 current-event semantic and native-image review",
+  "visualReviewer": "Codex AI / 2026-11-22 current-event semantic and native-image review",
+  "reviewerType": "AI",
+  "assignmentOwner": "정원률",
+  "teamFinalApproval": "PENDING",
+  "nativeCaptures": [
+    {
+      "localFile": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\images-native-review-20261122\\720x1480\\love_wedding_prep_01_phone_scene.png",
+      "sha256": "b1667eb3056354eb5f268bb74af9a942702db87fce4160f8708a9c81300070ca",
+      "kind": "scene",
+      "deviceSize": "720x1480",
+      "fontScale": 1,
+      "sampledPixelSimilarity": 1.0
+    },
+    {
+      "localFile": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\images-native-review-20261122\\720x1480\\love_wedding_prep_01_phone_play.png",
+      "sha256": "b253cb21ab1475030eb62add322700de86fa351e68567d1b4e356ea00c09b107",
+      "kind": "play",
+      "deviceSize": "720x1480",
+      "fontScale": 1,
+      "sampledPixelSimilarity": 1.0
+    },
+    {
+      "localFile": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\images-native-review-20261122\\1080x2400\\love_wedding_prep_01_phone_scene.png",
+      "sha256": "da4eefe3ca010273c3a4901098fa803c41ac476a87a6e78ca1c54b126598993b",
+      "kind": "scene",
+      "deviceSize": "1080x2400",
+      "fontScale": 1,
+      "sampledPixelSimilarity": 1.0
+    },
+    {
+      "localFile": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\images-native-review-20261122\\1080x2400\\love_wedding_prep_01_phone_play.png",
+      "sha256": "ab674cc25e761c1e424f702365a17ee8c18cd1e4c3f2eec509fde31f31c7184e",
+      "kind": "play",
+      "deviceSize": "1080x2400",
+      "fontScale": 1,
+      "sampledPixelSimilarity": 1.0
+    }
+  ],
+  "visualReview": "AI reviewed artwork and current matching native scene/play captures. User accepted the eleven native scene-view crops shown in three contact sheets, font 100%.",
+  "userImageReview": "APPROVED_FINAL_SCENE_REVIEW",
+  "userApproval": "2026-11-22 사용자: ㅇㅇ좋아. 그대로 가자. 다음은?",
+  "userApprovalScope": "Eleven displayed native scene-view crops; not full story E2E or team final acceptance.",
+  "productionReview": {
+    "eventId": "love_wedding_prep_01",
+    "imageId": "img_love_wedding_prep_01_001",
+    "title": "결혼 준비",
+    "reviewedMaster": {
+      "localFile": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\episodes-prep-review-20261122\\11-wedding-prep.png",
+      "sha256": "9aff39cd2a310ba4c619241fe872a5c0b8ac15b2eb08880292e66d5a7ddb7f49",
+      "width": 941,
+      "height": 1672,
+      "userReview": "APPROVED_PREVIEW",
+      "reviewedOn": "2026-11-22"
+    },
+    "deployment": {
+      "assetPath": "followup_20261120/img_love_wedding_prep_01_001.png",
+      "sha256": "9aff39cd2a310ba4c619241fe872a5c0b8ac15b2eb08880292e66d5a7ddb7f49",
+      "width": 941,
+      "height": 1672,
+      "crop": [
+        0,
+        0,
+        941,
+        1672
+      ],
+      "resized": false
+    },
+    "nativeReview": {
+      "status": "AI_CHECKED",
+      "method": "현재 사건 JSON과 실제 라우팅을 읽어 production DecisionScreen에서 복원 화면을 표시",
+      "screens": [
+        {
+          "screen": "720x1480",
+          "densityDpi": 320,
+          "fontScale": 1,
+          "sampledPixelSimilarity": 1.0,
+          "visibleSourceX": "0.068..0.932",
+          "captures": {
+            "scene": {
+              "localFile": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\images-native-review-20261122\\720x1480\\love_wedding_prep_01_phone_scene.png",
+              "sha256": "b1667eb3056354eb5f268bb74af9a942702db87fce4160f8708a9c81300070ca"
+            },
+            "play": {
+              "localFile": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\images-native-review-20261122\\720x1480\\love_wedding_prep_01_phone_play.png",
+              "sha256": "b253cb21ab1475030eb62add322700de86fa351e68567d1b4e356ea00c09b107"
+            }
+          }
+        },
+        {
+          "screen": "1080x2400",
+          "densityDpi": 420,
+          "fontScale": 1,
+          "sampledPixelSimilarity": 1.0,
+          "visibleSourceX": "0.100..0.900",
+          "captures": {
+            "scene": {
+              "localFile": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\images-native-review-20261122\\1080x2400\\love_wedding_prep_01_phone_scene.png",
+              "sha256": "da4eefe3ca010273c3a4901098fa803c41ac476a87a6e78ca1c54b126598993b"
+            },
+            "play": {
+              "localFile": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\images-native-review-20261122\\1080x2400\\love_wedding_prep_01_phone_play.png",
+              "sha256": "ab674cc25e761c1e424f702365a17ee8c18cd1e4c3f2eec509fde31f31c7184e"
+            }
+          }
+        }
+      ],
+      "userReview": "APPROVED_FINAL_SCENE_REVIEW",
+      "finalUserReviewPresentation": {
+        "status": "APPROVED_FINAL_SCENE_REVIEW",
+        "date": "2026-11-22",
+        "reviewRecord": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\romance-final-review-20261122\\review.json",
+        "contactSheet": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\romance-final-review-20261122\\scene-review-3.png",
+        "currentAssetEventRoutingAndCaptureHashesVerified": true,
+        "userApproval": "2026-11-22 사용자: ㅇㅇ좋아. 그대로 가자. 다음은?"
+      }
+    },
+    "eventSourceHash": "ffdcca0f9fd80b5232873a13d96704bf75f5750c8581e81a9db85e53b4ba1abd"
+  }
+}

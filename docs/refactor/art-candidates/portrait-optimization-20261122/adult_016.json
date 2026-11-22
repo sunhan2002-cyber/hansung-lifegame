@@ -1,0 +1,127 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-22",
+  "eventId": "adult_016",
+  "eventSourceHash": "1ff6b96f8e518ee2a26e82c84fc791da7e962d7ff974116041ba58d87afc345c",
+  "sourceAssetPath": "followup_20261031/img_adult_dinner_seats_001.png",
+  "sourceSha256": "19fe038c02a418d219c16a69516a59e0c581e23c62a03ffd74f74ac83fb66665",
+  "variant": {
+    "assetPath": "presentation/portraits/img_adult_dinner_seats_001_portrait_v1.png",
+    "sha256": "24519538bc06c4ca6c1b124c0006aab5070178856bb294cce4a24817ccb713aa",
+    "width": 753,
+    "height": 1338,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI / 2026-11-22 optimized portrait review",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-optimization-20261122/adult_016.json"
+  },
+  "reviewerType": "AI",
+  "reviewer": "Codex AI / 2026-11-22 optimized portrait review",
+  "reviewStatus": "AI_REVIEWED_PRESENTATION",
+  "assignmentOwner": "정원률",
+  "scope": "Optimized optional portrait derivative only. Existing scene master and its legacy approval remain unchanged. User approval covers the preview, not final team acceptance.",
+  "semanticReview": "Existing scene content and event snapshot are inherited from the preserved previous review. Exact nearest-neighbor resampling changes no scenario, characters or props; current event hash is retained and validated.",
+  "visualReview": "AI inspected same-viewport original/candidate contact sheets; user accepted all 95 previews. Resolution is approximately 80% per axis with no palette quantization. Fine texture differs from original; full RGB decoding matches the intended resized pixels.",
+  "cropReview": "Production DecisionScreen and scene-only view exercised for this current event on 720x1480 and 1080x2400 emulators, font scale 100%. The registered optimized portrait path is asserted explicitly; scene pixels pass the unchanged 95% match gate. Scene content was inherited from the preserved source review and all 95 candidate previews were user accepted. AI inspected representative native frames; native captures for all events are preserved.",
+  "actualProducer": "Deterministic nearest-neighbor and PNG encoder; original scene generation is documented in previousReviewEvidence.",
+  "generationMethod": "No new scene generation. Pixel-center nearest-neighbor resampling, RGB8 PNG, Paeth row filter and zlib compression. Source-bound provenance remains in the untouched previous derivative and master.",
+  "previousReviewEvidence": "docs/refactor/art-candidates/portrait-integration/adult_016.json",
+  "previousVariant": {
+    "assetPath": "presentation/portraits/img_adult_dinner_seats_001_portrait_v1.png",
+    "sha256": "999dfaac6ec9ea90ad7c550d30df0b700b2282c5aebd0ca441938d355b0b72d1",
+    "width": 941,
+    "height": 1672,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/adult_016.json"
+  },
+  "optimization": {
+    "beforeBytes": 2663331,
+    "afterBytes": 1762808,
+    "savedPercent": 33.81,
+    "previousVariantSha256": "999dfaac6ec9ea90ad7c550d30df0b700b2282c5aebd0ca441938d355b0b72d1",
+    "preservedPreviousVariant": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\portrait-integration-20261122\\previous-variants\\img_adult_dinner_seats_001_portrait_v1.png",
+    "candidateSha256": "24519538bc06c4ca6c1b124c0006aab5070178856bb294cce4a24817ccb713aa",
+    "userPreviewReview": "APPROVED_PREVIEW",
+    "independentRgbDecodeVerified": true
+  },
+  "nativePending": false,
+  "runtimeConnected": true,
+  "legacyApprovalChanged": false,
+  "nativeReview": {
+    "status": "PASS",
+    "reviewerType": "AI",
+    "captures": [
+      {
+        "path": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\portrait-integration-20261122\\after-720x1480\\adult_016_phone_scene.png",
+        "sha256": "48ba97c594be575ab1d3d656a9f698f7045c38710550f8798de38bd54f3cc1a3",
+        "kind": "scene",
+        "deviceSize": "720x1480",
+        "densityDpi": 320,
+        "fontScale": 1,
+        "crop": {
+          "eventId": "adult_016",
+          "imageId": "img_adult_dinner_seats_001",
+          "assetPath": "presentation/portraits/img_adult_dinner_seats_001_portrait_v1.png",
+          "screen": "720x1480",
+          "visibleSourceX": "0.068..0.932",
+          "match": "1.000"
+        }
+      },
+      {
+        "path": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\portrait-integration-20261122\\after-720x1480\\adult_016_phone_play.png",
+        "sha256": "3820ec40d48f72391fe0013f711ca9041382ff1d08a4c5db8c5a4166843b977d",
+        "kind": "play",
+        "deviceSize": "720x1480",
+        "densityDpi": 320,
+        "fontScale": 1,
+        "crop": {
+          "eventId": "adult_016",
+          "imageId": "img_adult_dinner_seats_001",
+          "assetPath": "presentation/portraits/img_adult_dinner_seats_001_portrait_v1.png",
+          "screen": "720x1480",
+          "visibleSourceX": "0.068..0.932",
+          "match": "1.000"
+        }
+      },
+      {
+        "path": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\portrait-integration-20261122\\after-1080x2400\\adult_016_phone_scene.png",
+        "sha256": "cd844c28eac7b23a0fb41e36741821827b0c1b1b3975155566d2b228de3750d9",
+        "kind": "scene",
+        "deviceSize": "1080x2400",
+        "densityDpi": 420,
+        "fontScale": 1,
+        "crop": {
+          "eventId": "adult_016",
+          "imageId": "img_adult_dinner_seats_001",
+          "assetPath": "presentation/portraits/img_adult_dinner_seats_001_portrait_v1.png",
+          "screen": "1080x2400",
+          "visibleSourceX": "0.100..0.900",
+          "match": "1.000"
+        }
+      },
+      {
+        "path": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\portrait-integration-20261122\\after-1080x2400\\adult_016_phone_play.png",
+        "sha256": "a785b94731b2edff6f046ca68b9da3e5b327f0f0bcdd93ae17b5ebed25919953",
+        "kind": "play",
+        "deviceSize": "1080x2400",
+        "densityDpi": 420,
+        "fontScale": 1,
+        "crop": {
+          "eventId": "adult_016",
+          "imageId": "img_adult_dinner_seats_001",
+          "assetPath": "presentation/portraits/img_adult_dinner_seats_001_portrait_v1.png",
+          "screen": "1080x2400",
+          "visibleSourceX": "0.100..0.900",
+          "match": "1.000"
+        }
+      }
+    ],
+    "pixelThreshold": 0.95,
+    "userNativeScreenReview": "APPROVED_REPRESENTATIVE_NATIVE_SCREEN_REVIEW",
+    "teamFinalApproval": "PENDING",
+    "userNativeReviewScope": "2026-11-22 사용자: 충분히 좋네. 다음 내가 할 일? — 대표 실제 장면 보기 전후 비교를 통한 95장 최적화 앱 반영 결과 수용. 95개 실제 화면을 사람이 각각 재검수했다는 뜻은 아님."
+  },
+  "previousNativeAcceptanceEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/adult_016.json"
+}
