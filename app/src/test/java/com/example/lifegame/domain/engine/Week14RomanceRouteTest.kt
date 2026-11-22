@@ -109,10 +109,17 @@ class Week14RomanceRouteTest {
             if ("married" in s.added) {
                 if (s.eventId !in ceremonies) add("married_outside_ceremony:${s.eventId}")
                 if (!s.before.containsAll(setOf("engaged", "families_met", "wedding_ready"))) add("married_without_preparation:${s.eventId}")
-                val spouse = s.added.filter { it.startsWith("spouse_") }
+                val spouse = s.added.filter {
+                    it.startsWith("spouse_") && !it.startsWith(MarriageContract.SPOUSE_ID_PREFIX)
+                }
                 if (spouse.size != 1) add("spouse_flag_count:${s.eventId}")
                 val route = spouse.singleOrNull()?.removePrefix("spouse_")
                 if (route != null && route != "other" && "partner_$route" !in s.before) add("spouse_not_current_partner:${s.eventId}")
+                val partnerId = MarriageContract.currentPartnerId(s.before)
+                val spouseIds = s.added.filter { it.startsWith(MarriageContract.SPOUSE_ID_PREFIX) }
+                if (partnerId == null || spouseIds.singleOrNull() != "${MarriageContract.SPOUSE_ID_PREFIX}$partnerId") {
+                    add("spouse_id_not_current_partner:${s.eventId}")
+                }
             }
             if ("has_child" in s.added && "married" !in s.before) add("child_without_marriage:${s.eventId}")
         }
