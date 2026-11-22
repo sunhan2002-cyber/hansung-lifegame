@@ -502,6 +502,7 @@ internal fun DicePanel(
                 fontSize = 14.sp,
                 lineHeight = 20.sp,
             )
+            InkButton(text = "주사위 굴리기", onClick = rollOnce, enabled = !rolling, modifier = Modifier.testTag("dice_roll"))
         } else {
             val rows = remember(roll) { startingStatRows(roll) }
             // 회전 · 복원 뒤에도 보던 능력치를 그대로 보여 준다. 굴림 결과나 재굴림 횟수에는 영향이 없다.
@@ -515,6 +516,21 @@ internal fun DicePanel(
                 modifier = Modifier.testTag("dice_3d_label"),
             )
             Dice3DStage(first = shown.first, second = shown.second, rollNonce = rollNonce, label = shown.label)
+            if (rerollsLeft > 0) {
+                LineButton(
+                    text = "다시 굴리기 (${rerollsLeft}번 남음)",
+                    onClick = rollOnce,
+                    enabled = !rolling,
+                    modifier = Modifier.testTag("dice_reroll"),
+                )
+            } else {
+                Text(
+                    text = "더 굴릴 수 없다. 이 능력치로 태어난다.",
+                    color = LifeGameInkTertiary,
+                    fontSize = 13.sp,
+                    modifier = Modifier.testTag("dice_no_reroll"),
+                )
+            }
             Text(
                 text = "능력치마다 주사위 두 개를 굴려요. 줄을 누르면 그 능력치의 두 눈을 위에서 볼 수 있어요.",
                 color = LifeGameInkSecondary,
@@ -534,21 +550,6 @@ internal fun DicePanel(
                 )
                 Text(tendency.description, color = LifeGameInkTertiary, fontSize = 13.sp, lineHeight = 18.sp)
             }
-        }
-        when {
-            roll == null -> InkButton(text = "주사위 굴리기", onClick = rollOnce, enabled = !rolling, modifier = Modifier.testTag("dice_roll"))
-            rerollsLeft > 0 -> LineButton(
-                text = "다시 굴리기 (${rerollsLeft}번 남음)",
-                onClick = rollOnce,
-                enabled = !rolling,
-                modifier = Modifier.testTag("dice_reroll"),
-            )
-            else -> Text(
-                text = "더 굴릴 수 없다. 이 능력치로 태어난다.",
-                color = LifeGameInkTertiary,
-                fontSize = 13.sp,
-                modifier = Modifier.testTag("dice_no_reroll"),
-            )
         }
     }
 }
