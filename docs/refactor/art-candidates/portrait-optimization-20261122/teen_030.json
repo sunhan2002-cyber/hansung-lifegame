@@ -1,0 +1,127 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-22",
+  "eventId": "teen_030",
+  "eventSourceHash": "0a9968ac1863acbb325b4ebba5df325c1b2abfabd1c96b588d319d97b9f27800",
+  "sourceAssetPath": "followup_20261031/img_teen_class_shirt_001.png",
+  "sourceSha256": "6b1d0bc07e9b421a390721271e13f9e4081df8af1e8f488f10b2f9836b40fc39",
+  "variant": {
+    "assetPath": "presentation/portraits/img_teen_class_shirt_001_portrait_v1.png",
+    "sha256": "c237c7761d0100098680eb1d8da28a6f5674380b41899fd80c900f5b53f12efe",
+    "width": 753,
+    "height": 1338,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI / 2026-11-22 optimized portrait review",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-optimization-20261122/teen_030.json"
+  },
+  "reviewerType": "AI",
+  "reviewer": "Codex AI / 2026-11-22 optimized portrait review",
+  "reviewStatus": "AI_REVIEWED_PRESENTATION",
+  "assignmentOwner": "정원률",
+  "scope": "Optimized optional portrait derivative only. Existing scene master and its legacy approval remain unchanged. User approval covers the preview, not final team acceptance.",
+  "semanticReview": "Existing scene content and event snapshot are inherited from the preserved previous review. Exact nearest-neighbor resampling changes no scenario, characters or props; current event hash is retained and validated.",
+  "visualReview": "AI inspected same-viewport original/candidate contact sheets; user accepted all 95 previews. Resolution is approximately 80% per axis with no palette quantization. Fine texture differs from original; full RGB decoding matches the intended resized pixels.",
+  "cropReview": "Production DecisionScreen and scene-only view exercised for this current event on 720x1480 and 1080x2400 emulators, font scale 100%. The registered optimized portrait path is asserted explicitly; scene pixels pass the unchanged 95% match gate. Scene content was inherited from the preserved source review and all 95 candidate previews were user accepted. AI inspected representative native frames; native captures for all events are preserved.",
+  "actualProducer": "Deterministic nearest-neighbor and PNG encoder; original scene generation is documented in previousReviewEvidence.",
+  "generationMethod": "No new scene generation. Pixel-center nearest-neighbor resampling, RGB8 PNG, Paeth row filter and zlib compression. Source-bound provenance remains in the untouched previous derivative and master.",
+  "previousReviewEvidence": "docs/refactor/art-candidates/portrait-integration/teen_030.json",
+  "previousVariant": {
+    "assetPath": "presentation/portraits/img_teen_class_shirt_001_portrait_v1.png",
+    "sha256": "0013e882f7dac256c2673b3d4adc45f62ade4ed0455619f578cc52480cc87fe0",
+    "width": 941,
+    "height": 1672,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/teen_030.json"
+  },
+  "optimization": {
+    "beforeBytes": 2216557,
+    "afterBytes": 1440127,
+    "savedPercent": 35.03,
+    "previousVariantSha256": "0013e882f7dac256c2673b3d4adc45f62ade4ed0455619f578cc52480cc87fe0",
+    "preservedPreviousVariant": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\portrait-integration-20261122\\previous-variants\\img_teen_class_shirt_001_portrait_v1.png",
+    "candidateSha256": "c237c7761d0100098680eb1d8da28a6f5674380b41899fd80c900f5b53f12efe",
+    "userPreviewReview": "APPROVED_PREVIEW",
+    "independentRgbDecodeVerified": true
+  },
+  "nativePending": false,
+  "runtimeConnected": true,
+  "legacyApprovalChanged": false,
+  "nativeReview": {
+    "status": "PASS",
+    "reviewerType": "AI",
+    "captures": [
+      {
+        "path": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\portrait-integration-20261122\\after-720x1480\\teen_030_phone_scene.png",
+        "sha256": "a0484855e21d94b059667556a20b67d01a0d3857e022944b6fa98936c656d233",
+        "kind": "scene",
+        "deviceSize": "720x1480",
+        "densityDpi": 320,
+        "fontScale": 1,
+        "crop": {
+          "eventId": "teen_030",
+          "imageId": "img_teen_class_shirt_001",
+          "assetPath": "presentation/portraits/img_teen_class_shirt_001_portrait_v1.png",
+          "screen": "720x1480",
+          "visibleSourceX": "0.068..0.932",
+          "match": "1.000"
+        }
+      },
+      {
+        "path": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\portrait-integration-20261122\\after-720x1480\\teen_030_phone_play.png",
+        "sha256": "0f5332af81087d7d94694b3fffe312bda2935288e1fec5a27e61a47f397830c0",
+        "kind": "play",
+        "deviceSize": "720x1480",
+        "densityDpi": 320,
+        "fontScale": 1,
+        "crop": {
+          "eventId": "teen_030",
+          "imageId": "img_teen_class_shirt_001",
+          "assetPath": "presentation/portraits/img_teen_class_shirt_001_portrait_v1.png",
+          "screen": "720x1480",
+          "visibleSourceX": "0.068..0.932",
+          "match": "1.000"
+        }
+      },
+      {
+        "path": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\portrait-integration-20261122\\after-1080x2400\\teen_030_phone_scene.png",
+        "sha256": "ffe29469c5b3cfdd4c47861b96cb841aad335f531b46add24badc4cadc425647",
+        "kind": "scene",
+        "deviceSize": "1080x2400",
+        "densityDpi": 420,
+        "fontScale": 1,
+        "crop": {
+          "eventId": "teen_030",
+          "imageId": "img_teen_class_shirt_001",
+          "assetPath": "presentation/portraits/img_teen_class_shirt_001_portrait_v1.png",
+          "screen": "1080x2400",
+          "visibleSourceX": "0.100..0.900",
+          "match": "1.000"
+        }
+      },
+      {
+        "path": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\portrait-integration-20261122\\after-1080x2400\\teen_030_phone_play.png",
+        "sha256": "464d59a6b1d42efc4959a67859795faa6b8c8929217b9da15401479e52440c44",
+        "kind": "play",
+        "deviceSize": "1080x2400",
+        "densityDpi": 420,
+        "fontScale": 1,
+        "crop": {
+          "eventId": "teen_030",
+          "imageId": "img_teen_class_shirt_001",
+          "assetPath": "presentation/portraits/img_teen_class_shirt_001_portrait_v1.png",
+          "screen": "1080x2400",
+          "visibleSourceX": "0.100..0.900",
+          "match": "1.000"
+        }
+      }
+    ],
+    "pixelThreshold": 0.95,
+    "userNativeScreenReview": "APPROVED_REPRESENTATIVE_NATIVE_SCREEN_REVIEW",
+    "teamFinalApproval": "PENDING",
+    "userNativeReviewScope": "2026-11-22 사용자: 충분히 좋네. 다음 내가 할 일? — 대표 실제 장면 보기 전후 비교를 통한 95장 최적화 앱 반영 결과 수용. 95개 실제 화면을 사람이 각각 재검수했다는 뜻은 아님."
+  },
+  "previousNativeAcceptanceEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/teen_030.json"
+}

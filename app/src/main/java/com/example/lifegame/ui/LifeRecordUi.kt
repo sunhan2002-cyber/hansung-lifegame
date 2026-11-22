@@ -152,9 +152,10 @@ fun recapMomentsUi(
         distinct.filter { it in fill || isMajor(it) }
     }
     return picked.mapIndexed { index, choice ->
-        val imageId = choice.momentImageId?.takeIf(String::isNotBlank)
+        val recordedImageId = choice.momentImageId?.takeIf(String::isNotBlank)
             ?: choice.eventImageId?.takeIf(String::isNotBlank)
             ?: content.decisions[choice.eventId]?.povImageId?.takeIf(String::isNotBlank)
+        val imageId = doljabiOutcomeImageId(choice.eventId, choice.choiceId, recordedImageId)
         val images = content.imageRouting
             .eventCandidates(choice.eventId, imageId, null, choice.period, content.imageFiles)
             .filter { it.usage != "character" }

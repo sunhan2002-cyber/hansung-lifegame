@@ -414,6 +414,14 @@ fun buildDecisionUi(
     )
 }
 
+/** 돌잡이는 실제 선택을 확인한 뒤에만 판사봉을 잡는 그림을 쓴다. 이전 저장의 공통 그림 ID도 선택으로 구분한다. */
+fun doljabiOutcomeImageId(eventId: String, choiceId: String, savedImageId: String?): String? =
+    if (eventId == "infant_007") {
+        if (choiceId == "B") "img_doljabi_grasp_001" else "img_infant_toys_001"
+    } else {
+        savedImageId
+    }
+
 /**
  * 결과를 읽던 중 앱이 꺼졌다가 이어할 때 결과 위에 다시 보여 줄 사건 머리.
  * 선택은 이미 반영됐으므로 선택지는 비워 두고(다시 고를 수 없게) 제목 · 본문 · 그림만 되살린다.

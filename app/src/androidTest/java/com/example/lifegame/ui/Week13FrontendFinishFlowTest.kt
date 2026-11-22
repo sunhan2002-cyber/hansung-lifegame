@@ -2,17 +2,23 @@ package com.example.lifegame.ui
 
 import android.app.Application
 import android.graphics.Bitmap
+import android.graphics.Canvas
+import android.graphics.Paint
+import android.graphics.RectF
+import android.graphics.Color as AndroidColor
 import androidx.activity.ComponentActivity
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.requiredSize
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.key
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clipToBounds
 import androidx.compose.ui.graphics.asAndroidBitmap
+import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.semantics.SemanticsActions
 import androidx.compose.ui.test.SemanticsMatcher
@@ -21,6 +27,7 @@ import androidx.compose.ui.test.assertCountEquals
 import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.assertTextContains
 import androidx.compose.ui.test.captureToImage
+import androidx.compose.ui.test.click
 import androidx.compose.ui.test.hasContentDescription
 import androidx.compose.ui.test.junit4.createAndroidComposeRule
 import androidx.compose.ui.test.onAllNodesWithTag
@@ -39,12 +46,22 @@ import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.platform.app.InstrumentationRegistry
 import com.example.lifegame.data.V4ProgressStore
 import com.example.lifegame.domain.model.CutsceneStatus
+import com.example.lifegame.ui.images.ImageCandidate
+import com.example.lifegame.ui.images.PixelAssetLoader
+import com.example.lifegame.ui.images.coverPlacement
 import com.example.lifegame.ui.screens.CUTSCENE_FADE_MILLIS
 import com.example.lifegame.ui.screens.CUTSCENE_HOLD_MILLIS
 import com.example.lifegame.ui.screens.DOLJABI_EVENT_ID
 import com.example.lifegame.ui.screens.DOLJABI_IMAGE_DESCRIPTION
+import com.example.lifegame.ui.screens.CHANGE_HOLD_MILLIS
+import com.example.lifegame.ui.screens.TAP_GUARD_MILLIS
+import com.example.lifegame.ui.theme.LifeGamePicture
 import com.example.lifegame.ui.theme.LifeGameTheme
 import java.io.File
+import java.util.concurrent.TimeUnit
+import kotlin.math.abs
+import kotlin.math.max
+import kotlin.math.min
 import org.junit.After
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertFalse
@@ -175,11 +192,211 @@ class Week13FrontendFinishFlowTest {
         awaitTag("decision_body")
         compose.onAllNodesWithTag("scene_preview").assertCountEquals(0)
         compose.onNodeWithTag("decision_title").assertTextContains("돌잡이")
-        compose.onNodeWithTag("decision_title").performClick()
-        advance(400)
+        advance(TAP_GUARD_MILLIS + 50)
+        tapDoljabiNode("decision_body")
+        advance(TAP_GUARD_MILLIS + 50)
         awaitTag("decision_choice_A")
         assertEquals("컷신은 능력치를 바꾸지 않는다", statsBefore, requireNotNull(vm.play).stats)
         save("finish_newgame_first_event.png")
+    }
+
+    @Test
+    fun doljabiPianoKeepsNeutralArtThroughTheChoiceAndRestoresIt() =
+        verifyDoljabiChoiceArtwork("A")
+
+    @Test
+    fun doljabiGavelShowsTheGraspOnlyAfterChoosingItAndRestoresIt() =
+        verifyDoljabiChoiceArtwork("B")
+
+    @Test
+    fun doljabiBanknoteKeepsNeutralArtThroughTheChoiceAndRestoresIt() =
+        verifyDoljabiChoiceArtwork("C")
+
+    /** Actual new-life state, native taps and fresh ViewModels, including pre-image-snapshot saves. */
+    private fun verifyDoljabiChoiceArtwork(choiceId: String) {
+        val neutralId = "img_infant_toys_001"
+        val neutralPath = "followup_20261120/img_infant_toys_001.png"
+        val graspId = "img_doljabi_grasp_001"
+        val expectedId = if (choiceId == "B") graspId else neutralId
+        val expectedPath = if (choiceId == "B") {
+            "cutscenes/week11/img_doljabi_grasp_001.png"
+        } else neutralPath
+        lateinit var first: LifeGameViewModel
+        compose.runOnUiThread {
+            first = LifeGameViewModel(app)
+            first.startNewLife(NewLifeProfile("검증", Gender.FEMALE, null, runSeed = 20261116L))
+        }
+        var current by mutableStateOf(first)
+        var generation by mutableStateOf(0)
+        compose.mainClock.autoAdvance = false
+        compose.setContent {
+            LifeGameTheme {
+                key(generation) { PlayHost(gameViewModel = current, onGoHome = {}) }
+            }
+        }
+        val store = V4ProgressStore(app)
+        val before = requireNotNull(first.play).stats
+        awaitTag("doljabi_cutscene")
+        advance(CUTSCENE_FADE_MILLIS + TAP_GUARD_MILLIS + 32)
+        assertDoljabiPixels("doljabi_cutscene_image", neutralPath, fill = false)
+        save("doljabi_${choiceId}_cutscene.png")
+        tapDoljabiNode("doljabi_cutscene_image")
+        awaitTag("decision_body")
+        advance(TAP_GUARD_MILLIS + 50)
+        tapDoljabiNode("decision_body")
+        advance(TAP_GUARD_MILLIS + 50)
+        awaitTag("decision_choice_$choiceId")
+        assertEquals(before, requireNotNull(first.play).stats)
+        assertTrue(requireNotNull(store.load()).choices.isEmpty())
+        assertDoljabiRoute(first, neutralId, neutralPath)
+        save("doljabi_${choiceId}_choice.png")
+        inspectDoljabiScene(neutralPath)
+        scrollDoljabiNode("decision_choice_$choiceId")
+        tapDoljabiNode("decision_choice_$choiceId")
+        awaitTag("outcome_text")
+        advance(CHANGE_HOLD_MILLIS + TAP_GUARD_MILLIS + 50)
+        assertDoljabiRoute(first, expectedId, expectedPath)
+        val chosen = requireNotNull(store.load())
+        assertEquals(1, chosen.choices.size)
+        assertEquals(choiceId, chosen.pendingOutcome?.choiceId)
+        assertEquals(expectedId, chosen.pendingOutcome?.eventImageId)
+        assertEquals(expectedId, chosen.choices.single().eventImageId)
+        save("doljabi_${choiceId}_result.png")
+        inspectDoljabiScene(expectedPath, "doljabi_${choiceId}_scene.png")
+
+        fun restoreAndInspect(fileName: String?) {
+            lateinit var restored: LifeGameViewModel
+            compose.runOnUiThread {
+                restored = LifeGameViewModel(app).apply { continueLife() }
+                current = restored
+                generation++
+            }
+            advance(TAP_GUARD_MILLIS + 50)
+            awaitTag("outcome_text")
+            compose.onAllNodesWithTag("doljabi_cutscene").assertCountEquals(0)
+            assertDoljabiRoute(restored, expectedId, expectedPath)
+            assertEquals(chosen.state.stats, requireNotNull(restored.play).stats)
+            assertEquals(requireNotNull(first.play).outcome, restored.play?.outcome)
+            assertEquals(1, requireNotNull(store.load()).choices.size)
+            inspectDoljabiScene(expectedPath, fileName)
+        }
+
+        assertTrue(store.awaitDurable().get(10, TimeUnit.SECONDS))
+        restoreAndInspect("doljabi_${choiceId}_resumed.png")
+        for (oldImageId in listOf(null, neutralId, graspId)) {
+            val legacy = chosen.copy(
+                pendingOutcome = requireNotNull(chosen.pendingOutcome).copy(eventImageId = oldImageId),
+                choices = chosen.choices.map { it.copy(eventImageId = oldImageId) },
+            )
+            assertTrue(store.save(legacy))
+            assertTrue(store.awaitDurable().get(10, TimeUnit.SECONDS))
+            restoreAndInspect(null)
+        }
+    }
+
+    private fun tapDoljabiNode(tag: String) {
+        compose.onNodeWithTag(tag, useUnmergedTree = true).performTouchInput { click(center) }
+        compose.mainClock.advanceTimeByFrame()
+    }
+
+    private fun scrollDoljabiNode(tag: String) {
+        compose.mainClock.autoAdvance = true
+        try {
+            compose.onNodeWithTag(tag, useUnmergedTree = true).performScrollTo().assertIsDisplayed()
+        } finally {
+            compose.mainClock.autoAdvance = false
+        }
+        advance(TAP_GUARD_MILLIS + 50)
+    }
+
+    private fun inspectDoljabiScene(expectedPath: String, fileName: String? = null) {
+        scrollDoljabiNode("scene_view_button")
+        tapDoljabiNode("scene_view_button")
+        awaitTag("scene_only")
+        assertDoljabiPixels("scene_clear", expectedPath, fill = true)
+        if (fileName != null) save(fileName)
+        tapDoljabiNode("scene_only")
+        advance(TAP_GUARD_MILLIS + 50)
+    }
+
+    private fun assertDoljabiRoute(vm: LifeGameViewModel, expectedId: String, expectedPath: String) {
+        val decision = requireNotNull(vm.play?.decision)
+        assertEquals(DOLJABI_EVENT_ID, decision.eventId)
+        assertEquals(expectedId, decision.imageId)
+        val loaded = requireNotNull(PixelAssetLoader.load(base, decision.images, 720, 1480))
+        assertEquals(expectedId, loaded.candidate.imageId)
+        assertEquals(expectedPath, loaded.candidate.path)
+    }
+
+    /** Compare the visible raster against a literal approved asset, independent of the model's selected path. */
+    private fun assertDoljabiPixels(tag: String, expectedPath: String, fill: Boolean) {
+        val node = compose.onNodeWithTag(tag)
+        val size = node.fetchSemanticsNode().size
+        // The native loader may sample the 1448x1086 master to 724x543 for the small cutscene.
+        // Resize that decoded raster, as SceneImage does, while keeping the expected path literal.
+        val loaded = requireNotNull(PixelAssetLoader.load(
+            base,
+            listOf(ImageCandidate(
+                imageId = expectedPath.substringAfterLast('/').removeSuffix(".png"),
+                path = expectedPath,
+                usage = "scene",
+            )),
+            size.width,
+            size.height,
+        ))
+        assertEquals(expectedPath, loaded.candidate.path)
+        val source = loaded.bitmap
+        val expected = Bitmap.createBitmap(size.width, size.height, Bitmap.Config.ARGB_8888)
+        val placement = if (fill) coverPlacement(source.width, source.height, size.width, size.height, loaded.focal) else null
+        val scale = min(size.width / source.width.toFloat(), size.height / source.height.toFloat())
+        val drawnWidth = placement?.width ?: source.width * scale
+        val drawnHeight = placement?.height ?: source.height * scale
+        val left = placement?.left ?: (size.width - drawnWidth) / 2f
+        val top = placement?.top ?: (size.height - drawnHeight) / 2f
+        Canvas(expected).apply {
+            drawColor(LifeGamePicture.toArgb())
+            drawBitmap(source, null, RectF(left, top, left + drawnWidth, top + drawnHeight),
+                Paint().apply { isFilterBitmap = false; isDither = false })
+        }
+        mark("$tag reference=$expectedPath decoded=${source.width}x${source.height} viewport=${size.width}x${size.height} fill=$fill")
+        var best = 0f
+        var lastActual: Bitmap? = null
+        try {
+            repeat(60) {
+                lastActual?.recycle()
+                val actual = node.captureToImage().asAndroidBitmap()
+                lastActual = actual
+                var matching = 0
+                var sampled = 0
+                for (row in 1 until 48) for (column in 1 until 24) {
+                    val x = size.width * column / 24
+                    val y = size.height * row / 48
+                    val a = expected.getPixel(x, y)
+                    val b = actual.getPixel(x, y)
+                    if (abs(AndroidColor.red(a) - AndroidColor.red(b)) <= 12 &&
+                        abs(AndroidColor.green(a) - AndroidColor.green(b)) <= 12 &&
+                        abs(AndroidColor.blue(a) - AndroidColor.blue(b)) <= 12) matching++
+                    sampled++
+                }
+                best = max(best, matching / sampled.toFloat())
+                if (best >= 0.95f) return
+                Thread.sleep(25)
+                compose.mainClock.advanceTimeByFrame()
+            }
+            val directory = requireNotNull(base.getExternalFilesDir("week13-finish"))
+            assertTrue(directory.isDirectory || directory.mkdirs())
+            val name = "doljabi_reference_${tag}_${expectedPath.substringAfterLast('/').removeSuffix(".png")}"
+            for ((suffix, bitmap) in listOf("expected" to expected, "actual" to requireNotNull(lastActual))) {
+                File(directory, "${name}_${suffix}.png").outputStream().use {
+                    assertTrue(bitmap.compress(Bitmap.CompressFormat.PNG, 100, it))
+                }
+            }
+            assertTrue("$tag differs from $expectedPath (pixel match $best)", best >= 0.95f)
+        } finally {
+            expected.recycle()
+            lastActual?.recycle()
+            // PixelAssetLoader owns and caches source; it must stay alive for the native screen.
+        }
     }
 
     @Test

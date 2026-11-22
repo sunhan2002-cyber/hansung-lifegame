@@ -1,0 +1,127 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-22",
+  "eventId": "special_007",
+  "eventSourceHash": "61ffa6ea7859268eaa5023312a60a872d5322d3d3964fdb9fe20364ed0391e7a",
+  "sourceAssetPath": "followup_20261031/img_special_water_bottle_001.png",
+  "sourceSha256": "9e8122c7e4a4ad13701a2594652223223adee65f2251df6fa4e4a5033a4a45c9",
+  "variant": {
+    "assetPath": "presentation/portraits/img_special_water_bottle_001_portrait_v1.png",
+    "sha256": "fe581d6096ebf5b1a8244c1ab0f3162945e6a41ee67c3cad96dc73cb8c932fc7",
+    "width": 753,
+    "height": 1338,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI / 2026-11-22 optimized portrait review",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-optimization-20261122/special_007.json"
+  },
+  "reviewerType": "AI",
+  "reviewer": "Codex AI / 2026-11-22 optimized portrait review",
+  "reviewStatus": "AI_REVIEWED_PRESENTATION",
+  "assignmentOwner": "정원률",
+  "scope": "Optimized optional portrait derivative only. Existing scene master and its legacy approval remain unchanged. User approval covers the preview, not final team acceptance.",
+  "semanticReview": "Existing scene content and event snapshot are inherited from the preserved previous review. Exact nearest-neighbor resampling changes no scenario, characters or props; current event hash is retained and validated.",
+  "visualReview": "AI inspected same-viewport original/candidate contact sheets; user accepted all 95 previews. Resolution is approximately 80% per axis with no palette quantization. Fine texture differs from original; full RGB decoding matches the intended resized pixels.",
+  "cropReview": "Production DecisionScreen and scene-only view exercised for this current event on 720x1480 and 1080x2400 emulators, font scale 100%. The registered optimized portrait path is asserted explicitly; scene pixels pass the unchanged 95% match gate. Scene content was inherited from the preserved source review and all 95 candidate previews were user accepted. AI inspected representative native frames; native captures for all events are preserved.",
+  "actualProducer": "Deterministic nearest-neighbor and PNG encoder; original scene generation is documented in previousReviewEvidence.",
+  "generationMethod": "No new scene generation. Pixel-center nearest-neighbor resampling, RGB8 PNG, Paeth row filter and zlib compression. Source-bound provenance remains in the untouched previous derivative and master.",
+  "previousReviewEvidence": "docs/refactor/art-candidates/portrait-integration/special_007.json",
+  "previousVariant": {
+    "assetPath": "presentation/portraits/img_special_water_bottle_001_portrait_v1.png",
+    "sha256": "2bb85889f04e52bf6394d0e0607f31c9ca04f9856d6c3961110edc64c3749e5d",
+    "width": 941,
+    "height": 1672,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root/security_p0)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/special_007.json"
+  },
+  "optimization": {
+    "beforeBytes": 2283124,
+    "afterBytes": 1496291,
+    "savedPercent": 34.46,
+    "previousVariantSha256": "2bb85889f04e52bf6394d0e0607f31c9ca04f9856d6c3961110edc64c3749e5d",
+    "preservedPreviousVariant": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\portrait-integration-20261122\\previous-variants\\img_special_water_bottle_001_portrait_v1.png",
+    "candidateSha256": "fe581d6096ebf5b1a8244c1ab0f3162945e6a41ee67c3cad96dc73cb8c932fc7",
+    "userPreviewReview": "APPROVED_PREVIEW",
+    "independentRgbDecodeVerified": true
+  },
+  "nativePending": false,
+  "runtimeConnected": true,
+  "legacyApprovalChanged": false,
+  "nativeReview": {
+    "status": "PASS",
+    "reviewerType": "AI",
+    "captures": [
+      {
+        "path": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\portrait-integration-20261122\\after-720x1480\\special_007_phone_scene.png",
+        "sha256": "5a3c1ae6f590b21278d998877545f8a45460653d1bd79ee0def90f49a449b031",
+        "kind": "scene",
+        "deviceSize": "720x1480",
+        "densityDpi": 320,
+        "fontScale": 1,
+        "crop": {
+          "eventId": "special_007",
+          "imageId": "img_special_water_bottle_001",
+          "assetPath": "presentation/portraits/img_special_water_bottle_001_portrait_v1.png",
+          "screen": "720x1480",
+          "visibleSourceX": "0.068..0.932",
+          "match": "1.000"
+        }
+      },
+      {
+        "path": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\portrait-integration-20261122\\after-720x1480\\special_007_phone_play.png",
+        "sha256": "f72b4ddbf326fcd66ca7e18785d6db7f1f91375cd2334c403a53bd8c31cdb507",
+        "kind": "play",
+        "deviceSize": "720x1480",
+        "densityDpi": 320,
+        "fontScale": 1,
+        "crop": {
+          "eventId": "special_007",
+          "imageId": "img_special_water_bottle_001",
+          "assetPath": "presentation/portraits/img_special_water_bottle_001_portrait_v1.png",
+          "screen": "720x1480",
+          "visibleSourceX": "0.068..0.932",
+          "match": "1.000"
+        }
+      },
+      {
+        "path": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\portrait-integration-20261122\\after-1080x2400\\special_007_phone_scene.png",
+        "sha256": "1b12bbb5fc66167db7bf7e5c8bbaf24791f4ea74b1114f8efb2eed24ea18d289",
+        "kind": "scene",
+        "deviceSize": "1080x2400",
+        "densityDpi": 420,
+        "fontScale": 1,
+        "crop": {
+          "eventId": "special_007",
+          "imageId": "img_special_water_bottle_001",
+          "assetPath": "presentation/portraits/img_special_water_bottle_001_portrait_v1.png",
+          "screen": "1080x2400",
+          "visibleSourceX": "0.100..0.900",
+          "match": "1.000"
+        }
+      },
+      {
+        "path": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\portrait-integration-20261122\\after-1080x2400\\special_007_phone_play.png",
+        "sha256": "509cfd761f63780c02536a6c618bc286c90634ce71567868755e16c0e8ef48f9",
+        "kind": "play",
+        "deviceSize": "1080x2400",
+        "densityDpi": 420,
+        "fontScale": 1,
+        "crop": {
+          "eventId": "special_007",
+          "imageId": "img_special_water_bottle_001",
+          "assetPath": "presentation/portraits/img_special_water_bottle_001_portrait_v1.png",
+          "screen": "1080x2400",
+          "visibleSourceX": "0.100..0.900",
+          "match": "1.000"
+        }
+      }
+    ],
+    "pixelThreshold": 0.95,
+    "userNativeScreenReview": "APPROVED_REPRESENTATIVE_NATIVE_SCREEN_REVIEW",
+    "teamFinalApproval": "PENDING",
+    "userNativeReviewScope": "2026-11-22 사용자: 충분히 좋네. 다음 내가 할 일? — 대표 실제 장면 보기 전후 비교를 통한 95장 최적화 앱 반영 결과 수용. 95개 실제 화면을 사람이 각각 재검수했다는 뜻은 아님."
+  },
+  "previousNativeAcceptanceEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/special_007.json"
+}

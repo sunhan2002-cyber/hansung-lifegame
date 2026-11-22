@@ -1,0 +1,331 @@
+{
+  "schemaVersion": 1,
+  "eventId": "infant_007",
+  "sourceAssetPath": "followup_20261120/img_infant_toys_001.png",
+  "sha256": "7e5a20c94d61004ceca9d1d2c785215942e47a782d5eb0d4a735874bd10b8710",
+  "eventSourceHash": "a72e45159d2b7581c27b3405cba07987ad6310c5ed0a05aa15fa12d2eea7a77a",
+  "currentEventSnapshot": {
+    "eventId": "infant_007",
+    "stage": "INFANT",
+    "type": "NORMAL",
+    "isFallback": false,
+    "isMilestone": true,
+    "title": "돌잡이",
+    "text": "사회자: \"자~ {name} 아기, 무엇을 잡을까요~?\" 앞에 피아노 장난감, 판사봉, 5만 원권이 놓여 있다. 온 가족이 숨을 죽였다.",
+    "imageId": "img_infant_toys_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [],
+      "blockedFlags": []
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "피아노 장난감을 잡는다",
+        "statDelta": {
+          "행복": 4,
+          "지력": 2,
+          "사회성": -2
+        },
+        "resultText": "건반을 두드리자 박수가 터졌다. 그날부터 우리 집엔 음악이 끊이지 않았다. 아랫집 인터폰도.",
+        "addFlags": [
+          "music_toy"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "a_primary",
+            "text": "건반을 두드리자 박수가 터졌다. 그날부터 우리 집엔 음악이 끊이지 않았다. 아랫집 인터폰도.",
+            "chance": 100,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 4,
+              "지력": 2,
+              "사회성": -2
+            },
+            "addFlags": [
+              "music_toy"
+            ],
+            "lifeDelta": 10
+          }
+        ],
+        "alwaysAvailable": true,
+        "conditionReview": "infant_baseline",
+        "alwaysAvailableReason": "영아기 기본 선택지는 초기 능력치 조건 없이 제공"
+      },
+      {
+        "choiceId": "B",
+        "label": "판사봉을 잡는다",
+        "statDelta": {
+          "지력": 4,
+          "사회성": 1,
+          "행복": -2
+        },
+        "resultText": "판사봉으로 아빠 이마를 \"땅! 땅!\" 두드렸다. 할아버지는 그 자리에서 어린이 법률 동화 전집을 주문했다.",
+        "addFlags": [
+          "judge_gavel"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "b_primary",
+            "text": "판사봉으로 아빠 이마를 \"땅! 땅!\" 두드렸다. 할아버지는 그 자리에서 어린이 법률 동화 전집을 주문했다.",
+            "chance": 100,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "지력": 4,
+              "사회성": 1,
+              "행복": -2
+            },
+            "addFlags": [
+              "judge_gavel"
+            ],
+            "lifeDelta": 10
+          }
+        ],
+        "alwaysAvailable": true,
+        "conditionReview": "infant_baseline",
+        "alwaysAvailableReason": "영아기 기본 선택지는 초기 능력치 조건 없이 제공"
+      },
+      {
+        "choiceId": "C",
+        "label": "5만 원권을 잡는다",
+        "statDelta": {
+          "운": 4,
+          "사회성": 1,
+          "행복": -3
+        },
+        "resultText": "박수 소리가 제일 컸다. 돈은 끝까지 안 놨는데 엄마가 결국 가져갔다. 그날 이후 돈 냄새만 맡으면 눈이 반짝인다.",
+        "addFlags": [
+          "cash_grabber"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "c_primary",
+            "text": "박수 소리가 제일 컸다. 돈은 끝까지 안 놨는데 엄마가 결국 가져갔다. 그날 이후 돈 냄새만 맡으면 눈이 반짝인다.",
+            "chance": 75,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "운": 4,
+              "사회성": 1,
+              "행복": -3
+            },
+            "addFlags": [
+              "cash_grabber"
+            ],
+            "lifeDelta": 10
+          },
+          {
+            "outcomeId": "c_double",
+            "text": "잡고 보니 5만 원권이 두 장이었다. 할아버지가 몰래 한 장을 겹쳐 둔 것이다. 박수가 두 배로 터졌고, 할아버지 지갑은 그날 두 배로 가벼워졌다.",
+            "chance": 25,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "운": 5,
+              "사회성": 2,
+              "행복": -2,
+              "건강": 10
+            },
+            "addFlags": [
+              "cash_grabber"
+            ],
+            "chanceWeights": {
+              "운": 3
+            }
+          }
+        ],
+        "alwaysAvailable": true,
+        "conditionReview": "infant_baseline",
+        "alwaysAvailableReason": "영아기 기본 선택지는 초기 능력치 조건 없이 제공"
+      }
+    ],
+    "priority": 0,
+    "kind": "MILESTONE",
+    "periods": [
+      "INFANT"
+    ],
+    "yearInPeriod": 1
+  },
+  "semanticReview": "피아노 장난감·판사봉과 받침·지폐가 중립적으로 놓여 있고 아기 손은 어느 것도 잡지 않는다. 판사봉 잡기 그림은 실제 B 결과에만 연결하며 A/C·이어하기·옛 저장 복원을 실제 검사했다.",
+  "semanticReviewer": "Codex AI / 2026-11-22 current-event semantic and native-image review",
+  "visualReviewer": "Codex AI / 2026-11-22 current-event semantic and native-image review",
+  "reviewerType": "AI",
+  "assignmentOwner": "정원률",
+  "teamFinalApproval": "PENDING",
+  "visualReview": "Neutral source preview user-approved. Native A/B/C flow, result scene view and fresh/legacy save restore checked at both sizes with isolated test storage.",
+  "userImageReview": "APPROVED_PREVIEW",
+  "nativeFlowReview": {
+    "status": "AI_CHECKED",
+    "date": "2026-11-22",
+    "screens": [
+      {
+        "size": "720x1480",
+        "densityDpi": 320,
+        "fontScale": 1,
+        "testsPassed": 3,
+        "captures": [
+          {
+            "file": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\doljabi-native-review-20261122\\720x1480\\doljabi_A_choice.png",
+            "sha256": "5ab25df9aa3daa5e3c54d7034d7c1d7a28fdd75a1763961ad1aae7f9da6e1626"
+          },
+          {
+            "file": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\doljabi-native-review-20261122\\720x1480\\doljabi_A_cutscene.png",
+            "sha256": "f6d1edd1c8086dca8449c26c1f14207b9bd181adc8016890a5ccd2bf99bbb2de"
+          },
+          {
+            "file": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\doljabi-native-review-20261122\\720x1480\\doljabi_A_result.png",
+            "sha256": "35e387cd322087aeff8add2bc516e213d2422a5e97d212bfdff0714eba5869b3"
+          },
+          {
+            "file": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\doljabi-native-review-20261122\\720x1480\\doljabi_A_resumed.png",
+            "sha256": "146a81ef5fd91e13fde6895fe23fac011f35274e6a79b5b2f7a89b11970992f9"
+          },
+          {
+            "file": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\doljabi-native-review-20261122\\720x1480\\doljabi_A_scene.png",
+            "sha256": "146a81ef5fd91e13fde6895fe23fac011f35274e6a79b5b2f7a89b11970992f9"
+          },
+          {
+            "file": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\doljabi-native-review-20261122\\720x1480\\doljabi_B_choice.png",
+            "sha256": "5ab25df9aa3daa5e3c54d7034d7c1d7a28fdd75a1763961ad1aae7f9da6e1626"
+          },
+          {
+            "file": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\doljabi-native-review-20261122\\720x1480\\doljabi_B_cutscene.png",
+            "sha256": "f6d1edd1c8086dca8449c26c1f14207b9bd181adc8016890a5ccd2bf99bbb2de"
+          },
+          {
+            "file": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\doljabi-native-review-20261122\\720x1480\\doljabi_B_result.png",
+            "sha256": "1111071ec073348b206aef32a8db788256343a94497c4636876f31e425ed06de"
+          },
+          {
+            "file": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\doljabi-native-review-20261122\\720x1480\\doljabi_B_resumed.png",
+            "sha256": "ee8a53b98805b453e2d8a2c63a5597467f1ba7926b29953014507a5210d60729"
+          },
+          {
+            "file": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\doljabi-native-review-20261122\\720x1480\\doljabi_B_scene.png",
+            "sha256": "ee8a53b98805b453e2d8a2c63a5597467f1ba7926b29953014507a5210d60729"
+          },
+          {
+            "file": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\doljabi-native-review-20261122\\720x1480\\doljabi_C_choice.png",
+            "sha256": "5ab25df9aa3daa5e3c54d7034d7c1d7a28fdd75a1763961ad1aae7f9da6e1626"
+          },
+          {
+            "file": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\doljabi-native-review-20261122\\720x1480\\doljabi_C_cutscene.png",
+            "sha256": "f6d1edd1c8086dca8449c26c1f14207b9bd181adc8016890a5ccd2bf99bbb2de"
+          },
+          {
+            "file": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\doljabi-native-review-20261122\\720x1480\\doljabi_C_result.png",
+            "sha256": "9a71ba2bf50b65053dcdd26aa8322ff286479c91ee55a505c6c0cbec23b4eed7"
+          },
+          {
+            "file": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\doljabi-native-review-20261122\\720x1480\\doljabi_C_resumed.png",
+            "sha256": "146a81ef5fd91e13fde6895fe23fac011f35274e6a79b5b2f7a89b11970992f9"
+          },
+          {
+            "file": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\doljabi-native-review-20261122\\720x1480\\doljabi_C_scene.png",
+            "sha256": "146a81ef5fd91e13fde6895fe23fac011f35274e6a79b5b2f7a89b11970992f9"
+          }
+        ]
+      },
+      {
+        "size": "1080x2400",
+        "densityDpi": 420,
+        "fontScale": 1,
+        "testsPassed": 6,
+        "captures": [
+          {
+            "file": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\doljabi-native-review-20261122\\1080x2400\\doljabi_A_choice.png",
+            "sha256": "4935247f21af13f0b1e0a8027f0c402fce924a579af6a957bdcf9b902b2af686"
+          },
+          {
+            "file": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\doljabi-native-review-20261122\\1080x2400\\doljabi_A_cutscene.png",
+            "sha256": "919fd3986c1a08226f3aed1aa88751265ba93cfced39c77d2a519aaf2aa7aa14"
+          },
+          {
+            "file": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\doljabi-native-review-20261122\\1080x2400\\doljabi_A_result.png",
+            "sha256": "0caa166bf4df2202fd186a510e9aa391cb92f31ec0c961e50e376d757a465f2b"
+          },
+          {
+            "file": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\doljabi-native-review-20261122\\1080x2400\\doljabi_A_resumed.png",
+            "sha256": "90c47c6f3bfd64fb58566cb03933cae107441dbbede174462f8f7d1f08a97b76"
+          },
+          {
+            "file": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\doljabi-native-review-20261122\\1080x2400\\doljabi_A_scene.png",
+            "sha256": "90c47c6f3bfd64fb58566cb03933cae107441dbbede174462f8f7d1f08a97b76"
+          },
+          {
+            "file": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\doljabi-native-review-20261122\\1080x2400\\doljabi_B_choice.png",
+            "sha256": "4935247f21af13f0b1e0a8027f0c402fce924a579af6a957bdcf9b902b2af686"
+          },
+          {
+            "file": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\doljabi-native-review-20261122\\1080x2400\\doljabi_B_cutscene.png",
+            "sha256": "919fd3986c1a08226f3aed1aa88751265ba93cfced39c77d2a519aaf2aa7aa14"
+          },
+          {
+            "file": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\doljabi-native-review-20261122\\1080x2400\\doljabi_B_result.png",
+            "sha256": "6bb223e4836c27ab56d9d9cf617c61650b4fcd7e5c8a21bebbc522ae62e94305"
+          },
+          {
+            "file": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\doljabi-native-review-20261122\\1080x2400\\doljabi_B_resumed.png",
+            "sha256": "a826a00e60d069ba409a75991f11ce37afe80ca0bc2bb2f2ed792a7a6d4f5d74"
+          },
+          {
+            "file": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\doljabi-native-review-20261122\\1080x2400\\doljabi_B_scene.png",
+            "sha256": "a826a00e60d069ba409a75991f11ce37afe80ca0bc2bb2f2ed792a7a6d4f5d74"
+          },
+          {
+            "file": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\doljabi-native-review-20261122\\1080x2400\\doljabi_C_choice.png",
+            "sha256": "4935247f21af13f0b1e0a8027f0c402fce924a579af6a957bdcf9b902b2af686"
+          },
+          {
+            "file": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\doljabi-native-review-20261122\\1080x2400\\doljabi_C_cutscene.png",
+            "sha256": "919fd3986c1a08226f3aed1aa88751265ba93cfced39c77d2a519aaf2aa7aa14"
+          },
+          {
+            "file": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\doljabi-native-review-20261122\\1080x2400\\doljabi_C_result.png",
+            "sha256": "b46da415f5dba5477c9b4c8fa59ead3a9f28787668ebf683155da23686966913"
+          },
+          {
+            "file": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\doljabi-native-review-20261122\\1080x2400\\doljabi_C_resumed.png",
+            "sha256": "90c47c6f3bfd64fb58566cb03933cae107441dbbede174462f8f7d1f08a97b76"
+          },
+          {
+            "file": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\doljabi-native-review-20261122\\1080x2400\\doljabi_C_scene.png",
+            "sha256": "90c47c6f3bfd64fb58566cb03933cae107441dbbede174462f8f7d1f08a97b76"
+          }
+        ]
+      }
+    ],
+    "literalAssetPixelComparisonThreshold": 0.95,
+    "testedChoices": [
+      "A",
+      "B",
+      "C"
+    ],
+    "savedImageVariants": [
+      null,
+      "img_infant_toys_001",
+      "img_doljabi_grasp_001"
+    ],
+    "newLifeAndSkipRestore": "PASS",
+    "statsAndChoiceCountUnchangedOnResume": true,
+    "evidenceDirectory": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\doljabi-native-review-20261122",
+    "userFinalScreenReview": "PENDING",
+    "teamApproval": "PENDING"
+  },
+  "confirmedBResult": {
+    "assetPath": "cutscenes/week11/img_doljabi_grasp_001.png",
+    "sha256": "7f1f4cc4e35f8a8fb285b8e4168782c58e9dae1600c8b7331986a4e4a13fd0ac"
+  },
+  "resultImageIds": {
+    "A": "img_infant_toys_001",
+    "B": "img_doljabi_grasp_001",
+    "C": "img_infant_toys_001"
+  },
+  "explicitHumanWholeFlowReview": "NOT_CLAIMED"
+}

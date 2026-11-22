@@ -310,7 +310,7 @@ class GameEngine(
                 "pending decision is not available in current content"
             }
             // A save from before the preparation step can already be waiting at a ceremony.
-            if (MarriageContract.isCeremony(eventId) && !MarriageContract.canFinalize(state.flags)) {
+            if (MarriageContract.isCeremony(eventId) && !MarriageContract.canFinalize(eventId, state.flags)) {
                 val preparation = decisions.firstOrNull {
                     it.eventId == MarriageContract.PREPARATION_EVENT &&
                         MarriageContract.canPrepare(state.flags) &&
@@ -437,8 +437,9 @@ class GameEngine(
         val employment = employmentFlagUpdate(outcome.addFlags, lifeFactRules)
         val replacedEmploymentFlags = employment.replaced
         val normalizedAdds = employment.additions
-        val nextFlags = (state.flags - outcome.removeFlags - replacedEmploymentFlags - normalizedAdds) +
+        val rawNextFlags = (state.flags - outcome.removeFlags - replacedEmploymentFlags - normalizedAdds) +
             normalizedAdds + completedEventFlag(event.eventId)
+        val nextFlags = MarriageContract.synchronizeIdentity(event.eventId, choiceId, rawNextFlags)
         val nextFacts = state.lifeFacts
             .removeRules(outcome.removeFlags + replacedEmploymentFlags, lifeFactRules)
             .applyRules(normalizedAdds + completedEventFlag(event.eventId), lifeFactRules)
@@ -651,7 +652,7 @@ class GameEngine(
 
     private fun canShowPeriodDecision(state: PeriodRunState, event: DecisionEvent): Boolean =
         state.period in event.periods &&
-            (!MarriageContract.isCeremony(event.eventId) || MarriageContract.canFinalize(state.flags)) &&
+            (!MarriageContract.isCeremony(event.eventId) || MarriageContract.canFinalize(event.eventId, state.flags)) &&
             completedEventFlag(event.eventId) !in state.flags &&
             event.statConditions.matches(state.stats) &&
             event.lifeFactConditions.matches(state.lifeFacts) &&

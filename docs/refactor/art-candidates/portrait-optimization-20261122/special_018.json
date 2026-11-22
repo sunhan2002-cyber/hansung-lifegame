@@ -1,0 +1,127 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-22",
+  "eventId": "special_018",
+  "eventSourceHash": "19fa3b51329e3af2a611771cddc22fe70dbbea018f1ae5d4b65698aaff230b3f",
+  "sourceAssetPath": "followup_20261031/img_special_revolving_door_001.png",
+  "sourceSha256": "2090848e90dd24d366c093c3129da4b9a47c68ad12eb6396e846cb6e9d92bfc5",
+  "variant": {
+    "assetPath": "presentation/portraits/img_special_revolving_door_001_portrait_v1.png",
+    "sha256": "c9d86b6be789b92742b5c422a4628d8745d8a49aeb15b4a68373c9774cc26910",
+    "width": 753,
+    "height": 1338,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI / 2026-11-22 optimized portrait review",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-optimization-20261122/special_018.json"
+  },
+  "reviewerType": "AI",
+  "reviewer": "Codex AI / 2026-11-22 optimized portrait review",
+  "reviewStatus": "AI_REVIEWED_PRESENTATION",
+  "assignmentOwner": "정원률",
+  "scope": "Optimized optional portrait derivative only. Existing scene master and its legacy approval remain unchanged. User approval covers the preview, not final team acceptance.",
+  "semanticReview": "Existing scene content and event snapshot are inherited from the preserved previous review. Exact nearest-neighbor resampling changes no scenario, characters or props; current event hash is retained and validated.",
+  "visualReview": "AI inspected same-viewport original/candidate contact sheets; user accepted all 95 previews. Resolution is approximately 80% per axis with no palette quantization. Fine texture differs from original; full RGB decoding matches the intended resized pixels.",
+  "cropReview": "Production DecisionScreen and scene-only view exercised for this current event on 720x1480 and 1080x2400 emulators, font scale 100%. The registered optimized portrait path is asserted explicitly; scene pixels pass the unchanged 95% match gate. Scene content was inherited from the preserved source review and all 95 candidate previews were user accepted. AI inspected representative native frames; native captures for all events are preserved.",
+  "actualProducer": "Deterministic nearest-neighbor and PNG encoder; original scene generation is documented in previousReviewEvidence.",
+  "generationMethod": "No new scene generation. Pixel-center nearest-neighbor resampling, RGB8 PNG, Paeth row filter and zlib compression. Source-bound provenance remains in the untouched previous derivative and master.",
+  "previousReviewEvidence": "docs/refactor/art-candidates/portrait-integration/special_018.json",
+  "previousVariant": {
+    "assetPath": "presentation/portraits/img_special_revolving_door_001_portrait_v1.png",
+    "sha256": "0b1cbbe9e46f7b1c98c9bea39132d1fdd4f48bb6c5ae9f0ec74af744f7d05d7e",
+    "width": 941,
+    "height": 1672,
+    "reviewStatus": "AI_REVIEWED_PRESENTATION",
+    "reviewerType": "AI",
+    "reviewer": "Codex AI (/root/security_p0)",
+    "reviewEvidence": "docs/refactor/art-candidates/portrait-integration/special_018.json"
+  },
+  "optimization": {
+    "beforeBytes": 1965574,
+    "afterBytes": 1273836,
+    "savedPercent": 35.19,
+    "previousVariantSha256": "0b1cbbe9e46f7b1c98c9bea39132d1fdd4f48bb6c5ae9f0ec74af744f7d05d7e",
+    "preservedPreviousVariant": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\portrait-integration-20261122\\previous-variants\\img_special_revolving_door_001_portrait_v1.png",
+    "candidateSha256": "c9d86b6be789b92742b5c422a4628d8745d8a49aeb15b4a68373c9774cc26910",
+    "userPreviewReview": "APPROVED_PREVIEW",
+    "independentRgbDecodeVerified": true
+  },
+  "nativePending": false,
+  "runtimeConnected": true,
+  "legacyApprovalChanged": false,
+  "nativeReview": {
+    "status": "PASS",
+    "reviewerType": "AI",
+    "captures": [
+      {
+        "path": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\portrait-integration-20261122\\after-720x1480\\special_018_phone_scene.png",
+        "sha256": "890f800065608f7999a1b178b2107a65ef1c3ce75e0a2200baf995850363e540",
+        "kind": "scene",
+        "deviceSize": "720x1480",
+        "densityDpi": 320,
+        "fontScale": 1,
+        "crop": {
+          "eventId": "special_018",
+          "imageId": "img_special_revolving_door_001",
+          "assetPath": "presentation/portraits/img_special_revolving_door_001_portrait_v1.png",
+          "screen": "720x1480",
+          "visibleSourceX": "0.068..0.932",
+          "match": "1.000"
+        }
+      },
+      {
+        "path": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\portrait-integration-20261122\\after-720x1480\\special_018_phone_play.png",
+        "sha256": "826152baf82f6b9855c530088ed60c7105f55dad0de02e3ba9d517898adf7324",
+        "kind": "play",
+        "deviceSize": "720x1480",
+        "densityDpi": 320,
+        "fontScale": 1,
+        "crop": {
+          "eventId": "special_018",
+          "imageId": "img_special_revolving_door_001",
+          "assetPath": "presentation/portraits/img_special_revolving_door_001_portrait_v1.png",
+          "screen": "720x1480",
+          "visibleSourceX": "0.068..0.932",
+          "match": "1.000"
+        }
+      },
+      {
+        "path": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\portrait-integration-20261122\\after-1080x2400\\special_018_phone_scene.png",
+        "sha256": "9f0333958642dbc4f87e5f41050a463f74e74202cc125cb6f8965e46ffe8885f",
+        "kind": "scene",
+        "deviceSize": "1080x2400",
+        "densityDpi": 420,
+        "fontScale": 1,
+        "crop": {
+          "eventId": "special_018",
+          "imageId": "img_special_revolving_door_001",
+          "assetPath": "presentation/portraits/img_special_revolving_door_001_portrait_v1.png",
+          "screen": "1080x2400",
+          "visibleSourceX": "0.100..0.900",
+          "match": "1.000"
+        }
+      },
+      {
+        "path": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\portrait-integration-20261122\\after-1080x2400\\special_018_phone_play.png",
+        "sha256": "a946a65ec806c467a463b8a72e86c8569c86705bdf7ee473c8fb09306b5e1cc1",
+        "kind": "play",
+        "deviceSize": "1080x2400",
+        "densityDpi": 420,
+        "fontScale": 1,
+        "crop": {
+          "eventId": "special_018",
+          "imageId": "img_special_revolving_door_001",
+          "assetPath": "presentation/portraits/img_special_revolving_door_001_portrait_v1.png",
+          "screen": "1080x2400",
+          "visibleSourceX": "0.100..0.900",
+          "match": "1.000"
+        }
+      }
+    ],
+    "pixelThreshold": 0.95,
+    "userNativeScreenReview": "APPROVED_REPRESENTATIVE_NATIVE_SCREEN_REVIEW",
+    "teamFinalApproval": "PENDING",
+    "userNativeReviewScope": "2026-11-22 사용자: 충분히 좋네. 다음 내가 할 일? — 대표 실제 장면 보기 전후 비교를 통한 95장 최적화 앱 반영 결과 수용. 95개 실제 화면을 사람이 각각 재검수했다는 뜻은 아님."
+  },
+  "previousNativeAcceptanceEvidence": "docs/refactor/art-candidates/native-portrait-acceptance/special_018.json"
+}

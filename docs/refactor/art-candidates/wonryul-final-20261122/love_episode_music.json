@@ -1,0 +1,271 @@
+{
+  "schemaVersion": 1,
+  "eventId": "love_episode_music",
+  "sourceAssetPath": "followup_20261120/img_love_episode_music_001.png",
+  "sha256": "85c8a9329b500c295fb939fb3c039e4f12379a0ac02e8f979a4f69f61cfc52ce",
+  "eventSourceHash": "f38b2465ddbcafe952e5de1175fafb388f795384fd541b3e1ce9a23ffd0039a6",
+  "currentEventSnapshot": {
+    "eventId": "love_episode_music",
+    "stage": "ADULT",
+    "type": "NORMAL",
+    "isFallback": false,
+    "isMilestone": true,
+    "title": "연습실 열쇠 두 개",
+    "text": "연인이 작은 연습실을 같이 빌리자고 했다. 열쇠는 두 개다. 연인: \"{nameCall}, 하나는 네 거야.\"",
+    "imageId": "img_love_episode_music_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [
+        "dating",
+        "partner_music",
+        "rel_warm"
+      ],
+      "blockedFlags": [
+        "rel_steady",
+        "rel_conflict",
+        "engaged",
+        "married",
+        "divorced"
+      ]
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "열쇠를 받아 바로 첫 곡을 맞춘다",
+        "statDelta": {
+          "행복": 3
+        },
+        "resultText": "새 연습실의 첫 곡은 둘이 처음 같이 연주한 노래였다. 방음벽이 우리 웃음까지 다 삼켰다.",
+        "addFlags": [
+          "rel_steady"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "a_play",
+            "text": "새 연습실의 첫 곡은 둘이 처음 같이 연주한 노래였다. 방음벽이 우리 웃음까지 다 삼켰다.",
+            "chance": 100,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 3
+            },
+            "addFlags": [
+              "rel_steady"
+            ],
+            "removeFlags": [
+              "rel_warm"
+            ]
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "관계 단계 전환점 — 연애·결혼은 능력치 자격이 아니라 의사 결정이라 잠그지 않고, 차이는 결과 분기와 후속 사실로 반영",
+        "conditionReview": "open_turning_point",
+        "conditionBasis": "week14_wedding_routes"
+      },
+      {
+        "choiceId": "B",
+        "label": "같이 쓸 규칙부터 정한다",
+        "statDelta": {
+          "지력": 1,
+          "사회성": 1
+        },
+        "resultText": "청소 당번, 연습 시간, 간식 규칙. 규칙표 맨 아래에 연인이 한 줄을 더 적었다. '싸우면 한 곡 같이 치고 화해하기.'",
+        "addFlags": [
+          "rel_steady"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "b_rules",
+            "text": "청소 당번, 연습 시간, 간식 규칙. 규칙표 맨 아래에 연인이 한 줄을 더 적었다. '싸우면 한 곡 같이 치고 화해하기.'",
+            "chance": 100,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "지력": 1,
+              "사회성": 1
+            },
+            "addFlags": [
+              "rel_steady"
+            ],
+            "removeFlags": [
+              "rel_warm"
+            ]
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "관계 단계 전환점 — 연애·결혼은 능력치 자격이 아니라 의사 결정이라 잠그지 않고, 차이는 결과 분기와 후속 사실로 반영",
+        "conditionReview": "open_turning_point",
+        "conditionBasis": "week14_wedding_routes"
+      },
+      {
+        "choiceId": "C",
+        "label": "열쇠고리에 둘의 이름을 새긴다",
+        "statDelta": {
+          "행복": 2
+        },
+        "resultText": "열쇠고리 가게 사장님이 철자를 틀렸다. 그 틀린 이름이 둘만의 애칭이 됐다.",
+        "addFlags": [
+          "rel_steady"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "c_tag",
+            "text": "열쇠고리 가게 사장님이 철자를 틀렸다. 그 틀린 이름이 둘만의 애칭이 됐다.",
+            "chance": 100,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 2
+            },
+            "addFlags": [
+              "rel_steady"
+            ],
+            "removeFlags": [
+              "rel_warm"
+            ]
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "관계 단계 전환점 — 연애·결혼은 능력치 자격이 아니라 의사 결정이라 잠그지 않고, 차이는 결과 분기와 후속 사실로 반영",
+        "conditionReview": "open_turning_point",
+        "conditionBasis": "week14_wedding_routes"
+      }
+    ],
+    "priority": 0,
+    "kind": "MILESTONE",
+    "periods": [
+      "YOUNG_ADULT",
+      "MIDDLE"
+    ],
+    "weight": 1,
+    "view": "FIRST_PERSON",
+    "pathRole": "음악 경로 3단계 — 추가 에피소드(관계 심화)",
+    "followUps": [
+      "love_marriage_talk_01",
+      "adult_032"
+    ]
+  },
+  "semanticReview": "문에 걸린 열쇠와 내미는 열쇠, 방음 연습실과 악기가 열쇠 두 개의 제안을 보여 준다. 열쇠를 받은 뒤 연주·규칙·이름표 결과는 없다.",
+  "semanticReviewer": "Codex AI / 2026-11-22 current-event semantic and native-image review",
+  "visualReviewer": "Codex AI / 2026-11-22 current-event semantic and native-image review",
+  "reviewerType": "AI",
+  "assignmentOwner": "정원률",
+  "teamFinalApproval": "PENDING",
+  "nativeCaptures": [
+    {
+      "localFile": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\images-native-review-20261122\\720x1480\\love_episode_music_phone_scene.png",
+      "sha256": "83c7d3236d2afc7b532ecf938af312ffb3bb99910969517ad23352b2797823c3",
+      "kind": "scene",
+      "deviceSize": "720x1480",
+      "fontScale": 1,
+      "sampledPixelSimilarity": 1.0
+    },
+    {
+      "localFile": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\images-native-review-20261122\\720x1480\\love_episode_music_phone_play.png",
+      "sha256": "61da10eb2a25c2a29bf177a1ff28f49f28df406c7c61f3877f0c0f4cc53069ca",
+      "kind": "play",
+      "deviceSize": "720x1480",
+      "fontScale": 1,
+      "sampledPixelSimilarity": 1.0
+    },
+    {
+      "localFile": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\images-native-review-20261122\\1080x2400\\love_episode_music_phone_scene.png",
+      "sha256": "46db8607db107c07cedeca13ef9257c39adfd5ea926c107cf454e00a550ac770",
+      "kind": "scene",
+      "deviceSize": "1080x2400",
+      "fontScale": 1,
+      "sampledPixelSimilarity": 1.0
+    },
+    {
+      "localFile": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\images-native-review-20261122\\1080x2400\\love_episode_music_phone_play.png",
+      "sha256": "2db7bb14d12e34207935115f582f2d391d4387a0ba4154d01fca862d3753a785",
+      "kind": "play",
+      "deviceSize": "1080x2400",
+      "fontScale": 1,
+      "sampledPixelSimilarity": 1.0
+    }
+  ],
+  "visualReview": "AI reviewed artwork and current matching native scene/play captures. User accepted the eleven native scene-view crops shown in three contact sheets, font 100%.",
+  "userImageReview": "APPROVED_FINAL_SCENE_REVIEW",
+  "userApproval": "2026-11-22 사용자: ㅇㅇ좋아. 그대로 가자. 다음은?",
+  "userApprovalScope": "Eleven displayed native scene-view crops; not full story E2E or team final acceptance.",
+  "productionReview": {
+    "eventId": "love_episode_music",
+    "imageId": "img_love_episode_music_001",
+    "title": "연습실 열쇠 두 개",
+    "reviewedMaster": {
+      "localFile": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\episodes-prep-review-20261122\\09-episode-music.png",
+      "sha256": "85c8a9329b500c295fb939fb3c039e4f12379a0ac02e8f979a4f69f61cfc52ce",
+      "width": 941,
+      "height": 1672,
+      "userReview": "APPROVED_PREVIEW",
+      "reviewedOn": "2026-11-22"
+    },
+    "deployment": {
+      "assetPath": "followup_20261120/img_love_episode_music_001.png",
+      "sha256": "85c8a9329b500c295fb939fb3c039e4f12379a0ac02e8f979a4f69f61cfc52ce",
+      "width": 941,
+      "height": 1672,
+      "crop": [
+        0,
+        0,
+        941,
+        1672
+      ],
+      "resized": false
+    },
+    "nativeReview": {
+      "status": "AI_CHECKED",
+      "method": "현재 사건 JSON과 실제 라우팅을 읽어 production DecisionScreen에서 복원 화면을 표시",
+      "screens": [
+        {
+          "screen": "720x1480",
+          "densityDpi": 320,
+          "fontScale": 1,
+          "sampledPixelSimilarity": 1.0,
+          "visibleSourceX": "0.068..0.932",
+          "captures": {
+            "scene": {
+              "localFile": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\images-native-review-20261122\\720x1480\\love_episode_music_phone_scene.png",
+              "sha256": "83c7d3236d2afc7b532ecf938af312ffb3bb99910969517ad23352b2797823c3"
+            },
+            "play": {
+              "localFile": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\images-native-review-20261122\\720x1480\\love_episode_music_phone_play.png",
+              "sha256": "61da10eb2a25c2a29bf177a1ff28f49f28df406c7c61f3877f0c0f4cc53069ca"
+            }
+          }
+        },
+        {
+          "screen": "1080x2400",
+          "densityDpi": 420,
+          "fontScale": 1,
+          "sampledPixelSimilarity": 1.0,
+          "visibleSourceX": "0.100..0.900",
+          "captures": {
+            "scene": {
+              "localFile": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\images-native-review-20261122\\1080x2400\\love_episode_music_phone_scene.png",
+              "sha256": "46db8607db107c07cedeca13ef9257c39adfd5ea926c107cf454e00a550ac770"
+            },
+            "play": {
+              "localFile": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\images-native-review-20261122\\1080x2400\\love_episode_music_phone_play.png",
+              "sha256": "2db7bb14d12e34207935115f582f2d391d4387a0ba4154d01fca862d3753a785"
+            }
+          }
+        }
+      ],
+      "userReview": "APPROVED_FINAL_SCENE_REVIEW",
+      "finalUserReviewPresentation": {
+        "status": "APPROVED_FINAL_SCENE_REVIEW",
+        "date": "2026-11-22",
+        "reviewRecord": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\romance-final-review-20261122\\review.json",
+        "contactSheet": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\romance-final-review-20261122\\scene-review-3.png",
+        "currentAssetEventRoutingAndCaptureHashesVerified": true,
+        "userApproval": "2026-11-22 사용자: ㅇㅇ좋아. 그대로 가자. 다음은?"
+      }
+    },
+    "eventSourceHash": "f38b2465ddbcafe952e5de1175fafb388f795384fd541b3e1ce9a23ffd0039a6"
+  }
+}

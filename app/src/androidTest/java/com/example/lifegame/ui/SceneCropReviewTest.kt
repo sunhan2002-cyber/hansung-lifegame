@@ -54,6 +54,7 @@ import org.junit.Assert.assertTrue
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
+import org.json.JSONObject
 
 /**
  * 2026-11-03 후속: 사건 전용 그림이 실제 사건 화면에 연결됐는지와, 세로 화면에서 어디까지 보이는지 확인한다.
@@ -68,6 +69,11 @@ class SceneCropReviewTest {
 
     private val context = InstrumentationRegistry.getInstrumentation().targetContext
     private val routing = ImageRoutingRepository(context).load()
+    private val portraitPaths = JSONObject(asset("image_presentation.json")).getJSONArray("images").let { entries ->
+        (0 until entries.length()).map(entries::getJSONObject).mapNotNull { entry ->
+            entry.optJSONObject("portraitVariant")?.let { entry.getString("assetPath") to it.getString("assetPath") }
+        }.toMap()
+    }
     private val periods = V4ContentParser.parsePeriods(asset("periods.sample.json"))
     private val events = V4ContentParser.parseDecisionEvents(asset("events.sample.json"))
     private val content = PlayContent(
@@ -136,7 +142,8 @@ class SceneCropReviewTest {
     }
 
     @Test fun longChoicesRemainReachableAtNormalAndDoubleFontSizeOnASmallPhone() {
-        val ids = listOf("love_family_meet_01", "love_letter_01", "love_wedding_music", "love_date_02", "path_int_18")
+        val ids = requestedEvents?.toList()
+            ?: listOf("love_family_meet_01", "love_letter_01", "love_wedding_music", "love_date_02", "path_int_18")
         var decision by mutableStateOf(decisionOf(events.first { it.eventId == ids.first() }))
         var fontScale by mutableStateOf(1f)
         val chosen = mutableListOf<String>()
@@ -215,6 +222,11 @@ class SceneCropReviewTest {
                 "${event.eventId}: 그림을 하나도 읽지 못했다"
             }
             assertEquals("${event.eventId}: 사건 그림 대신 다른 후보가 쓰였다", expectedId, loaded.candidate.imageId)
+            if (size.height > size.width * 1.35) {
+                routing.assets[expectedId]?.path?.let(portraitPaths::get)?.let { expectedPath ->
+                    assertEquals("${event.eventId}: 등록된 세로 파생본 대신 원본으로 대체됐다", expectedPath, loaded.candidate.path)
+                }
+            }
             val expected = focalCrop(loaded.bitmap, size.width, size.height, loaded.focal)
             val match = try { awaitMatch(expected) { scene.captureToImage().asAndroidBitmap() } }
                 finally { expected.recycle() }

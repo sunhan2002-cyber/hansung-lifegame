@@ -1473,10 +1473,17 @@
     },
     {
       "imageId": "img_infant_toys_001",
-      "assetPath": "cutscenes/week11/events/img_infant_toys_001.png",
+      "assetPath": "followup_20261120/img_infant_toys_001.png",
       "fileName": "img_infant_toys_001.png",
       "usage": "event",
-      "fallbackText": "이미지 준비 전에는 '돌잡이' 상황 이미지 영역으로 대체 표시"
+      "fallbackText": "돌상에 피아노 장난감·판사봉·지폐가 놓여 있다. 아직 아무 물건도 잡지 않았다."
+    },
+    {
+      "imageId": "img_doljabi_grasp_001",
+      "assetPath": "cutscenes/week11/img_doljabi_grasp_001.png",
+      "fileName": "img_doljabi_grasp_001.png",
+      "usage": "event",
+      "fallbackText": "아기의 손이 돌상의 판사봉을 잡는다."
     },
     {
       "imageId": "img_infant_first_steps_001",
@@ -2903,23 +2910,23 @@
     },
     {
       "imageId": "img_love_wedding_01_001",
-      "assetPath": "img_love_wedding_01_001.png",
+      "assetPath": "followup_20261120/img_love_wedding_01_001.png",
       "fileName": "img_love_wedding_01_001.png",
       "usage": "pov",
       "period": "YOUNG_ADULT",
       "statTag": null,
-      "description": "결혼식장 대기실 거울과 꽃장식을 보는 1인칭",
-      "fallbackText": "결혼식 10분 전 장면 준비 중"
+      "description": "열린 식장 문과 버진로드 앞에서 옆의 연인과 손을 잡은 결혼식 입장 장면",
+      "fallbackText": "결혼식 장면을 준비 중입니다"
     },
     {
       "imageId": "img_love_wedding_music_001",
-      "assetPath": "img_love_wedding_music_001.png",
+      "assetPath": "followup_20261120/img_love_wedding_music_001.png",
       "fileName": "img_love_wedding_music_001.png",
       "usage": "pov",
       "period": "YOUNG_ADULT",
       "statTag": null,
-      "description": "결혼식장 무대에서 악기를 든 친구들을 보는 1인칭",
-      "fallbackText": "연주로 채운 축가 장면 준비 중"
+      "description": "기타와 드럼 입장곡이 흐르는 버진로드에서 연인이 손을 내미는 결혼식 입장 장면",
+      "fallbackText": "연주로 채운 결혼식 장면을 준비 중입니다"
     },
     {
       "imageId": "img_love_family_meet_01_001",
@@ -3070,6 +3077,96 @@
       "statTag": null,
       "description": "책장 앞에서 메모가 끼워진 책을 펼친 1인칭",
       "fallbackText": "돌려주지 못한 책 장면 준비 중"
+    },
+    {
+      "imageId": "img_love_wedding_first_love_001",
+      "assetPath": "followup_20261120/img_love_wedding_first_love_001.png",
+      "fileName": "img_love_wedding_first_love_001.png",
+      "usage": "pov",
+      "period": "YOUNG_ADULT",
+      "statTag": null,
+      "description": "학창 단체 사진 옆의 버진로드에서 연인이 손을 내미는 결혼식 입장 장면",
+      "fallbackText": "단체 사진 앞의 결혼식 장면을 준비 중입니다"
+    },
+    {
+      "imageId": "img_love_wedding_book_001",
+      "assetPath": "followup_20261120/img_love_wedding_book_001.png",
+      "fileName": "img_love_wedding_book_001.png",
+      "usage": "pov",
+      "period": "YOUNG_ADULT",
+      "statTag": null,
+      "description": "책갈피를 든 하객과 펼친 책이 있는 도서관 정원의 결혼식 입장 장면",
+      "fallbackText": "책갈피 길 결혼식 장면을 준비 중입니다"
+    },
+    {
+      "imageId": "img_love_date_first_love_001",
+      "assetPath": "followup_20261120/img_love_date_first_love_001.png",
+      "fileName": "img_love_date_first_love_001.png",
+      "usage": "pov",
+      "period": "YOUNG_ADULT",
+      "statTag": null,
+      "description": "옛 골목 분식집 앞에서 연인이 금속 문손잡이를 잡는 첫 데이트 장면",
+      "fallbackText": "다시 걷는 그 길 장면을 준비 중입니다"
+    },
+    {
+      "imageId": "img_love_date_music_001",
+      "assetPath": "followup_20261120/img_love_date_music_001.png",
+      "fileName": "img_love_date_music_001.png",
+      "usage": "pov",
+      "period": "YOUNG_ADULT",
+      "statTag": null,
+      "description": "카페 작은 무대의 마이크 두 대와 기타, 신청서를 함께 보는 첫 데이트 장면",
+      "fallbackText": "둘만의 첫 무대 장면을 준비 중입니다"
+    },
+    {
+      "imageId": "img_love_date_book_001",
+      "assetPath": "followup_20261120/img_love_date_book_001.png",
+      "fileName": "img_love_date_book_001.png",
+      "usage": "pov",
+      "period": "YOUNG_ADULT",
+      "statTag": null,
+      "description": "헌책방 고양이 옆에서 연인과 책 두 권을 골라 든 첫 데이트 장면",
+      "fallbackText": "헌책방 첫 데이트 장면을 준비 중입니다"
+    },
+    {
+      "imageId": "img_love_episode_first_love_001",
+      "assetPath": "followup_20261120/img_love_episode_first_love_001.png",
+      "fileName": "img_love_episode_first_love_001.png",
+      "usage": "pov",
+      "period": "YOUNG_ADULT",
+      "statTag": null,
+      "description": "모교 축제 운동장 스탠드 앞에서 연인이 카메라 화면의 휴대폰을 건네는 장면",
+      "fallbackText": "모교 운동장 장면을 준비 중입니다"
+    },
+    {
+      "imageId": "img_love_episode_music_001",
+      "assetPath": "followup_20261120/img_love_episode_music_001.png",
+      "fileName": "img_love_episode_music_001.png",
+      "usage": "pov",
+      "period": "YOUNG_ADULT",
+      "statTag": null,
+      "description": "방음벽과 기타 케이스가 보이는 연습실 문 앞에서 두 열쇠 중 하나를 내미는 장면",
+      "fallbackText": "연습실 열쇠 두 개 장면을 준비 중입니다"
+    },
+    {
+      "imageId": "img_love_episode_book_001",
+      "assetPath": "followup_20261120/img_love_episode_book_001.png",
+      "fileName": "img_love_episode_book_001.png",
+      "usage": "pov",
+      "period": "YOUNG_ADULT",
+      "statTag": null,
+      "description": "비어 있는 거실 책장 칸 앞에서 연인과 한 권의 책을 함께 든 장면",
+      "fallbackText": "둘만의 책장 장면을 준비 중입니다"
+    },
+    {
+      "imageId": "img_love_wedding_prep_01_001",
+      "assetPath": "followup_20261120/img_love_wedding_prep_01_001.png",
+      "fileName": "img_love_wedding_prep_01_001.png",
+      "usage": "pov",
+      "period": "YOUNG_ADULT",
+      "statTag": null,
+      "description": "밤의 거실 바닥에서 청첩장 시안과 식장 견적서, 예산표와 두 반지를 살피는 장면",
+      "fallbackText": "결혼 준비 장면을 준비 중입니다"
     }
   ],
   "periodPortraits": {

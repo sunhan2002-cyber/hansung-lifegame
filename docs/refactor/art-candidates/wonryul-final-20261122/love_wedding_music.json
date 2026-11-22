@@ -1,0 +1,314 @@
+{
+  "schemaVersion": 1,
+  "eventId": "love_wedding_music",
+  "sourceAssetPath": "followup_20261120/img_love_wedding_music_001.png",
+  "sha256": "82e91788b39d8fcc9723b4ff136f3484464510d7ce16e7fd00e02903ca1a06db",
+  "eventSourceHash": "568a56788bc7868d22cced9c51624b89b3b64b4a909cd7feaa629d2a73935a0c",
+  "currentEventSnapshot": {
+    "eventId": "love_wedding_music",
+    "stage": "ADULT",
+    "type": "NORMAL",
+    "isFallback": false,
+    "isMilestone": true,
+    "title": "연주로 채운 결혼식",
+    "text": "식장 문이 열리자 같이 연주하던 사람들이 입장곡을 시작했다. 리더가 마이크를 잡았다. \"이 곡, 두 사람이 처음 같이 연주한 노래입니다.\"",
+    "imageId": "img_love_wedding_music_001",
+    "conditions": {
+      "stats": {},
+      "requiredFlags": [
+        "engaged",
+        "families_met",
+        "wedding_ready",
+        "partner_music"
+      ],
+      "blockedFlags": [
+        "married",
+        "divorced"
+      ]
+    },
+    "choices": [
+      {
+        "choiceId": "A",
+        "label": "그 곡에 맞춰 입장한다",
+        "statDelta": {
+          "행복": 5,
+          "사회성": 3,
+          "경제력": -4
+        },
+        "resultText": "박자에 맞춰 걷다 보니 둘의 걸음이 저절로 맞았다. 마지막 마디에서 정확히 버진로드 끝에 닿았다.",
+        "addFlags": [
+          "married",
+          "spouse_music",
+          "achv_band_wedding"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "a_walk",
+            "text": "박자에 맞춰 걷다 보니 둘의 걸음이 저절로 맞았다. 마지막 마디에서 정확히 버진로드 끝에 닿았다.",
+            "chance": 100,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 5,
+              "사회성": 3,
+              "경제력": -4
+            },
+            "addFlags": [
+              "married",
+              "spouse_music",
+              "achv_band_wedding"
+            ],
+            "removeFlags": [
+              "engaged",
+              "wedding_ready"
+            ]
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "관계 단계 전환점 — 연애·결혼은 능력치 자격이 아니라 의사 결정이라 잠그지 않고, 차이는 결과 분기와 후속 사실로 반영",
+        "conditionReview": "open_turning_point",
+        "conditionBasis": "week14_wedding_routes"
+      },
+      {
+        "choiceId": "B",
+        "label": "서약 대신 둘이 만든 노래를 부른다",
+        "statDelta": {
+          "행복": 5,
+          "경제력": -4
+        },
+        "resultText": "가사는 연인이, 코드는 내가 쓴 노래였다. 마지막 소절에서는 하객석까지 따라 불렀다.",
+        "addFlags": [
+          "married",
+          "spouse_music",
+          "achv_band_wedding"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "b_song",
+            "text": "가사는 연인이, 코드는 내가 쓴 노래였다. 마지막 소절에서는 하객석까지 따라 불렀다.",
+            "chance": 100,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 5,
+              "경제력": -4
+            },
+            "addFlags": [
+              "married",
+              "spouse_music",
+              "achv_band_wedding"
+            ],
+            "removeFlags": [
+              "engaged",
+              "wedding_ready"
+            ]
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "관계 단계 전환점 — 연애·결혼은 능력치 자격이 아니라 의사 결정이라 잠그지 않고, 차이는 결과 분기와 후속 사실로 반영",
+        "conditionReview": "open_turning_point",
+        "conditionBasis": "week14_wedding_routes"
+      },
+      {
+        "choiceId": "C",
+        "label": "축가에 드럼으로 직접 합류한다",
+        "statDelta": {
+          "행복": 4,
+          "사회성": 1,
+          "경제력": -4
+        },
+        "resultText": "결혼식 역사상 가장 시끄러운 축가였다. 식장 직원도 박자를 탔다.",
+        "addFlags": [
+          "married",
+          "spouse_music",
+          "achv_band_wedding"
+        ],
+        "outcomes": [
+          {
+            "outcomeId": "c_drum",
+            "text": "결혼식 역사상 가장 시끄러운 축가였다. 식장 직원도 박자를 탔다.",
+            "chance": 55,
+            "primary": true,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 4,
+              "사회성": 1,
+              "경제력": -4
+            },
+            "addFlags": [
+              "married",
+              "spouse_music",
+              "achv_band_wedding"
+            ],
+            "removeFlags": [
+              "engaged",
+              "wedding_ready"
+            ]
+          },
+          {
+            "outcomeId": "c_snap",
+            "text": "첫 박자에 스틱이 부러졌다. 나머지는 하객들이 손뼉으로 박자를 맞췄다.",
+            "chance": 45,
+            "primary": false,
+            "hidden": false,
+            "death": false,
+            "statDelta": {
+              "행복": 3,
+              "경제력": -4
+            },
+            "addFlags": [
+              "married",
+              "spouse_music",
+              "achv_band_wedding"
+            ],
+            "removeFlags": [
+              "engaged",
+              "wedding_ready"
+            ]
+          }
+        ],
+        "alwaysAvailable": true,
+        "alwaysAvailableReason": "관계 단계 전환점 — 연애·결혼은 능력치 자격이 아니라 의사 결정이라 잠그지 않고, 차이는 결과 분기와 후속 사실로 반영",
+        "conditionReview": "open_turning_point",
+        "conditionBasis": "week14_wedding_routes"
+      }
+    ],
+    "priority": 0,
+    "kind": "MILESTONE",
+    "periods": [
+      "YOUNG_ADULT",
+      "MIDDLE",
+      "OLD_AGE"
+    ],
+    "weight": 1,
+    "view": "FIRST_PERSON",
+    "pathRole": "음악 경로 6단계 — 플레이어 본인의 본식(입장곡·노래 서약·축가)",
+    "followUps": [
+      "love_holiday_01",
+      "love_child_plan_01"
+    ]
+  },
+  "semanticReview": "밴드·마이크·버진로드가 이미 시작된 입장곡을 나타낸다. 주인공은 전경의 손으로만 표현하고 선택 후 노래·드럼 연주나 성공 결과는 그리지 않는다.",
+  "semanticReviewer": "Codex AI / 2026-11-22 current-event semantic and native-image review",
+  "visualReviewer": "Codex AI / 2026-11-22 current-event semantic and native-image review",
+  "reviewerType": "AI",
+  "assignmentOwner": "정원률",
+  "teamFinalApproval": "PENDING",
+  "nativeCaptures": [
+    {
+      "localFile": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\images-native-review-20261122\\720x1480\\love_wedding_music_phone_scene.png",
+      "sha256": "f78e16a67acb194df0864be4f9eea369ca9a3362fa6f36077344c41a2f7696b0",
+      "kind": "scene",
+      "deviceSize": "720x1480",
+      "fontScale": 1,
+      "sampledPixelSimilarity": 1.0
+    },
+    {
+      "localFile": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\images-native-review-20261122\\720x1480\\love_wedding_music_phone_play.png",
+      "sha256": "63679781c12d304b1fdbb59c787ba190fba4d906cc2301f3009ce41a5b32f461",
+      "kind": "play",
+      "deviceSize": "720x1480",
+      "fontScale": 1,
+      "sampledPixelSimilarity": 1.0
+    },
+    {
+      "localFile": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\images-native-review-20261122\\1080x2400\\love_wedding_music_phone_scene.png",
+      "sha256": "3e4bc0e9780516f28d69fc83d247f41282061c651b807dec3624826b03a8245e",
+      "kind": "scene",
+      "deviceSize": "1080x2400",
+      "fontScale": 1,
+      "sampledPixelSimilarity": 1.0
+    },
+    {
+      "localFile": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\images-native-review-20261122\\1080x2400\\love_wedding_music_phone_play.png",
+      "sha256": "66d913c6d79c2733fa16ae57b4eab8f82d498737dd07fab9653ca95a464f4761",
+      "kind": "play",
+      "deviceSize": "1080x2400",
+      "fontScale": 1,
+      "sampledPixelSimilarity": 1.0
+    }
+  ],
+  "visualReview": "AI reviewed artwork and current matching native scene/play captures. User accepted the eleven native scene-view crops shown in three contact sheets, font 100%.",
+  "userImageReview": "APPROVED_FINAL_SCENE_REVIEW",
+  "userApproval": "2026-11-22 사용자: ㅇㅇ좋아. 그대로 가자. 다음은?",
+  "userApprovalScope": "Eleven displayed native scene-view crops; not full story E2E or team final acceptance.",
+  "productionReview": {
+    "eventId": "love_wedding_music",
+    "imageId": "img_love_wedding_music_001",
+    "title": "연주로 채운 결혼식",
+    "reviewedMaster": {
+      "localFile": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\wedding-p0-review-20261121\\02-music-hands-v5.png",
+      "sha256": "82e91788b39d8fcc9723b4ff136f3484464510d7ce16e7fd00e02903ca1a06db",
+      "width": 941,
+      "height": 1672,
+      "userReview": "APPROVED_PREVIEW",
+      "reviewedOn": "2026-11-22"
+    },
+    "deployment": {
+      "assetPath": "followup_20261120/img_love_wedding_music_001.png",
+      "sha256": "82e91788b39d8fcc9723b4ff136f3484464510d7ce16e7fd00e02903ca1a06db",
+      "width": 941,
+      "height": 1672,
+      "crop": [
+        0,
+        0,
+        941,
+        1672
+      ],
+      "resized": false
+    },
+    "nativeReview": {
+      "status": "AI_CHECKED",
+      "method": "현재 사건 JSON과 실제 라우팅을 읽어 production DecisionScreen에서 복원 화면을 표시",
+      "screens": [
+        {
+          "screen": "720x1480",
+          "densityDpi": 320,
+          "fontScale": 1,
+          "sampledPixelSimilarity": 1.0,
+          "visibleSourceX": "0.068..0.932",
+          "captures": {
+            "scene": {
+              "localFile": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\images-native-review-20261122\\720x1480\\love_wedding_music_phone_scene.png",
+              "sha256": "f78e16a67acb194df0864be4f9eea369ca9a3362fa6f36077344c41a2f7696b0"
+            },
+            "play": {
+              "localFile": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\images-native-review-20261122\\720x1480\\love_wedding_music_phone_play.png",
+              "sha256": "63679781c12d304b1fdbb59c787ba190fba4d906cc2301f3009ce41a5b32f461"
+            }
+          }
+        },
+        {
+          "screen": "1080x2400",
+          "densityDpi": 420,
+          "fontScale": 1,
+          "sampledPixelSimilarity": 1.0,
+          "visibleSourceX": "0.100..0.900",
+          "captures": {
+            "scene": {
+              "localFile": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\images-native-review-20261122\\1080x2400\\love_wedding_music_phone_scene.png",
+              "sha256": "3e4bc0e9780516f28d69fc83d247f41282061c651b807dec3624826b03a8245e"
+            },
+            "play": {
+              "localFile": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\images-native-review-20261122\\1080x2400\\love_wedding_music_phone_play.png",
+              "sha256": "66d913c6d79c2733fa16ae57b4eab8f82d498737dd07fab9653ca95a464f4761"
+            }
+          }
+        }
+      ],
+      "userReview": "APPROVED_FINAL_SCENE_REVIEW",
+      "finalUserReviewPresentation": {
+        "status": "APPROVED_FINAL_SCENE_REVIEW",
+        "date": "2026-11-22",
+        "reviewRecord": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\romance-final-review-20261122\\review.json",
+        "contactSheet": "C:\\Users\\bestw\\.codex\\visualizations\\2026\\11\\06\\01a1b1c2-7d6c-7ed2-a8a6-20ad1c6d2679\\romance-final-review-20261122\\scene-review-1.png",
+        "currentAssetEventRoutingAndCaptureHashesVerified": true,
+        "userApproval": "2026-11-22 사용자: ㅇㅇ좋아. 그대로 가자. 다음은?"
+      }
+    },
+    "eventSourceHash": "568a56788bc7868d22cced9c51624b89b3b64b4a909cd7feaa629d2a73935a0c"
+  }
+}
