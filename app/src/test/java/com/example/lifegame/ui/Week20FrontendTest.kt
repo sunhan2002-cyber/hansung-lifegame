@@ -55,6 +55,20 @@ class Week20FrontendTest {
     }
 
     @Test
+    fun `spouse identity wins when two meetings share the same route`() {
+        val campfire = record("adult_075", "A", "a_spark", year = 1)
+        val bandChoice = decisions.getValue("path_hap_05").choices.first { it.choiceId == "A" }
+        val bandOutcome = bandChoice.outcomes.first { "partner_music" in it.addFlags }
+        val band = record("path_hap_05", "A", bandOutcome.outcomeId, year = 2)
+        val history = listOf(campfire, band)
+        val legacy = setOf("dating", "partner_music")
+        assertEquals(band.eventId, partnerOf(legacy, history, emptyList(), decisions, autoRules, periods)?.originEventId)
+        val married = legacy + setOf("married", "spouse_id_music_campfire", "partner_id_music_band")
+        assertEquals(campfire.eventId, partnerOf(married, history, emptyList(), decisions, autoRules, periods)?.originEventId)
+        assertNull(partnerOf(married, listOf(band), emptyList(), decisions, autoRules, periods))
+    }
+
+    @Test
     fun `a partner that started in an automatic event is named after it`() {
         val auto = AutomaticEventRecord("auto_ya_love_start", "t", LifePeriod.YOUNG_ADULT, 3, "text", StatDelta())
         val partner = partnerOf(setOf("dating", "partner_second_chance"), emptyList(), listOf(auto), decisions, autoRules, periods)

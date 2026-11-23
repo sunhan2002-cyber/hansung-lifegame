@@ -32727,7 +32727,7 @@
     "imageId": "img_path_hap_01_001",
     "conditions": {
       "stats": {
-        "행복": 74
+        "행복": 70
       },
       "requiredFlags": [],
       "blockedFlags": [
@@ -51622,7 +51622,7 @@
           },
           {
             "outcomeId": "c_spill",
-            "text": "네 번째 잔을 엎질렀다. 사돈어른 바지에. 그 이야기는 결혼식 축사에 들어갔다.",
+            "text": "세 번째 잔을 집으려다 사돈어른 바지에 물을 엎질렀다. 잠시 얼어붙었지만 휴지를 건네자, 괜찮다며 먼저 웃어 주셨다.",
             "chance": 40,
             "primary": false,
             "hidden": false,

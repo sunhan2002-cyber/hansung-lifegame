@@ -1794,12 +1794,12 @@
       "requirements": {},
       "reviewVersion": 2,
       "sourceHash": "8722417ea69621a6bf6726071bf4b0c3a67a505152a4f421beb4e291f99f5c1f",
-      "fullSourceHash": "e6e8a4ba864eb9c148e1f641e300f72e4d27a53fb92dd2dbd317ec8f34dc3ac8",
-      "verdict": "CLARIFY",
-      "reason": "세 잔을 마신 선택인데 실패 결과는 네 번째 잔을 엎질렀다고만 한다. 추가로 물을 따르는 흐름을 한 문장으로 설명하거나 잔 수를 맞출 필요가 있다.",
+      "fullSourceHash": "2fdfb82910bf208684355ae7959986e04ab6e1144caaece27bac4c317f50cf5b",
+      "verdict": "KEEP_OPEN",
+      "reason": "세 번째 잔을 집으려다 물을 흘리는 결과가 선택과 직접 이어진다. 예의나 관계 선택을 능력치로 잠글 필요가 없다.",
       "reviewerType": "AI",
       "reviewer": "Codex AI (김선한 통합 QA)",
-      "reviewedAt": "2026-11-21"
+      "reviewedAt": "2026-11-23"
     },
     {
       "id": "love_wedding_01:A",
