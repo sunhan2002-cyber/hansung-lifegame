@@ -11,7 +11,7 @@ import com.example.lifegame.domain.model.RunChoiceRecord
 /**
  * 연애 · 결혼 화면에서 "같은 상대"를 이어 보여 주는 조회(2026-11-20 과제, 김재겸 프론트).
  *
- * 상대는 이번 인생에서 실제로 상대 플래그(`partner_*`)를 붙인 선택 결과나 자동 사건으로만 정한다. 이름을 지어내지 않고
+ * 현재 상대의 안정 ID와 실제 만남 기록을 연결한다. 안정 ID가 없는 이전 저장은 경로 플래그로 만남을 찾는다.
  * "「모닥불 옆자리」에서 만난 사람"처럼 처음 만난 사건으로 부른다. 결혼식은 실제로 고른 결혼식 사건 결과만 보여 준다.
  */
 object PartnerStory {
@@ -65,7 +65,7 @@ fun relationshipStatus(flags: Set<String>): String = when {
 }
 
 /**
- * 지금의 상대. 플래그가 여럿이면 가장 나중에 생긴 상대를 고른다. 플래그를 붙인 실제 기록(선택 결과 또는 자동 사건)이 없으면 null.
+ * 배우자 또는 현재 상대 ID가 있으면 그 사람의 만남 기록을 사용한다. ID가 없는 저장에서는 기존 경로를 찾는다.
  */
 fun partnerOf(
     flags: Set<String>,
@@ -75,16 +75,21 @@ fun partnerOf(
     automaticRules: Map<String, AutomaticEventRule>,
     periods: List<PeriodDefinition>,
 ): PartnerUi? {
-    val held = PartnerStory.PARTNER_FLAGS.filter { it in flags }.toSet()
+    val stableId = MarriageContract.spouseId(flags) ?: MarriageContract.currentPartnerId(flags)
+    val identity = stableId?.let { id -> MarriageContract.partners.firstOrNull { it.id == id } ?: return null }
+    val held = identity?.let { setOf(it.routeFlag) } ?: PartnerStory.PARTNER_FLAGS.filter { it in flags }.toSet()
     if (held.isEmpty()) return null
     data class Origin(val order: Int, val flag: String, val eventId: String, val title: String, val period: LifePeriod, val year: Int)
     val fromChoices = choices.mapIndexedNotNull { index, record ->
+        if (identity != null && record.choiceId !in identity.origins[record.eventId].orEmpty()) {
+            return@mapIndexedNotNull null
+        }
         val added = decisions[record.eventId]?.choices?.firstOrNull { it.choiceId == record.choiceId }
             ?.outcomes?.firstOrNull { it.outcomeId == record.outcomeId }?.addFlags.orEmpty()
-        added.firstOrNull { it in held }?.let { Origin(index * 2, it, record.eventId, record.eventTitle, record.period, record.yearInPeriod) }
+        added.firstOrNull { it in held }?.let { Origin(index, it, record.eventId, record.eventTitle, record.period, record.yearInPeriod) }
     }
     // 자동 사건은 선택 기록과 순서를 섞기 어렵다. 같은 상대가 선택에서도 생겼다면 선택 쪽을 쓴다.
-    val fromAuto = autoRecords.mapNotNull { record ->
+    val fromAuto = if (identity != null) emptyList() else autoRecords.mapNotNull { record ->
         val rule = automaticRules[record.eventId] ?: return@mapNotNull null
         rule.event.addFlags.firstOrNull { it in held }?.let {
             Origin(-1, it, record.eventId, rule.topic.ifBlank { record.text }, record.period, record.yearInPeriod)

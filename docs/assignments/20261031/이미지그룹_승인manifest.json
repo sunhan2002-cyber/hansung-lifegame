@@ -5959,7 +5959,7 @@
       "path_hap_01"
     ],
     "eventSourceHashes": {
-      "path_hap_01": "d4155a9e1631ab92fb90ae0e04b7c18faba7d2040af6e048b2cb70595b4f3b94"
+      "path_hap_01": "16a710db254971277a15048f6c1fbf33781e1fba5748ad59d3c6b4150c3429ad"
     },
     "semanticReviewer": "김선한 담당 Codex 직접 대행 검수",
     "visualReviewer": "김선한 담당 Codex 직접 대행 검수",
@@ -8050,7 +8050,7 @@
       "love_family_meet_01"
     ],
     "eventSourceHashes": {
-      "love_family_meet_01": "1be6275516d8247f307b367b77afbe0813cd63d8685ae423b001fbb13842baa1"
+      "love_family_meet_01": "dfaa4023fdc2c286e8b60ec5a41f541a75f9027426353d6999f85dd9bcf5dd7e"
     },
     "semanticReviewer": "Codex AI / plan_audit — full current event and outcomes",
     "visualReviewer": "Codex AI / plan_audit — full PNG and native captures",
@@ -8269,21 +8269,21 @@
     "groupId": "ai_native_20261119_love_conflict_book",
     "imageId": "img_love_conflict_book_001",
     "assetPath": "img_love_conflict_book_001.png",
-    "sha256": "ac3c05355964d7aff4f7dc28648fb22ecfaeea7010e87513521170137cda8d65",
+    "sha256": "49d349707f81f9c5e254b49e50442773f42cff451e4a13be54824a1f4484b7cf",
     "approvalStatus": "APPROVED",
     "eventIds": [
       "love_conflict_book"
     ],
     "eventSourceHashes": {
-      "love_conflict_book": "c5039811b3ae0471bf47dfd7c0441161d0ad88099e0250056f1ef4629f7a1fa7"
+      "love_conflict_book": "44af033ebc2925a1724de0bf8a28bc3d06d2cfb5b35a64ef5d50d1d485ea5403"
     },
-    "semanticReviewer": "Codex AI / plan_audit — full current event and outcomes",
-    "visualReviewer": "Codex AI / plan_audit — exact source and native captures",
-    "cropReviewer": "Codex AI / plan_audit — phone and 360x740 native captures",
+    "semanticReviewer": "Codex AI / 2026-11-23 — 영화 감상 대립과 실제 일러스트 대조",
+    "visualReviewer": "Codex AI / 2026-11-23 — 영화표 두 장, 팝콘, 1인칭 손 제스처 확인",
+    "cropReviewer": "Codex AI / 2026-11-23 — API 36 기본 및 360x740 장면 검수",
     "reviewerType": "AI",
-    "reviewEvidence": "docs/refactor/art-candidates/native-review-secondary-ten-20261119/love_conflict_book.json",
+    "reviewEvidence": "docs/assignments/20261120/submissions/김선한.md",
     "resolvedIssueEvidence": {
-      "love_conflict_book": "Previously NO_FILE; exact built-in generated source and current routing individually verified against native captures: docs/refactor/art-candidates/native-review-secondary-ten-20261119/love_conflict_book.json"
+      "love_conflict_book": "영화 감상 장면과 어긋난 펼쳐진 책을 영화표와 팝콘으로 교체. 기본 및 360x740 장면 화면에서 현재 PNG와의 일치율 1.000 및 핵심 사물 확인. docs/assignments/20261120/submissions/김선한.md"
     }
   },
   {
