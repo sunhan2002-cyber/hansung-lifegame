@@ -10,7 +10,7 @@ import java.util.zip.CRC32
  * LG1은 과거 보정식, LG2는 두 눈 합 증가 규칙이며 두 버전을 모두 읽는다.
  * 검사 자리는 앞부분의 CRC32를 36진수 두 자리로 줄인 값이라 한두 글자를 잘못 옮겨 적으면 대부분 걸러진다.
  *
- * 버전 규칙(LG1 · LG2)과 저장(`ChallengeCodeState.diceRuleVersion`)은 11/20 김우영 계약(`c1a6361`)이다.
+ * 코드의 접두어가 주사위 계산 규칙을 결정한다. 이어하기는 저장된 능력치와 규칙 버전(`V4SavedRun.startingDiceRule`)을 복원한다.
  */
 data class ChallengeStart(
     val gender: Gender,
