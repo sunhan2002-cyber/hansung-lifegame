@@ -280,7 +280,8 @@ class LifeTransitionsTest {
         moveTo(markAt(3, 2, PlayPhase.DECISION))
         compose.mainClock.advanceTimeBy(300)
         compose.runOnIdle { stampYield = true } // the choices appeared
-        compose.mainClock.advanceTimeBy(MotionTimeline.STAMP_YIELD_MS + 64L)
+        // STAMP_YIELD_MS plus a few frames: one to recompose with the flag, one for the sequence to see it, one to end.
+        compose.mainClock.advanceTimeBy(MotionTimeline.STAMP_YIELD_MS + 96L)
         val yielded = root()
         compose.mainClock.advanceTimeBy(2_500)
         assertTrue("gone within STAMP_YIELD_MS", yielded.sameAs(root()))
