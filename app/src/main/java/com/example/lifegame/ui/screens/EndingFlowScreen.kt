@@ -2,9 +2,6 @@ package com.example.lifegame.ui.screens
 
 import androidx.activity.compose.BackHandler
 import androidx.compose.animation.AnimatedContent
-import androidx.compose.animation.fadeIn
-import androidx.compose.animation.fadeOut
-import androidx.compose.animation.togetherWith
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
@@ -32,6 +29,7 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
@@ -45,6 +43,7 @@ import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.heading
 import androidx.compose.ui.semantics.liveRegion
 import androidx.compose.ui.semantics.semantics
+import androidx.compose.ui.text.TextLayoutResult
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
@@ -58,6 +57,9 @@ import com.example.lifegame.ui.images.rememberPixelAsset
 import androidx.compose.ui.platform.LocalDensity
 import com.example.lifegame.ui.components.InkButton
 import com.example.lifegame.ui.components.CompletionSealHeader
+import com.example.lifegame.ui.components.LocalMotionStyle
+import com.example.lifegame.ui.components.rememberCompletionReveal
+import com.example.lifegame.ui.components.rememberEntranceMotionAllowed
 import com.example.lifegame.ui.components.LifeMutedOnDark
 import com.example.lifegame.ui.components.LifePaperOnDark
 import com.example.lifegame.ui.components.LineButton
@@ -77,6 +79,9 @@ import kotlinx.coroutines.delay
 /** 종료 흐름 단계: 주마등 → 미래 모습 → 인생기록증 */
 enum class EndingStep { RECAP, FUTURE, CERTIFICATE }
 
+/** 기록증 칭호 줄의 머리말. 칭호 공개(SPIN_STAMP)는 이 뒤의 글자만 찍는다. */
+private const val CERTIFICATE_TITLE_PREFIX = "칭호 · "
+
 /**
  * 뒤로가기로 갈 단계. 바로 앞 단계로 가되, 화면을 연 단계보다 앞으로는 가지 않는다.
  * 지난 인생 기록은 인생기록증에서 열리므로, 거기서 "주마등 다시 보기"로 들어간 주마등 · 미래 모습의 뒤로가기는 인생기록증으로 돌아간다.
@@ -85,8 +90,8 @@ enum class EndingStep { RECAP, FUTURE, CERTIFICATE }
 internal fun previousEndingStep(step: EndingStep, initialStep: EndingStep): EndingStep =
     EndingStep.entries.getOrNull(step.ordinal - 1)?.takeIf { it.ordinal >= initialStep.ordinal } ?: initialStep
 
-/** 주마등 한 장면이 머무는 시간 */
-private const val RECAP_MILLIS = 2_800L
+/** 주마등 한 장면이 머무는 시간. 연출 비교 화면의 주마등 미리보기도 같은 시간으로 넘어간다. */
+internal const val RECAP_MILLIS = 2_800L
 
 /**
  * 인생이 끝난 뒤의 흐름. 플레이 직후에는 주마등부터, 홈의 지난 인생에서 열면 기록증부터 보여 준다.
@@ -150,7 +155,6 @@ fun EndingFlowScreen(
 private fun RecapView(record: LifeRecordUi, onFinish: () -> Unit, modifier: Modifier = Modifier) {
     val moments = record.recap
     var index by rememberSaveable(record.runId) { mutableIntStateOf(0) }
-    val reduceMotion = rememberReduceMotion()
 
     LaunchedEffect(record.runId, index) {
         if (moments.isEmpty()) return@LaunchedEffect
@@ -209,14 +213,7 @@ private fun RecapView(record: LifeRecordUi, onFinish: () -> Unit, modifier: Modi
                 .clickable(role = Role.Button) { if (safeIndex < moments.lastIndex) index = safeIndex + 1 else onFinish() }
                 .semantics { contentDescription = "다음 장면" },
         ) {
-            AnimatedContent(
-                targetState = moments[safeIndex],
-                transitionSpec = {
-                    if (reduceMotion) fadeIn(androidx.compose.animation.core.snap()) togetherWith fadeOut(androidx.compose.animation.core.snap())
-                    else fadeIn() togetherWith fadeOut()
-                },
-                label = "recap",
-            ) { moment -> RecapMoment(moment) }
+            RecapStage(moments, safeIndex)
         }
         Text(
             text = "${safeIndex + 1} / ${moments.size}",
@@ -228,8 +225,28 @@ private fun RecapView(record: LifeRecordUi, onFinish: () -> Unit, modifier: Modi
     }
 }
 
+/**
+ * 주마등의 무대: 지금 장면과 장면 사이 전환(연출: LocalMotionStyle.recapMoment). 넘기기 · 타이머는 부르는 쪽이 정한다.
+ * 연출 비교 화면도 이 무대를 그대로 쓴다.
+ */
 @Composable
-private fun RecapMoment(moment: RecapMomentUi) {
+internal fun RecapStage(moments: List<RecapMomentUi>, index: Int, modifier: Modifier = Modifier) {
+    if (moments.isEmpty()) return
+    val reduceMotion = rememberReduceMotion()
+    val entrancesMove = rememberEntranceMotionAllowed()
+    val style = LocalMotionStyle.current.recapMoment
+    AnimatedContent(
+        targetState = moments[index.coerceIn(0, moments.lastIndex)],
+        transitionSpec = { recapTransition(style, reduceMotion, entrancesMove) },
+        modifier = modifier,
+        label = "recap",
+    ) { moment -> RecapMoment(moment) }
+}
+
+@Composable
+internal fun RecapMoment(moment: RecapMomentUi) {
+    // 장면마다 제 시계: 그림이 자리 잡고 글줄이 차례로 나타난다. 모두 1.1초 안에 끝나고 반복하지 않는다.
+    val motion = rememberRecapMomentMotion(moment.key)
     Column(
         Modifier
             .fillMaxSize()
@@ -244,7 +261,8 @@ private fun RecapMoment(moment: RecapMomentUi) {
                 .fillMaxWidth()
                 .aspectRatio(4f / 3f)
                 .clip(RoundedCornerShape(10.dp))
-                .testTag("recap_picture"),
+                .testTag("recap_picture")
+                .recapPicture(motion),
             contentAlignment = Alignment.BottomCenter,
         ) {
             SceneBackdrop(moment.images, Modifier.fillMaxSize())
@@ -269,7 +287,7 @@ private fun RecapMoment(moment: RecapMomentUi) {
                 )
             }
         }
-        Text(moment.place, color = LifeMutedOnDark, fontSize = 14.sp)
+        Text(moment.place, color = LifeMutedOnDark, fontSize = 14.sp, modifier = Modifier.recapLine(motion, 0))
         Text(
             text = moment.title,
             color = LifePaperOnDark,
@@ -277,14 +295,22 @@ private fun RecapMoment(moment: RecapMomentUi) {
             fontWeight = FontWeight.Bold,
             fontSize = 22.sp,
             lineHeight = 29.sp,
+            modifier = Modifier.recapLine(motion, 1),
         )
-        Text("→ ${moment.choiceLabel}", color = LifePaperOnDark.copy(alpha = 0.86f), fontSize = 15.sp, lineHeight = 21.sp)
+        Text(
+            "→ ${moment.choiceLabel}",
+            color = LifePaperOnDark.copy(alpha = 0.86f),
+            fontSize = 15.sp,
+            lineHeight = 21.sp,
+            modifier = Modifier.recapLine(motion, 2),
+        )
         Text(
             text = moment.resultText,
             color = LifePaperOnDark,
             fontFamily = LifeGameSerif,
             fontSize = 16.sp,
             lineHeight = 25.sp,
+            modifier = Modifier.recapLine(motion, 3),
         )
     }
 }
@@ -387,9 +413,13 @@ private fun FutureView(
     }
 }
 
-/** 인생기록증: 이름 · 칭호 · 사망 시기와 원인 · 교육 · 직업 · 가족 · 주거 · 경제력 · 업적 · 생애 요약. */
+/**
+ * 인생기록증: 이름 · 칭호 · 사망 시기와 원인 · 교육 · 직업 · 가족 · 주거 · 경제력 · 업적 · 생애 요약.
+ * 막 끝난 인생을 처음 열 때만 한 번 펼쳐진다(카드 · 본문 · 도장 · 칭호 공개, 모두 1초 안). 지난 기록 · 주마등 다시 보기 ·
+ * 화면 재생성 · 백그라운드에서 돌아올 때는 처음부터 다 찍힌 모습이다. 연출 비교 화면이 그대로 미리 보여 준다.
+ */
 @Composable
-private fun CertificateView(
+internal fun CertificateView(
     record: LifeRecordUi,
     onReplay: () -> Unit,
     onDone: () -> Unit,
@@ -401,6 +431,12 @@ private fun CertificateView(
 ) {
     // 칭호 획득 팝업(lobby2 영역)의 상태. 팝업이 칭호를 축하하는 동안(unlock.celebratesTitle) 기록증 안의 칭호 공개는 쉰다.
     val unlock = rememberTitleUnlockState(record, titleUnlock, celebrate)
+    val reveal = rememberCompletionReveal(record.runId, celebrate, onCelebrationConsumed)
+    val motion = LocalMotionStyle.current
+    val seal = motion.certificateSeal
+    val titleReveal = certificateTitleRevealFor(motion.titleReveal, hasTitle = record.title != null, popupCelebrates = unlock.celebratesTitle)
+    val sealArt = rememberCertificateSealArt(record.runId)
+    CertificateSealHaptic(reveal, seal)
     Column(
         modifier
             .fillMaxSize()
@@ -418,15 +454,17 @@ private fun CertificateView(
                 verticalArrangement = Arrangement.spacedBy(14.dp),
             ) {
                 CompletionSealHeader(
-                    runId = record.runId,
+                    reveal = reveal,
                     titleEarned = record.title != null,
-                    celebrate = celebrate,
-                    onConsumed = onCelebrationConsumed,
                     badgeModifier = Modifier.titleUnlockAnchor(unlock),
+                    titleReveal = titleReveal,
                 )
                 val shape = RoundedCornerShape(12.dp)
                 Row(
                     Modifier
+                        // 카드가 떠오르고 도장이 사진 모서리에 찍힌다. 도장은 카드의 clip 바깥에서 그려 잘리지 않는다.
+                        .certificateCardEntrance(seal, reveal.clockMs)
+                        .certificateSeal(seal, reveal.clockMs, sealArt)
                         .fillMaxWidth()
                         .clip(shape)
                         .background(LifeGameCard)
@@ -448,13 +486,17 @@ private fun CertificateView(
                         )
                         val title = record.title
                         if (title != null) {
+                            val titleLayout = remember { mutableStateOf<TextLayoutResult?>(null) }
                             Text(
-                                text = "칭호 · ${title.text}",
+                                text = "$CERTIFICATE_TITLE_PREFIX${title.text}",
                                 color = LifeGameSpecial,
                                 fontWeight = FontWeight.Bold,
                                 fontSize = 16.sp,
                                 lineHeight = 22.sp,
-                                modifier = Modifier.testTag("certificate_title"),
+                                onTextLayout = { titleLayout.value = it },
+                                modifier = Modifier
+                                    .testTag("certificate_title")
+                                    .certificateTitleReveal(titleReveal, reveal.clockMs, titleLayout, CERTIFICATE_TITLE_PREFIX.length),
                             )
                             Text(title.description, color = LifeGameInkSecondary, fontSize = 14.sp, lineHeight = 20.sp)
                         } else {
@@ -467,8 +509,14 @@ private fun CertificateView(
                         }
                     }
                 }
-                EndingBody(record.summary)
-                LifeExtensionSections(record)
+                // 본문은 카드를 뒤따라 들어온다. 묶음 Column의 간격이 바깥과 같아 배치 · 의미는 이전과 같다.
+                Column(
+                    Modifier.fillMaxWidth().certificateBodyEntrance(seal, reveal.clockMs),
+                    verticalArrangement = Arrangement.spacedBy(14.dp),
+                ) {
+                    EndingBody(record.summary)
+                    LifeExtensionSections(record)
+                }
             }
             TitleUnlockOverlay(unlock, record, Modifier.matchParentSize())
         }

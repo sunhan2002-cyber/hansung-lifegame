@@ -15,6 +15,7 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberUpdatedState
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -222,9 +223,16 @@ object AvatarLayerAssets {
 /**
  * 플레이어 캐릭터. 배경 없이 투명하게 그려져 사건 배경 위에 그대로 얹힌다.
  * 레이어 PNG가 모두 있으면 그것을 겹치고, 하나라도 없으면 도트 생성기로 그린다.
+ * [onShown]은 실제로 화면에 그려진 모습이 바뀔 때마다 그 모습을 알려 준다(레이어는 다 읽힐 때까지 앞 모습이 남는다).
+ * 연출이 새 모습이 정말 보인 순간에 맞추려고 쓰며, 그림은 넘기든 안 넘기든 똑같다.
  */
 @Composable
-fun PlayerAvatar(look: AvatarLook, modifier: Modifier = Modifier, ambientPhase: androidx.compose.runtime.State<Float>? = null) {
+fun PlayerAvatar(
+    look: AvatarLook,
+    modifier: Modifier = Modifier,
+    ambientPhase: androidx.compose.runtime.State<Float>? = null,
+    onShown: ((AvatarLook) -> Unit)? = null,
+) {
     val density = LocalDensity.current
     val context = LocalContext.current
     BoxWithConstraints(
@@ -253,6 +261,12 @@ fun PlayerAvatar(look: AvatarLook, modifier: Modifier = Modifier, ambientPhase: 
         }
         val ready = displayed
         val photoReady = photo?.takeIf { it.first == look }
+        if (onShown != null) {
+            // 지금 그려지는 모습: 사진 얼굴, 아니면 읽힌 레이어(새 모습이 다 읽힐 때까지는 앞 모습), 아니면 바로 그리는 도트 모습.
+            val shownLook = photoReady?.first ?: ready?.first ?: look
+            val report by rememberUpdatedState(onShown)
+            LaunchedEffect(shownLook) { report(shownLook) }
+        }
         if (photoReady != null) {
             Image(
                 painter = BitmapPainter(photoReady.second.asImageBitmap(), filterQuality = FilterQuality.None),

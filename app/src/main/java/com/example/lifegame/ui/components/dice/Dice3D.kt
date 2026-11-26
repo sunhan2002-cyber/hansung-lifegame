@@ -20,6 +20,7 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberUpdatedState
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -38,6 +39,7 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleEventObserver
 import androidx.lifecycle.compose.LocalLifecycleOwner
 import androidx.lifecycle.compose.currentStateAsState
+import com.example.lifegame.ui.components.awaitFrameMillis
 import com.example.lifegame.ui.components.rememberReduceMotion
 import java.nio.ByteBuffer
 import java.nio.ByteOrder
@@ -64,6 +66,12 @@ fun Dice3DStage(
     label: String = "운동능력",
     /** Allows deterministic fallback verification and a future device quality policy. */
     allow3D: Boolean = true,
+    /**
+     * Presentation hook: called once per roll when that roll's final faces are on screen — the GL scene presented the
+     * settled pose of the current pair, or the static pair is final (no GL, or GL failed). Rendering, the lifecycle and
+     * the watchdog do not depend on it.
+     */
+    onSettled: ((rollNonce: Int) -> Unit)? = null,
 ) {
     val context = LocalContext.current
     val lifecycle = LocalLifecycleOwner.current.lifecycle
@@ -101,6 +109,28 @@ fun Dice3DStage(
         if (surface != null && lifecycleState == Lifecycle.State.RESUMED) {
             delay(2_000)
             if (!ready || renderedResult != "$first,$second:settled") failed = true
+        }
+    }
+    if (onSettled != null) {
+        val report by rememberUpdatedState(onSettled)
+        // An animated roll lasts DiceGeometry.ROLL_DURATION_MS. Until the GL thread presents its first rolling frame, an
+        // identical pair still carries the previous roll's settled marker, so a settle counts for this roll only after
+        // that floor (frame clock, like the profile's rolling lock).
+        val animated = rollNonce > 0 && !reduceMotion
+        var floorPassed by remember(rollNonce) { mutableStateOf(!animated) }
+        LaunchedEffect(rollNonce) {
+            if (!floorPassed) {
+                awaitFrameMillis(DiceGeometry.ROLL_DURATION_MS)
+                floorPassed = true
+            }
+        }
+        val settled = floorPassed && (surface == null || failed || ready && renderedResult == "$first,$second:settled")
+        val reported = remember { intArrayOf(Int.MIN_VALUE) }
+        LaunchedEffect(rollNonce, settled) {
+            if (settled && reported[0] != rollNonce) {
+                reported[0] = rollNonce
+                report(rollNonce)
+            }
         }
     }
     Box(
