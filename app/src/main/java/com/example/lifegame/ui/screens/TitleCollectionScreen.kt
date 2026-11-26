@@ -1,11 +1,15 @@
 package com.example.lifegame.ui.screens
 
+import androidx.compose.animation.core.Animatable
+import androidx.compose.animation.core.FastOutSlowInEasing
+import androidx.compose.animation.core.tween
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.heightIn
 import androidx.compose.ui.semantics.Role
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.size
@@ -14,14 +18,19 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.safeDrawingPadding
 import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.State
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.testTag
+import androidx.compose.ui.semantics.clearAndSetSemantics
 import androidx.compose.ui.semantics.heading
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.semantics.stateDescription
@@ -32,7 +41,9 @@ import com.example.lifegame.ui.TitleCollectionUi
 import com.example.lifegame.ui.TitleEntryUi
 import com.example.lifegame.ui.components.LineButton
 import com.example.lifegame.ui.components.TitleMedallion
+import com.example.lifegame.ui.components.rememberEntranceMotionAllowed
 import com.example.lifegame.ui.theme.LifeGameCard
+import com.example.lifegame.ui.theme.LifeGameGold
 import com.example.lifegame.ui.theme.LifeGameInk
 import com.example.lifegame.ui.theme.LifeGameInkSecondary
 import com.example.lifegame.ui.theme.LifeGameInkTertiary
@@ -57,6 +68,12 @@ fun TitleCollectionScreen(
     onSetTarget: (String?) -> Unit = {},
     newTitleIds: Set<String> = emptySet(),
 ) {
+    // 새로 받은 칭호가 맨 위에 온다. 안정 정렬이라 나머지는 원래 순서 그대로다(비어 있으면 목록을 그대로 쓴다).
+    val entries = remember(collection.entries, newTitleIds) {
+        if (newTitleIds.isEmpty()) collection.entries else collection.entries.sortedByDescending { it.earned && it.titleId in newTitleIds }
+    }
+    // 이번 방문에서 메달 공개를 이미 보여 준 칭호. 목록이 항목을 다시 만들어도 공개를 되풀이하지 않는다.
+    val revealed = remember { mutableSetOf<String>() }
     Column(
         modifier
             .fillMaxSize()
@@ -90,11 +107,14 @@ fun TitleCollectionScreen(
             if (collection.entries.isEmpty()) {
                 item { Text("칭호 데이터를 불러오지 못했다.", color = LifeGameInkTertiary, fontSize = 15.sp) }
             }
-            items(collection.entries, key = { it.titleId }) { entry ->
+            itemsIndexed(entries, key = { _, entry -> entry.titleId }) { index, entry ->
                 TitleRow(
                     entry = entry,
                     targeted = entry.titleId == targetTitleId,
                     onToggleTarget = { onSetTarget(if (entry.titleId == targetTitleId) null else entry.titleId) },
+                    isNew = entry.earned && entry.titleId in newTitleIds,
+                    revealDelayMillis = NEW_TITLE_REVEAL_DELAY_MS + NEW_TITLE_REVEAL_STAGGER_MS * index,
+                    revealed = revealed,
                 )
             }
         }
@@ -106,8 +126,28 @@ fun TitleCollectionScreen(
     }
 }
 
+/** 새로 받은 칭호의 메달 공개: 목록이 뜬 뒤 160ms부터 한 줄에 90ms씩 차례로(lobby2 영역). */
+private const val NEW_TITLE_REVEAL_DELAY_MS = 160
+private const val NEW_TITLE_REVEAL_STAGGER_MS = 90
+private const val NEW_TITLE_REVEAL_MS = 720
+
+/** "연출 비교" 화면용: 목록 밖에서 칭호 한 줄을 그린다. [isNew]이면 '새로 받음' 표시와 메달 공개가 함께 나온다. */
 @Composable
-private fun TitleRow(entry: TitleEntryUi, targeted: Boolean = false, onToggleTarget: () -> Unit = {}) {
+internal fun LobbyTitleRowSample(entry: TitleEntryUi, isNew: Boolean, modifier: Modifier = Modifier) {
+    Box(modifier) {
+        TitleRow(entry, isNew = isNew, revealDelayMillis = NEW_TITLE_REVEAL_DELAY_MS, revealed = remember { mutableSetOf() })
+    }
+}
+
+@Composable
+private fun TitleRow(
+    entry: TitleEntryUi,
+    targeted: Boolean = false,
+    onToggleTarget: () -> Unit = {},
+    isNew: Boolean = false,
+    revealDelayMillis: Int = 0,
+    revealed: MutableSet<String>? = null,
+) {
     val shape = RoundedCornerShape(10.dp)
     Column(
         Modifier
@@ -131,6 +171,7 @@ private fun TitleRow(entry: TitleEntryUi, targeted: Boolean = false, onToggleTar
                 .fillMaxWidth()
                 .semantics(mergeDescendants = true) {
                     stateDescription = when {
+                        entry.earned && isNew -> LOBBY_NEW_TITLE_STATE
                         entry.earned -> "받음"
                         targeted -> "다음 판 목표"
                         else -> "아직 받지 못함"
@@ -140,8 +181,17 @@ private fun TitleRow(entry: TitleEntryUi, targeted: Boolean = false, onToggleTar
             verticalArrangement = Arrangement.spacedBy(3.dp),
         ) {
             Row(horizontalArrangement = Arrangement.spacedBy(10.dp), verticalAlignment = Alignment.Top) {
-                if (entry.earned) TitleMedallion(Modifier.size(36.dp).testTag("earned_badge_${entry.titleId}"))
+                if (entry.earned) {
+                    val badge = Modifier.size(36.dp).testTag("earned_badge_${entry.titleId}")
+                    if (isNew) {
+                        val reveal = rememberNewTitleReveal(entry.titleId, revealDelayMillis, revealed)
+                        TitleMedallion(badge, progress = { reveal.value })
+                    } else {
+                        TitleMedallion(badge)
+                    }
+                }
                 Column(Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(3.dp)) {
+                    if (isNew) NewTitlePill()
                     TitleRowText(entry, targeted)
                 }
             }
@@ -188,4 +238,42 @@ private fun TitleRowText(entry: TitleEntryUi, targeted: Boolean) {
             }
         }
     }
+}
+
+/** 새로 받은 칭호의 상태 설명. 화면의 '새로 받음' 표시는 그림으로만 두고 낭독은 이 한 번이다. */
+internal const val LOBBY_NEW_TITLE_STATE = "새로 받음"
+
+@Composable
+private fun NewTitlePill() {
+    Text(
+        text = LOBBY_NEW_TITLE_STATE,
+        color = Color(0xFF253631),
+        fontSize = 12.sp,
+        fontWeight = FontWeight.Bold,
+        modifier = Modifier
+            .clip(RoundedCornerShape(50))
+            .background(LifeGameGold)
+            .padding(horizontal = 8.dp, vertical = 2.dp)
+            .clearAndSetSemantics { },
+    )
+}
+
+/**
+ * 새로 받은 칭호 메달의 공개 진행(0 → 1). 메달 자체의 공개 연출(크기 · 기울기 · 반짝임)을 한 번만 쓴다.
+ * 방문마다 한 번: 목록이 항목을 다시 만들면 [revealed]에 있어 바로 1이다. 움직임 줄이기 · 화면 낭독 탐색에서는 1이다.
+ */
+@Composable
+private fun rememberNewTitleReveal(titleId: String, delayMillis: Int, revealed: MutableSet<String>?): State<Float> {
+    val firstShow = remember(titleId) { revealed != null && titleId !in revealed }
+    val play = firstShow && rememberEntranceMotionAllowed()
+    val progress = remember(titleId) { Animatable(if (play) 0f else 1f) }
+    LaunchedEffect(progress, play) {
+        if (!play) {
+            progress.snapTo(1f)
+            return@LaunchedEffect
+        }
+        revealed?.add(titleId)
+        progress.animateTo(1f, tween(NEW_TITLE_REVEAL_MS, delayMillis = delayMillis, easing = FastOutSlowInEasing))
+    }
+    return progress.asState()
 }
