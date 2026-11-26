@@ -24,6 +24,8 @@ import androidx.compose.ui.unit.Density
 import androidx.compose.ui.unit.dp
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.platform.app.InstrumentationRegistry
+import com.example.lifegame.ui.components.ExperiencePreferences
+import com.example.lifegame.ui.components.LocalExperiencePreferences
 import com.example.lifegame.ui.screens.DicePanel
 import com.example.lifegame.ui.theme.LifeGamePaper
 import com.example.lifegame.ui.theme.LifeGameTheme
@@ -66,7 +68,11 @@ class Week20ScreenCaptureTest {
     private fun framed(width: Int, height: Int, content: @androidx.compose.runtime.Composable () -> Unit) {
         compose.setContent {
             val density = LocalDensity.current.density
-            CompositionLocalProvider(LocalDensity provides Density(density, fontScale = fontScale)) {
+            CompositionLocalProvider(
+                LocalDensity provides Density(density, fontScale = fontScale),
+                // 캡처는 몇 프레임 뒤에 찍으므로 정지 화면으로 찍는다(시기 전환 · 해 도장이 반쯤 걸린 채 찍히지 않게).
+                LocalExperiencePreferences provides ExperiencePreferences(motionEnabled = false),
+            ) {
                 LifeGameTheme { Box(Modifier.requiredSize(width.dp, height.dp).clipToBounds()) { content() } }
             }
         }
