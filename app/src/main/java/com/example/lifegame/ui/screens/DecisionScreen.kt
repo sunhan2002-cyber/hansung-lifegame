@@ -131,6 +131,8 @@ import com.example.lifegame.ui.components.distortEnvelope
 import com.example.lifegame.ui.components.markLabel
 import com.example.lifegame.ui.components.rememberReduceMotion
 import com.example.lifegame.ui.components.experiencePress
+import com.example.lifegame.ui.components.inkSplash
+import com.example.lifegame.ui.components.pressIndication
 import com.example.lifegame.ui.components.rememberExperienceClick
 import com.example.lifegame.ui.teaser
 import com.example.lifegame.ui.theme.LifeGameBodyInk
@@ -785,7 +787,8 @@ private fun ColumnScope.ChoiceDetailsToggle(expanded: Boolean, onToggle: () -> U
             .align(Alignment.End)
             .experiencePress(interactions)
             .clip(RoundedCornerShape(8.dp))
-            .clickable(interactionSource = interactions, indication = androidx.compose.foundation.LocalIndication.current,
+            .inkSplash(interactions, LifeGamePaper.copy(alpha = 0.16f))
+            .clickable(interactionSource = interactions, indication = pressIndication(),
                 role = Role.Button, onClickLabel = if (expanded) "능력치 영향 접기" else "능력치 영향 펼치기", onClick = click)
             .heightIn(min = 44.dp)
             .padding(horizontal = 8.dp, vertical = 10.dp)

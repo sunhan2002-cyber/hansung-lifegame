@@ -4,7 +4,6 @@ import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
-import androidx.compose.foundation.LocalIndication
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.ExperimentalLayoutApi
 import androidx.compose.foundation.layout.FlowRow
@@ -284,18 +283,25 @@ fun InkButton(
     compact: Boolean = false,
     containerColor: Color = LifeGameInk,
     contentColor: Color = LifeGameCard,
+    /** The screen's main action: draws the call-to-action highlight chosen in [LocalMotionStyle]. */
+    highlight: Boolean = false,
 ) {
     val shape = RoundedCornerShape(10.dp)
     val interactions = remember { MutableInteractionSource() }
     val click = rememberExperienceClick(onClick)
+    val highlightStyle = LocalMotionStyle.current.highlight
+    val phase = if (highlight && enabled) rememberHighlightPhase(highlightStyle) else null
     Box(
         modifier = modifier
             .fillMaxWidth()
             .heightIn(min = if (compact) 44.dp else 56.dp)
             .experiencePress(interactions, enabled)
+            .ctaGlow(phase, highlightStyle, containerColor, 10.dp)
             .clip(shape)
             .background(if (enabled) containerColor else LifeGameRule)
-            .clickable(interactionSource = interactions, indication = LocalIndication.current,
+            .inkSplash(interactions, contentColor.copy(alpha = 0.22f), enabled)
+            .ctaShine(phase, highlightStyle)
+            .clickable(interactionSource = interactions, indication = pressIndication(),
                 enabled = enabled, role = Role.Button, onClick = click)
             .padding(horizontal = 16.dp, vertical = if (compact) 10.dp else 15.dp),
         contentAlignment = Alignment.Center,
@@ -332,7 +338,8 @@ fun LineButton(
             .clip(shape)
             .background(if (enabled) containerColor else LifeGameCard)
             .border(1.dp, if (enabled) borderColor else LifeGameRule, shape)
-            .clickable(interactionSource = interactions, indication = LocalIndication.current,
+            .inkSplash(interactions, contentColor.copy(alpha = 0.16f), enabled)
+            .clickable(interactionSource = interactions, indication = pressIndication(),
                 enabled = enabled, role = Role.Button, onClick = click)
             .padding(horizontal = 16.dp, vertical = 14.dp),
         contentAlignment = Alignment.Center,

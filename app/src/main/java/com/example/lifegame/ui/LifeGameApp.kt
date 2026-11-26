@@ -52,6 +52,8 @@ import com.example.lifegame.ui.screens.doljabiPreviewAlreadyShown
 import com.example.lifegame.ui.screens.shouldPlayDoljabiCutscene
 import com.example.lifegame.domain.model.CutsceneStatus
 import com.example.lifegame.ui.screens.DesignPreviewScreen
+import com.example.lifegame.ui.screens.MotionCompareScreen
+import com.example.lifegame.ui.components.ProvideMotionStyle
 import com.example.lifegame.ui.screens.EndingFlowScreen
 import com.example.lifegame.ui.screens.EndingStep
 import com.example.lifegame.ui.screens.TitleCollectionScreen
@@ -69,6 +71,7 @@ object Routes {
     const val PROFILE = "profile"
     const val PLAY = "play"
     const val DESIGN_PREVIEW = "design_preview"
+    const val MOTION_COMPARE = "motion_compare"
     const val RECORD = "record/{runId}"
     const val TITLES = "titles"
 
@@ -81,6 +84,7 @@ fun LifeGameApp(
     gameViewModel: LifeGameViewModel = viewModel(),
 ) {
     LifeGameTheme {
+        ProvideMotionStyle(allowOverride = BuildConfig.DEBUG) {
         Surface(modifier = Modifier.fillMaxSize(), color = LifeGamePaper) {
             val saveState by gameViewModel.saveState.collectAsState()
             Box(Modifier.fillMaxSize()) {
@@ -102,6 +106,9 @@ fun LifeGameApp(
                         onNewLife = { navController.navigateOnce(Routes.PROFILE) },
                         onDesignPreview = if (BuildConfig.DEBUG) {
                             { navController.navigateOnce(Routes.DESIGN_PREVIEW) }
+                        } else null,
+                        onMotionCompare = if (BuildConfig.DEBUG) {
+                            { navController.navigateOnce(Routes.MOTION_COMPARE) }
                         } else null,
                         onOpenRecord = { runId -> navController.navigateOnce(Routes.record(runId)) },
                         onOpenTitles = { navController.navigateOnce(Routes.TITLES) },
@@ -137,6 +144,9 @@ fun LifeGameApp(
                 }
                 composable(Routes.DESIGN_PREVIEW) {
                     DesignPreviewScreen(onBack = { navController.popBackStack() })
+                }
+                composable(Routes.MOTION_COMPARE) {
+                    MotionCompareScreen(onBack = { navController.popOnce() })
                 }
                 composable(Routes.PROFILE) {
                     val titleTarget = remember(gameViewModel.titleTargetId, gameViewModel.completedLives) { gameViewModel.titleTarget() }
@@ -195,6 +205,7 @@ fun LifeGameApp(
                 confirmButton = { TextButton(onClick = { gameViewModel.retrySave() }) { Text("저장 다시 시도") } },
             )
             }
+        }
         }
     }
 }
@@ -424,6 +435,13 @@ private fun RecoveryScreen(
         )
         Text(text = message, color = LifeGameInkSecondary, style = MaterialTheme.typography.bodyLarge)
         InkButton(text = "홈으로", onClick = onGoHome)
+    }
+}
+
+/** Pops only from a settled screen, so a double tap on a back control cannot also pop HOME. */
+private fun NavHostController.popOnce() {
+    if (currentBackStackEntry?.lifecycle?.currentState == Lifecycle.State.RESUMED && previousBackStackEntry != null) {
+        popBackStack()
     }
 }
 

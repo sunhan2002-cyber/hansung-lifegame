@@ -17,7 +17,6 @@ import androidx.compose.ui.unit.IntOffset
 import androidx.compose.ui.unit.IntSize
 import kotlin.math.roundToInt
 import androidx.compose.foundation.clickable
-import androidx.compose.foundation.LocalIndication
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -186,7 +185,8 @@ fun PlayTopBar(
                 .size(width = 60.dp, height = 68.dp)
                 .experiencePress(interactions)
                 .clip(RoundedCornerShape(10.dp))
-                .clickable(interactionSource = interactions, indication = LocalIndication.current, role = Role.Button, onClick = click)
+                .inkSplash(interactions, (if (onDark) LifeGamePaper else LifeGameInk).copy(alpha = 0.16f))
+                .clickable(interactionSource = interactions, indication = pressIndication(), role = Role.Button, onClick = click)
                 .semantics(mergeDescendants = true) { contentDescription = "플레이어 현재 모습, 능력치와 이번 시기 초점 보기" }
                 .testTag("player_avatar_button"),
             contentAlignment = Alignment.BottomCenter,
@@ -452,7 +452,8 @@ fun SceneViewButton(
             .experiencePress(interactions, enabled)
             .clip(shape)
             .background(Color.Black.copy(alpha = if (enabled) 0.34f else 0.18f))
-            .clickable(interactionSource = interactions, indication = LocalIndication.current, enabled = enabled, role = Role.Button, onClick = click)
+            .inkSplash(interactions, LifeGamePaper.copy(alpha = 0.16f), enabled)
+            .clickable(interactionSource = interactions, indication = pressIndication(), enabled = enabled, role = Role.Button, onClick = click)
             .padding(horizontal = 22.dp, vertical = 11.dp)
             .testTag("scene_view_button"),
         contentAlignment = Alignment.Center,
