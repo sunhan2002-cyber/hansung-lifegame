@@ -102,17 +102,26 @@ var SemanticsPropertyReceiver.healthLevel by HealthLevelKey
 /** 사건 배경이나 어두운 장면 위에서도 읽히도록 흰 글자에 그림자를 준다. */
 val OnSceneShadow = Shadow(color = Color.Black.copy(alpha = 0.72f), offset = Offset(0f, 1.5f), blurRadius = 6f)
 
+/**
+ * 건강 게이지. 값이 바뀌면 능력치 변화 연출(play · statChange)에 따라 차오르거나 줄어든다(그리기만 하므로
+ * 채움의 배치 · 태그 · 의미는 언제나 새 값 그대로다). 처음 그려질 때는 움직이지 않는다.
+ * [accents]는 잃을 때의 잔상 번쩍임 · 흔들림과 '떠오르는 숫자'까지 더한다(사건 화면). 기본은 차오르고 줄어드는 것만.
+ * [changeDelayMillis]만큼 기다렸다가 움직인다(고른 카드가 물러나는 동안, 결과 연출과 같은 순간에 닿게).
+ */
 @Composable
 fun HealthGauge(
     health: Int,
     modifier: Modifier = Modifier,
     onDark: Boolean = true,
     barHeight: Dp = 14.dp,
+    accents: Boolean = false,
+    changeDelayMillis: Long = 0L,
 ) {
     val value = health.coerceIn(0, 100)
     val level = healthLevelOf(value)
     val track = if (onDark) Color.White.copy(alpha = 0.24f) else LifeGameRule
     val labelColor = if (onDark) LifeGamePaper else LifeGameInk
+    val change = rememberStatChangeGauge(value, accents, changeDelayMillis)
     Column(
         modifier
             .fillMaxWidth()
@@ -137,10 +146,12 @@ fun HealthGauge(
         }
         Box(
             Modifier
+                .statChangeGaugeShake(change, value)
                 .fillMaxWidth()
                 .height(barHeight)
                 .clip(RoundedCornerShape(barHeight / 2))
-                .background(track),
+                .background(track)
+                .statChangeGaugeTrail(change, value, level.color, onDark),
         ) {
             if (value > 0) {
                 Box(
@@ -148,6 +159,7 @@ fun HealthGauge(
                         .fillMaxWidth(value / 100f)
                         .height(barHeight)
                         .clip(RoundedCornerShape(barHeight / 2))
+                        .statChangeGaugeFill(change, value, level.color)
                         .background(level.color)
                         .testTag("health_gauge_fill"),
                 )
@@ -159,6 +171,8 @@ fun HealthGauge(
 /**
  * 상단 줄: 캐릭터와 건강 게이지만 배경 위에 떠 있다. 카드 · 버튼 바탕은 없다.
  * 캐릭터를 누르면 능력치 · 이번 시기 초점 · 인생 사실 창이 열린다.
+ * 건강 게이지는 기본으로 차오르고 줄어드는 것만 한다(자동 진행). 사건 화면은 [healthAccents]로 잔상 · 흔들림 ·
+ * 떠오르는 숫자를 켜고, 고른 카드가 물러나는 동안 [healthChangeDelayMillis]만큼 늦춘다([HealthGauge]).
  */
 @Composable
 fun PlayTopBar(
@@ -166,6 +180,8 @@ fun PlayTopBar(
     onOpenDetails: () -> Unit,
     modifier: Modifier = Modifier,
     onDark: Boolean = true,
+    healthAccents: Boolean = false,
+    healthChangeDelayMillis: Long = 0L,
     avatar: @Composable (Modifier) -> Unit,
 ) {
     val interactions = remember { MutableInteractionSource() }
@@ -191,7 +207,13 @@ fun PlayTopBar(
         ) {
             avatar(Modifier.size(width = 56.dp, height = 66.dp))
         }
-        HealthGauge(health = health, onDark = onDark, modifier = Modifier.weight(1f))
+        HealthGauge(
+            health = health,
+            onDark = onDark,
+            modifier = Modifier.weight(1f),
+            accents = healthAccents,
+            changeDelayMillis = healthChangeDelayMillis,
+        )
         LocalPlayMenu.current?.let { menu -> PlayMenuButton(menu, onDark) }
     }
 }
