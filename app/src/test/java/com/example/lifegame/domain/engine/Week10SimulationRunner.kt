@@ -191,7 +191,7 @@ object Week10SimulationRunner {
                         else -> options[hash]
                     }
                     val before = step.state
-                    val resolved = game.choose(picked.choiceId)
+                    val resolved = game.choose(picked.choiceId, expectedEventId = pending.eventId)
                     trace.put(JSONObject().apply {
                         put("period", before.period.name); put("year", before.yearInPeriod)
                         put("eventId", event.eventId); put("kind", event.kind.name)
@@ -201,7 +201,7 @@ object Week10SimulationRunner {
                         put("addedFlags", JSONArray((resolved.step.state.flags - before.flags).sorted()))
                     })
                     if (sampleRestoration) {
-                        val twice = runCatching { game.choose(picked.choiceId) }
+                        val twice = runCatching { game.choose(picked.choiceId, expectedEventId = pending.eventId) }
                         if (twice.isSuccess || game.state != resolved.step.state) violations += "DUPLICATE_CHOICE_APPLIED:${event.eventId}"
                     }
                     resolved.step

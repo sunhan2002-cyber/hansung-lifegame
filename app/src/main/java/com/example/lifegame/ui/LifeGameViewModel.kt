@@ -618,7 +618,7 @@ class LifeGameViewModel @JvmOverloads constructor(
         val label = decision.choices.firstOrNull { it.choiceId == choiceId }?.label ?: return
         val inputId = "${beforeState.runId}:${decision.eventId}:$choiceId"
         if (!choiceApplicationGuard.tryBegin(inputId)) return
-        val resolution = runCatching { current.choose(choiceId) }.getOrElse {
+        val resolution = runCatching { current.choose(choiceId, expectedEventId = decision.eventId) }.getOrElse {
             choiceApplicationGuard.release(inputId)
             playError = "선택을 반영하지 못했습니다."
             return
@@ -714,7 +714,12 @@ class LifeGameViewModel @JvmOverloads constructor(
         pendingOutcomeSnapshot = null
         shownDecision = null
         decisionYear = null
-        publishPlay()
+        val next = playStep
+        if (next?.phase == TurnPhase.DECISION) {
+            applyStep(next)
+        } else {
+            publishPlay()
+        }
     }
 
     /** 화면 연출 확인만 저장한다. 엔진 선택이나 보상 적용을 다시 호출하지 않는다. */

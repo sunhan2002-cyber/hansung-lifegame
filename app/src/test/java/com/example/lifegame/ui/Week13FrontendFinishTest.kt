@@ -128,10 +128,25 @@ class Week13FrontendFinishTest {
             records.groupBy { it.period }.forEach { (period, inPeriod) ->
                 assertTrue("$period cap", inPeriod.size <= AutomaticEventPicker.periodLimit(period))
             }
-            // 자동 사건이 그해 결정을 대신하지 않는다: 지나간 해마다 결정은 정확히 한 번이다.
+            // Automatic events never replace a decision. Only the authored marriage sequence
+            // can add another decision to the same slot.
             val decisionsPerYear = trace.filter { it.step.phase == TurnPhase.DECISION }
-                .groupingBy { it.step.state.period to it.step.state.yearInPeriod }.eachCount()
-            assertTrue("seed $seed: ${decisionsPerYear.filterValues { it != 1 }}", decisionsPerYear.values.all { it == 1 })
+                .groupBy { it.step.state.period to it.step.state.yearInPeriod }
+            val marriageFollowUps = mapOf(
+                "adult_032" to setOf("love_family_meet_01", "path_soc_05"),
+                "love_marriage_talk_01" to setOf("love_family_meet_01", "path_soc_05"),
+                "love_family_meet_01" to setOf("love_wedding_prep_01"),
+                "path_soc_05" to setOf("love_wedding_prep_01"),
+                "love_wedding_prep_01" to setOf("love_wedding_01", "love_wedding_first_love", "love_wedding_music", "love_wedding_book"),
+            )
+            decisionsPerYear.values.forEach { decisions ->
+                decisions.zipWithNext().forEach { (previous, next) ->
+                    val from = previous.step.state.pendingDecisionId
+                    val to = next.step.state.pendingDecisionId
+                    assertEquals("seed $seed: $from → $to must be consecutive", from, next.before?.pendingDecisionId)
+                    assertTrue("seed $seed: unexpected decision in the same slot: $from → $to", to in marriageFollowUps[from].orEmpty())
+                }
+            }
             val baseline = play(20261116L + seed, withAutoEvents = false)
                 .filter { it.step.phase == TurnPhase.DECISION }
                 .map { it.step.state.period to it.step.state.yearInPeriod }.toSet()

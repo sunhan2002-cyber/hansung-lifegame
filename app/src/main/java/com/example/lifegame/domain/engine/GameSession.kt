@@ -245,9 +245,10 @@ class PeriodGameSession(
         return record(step)
     }
 
-    fun choose(choiceId: String): OutcomeResolution {
+    fun choose(choiceId: String, expectedEventId: String? = null): OutcomeResolution {
         val current = requireNotNull(state) { "Session has not started" }
         val eventId = requireNotNull(current.pendingDecisionId) { "There is no pending decision" }
+        require(expectedEventId == null || expectedEventId == eventId) { "The decision has already changed" }
         val event = requireNotNull(decisions.firstOrNull { it.eventId == eventId }) {
             "Pending decision is not available in the current content"
         }
@@ -257,6 +258,7 @@ class PeriodGameSession(
             choiceId,
             periods,
             lifeFactRules,
+            decisions = decisions,
         )
         record(resolution.step)
         return resolution
