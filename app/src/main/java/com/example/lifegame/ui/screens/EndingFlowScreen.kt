@@ -91,6 +91,7 @@ private const val RECAP_MILLIS = 2_800L
 /**
  * 인생이 끝난 뒤의 흐름. 플레이 직후에는 주마등부터, 홈의 지난 인생에서 열면 기록증부터 보여 준다.
  * 모든 내용은 저장된 완료 기록에서 만든 [LifeRecordUi]다. 이 화면은 기록을 새로 만들거나 고치지 않는다.
+ * [titleUnlock]은 플레이 직후의 흐름만 넘긴다(칭호 획득 팝업, lobby2 영역). 지난 기록을 열 때는 null이다.
  */
 @Composable
 fun EndingFlowScreen(
@@ -102,6 +103,7 @@ fun EndingFlowScreen(
     modifier: Modifier = Modifier,
     doneLabel: String = "홈으로",
     initialStep: EndingStep = EndingStep.RECAP,
+    titleUnlock: TitleUnlockUi? = null,
 ) {
     var step by rememberSaveable(record.runId) { mutableStateOf(initialStep) }
     // Presentation-only consumption survives replay and Activity recreation. Archived records open quietly.
@@ -138,6 +140,7 @@ fun EndingFlowScreen(
             celebrate = !completionPresented,
             onCelebrationConsumed = { completionPresented = true },
             modifier = modifier,
+            titleUnlock = titleUnlock,
         )
     }
 }
@@ -394,72 +397,80 @@ private fun CertificateView(
     celebrate: Boolean,
     onCelebrationConsumed: () -> Unit,
     modifier: Modifier = Modifier,
+    titleUnlock: TitleUnlockUi? = null,
 ) {
+    // 칭호 획득 팝업(lobby2 영역)의 상태. 팝업이 칭호를 축하하는 동안(unlock.celebratesTitle) 기록증 안의 칭호 공개는 쉰다.
+    val unlock = rememberTitleUnlockState(record, titleUnlock, celebrate)
     Column(
         modifier
             .fillMaxSize()
             .background(LifeGamePaper)
             .safeDrawingPadding(),
     ) {
-        Column(
-            Modifier
-                .weight(1f)
-                .verticalScroll(rememberScrollState())
-                .padding(horizontal = 18.dp, vertical = 18.dp)
-                .testTag("certificate"),
-            verticalArrangement = Arrangement.spacedBy(14.dp),
-        ) {
-            CompletionSealHeader(
-                runId = record.runId,
-                titleEarned = record.title != null,
-                celebrate = celebrate,
-                onConsumed = onCelebrationConsumed,
-            )
-            val shape = RoundedCornerShape(12.dp)
-            Row(
+        // 팝업은 스크롤 영역만 덮고 아래 "주마등 다시 보기 · 홈으로" 줄은 덮지 않는다. 배치 · 의미는 이전과 같다.
+        Box(Modifier.weight(1f).fillMaxWidth().titleUnlockOutsideTouch(unlock)) {
+            Column(
                 Modifier
-                    .fillMaxWidth()
-                    .clip(shape)
-                    .background(LifeGameCard)
-                    .border(1.dp, LifeGameRule, shape)
-                    .padding(14.dp),
-                horizontalArrangement = Arrangement.spacedBy(14.dp),
-                verticalAlignment = Alignment.CenterVertically,
+                    .fillMaxSize()
+                    .verticalScroll(rememberScrollState())
+                    .padding(horizontal = 18.dp, vertical = 18.dp)
+                    .testTag("certificate"),
+                verticalArrangement = Arrangement.spacedBy(14.dp),
             ) {
-                PlayerAvatar(record.avatar, Modifier.size(width = 64.dp, height = 96.dp))
-                Column(Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(4.dp)) {
-                    Text(
-                        text = record.playerName,
-                        color = LifeGameInk,
-                        fontFamily = LifeGameSerif,
-                        fontWeight = FontWeight.Bold,
-                        fontSize = 28.sp,
-                        lineHeight = 34.sp,
-                        modifier = Modifier.testTag("certificate_name"),
-                    )
-                    val title = record.title
-                    if (title != null) {
+                CompletionSealHeader(
+                    runId = record.runId,
+                    titleEarned = record.title != null,
+                    celebrate = celebrate,
+                    onConsumed = onCelebrationConsumed,
+                    badgeModifier = Modifier.titleUnlockAnchor(unlock),
+                )
+                val shape = RoundedCornerShape(12.dp)
+                Row(
+                    Modifier
+                        .fillMaxWidth()
+                        .clip(shape)
+                        .background(LifeGameCard)
+                        .border(1.dp, LifeGameRule, shape)
+                        .padding(14.dp),
+                    horizontalArrangement = Arrangement.spacedBy(14.dp),
+                    verticalAlignment = Alignment.CenterVertically,
+                ) {
+                    PlayerAvatar(record.avatar, Modifier.size(width = 64.dp, height = 96.dp))
+                    Column(Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(4.dp)) {
                         Text(
-                            text = "칭호 · ${title.text}",
-                            color = LifeGameSpecial,
+                            text = record.playerName,
+                            color = LifeGameInk,
+                            fontFamily = LifeGameSerif,
                             fontWeight = FontWeight.Bold,
-                            fontSize = 16.sp,
-                            lineHeight = 22.sp,
-                            modifier = Modifier.testTag("certificate_title"),
+                            fontSize = 28.sp,
+                            lineHeight = 34.sp,
+                            modifier = Modifier.testTag("certificate_name"),
                         )
-                        Text(title.description, color = LifeGameInkSecondary, fontSize = 14.sp, lineHeight = 20.sp)
-                    } else {
-                        Text("칭호 기록 없음", color = LifeGameInkTertiary, fontSize = 14.sp, modifier = Modifier.testTag("certificate_title"))
-                    }
-                    if (record.avatar.photoFaceSheet != null) {
-                        Text("사진으로 만든 얼굴", color = LifeGameInkTertiary, fontSize = 13.sp, modifier = Modifier.testTag("certificate_photo_face"))
-                    } else if (record.usesPhotoFace) {
-                        Text("사진 얼굴: 예시 응답(생성 키 없는 빌드)", color = LifeGameInkTertiary, fontSize = 13.sp)
+                        val title = record.title
+                        if (title != null) {
+                            Text(
+                                text = "칭호 · ${title.text}",
+                                color = LifeGameSpecial,
+                                fontWeight = FontWeight.Bold,
+                                fontSize = 16.sp,
+                                lineHeight = 22.sp,
+                                modifier = Modifier.testTag("certificate_title"),
+                            )
+                            Text(title.description, color = LifeGameInkSecondary, fontSize = 14.sp, lineHeight = 20.sp)
+                        } else {
+                            Text("칭호 기록 없음", color = LifeGameInkTertiary, fontSize = 14.sp, modifier = Modifier.testTag("certificate_title"))
+                        }
+                        if (record.avatar.photoFaceSheet != null) {
+                            Text("사진으로 만든 얼굴", color = LifeGameInkTertiary, fontSize = 13.sp, modifier = Modifier.testTag("certificate_photo_face"))
+                        } else if (record.usesPhotoFace) {
+                            Text("사진 얼굴: 예시 응답(생성 키 없는 빌드)", color = LifeGameInkTertiary, fontSize = 13.sp)
+                        }
                     }
                 }
+                EndingBody(record.summary)
+                LifeExtensionSections(record)
             }
-            EndingBody(record.summary)
-            LifeExtensionSections(record)
+            TitleUnlockOverlay(unlock, record, Modifier.matchParentSize())
         }
         Column(
             Modifier.padding(start = 16.dp, end = 16.dp, top = 8.dp, bottom = 16.dp),

@@ -55,7 +55,11 @@ private val LobbyPaper = Color(0xFFF6F1E5)
 private val LobbyTitleStyle = TextStyle(color = LobbyPaper, fontFamily = LifeGameSerif, fontWeight = FontWeight.Bold,
     fontSize = 36.sp, letterSpacing = 3.sp)
 
-/** Artwork fills the viewport; the reserved scene area keeps the avatar clear of the text. */
+/**
+ * Artwork fills the viewport; the reserved scene area keeps the avatar clear of the text.
+ * Stage-2 lobby details (lobby2 area): [hasNewTitles] puts the new-title dot on 칭호 수집 and [hourOfDay] (0f until 24f)
+ * picks the time-of-day sky. Their defaults reproduce today's lobby exactly.
+ */
 @OptIn(ExperimentalLayoutApi::class)
 @Composable
 fun HomeScreen(
@@ -73,6 +77,8 @@ fun HomeScreen(
     onScenarioChange: (FakeScenario) -> Unit = {},
     latestRecord: LifeRecordUi? = null,
     hasRecoverableSave: Boolean = false,
+    hasNewTitles: Boolean = false,
+    hourOfDay: Float = LobbyClock.NEUTRAL_HOUR,
 ) {
     HomeSystemBarAppearance()
     var confirmOverwrite by rememberSaveable { mutableStateOf(false) }

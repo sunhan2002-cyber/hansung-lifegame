@@ -509,6 +509,8 @@ fun DecisionScreen(
                 PeriodTrack(
                     marks = state.periodMarks,
                     yearLabel = "${state.yearInPeriod}번째 해",
+                    // 선택지가 보이면 시기선의 해 도장(time 영역)은 바로 물러나고 새로 찍히지 않는다.
+                    stampYield = choicesVisible,
                     modifier = Modifier
                         .background(LifeGamePaper)
                         .windowInsetsPadding(

@@ -46,7 +46,6 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Shadow
-import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.semantics.Role
@@ -68,7 +67,6 @@ import com.example.lifegame.ui.theme.LifeGameInk
 import com.example.lifegame.ui.theme.LifeGameInkTertiary
 import com.example.lifegame.ui.theme.LifeGamePaper
 import com.example.lifegame.ui.theme.LifeGameRule
-import com.example.lifegame.ui.theme.LifeGameSpecial
 
 /**
  * 10주차 최종 시안의 플레이 화면 부품.
@@ -248,15 +246,19 @@ private fun PlayMenuButton(menu: PlayMenuActions, onDark: Boolean) {
 /**
  * 하단 시기선 -O-O-O-. 지난 시기는 채운 원과 선, 지금 시기는 강조 테두리의 큰 원과 굵은 이름,
  * 아직 오지 않은 시기는 빈 원과 옅은 선이다. 밝은 바탕은 유지한다.
+ * 선 그림과 해 · 시기 연출은 LifeClock.kt(time 영역)에 있다. [stampYield]가 참인 동안(사건 화면에서 선택지가 보일 때)
+ * 해 도장은 바로 물러나고 새 도장을 시작하지 않는다. 배치 · 의미 · 태그는 연출과 상관없이 같다.
  */
 @Composable
 fun PeriodTrack(
     marks: List<PeriodMarkUi>,
     modifier: Modifier = Modifier,
     yearLabel: String? = null,
+    stampYield: Boolean = false,
 ) {
     val currentIndex = marks.indexOfFirst { it.isCurrent }
     val current = marks.getOrNull(currentIndex)
+    val trackMotion = rememberPeriodTrackMotion(marks, yearLabel, stampYield)
     Column(
         modifier
             .fillMaxWidth()
@@ -278,43 +280,7 @@ fun PeriodTrack(
                 .fillMaxWidth()
                 .height(24.dp),
         ) {
-            if (marks.isEmpty()) return@Canvas
-            // 원은 아래 이름 칸의 한가운데에 놓는다(이름과 원이 어긋나지 않게).
-            val y = size.height / 2f
-            val cellWidth = size.width / marks.size
-            fun cx(index: Int) = cellWidth * (index + 0.5f)
-            val small = 6.dp.toPx()
-            val big = 9.dp.toPx()
-            val line = 3.dp.toPx()
-            // 원과 원 사이를 잇는 선. 지나온 구간은 진하게, 남은 구간은 옅게.
-            for (index in 0 until marks.lastIndex) {
-                val passed = currentIndex >= 0 && index < currentIndex
-                val startX = cx(index) + (if (index == currentIndex) big else small)
-                val endX = cx(index + 1) - (if (index + 1 == currentIndex) big else small)
-                if (endX > startX) {
-                    drawLine(
-                        color = if (passed) LifeGameInk else LifeGameRule,
-                        start = Offset(startX, y),
-                        end = Offset(endX, y),
-                        strokeWidth = line,
-                    )
-                }
-            }
-            marks.forEachIndexed { index, mark ->
-                val center = Offset(cx(index), y)
-                when {
-                    mark.isCurrent -> {
-                        drawCircle(LifeGamePaper, radius = big, center = center)
-                        drawCircle(LifeGameSpecial, radius = big - 1.5.dp.toPx(), center = center, style = Stroke(3.dp.toPx()))
-                        drawCircle(LifeGameSpecial, radius = big * 0.42f, center = center)
-                    }
-                    index < currentIndex -> drawCircle(LifeGameInk, radius = small, center = center)
-                    else -> {
-                        drawCircle(LifeGamePaper, radius = small, center = center)
-                        drawCircle(LifeGameRule, radius = small - 1.dp.toPx(), center = center, style = Stroke(2.dp.toPx()))
-                    }
-                }
-            }
+            drawPeriodTrackLine(marks, currentIndex, trackMotion)
         }
         // 칸 너비가 고정이라 이름은 1.3배까지만 커진다(그 이상은 접근성 설명으로 읽는다).
         val fontScale = LocalDensity.current.fontScale

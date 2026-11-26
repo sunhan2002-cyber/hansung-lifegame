@@ -38,3 +38,9 @@ val LifeGameSpecial = Color(0xFF8A2433)
 // 그림이 준비되기 전 필름 안 자리
 val LifeGamePicture = Color(0xFFECEEF1)
 val LifeGameSpecialPicture = Color(0xFFEFE2E5)
+
+// 연출 공용 색(2026-11-26 2단계). 로비의 금빛 · 밤색 · 종이색과 같은 값이다.
+// 금빛 번쩍임 · 후광 · 금줄 · 도장 장식이 같은 색을 쓰도록 한곳에 둔다.
+val LifeGameGold = Color(0xFFE9CD94)
+val LifeGameNight = Color(0xFF15242C)
+val LifeGameLobbyPaper = Color(0xFFF6F1E5)

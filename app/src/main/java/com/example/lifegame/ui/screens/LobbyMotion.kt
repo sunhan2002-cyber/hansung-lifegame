@@ -1,10 +1,7 @@
 package com.example.lifegame.ui.screens
 
 import androidx.compose.animation.core.Animatable
-import androidx.compose.animation.core.CubicBezierEasing
 import androidx.compose.animation.core.FastOutSlowInEasing
-import androidx.compose.animation.core.Spring
-import androidx.compose.animation.core.spring
 import androidx.compose.animation.core.tween
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Row
@@ -18,14 +15,12 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
-import androidx.compose.runtime.withFrameMillis
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.drawBehind
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.geometry.Size
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.CompositingStrategy
-import androidx.compose.ui.graphics.TransformOrigin
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.platform.LocalLayoutDirection
 import androidx.compose.ui.semantics.clearAndSetSemantics
@@ -37,6 +32,9 @@ import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.dp
 import com.example.lifegame.ui.components.EntranceStyle
 import com.example.lifegame.ui.components.LocalMotionStyle
+import com.example.lifegame.ui.components.RiseEasing
+import com.example.lifegame.ui.components.StampSpec
+import com.example.lifegame.ui.components.awaitFrameMillis
 import com.example.lifegame.ui.components.rememberReduceMotion
 import kotlinx.coroutines.async
 import kotlinx.coroutines.awaitAll
@@ -90,19 +88,6 @@ internal fun rememberLobbyIntro(): LobbyIntroState {
 }
 
 /**
- * Waits on the frame clock, the same clock the animations run on. A wall-clock delay() keeps counting
- * while frames are paused (cold start behind the splash, a paused test clock), so a stagger built on it
- * collapses into everything starting at once.
- */
-internal suspend fun awaitFrameMillis(millis: Long) {
-    if (millis <= 0L) return
-    val start = withFrameMillis { it }
-    while (withFrameMillis { it } - start < millis) Unit
-}
-
-private val RiseEasing = CubicBezierEasing(0.18f, 0.9f, 0.24f, 1f)
-
-/**
  * Fades an element into place, [index] steps after the intro begins.
  * - [rise]: also lift it 22dp. Interactive elements pass false: graphicsLayer moves hit testing with the
  *   pixels, so a rising button would take taps meant for whatever will sit where it currently floats.
@@ -149,7 +134,7 @@ internal fun StampedTitle(text: String, titleStyle: TextStyle, accent: Color, in
             letters.mapIndexed { index, letter ->
                 async {
                     awaitFrameMillis(LobbyIntroState.TITLE_LETTER_START + index * LobbyIntroState.TITLE_LETTER_GAP)
-                    letter.animateTo(1f, spring(dampingRatio = 0.48f, stiffness = Spring.StiffnessMediumLow))
+                    letter.animateTo(1f, StampSpec.spring())
                 }
             }.let { jobs ->
                 underline.animateTo(1f, tween(420,
@@ -173,12 +158,12 @@ internal fun StampedTitle(text: String, titleStyle: TextStyle, accent: Color, in
                 text.forEachIndexed { index, glyph ->
                     Text(glyph.toString(), style = style, modifier = Modifier.graphicsLayer {
                         val p = letters[index].value
-                        alpha = (p * 3f).coerceIn(0f, 1f)
-                        val scale = 1f + (1f - p) * 0.9f
+                        alpha = StampSpec.alphaAt(p)
+                        val scale = StampSpec.scaleAt(p)
                         scaleX = scale
                         scaleY = scale
-                        rotationZ = (1f - p) * if (index % 2 == 0) -9f else 7f
-                        transformOrigin = TransformOrigin(0.5f, 0.62f)
+                        rotationZ = StampSpec.tiltAt(index, p)
+                        transformOrigin = StampSpec.Pivot
                     })
                 }
             }

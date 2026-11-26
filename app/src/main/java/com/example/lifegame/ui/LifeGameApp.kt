@@ -18,6 +18,12 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import com.example.lifegame.ui.components.PlayMenuActions
 import com.example.lifegame.ui.components.LocalPlayMenu
+import com.example.lifegame.ui.components.LocalLifeClock
+import com.example.lifegame.ui.components.PeriodTurnOverlay
+import com.example.lifegame.ui.components.rememberHasNewTitles
+import com.example.lifegame.ui.components.rememberLifeClock
+import com.example.lifegame.ui.components.rememberNewTitleIds
+import com.example.lifegame.ui.components.rememberTitleSeenState
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -58,6 +64,9 @@ import com.example.lifegame.ui.screens.EndingFlowScreen
 import com.example.lifegame.ui.screens.EndingStep
 import com.example.lifegame.ui.screens.TitleCollectionScreen
 import com.example.lifegame.ui.screens.HomeScreen
+import com.example.lifegame.ui.screens.LobbyClock
+import com.example.lifegame.ui.screens.rememberLobbyHour
+import com.example.lifegame.ui.screens.rememberTitleUnlock
 import com.example.lifegame.ui.screens.RunEndScreen
 import com.example.lifegame.ui.screens.TAP_GUARD_MILLIS
 import com.example.lifegame.ui.theme.LifeGameInkSecondary
@@ -78,16 +87,20 @@ object Routes {
     fun record(runId: String) = "record/${android.net.Uri.encode(runId)}"
 }
 
+/** [lobbyClock] is where the lobby reads the time of day from (its time-of-day sky); tests inject LobbyClock.fixed. */
 @Composable
 fun LifeGameApp(
     navController: NavHostController = rememberNavController(),
     gameViewModel: LifeGameViewModel = viewModel(),
+    lobbyClock: LobbyClock = LobbyClock.System,
 ) {
     LifeGameTheme {
         ProvideMotionStyle(allowOverride = BuildConfig.DEBUG) {
         Surface(modifier = Modifier.fillMaxSize(), color = LifeGamePaper) {
             val saveState by gameViewModel.saveState.collectAsState()
             Box(Modifier.fillMaxSize()) {
+            // 칭호 수집에서 이미 본 칭호(UI 전용). 홈의 새 칭호 점과 칭호 수집의 '새로 받음'이 함께 쓴다.
+            val titleSeen = rememberTitleSeenState()
             NavHost(navController = navController, startDestination = Routes.HOME) {
                 composable(Routes.HOME) {
                     val latestRecord = remember(gameViewModel.completedLives) {
@@ -114,6 +127,8 @@ fun LifeGameApp(
                         onOpenTitles = { navController.navigateOnce(Routes.TITLES) },
                         generationScenario = if (BuildConfig.DEBUG) gameViewModel.generationScenario else null,
                         onScenarioChange = { gameViewModel.generationScenario = it },
+                        hasNewTitles = rememberHasNewTitles(titleSeen, gameViewModel.completedLives),
+                        hourOfDay = rememberLobbyHour(lobbyClock),
                     )
                 }
                 composable(Routes.RECORD) { entry ->
@@ -140,6 +155,7 @@ fun LifeGameApp(
                         onBack = { navController.popBackStack() },
                         targetTitleId = gameViewModel.titleTargetId,
                         onSetTarget = gameViewModel::setTitleTarget,
+                        newTitleIds = rememberNewTitleIds(titleSeen, gameViewModel.completedLives),
                     )
                 }
                 composable(Routes.DESIGN_PREVIEW) {
@@ -217,6 +233,8 @@ internal fun PlayHost(
     onStartNewLife: () -> Unit = onGoHome,
 ) {
     val play = gameViewModel.play
+    // 해 · 시기 전환 연출(time 영역)이 보는 시계. 아래 화면 분기와 상관없이 늘 같은 자리에서 만든다.
+    val lifeClock = rememberLifeClock(play)
     val saveState by gameViewModel.saveState.collectAsState()
     var finishing by rememberSaveable { mutableStateOf(false) }
     // ---- 진행 중 "인생 리셋"(2026-11-20 과제) ----
@@ -311,8 +329,13 @@ internal fun PlayHost(
             Box(Modifier.fillMaxSize().background(LifeGamePaper), contentAlignment = Alignment.Center) {
                 Text("지금 인생을 정리하고 있어요…", modifier = Modifier.testTag("life_reset_pending"))
             }
-        } else CompositionLocalProvider(LocalPlayMenu provides playMenu.takeIf { play != null && play.phase != PlayPhase.ENDED }) {
+        } else CompositionLocalProvider(
+            LocalPlayMenu provides playMenu.takeIf { play != null && play.phase != PlayPhase.ENDED },
+            LocalLifeClock provides lifeClock,
+        ) {
             PlayPhaseScreen(play, gameViewModel, onGoHome, finishAndGoHome)
+            // 시기 전환 덮개: 새 화면 위, 대화상자 · 연타 보호 아래. 그리기 전용이라 터치는 그대로 아래 화면에 닿는다.
+            PeriodTurnOverlay(lifeClock, Modifier.fillMaxSize())
         }
         if (resetConfirm) {
             AlertDialog(
@@ -401,6 +424,8 @@ private fun PlayPhaseScreen(
                     onRequestFuture = { gameViewModel.requestFutureLook(record.runId) },
                     onCancelFuture = gameViewModel::cancelFutureLook,
                     onDone = onFinish,
+                    // 칭호 획득 팝업(lobby2 영역)은 플레이 직후의 기록증에서만. 지난 기록(Routes.RECORD)은 넘기지 않는다.
+                    titleUnlock = rememberTitleUnlock(record, gameViewModel.completedLives),
                 )
             } else {
                 RunEndScreen(

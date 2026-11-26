@@ -44,7 +44,11 @@ import kotlin.math.sin
 internal val CompletionEffectProgress = SemanticsPropertyKey<Float>("CompletionEffectProgress")
 private const val COMPLETION_DURATION_MS = 720
 
-/** Only a saved completed record opts in. This component cannot award a title or mutate a run. */
+/**
+ * Only a saved completed record opts in. This component cannot award a title or mutate a run.
+ * [badgeModifier] is chained after the title badge's size and tag; the title-unlock popup (lobby2) uses it only
+ * as the landing spot of its medal (it must never move, hide or re-time the badge).
+ */
 @Composable
 internal fun CompletionSealHeader(
     runId: String,
@@ -52,6 +56,7 @@ internal fun CompletionSealHeader(
     celebrate: Boolean,
     onConsumed: () -> Unit,
     modifier: Modifier = Modifier,
+    badgeModifier: Modifier = Modifier,
 ) {
     val eligibleAtEntry = remember(runId) { celebrate }
     var started by rememberSaveable(runId) { mutableStateOf(false) }
@@ -98,7 +103,7 @@ internal fun CompletionSealHeader(
                 fontWeight = FontWeight.Bold, letterSpacing = 2.sp,
                 modifier = Modifier.weight(1f).semantics { heading() },
             )
-            if (titleEarned) TitleMedallion(Modifier.size(56.dp).testTag("certificate_title_badge")) { progress.value }
+            if (titleEarned) TitleMedallion(Modifier.size(56.dp).testTag("certificate_title_badge").then(badgeModifier)) { progress.value }
         }
     }
 }

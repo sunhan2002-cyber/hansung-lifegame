@@ -46,6 +46,7 @@ import com.example.lifegame.ui.theme.LifeGameSpecial
  * 칭호 수집. 완료 기록에 영구 저장된 칭호를 콘텐츠의 칭호 목록 위에 표시한다.
  * 아직 받지 못한 칭호는 이름과 이야기식 힌트만 보이고 정확한 조건(플래그 · 확률)은 숨긴다.
  * "다음 판에서 노리기"로 하나를 고르면 그 목표가 새 인생 화면에 보인다(2026-11-13 승인된 확장 기능 3).
+ * [newTitleIds]는 이번 방문에서 '새로 받음'으로 보일 칭호다(lobby2 영역). 비어 있으면 지금 순서 · 의미 그대로다.
  */
 @Composable
 fun TitleCollectionScreen(
@@ -54,6 +55,7 @@ fun TitleCollectionScreen(
     modifier: Modifier = Modifier,
     targetTitleId: String? = null,
     onSetTarget: (String?) -> Unit = {},
+    newTitleIds: Set<String> = emptySet(),
 ) {
     Column(
         modifier
