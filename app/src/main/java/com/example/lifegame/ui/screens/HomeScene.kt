@@ -6,6 +6,7 @@ import android.content.ContextWrapper
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.BoxWithConstraints
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
@@ -21,6 +22,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clipToBounds
+import androidx.compose.ui.draw.drawWithCache
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.geometry.Size
 import androidx.compose.ui.graphics.Brush
@@ -101,10 +103,16 @@ internal fun rememberHomeScene(card: LifeCardUi?, record: LifeRecordUi?): HomeSc
     return HomeScene(ordinaryScene, AvatarLook(period = LifePeriod.YOUNG_ADULT))
 }
 
+/**
+ * The lobby artwork and its light. [look] (lobby2, 시간대 로비) picks the time-of-day light; the default [LobbyLook.Day]
+ * draws exactly today's literals. A look's grade is a plain SrcOver tint under the light: no blend modes, no
+ * offscreen layers. Brushes that only change with the look are built once per size and look.
+ */
 @Composable
-internal fun HomeSceneBackground(scene: HomeScene, phase: State<Float>, modifier: Modifier = Modifier) {
+internal fun HomeSceneBackground(scene: HomeScene, phase: State<Float>, modifier: Modifier = Modifier, look: LobbyLook = LobbyLook.Day) {
     Box(modifier.clipToBounds().testTag("home_scene").semantics {
         this[HomeSceneImageKey] = scene.images.firstOrNull()?.imageId.orEmpty()
+        this[HomeLightKey] = look.bucket.name
     }) {
         SceneImage(FilmShot("home-${scene.images.firstOrNull()?.imageId}", scene.images.firstOrNull()?.imageId.orEmpty(),
             scene.images.firstOrNull()?.path, false, scene.images),
@@ -115,19 +123,24 @@ internal fun HomeSceneBackground(scene: HomeScene, phase: State<Float>, modifier
                 translationX = sin(angle) * size.width * 0.009f
                 translationY = (cos(angle) - 1f) * size.height * 0.003f
             })
-        Canvas(Modifier.fillMaxSize()) {
-            val angle = phase.value * 2f * PI.toFloat()
-            drawRect(Brush.radialGradient(listOf(Color(0xFFFFDEA0).copy(alpha = 0.15f), Color.Transparent),
-                center = Offset(size.width * (0.82f + sin(angle) * 0.025f), size.height * 0.16f), radius = size.maxDimension * 0.65f))
-            // Fixed visual seeds only; the game's random stream is never consumed here.
-            repeat(12) { index ->
-                val progress = (phase.value + index * 0.0833f) % 1f
-                val x = ((index * 0.217f) % 1f) * size.width + sin(angle + index) * 5.dp.toPx()
-                val y = size.height * (0.72f - progress * 0.65f)
-                val alpha = sin(progress * PI.toFloat()).coerceAtLeast(0f) * 0.32f
-                drawCircle(Color(0xFFFFE7B7).copy(alpha = alpha), (0.8f + index % 3 * 0.3f).dp.toPx(), Offset(x, y))
+        Spacer(Modifier.fillMaxSize().drawWithCache {
+            val grade = if (look.hasGrade) Brush.verticalGradient(listOf(look.gradeTop, look.gradeBottom)) else null
+            onDrawBehind {
+                val angle = phase.value * 2f * PI.toFloat()
+                grade?.let { drawRect(it) }
+                drawRect(Brush.radialGradient(listOf(look.lightColor.copy(alpha = look.lightAlpha), Color.Transparent),
+                    center = Offset(size.width * (look.lightX + sin(angle) * 0.025f), size.height * look.lightY),
+                    radius = size.maxDimension * look.lightRadius))
+                // Fixed visual seeds only; the game's random stream is never consumed here.
+                if (look.moteAlpha > 0f) repeat(12) { index ->
+                    val progress = (phase.value + index * 0.0833f) % 1f
+                    val x = ((index * 0.217f) % 1f) * size.width + sin(angle + index) * 5.dp.toPx()
+                    val y = size.height * (0.72f - progress * 0.65f)
+                    val alpha = sin(progress * PI.toFloat()).coerceAtLeast(0f) * 0.32f * look.moteAlpha
+                    drawCircle(look.moteColor.copy(alpha = alpha), (0.8f + index % 3 * 0.3f).dp.toPx() * look.moteScale, Offset(x, y))
+                }
             }
-        }
+        })
     }
 }
 
