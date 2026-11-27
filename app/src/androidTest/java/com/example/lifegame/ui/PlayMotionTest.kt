@@ -235,6 +235,9 @@ class PlayMotionTest {
         compose.onNodeWithTag("decision_choice_A").performTouchInput { repeat(3) { click(center) } }
         compose.mainClock.advanceTimeByFrame()
         assertEquals("onChoose fires once, synchronously, as before", 1, picks)
+        // The result page replaces the choices in the pick's frame, so a fast repeated tap can land on its 계속하기 where
+        // card A was — unchanged from before stage 2 (no tap guard within the decision screen). Count from here.
+        val continuesBefore = continues
         // 결과 화면은 첫 프레임부터 있다(들어오는 연출은 투명도와 그리기 이동뿐). 물러나는 카드는 노드가 아니다.
         compose.onNodeWithTag("decision_outcome").assertExists()
         compose.onNodeWithTag("outcome_text").assertExists()
@@ -250,11 +253,12 @@ class PlayMotionTest {
         assertEquals(1, count("outcome_floating_changes"))
         // 오버레이에는 터치가 없다: 결과 글자를 눌러도 아무 일 없고, 계속하기는 그대로 한 번 눌린다.
         repeat(3) { tap("outcome_text") }
+        assertEquals("tapping the result text does nothing", continuesBefore, continues)
         advance(CHANGE_HOLD_MILLIS + 800)
         assertEquals(0, count("outcome_floating_changes"))
         compose.onNodeWithText("계속하기").performTouchInput { click(center) }
         compose.mainClock.advanceTimeByFrame()
-        assertEquals(1, continues)
+        assertEquals(continuesBefore + 1, continues)
         assertEquals(1, picks)
     }
 

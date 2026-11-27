@@ -109,6 +109,12 @@ class CreationEndingMotionTest {
 
     private fun SemanticsNodeInteraction.bitmap(): Bitmap = captureToImage().asAndroidBitmap()
 
+    /** Every text inside a dice stat row, in order (works while the row is scrolled out of view). */
+    private fun diceRowText(stat: String): String =
+        compose.onAllNodes(hasAnyAncestor(hasTestTag("dice_row_$stat")), useUnmergedTree = true).fetchSemanticsNodes()
+            .flatMap { it.config.getOrNull(SemanticsProperties.Text).orEmpty() }
+            .joinToString(" | ") { it.text }
+
     /**
      * performScrollTo() keeps re-issuing an animated semantics scroll until the node is fully visible. With the main
      * clock paused that animation never runs, so the call never returns: let the clock run just for the scroll.
@@ -155,7 +161,9 @@ class CreationEndingMotionTest {
 
     @Test fun theDiceGroupIsOpaqueAndInPlaceFromTheFrameTheRollAppears() {
         compose.mainClock.autoAdvance = false
-        screen {
+        // Tall enough that the stage and rows that appear under the roll button are on screen without scrolling: with
+        // the clock paused, performScrollTo would spin and a scroll with a running clock would play the entrance away.
+        screen(height = 900) {
             CompositionLocalProvider(LocalMotionStyle provides MotionStyle(profileEntrance = ProfileEntranceStyle.RISE, statCountUp = StatCountUpStyle.NONE)) {
                 CharacterSelectScreen(starters = emptyList(), onStart = {}, dice3D = false)
             }
@@ -167,12 +175,14 @@ class CreationEndingMotionTest {
         compose.onNodeWithTag("dice_roll").performClick()
         compose.mainClock.advanceTimeByFrame()
         val stage = compose.onNodeWithTag("dice_3d_stage").bitmap()
-        val row = compose.onNodeWithTag("dice_row_운동능력").bitmap()
+        // The stat rows sit below the fold under the reroll button (no scroll with a paused clock), so the row is
+        // compared by what it says rather than by pixels.
+        val row = diceRowText("운동능력")
         val position = compose.onNodeWithTag("dice_panel").fetchSemanticsNode().positionInRoot
         compose.mainClock.advanceTimeBy(1_500)
         assertEquals(position, compose.onNodeWithTag("dice_panel").fetchSemanticsNode().positionInRoot)
         assertTrue("the stage never fades or moves once it holds the dice", stage.sameAs(compose.onNodeWithTag("dice_3d_stage").bitmap()))
-        assertTrue(row.sameAs(compose.onNodeWithTag("dice_row_운동능력").bitmap()))
+        assertEquals(row, diceRowText("운동능력"))
     }
 
     @Test fun reducedMotionAndTouchExplorationShowTheSettledProfileFromTheFirstFrame() {
@@ -259,14 +269,18 @@ class CreationEndingMotionTest {
                 }
             }
         }
-        // Warm the layer cache for both looks, so the pop below starts right after the change.
+        // Baselines: the popping slot itself drawn with no pop, for both looks. Pixel art is scaled nearest-neighbour,
+        // so the same preview at another place on screen (the "still" one below) samples differently by a few hundred
+        // pixels; only the same slot compares exactly. This also warms the layer cache for both looks.
         awaitAvatarLayers(8, AvatarLookLabels.SHORT)
+        val restingShort = popping()
         compose.runOnIdle { hair = "hair_long_black" }
         awaitAvatarLayers(8, AvatarLookLabels.LONG)
+        val restingLong = popping()
         for (pop in AppearancePopStyle.entries - AppearancePopStyle.NONE) {
             compose.runOnIdle { style = pop; hair = "hair_default" }
             awaitAvatarLayers(8, AvatarLookLabels.SHORT)
-            assertTrue("$pop: the first display never pops", previewsMatch())
+            assertTrue("$pop: the first display never pops", popping().sameAs(restingShort))
             compose.runOnIdle { hair = "hair_long_black" }
             compose.mainClock.advanceTimeByFrame()
             // Descriptions follow the requested look immediately, in all four ages of both previews.
@@ -274,17 +288,16 @@ class CreationEndingMotionTest {
             awaitAvatarLayers(8, AvatarLookLabels.LONG)
             var popped = false
             repeat(16) {
-                if (!previewsMatch()) popped = true
+                if (!popping().sameAs(restingLong)) popped = true
                 compose.mainClock.advanceTimeBy(48)
             }
             assertTrue("$pop: the change is answered with a pop", popped)
             compose.mainClock.advanceTimeBy(1_000)
-            assertTrue("$pop: at rest it is pixel-identical to no pop", previewsMatch())
+            assertTrue("$pop: at rest it is pixel-identical to no pop", popping().sameAs(restingLong))
         }
     }
 
-    private fun previewsMatch(): Boolean =
-        compose.onNodeWithTag("popping").bitmap().sameAs(compose.onNodeWithTag("still").bitmap())
+    private fun popping(): Bitmap = compose.onNodeWithTag("popping").bitmap()
 
     private object AvatarLookLabels {
         const val SHORT = "짧은 검은 머리"
