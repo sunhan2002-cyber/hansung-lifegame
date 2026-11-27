@@ -157,8 +157,8 @@ internal class LifeClockMemory(seed: LifeMark? = null) {
 
     /**
      * The furthest period the lifeline marker has reached in [arrivedRunKey] — its travel finished — even if that
-     * mark's stamp has not landed (so [trackShown] is still older). A newer track travels only from here, so at 4× or
-     * after a quick skip the marker never jumps back a period to travel again.
+     * mark's stamp has not landed (so [trackShown] is still older). A newer track travels only from here, so once the
+     * marker has arrived it never jumps back a period to travel again (a travel cut off before arriving replays).
      */
     private var arrivedRunKey: String? = seed?.runKey
     private var arrivedIndex: Int = seed?.periodIndex ?: -1
@@ -741,13 +741,11 @@ private suspend fun PeriodTrackMotion.play(
         last = now
     }
     var committed = false
-    var traveling = false
     var arrived = false
     // No new stamp over visible choices, and none under reduced motion: show the new state as it is.
-    if (!reduceNow.value && !yieldNow.value) try {
+    if (!reduceNow.value && !yieldNow.value) {
         var start = -1L
         var beaten = false
-        traveling = true
         while (true) {
             val now = withFrameMillis { it }
             if (start < 0L) start = now
@@ -772,11 +770,9 @@ private suspend fun PeriodTrackMotion.play(
             }
             if (t >= plan.endMs(yieldAt)) break
         }
-    } finally {
-        // Cancelled mid-travel (a newer mark, a screen swap): the marker was on its way, so a later track starts from
-        // the target period instead of travelling back over it. The stamp itself still replays (nothing committed).
-        if (traveling && !arrived) onArrive()
     }
+    // A sequence cut off before the marker arrived (장면 보기, the image preview) replays the whole change, travel
+    // included, on the next track — by design. Travel at high auto speeds is short enough to arrive within a year.
     if (!committed) onCommit()
     clockMs.floatValue = Float.POSITIVE_INFINITY
 }
