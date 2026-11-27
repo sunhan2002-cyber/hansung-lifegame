@@ -212,8 +212,31 @@ internal class TitleUnlockState private constructor(
     /** '간직하기', a touch outside the card or the auto-collapse. Nothing happens before the card is up or once it leaves. */
     internal fun dismiss() {
         if (phase == TitleUnlockPhase.ENTERING || phase == TitleUnlockPhase.SHOWING) {
+            if (!instantDismiss) latchFlight()
             phase = if (instantDismiss) TitleUnlockPhase.DONE else TitleUnlockPhase.LEAVING
         }
+    }
+
+    // The exit decides ONCE, when it starts, whether the medal flies to the header or shrinks in place: re-deciding per
+    // frame made a swipe dismissal (the header scrolling out mid-flight) snap the medal back to the card and back again.
+    private var flightLatched = false
+    private var flightGoal: Offset? = null
+
+    private fun latchFlight() {
+        flightLatched = true
+        flightGoal = flightTarget()
+    }
+
+    /**
+     * Where the exiting medal flies: null for the shrink-in-place exit (decided when the exit started). While it flies it
+     * follows the header medal if that is still visible, otherwise the last point it was seen at. Plain fields, so it
+     * may be read and refreshed from draw.
+     */
+    internal fun flightPoint(): Offset? {
+        if (!flightLatched) return flightTarget()
+        if (flightGoal == null) return null
+        flightTarget()?.let { flightGoal = it }
+        return flightGoal
     }
 
     /** Settle, never restart: jump to the settled card. */
@@ -868,7 +891,7 @@ private fun DrawScope.drawTitleUnlockLanding(state: TitleUnlockState) {
     if (state.phase != TitleUnlockPhase.LEAVING) return
     val ring = titleUnlockLandRing(state.leave.value)
     if (ring <= 0f || ring >= 1f) return
-    val target = state.flightTarget() ?: return
+    val target = state.flightPoint() ?: return
     val radius = 28.dp.toPx() + (44.dp.toPx() - 28.dp.toPx()) * ring
     drawCircle(TitleUnlockDeepGold.copy(alpha = 0.6f * (1f - ring)), radius, target, style = Stroke(2.dp.toPx()))
 }
@@ -943,7 +966,7 @@ private fun GraphicsLayerScope.titleUnlockFlightLayer(state: TitleUnlockState) {
     val flight = titleUnlockFlight(leave)
     transformOrigin = TransformOrigin.Center
     val from = state.medalCentre()
-    val target = state.flightTarget()
+    val target = state.flightPoint()
     val anchorWidth = state.anchor?.size?.width?.toFloat()
     if (from != null && target != null && anchorWidth != null && size.width > 0f) {
         val arc = sin(PI.toFloat() * flight)

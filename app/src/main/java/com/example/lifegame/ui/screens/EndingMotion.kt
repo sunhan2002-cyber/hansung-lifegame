@@ -1,6 +1,5 @@
 package com.example.lifegame.ui.screens
 
-import androidx.compose.ui.unit.Density
 import androidx.compose.animation.ContentTransform
 import androidx.compose.animation.core.EaseOut
 import androidx.compose.animation.core.FastOutLinearInEasing
@@ -46,6 +45,7 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.drawText
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.rememberTextMeasurer
+import androidx.compose.ui.unit.Density
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp

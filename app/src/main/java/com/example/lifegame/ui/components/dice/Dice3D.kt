@@ -22,6 +22,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberUpdatedState
 import androidx.compose.runtime.setValue
+import androidx.compose.runtime.withFrameMillis
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.geometry.CornerRadius
@@ -115,22 +116,27 @@ fun Dice3DStage(
         val report by rememberUpdatedState(onSettled)
         // An animated roll lasts DiceGeometry.ROLL_DURATION_MS. Until the GL thread presents its first rolling frame, an
         // identical pair still carries the previous roll's settled marker, so a settle counts for this roll only after
-        // that floor (frame clock, like the profile's rolling lock).
+        // that floor (frame clock, like the profile's rolling lock). The floor is lazy: the roll's start frame is read
+        // once, and only when a settled marker shows is the rest of the floor waited. Nothing pumps frames before the GL
+        // has presented, which keeps tests' virtual time (and the 2 s watchdog's real-time margin) untouched.
         val animated = rollNonce > 0 && !reduceMotion
-        var floorPassed by remember(rollNonce) { mutableStateOf(!animated) }
+        val rollStartMs = remember(rollNonce) { longArrayOf(-1L) }
         LaunchedEffect(rollNonce) {
-            if (!floorPassed) {
-                awaitFrameMillis(DiceGeometry.ROLL_DURATION_MS)
-                floorPassed = true
-            }
+            if (animated) rollStartMs[0] = withFrameMillis { it }
         }
-        val settled = floorPassed && (surface == null || failed || ready && renderedResult == "$first,$second:settled")
+        val markerSettled = surface == null || failed || ready && renderedResult == "$first,$second:settled"
         val reported = remember { intArrayOf(Int.MIN_VALUE) }
-        LaunchedEffect(rollNonce, settled) {
-            if (settled && reported[0] != rollNonce) {
-                reported[0] = rollNonce
-                report(rollNonce)
+        LaunchedEffect(rollNonce, markerSettled) {
+            if (!markerSettled || reported[0] == rollNonce) return@LaunchedEffect
+            if (animated) {
+                val start = rollStartMs[0]
+                val elapsed = if (start < 0L) 0L else withFrameMillis { it } - start
+                // If the marker turns to this roll's rolling frames meanwhile, this effect restarts (its key changes) and
+                // reports at the real settle.
+                awaitFrameMillis((DiceGeometry.ROLL_DURATION_MS - elapsed).coerceAtLeast(0L))
             }
+            reported[0] = rollNonce
+            report(rollNonce)
         }
     }
     Box(

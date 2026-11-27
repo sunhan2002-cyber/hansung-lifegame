@@ -67,6 +67,7 @@ import kotlin.math.PI
 import kotlin.math.cos
 import kotlin.math.floor
 import kotlin.math.hypot
+import kotlin.math.max
 import kotlin.math.roundToInt
 import kotlin.math.sin
 
@@ -213,7 +214,9 @@ internal fun Modifier.profileEntranceStep(
         compositingStrategy = CompositingStrategy.ModulateAlpha
     }.drawWithCache {
         val fold = Matrix()
-        val camera = ProfileEntranceTimeline.UNFOLD_CAMERA_DISTANCE * PROFILE_CAMERA_INCH * density
+        // The camera sits at least 3 group-heights away: a tall group (the appearance section is ~1,200dp) folded
+        // under a fixed camera would put its lower edge behind the camera (w <= 0) and smear magnified fragments.
+        val camera = max(ProfileEntranceTimeline.UNFOLD_CAMERA_DISTANCE * PROFILE_CAMERA_INCH * density, 3f * size.height)
         onDrawWithContent {
             if (rest) {
                 drawContent()

@@ -155,6 +155,28 @@ internal class LifeClockMemory(seed: LifeMark? = null) {
     /** The last mark a PeriodTrack finished presenting (its stamp landed), or that was presented at once. */
     var trackShown: LifeMark? = seed
 
+    /**
+     * The furthest period the lifeline marker has reached in [arrivedRunKey] — its travel finished — even if that
+     * mark's stamp has not landed (so [trackShown] is still older). A newer track travels only from here, so at 4× or
+     * after a quick skip the marker never jumps back a period to travel again.
+     */
+    private var arrivedRunKey: String? = seed?.runKey
+    private var arrivedIndex: Int = seed?.periodIndex ?: -1
+
+    /** The marker now stands on [mark]'s period. */
+    fun arrive(mark: LifeMark) {
+        if (arrivedRunKey != mark.runKey) {
+            arrivedRunKey = mark.runKey
+            arrivedIndex = mark.periodIndex
+        } else if (mark.periodIndex > arrivedIndex) {
+            arrivedIndex = mark.periodIndex
+        }
+    }
+
+    /** [from] with its period moved up to where the marker already stands: the start of a new track's travel. */
+    fun travelFrom(from: LifeMark): LifeMark =
+        if (arrivedRunKey == from.runKey && arrivedIndex > from.periodIndex) from.copy(periodIndex = arrivedIndex) else from
+
     /** The newest turn; its serial is the pending turn serial. Kept after the turn ends so later marks keep it. */
     var latestTurn: PeriodTurn? = null
 
@@ -171,12 +193,16 @@ internal class LifeClockMemory(seed: LifeMark? = null) {
         if (turn != null && turn.serial > (latestTurn?.serial ?: 0)) latestTurn = turn
         if (mark == null) return
         val shown = trackShown
-        if (shown == null || shown.runKey != mark.runKey || presentAtOnce) trackShown = mark
+        if (shown == null || shown.runKey != mark.runKey || presentAtOnce) {
+            trackShown = mark
+            arrive(mark)
+        }
     }
 
     /** A PeriodTrack has shown [mark] (its stamp landed, or it rested at once). */
     fun present(mark: LifeMark) {
         trackShown = mark
+        arrive(mark)
     }
 }
 
@@ -649,7 +675,7 @@ internal fun rememberPeriodTrackMotion(marks: List<PeriodMarkUi>, yearLabel: Str
     val motion = remember(memory, mark.runKey, mark.periodIndex, mark.year) {
         val from = memory.trackShown?.takeIf { it.runKey == mark.runKey }
         val plan = if (reduceMotion || stampYield || from == null || !mark.isAfter(from)) null
-            else periodTrackPlan(style, from, mark, yearLabel)
+            else periodTrackPlan(style, memory.travelFrom(from), mark, yearLabel)
         if (plan == null) {
             PeriodTrackMotion.Rest
         } else {
@@ -666,7 +692,7 @@ internal fun rememberPeriodTrackMotion(marks: List<PeriodMarkUi>, yearLabel: Str
             memory.present(mark)
         } else {
             motion.play(turnSerial = clock.turn?.serial ?: 0, memory = memory, yieldNow = yieldNow, reduceNow = reduceNow,
-                onCommit = { memory.present(mark) }, onBeat = beat)
+                onArrive = { memory.arrive(mark) }, onCommit = { memory.present(mark) }, onBeat = beat)
         }
     }
     return motion
@@ -682,6 +708,7 @@ private suspend fun PeriodTrackMotion.play(
     memory: LifeClockMemory,
     yieldNow: State<Boolean>,
     reduceNow: State<Boolean>,
+    onArrive: () -> Unit,
     onCommit: () -> Unit,
     onBeat: (MotionHaptic) -> Unit,
 ) {
@@ -698,11 +725,17 @@ private suspend fun PeriodTrackMotion.play(
     if (!reduceNow.value && !yieldNow.value) {
         var start = -1L
         var beaten = false
+        var arrived = false
         while (true) {
             val now = withFrameMillis { it }
             if (start < 0L) start = now
             val t = (now - start).toFloat()
             if (reduceNow.value) break
+            // The marker's travel is done: a track that replaces this one (a newer mark) starts from here.
+            if (!arrived && t >= plan.travelMs) {
+                arrived = true
+                onArrive()
+            }
             if (yieldAtMs.floatValue < 0f && yieldNow.value) yieldAtMs.floatValue = t
             val yieldAt = yieldAtMs.floatValue
             clockMs.floatValue = t

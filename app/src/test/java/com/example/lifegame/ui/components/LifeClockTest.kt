@@ -210,6 +210,25 @@ class LifeClockTest {
         assertFalse("the same number does not roll", periodTrackPlan(AgeStampStyle.ROLL, mark(1, 1), mark(2, 1), "1번째 해")!!.rolls)
     }
 
+    @Test fun aNewerTrackTravelsOnlyFromWhereTheMarkerAlreadyStands() {
+        // 4×: the marker reached period 2 for (2,1) but that stamp never landed, so trackShown is still (1,5).
+        val memory = LifeClockMemory(seed = mark(1, 5))
+        memory.arrive(mark(2, 1))
+        val from = memory.travelFrom(mark(1, 5))
+        assertEquals("the travel starts at the reached period", 2, from.periodIndex)
+        assertEquals("the year still rolls from the last landed stamp", 5, from.year)
+        val next = periodTrackPlan(AgeStampStyle.BIG_STAMP, from, mark(2, 2), "2번째 해")!!
+        assertEquals("no second travel", 0f, next.travelMs, 0f)
+        assertEquals(2 to 2, next.fromIndex to next.toIndex)
+        // Without an arrival nothing changes, and another run's arrival never applies.
+        assertEquals(mark(1, 5), LifeClockMemory(seed = mark(1, 5)).travelFrom(mark(1, 5)))
+        val other = LifeClockMemory(seed = mark(1, 5)).apply { arrive(mark(3, 1, run = "other")) }
+        assertEquals(1, other.travelFrom(mark(1, 5)).periodIndex)
+        // The marker never moves back: an older arrival does not lower it.
+        memory.arrive(mark(1, 4))
+        assertEquals(2, memory.travelFrom(mark(1, 5)).periodIndex)
+    }
+
     /** How strongly the stamp shows at [t]: the big stamp's label opacity times its most inked glyph. */
     private fun visible(plan: PeriodTrackPlan, t: Float, yieldAt: Float = -1f): Float {
         val label = plan.stampAlphaAt(t, yieldAt)
