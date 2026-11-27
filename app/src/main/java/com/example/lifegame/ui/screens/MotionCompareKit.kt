@@ -1,6 +1,10 @@
 package com.example.lifegame.ui.screens
 
 import androidx.compose.foundation.background
+import androidx.activity.OnBackPressedDispatcher
+import androidx.activity.OnBackPressedDispatcherOwner
+import androidx.activity.compose.LocalOnBackPressedDispatcherOwner
+import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -13,17 +17,22 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.relocation.BringIntoViewRequester
+import androidx.compose.foundation.relocation.bringIntoViewRequester
 import androidx.compose.foundation.selection.selectable
 import androidx.compose.foundation.selection.selectableGroup
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.CompositionLocalProvider
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.key
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
+import androidx.compose.runtime.withFrameNanos
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -40,6 +49,8 @@ import androidx.compose.ui.unit.Constraints
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.compose.LocalLifecycleOwner
 import com.example.lifegame.ui.components.rememberReduceMotion
 import com.example.lifegame.ui.theme.LifeGameGold
 import com.example.lifegame.ui.theme.LifeGameLobbyPaper
@@ -202,7 +213,19 @@ internal fun PhoneFrame(
     background: Color = CompareNight,
     content: @Composable () -> Unit,
 ) {
-    Layout(content = content, modifier = modifier.clip(RoundedCornerShape(12.dp)).background(background)) { measurables, constraints ->
+    // Real screens embedded here (DecisionScreen's 장면 보기, popups) register BackHandlers. Give them their own
+    // dispatcher, one the activity never calls, so system back keeps leaving the comparison screen.
+    val lifecycleOwner = LocalLifecycleOwner.current
+    val isolatedBack = remember(lifecycleOwner) {
+        object : OnBackPressedDispatcherOwner {
+            override val onBackPressedDispatcher = OnBackPressedDispatcher()
+            override val lifecycle: Lifecycle get() = lifecycleOwner.lifecycle
+        }
+    }
+    Layout(
+        content = { CompositionLocalProvider(LocalOnBackPressedDispatcherOwner provides isolatedBack, content = content) },
+        modifier = modifier.clip(RoundedCornerShape(12.dp)).background(background),
+    ) { measurables, constraints ->
         val width = designWidth.roundToPx().coerceAtLeast(1)
         val height = designHeight.roundToPx().coerceAtLeast(1)
         val available = if (constraints.hasBoundedWidth) constraints.maxWidth else width
@@ -226,6 +249,7 @@ internal fun PhoneFrame(
  * One collapsible group of the comparison screen. The header is a button (펼치기 / 접기, state 펼침 / 접힘) tagged
  * [tag]; [content] is composed only while [expanded], so heavy previews cost nothing while the group is closed.
  */
+@OptIn(ExperimentalFoundationApi::class)
 @Composable
 internal fun CompareGroup(
     title: String,
@@ -236,6 +260,18 @@ internal fun CompareGroup(
     content: @Composable ColumnScope.() -> Unit,
 ) {
     val shape = RoundedCornerShape(14.dp)
+    // Opening a group closes the open one; when that one sits above, the page shrinks by its whole content (thousands of
+    // dp) and this header would land far above the viewport, its one-shot previews playing unseen. So a group opened by
+    // a tap brings its header into view once the collapse is laid out. A group restored open keeps the saved scroll.
+    val header = remember { BringIntoViewRequester() }
+    var settledExpanded by remember { mutableStateOf(expanded) }
+    LaunchedEffect(expanded) {
+        if (expanded && !settledExpanded) {
+            withFrameNanos { }
+            header.bringIntoView()
+        }
+        settledExpanded = expanded
+    }
     // Only the header is clipped (for its press feedback); the content is not, so halos near the edge still show.
     Column(
         Modifier.fillMaxWidth()
@@ -243,6 +279,7 @@ internal fun CompareGroup(
     ) {
         Row(
             Modifier.fillMaxWidth().heightIn(min = 56.dp)
+                .bringIntoViewRequester(header)
                 .clip(if (expanded) RoundedCornerShape(topStart = 14.dp, topEnd = 14.dp) else shape)
                 .clickable(role = Role.Button, onClickLabel = if (expanded) "접기" else "펼치기", onClick = onToggle)
                 .semantics { stateDescription = if (expanded) "펼침" else "접힘" }

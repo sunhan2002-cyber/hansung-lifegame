@@ -68,12 +68,14 @@ class Week20ScreenCaptureTest {
     private fun framed(width: Int, height: Int, content: @androidx.compose.runtime.Composable () -> Unit) {
         compose.setContent {
             val density = LocalDensity.current.density
-            CompositionLocalProvider(
-                LocalDensity provides Density(density, fontScale = fontScale),
-                // 캡처는 몇 프레임 뒤에 찍으므로 정지 화면으로 찍는다(시기 전환 · 해 도장이 반쯤 걸린 채 찍히지 않게).
-                LocalExperiencePreferences provides ExperiencePreferences(motionEnabled = false),
-            ) {
-                LifeGameTheme { Box(Modifier.requiredSize(width.dp, height.dp).clipToBounds()) { content() } }
+            CompositionLocalProvider(LocalDensity provides Density(density, fontScale = fontScale)) {
+                LifeGameTheme {
+                    // 캡처는 몇 프레임 뒤에 찍으므로 정지 화면으로 찍는다(시기 전환 · 해 도장이 반쯤 걸린 채 찍히지 않게).
+                    // LifeGameTheme가 저장된 설정으로 이 값을 다시 제공하므로, 테마 안쪽에서 덮어써야 효과가 있다.
+                    CompositionLocalProvider(LocalExperiencePreferences provides ExperiencePreferences(motionEnabled = false)) {
+                        Box(Modifier.requiredSize(width.dp, height.dp).clipToBounds()) { content() }
+                    }
+                }
             }
         }
     }

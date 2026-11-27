@@ -12,11 +12,17 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.drawBehind
+import androidx.compose.ui.draw.drawWithCache
+import androidx.compose.ui.geometry.CornerRadius
 import androidx.compose.ui.geometry.Offset
+import androidx.compose.ui.geometry.RoundRect
+import androidx.compose.ui.geometry.toRect
 import androidx.compose.ui.graphics.Brush
+import androidx.compose.ui.graphics.ClipOp
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.Path
 import androidx.compose.ui.graphics.drawscope.DrawScope
+import androidx.compose.ui.graphics.drawscope.clipPath
 import androidx.compose.ui.semantics.SemanticsPropertyKey
 import androidx.compose.ui.semantics.SemanticsPropertyReceiver
 import androidx.compose.ui.unit.dp
@@ -175,6 +181,12 @@ internal class ResultImpactMotion internal constructor(
 ) {
     internal val ms: Float get() = clock.value
 
+    /**
+     * When the rim glow starts. After a live pick the outcome card is still fading in (transparent, drawn 12dp low)
+     * until PICK_EXIT_MS, and the glow would read as a filled panel through it, so the glow waits for the card.
+     */
+    internal val glowStartMs: Float = startMs + resultImpactGlowDelayMs(startMs.toInt())
+
     /** Draw-phase offset of the scrolled content (and of a picked card's exit, so they move together). */
     fun contentOffset(scope: DrawScope): Offset {
         val impact = impact ?: return Offset.Zero
@@ -207,7 +219,8 @@ internal fun rememberResultImpact(
     val effective = impact?.takeIf {
         playNow && style != BigResultStyle.NONE && it.tier != ResultImpactTier.CALM
     }
-    val total = if (effective == null) 0 else startMs + resultImpactDurationMs(style, effective)
+    // The clock also covers the rim glow, which waits for the card after a live pick (see glowStartMs).
+    val total = if (effective == null) 0 else startMs + resultImpactGlowDelayMs(startMs) + resultImpactDurationMs(style, effective)
     val clock = rememberOneShotClock(key = key, active = effective != null, totalMs = total)
     val haptics = rememberMotionHaptics()
     LaunchedEffect(key) {
@@ -231,29 +244,40 @@ internal fun Modifier.resultImpactShake(motion: ResultImpactMotion): Modifier =
  */
 internal fun Modifier.resultImpactGlow(motion: ResultImpactMotion): Modifier {
     val impact = motion.impact ?: return this
-    return drawBehind {
-        val t = motion.ms - motion.startMs
-        if (t < 0f) return@drawBehind
-        val color = if (impact.good) LifeGameGold else LifeGameStatDown
+    return drawWithCache {
         val corner = 12.dp.toPx()
-        when (motion.style) {
-            BigResultStyle.THUD -> if (impact.tier == ResultImpactTier.NOTABLE) {
-                drawRimGlow(color, alpha = 0.25f * (1f - t / 500f).coerceIn(0f, 1f), reach = 6.dp.toPx(), corner = corner)
-            }
-            BigResultStyle.GLOW -> when (impact.tier) {
-                ResultImpactTier.NOTABLE ->
-                    drawRimGlow(color, alpha = 0.3f * (1f - t / 700f).coerceIn(0f, 1f), reach = 8.dp.toPx(), corner = corner)
-                ResultImpactTier.BIG -> drawRimGlow(
-                    color,
-                    alpha = 0.45f * (1f - t / 900f).coerceIn(0f, 1f),
-                    reach = (if (impact.good) 16 else 14).dp.toPx(),
-                    corner = corner,
-                    layers = 4,
-                )
-                ResultImpactTier.CALM, ResultImpactTier.FINAL -> Unit
-            }
-            BigResultStyle.NONE -> Unit
+        // Only ever a rim: the card's own area is cut out, whatever the card's opacity at that moment.
+        val card = Path().apply { addRoundRect(RoundRect(size.toRect(), CornerRadius(corner))) }
+        onDrawBehind {
+            val t = motion.ms - motion.glowStartMs
+            if (t < 0f) return@onDrawBehind
+            clipPath(card, clipOp = ClipOp.Difference) { drawResultRim(motion, impact, t, corner) }
         }
+    }
+}
+
+/** After a live pick ([startMs] > 0) the glow waits until the outcome card has faded in (PICK_EXIT_MS on the pick clock). */
+private fun resultImpactGlowDelayMs(startMs: Int): Int = if (startMs > 0) PICK_EXIT_MS - PICK_RESULT_DELAY_MS else 0
+
+private fun DrawScope.drawResultRim(motion: ResultImpactMotion, impact: ResultImpact, t: Float, corner: Float) {
+    val color = if (impact.good) LifeGameGold else LifeGameStatDown
+    when (motion.style) {
+        BigResultStyle.THUD -> if (impact.tier == ResultImpactTier.NOTABLE) {
+            drawRimGlow(color, alpha = 0.25f * (1f - t / 500f).coerceIn(0f, 1f), reach = 6.dp.toPx(), corner = corner)
+        }
+        BigResultStyle.GLOW -> when (impact.tier) {
+            ResultImpactTier.NOTABLE ->
+                drawRimGlow(color, alpha = 0.3f * (1f - t / 700f).coerceIn(0f, 1f), reach = 8.dp.toPx(), corner = corner)
+            ResultImpactTier.BIG -> drawRimGlow(
+                color,
+                alpha = 0.45f * (1f - t / 900f).coerceIn(0f, 1f),
+                reach = (if (impact.good) 16 else 14).dp.toPx(),
+                corner = corner,
+                layers = 4,
+            )
+            ResultImpactTier.CALM, ResultImpactTier.FINAL -> Unit
+        }
+        BigResultStyle.NONE -> Unit
     }
 }
 

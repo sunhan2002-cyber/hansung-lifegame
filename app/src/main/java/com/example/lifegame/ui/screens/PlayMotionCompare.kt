@@ -16,12 +16,10 @@
  */
 package com.example.lifegame.ui.screens
 
-import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
@@ -33,7 +31,6 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.clip
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
@@ -189,17 +186,18 @@ private fun ChoiceDemoSlot(
     if (section == showing) {
         content()
     } else {
-        Box(
-            Modifier.fillMaxWidth().heightIn(min = 88.dp).clip(RoundedCornerShape(12.dp)).background(CompareNight).padding(14.dp),
-            contentAlignment = Alignment.Center,
-        ) {
-            Text(
-                "다른 효과를 미리보는 중이에요.\n버전을 고르거나 ▶ 다시 재생을 누르면 여기에서 보여요.",
-                color = ComparePaper.copy(alpha = 0.7f),
-                fontSize = 12.sp,
-                lineHeight = 17.sp,
-                textAlign = TextAlign.Center,
-            )
+        // The same PhoneFrame size as the live preview: when another section takes the screen, this slot keeps its
+        // height, so the page (a plain verticalScroll without anchoring) never jumps under the user.
+        PhoneFrame(Modifier.fillMaxWidth()) {
+            Box(Modifier.fillMaxSize().padding(24.dp), contentAlignment = Alignment.Center) {
+                Text(
+                    "다른 효과를 미리보는 중이에요.\n버전을 고르거나 ▶ 다시 재생을 누르면 여기에서 보여요.",
+                    color = ComparePaper.copy(alpha = 0.7f),
+                    fontSize = 14.sp,
+                    lineHeight = 20.sp,
+                    textAlign = TextAlign.Center,
+                )
+            }
         }
     }
 }
@@ -251,6 +249,7 @@ private fun ChoiceDemoScreen(
                     }
                 },
                 skipImagePreview = true,
+                bringChoicesIntoView = false,
             )
         }
     }

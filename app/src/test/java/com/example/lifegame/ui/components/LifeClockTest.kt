@@ -210,6 +210,22 @@ class LifeClockTest {
         assertFalse("the same number does not roll", periodTrackPlan(AgeStampStyle.ROLL, mark(1, 1), mark(2, 1), "1번째 해")!!.rolls)
     }
 
+    @Test fun theMarkerTravelShrinksWithAutoSpeedSoItFitsTheYear() {
+        val at1x = periodTrackPlan(AgeStampStyle.BIG_STAMP, mark(4, 5), mark(5, 1, speed = 1), "1번째 해")!!
+        assertEquals(560f, at1x.travelMs, 0f)
+        assertEquals(280f, periodTrackPlan(AgeStampStyle.BIG_STAMP, mark(4, 5), mark(5, 1, speed = 2), "1번째 해")!!.travelMs, 0f)
+        val at4x = periodTrackPlan(AgeStampStyle.BIG_STAMP, mark(4, 5), mark(5, 1, speed = 4), "1번째 해")!!
+        assertEquals("floored", 240f, at4x.travelMs, 0f)
+        // At 4× a year is 750 ms: the 280 ms turn plus the travel must land inside it.
+        assertTrue(280f + at4x.travelMs < 750f)
+        // At 4× years pass faster than a stamp: no stamp, only the marker (and nothing at all within a period).
+        assertEquals(0, at4x.glyphCount)
+        assertNull(periodTrackPlan(AgeStampStyle.BIG_STAMP, mark(5, 1, speed = 4), mark(5, 2, speed = 4), "2번째 해"))
+        assertEquals(4, periodTrackPlan(AgeStampStyle.BIG_STAMP, mark(5, 1, speed = 2), mark(5, 2, speed = 2), "2번째 해")!!.glyphCount)
+        // Only AUTO screens run at a speed: a decision screen keeps the full travel.
+        assertEquals(560f, periodTrackPlan(AgeStampStyle.BIG_STAMP, mark(4, 5), mark(5, 1, PlayPhase.DECISION, speed = 4), "1번째 해")!!.travelMs, 0f)
+    }
+
     @Test fun aNewerTrackTravelsOnlyFromWhereTheMarkerAlreadyStands() {
         // 4×: the marker reached period 2 for (2,1) but that stamp never landed, so trackShown is still (1,5).
         val memory = LifeClockMemory(seed = mark(1, 5))

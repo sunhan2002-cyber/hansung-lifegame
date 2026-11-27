@@ -227,6 +227,11 @@ fun DecisionScreen(
     modifier: Modifier = Modifier,
     /** 같은 장면을 방금 다른 화면(돌잡이 컷신)에서 보여 줬으면 선노출을 건너뛰고 본문부터 시작한다. */
     skipImagePreview: Boolean = false,
+    /**
+     * 선택지가 처음 나타날 때 첫 카드가 보이게 스크롤한다. 연출 비교 화면처럼 바깥 스크롤 안에 축소해 넣은 미리보기는
+     * false: 이 요청은 바깥 스크롤까지 올라가 비교 화면 전체를 움직인다.
+     */
+    bringChoicesIntoView: Boolean = true,
 ) {
     val decision = state.decision ?: return
     val outcome = state.outcome
@@ -392,7 +397,7 @@ fun DecisionScreen(
         // 본문이 저절로 끝나는 순간 막 나타난 선택지 카드에 터치가 떨어지지 않게 짧게 삼킨다.
         swallowTaps = true
         withFrameNanos { } // 선택지가 한 번 배치된 뒤에 잰다.
-        choicesInView.bringIntoView()
+        if (bringChoicesIntoView) choicesInView.bringIntoView()
     }
 
     // ---- play 연출(선택지 등장 · 고른 카드 · 능력치 변화 · 큰 결과). 모두 표시 전용이고 그리기 단계에서만 움직인다. ----

@@ -260,6 +260,9 @@ internal fun rememberLifeClockFor(mark: LifeMark?, seed: LifeMark? = null, perio
 /** Timing of the lifeline motion (ms). The stamp shapes follow the stage-2 design; values only this file reads. */
 private object LifeClockTiming {
     const val TRAVEL = 560f
+
+    /** The shortest travel (at high auto-progress speeds). */
+    const val TRAVEL_MIN = 240f
     // SEAL: drop spring, impact ring, hold, lift.
     const val SEAL_DAMPING = 0.42f
     const val SEAL_STIFFNESS = 520f
@@ -348,11 +351,21 @@ internal data class PeriodTrackPlan(
     val toIndex: Int,
     val glyphCount: Int,
     val rolls: Boolean,
+    /** The auto-progress speed of an AUTO target (1 otherwise): the travel shrinks with it, like the period turn. */
+    val speed: Int = 1,
 ) {
     private val hasStamp: Boolean get() = glyphCount > 0
 
-    /** The marker's travel time; 0 when the period stayed the same. */
-    val travelMs: Float = if (fromIndex != toIndex && fromIndex >= 0) LifeClockTiming.TRAVEL else 0f
+    /**
+     * The marker's travel time; 0 when the period stayed the same. On an AUTO screen at 4× a year lasts 750 ms, and
+     * turn (280 ms) + a fixed 560 ms travel would outlast it, cutting the travel short so the next screen travelled it
+     * again; so the travel scales with the speed (floored), as the turn does.
+     */
+    val travelMs: Float = when {
+        fromIndex == toIndex || fromIndex < 0 -> 0f
+        speed > 1 -> max(LifeClockTiming.TRAVEL_MIN, LifeClockTiming.TRAVEL / speed)
+        else -> LifeClockTiming.TRAVEL
+    }
 
     /** When the stamp itself starts: after the travel (ROLL's tag rides along with the marker during it). */
     val stampStartMs: Float = when {
@@ -513,6 +526,9 @@ internal data class PeriodTrackPlan(
     }
 }
 
+/** From this auto-progress speed on, years pass too fast for a stamp; only the marker travels. */
+internal const val FAST_AUTO_SPEED = 4
+
 /**
  * The plan for a change from [from] to [to], or null when nothing moves (NONE, or neither a new period nor a label to
  * stamp). [yearLabel] is PeriodTrack's label for [to] ("3번째 해"); without one only the marker travels.
@@ -520,7 +536,10 @@ internal data class PeriodTrackPlan(
 internal fun periodTrackPlan(style: AgeStampStyle, from: LifeMark, to: LifeMark, yearLabel: String?): PeriodTrackPlan? {
     if (style == AgeStampStyle.NONE) return null
     val traveling = from.periodIndex >= 0 && from.periodIndex != to.periodIndex
-    val glyphs = yearStampGlyphs(yearLabel).count { it.stamped }
+    // At 4× auto progress a year lasts 750 ms, shorter than any stamp: it would be cut and restamped every year (with a
+    // haptic each time). There only the marker moves; the track's own label still shows the new year.
+    val fast = to.phase == PlayPhase.AUTO && to.speed >= FAST_AUTO_SPEED
+    val glyphs = if (fast) 0 else yearStampGlyphs(yearLabel).count { it.stamped }
     if (!traveling && glyphs == 0) return null
     val number = yearStampNumber(yearLabel)
     return PeriodTrackPlan(
@@ -529,6 +548,7 @@ internal fun periodTrackPlan(style: AgeStampStyle, from: LifeMark, to: LifeMark,
         toIndex = to.periodIndex,
         glyphCount = glyphs,
         rolls = number != null && number.digits != from.year.toString(),
+        speed = if (to.phase == PlayPhase.AUTO) to.speed.coerceAtLeast(1) else 1,
     )
 }
 
@@ -721,11 +741,13 @@ private suspend fun PeriodTrackMotion.play(
         last = now
     }
     var committed = false
+    var traveling = false
+    var arrived = false
     // No new stamp over visible choices, and none under reduced motion: show the new state as it is.
-    if (!reduceNow.value && !yieldNow.value) {
+    if (!reduceNow.value && !yieldNow.value) try {
         var start = -1L
         var beaten = false
-        var arrived = false
+        traveling = true
         while (true) {
             val now = withFrameMillis { it }
             if (start < 0L) start = now
@@ -750,6 +772,10 @@ private suspend fun PeriodTrackMotion.play(
             }
             if (t >= plan.endMs(yieldAt)) break
         }
+    } finally {
+        // Cancelled mid-travel (a newer mark, a screen swap): the marker was on its way, so a later track starts from
+        // the target period instead of travelling back over it. The stamp itself still replays (nothing committed).
+        if (traveling && !arrived) onArrive()
     }
     if (!committed) onCommit()
     clockMs.floatValue = Float.POSITIVE_INFINITY

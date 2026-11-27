@@ -183,13 +183,16 @@ internal fun Modifier.choiceEntrance(reveal: ChoiceRevealMotion, index: Int): Mo
     if (!reveal.animates) return this
     return when (reveal.style) {
         ChoiceRevealStyle.NONE -> this
+        // ModulateAlpha: an offscreen fade layer (the default) is bounded by the card and would clip the draw-only move.
         ChoiceRevealStyle.RISE -> graphicsLayer {
             alpha = (1.6f * choiceRiseProgress(reveal.ms, index)).coerceAtMost(1f)
+            compositingStrategy = CompositingStrategy.ModulateAlpha
         }.drawOffset {
             Offset(0f, (1f - RiseEasing.transform(choiceRiseProgress(reveal.ms, index))) * 16.dp.toPx())
         }
         ChoiceRevealStyle.DEAL -> graphicsLayer {
             alpha = (2.5f * choiceDealProgress(reveal.ms, index)).coerceIn(0f, 1f)
+            compositingStrategy = CompositingStrategy.ModulateAlpha
         }.drawWithContent {
             val away = 1f - choiceDealProgress(reveal.ms, index)
             if (away == 0f) {
@@ -395,7 +398,13 @@ internal class ChoicePickState internal constructor(
         val window = choicePickWindow(style, part) ?: return Modifier
         val start = window.startMs.toFloat()
         val duration = (window.endMs - window.startMs).toFloat()
-        val faded = Modifier.graphicsLayer { alpha = stepProgress(clock.value, start, duration) }
+        // Parts that rise fade per draw (ModulateAlpha) so the bounded offscreen layer cannot clip the rise; text that
+        // only fades keeps group opacity for its shadow.
+        val rises = window.rises
+        val faded = Modifier.graphicsLayer {
+            alpha = stepProgress(clock.value, start, duration)
+            if (rises) compositingStrategy = CompositingStrategy.ModulateAlpha
+        }
         return if (!window.rises) faded else faded.drawOffset {
             Offset(0f, (1f - stepProgress(clock.value, start, duration, RiseEasing)) * 12.dp.toPx())
         }
