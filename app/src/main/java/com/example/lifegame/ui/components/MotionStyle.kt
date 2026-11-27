@@ -18,13 +18,14 @@ import androidx.compose.ui.platform.LocalContext
  *
  * The debug-only "연출 비교" screen lets the team try the variants side by side and apply one to the real
  * app; [MotionStyle.Default] is what ships. Stage 1 (press · highlight · entrance) was chosen on 2026-11-26 and
- * stage 2 on 2026-11-27, both in "연출 비교" (stage 2 kept every recommended variant).
+ * stage 2 on 2026-11-27, both in "연출 비교" (stage 2 kept every recommended variant). On 2026-11-27 the main-button
+ * highlight became PULSE_SHINE (the breathing glow plus the shine band) at the user's request.
  * Each field is read only by the area named in the comment above it.
  */
 data class MotionStyle(
     // 1단계 · 로비와 버튼
     val press: PressStyle = PressStyle.BOUNCE_INK,
-    val highlight: HighlightStyle = HighlightStyle.PULSE,
+    val highlight: HighlightStyle = HighlightStyle.PULSE_SHINE,
     val entrance: EntranceStyle = EntranceStyle.STAMP_STAGGER,
     // 2단계 · 플레이 화면 (play)
     val choiceReveal: ChoiceRevealStyle = ChoiceRevealStyle.RISE,
@@ -61,6 +62,7 @@ enum class HighlightStyle(val label: String, val detail: String) {
     SHINE("빛줄기", "몇 초마다 빛이 대각선으로 지나감"),
     SHINE_GLOW("빛줄기 + 테두리", "빛줄기와 은은하게 빛나는 테두리"),
     PULSE("숨쉬는 빛", "버튼 주변 빛이 천천히 커졌다 작아짐"),
+    PULSE_SHINE("숨쉬는 빛 + 빛줄기", "숨쉬는 빛에 더해, 숨 두 번마다 빛줄기가 대각선으로 지나감"),
 }
 
 enum class EntranceStyle(val label: String, val detail: String) {

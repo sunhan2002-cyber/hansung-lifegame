@@ -128,6 +128,22 @@ internal fun Modifier.inkSplash(interactions: InteractionSource, color: Color, e
     }
 }
 
+private val GlowStyles = setOf(HighlightStyle.SHINE_GLOW, HighlightStyle.PULSE, HighlightStyle.PULSE_SHINE)
+private val ShineStyles = setOf(HighlightStyle.SHINE, HighlightStyle.SHINE_GLOW, HighlightStyle.PULSE_SHINE)
+
+/** How long the shine band takes to cross the button (0.3 of SHINE's 3.8 s cycle). */
+private const val SHINE_SWEEP_MS = 1_140f
+
+/**
+ * One highlight cycle. PULSE breathes every 2.6 s; SHINE sweeps once per 3.8 s; PULSE_SHINE keeps PULSE's breath and
+ * lets the band pass every other breath (5.2 s), so the button stays calm between sweeps.
+ */
+private fun highlightPeriodMillis(style: HighlightStyle): Int = when (style) {
+    HighlightStyle.PULSE -> 2_600
+    HighlightStyle.PULSE_SHINE -> 5_200
+    HighlightStyle.NONE, HighlightStyle.SHINE, HighlightStyle.SHINE_GLOW -> 3_800
+}
+
 /**
  * A looping 0..1 phase for the call-to-action highlight. Null (nothing drawn) for NONE and under
  * reduced motion; while the screen is not resumed (navigation transitions) it rests at phase 0, so the
@@ -143,7 +159,7 @@ internal fun rememberHighlightPhase(style: HighlightStyle = LocalMotionStyle.cur
         initialValue = 0f,
         targetValue = 1f,
         animationSpec = infiniteRepeatable(
-            tween(if (style == HighlightStyle.PULSE) 2_600 else 3_800, easing = LinearEasing),
+            tween(highlightPeriodMillis(style), easing = LinearEasing),
             RepeatMode.Restart,
         ),
         label = "cta_highlight_phase",
@@ -152,10 +168,12 @@ internal fun rememberHighlightPhase(style: HighlightStyle = LocalMotionStyle.cur
 
 /** Soft halo outside the button. Place before the button's clip so it can draw past its bounds. */
 internal fun Modifier.ctaGlow(phase: State<Float>?, style: HighlightStyle, color: Color, corner: Dp): Modifier {
-    if (phase == null || (style != HighlightStyle.SHINE_GLOW && style != HighlightStyle.PULSE)) return this
+    if (phase == null || style !in GlowStyles) return this
+    // PULSE_SHINE's phase spans two breaths (so the shine passes every other breath): breathe twice per cycle.
+    val breaths = if (style == HighlightStyle.PULSE_SHINE) 2f else 1f
     return drawBehind {
-        val breath = (sin(phase.value * 2f * PI.toFloat()) + 1f) / 2f
-        val pulse = style == HighlightStyle.PULSE
+        val breath = (sin(phase.value * breaths * 2f * PI.toFloat()) + 1f) / 2f
+        val pulse = style == HighlightStyle.PULSE || style == HighlightStyle.PULSE_SHINE
         val reach = (if (pulse) 3f + breath * 9f else 2f + breath * 4f).dp.toPx()
         val peak = if (pulse) 0.34f - breath * 0.2f else 0.16f + breath * 0.14f
         val layers = 4
@@ -173,10 +191,12 @@ internal fun Modifier.ctaGlow(phase: State<Float>?, style: HighlightStyle, color
 
 /** A diagonal band of light sweeping across the button. Place after the clip and background. */
 internal fun Modifier.ctaShine(phase: State<Float>?, style: HighlightStyle): Modifier {
-    if (phase == null || (style != HighlightStyle.SHINE && style != HighlightStyle.SHINE_GLOW)) return this
+    if (phase == null || style !in ShineStyles) return this
+    // The band always takes SHINE_SWEEP_MS to cross, whatever the cycle length.
+    val window = SHINE_SWEEP_MS / highlightPeriodMillis(style)
     return drawWithContent {
         drawContent()
-        val sweep = phase.value / 0.3f
+        val sweep = phase.value / window
         if (sweep < 1f) {
             val band = size.width * 0.16f
             val x = -band * 2f + (size.width + band * 4f) * FastOutSlowInEasing.transform(sweep)
