@@ -109,6 +109,21 @@ class CreationEndingMotionTest {
 
     private fun SemanticsNodeInteraction.bitmap(): Bitmap = captureToImage().asAndroidBitmap()
 
+    /**
+     * performScrollTo() keeps re-issuing an animated semantics scroll until the node is fully visible. With the main
+     * clock paused that animation never runs, so the call never returns: let the clock run just for the scroll.
+     */
+    private fun SemanticsNodeInteraction.scrollToWithRunningClock(): SemanticsNodeInteraction {
+        val paused = !compose.mainClock.autoAdvance
+        compose.mainClock.autoAdvance = true
+        try {
+            performScrollTo()
+        } finally {
+            if (paused) compose.mainClock.autoAdvance = false
+        }
+        return this
+    }
+
     // ---- profileEntrance --------------------------------------------------------------------------------
 
     @Test fun everyProfileEntranceKeepsTapsLandingWhileItPlays() {
@@ -130,7 +145,8 @@ class CreationEndingMotionTest {
             compose.onNodeWithText("남").performClick()
             compose.mainClock.advanceTimeByFrame()
             compose.onNodeWithText("남").assertIsSelected()
-            compose.onNodeWithTag("dice_roll").performScrollTo().performClick()
+            // Visible already (its lower edge touches the viewport); performScrollTo would spin with the clock paused.
+            compose.onNodeWithTag("dice_roll").performClick()
             compose.mainClock.advanceTimeByFrame()
             compose.onNodeWithTag("dice_reroll").assertExists()
             compose.onNodeWithText("이 인생 시작하기").assertExists()
@@ -147,7 +163,8 @@ class CreationEndingMotionTest {
         compose.mainClock.advanceTimeByFrame()
         // The dice group would start rising at 380 ms; roll long before that.
         compose.mainClock.advanceTimeBy(64)
-        compose.onNodeWithTag("dice_roll").performScrollTo().performClick()
+        // Visible already (its lower edge touches the viewport); performScrollTo would spin with the clock paused.
+        compose.onNodeWithTag("dice_roll").performClick()
         compose.mainClock.advanceTimeByFrame()
         val stage = compose.onNodeWithTag("dice_3d_stage").bitmap()
         val row = compose.onNodeWithTag("dice_row_운동능력").bitmap()
@@ -425,7 +442,7 @@ class CreationEndingMotionTest {
         compose.mainClock.advanceTimeByFrame()
         compose.onNodeWithTag("recap_skip").performClick()
         compose.mainClock.advanceTimeByFrame()
-        compose.onNodeWithTag("future_next").performScrollTo().performClick()
+        compose.onNodeWithTag("future_next").scrollToWithRunningClock().performClick()
         compose.mainClock.advanceTimeByFrame()
     }
 

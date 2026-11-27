@@ -21,6 +21,7 @@ import androidx.compose.ui.test.onAllNodesWithTag
 import androidx.compose.ui.test.onNodeWithTag
 import androidx.compose.ui.test.onRoot
 import androidx.compose.ui.test.performClick
+import androidx.compose.ui.test.SemanticsNodeInteraction
 import androidx.compose.ui.test.performScrollTo
 import androidx.compose.ui.test.performTouchInput
 import androidx.compose.ui.test.swipeUp
@@ -127,8 +128,23 @@ class TitleUnlockTest {
         compose.mainClock.advanceTimeByFrame()
     }
 
+    /**
+     * performScrollTo() keeps re-issuing an animated semantics scroll until the node is fully visible. With the main
+     * clock paused that animation never runs, so the call never returns: let the clock run just for the scroll.
+     */
+    private fun SemanticsNodeInteraction.scrollToWithRunningClock(): SemanticsNodeInteraction {
+        val paused = !compose.mainClock.autoAdvance
+        compose.mainClock.autoAdvance = true
+        try {
+            performScrollTo()
+        } finally {
+            if (paused) compose.mainClock.autoAdvance = false
+        }
+        return this
+    }
+
     private fun openCertificate() {
-        compose.onNodeWithTag("future_next").performScrollTo().performClick()
+        compose.onNodeWithTag("future_next").scrollToWithRunningClock().performClick()
         compose.mainClock.advanceTimeByFrame()
     }
 
