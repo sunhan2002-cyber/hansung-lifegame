@@ -58,6 +58,7 @@ import com.example.lifegame.ui.components.glyphStamp
 import com.example.lifegame.ui.components.rememberEntranceMotionAllowed
 import com.example.lifegame.ui.components.rememberOneShotClock
 import com.example.lifegame.ui.components.rememberReduceMotion
+import com.example.lifegame.ui.components.safeCubicBezierEasing
 import com.example.lifegame.ui.components.stepProgress
 import com.example.lifegame.ui.components.withStampTransform
 import com.example.lifegame.ui.startingStatRows
@@ -113,7 +114,7 @@ internal object ProfileEntranceTimeline {
     /** Perspective of the fold, as graphicsLayer cameraDistance (× density). */
     const val UNFOLD_CAMERA_DISTANCE = 14f
     /** Swings a little (about 2%) past flat, then settles. */
-    val UnfoldEasing = CubicBezierEasing(0.2f, 1.25f, 0.4f, 1f)
+    val UnfoldEasing = safeCubicBezierEasing(0.2f, 1.25f, 0.4f, 1f)
 
     fun startMs(style: ProfileEntranceStyle, group: Int): Float = when (style) {
         ProfileEntranceStyle.NONE -> 0f

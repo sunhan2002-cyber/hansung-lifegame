@@ -164,7 +164,7 @@ internal fun periodTurnTiming(style: PeriodTransitionStyle, speed: Int): PeriodT
 }
 
 /** The peel's pace: a slow lift, a quick sweep and a soft settle. */
-private val PageTurnEasing = CubicBezierEasing(0.5f, 0f, 0.25f, 1f)
+private val PageTurnEasing = safeCubicBezierEasing(0.5f, 0f, 0.25f, 1f)
 
 /** The direction the page corner is dragged: toward the upper left, a little flatter than the diagonal. */
 internal val PageTurnDirection: Offset = Offset(-1f, -0.42f).let { it / it.getDistance() }

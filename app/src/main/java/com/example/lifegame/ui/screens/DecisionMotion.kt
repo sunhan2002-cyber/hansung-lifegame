@@ -58,6 +58,7 @@ import com.example.lifegame.ui.components.drawOffset
 import com.example.lifegame.ui.components.drawRimGlow
 import com.example.lifegame.ui.components.rememberEntranceMotionAllowed
 import com.example.lifegame.ui.components.rememberOneShotClock
+import com.example.lifegame.ui.components.safeCubicBezierEasing
 import com.example.lifegame.ui.components.statChangeSpring
 import com.example.lifegame.ui.components.statChangeSpringPulse
 import com.example.lifegame.ui.components.stepProgress
@@ -108,7 +109,7 @@ private const val DEAL_SETTLE_MS = 560f
 private const val INK_STAGGER_MS = 80f
 private const val INK_MS = 440f
 private const val REVEAL_FADE_MS = 220f
-private val InkEasing = CubicBezierEasing(0.25f, 0.1f, 0.25f, 1f)
+private val InkEasing = safeCubicBezierEasing(0.25f, 0.1f, 0.25f, 1f)
 
 /**
  * One choice reveal. When [animates] is false every reveal modifier is a no-op (the cards simply appear, as

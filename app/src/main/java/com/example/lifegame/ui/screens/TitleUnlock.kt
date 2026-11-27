@@ -128,6 +128,7 @@ import com.example.lifegame.ui.components.rememberEntranceMotionAllowed
 import com.example.lifegame.ui.components.rememberHighlightPhase
 import com.example.lifegame.ui.components.rememberReduceMotion
 import com.example.lifegame.ui.components.rememberTouchExploration
+import com.example.lifegame.ui.components.safeCubicBezierEasing
 import com.example.lifegame.ui.components.stepProgress
 import com.example.lifegame.ui.theme.LifeGameCard
 import com.example.lifegame.ui.theme.LifeGameGold
@@ -489,10 +490,10 @@ internal data class TitleUnlockMedalPose(
     }
 }
 
-private val TitleUnlockFallEasing = CubicBezierEasing(0.55f, 0.085f, 0.68f, 0.53f)
-private val TitleUnlockSpinEasing = CubicBezierEasing(0.15f, 0.6f, 0.25f, 1f)
-private val TitleUnlockStampDownEasing = CubicBezierEasing(0.6f, 0f, 0.9f, 0.4f)
-private val TitleUnlockFlipEasing = CubicBezierEasing(0.34f, 1.4f, 0.64f, 1f)
+private val TitleUnlockFallEasing = safeCubicBezierEasing(0.55f, 0.085f, 0.68f, 0.53f)
+private val TitleUnlockSpinEasing = safeCubicBezierEasing(0.15f, 0.6f, 0.25f, 1f)
+private val TitleUnlockStampDownEasing = safeCubicBezierEasing(0.6f, 0f, 0.9f, 0.4f)
+private val TitleUnlockFlipEasing = safeCubicBezierEasing(0.34f, 1.4f, 0.64f, 1f)
 
 /** One real bounce after the landing: up 12dp, down, up 4dp, down (dp, ms after the impact). */
 private val TitleUnlockBounce = TitleUnlockKeyframes(

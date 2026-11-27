@@ -64,8 +64,29 @@ import kotlin.math.sin
 // Curves
 // ---------------------------------------------------------------------------------------------------------
 
+/**
+ * A cubic-bézier easing that never throws. Compose 1.7's CubicBezierEasing fails to solve some curves for a fraction a
+ * hair below 1 ("The cubic curve … has no solution at 0.99999994"): RiseEasing and the title-unlock flip did, and the
+ * exception took the app down while the 연출 비교 lobby preview replayed its entrance. The ends are exact, and a failed
+ * solve falls back to the fraction itself (the curve is at its end value there anyway). Every curve we define uses this.
+ */
+internal fun safeCubicBezierEasing(a: Float, b: Float, c: Float, d: Float): Easing {
+    val curve = CubicBezierEasing(a, b, c, d)
+    return Easing { fraction ->
+        when {
+            fraction <= 0f -> 0f
+            fraction >= 1f -> 1f
+            else -> try {
+                curve.transform(fraction)
+            } catch (e: IllegalArgumentException) {
+                fraction
+            }
+        }
+    }
+}
+
 /** The lobby entrance curve the user picked in stage 1: a quick lift that settles softly (no overshoot). */
-internal val RiseEasing: Easing = CubicBezierEasing(0.18f, 0.9f, 0.24f, 1f)
+internal val RiseEasing: Easing = safeCubicBezierEasing(0.18f, 0.9f, 0.24f, 1f)
 
 /**
  * Back-out (Penner, overshoot constant 1.70158): passes the target by about 10% near 58% of the way, then
