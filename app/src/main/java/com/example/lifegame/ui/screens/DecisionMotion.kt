@@ -467,7 +467,7 @@ private val PickSealRing = Color(0xFFB89255)
 @Composable
 internal fun ChoiceExitOverlay(pick: ChoicePickState, contentOffset: DrawScope.() -> Offset) {
     val live = pick.live ?: return
-    val measurer = rememberTextMeasurer()
+    val measurer = rememberTextMeasurer(cacheSize = 32)
     Canvas(Modifier.fillMaxSize()) {
         val t = pick.clock.value
         if (t >= PICK_EXIT_MS || !drawContext.canvas.nativeCanvas.isHardwareAccelerated) return@Canvas

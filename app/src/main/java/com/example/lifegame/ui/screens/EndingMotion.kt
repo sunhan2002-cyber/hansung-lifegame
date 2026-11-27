@@ -1,5 +1,6 @@
 package com.example.lifegame.ui.screens
 
+import androidx.compose.ui.unit.Density
 import androidx.compose.animation.ContentTransform
 import androidx.compose.animation.core.EaseOut
 import androidx.compose.animation.core.FastOutLinearInEasing
@@ -376,7 +377,10 @@ internal fun certificateSealSpecks(runId: String): List<CertificateSealSpeck> {
     return List(7) { CertificateSealSpeck(x = (next() - 0.5f) * 0.72f, y = (next() - 0.5f) * 0.72f, radius = 0.010f + next() * 0.022f) }
 }
 
-/** What the seal of one record looks like: its lettering (measured once per draw cache) and its specks. */
+/**
+ * What the seal of one record looks like: its lettering (measured once per draw cache, at font scale 1 because the
+ * stamp is fixed-size art — larger system text would spill out of its 40dp frame) and its specks.
+ */
 @Stable
 internal class CertificateSealArt(val measurer: TextMeasurer, runId: String) {
     val specks: List<CertificateSealSpeck> = certificateSealSpecks(runId)
@@ -399,8 +403,8 @@ internal fun rememberCertificateSealArt(runId: String): CertificateSealArt {
  */
 internal fun Modifier.certificateSeal(style: CertificateSealStyle, clock: State<Float>, art: CertificateSealArt): Modifier =
     if (style == CertificateSealStyle.NONE) this else drawWithCache {
-        val top = art.measurer.measure("인생", art.lettering)
-        val bottom = art.measurer.measure("기록", art.lettering)
+        val top = art.measurer.measure("인생", art.lettering, density = Density(density, fontScale = 1f))
+        val bottom = art.measurer.measure("기록", art.lettering, density = Density(density, fontScale = 1f))
         val side = CertificateRevealTimeline.SealSize.toPx()
         val centre = Offset(
             (14.dp + 64.dp - 4.dp).toPx(),

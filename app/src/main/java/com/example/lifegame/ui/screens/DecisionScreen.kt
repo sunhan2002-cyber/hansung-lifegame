@@ -1196,7 +1196,7 @@ private fun FloatingChanges(
         exit = fadeOut(tween(320)) + slideOutVertically(tween(320)) { -it / 2 },
     ) {
         val motion = rememberStatChangeChips(style, changes.size)
-        val measurer = rememberTextMeasurer()
+        val measurer = rememberTextMeasurer(cacheSize = 32)
         val places = remember(changes.size) { StatChangeChipPlaces(changes.size) }
         // 칩이 한 줄에 다 들어가지 않으면 다음 줄로 넘긴다(한 칩을 좁혀 글자가 세로로 꺾이지 않게).
         FlowRow(

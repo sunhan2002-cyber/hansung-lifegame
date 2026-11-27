@@ -172,11 +172,13 @@ class LifeTransitionsTest {
         )
     }
 
-    /** The centre pixel of lifeline dot [index] in a capture of the track (14dp side and 8dp top padding, 24dp canvas). */
+    /**
+     * The centre pixel of lifeline dot [index] in a capture of the track. The capture is the period_track node's own
+     * box, which excludes PeriodTrack's outer padding, so the 24dp line canvas starts at its top-left.
+     */
     private fun dot(image: Bitmap, index: Int): Int {
-        val side = 14.dp.px()
-        val cell = (image.width - 2f * side) / Periods.size
-        return image.getPixel((side + cell * (index + 0.5f)).roundToInt(), (8.dp.px() + 12.dp.px()).roundToInt())
+        val cell = image.width / Periods.size.toFloat()
+        return image.getPixel((cell * (index + 0.5f)).roundToInt(), 12.dp.px().roundToInt())
     }
 
     private fun Int.isNear(color: Color, tolerance: Int = 40): Boolean {

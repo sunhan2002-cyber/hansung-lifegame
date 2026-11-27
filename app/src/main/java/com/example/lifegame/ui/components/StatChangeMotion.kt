@@ -137,7 +137,8 @@ internal class StatChangeChipMotion internal constructor(
 internal fun rememberStatChangeChips(style: StatChangeStyle, count: Int): StatChangeChipMotion {
     val clock = rememberOneShotClock(
         key = Unit,
-        active = style != StatChangeStyle.NONE,
+        // An entrance (chips start transparent and away from their place): rests under TalkBack touch exploration too.
+        active = style != StatChangeStyle.NONE && rememberEntranceMotionAllowed(),
         totalMs = statChangeChipsTotalMs(style, count),
     )
     return remember(style, clock) { StatChangeChipMotion(style, clock) }

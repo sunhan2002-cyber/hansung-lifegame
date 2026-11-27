@@ -154,7 +154,9 @@ internal fun CompletionSealHeader(
     modifier: Modifier = Modifier,
     badgeModifier: Modifier = Modifier,
 ) {
-    CompletionSealHeader(rememberCompletionReveal(runId, celebrate, onConsumed), titleEarned, modifier, badgeModifier)
+    // Callers of this older form (tests, demos) keep the pre-stage-2 look: only CertificateView opts into titleReveal.
+    CompletionSealHeader(rememberCompletionReveal(runId, celebrate, onConsumed), titleEarned, modifier, badgeModifier,
+        titleReveal = TitleRevealStyle.NONE)
 }
 
 /**

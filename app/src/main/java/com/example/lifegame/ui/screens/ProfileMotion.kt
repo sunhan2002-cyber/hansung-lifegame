@@ -500,13 +500,15 @@ internal class ProfileStatCountState internal constructor(
 @Composable
 internal fun rememberProfileStatCount(roll: StartingRoll?, rollNonce: Int, digitStyle: TextStyle): ProfileStatCountState {
     val style = LocalMotionStyle.current.statCountUp
-    val reduceMotion = rememberReduceMotion()
+    val entranceAllowed = rememberEntranceMotionAllowed()
     val memory = remember { ProfileStatCountMemory() }
     val finals = remember(roll) { roll?.let { rolled -> startingStatRows(rolled).map { it.finalValue } } }
     val from = remember(rollNonce) { memory.finals }
     SideEffect { memory.finals = finals }
     val rolled = remember(rollNonce) { roll }
-    val counting = style != StatCountUpStyle.NONE && !reduceMotion && rollNonce > 0 && roll != null && roll == rolled
+    // rememberEntranceMotionAllowed covers reduced motion and TalkBack touch exploration: while the count runs, the
+    // drawn number is blank (STAMP) or differs from the one TalkBack reads (TICK/SLOT).
+    val counting = style != StatCountUpStyle.NONE && entranceAllowed && rollNonce > 0 && roll != null && roll == rolled
     var settledNonce by remember { mutableIntStateOf(0) }
     val landed = settledNonce == rollNonce
     val clock = rememberOneShotClock(

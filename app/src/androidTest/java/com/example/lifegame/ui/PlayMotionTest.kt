@@ -103,13 +103,14 @@ class PlayMotionTest {
         ),
     )
 
-    private var current by mutableStateOf(choices(seen = true))
+    // Declared before `current`: building the first state reads them while the test instance is constructed.
     private var style by mutableStateOf(MotionStyle.Default)
     private var round by mutableIntStateOf(0)
     private var picks = 0
     private var continues = 0
     private var resultChanges = listOf(StatChangeUi("건강", -25), StatChangeUi("지력", 5))
     private var resultFacts = emptyList<FactChangeUi>()
+    private var current by mutableStateOf(choices(seen = true))
 
     private fun state(yearKey: String, health: Int, outcome: OutcomeUi?, seen: Boolean, presentation: PresentationState = PresentationState()) =
         PeriodPlayUiState(

@@ -1,5 +1,7 @@
 package com.example.lifegame.ui.screens
 
+import androidx.compose.runtime.saveable.listSaver
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.animation.core.Animatable
 import androidx.compose.animation.core.FastOutSlowInEasing
 import androidx.compose.animation.core.tween
@@ -73,7 +75,10 @@ fun TitleCollectionScreen(
         if (newTitleIds.isEmpty()) collection.entries else collection.entries.sortedByDescending { it.earned && it.titleId in newTitleIds }
     }
     // 이번 방문에서 메달 공개를 이미 보여 준 칭호. 목록이 항목을 다시 만들어도 공개를 되풀이하지 않는다.
-    val revealed = remember { mutableSetOf<String>() }
+    // Saveable: after rotation or recreation the '새로 받음' reveal does not play again.
+    val revealed = rememberSaveable(saver = listSaver<MutableSet<String>, String>({ it.toList() }, { it.toMutableSet() })) {
+        mutableSetOf()
+    }
     Column(
         modifier
             .fillMaxSize()
