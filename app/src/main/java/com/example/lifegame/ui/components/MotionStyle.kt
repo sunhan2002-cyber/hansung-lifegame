@@ -17,8 +17,8 @@ import androidx.compose.ui.platform.LocalContext
  * with reduced motion the effects rest in their final, static state.
  *
  * The debug-only "연출 비교" screen lets the team try the variants side by side and apply one to the real
- * app; [MotionStyle.Default] is what ships. Stage 1 (press · highlight · entrance) was chosen on 2026-11-26;
- * the stage-2 defaults are the designers' recommendations until the user picks in "연출 비교".
+ * app; [MotionStyle.Default] is what ships. Stage 1 (press · highlight · entrance) was chosen on 2026-11-26 and
+ * stage 2 on 2026-11-27, both in "연출 비교" (stage 2 kept every recommended variant).
  * Each field is read only by the area named in the comment above it.
  */
 data class MotionStyle(
