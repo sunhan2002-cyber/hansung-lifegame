@@ -235,9 +235,9 @@ class PlayMotionTest {
         compose.onNodeWithTag("decision_choice_A").performTouchInput { repeat(3) { click(center) } }
         compose.mainClock.advanceTimeByFrame()
         assertEquals("onChoose fires once, synchronously, as before", 1, picks)
-        // The result page replaces the choices in the pick's frame, so a fast repeated tap can land on its 계속하기 where
-        // card A was — unchanged from before stage 2 (no tap guard within the decision screen). Count from here.
-        val continuesBefore = continues
+        // The result page replaces the choices in the pick's frame, with its 계속하기 where card A was: the rest of the
+        // fast repeated tap is swallowed by the pick's tap guard instead of skipping the result.
+        assertEquals("the repeated tap never reaches 계속하기", 0, continues)
         // 결과 화면은 첫 프레임부터 있다(들어오는 연출은 투명도와 그리기 이동뿐). 물러나는 카드는 노드가 아니다.
         compose.onNodeWithTag("decision_outcome").assertExists()
         compose.onNodeWithTag("outcome_text").assertExists()
@@ -253,21 +253,27 @@ class PlayMotionTest {
         assertEquals(1, count("outcome_floating_changes"))
         // 오버레이에는 터치가 없다: 결과 글자를 눌러도 아무 일 없고, 계속하기는 그대로 한 번 눌린다.
         repeat(3) { tap("outcome_text") }
-        assertEquals("tapping the result text does nothing", continuesBefore, continues)
+        assertEquals("tapping the result text does nothing", 0, continues)
         advance(CHANGE_HOLD_MILLIS + 800)
         assertEquals(0, count("outcome_floating_changes"))
         compose.onNodeWithText("계속하기").performTouchInput { click(center) }
         compose.mainClock.advanceTimeByFrame()
-        assertEquals(continuesBefore + 1, continues)
+        assertEquals(1, continues)
         assertEquals(1, picks)
     }
 
     @Test
-    fun theContinueButtonIsClickableWhileTheResultPageEnters() {
+    fun aTapRightAfterThePickIsSwallowedThenContinueWorksWhileTheResultPageEnters() {
         show()
         tap("decision_choice_B")
         advance(40)
+        // A double tap's second touch lands where the result page's (still fading) 계속하기 now is: swallowed.
         compose.onNodeWithText("계속하기").assertIsDisplayed().performTouchInput { click(center) }
+        compose.mainClock.advanceTimeByFrame()
+        assertEquals(0, continues)
+        // Once the guard is over the button works, while the result page is still entering (it settles ~520 ms).
+        advance(TAP_GUARD_MILLIS)
+        compose.onNodeWithText("계속하기").performTouchInput { click(center) }
         compose.mainClock.advanceTimeByFrame()
         assertEquals(1, continues)
     }

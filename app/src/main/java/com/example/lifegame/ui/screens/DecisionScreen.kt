@@ -211,7 +211,8 @@ private fun Modifier.completeTextOnTap(enabled: Boolean, onTap: () -> Unit): Mod
  * → 제목 · 본문 타이핑 → 선택지. 전환점 사건도 같은 순서를 쓴다(팝업만 없음).
  * 그림을 읽지 못하면 선노출을 건너뛰고 "본 그림"으로 저장하지 않는다.
  * 선노출이 터치 · 시간 초과 · 뒤로가기로 끝날 때, 그리고 본문이 끝나 선택지가 나타날 때 짧게 터치를 삼켜
- * 다음 단계로 넘기려던 손가락이 선택을 확정하지 않게 한다.
+ * 다음 단계로 넘기려던 손가락이 선택을 확정하지 않게 한다. 선택지를 고른 직후에도 같은 시간만큼 삼켜, 연타가 같은
+ * 자리에 들어선 결과 화면의 '계속하기'를 누르지 않게 한다.
  *
  * 2단계 연출(play, LocalMotionStyle): 선택지 등장 · 고른 카드(DecisionMotion.kt), 능력치 변화(StatChangeMotion.kt),
  * 큰 결과(ResultImpact.kt). 모두 표시 전용이라 그리기 단계에서만 움직이고, 입력 보호 · 콜백 · 태그 · 의미는 그대로다.
@@ -270,6 +271,10 @@ fun DecisionScreen(
     val textLength = decision.text.length
     // 완성 터치 직후 아주 짧게 이어지는 연타도 삼켜, 본문을 보려던 손가락이 선택을 확정하지 않게 한다.
     var swallowTaps by remember(introKey) { mutableStateOf(false) }
+    // 고르면 결과 화면이 같은 자리에 곧바로 들어선다. 이어진 연타가 막 나타난(들어오는 연출 중이라 아직 흐린)
+    // '계속하기'를 눌러 결과를 못 보고 넘어가지 않게, 고른 순간부터 같은 시간만큼 터치를 삼킨다. 화면 단계가 바뀔 때의
+    // 연타 보호(PlayHost, 2026-11-09)와 같은 이유다. 결과가 오면 introKey가 바뀌므로 키 없이 기억한다.
+    var pickTapGuard by remember { mutableStateOf(false) }
     val typing = introDone && previewDone && outcome == null && !sceneOnly && typedChars < textLength
     val completeText: () -> Unit = {
         if (typedChars < textLength) {
@@ -382,6 +387,12 @@ fun DecisionScreen(
             swallowTaps = false
         }
     }
+    LaunchedEffect(pickTapGuard) {
+        if (pickTapGuard) {
+            delay(TAP_GUARD_MILLIS)
+            pickTapGuard = false
+        }
+    }
 
     // 본문 스크롤은 사건마다 새로 시작하고, 장면 보기에서 돌아와도 위치를 지킨다.
     val contentScroll = rememberSaveable(introKey, saver = ScrollState.Saver) { ScrollState(0) }
@@ -439,7 +450,7 @@ fun DecisionScreen(
             .fillMaxSize()
             .background(LifeGameInk)
             // 본문이 나오는 동안의 터치는 어디를 눌러도 본문 완성만 한다(선택 · 장면 보기 · 진행으로 가지 않는다).
-            .completeTextOnTap(enabled = typing || swallowTaps, onTap = completeText)
+            .completeTextOnTap(enabled = typing || swallowTaps || pickTapGuard, onTap = completeText)
             // 고른 카드 연출이 카드 · 결과 카드의 자리를 이 화면 기준으로 잰다(배치 콜백만, 의미 · 터치 없음).
             .then(choicePick.motion.rootTracker),
     ) {
@@ -551,6 +562,7 @@ fun DecisionScreen(
                                 // 같은 화면에서 두 번 눌러도 한 번만 넘긴다(VM도 결과가 있으면 무시한다).
                                 if (chosenId == null) {
                                     chosenId = id
+                                    pickTapGuard = true
                                     // 표시 상태만 먼저 남긴다(카드의 자리와 마지막 모습). 콜백은 그대로 곧바로 한 번.
                                     choicePick.onPick(decision.eventId, decision.choices, id)
                                     onChoose(id)
