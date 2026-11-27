@@ -185,17 +185,18 @@ internal const val CHANGE_HOLD_MILLIS = 1_600L
  */
 private fun Modifier.completeTextOnTap(enabled: Boolean, onTap: () -> Unit): Modifier = composed {
     val currentTap by rememberUpdatedState(onTap)
-    if (!enabled) {
-        this
-    } else {
-        pointerInput(Unit) {
-            awaitEachGesture {
-                awaitFirstDown(requireUnconsumed = false, pass = PointerEventPass.Initial)
-                val up = waitForUpOrCancellation(pass = PointerEventPass.Initial)
-                if (up != null) {
-                    up.consume()
-                    currentTap()
-                }
+    val guarding by rememberUpdatedState(enabled)
+    // 늘 붙여 두고 터치마다 손가락이 닿는 순간 한 번만 정한다. 보호 중에 시작된 터치는 손을 떼기 전에 보호가 끝나도
+    // 끝까지 삼킨다(보호가 끝날 때 이 처리를 떼어 내면, 이미 눌린 '계속하기'가 손을 뗄 때 눌렸다). 움직임은 그대로
+    // 두므로 스크롤은 막지 않는다.
+    pointerInput(Unit) {
+        awaitEachGesture {
+            awaitFirstDown(requireUnconsumed = false, pass = PointerEventPass.Initial)
+            if (!guarding) return@awaitEachGesture
+            val up = waitForUpOrCancellation(pass = PointerEventPass.Initial)
+            if (up != null) {
+                up.consume()
+                currentTap()
             }
         }
     }

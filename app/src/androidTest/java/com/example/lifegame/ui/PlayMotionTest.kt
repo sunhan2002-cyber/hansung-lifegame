@@ -279,6 +279,23 @@ class PlayMotionTest {
     }
 
     @Test
+    fun aTouchThatStartsDuringTheGuardStaysSwallowedEvenIfItLiftsAfterIt() {
+        show()
+        tap("decision_choice_B")
+        advance(200)
+        // The finger lands on 계속하기 inside the guard and lifts only after the guard has ended.
+        compose.onNodeWithText("계속하기").performTouchInput { down(center) }
+        advance(TAP_GUARD_MILLIS)
+        compose.onNodeWithText("계속하기").performTouchInput { up() }
+        compose.mainClock.advanceTimeByFrame()
+        assertEquals("the leftover touch of a double tap never continues", 0, continues)
+        // A fresh tap after the guard still works.
+        compose.onNodeWithText("계속하기").performTouchInput { click(center) }
+        compose.mainClock.advanceTimeByFrame()
+        assertEquals(1, continues)
+    }
+
+    @Test
     fun recreatingTheScreenDuringTheExitReplaysNothing() {
         val restoration = ManualRestoreHost(compose)
         show(restoration = restoration)
