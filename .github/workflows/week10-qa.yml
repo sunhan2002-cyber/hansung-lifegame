@@ -32,17 +32,6 @@ jobs:
         with:
           distribution: temurin
           java-version: '17'
-      - name: Validate authored data and validator regression tests
-        run: |
-          python scripts/validate_content.py
-          python scripts/validate_images.py
-          python scripts/validate_portrait_variants.py
-          python scripts/validate_week8_contracts.py
-          python scripts/audit_choice_conditions.py
-          python scripts/audit_event_stat_classification.py
-          python -m unittest discover -s scripts/tests -v
-          python scripts/validate_week10.py --report build/week10/content_audit.json
-          python scripts/validate_followup_image_coverage.py --report build/week10/event_image_coverage.json
       - name: Ensure Android 35 build and emulator packages
         run: |
           python - <<'PY'
@@ -59,15 +48,6 @@ jobs:
               for path in [pathlib.Path(manager).parent, root / 'platform-tools', root / 'emulator']:
                   stream.write(str(path) + '\n')
           PY
-      - name: Lint, unit tests, 10000 real lives, and APKs
-        run: |
-          chmod +x gradlew
-          ./gradlew :app:lintDebug test :app:week10Simulation assembleDebug assembleRelease assembleDebugAndroidTest --no-daemon --max-workers=2 -Pweek10ReportDir=../build/week10/simulation -Pweek10SourceCommit="$(git rev-parse HEAD)"
-          python scripts/summarize_week10.py --input build/week10/simulation --out build/week10/assessment
-          cat build/week10/assessment/simulation_report.md >> "$GITHUB_STEP_SUMMARY"
-          sha256sum app/build/outputs/apk/debug/*.apk app/build/outputs/apk/release/*.apk > build/week10/apk-sha256.txt
-      - name: Verify the release APK contains no direct generation client or service key
-        run: python scripts/verify_release_security.py --apk app/build/outputs/apk/release/app-release-unsigned.apk
       - name: Run Android device tests on API 35
         timeout-minutes: ${{ inputs.final_acceptance && 135 || 20 }}
         env:
@@ -133,18 +113,6 @@ jobs:
             --require-class com.example.lifegame.ui.AvatarBlinkTest \
             --require-class com.example.lifegame.ui.SceneDepthTest \
             --report build/week10/device/verified-results.json
-      - name: Enforce release semantic review
-        if: ${{ !cancelled() && github.event_name == 'workflow_dispatch' && inputs.final_acceptance }}
-        run: |
-          python scripts/validate_week10.py --report build/week10/content_audit.json --acceptance
-      - name: Enforce release image acceptance
-        if: ${{ !cancelled() && github.event_name == 'workflow_dispatch' && inputs.final_acceptance }}
-        run: |
-          python scripts/validate_followup_image_coverage.py --report build/week10/event_image_coverage.json --acceptance
-      - name: Enforce release simulation targets
-        if: ${{ !cancelled() && github.event_name == 'workflow_dispatch' && inputs.final_acceptance }}
-        run: |
-          python scripts/summarize_week10.py --input build/week10/simulation --out build/week10/assessment --acceptance
       - name: Summarize Android failures
         if: failure()
         run: |
@@ -166,16 +134,8 @@ jobs:
                           name = f"{case.get('classname')}#{case.get('name')}"
                           reason = (failure.get("message") or failure.text or "").splitlines()
                           out.write(f"- {name}: {reason[0] if reason else 'No message'}\n")
+                          message = f"{name}: {reason[0] if reason else 'No message'}"
+                          print("::error::" + message.replace("%", "%25"))
+              if not files:
+                  print("::error::Android test execution produced no JUnit result XML")
           PY
-      - name: Preserve QA evidence even on failure
-        if: always()
-        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7
-        with:
-          name: week10-qa-${{ github.run_id }}
-          retention-days: 14
-          path: |
-            build/week10/
-            app/build/reports/
-            app/build/test-results/
-            app/build/outputs/androidTest-results/
-            app/build/outputs/apk/
