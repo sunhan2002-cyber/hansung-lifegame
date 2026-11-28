@@ -145,6 +145,28 @@ jobs:
         if: ${{ !cancelled() && github.event_name == 'workflow_dispatch' && inputs.final_acceptance }}
         run: |
           python scripts/summarize_week10.py --input build/week10/simulation --out build/week10/assessment --acceptance
+      - name: Summarize Android failures
+        if: failure()
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import os
+          import xml.etree.ElementTree as ET
+
+          files = list(Path("app/build/outputs/androidTest-results").rglob("TEST-*.xml"))
+          with open(os.environ["GITHUB_STEP_SUMMARY"], "a", encoding="utf-8") as out:
+              out.write("## Android test diagnostics\n")
+              out.write(f"Result XML files: {len(files)}\n\n")
+              for file in files:
+                  for case in ET.parse(file).iter("testcase"):
+                      failure = case.find("failure")
+                      if failure is None:
+                          failure = case.find("error")
+                      if failure is not None:
+                          name = f"{case.get('classname')}#{case.get('name')}"
+                          reason = (failure.get("message") or failure.text or "").splitlines()
+                          out.write(f"- {name}: {reason[0] if reason else 'No message'}\n")
+          PY
       - name: Preserve QA evidence even on failure
         if: always()
         uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7
