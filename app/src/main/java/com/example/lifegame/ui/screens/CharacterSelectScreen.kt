@@ -44,6 +44,7 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.foundation.verticalScroll
+import androidx.compose.material3.LocalTextStyle
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.OutlinedTextFieldDefaults
 import androidx.compose.material3.Text
@@ -64,6 +65,8 @@ import androidx.compose.ui.semantics.role
 import androidx.compose.ui.semantics.selected
 import androidx.compose.ui.semantics.stateDescription
 import androidx.compose.ui.text.SpanStyle
+import androidx.compose.ui.text.TextLayoutResult
+import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.withStyle
 import com.example.lifegame.ui.StartingStatRowUi
@@ -116,6 +119,9 @@ import com.example.lifegame.ui.theme.LifeGameRule
 import com.example.lifegame.ui.theme.LifeGameSerif
 import com.example.lifegame.domain.model.PhotoFlowStatus
 
+/** 프로필 화면 제목. STAMP_RISE 등장에서는 이 글자들이 도장처럼 찍힌다(그리기만, 제목 글자는 그대로). */
+private const val PROFILE_TITLE = "새 인생"
+
 /**
  * 프로필 만들기: 이름 · 성별 · 주사위로 정하는 타고난 능력치 · 모습(피부 · 머리 · 눈) · 사진(선택).
  * 성별은 입영 통지서(남자) 때문에 받는다 (R-70).
@@ -137,6 +143,8 @@ fun CharacterSelectScreen(
     aiFace: Boolean = false,
     /** 칭호 목록에서 "다음 판에서 노리기"로 고른, 아직 받지 못한 칭호 */
     titleTarget: com.example.lifegame.ui.TitleEntryUi? = null,
+    /** 주사위를 3D(GL)로 보여 줄지. 연출 비교 화면처럼 GL 무대를 더 띄우지 않을 곳에서는 false(정지 그림). */
+    dice3D: Boolean = true,
 ) {
     var nameInput by rememberSaveable { mutableStateOf("") }
     var gender by rememberSaveable { mutableStateOf<Gender?>(null) }
@@ -200,6 +208,9 @@ fun CharacterSelectScreen(
     val roll = StartingRoll.decode(rollRaw, diceRule)
     val tendency = roll?.let { StartingDice.tendencyOf(it.delta, starters) }
     val ready = gender != null && roll != null
+    // 화면 등장: 제목부터 여섯 묶음이 차례로 들어온다. 묶음 안팎 간격이 같아 배치 · 의미 · 누르는 자리는 그대로다.
+    val entrance = rememberProfileEntrance(titleGlyphs = PROFILE_TITLE.count { !it.isWhitespace() })
+    val titleLayout = remember { mutableStateOf<TextLayoutResult?>(null) }
 
     Column(
         modifier = modifier
@@ -217,170 +228,189 @@ fun CharacterSelectScreen(
             verticalArrangement = Arrangement.spacedBy(14.dp),
         ) {
             Text(
-                text = "새 인생",
+                text = PROFILE_TITLE,
                 color = LifeGameInk,
                 fontFamily = LifeGameSerif,
                 fontWeight = FontWeight.Bold,
                 fontSize = 28.sp,
-                modifier = Modifier.semantics { heading() },
+                onTextLayout = { titleLayout.value = it },
+                modifier = Modifier
+                    .semantics { heading() }
+                    .profileEntranceStep(entrance, ProfileEntranceTimeline.TITLE_GROUP)
+                    .profileTitleStamp(entrance, titleLayout),
             )
-            Text("이름과 성별을 정하고, 타고난 능력치는 주사위로 정한다.", color = LifeGameInkSecondary, fontSize = 14.sp)
-            titleTarget?.let { target ->
-                val shape = RoundedCornerShape(10.dp)
-                Column(
-                    Modifier
-                        .fillMaxWidth()
-                        .clip(shape)
-                        .background(LifeGameCard)
-                        .border(1.dp, LifeGameRule, shape)
-                        .padding(12.dp)
-                        .testTag("profile_title_target"),
-                    verticalArrangement = Arrangement.spacedBy(2.dp),
-                ) {
-                    Text("이번 판에서 노리는 칭호 · ${target.text}", color = LifeGameInk, fontSize = 15.sp, fontWeight = FontWeight.Bold)
-                    target.goal?.let { Text("목표 · $it", color = LifeGameInkSecondary, fontSize = 14.sp, lineHeight = 20.sp) }
-                }
-            }
-
-            Spacer(Modifier.height(4.dp))
-            SectionLabel("이름")
-            OutlinedTextField(
-                value = nameInput,
-                onValueChange = { input ->
-                    // 줄바꿈은 받지 않고, 최대 글자 수까지만 입력받는다.
-                    nameInput = input.replace("\n", "").take(PLAYER_NAME_MAX_LENGTH)
-                },
-                modifier = Modifier.fillMaxWidth(),
-                placeholder = { Text("비워 두면 '$DEFAULT_PLAYER_NAME'") },
-                supportingText = {
-                    Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
-                        Text("부르는 이름: ${nameCallOf(previewName)}")
-                        Text("${nameInput.length}/$PLAYER_NAME_MAX_LENGTH")
-                    }
-                },
-                singleLine = true,
-                colors = OutlinedTextFieldDefaults.colors(
-                    focusedContainerColor = LifeGameCard,
-                    unfocusedContainerColor = LifeGameCard,
-                    focusedBorderColor = LifeGameInk,
-                    unfocusedBorderColor = LifeGameRule,
-                    cursorColor = LifeGameInk,
-                ),
-                keyboardOptions = KeyboardOptions(imeAction = ImeAction.Done),
-                keyboardActions = KeyboardActions(onDone = { focusManager.clearFocus() }),
-            )
-
-            SectionLabel("성별", trailing = "남자는 청년기에 입영 통지서를 받는다")
-            Row(horizontalArrangement = Arrangement.spacedBy(10.dp)) {
-                Gender.entries.forEach { option ->
-                    SelectCard(
-                        selected = gender == option,
-                        onSelect = { gender = option },
-                        modifier = Modifier.weight(1f),
+            Column(Modifier.profileEntranceStep(entrance, 1), verticalArrangement = Arrangement.spacedBy(14.dp)) {
+                Text("이름과 성별을 정하고, 타고난 능력치는 주사위로 정한다.", color = LifeGameInkSecondary, fontSize = 14.sp)
+                titleTarget?.let { target ->
+                    val shape = RoundedCornerShape(10.dp)
+                    Column(
+                        Modifier
+                            .fillMaxWidth()
+                            .clip(shape)
+                            .background(LifeGameCard)
+                            .border(1.dp, LifeGameRule, shape)
+                            .padding(12.dp)
+                            .testTag("profile_title_target"),
+                        verticalArrangement = Arrangement.spacedBy(2.dp),
                     ) {
-                        Text(option.label, color = LifeGameInk, fontSize = 15.5.sp, fontWeight = FontWeight.Medium)
+                        Text("이번 판에서 노리는 칭호 · ${target.text}", color = LifeGameInk, fontSize = 15.sp, fontWeight = FontWeight.Bold)
+                        target.goal?.let { Text("목표 · $it", color = LifeGameInkSecondary, fontSize = 14.sp, lineHeight = 20.sp) }
                     }
                 }
             }
 
-            SectionLabel("타고난 능력치", trailing = "주사위로 정한다")
-            DicePanel(
-                roll = roll,
-                rollNonce = rollNonce,
-                tendency = tendency,
-                rerollsLeft = rerollsLeft,
-                onRoll = {
-                    if (roll != null) rerollsLeft -= 1
-                    diceRuleName = DiceRule.SUM_LG2.name
-                    rollRaw = StartingDice.roll(rule = DiceRule.SUM_LG2).encode()
-                    rollNonce += 1
-                },
-            )
-
-            SectionLabel("같은 출발선 도전 코드", trailing = "선택")
-            ChallengeCodeSection(
-                code = if (gender != null && rollRaw != null) {
-                    ChallengeCode.encode(ChallengeStart(gender!!, rollRaw!!, runSeed, diceRule))
-                } else {
-                    null
-                },
-                input = codeInput,
-                onInputChange = { codeInput = it.take(48) },
-                message = codeMessage,
-                isError = codeError,
-                onApply = {
-                    when (val result = ChallengeCode.decode(codeInput)) {
-                        is ChallengeCodeResult.Valid -> {
-                            gender = result.start.gender
-                            rollRaw = result.start.rollRaw
-                            diceRuleName = result.start.diceRule.name
-                            runSeed = result.start.seed
-                            rerollsLeft = 0 // 친구와 같은 출발선이라 다시 굴리지 않는다
-                            // 도전 코드는 이미 확정된 주사위 값을 공유하므로 셔플 애니메이션을 재생하지 않는다.
-                            codeError = false
-                            codeMessage = "도전 코드의 출발선(성별 · 타고난 능력치 · 시드)으로 맞췄다. 이제 선택만 다르다."
+            Column(Modifier.profileEntranceStep(entrance, 2), verticalArrangement = Arrangement.spacedBy(14.dp)) {
+                Spacer(Modifier.height(4.dp))
+                SectionLabel("이름")
+                OutlinedTextField(
+                    value = nameInput,
+                    onValueChange = { input ->
+                        // 줄바꿈은 받지 않고, 최대 글자 수까지만 입력받는다.
+                        nameInput = input.replace("\n", "").take(PLAYER_NAME_MAX_LENGTH)
+                    },
+                    modifier = Modifier.fillMaxWidth(),
+                    placeholder = { Text("비워 두면 '$DEFAULT_PLAYER_NAME'") },
+                    supportingText = {
+                        Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
+                            Text("부르는 이름: ${nameCallOf(previewName)}")
+                            Text("${nameInput.length}/$PLAYER_NAME_MAX_LENGTH")
                         }
-                        is ChallengeCodeResult.Invalid -> {
-                            codeError = true
-                            codeMessage = result.message
-                        }
-                    }
-                    focusManager.clearFocus()
-                },
-            )
+                    },
+                    singleLine = true,
+                    colors = OutlinedTextFieldDefaults.colors(
+                        focusedContainerColor = LifeGameCard,
+                        unfocusedContainerColor = LifeGameCard,
+                        focusedBorderColor = LifeGameInk,
+                        unfocusedBorderColor = LifeGameRule,
+                        cursorColor = LifeGameInk,
+                    ),
+                    keyboardOptions = KeyboardOptions(imeAction = ImeAction.Done),
+                    keyboardActions = KeyboardActions(onDone = { focusManager.clearFocus() }),
+                )
+            }
 
-            SectionLabel("모습", trailing = "사진 없이도 정할 수 있다")
-            AppearancePreview(
-                skinId = skinId,
-                hairId = hairId,
-                eyesId = eyesId,
-                hairColorId = hairColorId,
-                outfitColorId = outfitColorId,
-                photoFaceSheet = PhotoFaceSheet.pathOf(sheet?.takeIf { it.status == GenerationStatus.READY }?.value),
-            )
-            OptionChips("피부", AvatarOptions.skins, skinId) { skinId = it }
-            OptionChips("머리", AvatarOptions.hairs, hairId) { hairId = it }
-            OptionChips(
-                "머리 색",
-                AvatarOptions.hairColors.map { AvatarOption(it.id, it.label) },
-                hairColorId,
-                note = "노년기에는 흰머리로 바뀐다",
-            ) { hairColorId = it }
-            OptionChips("눈", AvatarOptions.eyes, eyesId) { eyesId = it }
-            OptionChips(
-                "옷 색",
-                AvatarOptions.outfitColors.map { AvatarOption(it.id, it.label) },
-                outfitColorId,
-                note = "시기마다 옷 모양은 달라지고, 윗옷 색이 바뀐다",
-            ) { outfitColorId = it }
-
-            SectionLabel("사진으로 얼굴 만들기", trailing = "선택")
-            PhotoSection(
-                aiFace = aiFace,
-                photoRef = photoRef,
-                sheet = sheet,
-                message = photoMessage,
-                onPick = {
-                    consentOpen = true
-                    onPhotoFlowChanged(PhotoFlowStatus.CONSENT_REQUIRED, null)
-                },
-                onCancel = onCancelFaceSheet,
-                onRetry = { photoRef?.let { onRequestFaceSheet(it, true) } },
-                onRemove = {
-                    photoRef?.let { ref ->
-                        runCatching {
-                            context.contentResolver.releasePersistableUriPermission(
-                                Uri.parse(ref),
-                                Intent.FLAG_GRANT_READ_URI_PERMISSION,
-                            )
+            Column(Modifier.profileEntranceStep(entrance, 3), verticalArrangement = Arrangement.spacedBy(14.dp)) {
+                SectionLabel("성별", trailing = "남자는 청년기에 입영 통지서를 받는다")
+                Row(horizontalArrangement = Arrangement.spacedBy(10.dp)) {
+                    Gender.entries.forEach { option ->
+                        SelectCard(
+                            selected = gender == option,
+                            onSelect = { gender = option },
+                            modifier = Modifier.weight(1f),
+                        ) {
+                            Text(option.label, color = LifeGameInk, fontSize = 15.5.sp, fontWeight = FontWeight.Medium)
                         }
                     }
-                    photoRef = null
-                    onClearFaceSheet()
-                    photoMessage = "사진 참조를 지웠습니다. 사진 없이 위에서 고른 모습으로 진행합니다."
-                    onPhotoFlowChanged(PhotoFlowStatus.NOT_REQUESTED, null)
-                },
-            )
+                }
+            }
+
+            // 굴림이 생기면(코드 포함) 이 묶음은 바로 제자리 · 불투명이다: GL 주사위 무대는 흐리게 하거나 옮기지 않는다.
+            Column(
+                Modifier.profileEntranceStep(entrance, ProfileEntranceTimeline.DICE_GROUP, rest = roll != null),
+                verticalArrangement = Arrangement.spacedBy(14.dp),
+            ) {
+                SectionLabel("타고난 능력치", trailing = "주사위로 정한다")
+                DicePanel(
+                    roll = roll,
+                    rollNonce = rollNonce,
+                    tendency = tendency,
+                    rerollsLeft = rerollsLeft,
+                    onRoll = {
+                        if (roll != null) rerollsLeft -= 1
+                        diceRuleName = DiceRule.SUM_LG2.name
+                        rollRaw = StartingDice.roll(rule = DiceRule.SUM_LG2).encode()
+                        rollNonce += 1
+                    },
+                    allow3D = dice3D,
+                )
+            }
+
+            Column(Modifier.profileEntranceStep(entrance, 5), verticalArrangement = Arrangement.spacedBy(14.dp)) {
+                SectionLabel("같은 출발선 도전 코드", trailing = "선택")
+                ChallengeCodeSection(
+                    code = if (gender != null && rollRaw != null) {
+                        ChallengeCode.encode(ChallengeStart(gender!!, rollRaw!!, runSeed, diceRule))
+                    } else {
+                        null
+                    },
+                    input = codeInput,
+                    onInputChange = { codeInput = it.take(48) },
+                    message = codeMessage,
+                    isError = codeError,
+                    onApply = {
+                        when (val result = ChallengeCode.decode(codeInput)) {
+                            is ChallengeCodeResult.Valid -> {
+                                gender = result.start.gender
+                                rollRaw = result.start.rollRaw
+                                diceRuleName = result.start.diceRule.name
+                                runSeed = result.start.seed
+                                rerollsLeft = 0 // 친구와 같은 출발선이라 다시 굴리지 않는다
+                                // 도전 코드는 이미 확정된 주사위 값을 공유하므로 셔플 애니메이션을 재생하지 않는다.
+                                codeError = false
+                                codeMessage = "도전 코드의 출발선(성별 · 타고난 능력치 · 시드)으로 맞췄다. 이제 선택만 다르다."
+                            }
+                            is ChallengeCodeResult.Invalid -> {
+                                codeError = true
+                                codeMessage = result.message
+                            }
+                        }
+                        focusManager.clearFocus()
+                    },
+                )
+
+                SectionLabel("모습", trailing = "사진 없이도 정할 수 있다")
+                ProfileAppearancePreview(
+                    skinId = skinId,
+                    hairId = hairId,
+                    eyesId = eyesId,
+                    hairColorId = hairColorId,
+                    outfitColorId = outfitColorId,
+                    photoFaceSheet = PhotoFaceSheet.pathOf(sheet?.takeIf { it.status == GenerationStatus.READY }?.value),
+                )
+                ProfileOptionChips("피부", AvatarOptions.skins, skinId) { skinId = it }
+                ProfileOptionChips("머리", AvatarOptions.hairs, hairId) { hairId = it }
+                ProfileOptionChips(
+                    "머리 색",
+                    AvatarOptions.hairColors.map { AvatarOption(it.id, it.label) },
+                    hairColorId,
+                    note = "노년기에는 흰머리로 바뀐다",
+                ) { hairColorId = it }
+                ProfileOptionChips("눈", AvatarOptions.eyes, eyesId) { eyesId = it }
+                ProfileOptionChips(
+                    "옷 색",
+                    AvatarOptions.outfitColors.map { AvatarOption(it.id, it.label) },
+                    outfitColorId,
+                    note = "시기마다 옷 모양은 달라지고, 윗옷 색이 바뀐다",
+                ) { outfitColorId = it }
+
+                SectionLabel("사진으로 얼굴 만들기", trailing = "선택")
+                PhotoSection(
+                    aiFace = aiFace,
+                    photoRef = photoRef,
+                    sheet = sheet,
+                    message = photoMessage,
+                    onPick = {
+                        consentOpen = true
+                        onPhotoFlowChanged(PhotoFlowStatus.CONSENT_REQUIRED, null)
+                    },
+                    onCancel = onCancelFaceSheet,
+                    onRetry = { photoRef?.let { onRequestFaceSheet(it, true) } },
+                    onRemove = {
+                        photoRef?.let { ref ->
+                            runCatching {
+                                context.contentResolver.releasePersistableUriPermission(
+                                    Uri.parse(ref),
+                                    Intent.FLAG_GRANT_READ_URI_PERMISSION,
+                                )
+                            }
+                        }
+                        photoRef = null
+                        onClearFaceSheet()
+                        photoMessage = "사진 참조를 지웠습니다. 사진 없이 위에서 고른 모습으로 진행합니다."
+                        onPhotoFlowChanged(PhotoFlowStatus.NOT_REQUESTED, null)
+                    },
+                )
+            }
         }
 
         InkButton(
@@ -419,7 +449,9 @@ fun CharacterSelectScreen(
                     ),
                 )
             },
-            modifier = Modifier.padding(start = 16.dp, end = 16.dp, top = 8.dp, bottom = 16.dp),
+            modifier = Modifier
+                .padding(start = 16.dp, end = 16.dp, top = 8.dp, bottom = 16.dp)
+                .profileEntranceStep(entrance, ProfileEntranceTimeline.BUTTON_GROUP, button = true),
         )
     }
 
@@ -465,6 +497,8 @@ fun CharacterSelectScreen(
  * 그 능력치의 두 눈 · 합 · 실제 증가량 · 최종값을 보여 준다. 줄을 누르면 위 3D(정지 그림 대체 포함)가 그 능력치의 눈으로 바뀐다.
  * 숫자는 로직 결과([startingStatRows])를 그대로 쓰고 화면에서 규칙을 계산하지 않는다. 다시 굴리기 · 연타 잠금은 그대로다.
  * 굴린 값과 가장 닮은 성향을 아래에 한 줄로 보여 준다.
+ * 직접 굴리면 주사위가 실제로 멈춘 뒤 능력치 숫자가 차례로 올라간다(연출: statCountUp). 글자 · 낭독은 처음부터 최종값이고,
+ * 세는 숫자는 그리기에서만 덧그린다. [allow3D]가 false면 3D 대신 정지 그림 주사위다.
  */
 @Composable
 internal fun DicePanel(
@@ -473,6 +507,7 @@ internal fun DicePanel(
     tendency: StarterUi?,
     rerollsLeft: Int,
     onRoll: () -> Unit,
+    allow3D: Boolean = true,
 ) {
     val reduceMotion = rememberReduceMotion()
     var rolling by remember { mutableStateOf(false) }
@@ -480,6 +515,7 @@ internal fun DicePanel(
         if (rollNonce > 0 && !reduceMotion) delay(490L)
         rolling = false
     }
+    val count = rememberProfileStatCount(roll, rollNonce, LocalTextStyle.current.merge(ProfileDiceFinalValueStyle))
     val rollOnce = {
         // Synchronous lock covers two taps before the parent has recomposed.
         if (!rolling) { rolling = true; onRoll() }
@@ -515,7 +551,14 @@ internal fun DicePanel(
                 fontWeight = FontWeight.Medium,
                 modifier = Modifier.testTag("dice_3d_label"),
             )
-            Dice3DStage(first = shown.first, second = shown.second, rollNonce = rollNonce, label = shown.label)
+            Dice3DStage(
+                first = shown.first,
+                second = shown.second,
+                rollNonce = rollNonce,
+                label = shown.label,
+                allow3D = allow3D,
+                onSettled = count.onSettled,
+            )
             if (rerollsLeft > 0) {
                 LineButton(
                     text = "다시 굴리기 (${rerollsLeft}번 남음)",
@@ -538,7 +581,9 @@ internal fun DicePanel(
                 lineHeight = 18.sp,
                 modifier = Modifier.testTag("dice_rule"),
             )
-            rows.forEachIndexed { index, row -> DiceRow(row, shown = index == shownIndex, onShow = { shownIndex = index }) }
+            rows.forEachIndexed { index, row ->
+                DiceRow(row, shown = index == shownIndex, onShow = { shownIndex = index }, count = count, index = index)
+            }
             if (tendency != null) {
                 Spacer(Modifier.height(2.dp))
                 Text(
@@ -554,12 +599,23 @@ internal fun DicePanel(
     }
 }
 
+/** 능력치 줄 최종값(굵은 먹색)의 글자 모양. 세는 숫자도 이 모양으로 그려 멈출 때 진짜 글자와 겹친다. */
+private val ProfileDiceFinalValueStyle = TextStyle(color = LifeGameInk, fontSize = 14.sp, lineHeight = 20.sp, fontWeight = FontWeight.Bold)
+
 /**
  * 능력치 한 줄: "경제력 · 1 + 4 = 5 · 50 + 5 = 55". 증가량은 오르면 파랑, 내리면 빨강, 그대로면 회색, 최종값은 굵게.
  * 누르면 위 3D 주사위가 이 능력치의 두 눈을 보여 준다(다시 굴리지 않는다). 낭독도 같은 값을 읽는다.
+ * [count]가 세는 동안에도 글자는 최종값 그대로이고, 최종값 자리에만 세는 숫자를 덧그린다([index]: 위에서부터 몇째 줄).
  */
 @Composable
-private fun DiceRow(row: StartingStatRowUi, shown: Boolean, onShow: () -> Unit) {
+private fun DiceRow(
+    row: StartingStatRowUi,
+    shown: Boolean,
+    onShow: () -> Unit,
+    count: ProfileStatCountState? = null,
+    index: Int = 0,
+) {
+    val formulaLayout = remember { mutableStateOf<TextLayoutResult?>(null) }
     val increaseColor = when {
         row.increase > 0 -> LifeGameStatUp
         row.increase < 0 -> LifeGameStatDown
@@ -606,13 +662,21 @@ private fun DiceRow(row: StartingStatRowUi, shown: Boolean, onShow: () -> Unit) 
             fontSize = 14.sp,
             lineHeight = 20.sp,
             textAlign = TextAlign.End,
-            modifier = Modifier.weight(1f).testTag("dice_formula_${row.label}"),
+            onTextLayout = { formulaLayout.value = it },
+            modifier = Modifier
+                .weight(1f)
+                .testTag("dice_formula_${row.label}")
+                .profileStatCount(count, index, base = row.base, finalValue = row.finalValue, layout = formulaLayout),
         )
     }
 }
 
+/**
+ * 고른 모습을 영아 · 청소년 · 중년 · 노년 네 장으로 보여 준다. 옵션을 바꾸면 새 모습이 실제로 그려진 뒤
+ * 네 장이 함께 통 튄다(연출: appearancePop). 처음 보일 때는 튀지 않는다.
+ */
 @Composable
-private fun AppearancePreview(
+internal fun ProfileAppearancePreview(
     skinId: String,
     hairId: String,
     eyesId: String,
@@ -620,6 +684,23 @@ private fun AppearancePreview(
     outfitColorId: String = AvatarOptions.outfitColors.first().id,
     photoFaceSheet: String? = null,
 ) {
+    // 나이 드는 모습까지 보이도록 영아 · 청소년 · 중년 · 노년 네 장을 보여 준다.
+    val periods = listOf(
+        LifePeriod.INFANT to "지금",
+        LifePeriod.TEEN to "청소년기",
+        LifePeriod.MIDDLE to "중년기",
+        LifePeriod.OLD_AGE to "노년기",
+    )
+    val looks = periods.map { (period, _) ->
+        AvatarLook(
+            skinId, hairId, eyesId, period, BodyType.STANDARD,
+            usesPhotoFace = photoFaceSheet != null,
+            photoFaceSheet = photoFaceSheet,
+            hairColorId = hairColorId,
+            outfitColorId = outfitColorId,
+        )
+    }
+    val pop = rememberProfileAppearancePop(looks)
     val shape = RoundedCornerShape(10.dp)
     Row(
         Modifier
@@ -632,23 +713,12 @@ private fun AppearancePreview(
         horizontalArrangement = Arrangement.SpaceEvenly,
         verticalAlignment = Alignment.Bottom,
     ) {
-        // 나이 드는 모습까지 보이도록 영아 · 청소년 · 중년 · 노년 네 장을 보여 준다.
-        listOf(
-            LifePeriod.INFANT to "지금",
-            LifePeriod.TEEN to "청소년기",
-            LifePeriod.MIDDLE to "중년기",
-            LifePeriod.OLD_AGE to "노년기",
-        ).forEach { (period, label) ->
+        periods.forEachIndexed { index, (_, label) ->
             Column(horizontalAlignment = Alignment.CenterHorizontally, verticalArrangement = Arrangement.spacedBy(4.dp)) {
                 PlayerAvatar(
-                    look = AvatarLook(
-                        skinId, hairId, eyesId, period, BodyType.STANDARD,
-                        usesPhotoFace = photoFaceSheet != null,
-                        photoFaceSheet = photoFaceSheet,
-                        hairColorId = hairColorId,
-                        outfitColorId = outfitColorId,
-                    ),
-                    modifier = Modifier.size(width = 60.dp, height = 96.dp),
+                    look = looks[index],
+                    modifier = Modifier.profileAppearancePop(pop, index).size(width = 60.dp, height = 96.dp),
+                    onShown = pop.reporter(index),
                 )
                 Text(label, color = LifeGameInkTertiary, fontSize = 13.sp)
             }
@@ -744,7 +814,7 @@ private fun ChallengeCodeSection(
 
 @OptIn(ExperimentalLayoutApi::class)
 @Composable
-private fun OptionChips(
+internal fun ProfileOptionChips(
     label: String,
     options: List<AvatarOption>,
     selectedId: String,

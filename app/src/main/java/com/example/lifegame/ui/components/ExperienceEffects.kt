@@ -146,6 +146,8 @@ fun rememberAmbientPhase(enabled: Boolean = true): State<Float> {
     )
 }
 
+private const val PRESS_SCALE_THRESHOLD = 0.0005f
+
 /** Presentation-only modifier: callers retain their existing clickable, guards and semantics. */
 @Composable
 internal fun Modifier.experiencePress(
@@ -155,9 +157,20 @@ internal fun Modifier.experiencePress(
 ): Modifier {
     val pressed by interactions.collectIsPressedAsState()
     val reduceMotion = rememberReduceMotion()
+    val bounce = LocalMotionStyle.current.press != PressStyle.CLASSIC
+    val down = enabled && pressed && !reduceMotion
     val scale = animateFloatAsState(
-        if (enabled && pressed && !reduceMotion) pressedScale else 1f,
-        animationSpec = if (reduceMotion) snap() else spring(dampingRatio = 0.8f, stiffness = 450f),
+        if (down) pressedScale else 1f,
+        // With a bouncy press style the release uses a low damping ratio so the button springs
+        // slightly past its resting size and back, like a soft game button. The overshoot is under 1%,
+        // so the visibility threshold must be far below the 0.01 default or the spring stops before it.
+        animationSpec = when {
+            reduceMotion -> snap()
+            !bounce -> spring(dampingRatio = 0.8f, stiffness = 450f, visibilityThreshold = PRESS_SCALE_THRESHOLD)
+            down -> spring(dampingRatio = 0.8f, stiffness = 650f, visibilityThreshold = PRESS_SCALE_THRESHOLD)
+            else -> spring(dampingRatio = 0.35f, stiffness = 420f, visibilityThreshold = PRESS_SCALE_THRESHOLD)
+        },
+        visibilityThreshold = PRESS_SCALE_THRESHOLD,
         label = "experience_press",
     )
     // Read frame values only in the layer, without recomposing the button's text/content.

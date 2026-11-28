@@ -21,6 +21,13 @@ object MarriageContract {
 
     fun isCeremony(eventId: String): Boolean = eventId in weddingEventIds
 
+    fun followUpEventIds(before: Set<String>, after: Set<String>): Set<String> = when {
+        WEDDING_READY !in before && WEDDING_READY in after -> weddingEventIds
+        FAMILIES_MET !in before && FAMILIES_MET in after -> setOf(PREPARATION_EVENT)
+        ENGAGED !in before && ENGAGED in after -> setOf("love_family_meet_01", "path_soc_05")
+        else -> emptySet()
+    }
+
     data class PartnerDefinition(
         val id: String,
         val routeFlag: String,

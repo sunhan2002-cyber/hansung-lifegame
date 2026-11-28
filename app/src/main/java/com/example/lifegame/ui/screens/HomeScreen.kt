@@ -3,8 +3,6 @@ package com.example.lifegame.ui.screens
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
-import androidx.compose.foundation.LocalIndication
-import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.selection.selectable
@@ -19,7 +17,6 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Brush
@@ -29,8 +26,8 @@ import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.semantics.heading
 import androidx.compose.ui.semantics.semantics
+import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.lifegame.BuildConfig
@@ -41,17 +38,22 @@ import com.example.lifegame.ui.LifeRecordUi
 import com.example.lifegame.ui.components.ExperienceSettingsDialog
 import com.example.lifegame.ui.components.InkButton
 import com.example.lifegame.ui.components.LineButton
+import com.example.lifegame.ui.components.LocalMotionStyle
 import com.example.lifegame.ui.components.ThinRule
 import com.example.lifegame.ui.components.rememberAmbientPhase
-import com.example.lifegame.ui.components.experiencePress
-import com.example.lifegame.ui.components.rememberExperienceClick
 import com.example.lifegame.ui.theme.*
 
 private val LobbyGold = Color(0xFFE9CD94)
 private val LobbyNight = Color(0xFF15242C)
 private val LobbyPaper = Color(0xFFF6F1E5)
+private val LobbyTitleStyle = TextStyle(color = LobbyPaper, fontFamily = LifeGameSerif, fontWeight = FontWeight.Bold,
+    fontSize = 36.sp, letterSpacing = 3.sp)
 
-/** Artwork fills the viewport; the reserved scene area keeps the avatar clear of the text. */
+/**
+ * Artwork fills the viewport; the reserved scene area keeps the avatar clear of the text.
+ * Stage-2 lobby details (lobby2 area): [hasNewTitles] puts the new-title dot on 칭호 수집 and [hourOfDay] (0f until 24f)
+ * picks the time-of-day sky. Their defaults reproduce today's lobby exactly.
+ */
 @OptIn(ExperimentalLayoutApi::class)
 @Composable
 fun HomeScreen(
@@ -61,6 +63,7 @@ fun HomeScreen(
     onNewLife: () -> Unit,
     modifier: Modifier = Modifier,
     onDesignPreview: (() -> Unit)? = null,
+    onMotionCompare: (() -> Unit)? = null,
     message: String? = null,
     onOpenRecord: (runId: String) -> Unit = {},
     onOpenTitles: () -> Unit = {},
@@ -68,38 +71,51 @@ fun HomeScreen(
     onScenarioChange: (FakeScenario) -> Unit = {},
     latestRecord: LifeRecordUi? = null,
     hasRecoverableSave: Boolean = false,
+    hasNewTitles: Boolean = false,
+    hourOfDay: Float = LobbyClock.NEUTRAL_HOUR,
 ) {
     HomeSystemBarAppearance()
     var confirmOverwrite by rememberSaveable { mutableStateOf(false) }
     var showPastLives by rememberSaveable { mutableStateOf(false) }
     var showSettings by rememberSaveable { mutableStateOf(false) }
     val scene = rememberHomeScene(lifeCard, latestRecord)
-    val phase = rememberAmbientPhase(enabled = !confirmOverwrite && !showPastLives && !showSettings)
+    // While a dialog covers the lobby, the ambient scene and the main-button halo both rest.
+    val lobbyActive = !confirmOverwrite && !showPastLives && !showSettings
+    val phase = rememberAmbientPhase(enabled = lobbyActive)
+    val intro = rememberLobbyIntro()
     val startNew = { if (lifeCard != null || hasRecoverableSave) confirmOverwrite = true else onNewLife() }
+    // 시간대 로비(lobby2): the light follows the hour; at the neutral 13 h every style is today's lobby.
+    val timeStyle = LocalMotionStyle.current.lobbyTime
+    val look = remember(hourOfDay, timeStyle) { lobbyLookAt(hourOfDay, timeStyle) }
+    // The new-title dot pops as the footer row finishes rising; read once, so the intro settling never restarts it.
+    val newDotDelay = remember { lobbyNewDotDelayMillis(intro) }
 
     BoxWithConstraints(modifier.fillMaxSize().background(LobbyNight).testTag("home_screen")) {
-        HomeSceneBackground(scene, phase, Modifier.fillMaxSize())
+        HomeSceneBackground(scene, phase, Modifier.fillMaxSize(), look)
         Box(Modifier.fillMaxSize().background(Brush.verticalGradient(
             0f to LobbyNight.copy(alpha = 0.64f), 0.22f to LobbyNight.copy(alpha = 0.12f),
             0.56f to LobbyNight.copy(alpha = 0.12f), 0.78f to LobbyNight.copy(alpha = 0.82f), 1f to LobbyNight,
         )))
+        // Stars twinkle over the dark top gradient; nothing is composed here in daylight.
+        if (look.hasParticles) LobbyTimeParticles(look, phase, Modifier.fillMaxSize())
         val largeText = LocalDensity.current.fontScale > 1.5f
         val sceneHeight = (maxHeight * if (largeText) 0.30f else 0.34f).coerceIn(176.dp, 340.dp)
         Column(
             Modifier.fillMaxSize().safeDrawingPadding().verticalScroll(rememberScrollState())
                 .padding(horizontal = 22.dp, vertical = 24.dp).testTag("home_content"),
         ) {
-            Text("선택으로 만드는 한 사람의 일생", color = LobbyPaper.copy(alpha = 0.9f), fontSize = 12.sp, letterSpacing = 1.sp)
-            Text("인생게임", color = LobbyPaper, fontFamily = LifeGameSerif, fontWeight = FontWeight.Bold,
-                fontSize = 36.sp, letterSpacing = 3.sp, modifier = Modifier.semantics { heading() })
-            HomeSceneAvatar(scene, phase, Modifier.fillMaxWidth().height(sceneHeight))
+            Text("선택으로 만드는 한 사람의 일생", color = LobbyPaper.copy(alpha = 0.9f), fontSize = 12.sp, letterSpacing = 1.sp,
+                modifier = Modifier.lobbyEntrance(intro, 0))
+            StampedTitle("인생게임", LobbyTitleStyle, LobbyGold, intro, Modifier.lobbyEntrance(intro, LobbyIntroState.TITLE_INDEX))
+            HomeSceneAvatar(scene, phase, Modifier.fillMaxWidth().height(sceneHeight).lobbyEntrance(intro, 2, groupOpacity = true))
+            // Buttons and footers only fade, in place: a rising button would move its hit area with it.
             Column(
-                Modifier.fillMaxWidth().background(Brush.verticalGradient(listOf(
+                Modifier.fillMaxWidth().lobbyEntrance(intro, 3, rise = false).background(Brush.verticalGradient(listOf(
                     LobbyNight.copy(alpha = 0.24f), LobbyNight.copy(alpha = 0.94f),
                 )), RoundedCornerShape(16.dp)).padding(top = 12.dp, bottom = 4.dp),
                 verticalArrangement = Arrangement.spacedBy(10.dp),
             ) {
-                when {
+                Column(Modifier.fillMaxWidth().lobbyEntrance(intro, 3), verticalArrangement = Arrangement.spacedBy(10.dp)) { when {
                     lifeCard != null -> Column(Modifier.testTag("life_card"), verticalArrangement = Arrangement.spacedBy(5.dp)) {
                         LobbyEyebrow("지금 사는 인생 · ${lifeCard.place}")
                         LobbyHeading(lifeCard.playerName)
@@ -117,31 +133,39 @@ fun HomeScreen(
                         LobbyHeading("이번엔, 어떤 삶을 살게 될까?")
                         LobbyDescription("작은 선택 하나로 달라지는 나의 이야기.")
                     }
-                }
+                } }
                 if (message != null) Text(message, color = LobbyPaper, fontSize = 13.sp, lineHeight = 20.sp,
                     modifier = Modifier.fillMaxWidth().background(LobbyNight.copy(alpha = 0.86f), RoundedCornerShape(8.dp))
                         .padding(10.dp).testTag("home_message"))
                 if (lifeCard == null && hasRecoverableSave) LobbyDescription("불러오지 못한 저장이 있어요. 새로 시작하기 전에 확인해 주세요.")
                 Spacer(Modifier.height(2.dp))
                 InkButton(if (lifeCard != null) "이어하기" else "새 인생 살기", if (lifeCard != null) onContinue else startNew,
-                    Modifier.testTag(if (lifeCard != null) "home_continue" else "home_new_life"),
-                    containerColor = LobbyGold, contentColor = Color(0xFF253631))
-                if (lifeCard != null) LineButton("새 인생 살기", startNew, Modifier.testTag("home_new_life"),
+                    Modifier.lobbyEntrance(intro, 4, rise = false).testTag(if (lifeCard != null) "home_continue" else "home_new_life"),
+                    containerColor = LobbyGold, contentColor = Color(0xFF253631), highlight = lobbyActive)
+                if (lifeCard != null) LineButton("새 인생 살기", startNew, Modifier.lobbyEntrance(intro, 5, rise = false).testTag("home_new_life"),
                     containerColor = LobbyNight.copy(alpha = 0.55f), contentColor = LobbyPaper, borderColor = LobbyPaper.copy(alpha = 0.35f))
+                // Large text: one wide button per line, icon left of the label. Otherwise three in a row with the icon
+                // above the label, so the weight(1f) widths still fit '칭호 수집' on one line.
                 if (largeText) {
-                    Column(Modifier.fillMaxWidth(), verticalArrangement = Arrangement.spacedBy(4.dp)) {
-                        LobbyFooter("지난 인생", "home_past_lives", Modifier.fillMaxWidth()) { showPastLives = true }
-                        LobbyFooter("칭호 수집", "home_titles", Modifier.fillMaxWidth(), onOpenTitles)
-                        LobbyFooter("설정", "home_settings", Modifier.fillMaxWidth()) { showSettings = true }
+                    Column(Modifier.fillMaxWidth().lobbyEntrance(intro, 6, rise = false), verticalArrangement = Arrangement.spacedBy(4.dp)) {
+                        LobbyFooter("지난 인생", "home_past_lives", LobbyIcon.BOOK, stacked = false, Modifier.fillMaxWidth()) { showPastLives = true }
+                        LobbyFooter("칭호 수집", "home_titles", LobbyIcon.MEDAL, stacked = false, Modifier.fillMaxWidth(),
+                            showNewDot = hasNewTitles, newDotDelayMillis = newDotDelay, onClick = onOpenTitles)
+                        LobbyFooter("설정", "home_settings", LobbyIcon.GEAR, stacked = false, Modifier.fillMaxWidth()) { showSettings = true }
                     }
                 } else {
-                    Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(4.dp)) {
-                        LobbyFooter("지난 인생", "home_past_lives", Modifier.weight(1f)) { showPastLives = true }
-                        LobbyFooter("칭호 수집", "home_titles", Modifier.weight(1f), onOpenTitles)
-                        LobbyFooter("설정", "home_settings", Modifier.weight(1f)) { showSettings = true }
+                    Row(Modifier.fillMaxWidth().lobbyEntrance(intro, 6, rise = false), horizontalArrangement = Arrangement.spacedBy(4.dp)) {
+                        LobbyFooter("지난 인생", "home_past_lives", LobbyIcon.BOOK, stacked = true, Modifier.weight(1f)) { showPastLives = true }
+                        LobbyFooter("칭호 수집", "home_titles", LobbyIcon.MEDAL, stacked = true, Modifier.weight(1f),
+                            showNewDot = hasNewTitles, newDotDelayMillis = newDotDelay, onClick = onOpenTitles)
+                        LobbyFooter("설정", "home_settings", LobbyIcon.GEAR, stacked = true, Modifier.weight(1f)) { showSettings = true }
                     }
                 }
                 if (BuildConfig.DEBUG) {
+                    onMotionCompare?.let { openCompare ->
+                        LineButton("연출 비교", openCompare, Modifier.testTag("home_motion_compare"),
+                            containerColor = LobbyNight, contentColor = LobbyPaper, borderColor = LobbyGold.copy(alpha = 0.6f))
+                    }
                     onDesignPreview?.let { openPreview ->
                         LineButton("디자인 미리보기", openPreview, Modifier.testTag("home_design_preview"),
                             containerColor = LobbyNight, contentColor = LobbyPaper, borderColor = LobbyPaper.copy(alpha = 0.25f))
@@ -184,16 +208,6 @@ fun HomeScreen(
     Text(text, color = LobbyPaper, fontWeight = FontWeight.Bold, fontSize = 22.sp, lineHeight = 29.sp, modifier = Modifier.semantics { heading() })
 }
 @Composable private fun LobbyDescription(text: String) { Text(text, color = LobbyPaper.copy(alpha = 0.86f), fontSize = 13.sp, lineHeight = 20.sp) }
-
-@Composable private fun LobbyFooter(label: String, tag: String, modifier: Modifier, onClick: () -> Unit) {
-    val interactions = remember { MutableInteractionSource() }
-    val click = rememberExperienceClick(onClick)
-    Box(modifier.heightIn(min = 48.dp).experiencePress(interactions).clip(RoundedCornerShape(8.dp))
-        .clickable(interactionSource = interactions, indication = LocalIndication.current, role = Role.Button, onClick = click)
-        .padding(horizontal = 4.dp, vertical = 12.dp).testTag(tag), contentAlignment = Alignment.Center) {
-        Text(label, color = LobbyPaper.copy(alpha = 0.9f), fontSize = 13.sp, textAlign = TextAlign.Center)
-    }
-}
 
 @Composable private fun PastLivesDialog(lives: List<FinishedLifeUi>, onDismiss: () -> Unit, onOpenRecord: (String) -> Unit) {
     AlertDialog(onDismissRequest = onDismiss, modifier = Modifier.testTag("home_past_lives_dialog"), containerColor = LifeGamePaper,

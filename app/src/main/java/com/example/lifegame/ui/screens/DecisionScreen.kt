@@ -4,6 +4,7 @@ import androidx.compose.foundation.layout.ColumnScope
 import androidx.compose.foundation.layout.ExperimentalLayoutApi
 import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.animation.AnimatedVisibility
+import androidx.compose.animation.EnterTransition
 import androidx.compose.animation.core.MutableTransitionState
 import androidx.compose.animation.core.animateDpAsState
 import androidx.compose.animation.fadeIn
@@ -14,7 +15,18 @@ import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.interaction.collectIsPressedAsState
 import androidx.compose.ui.semantics.LiveRegionMode
 import androidx.compose.ui.semantics.liveRegion
+import androidx.compose.ui.text.rememberTextMeasurer
 import com.example.lifegame.ui.StatChangeUi
+import com.example.lifegame.ui.toDisplayMap
+import com.example.lifegame.ui.components.LocalMotionStyle
+import com.example.lifegame.ui.components.StatChangeChipPlaces
+import com.example.lifegame.ui.components.StatChangeStyle
+import com.example.lifegame.ui.components.StatChangeTextHolder
+import com.example.lifegame.ui.components.awaitFrameMillis
+import com.example.lifegame.ui.components.rememberStatChangeChips
+import com.example.lifegame.ui.components.statChangeChip
+import com.example.lifegame.ui.components.statChangeFloatingNumbers
+import com.example.lifegame.ui.components.statChangeOdometer
 import com.example.lifegame.ui.theme.LifeGameStatDown
 import com.example.lifegame.ui.theme.LifeGameStatDownSoft
 import com.example.lifegame.ui.theme.LifeGameStatUp
@@ -131,6 +143,8 @@ import com.example.lifegame.ui.components.distortEnvelope
 import com.example.lifegame.ui.components.markLabel
 import com.example.lifegame.ui.components.rememberReduceMotion
 import com.example.lifegame.ui.components.experiencePress
+import com.example.lifegame.ui.components.inkSplash
+import com.example.lifegame.ui.components.pressIndication
 import com.example.lifegame.ui.components.rememberExperienceClick
 import com.example.lifegame.ui.teaser
 import com.example.lifegame.ui.theme.LifeGameBodyInk
@@ -171,17 +185,18 @@ internal const val CHANGE_HOLD_MILLIS = 1_600L
  */
 private fun Modifier.completeTextOnTap(enabled: Boolean, onTap: () -> Unit): Modifier = composed {
     val currentTap by rememberUpdatedState(onTap)
-    if (!enabled) {
-        this
-    } else {
-        pointerInput(Unit) {
-            awaitEachGesture {
-                awaitFirstDown(requireUnconsumed = false, pass = PointerEventPass.Initial)
-                val up = waitForUpOrCancellation(pass = PointerEventPass.Initial)
-                if (up != null) {
-                    up.consume()
-                    currentTap()
-                }
+    val guarding by rememberUpdatedState(enabled)
+    // 늘 붙여 두고 터치마다 손가락이 닿는 순간 한 번만 정한다. 보호 중에 시작된 터치는 손을 떼기 전에 보호가 끝나도
+    // 끝까지 삼킨다(보호가 끝날 때 이 처리를 떼어 내면, 이미 눌린 '계속하기'가 손을 뗄 때 눌렸다). 움직임은 그대로
+    // 두므로 스크롤은 막지 않는다.
+    pointerInput(Unit) {
+        awaitEachGesture {
+            awaitFirstDown(requireUnconsumed = false, pass = PointerEventPass.Initial)
+            if (!guarding) return@awaitEachGesture
+            val up = waitForUpOrCancellation(pass = PointerEventPass.Initial)
+            if (up != null) {
+                up.consume()
+                currentTap()
             }
         }
     }
@@ -197,7 +212,11 @@ private fun Modifier.completeTextOnTap(enabled: Boolean, onTap: () -> Unit): Mod
  * → 제목 · 본문 타이핑 → 선택지. 전환점 사건도 같은 순서를 쓴다(팝업만 없음).
  * 그림을 읽지 못하면 선노출을 건너뛰고 "본 그림"으로 저장하지 않는다.
  * 선노출이 터치 · 시간 초과 · 뒤로가기로 끝날 때, 그리고 본문이 끝나 선택지가 나타날 때 짧게 터치를 삼켜
- * 다음 단계로 넘기려던 손가락이 선택을 확정하지 않게 한다.
+ * 다음 단계로 넘기려던 손가락이 선택을 확정하지 않게 한다. 선택지를 고른 직후에도 같은 시간만큼 삼켜, 연타가 같은
+ * 자리에 들어선 결과 화면의 '계속하기'를 누르지 않게 한다.
+ *
+ * 2단계 연출(play, LocalMotionStyle): 선택지 등장 · 고른 카드(DecisionMotion.kt), 능력치 변화(StatChangeMotion.kt),
+ * 큰 결과(ResultImpact.kt). 모두 표시 전용이라 그리기 단계에서만 움직이고, 입력 보호 · 콜백 · 태그 · 의미는 그대로다.
  */
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
@@ -210,6 +229,11 @@ fun DecisionScreen(
     modifier: Modifier = Modifier,
     /** 같은 장면을 방금 다른 화면(돌잡이 컷신)에서 보여 줬으면 선노출을 건너뛰고 본문부터 시작한다. */
     skipImagePreview: Boolean = false,
+    /**
+     * 선택지가 처음 나타날 때 첫 카드가 보이게 스크롤한다. 연출 비교 화면처럼 바깥 스크롤 안에 축소해 넣은 미리보기는
+     * false: 이 요청은 바깥 스크롤까지 올라가 비교 화면 전체를 움직인다.
+     */
+    bringChoicesIntoView: Boolean = true,
 ) {
     val decision = state.decision ?: return
     val outcome = state.outcome
@@ -248,6 +272,10 @@ fun DecisionScreen(
     val textLength = decision.text.length
     // 완성 터치 직후 아주 짧게 이어지는 연타도 삼켜, 본문을 보려던 손가락이 선택을 확정하지 않게 한다.
     var swallowTaps by remember(introKey) { mutableStateOf(false) }
+    // 고르면 결과 화면이 같은 자리에 곧바로 들어선다. 이어진 연타가 막 나타난(들어오는 연출 중이라 아직 흐린)
+    // '계속하기'를 눌러 결과를 못 보고 넘어가지 않게, 고른 순간부터 같은 시간만큼 터치를 삼킨다. 화면 단계가 바뀔 때의
+    // 연타 보호(PlayHost, 2026-11-09)와 같은 이유다. 결과가 오면 introKey가 바뀌므로 키 없이 기억한다.
+    var pickTapGuard by remember { mutableStateOf(false) }
     val typing = introDone && previewDone && outcome == null && !sceneOnly && typedChars < textLength
     val completeText: () -> Unit = {
         if (typedChars < textLength) {
@@ -360,6 +388,12 @@ fun DecisionScreen(
             swallowTaps = false
         }
     }
+    LaunchedEffect(pickTapGuard) {
+        if (pickTapGuard) {
+            delay(TAP_GUARD_MILLIS)
+            pickTapGuard = false
+        }
+    }
 
     // 본문 스크롤은 사건마다 새로 시작하고, 장면 보기에서 돌아와도 위치를 지킨다.
     val contentScroll = rememberSaveable(introKey, saver = ScrollState.Saver) { ScrollState(0) }
@@ -375,8 +409,31 @@ fun DecisionScreen(
         // 본문이 저절로 끝나는 순간 막 나타난 선택지 카드에 터치가 떨어지지 않게 짧게 삼킨다.
         swallowTaps = true
         withFrameNanos { } // 선택지가 한 번 배치된 뒤에 잰다.
-        choicesInView.bringIntoView()
+        if (bringChoicesIntoView) choicesInView.bringIntoView()
     }
+
+    // ---- play 연출(선택지 등장 · 고른 카드 · 능력치 변화 · 큰 결과). 모두 표시 전용이고 그리기 단계에서만 움직인다. ----
+    // 선택지 등장: 본문이 끝나 선택지가 처음 나타나는 그 composition만 '실시간 등장'이다(choicesRevealed는 그 뒤에 저장된다).
+    val choiceReveal = rememberChoiceReveal(
+        key = introKey,
+        visible = choicesVisible,
+        live = choicesVisible && !choicesRevealed && outcome == null,
+        count = decision.choices.size,
+    )
+    // 고른 카드: 키 없는 상태라 고르는 순간 introKey가 바뀌어도(같은 프레임에 결과가 나온다) 남는다.
+    val choicePick = rememberChoicePick(eventId = decision.eventId, showingOutcome = outcome != null)
+    // 저장된 연출 상태상 이미 끝난 결과는 앱을 다시 열어도 칩 · 큰 결과를 다시 띄우지 않는다.
+    val resultChangesShownBefore = resultDisplayId != null &&
+        state.presentation.resultAnimation == ResultAnimationStatus.CONSUMED
+    // 결과 연출(칩 · 건강 게이지 · 큰 결과)은 고른 카드가 물러나는 동안 PICK_RESULT_DELAY_MS 늦게 시작한다.
+    val resultDelayMillis = choicePick.resultDelayMillis
+    val resultImpact = rememberResultImpact(
+        outcome = outcome,
+        kind = decision.kind,
+        key = introKey,
+        shownBefore = resultChangesShownBefore,
+        startDelayMillis = resultDelayMillis,
+    )
 
     BackHandler(enabled = popupOpen) { popupClosed.trySend(Unit) }
     BackHandler(enabled = sceneOnly && !popupOpen) { sceneOnly = false }
@@ -394,7 +451,9 @@ fun DecisionScreen(
             .fillMaxSize()
             .background(LifeGameInk)
             // 본문이 나오는 동안의 터치는 어디를 눌러도 본문 완성만 한다(선택 · 장면 보기 · 진행으로 가지 않는다).
-            .completeTextOnTap(enabled = typing || swallowTaps, onTap = completeText),
+            .completeTextOnTap(enabled = typing || swallowTaps || pickTapGuard, onTap = completeText)
+            // 고른 카드 연출이 카드 · 결과 카드의 자리를 이 화면 기준으로 잰다(배치 콜백만, 의미 · 터치 없음).
+            .then(choicePick.motion.rootTracker),
     ) {
         SceneImage(
             shot = FilmShot(
@@ -452,6 +511,9 @@ fun DecisionScreen(
                     modifier = Modifier.windowInsetsPadding(
                         WindowInsets.safeDrawing.only(WindowInsetsSides.Top + WindowInsetsSides.Horizontal),
                     ),
+                    // 사건 화면은 능력치 변화 연출 전체를 쓰고, 건강 변화도 결과 연출과 같은 순간에 닿게 한다.
+                    healthAccents = true,
+                    healthChangeDelayMillis = resultDelayMillis.toLong(),
                     avatar = { avatarModifier -> PlayerPortrait(state.avatar, avatarModifier) },
                 )
                 Column(
@@ -459,7 +521,11 @@ fun DecisionScreen(
                         .weight(1f)
                         .fillMaxWidth()
                         .windowInsetsPadding(WindowInsets.safeDrawing.only(WindowInsetsSides.Horizontal))
+                        // 선택지 목록이 보이는 창(스크롤 전). 고른 카드가 물러나는 그림은 이 안에서만 그린다.
+                        .then(choicePick.motion.viewportTracker)
                         .verticalScroll(contentScroll)
+                        // 큰 결과의 흔들림은 스크롤된 본문에만, 그리기 단계로 준다(배치 · 스크롤 범위는 그대로).
+                        .resultImpactShake(resultImpact)
                         .testTag("decision_content"),
                 ) {
                     if (outcome == null) {
@@ -474,10 +540,15 @@ fun DecisionScreen(
                                 animateMark = revealMark && !reduceMotion,
                                 onReveal = { sceneOnly = true },
                                 onCompleteText = completeText.takeIf { typing },
+                                readyModifier = Modifier.choiceRevealFade(choiceReveal),
                             )
                         }
                     } else {
-                        DecisionText(decision = decision, onReveal = { sceneOnly = true })
+                        DecisionText(
+                            decision = decision,
+                            onReveal = { sceneOnly = true },
+                            modifier = choicePick.entrance(ChoicePickEntrance.TEXT),
+                        )
                     }
                     if (choicesVisible) {
                         DecisionSheet(
@@ -492,21 +563,28 @@ fun DecisionScreen(
                                 // 같은 화면에서 두 번 눌러도 한 번만 넘긴다(VM도 결과가 있으면 무시한다).
                                 if (chosenId == null) {
                                     chosenId = id
+                                    pickTapGuard = true
+                                    // 표시 상태만 먼저 남긴다(카드의 자리와 마지막 모습). 콜백은 그대로 곧바로 한 번.
+                                    choicePick.onPick(decision.eventId, decision.choices, id)
                                     onChoose(id)
                                 }
                             },
                             onContinue = onContinue,
                             changeKey = introKey,
-                            // 저장된 연출 상태상 이미 끝난 결과 칩은 앱을 다시 열어도 다시 띄우지 않는다.
-                            resultChangesShownBefore = resultDisplayId != null &&
-                                state.presentation.resultAnimation == ResultAnimationStatus.CONSUMED,
+                            resultChangesShownBefore = resultChangesShownBefore,
                             reduceMotion = reduceMotion,
+                            reveal = choiceReveal,
+                            pick = choicePick,
+                            impact = resultImpact,
+                            statValues = state.stats.toDisplayMap(),
                         )
                     }
                 }
                 PeriodTrack(
                     marks = state.periodMarks,
                     yearLabel = "${state.yearInPeriod}번째 해",
+                    // 선택지가 보이면 시기선의 해 도장(time 영역)은 바로 물러나고 새로 찍히지 않는다.
+                    stampYield = choicesVisible,
                     modifier = Modifier
                         .background(LifeGamePaper)
                         .windowInsetsPadding(
@@ -514,6 +592,10 @@ fun DecisionScreen(
                         ),
                 )
             }
+            // 고른 카드의 마지막 모습이 물러나는 그림과 큰 결과의 빛 · 그늘. 의미 노드 · 터치가 없어 아래 결과 화면이
+            // 그대로 읽히고 눌린다. 돌발 팝업보다 아래이고, 끝나면 아무것도 그리지 않는다.
+            ChoiceExitOverlay(choicePick, contentOffset = resultImpact::contentOffset)
+            ResultImpactOverlay(resultImpact, center = choicePick::outcomeCenter, modifier = Modifier.fillMaxSize())
         }
 
         if (popupOpen) {
@@ -538,6 +620,7 @@ fun DecisionScreen(
     }
 }
 
+/** [readyModifier]는 본문이 끝나고 선택지와 함께 나타나는 줄(회상 · 장면 보기)에 붙는다(선택지 등장 연출의 페이드). */
 @Composable
 private fun NarrativeReveal(
     decision: DecisionUi,
@@ -546,6 +629,7 @@ private fun NarrativeReveal(
     animateMark: Boolean,
     onReveal: () -> Unit,
     onCompleteText: (() -> Unit)? = null,
+    readyModifier: Modifier = Modifier,
 ) {
     Column(
         Modifier
@@ -596,18 +680,18 @@ private fun NarrativeReveal(
             )
         }
         if (ready) {
-            ExtensionNotes(decision)
-            SceneViewButton(onClick = onReveal, enabled = true)
+            ExtensionNotes(decision, itemModifier = readyModifier)
+            SceneViewButton(onClick = onReveal, modifier = readyModifier, enabled = true)
         }
     }
 }
 
 /**
  * 승인된 확장 기능: "그때 그 선택" 회상 한 줄과 다시 만난 사람. 이번 인생의 실제 기록이 있을 때만 값이 있고,
- * 없으면 아무것도 그리지 않는다(문구를 지어내지 않는다).
+ * 없으면 아무것도 그리지 않는다(문구를 지어내지 않는다). [itemModifier]는 줄마다 붙는다(연출용).
  */
 @Composable
-private fun ExtensionNotes(decision: DecisionUi) {
+private fun ExtensionNotes(decision: DecisionUi, itemModifier: Modifier = Modifier) {
     decision.recall?.let { recall ->
         Text(
             text = "그때 그 선택 · ${recall.text}",
@@ -618,7 +702,7 @@ private fun ExtensionNotes(decision: DecisionUi) {
             lineHeight = 22.sp,
             textAlign = TextAlign.Center,
             style = TextStyle(shadow = OnSceneShadow),
-            modifier = Modifier.testTag("decision_recall"),
+            modifier = itemModifier.testTag("decision_recall"),
         )
     }
     decision.returningNpc?.let { npc ->
@@ -629,7 +713,7 @@ private fun ExtensionNotes(decision: DecisionUi) {
             lineHeight = 20.sp,
             textAlign = TextAlign.Center,
             style = TextStyle(shadow = OnSceneShadow),
-            modifier = Modifier.testTag("decision_npc"),
+            modifier = itemModifier.testTag("decision_npc"),
         )
     }
     decision.partner?.let { partner ->
@@ -640,7 +724,7 @@ private fun ExtensionNotes(decision: DecisionUi) {
             lineHeight = 20.sp,
             textAlign = TextAlign.Center,
             style = TextStyle(shadow = OnSceneShadow),
-            modifier = Modifier.testTag("decision_partner"),
+            modifier = itemModifier.testTag("decision_partner"),
         )
     }
 }
@@ -687,11 +771,14 @@ private fun ScenePreview(title: String, onDone: () -> Unit) {
     }
 }
 
-/** 결과를 보는 동안의 사건 머리. 분류 · 제목 · 본문을 가운데 정렬로 선명하게 둔다. */
+/**
+ * 결과를 보는 동안의 사건 머리. 분류 · 제목 · 본문을 가운데 정렬로 선명하게 둔다.
+ * [modifier]는 고른 직후 결과 화면이 들어오는 연출(투명도만)이다.
+ */
 @Composable
-private fun DecisionText(decision: DecisionUi, onReveal: () -> Unit) {
+private fun DecisionText(decision: DecisionUi, onReveal: () -> Unit, modifier: Modifier = Modifier) {
     Column(
-        modifier = Modifier
+        modifier = modifier
             .fillMaxWidth()
             .padding(start = 22.dp, end = 22.dp, top = 12.dp, bottom = 10.dp),
         horizontalAlignment = Alignment.CenterHorizontally,
@@ -738,6 +825,11 @@ private fun DecisionSheet(
     changeKey: String,
     resultChangesShownBefore: Boolean = false,
     reduceMotion: Boolean,
+    reveal: ChoiceRevealMotion,
+    pick: ChoicePickState,
+    impact: ResultImpactMotion,
+    /** 바뀐 뒤 능력치(이름 → 값). 결과 칩의 미니 막대가 바뀌기 전 값(뒤 값 − 변화량)부터 움직인다. */
+    statValues: Map<String, Int>,
 ) {
     Column(
         modifier = Modifier
@@ -748,24 +840,43 @@ private fun DecisionSheet(
         if (outcome == null) {
             val hasDetails = decision.choices.any { it.statTags.isNotEmpty() }
             if (hasDetails) {
-                ChoiceDetailsToggle(expanded = showChoiceDetails, onToggle = onToggleDetails)
+                ChoiceDetailsToggle(
+                    expanded = showChoiceDetails,
+                    onToggle = onToggleDetails,
+                    modifier = Modifier.choiceRevealFade(reveal),
+                )
             }
             decision.choices.forEachIndexed { index, choice ->
                 DecisionChoiceCard(
-                    modifier = if (index == 0) firstChoiceModifier else Modifier,
+                    modifier = (if (index == 0) firstChoiceModifier else Modifier).choiceEntrance(reveal, index),
                     choice = choice,
                     enabled = enabled && choice.available,
                     showDetails = showChoiceDetails,
                     chosen = chosenId == choice.choiceId,
                     dimmed = chosenId != null && chosenId != choice.choiceId,
                     onClick = { onChoose(choice.choiceId) },
+                    badgeModifier = Modifier.choiceBadgeStamp(reveal, index),
+                    pickTrack = pick.track(choice.key),
+                    pickRecord = pick.record(choice.key),
                 )
             }
         } else {
-            OutcomeBlock(outcome, changeKey = changeKey, reduceMotion = reduceMotion, changesShownBefore = resultChangesShownBefore)
+            OutcomeBlock(
+                outcome,
+                changeKey = changeKey,
+                reduceMotion = reduceMotion,
+                changesShownBefore = resultChangesShownBefore,
+                statValues = statValues,
+                changeStyle = LocalMotionStyle.current.statChange,
+                changeDelayMillis = pick.resultDelayMillis,
+                cardModifier = pick.entrance(ChoicePickEntrance.CARD).then(pick.motion.outcomeTracker),
+                cardSemantics = Modifier.semantics { resultImpactTier = resultImpactOf(outcome, decision.kind).tier },
+                modifier = Modifier.resultImpactGlow(impact),
+            )
             InkButton(
                 text = if (outcome.endsLife) "인생 정리하기" else "계속하기",
                 onClick = onContinue,
+                modifier = pick.entrance(ChoicePickEntrance.BUTTON),
             )
         }
     }
@@ -773,7 +884,7 @@ private fun DecisionSheet(
 
 /** 능력치 영향(사회성 · 행복 같은 보조 태그)은 기본으로 접어 두고 필요할 때만 펼친다 (2026-11-06 요구 7). */
 @Composable
-private fun ColumnScope.ChoiceDetailsToggle(expanded: Boolean, onToggle: () -> Unit) {
+private fun ColumnScope.ChoiceDetailsToggle(expanded: Boolean, onToggle: () -> Unit, modifier: Modifier = Modifier) {
     val interactions = remember { MutableInteractionSource() }
     val click = rememberExperienceClick(onToggle)
     Text(
@@ -781,11 +892,12 @@ private fun ColumnScope.ChoiceDetailsToggle(expanded: Boolean, onToggle: () -> U
         color = LifeGamePaper.copy(alpha = 0.78f),
         fontSize = 13.sp,
         fontWeight = FontWeight.Medium,
-        modifier = Modifier
+        modifier = modifier
             .align(Alignment.End)
             .experiencePress(interactions)
             .clip(RoundedCornerShape(8.dp))
-            .clickable(interactionSource = interactions, indication = androidx.compose.foundation.LocalIndication.current,
+            .inkSplash(interactions, LifeGamePaper.copy(alpha = 0.16f))
+            .clickable(interactionSource = interactions, indication = pressIndication(),
                 role = Role.Button, onClickLabel = if (expanded) "능력치 영향 접기" else "능력치 영향 펼치기", onClick = click)
             .heightIn(min = 44.dp)
             .padding(horizontal = 8.dp, vertical = 10.dp)
@@ -798,6 +910,8 @@ private fun ColumnScope.ChoiceDetailsToggle(expanded: Boolean, onToggle: () -> U
  * 숨은 결과의 문장 · 확률은 쓰지 않고, 잠긴 선택지는 실제 조건만 보인다.
  * 제목(행동)이 가장 크고, 가능성 · 건강 변화는 한 줄 보조 정보로 약하게 둔다. 능력치 태그는 펼쳤을 때만 보인다.
  * 누르는 동안 카드가 밝아지고, 고른 카드는 테두리가 진해지며 나머지는 흐려진다.
+ * 연출 수식어(play): [badgeModifier]는 ABC 표식의 등장 도장, [pickTrack]은 카드의 자리(누름 크기 바깥),
+ * [pickRecord]는 카드의 마지막 모습 녹화(모서리 자르기 바로 뒤)다. 모두 그리기 · 배치 콜백뿐이라 의미 · 터치는 그대로다.
  */
 @Composable
 private fun DecisionChoiceCard(
@@ -808,6 +922,9 @@ private fun DecisionChoiceCard(
     chosen: Boolean,
     dimmed: Boolean,
     onClick: () -> Unit,
+    badgeModifier: Modifier = Modifier,
+    pickTrack: Modifier = Modifier,
+    pickRecord: Modifier = Modifier,
 ) {
     val shape = RoundedCornerShape(12.dp)
     val interaction = remember { MutableInteractionSource() }
@@ -829,9 +946,11 @@ private fun DecisionChoiceCard(
     Box(
         modifier = modifier
             .fillMaxWidth()
+            .then(pickTrack)
             .heightIn(min = 72.dp)
             .experiencePress(interaction, enabled, pressedScale = 0.985f)
             .clip(shape)
+            .then(pickRecord)
             .background(if (pressed && enabled) ChoiceGlassPressed else ChoiceGlass)
             .border(
                 width = if (chosen) 2.dp else 1.dp,
@@ -913,12 +1032,13 @@ private fun DecisionChoiceCard(
             }
             ChoiceArrow(color = LifeGamePaper.copy(alpha = 0.9f * textAlpha))
         }
+        // 모양은 자르기 층 대신 배경 모양으로 그린다(보이는 모습은 같다). 카드 녹화(pickRecord)에 겹친 층이 생기지 않는다.
         Box(
             Modifier
                 .align(Alignment.TopStart)
+                .then(badgeModifier)
                 .size(width = 36.dp, height = 32.dp)
-                .clip(RoundedCornerShape(bottomEnd = 10.dp))
-                .background(LifeGamePaper.copy(alpha = if (chosen) 0.5f else 0.24f))
+                .background(LifeGamePaper.copy(alpha = if (chosen) 0.5f else 0.24f), RoundedCornerShape(bottomEnd = 10.dp))
                 .testTag("choice_badge_${choice.key}"),
             contentAlignment = Alignment.Center,
         ) {
@@ -950,18 +1070,35 @@ private fun ChoiceArrow(color: Color) {
     }
 }
 
+/**
+ * 결과 카드와 그 위의 변화 칩. 연출(play): [cardModifier]는 카드가 들어오는 모습과 자리 재기(카드 사슬 맨 앞),
+ * [cardSemantics]는 테스트용 등급 속성(태그 뒤에 붙여 의미 경계가 바뀌지 않게), [modifier]는 카드 둘레의 빛이다.
+ * 칩은 [changeStyle]대로 움직이고 [changeDelayMillis]만큼 늦게 뜬다.
+ */
 @Composable
-private fun OutcomeBlock(outcome: OutcomeUi, changeKey: String, reduceMotion: Boolean, changesShownBefore: Boolean = false) {
+private fun OutcomeBlock(
+    outcome: OutcomeUi,
+    changeKey: String,
+    reduceMotion: Boolean,
+    changesShownBefore: Boolean = false,
+    statValues: Map<String, Int> = emptyMap(),
+    changeStyle: StatChangeStyle = StatChangeStyle.NONE,
+    changeDelayMillis: Int = 0,
+    cardModifier: Modifier = Modifier,
+    cardSemantics: Modifier = Modifier,
+    modifier: Modifier = Modifier,
+) {
     val shape = RoundedCornerShape(12.dp)
-    Box(Modifier.fillMaxWidth()) {
+    Box(modifier.fillMaxWidth()) {
         Column(
-            modifier = Modifier
+            modifier = cardModifier
                 .fillMaxWidth()
                 .clip(shape)
                 .background(LifeGamePaper.copy(alpha = 0.97f))
                 .border(1.dp, LifeGameRule, shape)
                 .padding(horizontal = 16.dp, vertical = 14.dp)
-                .testTag("decision_outcome"),
+                .testTag("decision_outcome")
+                .then(cardSemantics),
             verticalArrangement = Arrangement.spacedBy(8.dp),
         ) {
             Text(
@@ -1021,6 +1158,9 @@ private fun OutcomeBlock(outcome: OutcomeUi, changeKey: String, reduceMotion: Bo
                 key = changeKey,
                 shownBefore = changesShownBefore,
                 modifier = Modifier.align(Alignment.TopCenter),
+                style = changeStyle,
+                startDelayMillis = changeDelayMillis,
+                values = statValues,
             )
         }
     }
@@ -1030,16 +1170,29 @@ private fun OutcomeBlock(outcome: OutcomeUi, changeKey: String, reduceMotion: Bo
  * 선택 직후 결과 카드 위에 능력치 변화가 잠깐 떠올랐다가 사라진다 (2026-11-06 요구 9).
  * 순수 표시용이라 반영은 VM에서 이미 한 번 끝났다. 같은 결과에서는 다시 재생하지 않는다(복원 포함).
  * 스크린리더에는 나타날 때 한 번 읽힌다.
+ * 능력치 변화 연출(play · [style]): ROLL은 숫자가 0부터 굴러 오르고 칩 속 미니 막대가 [values](바뀐 뒤 값)로 차오르며,
+ * FLOAT는 칩 옆에서 숫자가 떠오르거나 떨어진다. 칩의 배치 · 글자 · 의미는 그대로이고 그리기 단계에서만 움직인다.
+ * 고른 카드가 물러나는 동안에는 [startDelayMillis]만큼 늦게 뜬다(재생함 표시는 그 전에 남긴다).
  */
 @OptIn(ExperimentalLayoutApi::class)
 @Composable
-private fun FloatingChanges(changes: List<StatChangeUi>, key: String, shownBefore: Boolean = false, modifier: Modifier = Modifier) {
+private fun FloatingChanges(
+    changes: List<StatChangeUi>,
+    key: String,
+    shownBefore: Boolean = false,
+    modifier: Modifier = Modifier,
+    style: StatChangeStyle = StatChangeStyle.NONE,
+    startDelayMillis: Int = 0,
+    values: Map<String, Int> = emptyMap(),
+) {
     var played by rememberSaveable(key) { mutableStateOf(shownBefore) }
     val visible = remember(key) { MutableTransitionState(false) }
     LaunchedEffect(key) {
         if (played) return@LaunchedEffect
         // 시작하자마자 재생함으로 남긴다: 떠 있는 도중 화면이 다시 만들어져도(회전 등) 처음부터 다시 띄우지 않는다.
         played = true
+        // 고른 카드가 물러나는 동안 기다린다(프레임 시계). 실시간 선택이 아니면 0이다.
+        awaitFrameMillis(startDelayMillis.toLong())
         visible.targetState = true
         delay(CHANGE_HOLD_MILLIS)
         visible.targetState = false
@@ -1056,9 +1209,13 @@ private fun FloatingChanges(changes: List<StatChangeUi>, key: String, shownBefor
                 val overlap = 12.dp.roundToPx()
                 layout(placeable.width, placeable.height) { placeable.place(0, -(placeable.height - overlap)) }
             },
-        enter = fadeIn(tween(200)) + slideInVertically(tween(260)) { it / 2 },
+        // ROLL · FLOAT는 칩마다 따로 나타난다(묶음 페이드는 묶음 밖으로 그리는 칩 · 숫자를 잘라 쓰지 않는다).
+        enter = if (style == StatChangeStyle.NONE) fadeIn(tween(200)) + slideInVertically(tween(260)) { it / 2 } else EnterTransition.None,
         exit = fadeOut(tween(320)) + slideOutVertically(tween(320)) { -it / 2 },
     ) {
+        val motion = rememberStatChangeChips(style, changes.size)
+        val measurer = rememberTextMeasurer(cacheSize = 32)
+        val places = remember(changes.size) { StatChangeChipPlaces(changes.size) }
         // 칩이 한 줄에 다 들어가지 않으면 다음 줄로 넘긴다(한 칩을 좁혀 글자가 세로로 꺾이지 않게).
         FlowRow(
             Modifier
@@ -1067,24 +1224,32 @@ private fun FloatingChanges(changes: List<StatChangeUi>, key: String, shownBefor
                     liveRegion = LiveRegionMode.Polite
                     contentDescription = spoken
                 }
-                .testTag("outcome_floating_changes"),
+                .testTag("outcome_floating_changes")
+                .statChangeFloatingNumbers(motion, places, changes.map { it.delta }, measurer),
             horizontalArrangement = Arrangement.spacedBy(6.dp, Alignment.CenterHorizontally),
             verticalArrangement = Arrangement.spacedBy(4.dp),
         ) {
-            changes.forEach { change ->
+            changes.forEachIndexed { index, change ->
                 val up = change.delta > 0
+                val tone = if (up) LifeGameStatUp else LifeGameStatDown
+                val text = remember { StatChangeTextHolder() }
+                val after = values[change.name]
                 Text(
                     text = "${change.name} ${signed(change.delta)}",
-                    color = if (up) LifeGameStatUp else LifeGameStatDown,
+                    color = tone,
                     fontSize = 14.sp,
                     fontWeight = FontWeight.Bold,
                     maxLines = 1,
                     softWrap = false,
+                    onTextLayout = { text.layout = it },
+                    // 알약 모양은 자르기 층 대신 배경 모양으로 그린다(보이는 모습은 같다). 그래서 칩 전체가 그리기
+                    // 단계에서 함께 움직이고, 묶음 밖으로 내려앉거나 떠올라도 잘리지 않는다.
                     modifier = Modifier
-                        .clip(RoundedCornerShape(999.dp))
-                        .background(if (up) LifeGameStatUpSoft else LifeGameStatDownSoft)
-                        .border(1.dp, (if (up) LifeGameStatUp else LifeGameStatDown).copy(alpha = 0.35f), RoundedCornerShape(999.dp))
+                        .statChangeChip(motion, index, change.delta, after?.minus(change.delta), after, tone, places)
+                        .background(if (up) LifeGameStatUpSoft else LifeGameStatDownSoft, RoundedCornerShape(999.dp))
+                        .border(1.dp, tone.copy(alpha = 0.35f), RoundedCornerShape(999.dp))
                         .padding(horizontal = 10.dp, vertical = 5.dp)
+                        .statChangeOdometer(motion, index, change.delta, change.name.length + 1, text, measurer)
                         // 칩 하나하나는 읽지 않는다(묶음 설명으로 한 번). 테스트 표시만 남긴다.
                         .clearAndSetSemantics { testTag = "outcome_change_chip" },
                 )

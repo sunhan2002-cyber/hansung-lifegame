@@ -416,6 +416,7 @@ class GameEngine(
         choiceId: String,
         periods: List<PeriodDefinition>,
         lifeFactRules: List<LifeFactRule> = emptyList(),
+        decisions: List<DecisionEvent> = emptyList(),
     ): OutcomeResolution {
         val orderedPeriods = validatePeriods(periods)
         require(!state.isEnding) { "ending state cannot resolve a decision" }
@@ -474,6 +475,21 @@ class GameEngine(
                     momentImageId = event.momentImageId,
                 ),
             )
+        }
+
+        // Keep a chosen marriage sequence in the current life stage. The normal calendar
+        // advances once after its last decision, preserving the next stage's scheduled events.
+        if (state.period == LifePeriod.YOUNG_ADULT || state.period == LifePeriod.MIDDLE) {
+            val followUpIds = MarriageContract.followUpEventIds(state.flags, nextFlags)
+            val followUp = if (followUpIds.isEmpty()) null else decisions.firstOrNull {
+                it.eventId in followUpIds && canShowPeriodDecision(resolved, it)
+            }
+            if (followUp != null) {
+                return OutcomeResolution(
+                    outcome = outcome,
+                    step = decisionStep(resolved.copy(pendingDecisionId = followUp.eventId), followUp),
+                )
+            }
         }
 
         val nextState = movePeriodCalendar(resolved, orderedPeriods)

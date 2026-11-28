@@ -164,6 +164,40 @@ class Week14RomanceRouteTest {
         assertTrue("married" in resumed.state.flags)
     }
 
+    @Test fun marriageStepsStayInMiddleAgeAndPreserveTheNextScheduledMilestone() {
+        val middle = PeriodRunState(
+            runId = "middle-age-wedding",
+            runSeed = 20261125L,
+            period = LifePeriod.MIDDLE,
+            yearInPeriod = 4,
+            selectedFocusId = focuses.first { it.period == LifePeriod.MIDDLE }.focusId,
+            pendingDecisionId = "adult_032",
+            flags = setOf("dating", "rel_steady", "job_employed", "partner_first_love", "partner_id_bus",
+                "met_bus", "dating__path_soc_03", "soc_path"),
+        )
+        val game = session(middle.runSeed)
+        game.restoreSaved(middle)
+        val familyMeeting = game.choose("A").step
+        assertEquals("path_soc_05", familyMeeting.state.pendingDecisionId)
+        assertTrue(runCatching { game.choose("A", expectedEventId = "adult_032") }.isFailure)
+        assertEquals(familyMeeting.state, game.state)
+        assertEquals("love_wedding_prep_01", game.choose("B").step.state.pendingDecisionId)
+        val prepared = game.choose("A").step.state
+        assertEquals("love_wedding_first_love", prepared.pendingDecisionId)
+        assertEquals(LifePeriod.MIDDLE, prepared.period)
+        assertEquals(middle.yearInPeriod, prepared.yearInPeriod)
+        assertTrue("married" !in prepared.flags)
+
+        val restored = session(middle.runSeed)
+        assertEquals(prepared.pendingDecisionId, restored.restoreSaved(prepared).state.pendingDecisionId)
+        assertEquals(prepared.stats, restored.lastStep?.state?.stats)
+        val married = restored.choose("A").step.state
+        assertTrue("spouse_id_bus" in married.flags)
+        assertEquals(LifePeriod.MIDDLE, married.period)
+        assertEquals(5, married.yearInPeriod)
+        assertEquals("adult_065", restored.advance().state.pendingDecisionId)
+    }
+
     @Test fun threeRoutesReachTheirOwnCeremonyAndAllExitsStayOpen() {
         // focus index: 0 건강 1 운동 2 지력 3 사회성 4 경제력 5 행복 6 운
         val scenarios = linkedMapOf<String, Triple<Int, (String, List<String>) -> String?, (Life) -> Boolean>>(

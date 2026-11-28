@@ -1,5 +1,7 @@
 package com.example.lifegame.ui
 
+import android.app.Application
+import android.content.Context
 import android.graphics.Bitmap
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.requiredSize
@@ -19,8 +21,12 @@ import androidx.compose.ui.unit.Density
 import androidx.compose.ui.unit.dp
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.platform.app.InstrumentationRegistry
+import com.example.lifegame.data.ContentRepository
 import com.example.lifegame.data.V4ContentParser
+import com.example.lifegame.data.V4ProgressStore
+import com.example.lifegame.data.V4SavedRun
 import com.example.lifegame.domain.model.LifePeriod
+import com.example.lifegame.domain.model.PeriodRunState
 import com.example.lifegame.domain.model.Stats
 import com.example.lifegame.ui.avatar.AvatarLook
 import com.example.lifegame.ui.screens.DecisionScreen
@@ -28,6 +34,10 @@ import com.example.lifegame.ui.screens.EndingFlowScreen
 import com.example.lifegame.ui.screens.EndingStep
 import com.example.lifegame.ui.theme.LifeGameTheme
 import java.io.File
+import java.util.concurrent.TimeUnit
+import org.junit.Assert.assertEquals
+import org.junit.Assert.assertNotNull
+import org.junit.Assert.assertNull
 import org.junit.Assert.assertTrue
 import org.junit.Rule
 import org.junit.Test
@@ -120,6 +130,45 @@ class Week20PartnerDisplayTest {
         compose.onNodeWithTag("certificate_wedding", useUnmergedTree = true).performScrollTo()
             .assertTextContains("결혼식 · 청년기 5번째 해 「연주로 채운 축가」 · 직접 노래한다")
         save("w20_certificate_partner.png")
+    }
+
+    @Test
+    fun preparationResultRestoresAndContinuesToTheWeddingInMiddleAge() {
+        val app = context.applicationContext as Application
+        val prefsName = "middle-wedding-test-${System.nanoTime()}"
+        val store = V4ProgressStore(app.getSharedPreferences(prefsName, Context.MODE_PRIVATE))
+        try {
+            store.save(V4SavedRun("검증", PeriodRunState(
+                runId = "middle-wedding", runSeed = 20261125L, period = LifePeriod.MIDDLE, yearInPeriod = 5,
+                pendingDecisionId = "love_wedding_prep_01",
+                flags = setOf("dating", "engaged", "families_met", "partner_first_love", "partner_id_bus",
+                    "met_bus", "dating__path_soc_03"),
+            )))
+            assertTrue(store.awaitDurable().get(10, TimeUnit.SECONDS))
+            compose.runOnIdle {
+                val vm = LifeGameViewModel(app, ContentRepository(app), store)
+                vm.continueLife()
+                assertEquals("love_wedding_prep_01", vm.play?.decision?.eventId)
+                vm.chooseDecision("A")
+                assertNotNull(vm.play?.outcome)
+            }
+            assertTrue(store.awaitDurable().get(10, TimeUnit.SECONDS))
+            compose.runOnIdle {
+                val restored = LifeGameViewModel(app, ContentRepository(app), store)
+                restored.continueLife()
+                assertNotNull(restored.play?.outcome)
+                assertEquals("love_wedding_prep_01", restored.play?.decision?.eventId)
+                restored.continueAfterOutcome()
+                val wedding = checkNotNull(restored.play)
+                assertNull(wedding.outcome)
+                assertEquals("love_wedding_first_love", wedding.decision?.eventId)
+                assertEquals("중년기", wedding.periodName)
+                assertEquals("love_wedding_first_love", wedding.presentation.exposedEventId)
+            }
+            assertTrue(store.awaitDurable().get(10, TimeUnit.SECONDS))
+        } finally {
+            app.deleteSharedPreferences(prefsName)
+        }
     }
 
     private fun androidx.compose.ui.test.junit4.ComposeContentTestRule.onAllNodesWithTagExists(tag: String) =

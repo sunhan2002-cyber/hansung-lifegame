@@ -315,11 +315,23 @@ private fun DrawScope.drawFilm(m: FilmMotion, current: ImageBitmap, incoming: Im
     }
 }
 
-private fun DrawScope.drawPerforations(trackX: Float, strip: Float, gateHeight: Float) {
-    val holeW = HoleWidth.toPx()
-    val holeH = HoleHeight.toPx()
+/**
+ * 위아래 구멍 띠의 구멍. 기본값은 필름 컷(Week7 토큰)이고, 시기 전환의 화면 전체 필름(LifeTransitions.kt)은 더 큰 구멍과
+ * 페이드용 [color]를 넘긴다.
+ */
+internal fun DrawScope.drawPerforations(
+    trackX: Float,
+    strip: Float,
+    gateHeight: Float,
+    holeWidth: Dp = HoleWidth,
+    holeHeight: Dp = HoleHeight,
+    holePitch: Dp = HolePitch,
+    color: Color = LifeGamePaper,
+) {
+    val holeW = holeWidth.toPx()
+    val holeH = holeHeight.toPx()
     // 컷 하나에 구멍이 정수 개 들어가야 한 컷 넘긴 뒤에도 구멍 위치가 이어진다
-    val count = max(1, (size.width / HolePitch.toPx()).roundToInt())
+    val count = max(1, (size.width / holePitch.toPx()).roundToInt())
     val pitch = size.width / count
     val shift = trackX % pitch
     val corner = CornerRadius(1.5.dp.toPx())
@@ -327,8 +339,8 @@ private fun DrawScope.drawPerforations(trackX: Float, strip: Float, gateHeight: 
     val bottomY = strip + gateHeight + (strip - holeH) / 2
     for (k in -1..count) {
         val x = (pitch - holeW) / 2 + k * pitch + shift
-        drawRoundRect(LifeGamePaper, Offset(x, topY), Size(holeW, holeH), corner)
-        drawRoundRect(LifeGamePaper, Offset(x, bottomY), Size(holeW, holeH), corner)
+        drawRoundRect(color, Offset(x, topY), Size(holeW, holeH), corner)
+        drawRoundRect(color, Offset(x, bottomY), Size(holeW, holeH), corner)
     }
 }
 
@@ -351,8 +363,8 @@ private fun DrawScope.drawPicture(image: ImageBitmap, topLeft: Offset, m: FilmMo
     }
 }
 
-/** 지지직: 깜빡임 + 입자 + 먼지 + 세로 스크래치. 시드가 바뀔 때마다 다른 자리에 그린다. */
-private fun DrawScope.drawNoise(rect: Rect, seed: Int) {
+/** 지지직: 깜빡임 + 입자 + 먼지 + 세로 스크래치. 시드가 바뀔 때마다 다른 자리에 그린다(시기 전환 필름도 같이 쓴다). */
+internal fun DrawScope.drawNoise(rect: Rect, seed: Int) {
     val rnd = Random(seed)
     drawRect(Color.White.copy(alpha = 0.05f + rnd.nextFloat() * 0.15f), rect.topLeft, rect.size)
     val dot = 1.dp.toPx()
